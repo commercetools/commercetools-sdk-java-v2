@@ -46,14 +46,33 @@ public interface InventoryQuantityValue {
     @JsonProperty("availableQuantity")
     public Integer getAvailableQuantity();
 
+    /**
+     * set quantityOnStock
+     * @param quantityOnStock value to be set
+     */
+
     public void setQuantityOnStock(final Integer quantityOnStock);
+
+    /**
+     * set availableQuantity
+     * @param availableQuantity value to be set
+     */
 
     public void setAvailableQuantity(final Integer availableQuantity);
 
+    /**
+     * factory method
+     * @return instance of InventoryQuantityValue
+     */
     public static InventoryQuantityValue of() {
         return new InventoryQuantityValueImpl();
     }
 
+    /**
+     * factory method to copy an instance of InventoryQuantityValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static InventoryQuantityValue of(final InventoryQuantityValue template) {
         InventoryQuantityValueImpl instance = new InventoryQuantityValueImpl();
         instance.setQuantityOnStock(template.getQuantityOnStock());
@@ -61,18 +80,37 @@ public interface InventoryQuantityValue {
         return instance;
     }
 
+    /**
+     * builder factory method for InventoryQuantityValue
+     * @return builder
+     */
     public static InventoryQuantityValueBuilder builder() {
         return InventoryQuantityValueBuilder.of();
     }
 
+    /**
+     * create builder for InventoryQuantityValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InventoryQuantityValueBuilder builder(final InventoryQuantityValue template) {
         return InventoryQuantityValueBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withInventoryQuantityValue(Function<InventoryQuantityValue, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<InventoryQuantityValue> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<InventoryQuantityValue>() {
             @Override

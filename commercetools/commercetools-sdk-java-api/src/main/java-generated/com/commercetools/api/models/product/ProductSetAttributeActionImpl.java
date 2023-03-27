@@ -32,6 +32,9 @@ public class ProductSetAttributeActionImpl implements ProductSetAttributeAction,
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSetAttributeActionImpl(@JsonProperty("variantId") final Long variantId,
             @JsonProperty("sku") final String sku, @JsonProperty("name") final String name,
@@ -44,6 +47,9 @@ public class ProductSetAttributeActionImpl implements ProductSetAttributeAction,
         this.action = SET_ATTRIBUTE;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSetAttributeActionImpl() {
         this.action = SET_ATTRIBUTE;
     }

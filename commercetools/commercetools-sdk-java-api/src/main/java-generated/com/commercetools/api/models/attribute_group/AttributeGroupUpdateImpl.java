@@ -24,6 +24,9 @@ public class AttributeGroupUpdateImpl implements AttributeGroupUpdate, ModelBase
 
     private java.util.List<com.commercetools.api.models.attribute_group.AttributeGroupUpdateAction> actions;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AttributeGroupUpdateImpl(@JsonProperty("version") final Long version,
             @JsonProperty("actions") final java.util.List<com.commercetools.api.models.attribute_group.AttributeGroupUpdateAction> actions) {
@@ -31,6 +34,9 @@ public class AttributeGroupUpdateImpl implements AttributeGroupUpdate, ModelBase
         this.actions = actions;
     }
 
+    /**
+     * create empty instance
+     */
     public AttributeGroupUpdateImpl() {
     }
 

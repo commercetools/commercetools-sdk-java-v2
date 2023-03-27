@@ -28,6 +28,9 @@ public class SetVatIdChangeImpl implements SetVatIdChange, ModelBase {
 
     private String nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetVatIdChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final String previousValue,
@@ -38,6 +41,9 @@ public class SetVatIdChangeImpl implements SetVatIdChange, ModelBase {
         this.type = SET_VAT_ID_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetVatIdChangeImpl() {
         this.type = SET_VAT_ID_CHANGE;
     }

@@ -27,7 +27,7 @@ public class ParcelChangeValueBuilder implements Builder<ParcelChangeValue> {
     private String createdAt;
 
     /**
-     *
+     * set the value to the id
      * @param id value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class ParcelChangeValueBuilder implements Builder<ParcelChangeValue> {
     }
 
     /**
-     *
+     * set the value to the createdAt
      * @param createdAt value to be set
      * @return Builder
      */
@@ -48,9 +48,19 @@ public class ParcelChangeValueBuilder implements Builder<ParcelChangeValue> {
         return this;
     }
 
+    /**
+     * value of id}
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     * value of createdAt}
+     * @return createdAt
+     */
 
     public String getCreatedAt() {
         return this.createdAt;
@@ -74,10 +84,19 @@ public class ParcelChangeValueBuilder implements Builder<ParcelChangeValue> {
         return new ParcelChangeValueImpl(id, createdAt);
     }
 
+    /**
+     * factory method for an instance of ParcelChangeValueBuilder
+     * @return builder
+     */
     public static ParcelChangeValueBuilder of() {
         return new ParcelChangeValueBuilder();
     }
 
+    /**
+     * create builder for ParcelChangeValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ParcelChangeValueBuilder of(final ParcelChangeValue template) {
         ParcelChangeValueBuilder builder = new ParcelChangeValueBuilder();
         builder.id = template.getId();

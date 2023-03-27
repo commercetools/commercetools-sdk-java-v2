@@ -24,6 +24,9 @@ public class StoreRemoveSupplyChannelActionImpl implements StoreRemoveSupplyChan
 
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StoreRemoveSupplyChannelActionImpl(
             @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
@@ -31,6 +34,9 @@ public class StoreRemoveSupplyChannelActionImpl implements StoreRemoveSupplyChan
         this.action = REMOVE_SUPPLY_CHANNEL;
     }
 
+    /**
+     * create empty instance
+     */
     public StoreRemoveSupplyChannelActionImpl() {
         this.action = REMOVE_SUPPLY_CHANNEL;
     }

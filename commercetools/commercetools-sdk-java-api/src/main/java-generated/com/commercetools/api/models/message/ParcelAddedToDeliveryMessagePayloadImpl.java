@@ -28,6 +28,9 @@ public class ParcelAddedToDeliveryMessagePayloadImpl implements ParcelAddedToDel
 
     private String shippingKey;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ParcelAddedToDeliveryMessagePayloadImpl(
             @JsonProperty("delivery") final com.commercetools.api.models.order.Delivery delivery,
@@ -39,6 +42,9 @@ public class ParcelAddedToDeliveryMessagePayloadImpl implements ParcelAddedToDel
         this.type = PARCEL_ADDED_TO_DELIVERY;
     }
 
+    /**
+     * create empty instance
+     */
     public ParcelAddedToDeliveryMessagePayloadImpl() {
         this.type = PARCEL_ADDED_TO_DELIVERY;
     }

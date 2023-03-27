@@ -29,6 +29,9 @@ public class QuoteRequestStateTransitionMessagePayloadImpl
 
     private Boolean force;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     QuoteRequestStateTransitionMessagePayloadImpl(
             @JsonProperty("state") final com.commercetools.api.models.state.StateReference state,
@@ -40,6 +43,9 @@ public class QuoteRequestStateTransitionMessagePayloadImpl
         this.type = QUOTE_REQUEST_STATE_TRANSITION;
     }
 
+    /**
+     * create empty instance
+     */
     public QuoteRequestStateTransitionMessagePayloadImpl() {
         this.type = QUOTE_REQUEST_STATE_TRANSITION;
     }

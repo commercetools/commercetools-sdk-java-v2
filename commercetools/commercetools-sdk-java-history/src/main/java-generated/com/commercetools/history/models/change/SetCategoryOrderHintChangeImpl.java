@@ -32,6 +32,9 @@ public class SetCategoryOrderHintChangeImpl implements SetCategoryOrderHintChang
 
     private com.commercetools.history.models.common.CategoryOrderHints nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetCategoryOrderHintChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("catalogData") final String catalogData, @JsonProperty("categoryId") final String categoryId,
@@ -45,6 +48,9 @@ public class SetCategoryOrderHintChangeImpl implements SetCategoryOrderHintChang
         this.type = SET_CATEGORY_ORDER_HINT_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetCategoryOrderHintChangeImpl() {
         this.type = SET_CATEGORY_ORDER_HINT_CHANGE;
     }

@@ -46,6 +46,9 @@ public class ProductSelectionProductExcludedMessageImpl implements ProductSelect
 
     private com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSelectionProductExcludedMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -74,6 +77,9 @@ public class ProductSelectionProductExcludedMessageImpl implements ProductSelect
         this.type = PRODUCT_SELECTION_PRODUCT_EXCLUDED;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSelectionProductExcludedMessageImpl() {
         this.type = PRODUCT_SELECTION_PRODUCT_EXCLUDED;
     }

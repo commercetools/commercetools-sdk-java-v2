@@ -28,6 +28,9 @@ public class SetTransitionsChangeImpl implements SetTransitionsChange, ModelBase
 
     private java.util.List<com.commercetools.history.models.common.Reference> nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetTransitionsChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.common.Reference> previousValue,
@@ -38,6 +41,9 @@ public class SetTransitionsChangeImpl implements SetTransitionsChange, ModelBase
         this.type = SET_TRANSITIONS_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetTransitionsChangeImpl() {
         this.type = SET_TRANSITIONS_CHANGE;
     }

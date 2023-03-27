@@ -30,6 +30,9 @@ public class ReviewRatingSetMessagePayloadImpl implements ReviewRatingSetMessage
 
     private com.commercetools.api.models.common.Reference target;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReviewRatingSetMessagePayloadImpl(@JsonProperty("oldRating") final Double oldRating,
             @JsonProperty("newRating") final Double newRating,
@@ -42,6 +45,9 @@ public class ReviewRatingSetMessagePayloadImpl implements ReviewRatingSetMessage
         this.type = REVIEW_RATING_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public ReviewRatingSetMessagePayloadImpl() {
         this.type = REVIEW_RATING_SET;
     }

@@ -24,12 +24,18 @@ public class LocalizedEnumFieldImpl implements LocalizedEnumField, ModelBase {
 
     private String value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     LocalizedEnumFieldImpl(@JsonProperty("value") final String value) {
         this.value = value;
         this.type = LOCALIZED_ENUM;
     }
 
+    /**
+     * create empty instance
+     */
     public LocalizedEnumFieldImpl() {
         this.type = LOCALIZED_ENUM;
     }

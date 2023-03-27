@@ -19,6 +19,10 @@ public class HttpDestinationAuthenticationBuilder {
         return com.commercetools.api.models.extension.AzureFunctionsAuthenticationBuilder.of();
     }
 
+    /**
+     * factory method for an instance of HttpDestinationAuthenticationBuilder
+     * @return builder
+     */
     public static HttpDestinationAuthenticationBuilder of() {
         return new HttpDestinationAuthenticationBuilder();
     }

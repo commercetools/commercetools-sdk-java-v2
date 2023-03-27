@@ -24,12 +24,18 @@ public class ZoneAddLocationActionImpl implements ZoneAddLocationAction, ModelBa
 
     private com.commercetools.api.models.zone.Location location;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ZoneAddLocationActionImpl(@JsonProperty("location") final com.commercetools.api.models.zone.Location location) {
         this.location = location;
         this.action = ADD_LOCATION;
     }
 
+    /**
+     * create empty instance
+     */
     public ZoneAddLocationActionImpl() {
         this.action = ADD_LOCATION;
     }

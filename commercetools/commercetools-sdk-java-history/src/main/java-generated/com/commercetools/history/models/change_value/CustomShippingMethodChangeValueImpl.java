@@ -22,11 +22,17 @@ public class CustomShippingMethodChangeValueImpl implements CustomShippingMethod
 
     private String name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomShippingMethodChangeValueImpl(@JsonProperty("name") final String name) {
         this.name = name;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomShippingMethodChangeValueImpl() {
     }
 

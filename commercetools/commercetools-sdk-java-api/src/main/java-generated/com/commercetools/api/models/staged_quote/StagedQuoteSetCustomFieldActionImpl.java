@@ -26,6 +26,9 @@ public class StagedQuoteSetCustomFieldActionImpl implements StagedQuoteSetCustom
 
     private java.lang.Object value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedQuoteSetCustomFieldActionImpl(@JsonProperty("name") final String name,
             @JsonProperty("value") final java.lang.Object value) {
@@ -34,6 +37,9 @@ public class StagedQuoteSetCustomFieldActionImpl implements StagedQuoteSetCustom
         this.action = SET_CUSTOM_FIELD;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedQuoteSetCustomFieldActionImpl() {
         this.action = SET_CUSTOM_FIELD;
     }

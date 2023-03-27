@@ -24,6 +24,9 @@ public class ProductPriceDiscountsSetMessagePayloadImpl implements ProductPriceD
 
     private java.util.List<com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice> updatedPrices;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductPriceDiscountsSetMessagePayloadImpl(
             @JsonProperty("updatedPrices") final java.util.List<com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice> updatedPrices) {
@@ -31,6 +34,9 @@ public class ProductPriceDiscountsSetMessagePayloadImpl implements ProductPriceD
         this.type = PRODUCT_PRICE_DISCOUNTS_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductPriceDiscountsSetMessagePayloadImpl() {
         this.type = PRODUCT_PRICE_DISCOUNTS_SET;
     }

@@ -24,6 +24,9 @@ public class InventoryEntrySetSupplyChannelActionImpl implements InventoryEntryS
 
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     InventoryEntrySetSupplyChannelActionImpl(
             @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
@@ -31,6 +34,9 @@ public class InventoryEntrySetSupplyChannelActionImpl implements InventoryEntryS
         this.action = SET_SUPPLY_CHANNEL;
     }
 
+    /**
+     * create empty instance
+     */
     public InventoryEntrySetSupplyChannelActionImpl() {
         this.action = SET_SUPPLY_CHANNEL;
     }

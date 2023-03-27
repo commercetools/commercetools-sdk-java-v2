@@ -78,14 +78,29 @@ public class CustomerGroupDraftBuilder implements Builder<CustomerGroupDraft> {
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier for the CustomerGroup.</p>
+     * @return key
+     */
+
     @Nullable
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>Unique value which must be different from any value used for <code>name</code> in CustomerGroup in the Project. If not, a DuplicateField error is returned.</p>
+     * @return groupName
+     */
+
     public String getGroupName() {
         return this.groupName;
     }
+
+    /**
+     *  <p>Custom Fields for the CustomerGroup.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -109,10 +124,19 @@ public class CustomerGroupDraftBuilder implements Builder<CustomerGroupDraft> {
         return new CustomerGroupDraftImpl(key, groupName, custom);
     }
 
+    /**
+     * factory method for an instance of CustomerGroupDraftBuilder
+     * @return builder
+     */
     public static CustomerGroupDraftBuilder of() {
         return new CustomerGroupDraftBuilder();
     }
 
+    /**
+     * create builder for CustomerGroupDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerGroupDraftBuilder of(final CustomerGroupDraft template) {
         CustomerGroupDraftBuilder builder = new CustomerGroupDraftBuilder();
         builder.key = template.getKey();

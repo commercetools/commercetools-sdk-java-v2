@@ -147,19 +147,39 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
         return this;
     }
 
+    /**
+     *  <p>The Order search query.</p>
+     * @return query
+     */
+
     public com.commercetools.api.models.order.OrderSearchQuery getQuery() {
         return this.query;
     }
+
+    /**
+     *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>
+     * @return sort
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.order.OrderSearchSorting> getSort() {
         return this.sort;
     }
 
+    /**
+     *  <p>The maximum number of search results to be returned.</p>
+     * @return limit
+     */
+
     @Nullable
     public Integer getLimit() {
         return this.limit;
     }
+
+    /**
+     *  <p>The number of search results to be skipped in the response for pagination.</p>
+     * @return offset
+     */
 
     @Nullable
     public Integer getOffset() {
@@ -183,10 +203,19 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
         return new OrderSearchRequestImpl(query, sort, limit, offset);
     }
 
+    /**
+     * factory method for an instance of OrderSearchRequestBuilder
+     * @return builder
+     */
     public static OrderSearchRequestBuilder of() {
         return new OrderSearchRequestBuilder();
     }
 
+    /**
+     * create builder for OrderSearchRequest instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderSearchRequestBuilder of(final OrderSearchRequest template) {
         OrderSearchRequestBuilder builder = new OrderSearchRequestBuilder();
         builder.query = template.getQuery();

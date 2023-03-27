@@ -41,7 +41,7 @@ public class ChangeShipmentStateChangeBuilder implements Builder<ChangeShipmentS
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class ChangeShipmentStateChangeBuilder implements Builder<ChangeShipmentS
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -64,13 +64,28 @@ public class ChangeShipmentStateChangeBuilder implements Builder<ChangeShipmentS
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>changeShipmentState</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
+
     public com.commercetools.history.models.common.ShipmentState getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public com.commercetools.history.models.common.ShipmentState getPreviousValue() {
         return this.previousValue;
@@ -95,10 +110,19 @@ public class ChangeShipmentStateChangeBuilder implements Builder<ChangeShipmentS
         return new ChangeShipmentStateChangeImpl(change, nextValue, previousValue);
     }
 
+    /**
+     * factory method for an instance of ChangeShipmentStateChangeBuilder
+     * @return builder
+     */
     public static ChangeShipmentStateChangeBuilder of() {
         return new ChangeShipmentStateChangeBuilder();
     }
 
+    /**
+     * create builder for ChangeShipmentStateChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeShipmentStateChangeBuilder of(final ChangeShipmentStateChange template) {
         ChangeShipmentStateChangeBuilder builder = new ChangeShipmentStateChangeBuilder();
         builder.change = template.getChange();

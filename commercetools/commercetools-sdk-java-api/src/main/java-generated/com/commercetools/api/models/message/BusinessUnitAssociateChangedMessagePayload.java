@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = BusinessUnitAssociateChangedMessagePayloadImpl.class)
 public interface BusinessUnitAssociateChangedMessagePayload extends MessagePayload {
 
+    /**
+     * discriminator value for BusinessUnitAssociateChangedMessagePayload
+     */
     String BUSINESS_UNIT_ASSOCIATE_CHANGED = "BusinessUnitAssociateChanged";
 
     /**
@@ -42,12 +45,26 @@ public interface BusinessUnitAssociateChangedMessagePayload extends MessagePaylo
     @JsonProperty("associate")
     public Associate getAssociate();
 
+    /**
+     *  <p>The Associate that was updated.</p>
+     * @param associate value to be set
+     */
+
     public void setAssociate(final Associate associate);
 
+    /**
+     * factory method
+     * @return instance of BusinessUnitAssociateChangedMessagePayload
+     */
     public static BusinessUnitAssociateChangedMessagePayload of() {
         return new BusinessUnitAssociateChangedMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of BusinessUnitAssociateChangedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static BusinessUnitAssociateChangedMessagePayload of(
             final BusinessUnitAssociateChangedMessagePayload template) {
         BusinessUnitAssociateChangedMessagePayloadImpl instance = new BusinessUnitAssociateChangedMessagePayloadImpl();
@@ -55,20 +72,39 @@ public interface BusinessUnitAssociateChangedMessagePayload extends MessagePaylo
         return instance;
     }
 
+    /**
+     * builder factory method for BusinessUnitAssociateChangedMessagePayload
+     * @return builder
+     */
     public static BusinessUnitAssociateChangedMessagePayloadBuilder builder() {
         return BusinessUnitAssociateChangedMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for BusinessUnitAssociateChangedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitAssociateChangedMessagePayloadBuilder builder(
             final BusinessUnitAssociateChangedMessagePayload template) {
         return BusinessUnitAssociateChangedMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withBusinessUnitAssociateChangedMessagePayload(
             Function<BusinessUnitAssociateChangedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitAssociateChangedMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitAssociateChangedMessagePayload>() {
             @Override

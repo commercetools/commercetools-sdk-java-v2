@@ -24,6 +24,9 @@ public class ZoneRateDraftImpl implements ZoneRateDraft, ModelBase {
 
     private java.util.List<com.commercetools.api.models.shipping_method.ShippingRateDraft> shippingRates;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ZoneRateDraftImpl(@JsonProperty("zone") final com.commercetools.api.models.zone.ZoneResourceIdentifier zone,
             @JsonProperty("shippingRates") final java.util.List<com.commercetools.api.models.shipping_method.ShippingRateDraft> shippingRates) {
@@ -31,6 +34,9 @@ public class ZoneRateDraftImpl implements ZoneRateDraft, ModelBase {
         this.shippingRates = shippingRates;
     }
 
+    /**
+     * create empty instance
+     */
     public ZoneRateDraftImpl() {
     }
 

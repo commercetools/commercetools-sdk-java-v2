@@ -27,6 +27,9 @@ public class ShippingMethodDoesNotMatchCartErrorImpl implements ShippingMethodDo
 
     private Map<String, java.lang.Object> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShippingMethodDoesNotMatchCartErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values) {
@@ -35,6 +38,9 @@ public class ShippingMethodDoesNotMatchCartErrorImpl implements ShippingMethodDo
         this.code = SHIPPING_METHOD_DOES_NOT_MATCH_CART;
     }
 
+    /**
+     * create empty instance
+     */
     public ShippingMethodDoesNotMatchCartErrorImpl() {
         this.code = SHIPPING_METHOD_DOES_NOT_MATCH_CART;
     }

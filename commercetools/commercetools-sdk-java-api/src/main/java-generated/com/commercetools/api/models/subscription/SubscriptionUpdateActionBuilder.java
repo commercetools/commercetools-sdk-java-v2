@@ -27,6 +27,10 @@ public class SubscriptionUpdateActionBuilder {
         return com.commercetools.api.models.subscription.SubscriptionSetMessagesActionBuilder.of();
     }
 
+    /**
+     * factory method for an instance of SubscriptionUpdateActionBuilder
+     * @return builder
+     */
     public static SubscriptionUpdateActionBuilder of() {
         return new SubscriptionUpdateActionBuilder();
     }

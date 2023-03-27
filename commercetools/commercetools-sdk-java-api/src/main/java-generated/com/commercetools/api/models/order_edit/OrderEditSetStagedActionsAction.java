@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderEditSetStagedActionsActionImpl.class)
 public interface OrderEditSetStagedActionsAction extends OrderEditUpdateAction {
 
+    /**
+     * discriminator value for OrderEditSetStagedActionsAction
+     */
     String SET_STAGED_ACTIONS = "setStagedActions";
 
     /**
@@ -42,33 +45,71 @@ public interface OrderEditSetStagedActionsAction extends OrderEditUpdateAction {
     @JsonProperty("stagedActions")
     public List<StagedOrderUpdateAction> getStagedActions();
 
+    /**
+     *  <p>The actions to edit the <code>resource</code>.</p>
+     * @param stagedActions values to be set
+     */
+
     @JsonIgnore
     public void setStagedActions(final StagedOrderUpdateAction... stagedActions);
 
+    /**
+     *  <p>The actions to edit the <code>resource</code>.</p>
+     * @param stagedActions values to be set
+     */
+
     public void setStagedActions(final List<StagedOrderUpdateAction> stagedActions);
 
+    /**
+     * factory method
+     * @return instance of OrderEditSetStagedActionsAction
+     */
     public static OrderEditSetStagedActionsAction of() {
         return new OrderEditSetStagedActionsActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderEditSetStagedActionsAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderEditSetStagedActionsAction of(final OrderEditSetStagedActionsAction template) {
         OrderEditSetStagedActionsActionImpl instance = new OrderEditSetStagedActionsActionImpl();
         instance.setStagedActions(template.getStagedActions());
         return instance;
     }
 
+    /**
+     * builder factory method for OrderEditSetStagedActionsAction
+     * @return builder
+     */
     public static OrderEditSetStagedActionsActionBuilder builder() {
         return OrderEditSetStagedActionsActionBuilder.of();
     }
 
+    /**
+     * create builder for OrderEditSetStagedActionsAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderEditSetStagedActionsActionBuilder builder(final OrderEditSetStagedActionsAction template) {
         return OrderEditSetStagedActionsActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderEditSetStagedActionsAction(Function<OrderEditSetStagedActionsAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderEditSetStagedActionsAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderEditSetStagedActionsAction>() {
             @Override

@@ -40,7 +40,7 @@ public class BooleanSetAttributeBuilder implements Builder<BooleanSetAttribute> 
     }
 
     /**
-     *
+     * set values to the value
      * @param value value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class BooleanSetAttributeBuilder implements Builder<BooleanSetAttribute> 
     }
 
     /**
-     *
+     * set value to the value
      * @param value value to be set
      * @return Builder
      */
@@ -62,7 +62,7 @@ public class BooleanSetAttributeBuilder implements Builder<BooleanSetAttribute> 
     }
 
     /**
-     *
+     * add values to the value
      * @param value value to be set
      * @return Builder
      */
@@ -75,10 +75,20 @@ public class BooleanSetAttributeBuilder implements Builder<BooleanSetAttribute> 
         return this;
     }
 
+    /**
+     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     * @return name
+     */
+
     @Nullable
     public String getName() {
         return this.name;
     }
+
+    /**
+     * value of value}
+     * @return value
+     */
 
     public java.util.List<Boolean> getValue() {
         return this.value;
@@ -101,10 +111,19 @@ public class BooleanSetAttributeBuilder implements Builder<BooleanSetAttribute> 
         return new BooleanSetAttributeImpl(name, value);
     }
 
+    /**
+     * factory method for an instance of BooleanSetAttributeBuilder
+     * @return builder
+     */
     public static BooleanSetAttributeBuilder of() {
         return new BooleanSetAttributeBuilder();
     }
 
+    /**
+     * create builder for BooleanSetAttribute instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BooleanSetAttributeBuilder of(final BooleanSetAttribute template) {
         BooleanSetAttributeBuilder builder = new BooleanSetAttributeBuilder();
         builder.name = template.getName();

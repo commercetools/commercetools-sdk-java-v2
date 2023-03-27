@@ -45,7 +45,7 @@ public class SetOrderTaxedPriceChangeBuilder implements Builder<SetOrderTaxedPri
     }
 
     /**
-     *
+     * set the value to the taxMode
      * @param taxMode value to be set
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class SetOrderTaxedPriceChangeBuilder implements Builder<SetOrderTaxedPri
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class SetOrderTaxedPriceChangeBuilder implements Builder<SetOrderTaxedPri
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class SetOrderTaxedPriceChangeBuilder implements Builder<SetOrderTaxedPri
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -92,7 +92,7 @@ public class SetOrderTaxedPriceChangeBuilder implements Builder<SetOrderTaxedPri
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -103,17 +103,37 @@ public class SetOrderTaxedPriceChangeBuilder implements Builder<SetOrderTaxedPri
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>setOrderTaxedPrice</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of taxMode}
+     * @return taxMode
+     */
 
     public com.commercetools.history.models.common.TaxMode getTaxMode() {
         return this.taxMode;
     }
 
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
+
     public com.commercetools.history.models.common.TaxedItemPrice getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public com.commercetools.history.models.common.TaxedItemPrice getPreviousValue() {
         return this.previousValue;
@@ -139,10 +159,19 @@ public class SetOrderTaxedPriceChangeBuilder implements Builder<SetOrderTaxedPri
         return new SetOrderTaxedPriceChangeImpl(change, taxMode, nextValue, previousValue);
     }
 
+    /**
+     * factory method for an instance of SetOrderTaxedPriceChangeBuilder
+     * @return builder
+     */
     public static SetOrderTaxedPriceChangeBuilder of() {
         return new SetOrderTaxedPriceChangeBuilder();
     }
 
+    /**
+     * create builder for SetOrderTaxedPriceChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetOrderTaxedPriceChangeBuilder of(final SetOrderTaxedPriceChange template) {
         SetOrderTaxedPriceChangeBuilder builder = new SetOrderTaxedPriceChangeBuilder();
         builder.change = template.getChange();

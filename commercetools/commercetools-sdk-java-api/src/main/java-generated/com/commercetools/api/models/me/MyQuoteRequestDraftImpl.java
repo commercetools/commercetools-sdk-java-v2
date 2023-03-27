@@ -26,6 +26,9 @@ public class MyQuoteRequestDraftImpl implements MyQuoteRequestDraft, ModelBase {
 
     private String comment;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyQuoteRequestDraftImpl(@JsonProperty("cartId") final String cartId,
             @JsonProperty("cartVersion") final Long cartVersion, @JsonProperty("comment") final String comment) {
@@ -34,6 +37,9 @@ public class MyQuoteRequestDraftImpl implements MyQuoteRequestDraft, ModelBase {
         this.comment = comment;
     }
 
+    /**
+     * create empty instance
+     */
     public MyQuoteRequestDraftImpl() {
     }
 

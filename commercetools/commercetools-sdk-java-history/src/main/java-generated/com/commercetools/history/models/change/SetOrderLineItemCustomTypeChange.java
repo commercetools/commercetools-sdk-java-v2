@@ -36,6 +36,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetOrderLineItemCustomTypeChangeImpl.class)
 public interface SetOrderLineItemCustomTypeChange extends Change {
 
+    /**
+     * discriminator value for SetOrderLineItemCustomTypeChange
+     */
     String SET_ORDER_LINE_ITEM_CUSTOM_TYPE_CHANGE = "SetOrderLineItemCustomTypeChange";
 
     /**
@@ -89,20 +92,54 @@ public interface SetOrderLineItemCustomTypeChange extends Change {
     @JsonProperty("previousValue")
     public CustomFields getPreviousValue();
 
+    /**
+     *  <p>Update action for <code>setLineItemCustomType</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set lineItem
+     * @param lineItem value to be set
+     */
 
     public void setLineItem(final LocalizedString lineItem);
 
+    /**
+     * set variant
+     * @param variant value to be set
+     */
+
     public void setVariant(final String variant);
+
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
 
     public void setNextValue(final CustomFields nextValue);
 
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
+
     public void setPreviousValue(final CustomFields previousValue);
 
+    /**
+     * factory method
+     * @return instance of SetOrderLineItemCustomTypeChange
+     */
     public static SetOrderLineItemCustomTypeChange of() {
         return new SetOrderLineItemCustomTypeChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetOrderLineItemCustomTypeChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetOrderLineItemCustomTypeChange of(final SetOrderLineItemCustomTypeChange template) {
         SetOrderLineItemCustomTypeChangeImpl instance = new SetOrderLineItemCustomTypeChangeImpl();
         instance.setChange(template.getChange());
@@ -113,18 +150,37 @@ public interface SetOrderLineItemCustomTypeChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetOrderLineItemCustomTypeChange
+     * @return builder
+     */
     public static SetOrderLineItemCustomTypeChangeBuilder builder() {
         return SetOrderLineItemCustomTypeChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetOrderLineItemCustomTypeChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetOrderLineItemCustomTypeChangeBuilder builder(final SetOrderLineItemCustomTypeChange template) {
         return SetOrderLineItemCustomTypeChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetOrderLineItemCustomTypeChange(Function<SetOrderLineItemCustomTypeChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetOrderLineItemCustomTypeChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetOrderLineItemCustomTypeChange>() {
             @Override

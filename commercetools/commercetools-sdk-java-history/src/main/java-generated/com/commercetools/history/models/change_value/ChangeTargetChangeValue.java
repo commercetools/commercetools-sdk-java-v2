@@ -44,30 +44,60 @@ public interface ChangeTargetChangeValue {
     @JsonProperty("type")
     public String getType();
 
+    /**
+     * builder for customLineItems subtype
+     * @return builder
+     */
     public static com.commercetools.history.models.change_value.ChangeTargetCustomLineItemsChangeValueBuilder customLineItemsBuilder() {
         return com.commercetools.history.models.change_value.ChangeTargetCustomLineItemsChangeValueBuilder.of();
     }
 
+    /**
+     * builder for lineItems subtype
+     * @return builder
+     */
     public static com.commercetools.history.models.change_value.ChangeTargetLineItemsChangeValueBuilder lineItemsBuilder() {
         return com.commercetools.history.models.change_value.ChangeTargetLineItemsChangeValueBuilder.of();
     }
 
+    /**
+     * builder for multiBuyCustomLineItems subtype
+     * @return builder
+     */
     public static com.commercetools.history.models.change_value.ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder multiBuyCustomLineItemsBuilder() {
         return com.commercetools.history.models.change_value.ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder.of();
     }
 
+    /**
+     * builder for multiBuyLineItems subtype
+     * @return builder
+     */
     public static com.commercetools.history.models.change_value.ChangeTargetMultiBuyLineItemsChangeValueBuilder multiBuyLineItemsBuilder() {
         return com.commercetools.history.models.change_value.ChangeTargetMultiBuyLineItemsChangeValueBuilder.of();
     }
 
+    /**
+     * builder for shipping subtype
+     * @return builder
+     */
     public static com.commercetools.history.models.change_value.ChangeTargetShippingChangeValueBuilder shippingBuilder() {
         return com.commercetools.history.models.change_value.ChangeTargetShippingChangeValueBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withChangeTargetChangeValue(Function<ChangeTargetChangeValue, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ChangeTargetChangeValue> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ChangeTargetChangeValue>() {
             @Override

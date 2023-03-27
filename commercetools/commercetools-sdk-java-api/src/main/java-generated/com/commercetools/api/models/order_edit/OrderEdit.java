@@ -145,37 +145,111 @@ public interface OrderEdit extends BaseResource, OrderEditMixin, com.commercetoo
     @JsonProperty("comment")
     public String getComment();
 
+    /**
+     *  <p>Unique identifier of the OrderEdit.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>The current version of the OrderEdit.</p>
+     * @param version value to be set
+     */
 
     public void setVersion(final Long version);
 
+    /**
+     * set createdAt
+     * @param createdAt value to be set
+     */
+
     public void setCreatedAt(final ZonedDateTime createdAt);
+
+    /**
+     * set lastModifiedAt
+     * @param lastModifiedAt value to be set
+     */
 
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy value to be set
+     */
+
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy value to be set
+     */
 
     public void setCreatedBy(final CreatedBy createdBy);
 
+    /**
+     *  <p>User-defined unique identifier of the OrderEdit.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
 
+    /**
+     *  <p>The order to be updated with this edit.</p>
+     * @param resource value to be set
+     */
+
     public void setResource(final OrderReference resource);
+
+    /**
+     *  <p>The actions to apply to the Order. Cannot be updated after the edit has been applied.</p>
+     * @param stagedActions values to be set
+     */
 
     @JsonIgnore
     public void setStagedActions(final StagedOrderUpdateAction... stagedActions);
 
+    /**
+     *  <p>The actions to apply to the Order. Cannot be updated after the edit has been applied.</p>
+     * @param stagedActions values to be set
+     */
+
     public void setStagedActions(final List<StagedOrderUpdateAction> stagedActions);
+
+    /**
+     * set custom
+     * @param custom value to be set
+     */
 
     public void setCustom(final CustomFields custom);
 
+    /**
+     *  <p>Contains a preview of the changes in case of unapplied edit. For applied edits, it contains the summary of the changes.</p>
+     * @param result value to be set
+     */
+
     public void setResult(final OrderEditResult result);
+
+    /**
+     *  <p>This field can be used to add textual information regarding the edit.</p>
+     * @param comment value to be set
+     */
 
     public void setComment(final String comment);
 
+    /**
+     * factory method
+     * @return instance of OrderEdit
+     */
     public static OrderEdit of() {
         return new OrderEditImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderEdit
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderEdit of(final OrderEdit template) {
         OrderEditImpl instance = new OrderEditImpl();
         instance.setId(template.getId());
@@ -193,14 +267,29 @@ public interface OrderEdit extends BaseResource, OrderEditMixin, com.commercetoo
         return instance;
     }
 
+    /**
+     * builder factory method for OrderEdit
+     * @return builder
+     */
     public static OrderEditBuilder builder() {
         return OrderEditBuilder.of();
     }
 
+    /**
+     * create builder for OrderEdit instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderEditBuilder builder(final OrderEdit template) {
         return OrderEditBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderEdit(Function<OrderEdit, T> helper) {
         return helper.apply(this);
     }
@@ -209,6 +298,10 @@ public interface OrderEdit extends BaseResource, OrderEditMixin, com.commercetoo
         return com.commercetools.api.models.common.ReferenceTypeId.ORDER_EDIT;
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderEdit> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderEdit>() {
             @Override

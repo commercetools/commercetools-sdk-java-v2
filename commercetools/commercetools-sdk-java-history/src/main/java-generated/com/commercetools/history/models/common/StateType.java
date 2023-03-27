@@ -25,15 +25,33 @@ public interface StateType {
 
     StateType PAYMENT_STATE = StateTypeEnum.PAYMENT_STATE;
 
+    /**
+     * possible values of StateType
+     */
     enum StateTypeEnum implements StateType {
+        /**
+         * OrderState
+         */
         ORDER_STATE("OrderState"),
 
+        /**
+         * LineItemState
+         */
         LINE_ITEM_STATE("LineItemState"),
 
+        /**
+         * ProductState
+         */
         PRODUCT_STATE("ProductState"),
 
+        /**
+         * ReviewState
+         */
         REVIEW_STATE("ReviewState"),
 
+        /**
+         * PaymentState
+         */
         PAYMENT_STATE("PaymentState");
         private final String jsonName;
 
@@ -50,13 +68,30 @@ public interface StateType {
         }
     }
 
+    /**
+     * the JSON value
+     * @return json value
+     */
     @JsonValue
     String getJsonName();
 
+    /**
+     * the enum value
+     * @return name
+     */
     String name();
 
+    /**
+     * convert value to string
+     * @return string representation
+     */
     String toString();
 
+    /**
+     * factory method for a enum value of StateType
+     * if no enum has been found an anonymous instance will be created
+     * @return enum instance
+     */
     @JsonCreator
     public static StateType findEnum(String value) {
         return findEnumViaJsonName(value).orElse(new StateType() {
@@ -76,10 +111,18 @@ public interface StateType {
         });
     }
 
+    /**
+     * method to find enum using the JSON value
+     * @return optional of enum instance
+     */
     public static Optional<StateType> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
 
+    /**
+     * possible enum values
+     * @return array of possible enum values
+     */
     public static StateType[] values() {
         return StateTypeEnum.values();
     }

@@ -24,6 +24,9 @@ public class CustomImpl implements Custom, ModelBase {
 
     private com.commercetools.importapi.models.customfields.FieldContainer fields;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomImpl(@JsonProperty("type") final com.commercetools.importapi.models.common.TypeKeyReference type,
             @JsonProperty("fields") final com.commercetools.importapi.models.customfields.FieldContainer fields) {
@@ -31,6 +34,9 @@ public class CustomImpl implements Custom, ModelBase {
         this.fields = fields;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomImpl() {
     }
 

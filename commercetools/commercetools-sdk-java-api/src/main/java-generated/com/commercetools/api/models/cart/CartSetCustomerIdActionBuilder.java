@@ -36,6 +36,11 @@ public class CartSetCustomerIdActionBuilder implements Builder<CartSetCustomerId
         return this;
     }
 
+    /**
+     *  <p><code>id</code> of an existing Customer. If empty, any value is removed.</p>
+     * @return customerId
+     */
+
     @Nullable
     public String getCustomerId() {
         return this.customerId;
@@ -57,10 +62,19 @@ public class CartSetCustomerIdActionBuilder implements Builder<CartSetCustomerId
         return new CartSetCustomerIdActionImpl(customerId);
     }
 
+    /**
+     * factory method for an instance of CartSetCustomerIdActionBuilder
+     * @return builder
+     */
     public static CartSetCustomerIdActionBuilder of() {
         return new CartSetCustomerIdActionBuilder();
     }
 
+    /**
+     * create builder for CartSetCustomerIdAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartSetCustomerIdActionBuilder of(final CartSetCustomerIdAction template) {
         CartSetCustomerIdActionBuilder builder = new CartSetCustomerIdActionBuilder();
         builder.customerId = template.getCustomerId();

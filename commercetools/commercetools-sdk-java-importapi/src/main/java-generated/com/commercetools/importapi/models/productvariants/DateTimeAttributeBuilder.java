@@ -40,7 +40,7 @@ public class DateTimeAttributeBuilder implements Builder<DateTimeAttribute> {
     }
 
     /**
-     *
+     * set the value to the value
      * @param value value to be set
      * @return Builder
      */
@@ -50,10 +50,20 @@ public class DateTimeAttributeBuilder implements Builder<DateTimeAttribute> {
         return this;
     }
 
+    /**
+     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     * @return name
+     */
+
     @Nullable
     public String getName() {
         return this.name;
     }
+
+    /**
+     * value of value}
+     * @return value
+     */
 
     public java.time.ZonedDateTime getValue() {
         return this.value;
@@ -76,10 +86,19 @@ public class DateTimeAttributeBuilder implements Builder<DateTimeAttribute> {
         return new DateTimeAttributeImpl(name, value);
     }
 
+    /**
+     * factory method for an instance of DateTimeAttributeBuilder
+     * @return builder
+     */
     public static DateTimeAttributeBuilder of() {
         return new DateTimeAttributeBuilder();
     }
 
+    /**
+     * create builder for DateTimeAttribute instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DateTimeAttributeBuilder of(final DateTimeAttribute template) {
         DateTimeAttributeBuilder builder = new DateTimeAttributeBuilder();
         builder.name = template.getName();

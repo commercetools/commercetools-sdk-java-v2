@@ -28,6 +28,9 @@ public class ProductPricesSetMessagePayloadImpl implements ProductPricesSetMessa
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductPricesSetMessagePayloadImpl(@JsonProperty("variantId") final Long variantId,
             @JsonProperty("prices") final java.util.List<com.commercetools.api.models.common.Price> prices,
@@ -38,6 +41,9 @@ public class ProductPricesSetMessagePayloadImpl implements ProductPricesSetMessa
         this.type = PRODUCT_PRICES_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductPricesSetMessagePayloadImpl() {
         this.type = PRODUCT_PRICES_SET;
     }

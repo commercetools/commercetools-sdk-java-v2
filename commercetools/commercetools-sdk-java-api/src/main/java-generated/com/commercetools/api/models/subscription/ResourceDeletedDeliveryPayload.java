@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ResourceDeletedDeliveryPayloadImpl.class)
 public interface ResourceDeletedDeliveryPayload extends DeliveryPayload {
 
+    /**
+     * discriminator value for ResourceDeletedDeliveryPayload
+     */
     String RESOURCE_DELETED = "ResourceDeleted";
 
     /**
@@ -59,16 +62,40 @@ public interface ResourceDeletedDeliveryPayload extends DeliveryPayload {
     @JsonProperty("dataErasure")
     public Boolean getDataErasure();
 
+    /**
+     *  <p>Last seen version of the resource.</p>
+     * @param version value to be set
+     */
+
     public void setVersion(final Long version);
+
+    /**
+     *  <p>Date and time (UTC) the resource was last deleted.</p>
+     * @param modifiedAt value to be set
+     */
 
     public void setModifiedAt(final ZonedDateTime modifiedAt);
 
+    /**
+     *  <p><code>true</code> if the <code>dataErasure</code> parameter on the <code>DELETE</code> request was set to <code>true</code>.</p>
+     * @param dataErasure value to be set
+     */
+
     public void setDataErasure(final Boolean dataErasure);
 
+    /**
+     * factory method
+     * @return instance of ResourceDeletedDeliveryPayload
+     */
     public static ResourceDeletedDeliveryPayload of() {
         return new ResourceDeletedDeliveryPayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of ResourceDeletedDeliveryPayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ResourceDeletedDeliveryPayload of(final ResourceDeletedDeliveryPayload template) {
         ResourceDeletedDeliveryPayloadImpl instance = new ResourceDeletedDeliveryPayloadImpl();
         instance.setProjectKey(template.getProjectKey());
@@ -80,18 +107,37 @@ public interface ResourceDeletedDeliveryPayload extends DeliveryPayload {
         return instance;
     }
 
+    /**
+     * builder factory method for ResourceDeletedDeliveryPayload
+     * @return builder
+     */
     public static ResourceDeletedDeliveryPayloadBuilder builder() {
         return ResourceDeletedDeliveryPayloadBuilder.of();
     }
 
+    /**
+     * create builder for ResourceDeletedDeliveryPayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ResourceDeletedDeliveryPayloadBuilder builder(final ResourceDeletedDeliveryPayload template) {
         return ResourceDeletedDeliveryPayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withResourceDeletedDeliveryPayload(Function<ResourceDeletedDeliveryPayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ResourceDeletedDeliveryPayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ResourceDeletedDeliveryPayload>() {
             @Override

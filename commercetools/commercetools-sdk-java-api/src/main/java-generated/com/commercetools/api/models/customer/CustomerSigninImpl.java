@@ -35,6 +35,9 @@ public class CustomerSigninImpl implements CustomerSignin, ModelBase {
 
     private Boolean updateProductData;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerSigninImpl(@JsonProperty("email") final String email, @JsonProperty("password") final String password,
             @JsonProperty("anonymousCartId") final String anonymousCartId,
@@ -51,6 +54,9 @@ public class CustomerSigninImpl implements CustomerSignin, ModelBase {
         this.updateProductData = updateProductData;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerSigninImpl() {
     }
 

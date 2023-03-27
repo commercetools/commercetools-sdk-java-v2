@@ -24,6 +24,9 @@ public class GraphQLResponseImpl implements GraphQLResponse, ModelBase {
 
     private java.util.List<com.commercetools.api.models.graph_ql.GraphQLError> errors;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     GraphQLResponseImpl(@JsonProperty("data") final java.lang.Object data,
             @JsonProperty("errors") final java.util.List<com.commercetools.api.models.graph_ql.GraphQLError> errors) {
@@ -31,6 +34,9 @@ public class GraphQLResponseImpl implements GraphQLResponse, ModelBase {
         this.errors = errors;
     }
 
+    /**
+     * create empty instance
+     */
     public GraphQLResponseImpl() {
     }
 

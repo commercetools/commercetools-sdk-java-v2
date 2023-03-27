@@ -36,6 +36,11 @@ public class ProjectChangeBusinessUnitStatusOnCreationActionBuilder
         return this;
     }
 
+    /**
+     *  <p>Status for Business Units created using the My Business Unit endpoint.</p>
+     * @return status
+     */
+
     public com.commercetools.api.models.project.BusinessUnitConfigurationStatus getStatus() {
         return this.status;
     }
@@ -57,10 +62,19 @@ public class ProjectChangeBusinessUnitStatusOnCreationActionBuilder
         return new ProjectChangeBusinessUnitStatusOnCreationActionImpl(status);
     }
 
+    /**
+     * factory method for an instance of ProjectChangeBusinessUnitStatusOnCreationActionBuilder
+     * @return builder
+     */
     public static ProjectChangeBusinessUnitStatusOnCreationActionBuilder of() {
         return new ProjectChangeBusinessUnitStatusOnCreationActionBuilder();
     }
 
+    /**
+     * create builder for ProjectChangeBusinessUnitStatusOnCreationAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProjectChangeBusinessUnitStatusOnCreationActionBuilder of(
             final ProjectChangeBusinessUnitStatusOnCreationAction template) {
         ProjectChangeBusinessUnitStatusOnCreationActionBuilder builder = new ProjectChangeBusinessUnitStatusOnCreationActionBuilder();

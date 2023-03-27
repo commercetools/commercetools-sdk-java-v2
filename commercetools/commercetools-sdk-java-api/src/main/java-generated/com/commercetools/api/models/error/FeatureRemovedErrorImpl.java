@@ -26,6 +26,9 @@ public class FeatureRemovedErrorImpl implements FeatureRemovedError, ModelBase {
 
     private Map<String, java.lang.Object> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     FeatureRemovedErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values) {
@@ -34,6 +37,9 @@ public class FeatureRemovedErrorImpl implements FeatureRemovedError, ModelBase {
         this.code = FEATURE_REMOVED;
     }
 
+    /**
+     * create empty instance
+     */
     public FeatureRemovedErrorImpl() {
         this.code = FEATURE_REMOVED;
     }

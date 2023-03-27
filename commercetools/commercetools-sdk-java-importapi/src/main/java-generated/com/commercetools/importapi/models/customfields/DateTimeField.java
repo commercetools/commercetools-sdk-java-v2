@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = DateTimeFieldImpl.class)
 public interface DateTimeField extends CustomField {
 
+    /**
+     * discriminator value for DateTimeField
+     */
     String DATE_TIME = "DateTime";
 
     /**
@@ -40,30 +43,63 @@ public interface DateTimeField extends CustomField {
     @JsonProperty("value")
     public ZonedDateTime getValue();
 
+    /**
+     * set value
+     * @param value value to be set
+     */
+
     public void setValue(final ZonedDateTime value);
 
+    /**
+     * factory method
+     * @return instance of DateTimeField
+     */
     public static DateTimeField of() {
         return new DateTimeFieldImpl();
     }
 
+    /**
+     * factory method to copy an instance of DateTimeField
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static DateTimeField of(final DateTimeField template) {
         DateTimeFieldImpl instance = new DateTimeFieldImpl();
         instance.setValue(template.getValue());
         return instance;
     }
 
+    /**
+     * builder factory method for DateTimeField
+     * @return builder
+     */
     public static DateTimeFieldBuilder builder() {
         return DateTimeFieldBuilder.of();
     }
 
+    /**
+     * create builder for DateTimeField instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DateTimeFieldBuilder builder(final DateTimeField template) {
         return DateTimeFieldBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withDateTimeField(Function<DateTimeField, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<DateTimeField> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<DateTimeField>() {
             @Override

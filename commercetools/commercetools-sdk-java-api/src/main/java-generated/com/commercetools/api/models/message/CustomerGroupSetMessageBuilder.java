@@ -245,48 +245,103 @@ public class CustomerGroupSetMessageBuilder implements Builder<CustomerGroupSetM
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
+     * @return version
+     */
 
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *  <p>Date and time (UTC) the Message was generated.</p>
+     * @return createdAt
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+     *  <p>Value of <code>createdAt</code>.</p>
+     * @return lastModifiedAt
+     */
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
+
+    /**
+     *  <p>Value of <code>createdBy</code>.</p>
+     * @return lastModifiedBy
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
+     */
+
     @Nullable
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
 
+    /**
+     *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
+     * @return sequenceNumber
+     */
+
     public Long getSequenceNumber() {
         return this.sequenceNumber;
     }
+
+    /**
+     *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @return resource
+     */
 
     public com.commercetools.api.models.common.Reference getResource() {
         return this.resource;
     }
 
+    /**
+     *  <p>Version of the resource on which the change or action was performed.</p>
+     * @return resourceVersion
+     */
+
     public Long getResourceVersion() {
         return this.resourceVersion;
     }
+
+    /**
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @return resourceUserProvidedIdentifiers
+     */
 
     @Nullable
     public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers() {
         return this.resourceUserProvidedIdentifiers;
     }
+
+    /**
+     *  <p>Customer Group that was set during the Set Customer Group update action.</p>
+     * @return customerGroup
+     */
 
     @Nullable
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
@@ -318,10 +373,19 @@ public class CustomerGroupSetMessageBuilder implements Builder<CustomerGroupSetM
             sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, customerGroup);
     }
 
+    /**
+     * factory method for an instance of CustomerGroupSetMessageBuilder
+     * @return builder
+     */
     public static CustomerGroupSetMessageBuilder of() {
         return new CustomerGroupSetMessageBuilder();
     }
 
+    /**
+     * create builder for CustomerGroupSetMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerGroupSetMessageBuilder of(final CustomerGroupSetMessage template) {
         CustomerGroupSetMessageBuilder builder = new CustomerGroupSetMessageBuilder();
         builder.id = template.getId();

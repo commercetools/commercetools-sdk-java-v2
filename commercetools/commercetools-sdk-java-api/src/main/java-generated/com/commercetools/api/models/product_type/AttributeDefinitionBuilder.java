@@ -175,34 +175,75 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
         return this;
     }
 
+    /**
+     *  <p>Describes the Type of the Attribute.</p>
+     * @return type
+     */
+
     public com.commercetools.api.models.product_type.AttributeType getType() {
         return this.type;
     }
+
+    /**
+     *  <p>User-defined name of the Attribute that is unique within the Project.</p>
+     * @return name
+     */
 
     public String getName() {
         return this.name;
     }
 
+    /**
+     *  <p>Human-readable label for the Attribute.</p>
+     * @return label
+     */
+
     public com.commercetools.api.models.common.LocalizedString getLabel() {
         return this.label;
     }
+
+    /**
+     *  <p>If <code>true</code>, the Attribute must have a value on a ProductVariant.</p>
+     * @return isRequired
+     */
 
     public Boolean getIsRequired() {
         return this.isRequired;
     }
 
+    /**
+     *  <p>Specifies how Attributes are validated across all variants of a Product.</p>
+     * @return attributeConstraint
+     */
+
     public com.commercetools.api.models.product_type.AttributeConstraintEnum getAttributeConstraint() {
         return this.attributeConstraint;
     }
+
+    /**
+     *  <p>Provides additional Attribute information to aid content managers configure Product details.</p>
+     * @return inputTip
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getInputTip() {
         return this.inputTip;
     }
 
+    /**
+     *  <p>Provides a visual representation directive for values of this Attribute (only relevant for AttributeTextType and AttributeLocalizableTextType).</p>
+     * @return inputHint
+     */
+
     public com.commercetools.api.models.product_type.TextInputHint getInputHint() {
         return this.inputHint;
     }
+
+    /**
+     *  <p>If <code>true</code>, the Attribute's values are available for the Product Projections Search API for use in full-text search queries, filters, and facets.</p>
+     *  <p>Which exact features are available with this flag depends on the specific AttributeType. The maximum size of a searchable field is <strong>restricted</strong> by the Field content size limit. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an InvalidField error is returned.</p>
+     * @return isSearchable
+     */
 
     public Boolean getIsSearchable() {
         return this.isSearchable;
@@ -233,10 +274,19 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
             isSearchable);
     }
 
+    /**
+     * factory method for an instance of AttributeDefinitionBuilder
+     * @return builder
+     */
     public static AttributeDefinitionBuilder of() {
         return new AttributeDefinitionBuilder();
     }
 
+    /**
+     * create builder for AttributeDefinition instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeDefinitionBuilder of(final AttributeDefinition template) {
         AttributeDefinitionBuilder builder = new AttributeDefinitionBuilder();
         builder.type = template.getType();

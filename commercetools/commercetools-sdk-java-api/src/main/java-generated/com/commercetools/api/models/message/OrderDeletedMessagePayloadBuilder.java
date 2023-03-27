@@ -47,6 +47,11 @@ public class OrderDeletedMessagePayloadBuilder implements Builder<OrderDeletedMe
         return this;
     }
 
+    /**
+     *  <p>Order that has been deleted.</p>
+     * @return order
+     */
+
     public com.commercetools.api.models.order.Order getOrder() {
         return this.order;
     }
@@ -68,10 +73,19 @@ public class OrderDeletedMessagePayloadBuilder implements Builder<OrderDeletedMe
         return new OrderDeletedMessagePayloadImpl(order);
     }
 
+    /**
+     * factory method for an instance of OrderDeletedMessagePayloadBuilder
+     * @return builder
+     */
     public static OrderDeletedMessagePayloadBuilder of() {
         return new OrderDeletedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for OrderDeletedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderDeletedMessagePayloadBuilder of(final OrderDeletedMessagePayload template) {
         OrderDeletedMessagePayloadBuilder builder = new OrderDeletedMessagePayloadBuilder();
         builder.order = template.getOrder();

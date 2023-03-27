@@ -27,6 +27,9 @@ public class ProductRemovedFromCategoryMessagePayloadImpl
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductRemovedFromCategoryMessagePayloadImpl(
             @JsonProperty("category") final com.commercetools.api.models.category.CategoryReference category,
@@ -36,6 +39,9 @@ public class ProductRemovedFromCategoryMessagePayloadImpl
         this.type = PRODUCT_REMOVED_FROM_CATEGORY;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductRemovedFromCategoryMessagePayloadImpl() {
         this.type = PRODUCT_REMOVED_FROM_CATEGORY;
     }

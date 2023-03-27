@@ -130,21 +130,46 @@ public class ProductPriceChangedMessagePayloadBuilder implements Builder<Product
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the ProductVariant for which the Price was changed.</p>
+     * @return variantId
+     */
+
     public Long getVariantId() {
         return this.variantId;
     }
+
+    /**
+     *  <p>The current Embedded Price before the Change Embedded Price update action.</p>
+     * @return oldPrice
+     */
 
     public com.commercetools.api.models.common.Price getOldPrice() {
         return this.oldPrice;
     }
 
+    /**
+     *  <p>The Embedded Price after the Change Embedded Price update action.</p>
+     * @return newPrice
+     */
+
     public com.commercetools.api.models.common.Price getNewPrice() {
         return this.newPrice;
     }
 
+    /**
+     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     * @return staged
+     */
+
     public Boolean getStaged() {
         return this.staged;
     }
+
+    /**
+     *  <p>The staged Embedded Price before the Change Embedded Price update action.</p>
+     * @return oldStagedPrice
+     */
 
     @Nullable
     public com.commercetools.api.models.common.Price getOldStagedPrice() {
@@ -171,10 +196,19 @@ public class ProductPriceChangedMessagePayloadBuilder implements Builder<Product
         return new ProductPriceChangedMessagePayloadImpl(variantId, oldPrice, newPrice, staged, oldStagedPrice);
     }
 
+    /**
+     * factory method for an instance of ProductPriceChangedMessagePayloadBuilder
+     * @return builder
+     */
     public static ProductPriceChangedMessagePayloadBuilder of() {
         return new ProductPriceChangedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for ProductPriceChangedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductPriceChangedMessagePayloadBuilder of(final ProductPriceChangedMessagePayload template) {
         ProductPriceChangedMessagePayloadBuilder builder = new ProductPriceChangedMessagePayloadBuilder();
         builder.variantId = template.getVariantId();

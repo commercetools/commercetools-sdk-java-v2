@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CategorySetCustomTypeActionImpl.class)
 public interface CategorySetCustomTypeAction extends CategoryUpdateAction {
 
+    /**
+     * discriminator value for CategorySetCustomTypeAction
+     */
     String SET_CUSTOM_TYPE = "setCustomType";
 
     /**
@@ -48,14 +51,33 @@ public interface CategorySetCustomTypeAction extends CategoryUpdateAction {
     @JsonProperty("fields")
     public FieldContainer getFields();
 
+    /**
+     *  <p>Defines the Type that extends the Category with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Category.</p>
+     * @param type value to be set
+     */
+
     public void setType(final TypeResourceIdentifier type);
+
+    /**
+     *  <p>Sets the Custom Fields fields for the Category.</p>
+     * @param fields value to be set
+     */
 
     public void setFields(final FieldContainer fields);
 
+    /**
+     * factory method
+     * @return instance of CategorySetCustomTypeAction
+     */
     public static CategorySetCustomTypeAction of() {
         return new CategorySetCustomTypeActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CategorySetCustomTypeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CategorySetCustomTypeAction of(final CategorySetCustomTypeAction template) {
         CategorySetCustomTypeActionImpl instance = new CategorySetCustomTypeActionImpl();
         instance.setType(template.getType());
@@ -63,18 +85,37 @@ public interface CategorySetCustomTypeAction extends CategoryUpdateAction {
         return instance;
     }
 
+    /**
+     * builder factory method for CategorySetCustomTypeAction
+     * @return builder
+     */
     public static CategorySetCustomTypeActionBuilder builder() {
         return CategorySetCustomTypeActionBuilder.of();
     }
 
+    /**
+     * create builder for CategorySetCustomTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategorySetCustomTypeActionBuilder builder(final CategorySetCustomTypeAction template) {
         return CategorySetCustomTypeActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCategorySetCustomTypeAction(Function<CategorySetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CategorySetCustomTypeAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CategorySetCustomTypeAction>() {
             @Override

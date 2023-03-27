@@ -90,13 +90,28 @@ public class ParcelAddedToDeliveryMessagePayloadBuilder implements Builder<Parce
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Delivery.</p>
+     * @return delivery
+     */
+
     public com.commercetools.api.models.order.Delivery getDelivery() {
         return this.delivery;
     }
 
+    /**
+     *  <p>Parcel that was added to the Delivery.</p>
+     * @return parcel
+     */
+
     public com.commercetools.api.models.order.Parcel getParcel() {
         return this.parcel;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     * @return shippingKey
+     */
 
     @Nullable
     public String getShippingKey() {
@@ -121,10 +136,19 @@ public class ParcelAddedToDeliveryMessagePayloadBuilder implements Builder<Parce
         return new ParcelAddedToDeliveryMessagePayloadImpl(delivery, parcel, shippingKey);
     }
 
+    /**
+     * factory method for an instance of ParcelAddedToDeliveryMessagePayloadBuilder
+     * @return builder
+     */
     public static ParcelAddedToDeliveryMessagePayloadBuilder of() {
         return new ParcelAddedToDeliveryMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for ParcelAddedToDeliveryMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ParcelAddedToDeliveryMessagePayloadBuilder of(final ParcelAddedToDeliveryMessagePayload template) {
         ParcelAddedToDeliveryMessagePayloadBuilder builder = new ParcelAddedToDeliveryMessagePayloadBuilder();
         builder.delivery = template.getDelivery();

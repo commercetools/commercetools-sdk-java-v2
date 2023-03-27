@@ -30,6 +30,9 @@ public class ShoppingListPagedQueryResponseImpl implements ShoppingListPagedQuer
 
     private java.util.List<com.commercetools.api.models.shopping_list.ShoppingList> results;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShoppingListPagedQueryResponseImpl(@JsonProperty("limit") final Long limit, @JsonProperty("count") final Long count,
             @JsonProperty("total") final Long total, @JsonProperty("offset") final Long offset,
@@ -41,6 +44,9 @@ public class ShoppingListPagedQueryResponseImpl implements ShoppingListPagedQuer
         this.results = results;
     }
 
+    /**
+     * create empty instance
+     */
     public ShoppingListPagedQueryResponseImpl() {
     }
 

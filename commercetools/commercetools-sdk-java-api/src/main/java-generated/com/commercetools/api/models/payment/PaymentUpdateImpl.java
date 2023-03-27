@@ -24,6 +24,9 @@ public class PaymentUpdateImpl implements PaymentUpdate, ModelBase {
 
     private java.util.List<com.commercetools.api.models.payment.PaymentUpdateAction> actions;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PaymentUpdateImpl(@JsonProperty("version") final Long version,
             @JsonProperty("actions") final java.util.List<com.commercetools.api.models.payment.PaymentUpdateAction> actions) {
@@ -31,6 +34,9 @@ public class PaymentUpdateImpl implements PaymentUpdate, ModelBase {
         this.actions = actions;
     }
 
+    /**
+     * create empty instance
+     */
     public PaymentUpdateImpl() {
     }
 

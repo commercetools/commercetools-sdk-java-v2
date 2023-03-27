@@ -46,14 +46,33 @@ public interface ContainerAndKey {
     @JsonProperty("container")
     public String getContainer();
 
+    /**
+     *  <p>User-defined identifier that is unique within the given container.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
+
+    /**
+     *  <p>Namespace to group Custom Objects.</p>
+     * @param container value to be set
+     */
 
     public void setContainer(final String container);
 
+    /**
+     * factory method
+     * @return instance of ContainerAndKey
+     */
     public static ContainerAndKey of() {
         return new ContainerAndKeyImpl();
     }
 
+    /**
+     * factory method to copy an instance of ContainerAndKey
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ContainerAndKey of(final ContainerAndKey template) {
         ContainerAndKeyImpl instance = new ContainerAndKeyImpl();
         instance.setKey(template.getKey());
@@ -61,18 +80,37 @@ public interface ContainerAndKey {
         return instance;
     }
 
+    /**
+     * builder factory method for ContainerAndKey
+     * @return builder
+     */
     public static ContainerAndKeyBuilder builder() {
         return ContainerAndKeyBuilder.of();
     }
 
+    /**
+     * create builder for ContainerAndKey instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ContainerAndKeyBuilder builder(final ContainerAndKey template) {
         return ContainerAndKeyBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withContainerAndKey(Function<ContainerAndKey, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ContainerAndKey> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ContainerAndKey>() {
             @Override

@@ -43,26 +43,52 @@ public interface CartDiscountValueDraft {
     @JsonProperty("type")
     public String getType();
 
+    /**
+     * builder for absolute subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.cart_discount.CartDiscountValueAbsoluteDraftBuilder absoluteBuilder() {
         return com.commercetools.api.models.cart_discount.CartDiscountValueAbsoluteDraftBuilder.of();
     }
 
+    /**
+     * builder for fixed subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.cart_discount.CartDiscountValueFixedDraftBuilder fixedBuilder() {
         return com.commercetools.api.models.cart_discount.CartDiscountValueFixedDraftBuilder.of();
     }
 
+    /**
+     * builder for giftLineItem subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItemDraftBuilder giftLineItemBuilder() {
         return com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItemDraftBuilder.of();
     }
 
+    /**
+     * builder for relative subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.cart_discount.CartDiscountValueRelativeDraftBuilder relativeBuilder() {
         return com.commercetools.api.models.cart_discount.CartDiscountValueRelativeDraftBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartDiscountValueDraft(Function<CartDiscountValueDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountValueDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountValueDraft>() {
             @Override

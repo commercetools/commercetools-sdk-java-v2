@@ -37,6 +37,11 @@ public class ProductPublishActionBuilder implements Builder<ProductPublishAction
         return this;
     }
 
+    /**
+     *  <p><code>All</code> or <code>Prices</code></p>
+     * @return scope
+     */
+
     @Nullable
     public com.commercetools.api.models.cart.ProductPublishScope getScope() {
         return this.scope;
@@ -58,10 +63,19 @@ public class ProductPublishActionBuilder implements Builder<ProductPublishAction
         return new ProductPublishActionImpl(scope);
     }
 
+    /**
+     * factory method for an instance of ProductPublishActionBuilder
+     * @return builder
+     */
     public static ProductPublishActionBuilder of() {
         return new ProductPublishActionBuilder();
     }
 
+    /**
+     * create builder for ProductPublishAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductPublishActionBuilder of(final ProductPublishAction template) {
         ProductPublishActionBuilder builder = new ProductPublishActionBuilder();
         builder.scope = template.getScope();

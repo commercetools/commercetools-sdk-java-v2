@@ -36,6 +36,11 @@ public class ProductSelectionSetKeyActionBuilder implements Builder<ProductSelec
         return this;
     }
 
+    /**
+     *  <p>If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
+     * @return key
+     */
+
     @Nullable
     public String getKey() {
         return this.key;
@@ -57,10 +62,19 @@ public class ProductSelectionSetKeyActionBuilder implements Builder<ProductSelec
         return new ProductSelectionSetKeyActionImpl(key);
     }
 
+    /**
+     * factory method for an instance of ProductSelectionSetKeyActionBuilder
+     * @return builder
+     */
     public static ProductSelectionSetKeyActionBuilder of() {
         return new ProductSelectionSetKeyActionBuilder();
     }
 
+    /**
+     * create builder for ProductSelectionSetKeyAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSelectionSetKeyActionBuilder of(final ProductSelectionSetKeyAction template) {
         ProductSelectionSetKeyActionBuilder builder = new ProductSelectionSetKeyActionBuilder();
         builder.key = template.getKey();

@@ -39,6 +39,9 @@ public class MissingRoleOnChannelErrorImpl implements MissingRoleOnChannelError,
 
     private com.commercetools.api.models.channel.ChannelRoleEnum missingRole;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MissingRoleOnChannelErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values,
@@ -51,6 +54,9 @@ public class MissingRoleOnChannelErrorImpl implements MissingRoleOnChannelError,
         this.code = MISSING_ROLE_ON_CHANNEL;
     }
 
+    /**
+     * create empty instance
+     */
     public MissingRoleOnChannelErrorImpl() {
         this.code = MISSING_ROLE_ON_CHANNEL;
     }

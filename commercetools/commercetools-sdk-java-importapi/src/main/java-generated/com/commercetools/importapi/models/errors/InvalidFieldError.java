@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = InvalidFieldErrorImpl.class)
 public interface InvalidFieldError extends ErrorObject {
 
+    /**
+     * discriminator value for InvalidFieldError
+     */
     String INVALID_FIELD = "InvalidField";
 
     /**
@@ -64,21 +67,55 @@ public interface InvalidFieldError extends ErrorObject {
     @JsonProperty("resourceIndex")
     public Long getResourceIndex();
 
+    /**
+     *  <p>The name of the field.</p>
+     * @param field value to be set
+     */
+
     public void setField(final String field);
 
+    /**
+     *  <p>The invalid value.</p>
+     * @param invalidValue value to be set
+     */
+
     public void setInvalidValue(final Object invalidValue);
+
+    /**
+     *  <p>The set of allowed values for the field, if any.</p>
+     * @param allowedValues values to be set
+     */
 
     @JsonIgnore
     public void setAllowedValues(final Object... allowedValues);
 
+    /**
+     *  <p>The set of allowed values for the field, if any.</p>
+     * @param allowedValues values to be set
+     */
+
     public void setAllowedValues(final List<Object> allowedValues);
+
+    /**
+     * set resourceIndex
+     * @param resourceIndex value to be set
+     */
 
     public void setResourceIndex(final Long resourceIndex);
 
+    /**
+     * factory method
+     * @return instance of InvalidFieldError
+     */
     public static InvalidFieldError of() {
         return new InvalidFieldErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of InvalidFieldError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static InvalidFieldError of(final InvalidFieldError template) {
         InvalidFieldErrorImpl instance = new InvalidFieldErrorImpl();
         instance.setMessage(template.getMessage());
@@ -89,18 +126,37 @@ public interface InvalidFieldError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for InvalidFieldError
+     * @return builder
+     */
     public static InvalidFieldErrorBuilder builder() {
         return InvalidFieldErrorBuilder.of();
     }
 
+    /**
+     * create builder for InvalidFieldError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InvalidFieldErrorBuilder builder(final InvalidFieldError template) {
         return InvalidFieldErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withInvalidFieldError(Function<InvalidFieldError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<InvalidFieldError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<InvalidFieldError>() {
             @Override

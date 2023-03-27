@@ -24,6 +24,9 @@ public class PaymentTransactionAddedMessagePayloadImpl implements PaymentTransac
 
     private com.commercetools.api.models.payment.Transaction transaction;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PaymentTransactionAddedMessagePayloadImpl(
             @JsonProperty("transaction") final com.commercetools.api.models.payment.Transaction transaction) {
@@ -31,6 +34,9 @@ public class PaymentTransactionAddedMessagePayloadImpl implements PaymentTransac
         this.type = PAYMENT_TRANSACTION_ADDED;
     }
 
+    /**
+     * create empty instance
+     */
     public PaymentTransactionAddedMessagePayloadImpl() {
         this.type = PAYMENT_TRANSACTION_ADDED;
     }

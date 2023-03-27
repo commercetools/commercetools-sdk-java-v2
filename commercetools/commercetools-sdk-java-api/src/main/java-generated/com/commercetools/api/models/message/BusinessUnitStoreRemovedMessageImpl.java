@@ -44,6 +44,9 @@ public class BusinessUnitStoreRemovedMessageImpl implements BusinessUnitStoreRem
 
     private com.commercetools.api.models.store.StoreKeyReference store;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitStoreRemovedMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -70,6 +73,9 @@ public class BusinessUnitStoreRemovedMessageImpl implements BusinessUnitStoreRem
         this.type = BUSINESS_UNIT_STORE_REMOVED;
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitStoreRemovedMessageImpl() {
         this.type = BUSINESS_UNIT_STORE_REMOVED;
     }

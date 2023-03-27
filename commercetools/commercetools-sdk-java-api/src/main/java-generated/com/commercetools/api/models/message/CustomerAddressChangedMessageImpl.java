@@ -44,6 +44,9 @@ public class CustomerAddressChangedMessageImpl implements CustomerAddressChanged
 
     private com.commercetools.api.models.common.Address address;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerAddressChangedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -69,6 +72,9 @@ public class CustomerAddressChangedMessageImpl implements CustomerAddressChanged
         this.type = CUSTOMER_ADDRESS_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerAddressChangedMessageImpl() {
         this.type = CUSTOMER_ADDRESS_CHANGED;
     }

@@ -50,6 +50,11 @@ public class StoreAddDistributionChannelActionBuilder implements Builder<StoreAd
         return this;
     }
 
+    /**
+     *  <p>Value to append.</p>
+     * @return distributionChannel
+     */
+
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
         return this.distributionChannel;
     }
@@ -72,10 +77,19 @@ public class StoreAddDistributionChannelActionBuilder implements Builder<StoreAd
         return new StoreAddDistributionChannelActionImpl(distributionChannel);
     }
 
+    /**
+     * factory method for an instance of StoreAddDistributionChannelActionBuilder
+     * @return builder
+     */
     public static StoreAddDistributionChannelActionBuilder of() {
         return new StoreAddDistributionChannelActionBuilder();
     }
 
+    /**
+     * create builder for StoreAddDistributionChannelAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreAddDistributionChannelActionBuilder of(final StoreAddDistributionChannelAction template) {
         StoreAddDistributionChannelActionBuilder builder = new StoreAddDistributionChannelActionBuilder();
         builder.distributionChannel = template.getDistributionChannel();

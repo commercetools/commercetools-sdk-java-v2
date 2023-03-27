@@ -26,6 +26,9 @@ public class GraphQLRequestImpl implements GraphQLRequest, ModelBase {
 
     private com.commercetools.api.models.graph_ql.GraphQLVariablesMap variables;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     GraphQLRequestImpl(@JsonProperty("query") final String query,
             @JsonProperty("operationName") final String operationName,
@@ -35,6 +38,9 @@ public class GraphQLRequestImpl implements GraphQLRequest, ModelBase {
         this.variables = variables;
     }
 
+    /**
+     * create empty instance
+     */
     public GraphQLRequestImpl() {
     }
 

@@ -28,6 +28,9 @@ public class ProductSetDiscountedPriceActionImpl implements ProductSetDiscounted
 
     private com.commercetools.api.models.common.DiscountedPriceDraft discounted;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSetDiscountedPriceActionImpl(@JsonProperty("priceId") final String priceId,
             @JsonProperty("staged") final Boolean staged,
@@ -38,6 +41,9 @@ public class ProductSetDiscountedPriceActionImpl implements ProductSetDiscounted
         this.action = SET_DISCOUNTED_PRICE;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSetDiscountedPriceActionImpl() {
         this.action = SET_DISCOUNTED_PRICE;
     }

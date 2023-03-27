@@ -24,12 +24,18 @@ public class ClassificationShippingRateInputDraftImpl implements ClassificationS
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ClassificationShippingRateInputDraftImpl(@JsonProperty("key") final String key) {
         this.key = key;
         this.type = CLASSIFICATION;
     }
 
+    /**
+     * create empty instance
+     */
     public ClassificationShippingRateInputDraftImpl() {
         this.type = CLASSIFICATION;
     }

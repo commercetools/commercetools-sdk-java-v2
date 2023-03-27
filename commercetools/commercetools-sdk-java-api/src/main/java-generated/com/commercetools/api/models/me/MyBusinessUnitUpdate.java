@@ -49,17 +49,41 @@ public interface MyBusinessUnitUpdate {
     @JsonProperty("actions")
     public List<BusinessUnitUpdateAction> getActions();
 
+    /**
+     *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
+     * @param version value to be set
+     */
+
     public void setVersion(final Long version);
+
+    /**
+     *  <p>Update actions to be performed on the BusinessUnit.</p>
+     * @param actions values to be set
+     */
 
     @JsonIgnore
     public void setActions(final BusinessUnitUpdateAction... actions);
 
+    /**
+     *  <p>Update actions to be performed on the BusinessUnit.</p>
+     * @param actions values to be set
+     */
+
     public void setActions(final List<BusinessUnitUpdateAction> actions);
 
+    /**
+     * factory method
+     * @return instance of MyBusinessUnitUpdate
+     */
     public static MyBusinessUnitUpdate of() {
         return new MyBusinessUnitUpdateImpl();
     }
 
+    /**
+     * factory method to copy an instance of MyBusinessUnitUpdate
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static MyBusinessUnitUpdate of(final MyBusinessUnitUpdate template) {
         MyBusinessUnitUpdateImpl instance = new MyBusinessUnitUpdateImpl();
         instance.setVersion(template.getVersion());
@@ -67,18 +91,37 @@ public interface MyBusinessUnitUpdate {
         return instance;
     }
 
+    /**
+     * builder factory method for MyBusinessUnitUpdate
+     * @return builder
+     */
     public static MyBusinessUnitUpdateBuilder builder() {
         return MyBusinessUnitUpdateBuilder.of();
     }
 
+    /**
+     * create builder for MyBusinessUnitUpdate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyBusinessUnitUpdateBuilder builder(final MyBusinessUnitUpdate template) {
         return MyBusinessUnitUpdateBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMyBusinessUnitUpdate(Function<MyBusinessUnitUpdate, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MyBusinessUnitUpdate> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MyBusinessUnitUpdate>() {
             @Override

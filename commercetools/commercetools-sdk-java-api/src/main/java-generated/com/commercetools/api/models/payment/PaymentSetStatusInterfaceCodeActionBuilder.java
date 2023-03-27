@@ -36,6 +36,11 @@ public class PaymentSetStatusInterfaceCodeActionBuilder implements Builder<Payme
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return interfaceCode
+     */
+
     @Nullable
     public String getInterfaceCode() {
         return this.interfaceCode;
@@ -57,10 +62,19 @@ public class PaymentSetStatusInterfaceCodeActionBuilder implements Builder<Payme
         return new PaymentSetStatusInterfaceCodeActionImpl(interfaceCode);
     }
 
+    /**
+     * factory method for an instance of PaymentSetStatusInterfaceCodeActionBuilder
+     * @return builder
+     */
     public static PaymentSetStatusInterfaceCodeActionBuilder of() {
         return new PaymentSetStatusInterfaceCodeActionBuilder();
     }
 
+    /**
+     * create builder for PaymentSetStatusInterfaceCodeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentSetStatusInterfaceCodeActionBuilder of(final PaymentSetStatusInterfaceCodeAction template) {
         PaymentSetStatusInterfaceCodeActionBuilder builder = new PaymentSetStatusInterfaceCodeActionBuilder();
         builder.interfaceCode = template.getInterfaceCode();

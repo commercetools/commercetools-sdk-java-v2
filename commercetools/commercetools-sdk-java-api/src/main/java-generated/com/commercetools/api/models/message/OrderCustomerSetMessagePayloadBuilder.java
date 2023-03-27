@@ -135,20 +135,40 @@ public class OrderCustomerSetMessagePayloadBuilder implements Builder<OrderCusto
         return this;
     }
 
+    /**
+     *  <p>Customer on the Order after the Set Customer Id update action.</p>
+     * @return customer
+     */
+
     @Nullable
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
         return this.customer;
     }
+
+    /**
+     *  <p>CustomerGroup on the Order after the Set Customer Id update action.</p>
+     * @return customerGroup
+     */
 
     @Nullable
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
         return this.customerGroup;
     }
 
+    /**
+     *  <p>Customer on the Order before the Set Customer Id update action.</p>
+     * @return oldCustomer
+     */
+
     @Nullable
     public com.commercetools.api.models.customer.CustomerReference getOldCustomer() {
         return this.oldCustomer;
     }
+
+    /**
+     *  <p>CustomerGroup on the Order before the Set Customer Id update action.</p>
+     * @return oldCustomerGroup
+     */
 
     @Nullable
     public com.commercetools.api.models.customer_group.CustomerGroupReference getOldCustomerGroup() {
@@ -171,10 +191,19 @@ public class OrderCustomerSetMessagePayloadBuilder implements Builder<OrderCusto
         return new OrderCustomerSetMessagePayloadImpl(customer, customerGroup, oldCustomer, oldCustomerGroup);
     }
 
+    /**
+     * factory method for an instance of OrderCustomerSetMessagePayloadBuilder
+     * @return builder
+     */
     public static OrderCustomerSetMessagePayloadBuilder of() {
         return new OrderCustomerSetMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for OrderCustomerSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderCustomerSetMessagePayloadBuilder of(final OrderCustomerSetMessagePayload template) {
         OrderCustomerSetMessagePayloadBuilder builder = new OrderCustomerSetMessagePayloadBuilder();
         builder.customer = template.getCustomer();

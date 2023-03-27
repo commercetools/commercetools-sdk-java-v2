@@ -26,6 +26,9 @@ public class ProductSetMetaKeywordsActionImpl implements ProductSetMetaKeywordsA
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSetMetaKeywordsActionImpl(
             @JsonProperty("metaKeywords") final com.commercetools.api.models.common.LocalizedString metaKeywords,
@@ -35,6 +38,9 @@ public class ProductSetMetaKeywordsActionImpl implements ProductSetMetaKeywordsA
         this.action = SET_META_KEYWORDS;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSetMetaKeywordsActionImpl() {
         this.action = SET_META_KEYWORDS;
     }

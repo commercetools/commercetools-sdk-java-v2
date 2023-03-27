@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetCustomerChangeImpl.class)
 public interface SetCustomerChange extends Change {
 
+    /**
+     * discriminator value for SetCustomerChange
+     */
     String SET_CUSTOMER_CHANGE = "SetCustomerChange";
 
     /**
@@ -69,16 +72,40 @@ public interface SetCustomerChange extends Change {
     @JsonProperty("nextValue")
     public Reference getNextValue();
 
+    /**
+     *  <p>Shape of the action for <code>setCustomer</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
 
     public void setPreviousValue(final Reference previousValue);
 
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
+
     public void setNextValue(final Reference nextValue);
 
+    /**
+     * factory method
+     * @return instance of SetCustomerChange
+     */
     public static SetCustomerChange of() {
         return new SetCustomerChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetCustomerChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetCustomerChange of(final SetCustomerChange template) {
         SetCustomerChangeImpl instance = new SetCustomerChangeImpl();
         instance.setChange(template.getChange());
@@ -87,18 +114,37 @@ public interface SetCustomerChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetCustomerChange
+     * @return builder
+     */
     public static SetCustomerChangeBuilder builder() {
         return SetCustomerChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetCustomerChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetCustomerChangeBuilder builder(final SetCustomerChange template) {
         return SetCustomerChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetCustomerChange(Function<SetCustomerChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetCustomerChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetCustomerChange>() {
             @Override

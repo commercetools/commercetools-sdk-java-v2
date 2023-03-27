@@ -30,7 +30,7 @@ public class ParcelMeasurementDraftBuilder implements Builder<ParcelMeasurementD
     private com.commercetools.importapi.models.orders.ParcelMeasurements measurements;
 
     /**
-     *
+     * set the value to the parcelId
      * @param parcelId value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class ParcelMeasurementDraftBuilder implements Builder<ParcelMeasurementD
     }
 
     /**
-     *
+     * set the value to the measurements using the builder function
      * @param builder function to build the measurements value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class ParcelMeasurementDraftBuilder implements Builder<ParcelMeasurementD
     }
 
     /**
-     *
+     * set the value to the measurements
      * @param measurements value to be set
      * @return Builder
      */
@@ -65,9 +65,19 @@ public class ParcelMeasurementDraftBuilder implements Builder<ParcelMeasurementD
         return this;
     }
 
+    /**
+     * value of parcelId}
+     * @return parcelId
+     */
+
     public String getParcelId() {
         return this.parcelId;
     }
+
+    /**
+     * value of measurements}
+     * @return measurements
+     */
 
     @Nullable
     public com.commercetools.importapi.models.orders.ParcelMeasurements getMeasurements() {
@@ -91,10 +101,19 @@ public class ParcelMeasurementDraftBuilder implements Builder<ParcelMeasurementD
         return new ParcelMeasurementDraftImpl(parcelId, measurements);
     }
 
+    /**
+     * factory method for an instance of ParcelMeasurementDraftBuilder
+     * @return builder
+     */
     public static ParcelMeasurementDraftBuilder of() {
         return new ParcelMeasurementDraftBuilder();
     }
 
+    /**
+     * create builder for ParcelMeasurementDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ParcelMeasurementDraftBuilder of(final ParcelMeasurementDraft template) {
         ParcelMeasurementDraftBuilder builder = new ParcelMeasurementDraftBuilder();
         builder.parcelId = template.getParcelId();

@@ -50,6 +50,11 @@ public class AttributesBuilder implements Builder<Attributes> {
         return this;
     }
 
+    /**
+     *  <p>The name of the attribute is given by the key and shouldn't be set on the attribute itself. And since this property will be represented as a map, we can set individual attributes to null to delete them (which follows JSON Merge Patch semantics).</p>
+     * @return pattern properties
+     */
+
     public Map<String, com.commercetools.importapi.models.productvariants.Attribute> getValues() {
         return this.values;
     }
@@ -70,10 +75,19 @@ public class AttributesBuilder implements Builder<Attributes> {
         return new AttributesImpl(values);
     }
 
+    /**
+     * factory method for an instance of AttributesBuilder
+     * @return builder
+     */
     public static AttributesBuilder of() {
         return new AttributesBuilder();
     }
 
+    /**
+     * create builder for Attributes instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributesBuilder of(final Attributes template) {
         AttributesBuilder builder = new AttributesBuilder();
         builder.values = template.values();

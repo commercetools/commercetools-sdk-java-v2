@@ -28,6 +28,9 @@ public class AddCustomLineItemChangeImpl implements AddCustomLineItemChange, Mod
 
     private com.commercetools.history.models.common.CustomLineItem previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AddCustomLineItemChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.CustomLineItem nextValue,
@@ -38,6 +41,9 @@ public class AddCustomLineItemChangeImpl implements AddCustomLineItemChange, Mod
         this.type = ADD_CUSTOM_LINE_ITEM_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public AddCustomLineItemChangeImpl() {
         this.type = ADD_CUSTOM_LINE_ITEM_CHANGE;
     }

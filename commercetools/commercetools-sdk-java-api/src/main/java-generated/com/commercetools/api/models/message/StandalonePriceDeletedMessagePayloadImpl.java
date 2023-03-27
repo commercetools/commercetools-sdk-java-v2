@@ -21,6 +21,9 @@ public class StandalonePriceDeletedMessagePayloadImpl implements StandalonePrice
 
     private String type;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StandalonePriceDeletedMessagePayloadImpl() {
         this.type = STANDALONE_PRICE_DELETED;

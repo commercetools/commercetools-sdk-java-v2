@@ -30,7 +30,7 @@ public class StagedOrderSetLineItemTotalPriceActionBuilder implements Builder<St
     private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
 
     /**
-     *
+     * set the value to the lineItemId
      * @param lineItemId value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class StagedOrderSetLineItemTotalPriceActionBuilder implements Builder<St
     }
 
     /**
-     *
+     * set the value to the externalTotalPrice using the builder function
      * @param builder function to build the externalTotalPrice value
      * @return Builder
      */
@@ -55,7 +55,7 @@ public class StagedOrderSetLineItemTotalPriceActionBuilder implements Builder<St
     }
 
     /**
-     *
+     * set the value to the externalTotalPrice
      * @param externalTotalPrice value to be set
      * @return Builder
      */
@@ -66,9 +66,19 @@ public class StagedOrderSetLineItemTotalPriceActionBuilder implements Builder<St
         return this;
     }
 
+    /**
+     * value of lineItemId}
+     * @return lineItemId
+     */
+
     public String getLineItemId() {
         return this.lineItemId;
     }
+
+    /**
+     * value of externalTotalPrice}
+     * @return externalTotalPrice
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice() {
@@ -92,10 +102,19 @@ public class StagedOrderSetLineItemTotalPriceActionBuilder implements Builder<St
         return new StagedOrderSetLineItemTotalPriceActionImpl(lineItemId, externalTotalPrice);
     }
 
+    /**
+     * factory method for an instance of StagedOrderSetLineItemTotalPriceActionBuilder
+     * @return builder
+     */
     public static StagedOrderSetLineItemTotalPriceActionBuilder of() {
         return new StagedOrderSetLineItemTotalPriceActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderSetLineItemTotalPriceAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetLineItemTotalPriceActionBuilder of(
             final StagedOrderSetLineItemTotalPriceAction template) {
         StagedOrderSetLineItemTotalPriceActionBuilder builder = new StagedOrderSetLineItemTotalPriceActionBuilder();

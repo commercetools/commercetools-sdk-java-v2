@@ -27,6 +27,9 @@ public class StandalonePriceReferenceImpl implements StandalonePriceReference, M
 
     private com.commercetools.api.models.standalone_price.StandalonePrice obj;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StandalonePriceReferenceImpl(@JsonProperty("id") final String id,
             @JsonProperty("obj") final com.commercetools.api.models.standalone_price.StandalonePrice obj) {
@@ -35,6 +38,9 @@ public class StandalonePriceReferenceImpl implements StandalonePriceReference, M
         this.typeId = ReferenceTypeId.findEnum("standalone-price");
     }
 
+    /**
+     * create empty instance
+     */
     public StandalonePriceReferenceImpl() {
         this.typeId = ReferenceTypeId.findEnum("standalone-price");
     }

@@ -34,6 +34,11 @@ public class StateChangeInitialActionBuilder implements Builder<StateChangeIniti
         return this;
     }
 
+    /**
+     *  <p>Set to <code>true</code> for defining the State as initial State in a state machine and making it the first step in a workflow.</p>
+     * @return initial
+     */
+
     public Boolean getInitial() {
         return this.initial;
     }
@@ -55,10 +60,19 @@ public class StateChangeInitialActionBuilder implements Builder<StateChangeIniti
         return new StateChangeInitialActionImpl(initial);
     }
 
+    /**
+     * factory method for an instance of StateChangeInitialActionBuilder
+     * @return builder
+     */
     public static StateChangeInitialActionBuilder of() {
         return new StateChangeInitialActionBuilder();
     }
 
+    /**
+     * create builder for StateChangeInitialAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StateChangeInitialActionBuilder of(final StateChangeInitialAction template) {
         StateChangeInitialActionBuilder builder = new StateChangeInitialActionBuilder();
         builder.initial = template.getInitial();

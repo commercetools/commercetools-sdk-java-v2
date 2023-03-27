@@ -50,6 +50,11 @@ public class ChannelSetGeoLocationActionBuilder implements Builder<ChannelSetGeo
         return this;
     }
 
+    /**
+     *  <p>Value to set.</p>
+     * @return geoLocation
+     */
+
     @Nullable
     public com.commercetools.api.models.common.GeoJson getGeoLocation() {
         return this.geoLocation;
@@ -71,10 +76,19 @@ public class ChannelSetGeoLocationActionBuilder implements Builder<ChannelSetGeo
         return new ChannelSetGeoLocationActionImpl(geoLocation);
     }
 
+    /**
+     * factory method for an instance of ChannelSetGeoLocationActionBuilder
+     * @return builder
+     */
     public static ChannelSetGeoLocationActionBuilder of() {
         return new ChannelSetGeoLocationActionBuilder();
     }
 
+    /**
+     * create builder for ChannelSetGeoLocationAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChannelSetGeoLocationActionBuilder of(final ChannelSetGeoLocationAction template) {
         ChannelSetGeoLocationActionBuilder builder = new ChannelSetGeoLocationActionBuilder();
         builder.geoLocation = template.getGeoLocation();

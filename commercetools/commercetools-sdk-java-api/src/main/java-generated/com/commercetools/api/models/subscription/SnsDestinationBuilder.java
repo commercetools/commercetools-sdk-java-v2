@@ -79,19 +79,39 @@ public class SnsDestinationBuilder implements Builder<SnsDestination> {
         return this;
     }
 
+    /**
+     *  <p>Only present if <code>authenticationMode</code> is set to <code>Credentials</code>.</p>
+     * @return accessKey
+     */
+
     @Nullable
     public String getAccessKey() {
         return this.accessKey;
     }
+
+    /**
+     *  <p>Only present if <code>authenticationMode</code> is set to <code>Credentials</code>.</p>
+     * @return accessSecret
+     */
 
     @Nullable
     public String getAccessSecret() {
         return this.accessSecret;
     }
 
+    /**
+     *  <p>Amazon Resource Name (ARN) of the topic.</p>
+     * @return topicArn
+     */
+
     public String getTopicArn() {
         return this.topicArn;
     }
+
+    /**
+     *  <p>Defines the method of authentication for the SNS topic.</p>
+     * @return authenticationMode
+     */
 
     @Nullable
     public com.commercetools.api.models.subscription.AwsAuthenticationMode getAuthenticationMode() {
@@ -115,10 +135,19 @@ public class SnsDestinationBuilder implements Builder<SnsDestination> {
         return new SnsDestinationImpl(accessKey, accessSecret, topicArn, authenticationMode);
     }
 
+    /**
+     * factory method for an instance of SnsDestinationBuilder
+     * @return builder
+     */
     public static SnsDestinationBuilder of() {
         return new SnsDestinationBuilder();
     }
 
+    /**
+     * create builder for SnsDestination instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SnsDestinationBuilder of(final SnsDestination template) {
         SnsDestinationBuilder builder = new SnsDestinationBuilder();
         builder.accessKey = template.getAccessKey();

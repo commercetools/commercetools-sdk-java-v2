@@ -60,18 +60,47 @@ public interface ProductVariantAvailability {
     @JsonProperty("availableQuantity")
     public Long getAvailableQuantity();
 
+    /**
+     *  <p>For each InventoryEntry with a supply Channel, an entry is added to <code>channels</code>.</p>
+     * @param channels value to be set
+     */
+
     public void setChannels(final ProductVariantChannelAvailabilityMap channels);
+
+    /**
+     *  <p>Indicates whether a Product Variant is in stock.</p>
+     * @param isOnStock value to be set
+     */
 
     public void setIsOnStock(final Boolean isOnStock);
 
+    /**
+     *  <p>Number of days to restock a Product Variant once it is out of stock.</p>
+     * @param restockableInDays value to be set
+     */
+
     public void setRestockableInDays(final Long restockableInDays);
+
+    /**
+     *  <p>Number of items of the Product Variant that are in stock.</p>
+     * @param availableQuantity value to be set
+     */
 
     public void setAvailableQuantity(final Long availableQuantity);
 
+    /**
+     * factory method
+     * @return instance of ProductVariantAvailability
+     */
     public static ProductVariantAvailability of() {
         return new ProductVariantAvailabilityImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductVariantAvailability
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductVariantAvailability of(final ProductVariantAvailability template) {
         ProductVariantAvailabilityImpl instance = new ProductVariantAvailabilityImpl();
         instance.setChannels(template.getChannels());
@@ -81,18 +110,37 @@ public interface ProductVariantAvailability {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductVariantAvailability
+     * @return builder
+     */
     public static ProductVariantAvailabilityBuilder builder() {
         return ProductVariantAvailabilityBuilder.of();
     }
 
+    /**
+     * create builder for ProductVariantAvailability instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductVariantAvailabilityBuilder builder(final ProductVariantAvailability template) {
         return ProductVariantAvailabilityBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductVariantAvailability(Function<ProductVariantAvailability, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductVariantAvailability> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductVariantAvailability>() {
             @Override

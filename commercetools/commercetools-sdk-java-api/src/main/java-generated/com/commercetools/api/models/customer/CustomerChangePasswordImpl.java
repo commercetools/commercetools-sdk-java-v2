@@ -28,6 +28,9 @@ public class CustomerChangePasswordImpl implements CustomerChangePassword, Model
 
     private String newPassword;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerChangePasswordImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("currentPassword") final String currentPassword,
@@ -38,6 +41,9 @@ public class CustomerChangePasswordImpl implements CustomerChangePassword, Model
         this.newPassword = newPassword;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerChangePasswordImpl() {
     }
 

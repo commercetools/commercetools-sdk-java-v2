@@ -24,12 +24,18 @@ public class ShippingMethodSetKeyActionImpl implements ShippingMethodSetKeyActio
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShippingMethodSetKeyActionImpl(@JsonProperty("key") final String key) {
         this.key = key;
         this.action = SET_KEY;
     }
 
+    /**
+     * create empty instance
+     */
     public ShippingMethodSetKeyActionImpl() {
         this.action = SET_KEY;
     }

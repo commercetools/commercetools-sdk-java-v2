@@ -62,9 +62,19 @@ public class ExternalOAuthFailedErrorBuilder implements Builder<ExternalOAuthFai
         return this;
     }
 
+    /**
+     *  <p>Plain text description detailing the external OAuth error. For example, <code>"External OAuth did not respond in time."</code>.</p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
@@ -87,10 +97,19 @@ public class ExternalOAuthFailedErrorBuilder implements Builder<ExternalOAuthFai
         return new ExternalOAuthFailedErrorImpl(message, values);
     }
 
+    /**
+     * factory method for an instance of ExternalOAuthFailedErrorBuilder
+     * @return builder
+     */
     public static ExternalOAuthFailedErrorBuilder of() {
         return new ExternalOAuthFailedErrorBuilder();
     }
 
+    /**
+     * create builder for ExternalOAuthFailedError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ExternalOAuthFailedErrorBuilder of(final ExternalOAuthFailedError template) {
         ExternalOAuthFailedErrorBuilder builder = new ExternalOAuthFailedErrorBuilder();
         builder.message = template.getMessage();

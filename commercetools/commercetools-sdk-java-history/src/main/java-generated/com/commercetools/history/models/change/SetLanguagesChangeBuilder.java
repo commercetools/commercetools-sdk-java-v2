@@ -41,7 +41,7 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
     }
 
     /**
-     *
+     * set values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
     }
 
     /**
-     *
+     * set value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
     }
 
     /**
-     *
+     * add values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
     }
 
     /**
-     *
+     * set values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -88,7 +88,7 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
     }
 
     /**
-     *
+     * set value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -99,7 +99,7 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
     }
 
     /**
-     *
+     * add values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -112,13 +112,28 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>setLanguages</code> on stores</p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public java.util.List<String> getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public java.util.List<String> getNextValue() {
         return this.nextValue;
@@ -143,10 +158,19 @@ public class SetLanguagesChangeBuilder implements Builder<SetLanguagesChange> {
         return new SetLanguagesChangeImpl(change, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of SetLanguagesChangeBuilder
+     * @return builder
+     */
     public static SetLanguagesChangeBuilder of() {
         return new SetLanguagesChangeBuilder();
     }
 
+    /**
+     * create builder for SetLanguagesChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetLanguagesChangeBuilder of(final SetLanguagesChange template) {
         SetLanguagesChangeBuilder builder = new SetLanguagesChangeBuilder();
         builder.change = template.getChange();

@@ -27,17 +27,38 @@ public interface PlatformInitiatedChange {
 
     PlatformInitiatedChange SET_VARIANT_AVAILABILITY = PlatformInitiatedChangeEnum.SET_VARIANT_AVAILABILITY;
 
+    /**
+     * possible values of PlatformInitiatedChange
+     */
     enum PlatformInitiatedChangeEnum implements PlatformInitiatedChange {
+        /**
+         * excludeAll
+         */
         EXCLUDE_ALL("excludeAll"),
 
+        /**
+         * changeLineItemName
+         */
         CHANGE_LINE_ITEM_NAME("changeLineItemName"),
 
+        /**
+         * changeReviewRatingStatistics
+         */
         CHANGE_REVIEW_RATING_STATISTICS("changeReviewRatingStatistics"),
 
+        /**
+         * setApplicationVersion
+         */
         SET_APPLICATION_VERSION("setApplicationVersion"),
 
+        /**
+         * setIsValid
+         */
         SET_IS_VALID("setIsValid"),
 
+        /**
+         * setVariantAvailability
+         */
         SET_VARIANT_AVAILABILITY("setVariantAvailability");
         private final String jsonName;
 
@@ -54,13 +75,30 @@ public interface PlatformInitiatedChange {
         }
     }
 
+    /**
+     * the JSON value
+     * @return json value
+     */
     @JsonValue
     String getJsonName();
 
+    /**
+     * the enum value
+     * @return name
+     */
     String name();
 
+    /**
+     * convert value to string
+     * @return string representation
+     */
     String toString();
 
+    /**
+     * factory method for a enum value of PlatformInitiatedChange
+     * if no enum has been found an anonymous instance will be created
+     * @return enum instance
+     */
     @JsonCreator
     public static PlatformInitiatedChange findEnum(String value) {
         return findEnumViaJsonName(value).orElse(new PlatformInitiatedChange() {
@@ -80,10 +118,18 @@ public interface PlatformInitiatedChange {
         });
     }
 
+    /**
+     * method to find enum using the JSON value
+     * @return optional of enum instance
+     */
     public static Optional<PlatformInitiatedChange> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
 
+    /**
+     * possible enum values
+     * @return array of possible enum values
+     */
     public static PlatformInitiatedChange[] values() {
         return PlatformInitiatedChangeEnum.values();
     }

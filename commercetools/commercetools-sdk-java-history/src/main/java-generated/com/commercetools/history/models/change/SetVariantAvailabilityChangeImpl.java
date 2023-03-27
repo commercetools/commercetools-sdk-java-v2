@@ -32,6 +32,9 @@ public class SetVariantAvailabilityChangeImpl implements SetVariantAvailabilityC
 
     private com.commercetools.history.models.common.ProductVariantAvailability nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetVariantAvailabilityChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("catalogData") final String catalogData, @JsonProperty("variant") final String variant,
@@ -45,6 +48,9 @@ public class SetVariantAvailabilityChangeImpl implements SetVariantAvailabilityC
         this.type = SET_VARIANT_AVAILABILITY_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetVariantAvailabilityChangeImpl() {
         this.type = SET_VARIANT_AVAILABILITY_CHANGE;
     }

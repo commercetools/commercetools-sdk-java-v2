@@ -25,6 +25,9 @@ public class MyShoppingListSetDeleteDaysAfterLastModificationActionImpl
 
     private Long deleteDaysAfterLastModification;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyShoppingListSetDeleteDaysAfterLastModificationActionImpl(
             @JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification) {
@@ -32,6 +35,9 @@ public class MyShoppingListSetDeleteDaysAfterLastModificationActionImpl
         this.action = SET_DELETE_DAYS_AFTER_LAST_MODIFICATION;
     }
 
+    /**
+     * create empty instance
+     */
     public MyShoppingListSetDeleteDaysAfterLastModificationActionImpl() {
         this.action = SET_DELETE_DAYS_AFTER_LAST_MODIFICATION;
     }

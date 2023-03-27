@@ -93,6 +93,11 @@ public class OrderPatchImportRequestBuilder implements Builder<OrderPatchImportR
         return this;
     }
 
+    /**
+     *  <p>The order patches of this request</p>
+     * @return patches
+     */
+
     public java.util.List<com.commercetools.importapi.models.order_patches.OrderPatchImport> getPatches() {
         return this.patches;
     }
@@ -114,10 +119,19 @@ public class OrderPatchImportRequestBuilder implements Builder<OrderPatchImportR
         return new OrderPatchImportRequestImpl(patches);
     }
 
+    /**
+     * factory method for an instance of OrderPatchImportRequestBuilder
+     * @return builder
+     */
     public static OrderPatchImportRequestBuilder of() {
         return new OrderPatchImportRequestBuilder();
     }
 
+    /**
+     * create builder for OrderPatchImportRequest instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderPatchImportRequestBuilder of(final OrderPatchImportRequest template) {
         OrderPatchImportRequestBuilder builder = new OrderPatchImportRequestBuilder();
         builder.patches = template.getPatches();

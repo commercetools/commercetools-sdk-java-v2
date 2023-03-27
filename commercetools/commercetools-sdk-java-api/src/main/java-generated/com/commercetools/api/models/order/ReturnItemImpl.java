@@ -38,6 +38,9 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
 
     private java.time.ZonedDateTime createdAt;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReturnItemImpl(@JsonProperty("id") final String id, @JsonProperty("quantity") final Long quantity,
             @JsonProperty("type") final String type, @JsonProperty("comment") final String comment,
@@ -57,6 +60,9 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
         this.createdAt = createdAt;
     }
 
+    /**
+     * create empty instance
+     */
     public ReturnItemImpl() {
     }
 

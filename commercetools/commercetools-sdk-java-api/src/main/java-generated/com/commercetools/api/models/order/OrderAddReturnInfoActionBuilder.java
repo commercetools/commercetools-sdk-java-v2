@@ -33,7 +33,7 @@ public class OrderAddReturnInfoActionBuilder implements Builder<OrderAddReturnIn
     private java.time.ZonedDateTime returnDate;
 
     /**
-     *
+     * set the value to the returnTrackingId
      * @param returnTrackingId value to be set
      * @return Builder
      */
@@ -44,7 +44,7 @@ public class OrderAddReturnInfoActionBuilder implements Builder<OrderAddReturnIn
     }
 
     /**
-     *
+     * set values to the items
      * @param items value to be set
      * @return Builder
      */
@@ -55,7 +55,7 @@ public class OrderAddReturnInfoActionBuilder implements Builder<OrderAddReturnIn
     }
 
     /**
-     *
+     * set value to the items
      * @param items value to be set
      * @return Builder
      */
@@ -67,7 +67,7 @@ public class OrderAddReturnInfoActionBuilder implements Builder<OrderAddReturnIn
     }
 
     /**
-     *
+     * add values to the items
      * @param items value to be set
      * @return Builder
      */
@@ -82,7 +82,7 @@ public class OrderAddReturnInfoActionBuilder implements Builder<OrderAddReturnIn
     }
 
     /**
-     *
+     * add the value to the items using the builder function
      * @param builder function to build the items value
      * @return Builder
      */
@@ -97,7 +97,7 @@ public class OrderAddReturnInfoActionBuilder implements Builder<OrderAddReturnIn
     }
 
     /**
-     *
+     * set the value to the items using the builder function
      * @param builder function to build the items value
      * @return Builder
      */
@@ -110,7 +110,7 @@ public class OrderAddReturnInfoActionBuilder implements Builder<OrderAddReturnIn
     }
 
     /**
-     *
+     * set the value to the returnDate
      * @param returnDate value to be set
      * @return Builder
      */
@@ -120,14 +120,29 @@ public class OrderAddReturnInfoActionBuilder implements Builder<OrderAddReturnIn
         return this;
     }
 
+    /**
+     * value of returnTrackingId}
+     * @return returnTrackingId
+     */
+
     @Nullable
     public String getReturnTrackingId() {
         return this.returnTrackingId;
     }
 
+    /**
+     * value of items}
+     * @return items
+     */
+
     public java.util.List<com.commercetools.api.models.order.ReturnItemDraft> getItems() {
         return this.items;
     }
+
+    /**
+     * value of returnDate}
+     * @return returnDate
+     */
 
     @Nullable
     public java.time.ZonedDateTime getReturnDate() {
@@ -151,10 +166,19 @@ public class OrderAddReturnInfoActionBuilder implements Builder<OrderAddReturnIn
         return new OrderAddReturnInfoActionImpl(returnTrackingId, items, returnDate);
     }
 
+    /**
+     * factory method for an instance of OrderAddReturnInfoActionBuilder
+     * @return builder
+     */
     public static OrderAddReturnInfoActionBuilder of() {
         return new OrderAddReturnInfoActionBuilder();
     }
 
+    /**
+     * create builder for OrderAddReturnInfoAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderAddReturnInfoActionBuilder of(final OrderAddReturnInfoAction template) {
         OrderAddReturnInfoActionBuilder builder = new OrderAddReturnInfoActionBuilder();
         builder.returnTrackingId = template.getReturnTrackingId();

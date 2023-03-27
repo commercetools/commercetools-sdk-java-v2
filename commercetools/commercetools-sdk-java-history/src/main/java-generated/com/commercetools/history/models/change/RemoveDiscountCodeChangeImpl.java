@@ -26,6 +26,9 @@ public class RemoveDiscountCodeChangeImpl implements RemoveDiscountCodeChange, M
 
     private com.commercetools.history.models.common.DiscountCodeInfo previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     RemoveDiscountCodeChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.DiscountCodeInfo previousValue) {
@@ -34,6 +37,9 @@ public class RemoveDiscountCodeChangeImpl implements RemoveDiscountCodeChange, M
         this.type = REMOVE_DISCOUNT_CODE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public RemoveDiscountCodeChangeImpl() {
         this.type = REMOVE_DISCOUNT_CODE_CHANGE;
     }

@@ -37,6 +37,11 @@ public class ProductSetPriceModeActionBuilder implements Builder<ProductSetPrice
         return this;
     }
 
+    /**
+     *  <p>Specifies which type of Prices should be used when looking up a price for the Product.</p>
+     * @return priceMode
+     */
+
     @Nullable
     public com.commercetools.api.models.product.ProductPriceModeEnum getPriceMode() {
         return this.priceMode;
@@ -58,10 +63,19 @@ public class ProductSetPriceModeActionBuilder implements Builder<ProductSetPrice
         return new ProductSetPriceModeActionImpl(priceMode);
     }
 
+    /**
+     * factory method for an instance of ProductSetPriceModeActionBuilder
+     * @return builder
+     */
     public static ProductSetPriceModeActionBuilder of() {
         return new ProductSetPriceModeActionBuilder();
     }
 
+    /**
+     * create builder for ProductSetPriceModeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSetPriceModeActionBuilder of(final ProductSetPriceModeAction template) {
         ProductSetPriceModeActionBuilder builder = new ProductSetPriceModeActionBuilder();
         builder.priceMode = template.getPriceMode();

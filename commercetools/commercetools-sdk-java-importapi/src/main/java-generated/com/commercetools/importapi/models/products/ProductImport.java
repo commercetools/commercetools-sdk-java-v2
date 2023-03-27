@@ -179,39 +179,149 @@ public interface ProductImport extends ImportResource {
     @JsonProperty("priceMode")
     public ProductPriceModeEnum getPriceMode();
 
+    /**
+     *  <p>Maps to <code>Product.name</code>.</p>
+     * @param name value to be set
+     */
+
     public void setName(final LocalizedString name);
+
+    /**
+     *  <p>The <code>productType</code> of a Product. Maps to <code>Product.productType</code>. The Reference to the ProductType with which the Product is associated. If referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductType is created.</p>
+     * @param productType value to be set
+     */
 
     public void setProductType(final ProductTypeKeyReference productType);
 
+    /**
+     *  <p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a Project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p>
+     * @param slug value to be set
+     */
+
     public void setSlug(final LocalizedString slug);
 
+    /**
+     *  <p>Maps to <code>Product.description</code>.</p>
+     * @param description value to be set
+     */
+
     public void setDescription(final LocalizedString description);
+
+    /**
+     *  <p>Maps to <code>Product.categories</code>. The References to the Categories with which the Product is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
+     * @param categories values to be set
+     */
 
     @JsonIgnore
     public void setCategories(final CategoryKeyReference... categories);
 
+    /**
+     *  <p>Maps to <code>Product.categories</code>. The References to the Categories with which the Product is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
+     * @param categories values to be set
+     */
+
     public void setCategories(final List<CategoryKeyReference> categories);
+
+    /**
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     * @param metaTitle value to be set
+     */
 
     public void setMetaTitle(final LocalizedString metaTitle);
 
+    /**
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     * @param metaDescription value to be set
+     */
+
     public void setMetaDescription(final LocalizedString metaDescription);
+
+    /**
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     * @param metaKeywords value to be set
+     */
 
     public void setMetaKeywords(final LocalizedString metaKeywords);
 
+    /**
+     *  <p>The Reference to the TaxCategory with which the Product is associated. If referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary TaxCategory is created.</p>
+     * @param taxCategory value to be set
+     */
+
     public void setTaxCategory(final TaxCategoryKeyReference taxCategory);
+
+    /**
+     *  <p>Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of IETF language tag. The value to a language tag key is an array of SearchKeyword for the specific language.</p>
+     *  <pre><code>{
+     *    "en": [
+     *      { "text": "Multi tool" },
+     *      { "text": "Swiss Army Knife", "suggestTokenizer": { "type": "whitespace" } }
+     *    ],
+     *    "de": [
+     *      {
+     *        "text": "Schweizer Messer",
+     *        "suggestTokenizer": {
+     *          "type": "custom",
+     *          "inputs": ["schweizer messer", "offiziersmesser", "sackmesser"]
+     *        }
+     *      }
+     *    ]
+     *  }
+     *  </code></pre>
+     * @param searchKeywords value to be set
+     */
 
     public void setSearchKeywords(final SearchKeywords searchKeywords);
 
+    /**
+     *  <p>The Reference to the State with which the Product is associated. If referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary State is created.</p>
+     * @param state value to be set
+     */
+
     public void setState(final StateKeyReference state);
+
+    /**
+     *  <p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data. If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p>
+     * @param publish value to be set
+     */
 
     public void setPublish(final Boolean publish);
 
+    /**
+     *  <p>Determines the type of Prices the API uses. See ProductPriceMode for more details. If not provided, the existing <code>Product.priceMode</code> is not changed.</p>
+     * @param priceMode value to be set
+     */
+
     public void setPriceMode(final ProductPriceModeEnum priceMode);
 
+    /**
+     * factory method
+     * @return instance of ProductImport
+     */
     public static ProductImport of() {
         return new ProductImportImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductImport
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductImport of(final ProductImport template) {
         ProductImportImpl instance = new ProductImportImpl();
         instance.setKey(template.getKey());
@@ -231,18 +341,37 @@ public interface ProductImport extends ImportResource {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductImport
+     * @return builder
+     */
     public static ProductImportBuilder builder() {
         return ProductImportBuilder.of();
     }
 
+    /**
+     * create builder for ProductImport instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductImportBuilder builder(final ProductImport template) {
         return ProductImportBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductImport(Function<ProductImport, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductImport> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductImport>() {
             @Override

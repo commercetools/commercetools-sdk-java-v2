@@ -27,6 +27,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MyCartRecalculateActionImpl.class)
 public interface MyCartRecalculateAction extends MyCartUpdateAction {
 
+    /**
+     * discriminator value for MyCartRecalculateAction
+     */
     String RECALCULATE = "recalculate";
 
     /**
@@ -40,30 +43,66 @@ public interface MyCartRecalculateAction extends MyCartUpdateAction {
     @JsonProperty("updateProductData")
     public Boolean getUpdateProductData();
 
+    /**
+     *  <ul>
+     *   <li>Leave empty or set to <code>false</code> to only update the Prices and TaxRates of the Line Items.</li>
+     *   <li>Set to <code>true</code> to update the Line Items' product data (like <code>name</code>, <code>variant</code> and <code>productType</code>) also.</li>
+     *  </ul>
+     * @param updateProductData value to be set
+     */
+
     public void setUpdateProductData(final Boolean updateProductData);
 
+    /**
+     * factory method
+     * @return instance of MyCartRecalculateAction
+     */
     public static MyCartRecalculateAction of() {
         return new MyCartRecalculateActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of MyCartRecalculateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static MyCartRecalculateAction of(final MyCartRecalculateAction template) {
         MyCartRecalculateActionImpl instance = new MyCartRecalculateActionImpl();
         instance.setUpdateProductData(template.getUpdateProductData());
         return instance;
     }
 
+    /**
+     * builder factory method for MyCartRecalculateAction
+     * @return builder
+     */
     public static MyCartRecalculateActionBuilder builder() {
         return MyCartRecalculateActionBuilder.of();
     }
 
+    /**
+     * create builder for MyCartRecalculateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCartRecalculateActionBuilder builder(final MyCartRecalculateAction template) {
         return MyCartRecalculateActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMyCartRecalculateAction(Function<MyCartRecalculateAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MyCartRecalculateAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MyCartRecalculateAction>() {
             @Override

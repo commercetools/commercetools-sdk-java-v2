@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductSelectionAddProductActionImpl.class)
 public interface ProductSelectionAddProductAction extends ProductSelectionUpdateAction {
 
+    /**
+     * discriminator value for ProductSelectionAddProductAction
+     */
     String ADD_PRODUCT = "addProduct";
 
     /**
@@ -51,14 +54,33 @@ public interface ProductSelectionAddProductAction extends ProductSelectionUpdate
     @JsonProperty("variantSelection")
     public ProductVariantSelection getVariantSelection();
 
+    /**
+     *  <p>ResourceIdentifier of the Product</p>
+     * @param product value to be set
+     */
+
     public void setProduct(final ProductResourceIdentifier product);
+
+    /**
+     *  <p>Defines which Variants of the Product will be included from the Product Selection. If not supplied all Variants are deemed to be included.</p>
+     * @param variantSelection value to be set
+     */
 
     public void setVariantSelection(final ProductVariantSelection variantSelection);
 
+    /**
+     * factory method
+     * @return instance of ProductSelectionAddProductAction
+     */
     public static ProductSelectionAddProductAction of() {
         return new ProductSelectionAddProductActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductSelectionAddProductAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductSelectionAddProductAction of(final ProductSelectionAddProductAction template) {
         ProductSelectionAddProductActionImpl instance = new ProductSelectionAddProductActionImpl();
         instance.setProduct(template.getProduct());
@@ -66,18 +88,37 @@ public interface ProductSelectionAddProductAction extends ProductSelectionUpdate
         return instance;
     }
 
+    /**
+     * builder factory method for ProductSelectionAddProductAction
+     * @return builder
+     */
     public static ProductSelectionAddProductActionBuilder builder() {
         return ProductSelectionAddProductActionBuilder.of();
     }
 
+    /**
+     * create builder for ProductSelectionAddProductAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSelectionAddProductActionBuilder builder(final ProductSelectionAddProductAction template) {
         return ProductSelectionAddProductActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductSelectionAddProductAction(Function<ProductSelectionAddProductAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionAddProductAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionAddProductAction>() {
             @Override

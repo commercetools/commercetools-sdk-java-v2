@@ -24,12 +24,18 @@ public class ZoneSetDescriptionActionImpl implements ZoneSetDescriptionAction, M
 
     private String description;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ZoneSetDescriptionActionImpl(@JsonProperty("description") final String description) {
         this.description = description;
         this.action = SET_DESCRIPTION;
     }
 
+    /**
+     * create empty instance
+     */
     public ZoneSetDescriptionActionImpl() {
         this.action = SET_DESCRIPTION;
     }

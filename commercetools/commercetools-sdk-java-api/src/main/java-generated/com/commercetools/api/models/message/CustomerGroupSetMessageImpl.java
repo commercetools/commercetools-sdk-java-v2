@@ -44,6 +44,9 @@ public class CustomerGroupSetMessageImpl implements CustomerGroupSetMessage, Mod
 
     private com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerGroupSetMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -69,6 +72,9 @@ public class CustomerGroupSetMessageImpl implements CustomerGroupSetMessage, Mod
         this.type = CUSTOMER_GROUP_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerGroupSetMessageImpl() {
         this.type = CUSTOMER_GROUP_SET;
     }

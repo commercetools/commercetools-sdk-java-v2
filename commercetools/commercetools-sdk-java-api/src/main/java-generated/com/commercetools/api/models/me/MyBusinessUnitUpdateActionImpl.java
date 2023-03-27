@@ -22,11 +22,17 @@ public class MyBusinessUnitUpdateActionImpl implements MyBusinessUnitUpdateActio
 
     private String action;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyBusinessUnitUpdateActionImpl(@JsonProperty("action") final String action) {
         this.action = action;
     }
 
+    /**
+     * create empty instance
+     */
     public MyBusinessUnitUpdateActionImpl() {
     }
 

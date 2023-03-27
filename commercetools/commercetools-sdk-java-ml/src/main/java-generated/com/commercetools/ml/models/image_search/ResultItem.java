@@ -49,17 +49,41 @@ public interface ResultItem {
     @JsonProperty("productVariants")
     public List<ProductVariant> getProductVariants();
 
+    /**
+     *  <p>The URL of the image.</p>
+     * @param imageUrl value to be set
+     */
+
     public void setImageUrl(final String imageUrl);
+
+    /**
+     *  <p>An array of product variants containing the image URL.</p>
+     * @param productVariants values to be set
+     */
 
     @JsonIgnore
     public void setProductVariants(final ProductVariant... productVariants);
 
+    /**
+     *  <p>An array of product variants containing the image URL.</p>
+     * @param productVariants values to be set
+     */
+
     public void setProductVariants(final List<ProductVariant> productVariants);
 
+    /**
+     * factory method
+     * @return instance of ResultItem
+     */
     public static ResultItem of() {
         return new ResultItemImpl();
     }
 
+    /**
+     * factory method to copy an instance of ResultItem
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ResultItem of(final ResultItem template) {
         ResultItemImpl instance = new ResultItemImpl();
         instance.setImageUrl(template.getImageUrl());
@@ -67,18 +91,37 @@ public interface ResultItem {
         return instance;
     }
 
+    /**
+     * builder factory method for ResultItem
+     * @return builder
+     */
     public static ResultItemBuilder builder() {
         return ResultItemBuilder.of();
     }
 
+    /**
+     * create builder for ResultItem instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ResultItemBuilder builder(final ResultItem template) {
         return ResultItemBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withResultItem(Function<ResultItem, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ResultItem> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ResultItem>() {
             @Override

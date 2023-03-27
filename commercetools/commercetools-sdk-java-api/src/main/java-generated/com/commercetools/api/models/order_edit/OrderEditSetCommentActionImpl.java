@@ -24,12 +24,18 @@ public class OrderEditSetCommentActionImpl implements OrderEditSetCommentAction,
 
     private String comment;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderEditSetCommentActionImpl(@JsonProperty("comment") final String comment) {
         this.comment = comment;
         this.action = SET_COMMENT;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderEditSetCommentActionImpl() {
         this.action = SET_COMMENT;
     }

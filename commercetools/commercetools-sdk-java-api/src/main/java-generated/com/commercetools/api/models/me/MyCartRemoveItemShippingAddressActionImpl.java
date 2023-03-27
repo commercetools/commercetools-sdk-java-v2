@@ -24,12 +24,18 @@ public class MyCartRemoveItemShippingAddressActionImpl implements MyCartRemoveIt
 
     private String addressKey;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyCartRemoveItemShippingAddressActionImpl(@JsonProperty("addressKey") final String addressKey) {
         this.addressKey = addressKey;
         this.action = REMOVE_ITEM_SHIPPING_ADDRESS;
     }
 
+    /**
+     * create empty instance
+     */
     public MyCartRemoveItemShippingAddressActionImpl() {
         this.action = REMOVE_ITEM_SHIPPING_ADDRESS;
     }

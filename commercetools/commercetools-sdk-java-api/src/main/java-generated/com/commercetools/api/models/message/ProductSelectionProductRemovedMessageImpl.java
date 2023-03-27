@@ -44,6 +44,9 @@ public class ProductSelectionProductRemovedMessageImpl implements ProductSelecti
 
     private com.commercetools.api.models.product.ProductReference product;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSelectionProductRemovedMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -70,6 +73,9 @@ public class ProductSelectionProductRemovedMessageImpl implements ProductSelecti
         this.type = PRODUCT_SELECTION_PRODUCT_REMOVED;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSelectionProductRemovedMessageImpl() {
         this.type = PRODUCT_SELECTION_PRODUCT_REMOVED;
     }

@@ -26,6 +26,9 @@ public class CustomerGroupDraftImpl implements CustomerGroupDraft, ModelBase {
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerGroupDraftImpl(@JsonProperty("key") final String key, @JsonProperty("groupName") final String groupName,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
@@ -34,6 +37,9 @@ public class CustomerGroupDraftImpl implements CustomerGroupDraft, ModelBase {
         this.custom = custom;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerGroupDraftImpl() {
     }
 

@@ -47,6 +47,11 @@ public class OrderImportedMessagePayloadBuilder implements Builder<OrderImported
         return this;
     }
 
+    /**
+     *  <p>Order that was imported.</p>
+     * @return order
+     */
+
     public com.commercetools.api.models.order.Order getOrder() {
         return this.order;
     }
@@ -68,10 +73,19 @@ public class OrderImportedMessagePayloadBuilder implements Builder<OrderImported
         return new OrderImportedMessagePayloadImpl(order);
     }
 
+    /**
+     * factory method for an instance of OrderImportedMessagePayloadBuilder
+     * @return builder
+     */
     public static OrderImportedMessagePayloadBuilder of() {
         return new OrderImportedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for OrderImportedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderImportedMessagePayloadBuilder of(final OrderImportedMessagePayload template) {
         OrderImportedMessagePayloadBuilder builder = new OrderImportedMessagePayloadBuilder();
         builder.order = template.getOrder();

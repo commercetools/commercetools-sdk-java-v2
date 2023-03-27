@@ -47,14 +47,33 @@ public interface ParcelMeasurementDraft extends io.vrap.rmf.base.client.Draft<Pa
     @JsonProperty("measurements")
     public ParcelMeasurements getMeasurements();
 
+    /**
+     * set parcelId
+     * @param parcelId value to be set
+     */
+
     public void setParcelId(final String parcelId);
+
+    /**
+     * set measurements
+     * @param measurements value to be set
+     */
 
     public void setMeasurements(final ParcelMeasurements measurements);
 
+    /**
+     * factory method
+     * @return instance of ParcelMeasurementDraft
+     */
     public static ParcelMeasurementDraft of() {
         return new ParcelMeasurementDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of ParcelMeasurementDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ParcelMeasurementDraft of(final ParcelMeasurementDraft template) {
         ParcelMeasurementDraftImpl instance = new ParcelMeasurementDraftImpl();
         instance.setParcelId(template.getParcelId());
@@ -62,18 +81,37 @@ public interface ParcelMeasurementDraft extends io.vrap.rmf.base.client.Draft<Pa
         return instance;
     }
 
+    /**
+     * builder factory method for ParcelMeasurementDraft
+     * @return builder
+     */
     public static ParcelMeasurementDraftBuilder builder() {
         return ParcelMeasurementDraftBuilder.of();
     }
 
+    /**
+     * create builder for ParcelMeasurementDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ParcelMeasurementDraftBuilder builder(final ParcelMeasurementDraft template) {
         return ParcelMeasurementDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withParcelMeasurementDraft(Function<ParcelMeasurementDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ParcelMeasurementDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ParcelMeasurementDraft>() {
             @Override

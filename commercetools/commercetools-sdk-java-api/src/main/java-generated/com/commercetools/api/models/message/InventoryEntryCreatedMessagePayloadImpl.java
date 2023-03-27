@@ -24,6 +24,9 @@ public class InventoryEntryCreatedMessagePayloadImpl implements InventoryEntryCr
 
     private com.commercetools.api.models.inventory.InventoryEntry inventoryEntry;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     InventoryEntryCreatedMessagePayloadImpl(
             @JsonProperty("inventoryEntry") final com.commercetools.api.models.inventory.InventoryEntry inventoryEntry) {
@@ -31,6 +34,9 @@ public class InventoryEntryCreatedMessagePayloadImpl implements InventoryEntryCr
         this.type = INVENTORY_ENTRY_CREATED;
     }
 
+    /**
+     * create empty instance
+     */
     public InventoryEntryCreatedMessagePayloadImpl() {
         this.type = INVENTORY_ENTRY_CREATED;
     }

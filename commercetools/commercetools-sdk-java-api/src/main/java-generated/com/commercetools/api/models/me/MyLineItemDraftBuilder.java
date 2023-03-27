@@ -207,45 +207,92 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
         return this;
     }
 
+    /**
+     *  <p><code>id</code> of the Product.</p>
+     * @return productId
+     */
+
     @Nullable
     public String getProductId() {
         return this.productId;
     }
+
+    /**
+     *  <p><code>id</code> of the ProductVariant in the Product. If not provided, the Master Variant is used.</p>
+     * @return variantId
+     */
 
     @Nullable
     public Long getVariantId() {
         return this.variantId;
     }
 
+    /**
+     *  <p><code>sku</code> of the ProductVariant.</p>
+     * @return sku
+     */
+
     @Nullable
     public String getSku() {
         return this.sku;
     }
+
+    /**
+     *  <p>Number of Product Variants to add to the Cart.</p>
+     * @return quantity
+     */
 
     @Nullable
     public Long getQuantity() {
         return this.quantity;
     }
 
+    /**
+     *  <p>Date and time (UTC) the Product Variant is added to the Cart. If not set, it defaults to the current date and time.</p>
+     *  <p>Optional for backwards compatibility reasons.</p>
+     * @return addedAt
+     */
+
     @Nullable
     public java.time.ZonedDateTime getAddedAt() {
         return this.addedAt;
     }
+
+    /**
+     *  <p>Used to identify Inventory entries that must be reserved. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @return supplyChannel
+     */
 
     @Nullable
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
         return this.supplyChannel;
     }
 
+    /**
+     *  <p>Used to select a Product Price. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     *  <p>If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
+     * @return distributionChannel
+     */
+
     @Nullable
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
         return this.distributionChannel;
     }
 
+    /**
+     *  <p>Container for Line Item-specific addresses.</p>
+     * @return shippingDetails
+     */
+
     @Nullable
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {
         return this.shippingDetails;
     }
+
+    /**
+     *  <p>Custom Fields for the Cart.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -270,10 +317,19 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
             shippingDetails, custom);
     }
 
+    /**
+     * factory method for an instance of MyLineItemDraftBuilder
+     * @return builder
+     */
     public static MyLineItemDraftBuilder of() {
         return new MyLineItemDraftBuilder();
     }
 
+    /**
+     * create builder for MyLineItemDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyLineItemDraftBuilder of(final MyLineItemDraft template) {
         MyLineItemDraftBuilder builder = new MyLineItemDraftBuilder();
         builder.productId = template.getProductId();

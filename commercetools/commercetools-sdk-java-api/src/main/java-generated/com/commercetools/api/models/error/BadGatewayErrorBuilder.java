@@ -62,9 +62,19 @@ public class BadGatewayErrorBuilder implements Builder<BadGatewayError> {
         return this;
     }
 
+    /**
+     *  <p>Plain text description of the error.</p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
@@ -87,10 +97,19 @@ public class BadGatewayErrorBuilder implements Builder<BadGatewayError> {
         return new BadGatewayErrorImpl(message, values);
     }
 
+    /**
+     * factory method for an instance of BadGatewayErrorBuilder
+     * @return builder
+     */
     public static BadGatewayErrorBuilder of() {
         return new BadGatewayErrorBuilder();
     }
 
+    /**
+     * create builder for BadGatewayError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BadGatewayErrorBuilder of(final BadGatewayError template) {
         BadGatewayErrorBuilder builder = new BadGatewayErrorBuilder();
         builder.message = template.getMessage();

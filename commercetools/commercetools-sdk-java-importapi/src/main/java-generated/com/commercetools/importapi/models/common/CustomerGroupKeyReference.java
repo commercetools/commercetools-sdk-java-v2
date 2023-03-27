@@ -27,30 +27,61 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomerGroupKeyReferenceImpl.class)
 public interface CustomerGroupKeyReference extends KeyReference {
 
+    /**
+     * discriminator value for CustomerGroupKeyReference
+     */
     String CUSTOMER_GROUP = "customer-group";
 
+    /**
+     * factory method
+     * @return instance of CustomerGroupKeyReference
+     */
     public static CustomerGroupKeyReference of() {
         return new CustomerGroupKeyReferenceImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomerGroupKeyReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomerGroupKeyReference of(final CustomerGroupKeyReference template) {
         CustomerGroupKeyReferenceImpl instance = new CustomerGroupKeyReferenceImpl();
         instance.setKey(template.getKey());
         return instance;
     }
 
+    /**
+     * builder factory method for CustomerGroupKeyReference
+     * @return builder
+     */
     public static CustomerGroupKeyReferenceBuilder builder() {
         return CustomerGroupKeyReferenceBuilder.of();
     }
 
+    /**
+     * create builder for CustomerGroupKeyReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerGroupKeyReferenceBuilder builder(final CustomerGroupKeyReference template) {
         return CustomerGroupKeyReferenceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomerGroupKeyReference(Function<CustomerGroupKeyReference, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomerGroupKeyReference> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomerGroupKeyReference>() {
             @Override

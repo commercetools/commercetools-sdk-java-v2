@@ -24,6 +24,9 @@ public class PaymentCreatedMessagePayloadImpl implements PaymentCreatedMessagePa
 
     private com.commercetools.api.models.payment.Payment payment;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PaymentCreatedMessagePayloadImpl(
             @JsonProperty("payment") final com.commercetools.api.models.payment.Payment payment) {
@@ -31,6 +34,9 @@ public class PaymentCreatedMessagePayloadImpl implements PaymentCreatedMessagePa
         this.type = PAYMENT_CREATED;
     }
 
+    /**
+     * create empty instance
+     */
     public PaymentCreatedMessagePayloadImpl() {
         this.type = PAYMENT_CREATED;
     }

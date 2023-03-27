@@ -49,6 +49,11 @@ public class CategoryChangeParentActionBuilder implements Builder<CategoryChange
         return this;
     }
 
+    /**
+     *  <p>New value to set as parent.</p>
+     * @return parent
+     */
+
     public com.commercetools.api.models.category.CategoryResourceIdentifier getParent() {
         return this.parent;
     }
@@ -70,10 +75,19 @@ public class CategoryChangeParentActionBuilder implements Builder<CategoryChange
         return new CategoryChangeParentActionImpl(parent);
     }
 
+    /**
+     * factory method for an instance of CategoryChangeParentActionBuilder
+     * @return builder
+     */
     public static CategoryChangeParentActionBuilder of() {
         return new CategoryChangeParentActionBuilder();
     }
 
+    /**
+     * create builder for CategoryChangeParentAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategoryChangeParentActionBuilder of(final CategoryChangeParentAction template) {
         CategoryChangeParentActionBuilder builder = new CategoryChangeParentActionBuilder();
         builder.parent = template.getParent();

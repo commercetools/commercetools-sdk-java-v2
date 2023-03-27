@@ -48,6 +48,11 @@ public class OrderUpdateItemShippingAddressActionBuilder implements Builder<Orde
         return this;
     }
 
+    /**
+     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     * @return address
+     */
+
     public com.commercetools.api.models.common.BaseAddress getAddress() {
         return this.address;
     }
@@ -69,10 +74,19 @@ public class OrderUpdateItemShippingAddressActionBuilder implements Builder<Orde
         return new OrderUpdateItemShippingAddressActionImpl(address);
     }
 
+    /**
+     * factory method for an instance of OrderUpdateItemShippingAddressActionBuilder
+     * @return builder
+     */
     public static OrderUpdateItemShippingAddressActionBuilder of() {
         return new OrderUpdateItemShippingAddressActionBuilder();
     }
 
+    /**
+     * create builder for OrderUpdateItemShippingAddressAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderUpdateItemShippingAddressActionBuilder of(final OrderUpdateItemShippingAddressAction template) {
         OrderUpdateItemShippingAddressActionBuilder builder = new OrderUpdateItemShippingAddressActionBuilder();
         builder.address = template.getAddress();

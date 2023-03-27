@@ -36,6 +36,11 @@ public class TaxCategorySetDescriptionActionBuilder implements Builder<TaxCatego
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return description
+     */
+
     @Nullable
     public String getDescription() {
         return this.description;
@@ -57,10 +62,19 @@ public class TaxCategorySetDescriptionActionBuilder implements Builder<TaxCatego
         return new TaxCategorySetDescriptionActionImpl(description);
     }
 
+    /**
+     * factory method for an instance of TaxCategorySetDescriptionActionBuilder
+     * @return builder
+     */
     public static TaxCategorySetDescriptionActionBuilder of() {
         return new TaxCategorySetDescriptionActionBuilder();
     }
 
+    /**
+     * create builder for TaxCategorySetDescriptionAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TaxCategorySetDescriptionActionBuilder of(final TaxCategorySetDescriptionAction template) {
         TaxCategorySetDescriptionActionBuilder builder = new TaxCategorySetDescriptionActionBuilder();
         builder.description = template.getDescription();

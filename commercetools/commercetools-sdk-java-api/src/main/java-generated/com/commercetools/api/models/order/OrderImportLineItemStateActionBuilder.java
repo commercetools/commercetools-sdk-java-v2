@@ -28,7 +28,7 @@ public class OrderImportLineItemStateActionBuilder implements Builder<OrderImpor
     private java.util.List<com.commercetools.api.models.order.ItemState> state;
 
     /**
-     *
+     * set the value to the lineItemId
      * @param lineItemId value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class OrderImportLineItemStateActionBuilder implements Builder<OrderImpor
     }
 
     /**
-     *
+     * set values to the state
      * @param state value to be set
      * @return Builder
      */
@@ -50,7 +50,7 @@ public class OrderImportLineItemStateActionBuilder implements Builder<OrderImpor
     }
 
     /**
-     *
+     * set value to the state
      * @param state value to be set
      * @return Builder
      */
@@ -62,7 +62,7 @@ public class OrderImportLineItemStateActionBuilder implements Builder<OrderImpor
     }
 
     /**
-     *
+     * add values to the state
      * @param state value to be set
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class OrderImportLineItemStateActionBuilder implements Builder<OrderImpor
     }
 
     /**
-     *
+     * add the value to the state using the builder function
      * @param builder function to build the state value
      * @return Builder
      */
@@ -92,7 +92,7 @@ public class OrderImportLineItemStateActionBuilder implements Builder<OrderImpor
     }
 
     /**
-     *
+     * set the value to the state using the builder function
      * @param builder function to build the state value
      * @return Builder
      */
@@ -104,9 +104,19 @@ public class OrderImportLineItemStateActionBuilder implements Builder<OrderImpor
         return this;
     }
 
+    /**
+     * value of lineItemId}
+     * @return lineItemId
+     */
+
     public String getLineItemId() {
         return this.lineItemId;
     }
+
+    /**
+     * value of state}
+     * @return state
+     */
 
     public java.util.List<com.commercetools.api.models.order.ItemState> getState() {
         return this.state;
@@ -130,10 +140,19 @@ public class OrderImportLineItemStateActionBuilder implements Builder<OrderImpor
         return new OrderImportLineItemStateActionImpl(lineItemId, state);
     }
 
+    /**
+     * factory method for an instance of OrderImportLineItemStateActionBuilder
+     * @return builder
+     */
     public static OrderImportLineItemStateActionBuilder of() {
         return new OrderImportLineItemStateActionBuilder();
     }
 
+    /**
+     * create builder for OrderImportLineItemStateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderImportLineItemStateActionBuilder of(final OrderImportLineItemStateAction template) {
         OrderImportLineItemStateActionBuilder builder = new OrderImportLineItemStateActionBuilder();
         builder.lineItemId = template.getLineItemId();

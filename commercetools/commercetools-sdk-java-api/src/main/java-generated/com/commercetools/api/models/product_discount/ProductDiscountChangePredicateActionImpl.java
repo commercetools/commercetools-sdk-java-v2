@@ -24,12 +24,18 @@ public class ProductDiscountChangePredicateActionImpl implements ProductDiscount
 
     private String predicate;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductDiscountChangePredicateActionImpl(@JsonProperty("predicate") final String predicate) {
         this.predicate = predicate;
         this.action = CHANGE_PREDICATE;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductDiscountChangePredicateActionImpl() {
         this.action = CHANGE_PREDICATE;
     }

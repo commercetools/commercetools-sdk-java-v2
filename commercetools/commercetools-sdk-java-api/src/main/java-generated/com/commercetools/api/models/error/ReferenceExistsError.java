@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ReferenceExistsErrorImpl.class)
 public interface ReferenceExistsError extends ErrorObject {
 
+    /**
+     * discriminator value for ReferenceExistsError
+     */
     String REFERENCE_EXISTS = "ReferenceExists";
 
     /**
@@ -56,14 +59,33 @@ public interface ReferenceExistsError extends ErrorObject {
     @JsonProperty("referencedBy")
     public ReferenceTypeId getReferencedBy();
 
+    /**
+     *  <p><code>"Can not delete a $resource while it is referenced by at least one $referencedBy."</code></p>
+     * @param message value to be set
+     */
+
     public void setMessage(final String message);
+
+    /**
+     *  <p>Type of referenced resource.</p>
+     * @param referencedBy value to be set
+     */
 
     public void setReferencedBy(final ReferenceTypeId referencedBy);
 
+    /**
+     * factory method
+     * @return instance of ReferenceExistsError
+     */
     public static ReferenceExistsError of() {
         return new ReferenceExistsErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of ReferenceExistsError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ReferenceExistsError of(final ReferenceExistsError template) {
         ReferenceExistsErrorImpl instance = new ReferenceExistsErrorImpl();
         instance.setMessage(template.getMessage());
@@ -72,18 +94,37 @@ public interface ReferenceExistsError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for ReferenceExistsError
+     * @return builder
+     */
     public static ReferenceExistsErrorBuilder builder() {
         return ReferenceExistsErrorBuilder.of();
     }
 
+    /**
+     * create builder for ReferenceExistsError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReferenceExistsErrorBuilder builder(final ReferenceExistsError template) {
         return ReferenceExistsErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withReferenceExistsError(Function<ReferenceExistsError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ReferenceExistsError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ReferenceExistsError>() {
             @Override

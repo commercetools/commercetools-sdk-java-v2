@@ -24,7 +24,7 @@ public class SuggestionResultBuilder implements Builder<SuggestionResult> {
     private Map<String, java.util.List<com.commercetools.api.models.product.Suggestion>> values = new HashMap<>();
 
     /**
-     *
+     * assign pattern properties to the builder
      * @param values properties to be set
      * @return Builder
      */
@@ -36,7 +36,7 @@ public class SuggestionResultBuilder implements Builder<SuggestionResult> {
     }
 
     /**
-     *
+     * assign a pattern property to the builder
      * @param key property name
      * @param value property value
      * @return Builder
@@ -50,6 +50,11 @@ public class SuggestionResultBuilder implements Builder<SuggestionResult> {
         values.put(key, value);
         return this;
     }
+
+    /**
+     * values of pattern properties
+     * @return pattern properties
+     */
 
     public Map<String, java.util.List<com.commercetools.api.models.product.Suggestion>> getValues() {
         return this.values;
@@ -71,10 +76,19 @@ public class SuggestionResultBuilder implements Builder<SuggestionResult> {
         return new SuggestionResultImpl(values);
     }
 
+    /**
+     * factory method for an instance of SuggestionResultBuilder
+     * @return builder
+     */
     public static SuggestionResultBuilder of() {
         return new SuggestionResultBuilder();
     }
 
+    /**
+     * create builder for SuggestionResult instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SuggestionResultBuilder of(final SuggestionResult template) {
         SuggestionResultBuilder builder = new SuggestionResultBuilder();
         builder.values = template.values();

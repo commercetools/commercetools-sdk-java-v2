@@ -64,9 +64,19 @@ public class BusinessUnitReferenceBuilder implements Builder<BusinessUnitReferen
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the referenced BusinessUnit.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Contains the representation of the expanded BusinessUnit. Only present in responses to requests with Reference Expansion for BusinessUnit.</p>
+     * @return obj
+     */
 
     @Nullable
     public com.commercetools.api.models.business_unit.BusinessUnit getObj() {
@@ -90,10 +100,19 @@ public class BusinessUnitReferenceBuilder implements Builder<BusinessUnitReferen
         return new BusinessUnitReferenceImpl(id, obj);
     }
 
+    /**
+     * factory method for an instance of BusinessUnitReferenceBuilder
+     * @return builder
+     */
     public static BusinessUnitReferenceBuilder of() {
         return new BusinessUnitReferenceBuilder();
     }
 
+    /**
+     * create builder for BusinessUnitReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitReferenceBuilder of(final BusinessUnitReference template) {
         BusinessUnitReferenceBuilder builder = new BusinessUnitReferenceBuilder();
         builder.id = template.getId();

@@ -40,6 +40,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ParcelAddedToDeliveryMessageImpl.class)
 public interface ParcelAddedToDeliveryMessage extends OrderMessage {
 
+    /**
+     * discriminator value for ParcelAddedToDeliveryMessage
+     */
     String PARCEL_ADDED_TO_DELIVERY = "ParcelAddedToDelivery";
 
     /**
@@ -68,16 +71,40 @@ public interface ParcelAddedToDeliveryMessage extends OrderMessage {
     @JsonProperty("shippingKey")
     public String getShippingKey();
 
+    /**
+     *  <p>Unique identifier of the Delivery.</p>
+     * @param delivery value to be set
+     */
+
     public void setDelivery(final Delivery delivery);
+
+    /**
+     *  <p>Parcel that was added to the Delivery.</p>
+     * @param parcel value to be set
+     */
 
     public void setParcel(final Parcel parcel);
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     * @param shippingKey value to be set
+     */
+
     public void setShippingKey(final String shippingKey);
 
+    /**
+     * factory method
+     * @return instance of ParcelAddedToDeliveryMessage
+     */
     public static ParcelAddedToDeliveryMessage of() {
         return new ParcelAddedToDeliveryMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of ParcelAddedToDeliveryMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ParcelAddedToDeliveryMessage of(final ParcelAddedToDeliveryMessage template) {
         ParcelAddedToDeliveryMessageImpl instance = new ParcelAddedToDeliveryMessageImpl();
         instance.setId(template.getId());
@@ -96,18 +123,37 @@ public interface ParcelAddedToDeliveryMessage extends OrderMessage {
         return instance;
     }
 
+    /**
+     * builder factory method for ParcelAddedToDeliveryMessage
+     * @return builder
+     */
     public static ParcelAddedToDeliveryMessageBuilder builder() {
         return ParcelAddedToDeliveryMessageBuilder.of();
     }
 
+    /**
+     * create builder for ParcelAddedToDeliveryMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ParcelAddedToDeliveryMessageBuilder builder(final ParcelAddedToDeliveryMessage template) {
         return ParcelAddedToDeliveryMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withParcelAddedToDeliveryMessage(Function<ParcelAddedToDeliveryMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ParcelAddedToDeliveryMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ParcelAddedToDeliveryMessage>() {
             @Override

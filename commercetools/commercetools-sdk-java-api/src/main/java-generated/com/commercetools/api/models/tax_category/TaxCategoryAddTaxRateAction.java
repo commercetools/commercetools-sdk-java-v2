@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TaxCategoryAddTaxRateActionImpl.class)
 public interface TaxCategoryAddTaxRateAction extends TaxCategoryUpdateAction {
 
+    /**
+     * discriminator value for TaxCategoryAddTaxRateAction
+     */
     String ADD_TAX_RATE = "addTaxRate";
 
     /**
@@ -41,30 +44,63 @@ public interface TaxCategoryAddTaxRateAction extends TaxCategoryUpdateAction {
     @JsonProperty("taxRate")
     public TaxRateDraft getTaxRate();
 
+    /**
+     *  <p>Value to append to the <code>rates</code> array.</p>
+     * @param taxRate value to be set
+     */
+
     public void setTaxRate(final TaxRateDraft taxRate);
 
+    /**
+     * factory method
+     * @return instance of TaxCategoryAddTaxRateAction
+     */
     public static TaxCategoryAddTaxRateAction of() {
         return new TaxCategoryAddTaxRateActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of TaxCategoryAddTaxRateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static TaxCategoryAddTaxRateAction of(final TaxCategoryAddTaxRateAction template) {
         TaxCategoryAddTaxRateActionImpl instance = new TaxCategoryAddTaxRateActionImpl();
         instance.setTaxRate(template.getTaxRate());
         return instance;
     }
 
+    /**
+     * builder factory method for TaxCategoryAddTaxRateAction
+     * @return builder
+     */
     public static TaxCategoryAddTaxRateActionBuilder builder() {
         return TaxCategoryAddTaxRateActionBuilder.of();
     }
 
+    /**
+     * create builder for TaxCategoryAddTaxRateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TaxCategoryAddTaxRateActionBuilder builder(final TaxCategoryAddTaxRateAction template) {
         return TaxCategoryAddTaxRateActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTaxCategoryAddTaxRateAction(Function<TaxCategoryAddTaxRateAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<TaxCategoryAddTaxRateAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TaxCategoryAddTaxRateAction>() {
             @Override

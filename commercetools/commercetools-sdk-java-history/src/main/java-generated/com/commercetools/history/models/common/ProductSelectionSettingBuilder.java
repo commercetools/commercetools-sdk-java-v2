@@ -28,7 +28,7 @@ public class ProductSelectionSettingBuilder implements Builder<ProductSelectionS
     private Boolean active;
 
     /**
-     *
+     * set the value to the productSelection using the builder function
      * @param builder function to build the productSelection value
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class ProductSelectionSettingBuilder implements Builder<ProductSelectionS
     }
 
     /**
-     *
+     * set the value to the productSelection
      * @param productSelection value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class ProductSelectionSettingBuilder implements Builder<ProductSelectionS
     }
 
     /**
-     *
+     * set the value to the active
      * @param active value to be set
      * @return Builder
      */
@@ -62,9 +62,19 @@ public class ProductSelectionSettingBuilder implements Builder<ProductSelectionS
         return this;
     }
 
+    /**
+     * value of productSelection}
+     * @return productSelection
+     */
+
     public com.commercetools.history.models.common.Reference getProductSelection() {
         return this.productSelection;
     }
+
+    /**
+     * value of active}
+     * @return active
+     */
 
     public Boolean getActive() {
         return this.active;
@@ -88,10 +98,19 @@ public class ProductSelectionSettingBuilder implements Builder<ProductSelectionS
         return new ProductSelectionSettingImpl(productSelection, active);
     }
 
+    /**
+     * factory method for an instance of ProductSelectionSettingBuilder
+     * @return builder
+     */
     public static ProductSelectionSettingBuilder of() {
         return new ProductSelectionSettingBuilder();
     }
 
+    /**
+     * create builder for ProductSelectionSetting instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSelectionSettingBuilder of(final ProductSelectionSetting template) {
         ProductSelectionSettingBuilder builder = new ProductSelectionSettingBuilder();
         builder.productSelection = template.getProductSelection();

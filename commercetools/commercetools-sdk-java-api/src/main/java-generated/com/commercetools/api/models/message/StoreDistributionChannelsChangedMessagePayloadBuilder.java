@@ -168,10 +168,20 @@ public class StoreDistributionChannelsChangedMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>Product distribution Channels that have been added to the Store.</p>
+     * @return addedDistributionChannels
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getAddedDistributionChannels() {
         return this.addedDistributionChannels;
     }
+
+    /**
+     *  <p>Product distribution Channels that have been removed from the Store.</p>
+     * @return removedDistributionChannels
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getRemovedDistributionChannels() {
@@ -196,10 +206,19 @@ public class StoreDistributionChannelsChangedMessagePayloadBuilder
             removedDistributionChannels);
     }
 
+    /**
+     * factory method for an instance of StoreDistributionChannelsChangedMessagePayloadBuilder
+     * @return builder
+     */
     public static StoreDistributionChannelsChangedMessagePayloadBuilder of() {
         return new StoreDistributionChannelsChangedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for StoreDistributionChannelsChangedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreDistributionChannelsChangedMessagePayloadBuilder of(
             final StoreDistributionChannelsChangedMessagePayload template) {
         StoreDistributionChannelsChangedMessagePayloadBuilder builder = new StoreDistributionChannelsChangedMessagePayloadBuilder();

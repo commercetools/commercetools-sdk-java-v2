@@ -27,7 +27,7 @@ public class CustomObjectLabelBuilder implements Builder<CustomObjectLabel> {
     private String container;
 
     /**
-     *
+     * set the value to the key
      * @param key value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class CustomObjectLabelBuilder implements Builder<CustomObjectLabel> {
     }
 
     /**
-     *
+     * set the value to the container
      * @param container value to be set
      * @return Builder
      */
@@ -48,9 +48,19 @@ public class CustomObjectLabelBuilder implements Builder<CustomObjectLabel> {
         return this;
     }
 
+    /**
+     * value of key}
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     * value of container}
+     * @return container
+     */
 
     public String getContainer() {
         return this.container;
@@ -74,10 +84,19 @@ public class CustomObjectLabelBuilder implements Builder<CustomObjectLabel> {
         return new CustomObjectLabelImpl(key, container);
     }
 
+    /**
+     * factory method for an instance of CustomObjectLabelBuilder
+     * @return builder
+     */
     public static CustomObjectLabelBuilder of() {
         return new CustomObjectLabelBuilder();
     }
 
+    /**
+     * create builder for CustomObjectLabel instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomObjectLabelBuilder of(final CustomObjectLabel template) {
         CustomObjectLabelBuilder builder = new CustomObjectLabelBuilder();
         builder.key = template.getKey();

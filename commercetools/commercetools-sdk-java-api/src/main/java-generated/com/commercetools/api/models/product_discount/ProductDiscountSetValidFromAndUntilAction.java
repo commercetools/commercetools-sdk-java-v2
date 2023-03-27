@@ -27,6 +27,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductDiscountSetValidFromAndUntilActionImpl.class)
 public interface ProductDiscountSetValidFromAndUntilAction extends ProductDiscountUpdateAction {
 
+    /**
+     * discriminator value for ProductDiscountSetValidFromAndUntilAction
+     */
     String SET_VALID_FROM_AND_UNTIL = "setValidFromAndUntil";
 
     /**
@@ -45,14 +48,33 @@ public interface ProductDiscountSetValidFromAndUntilAction extends ProductDiscou
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();
 
+    /**
+     *  <p>Value to set. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     * @param validFrom value to be set
+     */
+
     public void setValidFrom(final ZonedDateTime validFrom);
+
+    /**
+     *  <p>Value to set. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     * @param validUntil value to be set
+     */
 
     public void setValidUntil(final ZonedDateTime validUntil);
 
+    /**
+     * factory method
+     * @return instance of ProductDiscountSetValidFromAndUntilAction
+     */
     public static ProductDiscountSetValidFromAndUntilAction of() {
         return new ProductDiscountSetValidFromAndUntilActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductDiscountSetValidFromAndUntilAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductDiscountSetValidFromAndUntilAction of(
             final ProductDiscountSetValidFromAndUntilAction template) {
         ProductDiscountSetValidFromAndUntilActionImpl instance = new ProductDiscountSetValidFromAndUntilActionImpl();
@@ -61,20 +83,39 @@ public interface ProductDiscountSetValidFromAndUntilAction extends ProductDiscou
         return instance;
     }
 
+    /**
+     * builder factory method for ProductDiscountSetValidFromAndUntilAction
+     * @return builder
+     */
     public static ProductDiscountSetValidFromAndUntilActionBuilder builder() {
         return ProductDiscountSetValidFromAndUntilActionBuilder.of();
     }
 
+    /**
+     * create builder for ProductDiscountSetValidFromAndUntilAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductDiscountSetValidFromAndUntilActionBuilder builder(
             final ProductDiscountSetValidFromAndUntilAction template) {
         return ProductDiscountSetValidFromAndUntilActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductDiscountSetValidFromAndUntilAction(
             Function<ProductDiscountSetValidFromAndUntilAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountSetValidFromAndUntilAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountSetValidFromAndUntilAction>() {
             @Override

@@ -24,6 +24,9 @@ public class CartRemovePaymentActionImpl implements CartRemovePaymentAction, Mod
 
     private com.commercetools.api.models.payment.PaymentResourceIdentifier payment;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartRemovePaymentActionImpl(
             @JsonProperty("payment") final com.commercetools.api.models.payment.PaymentResourceIdentifier payment) {
@@ -31,6 +34,9 @@ public class CartRemovePaymentActionImpl implements CartRemovePaymentAction, Mod
         this.action = REMOVE_PAYMENT;
     }
 
+    /**
+     * create empty instance
+     */
     public CartRemovePaymentActionImpl() {
         this.action = REMOVE_PAYMENT;
     }

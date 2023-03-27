@@ -25,7 +25,7 @@ public class StagedOrderRemoveItemShippingAddressActionBuilder
     private String addressKey;
 
     /**
-     *
+     * set the value to the addressKey
      * @param addressKey value to be set
      * @return Builder
      */
@@ -34,6 +34,11 @@ public class StagedOrderRemoveItemShippingAddressActionBuilder
         this.addressKey = addressKey;
         return this;
     }
+
+    /**
+     * value of addressKey}
+     * @return addressKey
+     */
 
     public String getAddressKey() {
         return this.addressKey;
@@ -57,10 +62,19 @@ public class StagedOrderRemoveItemShippingAddressActionBuilder
         return new StagedOrderRemoveItemShippingAddressActionImpl(addressKey);
     }
 
+    /**
+     * factory method for an instance of StagedOrderRemoveItemShippingAddressActionBuilder
+     * @return builder
+     */
     public static StagedOrderRemoveItemShippingAddressActionBuilder of() {
         return new StagedOrderRemoveItemShippingAddressActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderRemoveItemShippingAddressAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderRemoveItemShippingAddressActionBuilder of(
             final StagedOrderRemoveItemShippingAddressAction template) {
         StagedOrderRemoveItemShippingAddressActionBuilder builder = new StagedOrderRemoveItemShippingAddressActionBuilder();

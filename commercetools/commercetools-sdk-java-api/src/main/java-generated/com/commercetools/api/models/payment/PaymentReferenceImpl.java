@@ -27,6 +27,9 @@ public class PaymentReferenceImpl implements PaymentReference, ModelBase {
 
     private com.commercetools.api.models.payment.Payment obj;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PaymentReferenceImpl(@JsonProperty("id") final String id,
             @JsonProperty("obj") final com.commercetools.api.models.payment.Payment obj) {
@@ -35,6 +38,9 @@ public class PaymentReferenceImpl implements PaymentReference, ModelBase {
         this.typeId = ReferenceTypeId.findEnum("payment");
     }
 
+    /**
+     * create empty instance
+     */
     public PaymentReferenceImpl() {
         this.typeId = ReferenceTypeId.findEnum("payment");
     }

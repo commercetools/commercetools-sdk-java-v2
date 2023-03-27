@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderSetParcelTrackingDataActionImpl.class)
 public interface OrderSetParcelTrackingDataAction extends OrderUpdateAction {
 
+    /**
+     * discriminator value for OrderSetParcelTrackingDataAction
+     */
     String SET_PARCEL_TRACKING_DATA = "setParcelTrackingData";
 
     /**
@@ -48,14 +51,33 @@ public interface OrderSetParcelTrackingDataAction extends OrderUpdateAction {
     @JsonProperty("trackingData")
     public TrackingData getTrackingData();
 
+    /**
+     * set parcelId
+     * @param parcelId value to be set
+     */
+
     public void setParcelId(final String parcelId);
+
+    /**
+     * set trackingData
+     * @param trackingData value to be set
+     */
 
     public void setTrackingData(final TrackingData trackingData);
 
+    /**
+     * factory method
+     * @return instance of OrderSetParcelTrackingDataAction
+     */
     public static OrderSetParcelTrackingDataAction of() {
         return new OrderSetParcelTrackingDataActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderSetParcelTrackingDataAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderSetParcelTrackingDataAction of(final OrderSetParcelTrackingDataAction template) {
         OrderSetParcelTrackingDataActionImpl instance = new OrderSetParcelTrackingDataActionImpl();
         instance.setParcelId(template.getParcelId());
@@ -63,18 +85,37 @@ public interface OrderSetParcelTrackingDataAction extends OrderUpdateAction {
         return instance;
     }
 
+    /**
+     * builder factory method for OrderSetParcelTrackingDataAction
+     * @return builder
+     */
     public static OrderSetParcelTrackingDataActionBuilder builder() {
         return OrderSetParcelTrackingDataActionBuilder.of();
     }
 
+    /**
+     * create builder for OrderSetParcelTrackingDataAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderSetParcelTrackingDataActionBuilder builder(final OrderSetParcelTrackingDataAction template) {
         return OrderSetParcelTrackingDataActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderSetParcelTrackingDataAction(Function<OrderSetParcelTrackingDataAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderSetParcelTrackingDataAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderSetParcelTrackingDataAction>() {
             @Override

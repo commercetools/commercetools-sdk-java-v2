@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AzureServiceBusDestinationImpl.class)
 public interface AzureServiceBusDestination extends Destination {
 
+    /**
+     * discriminator value for AzureServiceBusDestination
+     */
     String AZURE_SERVICE_BUS = "AzureServiceBus";
 
     /**
@@ -39,30 +42,63 @@ public interface AzureServiceBusDestination extends Destination {
     @JsonProperty("connectionString")
     public String getConnectionString();
 
+    /**
+     *  <p>SharedAccessKey is partially hidden on retrieval for security reasons.</p>
+     * @param connectionString value to be set
+     */
+
     public void setConnectionString(final String connectionString);
 
+    /**
+     * factory method
+     * @return instance of AzureServiceBusDestination
+     */
     public static AzureServiceBusDestination of() {
         return new AzureServiceBusDestinationImpl();
     }
 
+    /**
+     * factory method to copy an instance of AzureServiceBusDestination
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static AzureServiceBusDestination of(final AzureServiceBusDestination template) {
         AzureServiceBusDestinationImpl instance = new AzureServiceBusDestinationImpl();
         instance.setConnectionString(template.getConnectionString());
         return instance;
     }
 
+    /**
+     * builder factory method for AzureServiceBusDestination
+     * @return builder
+     */
     public static AzureServiceBusDestinationBuilder builder() {
         return AzureServiceBusDestinationBuilder.of();
     }
 
+    /**
+     * create builder for AzureServiceBusDestination instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AzureServiceBusDestinationBuilder builder(final AzureServiceBusDestination template) {
         return AzureServiceBusDestinationBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAzureServiceBusDestination(Function<AzureServiceBusDestination, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AzureServiceBusDestination> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AzureServiceBusDestination>() {
             @Override

@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductSetImageLabelActionImpl.class)
 public interface ProductSetImageLabelAction extends ProductUpdateAction {
 
+    /**
+     * discriminator value for ProductSetImageLabelAction
+     */
     String SET_IMAGE_LABEL = "setImageLabel";
 
     /**
@@ -71,20 +74,54 @@ public interface ProductSetImageLabelAction extends ProductUpdateAction {
     @JsonProperty("staged")
     public Boolean getStaged();
 
+    /**
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
+     * @param sku value to be set
+     */
+
     public void setSku(final String sku);
+
+    /**
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @param variantId value to be set
+     */
 
     public void setVariantId(final Long variantId);
 
+    /**
+     *  <p>The URL of the image to set the label.</p>
+     * @param imageUrl value to be set
+     */
+
     public void setImageUrl(final String imageUrl);
+
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param label value to be set
+     */
 
     public void setLabel(final String label);
 
+    /**
+     *  <p>If <code>true</code>, only the staged image is updated. If <code>false</code>, both the current and staged image is updated.</p>
+     * @param staged value to be set
+     */
+
     public void setStaged(final Boolean staged);
 
+    /**
+     * factory method
+     * @return instance of ProductSetImageLabelAction
+     */
     public static ProductSetImageLabelAction of() {
         return new ProductSetImageLabelActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductSetImageLabelAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductSetImageLabelAction of(final ProductSetImageLabelAction template) {
         ProductSetImageLabelActionImpl instance = new ProductSetImageLabelActionImpl();
         instance.setSku(template.getSku());
@@ -95,14 +132,29 @@ public interface ProductSetImageLabelAction extends ProductUpdateAction {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductSetImageLabelAction
+     * @return builder
+     */
     public static ProductSetImageLabelActionBuilder builder() {
         return ProductSetImageLabelActionBuilder.of();
     }
 
+    /**
+     * create builder for ProductSetImageLabelAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSetImageLabelActionBuilder builder(final ProductSetImageLabelAction template) {
         return ProductSetImageLabelActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductSetImageLabelAction(Function<ProductSetImageLabelAction, T> helper) {
         return helper.apply(this);
     }
@@ -116,6 +168,10 @@ public interface ProductSetImageLabelAction extends ProductUpdateAction {
         return ProductSetImageLabelActionBuilder.of().variantId(variantId).imageUrl(imageUrl).build();
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSetImageLabelAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductSetImageLabelAction>() {
             @Override

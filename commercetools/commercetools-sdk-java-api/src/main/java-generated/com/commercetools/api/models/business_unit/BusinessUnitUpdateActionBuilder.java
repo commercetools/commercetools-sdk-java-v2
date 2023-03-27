@@ -111,6 +111,10 @@ public class BusinessUnitUpdateActionBuilder {
         return com.commercetools.api.models.business_unit.BusinessUnitSetStoresActionBuilder.of();
     }
 
+    /**
+     * factory method for an instance of BusinessUnitUpdateActionBuilder
+     * @return builder
+     */
     public static BusinessUnitUpdateActionBuilder of() {
         return new BusinessUnitUpdateActionBuilder();
     }

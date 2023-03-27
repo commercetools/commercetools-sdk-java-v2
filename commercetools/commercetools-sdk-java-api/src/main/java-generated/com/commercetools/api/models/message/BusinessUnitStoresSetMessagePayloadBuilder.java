@@ -91,6 +91,11 @@ public class BusinessUnitStoresSetMessagePayloadBuilder implements Builder<Busin
         return this;
     }
 
+    /**
+     *  <p>Stores of the Business Unit after the Set Stores update action.</p>
+     * @return stores
+     */
+
     public java.util.List<com.commercetools.api.models.store.StoreKeyReference> getStores() {
         return this.stores;
     }
@@ -112,10 +117,19 @@ public class BusinessUnitStoresSetMessagePayloadBuilder implements Builder<Busin
         return new BusinessUnitStoresSetMessagePayloadImpl(stores);
     }
 
+    /**
+     * factory method for an instance of BusinessUnitStoresSetMessagePayloadBuilder
+     * @return builder
+     */
     public static BusinessUnitStoresSetMessagePayloadBuilder of() {
         return new BusinessUnitStoresSetMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for BusinessUnitStoresSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitStoresSetMessagePayloadBuilder of(final BusinessUnitStoresSetMessagePayload template) {
         BusinessUnitStoresSetMessagePayloadBuilder builder = new BusinessUnitStoresSetMessagePayloadBuilder();
         builder.stores = template.getStores();

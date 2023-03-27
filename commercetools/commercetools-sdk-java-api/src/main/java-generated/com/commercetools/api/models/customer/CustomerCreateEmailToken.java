@@ -54,16 +54,40 @@ public interface CustomerCreateEmailToken {
     @JsonProperty("ttlMinutes")
     public Long getTtlMinutes();
 
+    /**
+     *  <p>Unique identifier of the Customer.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>Expected version of the Customer.</p>
+     * @param version value to be set
+     */
 
     public void setVersion(final Long version);
 
+    /**
+     *  <p>Validity period of the generated token in minutes.</p>
+     * @param ttlMinutes value to be set
+     */
+
     public void setTtlMinutes(final Long ttlMinutes);
 
+    /**
+     * factory method
+     * @return instance of CustomerCreateEmailToken
+     */
     public static CustomerCreateEmailToken of() {
         return new CustomerCreateEmailTokenImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomerCreateEmailToken
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomerCreateEmailToken of(final CustomerCreateEmailToken template) {
         CustomerCreateEmailTokenImpl instance = new CustomerCreateEmailTokenImpl();
         instance.setId(template.getId());
@@ -72,18 +96,37 @@ public interface CustomerCreateEmailToken {
         return instance;
     }
 
+    /**
+     * builder factory method for CustomerCreateEmailToken
+     * @return builder
+     */
     public static CustomerCreateEmailTokenBuilder builder() {
         return CustomerCreateEmailTokenBuilder.of();
     }
 
+    /**
+     * create builder for CustomerCreateEmailToken instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerCreateEmailTokenBuilder builder(final CustomerCreateEmailToken template) {
         return CustomerCreateEmailTokenBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomerCreateEmailToken(Function<CustomerCreateEmailToken, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomerCreateEmailToken> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomerCreateEmailToken>() {
             @Override

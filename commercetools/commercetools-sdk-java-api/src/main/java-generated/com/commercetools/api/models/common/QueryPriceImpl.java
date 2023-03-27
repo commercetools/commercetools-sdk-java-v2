@@ -40,6 +40,9 @@ public class QueryPriceImpl implements QueryPrice, ModelBase {
 
     private java.util.List<com.commercetools.api.models.common.PriceTierDraft> tiers;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     QueryPriceImpl(@JsonProperty("id") final String id,
             @JsonProperty("value") final com.commercetools.api.models.common.Money value,
@@ -63,6 +66,9 @@ public class QueryPriceImpl implements QueryPrice, ModelBase {
         this.tiers = tiers;
     }
 
+    /**
+     * create empty instance
+     */
     public QueryPriceImpl() {
     }
 

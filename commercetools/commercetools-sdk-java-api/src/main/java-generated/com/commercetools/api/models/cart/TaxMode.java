@@ -44,13 +44,28 @@ public interface TaxMode {
     */
     TaxMode DISABLED = TaxModeEnum.DISABLED;
 
+    /**
+     * possible values of TaxMode
+     */
     enum TaxModeEnum implements TaxMode {
+        /**
+         * Platform
+         */
         PLATFORM("Platform"),
 
+        /**
+         * External
+         */
         EXTERNAL("External"),
 
+        /**
+         * ExternalAmount
+         */
         EXTERNAL_AMOUNT("ExternalAmount"),
 
+        /**
+         * Disabled
+         */
         DISABLED("Disabled");
         private final String jsonName;
 
@@ -67,13 +82,30 @@ public interface TaxMode {
         }
     }
 
+    /**
+     * the JSON value
+     * @return json value
+     */
     @JsonValue
     String getJsonName();
 
+    /**
+     * the enum value
+     * @return name
+     */
     String name();
 
+    /**
+     * convert value to string
+     * @return string representation
+     */
     String toString();
 
+    /**
+     * factory method for a enum value of TaxMode
+     * if no enum has been found an anonymous instance will be created
+     * @return enum instance
+     */
     @JsonCreator
     public static TaxMode findEnum(String value) {
         return findEnumViaJsonName(value).orElse(new TaxMode() {
@@ -93,10 +125,18 @@ public interface TaxMode {
         });
     }
 
+    /**
+     * method to find enum using the JSON value
+     * @return optional of enum instance
+     */
     public static Optional<TaxMode> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
 
+    /**
+     * possible enum values
+     * @return array of possible enum values
+     */
     public static TaxMode[] values() {
         return TaxModeEnum.values();
     }

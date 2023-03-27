@@ -78,13 +78,28 @@ public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentMod
         return this;
     }
 
+    /**
+     *  <p><code>"Object $resourceId has a different version than expected. Expected: $expectedVersion - Actual: $currentVersion."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
 
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
+
     public Map<String, java.lang.Object> getValues() {
         return this.values;
     }
+
+    /**
+     *  <p>Current version of the resource.</p>
+     * @return currentVersion
+     */
 
     @Nullable
     public Long getCurrentVersion() {
@@ -108,10 +123,19 @@ public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentMod
         return new ConcurrentModificationErrorImpl(message, values, currentVersion);
     }
 
+    /**
+     * factory method for an instance of ConcurrentModificationErrorBuilder
+     * @return builder
+     */
     public static ConcurrentModificationErrorBuilder of() {
         return new ConcurrentModificationErrorBuilder();
     }
 
+    /**
+     * create builder for ConcurrentModificationError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ConcurrentModificationErrorBuilder of(final ConcurrentModificationError template) {
         ConcurrentModificationErrorBuilder builder = new ConcurrentModificationErrorBuilder();
         builder.message = template.getMessage();

@@ -24,12 +24,18 @@ public class ChannelKeyReferenceImpl implements ChannelKeyReference, ModelBase {
 
     private com.commercetools.importapi.models.common.ReferenceType typeId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChannelKeyReferenceImpl(@JsonProperty("key") final String key) {
         this.key = key;
         this.typeId = ReferenceType.findEnum("channel");
     }
 
+    /**
+     * create empty instance
+     */
     public ChannelKeyReferenceImpl() {
         this.typeId = ReferenceType.findEnum("channel");
     }

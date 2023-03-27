@@ -28,6 +28,9 @@ public class SetReservationsChangeImpl implements SetReservationsChange, ModelBa
 
     private java.util.List<com.commercetools.history.models.common.Reservation> previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetReservationsChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final java.util.List<com.commercetools.history.models.common.Reservation> nextValue,
@@ -38,6 +41,9 @@ public class SetReservationsChangeImpl implements SetReservationsChange, ModelBa
         this.type = SET_RESERVATIONS_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetReservationsChangeImpl() {
         this.type = SET_RESERVATIONS_CHANGE;
     }

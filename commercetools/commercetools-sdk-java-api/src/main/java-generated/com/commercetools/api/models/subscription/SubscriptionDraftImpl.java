@@ -30,6 +30,9 @@ public class SubscriptionDraftImpl implements SubscriptionDraft, ModelBase {
 
     private com.commercetools.api.models.subscription.DeliveryFormat format;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SubscriptionDraftImpl(
             @JsonProperty("changes") final java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes,
@@ -44,6 +47,9 @@ public class SubscriptionDraftImpl implements SubscriptionDraft, ModelBase {
         this.format = format;
     }
 
+    /**
+     * create empty instance
+     */
     public SubscriptionDraftImpl() {
     }
 

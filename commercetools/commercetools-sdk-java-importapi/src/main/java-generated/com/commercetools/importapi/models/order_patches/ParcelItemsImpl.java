@@ -24,6 +24,9 @@ public class ParcelItemsImpl implements ParcelItems, ModelBase {
 
     private java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> items;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ParcelItemsImpl(@JsonProperty("parcelId") final String parcelId,
             @JsonProperty("items") final java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> items) {
@@ -31,6 +34,9 @@ public class ParcelItemsImpl implements ParcelItems, ModelBase {
         this.items = items;
     }
 
+    /**
+     * create empty instance
+     */
     public ParcelItemsImpl() {
     }
 

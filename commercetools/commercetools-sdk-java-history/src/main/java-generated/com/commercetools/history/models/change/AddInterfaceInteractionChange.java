@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AddInterfaceInteractionChangeImpl.class)
 public interface AddInterfaceInteractionChange extends Change {
 
+    /**
+     * discriminator value for AddInterfaceInteractionChange
+     */
     String ADD_INTERFACE_INTERACTION_CHANGE = "AddInterfaceInteractionChange";
 
     /**
@@ -59,14 +62,33 @@ public interface AddInterfaceInteractionChange extends Change {
     @JsonProperty("nextValue")
     public CustomFieldExpandedValue getNextValue();
 
+    /**
+     *  <p>Update action for <code>addInterfaceInteraction</code> on payments</p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     *  <p>Only available if <code>expand</code> is set to true</p>
+     * @param nextValue value to be set
+     */
 
     public void setNextValue(final CustomFieldExpandedValue nextValue);
 
+    /**
+     * factory method
+     * @return instance of AddInterfaceInteractionChange
+     */
     public static AddInterfaceInteractionChange of() {
         return new AddInterfaceInteractionChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of AddInterfaceInteractionChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static AddInterfaceInteractionChange of(final AddInterfaceInteractionChange template) {
         AddInterfaceInteractionChangeImpl instance = new AddInterfaceInteractionChangeImpl();
         instance.setChange(template.getChange());
@@ -74,18 +96,37 @@ public interface AddInterfaceInteractionChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for AddInterfaceInteractionChange
+     * @return builder
+     */
     public static AddInterfaceInteractionChangeBuilder builder() {
         return AddInterfaceInteractionChangeBuilder.of();
     }
 
+    /**
+     * create builder for AddInterfaceInteractionChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AddInterfaceInteractionChangeBuilder builder(final AddInterfaceInteractionChange template) {
         return AddInterfaceInteractionChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAddInterfaceInteractionChange(Function<AddInterfaceInteractionChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AddInterfaceInteractionChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AddInterfaceInteractionChange>() {
             @Override

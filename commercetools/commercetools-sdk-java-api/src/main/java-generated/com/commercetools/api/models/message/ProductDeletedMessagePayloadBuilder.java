@@ -90,9 +90,19 @@ public class ProductDeletedMessagePayloadBuilder implements Builder<ProductDelet
         return this;
     }
 
+    /**
+     *  <p>List of image URLs that were removed during the Delete Product request.</p>
+     * @return removedImageUrls
+     */
+
     public java.util.List<String> getRemovedImageUrls() {
         return this.removedImageUrls;
     }
+
+    /**
+     *  <p>Current Product Projection of the deleted Product.</p>
+     * @return currentProjection
+     */
 
     @Nullable
     public com.commercetools.api.models.product.ProductProjection getCurrentProjection() {
@@ -116,10 +126,19 @@ public class ProductDeletedMessagePayloadBuilder implements Builder<ProductDelet
         return new ProductDeletedMessagePayloadImpl(removedImageUrls, currentProjection);
     }
 
+    /**
+     * factory method for an instance of ProductDeletedMessagePayloadBuilder
+     * @return builder
+     */
     public static ProductDeletedMessagePayloadBuilder of() {
         return new ProductDeletedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for ProductDeletedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductDeletedMessagePayloadBuilder of(final ProductDeletedMessagePayload template) {
         ProductDeletedMessagePayloadBuilder builder = new ProductDeletedMessagePayloadBuilder();
         builder.removedImageUrls = template.getRemovedImageUrls();

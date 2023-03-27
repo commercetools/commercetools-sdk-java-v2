@@ -21,6 +21,9 @@ public class AttributeTextTypeImpl implements AttributeTextType, ModelBase {
 
     private String name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AttributeTextTypeImpl() {
         this.name = TEXT;

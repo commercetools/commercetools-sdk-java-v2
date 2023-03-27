@@ -93,6 +93,11 @@ public class InventoryImportRequestBuilder implements Builder<InventoryImportReq
         return this;
     }
 
+    /**
+     *  <p>The inventory import resources of this request.</p>
+     * @return resources
+     */
+
     public java.util.List<com.commercetools.importapi.models.inventories.InventoryImport> getResources() {
         return this.resources;
     }
@@ -114,10 +119,19 @@ public class InventoryImportRequestBuilder implements Builder<InventoryImportReq
         return new InventoryImportRequestImpl(resources);
     }
 
+    /**
+     * factory method for an instance of InventoryImportRequestBuilder
+     * @return builder
+     */
     public static InventoryImportRequestBuilder of() {
         return new InventoryImportRequestBuilder();
     }
 
+    /**
+     * create builder for InventoryImportRequest instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InventoryImportRequestBuilder of(final InventoryImportRequest template) {
         InventoryImportRequestBuilder builder = new InventoryImportRequestBuilder();
         builder.resources = template.getResources();

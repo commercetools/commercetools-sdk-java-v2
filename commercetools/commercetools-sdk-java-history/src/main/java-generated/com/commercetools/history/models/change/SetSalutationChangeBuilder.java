@@ -41,7 +41,7 @@ public class SetSalutationChangeBuilder implements Builder<SetSalutationChange> 
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class SetSalutationChangeBuilder implements Builder<SetSalutationChange> 
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -62,13 +62,28 @@ public class SetSalutationChangeBuilder implements Builder<SetSalutationChange> 
         return this;
     }
 
+    /**
+     *  <p>Shape of the action for <code>setSalutation</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public String getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public String getNextValue() {
         return this.nextValue;
@@ -93,10 +108,19 @@ public class SetSalutationChangeBuilder implements Builder<SetSalutationChange> 
         return new SetSalutationChangeImpl(change, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of SetSalutationChangeBuilder
+     * @return builder
+     */
     public static SetSalutationChangeBuilder of() {
         return new SetSalutationChangeBuilder();
     }
 
+    /**
+     * create builder for SetSalutationChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetSalutationChangeBuilder of(final SetSalutationChange template) {
         SetSalutationChangeBuilder builder = new SetSalutationChangeBuilder();
         builder.change = template.getChange();

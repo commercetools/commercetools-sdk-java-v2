@@ -24,12 +24,18 @@ public class CategoryChangeAssetOrderActionImpl implements CategoryChangeAssetOr
 
     private java.util.List<String> assetOrder;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CategoryChangeAssetOrderActionImpl(@JsonProperty("assetOrder") final java.util.List<String> assetOrder) {
         this.assetOrder = assetOrder;
         this.action = CHANGE_ASSET_ORDER;
     }
 
+    /**
+     * create empty instance
+     */
     public CategoryChangeAssetOrderActionImpl() {
         this.action = CHANGE_ASSET_ORDER;
     }

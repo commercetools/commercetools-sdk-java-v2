@@ -24,6 +24,9 @@ public class ProductSelectionCreatedMessagePayloadImpl implements ProductSelecti
 
     private com.commercetools.api.models.product_selection.ProductSelectionType productSelection;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSelectionCreatedMessagePayloadImpl(
             @JsonProperty("productSelection") final com.commercetools.api.models.product_selection.ProductSelectionType productSelection) {
@@ -31,6 +34,9 @@ public class ProductSelectionCreatedMessagePayloadImpl implements ProductSelecti
         this.type = PRODUCT_SELECTION_CREATED;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSelectionCreatedMessagePayloadImpl() {
         this.type = PRODUCT_SELECTION_CREATED;
     }

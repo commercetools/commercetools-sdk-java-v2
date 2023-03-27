@@ -24,7 +24,7 @@ public class RemoveParcelFromDeliveryDraftBuilder implements Builder<RemoveParce
     private String parcelId;
 
     /**
-     *
+     * set the value to the parcelId
      * @param parcelId value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class RemoveParcelFromDeliveryDraftBuilder implements Builder<RemoveParce
         this.parcelId = parcelId;
         return this;
     }
+
+    /**
+     * value of parcelId}
+     * @return parcelId
+     */
 
     public String getParcelId() {
         return this.parcelId;
@@ -55,10 +60,19 @@ public class RemoveParcelFromDeliveryDraftBuilder implements Builder<RemoveParce
         return new RemoveParcelFromDeliveryDraftImpl(parcelId);
     }
 
+    /**
+     * factory method for an instance of RemoveParcelFromDeliveryDraftBuilder
+     * @return builder
+     */
     public static RemoveParcelFromDeliveryDraftBuilder of() {
         return new RemoveParcelFromDeliveryDraftBuilder();
     }
 
+    /**
+     * create builder for RemoveParcelFromDeliveryDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static RemoveParcelFromDeliveryDraftBuilder of(final RemoveParcelFromDeliveryDraft template) {
         RemoveParcelFromDeliveryDraftBuilder builder = new RemoveParcelFromDeliveryDraftBuilder();
         builder.parcelId = template.getParcelId();

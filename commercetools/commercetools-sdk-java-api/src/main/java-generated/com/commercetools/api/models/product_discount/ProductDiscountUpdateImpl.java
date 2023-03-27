@@ -24,6 +24,9 @@ public class ProductDiscountUpdateImpl implements ProductDiscountUpdate, ModelBa
 
     private java.util.List<com.commercetools.api.models.product_discount.ProductDiscountUpdateAction> actions;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductDiscountUpdateImpl(@JsonProperty("version") final Long version,
             @JsonProperty("actions") final java.util.List<com.commercetools.api.models.product_discount.ProductDiscountUpdateAction> actions) {
@@ -31,6 +34,9 @@ public class ProductDiscountUpdateImpl implements ProductDiscountUpdate, ModelBa
         this.actions = actions;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductDiscountUpdateImpl() {
     }
 

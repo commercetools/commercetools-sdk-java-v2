@@ -25,12 +25,18 @@ public class StoreKeyReferenceImpl implements StoreKeyReference, ModelBase {
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StoreKeyReferenceImpl(@JsonProperty("key") final String key) {
         this.key = key;
         this.typeId = ReferenceTypeId.findEnum("store");
     }
 
+    /**
+     * create empty instance
+     */
     public StoreKeyReferenceImpl() {
         this.typeId = ReferenceTypeId.findEnum("store");
     }

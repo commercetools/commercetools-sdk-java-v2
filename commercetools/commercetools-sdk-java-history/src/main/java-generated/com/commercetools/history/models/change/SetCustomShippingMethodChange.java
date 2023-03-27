@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetCustomShippingMethodChangeImpl.class)
 public interface SetCustomShippingMethodChange extends Change {
 
+    /**
+     * discriminator value for SetCustomShippingMethodChange
+     */
     String SET_CUSTOM_SHIPPING_METHOD_CHANGE = "SetCustomShippingMethodChange";
 
     /**
@@ -69,16 +72,40 @@ public interface SetCustomShippingMethodChange extends Change {
     @JsonProperty("previousValue")
     public CustomShippingMethodChangeValue getPreviousValue();
 
+    /**
+     *  <p>Update action for <code>setCustomShippingMethod</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
 
     public void setNextValue(final CustomShippingMethodChangeValue nextValue);
 
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
+
     public void setPreviousValue(final CustomShippingMethodChangeValue previousValue);
 
+    /**
+     * factory method
+     * @return instance of SetCustomShippingMethodChange
+     */
     public static SetCustomShippingMethodChange of() {
         return new SetCustomShippingMethodChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetCustomShippingMethodChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetCustomShippingMethodChange of(final SetCustomShippingMethodChange template) {
         SetCustomShippingMethodChangeImpl instance = new SetCustomShippingMethodChangeImpl();
         instance.setChange(template.getChange());
@@ -87,18 +114,37 @@ public interface SetCustomShippingMethodChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetCustomShippingMethodChange
+     * @return builder
+     */
     public static SetCustomShippingMethodChangeBuilder builder() {
         return SetCustomShippingMethodChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetCustomShippingMethodChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetCustomShippingMethodChangeBuilder builder(final SetCustomShippingMethodChange template) {
         return SetCustomShippingMethodChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetCustomShippingMethodChange(Function<SetCustomShippingMethodChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetCustomShippingMethodChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetCustomShippingMethodChange>() {
             @Override

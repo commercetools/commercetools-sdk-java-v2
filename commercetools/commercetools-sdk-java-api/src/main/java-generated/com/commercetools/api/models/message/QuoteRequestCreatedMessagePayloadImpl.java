@@ -24,6 +24,9 @@ public class QuoteRequestCreatedMessagePayloadImpl implements QuoteRequestCreate
 
     private com.commercetools.api.models.quote_request.QuoteRequest quoteRequest;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     QuoteRequestCreatedMessagePayloadImpl(
             @JsonProperty("quoteRequest") final com.commercetools.api.models.quote_request.QuoteRequest quoteRequest) {
@@ -31,6 +34,9 @@ public class QuoteRequestCreatedMessagePayloadImpl implements QuoteRequestCreate
         this.type = QUOTE_REQUEST_CREATED;
     }
 
+    /**
+     * create empty instance
+     */
     public QuoteRequestCreatedMessagePayloadImpl() {
         this.type = QUOTE_REQUEST_CREATED;
     }

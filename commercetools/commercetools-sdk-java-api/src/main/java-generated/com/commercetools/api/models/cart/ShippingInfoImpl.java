@@ -40,6 +40,9 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
 
     private com.commercetools.api.models.cart.ShippingMethodState shippingMethodState;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShippingInfoImpl(@JsonProperty("shippingMethodName") final String shippingMethodName,
             @JsonProperty("price") final com.commercetools.api.models.common.CentPrecisionMoney price,
@@ -63,6 +66,9 @@ public class ShippingInfoImpl implements ShippingInfo, ModelBase {
         this.shippingMethodState = shippingMethodState;
     }
 
+    /**
+     * create empty instance
+     */
     public ShippingInfoImpl() {
     }
 

@@ -24,6 +24,9 @@ public class ItemStateImpl implements ItemState, ModelBase {
 
     private com.commercetools.api.models.state.StateReference state;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ItemStateImpl(@JsonProperty("quantity") final Long quantity,
             @JsonProperty("state") final com.commercetools.api.models.state.StateReference state) {
@@ -31,6 +34,9 @@ public class ItemStateImpl implements ItemState, ModelBase {
         this.state = state;
     }
 
+    /**
+     * create empty instance
+     */
     public ItemStateImpl() {
     }
 

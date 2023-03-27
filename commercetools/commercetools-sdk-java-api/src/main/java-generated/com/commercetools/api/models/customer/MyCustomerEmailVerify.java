@@ -37,30 +37,63 @@ public interface MyCustomerEmailVerify {
     @JsonProperty("tokenValue")
     public String getTokenValue();
 
+    /**
+     *  <p>Value of the token to verify Customer email.</p>
+     * @param tokenValue value to be set
+     */
+
     public void setTokenValue(final String tokenValue);
 
+    /**
+     * factory method
+     * @return instance of MyCustomerEmailVerify
+     */
     public static MyCustomerEmailVerify of() {
         return new MyCustomerEmailVerifyImpl();
     }
 
+    /**
+     * factory method to copy an instance of MyCustomerEmailVerify
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static MyCustomerEmailVerify of(final MyCustomerEmailVerify template) {
         MyCustomerEmailVerifyImpl instance = new MyCustomerEmailVerifyImpl();
         instance.setTokenValue(template.getTokenValue());
         return instance;
     }
 
+    /**
+     * builder factory method for MyCustomerEmailVerify
+     * @return builder
+     */
     public static MyCustomerEmailVerifyBuilder builder() {
         return MyCustomerEmailVerifyBuilder.of();
     }
 
+    /**
+     * create builder for MyCustomerEmailVerify instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCustomerEmailVerifyBuilder builder(final MyCustomerEmailVerify template) {
         return MyCustomerEmailVerifyBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMyCustomerEmailVerify(Function<MyCustomerEmailVerify, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MyCustomerEmailVerify> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MyCustomerEmailVerify>() {
             @Override

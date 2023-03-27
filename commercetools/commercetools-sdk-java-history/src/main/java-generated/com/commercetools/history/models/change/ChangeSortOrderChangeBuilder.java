@@ -41,7 +41,7 @@ public class ChangeSortOrderChangeBuilder implements Builder<ChangeSortOrderChan
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class ChangeSortOrderChangeBuilder implements Builder<ChangeSortOrderChan
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -62,13 +62,28 @@ public class ChangeSortOrderChangeBuilder implements Builder<ChangeSortOrderChan
         return this;
     }
 
+    /**
+     *  <p>Shape of the action for <code>changeSortOrder</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public String getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public String getNextValue() {
         return this.nextValue;
@@ -93,10 +108,19 @@ public class ChangeSortOrderChangeBuilder implements Builder<ChangeSortOrderChan
         return new ChangeSortOrderChangeImpl(change, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of ChangeSortOrderChangeBuilder
+     * @return builder
+     */
     public static ChangeSortOrderChangeBuilder of() {
         return new ChangeSortOrderChangeBuilder();
     }
 
+    /**
+     * create builder for ChangeSortOrderChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeSortOrderChangeBuilder of(final ChangeSortOrderChange template) {
         ChangeSortOrderChangeBuilder builder = new ChangeSortOrderChangeBuilder();
         builder.change = template.getChange();

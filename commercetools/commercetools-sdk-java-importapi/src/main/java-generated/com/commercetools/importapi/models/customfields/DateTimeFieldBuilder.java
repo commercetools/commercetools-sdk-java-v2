@@ -24,7 +24,7 @@ public class DateTimeFieldBuilder implements Builder<DateTimeField> {
     private java.time.ZonedDateTime value;
 
     /**
-     *
+     * set the value to the value
      * @param value value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class DateTimeFieldBuilder implements Builder<DateTimeField> {
         this.value = value;
         return this;
     }
+
+    /**
+     * value of value}
+     * @return value
+     */
 
     public java.time.ZonedDateTime getValue() {
         return this.value;
@@ -55,10 +60,19 @@ public class DateTimeFieldBuilder implements Builder<DateTimeField> {
         return new DateTimeFieldImpl(value);
     }
 
+    /**
+     * factory method for an instance of DateTimeFieldBuilder
+     * @return builder
+     */
     public static DateTimeFieldBuilder of() {
         return new DateTimeFieldBuilder();
     }
 
+    /**
+     * create builder for DateTimeField instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DateTimeFieldBuilder of(final DateTimeField template) {
         DateTimeFieldBuilder builder = new DateTimeFieldBuilder();
         builder.value = template.getValue();

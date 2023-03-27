@@ -36,6 +36,11 @@ public class QuoteRequestChangeQuoteRequestStateActionBuilder
         return this;
     }
 
+    /**
+     *  <p>New state to be set for the Quote Request.</p>
+     * @return quoteRequestState
+     */
+
     public com.commercetools.api.models.quote_request.QuoteRequestState getQuoteRequestState() {
         return this.quoteRequestState;
     }
@@ -58,10 +63,19 @@ public class QuoteRequestChangeQuoteRequestStateActionBuilder
         return new QuoteRequestChangeQuoteRequestStateActionImpl(quoteRequestState);
     }
 
+    /**
+     * factory method for an instance of QuoteRequestChangeQuoteRequestStateActionBuilder
+     * @return builder
+     */
     public static QuoteRequestChangeQuoteRequestStateActionBuilder of() {
         return new QuoteRequestChangeQuoteRequestStateActionBuilder();
     }
 
+    /**
+     * create builder for QuoteRequestChangeQuoteRequestStateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static QuoteRequestChangeQuoteRequestStateActionBuilder of(
             final QuoteRequestChangeQuoteRequestStateAction template) {
         QuoteRequestChangeQuoteRequestStateActionBuilder builder = new QuoteRequestChangeQuoteRequestStateActionBuilder();

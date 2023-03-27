@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductLabelImpl.class)
 public interface ProductLabel extends Label {
 
+    /**
+     * discriminator value for ProductLabel
+     */
     String PRODUCT_LABEL = "ProductLabel";
 
     /**
@@ -60,14 +63,33 @@ public interface ProductLabel extends Label {
     @JsonProperty("name")
     public LocalizedString getName();
 
+    /**
+     * set slug
+     * @param slug value to be set
+     */
+
     public void setSlug(final LocalizedString slug);
+
+    /**
+     * set name
+     * @param name value to be set
+     */
 
     public void setName(final LocalizedString name);
 
+    /**
+     * factory method
+     * @return instance of ProductLabel
+     */
     public static ProductLabel of() {
         return new ProductLabelImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductLabel
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductLabel of(final ProductLabel template) {
         ProductLabelImpl instance = new ProductLabelImpl();
         instance.setSlug(template.getSlug());
@@ -75,18 +97,37 @@ public interface ProductLabel extends Label {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductLabel
+     * @return builder
+     */
     public static ProductLabelBuilder builder() {
         return ProductLabelBuilder.of();
     }
 
+    /**
+     * create builder for ProductLabel instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductLabelBuilder builder(final ProductLabel template) {
         return ProductLabelBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductLabel(Function<ProductLabel, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductLabel> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductLabel>() {
             @Override

@@ -34,6 +34,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = InvalidCurrentPasswordErrorImpl.class)
 public interface InvalidCurrentPasswordError extends ErrorObject {
 
+    /**
+     * discriminator value for InvalidCurrentPasswordError
+     */
     String INVALID_CURRENT_PASSWORD = "InvalidCurrentPassword";
 
     /**
@@ -52,12 +55,26 @@ public interface InvalidCurrentPasswordError extends ErrorObject {
     @JsonProperty("message")
     public String getMessage();
 
+    /**
+     *  <p><code>"The given current password does not match."</code></p>
+     * @param message value to be set
+     */
+
     public void setMessage(final String message);
 
+    /**
+     * factory method
+     * @return instance of InvalidCurrentPasswordError
+     */
     public static InvalidCurrentPasswordError of() {
         return new InvalidCurrentPasswordErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of InvalidCurrentPasswordError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static InvalidCurrentPasswordError of(final InvalidCurrentPasswordError template) {
         InvalidCurrentPasswordErrorImpl instance = new InvalidCurrentPasswordErrorImpl();
         instance.setMessage(template.getMessage());
@@ -65,18 +82,37 @@ public interface InvalidCurrentPasswordError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for InvalidCurrentPasswordError
+     * @return builder
+     */
     public static InvalidCurrentPasswordErrorBuilder builder() {
         return InvalidCurrentPasswordErrorBuilder.of();
     }
 
+    /**
+     * create builder for InvalidCurrentPasswordError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InvalidCurrentPasswordErrorBuilder builder(final InvalidCurrentPasswordError template) {
         return InvalidCurrentPasswordErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withInvalidCurrentPasswordError(Function<InvalidCurrentPasswordError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<InvalidCurrentPasswordError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<InvalidCurrentPasswordError>() {
             @Override

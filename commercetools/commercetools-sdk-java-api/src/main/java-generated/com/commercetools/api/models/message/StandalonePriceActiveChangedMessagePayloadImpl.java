@@ -27,6 +27,9 @@ public class StandalonePriceActiveChangedMessagePayloadImpl
 
     private Boolean oldActive;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StandalonePriceActiveChangedMessagePayloadImpl(@JsonProperty("active") final Boolean active,
             @JsonProperty("oldActive") final Boolean oldActive) {
@@ -35,6 +38,9 @@ public class StandalonePriceActiveChangedMessagePayloadImpl
         this.type = STANDALONE_PRICE_ACTIVE_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public StandalonePriceActiveChangedMessagePayloadImpl() {
         this.type = STANDALONE_PRICE_ACTIVE_CHANGED;
     }

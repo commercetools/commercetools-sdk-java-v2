@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PaymentSetCustomerActionImpl.class)
 public interface PaymentSetCustomerAction extends PaymentUpdateAction {
 
+    /**
+     * discriminator value for PaymentSetCustomerAction
+     */
     String SET_CUSTOMER = "setCustomer";
 
     /**
@@ -39,30 +42,63 @@ public interface PaymentSetCustomerAction extends PaymentUpdateAction {
     @JsonProperty("customer")
     public CustomerResourceIdentifier getCustomer();
 
+    /**
+     *  <p>Value to set. If empty, any existing reference is removed.</p>
+     * @param customer value to be set
+     */
+
     public void setCustomer(final CustomerResourceIdentifier customer);
 
+    /**
+     * factory method
+     * @return instance of PaymentSetCustomerAction
+     */
     public static PaymentSetCustomerAction of() {
         return new PaymentSetCustomerActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of PaymentSetCustomerAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static PaymentSetCustomerAction of(final PaymentSetCustomerAction template) {
         PaymentSetCustomerActionImpl instance = new PaymentSetCustomerActionImpl();
         instance.setCustomer(template.getCustomer());
         return instance;
     }
 
+    /**
+     * builder factory method for PaymentSetCustomerAction
+     * @return builder
+     */
     public static PaymentSetCustomerActionBuilder builder() {
         return PaymentSetCustomerActionBuilder.of();
     }
 
+    /**
+     * create builder for PaymentSetCustomerAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentSetCustomerActionBuilder builder(final PaymentSetCustomerAction template) {
         return PaymentSetCustomerActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withPaymentSetCustomerAction(Function<PaymentSetCustomerAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<PaymentSetCustomerAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<PaymentSetCustomerAction>() {
             @Override

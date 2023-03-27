@@ -27,6 +27,9 @@ public class PaymentStatusStateTransitionMessagePayloadImpl
 
     private Boolean force;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PaymentStatusStateTransitionMessagePayloadImpl(
             @JsonProperty("state") final com.commercetools.api.models.state.StateReference state,
@@ -36,6 +39,9 @@ public class PaymentStatusStateTransitionMessagePayloadImpl
         this.type = PAYMENT_STATUS_STATE_TRANSITION;
     }
 
+    /**
+     * create empty instance
+     */
     public PaymentStatusStateTransitionMessagePayloadImpl() {
         this.type = PAYMENT_STATUS_STATE_TRANSITION;
     }

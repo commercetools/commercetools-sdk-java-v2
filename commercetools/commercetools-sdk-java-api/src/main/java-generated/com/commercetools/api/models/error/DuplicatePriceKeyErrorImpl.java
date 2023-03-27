@@ -29,6 +29,9 @@ public class DuplicatePriceKeyErrorImpl implements DuplicatePriceKeyError, Model
 
     private com.commercetools.api.models.common.Price conflictingPrice;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DuplicatePriceKeyErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values,
@@ -39,6 +42,9 @@ public class DuplicatePriceKeyErrorImpl implements DuplicatePriceKeyError, Model
         this.code = DUPLICATE_PRICE_KEY;
     }
 
+    /**
+     * create empty instance
+     */
     public DuplicatePriceKeyErrorImpl() {
         this.code = DUPLICATE_PRICE_KEY;
     }

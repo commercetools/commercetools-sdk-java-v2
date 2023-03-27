@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = EnumKeyAlreadyExistsErrorImpl.class)
 public interface EnumKeyAlreadyExistsError extends ErrorObject {
 
+    /**
+     * discriminator value for EnumKeyAlreadyExistsError
+     */
     String ENUM_KEY_ALREADY_EXISTS = "EnumKeyAlreadyExists";
 
     /**
@@ -65,16 +68,40 @@ public interface EnumKeyAlreadyExistsError extends ErrorObject {
     @JsonProperty("conflictingAttributeName")
     public String getConflictingAttributeName();
 
+    /**
+     *  <p><code>"The $attributeName attribute definition already contains an enum value with the key $enumKey."</code></p>
+     * @param message value to be set
+     */
+
     public void setMessage(final String message);
+
+    /**
+     *  <p>Conflicting enum key.</p>
+     * @param conflictingEnumKey value to be set
+     */
 
     public void setConflictingEnumKey(final String conflictingEnumKey);
 
+    /**
+     *  <p>Name of the conflicting Attribute.</p>
+     * @param conflictingAttributeName value to be set
+     */
+
     public void setConflictingAttributeName(final String conflictingAttributeName);
 
+    /**
+     * factory method
+     * @return instance of EnumKeyAlreadyExistsError
+     */
     public static EnumKeyAlreadyExistsError of() {
         return new EnumKeyAlreadyExistsErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of EnumKeyAlreadyExistsError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static EnumKeyAlreadyExistsError of(final EnumKeyAlreadyExistsError template) {
         EnumKeyAlreadyExistsErrorImpl instance = new EnumKeyAlreadyExistsErrorImpl();
         instance.setMessage(template.getMessage());
@@ -84,18 +111,37 @@ public interface EnumKeyAlreadyExistsError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for EnumKeyAlreadyExistsError
+     * @return builder
+     */
     public static EnumKeyAlreadyExistsErrorBuilder builder() {
         return EnumKeyAlreadyExistsErrorBuilder.of();
     }
 
+    /**
+     * create builder for EnumKeyAlreadyExistsError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static EnumKeyAlreadyExistsErrorBuilder builder(final EnumKeyAlreadyExistsError template) {
         return EnumKeyAlreadyExistsErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withEnumKeyAlreadyExistsError(Function<EnumKeyAlreadyExistsError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<EnumKeyAlreadyExistsError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<EnumKeyAlreadyExistsError>() {
             @Override

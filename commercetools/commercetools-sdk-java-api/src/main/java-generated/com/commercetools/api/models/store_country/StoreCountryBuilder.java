@@ -34,6 +34,11 @@ public class StoreCountryBuilder implements Builder<StoreCountry> {
         return this;
     }
 
+    /**
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     * @return code
+     */
+
     public String getCode() {
         return this.code;
     }
@@ -55,10 +60,19 @@ public class StoreCountryBuilder implements Builder<StoreCountry> {
         return new StoreCountryImpl(code);
     }
 
+    /**
+     * factory method for an instance of StoreCountryBuilder
+     * @return builder
+     */
     public static StoreCountryBuilder of() {
         return new StoreCountryBuilder();
     }
 
+    /**
+     * create builder for StoreCountry instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreCountryBuilder of(final StoreCountry template) {
         StoreCountryBuilder builder = new StoreCountryBuilder();
         builder.code = template.getCode();

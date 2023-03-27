@@ -24,6 +24,9 @@ public class ProductTypeAddAttributeDefinitionActionImpl implements ProductTypeA
 
     private com.commercetools.api.models.product_type.AttributeDefinitionDraft attribute;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductTypeAddAttributeDefinitionActionImpl(
             @JsonProperty("attribute") final com.commercetools.api.models.product_type.AttributeDefinitionDraft attribute) {
@@ -31,6 +34,9 @@ public class ProductTypeAddAttributeDefinitionActionImpl implements ProductTypeA
         this.action = ADD_ATTRIBUTE_DEFINITION;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductTypeAddAttributeDefinitionActionImpl() {
         this.action = ADD_ATTRIBUTE_DEFINITION;
     }

@@ -35,6 +35,11 @@ public class StagedOrderChangeTaxRoundingModeActionBuilder implements Builder<St
         return this;
     }
 
+    /**
+     *  <p>Determines how monetary values are rounded.</p>
+     * @return taxRoundingMode
+     */
+
     public com.commercetools.api.models.cart.RoundingMode getTaxRoundingMode() {
         return this.taxRoundingMode;
     }
@@ -57,10 +62,19 @@ public class StagedOrderChangeTaxRoundingModeActionBuilder implements Builder<St
         return new StagedOrderChangeTaxRoundingModeActionImpl(taxRoundingMode);
     }
 
+    /**
+     * factory method for an instance of StagedOrderChangeTaxRoundingModeActionBuilder
+     * @return builder
+     */
     public static StagedOrderChangeTaxRoundingModeActionBuilder of() {
         return new StagedOrderChangeTaxRoundingModeActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderChangeTaxRoundingModeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderChangeTaxRoundingModeActionBuilder of(
             final StagedOrderChangeTaxRoundingModeAction template) {
         StagedOrderChangeTaxRoundingModeActionBuilder builder = new StagedOrderChangeTaxRoundingModeActionBuilder();

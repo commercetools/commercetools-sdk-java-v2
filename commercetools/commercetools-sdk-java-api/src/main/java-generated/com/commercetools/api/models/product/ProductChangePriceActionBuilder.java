@@ -77,13 +77,28 @@ public class ProductChangePriceActionBuilder implements Builder<ProductChangePri
         return this;
     }
 
+    /**
+     *  <p>The <code>id</code> of the Embedded Price to update.</p>
+     * @return priceId
+     */
+
     public String getPriceId() {
         return this.priceId;
     }
 
+    /**
+     *  <p>Value to set.</p>
+     * @return price
+     */
+
     public com.commercetools.api.models.common.PriceDraft getPrice() {
         return this.price;
     }
+
+    /**
+     *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
+     * @return staged
+     */
 
     @Nullable
     public Boolean getStaged() {
@@ -108,10 +123,19 @@ public class ProductChangePriceActionBuilder implements Builder<ProductChangePri
         return new ProductChangePriceActionImpl(priceId, price, staged);
     }
 
+    /**
+     * factory method for an instance of ProductChangePriceActionBuilder
+     * @return builder
+     */
     public static ProductChangePriceActionBuilder of() {
         return new ProductChangePriceActionBuilder();
     }
 
+    /**
+     * create builder for ProductChangePriceAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductChangePriceActionBuilder of(final ProductChangePriceAction template) {
         ProductChangePriceActionBuilder builder = new ProductChangePriceActionBuilder();
         builder.priceId = template.getPriceId();

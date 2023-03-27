@@ -38,6 +38,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderDeletedMessageImpl.class)
 public interface OrderDeletedMessage extends OrderMessage {
 
+    /**
+     * discriminator value for OrderDeletedMessage
+     */
     String ORDER_DELETED = "OrderDeleted";
 
     /**
@@ -49,12 +52,26 @@ public interface OrderDeletedMessage extends OrderMessage {
     @JsonProperty("order")
     public Order getOrder();
 
+    /**
+     *  <p>Order that has been deleted.</p>
+     * @param order value to be set
+     */
+
     public void setOrder(final Order order);
 
+    /**
+     * factory method
+     * @return instance of OrderDeletedMessage
+     */
     public static OrderDeletedMessage of() {
         return new OrderDeletedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderDeletedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderDeletedMessage of(final OrderDeletedMessage template) {
         OrderDeletedMessageImpl instance = new OrderDeletedMessageImpl();
         instance.setId(template.getId());
@@ -71,18 +88,37 @@ public interface OrderDeletedMessage extends OrderMessage {
         return instance;
     }
 
+    /**
+     * builder factory method for OrderDeletedMessage
+     * @return builder
+     */
     public static OrderDeletedMessageBuilder builder() {
         return OrderDeletedMessageBuilder.of();
     }
 
+    /**
+     * create builder for OrderDeletedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderDeletedMessageBuilder builder(final OrderDeletedMessage template) {
         return OrderDeletedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderDeletedMessage(Function<OrderDeletedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderDeletedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderDeletedMessage>() {
             @Override

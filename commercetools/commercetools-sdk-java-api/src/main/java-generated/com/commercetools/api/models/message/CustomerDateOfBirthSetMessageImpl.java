@@ -44,6 +44,9 @@ public class CustomerDateOfBirthSetMessageImpl implements CustomerDateOfBirthSet
 
     private java.time.LocalDate dateOfBirth;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerDateOfBirthSetMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -69,6 +72,9 @@ public class CustomerDateOfBirthSetMessageImpl implements CustomerDateOfBirthSet
         this.type = CUSTOMER_DATE_OF_BIRTH_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerDateOfBirthSetMessageImpl() {
         this.type = CUSTOMER_DATE_OF_BIRTH_SET;
     }

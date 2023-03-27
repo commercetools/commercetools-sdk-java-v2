@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductSelectionProductExcludedMessagePayloadImpl.class)
 public interface ProductSelectionProductExcludedMessagePayload extends MessagePayload {
 
+    /**
+     * discriminator value for ProductSelectionProductExcludedMessagePayload
+     */
     String PRODUCT_SELECTION_PRODUCT_EXCLUDED = "ProductSelectionProductExcluded";
 
     /**
@@ -53,14 +56,33 @@ public interface ProductSelectionProductExcludedMessagePayload extends MessagePa
     @JsonProperty("variantExclusion")
     public ProductVariantExclusion getVariantExclusion();
 
+    /**
+     *  <p>Product that was excluded from the Product Selection.</p>
+     * @param product value to be set
+     */
+
     public void setProduct(final ProductReference product);
+
+    /**
+     *  <p>Product Variant Exclusion after the Exclude Product update action.</p>
+     * @param variantExclusion value to be set
+     */
 
     public void setVariantExclusion(final ProductVariantExclusion variantExclusion);
 
+    /**
+     * factory method
+     * @return instance of ProductSelectionProductExcludedMessagePayload
+     */
     public static ProductSelectionProductExcludedMessagePayload of() {
         return new ProductSelectionProductExcludedMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductSelectionProductExcludedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductSelectionProductExcludedMessagePayload of(
             final ProductSelectionProductExcludedMessagePayload template) {
         ProductSelectionProductExcludedMessagePayloadImpl instance = new ProductSelectionProductExcludedMessagePayloadImpl();
@@ -69,20 +91,39 @@ public interface ProductSelectionProductExcludedMessagePayload extends MessagePa
         return instance;
     }
 
+    /**
+     * builder factory method for ProductSelectionProductExcludedMessagePayload
+     * @return builder
+     */
     public static ProductSelectionProductExcludedMessagePayloadBuilder builder() {
         return ProductSelectionProductExcludedMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for ProductSelectionProductExcludedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSelectionProductExcludedMessagePayloadBuilder builder(
             final ProductSelectionProductExcludedMessagePayload template) {
         return ProductSelectionProductExcludedMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductSelectionProductExcludedMessagePayload(
             Function<ProductSelectionProductExcludedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionProductExcludedMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionProductExcludedMessagePayload>() {
             @Override

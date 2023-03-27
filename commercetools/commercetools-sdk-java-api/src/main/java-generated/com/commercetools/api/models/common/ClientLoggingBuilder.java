@@ -92,20 +92,40 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
         return this;
     }
 
+    /**
+     *  <p><code>id</code> of the APIClient which created the resource.</p>
+     * @return clientId
+     */
+
     @Nullable
     public String getClientId() {
         return this.clientId;
     }
+
+    /**
+     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
+     * @return externalUserId
+     */
 
     @Nullable
     public String getExternalUserId() {
         return this.externalUserId;
     }
 
+    /**
+     *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
+     * @return customer
+     */
+
     @Nullable
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
         return this.customer;
     }
+
+    /**
+     *  <p>Indicates that the resource was modified during an anonymous session with the logged ID.</p>
+     * @return anonymousId
+     */
 
     @Nullable
     public String getAnonymousId() {
@@ -128,10 +148,19 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
         return new ClientLoggingImpl(clientId, externalUserId, customer, anonymousId);
     }
 
+    /**
+     * factory method for an instance of ClientLoggingBuilder
+     * @return builder
+     */
     public static ClientLoggingBuilder of() {
         return new ClientLoggingBuilder();
     }
 
+    /**
+     * create builder for ClientLogging instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ClientLoggingBuilder of(final ClientLogging template) {
         ClientLoggingBuilder builder = new ClientLoggingBuilder();
         builder.clientId = template.getClientId();

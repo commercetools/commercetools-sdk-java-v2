@@ -28,7 +28,7 @@ public class UpdateBuilder implements Builder<Update> {
     private java.util.List<com.commercetools.api.models.common.UpdateAction> actions;
 
     /**
-     *
+     * set the value to the version
      * @param version value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class UpdateBuilder implements Builder<Update> {
     }
 
     /**
-     *
+     * set values to the actions
      * @param actions value to be set
      * @return Builder
      */
@@ -50,7 +50,7 @@ public class UpdateBuilder implements Builder<Update> {
     }
 
     /**
-     *
+     * set value to the actions
      * @param actions value to be set
      * @return Builder
      */
@@ -61,7 +61,7 @@ public class UpdateBuilder implements Builder<Update> {
     }
 
     /**
-     *
+     * add values to the actions
      * @param actions value to be set
      * @return Builder
      */
@@ -75,7 +75,7 @@ public class UpdateBuilder implements Builder<Update> {
     }
 
     /**
-     *
+     * add the value to the actions using the builder function
      * @param builder function to build the actions value
      * @return Builder
      */
@@ -90,7 +90,7 @@ public class UpdateBuilder implements Builder<Update> {
     }
 
     /**
-     *
+     * set the value to the actions using the builder function
      * @param builder function to build the actions value
      * @return Builder
      */
@@ -102,9 +102,19 @@ public class UpdateBuilder implements Builder<Update> {
         return this;
     }
 
+    /**
+     * value of version}
+     * @return version
+     */
+
     public Long getVersion() {
         return this.version;
     }
+
+    /**
+     * value of actions}
+     * @return actions
+     */
 
     public java.util.List<com.commercetools.api.models.common.UpdateAction> getActions() {
         return this.actions;
@@ -128,10 +138,19 @@ public class UpdateBuilder implements Builder<Update> {
         return new UpdateImpl(version, actions);
     }
 
+    /**
+     * factory method for an instance of UpdateBuilder
+     * @return builder
+     */
     public static UpdateBuilder of() {
         return new UpdateBuilder();
     }
 
+    /**
+     * create builder for Update instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static UpdateBuilder of(final Update template) {
         UpdateBuilder builder = new UpdateBuilder();
         builder.version = template.getVersion();

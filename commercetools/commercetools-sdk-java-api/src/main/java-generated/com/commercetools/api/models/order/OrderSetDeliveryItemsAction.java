@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderSetDeliveryItemsActionImpl.class)
 public interface OrderSetDeliveryItemsAction extends OrderUpdateAction {
 
+    /**
+     * discriminator value for OrderSetDeliveryItemsAction
+     */
     String SET_DELIVERY_ITEMS = "setDeliveryItems";
 
     /**
@@ -50,17 +53,41 @@ public interface OrderSetDeliveryItemsAction extends OrderUpdateAction {
     @JsonProperty("items")
     public List<DeliveryItem> getItems();
 
+    /**
+     * set deliveryId
+     * @param deliveryId value to be set
+     */
+
     public void setDeliveryId(final String deliveryId);
+
+    /**
+     * set items
+     * @param items values to be set
+     */
 
     @JsonIgnore
     public void setItems(final DeliveryItem... items);
 
+    /**
+     * set items
+     * @param items values to be set
+     */
+
     public void setItems(final List<DeliveryItem> items);
 
+    /**
+     * factory method
+     * @return instance of OrderSetDeliveryItemsAction
+     */
     public static OrderSetDeliveryItemsAction of() {
         return new OrderSetDeliveryItemsActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderSetDeliveryItemsAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderSetDeliveryItemsAction of(final OrderSetDeliveryItemsAction template) {
         OrderSetDeliveryItemsActionImpl instance = new OrderSetDeliveryItemsActionImpl();
         instance.setDeliveryId(template.getDeliveryId());
@@ -68,18 +95,37 @@ public interface OrderSetDeliveryItemsAction extends OrderUpdateAction {
         return instance;
     }
 
+    /**
+     * builder factory method for OrderSetDeliveryItemsAction
+     * @return builder
+     */
     public static OrderSetDeliveryItemsActionBuilder builder() {
         return OrderSetDeliveryItemsActionBuilder.of();
     }
 
+    /**
+     * create builder for OrderSetDeliveryItemsAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderSetDeliveryItemsActionBuilder builder(final OrderSetDeliveryItemsAction template) {
         return OrderSetDeliveryItemsActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderSetDeliveryItemsAction(Function<OrderSetDeliveryItemsAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderSetDeliveryItemsAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderSetDeliveryItemsAction>() {
             @Override

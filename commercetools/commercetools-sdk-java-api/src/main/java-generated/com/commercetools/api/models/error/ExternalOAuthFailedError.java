@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ExternalOAuthFailedErrorImpl.class)
 public interface ExternalOAuthFailedError extends ErrorObject {
 
+    /**
+     * discriminator value for ExternalOAuthFailedError
+     */
     String EXTERNAL_O_AUTH_FAILED = "ExternalOAuthFailed";
 
     /**
@@ -47,12 +50,26 @@ public interface ExternalOAuthFailedError extends ErrorObject {
     @JsonProperty("message")
     public String getMessage();
 
+    /**
+     *  <p>Plain text description detailing the external OAuth error. For example, <code>"External OAuth did not respond in time."</code>.</p>
+     * @param message value to be set
+     */
+
     public void setMessage(final String message);
 
+    /**
+     * factory method
+     * @return instance of ExternalOAuthFailedError
+     */
     public static ExternalOAuthFailedError of() {
         return new ExternalOAuthFailedErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of ExternalOAuthFailedError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ExternalOAuthFailedError of(final ExternalOAuthFailedError template) {
         ExternalOAuthFailedErrorImpl instance = new ExternalOAuthFailedErrorImpl();
         instance.setMessage(template.getMessage());
@@ -60,18 +77,37 @@ public interface ExternalOAuthFailedError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for ExternalOAuthFailedError
+     * @return builder
+     */
     public static ExternalOAuthFailedErrorBuilder builder() {
         return ExternalOAuthFailedErrorBuilder.of();
     }
 
+    /**
+     * create builder for ExternalOAuthFailedError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ExternalOAuthFailedErrorBuilder builder(final ExternalOAuthFailedError template) {
         return ExternalOAuthFailedErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withExternalOAuthFailedError(Function<ExternalOAuthFailedError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ExternalOAuthFailedError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ExternalOAuthFailedError>() {
             @Override

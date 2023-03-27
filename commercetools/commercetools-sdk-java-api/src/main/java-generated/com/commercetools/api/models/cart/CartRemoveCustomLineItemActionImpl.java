@@ -25,12 +25,18 @@ public class CartRemoveCustomLineItemActionImpl implements CartRemoveCustomLineI
 
     private String customLineItemId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartRemoveCustomLineItemActionImpl(@JsonProperty("customLineItemId") final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         this.action = REMOVE_CUSTOM_LINE_ITEM;
     }
 
+    /**
+     * create empty instance
+     */
     public CartRemoveCustomLineItemActionImpl() {
         this.action = REMOVE_CUSTOM_LINE_ITEM;
     }

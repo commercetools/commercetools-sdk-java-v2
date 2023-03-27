@@ -24,6 +24,9 @@ public class DiscountedLineItemPriceForQuantityImpl implements DiscountedLineIte
 
     private com.commercetools.history.models.common.DiscountedLineItemPrice discountedPrice;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DiscountedLineItemPriceForQuantityImpl(@JsonProperty("quantity") final Integer quantity,
             @JsonProperty("discountedPrice") final com.commercetools.history.models.common.DiscountedLineItemPrice discountedPrice) {
@@ -31,6 +34,9 @@ public class DiscountedLineItemPriceForQuantityImpl implements DiscountedLineIte
         this.discountedPrice = discountedPrice;
     }
 
+    /**
+     * create empty instance
+     */
     public DiscountedLineItemPriceForQuantityImpl() {
     }
 

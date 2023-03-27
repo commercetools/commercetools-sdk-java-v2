@@ -61,9 +61,19 @@ public class AttributeLocalizedEnumValueBuilder implements Builder<AttributeLoca
         return this;
     }
 
+    /**
+     *  <p>Key of the value used as a programmatic identifier, for example in facets &amp; filters.</p>
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     *  <p>Descriptive, localized label of the value.</p>
+     * @return label
+     */
 
     public com.commercetools.api.models.common.LocalizedString getLabel() {
         return this.label;
@@ -87,10 +97,19 @@ public class AttributeLocalizedEnumValueBuilder implements Builder<AttributeLoca
         return new AttributeLocalizedEnumValueImpl(key, label);
     }
 
+    /**
+     * factory method for an instance of AttributeLocalizedEnumValueBuilder
+     * @return builder
+     */
     public static AttributeLocalizedEnumValueBuilder of() {
         return new AttributeLocalizedEnumValueBuilder();
     }
 
+    /**
+     * create builder for AttributeLocalizedEnumValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeLocalizedEnumValueBuilder of(final AttributeLocalizedEnumValue template) {
         AttributeLocalizedEnumValueBuilder builder = new AttributeLocalizedEnumValueBuilder();
         builder.key = template.getKey();

@@ -50,9 +50,19 @@ public class CustomerCreatePasswordResetTokenBuilder implements Builder<Customer
         return this;
     }
 
+    /**
+     *  <p>Email address of the Customer treated as case-insensitive.</p>
+     * @return email
+     */
+
     public String getEmail() {
         return this.email;
     }
+
+    /**
+     *  <p>Validity period of the generated token in minutes.</p>
+     * @return ttlMinutes
+     */
 
     @Nullable
     public Long getTtlMinutes() {
@@ -76,10 +86,19 @@ public class CustomerCreatePasswordResetTokenBuilder implements Builder<Customer
         return new CustomerCreatePasswordResetTokenImpl(email, ttlMinutes);
     }
 
+    /**
+     * factory method for an instance of CustomerCreatePasswordResetTokenBuilder
+     * @return builder
+     */
     public static CustomerCreatePasswordResetTokenBuilder of() {
         return new CustomerCreatePasswordResetTokenBuilder();
     }
 
+    /**
+     * create builder for CustomerCreatePasswordResetToken instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerCreatePasswordResetTokenBuilder of(final CustomerCreatePasswordResetToken template) {
         CustomerCreatePasswordResetTokenBuilder builder = new CustomerCreatePasswordResetTokenBuilder();
         builder.email = template.getEmail();

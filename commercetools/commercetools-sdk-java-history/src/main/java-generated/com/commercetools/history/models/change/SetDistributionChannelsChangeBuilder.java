@@ -42,7 +42,7 @@ public class SetDistributionChannelsChangeBuilder implements Builder<SetDistribu
     }
 
     /**
-     *
+     * set values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class SetDistributionChannelsChangeBuilder implements Builder<SetDistribu
     }
 
     /**
-     *
+     * set value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class SetDistributionChannelsChangeBuilder implements Builder<SetDistribu
     }
 
     /**
-     *
+     * add values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class SetDistributionChannelsChangeBuilder implements Builder<SetDistribu
     }
 
     /**
-     *
+     * add the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -96,7 +96,7 @@ public class SetDistributionChannelsChangeBuilder implements Builder<SetDistribu
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -109,7 +109,7 @@ public class SetDistributionChannelsChangeBuilder implements Builder<SetDistribu
     }
 
     /**
-     *
+     * set values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -121,7 +121,7 @@ public class SetDistributionChannelsChangeBuilder implements Builder<SetDistribu
     }
 
     /**
-     *
+     * set value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -133,7 +133,7 @@ public class SetDistributionChannelsChangeBuilder implements Builder<SetDistribu
     }
 
     /**
-     *
+     * add values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -148,7 +148,7 @@ public class SetDistributionChannelsChangeBuilder implements Builder<SetDistribu
     }
 
     /**
-     *
+     * add the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -163,7 +163,7 @@ public class SetDistributionChannelsChangeBuilder implements Builder<SetDistribu
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -175,13 +175,28 @@ public class SetDistributionChannelsChangeBuilder implements Builder<SetDistribu
         return this;
     }
 
+    /**
+     *  <p>Shape of the action for <code>setDistributionChannels</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public java.util.List<com.commercetools.history.models.common.Reference> getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public java.util.List<com.commercetools.history.models.common.Reference> getNextValue() {
         return this.nextValue;
@@ -206,10 +221,19 @@ public class SetDistributionChannelsChangeBuilder implements Builder<SetDistribu
         return new SetDistributionChannelsChangeImpl(change, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of SetDistributionChannelsChangeBuilder
+     * @return builder
+     */
     public static SetDistributionChannelsChangeBuilder of() {
         return new SetDistributionChannelsChangeBuilder();
     }
 
+    /**
+     * create builder for SetDistributionChannelsChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetDistributionChannelsChangeBuilder of(final SetDistributionChannelsChange template) {
         SetDistributionChannelsChangeBuilder builder = new SetDistributionChannelsChangeBuilder();
         builder.change = template.getChange();

@@ -50,6 +50,11 @@ public class MyBusinessUnitChangeParentUnitActionBuilder implements Builder<MyBu
         return this;
     }
 
+    /**
+     *  <p>New parent unit of the Business Unit.</p>
+     * @return parentUnit
+     */
+
     public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier getParentUnit() {
         return this.parentUnit;
     }
@@ -71,10 +76,19 @@ public class MyBusinessUnitChangeParentUnitActionBuilder implements Builder<MyBu
         return new MyBusinessUnitChangeParentUnitActionImpl(parentUnit);
     }
 
+    /**
+     * factory method for an instance of MyBusinessUnitChangeParentUnitActionBuilder
+     * @return builder
+     */
     public static MyBusinessUnitChangeParentUnitActionBuilder of() {
         return new MyBusinessUnitChangeParentUnitActionBuilder();
     }
 
+    /**
+     * create builder for MyBusinessUnitChangeParentUnitAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyBusinessUnitChangeParentUnitActionBuilder of(final MyBusinessUnitChangeParentUnitAction template) {
         MyBusinessUnitChangeParentUnitActionBuilder builder = new MyBusinessUnitChangeParentUnitActionBuilder();
         builder.parentUnit = template.getParentUnit();

@@ -28,6 +28,9 @@ public class ClientLoggingImpl implements ClientLogging, ModelBase {
 
     private String anonymousId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ClientLoggingImpl(@JsonProperty("clientId") final String clientId,
             @JsonProperty("externalUserId") final String externalUserId,
@@ -39,6 +42,9 @@ public class ClientLoggingImpl implements ClientLogging, ModelBase {
         this.anonymousId = anonymousId;
     }
 
+    /**
+     * create empty instance
+     */
     public ClientLoggingImpl() {
     }
 

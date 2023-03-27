@@ -24,12 +24,18 @@ public class InvalidScopeErrorImpl implements InvalidScopeError, ModelBase {
 
     private String message;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     InvalidScopeErrorImpl(@JsonProperty("message") final String message) {
         this.message = message;
         this.code = INVALID_SCOPE;
     }
 
+    /**
+     * create empty instance
+     */
     public InvalidScopeErrorImpl() {
         this.code = INVALID_SCOPE;
     }

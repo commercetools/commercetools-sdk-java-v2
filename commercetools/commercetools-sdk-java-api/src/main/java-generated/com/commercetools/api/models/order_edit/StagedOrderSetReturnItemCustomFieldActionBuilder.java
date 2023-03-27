@@ -33,7 +33,7 @@ public class StagedOrderSetReturnItemCustomFieldActionBuilder
     private java.lang.Object value;
 
     /**
-     *
+     * set the value to the returnItemId
      * @param returnItemId value to be set
      * @return Builder
      */
@@ -65,13 +65,28 @@ public class StagedOrderSetReturnItemCustomFieldActionBuilder
         return this;
     }
 
+    /**
+     * value of returnItemId}
+     * @return returnItemId
+     */
+
     public String getReturnItemId() {
         return this.returnItemId;
     }
 
+    /**
+     *  <p>Name of the Custom Field.</p>
+     * @return name
+     */
+
     public String getName() {
         return this.name;
     }
+
+    /**
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     * @return value
+     */
 
     @Nullable
     public java.lang.Object getValue() {
@@ -97,10 +112,19 @@ public class StagedOrderSetReturnItemCustomFieldActionBuilder
         return new StagedOrderSetReturnItemCustomFieldActionImpl(returnItemId, name, value);
     }
 
+    /**
+     * factory method for an instance of StagedOrderSetReturnItemCustomFieldActionBuilder
+     * @return builder
+     */
     public static StagedOrderSetReturnItemCustomFieldActionBuilder of() {
         return new StagedOrderSetReturnItemCustomFieldActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderSetReturnItemCustomFieldAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetReturnItemCustomFieldActionBuilder of(
             final StagedOrderSetReturnItemCustomFieldAction template) {
         StagedOrderSetReturnItemCustomFieldActionBuilder builder = new StagedOrderSetReturnItemCustomFieldActionBuilder();

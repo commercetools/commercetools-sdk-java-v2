@@ -28,6 +28,9 @@ public class SetLocaleChangeImpl implements SetLocaleChange, ModelBase {
 
     private String nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetLocaleChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final String previousValue,
@@ -38,6 +41,9 @@ public class SetLocaleChangeImpl implements SetLocaleChange, ModelBase {
         this.type = SET_LOCALE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetLocaleChangeImpl() {
         this.type = SET_LOCALE_CHANGE;
     }

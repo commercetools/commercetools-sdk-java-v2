@@ -32,6 +32,9 @@ public class ChangeInputHintChangeImpl implements ChangeInputHintChange, ModelBa
 
     private com.commercetools.history.models.common.TextInputHint previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeInputHintChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("fieldName") final String fieldName,
@@ -46,6 +49,9 @@ public class ChangeInputHintChangeImpl implements ChangeInputHintChange, ModelBa
         this.type = CHANGE_INPUT_HINT_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeInputHintChangeImpl() {
         this.type = CHANGE_INPUT_HINT_CHANGE;
     }

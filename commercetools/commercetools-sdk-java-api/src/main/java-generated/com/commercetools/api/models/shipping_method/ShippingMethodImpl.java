@@ -53,6 +53,9 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
 
     private com.commercetools.api.models.type.CustomFields custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShippingMethodImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -85,6 +88,9 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
         this.custom = custom;
     }
 
+    /**
+     * create empty instance
+     */
     public ShippingMethodImpl() {
     }
 

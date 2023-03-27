@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomerChangeAddressActionImpl.class)
 public interface CustomerChangeAddressAction extends CustomerUpdateAction {
 
+    /**
+     * discriminator value for CustomerChangeAddressAction
+     */
     String CHANGE_ADDRESS = "changeAddress";
 
     /**
@@ -59,16 +62,40 @@ public interface CustomerChangeAddressAction extends CustomerUpdateAction {
     @JsonProperty("address")
     public BaseAddress getAddress();
 
+    /**
+     *  <p><code>id</code> of the Address to change.</p>
+     * @param addressId value to be set
+     */
+
     public void setAddressId(final String addressId);
+
+    /**
+     *  <p><code>key</code> of the Address to change.</p>
+     * @param addressKey value to be set
+     */
 
     public void setAddressKey(final String addressKey);
 
+    /**
+     *  <p>Value to set.</p>
+     * @param address value to be set
+     */
+
     public void setAddress(final BaseAddress address);
 
+    /**
+     * factory method
+     * @return instance of CustomerChangeAddressAction
+     */
     public static CustomerChangeAddressAction of() {
         return new CustomerChangeAddressActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomerChangeAddressAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomerChangeAddressAction of(final CustomerChangeAddressAction template) {
         CustomerChangeAddressActionImpl instance = new CustomerChangeAddressActionImpl();
         instance.setAddressId(template.getAddressId());
@@ -77,18 +104,37 @@ public interface CustomerChangeAddressAction extends CustomerUpdateAction {
         return instance;
     }
 
+    /**
+     * builder factory method for CustomerChangeAddressAction
+     * @return builder
+     */
     public static CustomerChangeAddressActionBuilder builder() {
         return CustomerChangeAddressActionBuilder.of();
     }
 
+    /**
+     * create builder for CustomerChangeAddressAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerChangeAddressActionBuilder builder(final CustomerChangeAddressAction template) {
         return CustomerChangeAddressActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomerChangeAddressAction(Function<CustomerChangeAddressAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomerChangeAddressAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomerChangeAddressAction>() {
             @Override

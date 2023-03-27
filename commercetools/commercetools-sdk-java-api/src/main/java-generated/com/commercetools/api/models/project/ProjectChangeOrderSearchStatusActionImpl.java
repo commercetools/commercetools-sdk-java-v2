@@ -24,6 +24,9 @@ public class ProjectChangeOrderSearchStatusActionImpl implements ProjectChangeOr
 
     private com.commercetools.api.models.project.OrderSearchStatus status;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProjectChangeOrderSearchStatusActionImpl(
             @JsonProperty("status") final com.commercetools.api.models.project.OrderSearchStatus status) {
@@ -31,6 +34,9 @@ public class ProjectChangeOrderSearchStatusActionImpl implements ProjectChangeOr
         this.action = CHANGE_ORDER_SEARCH_STATUS;
     }
 
+    /**
+     * create empty instance
+     */
     public ProjectChangeOrderSearchStatusActionImpl() {
         this.action = CHANGE_ORDER_SEARCH_STATUS;
     }

@@ -26,6 +26,9 @@ public class RemoveProductChangeImpl implements RemoveProductChange, ModelBase {
 
     private com.commercetools.history.models.common.Reference previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     RemoveProductChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.Reference previousValue) {
@@ -34,6 +37,9 @@ public class RemoveProductChangeImpl implements RemoveProductChange, ModelBase {
         this.type = REMOVE_PRODUCT_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public RemoveProductChangeImpl() {
         this.type = REMOVE_PRODUCT_CHANGE;
     }

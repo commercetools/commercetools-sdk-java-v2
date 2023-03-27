@@ -91,14 +91,29 @@ public class PaymentSetTransactionCustomTypeActionBuilder implements Builder<Pay
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Transaction. If the specified <code>transactionId</code> does not exist, the request will fail with an InvalidOperation error.</p>
+     * @return transactionId
+     */
+
     public String getTransactionId() {
         return this.transactionId;
     }
+
+    /**
+     *  <p>Defines the Type that extends the Transaction with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Transaction.</p>
+     * @return type
+     */
 
     @Nullable
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }
+
+    /**
+     *  <p>Sets the Custom Fields fields for the Transaction.</p>
+     * @return fields
+     */
 
     @Nullable
     public com.commercetools.api.models.type.FieldContainer getFields() {
@@ -123,10 +138,19 @@ public class PaymentSetTransactionCustomTypeActionBuilder implements Builder<Pay
         return new PaymentSetTransactionCustomTypeActionImpl(transactionId, type, fields);
     }
 
+    /**
+     * factory method for an instance of PaymentSetTransactionCustomTypeActionBuilder
+     * @return builder
+     */
     public static PaymentSetTransactionCustomTypeActionBuilder of() {
         return new PaymentSetTransactionCustomTypeActionBuilder();
     }
 
+    /**
+     * create builder for PaymentSetTransactionCustomTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentSetTransactionCustomTypeActionBuilder of(
             final PaymentSetTransactionCustomTypeAction template) {
         PaymentSetTransactionCustomTypeActionBuilder builder = new PaymentSetTransactionCustomTypeActionBuilder();

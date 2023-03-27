@@ -51,9 +51,19 @@ public class OrderShipmentStateChangedMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>ShipmentState after the Change Shipment State update action.</p>
+     * @return shipmentState
+     */
+
     public com.commercetools.api.models.order.ShipmentState getShipmentState() {
         return this.shipmentState;
     }
+
+    /**
+     *  <p>ShipmentState before the Change Shipment State update action.</p>
+     * @return oldShipmentState
+     */
 
     public com.commercetools.api.models.order.ShipmentState getOldShipmentState() {
         return this.oldShipmentState;
@@ -79,10 +89,19 @@ public class OrderShipmentStateChangedMessagePayloadBuilder
         return new OrderShipmentStateChangedMessagePayloadImpl(shipmentState, oldShipmentState);
     }
 
+    /**
+     * factory method for an instance of OrderShipmentStateChangedMessagePayloadBuilder
+     * @return builder
+     */
     public static OrderShipmentStateChangedMessagePayloadBuilder of() {
         return new OrderShipmentStateChangedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for OrderShipmentStateChangedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderShipmentStateChangedMessagePayloadBuilder of(
             final OrderShipmentStateChangedMessagePayload template) {
         OrderShipmentStateChangedMessagePayloadBuilder builder = new OrderShipmentStateChangedMessagePayloadBuilder();

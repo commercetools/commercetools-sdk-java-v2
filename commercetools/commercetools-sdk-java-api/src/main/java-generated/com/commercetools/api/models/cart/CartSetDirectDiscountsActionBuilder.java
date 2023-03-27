@@ -106,6 +106,14 @@ public class CartSetDirectDiscountsActionBuilder implements Builder<CartSetDirec
         return this;
     }
 
+    /**
+     *  <ul>
+     *   <li>If set, all existing Direct Discounts are replaced. The discounts apply in the order they are added to the list.</li>
+     *   <li>If empty, all existing Direct Discounts are removed and all affected prices on the Cart or Order are recalculated.</li>
+     *  </ul>
+     * @return discounts
+     */
+
     public java.util.List<com.commercetools.api.models.cart.DirectDiscountDraft> getDiscounts() {
         return this.discounts;
     }
@@ -127,10 +135,19 @@ public class CartSetDirectDiscountsActionBuilder implements Builder<CartSetDirec
         return new CartSetDirectDiscountsActionImpl(discounts);
     }
 
+    /**
+     * factory method for an instance of CartSetDirectDiscountsActionBuilder
+     * @return builder
+     */
     public static CartSetDirectDiscountsActionBuilder of() {
         return new CartSetDirectDiscountsActionBuilder();
     }
 
+    /**
+     * create builder for CartSetDirectDiscountsAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartSetDirectDiscountsActionBuilder of(final CartSetDirectDiscountsAction template) {
         CartSetDirectDiscountsActionBuilder builder = new CartSetDirectDiscountsActionBuilder();
         builder.discounts = template.getDiscounts();

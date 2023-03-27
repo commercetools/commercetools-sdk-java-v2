@@ -26,29 +26,60 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StoreDeletedMessagePayloadImpl.class)
 public interface StoreDeletedMessagePayload extends MessagePayload {
 
+    /**
+     * discriminator value for StoreDeletedMessagePayload
+     */
     String STORE_DELETED = "StoreDeleted";
 
+    /**
+     * factory method
+     * @return instance of StoreDeletedMessagePayload
+     */
     public static StoreDeletedMessagePayload of() {
         return new StoreDeletedMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of StoreDeletedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StoreDeletedMessagePayload of(final StoreDeletedMessagePayload template) {
         StoreDeletedMessagePayloadImpl instance = new StoreDeletedMessagePayloadImpl();
         return instance;
     }
 
+    /**
+     * builder factory method for StoreDeletedMessagePayload
+     * @return builder
+     */
     public static StoreDeletedMessagePayloadBuilder builder() {
         return StoreDeletedMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for StoreDeletedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreDeletedMessagePayloadBuilder builder(final StoreDeletedMessagePayload template) {
         return StoreDeletedMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStoreDeletedMessagePayload(Function<StoreDeletedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StoreDeletedMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StoreDeletedMessagePayload>() {
             @Override

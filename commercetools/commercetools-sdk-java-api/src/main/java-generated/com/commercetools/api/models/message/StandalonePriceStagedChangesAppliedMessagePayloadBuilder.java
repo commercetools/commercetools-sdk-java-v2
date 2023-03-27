@@ -51,6 +51,11 @@ public class StandalonePriceStagedChangesAppliedMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>Applied changes of the StandalonePrice after the Apply Staged Changes update action.</p>
+     * @return stagedChanges
+     */
+
     public com.commercetools.api.models.standalone_price.StagedStandalonePrice getStagedChanges() {
         return this.stagedChanges;
     }
@@ -73,10 +78,19 @@ public class StandalonePriceStagedChangesAppliedMessagePayloadBuilder
         return new StandalonePriceStagedChangesAppliedMessagePayloadImpl(stagedChanges);
     }
 
+    /**
+     * factory method for an instance of StandalonePriceStagedChangesAppliedMessagePayloadBuilder
+     * @return builder
+     */
     public static StandalonePriceStagedChangesAppliedMessagePayloadBuilder of() {
         return new StandalonePriceStagedChangesAppliedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for StandalonePriceStagedChangesAppliedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StandalonePriceStagedChangesAppliedMessagePayloadBuilder of(
             final StandalonePriceStagedChangesAppliedMessagePayload template) {
         StandalonePriceStagedChangesAppliedMessagePayloadBuilder builder = new StandalonePriceStagedChangesAppliedMessagePayloadBuilder();

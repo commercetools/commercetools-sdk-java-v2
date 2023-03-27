@@ -32,6 +32,9 @@ public class SetLineItemDistributionChannelChangeImpl implements SetLineItemDist
 
     private com.commercetools.history.models.common.Reference previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetLineItemDistributionChannelChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("lineItem") final com.commercetools.history.models.common.LocalizedString lineItem,
@@ -46,6 +49,9 @@ public class SetLineItemDistributionChannelChangeImpl implements SetLineItemDist
         this.type = SET_LINE_ITEM_DISTRIBUTION_CHANNEL_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetLineItemDistributionChannelChangeImpl() {
         this.type = SET_LINE_ITEM_DISTRIBUTION_CHANNEL_CHANGE;
     }

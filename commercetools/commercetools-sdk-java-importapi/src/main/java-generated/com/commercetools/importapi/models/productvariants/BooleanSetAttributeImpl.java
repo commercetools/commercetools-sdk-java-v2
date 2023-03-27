@@ -26,6 +26,9 @@ public class BooleanSetAttributeImpl implements BooleanSetAttribute, ModelBase {
 
     private java.util.List<Boolean> value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BooleanSetAttributeImpl(@JsonProperty("name") final String name,
             @JsonProperty("value") final java.util.List<Boolean> value) {
@@ -34,6 +37,9 @@ public class BooleanSetAttributeImpl implements BooleanSetAttribute, ModelBase {
         this.type = BOOLEAN_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public BooleanSetAttributeImpl() {
         this.type = BOOLEAN_SET;
     }

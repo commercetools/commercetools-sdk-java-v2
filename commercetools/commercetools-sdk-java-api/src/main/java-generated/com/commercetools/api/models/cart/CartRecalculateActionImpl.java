@@ -25,12 +25,18 @@ public class CartRecalculateActionImpl implements CartRecalculateAction, ModelBa
 
     private Boolean updateProductData;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartRecalculateActionImpl(@JsonProperty("updateProductData") final Boolean updateProductData) {
         this.updateProductData = updateProductData;
         this.action = RECALCULATE;
     }
 
+    /**
+     * create empty instance
+     */
     public CartRecalculateActionImpl() {
         this.action = RECALCULATE;
     }

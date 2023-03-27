@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TransitionStateChangeImpl.class)
 public interface TransitionStateChange extends Change {
 
+    /**
+     * discriminator value for TransitionStateChange
+     */
     String TRANSITION_STATE_CHANGE = "TransitionStateChange";
 
     /**
@@ -69,16 +72,40 @@ public interface TransitionStateChange extends Change {
     @JsonProperty("nextValue")
     public Reference getNextValue();
 
+    /**
+     *  <p>Shape of the action for <code>transitionState</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
 
     public void setPreviousValue(final Reference previousValue);
 
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
+
     public void setNextValue(final Reference nextValue);
 
+    /**
+     * factory method
+     * @return instance of TransitionStateChange
+     */
     public static TransitionStateChange of() {
         return new TransitionStateChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of TransitionStateChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static TransitionStateChange of(final TransitionStateChange template) {
         TransitionStateChangeImpl instance = new TransitionStateChangeImpl();
         instance.setChange(template.getChange());
@@ -87,18 +114,37 @@ public interface TransitionStateChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for TransitionStateChange
+     * @return builder
+     */
     public static TransitionStateChangeBuilder builder() {
         return TransitionStateChangeBuilder.of();
     }
 
+    /**
+     * create builder for TransitionStateChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TransitionStateChangeBuilder builder(final TransitionStateChange template) {
         return TransitionStateChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTransitionStateChange(Function<TransitionStateChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<TransitionStateChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TransitionStateChange>() {
             @Override

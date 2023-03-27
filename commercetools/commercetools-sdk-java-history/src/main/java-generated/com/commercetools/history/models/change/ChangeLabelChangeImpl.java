@@ -32,6 +32,9 @@ public class ChangeLabelChangeImpl implements ChangeLabelChange, ModelBase {
 
     private com.commercetools.history.models.common.LocalizedString previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeLabelChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("fieldName") final String fieldName,
@@ -46,6 +49,9 @@ public class ChangeLabelChangeImpl implements ChangeLabelChange, ModelBase {
         this.type = CHANGE_LABEL_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeLabelChangeImpl() {
         this.type = CHANGE_LABEL_CHANGE;
     }

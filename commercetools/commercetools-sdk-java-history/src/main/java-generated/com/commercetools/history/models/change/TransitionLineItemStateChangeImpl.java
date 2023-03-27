@@ -32,6 +32,9 @@ public class TransitionLineItemStateChangeImpl implements TransitionLineItemStat
 
     private java.util.List<com.commercetools.history.models.common.ItemState> previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TransitionLineItemStateChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("lineItemId") final String lineItemId, @JsonProperty("stateId") final String stateId,
@@ -45,6 +48,9 @@ public class TransitionLineItemStateChangeImpl implements TransitionLineItemStat
         this.type = TRANSITION_LINE_ITEM_STATE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public TransitionLineItemStateChangeImpl() {
         this.type = TRANSITION_LINE_ITEM_STATE_CHANGE;
     }

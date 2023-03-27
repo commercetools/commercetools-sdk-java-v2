@@ -38,6 +38,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ReturnInfoAddedMessageImpl.class)
 public interface ReturnInfoAddedMessage extends OrderMessage {
 
+    /**
+     * discriminator value for ReturnInfoAddedMessage
+     */
     String RETURN_INFO_ADDED = "ReturnInfoAdded";
 
     /**
@@ -49,12 +52,26 @@ public interface ReturnInfoAddedMessage extends OrderMessage {
     @JsonProperty("returnInfo")
     public ReturnInfo getReturnInfo();
 
+    /**
+     *  <p>The ReturnInfo that was added to the Order.</p>
+     * @param returnInfo value to be set
+     */
+
     public void setReturnInfo(final ReturnInfo returnInfo);
 
+    /**
+     * factory method
+     * @return instance of ReturnInfoAddedMessage
+     */
     public static ReturnInfoAddedMessage of() {
         return new ReturnInfoAddedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of ReturnInfoAddedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ReturnInfoAddedMessage of(final ReturnInfoAddedMessage template) {
         ReturnInfoAddedMessageImpl instance = new ReturnInfoAddedMessageImpl();
         instance.setId(template.getId());
@@ -71,18 +88,37 @@ public interface ReturnInfoAddedMessage extends OrderMessage {
         return instance;
     }
 
+    /**
+     * builder factory method for ReturnInfoAddedMessage
+     * @return builder
+     */
     public static ReturnInfoAddedMessageBuilder builder() {
         return ReturnInfoAddedMessageBuilder.of();
     }
 
+    /**
+     * create builder for ReturnInfoAddedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReturnInfoAddedMessageBuilder builder(final ReturnInfoAddedMessage template) {
         return ReturnInfoAddedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withReturnInfoAddedMessage(Function<ReturnInfoAddedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ReturnInfoAddedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ReturnInfoAddedMessage>() {
             @Override

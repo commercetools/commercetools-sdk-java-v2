@@ -42,6 +42,9 @@ public class PriceImpl implements Price, ModelBase {
 
     private com.commercetools.api.models.type.CustomFields custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PriceImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key,
             @JsonProperty("value") final com.commercetools.api.models.common.TypedMoney value,
@@ -66,6 +69,9 @@ public class PriceImpl implements Price, ModelBase {
         this.custom = custom;
     }
 
+    /**
+     * create empty instance
+     */
     public PriceImpl() {
     }
 

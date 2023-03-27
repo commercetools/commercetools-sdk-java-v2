@@ -26,6 +26,9 @@ public class CustomObjectKeyReferenceImpl implements CustomObjectKeyReference, M
 
     private String container;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomObjectKeyReferenceImpl(@JsonProperty("key") final String key,
             @JsonProperty("container") final String container) {
@@ -34,6 +37,9 @@ public class CustomObjectKeyReferenceImpl implements CustomObjectKeyReference, M
         this.typeId = ReferenceType.findEnum("key-value-document");
     }
 
+    /**
+     * create empty instance
+     */
     public CustomObjectKeyReferenceImpl() {
         this.typeId = ReferenceType.findEnum("key-value-document");
     }

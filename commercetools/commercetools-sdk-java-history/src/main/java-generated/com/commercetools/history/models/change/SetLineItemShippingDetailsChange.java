@@ -34,6 +34,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetLineItemShippingDetailsChangeImpl.class)
 public interface SetLineItemShippingDetailsChange extends Change {
 
+    /**
+     * discriminator value for SetLineItemShippingDetailsChange
+     */
     String SET_LINE_ITEM_SHIPPING_DETAILS_CHANGE = "SetLineItemShippingDetailsChange";
 
     /**
@@ -78,18 +81,47 @@ public interface SetLineItemShippingDetailsChange extends Change {
     @JsonProperty("previousValue")
     public ItemShippingDetails getPreviousValue();
 
+    /**
+     *  <p>Update action for <code>setLineItemShippingDetails</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set lineItemId
+     * @param lineItemId value to be set
+     */
 
     public void setLineItemId(final String lineItemId);
 
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
+
     public void setNextValue(final ItemShippingDetails nextValue);
+
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
 
     public void setPreviousValue(final ItemShippingDetails previousValue);
 
+    /**
+     * factory method
+     * @return instance of SetLineItemShippingDetailsChange
+     */
     public static SetLineItemShippingDetailsChange of() {
         return new SetLineItemShippingDetailsChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetLineItemShippingDetailsChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetLineItemShippingDetailsChange of(final SetLineItemShippingDetailsChange template) {
         SetLineItemShippingDetailsChangeImpl instance = new SetLineItemShippingDetailsChangeImpl();
         instance.setChange(template.getChange());
@@ -99,18 +131,37 @@ public interface SetLineItemShippingDetailsChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetLineItemShippingDetailsChange
+     * @return builder
+     */
     public static SetLineItemShippingDetailsChangeBuilder builder() {
         return SetLineItemShippingDetailsChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetLineItemShippingDetailsChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetLineItemShippingDetailsChangeBuilder builder(final SetLineItemShippingDetailsChange template) {
         return SetLineItemShippingDetailsChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetLineItemShippingDetailsChange(Function<SetLineItemShippingDetailsChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetLineItemShippingDetailsChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetLineItemShippingDetailsChange>() {
             @Override

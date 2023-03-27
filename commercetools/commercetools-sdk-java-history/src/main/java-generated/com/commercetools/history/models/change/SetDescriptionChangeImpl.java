@@ -28,6 +28,9 @@ public class SetDescriptionChangeImpl implements SetDescriptionChange, ModelBase
 
     private String nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetDescriptionChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final String previousValue,
@@ -38,6 +41,9 @@ public class SetDescriptionChangeImpl implements SetDescriptionChange, ModelBase
         this.type = SET_DESCRIPTION_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetDescriptionChangeImpl() {
         this.type = SET_DESCRIPTION_CHANGE;
     }

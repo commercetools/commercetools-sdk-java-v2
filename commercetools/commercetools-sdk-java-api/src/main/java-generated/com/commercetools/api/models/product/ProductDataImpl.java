@@ -42,6 +42,9 @@ public class ProductDataImpl implements ProductData, ModelBase {
 
     private com.commercetools.api.models.product.SearchKeywords searchKeywords;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductDataImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("categories") final java.util.List<com.commercetools.api.models.category.CategoryReference> categories,
@@ -67,6 +70,9 @@ public class ProductDataImpl implements ProductData, ModelBase {
         this.searchKeywords = searchKeywords;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductDataImpl() {
     }
 

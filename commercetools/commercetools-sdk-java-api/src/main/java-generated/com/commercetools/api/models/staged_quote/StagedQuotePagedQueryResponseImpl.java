@@ -30,6 +30,9 @@ public class StagedQuotePagedQueryResponseImpl implements StagedQuotePagedQueryR
 
     private java.util.List<com.commercetools.api.models.staged_quote.StagedQuote> results;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedQuotePagedQueryResponseImpl(@JsonProperty("limit") final Long limit,
             @JsonProperty("offset") final Long offset, @JsonProperty("count") final Long count,
@@ -42,6 +45,9 @@ public class StagedQuotePagedQueryResponseImpl implements StagedQuotePagedQueryR
         this.results = results;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedQuotePagedQueryResponseImpl() {
     }
 

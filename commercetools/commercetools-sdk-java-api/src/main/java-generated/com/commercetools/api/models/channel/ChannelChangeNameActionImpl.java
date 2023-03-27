@@ -24,12 +24,18 @@ public class ChannelChangeNameActionImpl implements ChannelChangeNameAction, Mod
 
     private com.commercetools.api.models.common.LocalizedString name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChannelChangeNameActionImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         this.action = CHANGE_NAME;
     }
 
+    /**
+     * create empty instance
+     */
     public ChannelChangeNameActionImpl() {
         this.action = CHANGE_NAME;
     }

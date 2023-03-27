@@ -26,6 +26,9 @@ public class AddAttributeDefinitionChangeImpl implements AddAttributeDefinitionC
 
     private com.commercetools.history.models.common.AttributeDefinition nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AddAttributeDefinitionChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.AttributeDefinition nextValue) {
@@ -34,6 +37,9 @@ public class AddAttributeDefinitionChangeImpl implements AddAttributeDefinitionC
         this.type = ADD_ATTRIBUTE_DEFINITION_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public AddAttributeDefinitionChangeImpl() {
         this.type = ADD_ATTRIBUTE_DEFINITION_CHANGE;
     }

@@ -71,6 +71,10 @@ public class CartDiscountUpdateActionBuilder {
         return com.commercetools.api.models.cart_discount.CartDiscountSetValidUntilActionBuilder.of();
     }
 
+    /**
+     * factory method for an instance of CartDiscountUpdateActionBuilder
+     * @return builder
+     */
     public static CartDiscountUpdateActionBuilder of() {
         return new CartDiscountUpdateActionBuilder();
     }

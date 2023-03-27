@@ -24,7 +24,7 @@ public class CloudEventsFormatBuilder implements Builder<CloudEventsFormat> {
     private String cloudEventsVersion;
 
     /**
-     *
+     * set the value to the cloudEventsVersion
      * @param cloudEventsVersion value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class CloudEventsFormatBuilder implements Builder<CloudEventsFormat> {
         this.cloudEventsVersion = cloudEventsVersion;
         return this;
     }
+
+    /**
+     * value of cloudEventsVersion}
+     * @return cloudEventsVersion
+     */
 
     public String getCloudEventsVersion() {
         return this.cloudEventsVersion;
@@ -55,10 +60,19 @@ public class CloudEventsFormatBuilder implements Builder<CloudEventsFormat> {
         return new CloudEventsFormatImpl(cloudEventsVersion);
     }
 
+    /**
+     * factory method for an instance of CloudEventsFormatBuilder
+     * @return builder
+     */
     public static CloudEventsFormatBuilder of() {
         return new CloudEventsFormatBuilder();
     }
 
+    /**
+     * create builder for CloudEventsFormat instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CloudEventsFormatBuilder of(final CloudEventsFormat template) {
         CloudEventsFormatBuilder builder = new CloudEventsFormatBuilder();
         builder.cloudEventsVersion = template.getCloudEventsVersion();

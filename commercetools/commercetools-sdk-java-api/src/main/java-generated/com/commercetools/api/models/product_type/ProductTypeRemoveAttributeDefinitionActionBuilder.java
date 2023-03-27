@@ -35,6 +35,11 @@ public class ProductTypeRemoveAttributeDefinitionActionBuilder
         return this;
     }
 
+    /**
+     *  <p>Name of the Attribute to remove.</p>
+     * @return name
+     */
+
     public String getName() {
         return this.name;
     }
@@ -56,10 +61,19 @@ public class ProductTypeRemoveAttributeDefinitionActionBuilder
         return new ProductTypeRemoveAttributeDefinitionActionImpl(name);
     }
 
+    /**
+     * factory method for an instance of ProductTypeRemoveAttributeDefinitionActionBuilder
+     * @return builder
+     */
     public static ProductTypeRemoveAttributeDefinitionActionBuilder of() {
         return new ProductTypeRemoveAttributeDefinitionActionBuilder();
     }
 
+    /**
+     * create builder for ProductTypeRemoveAttributeDefinitionAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductTypeRemoveAttributeDefinitionActionBuilder of(
             final ProductTypeRemoveAttributeDefinitionAction template) {
         ProductTypeRemoveAttributeDefinitionActionBuilder builder = new ProductTypeRemoveAttributeDefinitionActionBuilder();

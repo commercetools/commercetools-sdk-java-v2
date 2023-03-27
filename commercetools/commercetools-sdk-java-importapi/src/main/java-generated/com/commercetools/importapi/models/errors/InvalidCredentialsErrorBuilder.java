@@ -24,7 +24,7 @@ public class InvalidCredentialsErrorBuilder implements Builder<InvalidCredential
     private String message;
 
     /**
-     *
+     * set the value to the message
      * @param message value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class InvalidCredentialsErrorBuilder implements Builder<InvalidCredential
         this.message = message;
         return this;
     }
+
+    /**
+     * value of message}
+     * @return message
+     */
 
     public String getMessage() {
         return this.message;
@@ -55,10 +60,19 @@ public class InvalidCredentialsErrorBuilder implements Builder<InvalidCredential
         return new InvalidCredentialsErrorImpl(message);
     }
 
+    /**
+     * factory method for an instance of InvalidCredentialsErrorBuilder
+     * @return builder
+     */
     public static InvalidCredentialsErrorBuilder of() {
         return new InvalidCredentialsErrorBuilder();
     }
 
+    /**
+     * create builder for InvalidCredentialsError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InvalidCredentialsErrorBuilder of(final InvalidCredentialsError template) {
         InvalidCredentialsErrorBuilder builder = new InvalidCredentialsErrorBuilder();
         builder.message = template.getMessage();

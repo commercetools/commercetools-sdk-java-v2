@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CartDiscountValueRelativeDraft
         extends CartDiscountValueDraft, io.vrap.rmf.base.client.Draft<CartDiscountValueRelativeDraft> {
 
+    /**
+     * discriminator value for CartDiscountValueRelativeDraft
+     */
     String RELATIVE = "relative";
 
     /**
@@ -40,30 +43,63 @@ public interface CartDiscountValueRelativeDraft
     @JsonProperty("permyriad")
     public Long getPermyriad();
 
+    /**
+     *  <p>Fraction (per ten thousand) the price is reduced by. For example, <code>1000</code> will result in a 10% price reduction.</p>
+     * @param permyriad value to be set
+     */
+
     public void setPermyriad(final Long permyriad);
 
+    /**
+     * factory method
+     * @return instance of CartDiscountValueRelativeDraft
+     */
     public static CartDiscountValueRelativeDraft of() {
         return new CartDiscountValueRelativeDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartDiscountValueRelativeDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartDiscountValueRelativeDraft of(final CartDiscountValueRelativeDraft template) {
         CartDiscountValueRelativeDraftImpl instance = new CartDiscountValueRelativeDraftImpl();
         instance.setPermyriad(template.getPermyriad());
         return instance;
     }
 
+    /**
+     * builder factory method for CartDiscountValueRelativeDraft
+     * @return builder
+     */
     public static CartDiscountValueRelativeDraftBuilder builder() {
         return CartDiscountValueRelativeDraftBuilder.of();
     }
 
+    /**
+     * create builder for CartDiscountValueRelativeDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartDiscountValueRelativeDraftBuilder builder(final CartDiscountValueRelativeDraft template) {
         return CartDiscountValueRelativeDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartDiscountValueRelativeDraft(Function<CartDiscountValueRelativeDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountValueRelativeDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountValueRelativeDraft>() {
             @Override

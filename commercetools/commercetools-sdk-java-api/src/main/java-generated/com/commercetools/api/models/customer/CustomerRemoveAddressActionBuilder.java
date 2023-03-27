@@ -50,10 +50,20 @@ public class CustomerRemoveAddressActionBuilder implements Builder<CustomerRemov
         return this;
     }
 
+    /**
+     *  <p><code>id</code> of the Address to remove.</p>
+     * @return addressId
+     */
+
     @Nullable
     public String getAddressId() {
         return this.addressId;
     }
+
+    /**
+     *  <p><code>key</code> of the Address to remove.</p>
+     * @return addressKey
+     */
 
     @Nullable
     public String getAddressKey() {
@@ -76,10 +86,19 @@ public class CustomerRemoveAddressActionBuilder implements Builder<CustomerRemov
         return new CustomerRemoveAddressActionImpl(addressId, addressKey);
     }
 
+    /**
+     * factory method for an instance of CustomerRemoveAddressActionBuilder
+     * @return builder
+     */
     public static CustomerRemoveAddressActionBuilder of() {
         return new CustomerRemoveAddressActionBuilder();
     }
 
+    /**
+     * create builder for CustomerRemoveAddressAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerRemoveAddressActionBuilder of(final CustomerRemoveAddressAction template) {
         CustomerRemoveAddressActionBuilder builder = new CustomerRemoveAddressActionBuilder();
         builder.addressId = template.getAddressId();

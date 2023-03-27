@@ -46,6 +46,9 @@ public class CategorySlugChangedMessageImpl implements CategorySlugChangedMessag
 
     private com.commercetools.api.models.common.LocalizedString oldSlug;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CategorySlugChangedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -73,6 +76,9 @@ public class CategorySlugChangedMessageImpl implements CategorySlugChangedMessag
         this.type = CATEGORY_SLUG_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public CategorySlugChangedMessageImpl() {
         this.type = CATEGORY_SLUG_CHANGED;
     }

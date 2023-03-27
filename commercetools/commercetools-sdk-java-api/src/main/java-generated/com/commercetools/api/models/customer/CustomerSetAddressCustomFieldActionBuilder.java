@@ -64,13 +64,28 @@ public class CustomerSetAddressCustomFieldActionBuilder implements Builder<Custo
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the Address to be updated.</p>
+     * @return addressId
+     */
+
     public String getAddressId() {
         return this.addressId;
     }
 
+    /**
+     *  <p>Name of the Custom Field.</p>
+     * @return name
+     */
+
     public String getName() {
         return this.name;
     }
+
+    /**
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. If <code>value</code> is provided, it is set for the field defined by <code>name</code>. Trying to remove a field that does not exist will fail with an InvalidOperation error.</p>
+     * @return value
+     */
 
     @Nullable
     public java.lang.Object getValue() {
@@ -95,10 +110,19 @@ public class CustomerSetAddressCustomFieldActionBuilder implements Builder<Custo
         return new CustomerSetAddressCustomFieldActionImpl(addressId, name, value);
     }
 
+    /**
+     * factory method for an instance of CustomerSetAddressCustomFieldActionBuilder
+     * @return builder
+     */
     public static CustomerSetAddressCustomFieldActionBuilder of() {
         return new CustomerSetAddressCustomFieldActionBuilder();
     }
 
+    /**
+     * create builder for CustomerSetAddressCustomFieldAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerSetAddressCustomFieldActionBuilder of(final CustomerSetAddressCustomFieldAction template) {
         CustomerSetAddressCustomFieldActionBuilder builder = new CustomerSetAddressCustomFieldActionBuilder();
         builder.addressId = template.getAddressId();

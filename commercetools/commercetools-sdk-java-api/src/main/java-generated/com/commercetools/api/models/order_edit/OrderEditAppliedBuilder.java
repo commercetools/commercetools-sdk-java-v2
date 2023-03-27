@@ -31,7 +31,7 @@ public class OrderEditAppliedBuilder implements Builder<OrderEditApplied> {
     private com.commercetools.api.models.order_edit.OrderExcerpt excerptAfterEdit;
 
     /**
-     *
+     * set the value to the appliedAt
      * @param appliedAt value to be set
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class OrderEditAppliedBuilder implements Builder<OrderEditApplied> {
     }
 
     /**
-     *
+     * set the value to the excerptBeforeEdit using the builder function
      * @param builder function to build the excerptBeforeEdit value
      * @return Builder
      */
@@ -55,7 +55,7 @@ public class OrderEditAppliedBuilder implements Builder<OrderEditApplied> {
     }
 
     /**
-     *
+     * set the value to the excerptBeforeEdit
      * @param excerptBeforeEdit value to be set
      * @return Builder
      */
@@ -67,7 +67,7 @@ public class OrderEditAppliedBuilder implements Builder<OrderEditApplied> {
     }
 
     /**
-     *
+     * set the value to the excerptAfterEdit using the builder function
      * @param builder function to build the excerptAfterEdit value
      * @return Builder
      */
@@ -79,7 +79,7 @@ public class OrderEditAppliedBuilder implements Builder<OrderEditApplied> {
     }
 
     /**
-     *
+     * set the value to the excerptAfterEdit
      * @param excerptAfterEdit value to be set
      * @return Builder
      */
@@ -90,13 +90,28 @@ public class OrderEditAppliedBuilder implements Builder<OrderEditApplied> {
         return this;
     }
 
+    /**
+     * value of appliedAt}
+     * @return appliedAt
+     */
+
     public java.time.ZonedDateTime getAppliedAt() {
         return this.appliedAt;
     }
 
+    /**
+     * value of excerptBeforeEdit}
+     * @return excerptBeforeEdit
+     */
+
     public com.commercetools.api.models.order_edit.OrderExcerpt getExcerptBeforeEdit() {
         return this.excerptBeforeEdit;
     }
+
+    /**
+     * value of excerptAfterEdit}
+     * @return excerptAfterEdit
+     */
 
     public com.commercetools.api.models.order_edit.OrderExcerpt getExcerptAfterEdit() {
         return this.excerptAfterEdit;
@@ -121,10 +136,19 @@ public class OrderEditAppliedBuilder implements Builder<OrderEditApplied> {
         return new OrderEditAppliedImpl(appliedAt, excerptBeforeEdit, excerptAfterEdit);
     }
 
+    /**
+     * factory method for an instance of OrderEditAppliedBuilder
+     * @return builder
+     */
     public static OrderEditAppliedBuilder of() {
         return new OrderEditAppliedBuilder();
     }
 
+    /**
+     * create builder for OrderEditApplied instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderEditAppliedBuilder of(final OrderEditApplied template) {
         OrderEditAppliedBuilder builder = new OrderEditAppliedBuilder();
         builder.appliedAt = template.getAppliedAt();

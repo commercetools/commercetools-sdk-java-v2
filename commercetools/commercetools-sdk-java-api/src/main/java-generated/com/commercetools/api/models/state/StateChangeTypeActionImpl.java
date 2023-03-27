@@ -24,12 +24,18 @@ public class StateChangeTypeActionImpl implements StateChangeTypeAction, ModelBa
 
     private com.commercetools.api.models.state.StateTypeEnum type;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StateChangeTypeActionImpl(@JsonProperty("type") final com.commercetools.api.models.state.StateTypeEnum type) {
         this.type = type;
         this.action = CHANGE_TYPE;
     }
 
+    /**
+     * create empty instance
+     */
     public StateChangeTypeActionImpl() {
         this.action = CHANGE_TYPE;
     }

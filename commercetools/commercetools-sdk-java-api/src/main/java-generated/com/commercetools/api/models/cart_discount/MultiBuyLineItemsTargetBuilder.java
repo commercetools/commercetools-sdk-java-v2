@@ -93,22 +93,47 @@ public class MultiBuyLineItemsTargetBuilder implements Builder<MultiBuyLineItems
         return this;
     }
 
+    /**
+     *  <p>Valid LineItem target predicate. The Discount will be applied to Line Items that are matched by the predicate.</p>
+     * @return predicate
+     */
+
     public String getPredicate() {
         return this.predicate;
     }
+
+    /**
+     *  <p>Number of Line Items to be present in order to trigger an application of this Discount.</p>
+     * @return triggerQuantity
+     */
 
     public Integer getTriggerQuantity() {
         return this.triggerQuantity;
     }
 
+    /**
+     *  <p>Number of Line Items that are discounted per application of this Discount.</p>
+     * @return discountedQuantity
+     */
+
     public Integer getDiscountedQuantity() {
         return this.discountedQuantity;
     }
+
+    /**
+     *  <p>Maximum number of times this Discount can be applied.</p>
+     * @return maxOccurrence
+     */
 
     @Nullable
     public Integer getMaxOccurrence() {
         return this.maxOccurrence;
     }
+
+    /**
+     *  <p>Discounts particular Line Items only according to the SelectionMode.</p>
+     * @return selectionMode
+     */
 
     public com.commercetools.api.models.cart_discount.SelectionMode getSelectionMode() {
         return this.selectionMode;
@@ -136,10 +161,19 @@ public class MultiBuyLineItemsTargetBuilder implements Builder<MultiBuyLineItems
             selectionMode);
     }
 
+    /**
+     * factory method for an instance of MultiBuyLineItemsTargetBuilder
+     * @return builder
+     */
     public static MultiBuyLineItemsTargetBuilder of() {
         return new MultiBuyLineItemsTargetBuilder();
     }
 
+    /**
+     * create builder for MultiBuyLineItemsTarget instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MultiBuyLineItemsTargetBuilder of(final MultiBuyLineItemsTarget template) {
         MultiBuyLineItemsTargetBuilder builder = new MultiBuyLineItemsTargetBuilder();
         builder.predicate = template.getPredicate();

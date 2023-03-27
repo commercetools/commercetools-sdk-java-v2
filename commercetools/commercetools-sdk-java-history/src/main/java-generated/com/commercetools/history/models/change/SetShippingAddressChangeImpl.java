@@ -28,6 +28,9 @@ public class SetShippingAddressChangeImpl implements SetShippingAddressChange, M
 
     private com.commercetools.history.models.common.Address previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetShippingAddressChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.Address nextValue,
@@ -38,6 +41,9 @@ public class SetShippingAddressChangeImpl implements SetShippingAddressChange, M
         this.type = SET_SHIPPING_ADDRESS_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetShippingAddressChangeImpl() {
         this.type = SET_SHIPPING_ADDRESS_CHANGE;
     }

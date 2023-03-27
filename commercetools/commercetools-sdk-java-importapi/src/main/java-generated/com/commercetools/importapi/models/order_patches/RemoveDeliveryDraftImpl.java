@@ -22,11 +22,17 @@ public class RemoveDeliveryDraftImpl implements RemoveDeliveryDraft, ModelBase {
 
     private String id;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     RemoveDeliveryDraftImpl(@JsonProperty("id") final String id) {
         this.id = id;
     }
 
+    /**
+     * create empty instance
+     */
     public RemoveDeliveryDraftImpl() {
     }
 

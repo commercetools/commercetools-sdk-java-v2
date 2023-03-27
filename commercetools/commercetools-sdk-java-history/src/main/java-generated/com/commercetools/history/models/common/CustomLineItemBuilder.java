@@ -54,7 +54,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     *
+     * set the value to the name using the builder function
      * @param builder function to build the name value
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     *
+     * set the value to the name
      * @param name value to be set
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     *
+     * set the value to the money using the builder function
      * @param builder function to build the money value
      * @return Builder
      */
@@ -89,7 +89,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     *
+     * set the value to the money
      * @param money value to be set
      * @return Builder
      */
@@ -100,7 +100,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     *
+     * set the value to the taxedPrice using the builder function
      * @param builder function to build the taxedPrice value
      * @return Builder
      */
@@ -112,7 +112,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     *
+     * set the value to the taxedPrice
      * @param taxedPrice value to be set
      * @return Builder
      */
@@ -123,7 +123,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     *
+     * set the value to the totalPrice using the builder function
      * @param builder function to build the totalPrice value
      * @return Builder
      */
@@ -135,7 +135,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     *
+     * set the value to the totalPrice
      * @param totalPrice value to be set
      * @return Builder
      */
@@ -167,29 +167,64 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
         return this;
     }
 
+    /**
+     *  <p>The unique ID of this CustomLineItem.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     * value of name}
+     * @return name
+     */
 
     public com.commercetools.history.models.common.LocalizedString getName() {
         return this.name;
     }
 
+    /**
+     * value of money}
+     * @return money
+     */
+
     public com.commercetools.history.models.common.Money getMoney() {
         return this.money;
     }
+
+    /**
+     * value of taxedPrice}
+     * @return taxedPrice
+     */
 
     public com.commercetools.history.models.common.TaxedItemPrice getTaxedPrice() {
         return this.taxedPrice;
     }
 
+    /**
+     * value of totalPrice}
+     * @return totalPrice
+     */
+
     public com.commercetools.history.models.common.Money getTotalPrice() {
         return this.totalPrice;
     }
 
+    /**
+     *  <p>A unique String in the cart to identify this CustomLineItem.</p>
+     * @return slug
+     */
+
     public String getSlug() {
         return this.slug;
     }
+
+    /**
+     *  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>
+     * @return quantity
+     */
 
     public Integer getQuantity() {
         return this.quantity;
@@ -218,10 +253,19 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
         return new CustomLineItemImpl(id, name, money, taxedPrice, totalPrice, slug, quantity);
     }
 
+    /**
+     * factory method for an instance of CustomLineItemBuilder
+     * @return builder
+     */
     public static CustomLineItemBuilder of() {
         return new CustomLineItemBuilder();
     }
 
+    /**
+     * create builder for CustomLineItem instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomLineItemBuilder of(final CustomLineItem template) {
         CustomLineItemBuilder builder = new CustomLineItemBuilder();
         builder.id = template.getId();

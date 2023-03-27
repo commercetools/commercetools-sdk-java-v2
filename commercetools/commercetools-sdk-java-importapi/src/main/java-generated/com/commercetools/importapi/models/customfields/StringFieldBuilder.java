@@ -24,7 +24,7 @@ public class StringFieldBuilder implements Builder<StringField> {
     private String value;
 
     /**
-     *
+     * set the value to the value
      * @param value value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class StringFieldBuilder implements Builder<StringField> {
         this.value = value;
         return this;
     }
+
+    /**
+     * value of value}
+     * @return value
+     */
 
     public String getValue() {
         return this.value;
@@ -55,10 +60,19 @@ public class StringFieldBuilder implements Builder<StringField> {
         return new StringFieldImpl(value);
     }
 
+    /**
+     * factory method for an instance of StringFieldBuilder
+     * @return builder
+     */
     public static StringFieldBuilder of() {
         return new StringFieldBuilder();
     }
 
+    /**
+     * create builder for StringField instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StringFieldBuilder of(final StringField template) {
         StringFieldBuilder builder = new StringFieldBuilder();
         builder.value = template.getValue();

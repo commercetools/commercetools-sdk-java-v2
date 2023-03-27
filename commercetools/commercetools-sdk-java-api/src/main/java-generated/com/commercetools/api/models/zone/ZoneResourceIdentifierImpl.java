@@ -27,6 +27,9 @@ public class ZoneResourceIdentifierImpl implements ZoneResourceIdentifier, Model
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ZoneResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
@@ -34,6 +37,9 @@ public class ZoneResourceIdentifierImpl implements ZoneResourceIdentifier, Model
         this.typeId = ReferenceTypeId.findEnum("zone");
     }
 
+    /**
+     * create empty instance
+     */
     public ZoneResourceIdentifierImpl() {
         this.typeId = ReferenceTypeId.findEnum("zone");
     }

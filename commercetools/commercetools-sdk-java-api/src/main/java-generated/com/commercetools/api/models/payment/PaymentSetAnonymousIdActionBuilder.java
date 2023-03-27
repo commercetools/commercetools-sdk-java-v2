@@ -36,6 +36,11 @@ public class PaymentSetAnonymousIdActionBuilder implements Builder<PaymentSetAno
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return anonymousId
+     */
+
     @Nullable
     public String getAnonymousId() {
         return this.anonymousId;
@@ -57,10 +62,19 @@ public class PaymentSetAnonymousIdActionBuilder implements Builder<PaymentSetAno
         return new PaymentSetAnonymousIdActionImpl(anonymousId);
     }
 
+    /**
+     * factory method for an instance of PaymentSetAnonymousIdActionBuilder
+     * @return builder
+     */
     public static PaymentSetAnonymousIdActionBuilder of() {
         return new PaymentSetAnonymousIdActionBuilder();
     }
 
+    /**
+     * create builder for PaymentSetAnonymousIdAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentSetAnonymousIdActionBuilder of(final PaymentSetAnonymousIdAction template) {
         PaymentSetAnonymousIdActionBuilder builder = new PaymentSetAnonymousIdActionBuilder();
         builder.anonymousId = template.getAnonymousId();

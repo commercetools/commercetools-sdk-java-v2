@@ -30,6 +30,9 @@ public class SetDeliveryAddressChangeImpl implements SetDeliveryAddressChange, M
 
     private com.commercetools.history.models.common.Address previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetDeliveryAddressChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("deliveryId") final String deliveryId,
@@ -42,6 +45,9 @@ public class SetDeliveryAddressChangeImpl implements SetDeliveryAddressChange, M
         this.type = SET_DELIVERY_ADDRESS_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetDeliveryAddressChangeImpl() {
         this.type = SET_DELIVERY_ADDRESS_CHANGE;
     }

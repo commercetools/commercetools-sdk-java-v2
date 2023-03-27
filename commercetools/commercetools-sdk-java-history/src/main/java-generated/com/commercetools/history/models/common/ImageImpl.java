@@ -26,6 +26,9 @@ public class ImageImpl implements Image, ModelBase {
 
     private String label;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ImageImpl(@JsonProperty("url") final String url,
             @JsonProperty("dimensions") final com.commercetools.history.models.common.ImageDimensions dimensions,
@@ -35,6 +38,9 @@ public class ImageImpl implements Image, ModelBase {
         this.label = label;
     }
 
+    /**
+     * create empty instance
+     */
     public ImageImpl() {
     }
 

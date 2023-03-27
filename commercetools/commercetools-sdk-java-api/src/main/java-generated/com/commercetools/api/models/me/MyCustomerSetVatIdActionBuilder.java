@@ -36,6 +36,11 @@ public class MyCustomerSetVatIdActionBuilder implements Builder<MyCustomerSetVat
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @return vatId
+     */
+
     @Nullable
     public String getVatId() {
         return this.vatId;
@@ -57,10 +62,19 @@ public class MyCustomerSetVatIdActionBuilder implements Builder<MyCustomerSetVat
         return new MyCustomerSetVatIdActionImpl(vatId);
     }
 
+    /**
+     * factory method for an instance of MyCustomerSetVatIdActionBuilder
+     * @return builder
+     */
     public static MyCustomerSetVatIdActionBuilder of() {
         return new MyCustomerSetVatIdActionBuilder();
     }
 
+    /**
+     * create builder for MyCustomerSetVatIdAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCustomerSetVatIdActionBuilder of(final MyCustomerSetVatIdAction template) {
         MyCustomerSetVatIdActionBuilder builder = new MyCustomerSetVatIdActionBuilder();
         builder.vatId = template.getVatId();

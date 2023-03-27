@@ -67,18 +67,49 @@ public interface AssignedProductSelection {
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
+    /**
+     *  <p>Reference to the Product Selection that this assignment is part of.</p>
+     * @param productSelection value to be set
+     */
+
     public void setProductSelection(final ProductSelectionReference productSelection);
+
+    /**
+     *  <p>Defines which Variants of the Product will be included from the Product Selection.</p>
+     *  <p>This field is only available for Assignments to a Product Selection of type Individual.</p>
+     * @param variantSelection value to be set
+     */
 
     public void setVariantSelection(final ProductVariantSelection variantSelection);
 
+    /**
+     *  <p>Defines which Variants of the Product will be excluded from the Product Selection.</p>
+     *  <p>This field is only available for Assignments to a Product Selection of type Individual Exclusion.</p>
+     * @param variantExclusion value to be set
+     */
+
     public void setVariantExclusion(final ProductVariantExclusion variantExclusion);
+
+    /**
+     *  <p>Date and time (UTC) this assignment was initially created.</p>
+     * @param createdAt value to be set
+     */
 
     public void setCreatedAt(final ZonedDateTime createdAt);
 
+    /**
+     * factory method
+     * @return instance of AssignedProductSelection
+     */
     public static AssignedProductSelection of() {
         return new AssignedProductSelectionImpl();
     }
 
+    /**
+     * factory method to copy an instance of AssignedProductSelection
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static AssignedProductSelection of(final AssignedProductSelection template) {
         AssignedProductSelectionImpl instance = new AssignedProductSelectionImpl();
         instance.setProductSelection(template.getProductSelection());
@@ -88,18 +119,37 @@ public interface AssignedProductSelection {
         return instance;
     }
 
+    /**
+     * builder factory method for AssignedProductSelection
+     * @return builder
+     */
     public static AssignedProductSelectionBuilder builder() {
         return AssignedProductSelectionBuilder.of();
     }
 
+    /**
+     * create builder for AssignedProductSelection instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AssignedProductSelectionBuilder builder(final AssignedProductSelection template) {
         return AssignedProductSelectionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAssignedProductSelection(Function<AssignedProductSelection, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AssignedProductSelection> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AssignedProductSelection>() {
             @Override

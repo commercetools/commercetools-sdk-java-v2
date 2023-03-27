@@ -44,26 +44,52 @@ public interface SubscriptionUpdateAction
     @JsonProperty("action")
     public String getAction();
 
+    /**
+     * builder for changeDestination subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.subscription.SubscriptionChangeDestinationActionBuilder changeDestinationBuilder() {
         return com.commercetools.api.models.subscription.SubscriptionChangeDestinationActionBuilder.of();
     }
 
+    /**
+     * builder for setChanges subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.subscription.SubscriptionSetChangesActionBuilder setChangesBuilder() {
         return com.commercetools.api.models.subscription.SubscriptionSetChangesActionBuilder.of();
     }
 
+    /**
+     * builder for setKey subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.subscription.SubscriptionSetKeyActionBuilder setKeyBuilder() {
         return com.commercetools.api.models.subscription.SubscriptionSetKeyActionBuilder.of();
     }
 
+    /**
+     * builder for setMessages subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.subscription.SubscriptionSetMessagesActionBuilder setMessagesBuilder() {
         return com.commercetools.api.models.subscription.SubscriptionSetMessagesActionBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSubscriptionUpdateAction(Function<SubscriptionUpdateAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SubscriptionUpdateAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SubscriptionUpdateAction>() {
             @Override

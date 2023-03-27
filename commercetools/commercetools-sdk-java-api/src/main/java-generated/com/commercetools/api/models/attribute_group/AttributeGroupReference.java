@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AttributeGroupReferenceImpl.class)
 public interface AttributeGroupReference extends Reference, com.commercetools.api.models.Identifiable<AttributeGroup> {
 
+    /**
+     * discriminator value for AttributeGroupReference
+     */
     String ATTRIBUTE_GROUP = "attribute-group";
 
     /**
@@ -49,14 +52,33 @@ public interface AttributeGroupReference extends Reference, com.commercetools.ap
     @JsonProperty("id")
     public String getId();
 
+    /**
+     *  <p>Contains the representation of the expanded AttributeGroup. Only present in responses to requests with Reference Expansion for AttributeGroup.</p>
+     * @param obj value to be set
+     */
+
     public void setObj(final AttributeGroup obj);
+
+    /**
+     *  <p>Platform-generated unique identifier of the referenced AttributeGroup.</p>
+     * @param id value to be set
+     */
 
     public void setId(final String id);
 
+    /**
+     * factory method
+     * @return instance of AttributeGroupReference
+     */
     public static AttributeGroupReference of() {
         return new AttributeGroupReferenceImpl();
     }
 
+    /**
+     * factory method to copy an instance of AttributeGroupReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static AttributeGroupReference of(final AttributeGroupReference template) {
         AttributeGroupReferenceImpl instance = new AttributeGroupReferenceImpl();
         instance.setId(template.getId());
@@ -64,18 +86,37 @@ public interface AttributeGroupReference extends Reference, com.commercetools.ap
         return instance;
     }
 
+    /**
+     * builder factory method for AttributeGroupReference
+     * @return builder
+     */
     public static AttributeGroupReferenceBuilder builder() {
         return AttributeGroupReferenceBuilder.of();
     }
 
+    /**
+     * create builder for AttributeGroupReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeGroupReferenceBuilder builder(final AttributeGroupReference template) {
         return AttributeGroupReferenceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAttributeGroupReference(Function<AttributeGroupReference, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AttributeGroupReference> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AttributeGroupReference>() {
             @Override

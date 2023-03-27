@@ -64,9 +64,19 @@ public class InventoryEntryDeletedMessagePayloadBuilder implements Builder<Inven
         return this;
     }
 
+    /**
+     *  <p>The <code>sku</code> of the InventoryEntry that was deleted.</p>
+     * @return sku
+     */
+
     public String getSku() {
         return this.sku;
     }
+
+    /**
+     *  <p>Reference to the Channel where the InventoryEntry was deleted.</p>
+     * @return supplyChannel
+     */
 
     @Nullable
     public com.commercetools.api.models.channel.ChannelReference getSupplyChannel() {
@@ -90,10 +100,19 @@ public class InventoryEntryDeletedMessagePayloadBuilder implements Builder<Inven
         return new InventoryEntryDeletedMessagePayloadImpl(sku, supplyChannel);
     }
 
+    /**
+     * factory method for an instance of InventoryEntryDeletedMessagePayloadBuilder
+     * @return builder
+     */
     public static InventoryEntryDeletedMessagePayloadBuilder of() {
         return new InventoryEntryDeletedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for InventoryEntryDeletedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InventoryEntryDeletedMessagePayloadBuilder of(final InventoryEntryDeletedMessagePayload template) {
         InventoryEntryDeletedMessagePayloadBuilder builder = new InventoryEntryDeletedMessagePayloadBuilder();
         builder.sku = template.getSku();

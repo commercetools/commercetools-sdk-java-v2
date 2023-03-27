@@ -49,14 +49,33 @@ public interface ExtensionInput {
     @JsonProperty("resource")
     public Reference getResource();
 
+    /**
+     *  <p><code>Create</code> or <code>Update</code> request.</p>
+     * @param action value to be set
+     */
+
     public void setAction(final ExtensionAction action);
+
+    /**
+     *  <p>Expanded reference to the resource that triggered the Extension.</p>
+     * @param resource value to be set
+     */
 
     public void setResource(final Reference resource);
 
+    /**
+     * factory method
+     * @return instance of ExtensionInput
+     */
     public static ExtensionInput of() {
         return new ExtensionInputImpl();
     }
 
+    /**
+     * factory method to copy an instance of ExtensionInput
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ExtensionInput of(final ExtensionInput template) {
         ExtensionInputImpl instance = new ExtensionInputImpl();
         instance.setAction(template.getAction());
@@ -64,18 +83,37 @@ public interface ExtensionInput {
         return instance;
     }
 
+    /**
+     * builder factory method for ExtensionInput
+     * @return builder
+     */
     public static ExtensionInputBuilder builder() {
         return ExtensionInputBuilder.of();
     }
 
+    /**
+     * create builder for ExtensionInput instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ExtensionInputBuilder builder(final ExtensionInput template) {
         return ExtensionInputBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withExtensionInput(Function<ExtensionInput, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ExtensionInput> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ExtensionInput>() {
             @Override

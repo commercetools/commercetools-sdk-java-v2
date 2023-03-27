@@ -48,6 +48,9 @@ public class QuoteStateTransitionMessageImpl implements QuoteStateTransitionMess
 
     private Boolean force;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     QuoteStateTransitionMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -77,6 +80,9 @@ public class QuoteStateTransitionMessageImpl implements QuoteStateTransitionMess
         this.type = QUOTE_STATE_TRANSITION;
     }
 
+    /**
+     * create empty instance
+     */
     public QuoteStateTransitionMessageImpl() {
         this.type = QUOTE_STATE_TRANSITION;
     }

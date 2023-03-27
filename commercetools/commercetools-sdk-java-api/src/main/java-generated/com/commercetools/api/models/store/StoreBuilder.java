@@ -550,60 +550,136 @@ public class StoreBuilder implements Builder<Store> {
         return this;
     }
 
+    /**
+     *  <p>Unique ID of the Store.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Current version of the Store.</p>
+     * @return version
+     */
 
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *  <p>Date and time (UTC) the Store was initially created.</p>
+     * @return createdAt
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+     *  <p>Date and time (UTC) the Store was last updated.</p>
+     * @return lastModifiedAt
+     */
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
+     */
+
     @Nullable
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
 
+    /**
+     *  <p>User-defined unique and immutable identifier for the Store.</p>
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     *  <p>Name of the Store.</p>
+     * @return name
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
 
+    /**
+     *  <p>Languages configured for the Store.</p>
+     * @return languages
+     */
+
     public java.util.List<String> getLanguages() {
         return this.languages;
     }
+
+    /**
+     *  <p>Countries defined for the Store.</p>
+     * @return countries
+     */
 
     public java.util.List<com.commercetools.api.models.store_country.StoreCountry> getCountries() {
         return this.countries;
     }
 
+    /**
+     *  <p>Product Distribution Channels allowed for the Store.</p>
+     * @return distributionChannels
+     */
+
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getDistributionChannels() {
         return this.distributionChannels;
     }
+
+    /**
+     *  <p>Inventory Supply Channels allowed for the Store.</p>
+     * @return supplyChannels
+     */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getSupplyChannels() {
         return this.supplyChannels;
     }
 
+    /**
+     *  <p>Controls availability of Products for this Store via Product Selections:</p>
+     *  <ul>
+     *   <li>Leave empty if all Products in the Project should be available in this Store.</li>
+     *   <li>If only <code>inactive</code> Product Selections of type Individual Exclusion are provided, all the Products are availlable in this Store.</li>
+     *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of type <code>individual</code>, no Product is availlable in this Store.</li>
+     *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availlability in this Store.</li>
+     *  </ul>
+     * @return productSelections
+     */
+
     public java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> getProductSelections() {
         return this.productSelections;
     }
+
+    /**
+     *  <p>Custom fields for the Store.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -638,10 +714,19 @@ public class StoreBuilder implements Builder<Store> {
             countries, distributionChannels, supplyChannels, productSelections, custom);
     }
 
+    /**
+     * factory method for an instance of StoreBuilder
+     * @return builder
+     */
     public static StoreBuilder of() {
         return new StoreBuilder();
     }
 
+    /**
+     * create builder for Store instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreBuilder of(final Store template) {
         StoreBuilder builder = new StoreBuilder();
         builder.id = template.getId();

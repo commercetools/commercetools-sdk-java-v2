@@ -50,10 +50,20 @@ public class OrderEditResourceIdentifierBuilder implements Builder<OrderEditReso
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the referenced OrderEdit. Either <code>id</code> or <code>key</code> is required.</p>
+     * @return id
+     */
+
     @Nullable
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the referenced OrderEdit. Either <code>id</code> or <code>key</code> is required.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
@@ -76,10 +86,19 @@ public class OrderEditResourceIdentifierBuilder implements Builder<OrderEditReso
         return new OrderEditResourceIdentifierImpl(id, key);
     }
 
+    /**
+     * factory method for an instance of OrderEditResourceIdentifierBuilder
+     * @return builder
+     */
     public static OrderEditResourceIdentifierBuilder of() {
         return new OrderEditResourceIdentifierBuilder();
     }
 
+    /**
+     * create builder for OrderEditResourceIdentifier instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderEditResourceIdentifierBuilder of(final OrderEditResourceIdentifier template) {
         OrderEditResourceIdentifierBuilder builder = new OrderEditResourceIdentifierBuilder();
         builder.id = template.getId();

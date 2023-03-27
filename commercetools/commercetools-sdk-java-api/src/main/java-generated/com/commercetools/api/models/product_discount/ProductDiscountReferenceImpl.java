@@ -27,6 +27,9 @@ public class ProductDiscountReferenceImpl implements ProductDiscountReference, M
 
     private com.commercetools.api.models.product_discount.ProductDiscount obj;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductDiscountReferenceImpl(@JsonProperty("id") final String id,
             @JsonProperty("obj") final com.commercetools.api.models.product_discount.ProductDiscount obj) {
@@ -35,6 +38,9 @@ public class ProductDiscountReferenceImpl implements ProductDiscountReference, M
         this.typeId = ReferenceTypeId.findEnum("product-discount");
     }
 
+    /**
+     * create empty instance
+     */
     public ProductDiscountReferenceImpl() {
         this.typeId = ReferenceTypeId.findEnum("product-discount");
     }

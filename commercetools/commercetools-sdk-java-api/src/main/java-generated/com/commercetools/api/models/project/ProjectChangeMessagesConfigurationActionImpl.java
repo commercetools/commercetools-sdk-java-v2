@@ -25,6 +25,9 @@ public class ProjectChangeMessagesConfigurationActionImpl
 
     private com.commercetools.api.models.message.MessagesConfigurationDraft messagesConfiguration;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProjectChangeMessagesConfigurationActionImpl(
             @JsonProperty("messagesConfiguration") final com.commercetools.api.models.message.MessagesConfigurationDraft messagesConfiguration) {
@@ -32,6 +35,9 @@ public class ProjectChangeMessagesConfigurationActionImpl
         this.action = CHANGE_MESSAGES_CONFIGURATION;
     }
 
+    /**
+     * create empty instance
+     */
     public ProjectChangeMessagesConfigurationActionImpl() {
         this.action = CHANGE_MESSAGES_CONFIGURATION;
     }

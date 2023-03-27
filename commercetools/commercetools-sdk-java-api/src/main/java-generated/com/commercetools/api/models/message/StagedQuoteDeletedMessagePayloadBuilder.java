@@ -36,10 +36,19 @@ public class StagedQuoteDeletedMessagePayloadBuilder implements Builder<StagedQu
         return new StagedQuoteDeletedMessagePayloadImpl();
     }
 
+    /**
+     * factory method for an instance of StagedQuoteDeletedMessagePayloadBuilder
+     * @return builder
+     */
     public static StagedQuoteDeletedMessagePayloadBuilder of() {
         return new StagedQuoteDeletedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for StagedQuoteDeletedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedQuoteDeletedMessagePayloadBuilder of(final StagedQuoteDeletedMessagePayload template) {
         StagedQuoteDeletedMessagePayloadBuilder builder = new StagedQuoteDeletedMessagePayloadBuilder();
         return builder;

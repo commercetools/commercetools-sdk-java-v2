@@ -24,6 +24,9 @@ public class ChangeValueAbsoluteChangeValueImpl implements ChangeValueAbsoluteCh
 
     private java.util.List<com.commercetools.history.models.common.Money> money;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeValueAbsoluteChangeValueImpl(
             @JsonProperty("money") final java.util.List<com.commercetools.history.models.common.Money> money) {
@@ -31,6 +34,9 @@ public class ChangeValueAbsoluteChangeValueImpl implements ChangeValueAbsoluteCh
         this.type = ABSOLUTE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeValueAbsoluteChangeValueImpl() {
         this.type = ABSOLUTE;
     }

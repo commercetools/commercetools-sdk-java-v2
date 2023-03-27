@@ -41,18 +41,36 @@ public interface ProductSelectionType {
     @JsonProperty("type")
     public ProductSelectionTypeEnum getType();
 
+    /**
+     * builder for individualExclusion subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.product_selection.IndividualExclusionProductSelectionTypeBuilder individualExclusionBuilder() {
         return com.commercetools.api.models.product_selection.IndividualExclusionProductSelectionTypeBuilder.of();
     }
 
+    /**
+     * builder for individual subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.product_selection.IndividualProductSelectionTypeBuilder individualBuilder() {
         return com.commercetools.api.models.product_selection.IndividualProductSelectionTypeBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductSelectionType(Function<ProductSelectionType, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionType> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionType>() {
             @Override

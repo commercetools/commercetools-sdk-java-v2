@@ -51,6 +51,10 @@ public class ProductDiscountUpdateActionBuilder {
         return com.commercetools.api.models.product_discount.ProductDiscountSetValidUntilActionBuilder.of();
     }
 
+    /**
+     * factory method for an instance of ProductDiscountUpdateActionBuilder
+     * @return builder
+     */
     public static ProductDiscountUpdateActionBuilder of() {
         return new ProductDiscountUpdateActionBuilder();
     }

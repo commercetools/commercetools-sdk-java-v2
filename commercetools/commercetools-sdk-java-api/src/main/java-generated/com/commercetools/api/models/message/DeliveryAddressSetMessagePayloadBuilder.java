@@ -105,19 +105,39 @@ public class DeliveryAddressSetMessagePayloadBuilder implements Builder<Delivery
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Parcel.</p>
+     * @return deliveryId
+     */
+
     public String getDeliveryId() {
         return this.deliveryId;
     }
+
+    /**
+     *  <p>Address after the Set Delivery Address update action.</p>
+     * @return address
+     */
 
     @Nullable
     public com.commercetools.api.models.common.Address getAddress() {
         return this.address;
     }
 
+    /**
+     *  <p>Address before the Set Delivery Address update action.</p>
+     * @return oldAddress
+     */
+
     @Nullable
     public com.commercetools.api.models.common.Address getOldAddress() {
         return this.oldAddress;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     * @return shippingKey
+     */
 
     @Nullable
     public String getShippingKey() {
@@ -141,10 +161,19 @@ public class DeliveryAddressSetMessagePayloadBuilder implements Builder<Delivery
         return new DeliveryAddressSetMessagePayloadImpl(deliveryId, address, oldAddress, shippingKey);
     }
 
+    /**
+     * factory method for an instance of DeliveryAddressSetMessagePayloadBuilder
+     * @return builder
+     */
     public static DeliveryAddressSetMessagePayloadBuilder of() {
         return new DeliveryAddressSetMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for DeliveryAddressSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DeliveryAddressSetMessagePayloadBuilder of(final DeliveryAddressSetMessagePayload template) {
         DeliveryAddressSetMessagePayloadBuilder builder = new DeliveryAddressSetMessagePayloadBuilder();
         builder.deliveryId = template.getDeliveryId();

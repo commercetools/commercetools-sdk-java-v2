@@ -26,6 +26,9 @@ public class ReturnInfoDraftImpl implements ReturnInfoDraft, ModelBase {
 
     private java.time.ZonedDateTime returnDate;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReturnInfoDraftImpl(
             @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.ReturnItemDraft> items,
@@ -36,6 +39,9 @@ public class ReturnInfoDraftImpl implements ReturnInfoDraft, ModelBase {
         this.returnDate = returnDate;
     }
 
+    /**
+     * create empty instance
+     */
     public ReturnInfoDraftImpl() {
     }
 

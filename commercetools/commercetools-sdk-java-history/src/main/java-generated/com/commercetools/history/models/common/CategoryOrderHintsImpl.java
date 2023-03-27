@@ -22,11 +22,17 @@ public class CategoryOrderHintsImpl implements CategoryOrderHints, ModelBase {
 
     private Map<String, String> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CategoryOrderHintsImpl(@JsonProperty("values") final Map<String, String> values) {
         this.values = values;
     }
 
+    /**
+     * create empty instance
+     */
     public CategoryOrderHintsImpl() {
     }
 

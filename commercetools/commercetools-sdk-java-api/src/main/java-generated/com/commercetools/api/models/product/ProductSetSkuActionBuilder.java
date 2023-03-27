@@ -64,14 +64,29 @@ public class ProductSetSkuActionBuilder implements Builder<ProductSetSkuAction> 
         return this;
     }
 
+    /**
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @return variantId
+     */
+
     public Long getVariantId() {
         return this.variantId;
     }
+
+    /**
+     *  <p>Value to set. Must be unique. If empty, any existing value will be removed.</p>
+     * @return sku
+     */
 
     @Nullable
     public String getSku() {
         return this.sku;
     }
+
+    /**
+     *  <p>If <code>true</code>, only the staged <code>sku</code> is updated. If <code>false</code>, both the current and staged <code>sku</code> are updated.</p>
+     * @return staged
+     */
 
     @Nullable
     public Boolean getStaged() {
@@ -95,10 +110,19 @@ public class ProductSetSkuActionBuilder implements Builder<ProductSetSkuAction> 
         return new ProductSetSkuActionImpl(variantId, sku, staged);
     }
 
+    /**
+     * factory method for an instance of ProductSetSkuActionBuilder
+     * @return builder
+     */
     public static ProductSetSkuActionBuilder of() {
         return new ProductSetSkuActionBuilder();
     }
 
+    /**
+     * create builder for ProductSetSkuAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSetSkuActionBuilder of(final ProductSetSkuAction template) {
         ProductSetSkuActionBuilder builder = new ProductSetSkuActionBuilder();
         builder.variantId = template.getVariantId();

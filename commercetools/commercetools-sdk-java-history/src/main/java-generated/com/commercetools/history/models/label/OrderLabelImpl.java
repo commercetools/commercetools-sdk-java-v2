@@ -26,6 +26,9 @@ public class OrderLabelImpl implements OrderLabel, ModelBase {
 
     private String orderNumber;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderLabelImpl(@JsonProperty("customerEmail") final String customerEmail,
             @JsonProperty("orderNumber") final String orderNumber) {
@@ -34,6 +37,9 @@ public class OrderLabelImpl implements OrderLabel, ModelBase {
         this.type = ORDER_LABEL;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderLabelImpl() {
         this.type = ORDER_LABEL;
     }

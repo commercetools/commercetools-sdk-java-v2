@@ -46,6 +46,9 @@ public class OrderPaymentStateChangedMessageImpl implements OrderPaymentStateCha
 
     private com.commercetools.api.models.order.PaymentState oldPaymentState;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderPaymentStateChangedMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -74,6 +77,9 @@ public class OrderPaymentStateChangedMessageImpl implements OrderPaymentStateCha
         this.type = ORDER_PAYMENT_STATE_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderPaymentStateChangedMessageImpl() {
         this.type = ORDER_PAYMENT_STATE_CHANGED;
     }

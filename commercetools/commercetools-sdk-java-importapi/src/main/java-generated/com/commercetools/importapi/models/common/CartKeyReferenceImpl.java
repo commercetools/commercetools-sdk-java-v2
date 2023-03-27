@@ -24,12 +24,18 @@ public class CartKeyReferenceImpl implements CartKeyReference, ModelBase {
 
     private com.commercetools.importapi.models.common.ReferenceType typeId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartKeyReferenceImpl(@JsonProperty("key") final String key) {
         this.key = key;
         this.typeId = ReferenceType.findEnum("cart");
     }
 
+    /**
+     * create empty instance
+     */
     public CartKeyReferenceImpl() {
         this.typeId = ReferenceType.findEnum("cart");
     }

@@ -28,6 +28,9 @@ public class DeliveryDraftImpl implements DeliveryDraft, ModelBase {
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DeliveryDraftImpl(
             @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items,
@@ -40,6 +43,9 @@ public class DeliveryDraftImpl implements DeliveryDraft, ModelBase {
         this.custom = custom;
     }
 
+    /**
+     * create empty instance
+     */
     public DeliveryDraftImpl() {
     }
 

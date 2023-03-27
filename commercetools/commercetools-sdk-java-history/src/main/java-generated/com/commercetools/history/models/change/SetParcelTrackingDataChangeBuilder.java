@@ -45,7 +45,7 @@ public class SetParcelTrackingDataChangeBuilder implements Builder<SetParcelTrac
     }
 
     /**
-     *
+     * set the value to the parcel using the builder function
      * @param builder function to build the parcel value
      * @return Builder
      */
@@ -58,7 +58,7 @@ public class SetParcelTrackingDataChangeBuilder implements Builder<SetParcelTrac
     }
 
     /**
-     *
+     * set the value to the parcel
      * @param parcel value to be set
      * @return Builder
      */
@@ -70,7 +70,7 @@ public class SetParcelTrackingDataChangeBuilder implements Builder<SetParcelTrac
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -82,7 +82,7 @@ public class SetParcelTrackingDataChangeBuilder implements Builder<SetParcelTrac
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -94,7 +94,7 @@ public class SetParcelTrackingDataChangeBuilder implements Builder<SetParcelTrac
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -106,7 +106,7 @@ public class SetParcelTrackingDataChangeBuilder implements Builder<SetParcelTrac
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -117,17 +117,37 @@ public class SetParcelTrackingDataChangeBuilder implements Builder<SetParcelTrac
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>setParcelTrackingData</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of parcel}
+     * @return parcel
+     */
 
     public com.commercetools.history.models.change_value.ParcelChangeValue getParcel() {
         return this.parcel;
     }
 
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
+
     public com.commercetools.history.models.common.TrackingData getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public com.commercetools.history.models.common.TrackingData getPreviousValue() {
         return this.previousValue;
@@ -153,10 +173,19 @@ public class SetParcelTrackingDataChangeBuilder implements Builder<SetParcelTrac
         return new SetParcelTrackingDataChangeImpl(change, parcel, nextValue, previousValue);
     }
 
+    /**
+     * factory method for an instance of SetParcelTrackingDataChangeBuilder
+     * @return builder
+     */
     public static SetParcelTrackingDataChangeBuilder of() {
         return new SetParcelTrackingDataChangeBuilder();
     }
 
+    /**
+     * create builder for SetParcelTrackingDataChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetParcelTrackingDataChangeBuilder of(final SetParcelTrackingDataChange template) {
         SetParcelTrackingDataChangeBuilder builder = new SetParcelTrackingDataChangeBuilder();
         builder.change = template.getChange();

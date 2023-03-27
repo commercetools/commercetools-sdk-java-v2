@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TypeChangeInputHintActionImpl.class)
 public interface TypeChangeInputHintAction extends TypeUpdateAction {
 
+    /**
+     * discriminator value for TypeChangeInputHintAction
+     */
     String CHANGE_INPUT_HINT = "changeInputHint";
 
     /**
@@ -48,14 +51,33 @@ public interface TypeChangeInputHintAction extends TypeUpdateAction {
     @JsonProperty("inputHint")
     public TypeTextInputHint getInputHint();
 
+    /**
+     *  <p><code>name</code> of the Field Definition to update.</p>
+     * @param fieldName value to be set
+     */
+
     public void setFieldName(final String fieldName);
+
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     * @param inputHint value to be set
+     */
 
     public void setInputHint(final TypeTextInputHint inputHint);
 
+    /**
+     * factory method
+     * @return instance of TypeChangeInputHintAction
+     */
     public static TypeChangeInputHintAction of() {
         return new TypeChangeInputHintActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of TypeChangeInputHintAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static TypeChangeInputHintAction of(final TypeChangeInputHintAction template) {
         TypeChangeInputHintActionImpl instance = new TypeChangeInputHintActionImpl();
         instance.setFieldName(template.getFieldName());
@@ -63,18 +85,37 @@ public interface TypeChangeInputHintAction extends TypeUpdateAction {
         return instance;
     }
 
+    /**
+     * builder factory method for TypeChangeInputHintAction
+     * @return builder
+     */
     public static TypeChangeInputHintActionBuilder builder() {
         return TypeChangeInputHintActionBuilder.of();
     }
 
+    /**
+     * create builder for TypeChangeInputHintAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TypeChangeInputHintActionBuilder builder(final TypeChangeInputHintAction template) {
         return TypeChangeInputHintActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTypeChangeInputHintAction(Function<TypeChangeInputHintAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<TypeChangeInputHintAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TypeChangeInputHintAction>() {
             @Override

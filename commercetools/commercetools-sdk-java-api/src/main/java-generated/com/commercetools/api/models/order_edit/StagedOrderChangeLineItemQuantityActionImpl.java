@@ -30,6 +30,9 @@ public class StagedOrderChangeLineItemQuantityActionImpl implements StagedOrderC
 
     private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderChangeLineItemQuantityActionImpl(@JsonProperty("lineItemId") final String lineItemId,
             @JsonProperty("quantity") final Long quantity,
@@ -42,6 +45,9 @@ public class StagedOrderChangeLineItemQuantityActionImpl implements StagedOrderC
         this.action = CHANGE_LINE_ITEM_QUANTITY;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderChangeLineItemQuantityActionImpl() {
         this.action = CHANGE_LINE_ITEM_QUANTITY;
     }

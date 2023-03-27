@@ -90,17 +90,37 @@ public class InvalidItemShippingDetailsErrorBuilder implements Builder<InvalidIt
         return this;
     }
 
+    /**
+     *  <p><code>"Inconsistent shipping details for $subject with ID $itemId. $subject quantity is $itemQuantity and shippingTargets quantity sum is $quantitySum."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
     }
 
+    /**
+     *  <p><code>"LineItem"</code> or <code>"CustomLineItem"</code></p>
+     * @return subject
+     */
+
     public String getSubject() {
         return this.subject;
     }
+
+    /**
+     *  <p>Unique identifier of the Line Item or Custom Line Item.</p>
+     * @return itemId
+     */
 
     public String getItemId() {
         return this.itemId;
@@ -125,10 +145,19 @@ public class InvalidItemShippingDetailsErrorBuilder implements Builder<InvalidIt
         return new InvalidItemShippingDetailsErrorImpl(message, values, subject, itemId);
     }
 
+    /**
+     * factory method for an instance of InvalidItemShippingDetailsErrorBuilder
+     * @return builder
+     */
     public static InvalidItemShippingDetailsErrorBuilder of() {
         return new InvalidItemShippingDetailsErrorBuilder();
     }
 
+    /**
+     * create builder for InvalidItemShippingDetailsError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InvalidItemShippingDetailsErrorBuilder of(final InvalidItemShippingDetailsError template) {
         InvalidItemShippingDetailsErrorBuilder builder = new InvalidItemShippingDetailsErrorBuilder();
         builder.message = template.getMessage();

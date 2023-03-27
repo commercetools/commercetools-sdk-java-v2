@@ -27,17 +27,38 @@ public interface TermFacetResultType {
 
     TermFacetResultType NUMBER = TermFacetResultTypeEnum.NUMBER;
 
+    /**
+     * possible values of TermFacetResultType
+     */
     enum TermFacetResultTypeEnum implements TermFacetResultType {
+        /**
+         * text
+         */
         TEXT("text"),
 
+        /**
+         * date
+         */
         DATE("date"),
 
+        /**
+         * time
+         */
         TIME("time"),
 
+        /**
+         * datetime
+         */
         DATETIME("datetime"),
 
+        /**
+         * boolean
+         */
         BOOLEAN("boolean"),
 
+        /**
+         * number
+         */
         NUMBER("number");
         private final String jsonName;
 
@@ -54,13 +75,30 @@ public interface TermFacetResultType {
         }
     }
 
+    /**
+     * the JSON value
+     * @return json value
+     */
     @JsonValue
     String getJsonName();
 
+    /**
+     * the enum value
+     * @return name
+     */
     String name();
 
+    /**
+     * convert value to string
+     * @return string representation
+     */
     String toString();
 
+    /**
+     * factory method for a enum value of TermFacetResultType
+     * if no enum has been found an anonymous instance will be created
+     * @return enum instance
+     */
     @JsonCreator
     public static TermFacetResultType findEnum(String value) {
         return findEnumViaJsonName(value).orElse(new TermFacetResultType() {
@@ -80,10 +118,18 @@ public interface TermFacetResultType {
         });
     }
 
+    /**
+     * method to find enum using the JSON value
+     * @return optional of enum instance
+     */
     public static Optional<TermFacetResultType> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
 
+    /**
+     * possible enum values
+     * @return array of possible enum values
+     */
     public static TermFacetResultType[] values() {
         return TermFacetResultTypeEnum.values();
     }

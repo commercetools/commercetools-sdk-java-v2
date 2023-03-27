@@ -60,6 +60,11 @@ public class ChannelSetRolesActionBuilder implements Builder<ChannelSetRolesActi
         return this;
     }
 
+    /**
+     *  <p>Value to set. If not specified, then <code>InventorySupply</code> is assigned by default.</p>
+     * @return roles
+     */
+
     public java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> getRoles() {
         return this.roles;
     }
@@ -81,10 +86,19 @@ public class ChannelSetRolesActionBuilder implements Builder<ChannelSetRolesActi
         return new ChannelSetRolesActionImpl(roles);
     }
 
+    /**
+     * factory method for an instance of ChannelSetRolesActionBuilder
+     * @return builder
+     */
     public static ChannelSetRolesActionBuilder of() {
         return new ChannelSetRolesActionBuilder();
     }
 
+    /**
+     * create builder for ChannelSetRolesAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChannelSetRolesActionBuilder of(final ChannelSetRolesAction template) {
         ChannelSetRolesActionBuilder builder = new ChannelSetRolesActionBuilder();
         builder.roles = template.getRoles();

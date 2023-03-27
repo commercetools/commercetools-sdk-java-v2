@@ -32,6 +32,9 @@ public class ModifiedByImpl implements ModifiedBy, ModelBase {
 
     private Boolean isPlatformClient;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ModifiedByImpl(@JsonProperty("id") final String id, @JsonProperty("type") final String type,
             @JsonProperty("customer") final com.commercetools.history.models.common.Reference customer,
@@ -45,6 +48,9 @@ public class ModifiedByImpl implements ModifiedBy, ModelBase {
         this.isPlatformClient = isPlatformClient;
     }
 
+    /**
+     * create empty instance
+     */
     public ModifiedByImpl() {
     }
 

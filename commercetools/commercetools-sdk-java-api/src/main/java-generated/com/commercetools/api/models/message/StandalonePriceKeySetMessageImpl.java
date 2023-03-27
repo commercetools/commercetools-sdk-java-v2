@@ -46,6 +46,9 @@ public class StandalonePriceKeySetMessageImpl implements StandalonePriceKeySetMe
 
     private String oldKey;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StandalonePriceKeySetMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -72,6 +75,9 @@ public class StandalonePriceKeySetMessageImpl implements StandalonePriceKeySetMe
         this.type = STANDALONE_PRICE_KEY_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public StandalonePriceKeySetMessageImpl() {
         this.type = STANDALONE_PRICE_KEY_SET;
     }

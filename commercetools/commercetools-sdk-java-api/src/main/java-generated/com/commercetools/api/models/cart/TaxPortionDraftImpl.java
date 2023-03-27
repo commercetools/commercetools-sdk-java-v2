@@ -27,6 +27,9 @@ public class TaxPortionDraftImpl implements TaxPortionDraft, ModelBase {
 
     private com.commercetools.api.models.common.Money amount;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TaxPortionDraftImpl(@JsonProperty("name") final String name, @JsonProperty("rate") final Double rate,
             @JsonProperty("amount") final com.commercetools.api.models.common.Money amount) {
@@ -35,6 +38,9 @@ public class TaxPortionDraftImpl implements TaxPortionDraft, ModelBase {
         this.amount = amount;
     }
 
+    /**
+     * create empty instance
+     */
     public TaxPortionDraftImpl() {
     }
 

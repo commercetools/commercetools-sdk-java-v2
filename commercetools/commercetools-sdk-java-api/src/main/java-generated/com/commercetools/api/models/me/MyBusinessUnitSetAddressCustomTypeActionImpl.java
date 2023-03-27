@@ -29,6 +29,9 @@ public class MyBusinessUnitSetAddressCustomTypeActionImpl
 
     private String addressId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyBusinessUnitSetAddressCustomTypeActionImpl(
             @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
@@ -40,6 +43,9 @@ public class MyBusinessUnitSetAddressCustomTypeActionImpl
         this.action = SET_ADDRESS_CUSTOM_TYPE;
     }
 
+    /**
+     * create empty instance
+     */
     public MyBusinessUnitSetAddressCustomTypeActionImpl() {
         this.action = SET_ADDRESS_CUSTOM_TYPE;
     }

@@ -24,6 +24,9 @@ public class TaxCategoryAddTaxRateActionImpl implements TaxCategoryAddTaxRateAct
 
     private com.commercetools.api.models.tax_category.TaxRateDraft taxRate;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TaxCategoryAddTaxRateActionImpl(
             @JsonProperty("taxRate") final com.commercetools.api.models.tax_category.TaxRateDraft taxRate) {
@@ -31,6 +34,9 @@ public class TaxCategoryAddTaxRateActionImpl implements TaxCategoryAddTaxRateAct
         this.action = ADD_TAX_RATE;
     }
 
+    /**
+     * create empty instance
+     */
     public TaxCategoryAddTaxRateActionImpl() {
         this.action = ADD_TAX_RATE;
     }

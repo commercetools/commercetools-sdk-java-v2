@@ -30,6 +30,9 @@ public class ChangeTransactionInteractionIdChangeImpl implements ChangeTransacti
 
     private String previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeTransactionInteractionIdChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("transaction") final com.commercetools.history.models.change_value.TransactionChangeValue transaction,
@@ -42,6 +45,9 @@ public class ChangeTransactionInteractionIdChangeImpl implements ChangeTransacti
         this.type = CHANGE_TRANSACTION_INTERACTION_ID_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeTransactionInteractionIdChangeImpl() {
         this.type = CHANGE_TRANSACTION_INTERACTION_ID_CHANGE;
     }

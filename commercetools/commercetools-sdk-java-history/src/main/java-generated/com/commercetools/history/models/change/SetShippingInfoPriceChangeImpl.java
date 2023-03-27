@@ -28,6 +28,9 @@ public class SetShippingInfoPriceChangeImpl implements SetShippingInfoPriceChang
 
     private com.commercetools.history.models.common.Money previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetShippingInfoPriceChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.Money nextValue,
@@ -38,6 +41,9 @@ public class SetShippingInfoPriceChangeImpl implements SetShippingInfoPriceChang
         this.type = SET_SHIPPING_INFO_PRICE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetShippingInfoPriceChangeImpl() {
         this.type = SET_SHIPPING_INFO_PRICE_CHANGE;
     }

@@ -53,14 +53,41 @@ public interface Attribute {
     @JsonProperty("value")
     public Object getValue();
 
+    /**
+     *  <p>Name of the Attribute.</p>
+     * @param name value to be set
+     */
+
     public void setName(final String name);
+
+    /**
+     *  <p>The AttributeType determines the format of the Attribute <code>value</code> to be provided:</p>
+     *  <ul>
+     *   <li>For Enum Type and Localized Enum Type, use the <code>key</code> of the Plain Enum Value or Localized Enum Value objects, or the complete objects as <code>value</code>.</li>
+     *   <li>For Localizable Text Type, use the LocalizedString object as <code>value</code>.</li>
+     *   <li>For Money Type Attributes, use the Money object as <code>value</code>.</li>
+     *   <li>For Set Type Attributes, use the entire <code>set</code> object as <code>value</code>.</li>
+     *   <li>For Nested Type Attributes, use the list of values of all Attributes of the nested Product as <code>value</code>.</li>
+     *   <li>For Reference Type Attributes, use the Reference object as <code>value</code>.</li>
+     *  </ul>
+     * @param value value to be set
+     */
 
     public void setValue(final Object value);
 
+    /**
+     * factory method
+     * @return instance of Attribute
+     */
     public static Attribute of() {
         return new AttributeImpl();
     }
 
+    /**
+     * factory method to copy an instance of Attribute
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static Attribute of(final Attribute template) {
         AttributeImpl instance = new AttributeImpl();
         instance.setName(template.getName());
@@ -68,18 +95,37 @@ public interface Attribute {
         return instance;
     }
 
+    /**
+     * builder factory method for Attribute
+     * @return builder
+     */
     public static AttributeBuilder builder() {
         return AttributeBuilder.of();
     }
 
+    /**
+     * create builder for Attribute instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeBuilder builder(final Attribute template) {
         return AttributeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAttribute(Function<Attribute, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<Attribute> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Attribute>() {
             @Override

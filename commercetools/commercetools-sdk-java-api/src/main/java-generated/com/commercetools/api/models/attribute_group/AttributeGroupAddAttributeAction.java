@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AttributeGroupAddAttributeActionImpl.class)
 public interface AttributeGroupAddAttributeAction extends AttributeGroupUpdateAction {
 
+    /**
+     * discriminator value for AttributeGroupAddAttributeAction
+     */
     String ADD_ATTRIBUTE = "addAttribute";
 
     /**
@@ -41,30 +44,63 @@ public interface AttributeGroupAddAttributeAction extends AttributeGroupUpdateAc
     @JsonProperty("attribute")
     public AttributeReference getAttribute();
 
+    /**
+     *  <p>Value to add.</p>
+     * @param attribute value to be set
+     */
+
     public void setAttribute(final AttributeReference attribute);
 
+    /**
+     * factory method
+     * @return instance of AttributeGroupAddAttributeAction
+     */
     public static AttributeGroupAddAttributeAction of() {
         return new AttributeGroupAddAttributeActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of AttributeGroupAddAttributeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static AttributeGroupAddAttributeAction of(final AttributeGroupAddAttributeAction template) {
         AttributeGroupAddAttributeActionImpl instance = new AttributeGroupAddAttributeActionImpl();
         instance.setAttribute(template.getAttribute());
         return instance;
     }
 
+    /**
+     * builder factory method for AttributeGroupAddAttributeAction
+     * @return builder
+     */
     public static AttributeGroupAddAttributeActionBuilder builder() {
         return AttributeGroupAddAttributeActionBuilder.of();
     }
 
+    /**
+     * create builder for AttributeGroupAddAttributeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeGroupAddAttributeActionBuilder builder(final AttributeGroupAddAttributeAction template) {
         return AttributeGroupAddAttributeActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAttributeGroupAddAttributeAction(Function<AttributeGroupAddAttributeAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AttributeGroupAddAttributeAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AttributeGroupAddAttributeAction>() {
             @Override

@@ -26,6 +26,9 @@ public class BooleanAttributeImpl implements BooleanAttribute, ModelBase {
 
     private Boolean value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BooleanAttributeImpl(@JsonProperty("name") final String name, @JsonProperty("value") final Boolean value) {
         this.name = name;
@@ -33,6 +36,9 @@ public class BooleanAttributeImpl implements BooleanAttribute, ModelBase {
         this.type = BOOLEAN;
     }
 
+    /**
+     * create empty instance
+     */
     public BooleanAttributeImpl() {
         this.type = BOOLEAN;
     }

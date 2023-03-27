@@ -49,6 +49,9 @@ public class OrderCustomLineItemQuantityChangedMessageImpl
 
     private Long oldQuantity;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderCustomLineItemQuantityChangedMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -78,6 +81,9 @@ public class OrderCustomLineItemQuantityChangedMessageImpl
         this.type = ORDER_CUSTOM_LINE_ITEM_QUANTITY_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderCustomLineItemQuantityChangedMessageImpl() {
         this.type = ORDER_CUSTOM_LINE_ITEM_QUANTITY_CHANGED;
     }

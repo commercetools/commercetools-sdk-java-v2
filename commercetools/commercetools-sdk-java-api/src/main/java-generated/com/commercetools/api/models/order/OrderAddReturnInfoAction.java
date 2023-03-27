@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderAddReturnInfoActionImpl.class)
 public interface OrderAddReturnInfoAction extends OrderUpdateAction {
 
+    /**
+     * discriminator value for OrderAddReturnInfoAction
+     */
     String ADD_RETURN_INFO = "addReturnInfo";
 
     /**
@@ -58,19 +61,48 @@ public interface OrderAddReturnInfoAction extends OrderUpdateAction {
     @JsonProperty("returnDate")
     public ZonedDateTime getReturnDate();
 
+    /**
+     * set returnTrackingId
+     * @param returnTrackingId value to be set
+     */
+
     public void setReturnTrackingId(final String returnTrackingId);
+
+    /**
+     * set items
+     * @param items values to be set
+     */
 
     @JsonIgnore
     public void setItems(final ReturnItemDraft... items);
 
+    /**
+     * set items
+     * @param items values to be set
+     */
+
     public void setItems(final List<ReturnItemDraft> items);
+
+    /**
+     * set returnDate
+     * @param returnDate value to be set
+     */
 
     public void setReturnDate(final ZonedDateTime returnDate);
 
+    /**
+     * factory method
+     * @return instance of OrderAddReturnInfoAction
+     */
     public static OrderAddReturnInfoAction of() {
         return new OrderAddReturnInfoActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderAddReturnInfoAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderAddReturnInfoAction of(final OrderAddReturnInfoAction template) {
         OrderAddReturnInfoActionImpl instance = new OrderAddReturnInfoActionImpl();
         instance.setReturnTrackingId(template.getReturnTrackingId());
@@ -79,18 +111,37 @@ public interface OrderAddReturnInfoAction extends OrderUpdateAction {
         return instance;
     }
 
+    /**
+     * builder factory method for OrderAddReturnInfoAction
+     * @return builder
+     */
     public static OrderAddReturnInfoActionBuilder builder() {
         return OrderAddReturnInfoActionBuilder.of();
     }
 
+    /**
+     * create builder for OrderAddReturnInfoAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderAddReturnInfoActionBuilder builder(final OrderAddReturnInfoAction template) {
         return OrderAddReturnInfoActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderAddReturnInfoAction(Function<OrderAddReturnInfoAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderAddReturnInfoAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderAddReturnInfoAction>() {
             @Override

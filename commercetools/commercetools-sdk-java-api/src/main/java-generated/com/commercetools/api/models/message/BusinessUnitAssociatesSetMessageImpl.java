@@ -44,6 +44,9 @@ public class BusinessUnitAssociatesSetMessageImpl implements BusinessUnitAssocia
 
     private java.util.List<com.commercetools.api.models.business_unit.Associate> associates;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitAssociatesSetMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -70,6 +73,9 @@ public class BusinessUnitAssociatesSetMessageImpl implements BusinessUnitAssocia
         this.type = BUSINESS_UNIT_ASSOCIATES_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitAssociatesSetMessageImpl() {
         this.type = BUSINESS_UNIT_ASSOCIATES_SET;
     }

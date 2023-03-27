@@ -25,6 +25,9 @@ public class StoreSetSupplyChannelsActionImpl implements StoreSetSupplyChannelsA
 
     private java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StoreSetSupplyChannelsActionImpl(
             @JsonProperty("supplyChannels") final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels) {
@@ -32,6 +35,9 @@ public class StoreSetSupplyChannelsActionImpl implements StoreSetSupplyChannelsA
         this.action = SET_SUPPLY_CHANNELS;
     }
 
+    /**
+     * create empty instance
+     */
     public StoreSetSupplyChannelsActionImpl() {
         this.action = SET_SUPPLY_CHANNELS;
     }

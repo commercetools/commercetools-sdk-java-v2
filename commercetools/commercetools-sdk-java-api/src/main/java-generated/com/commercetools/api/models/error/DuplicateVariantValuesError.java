@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = DuplicateVariantValuesErrorImpl.class)
 public interface DuplicateVariantValuesError extends ErrorObject {
 
+    /**
+     * discriminator value for DuplicateVariantValuesError
+     */
     String DUPLICATE_VARIANT_VALUES = "DuplicateVariantValues";
 
     /**
@@ -58,14 +61,33 @@ public interface DuplicateVariantValuesError extends ErrorObject {
     @JsonProperty("variantValues")
     public VariantValues getVariantValues();
 
+    /**
+     *  <p><code>"A duplicate combination of the variant values (sku, key, images, prices, attributes) exists."</code></p>
+     * @param message value to be set
+     */
+
     public void setMessage(final String message);
+
+    /**
+     *  <p>Every Product Variant must have a distinct combination of SKU, prices, and custom Attribute values.</p>
+     * @param variantValues value to be set
+     */
 
     public void setVariantValues(final VariantValues variantValues);
 
+    /**
+     * factory method
+     * @return instance of DuplicateVariantValuesError
+     */
     public static DuplicateVariantValuesError of() {
         return new DuplicateVariantValuesErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of DuplicateVariantValuesError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static DuplicateVariantValuesError of(final DuplicateVariantValuesError template) {
         DuplicateVariantValuesErrorImpl instance = new DuplicateVariantValuesErrorImpl();
         instance.setMessage(template.getMessage());
@@ -74,18 +96,37 @@ public interface DuplicateVariantValuesError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for DuplicateVariantValuesError
+     * @return builder
+     */
     public static DuplicateVariantValuesErrorBuilder builder() {
         return DuplicateVariantValuesErrorBuilder.of();
     }
 
+    /**
+     * create builder for DuplicateVariantValuesError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DuplicateVariantValuesErrorBuilder builder(final DuplicateVariantValuesError template) {
         return DuplicateVariantValuesErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withDuplicateVariantValuesError(Function<DuplicateVariantValuesError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<DuplicateVariantValuesError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<DuplicateVariantValuesError>() {
             @Override

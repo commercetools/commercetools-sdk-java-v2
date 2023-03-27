@@ -27,6 +27,9 @@ public class OverCapacityErrorImpl implements OverCapacityError, ModelBase {
 
     private Map<String, java.lang.Object> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OverCapacityErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values) {
@@ -35,6 +38,9 @@ public class OverCapacityErrorImpl implements OverCapacityError, ModelBase {
         this.code = OVER_CAPACITY;
     }
 
+    /**
+     * create empty instance
+     */
     public OverCapacityErrorImpl() {
         this.code = OVER_CAPACITY;
     }

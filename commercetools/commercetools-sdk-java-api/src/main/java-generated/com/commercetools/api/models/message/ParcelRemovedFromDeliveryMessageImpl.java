@@ -48,6 +48,9 @@ public class ParcelRemovedFromDeliveryMessageImpl implements ParcelRemovedFromDe
 
     private String shippingKey;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ParcelRemovedFromDeliveryMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -78,6 +81,9 @@ public class ParcelRemovedFromDeliveryMessageImpl implements ParcelRemovedFromDe
         this.type = PARCEL_REMOVED_FROM_DELIVERY;
     }
 
+    /**
+     * create empty instance
+     */
     public ParcelRemovedFromDeliveryMessageImpl() {
         this.type = PARCEL_REMOVED_FROM_DELIVERY;
     }

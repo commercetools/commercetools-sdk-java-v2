@@ -49,6 +49,11 @@ public class BusinessUnitAssociateRemovedMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>The Associate that was removed from the Business Unit.</p>
+     * @return associate
+     */
+
     public com.commercetools.api.models.business_unit.Associate getAssociate() {
         return this.associate;
     }
@@ -70,10 +75,19 @@ public class BusinessUnitAssociateRemovedMessagePayloadBuilder
         return new BusinessUnitAssociateRemovedMessagePayloadImpl(associate);
     }
 
+    /**
+     * factory method for an instance of BusinessUnitAssociateRemovedMessagePayloadBuilder
+     * @return builder
+     */
     public static BusinessUnitAssociateRemovedMessagePayloadBuilder of() {
         return new BusinessUnitAssociateRemovedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for BusinessUnitAssociateRemovedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitAssociateRemovedMessagePayloadBuilder of(
             final BusinessUnitAssociateRemovedMessagePayload template) {
         BusinessUnitAssociateRemovedMessagePayloadBuilder builder = new BusinessUnitAssociateRemovedMessagePayloadBuilder();

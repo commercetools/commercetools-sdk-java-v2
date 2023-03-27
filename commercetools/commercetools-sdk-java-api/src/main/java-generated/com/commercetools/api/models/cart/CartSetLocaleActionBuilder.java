@@ -36,6 +36,11 @@ public class CartSetLocaleActionBuilder implements Builder<CartSetLocaleAction> 
         return this;
     }
 
+    /**
+     *  <p>Value to set. Must be one of the Project's <code>languages</code>. If empty, any existing value will be removed.</p>
+     * @return locale
+     */
+
     @Nullable
     public String getLocale() {
         return this.locale;
@@ -57,10 +62,19 @@ public class CartSetLocaleActionBuilder implements Builder<CartSetLocaleAction> 
         return new CartSetLocaleActionImpl(locale);
     }
 
+    /**
+     * factory method for an instance of CartSetLocaleActionBuilder
+     * @return builder
+     */
     public static CartSetLocaleActionBuilder of() {
         return new CartSetLocaleActionBuilder();
     }
 
+    /**
+     * create builder for CartSetLocaleAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartSetLocaleActionBuilder of(final CartSetLocaleAction template) {
         CartSetLocaleActionBuilder builder = new CartSetLocaleActionBuilder();
         builder.locale = template.getLocale();

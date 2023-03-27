@@ -19,6 +19,9 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSearchQueryImpl implements OrderSearchQuery, ModelBase {
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderSearchQueryImpl() {
     }

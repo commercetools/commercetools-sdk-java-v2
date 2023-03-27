@@ -24,6 +24,9 @@ public class AttributeGroupAddAttributeActionImpl implements AttributeGroupAddAt
 
     private com.commercetools.api.models.attribute_group.AttributeReference attribute;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AttributeGroupAddAttributeActionImpl(
             @JsonProperty("attribute") final com.commercetools.api.models.attribute_group.AttributeReference attribute) {
@@ -31,6 +34,9 @@ public class AttributeGroupAddAttributeActionImpl implements AttributeGroupAddAt
         this.action = ADD_ATTRIBUTE;
     }
 
+    /**
+     * create empty instance
+     */
     public AttributeGroupAddAttributeActionImpl() {
         this.action = ADD_ATTRIBUTE;
     }

@@ -32,6 +32,9 @@ public class OrderTransitionLineItemStateActionImpl implements OrderTransitionLi
 
     private java.time.ZonedDateTime actualTransitionDate;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderTransitionLineItemStateActionImpl(@JsonProperty("lineItemId") final String lineItemId,
             @JsonProperty("quantity") final Long quantity,
@@ -46,6 +49,9 @@ public class OrderTransitionLineItemStateActionImpl implements OrderTransitionLi
         this.action = TRANSITION_LINE_ITEM_STATE;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderTransitionLineItemStateActionImpl() {
         this.action = TRANSITION_LINE_ITEM_STATE;
     }

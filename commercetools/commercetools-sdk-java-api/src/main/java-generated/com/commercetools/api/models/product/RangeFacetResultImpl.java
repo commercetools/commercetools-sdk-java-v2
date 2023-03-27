@@ -24,6 +24,9 @@ public class RangeFacetResultImpl implements RangeFacetResult, ModelBase {
 
     private java.util.List<com.commercetools.api.models.product.FacetRange> ranges;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     RangeFacetResultImpl(
             @JsonProperty("ranges") final java.util.List<com.commercetools.api.models.product.FacetRange> ranges) {
@@ -31,6 +34,9 @@ public class RangeFacetResultImpl implements RangeFacetResult, ModelBase {
         this.type = FacetTypes.findEnum("range");
     }
 
+    /**
+     * create empty instance
+     */
     public RangeFacetResultImpl() {
         this.type = FacetTypes.findEnum("range");
     }

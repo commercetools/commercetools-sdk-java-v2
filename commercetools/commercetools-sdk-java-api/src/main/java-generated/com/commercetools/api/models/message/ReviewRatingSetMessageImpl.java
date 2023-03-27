@@ -50,6 +50,9 @@ public class ReviewRatingSetMessageImpl implements ReviewRatingSetMessage, Model
 
     private com.commercetools.api.models.common.Reference target;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReviewRatingSetMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -80,6 +83,9 @@ public class ReviewRatingSetMessageImpl implements ReviewRatingSetMessage, Model
         this.type = REVIEW_RATING_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public ReviewRatingSetMessageImpl() {
         this.type = REVIEW_RATING_SET;
     }

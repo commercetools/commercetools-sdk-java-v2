@@ -64,9 +64,19 @@ public class DiscountCodeReferenceBuilder implements Builder<DiscountCodeReferen
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the referenced DiscountCode.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Contains the representation of the expanded DiscountCode. Only present in responses to requests with Reference Expansion for DiscountCodes.</p>
+     * @return obj
+     */
 
     @Nullable
     public com.commercetools.api.models.discount_code.DiscountCode getObj() {
@@ -90,10 +100,19 @@ public class DiscountCodeReferenceBuilder implements Builder<DiscountCodeReferen
         return new DiscountCodeReferenceImpl(id, obj);
     }
 
+    /**
+     * factory method for an instance of DiscountCodeReferenceBuilder
+     * @return builder
+     */
     public static DiscountCodeReferenceBuilder of() {
         return new DiscountCodeReferenceBuilder();
     }
 
+    /**
+     * create builder for DiscountCodeReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DiscountCodeReferenceBuilder of(final DiscountCodeReference template) {
         DiscountCodeReferenceBuilder builder = new DiscountCodeReferenceBuilder();
         builder.id = template.getId();

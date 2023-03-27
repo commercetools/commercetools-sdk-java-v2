@@ -38,6 +38,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PaymentTransactionAddedMessageImpl.class)
 public interface PaymentTransactionAddedMessage extends Message {
 
+    /**
+     * discriminator value for PaymentTransactionAddedMessage
+     */
     String PAYMENT_TRANSACTION_ADDED = "PaymentTransactionAdded";
 
     /**
@@ -49,12 +52,26 @@ public interface PaymentTransactionAddedMessage extends Message {
     @JsonProperty("transaction")
     public Transaction getTransaction();
 
+    /**
+     *  <p>Transaction that was added to the Payment.</p>
+     * @param transaction value to be set
+     */
+
     public void setTransaction(final Transaction transaction);
 
+    /**
+     * factory method
+     * @return instance of PaymentTransactionAddedMessage
+     */
     public static PaymentTransactionAddedMessage of() {
         return new PaymentTransactionAddedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of PaymentTransactionAddedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static PaymentTransactionAddedMessage of(final PaymentTransactionAddedMessage template) {
         PaymentTransactionAddedMessageImpl instance = new PaymentTransactionAddedMessageImpl();
         instance.setId(template.getId());
@@ -71,18 +88,37 @@ public interface PaymentTransactionAddedMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for PaymentTransactionAddedMessage
+     * @return builder
+     */
     public static PaymentTransactionAddedMessageBuilder builder() {
         return PaymentTransactionAddedMessageBuilder.of();
     }
 
+    /**
+     * create builder for PaymentTransactionAddedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentTransactionAddedMessageBuilder builder(final PaymentTransactionAddedMessage template) {
         return PaymentTransactionAddedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withPaymentTransactionAddedMessage(Function<PaymentTransactionAddedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<PaymentTransactionAddedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<PaymentTransactionAddedMessage>() {
             @Override

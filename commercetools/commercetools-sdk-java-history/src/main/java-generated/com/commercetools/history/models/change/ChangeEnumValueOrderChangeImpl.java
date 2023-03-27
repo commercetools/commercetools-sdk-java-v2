@@ -30,6 +30,9 @@ public class ChangeEnumValueOrderChangeImpl implements ChangeEnumValueOrderChang
 
     private java.util.List<com.commercetools.history.models.change_value.EnumValue> previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeEnumValueOrderChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("fieldName") final String fieldName,
@@ -42,6 +45,9 @@ public class ChangeEnumValueOrderChangeImpl implements ChangeEnumValueOrderChang
         this.type = CHANGE_ENUM_VALUE_ORDER_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeEnumValueOrderChangeImpl() {
         this.type = CHANGE_ENUM_VALUE_ORDER_CHANGE;
     }

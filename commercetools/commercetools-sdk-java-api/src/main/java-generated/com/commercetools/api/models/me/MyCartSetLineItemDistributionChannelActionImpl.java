@@ -27,6 +27,9 @@ public class MyCartSetLineItemDistributionChannelActionImpl
 
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyCartSetLineItemDistributionChannelActionImpl(@JsonProperty("lineItemId") final String lineItemId,
             @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
@@ -35,6 +38,9 @@ public class MyCartSetLineItemDistributionChannelActionImpl
         this.action = SET_LINE_ITEM_DISTRIBUTION_CHANNEL;
     }
 
+    /**
+     * create empty instance
+     */
     public MyCartSetLineItemDistributionChannelActionImpl() {
         this.action = SET_LINE_ITEM_DISTRIBUTION_CHANNEL;
     }

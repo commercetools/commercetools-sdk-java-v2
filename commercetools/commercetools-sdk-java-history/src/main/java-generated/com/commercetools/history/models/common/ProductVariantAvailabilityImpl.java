@@ -28,6 +28,9 @@ public class ProductVariantAvailabilityImpl implements ProductVariantAvailabilit
 
     private com.commercetools.history.models.common.ProductVariantChannelAvailabilityMap channels;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductVariantAvailabilityImpl(@JsonProperty("isOnStock") final Boolean isOnStock,
             @JsonProperty("restockableInDays") final Integer restockableInDays,
@@ -39,6 +42,9 @@ public class ProductVariantAvailabilityImpl implements ProductVariantAvailabilit
         this.channels = channels;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductVariantAvailabilityImpl() {
     }
 

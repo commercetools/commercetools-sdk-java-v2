@@ -26,6 +26,9 @@ public class CartDiscountSetCustomFieldActionImpl implements CartDiscountSetCust
 
     private java.lang.Object value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartDiscountSetCustomFieldActionImpl(@JsonProperty("name") final String name,
             @JsonProperty("value") final java.lang.Object value) {
@@ -34,6 +37,9 @@ public class CartDiscountSetCustomFieldActionImpl implements CartDiscountSetCust
         this.action = SET_CUSTOM_FIELD;
     }
 
+    /**
+     * create empty instance
+     */
     public CartDiscountSetCustomFieldActionImpl() {
         this.action = SET_CUSTOM_FIELD;
     }

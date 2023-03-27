@@ -90,6 +90,11 @@ public class CustomFieldEnumTypeBuilder implements Builder<CustomFieldEnumType> 
         return this;
     }
 
+    /**
+     *  <p>Allowed values.</p>
+     * @return values
+     */
+
     public java.util.List<com.commercetools.api.models.type.CustomFieldEnumValue> getValues() {
         return this.values;
     }
@@ -111,10 +116,19 @@ public class CustomFieldEnumTypeBuilder implements Builder<CustomFieldEnumType> 
         return new CustomFieldEnumTypeImpl(values);
     }
 
+    /**
+     * factory method for an instance of CustomFieldEnumTypeBuilder
+     * @return builder
+     */
     public static CustomFieldEnumTypeBuilder of() {
         return new CustomFieldEnumTypeBuilder();
     }
 
+    /**
+     * create builder for CustomFieldEnumType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomFieldEnumTypeBuilder of(final CustomFieldEnumType template) {
         CustomFieldEnumTypeBuilder builder = new CustomFieldEnumTypeBuilder();
         builder.values = template.getValues();

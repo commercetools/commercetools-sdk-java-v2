@@ -24,12 +24,18 @@ public class StoreSetLanguagesActionImpl implements StoreSetLanguagesAction, Mod
 
     private java.util.List<String> languages;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StoreSetLanguagesActionImpl(@JsonProperty("languages") final java.util.List<String> languages) {
         this.languages = languages;
         this.action = SET_LANGUAGES;
     }
 
+    /**
+     * create empty instance
+     */
     public StoreSetLanguagesActionImpl() {
         this.action = SET_LANGUAGES;
     }

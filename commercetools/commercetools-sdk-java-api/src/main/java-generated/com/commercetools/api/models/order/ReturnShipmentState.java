@@ -23,13 +23,28 @@ public interface ReturnShipmentState {
 
     ReturnShipmentState UNUSABLE = ReturnShipmentStateEnum.UNUSABLE;
 
+    /**
+     * possible values of ReturnShipmentState
+     */
     enum ReturnShipmentStateEnum implements ReturnShipmentState {
+        /**
+         * Advised
+         */
         ADVISED("Advised"),
 
+        /**
+         * Returned
+         */
         RETURNED("Returned"),
 
+        /**
+         * BackInStock
+         */
         BACK_IN_STOCK("BackInStock"),
 
+        /**
+         * Unusable
+         */
         UNUSABLE("Unusable");
         private final String jsonName;
 
@@ -46,13 +61,30 @@ public interface ReturnShipmentState {
         }
     }
 
+    /**
+     * the JSON value
+     * @return json value
+     */
     @JsonValue
     String getJsonName();
 
+    /**
+     * the enum value
+     * @return name
+     */
     String name();
 
+    /**
+     * convert value to string
+     * @return string representation
+     */
     String toString();
 
+    /**
+     * factory method for a enum value of ReturnShipmentState
+     * if no enum has been found an anonymous instance will be created
+     * @return enum instance
+     */
     @JsonCreator
     public static ReturnShipmentState findEnum(String value) {
         return findEnumViaJsonName(value).orElse(new ReturnShipmentState() {
@@ -72,10 +104,18 @@ public interface ReturnShipmentState {
         });
     }
 
+    /**
+     * method to find enum using the JSON value
+     * @return optional of enum instance
+     */
     public static Optional<ReturnShipmentState> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
 
+    /**
+     * possible enum values
+     * @return array of possible enum values
+     */
     public static ReturnShipmentState[] values() {
         return ReturnShipmentStateEnum.values();
     }

@@ -26,6 +26,9 @@ public class CustomerSetAuthenticationModeActionImpl implements CustomerSetAuthe
 
     private String password;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerSetAuthenticationModeActionImpl(
             @JsonProperty("authMode") final com.commercetools.api.models.customer.AuthenticationMode authMode,
@@ -35,6 +38,9 @@ public class CustomerSetAuthenticationModeActionImpl implements CustomerSetAuthe
         this.action = SET_AUTHENTICATION_MODE;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerSetAuthenticationModeActionImpl() {
         this.action = SET_AUTHENTICATION_MODE;
     }

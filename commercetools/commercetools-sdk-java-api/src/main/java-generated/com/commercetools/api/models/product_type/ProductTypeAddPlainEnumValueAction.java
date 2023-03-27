@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductTypeAddPlainEnumValueActionImpl.class)
 public interface ProductTypeAddPlainEnumValueAction extends ProductTypeUpdateAction {
 
+    /**
+     * discriminator value for ProductTypeAddPlainEnumValueAction
+     */
     String ADD_PLAIN_ENUM_VALUE = "addPlainEnumValue";
 
     /**
@@ -50,14 +53,33 @@ public interface ProductTypeAddPlainEnumValueAction extends ProductTypeUpdateAct
     @JsonProperty("value")
     public AttributePlainEnumValue getValue();
 
+    /**
+     *  <p>Name of the AttributeDefinition to update.</p>
+     * @param attributeName value to be set
+     */
+
     public void setAttributeName(final String attributeName);
+
+    /**
+     *  <p>Value to append to the array.</p>
+     * @param value value to be set
+     */
 
     public void setValue(final AttributePlainEnumValue value);
 
+    /**
+     * factory method
+     * @return instance of ProductTypeAddPlainEnumValueAction
+     */
     public static ProductTypeAddPlainEnumValueAction of() {
         return new ProductTypeAddPlainEnumValueActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductTypeAddPlainEnumValueAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductTypeAddPlainEnumValueAction of(final ProductTypeAddPlainEnumValueAction template) {
         ProductTypeAddPlainEnumValueActionImpl instance = new ProductTypeAddPlainEnumValueActionImpl();
         instance.setAttributeName(template.getAttributeName());
@@ -65,18 +87,37 @@ public interface ProductTypeAddPlainEnumValueAction extends ProductTypeUpdateAct
         return instance;
     }
 
+    /**
+     * builder factory method for ProductTypeAddPlainEnumValueAction
+     * @return builder
+     */
     public static ProductTypeAddPlainEnumValueActionBuilder builder() {
         return ProductTypeAddPlainEnumValueActionBuilder.of();
     }
 
+    /**
+     * create builder for ProductTypeAddPlainEnumValueAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductTypeAddPlainEnumValueActionBuilder builder(final ProductTypeAddPlainEnumValueAction template) {
         return ProductTypeAddPlainEnumValueActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductTypeAddPlainEnumValueAction(Function<ProductTypeAddPlainEnumValueAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductTypeAddPlainEnumValueAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductTypeAddPlainEnumValueAction>() {
             @Override

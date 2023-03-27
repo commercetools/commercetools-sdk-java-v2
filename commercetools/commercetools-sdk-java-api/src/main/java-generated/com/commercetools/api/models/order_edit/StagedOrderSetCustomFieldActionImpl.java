@@ -26,6 +26,9 @@ public class StagedOrderSetCustomFieldActionImpl implements StagedOrderSetCustom
 
     private java.lang.Object value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderSetCustomFieldActionImpl(@JsonProperty("name") final String name,
             @JsonProperty("value") final java.lang.Object value) {
@@ -34,6 +37,9 @@ public class StagedOrderSetCustomFieldActionImpl implements StagedOrderSetCustom
         this.action = SET_CUSTOM_FIELD;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderSetCustomFieldActionImpl() {
         this.action = SET_CUSTOM_FIELD;
     }

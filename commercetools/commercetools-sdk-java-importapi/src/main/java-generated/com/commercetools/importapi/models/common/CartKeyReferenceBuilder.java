@@ -24,7 +24,7 @@ public class CartKeyReferenceBuilder implements Builder<CartKeyReference> {
     private String key;
 
     /**
-     *
+     * set the value to the key
      * @param key value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class CartKeyReferenceBuilder implements Builder<CartKeyReference> {
         this.key = key;
         return this;
     }
+
+    /**
+     * value of key}
+     * @return key
+     */
 
     public String getKey() {
         return this.key;
@@ -55,10 +60,19 @@ public class CartKeyReferenceBuilder implements Builder<CartKeyReference> {
         return new CartKeyReferenceImpl(key);
     }
 
+    /**
+     * factory method for an instance of CartKeyReferenceBuilder
+     * @return builder
+     */
     public static CartKeyReferenceBuilder of() {
         return new CartKeyReferenceBuilder();
     }
 
+    /**
+     * create builder for CartKeyReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartKeyReferenceBuilder of(final CartKeyReference template) {
         CartKeyReferenceBuilder builder = new CartKeyReferenceBuilder();
         builder.key = template.getKey();

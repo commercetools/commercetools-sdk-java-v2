@@ -24,6 +24,9 @@ public class ItemShippingDetailsImpl implements ItemShippingDetails, ModelBase {
 
     private Boolean valid;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ItemShippingDetailsImpl(
             @JsonProperty("targets") final java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targets,
@@ -32,6 +35,9 @@ public class ItemShippingDetailsImpl implements ItemShippingDetails, ModelBase {
         this.valid = valid;
     }
 
+    /**
+     * create empty instance
+     */
     public ItemShippingDetailsImpl() {
     }
 

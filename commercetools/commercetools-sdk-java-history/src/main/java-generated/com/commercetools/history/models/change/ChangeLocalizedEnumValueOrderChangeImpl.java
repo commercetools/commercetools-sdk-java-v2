@@ -32,6 +32,9 @@ public class ChangeLocalizedEnumValueOrderChangeImpl implements ChangeLocalizedE
 
     private java.util.List<com.commercetools.history.models.change_value.LocalizedEnumValue> previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeLocalizedEnumValueOrderChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("fieldName") final String fieldName,
@@ -46,6 +49,9 @@ public class ChangeLocalizedEnumValueOrderChangeImpl implements ChangeLocalizedE
         this.type = CHANGE_LOCALIZED_ENUM_VALUE_ORDER_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeLocalizedEnumValueOrderChangeImpl() {
         this.type = CHANGE_LOCALIZED_ENUM_VALUE_ORDER_CHANGE;
     }

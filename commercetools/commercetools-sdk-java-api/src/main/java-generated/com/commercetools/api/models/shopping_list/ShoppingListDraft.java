@@ -124,38 +124,112 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
+    /**
+     *  <p>Name of the ShoppingList.</p>
+     * @param name value to be set
+     */
+
     public void setName(final LocalizedString name);
+
+    /**
+     *  <p>Human-readable identifiers usually used as deep-link URL to the related ShoppingList. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. The slug must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>.</p>
+     * @param slug value to be set
+     */
 
     public void setSlug(final LocalizedString slug);
 
+    /**
+     *  <p>The Customer the ShoppingList should be associated to.</p>
+     * @param customer value to be set
+     */
+
     public void setCustomer(final CustomerResourceIdentifier customer);
+
+    /**
+     *  <p>User-defined unique identifier for the ShoppingList.</p>
+     * @param key value to be set
+     */
 
     public void setKey(final String key);
 
+    /**
+     *  <p>Description of the ShoppingList.</p>
+     * @param description value to be set
+     */
+
     public void setDescription(final LocalizedString description);
+
+    /**
+     *  <p>Identifies ShoppingLists belonging to an anonymous session.</p>
+     * @param anonymousId value to be set
+     */
 
     public void setAnonymousId(final String anonymousId);
 
+    /**
+     *  <p>Number of days after which the ShoppingList will be automatically deleted if it has not been modified. If not set, the default value configured in the Project is used.</p>
+     * @param deleteDaysAfterLastModification value to be set
+     */
+
     public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification);
+
+    /**
+     *  <p>Line Items (containing Products) to add to the ShoppingList.</p>
+     * @param lineItems values to be set
+     */
 
     @JsonIgnore
     public void setLineItems(final ShoppingListLineItemDraft... lineItems);
 
+    /**
+     *  <p>Line Items (containing Products) to add to the ShoppingList.</p>
+     * @param lineItems values to be set
+     */
+
     public void setLineItems(final List<ShoppingListLineItemDraft> lineItems);
+
+    /**
+     *  <p>Line Items (containing text values) to add to the ShoppingList.</p>
+     * @param textLineItems values to be set
+     */
 
     @JsonIgnore
     public void setTextLineItems(final TextLineItemDraft... textLineItems);
 
+    /**
+     *  <p>Line Items (containing text values) to add to the ShoppingList.</p>
+     * @param textLineItems values to be set
+     */
+
     public void setTextLineItems(final List<TextLineItemDraft> textLineItems);
+
+    /**
+     *  <p>Assigns the new ShoppingList to the Store.</p>
+     * @param store value to be set
+     */
 
     public void setStore(final StoreResourceIdentifier store);
 
+    /**
+     *  <p>Custom Fields defined for the ShoppingList.</p>
+     * @param custom value to be set
+     */
+
     public void setCustom(final CustomFieldsDraft custom);
 
+    /**
+     * factory method
+     * @return instance of ShoppingListDraft
+     */
     public static ShoppingListDraft of() {
         return new ShoppingListDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of ShoppingListDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ShoppingListDraft of(final ShoppingListDraft template) {
         ShoppingListDraftImpl instance = new ShoppingListDraftImpl();
         instance.setName(template.getName());
@@ -172,18 +246,37 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
         return instance;
     }
 
+    /**
+     * builder factory method for ShoppingListDraft
+     * @return builder
+     */
     public static ShoppingListDraftBuilder builder() {
         return ShoppingListDraftBuilder.of();
     }
 
+    /**
+     * create builder for ShoppingListDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShoppingListDraftBuilder builder(final ShoppingListDraft template) {
         return ShoppingListDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withShoppingListDraft(Function<ShoppingListDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListDraft>() {
             @Override

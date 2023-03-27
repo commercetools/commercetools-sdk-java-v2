@@ -119,34 +119,97 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
+    /**
+     *  <p>User-defined unique identifier for the ShippingMethod.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
+
+    /**
+     *  <p>Name of the ShippingMethod.</p>
+     * @param name value to be set
+     */
 
     public void setName(final String name);
 
+    /**
+     *  <p>Localized name of the ShippingMethod.</p>
+     * @param localizedName value to be set
+     */
+
     public void setLocalizedName(final LocalizedString localizedName);
 
+    /**
+     *  <p>Description of the ShippingMethod.</p>
+     * @param description value to be set
+     */
     @Deprecated
     public void setDescription(final String description);
 
+    /**
+     *  <p>Localized description of the ShippingMethod.</p>
+     * @param localizedDescription value to be set
+     */
+
     public void setLocalizedDescription(final LocalizedString localizedDescription);
 
+    /**
+     *  <p>TaxCategory for all ZoneRates of the ShippingMethod.</p>
+     * @param taxCategory value to be set
+     */
+
     public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
+
+    /**
+     *  <p>Defines ShippingRates (prices) for specific zones.</p>
+     * @param zoneRates values to be set
+     */
 
     @JsonIgnore
     public void setZoneRates(final ZoneRateDraft... zoneRates);
 
+    /**
+     *  <p>Defines ShippingRates (prices) for specific zones.</p>
+     * @param zoneRates values to be set
+     */
+
     public void setZoneRates(final List<ZoneRateDraft> zoneRates);
+
+    /**
+     *  <p>If <code>true</code> the ShippingMethod will be the Project's default ShippingMethod.</p>
+     * @param isDefault value to be set
+     */
 
     public void setIsDefault(final Boolean isDefault);
 
+    /**
+     *  <p>Valid Cart predicate to select a ShippingMethod for a Cart.</p>
+     * @param predicate value to be set
+     */
+
     public void setPredicate(final String predicate);
+
+    /**
+     *  <p>Custom Fields for the ShippingMethod.</p>
+     * @param custom value to be set
+     */
 
     public void setCustom(final CustomFieldsDraft custom);
 
+    /**
+     * factory method
+     * @return instance of ShippingMethodDraft
+     */
     public static ShippingMethodDraft of() {
         return new ShippingMethodDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of ShippingMethodDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ShippingMethodDraft of(final ShippingMethodDraft template) {
         ShippingMethodDraftImpl instance = new ShippingMethodDraftImpl();
         instance.setKey(template.getKey());
@@ -162,18 +225,37 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
         return instance;
     }
 
+    /**
+     * builder factory method for ShippingMethodDraft
+     * @return builder
+     */
     public static ShippingMethodDraftBuilder builder() {
         return ShippingMethodDraftBuilder.of();
     }
 
+    /**
+     * create builder for ShippingMethodDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShippingMethodDraftBuilder builder(final ShippingMethodDraft template) {
         return ShippingMethodDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withShippingMethodDraft(Function<ShippingMethodDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodDraft>() {
             @Override

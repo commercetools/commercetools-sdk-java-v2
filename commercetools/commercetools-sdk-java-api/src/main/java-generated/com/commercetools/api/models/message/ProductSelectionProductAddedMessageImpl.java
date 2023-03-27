@@ -46,6 +46,9 @@ public class ProductSelectionProductAddedMessageImpl implements ProductSelection
 
     private com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSelectionProductAddedMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -74,6 +77,9 @@ public class ProductSelectionProductAddedMessageImpl implements ProductSelection
         this.type = PRODUCT_SELECTION_PRODUCT_ADDED;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSelectionProductAddedMessageImpl() {
         this.type = PRODUCT_SELECTION_PRODUCT_ADDED;
     }

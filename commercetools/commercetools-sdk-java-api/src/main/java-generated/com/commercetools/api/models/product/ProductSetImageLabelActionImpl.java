@@ -32,6 +32,9 @@ public class ProductSetImageLabelActionImpl implements ProductSetImageLabelActio
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSetImageLabelActionImpl(@JsonProperty("sku") final String sku,
             @JsonProperty("variantId") final Long variantId, @JsonProperty("imageUrl") final String imageUrl,
@@ -44,6 +47,9 @@ public class ProductSetImageLabelActionImpl implements ProductSetImageLabelActio
         this.action = SET_IMAGE_LABEL;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSetImageLabelActionImpl() {
         this.action = SET_IMAGE_LABEL;
     }

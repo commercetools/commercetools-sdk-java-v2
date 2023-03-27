@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderSetParcelCustomFieldActionImpl.class)
 public interface StagedOrderSetParcelCustomFieldAction extends StagedOrderUpdateAction {
 
+    /**
+     * discriminator value for StagedOrderSetParcelCustomFieldAction
+     */
     String SET_PARCEL_CUSTOM_FIELD = "setParcelCustomField";
 
     /**
@@ -57,16 +60,40 @@ public interface StagedOrderSetParcelCustomFieldAction extends StagedOrderUpdate
     @JsonProperty("value")
     public Object getValue();
 
+    /**
+     * set parcelId
+     * @param parcelId value to be set
+     */
+
     public void setParcelId(final String parcelId);
+
+    /**
+     *  <p>Name of the Custom Field.</p>
+     * @param name value to be set
+     */
 
     public void setName(final String name);
 
+    /**
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     * @param value value to be set
+     */
+
     public void setValue(final Object value);
 
+    /**
+     * factory method
+     * @return instance of StagedOrderSetParcelCustomFieldAction
+     */
     public static StagedOrderSetParcelCustomFieldAction of() {
         return new StagedOrderSetParcelCustomFieldActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedOrderSetParcelCustomFieldAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedOrderSetParcelCustomFieldAction of(final StagedOrderSetParcelCustomFieldAction template) {
         StagedOrderSetParcelCustomFieldActionImpl instance = new StagedOrderSetParcelCustomFieldActionImpl();
         instance.setParcelId(template.getParcelId());
@@ -75,15 +102,30 @@ public interface StagedOrderSetParcelCustomFieldAction extends StagedOrderUpdate
         return instance;
     }
 
+    /**
+     * builder factory method for StagedOrderSetParcelCustomFieldAction
+     * @return builder
+     */
     public static StagedOrderSetParcelCustomFieldActionBuilder builder() {
         return StagedOrderSetParcelCustomFieldActionBuilder.of();
     }
 
+    /**
+     * create builder for StagedOrderSetParcelCustomFieldAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetParcelCustomFieldActionBuilder builder(
             final StagedOrderSetParcelCustomFieldAction template) {
         return StagedOrderSetParcelCustomFieldActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedOrderSetParcelCustomFieldAction(Function<StagedOrderSetParcelCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
@@ -92,6 +134,10 @@ public interface StagedOrderSetParcelCustomFieldAction extends StagedOrderUpdate
         return StagedOrderSetParcelCustomFieldActionBuilder.of().name(name).parcelId(parcelId).build();
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetParcelCustomFieldAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetParcelCustomFieldAction>() {
             @Override

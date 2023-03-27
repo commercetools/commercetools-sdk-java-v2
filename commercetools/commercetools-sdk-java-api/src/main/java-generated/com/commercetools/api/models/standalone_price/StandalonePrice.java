@@ -203,51 +203,160 @@ public interface StandalonePrice
     @JsonProperty("active")
     public Boolean getActive();
 
+    /**
+     *  <p>Unique identifier of the StandalonePrice.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>Current version of the StandalonePrice.</p>
+     * @param version value to be set
+     */
 
     public void setVersion(final Long version);
 
+    /**
+     *  <p>Date and time (UTC) the StandalonePrice was initially created.</p>
+     * @param createdAt value to be set
+     */
+
     public void setCreatedAt(final ZonedDateTime createdAt);
+
+    /**
+     *  <p>Date and time (UTC) the StandalonePrice was last updated.</p>
+     * @param lastModifiedAt value to be set
+     */
 
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy value to be set
+     */
+
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy value to be set
+     */
 
     public void setCreatedBy(final CreatedBy createdBy);
 
+    /**
+     *  <p>User-defined unique identifier of the StandalonePrice.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
+
+    /**
+     *  <p>SKU of the ProductVariant to which this Price is associated.</p>
+     * @param sku value to be set
+     */
 
     public void setSku(final String sku);
 
+    /**
+     *  <p>Money value of this Price.</p>
+     * @param value value to be set
+     */
+
     public void setValue(final TypedMoney value);
+
+    /**
+     *  <p>Country for which this Price is valid.</p>
+     * @param country value to be set
+     */
 
     public void setCountry(final String country);
 
+    /**
+     *  <p>CustomerGroup for which this Price is valid.</p>
+     * @param customerGroup value to be set
+     */
+
     public void setCustomerGroup(final CustomerGroupReference customerGroup);
+
+    /**
+     *  <p>Product distribution Channel for which this Price is valid.</p>
+     * @param channel value to be set
+     */
 
     public void setChannel(final ChannelReference channel);
 
+    /**
+     *  <p>Date from which the Price is valid.</p>
+     * @param validFrom value to be set
+     */
+
     public void setValidFrom(final ZonedDateTime validFrom);
 
+    /**
+     *  <p>Date until the Price is valid. Standalone Prices that are no longer valid are not automatically deleted, but they can be deleted if necessary.</p>
+     * @param validUntil value to be set
+     */
+
     public void setValidUntil(final ZonedDateTime validUntil);
+
+    /**
+     *  <p>Price tiers if any are defined.</p>
+     * @param tiers values to be set
+     */
 
     @JsonIgnore
     public void setTiers(final PriceTier... tiers);
 
+    /**
+     *  <p>Price tiers if any are defined.</p>
+     * @param tiers values to be set
+     */
+
     public void setTiers(final List<PriceTier> tiers);
+
+    /**
+     *  <p>Set if a matching ProductDiscount exists. If set, the API uses the <code>discounted</code> value for the LineItem Price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>
+     * @param discounted value to be set
+     */
 
     public void setDiscounted(final DiscountedPrice discounted);
 
+    /**
+     *  <p>Custom Fields for the StandalonePrice.</p>
+     * @param custom value to be set
+     */
+
     public void setCustom(final CustomFields custom);
+
+    /**
+     *  <p>Staged changes of the StandalonePrice. Only present if the StandalonePrice has staged changes.</p>
+     * @param staged value to be set
+     */
 
     public void setStaged(final StagedStandalonePrice staged);
 
+    /**
+     *  <p>If set to <code>true</code>, the StandalonePrice is considered during price selection. If set to <code>false</code>, the StandalonePrice is not considered during price selection.</p>
+     * @param active value to be set
+     */
+
     public void setActive(final Boolean active);
 
+    /**
+     * factory method
+     * @return instance of StandalonePrice
+     */
     public static StandalonePrice of() {
         return new StandalonePriceImpl();
     }
 
+    /**
+     * factory method to copy an instance of StandalonePrice
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StandalonePrice of(final StandalonePrice template) {
         StandalonePriceImpl instance = new StandalonePriceImpl();
         instance.setId(template.getId());
@@ -272,14 +381,29 @@ public interface StandalonePrice
         return instance;
     }
 
+    /**
+     * builder factory method for StandalonePrice
+     * @return builder
+     */
     public static StandalonePriceBuilder builder() {
         return StandalonePriceBuilder.of();
     }
 
+    /**
+     * create builder for StandalonePrice instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StandalonePriceBuilder builder(final StandalonePrice template) {
         return StandalonePriceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStandalonePrice(Function<StandalonePrice, T> helper) {
         return helper.apply(this);
     }
@@ -288,6 +412,10 @@ public interface StandalonePrice
         return com.commercetools.api.models.common.ReferenceTypeId.STANDALONE_PRICE;
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StandalonePrice> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StandalonePrice>() {
             @Override

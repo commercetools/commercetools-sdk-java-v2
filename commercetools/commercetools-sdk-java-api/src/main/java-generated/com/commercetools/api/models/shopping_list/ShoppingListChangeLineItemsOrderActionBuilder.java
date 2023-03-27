@@ -59,6 +59,11 @@ public class ShoppingListChangeLineItemsOrderActionBuilder implements Builder<Sh
         return this;
     }
 
+    /**
+     *  <p>All existing ShoppingListLineItem <code>id</code>s in the desired new order.</p>
+     * @return lineItemOrder
+     */
+
     public java.util.List<String> getLineItemOrder() {
         return this.lineItemOrder;
     }
@@ -81,10 +86,19 @@ public class ShoppingListChangeLineItemsOrderActionBuilder implements Builder<Sh
         return new ShoppingListChangeLineItemsOrderActionImpl(lineItemOrder);
     }
 
+    /**
+     * factory method for an instance of ShoppingListChangeLineItemsOrderActionBuilder
+     * @return builder
+     */
     public static ShoppingListChangeLineItemsOrderActionBuilder of() {
         return new ShoppingListChangeLineItemsOrderActionBuilder();
     }
 
+    /**
+     * create builder for ShoppingListChangeLineItemsOrderAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShoppingListChangeLineItemsOrderActionBuilder of(
             final ShoppingListChangeLineItemsOrderAction template) {
         ShoppingListChangeLineItemsOrderActionBuilder builder = new ShoppingListChangeLineItemsOrderActionBuilder();

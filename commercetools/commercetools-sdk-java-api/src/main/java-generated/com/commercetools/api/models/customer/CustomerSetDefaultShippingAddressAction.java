@@ -27,6 +27,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomerSetDefaultShippingAddressActionImpl.class)
 public interface CustomerSetDefaultShippingAddressAction extends CustomerUpdateAction {
 
+    /**
+     * discriminator value for CustomerSetDefaultShippingAddressAction
+     */
     String SET_DEFAULT_SHIPPING_ADDRESS = "setDefaultShippingAddress";
 
     /**
@@ -45,14 +48,33 @@ public interface CustomerSetDefaultShippingAddressAction extends CustomerUpdateA
     @JsonProperty("addressKey")
     public String getAddressKey();
 
+    /**
+     *  <p><code>id</code> of the Address to become the default shipping address.</p>
+     * @param addressId value to be set
+     */
+
     public void setAddressId(final String addressId);
+
+    /**
+     *  <p><code>key</code> of the Address to become the default shipping address.</p>
+     * @param addressKey value to be set
+     */
 
     public void setAddressKey(final String addressKey);
 
+    /**
+     * factory method
+     * @return instance of CustomerSetDefaultShippingAddressAction
+     */
     public static CustomerSetDefaultShippingAddressAction of() {
         return new CustomerSetDefaultShippingAddressActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomerSetDefaultShippingAddressAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomerSetDefaultShippingAddressAction of(final CustomerSetDefaultShippingAddressAction template) {
         CustomerSetDefaultShippingAddressActionImpl instance = new CustomerSetDefaultShippingAddressActionImpl();
         instance.setAddressId(template.getAddressId());
@@ -60,20 +82,39 @@ public interface CustomerSetDefaultShippingAddressAction extends CustomerUpdateA
         return instance;
     }
 
+    /**
+     * builder factory method for CustomerSetDefaultShippingAddressAction
+     * @return builder
+     */
     public static CustomerSetDefaultShippingAddressActionBuilder builder() {
         return CustomerSetDefaultShippingAddressActionBuilder.of();
     }
 
+    /**
+     * create builder for CustomerSetDefaultShippingAddressAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerSetDefaultShippingAddressActionBuilder builder(
             final CustomerSetDefaultShippingAddressAction template) {
         return CustomerSetDefaultShippingAddressActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomerSetDefaultShippingAddressAction(
             Function<CustomerSetDefaultShippingAddressAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomerSetDefaultShippingAddressAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomerSetDefaultShippingAddressAction>() {
             @Override

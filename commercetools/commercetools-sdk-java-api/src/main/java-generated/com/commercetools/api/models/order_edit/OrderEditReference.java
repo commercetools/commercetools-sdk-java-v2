@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderEditReferenceImpl.class)
 public interface OrderEditReference extends Reference, com.commercetools.api.models.Identifiable<OrderEdit> {
 
+    /**
+     * discriminator value for OrderEditReference
+     */
     String ORDER_EDIT = "order-edit";
 
     /**
@@ -49,14 +52,33 @@ public interface OrderEditReference extends Reference, com.commercetools.api.mod
     @JsonProperty("id")
     public String getId();
 
+    /**
+     *  <p>Contains the representation of the expanded OrderEdit. Only present in responses to requests with Reference Expansion for OrderEdits.</p>
+     * @param obj value to be set
+     */
+
     public void setObj(final OrderEdit obj);
+
+    /**
+     *  <p>Unique identifier of the referenced OrderEdit.</p>
+     * @param id value to be set
+     */
 
     public void setId(final String id);
 
+    /**
+     * factory method
+     * @return instance of OrderEditReference
+     */
     public static OrderEditReference of() {
         return new OrderEditReferenceImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderEditReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderEditReference of(final OrderEditReference template) {
         OrderEditReferenceImpl instance = new OrderEditReferenceImpl();
         instance.setId(template.getId());
@@ -64,18 +86,37 @@ public interface OrderEditReference extends Reference, com.commercetools.api.mod
         return instance;
     }
 
+    /**
+     * builder factory method for OrderEditReference
+     * @return builder
+     */
     public static OrderEditReferenceBuilder builder() {
         return OrderEditReferenceBuilder.of();
     }
 
+    /**
+     * create builder for OrderEditReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderEditReferenceBuilder builder(final OrderEditReference template) {
         return OrderEditReferenceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderEditReference(Function<OrderEditReference, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderEditReference> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderEditReference>() {
             @Override

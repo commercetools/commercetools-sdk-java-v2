@@ -63,9 +63,19 @@ public class MethodTaxRateBuilder implements Builder<MethodTaxRate> {
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     * @return shippingMethodKey
+     */
+
     public String getShippingMethodKey() {
         return this.shippingMethodKey;
     }
+
+    /**
+     *  <p>Tax Rate for the Shipping Method.</p>
+     * @return taxRate
+     */
 
     @Nullable
     public com.commercetools.api.models.tax_category.TaxRate getTaxRate() {
@@ -89,10 +99,19 @@ public class MethodTaxRateBuilder implements Builder<MethodTaxRate> {
         return new MethodTaxRateImpl(shippingMethodKey, taxRate);
     }
 
+    /**
+     * factory method for an instance of MethodTaxRateBuilder
+     * @return builder
+     */
     public static MethodTaxRateBuilder of() {
         return new MethodTaxRateBuilder();
     }
 
+    /**
+     * create builder for MethodTaxRate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MethodTaxRateBuilder of(final MethodTaxRate template) {
         MethodTaxRateBuilder builder = new MethodTaxRateBuilder();
         builder.shippingMethodKey = template.getShippingMethodKey();

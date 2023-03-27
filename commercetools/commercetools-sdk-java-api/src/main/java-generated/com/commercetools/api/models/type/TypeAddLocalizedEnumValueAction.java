@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TypeAddLocalizedEnumValueActionImpl.class)
 public interface TypeAddLocalizedEnumValueAction extends TypeUpdateAction {
 
+    /**
+     * discriminator value for TypeAddLocalizedEnumValueAction
+     */
     String ADD_LOCALIZED_ENUM_VALUE = "addLocalizedEnumValue";
 
     /**
@@ -50,14 +53,33 @@ public interface TypeAddLocalizedEnumValueAction extends TypeUpdateAction {
     @JsonProperty("value")
     public CustomFieldLocalizedEnumValue getValue();
 
+    /**
+     *  <p><code>name</code> of the FieldDefinition to update.</p>
+     * @param fieldName value to be set
+     */
+
     public void setFieldName(final String fieldName);
+
+    /**
+     *  <p>Value to append to the array.</p>
+     * @param value value to be set
+     */
 
     public void setValue(final CustomFieldLocalizedEnumValue value);
 
+    /**
+     * factory method
+     * @return instance of TypeAddLocalizedEnumValueAction
+     */
     public static TypeAddLocalizedEnumValueAction of() {
         return new TypeAddLocalizedEnumValueActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of TypeAddLocalizedEnumValueAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static TypeAddLocalizedEnumValueAction of(final TypeAddLocalizedEnumValueAction template) {
         TypeAddLocalizedEnumValueActionImpl instance = new TypeAddLocalizedEnumValueActionImpl();
         instance.setFieldName(template.getFieldName());
@@ -65,18 +87,37 @@ public interface TypeAddLocalizedEnumValueAction extends TypeUpdateAction {
         return instance;
     }
 
+    /**
+     * builder factory method for TypeAddLocalizedEnumValueAction
+     * @return builder
+     */
     public static TypeAddLocalizedEnumValueActionBuilder builder() {
         return TypeAddLocalizedEnumValueActionBuilder.of();
     }
 
+    /**
+     * create builder for TypeAddLocalizedEnumValueAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TypeAddLocalizedEnumValueActionBuilder builder(final TypeAddLocalizedEnumValueAction template) {
         return TypeAddLocalizedEnumValueActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTypeAddLocalizedEnumValueAction(Function<TypeAddLocalizedEnumValueAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<TypeAddLocalizedEnumValueAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TypeAddLocalizedEnumValueAction>() {
             @Override

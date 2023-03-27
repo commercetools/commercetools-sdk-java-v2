@@ -50,24 +50,51 @@ public interface Reference {
     @JsonProperty("id")
     public String getId();
 
+    /**
+     * set id
+     * @param id value to be set
+     */
+
     public void setId(final String id);
 
+    /**
+     * builder for category subtype
+     * @return builder
+     */
     public static com.commercetools.ml.models.common.CategoryReferenceBuilder categoryBuilder() {
         return com.commercetools.ml.models.common.CategoryReferenceBuilder.of();
     }
 
+    /**
+     * builder for product subtype
+     * @return builder
+     */
     public static com.commercetools.ml.models.common.ProductReferenceBuilder productBuilder() {
         return com.commercetools.ml.models.common.ProductReferenceBuilder.of();
     }
 
+    /**
+     * builder for productType subtype
+     * @return builder
+     */
     public static com.commercetools.ml.models.common.ProductTypeReferenceBuilder productTypeBuilder() {
         return com.commercetools.ml.models.common.ProductTypeReferenceBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withReference(Function<Reference, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<Reference> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Reference>() {
             @Override

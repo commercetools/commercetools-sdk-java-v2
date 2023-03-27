@@ -77,9 +77,19 @@ public class PaymentAddInterfaceInteractionActionBuilder implements Builder<Paym
         return this;
     }
 
+    /**
+     *  <p>ResourceIdentifier of a Type.</p>
+     * @return type
+     */
+
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }
+
+    /**
+     *  <p>Custom Fields as per FieldDefinitions of the Type.</p>
+     * @return fields
+     */
 
     @Nullable
     public com.commercetools.api.models.type.FieldContainer getFields() {
@@ -103,10 +113,19 @@ public class PaymentAddInterfaceInteractionActionBuilder implements Builder<Paym
         return new PaymentAddInterfaceInteractionActionImpl(type, fields);
     }
 
+    /**
+     * factory method for an instance of PaymentAddInterfaceInteractionActionBuilder
+     * @return builder
+     */
     public static PaymentAddInterfaceInteractionActionBuilder of() {
         return new PaymentAddInterfaceInteractionActionBuilder();
     }
 
+    /**
+     * create builder for PaymentAddInterfaceInteractionAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentAddInterfaceInteractionActionBuilder of(final PaymentAddInterfaceInteractionAction template) {
         PaymentAddInterfaceInteractionActionBuilder builder = new PaymentAddInterfaceInteractionActionBuilder();
         builder.type = template.getType();

@@ -99,6 +99,10 @@ public class AttributeBuilder {
         return com.commercetools.importapi.models.productvariants.TimeSetAttributeBuilder.of();
     }
 
+    /**
+     * factory method for an instance of AttributeBuilder
+     * @return builder
+     */
     public static AttributeBuilder of() {
         return new AttributeBuilder();
     }

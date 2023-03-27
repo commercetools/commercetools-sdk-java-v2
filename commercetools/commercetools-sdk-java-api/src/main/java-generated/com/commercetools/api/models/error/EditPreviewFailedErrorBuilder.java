@@ -91,13 +91,28 @@ public class EditPreviewFailedErrorBuilder implements Builder<EditPreviewFailedE
         return this;
     }
 
+    /**
+     *  <p><code>"Error while applying staged actions. ShippingMethods could not be determined."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
 
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
+
     public Map<String, java.lang.Object> getValues() {
         return this.values;
     }
+
+    /**
+     *  <p>State of the OrderEdit where the <code>stagedActions</code> cannot be applied to the Order.</p>
+     * @return result
+     */
 
     public com.commercetools.api.models.order_edit.OrderEditPreviewFailure getResult() {
         return this.result;
@@ -121,10 +136,19 @@ public class EditPreviewFailedErrorBuilder implements Builder<EditPreviewFailedE
         return new EditPreviewFailedErrorImpl(message, values, result);
     }
 
+    /**
+     * factory method for an instance of EditPreviewFailedErrorBuilder
+     * @return builder
+     */
     public static EditPreviewFailedErrorBuilder of() {
         return new EditPreviewFailedErrorBuilder();
     }
 
+    /**
+     * create builder for EditPreviewFailedError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static EditPreviewFailedErrorBuilder of(final EditPreviewFailedError template) {
         EditPreviewFailedErrorBuilder builder = new EditPreviewFailedErrorBuilder();
         builder.message = template.getMessage();

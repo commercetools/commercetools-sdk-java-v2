@@ -26,6 +26,9 @@ public class StagedOrderSetLineItemTotalPriceActionImpl implements StagedOrderSe
 
     private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderSetLineItemTotalPriceActionImpl(@JsonProperty("lineItemId") final String lineItemId,
             @JsonProperty("externalTotalPrice") final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
@@ -34,6 +37,9 @@ public class StagedOrderSetLineItemTotalPriceActionImpl implements StagedOrderSe
         this.action = SET_LINE_ITEM_TOTAL_PRICE;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderSetLineItemTotalPriceActionImpl() {
         this.action = SET_LINE_ITEM_TOTAL_PRICE;
     }

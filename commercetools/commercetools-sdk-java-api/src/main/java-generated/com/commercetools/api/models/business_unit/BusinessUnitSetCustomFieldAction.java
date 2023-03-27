@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = BusinessUnitSetCustomFieldActionImpl.class)
 public interface BusinessUnitSetCustomFieldAction extends BusinessUnitUpdateAction {
 
+    /**
+     * discriminator value for BusinessUnitSetCustomFieldAction
+     */
     String SET_CUSTOM_FIELD = "setCustomField";
 
     /**
@@ -47,14 +50,33 @@ public interface BusinessUnitSetCustomFieldAction extends BusinessUnitUpdateActi
     @JsonProperty("value")
     public Object getValue();
 
+    /**
+     *  <p>Name of the Custom Field.</p>
+     * @param name value to be set
+     */
+
     public void setName(final String name);
+
+    /**
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     * @param value value to be set
+     */
 
     public void setValue(final Object value);
 
+    /**
+     * factory method
+     * @return instance of BusinessUnitSetCustomFieldAction
+     */
     public static BusinessUnitSetCustomFieldAction of() {
         return new BusinessUnitSetCustomFieldActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of BusinessUnitSetCustomFieldAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static BusinessUnitSetCustomFieldAction of(final BusinessUnitSetCustomFieldAction template) {
         BusinessUnitSetCustomFieldActionImpl instance = new BusinessUnitSetCustomFieldActionImpl();
         instance.setName(template.getName());
@@ -62,14 +84,29 @@ public interface BusinessUnitSetCustomFieldAction extends BusinessUnitUpdateActi
         return instance;
     }
 
+    /**
+     * builder factory method for BusinessUnitSetCustomFieldAction
+     * @return builder
+     */
     public static BusinessUnitSetCustomFieldActionBuilder builder() {
         return BusinessUnitSetCustomFieldActionBuilder.of();
     }
 
+    /**
+     * create builder for BusinessUnitSetCustomFieldAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitSetCustomFieldActionBuilder builder(final BusinessUnitSetCustomFieldAction template) {
         return BusinessUnitSetCustomFieldActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withBusinessUnitSetCustomFieldAction(Function<BusinessUnitSetCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
@@ -78,6 +115,10 @@ public interface BusinessUnitSetCustomFieldAction extends BusinessUnitUpdateActi
         return BusinessUnitSetCustomFieldActionBuilder.of().name(name).build();
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitSetCustomFieldAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitSetCustomFieldAction>() {
             @Override

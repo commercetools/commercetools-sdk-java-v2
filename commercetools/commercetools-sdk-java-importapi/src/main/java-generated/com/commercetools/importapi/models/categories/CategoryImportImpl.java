@@ -44,6 +44,9 @@ public class CategoryImportImpl implements CategoryImport, ModelBase {
 
     private com.commercetools.importapi.models.customfields.Custom custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CategoryImportImpl(@JsonProperty("key") final String key,
             @JsonProperty("name") final com.commercetools.importapi.models.common.LocalizedString name,
@@ -70,6 +73,9 @@ public class CategoryImportImpl implements CategoryImport, ModelBase {
         this.custom = custom;
     }
 
+    /**
+     * create empty instance
+     */
     public CategoryImportImpl() {
     }
 

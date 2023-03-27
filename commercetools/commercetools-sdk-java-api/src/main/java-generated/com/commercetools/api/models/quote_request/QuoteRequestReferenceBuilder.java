@@ -64,9 +64,19 @@ public class QuoteRequestReferenceBuilder implements Builder<QuoteRequestReferen
         return this;
     }
 
+    /**
+     *  <p>Unique ID of the referenced resource.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Contains the representation of the expanded QuoteRequest. Only present in responses to requests with Reference Expansion for QuoteRequest.</p>
+     * @return obj
+     */
 
     @Nullable
     public com.commercetools.api.models.quote_request.QuoteRequest getObj() {
@@ -90,10 +100,19 @@ public class QuoteRequestReferenceBuilder implements Builder<QuoteRequestReferen
         return new QuoteRequestReferenceImpl(id, obj);
     }
 
+    /**
+     * factory method for an instance of QuoteRequestReferenceBuilder
+     * @return builder
+     */
     public static QuoteRequestReferenceBuilder of() {
         return new QuoteRequestReferenceBuilder();
     }
 
+    /**
+     * create builder for QuoteRequestReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static QuoteRequestReferenceBuilder of(final QuoteRequestReference template) {
         QuoteRequestReferenceBuilder builder = new QuoteRequestReferenceBuilder();
         builder.id = template.getId();

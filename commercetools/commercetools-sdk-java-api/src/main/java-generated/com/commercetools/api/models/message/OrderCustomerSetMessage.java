@@ -37,6 +37,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderCustomerSetMessageImpl.class)
 public interface OrderCustomerSetMessage extends OrderMessage {
 
+    /**
+     * discriminator value for OrderCustomerSetMessage
+     */
     String ORDER_CUSTOMER_SET = "OrderCustomerSet";
 
     /**
@@ -71,18 +74,47 @@ public interface OrderCustomerSetMessage extends OrderMessage {
     @JsonProperty("oldCustomerGroup")
     public CustomerGroupReference getOldCustomerGroup();
 
+    /**
+     *  <p>Customer on the Order after the Set Customer Id update action.</p>
+     * @param customer value to be set
+     */
+
     public void setCustomer(final CustomerReference customer);
+
+    /**
+     *  <p>CustomerGroup on the Order after the Set Customer Id update action.</p>
+     * @param customerGroup value to be set
+     */
 
     public void setCustomerGroup(final CustomerGroupReference customerGroup);
 
+    /**
+     *  <p>Customer on the Order before the Set Customer Id update action.</p>
+     * @param oldCustomer value to be set
+     */
+
     public void setOldCustomer(final CustomerReference oldCustomer);
+
+    /**
+     *  <p>CustomerGroup on the Order before the Set Customer Id update action.</p>
+     * @param oldCustomerGroup value to be set
+     */
 
     public void setOldCustomerGroup(final CustomerGroupReference oldCustomerGroup);
 
+    /**
+     * factory method
+     * @return instance of OrderCustomerSetMessage
+     */
     public static OrderCustomerSetMessage of() {
         return new OrderCustomerSetMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderCustomerSetMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderCustomerSetMessage of(final OrderCustomerSetMessage template) {
         OrderCustomerSetMessageImpl instance = new OrderCustomerSetMessageImpl();
         instance.setId(template.getId());
@@ -102,18 +134,37 @@ public interface OrderCustomerSetMessage extends OrderMessage {
         return instance;
     }
 
+    /**
+     * builder factory method for OrderCustomerSetMessage
+     * @return builder
+     */
     public static OrderCustomerSetMessageBuilder builder() {
         return OrderCustomerSetMessageBuilder.of();
     }
 
+    /**
+     * create builder for OrderCustomerSetMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderCustomerSetMessageBuilder builder(final OrderCustomerSetMessage template) {
         return OrderCustomerSetMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderCustomerSetMessage(Function<OrderCustomerSetMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderCustomerSetMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderCustomerSetMessage>() {
             @Override

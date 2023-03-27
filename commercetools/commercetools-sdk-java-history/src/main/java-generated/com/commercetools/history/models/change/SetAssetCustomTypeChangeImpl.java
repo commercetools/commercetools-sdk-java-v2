@@ -30,6 +30,9 @@ public class SetAssetCustomTypeChangeImpl implements SetAssetCustomTypeChange, M
 
     private com.commercetools.history.models.common.CustomFields previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetAssetCustomTypeChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("asset") final com.commercetools.history.models.change_value.AssetChangeValue asset,
@@ -42,6 +45,9 @@ public class SetAssetCustomTypeChangeImpl implements SetAssetCustomTypeChange, M
         this.type = SET_ASSET_CUSTOM_TYPE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetAssetCustomTypeChangeImpl() {
         this.type = SET_ASSET_CUSTOM_TYPE_CHANGE;
     }

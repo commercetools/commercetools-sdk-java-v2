@@ -30,6 +30,9 @@ public class OrderEditPagedQueryResponseImpl implements OrderEditPagedQueryRespo
 
     private java.util.List<com.commercetools.api.models.order_edit.OrderEdit> results;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderEditPagedQueryResponseImpl(@JsonProperty("limit") final Long limit, @JsonProperty("count") final Long count,
             @JsonProperty("total") final Long total, @JsonProperty("offset") final Long offset,
@@ -41,6 +44,9 @@ public class OrderEditPagedQueryResponseImpl implements OrderEditPagedQueryRespo
         this.results = results;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderEditPagedQueryResponseImpl() {
     }
 

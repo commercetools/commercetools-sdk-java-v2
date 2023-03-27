@@ -24,12 +24,18 @@ public class MyCustomerSetCompanyNameActionImpl implements MyCustomerSetCompanyN
 
     private String companyName;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyCustomerSetCompanyNameActionImpl(@JsonProperty("companyName") final String companyName) {
         this.companyName = companyName;
         this.action = SET_COMPANY_NAME;
     }
 
+    /**
+     * create empty instance
+     */
     public MyCustomerSetCompanyNameActionImpl() {
         this.action = SET_COMPANY_NAME;
     }

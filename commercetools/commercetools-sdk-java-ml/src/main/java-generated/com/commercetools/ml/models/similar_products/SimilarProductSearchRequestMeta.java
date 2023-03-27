@@ -39,30 +39,63 @@ public interface SimilarProductSearchRequestMeta {
     @JsonProperty("similarityMeasures")
     public SimilarityMeasures getSimilarityMeasures();
 
+    /**
+     *  <p>The SimilarityMeasures used in this search.</p>
+     * @param similarityMeasures value to be set
+     */
+
     public void setSimilarityMeasures(final SimilarityMeasures similarityMeasures);
 
+    /**
+     * factory method
+     * @return instance of SimilarProductSearchRequestMeta
+     */
     public static SimilarProductSearchRequestMeta of() {
         return new SimilarProductSearchRequestMetaImpl();
     }
 
+    /**
+     * factory method to copy an instance of SimilarProductSearchRequestMeta
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SimilarProductSearchRequestMeta of(final SimilarProductSearchRequestMeta template) {
         SimilarProductSearchRequestMetaImpl instance = new SimilarProductSearchRequestMetaImpl();
         instance.setSimilarityMeasures(template.getSimilarityMeasures());
         return instance;
     }
 
+    /**
+     * builder factory method for SimilarProductSearchRequestMeta
+     * @return builder
+     */
     public static SimilarProductSearchRequestMetaBuilder builder() {
         return SimilarProductSearchRequestMetaBuilder.of();
     }
 
+    /**
+     * create builder for SimilarProductSearchRequestMeta instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SimilarProductSearchRequestMetaBuilder builder(final SimilarProductSearchRequestMeta template) {
         return SimilarProductSearchRequestMetaBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSimilarProductSearchRequestMeta(Function<SimilarProductSearchRequestMeta, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SimilarProductSearchRequestMeta> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SimilarProductSearchRequestMeta>() {
             @Override

@@ -28,6 +28,9 @@ public class ProductTypeChangeLocalizedEnumValueLabelActionImpl
 
     private com.commercetools.api.models.product_type.AttributeLocalizedEnumValue newValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductTypeChangeLocalizedEnumValueLabelActionImpl(@JsonProperty("attributeName") final String attributeName,
             @JsonProperty("newValue") final com.commercetools.api.models.product_type.AttributeLocalizedEnumValue newValue) {
@@ -36,6 +39,9 @@ public class ProductTypeChangeLocalizedEnumValueLabelActionImpl
         this.action = CHANGE_LOCALIZED_ENUM_VALUE_LABEL;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductTypeChangeLocalizedEnumValueLabelActionImpl() {
         this.action = CHANGE_LOCALIZED_ENUM_VALUE_LABEL;
     }

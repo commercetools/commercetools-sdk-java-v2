@@ -47,6 +47,11 @@ public class CartDiscountChangeNameActionBuilder implements Builder<CartDiscount
         return this;
     }
 
+    /**
+     *  <p>New value to set.</p>
+     * @return name
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
@@ -68,10 +73,19 @@ public class CartDiscountChangeNameActionBuilder implements Builder<CartDiscount
         return new CartDiscountChangeNameActionImpl(name);
     }
 
+    /**
+     * factory method for an instance of CartDiscountChangeNameActionBuilder
+     * @return builder
+     */
     public static CartDiscountChangeNameActionBuilder of() {
         return new CartDiscountChangeNameActionBuilder();
     }
 
+    /**
+     * create builder for CartDiscountChangeNameAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartDiscountChangeNameActionBuilder of(final CartDiscountChangeNameAction template) {
         CartDiscountChangeNameActionBuilder builder = new CartDiscountChangeNameActionBuilder();
         builder.name = template.getName();

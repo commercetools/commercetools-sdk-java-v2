@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderDiscountCodeRemovedMessagePayloadImpl.class)
 public interface OrderDiscountCodeRemovedMessagePayload extends OrderMessagePayload {
 
+    /**
+     * discriminator value for OrderDiscountCodeRemovedMessagePayload
+     */
     String ORDER_DISCOUNT_CODE_REMOVED = "OrderDiscountCodeRemoved";
 
     /**
@@ -42,32 +45,65 @@ public interface OrderDiscountCodeRemovedMessagePayload extends OrderMessagePayl
     @JsonProperty("discountCode")
     public DiscountCodeReference getDiscountCode();
 
+    /**
+     *  <p>DiscountCode that was removed.</p>
+     * @param discountCode value to be set
+     */
+
     public void setDiscountCode(final DiscountCodeReference discountCode);
 
+    /**
+     * factory method
+     * @return instance of OrderDiscountCodeRemovedMessagePayload
+     */
     public static OrderDiscountCodeRemovedMessagePayload of() {
         return new OrderDiscountCodeRemovedMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderDiscountCodeRemovedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderDiscountCodeRemovedMessagePayload of(final OrderDiscountCodeRemovedMessagePayload template) {
         OrderDiscountCodeRemovedMessagePayloadImpl instance = new OrderDiscountCodeRemovedMessagePayloadImpl();
         instance.setDiscountCode(template.getDiscountCode());
         return instance;
     }
 
+    /**
+     * builder factory method for OrderDiscountCodeRemovedMessagePayload
+     * @return builder
+     */
     public static OrderDiscountCodeRemovedMessagePayloadBuilder builder() {
         return OrderDiscountCodeRemovedMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for OrderDiscountCodeRemovedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderDiscountCodeRemovedMessagePayloadBuilder builder(
             final OrderDiscountCodeRemovedMessagePayload template) {
         return OrderDiscountCodeRemovedMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderDiscountCodeRemovedMessagePayload(
             Function<OrderDiscountCodeRemovedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderDiscountCodeRemovedMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderDiscountCodeRemovedMessagePayload>() {
             @Override

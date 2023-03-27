@@ -37,30 +37,64 @@ public interface CategoryOrderHints {
     @JsonAnyGetter
     public Map<String, String> values();
 
+    /**
+     *  <p>A string representing a number between 0 and 1 that must start with <code>0.</code> and cannot end with <code>0</code>.</p>
+     * @param key property name
+     * @param value property value
+     */
+
     @JsonAnySetter
     public void setValue(String key, String value);
 
+    /**
+     * factory method
+     * @return instance of CategoryOrderHints
+     */
     public static CategoryOrderHints of() {
         return new CategoryOrderHintsImpl();
     }
 
+    /**
+     * factory method to copy an instance of CategoryOrderHints
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CategoryOrderHints of(final CategoryOrderHints template) {
         CategoryOrderHintsImpl instance = new CategoryOrderHintsImpl();
         return instance;
     }
 
+    /**
+     * builder factory method for CategoryOrderHints
+     * @return builder
+     */
     public static CategoryOrderHintsBuilder builder() {
         return CategoryOrderHintsBuilder.of();
     }
 
+    /**
+     * create builder for CategoryOrderHints instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategoryOrderHintsBuilder builder(final CategoryOrderHints template) {
         return CategoryOrderHintsBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCategoryOrderHints(Function<CategoryOrderHints, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CategoryOrderHints> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CategoryOrderHints>() {
             @Override

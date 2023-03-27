@@ -31,7 +31,7 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
     private java.util.List<com.commercetools.history.models.change_value.TextLineItemValue> nextValue;
 
     /**
-     *
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
     }
 
     /**
-     *
+     * set values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
     }
 
     /**
-     *
+     * set value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
     }
 
     /**
-     *
+     * add values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
     }
 
     /**
-     *
+     * add the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -97,7 +97,7 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -111,7 +111,7 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
     }
 
     /**
-     *
+     * set values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -123,7 +123,7 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
     }
 
     /**
-     *
+     * set value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -135,7 +135,7 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
     }
 
     /**
-     *
+     * add values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -150,7 +150,7 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
     }
 
     /**
-     *
+     * add the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -166,7 +166,7 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -179,13 +179,28 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
         return this;
     }
 
+    /**
+     * value of change}
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public java.util.List<com.commercetools.history.models.change_value.TextLineItemValue> getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public java.util.List<com.commercetools.history.models.change_value.TextLineItemValue> getNextValue() {
         return this.nextValue;
@@ -210,10 +225,19 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
         return new ChangeTextLineItemsOrderChangeImpl(change, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of ChangeTextLineItemsOrderChangeBuilder
+     * @return builder
+     */
     public static ChangeTextLineItemsOrderChangeBuilder of() {
         return new ChangeTextLineItemsOrderChangeBuilder();
     }
 
+    /**
+     * create builder for ChangeTextLineItemsOrderChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeTextLineItemsOrderChangeBuilder of(final ChangeTextLineItemsOrderChange template) {
         ChangeTextLineItemsOrderChangeBuilder builder = new ChangeTextLineItemsOrderChangeBuilder();
         builder.change = template.getChange();

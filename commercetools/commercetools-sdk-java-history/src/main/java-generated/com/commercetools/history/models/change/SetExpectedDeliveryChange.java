@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetExpectedDeliveryChangeImpl.class)
 public interface SetExpectedDeliveryChange extends Change {
 
+    /**
+     * discriminator value for SetExpectedDeliveryChange
+     */
     String SET_EXPECTED_DELIVERY_CHANGE = "SetExpectedDeliveryChange";
 
     /**
@@ -65,16 +68,40 @@ public interface SetExpectedDeliveryChange extends Change {
     @JsonProperty("nextValue")
     public String getNextValue();
 
+    /**
+     *  <p>Shape of the action for <code>setExpectedDelivery</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
 
     public void setPreviousValue(final String previousValue);
 
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
+
     public void setNextValue(final String nextValue);
 
+    /**
+     * factory method
+     * @return instance of SetExpectedDeliveryChange
+     */
     public static SetExpectedDeliveryChange of() {
         return new SetExpectedDeliveryChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetExpectedDeliveryChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetExpectedDeliveryChange of(final SetExpectedDeliveryChange template) {
         SetExpectedDeliveryChangeImpl instance = new SetExpectedDeliveryChangeImpl();
         instance.setChange(template.getChange());
@@ -83,18 +110,37 @@ public interface SetExpectedDeliveryChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetExpectedDeliveryChange
+     * @return builder
+     */
     public static SetExpectedDeliveryChangeBuilder builder() {
         return SetExpectedDeliveryChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetExpectedDeliveryChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetExpectedDeliveryChangeBuilder builder(final SetExpectedDeliveryChange template) {
         return SetExpectedDeliveryChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetExpectedDeliveryChange(Function<SetExpectedDeliveryChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetExpectedDeliveryChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetExpectedDeliveryChange>() {
             @Override

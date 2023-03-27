@@ -26,6 +26,9 @@ public class TypeChangeLocalizedEnumValueLabelActionImpl implements TypeChangeLo
 
     private com.commercetools.api.models.type.CustomFieldLocalizedEnumValue value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TypeChangeLocalizedEnumValueLabelActionImpl(@JsonProperty("fieldName") final String fieldName,
             @JsonProperty("value") final com.commercetools.api.models.type.CustomFieldLocalizedEnumValue value) {
@@ -34,6 +37,9 @@ public class TypeChangeLocalizedEnumValueLabelActionImpl implements TypeChangeLo
         this.action = CHANGE_LOCALIZED_ENUM_VALUE_LABEL;
     }
 
+    /**
+     * create empty instance
+     */
     public TypeChangeLocalizedEnumValueLabelActionImpl() {
         this.action = CHANGE_LOCALIZED_ENUM_VALUE_LABEL;
     }

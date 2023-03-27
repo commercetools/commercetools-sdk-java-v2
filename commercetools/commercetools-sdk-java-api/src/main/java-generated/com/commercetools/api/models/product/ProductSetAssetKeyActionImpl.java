@@ -32,6 +32,9 @@ public class ProductSetAssetKeyActionImpl implements ProductSetAssetKeyAction, M
 
     private String assetKey;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSetAssetKeyActionImpl(@JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku,
             @JsonProperty("staged") final Boolean staged, @JsonProperty("assetId") final String assetId,
@@ -44,6 +47,9 @@ public class ProductSetAssetKeyActionImpl implements ProductSetAssetKeyAction, M
         this.action = SET_ASSET_KEY;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSetAssetKeyActionImpl() {
         this.action = SET_ASSET_KEY;
     }

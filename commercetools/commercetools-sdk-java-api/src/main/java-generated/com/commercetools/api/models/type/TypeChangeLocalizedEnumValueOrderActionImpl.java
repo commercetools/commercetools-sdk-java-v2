@@ -26,6 +26,9 @@ public class TypeChangeLocalizedEnumValueOrderActionImpl implements TypeChangeLo
 
     private java.util.List<String> keys;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TypeChangeLocalizedEnumValueOrderActionImpl(@JsonProperty("fieldName") final String fieldName,
             @JsonProperty("keys") final java.util.List<String> keys) {
@@ -34,6 +37,9 @@ public class TypeChangeLocalizedEnumValueOrderActionImpl implements TypeChangeLo
         this.action = CHANGE_LOCALIZED_ENUM_VALUE_ORDER;
     }
 
+    /**
+     * create empty instance
+     */
     public TypeChangeLocalizedEnumValueOrderActionImpl() {
         this.action = CHANGE_LOCALIZED_ENUM_VALUE_ORDER;
     }

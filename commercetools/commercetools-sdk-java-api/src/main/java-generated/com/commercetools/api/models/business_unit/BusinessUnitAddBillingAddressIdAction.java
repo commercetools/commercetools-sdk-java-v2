@@ -26,6 +26,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = BusinessUnitAddBillingAddressIdActionImpl.class)
 public interface BusinessUnitAddBillingAddressIdAction extends BusinessUnitUpdateAction {
 
+    /**
+     * discriminator value for BusinessUnitAddBillingAddressIdAction
+     */
     String ADD_BILLING_ADDRESS_ID = "addBillingAddressId";
 
     /**
@@ -44,14 +47,33 @@ public interface BusinessUnitAddBillingAddressIdAction extends BusinessUnitUpdat
     @JsonProperty("addressKey")
     public String getAddressKey();
 
+    /**
+     *  <p>ID of the address to add as a billing address. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
+     * @param addressId value to be set
+     */
+
     public void setAddressId(final String addressId);
+
+    /**
+     *  <p>Key of the address to add as a billing address. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
+     * @param addressKey value to be set
+     */
 
     public void setAddressKey(final String addressKey);
 
+    /**
+     * factory method
+     * @return instance of BusinessUnitAddBillingAddressIdAction
+     */
     public static BusinessUnitAddBillingAddressIdAction of() {
         return new BusinessUnitAddBillingAddressIdActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of BusinessUnitAddBillingAddressIdAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static BusinessUnitAddBillingAddressIdAction of(final BusinessUnitAddBillingAddressIdAction template) {
         BusinessUnitAddBillingAddressIdActionImpl instance = new BusinessUnitAddBillingAddressIdActionImpl();
         instance.setAddressId(template.getAddressId());
@@ -59,19 +81,38 @@ public interface BusinessUnitAddBillingAddressIdAction extends BusinessUnitUpdat
         return instance;
     }
 
+    /**
+     * builder factory method for BusinessUnitAddBillingAddressIdAction
+     * @return builder
+     */
     public static BusinessUnitAddBillingAddressIdActionBuilder builder() {
         return BusinessUnitAddBillingAddressIdActionBuilder.of();
     }
 
+    /**
+     * create builder for BusinessUnitAddBillingAddressIdAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitAddBillingAddressIdActionBuilder builder(
             final BusinessUnitAddBillingAddressIdAction template) {
         return BusinessUnitAddBillingAddressIdActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withBusinessUnitAddBillingAddressIdAction(Function<BusinessUnitAddBillingAddressIdAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitAddBillingAddressIdAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitAddBillingAddressIdAction>() {
             @Override

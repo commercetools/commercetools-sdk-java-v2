@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AddEnumValueChangeImpl.class)
 public interface AddEnumValueChange extends Change {
 
+    /**
+     * discriminator value for AddEnumValueChange
+     */
     String ADD_ENUM_VALUE_CHANGE = "AddEnumValueChange";
 
     /**
@@ -68,16 +71,40 @@ public interface AddEnumValueChange extends Change {
     @JsonProperty("nextValue")
     public EnumValue getNextValue();
 
+    /**
+     *  <p>Update action for <code>addEnumValue</code> on types</p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     *  <p>The name of the field/attribute definition updated.</p>
+     * @param fieldName value to be set
+     */
 
     public void setFieldName(final String fieldName);
 
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
+
     public void setNextValue(final EnumValue nextValue);
 
+    /**
+     * factory method
+     * @return instance of AddEnumValueChange
+     */
     public static AddEnumValueChange of() {
         return new AddEnumValueChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of AddEnumValueChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static AddEnumValueChange of(final AddEnumValueChange template) {
         AddEnumValueChangeImpl instance = new AddEnumValueChangeImpl();
         instance.setChange(template.getChange());
@@ -86,18 +113,37 @@ public interface AddEnumValueChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for AddEnumValueChange
+     * @return builder
+     */
     public static AddEnumValueChangeBuilder builder() {
         return AddEnumValueChangeBuilder.of();
     }
 
+    /**
+     * create builder for AddEnumValueChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AddEnumValueChangeBuilder builder(final AddEnumValueChange template) {
         return AddEnumValueChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAddEnumValueChange(Function<AddEnumValueChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AddEnumValueChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AddEnumValueChange>() {
             @Override

@@ -26,6 +26,9 @@ public class CartChangeCustomLineItemPriceModeActionImpl implements CartChangeCu
 
     private com.commercetools.api.models.cart.CustomLineItemPriceMode mode;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartChangeCustomLineItemPriceModeActionImpl(@JsonProperty("customLineItemId") final String customLineItemId,
             @JsonProperty("mode") final com.commercetools.api.models.cart.CustomLineItemPriceMode mode) {
@@ -34,6 +37,9 @@ public class CartChangeCustomLineItemPriceModeActionImpl implements CartChangeCu
         this.action = CHANGE_CUSTOM_LINE_ITEM_PRICE_MODE;
     }
 
+    /**
+     * create empty instance
+     */
     public CartChangeCustomLineItemPriceModeActionImpl() {
         this.action = CHANGE_CUSTOM_LINE_ITEM_PRICE_MODE;
     }

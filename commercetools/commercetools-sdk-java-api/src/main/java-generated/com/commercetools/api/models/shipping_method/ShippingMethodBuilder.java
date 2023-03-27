@@ -381,73 +381,152 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the ShippingMethod.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Current version of the ShippingMethod.</p>
+     * @return version
+     */
 
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *  <p>Date and time (UTC) the ShippingMethod was initially created.</p>
+     * @return createdAt
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+     *  <p>Date and time (UTC) the ShippingMethod was last updated.</p>
+     * @return lastModifiedAt
+     */
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
+     */
+
     @Nullable
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the ShippingMethod.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>Name of the ShippingMethod.</p>
+     * @return name
+     */
+
     public String getName() {
         return this.name;
     }
+
+    /**
+     *  <p>Localized name of the ShippingMethod.</p>
+     * @return localizedName
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getLocalizedName() {
         return this.localizedName;
     }
 
+    /**
+     *  <p>Description of the ShippingMethod.</p>
+     * @return description
+     */
     @Deprecated
     @Nullable
     public String getDescription() {
         return this.description;
     }
 
+    /**
+     *  <p>Localized description of the ShippingMethod.</p>
+     * @return localizedDescription
+     */
+
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getLocalizedDescription() {
         return this.localizedDescription;
     }
 
+    /**
+     *  <p>TaxCategory of all ZoneRates of the ShippingMethod.</p>
+     * @return taxCategory
+     */
+
     public com.commercetools.api.models.tax_category.TaxCategoryReference getTaxCategory() {
         return this.taxCategory;
     }
+
+    /**
+     *  <p>Defines ShippingRates (prices) for specific Zones.</p>
+     * @return zoneRates
+     */
 
     public java.util.List<com.commercetools.api.models.shipping_method.ZoneRate> getZoneRates() {
         return this.zoneRates;
     }
 
+    /**
+     *  <p>If <code>true</code> this ShippingMethod is the Project's default ShippingMethod.</p>
+     * @return isDefault
+     */
+
     public Boolean getIsDefault() {
         return this.isDefault;
     }
+
+    /**
+     *  <p>Valid Cart predicate to select a ShippingMethod for a Cart.</p>
+     * @return predicate
+     */
 
     @Nullable
     public String getPredicate() {
         return this.predicate;
     }
+
+    /**
+     *  <p>Custom Fields of the ShippingMethod.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -480,10 +559,19 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
             localizedName, description, localizedDescription, taxCategory, zoneRates, isDefault, predicate, custom);
     }
 
+    /**
+     * factory method for an instance of ShippingMethodBuilder
+     * @return builder
+     */
     public static ShippingMethodBuilder of() {
         return new ShippingMethodBuilder();
     }
 
+    /**
+     * create builder for ShippingMethod instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShippingMethodBuilder of(final ShippingMethod template) {
         ShippingMethodBuilder builder = new ShippingMethodBuilder();
         builder.id = template.getId();

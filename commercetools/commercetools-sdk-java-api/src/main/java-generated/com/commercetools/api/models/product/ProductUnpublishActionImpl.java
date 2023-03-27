@@ -21,6 +21,9 @@ public class ProductUnpublishActionImpl implements ProductUnpublishAction, Model
 
     private String action;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductUnpublishActionImpl() {
         this.action = UNPUBLISH;

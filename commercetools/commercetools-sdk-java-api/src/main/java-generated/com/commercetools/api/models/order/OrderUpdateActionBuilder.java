@@ -239,6 +239,10 @@ public class OrderUpdateActionBuilder {
         return com.commercetools.api.models.order.OrderUpdateSyncInfoActionBuilder.of();
     }
 
+    /**
+     * factory method for an instance of OrderUpdateActionBuilder
+     * @return builder
+     */
     public static OrderUpdateActionBuilder of() {
         return new OrderUpdateActionBuilder();
     }

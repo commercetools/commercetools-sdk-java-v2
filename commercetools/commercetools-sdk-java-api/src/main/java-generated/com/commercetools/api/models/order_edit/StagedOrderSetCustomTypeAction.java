@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderSetCustomTypeActionImpl.class)
 public interface StagedOrderSetCustomTypeAction extends StagedOrderUpdateAction {
 
+    /**
+     * discriminator value for StagedOrderSetCustomTypeAction
+     */
     String SET_CUSTOM_TYPE = "setCustomType";
 
     /**
@@ -49,14 +52,33 @@ public interface StagedOrderSetCustomTypeAction extends StagedOrderUpdateAction 
     @JsonProperty("fields")
     public FieldContainer getFields();
 
+    /**
+     *  <p>Defines the Type that extends the StagedOrder with Custom Fields. If absent, any existing Type and Custom Fields are removed from the StagedOrder.</p>
+     * @param type value to be set
+     */
+
     public void setType(final TypeResourceIdentifier type);
+
+    /**
+     *  <p>Sets the Custom Fields fields for the StagedOrder.</p>
+     * @param fields value to be set
+     */
 
     public void setFields(final FieldContainer fields);
 
+    /**
+     * factory method
+     * @return instance of StagedOrderSetCustomTypeAction
+     */
     public static StagedOrderSetCustomTypeAction of() {
         return new StagedOrderSetCustomTypeActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedOrderSetCustomTypeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedOrderSetCustomTypeAction of(final StagedOrderSetCustomTypeAction template) {
         StagedOrderSetCustomTypeActionImpl instance = new StagedOrderSetCustomTypeActionImpl();
         instance.setType(template.getType());
@@ -64,18 +86,37 @@ public interface StagedOrderSetCustomTypeAction extends StagedOrderUpdateAction 
         return instance;
     }
 
+    /**
+     * builder factory method for StagedOrderSetCustomTypeAction
+     * @return builder
+     */
     public static StagedOrderSetCustomTypeActionBuilder builder() {
         return StagedOrderSetCustomTypeActionBuilder.of();
     }
 
+    /**
+     * create builder for StagedOrderSetCustomTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetCustomTypeActionBuilder builder(final StagedOrderSetCustomTypeAction template) {
         return StagedOrderSetCustomTypeActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedOrderSetCustomTypeAction(Function<StagedOrderSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetCustomTypeAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetCustomTypeAction>() {
             @Override

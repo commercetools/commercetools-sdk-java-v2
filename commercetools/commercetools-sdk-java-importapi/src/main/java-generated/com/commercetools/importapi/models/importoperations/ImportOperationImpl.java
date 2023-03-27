@@ -42,6 +42,9 @@ public class ImportOperationImpl implements ImportOperation, ModelBase {
 
     private java.time.ZonedDateTime expiresAt;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ImportOperationImpl(@JsonProperty("version") final Long version,
             @JsonProperty("importContainerKey") final String importContainerKey,
@@ -66,6 +69,9 @@ public class ImportOperationImpl implements ImportOperation, ModelBase {
         this.expiresAt = expiresAt;
     }
 
+    /**
+     * create empty instance
+     */
     public ImportOperationImpl() {
     }
 

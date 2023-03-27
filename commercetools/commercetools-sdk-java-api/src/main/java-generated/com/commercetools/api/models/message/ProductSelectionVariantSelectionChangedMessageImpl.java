@@ -49,6 +49,9 @@ public class ProductSelectionVariantSelectionChangedMessageImpl
 
     private com.commercetools.api.models.product_selection.ProductVariantSelection newVariantSelection;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSelectionVariantSelectionChangedMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -79,6 +82,9 @@ public class ProductSelectionVariantSelectionChangedMessageImpl
         this.type = PRODUCT_SELECTION_VARIANT_SELECTION_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSelectionVariantSelectionChangedMessageImpl() {
         this.type = PRODUCT_SELECTION_VARIANT_SELECTION_CHANGED;
     }

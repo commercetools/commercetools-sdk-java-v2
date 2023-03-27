@@ -28,6 +28,9 @@ public class AddOrderLineItemChangeImpl implements AddOrderLineItemChange, Model
 
     private com.commercetools.history.models.common.LineItem nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AddOrderLineItemChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.LineItem previousValue,
@@ -38,6 +41,9 @@ public class AddOrderLineItemChangeImpl implements AddOrderLineItemChange, Model
         this.type = ADD_ORDER_LINE_ITEM_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public AddOrderLineItemChangeImpl() {
         this.type = ADD_ORDER_LINE_ITEM_CHANGE;
     }

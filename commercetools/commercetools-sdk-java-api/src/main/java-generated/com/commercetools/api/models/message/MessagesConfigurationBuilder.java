@@ -50,9 +50,19 @@ public class MessagesConfigurationBuilder implements Builder<MessagesConfigurati
         return this;
     }
 
+    /**
+     *  <p>When <code>true</code>, the Messages Query feature is active.</p>
+     * @return enabled
+     */
+
     public Boolean getEnabled() {
         return this.enabled;
     }
+
+    /**
+     *  <p>Specifies the number of days each Message should be available via the Messages Query API. For Messages older than the specified period, it is not guaranteed that they are still accessible via the API. This field may not be present on Projects created before 8 October 2018.</p>
+     * @return deleteDaysAfterCreation
+     */
 
     @Nullable
     public Integer getDeleteDaysAfterCreation() {
@@ -76,10 +86,19 @@ public class MessagesConfigurationBuilder implements Builder<MessagesConfigurati
         return new MessagesConfigurationImpl(enabled, deleteDaysAfterCreation);
     }
 
+    /**
+     * factory method for an instance of MessagesConfigurationBuilder
+     * @return builder
+     */
     public static MessagesConfigurationBuilder of() {
         return new MessagesConfigurationBuilder();
     }
 
+    /**
+     * create builder for MessagesConfiguration instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MessagesConfigurationBuilder of(final MessagesConfiguration template) {
         MessagesConfigurationBuilder builder = new MessagesConfigurationBuilder();
         builder.enabled = template.getEnabled();

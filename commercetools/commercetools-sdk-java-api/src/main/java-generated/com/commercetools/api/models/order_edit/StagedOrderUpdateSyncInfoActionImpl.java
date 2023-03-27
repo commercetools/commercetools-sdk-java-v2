@@ -28,6 +28,9 @@ public class StagedOrderUpdateSyncInfoActionImpl implements StagedOrderUpdateSyn
 
     private java.time.ZonedDateTime syncedAt;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderUpdateSyncInfoActionImpl(
             @JsonProperty("channel") final com.commercetools.api.models.channel.ChannelResourceIdentifier channel,
@@ -39,6 +42,9 @@ public class StagedOrderUpdateSyncInfoActionImpl implements StagedOrderUpdateSyn
         this.action = UPDATE_SYNC_INFO;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderUpdateSyncInfoActionImpl() {
         this.action = UPDATE_SYNC_INFO;
     }

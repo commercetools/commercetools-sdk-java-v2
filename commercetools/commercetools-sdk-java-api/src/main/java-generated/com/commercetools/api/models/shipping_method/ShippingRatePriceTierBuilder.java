@@ -23,6 +23,10 @@ public class ShippingRatePriceTierBuilder {
         return com.commercetools.api.models.shipping_method.CartValueTierBuilder.of();
     }
 
+    /**
+     * factory method for an instance of ShippingRatePriceTierBuilder
+     * @return builder
+     */
     public static ShippingRatePriceTierBuilder of() {
         return new ShippingRatePriceTierBuilder();
     }

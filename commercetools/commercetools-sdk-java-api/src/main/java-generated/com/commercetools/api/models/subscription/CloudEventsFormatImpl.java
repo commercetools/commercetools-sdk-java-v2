@@ -24,12 +24,18 @@ public class CloudEventsFormatImpl implements CloudEventsFormat, ModelBase {
 
     private String cloudEventsVersion;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CloudEventsFormatImpl(@JsonProperty("cloudEventsVersion") final String cloudEventsVersion) {
         this.cloudEventsVersion = cloudEventsVersion;
         this.type = CLOUD_EVENTS;
     }
 
+    /**
+     * create empty instance
+     */
     public CloudEventsFormatImpl() {
         this.type = CLOUD_EVENTS;
     }

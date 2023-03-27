@@ -27,6 +27,10 @@ public class ProductVariantSelectionBuilder {
         return com.commercetools.api.models.product_selection.ProductVariantSelectionInclusionBuilder.of();
     }
 
+    /**
+     * factory method for an instance of ProductVariantSelectionBuilder
+     * @return builder
+     */
     public static ProductVariantSelectionBuilder of() {
         return new ProductVariantSelectionBuilder();
     }

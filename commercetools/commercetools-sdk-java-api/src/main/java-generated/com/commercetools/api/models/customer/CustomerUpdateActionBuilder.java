@@ -135,6 +135,10 @@ public class CustomerUpdateActionBuilder {
         return com.commercetools.api.models.customer.CustomerSetVatIdActionBuilder.of();
     }
 
+    /**
+     * factory method for an instance of CustomerUpdateActionBuilder
+     * @return builder
+     */
     public static CustomerUpdateActionBuilder of() {
         return new CustomerUpdateActionBuilder();
     }

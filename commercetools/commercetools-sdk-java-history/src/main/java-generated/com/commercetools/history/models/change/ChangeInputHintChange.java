@@ -34,6 +34,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ChangeInputHintChangeImpl.class)
 public interface ChangeInputHintChange extends Change {
 
+    /**
+     * discriminator value for ChangeInputHintChange
+     */
     String CHANGE_INPUT_HINT_CHANGE = "ChangeInputHintChange";
 
     /**
@@ -84,20 +87,54 @@ public interface ChangeInputHintChange extends Change {
     @JsonProperty("previousValue")
     public TextInputHint getPreviousValue();
 
+    /**
+     *  <p>Update action for <code>changeInputHint</code> on product types and types</p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     *  <p>The name of the field definition updated.</p>
+     * @param fieldName value to be set
+     */
 
     public void setFieldName(final String fieldName);
 
+    /**
+     *  <p>The name of the attribute updated.</p>
+     * @param attributeName value to be set
+     */
+
     public void setAttributeName(final String attributeName);
+
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
 
     public void setNextValue(final TextInputHint nextValue);
 
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
+
     public void setPreviousValue(final TextInputHint previousValue);
 
+    /**
+     * factory method
+     * @return instance of ChangeInputHintChange
+     */
     public static ChangeInputHintChange of() {
         return new ChangeInputHintChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of ChangeInputHintChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ChangeInputHintChange of(final ChangeInputHintChange template) {
         ChangeInputHintChangeImpl instance = new ChangeInputHintChangeImpl();
         instance.setChange(template.getChange());
@@ -108,18 +145,37 @@ public interface ChangeInputHintChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for ChangeInputHintChange
+     * @return builder
+     */
     public static ChangeInputHintChangeBuilder builder() {
         return ChangeInputHintChangeBuilder.of();
     }
 
+    /**
+     * create builder for ChangeInputHintChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeInputHintChangeBuilder builder(final ChangeInputHintChange template) {
         return ChangeInputHintChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withChangeInputHintChange(Function<ChangeInputHintChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ChangeInputHintChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ChangeInputHintChange>() {
             @Override

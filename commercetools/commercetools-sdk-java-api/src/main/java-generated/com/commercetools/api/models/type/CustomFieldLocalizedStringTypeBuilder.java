@@ -36,10 +36,19 @@ public class CustomFieldLocalizedStringTypeBuilder implements Builder<CustomFiel
         return new CustomFieldLocalizedStringTypeImpl();
     }
 
+    /**
+     * factory method for an instance of CustomFieldLocalizedStringTypeBuilder
+     * @return builder
+     */
     public static CustomFieldLocalizedStringTypeBuilder of() {
         return new CustomFieldLocalizedStringTypeBuilder();
     }
 
+    /**
+     * create builder for CustomFieldLocalizedStringType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomFieldLocalizedStringTypeBuilder of(final CustomFieldLocalizedStringType template) {
         CustomFieldLocalizedStringTypeBuilder builder = new CustomFieldLocalizedStringTypeBuilder();
         return builder;

@@ -28,7 +28,7 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
     private java.lang.Object fields;
 
     /**
-     *
+     * set the value to the type using the builder function
      * @param builder function to build the type value
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
     }
 
     /**
-     *
+     * set the value to the type
      * @param type value to be set
      * @return Builder
      */
@@ -61,9 +61,19 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
         return this;
     }
 
+    /**
+     * value of type}
+     * @return type
+     */
+
     public com.commercetools.history.models.common.Reference getType() {
         return this.type;
     }
+
+    /**
+     *  <p>A valid JSON object, based on FieldDefinition.</p>
+     * @return fields
+     */
 
     public java.lang.Object getFields() {
         return this.fields;
@@ -87,10 +97,19 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
         return new CustomFieldsImpl(type, fields);
     }
 
+    /**
+     * factory method for an instance of CustomFieldsBuilder
+     * @return builder
+     */
     public static CustomFieldsBuilder of() {
         return new CustomFieldsBuilder();
     }
 
+    /**
+     * create builder for CustomFields instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomFieldsBuilder of(final CustomFields template) {
         CustomFieldsBuilder builder = new CustomFieldsBuilder();
         builder.type = template.getType();

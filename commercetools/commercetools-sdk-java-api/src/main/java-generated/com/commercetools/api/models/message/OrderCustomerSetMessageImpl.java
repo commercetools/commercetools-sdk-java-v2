@@ -50,6 +50,9 @@ public class OrderCustomerSetMessageImpl implements OrderCustomerSetMessage, Mod
 
     private com.commercetools.api.models.customer_group.CustomerGroupReference oldCustomerGroup;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderCustomerSetMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -81,6 +84,9 @@ public class OrderCustomerSetMessageImpl implements OrderCustomerSetMessage, Mod
         this.type = ORDER_CUSTOMER_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderCustomerSetMessageImpl() {
         this.type = ORDER_CUSTOMER_SET;
     }

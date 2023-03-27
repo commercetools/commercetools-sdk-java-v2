@@ -235,24 +235,49 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
         return this;
     }
 
+    /**
+     *  <p>Change notifications to be subscribed to.</p>
+     * @return changes
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> getChanges() {
         return this.changes;
     }
 
+    /**
+     *  <p>Messaging service to which the messages are sent.</p>
+     * @return destination
+     */
+
     public com.commercetools.api.models.subscription.Destination getDestination() {
         return this.destination;
     }
+
+    /**
+     *  <p>User-defined unique identifier for the Subscription.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>Messages to be subscribed to.</p>
+     * @return messages
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.subscription.MessageSubscription> getMessages() {
         return this.messages;
     }
+
+    /**
+     *  <p>Format in which the payload is delivered. When not provided, the PlatformFormat is selected by default.</p>
+     * @return format
+     */
 
     @Nullable
     public com.commercetools.api.models.subscription.DeliveryFormat getFormat() {
@@ -276,10 +301,19 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
         return new SubscriptionDraftImpl(changes, destination, key, messages, format);
     }
 
+    /**
+     * factory method for an instance of SubscriptionDraftBuilder
+     * @return builder
+     */
     public static SubscriptionDraftBuilder of() {
         return new SubscriptionDraftBuilder();
     }
 
+    /**
+     * create builder for SubscriptionDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SubscriptionDraftBuilder of(final SubscriptionDraft template) {
         SubscriptionDraftBuilder builder = new SubscriptionDraftBuilder();
         builder.changes = template.getChanges();

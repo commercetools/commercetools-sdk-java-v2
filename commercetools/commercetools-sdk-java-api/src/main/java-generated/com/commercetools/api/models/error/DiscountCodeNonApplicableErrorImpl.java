@@ -43,6 +43,9 @@ public class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNonApplic
 
     private java.time.ZonedDateTime validityCheckTime;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DiscountCodeNonApplicableErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values,
@@ -62,6 +65,9 @@ public class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNonApplic
         this.code = DISCOUNT_CODE_NON_APPLICABLE;
     }
 
+    /**
+     * create empty instance
+     */
     public DiscountCodeNonApplicableErrorImpl() {
         this.code = DISCOUNT_CODE_NON_APPLICABLE;
     }

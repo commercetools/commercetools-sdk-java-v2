@@ -22,11 +22,17 @@ public class ProjectUpdateActionImpl implements ProjectUpdateAction, ModelBase {
 
     private String action;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProjectUpdateActionImpl(@JsonProperty("action") final String action) {
         this.action = action;
     }
 
+    /**
+     * create empty instance
+     */
     public ProjectUpdateActionImpl() {
     }
 

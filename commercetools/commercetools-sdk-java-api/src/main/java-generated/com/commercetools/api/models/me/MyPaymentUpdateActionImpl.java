@@ -22,11 +22,17 @@ public class MyPaymentUpdateActionImpl implements MyPaymentUpdateAction, ModelBa
 
     private String action;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyPaymentUpdateActionImpl(@JsonProperty("action") final String action) {
         this.action = action;
     }
 
+    /**
+     * create empty instance
+     */
     public MyPaymentUpdateActionImpl() {
     }
 

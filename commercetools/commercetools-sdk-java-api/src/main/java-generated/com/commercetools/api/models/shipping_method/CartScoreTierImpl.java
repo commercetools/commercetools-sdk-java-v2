@@ -30,6 +30,9 @@ public class CartScoreTierImpl implements CartScoreTier, ModelBase {
 
     private Boolean isMatching;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartScoreTierImpl(@JsonProperty("score") final Integer score,
             @JsonProperty("price") final com.commercetools.api.models.common.Money price,
@@ -42,6 +45,9 @@ public class CartScoreTierImpl implements CartScoreTier, ModelBase {
         this.type = ShippingRateTierType.findEnum("CartScore");
     }
 
+    /**
+     * create empty instance
+     */
     public CartScoreTierImpl() {
         this.type = ShippingRateTierType.findEnum("CartScore");
     }

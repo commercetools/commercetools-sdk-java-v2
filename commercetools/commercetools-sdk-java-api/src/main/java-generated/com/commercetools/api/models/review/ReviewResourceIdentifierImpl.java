@@ -27,6 +27,9 @@ public class ReviewResourceIdentifierImpl implements ReviewResourceIdentifier, M
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReviewResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
@@ -34,6 +37,9 @@ public class ReviewResourceIdentifierImpl implements ReviewResourceIdentifier, M
         this.typeId = ReferenceTypeId.findEnum("review");
     }
 
+    /**
+     * create empty instance
+     */
     public ReviewResourceIdentifierImpl() {
         this.typeId = ReferenceTypeId.findEnum("review");
     }

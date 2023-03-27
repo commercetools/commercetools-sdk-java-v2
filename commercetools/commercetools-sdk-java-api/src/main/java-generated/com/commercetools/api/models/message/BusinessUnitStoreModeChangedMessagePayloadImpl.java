@@ -31,6 +31,9 @@ public class BusinessUnitStoreModeChangedMessagePayloadImpl
 
     private com.commercetools.api.models.business_unit.BusinessUnitStoreMode oldStoreMode;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitStoreModeChangedMessagePayloadImpl(
             @JsonProperty("stores") final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores,
@@ -44,6 +47,9 @@ public class BusinessUnitStoreModeChangedMessagePayloadImpl
         this.type = BUSINESS_UNIT_STORE_MODE_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitStoreModeChangedMessagePayloadImpl() {
         this.type = BUSINESS_UNIT_STORE_MODE_CHANGED;
     }

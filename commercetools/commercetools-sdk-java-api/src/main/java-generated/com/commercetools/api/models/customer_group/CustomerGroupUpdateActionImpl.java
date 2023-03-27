@@ -22,11 +22,17 @@ public class CustomerGroupUpdateActionImpl implements CustomerGroupUpdateAction,
 
     private String action;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerGroupUpdateActionImpl(@JsonProperty("action") final String action) {
         this.action = action;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerGroupUpdateActionImpl() {
     }
 

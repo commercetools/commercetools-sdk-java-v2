@@ -45,7 +45,7 @@ public class ReturnItemBuilder implements Builder<ReturnItem> {
     private String createdAt;
 
     /**
-     *
+     * set the value to the id
      * @param id value to be set
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class ReturnItemBuilder implements Builder<ReturnItem> {
     }
 
     /**
-     *
+     * set the value to the quantity
      * @param quantity value to be set
      * @return Builder
      */
@@ -67,7 +67,7 @@ public class ReturnItemBuilder implements Builder<ReturnItem> {
     }
 
     /**
-     *
+     * set the value to the type
      * @param type value to be set
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class ReturnItemBuilder implements Builder<ReturnItem> {
     }
 
     /**
-     *
+     * set the value to the comment
      * @param comment value to be set
      * @return Builder
      */
@@ -89,7 +89,7 @@ public class ReturnItemBuilder implements Builder<ReturnItem> {
     }
 
     /**
-     *
+     * set the value to the shipmentState
      * @param shipmentState value to be set
      * @return Builder
      */
@@ -101,7 +101,7 @@ public class ReturnItemBuilder implements Builder<ReturnItem> {
     }
 
     /**
-     *
+     * set the value to the paymentState
      * @param paymentState value to be set
      * @return Builder
      */
@@ -113,7 +113,7 @@ public class ReturnItemBuilder implements Builder<ReturnItem> {
     }
 
     /**
-     *
+     * set the value to the lastModifiedAt
      * @param lastModifiedAt value to be set
      * @return Builder
      */
@@ -124,7 +124,7 @@ public class ReturnItemBuilder implements Builder<ReturnItem> {
     }
 
     /**
-     *
+     * set the value to the createdAt
      * @param createdAt value to be set
      * @return Builder
      */
@@ -134,33 +134,73 @@ public class ReturnItemBuilder implements Builder<ReturnItem> {
         return this;
     }
 
+    /**
+     * value of id}
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     * value of quantity}
+     * @return quantity
+     */
 
     public Integer getQuantity() {
         return this.quantity;
     }
 
+    /**
+     * value of type}
+     * @return type
+     */
+
     public String getType() {
         return this.type;
     }
+
+    /**
+     * value of comment}
+     * @return comment
+     */
 
     public String getComment() {
         return this.comment;
     }
 
+    /**
+     * value of shipmentState}
+     * @return shipmentState
+     */
+
     public com.commercetools.history.models.common.ReturnShipmentState getShipmentState() {
         return this.shipmentState;
     }
+
+    /**
+     * value of paymentState}
+     * @return paymentState
+     */
 
     public com.commercetools.history.models.common.ReturnPaymentState getPaymentState() {
         return this.paymentState;
     }
 
+    /**
+     * value of lastModifiedAt}
+     * @return lastModifiedAt
+     */
+
     public String getLastModifiedAt() {
         return this.lastModifiedAt;
     }
+
+    /**
+     * value of createdAt}
+     * @return createdAt
+     */
 
     public String getCreatedAt() {
         return this.createdAt;
@@ -190,10 +230,19 @@ public class ReturnItemBuilder implements Builder<ReturnItem> {
         return new ReturnItemImpl(id, quantity, type, comment, shipmentState, paymentState, lastModifiedAt, createdAt);
     }
 
+    /**
+     * factory method for an instance of ReturnItemBuilder
+     * @return builder
+     */
     public static ReturnItemBuilder of() {
         return new ReturnItemBuilder();
     }
 
+    /**
+     * create builder for ReturnItem instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReturnItemBuilder of(final ReturnItem template) {
         ReturnItemBuilder builder = new ReturnItemBuilder();
         builder.id = template.getId();

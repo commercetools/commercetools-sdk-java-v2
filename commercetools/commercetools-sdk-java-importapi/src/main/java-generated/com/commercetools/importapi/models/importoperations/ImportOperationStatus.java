@@ -55,19 +55,48 @@ public interface ImportOperationStatus {
     @JsonProperty("errors")
     public List<ErrorObject> getErrors();
 
+    /**
+     *  <p>The ID of the ImportOperation.</p>
+     * @param operationId value to be set
+     */
+
     public void setOperationId(final String operationId);
 
+    /**
+     *  <p>The validation state of the ImportOperation.</p>
+     * @param state value to be set
+     */
+
     public void setState(final ImportOperationState state);
+
+    /**
+     *  <p>The validation errors for the ImportOperation. See Errors.</p>
+     * @param errors values to be set
+     */
 
     @JsonIgnore
     public void setErrors(final ErrorObject... errors);
 
+    /**
+     *  <p>The validation errors for the ImportOperation. See Errors.</p>
+     * @param errors values to be set
+     */
+
     public void setErrors(final List<ErrorObject> errors);
 
+    /**
+     * factory method
+     * @return instance of ImportOperationStatus
+     */
     public static ImportOperationStatus of() {
         return new ImportOperationStatusImpl();
     }
 
+    /**
+     * factory method to copy an instance of ImportOperationStatus
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ImportOperationStatus of(final ImportOperationStatus template) {
         ImportOperationStatusImpl instance = new ImportOperationStatusImpl();
         instance.setOperationId(template.getOperationId());
@@ -76,18 +105,37 @@ public interface ImportOperationStatus {
         return instance;
     }
 
+    /**
+     * builder factory method for ImportOperationStatus
+     * @return builder
+     */
     public static ImportOperationStatusBuilder builder() {
         return ImportOperationStatusBuilder.of();
     }
 
+    /**
+     * create builder for ImportOperationStatus instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ImportOperationStatusBuilder builder(final ImportOperationStatus template) {
         return ImportOperationStatusBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withImportOperationStatus(Function<ImportOperationStatus, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ImportOperationStatus> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ImportOperationStatus>() {
             @Override

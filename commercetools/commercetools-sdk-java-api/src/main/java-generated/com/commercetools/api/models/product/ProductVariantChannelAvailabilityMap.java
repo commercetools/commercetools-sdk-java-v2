@@ -39,31 +39,65 @@ public interface ProductVariantChannelAvailabilityMap {
     @JsonAnyGetter
     public Map<String, ProductVariantChannelAvailability> values();
 
+    /**
+     * set pattern property
+     * @param key property name
+     * @param value property value
+     */
+
     @JsonAnySetter
     public void setValue(String key, ProductVariantChannelAvailability value);
 
+    /**
+     * factory method
+     * @return instance of ProductVariantChannelAvailabilityMap
+     */
     public static ProductVariantChannelAvailabilityMap of() {
         return new ProductVariantChannelAvailabilityMapImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductVariantChannelAvailabilityMap
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductVariantChannelAvailabilityMap of(final ProductVariantChannelAvailabilityMap template) {
         ProductVariantChannelAvailabilityMapImpl instance = new ProductVariantChannelAvailabilityMapImpl();
         return instance;
     }
 
+    /**
+     * builder factory method for ProductVariantChannelAvailabilityMap
+     * @return builder
+     */
     public static ProductVariantChannelAvailabilityMapBuilder builder() {
         return ProductVariantChannelAvailabilityMapBuilder.of();
     }
 
+    /**
+     * create builder for ProductVariantChannelAvailabilityMap instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductVariantChannelAvailabilityMapBuilder builder(
             final ProductVariantChannelAvailabilityMap template) {
         return ProductVariantChannelAvailabilityMapBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductVariantChannelAvailabilityMap(Function<ProductVariantChannelAvailabilityMap, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductVariantChannelAvailabilityMap> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductVariantChannelAvailabilityMap>() {
             @Override

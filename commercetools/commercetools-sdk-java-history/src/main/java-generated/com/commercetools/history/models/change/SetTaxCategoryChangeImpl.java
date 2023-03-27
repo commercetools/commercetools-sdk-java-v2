@@ -28,6 +28,9 @@ public class SetTaxCategoryChangeImpl implements SetTaxCategoryChange, ModelBase
 
     private com.commercetools.history.models.common.Reference nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetTaxCategoryChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.Reference previousValue,
@@ -38,6 +41,9 @@ public class SetTaxCategoryChangeImpl implements SetTaxCategoryChange, ModelBase
         this.type = SET_TAX_CATEGORY_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetTaxCategoryChangeImpl() {
         this.type = SET_TAX_CATEGORY_CHANGE;
     }

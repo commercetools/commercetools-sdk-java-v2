@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StoreSetSupplyChannelsActionImpl.class)
 public interface StoreSetSupplyChannelsAction extends StoreUpdateAction {
 
+    /**
+     * discriminator value for StoreSetSupplyChannelsAction
+     */
     String SET_SUPPLY_CHANNELS = "setSupplyChannels";
 
     /**
@@ -40,33 +43,71 @@ public interface StoreSetSupplyChannelsAction extends StoreUpdateAction {
     @JsonProperty("supplyChannels")
     public List<ChannelResourceIdentifier> getSupplyChannels();
 
+    /**
+     *  <p>Value to set. If not defined, the Store's <code>supplyChannels</code> are unset.</p>
+     * @param supplyChannels values to be set
+     */
+
     @JsonIgnore
     public void setSupplyChannels(final ChannelResourceIdentifier... supplyChannels);
 
+    /**
+     *  <p>Value to set. If not defined, the Store's <code>supplyChannels</code> are unset.</p>
+     * @param supplyChannels values to be set
+     */
+
     public void setSupplyChannels(final List<ChannelResourceIdentifier> supplyChannels);
 
+    /**
+     * factory method
+     * @return instance of StoreSetSupplyChannelsAction
+     */
     public static StoreSetSupplyChannelsAction of() {
         return new StoreSetSupplyChannelsActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StoreSetSupplyChannelsAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StoreSetSupplyChannelsAction of(final StoreSetSupplyChannelsAction template) {
         StoreSetSupplyChannelsActionImpl instance = new StoreSetSupplyChannelsActionImpl();
         instance.setSupplyChannels(template.getSupplyChannels());
         return instance;
     }
 
+    /**
+     * builder factory method for StoreSetSupplyChannelsAction
+     * @return builder
+     */
     public static StoreSetSupplyChannelsActionBuilder builder() {
         return StoreSetSupplyChannelsActionBuilder.of();
     }
 
+    /**
+     * create builder for StoreSetSupplyChannelsAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreSetSupplyChannelsActionBuilder builder(final StoreSetSupplyChannelsAction template) {
         return StoreSetSupplyChannelsActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStoreSetSupplyChannelsAction(Function<StoreSetSupplyChannelsAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StoreSetSupplyChannelsAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StoreSetSupplyChannelsAction>() {
             @Override

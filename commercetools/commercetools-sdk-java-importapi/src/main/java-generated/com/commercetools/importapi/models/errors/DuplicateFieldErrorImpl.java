@@ -28,6 +28,9 @@ public class DuplicateFieldErrorImpl implements DuplicateFieldError, ModelBase {
 
     private java.lang.Object duplicateValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DuplicateFieldErrorImpl(@JsonProperty("message") final String message, @JsonProperty("field") final String field,
             @JsonProperty("duplicateValue") final java.lang.Object duplicateValue) {
@@ -37,6 +40,9 @@ public class DuplicateFieldErrorImpl implements DuplicateFieldError, ModelBase {
         this.code = DUPLICATE_FIELD;
     }
 
+    /**
+     * create empty instance
+     */
     public DuplicateFieldErrorImpl() {
         this.code = DUPLICATE_FIELD;
     }

@@ -50,6 +50,9 @@ public class DeliveryAddressSetMessageImpl implements DeliveryAddressSetMessage,
 
     private String shippingKey;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DeliveryAddressSetMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -81,6 +84,9 @@ public class DeliveryAddressSetMessageImpl implements DeliveryAddressSetMessage,
         this.type = DELIVERY_ADDRESS_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public DeliveryAddressSetMessageImpl() {
         this.type = DELIVERY_ADDRESS_SET;
     }

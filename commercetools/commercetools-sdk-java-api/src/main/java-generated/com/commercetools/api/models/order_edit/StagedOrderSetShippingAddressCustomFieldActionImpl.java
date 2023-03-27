@@ -27,6 +27,9 @@ public class StagedOrderSetShippingAddressCustomFieldActionImpl
 
     private java.lang.Object value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderSetShippingAddressCustomFieldActionImpl(@JsonProperty("name") final String name,
             @JsonProperty("value") final java.lang.Object value) {
@@ -35,6 +38,9 @@ public class StagedOrderSetShippingAddressCustomFieldActionImpl
         this.action = SET_SHIPPING_ADDRESS_CUSTOM_FIELD;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderSetShippingAddressCustomFieldActionImpl() {
         this.action = SET_SHIPPING_ADDRESS_CUSTOM_FIELD;
     }

@@ -52,14 +52,35 @@ public interface TaxedItemPriceDraft extends io.vrap.rmf.base.client.Draft<Taxed
     @JsonProperty("totalGross")
     public Money getTotalGross();
 
+    /**
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @param totalNet value to be set
+     */
+
     public void setTotalNet(final Money totalNet);
+
+    /**
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @param totalGross value to be set
+     */
 
     public void setTotalGross(final Money totalGross);
 
+    /**
+     * factory method
+     * @return instance of TaxedItemPriceDraft
+     */
     public static TaxedItemPriceDraft of() {
         return new TaxedItemPriceDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of TaxedItemPriceDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static TaxedItemPriceDraft of(final TaxedItemPriceDraft template) {
         TaxedItemPriceDraftImpl instance = new TaxedItemPriceDraftImpl();
         instance.setTotalNet(template.getTotalNet());
@@ -67,18 +88,37 @@ public interface TaxedItemPriceDraft extends io.vrap.rmf.base.client.Draft<Taxed
         return instance;
     }
 
+    /**
+     * builder factory method for TaxedItemPriceDraft
+     * @return builder
+     */
     public static TaxedItemPriceDraftBuilder builder() {
         return TaxedItemPriceDraftBuilder.of();
     }
 
+    /**
+     * create builder for TaxedItemPriceDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TaxedItemPriceDraftBuilder builder(final TaxedItemPriceDraft template) {
         return TaxedItemPriceDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTaxedItemPriceDraft(Function<TaxedItemPriceDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<TaxedItemPriceDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TaxedItemPriceDraft>() {
             @Override

@@ -26,29 +26,60 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AttributeMoneyTypeImpl.class)
 public interface AttributeMoneyType extends AttributeType {
 
+    /**
+     * discriminator value for AttributeMoneyType
+     */
     String MONEY = "money";
 
+    /**
+     * factory method
+     * @return instance of AttributeMoneyType
+     */
     public static AttributeMoneyType of() {
         return new AttributeMoneyTypeImpl();
     }
 
+    /**
+     * factory method to copy an instance of AttributeMoneyType
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static AttributeMoneyType of(final AttributeMoneyType template) {
         AttributeMoneyTypeImpl instance = new AttributeMoneyTypeImpl();
         return instance;
     }
 
+    /**
+     * builder factory method for AttributeMoneyType
+     * @return builder
+     */
     public static AttributeMoneyTypeBuilder builder() {
         return AttributeMoneyTypeBuilder.of();
     }
 
+    /**
+     * create builder for AttributeMoneyType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeMoneyTypeBuilder builder(final AttributeMoneyType template) {
         return AttributeMoneyTypeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAttributeMoneyType(Function<AttributeMoneyType, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AttributeMoneyType> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AttributeMoneyType>() {
             @Override

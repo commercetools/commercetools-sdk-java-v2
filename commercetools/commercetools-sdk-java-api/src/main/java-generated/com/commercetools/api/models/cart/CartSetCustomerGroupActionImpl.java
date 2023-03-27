@@ -25,6 +25,9 @@ public class CartSetCustomerGroupActionImpl implements CartSetCustomerGroupActio
 
     private com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartSetCustomerGroupActionImpl(
             @JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup) {
@@ -32,6 +35,9 @@ public class CartSetCustomerGroupActionImpl implements CartSetCustomerGroupActio
         this.action = SET_CUSTOMER_GROUP;
     }
 
+    /**
+     * create empty instance
+     */
     public CartSetCustomerGroupActionImpl() {
         this.action = SET_CUSTOMER_GROUP;
     }

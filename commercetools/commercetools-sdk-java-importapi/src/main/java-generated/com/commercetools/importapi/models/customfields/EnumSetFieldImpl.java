@@ -24,12 +24,18 @@ public class EnumSetFieldImpl implements EnumSetField, ModelBase {
 
     private java.util.List<String> value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     EnumSetFieldImpl(@JsonProperty("value") final java.util.List<String> value) {
         this.value = value;
         this.type = ENUM_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public EnumSetFieldImpl() {
         this.type = ENUM_SET;
     }

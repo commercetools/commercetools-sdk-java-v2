@@ -49,14 +49,33 @@ public interface StagedStandalonePrice {
     @JsonProperty("discounted")
     public DiscountedPrice getDiscounted();
 
+    /**
+     *  <p>Money value of the StagedStandalonePrice.</p>
+     * @param value value to be set
+     */
+
     public void setValue(final TypedMoney value);
+
+    /**
+     *  <p>Discounted price for the StagedStandalonePrice.</p>
+     * @param discounted value to be set
+     */
 
     public void setDiscounted(final DiscountedPrice discounted);
 
+    /**
+     * factory method
+     * @return instance of StagedStandalonePrice
+     */
     public static StagedStandalonePrice of() {
         return new StagedStandalonePriceImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedStandalonePrice
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedStandalonePrice of(final StagedStandalonePrice template) {
         StagedStandalonePriceImpl instance = new StagedStandalonePriceImpl();
         instance.setValue(template.getValue());
@@ -64,18 +83,37 @@ public interface StagedStandalonePrice {
         return instance;
     }
 
+    /**
+     * builder factory method for StagedStandalonePrice
+     * @return builder
+     */
     public static StagedStandalonePriceBuilder builder() {
         return StagedStandalonePriceBuilder.of();
     }
 
+    /**
+     * create builder for StagedStandalonePrice instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedStandalonePriceBuilder builder(final StagedStandalonePrice template) {
         return StagedStandalonePriceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedStandalonePrice(Function<StagedStandalonePrice, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedStandalonePrice> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedStandalonePrice>() {
             @Override

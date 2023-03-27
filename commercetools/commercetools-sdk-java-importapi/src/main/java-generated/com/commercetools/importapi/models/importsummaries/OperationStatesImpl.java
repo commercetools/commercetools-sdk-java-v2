@@ -32,6 +32,9 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
 
     private Long rejected;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OperationStatesImpl(@JsonProperty("processing") final Long processing,
             @JsonProperty("validationFailed") final Long validationFailed,
@@ -46,6 +49,9 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
         this.rejected = rejected;
     }
 
+    /**
+     * create empty instance
+     */
     public OperationStatesImpl() {
     }
 

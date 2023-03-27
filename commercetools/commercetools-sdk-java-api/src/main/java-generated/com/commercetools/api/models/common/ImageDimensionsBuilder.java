@@ -48,9 +48,19 @@ public class ImageDimensionsBuilder implements Builder<ImageDimensions> {
         return this;
     }
 
+    /**
+     *  <p>Width of the image.</p>
+     * @return w
+     */
+
     public Integer getW() {
         return this.w;
     }
+
+    /**
+     *  <p>Height of the image.</p>
+     * @return h
+     */
 
     public Integer getH() {
         return this.h;
@@ -74,10 +84,19 @@ public class ImageDimensionsBuilder implements Builder<ImageDimensions> {
         return new ImageDimensionsImpl(w, h);
     }
 
+    /**
+     * factory method for an instance of ImageDimensionsBuilder
+     * @return builder
+     */
     public static ImageDimensionsBuilder of() {
         return new ImageDimensionsBuilder();
     }
 
+    /**
+     * create builder for ImageDimensions instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ImageDimensionsBuilder of(final ImageDimensions template) {
         ImageDimensionsBuilder builder = new ImageDimensionsBuilder();
         builder.w = template.getW();

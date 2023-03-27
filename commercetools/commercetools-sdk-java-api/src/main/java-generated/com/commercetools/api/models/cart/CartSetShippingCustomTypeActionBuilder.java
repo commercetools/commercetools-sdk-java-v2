@@ -91,15 +91,30 @@ public class CartSetShippingCustomTypeActionBuilder implements Builder<CartSetSh
         return this;
     }
 
+    /**
+     *  <p>The <code>shippingKey</code> of the Shipping to customize. Used to specify which Shipping Method to customize on a Cart with <code>Multiple</code> ShippingMode. Leave this empty to customize the one and only ShippingMethod on a <code>Single</code> ShippingMode Cart.</p>
+     * @return shippingKey
+     */
+
     @Nullable
     public String getShippingKey() {
         return this.shippingKey;
     }
 
+    /**
+     *  <p>Defines the Type that extends the specified ShippingMethod with Custom Fields. If absent, any existing Type and Custom Fields are removed from the ShippingMethod.</p>
+     * @return type
+     */
+
     @Nullable
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }
+
+    /**
+     *  <p>Sets the Custom Fields fields for the <code>shippingMethod</code>.</p>
+     * @return fields
+     */
 
     @Nullable
     public com.commercetools.api.models.type.FieldContainer getFields() {
@@ -122,10 +137,19 @@ public class CartSetShippingCustomTypeActionBuilder implements Builder<CartSetSh
         return new CartSetShippingCustomTypeActionImpl(shippingKey, type, fields);
     }
 
+    /**
+     * factory method for an instance of CartSetShippingCustomTypeActionBuilder
+     * @return builder
+     */
     public static CartSetShippingCustomTypeActionBuilder of() {
         return new CartSetShippingCustomTypeActionBuilder();
     }
 
+    /**
+     * create builder for CartSetShippingCustomTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartSetShippingCustomTypeActionBuilder of(final CartSetShippingCustomTypeAction template) {
         CartSetShippingCustomTypeActionBuilder builder = new CartSetShippingCustomTypeActionBuilder();
         builder.shippingKey = template.getShippingKey();

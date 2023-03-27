@@ -48,7 +48,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     private Boolean isSearchable;
 
     /**
-     *
+     * set the value to the type
      * @param type value to be set
      * @return Builder
      */
@@ -59,7 +59,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *
+     * set the value to the type using the builder function
      * @param builder function to build the type value
      * @return Builder
      */
@@ -71,7 +71,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *
+     * set the value to the name
      * @param name value to be set
      * @return Builder
      */
@@ -115,7 +115,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *
+     * set the value to the isRequired
      * @param isRequired value to be set
      * @return Builder
      */
@@ -126,7 +126,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *
+     * set the value to the attributeConstraint
      * @param attributeConstraint value to be set
      * @return Builder
      */
@@ -172,7 +172,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *
+     * set the value to the inputHint
      * @param inputHint value to be set
      * @return Builder
      */
@@ -184,7 +184,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *
+     * set the value to the isSearchable
      * @param isSearchable value to be set
      * @return Builder
      */
@@ -194,36 +194,86 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
         return this;
     }
 
+    /**
+     * value of type}
+     * @return type
+     */
+
     public com.commercetools.importapi.models.producttypes.AttributeType getType() {
         return this.type;
     }
+
+    /**
+     * value of name}
+     * @return name
+     */
 
     public String getName() {
         return this.name;
     }
 
+    /**
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     * @return label
+     */
+
     public com.commercetools.importapi.models.common.LocalizedString getLabel() {
         return this.label;
     }
 
+    /**
+     * value of isRequired}
+     * @return isRequired
+     */
+
     public Boolean getIsRequired() {
         return this.isRequired;
     }
+
+    /**
+     * value of attributeConstraint}
+     * @return attributeConstraint
+     */
 
     @Nullable
     public com.commercetools.importapi.models.producttypes.AttributeConstraintEnum getAttributeConstraint() {
         return this.attributeConstraint;
     }
 
+    /**
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     * @return inputTip
+     */
+
     @Nullable
     public com.commercetools.importapi.models.common.LocalizedString getInputTip() {
         return this.inputTip;
     }
 
+    /**
+     * value of inputHint}
+     * @return inputHint
+     */
+
     @Nullable
     public com.commercetools.importapi.models.producttypes.TextInputHint getInputHint() {
         return this.inputHint;
     }
+
+    /**
+     * value of isSearchable}
+     * @return isSearchable
+     */
 
     @Nullable
     public Boolean getIsSearchable() {
@@ -252,10 +302,19 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
             isSearchable);
     }
 
+    /**
+     * factory method for an instance of AttributeDefinitionBuilder
+     * @return builder
+     */
     public static AttributeDefinitionBuilder of() {
         return new AttributeDefinitionBuilder();
     }
 
+    /**
+     * create builder for AttributeDefinition instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeDefinitionBuilder of(final AttributeDefinition template) {
         AttributeDefinitionBuilder builder = new AttributeDefinitionBuilder();
         builder.type = template.getType();

@@ -59,6 +59,11 @@ public class ProductVariantSelectionIncludeOnlyBuilder implements Builder<Produc
         return this;
     }
 
+    /**
+     *  <p>Non-empty array of SKUs representing Product Variants to be included into the Product Selection.</p>
+     * @return skus
+     */
+
     public java.util.List<String> getSkus() {
         return this.skus;
     }
@@ -80,10 +85,19 @@ public class ProductVariantSelectionIncludeOnlyBuilder implements Builder<Produc
         return new ProductVariantSelectionIncludeOnlyImpl(skus);
     }
 
+    /**
+     * factory method for an instance of ProductVariantSelectionIncludeOnlyBuilder
+     * @return builder
+     */
     public static ProductVariantSelectionIncludeOnlyBuilder of() {
         return new ProductVariantSelectionIncludeOnlyBuilder();
     }
 
+    /**
+     * create builder for ProductVariantSelectionIncludeOnly instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductVariantSelectionIncludeOnlyBuilder of(final ProductVariantSelectionIncludeOnly template) {
         ProductVariantSelectionIncludeOnlyBuilder builder = new ProductVariantSelectionIncludeOnlyBuilder();
         builder.skus = template.getSkus();

@@ -151,22 +151,47 @@ public class ProductSelectionPagedQueryResponseBuilder implements Builder<Produc
         return this;
     }
 
+    /**
+     *  <p>Number of results requested.</p>
+     * @return limit
+     */
+
     public Long getLimit() {
         return this.limit;
     }
+
+    /**
+     *  <p>Number of elements skipped.</p>
+     * @return offset
+     */
 
     public Long getOffset() {
         return this.offset;
     }
 
+    /**
+     *  <p>Actual number of results returned.</p>
+     * @return count
+     */
+
     public Long getCount() {
         return this.count;
     }
+
+    /**
+     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. Unlike other endpoints, the Product Selection endpoint does not return this field by default. To get <code>total</code>, pass the query parameter <code>withTotal</code> set to <code>true</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     * @return total
+     */
 
     @Nullable
     public Long getTotal() {
         return this.total;
     }
+
+    /**
+     *  <p>ProductSelections matching the query.</p>
+     * @return results
+     */
 
     public java.util.List<com.commercetools.api.models.product_selection.ProductSelection> getResults() {
         return this.results;
@@ -192,10 +217,19 @@ public class ProductSelectionPagedQueryResponseBuilder implements Builder<Produc
         return new ProductSelectionPagedQueryResponseImpl(limit, offset, count, total, results);
     }
 
+    /**
+     * factory method for an instance of ProductSelectionPagedQueryResponseBuilder
+     * @return builder
+     */
     public static ProductSelectionPagedQueryResponseBuilder of() {
         return new ProductSelectionPagedQueryResponseBuilder();
     }
 
+    /**
+     * create builder for ProductSelectionPagedQueryResponse instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSelectionPagedQueryResponseBuilder of(final ProductSelectionPagedQueryResponse template) {
         ProductSelectionPagedQueryResponseBuilder builder = new ProductSelectionPagedQueryResponseBuilder();
         builder.limit = template.getLimit();

@@ -32,6 +32,9 @@ public class ProductPriceKeySetMessagePayloadImpl implements ProductPriceKeySetM
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductPriceKeySetMessagePayloadImpl(@JsonProperty("variantId") final Long variantId,
             @JsonProperty("priceId") final String priceId, @JsonProperty("oldKey") final String oldKey,
@@ -44,6 +47,9 @@ public class ProductPriceKeySetMessagePayloadImpl implements ProductPriceKeySetM
         this.type = PRODUCT_PRICE_KEY_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductPriceKeySetMessagePayloadImpl() {
         this.type = PRODUCT_PRICE_KEY_SET;
     }

@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductRemovePriceActionImpl.class)
 public interface ProductRemovePriceAction extends ProductUpdateAction {
 
+    /**
+     * discriminator value for ProductRemovePriceAction
+     */
     String REMOVE_PRICE = "removePrice";
 
     /**
@@ -47,14 +50,33 @@ public interface ProductRemovePriceAction extends ProductUpdateAction {
     @JsonProperty("staged")
     public Boolean getStaged();
 
+    /**
+     *  <p>The <code>id</code> of the Embedded Price to remove.</p>
+     * @param priceId value to be set
+     */
+
     public void setPriceId(final String priceId);
+
+    /**
+     *  <p>If <code>true</code>, only the staged Embedded Price is removed. If <code>false</code>, both the current and staged Embedded Price are removed.</p>
+     * @param staged value to be set
+     */
 
     public void setStaged(final Boolean staged);
 
+    /**
+     * factory method
+     * @return instance of ProductRemovePriceAction
+     */
     public static ProductRemovePriceAction of() {
         return new ProductRemovePriceActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductRemovePriceAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductRemovePriceAction of(final ProductRemovePriceAction template) {
         ProductRemovePriceActionImpl instance = new ProductRemovePriceActionImpl();
         instance.setPriceId(template.getPriceId());
@@ -62,18 +84,37 @@ public interface ProductRemovePriceAction extends ProductUpdateAction {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductRemovePriceAction
+     * @return builder
+     */
     public static ProductRemovePriceActionBuilder builder() {
         return ProductRemovePriceActionBuilder.of();
     }
 
+    /**
+     * create builder for ProductRemovePriceAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductRemovePriceActionBuilder builder(final ProductRemovePriceAction template) {
         return ProductRemovePriceActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductRemovePriceAction(Function<ProductRemovePriceAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductRemovePriceAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductRemovePriceAction>() {
             @Override

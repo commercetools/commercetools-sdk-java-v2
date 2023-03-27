@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ShippingMethodChangeIsDefaultActionImpl.class)
 public interface ShippingMethodChangeIsDefaultAction extends ShippingMethodUpdateAction {
 
+    /**
+     * discriminator value for ShippingMethodChangeIsDefaultAction
+     */
     String CHANGE_IS_DEFAULT = "changeIsDefault";
 
     /**
@@ -39,31 +42,64 @@ public interface ShippingMethodChangeIsDefaultAction extends ShippingMethodUpdat
     @JsonProperty("isDefault")
     public Boolean getIsDefault();
 
+    /**
+     *  <p>Value to set. Only one ShippingMethod can be default in a Project.</p>
+     * @param isDefault value to be set
+     */
+
     public void setIsDefault(final Boolean isDefault);
 
+    /**
+     * factory method
+     * @return instance of ShippingMethodChangeIsDefaultAction
+     */
     public static ShippingMethodChangeIsDefaultAction of() {
         return new ShippingMethodChangeIsDefaultActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ShippingMethodChangeIsDefaultAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ShippingMethodChangeIsDefaultAction of(final ShippingMethodChangeIsDefaultAction template) {
         ShippingMethodChangeIsDefaultActionImpl instance = new ShippingMethodChangeIsDefaultActionImpl();
         instance.setIsDefault(template.getIsDefault());
         return instance;
     }
 
+    /**
+     * builder factory method for ShippingMethodChangeIsDefaultAction
+     * @return builder
+     */
     public static ShippingMethodChangeIsDefaultActionBuilder builder() {
         return ShippingMethodChangeIsDefaultActionBuilder.of();
     }
 
+    /**
+     * create builder for ShippingMethodChangeIsDefaultAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShippingMethodChangeIsDefaultActionBuilder builder(
             final ShippingMethodChangeIsDefaultAction template) {
         return ShippingMethodChangeIsDefaultActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withShippingMethodChangeIsDefaultAction(Function<ShippingMethodChangeIsDefaultAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodChangeIsDefaultAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodChangeIsDefaultAction>() {
             @Override

@@ -48,7 +48,7 @@ public class SetCustomLineItemCustomTypeChangeBuilder implements Builder<SetCust
     }
 
     /**
-     *
+     * set the value to the customLineItem using the builder function
      * @param builder function to build the customLineItem value
      * @return Builder
      */
@@ -61,7 +61,7 @@ public class SetCustomLineItemCustomTypeChangeBuilder implements Builder<SetCust
     }
 
     /**
-     *
+     * set the value to the customLineItem
      * @param customLineItem value to be set
      * @return Builder
      */
@@ -73,7 +73,7 @@ public class SetCustomLineItemCustomTypeChangeBuilder implements Builder<SetCust
     }
 
     /**
-     *
+     * set the value to the customLineItemId
      * @param customLineItemId value to be set
      * @return Builder
      */
@@ -84,7 +84,7 @@ public class SetCustomLineItemCustomTypeChangeBuilder implements Builder<SetCust
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -96,7 +96,7 @@ public class SetCustomLineItemCustomTypeChangeBuilder implements Builder<SetCust
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -108,7 +108,7 @@ public class SetCustomLineItemCustomTypeChangeBuilder implements Builder<SetCust
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -120,7 +120,7 @@ public class SetCustomLineItemCustomTypeChangeBuilder implements Builder<SetCust
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -131,21 +131,46 @@ public class SetCustomLineItemCustomTypeChangeBuilder implements Builder<SetCust
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>setCustomLineItemCustomType</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of customLineItem}
+     * @return customLineItem
+     */
 
     public com.commercetools.history.models.common.LocalizedString getCustomLineItem() {
         return this.customLineItem;
     }
 
+    /**
+     * value of customLineItemId}
+     * @return customLineItemId
+     */
+
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
 
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
+
     public com.commercetools.history.models.common.CustomFields getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public com.commercetools.history.models.common.CustomFields getPreviousValue() {
         return this.previousValue;
@@ -175,10 +200,19 @@ public class SetCustomLineItemCustomTypeChangeBuilder implements Builder<SetCust
             previousValue);
     }
 
+    /**
+     * factory method for an instance of SetCustomLineItemCustomTypeChangeBuilder
+     * @return builder
+     */
     public static SetCustomLineItemCustomTypeChangeBuilder of() {
         return new SetCustomLineItemCustomTypeChangeBuilder();
     }
 
+    /**
+     * create builder for SetCustomLineItemCustomTypeChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetCustomLineItemCustomTypeChangeBuilder of(final SetCustomLineItemCustomTypeChange template) {
         SetCustomLineItemCustomTypeChangeBuilder builder = new SetCustomLineItemCustomTypeChangeBuilder();
         builder.change = template.getChange();

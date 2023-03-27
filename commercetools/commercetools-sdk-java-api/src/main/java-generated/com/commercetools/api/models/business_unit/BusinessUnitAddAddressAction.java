@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = BusinessUnitAddAddressActionImpl.class)
 public interface BusinessUnitAddAddressAction extends BusinessUnitUpdateAction {
 
+    /**
+     * discriminator value for BusinessUnitAddAddressAction
+     */
     String ADD_ADDRESS = "addAddress";
 
     /**
@@ -42,30 +45,63 @@ public interface BusinessUnitAddAddressAction extends BusinessUnitUpdateAction {
     @JsonProperty("address")
     public BaseAddress getAddress();
 
+    /**
+     *  <p>Address to add to the addresses of the Business Unit.</p>
+     * @param address value to be set
+     */
+
     public void setAddress(final BaseAddress address);
 
+    /**
+     * factory method
+     * @return instance of BusinessUnitAddAddressAction
+     */
     public static BusinessUnitAddAddressAction of() {
         return new BusinessUnitAddAddressActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of BusinessUnitAddAddressAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static BusinessUnitAddAddressAction of(final BusinessUnitAddAddressAction template) {
         BusinessUnitAddAddressActionImpl instance = new BusinessUnitAddAddressActionImpl();
         instance.setAddress(template.getAddress());
         return instance;
     }
 
+    /**
+     * builder factory method for BusinessUnitAddAddressAction
+     * @return builder
+     */
     public static BusinessUnitAddAddressActionBuilder builder() {
         return BusinessUnitAddAddressActionBuilder.of();
     }
 
+    /**
+     * create builder for BusinessUnitAddAddressAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitAddAddressActionBuilder builder(final BusinessUnitAddAddressAction template) {
         return BusinessUnitAddAddressActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withBusinessUnitAddAddressAction(Function<BusinessUnitAddAddressAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitAddAddressAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitAddAddressAction>() {
             @Override

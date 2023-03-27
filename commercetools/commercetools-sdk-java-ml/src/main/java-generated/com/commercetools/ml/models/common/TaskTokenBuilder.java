@@ -48,9 +48,19 @@ public class TaskTokenBuilder implements Builder<TaskToken> {
         return this;
     }
 
+    /**
+     *  <p>The ID for the task. Used to find the status of the task.</p>
+     * @return taskId
+     */
+
     public String getTaskId() {
         return this.taskId;
     }
+
+    /**
+     *  <p>The URI path to poll for the status of the task.</p>
+     * @return uriPath
+     */
 
     public String getUriPath() {
         return this.uriPath;
@@ -74,10 +84,19 @@ public class TaskTokenBuilder implements Builder<TaskToken> {
         return new TaskTokenImpl(taskId, uriPath);
     }
 
+    /**
+     * factory method for an instance of TaskTokenBuilder
+     * @return builder
+     */
     public static TaskTokenBuilder of() {
         return new TaskTokenBuilder();
     }
 
+    /**
+     * create builder for TaskToken instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TaskTokenBuilder of(final TaskToken template) {
         TaskTokenBuilder builder = new TaskTokenBuilder();
         builder.taskId = template.getTaskId();

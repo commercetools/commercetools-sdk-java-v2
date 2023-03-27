@@ -41,7 +41,7 @@ public class ChangePaymentStateChangeBuilder implements Builder<ChangePaymentSta
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class ChangePaymentStateChangeBuilder implements Builder<ChangePaymentSta
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -64,13 +64,28 @@ public class ChangePaymentStateChangeBuilder implements Builder<ChangePaymentSta
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>changePaymentState</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
+
     public com.commercetools.history.models.common.PaymentState getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public com.commercetools.history.models.common.PaymentState getPreviousValue() {
         return this.previousValue;
@@ -95,10 +110,19 @@ public class ChangePaymentStateChangeBuilder implements Builder<ChangePaymentSta
         return new ChangePaymentStateChangeImpl(change, nextValue, previousValue);
     }
 
+    /**
+     * factory method for an instance of ChangePaymentStateChangeBuilder
+     * @return builder
+     */
     public static ChangePaymentStateChangeBuilder of() {
         return new ChangePaymentStateChangeBuilder();
     }
 
+    /**
+     * create builder for ChangePaymentStateChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangePaymentStateChangeBuilder of(final ChangePaymentStateChange template) {
         ChangePaymentStateChangeBuilder builder = new ChangePaymentStateChangeBuilder();
         builder.change = template.getChange();

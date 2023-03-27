@@ -24,6 +24,9 @@ public class ChangeStatusUpdateActionImpl implements ChangeStatusUpdateAction, M
 
     private com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus status;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeStatusUpdateActionImpl(
             @JsonProperty("status") final com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus status) {
@@ -31,6 +34,9 @@ public class ChangeStatusUpdateActionImpl implements ChangeStatusUpdateAction, M
         this.action = CHANGE_STATUS;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeStatusUpdateActionImpl() {
         this.action = CHANGE_STATUS;
     }

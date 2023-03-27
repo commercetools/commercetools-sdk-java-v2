@@ -30,6 +30,9 @@ public class SetPropertyChangeImpl implements SetPropertyChange, ModelBase {
 
     private java.lang.Object previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetPropertyChangeImpl(@JsonProperty("change") final String change, @JsonProperty("path") final String path,
             @JsonProperty("nextValue") final java.lang.Object nextValue,
@@ -41,6 +44,9 @@ public class SetPropertyChangeImpl implements SetPropertyChange, ModelBase {
         this.type = SET_PROPERTY_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetPropertyChangeImpl() {
         this.type = SET_PROPERTY_CHANGE;
     }

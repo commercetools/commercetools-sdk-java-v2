@@ -106,9 +106,19 @@ public class CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
         return this;
     }
 
+    /**
+     *  <p><code>id</code> of the LineItem to update.</p>
+     * @return lineItemId
+     */
+
     public String getLineItemId() {
         return this.lineItemId;
     }
+
+    /**
+     *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
+     * @return targetsDelta
+     */
 
     public java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> getTargetsDelta() {
         return this.targetsDelta;
@@ -134,10 +144,19 @@ public class CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
         return new CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl(lineItemId, targetsDelta);
     }
 
+    /**
+     * factory method for an instance of CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder
+     * @return builder
+     */
     public static CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder of() {
         return new CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder();
     }
 
+    /**
+     * create builder for CartApplyDeltaToLineItemShippingDetailsTargetsAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder of(
             final CartApplyDeltaToLineItemShippingDetailsTargetsAction template) {
         CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder builder = new CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder();

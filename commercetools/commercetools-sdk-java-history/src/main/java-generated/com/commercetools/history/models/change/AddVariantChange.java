@@ -34,6 +34,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AddVariantChangeImpl.class)
 public interface AddVariantChange extends Change {
 
+    /**
+     * discriminator value for AddVariantChange
+     */
     String ADD_VARIANT_CHANGE = "AddVariantChange";
 
     /**
@@ -78,18 +81,47 @@ public interface AddVariantChange extends Change {
     @JsonProperty("nextValue")
     public Variant getNextValue();
 
+    /**
+     *  <p>Update action for <code>addVariant</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set catalogData
+     * @param catalogData value to be set
+     */
 
     public void setCatalogData(final String catalogData);
 
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
+
     public void setPreviousValue(final Variant previousValue);
+
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
 
     public void setNextValue(final Variant nextValue);
 
+    /**
+     * factory method
+     * @return instance of AddVariantChange
+     */
     public static AddVariantChange of() {
         return new AddVariantChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of AddVariantChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static AddVariantChange of(final AddVariantChange template) {
         AddVariantChangeImpl instance = new AddVariantChangeImpl();
         instance.setChange(template.getChange());
@@ -99,18 +131,37 @@ public interface AddVariantChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for AddVariantChange
+     * @return builder
+     */
     public static AddVariantChangeBuilder builder() {
         return AddVariantChangeBuilder.of();
     }
 
+    /**
+     * create builder for AddVariantChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AddVariantChangeBuilder builder(final AddVariantChange template) {
         return AddVariantChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAddVariantChange(Function<AddVariantChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AddVariantChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AddVariantChange>() {
             @Override

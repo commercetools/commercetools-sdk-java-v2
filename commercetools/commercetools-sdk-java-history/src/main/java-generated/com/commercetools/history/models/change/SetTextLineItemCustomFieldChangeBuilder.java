@@ -49,7 +49,7 @@ public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextL
     }
 
     /**
-     *
+     * set the value to the name
      * @param name value to be set
      * @return Builder
      */
@@ -60,7 +60,7 @@ public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextL
     }
 
     /**
-     *
+     * set the value to the customTypeId
      * @param customTypeId value to be set
      * @return Builder
      */
@@ -71,7 +71,7 @@ public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextL
     }
 
     /**
-     *
+     * set the value to the textLineItem using the builder function
      * @param builder function to build the textLineItem value
      * @return Builder
      */
@@ -84,7 +84,7 @@ public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextL
     }
 
     /**
-     *
+     * set the value to the textLineItem
      * @param textLineItem value to be set
      * @return Builder
      */
@@ -96,7 +96,7 @@ public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextL
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -107,7 +107,7 @@ public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextL
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -117,25 +117,55 @@ public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextL
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>setTextLineItemCustomField</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of name}
+     * @return name
+     */
 
     public String getName() {
         return this.name;
     }
 
+    /**
+     * value of customTypeId}
+     * @return customTypeId
+     */
+
     public String getCustomTypeId() {
         return this.customTypeId;
     }
+
+    /**
+     * value of textLineItem}
+     * @return textLineItem
+     */
 
     public com.commercetools.history.models.change_value.TextLineItemValue getTextLineItem() {
         return this.textLineItem;
     }
 
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
+
     public java.lang.Object getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public java.lang.Object getPreviousValue() {
         return this.previousValue;
@@ -165,10 +195,19 @@ public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextL
             previousValue);
     }
 
+    /**
+     * factory method for an instance of SetTextLineItemCustomFieldChangeBuilder
+     * @return builder
+     */
     public static SetTextLineItemCustomFieldChangeBuilder of() {
         return new SetTextLineItemCustomFieldChangeBuilder();
     }
 
+    /**
+     * create builder for SetTextLineItemCustomFieldChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetTextLineItemCustomFieldChangeBuilder of(final SetTextLineItemCustomFieldChange template) {
         SetTextLineItemCustomFieldChangeBuilder builder = new SetTextLineItemCustomFieldChangeBuilder();
         builder.change = template.getChange();

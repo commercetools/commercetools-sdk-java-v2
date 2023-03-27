@@ -253,55 +253,115 @@ public class OverlappingStandalonePriceValidityErrorBuilder
         return this;
     }
 
+    /**
+     *  <p><code>Two standalone prices have overlapping validity periods."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
     }
 
+    /**
+     *  <p>Reference to the conflicting Standalone Price.</p>
+     * @return conflictingStandalonePrice
+     */
+
     public com.commercetools.api.models.standalone_price.StandalonePriceReference getConflictingStandalonePrice() {
         return this.conflictingStandalonePrice;
     }
+
+    /**
+     *  <p>SKU of the ProductVariant to which the conflicting Standalone Price is associated.</p>
+     * @return sku
+     */
 
     public String getSku() {
         return this.sku;
     }
 
+    /**
+     *  <p>Currency code of the country.</p>
+     * @return currency
+     */
+
     public String getCurrency() {
         return this.currency;
     }
+
+    /**
+     *  <p>Country code of the geographic location.</p>
+     * @return country
+     */
 
     @Nullable
     public String getCountry() {
         return this.country;
     }
 
+    /**
+     *  <p>CustomerGroup for which the Standalone Price is valid.</p>
+     * @return customerGroup
+     */
+
     @Nullable
     public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {
         return this.customerGroup;
     }
+
+    /**
+     *  <p>Channel for which the Standalone Price is valid.</p>
+     * @return channel
+     */
 
     @Nullable
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel() {
         return this.channel;
     }
 
+    /**
+     *  <p>Date and time (UTC) from which the Standalone Price is valid.</p>
+     * @return validFrom
+     */
+
     @Nullable
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
+
+    /**
+     *  <p>Date and time (UTC) until which the Standalone Price is valid.</p>
+     * @return validUntil
+     */
 
     @Nullable
     public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;
     }
 
+    /**
+     *  <p>Date and time (UTC) from which the conflicting Standalone Price is valid.</p>
+     * @return conflictingValidFrom
+     */
+
     @Nullable
     public java.time.ZonedDateTime getConflictingValidFrom() {
         return this.conflictingValidFrom;
     }
+
+    /**
+     *  <p>Date and time (UTC) until which the conflicting Standalone Price is valid.</p>
+     * @return conflictingValidUntil
+     */
 
     @Nullable
     public java.time.ZonedDateTime getConflictingValidUntil() {
@@ -333,10 +393,19 @@ public class OverlappingStandalonePriceValidityErrorBuilder
             conflictingValidUntil);
     }
 
+    /**
+     * factory method for an instance of OverlappingStandalonePriceValidityErrorBuilder
+     * @return builder
+     */
     public static OverlappingStandalonePriceValidityErrorBuilder of() {
         return new OverlappingStandalonePriceValidityErrorBuilder();
     }
 
+    /**
+     * create builder for OverlappingStandalonePriceValidityError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OverlappingStandalonePriceValidityErrorBuilder of(
             final OverlappingStandalonePriceValidityError template) {
         OverlappingStandalonePriceValidityErrorBuilder builder = new OverlappingStandalonePriceValidityErrorBuilder();

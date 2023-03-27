@@ -107,21 +107,46 @@ public class InventoryEntryQuantitySetMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>Quantity on stock for the InventoryEntry before the quantity was updated.</p>
+     * @return oldQuantityOnStock
+     */
+
     public Long getOldQuantityOnStock() {
         return this.oldQuantityOnStock;
     }
+
+    /**
+     *  <p>Quantity on stock for the InventoryEntry after the quantity was updated.</p>
+     * @return newQuantityOnStock
+     */
 
     public Long getNewQuantityOnStock() {
         return this.newQuantityOnStock;
     }
 
+    /**
+     *  <p>Available quantity for the InventoryEntry before the quantity was updated.</p>
+     * @return oldAvailableQuantity
+     */
+
     public Long getOldAvailableQuantity() {
         return this.oldAvailableQuantity;
     }
 
+    /**
+     *  <p>Available quantity for the InventoryEntry after the quantity was updated.</p>
+     * @return newAvailableQuantity
+     */
+
     public Long getNewAvailableQuantity() {
         return this.newAvailableQuantity;
     }
+
+    /**
+     *  <p>Reference to the Channel where the InventoryEntry quantity was set.</p>
+     * @return supplyChannel
+     */
 
     @Nullable
     public com.commercetools.api.models.channel.ChannelReference getSupplyChannel() {
@@ -154,10 +179,19 @@ public class InventoryEntryQuantitySetMessagePayloadBuilder
             oldAvailableQuantity, newAvailableQuantity, supplyChannel);
     }
 
+    /**
+     * factory method for an instance of InventoryEntryQuantitySetMessagePayloadBuilder
+     * @return builder
+     */
     public static InventoryEntryQuantitySetMessagePayloadBuilder of() {
         return new InventoryEntryQuantitySetMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for InventoryEntryQuantitySetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InventoryEntryQuantitySetMessagePayloadBuilder of(
             final InventoryEntryQuantitySetMessagePayload template) {
         InventoryEntryQuantitySetMessagePayloadBuilder builder = new InventoryEntryQuantitySetMessagePayloadBuilder();

@@ -212,59 +212,183 @@ public interface DiscountCode
     @JsonProperty("applicationVersion")
     public Long getApplicationVersion();
 
+    /**
+     *  <p>Unique identifier of the DiscountCode.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>Current version of the DiscountCode.</p>
+     * @param version value to be set
+     */
 
     public void setVersion(final Long version);
 
+    /**
+     *  <p>Date and time (UTC) the DiscountCode was initially created.</p>
+     * @param createdAt value to be set
+     */
+
     public void setCreatedAt(final ZonedDateTime createdAt);
+
+    /**
+     *  <p>Date and time (UTC) the DiscountCode was last updated.</p>
+     * @param lastModifiedAt value to be set
+     */
 
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy value to be set
+     */
+
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy value to be set
+     */
 
     public void setCreatedBy(final CreatedBy createdBy);
 
+    /**
+     *  <p>Name of the DiscountCode.</p>
+     * @param name value to be set
+     */
+
     public void setName(final LocalizedString name);
+
+    /**
+     *  <p>Description of the DiscountCode.</p>
+     * @param description value to be set
+     */
 
     public void setDescription(final LocalizedString description);
 
+    /**
+     *  <p>User-defined unique identifier of the DiscountCode added to the Cart to apply the related CartDiscounts.</p>
+     * @param code value to be set
+     */
+
     public void setCode(final String code);
+
+    /**
+     *  <p>Reference to CartDiscounts that can be applied to the Cart once the DiscountCode is applied.</p>
+     * @param cartDiscounts values to be set
+     */
 
     @JsonIgnore
     public void setCartDiscounts(final CartDiscountReference... cartDiscounts);
 
+    /**
+     *  <p>Reference to CartDiscounts that can be applied to the Cart once the DiscountCode is applied.</p>
+     * @param cartDiscounts values to be set
+     */
+
     public void setCartDiscounts(final List<CartDiscountReference> cartDiscounts);
+
+    /**
+     *  <p>DiscountCode can only be applied to Carts that match this predicate.</p>
+     * @param cartPredicate value to be set
+     */
 
     public void setCartPredicate(final String cartPredicate);
 
+    /**
+     *  <p>Indicates if the DiscountCode is active and can be applied to the Cart.</p>
+     * @param isActive value to be set
+     */
+
     public void setIsActive(final Boolean isActive);
+
+    /**
+     *  <p>Array generated from the Cart predicate. It contains the references of all the resources that are addressed in the predicate.</p>
+     * @param references values to be set
+     */
 
     @JsonIgnore
     public void setReferences(final Reference... references);
 
+    /**
+     *  <p>Array generated from the Cart predicate. It contains the references of all the resources that are addressed in the predicate.</p>
+     * @param references values to be set
+     */
+
     public void setReferences(final List<Reference> references);
+
+    /**
+     *  <p>Number of times the DiscountCode can be applied. DiscountCode application is counted at the time of Order creation or edit. However, Order cancellation or deletion does not decrement the count.</p>
+     * @param maxApplications value to be set
+     */
 
     public void setMaxApplications(final Long maxApplications);
 
+    /**
+     *  <p>Number of times the DiscountCode can be applied per Customer (anonymous Carts are not supported). DiscountCode application is counted at the time of Order creation or edit. However, Order cancellation or deletion does not decrement the count.</p>
+     * @param maxApplicationsPerCustomer value to be set
+     */
+
     public void setMaxApplicationsPerCustomer(final Long maxApplicationsPerCustomer);
 
+    /**
+     *  <p>Custom Fields of the DiscountCode.</p>
+     * @param custom value to be set
+     */
+
     public void setCustom(final CustomFields custom);
+
+    /**
+     *  <p>Groups to which the DiscountCode belongs to.</p>
+     * @param groups values to be set
+     */
 
     @JsonIgnore
     public void setGroups(final String... groups);
 
+    /**
+     *  <p>Groups to which the DiscountCode belongs to.</p>
+     * @param groups values to be set
+     */
+
     public void setGroups(final List<String> groups);
+
+    /**
+     *  <p>Date and time (UTC) from which the DiscountCode is effective.</p>
+     * @param validFrom value to be set
+     */
 
     public void setValidFrom(final ZonedDateTime validFrom);
 
+    /**
+     *  <p>Date and time (UTC) until which the DiscountCode is effective.</p>
+     * @param validUntil value to be set
+     */
+
     public void setValidUntil(final ZonedDateTime validUntil);
+
+    /**
+     *  <p>Used and managed by the API and must not be used in customer logic. The value can change at any time due to internal and external factors.</p>
+     * @param applicationVersion value to be set
+     */
 
     public void setApplicationVersion(final Long applicationVersion);
 
+    /**
+     * factory method
+     * @return instance of DiscountCode
+     */
     public static DiscountCode of() {
         return new DiscountCodeImpl();
     }
 
+    /**
+     * factory method to copy an instance of DiscountCode
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static DiscountCode of(final DiscountCode template) {
         DiscountCodeImpl instance = new DiscountCodeImpl();
         instance.setId(template.getId());
@@ -290,14 +414,29 @@ public interface DiscountCode
         return instance;
     }
 
+    /**
+     * builder factory method for DiscountCode
+     * @return builder
+     */
     public static DiscountCodeBuilder builder() {
         return DiscountCodeBuilder.of();
     }
 
+    /**
+     * create builder for DiscountCode instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DiscountCodeBuilder builder(final DiscountCode template) {
         return DiscountCodeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withDiscountCode(Function<DiscountCode, T> helper) {
         return helper.apply(this);
     }
@@ -306,6 +445,10 @@ public interface DiscountCode
         return com.commercetools.api.models.common.ReferenceTypeId.DISCOUNT_CODE;
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<DiscountCode> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<DiscountCode>() {
             @Override

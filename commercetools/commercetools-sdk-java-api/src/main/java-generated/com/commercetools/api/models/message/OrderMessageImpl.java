@@ -42,6 +42,9 @@ public class OrderMessageImpl implements OrderMessage, ModelBase {
 
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -65,6 +68,9 @@ public class OrderMessageImpl implements OrderMessage, ModelBase {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderMessageImpl() {
     }
 

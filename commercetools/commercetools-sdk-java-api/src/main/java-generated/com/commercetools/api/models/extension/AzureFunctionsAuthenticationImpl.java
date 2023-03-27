@@ -25,12 +25,18 @@ public class AzureFunctionsAuthenticationImpl implements AzureFunctionsAuthentic
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AzureFunctionsAuthenticationImpl(@JsonProperty("key") final String key) {
         this.key = key;
         this.type = AZURE_FUNCTIONS;
     }
 
+    /**
+     * create empty instance
+     */
     public AzureFunctionsAuthenticationImpl() {
         this.type = AZURE_FUNCTIONS;
     }

@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderTransitionStateActionImpl.class)
 public interface StagedOrderTransitionStateAction extends StagedOrderUpdateAction {
 
+    /**
+     * discriminator value for StagedOrderTransitionStateAction
+     */
     String TRANSITION_STATE = "transitionState";
 
     /**
@@ -51,14 +54,33 @@ public interface StagedOrderTransitionStateAction extends StagedOrderUpdateActio
     @JsonProperty("force")
     public Boolean getForce();
 
+    /**
+     *  <p>ResourceIdentifier to a State.</p>
+     * @param state value to be set
+     */
+
     public void setState(final StateResourceIdentifier state);
+
+    /**
+     * set force
+     * @param force value to be set
+     */
 
     public void setForce(final Boolean force);
 
+    /**
+     * factory method
+     * @return instance of StagedOrderTransitionStateAction
+     */
     public static StagedOrderTransitionStateAction of() {
         return new StagedOrderTransitionStateActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedOrderTransitionStateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedOrderTransitionStateAction of(final StagedOrderTransitionStateAction template) {
         StagedOrderTransitionStateActionImpl instance = new StagedOrderTransitionStateActionImpl();
         instance.setState(template.getState());
@@ -66,18 +88,37 @@ public interface StagedOrderTransitionStateAction extends StagedOrderUpdateActio
         return instance;
     }
 
+    /**
+     * builder factory method for StagedOrderTransitionStateAction
+     * @return builder
+     */
     public static StagedOrderTransitionStateActionBuilder builder() {
         return StagedOrderTransitionStateActionBuilder.of();
     }
 
+    /**
+     * create builder for StagedOrderTransitionStateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderTransitionStateActionBuilder builder(final StagedOrderTransitionStateAction template) {
         return StagedOrderTransitionStateActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedOrderTransitionStateAction(Function<StagedOrderTransitionStateAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderTransitionStateAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderTransitionStateAction>() {
             @Override

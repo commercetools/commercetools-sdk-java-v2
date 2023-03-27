@@ -30,7 +30,7 @@ public class StagedOrderSetDeliveryAddressActionBuilder implements Builder<Stage
     private com.commercetools.api.models.common.BaseAddress address;
 
     /**
-     *
+     * set the value to the deliveryId
      * @param deliveryId value to be set
      * @return Builder
      */
@@ -64,9 +64,19 @@ public class StagedOrderSetDeliveryAddressActionBuilder implements Builder<Stage
         return this;
     }
 
+    /**
+     * value of deliveryId}
+     * @return deliveryId
+     */
+
     public String getDeliveryId() {
         return this.deliveryId;
     }
+
+    /**
+     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     * @return address
+     */
 
     @Nullable
     public com.commercetools.api.models.common.BaseAddress getAddress() {
@@ -90,10 +100,19 @@ public class StagedOrderSetDeliveryAddressActionBuilder implements Builder<Stage
         return new StagedOrderSetDeliveryAddressActionImpl(deliveryId, address);
     }
 
+    /**
+     * factory method for an instance of StagedOrderSetDeliveryAddressActionBuilder
+     * @return builder
+     */
     public static StagedOrderSetDeliveryAddressActionBuilder of() {
         return new StagedOrderSetDeliveryAddressActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderSetDeliveryAddressAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetDeliveryAddressActionBuilder of(final StagedOrderSetDeliveryAddressAction template) {
         StagedOrderSetDeliveryAddressActionBuilder builder = new StagedOrderSetDeliveryAddressActionBuilder();
         builder.deliveryId = template.getDeliveryId();

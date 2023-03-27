@@ -75,23 +75,62 @@ public interface ProductSelectionPagedQueryResponse
     @JsonProperty("results")
     public List<ProductSelection> getResults();
 
+    /**
+     *  <p>Number of results requested.</p>
+     * @param limit value to be set
+     */
+
     public void setLimit(final Long limit);
+
+    /**
+     *  <p>Number of elements skipped.</p>
+     * @param offset value to be set
+     */
 
     public void setOffset(final Long offset);
 
+    /**
+     *  <p>Actual number of results returned.</p>
+     * @param count value to be set
+     */
+
     public void setCount(final Long count);
 
+    /**
+     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. Unlike other endpoints, the Product Selection endpoint does not return this field by default. To get <code>total</code>, pass the query parameter <code>withTotal</code> set to <code>true</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     * @param total value to be set
+     */
+
     public void setTotal(final Long total);
+
+    /**
+     *  <p>ProductSelections matching the query.</p>
+     * @param results values to be set
+     */
 
     @JsonIgnore
     public void setResults(final ProductSelection... results);
 
+    /**
+     *  <p>ProductSelections matching the query.</p>
+     * @param results values to be set
+     */
+
     public void setResults(final List<ProductSelection> results);
 
+    /**
+     * factory method
+     * @return instance of ProductSelectionPagedQueryResponse
+     */
     public static ProductSelectionPagedQueryResponse of() {
         return new ProductSelectionPagedQueryResponseImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductSelectionPagedQueryResponse
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductSelectionPagedQueryResponse of(final ProductSelectionPagedQueryResponse template) {
         ProductSelectionPagedQueryResponseImpl instance = new ProductSelectionPagedQueryResponseImpl();
         instance.setLimit(template.getLimit());
@@ -102,18 +141,37 @@ public interface ProductSelectionPagedQueryResponse
         return instance;
     }
 
+    /**
+     * builder factory method for ProductSelectionPagedQueryResponse
+     * @return builder
+     */
     public static ProductSelectionPagedQueryResponseBuilder builder() {
         return ProductSelectionPagedQueryResponseBuilder.of();
     }
 
+    /**
+     * create builder for ProductSelectionPagedQueryResponse instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSelectionPagedQueryResponseBuilder builder(final ProductSelectionPagedQueryResponse template) {
         return ProductSelectionPagedQueryResponseBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductSelectionPagedQueryResponse(Function<ProductSelectionPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionPagedQueryResponse> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionPagedQueryResponse>() {
             @Override

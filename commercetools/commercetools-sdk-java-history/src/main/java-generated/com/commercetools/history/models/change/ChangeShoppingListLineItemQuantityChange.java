@@ -34,6 +34,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ChangeShoppingListLineItemQuantityChangeImpl.class)
 public interface ChangeShoppingListLineItemQuantityChange extends Change {
 
+    /**
+     * discriminator value for ChangeShoppingListLineItemQuantityChange
+     */
     String CHANGE_SHOPPING_LIST_LINE_ITEM_QUANTITY_CHANGE = "ChangeShoppingListLineItemQuantityChange";
 
     /**
@@ -77,18 +80,47 @@ public interface ChangeShoppingListLineItemQuantityChange extends Change {
     @JsonProperty("nextValue")
     public Integer getNextValue();
 
+    /**
+     * set change
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set lineItem
+     * @param lineItem value to be set
+     */
 
     public void setLineItem(final ShoppingListLineItemValue lineItem);
 
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
+
     public void setPreviousValue(final Integer previousValue);
+
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
 
     public void setNextValue(final Integer nextValue);
 
+    /**
+     * factory method
+     * @return instance of ChangeShoppingListLineItemQuantityChange
+     */
     public static ChangeShoppingListLineItemQuantityChange of() {
         return new ChangeShoppingListLineItemQuantityChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of ChangeShoppingListLineItemQuantityChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ChangeShoppingListLineItemQuantityChange of(final ChangeShoppingListLineItemQuantityChange template) {
         ChangeShoppingListLineItemQuantityChangeImpl instance = new ChangeShoppingListLineItemQuantityChangeImpl();
         instance.setChange(template.getChange());
@@ -98,20 +130,39 @@ public interface ChangeShoppingListLineItemQuantityChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for ChangeShoppingListLineItemQuantityChange
+     * @return builder
+     */
     public static ChangeShoppingListLineItemQuantityChangeBuilder builder() {
         return ChangeShoppingListLineItemQuantityChangeBuilder.of();
     }
 
+    /**
+     * create builder for ChangeShoppingListLineItemQuantityChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeShoppingListLineItemQuantityChangeBuilder builder(
             final ChangeShoppingListLineItemQuantityChange template) {
         return ChangeShoppingListLineItemQuantityChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withChangeShoppingListLineItemQuantityChange(
             Function<ChangeShoppingListLineItemQuantityChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ChangeShoppingListLineItemQuantityChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ChangeShoppingListLineItemQuantityChange>() {
             @Override

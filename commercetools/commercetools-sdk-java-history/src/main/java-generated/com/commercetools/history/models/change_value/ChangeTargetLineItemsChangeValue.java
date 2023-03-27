@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ChangeTargetLineItemsChangeValueImpl.class)
 public interface ChangeTargetLineItemsChangeValue extends ChangeTargetChangeValue {
 
+    /**
+     * discriminator value for ChangeTargetLineItemsChangeValue
+     */
     String LINE_ITEMS = "lineItems";
 
     /**
@@ -47,30 +50,63 @@ public interface ChangeTargetLineItemsChangeValue extends ChangeTargetChangeValu
     @JsonProperty("predicate")
     public String getPredicate();
 
+    /**
+     * set predicate
+     * @param predicate value to be set
+     */
+
     public void setPredicate(final String predicate);
 
+    /**
+     * factory method
+     * @return instance of ChangeTargetLineItemsChangeValue
+     */
     public static ChangeTargetLineItemsChangeValue of() {
         return new ChangeTargetLineItemsChangeValueImpl();
     }
 
+    /**
+     * factory method to copy an instance of ChangeTargetLineItemsChangeValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ChangeTargetLineItemsChangeValue of(final ChangeTargetLineItemsChangeValue template) {
         ChangeTargetLineItemsChangeValueImpl instance = new ChangeTargetLineItemsChangeValueImpl();
         instance.setPredicate(template.getPredicate());
         return instance;
     }
 
+    /**
+     * builder factory method for ChangeTargetLineItemsChangeValue
+     * @return builder
+     */
     public static ChangeTargetLineItemsChangeValueBuilder builder() {
         return ChangeTargetLineItemsChangeValueBuilder.of();
     }
 
+    /**
+     * create builder for ChangeTargetLineItemsChangeValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeTargetLineItemsChangeValueBuilder builder(final ChangeTargetLineItemsChangeValue template) {
         return ChangeTargetLineItemsChangeValueBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withChangeTargetLineItemsChangeValue(Function<ChangeTargetLineItemsChangeValue, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ChangeTargetLineItemsChangeValue> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ChangeTargetLineItemsChangeValue>() {
             @Override

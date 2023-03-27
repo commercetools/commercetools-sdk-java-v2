@@ -109,9 +109,19 @@ public class ProductDiscountUpdateBuilder implements Builder<ProductDiscountUpda
         return this;
     }
 
+    /**
+     *  <p>Expected version of the ProductDiscount on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     * @return version
+     */
+
     public Long getVersion() {
         return this.version;
     }
+
+    /**
+     *  <p>Update actions to be performed on the ProductDiscount.</p>
+     * @return actions
+     */
 
     public java.util.List<com.commercetools.api.models.product_discount.ProductDiscountUpdateAction> getActions() {
         return this.actions;
@@ -135,10 +145,19 @@ public class ProductDiscountUpdateBuilder implements Builder<ProductDiscountUpda
         return new ProductDiscountUpdateImpl(version, actions);
     }
 
+    /**
+     * factory method for an instance of ProductDiscountUpdateBuilder
+     * @return builder
+     */
     public static ProductDiscountUpdateBuilder of() {
         return new ProductDiscountUpdateBuilder();
     }
 
+    /**
+     * create builder for ProductDiscountUpdate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductDiscountUpdateBuilder of(final ProductDiscountUpdate template) {
         ProductDiscountUpdateBuilder builder = new ProductDiscountUpdateBuilder();
         builder.version = template.getVersion();

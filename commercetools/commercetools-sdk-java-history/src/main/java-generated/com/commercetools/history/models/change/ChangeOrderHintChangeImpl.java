@@ -28,6 +28,9 @@ public class ChangeOrderHintChangeImpl implements ChangeOrderHintChange, ModelBa
 
     private String nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeOrderHintChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final String previousValue,
@@ -38,6 +41,9 @@ public class ChangeOrderHintChangeImpl implements ChangeOrderHintChange, ModelBa
         this.type = CHANGE_ORDER_HINT_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeOrderHintChangeImpl() {
         this.type = CHANGE_ORDER_HINT_CHANGE;
     }

@@ -19,6 +19,10 @@ public class KeyReferenceBuilder {
         return com.commercetools.api.models.store.StoreKeyReferenceBuilder.of();
     }
 
+    /**
+     * factory method for an instance of KeyReferenceBuilder
+     * @return builder
+     */
     public static KeyReferenceBuilder of() {
         return new KeyReferenceBuilder();
     }

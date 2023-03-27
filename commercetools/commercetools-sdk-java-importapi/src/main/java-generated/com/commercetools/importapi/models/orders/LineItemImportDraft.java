@@ -130,35 +130,104 @@ public interface LineItemImportDraft extends io.vrap.rmf.base.client.Draft<LineI
     @JsonProperty("custom")
     public Custom getCustom();
 
+    /**
+     *  <p>Maps to <code>LineItem.productId</code>.</p>
+     * @param product value to be set
+     */
+
     public void setProduct(final ProductKeyReference product);
+
+    /**
+     *  <p>Maps to <code>LineItem.name</code>.</p>
+     * @param name value to be set
+     */
 
     public void setName(final LocalizedString name);
 
+    /**
+     *  <p>Maps to <code>ProductVariantImportDraft</code>.</p>
+     * @param variant value to be set
+     */
+
     public void setVariant(final LineItemProductVariantImportDraft variant);
+
+    /**
+     *  <p>Maps to <code>LineItem.price</code>.</p>
+     * @param price value to be set
+     */
 
     public void setPrice(final LineItemPrice price);
 
+    /**
+     *  <p>Maps to <code>LineItem.quantity</code>.</p>
+     * @param quantity value to be set
+     */
+
     public void setQuantity(final Double quantity);
+
+    /**
+     * set state
+     * @param state values to be set
+     */
 
     @JsonIgnore
     public void setState(final ItemState... state);
 
+    /**
+     * set state
+     * @param state values to be set
+     */
+
     public void setState(final List<ItemState> state);
+
+    /**
+     *  <p>Maps to <code>LineItem.supplyChannel</code>. The Reference to the Supply Channel with which the LineItem is associated. If referenced Supply Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Supply Channel is created.</p>
+     * @param supplyChannel value to be set
+     */
 
     public void setSupplyChannel(final ChannelKeyReference supplyChannel);
 
+    /**
+     *  <p>Maps to <code>LineItem.distributionChannel</code>. The Reference to the Distribution Channel with which the LineItem is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Distribution Channel is created.</p>
+     * @param distributionChannel value to be set
+     */
+
     public void setDistributionChannel(final ChannelKeyReference distributionChannel);
+
+    /**
+     *  <p>Maps to <code>LineItem.taxRate</code>.</p>
+     * @param taxRate value to be set
+     */
 
     public void setTaxRate(final TaxRate taxRate);
 
+    /**
+     *  <p>Maps to LineItem.shippingDetails.</p>
+     * @param shippingDetails value to be set
+     */
+
     public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
+
+    /**
+     *  <p>Custom Fields for this Line Item.</p>
+     * @param custom value to be set
+     */
 
     public void setCustom(final Custom custom);
 
+    /**
+     * factory method
+     * @return instance of LineItemImportDraft
+     */
     public static LineItemImportDraft of() {
         return new LineItemImportDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of LineItemImportDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static LineItemImportDraft of(final LineItemImportDraft template) {
         LineItemImportDraftImpl instance = new LineItemImportDraftImpl();
         instance.setProduct(template.getProduct());
@@ -175,18 +244,37 @@ public interface LineItemImportDraft extends io.vrap.rmf.base.client.Draft<LineI
         return instance;
     }
 
+    /**
+     * builder factory method for LineItemImportDraft
+     * @return builder
+     */
     public static LineItemImportDraftBuilder builder() {
         return LineItemImportDraftBuilder.of();
     }
 
+    /**
+     * create builder for LineItemImportDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static LineItemImportDraftBuilder builder(final LineItemImportDraft template) {
         return LineItemImportDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withLineItemImportDraft(Function<LineItemImportDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<LineItemImportDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<LineItemImportDraft>() {
             @Override

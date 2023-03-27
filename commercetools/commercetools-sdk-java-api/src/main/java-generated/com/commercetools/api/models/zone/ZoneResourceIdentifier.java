@@ -27,6 +27,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ZoneResourceIdentifierImpl.class)
 public interface ZoneResourceIdentifier extends ResourceIdentifier, com.commercetools.api.models.Identifiable<Zone> {
 
+    /**
+     * discriminator value for ZoneResourceIdentifier
+     */
     String ZONE = "zone";
 
     /**
@@ -45,14 +48,33 @@ public interface ZoneResourceIdentifier extends ResourceIdentifier, com.commerce
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     *  <p>Unique identifier of the referenced Zone. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>User-defined unique identifier of the referenced Zone. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param key value to be set
+     */
 
     public void setKey(final String key);
 
+    /**
+     * factory method
+     * @return instance of ZoneResourceIdentifier
+     */
     public static ZoneResourceIdentifier of() {
         return new ZoneResourceIdentifierImpl();
     }
 
+    /**
+     * factory method to copy an instance of ZoneResourceIdentifier
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ZoneResourceIdentifier of(final ZoneResourceIdentifier template) {
         ZoneResourceIdentifierImpl instance = new ZoneResourceIdentifierImpl();
         instance.setId(template.getId());
@@ -60,18 +82,37 @@ public interface ZoneResourceIdentifier extends ResourceIdentifier, com.commerce
         return instance;
     }
 
+    /**
+     * builder factory method for ZoneResourceIdentifier
+     * @return builder
+     */
     public static ZoneResourceIdentifierBuilder builder() {
         return ZoneResourceIdentifierBuilder.of();
     }
 
+    /**
+     * create builder for ZoneResourceIdentifier instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ZoneResourceIdentifierBuilder builder(final ZoneResourceIdentifier template) {
         return ZoneResourceIdentifierBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withZoneResourceIdentifier(Function<ZoneResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ZoneResourceIdentifier> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ZoneResourceIdentifier>() {
             @Override

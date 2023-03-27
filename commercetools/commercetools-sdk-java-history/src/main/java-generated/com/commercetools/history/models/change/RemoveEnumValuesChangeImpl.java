@@ -28,6 +28,9 @@ public class RemoveEnumValuesChangeImpl implements RemoveEnumValuesChange, Model
 
     private com.commercetools.history.models.change_value.EnumValue previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     RemoveEnumValuesChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("attributeName") final String attributeName,
@@ -38,6 +41,9 @@ public class RemoveEnumValuesChangeImpl implements RemoveEnumValuesChange, Model
         this.type = REMOVE_ENUM_VALUES_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public RemoveEnumValuesChangeImpl() {
         this.type = REMOVE_ENUM_VALUES_CHANGE;
     }

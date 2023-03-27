@@ -50,10 +50,20 @@ public class BusinessUnitAddShippingAddressIdActionBuilder implements Builder<Bu
         return this;
     }
 
+    /**
+     *  <p>ID of the address to add as a shipping address. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
+     * @return addressId
+     */
+
     @Nullable
     public String getAddressId() {
         return this.addressId;
     }
+
+    /**
+     *  <p>Key of the address to add as a shipping address. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
+     * @return addressKey
+     */
 
     @Nullable
     public String getAddressKey() {
@@ -76,10 +86,19 @@ public class BusinessUnitAddShippingAddressIdActionBuilder implements Builder<Bu
         return new BusinessUnitAddShippingAddressIdActionImpl(addressId, addressKey);
     }
 
+    /**
+     * factory method for an instance of BusinessUnitAddShippingAddressIdActionBuilder
+     * @return builder
+     */
     public static BusinessUnitAddShippingAddressIdActionBuilder of() {
         return new BusinessUnitAddShippingAddressIdActionBuilder();
     }
 
+    /**
+     * create builder for BusinessUnitAddShippingAddressIdAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitAddShippingAddressIdActionBuilder of(
             final BusinessUnitAddShippingAddressIdAction template) {
         BusinessUnitAddShippingAddressIdActionBuilder builder = new BusinessUnitAddShippingAddressIdActionBuilder();

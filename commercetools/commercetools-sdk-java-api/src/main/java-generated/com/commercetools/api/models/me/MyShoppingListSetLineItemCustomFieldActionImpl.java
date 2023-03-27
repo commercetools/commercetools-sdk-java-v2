@@ -29,6 +29,9 @@ public class MyShoppingListSetLineItemCustomFieldActionImpl
 
     private java.lang.Object value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyShoppingListSetLineItemCustomFieldActionImpl(@JsonProperty("lineItemId") final String lineItemId,
             @JsonProperty("name") final String name, @JsonProperty("value") final java.lang.Object value) {
@@ -38,6 +41,9 @@ public class MyShoppingListSetLineItemCustomFieldActionImpl
         this.action = SET_LINE_ITEM_CUSTOM_FIELD;
     }
 
+    /**
+     * create empty instance
+     */
     public MyShoppingListSetLineItemCustomFieldActionImpl() {
         this.action = SET_LINE_ITEM_CUSTOM_FIELD;
     }

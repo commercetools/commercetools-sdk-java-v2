@@ -36,6 +36,11 @@ public class CustomerTitleSetMessagePayloadBuilder implements Builder<CustomerTi
         return this;
     }
 
+    /**
+     *  <p>The <code>title</code> that was set during the Set Title update action.</p>
+     * @return title
+     */
+
     @Nullable
     public String getTitle() {
         return this.title;
@@ -57,10 +62,19 @@ public class CustomerTitleSetMessagePayloadBuilder implements Builder<CustomerTi
         return new CustomerTitleSetMessagePayloadImpl(title);
     }
 
+    /**
+     * factory method for an instance of CustomerTitleSetMessagePayloadBuilder
+     * @return builder
+     */
     public static CustomerTitleSetMessagePayloadBuilder of() {
         return new CustomerTitleSetMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for CustomerTitleSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerTitleSetMessagePayloadBuilder of(final CustomerTitleSetMessagePayload template) {
         CustomerTitleSetMessagePayloadBuilder builder = new CustomerTitleSetMessagePayloadBuilder();
         builder.title = template.getTitle();

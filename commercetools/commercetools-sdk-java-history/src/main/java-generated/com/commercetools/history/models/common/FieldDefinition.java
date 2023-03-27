@@ -67,18 +67,47 @@ public interface FieldDefinition {
     @JsonProperty("inputHint")
     public TextInputHint getInputHint();
 
+    /**
+     * set type
+     * @param type value to be set
+     */
+
     public void setType(final FieldType type);
+
+    /**
+     *  <p>The name of the field. The name must be between two and 36 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>). The name must be unique for a given resource type ID. In case there is a field with the same name in another type it has to have the same FieldType also.</p>
+     * @param name value to be set
+     */
 
     public void setName(final String name);
 
+    /**
+     * set label
+     * @param label value to be set
+     */
+
     public void setLabel(final LocalizedString label);
+
+    /**
+     * set inputHint
+     * @param inputHint value to be set
+     */
 
     public void setInputHint(final TextInputHint inputHint);
 
+    /**
+     * factory method
+     * @return instance of FieldDefinition
+     */
     public static FieldDefinition of() {
         return new FieldDefinitionImpl();
     }
 
+    /**
+     * factory method to copy an instance of FieldDefinition
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static FieldDefinition of(final FieldDefinition template) {
         FieldDefinitionImpl instance = new FieldDefinitionImpl();
         instance.setType(template.getType());
@@ -88,18 +117,37 @@ public interface FieldDefinition {
         return instance;
     }
 
+    /**
+     * builder factory method for FieldDefinition
+     * @return builder
+     */
     public static FieldDefinitionBuilder builder() {
         return FieldDefinitionBuilder.of();
     }
 
+    /**
+     * create builder for FieldDefinition instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static FieldDefinitionBuilder builder(final FieldDefinition template) {
         return FieldDefinitionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withFieldDefinition(Function<FieldDefinition, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<FieldDefinition> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<FieldDefinition>() {
             @Override

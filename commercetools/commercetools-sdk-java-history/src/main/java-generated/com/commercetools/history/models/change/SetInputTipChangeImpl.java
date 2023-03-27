@@ -30,6 +30,9 @@ public class SetInputTipChangeImpl implements SetInputTipChange, ModelBase {
 
     private com.commercetools.history.models.common.LocalizedString previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetInputTipChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("attributeName") final String attributeName,
@@ -42,6 +45,9 @@ public class SetInputTipChangeImpl implements SetInputTipChange, ModelBase {
         this.type = SET_INPUT_TIP_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetInputTipChangeImpl() {
         this.type = SET_INPUT_TIP_CHANGE;
     }

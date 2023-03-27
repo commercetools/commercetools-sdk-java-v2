@@ -26,6 +26,9 @@ public class BusinessUnitSetStoreModeActionImpl implements BusinessUnitSetStoreM
 
     private java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitSetStoreModeActionImpl(
             @JsonProperty("storeMode") final com.commercetools.api.models.business_unit.BusinessUnitStoreMode storeMode,
@@ -35,6 +38,9 @@ public class BusinessUnitSetStoreModeActionImpl implements BusinessUnitSetStoreM
         this.action = SET_STORE_MODE;
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitSetStoreModeActionImpl() {
         this.action = SET_STORE_MODE;
     }

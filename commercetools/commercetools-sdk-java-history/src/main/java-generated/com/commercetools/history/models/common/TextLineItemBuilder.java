@@ -40,7 +40,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     private Integer quantity;
 
     /**
-     *
+     * set the value to the addedAt
      * @param addedAt value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     /**
-     *
+     * set the value to the custom using the builder function
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     /**
-     *
+     * set the value to the custom
      * @param custom value to be set
      * @return Builder
      */
@@ -74,7 +74,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     /**
-     *
+     * set the value to the description using the builder function
      * @param builder function to build the description value
      * @return Builder
      */
@@ -86,7 +86,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     /**
-     *
+     * set the value to the description
      * @param description value to be set
      * @return Builder
      */
@@ -97,7 +97,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     /**
-     *
+     * set the value to the id
      * @param id value to be set
      * @return Builder
      */
@@ -108,7 +108,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     /**
-     *
+     * set the value to the name using the builder function
      * @param builder function to build the name value
      * @return Builder
      */
@@ -120,7 +120,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     /**
-     *
+     * set the value to the name
      * @param name value to be set
      * @return Builder
      */
@@ -131,7 +131,7 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     /**
-     *
+     * set the value to the quantity
      * @param quantity value to be set
      * @return Builder
      */
@@ -141,25 +141,55 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
         return this;
     }
 
+    /**
+     * value of addedAt}
+     * @return addedAt
+     */
+
     public String getAddedAt() {
         return this.addedAt;
     }
+
+    /**
+     * value of custom}
+     * @return custom
+     */
 
     public com.commercetools.history.models.common.CustomFields getCustom() {
         return this.custom;
     }
 
+    /**
+     * value of description}
+     * @return description
+     */
+
     public com.commercetools.history.models.common.LocalizedString getDescription() {
         return this.description;
     }
+
+    /**
+     * value of id}
+     * @return id
+     */
 
     public String getId() {
         return this.id;
     }
 
+    /**
+     * value of name}
+     * @return name
+     */
+
     public com.commercetools.history.models.common.LocalizedString getName() {
         return this.name;
     }
+
+    /**
+     * value of quantity}
+     * @return quantity
+     */
 
     public Integer getQuantity() {
         return this.quantity;
@@ -187,10 +217,19 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
         return new TextLineItemImpl(addedAt, custom, description, id, name, quantity);
     }
 
+    /**
+     * factory method for an instance of TextLineItemBuilder
+     * @return builder
+     */
     public static TextLineItemBuilder of() {
         return new TextLineItemBuilder();
     }
 
+    /**
+     * create builder for TextLineItem instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TextLineItemBuilder of(final TextLineItem template) {
         TextLineItemBuilder builder = new TextLineItemBuilder();
         builder.addedAt = template.getAddedAt();

@@ -30,6 +30,9 @@ public class ChangeTransactionStateChangeImpl implements ChangeTransactionStateC
 
     private com.commercetools.history.models.common.TransactionState previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeTransactionStateChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("transaction") final com.commercetools.history.models.change_value.TransactionChangeValue transaction,
@@ -42,6 +45,9 @@ public class ChangeTransactionStateChangeImpl implements ChangeTransactionStateC
         this.type = CHANGE_TRANSACTION_STATE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeTransactionStateChangeImpl() {
         this.type = CHANGE_TRANSACTION_STATE_CHANGE;
     }

@@ -201,22 +201,47 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier for the Type.</p>
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>Name of the Type.</p>
+     * @return name
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
+
+    /**
+     *  <p>Description of the Type.</p>
+     * @return description
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
+    /**
+     *  <p>Resources and/or data types for which the Type is defined.</p>
+     * @return resourceTypeIds
+     */
+
     public java.util.List<com.commercetools.api.models.type.ResourceTypeId> getResourceTypeIds() {
         return this.resourceTypeIds;
     }
+
+    /**
+     *  <p>Defines Custom Fields.</p>
+     * @return fieldDefinitions
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.type.FieldDefinition> getFieldDefinitions() {
@@ -242,10 +267,19 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
         return new TypeDraftImpl(key, name, description, resourceTypeIds, fieldDefinitions);
     }
 
+    /**
+     * factory method for an instance of TypeDraftBuilder
+     * @return builder
+     */
     public static TypeDraftBuilder of() {
         return new TypeDraftBuilder();
     }
 
+    /**
+     * create builder for TypeDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TypeDraftBuilder of(final TypeDraft template) {
         TypeDraftBuilder builder = new TypeDraftBuilder();
         builder.key = template.getKey();

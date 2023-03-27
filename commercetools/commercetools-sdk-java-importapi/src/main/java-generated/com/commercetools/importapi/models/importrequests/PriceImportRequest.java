@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PriceImportRequestImpl.class)
 public interface PriceImportRequest extends ImportRequest {
 
+    /**
+     * discriminator value for PriceImportRequest
+     */
     String PRICE = "price";
 
     /**
@@ -42,33 +45,71 @@ public interface PriceImportRequest extends ImportRequest {
     @JsonProperty("resources")
     public List<PriceImport> getResources();
 
+    /**
+     *  <p>The price import resources of this request.</p>
+     * @param resources values to be set
+     */
+
     @JsonIgnore
     public void setResources(final PriceImport... resources);
 
+    /**
+     *  <p>The price import resources of this request.</p>
+     * @param resources values to be set
+     */
+
     public void setResources(final List<PriceImport> resources);
 
+    /**
+     * factory method
+     * @return instance of PriceImportRequest
+     */
     public static PriceImportRequest of() {
         return new PriceImportRequestImpl();
     }
 
+    /**
+     * factory method to copy an instance of PriceImportRequest
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static PriceImportRequest of(final PriceImportRequest template) {
         PriceImportRequestImpl instance = new PriceImportRequestImpl();
         instance.setResources(template.getResources());
         return instance;
     }
 
+    /**
+     * builder factory method for PriceImportRequest
+     * @return builder
+     */
     public static PriceImportRequestBuilder builder() {
         return PriceImportRequestBuilder.of();
     }
 
+    /**
+     * create builder for PriceImportRequest instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PriceImportRequestBuilder builder(final PriceImportRequest template) {
         return PriceImportRequestBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withPriceImportRequest(Function<PriceImportRequest, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<PriceImportRequest> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<PriceImportRequest>() {
             @Override

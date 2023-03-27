@@ -81,7 +81,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
     }
 
     /**
-     *
+     * set values to the results
      * @param results value to be set
      * @return Builder
      */
@@ -93,7 +93,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
     }
 
     /**
-     *
+     * set value to the results
      * @param results value to be set
      * @return Builder
      */
@@ -105,7 +105,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
     }
 
     /**
-     *
+     * add values to the results
      * @param results value to be set
      * @return Builder
      */
@@ -120,7 +120,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
     }
 
     /**
-     *
+     * add the value to the results using the builder function
      * @param builder function to build the results value
      * @return Builder
      */
@@ -135,7 +135,7 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
     }
 
     /**
-     *
+     * set the value to the results using the builder function
      * @param builder function to build the results value
      * @return Builder
      */
@@ -147,21 +147,46 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
         return this;
     }
 
+    /**
+     *  <p>Number of results requested.</p>
+     * @return limit
+     */
+
     public Integer getLimit() {
         return this.limit;
     }
+
+    /**
+     *  <p>Actual number of results returned.</p>
+     * @return count
+     */
 
     public Integer getCount() {
         return this.count;
     }
 
+    /**
+     *  <p>Total number of results matching the query. This number is an estimation and not strongly consistent.</p>
+     * @return total
+     */
+
     public Integer getTotal() {
         return this.total;
     }
 
+    /**
+     *  <p>Number of elements skipped.</p>
+     * @return offset
+     */
+
     public Integer getOffset() {
         return this.offset;
     }
+
+    /**
+     * value of results}
+     * @return results
+     */
 
     public java.util.List<com.commercetools.history.models.change_history.Record> getResults() {
         return this.results;
@@ -188,10 +213,19 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
         return new RecordPagedQueryResponseImpl(limit, count, total, offset, results);
     }
 
+    /**
+     * factory method for an instance of RecordPagedQueryResponseBuilder
+     * @return builder
+     */
     public static RecordPagedQueryResponseBuilder of() {
         return new RecordPagedQueryResponseBuilder();
     }
 
+    /**
+     * create builder for RecordPagedQueryResponse instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static RecordPagedQueryResponseBuilder of(final RecordPagedQueryResponse template) {
         RecordPagedQueryResponseBuilder builder = new RecordPagedQueryResponseBuilder();
         builder.limit = template.getLimit();

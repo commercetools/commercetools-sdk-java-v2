@@ -58,6 +58,9 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
 
     private Boolean active;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StandalonePriceImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -97,6 +100,9 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
         this.active = active;
     }
 
+    /**
+     * create empty instance
+     */
     public StandalonePriceImpl() {
     }
 

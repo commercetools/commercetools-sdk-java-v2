@@ -36,6 +36,9 @@ public class ProductSetAssetCustomFieldActionImpl implements ProductSetAssetCust
 
     private java.lang.Object value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSetAssetCustomFieldActionImpl(@JsonProperty("variantId") final Long variantId,
             @JsonProperty("sku") final String sku, @JsonProperty("staged") final Boolean staged,
@@ -51,6 +54,9 @@ public class ProductSetAssetCustomFieldActionImpl implements ProductSetAssetCust
         this.action = SET_ASSET_CUSTOM_FIELD;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSetAssetCustomFieldActionImpl() {
         this.action = SET_ASSET_CUSTOM_FIELD;
     }

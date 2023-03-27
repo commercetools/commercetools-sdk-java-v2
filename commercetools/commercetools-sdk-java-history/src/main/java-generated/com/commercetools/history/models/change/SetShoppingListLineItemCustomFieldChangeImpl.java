@@ -35,6 +35,9 @@ public class SetShoppingListLineItemCustomFieldChangeImpl
 
     private java.lang.Object previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetShoppingListLineItemCustomFieldChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("name") final String name, @JsonProperty("customTypeId") final String customTypeId,
@@ -50,6 +53,9 @@ public class SetShoppingListLineItemCustomFieldChangeImpl
         this.type = SET_SHOPPING_LIST_LINE_ITEM_CUSTOM_FIELD_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetShoppingListLineItemCustomFieldChangeImpl() {
         this.type = SET_SHOPPING_LIST_LINE_ITEM_CUSTOM_FIELD_CHANGE;
     }

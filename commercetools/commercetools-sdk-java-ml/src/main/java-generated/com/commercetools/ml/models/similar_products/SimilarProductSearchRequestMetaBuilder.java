@@ -50,6 +50,11 @@ public class SimilarProductSearchRequestMetaBuilder implements Builder<SimilarPr
         return this;
     }
 
+    /**
+     *  <p>The SimilarityMeasures used in this search.</p>
+     * @return similarityMeasures
+     */
+
     public com.commercetools.ml.models.similar_products.SimilarityMeasures getSimilarityMeasures() {
         return this.similarityMeasures;
     }
@@ -72,10 +77,19 @@ public class SimilarProductSearchRequestMetaBuilder implements Builder<SimilarPr
         return new SimilarProductSearchRequestMetaImpl(similarityMeasures);
     }
 
+    /**
+     * factory method for an instance of SimilarProductSearchRequestMetaBuilder
+     * @return builder
+     */
     public static SimilarProductSearchRequestMetaBuilder of() {
         return new SimilarProductSearchRequestMetaBuilder();
     }
 
+    /**
+     * create builder for SimilarProductSearchRequestMeta instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SimilarProductSearchRequestMetaBuilder of(final SimilarProductSearchRequestMeta template) {
         SimilarProductSearchRequestMetaBuilder builder = new SimilarProductSearchRequestMetaBuilder();
         builder.similarityMeasures = template.getSimilarityMeasures();

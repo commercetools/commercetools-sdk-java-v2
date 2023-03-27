@@ -27,6 +27,9 @@ public class StagedOrderImportCustomLineItemStateActionImpl
 
     private java.util.List<com.commercetools.api.models.order.ItemState> state;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderImportCustomLineItemStateActionImpl(@JsonProperty("customLineItemId") final String customLineItemId,
             @JsonProperty("state") final java.util.List<com.commercetools.api.models.order.ItemState> state) {
@@ -35,6 +38,9 @@ public class StagedOrderImportCustomLineItemStateActionImpl
         this.action = IMPORT_CUSTOM_LINE_ITEM_STATE;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderImportCustomLineItemStateActionImpl() {
         this.action = IMPORT_CUSTOM_LINE_ITEM_STATE;
     }

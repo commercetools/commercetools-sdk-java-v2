@@ -62,9 +62,19 @@ public class QueryTimedOutErrorBuilder implements Builder<QueryTimedOutError> {
         return this;
     }
 
+    /**
+     *  <p><code>"The query timed out. If your query constantly times out, please check that it follows the performance best practices (see https://docs.commercetools.com/api/predicates/query#performance-considerations)."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
@@ -87,10 +97,19 @@ public class QueryTimedOutErrorBuilder implements Builder<QueryTimedOutError> {
         return new QueryTimedOutErrorImpl(message, values);
     }
 
+    /**
+     * factory method for an instance of QueryTimedOutErrorBuilder
+     * @return builder
+     */
     public static QueryTimedOutErrorBuilder of() {
         return new QueryTimedOutErrorBuilder();
     }
 
+    /**
+     * create builder for QueryTimedOutError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static QueryTimedOutErrorBuilder of(final QueryTimedOutError template) {
         QueryTimedOutErrorBuilder builder = new QueryTimedOutErrorBuilder();
         builder.message = template.getMessage();

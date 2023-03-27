@@ -36,30 +36,64 @@ public interface GraphQLVariablesMap {
     @JsonAnyGetter
     public Map<String, Object> values();
 
+    /**
+     * set pattern property
+     * @param key property name
+     * @param value property value
+     */
+
     @JsonAnySetter
     public void setValue(String key, Object value);
 
+    /**
+     * factory method
+     * @return instance of GraphQLVariablesMap
+     */
     public static GraphQLVariablesMap of() {
         return new GraphQLVariablesMapImpl();
     }
 
+    /**
+     * factory method to copy an instance of GraphQLVariablesMap
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static GraphQLVariablesMap of(final GraphQLVariablesMap template) {
         GraphQLVariablesMapImpl instance = new GraphQLVariablesMapImpl();
         return instance;
     }
 
+    /**
+     * builder factory method for GraphQLVariablesMap
+     * @return builder
+     */
     public static GraphQLVariablesMapBuilder builder() {
         return GraphQLVariablesMapBuilder.of();
     }
 
+    /**
+     * create builder for GraphQLVariablesMap instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static GraphQLVariablesMapBuilder builder(final GraphQLVariablesMap template) {
         return GraphQLVariablesMapBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withGraphQLVariablesMap(Function<GraphQLVariablesMap, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<GraphQLVariablesMap> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<GraphQLVariablesMap>() {
             @Override

@@ -24,6 +24,9 @@ public class CustomFieldEnumTypeImpl implements CustomFieldEnumType, ModelBase {
 
     private java.util.List<com.commercetools.api.models.type.CustomFieldEnumValue> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomFieldEnumTypeImpl(
             @JsonProperty("values") final java.util.List<com.commercetools.api.models.type.CustomFieldEnumValue> values) {
@@ -31,6 +34,9 @@ public class CustomFieldEnumTypeImpl implements CustomFieldEnumType, ModelBase {
         this.name = ENUM;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomFieldEnumTypeImpl() {
         this.name = ENUM;
     }

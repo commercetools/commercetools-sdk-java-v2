@@ -59,6 +59,11 @@ public class DiscountCodeChangeGroupsActionBuilder implements Builder<DiscountCo
         return this;
     }
 
+    /**
+     *  <p>New value to set. An empty array removes the DiscountCode from all groups.</p>
+     * @return groups
+     */
+
     public java.util.List<String> getGroups() {
         return this.groups;
     }
@@ -80,10 +85,19 @@ public class DiscountCodeChangeGroupsActionBuilder implements Builder<DiscountCo
         return new DiscountCodeChangeGroupsActionImpl(groups);
     }
 
+    /**
+     * factory method for an instance of DiscountCodeChangeGroupsActionBuilder
+     * @return builder
+     */
     public static DiscountCodeChangeGroupsActionBuilder of() {
         return new DiscountCodeChangeGroupsActionBuilder();
     }
 
+    /**
+     * create builder for DiscountCodeChangeGroupsAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DiscountCodeChangeGroupsActionBuilder of(final DiscountCodeChangeGroupsAction template) {
         DiscountCodeChangeGroupsActionBuilder builder = new DiscountCodeChangeGroupsActionBuilder();
         builder.groups = template.getGroups();

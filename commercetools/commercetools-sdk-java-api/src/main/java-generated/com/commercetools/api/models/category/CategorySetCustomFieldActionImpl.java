@@ -26,6 +26,9 @@ public class CategorySetCustomFieldActionImpl implements CategorySetCustomFieldA
 
     private java.lang.Object value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CategorySetCustomFieldActionImpl(@JsonProperty("name") final String name,
             @JsonProperty("value") final java.lang.Object value) {
@@ -34,6 +37,9 @@ public class CategorySetCustomFieldActionImpl implements CategorySetCustomFieldA
         this.action = SET_CUSTOM_FIELD;
     }
 
+    /**
+     * create empty instance
+     */
     public CategorySetCustomFieldActionImpl() {
         this.action = SET_CUSTOM_FIELD;
     }

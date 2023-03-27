@@ -28,6 +28,9 @@ public class ChangeQuoteStateChangeImpl implements ChangeQuoteStateChange, Model
 
     private com.commercetools.history.models.common.QuoteState previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeQuoteStateChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.QuoteState nextValue,
@@ -38,6 +41,9 @@ public class ChangeQuoteStateChangeImpl implements ChangeQuoteStateChange, Model
         this.type = CHANGE_QUOTE_STATE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeQuoteStateChangeImpl() {
         this.type = CHANGE_QUOTE_STATE_CHANGE;
     }

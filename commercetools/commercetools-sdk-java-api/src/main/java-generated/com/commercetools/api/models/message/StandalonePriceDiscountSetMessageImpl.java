@@ -44,6 +44,9 @@ public class StandalonePriceDiscountSetMessageImpl implements StandalonePriceDis
 
     private com.commercetools.api.models.common.DiscountedPrice discounted;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StandalonePriceDiscountSetMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -70,6 +73,9 @@ public class StandalonePriceDiscountSetMessageImpl implements StandalonePriceDis
         this.type = STANDALONE_PRICE_DISCOUNT_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public StandalonePriceDiscountSetMessageImpl() {
         this.type = STANDALONE_PRICE_DISCOUNT_SET;
     }

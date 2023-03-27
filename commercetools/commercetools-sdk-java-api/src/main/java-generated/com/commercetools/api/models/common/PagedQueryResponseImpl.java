@@ -32,6 +32,9 @@ public class PagedQueryResponseImpl implements PagedQueryResponse, ModelBase {
 
     private java.lang.Object meta;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PagedQueryResponseImpl(@JsonProperty("limit") final Long limit, @JsonProperty("offset") final Long offset,
             @JsonProperty("count") final Long count, @JsonProperty("total") final Long total,
@@ -45,6 +48,9 @@ public class PagedQueryResponseImpl implements PagedQueryResponse, ModelBase {
         this.meta = meta;
     }
 
+    /**
+     * create empty instance
+     */
     public PagedQueryResponseImpl() {
     }
 

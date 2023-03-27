@@ -31,6 +31,9 @@ public class StagedOrderSetCustomShippingMethodActionImpl
 
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderSetCustomShippingMethodActionImpl(@JsonProperty("shippingMethodName") final String shippingMethodName,
             @JsonProperty("shippingRate") final com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate,
@@ -43,6 +46,9 @@ public class StagedOrderSetCustomShippingMethodActionImpl
         this.action = SET_CUSTOM_SHIPPING_METHOD;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderSetCustomShippingMethodActionImpl() {
         this.action = SET_CUSTOM_SHIPPING_METHOD;
     }

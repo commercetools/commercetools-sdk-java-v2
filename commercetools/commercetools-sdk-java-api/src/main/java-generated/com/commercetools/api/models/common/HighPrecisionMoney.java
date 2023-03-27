@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = HighPrecisionMoneyImpl.class)
 public interface HighPrecisionMoney extends TypedMoney {
 
+    /**
+     * discriminator value for HighPrecisionMoney
+     */
     String HIGH_PRECISION = "highPrecision";
 
     /**
@@ -50,14 +53,33 @@ public interface HighPrecisionMoney extends TypedMoney {
     @JsonProperty("fractionDigits")
     public Integer getFractionDigits();
 
+    /**
+     *  <p>Amount in 1 / (10 ^ <code>fractionDigits</code>) of a currency.</p>
+     * @param preciseAmount value to be set
+     */
+
     public void setPreciseAmount(final Long preciseAmount);
+
+    /**
+     *  <p>Number of digits after the decimal separator, greater than the default number of fraction digits for a currency.</p>
+     * @param fractionDigits value to be set
+     */
 
     public void setFractionDigits(final Integer fractionDigits);
 
+    /**
+     * factory method
+     * @return instance of HighPrecisionMoney
+     */
     public static HighPrecisionMoney of() {
         return new HighPrecisionMoneyImpl();
     }
 
+    /**
+     * factory method to copy an instance of HighPrecisionMoney
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static HighPrecisionMoney of(final HighPrecisionMoney template) {
         HighPrecisionMoneyImpl instance = new HighPrecisionMoneyImpl();
         instance.setCentAmount(template.getCentAmount());
@@ -67,14 +89,29 @@ public interface HighPrecisionMoney extends TypedMoney {
         return instance;
     }
 
+    /**
+     * builder factory method for HighPrecisionMoney
+     * @return builder
+     */
     public static HighPrecisionMoneyBuilder builder() {
         return HighPrecisionMoneyBuilder.of();
     }
 
+    /**
+     * create builder for HighPrecisionMoney instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static HighPrecisionMoneyBuilder builder(final HighPrecisionMoney template) {
         return HighPrecisionMoneyBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withHighPrecisionMoney(Function<HighPrecisionMoney, T> helper) {
         return helper.apply(this);
     }
@@ -92,6 +129,10 @@ public interface HighPrecisionMoney extends TypedMoney {
         return amount -> MoneyUtil.of(amount, getFractionDigits());
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<HighPrecisionMoney> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<HighPrecisionMoney>() {
             @Override

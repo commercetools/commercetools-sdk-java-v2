@@ -26,7 +26,7 @@ public class StagedOrderSetCountryActionBuilder implements Builder<StagedOrderSe
     private String country;
 
     /**
-     *
+     * set the value to the country
      * @param country value to be set
      * @return Builder
      */
@@ -35,6 +35,11 @@ public class StagedOrderSetCountryActionBuilder implements Builder<StagedOrderSe
         this.country = country;
         return this;
     }
+
+    /**
+     * value of country}
+     * @return country
+     */
 
     @Nullable
     public String getCountry() {
@@ -57,10 +62,19 @@ public class StagedOrderSetCountryActionBuilder implements Builder<StagedOrderSe
         return new StagedOrderSetCountryActionImpl(country);
     }
 
+    /**
+     * factory method for an instance of StagedOrderSetCountryActionBuilder
+     * @return builder
+     */
     public static StagedOrderSetCountryActionBuilder of() {
         return new StagedOrderSetCountryActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderSetCountryAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetCountryActionBuilder of(final StagedOrderSetCountryAction template) {
         StagedOrderSetCountryActionBuilder builder = new StagedOrderSetCountryActionBuilder();
         builder.country = template.getCountry();

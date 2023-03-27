@@ -46,6 +46,9 @@ public class PaymentStatusStateTransitionMessageImpl implements PaymentStatusSta
 
     private Boolean force;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PaymentStatusStateTransitionMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -74,6 +77,9 @@ public class PaymentStatusStateTransitionMessageImpl implements PaymentStatusSta
         this.type = PAYMENT_STATUS_STATE_TRANSITION;
     }
 
+    /**
+     * create empty instance
+     */
     public PaymentStatusStateTransitionMessageImpl() {
         this.type = PAYMENT_STATUS_STATE_TRANSITION;
     }

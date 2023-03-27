@@ -28,6 +28,9 @@ public class SetStoreChangeImpl implements SetStoreChange, ModelBase {
 
     private com.commercetools.history.models.common.Reference nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetStoreChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.Reference previousValue,
@@ -38,6 +41,9 @@ public class SetStoreChangeImpl implements SetStoreChange, ModelBase {
         this.type = SET_STORE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetStoreChangeImpl() {
         this.type = SET_STORE_CHANGE;
     }

@@ -46,14 +46,33 @@ public interface KeyReference {
     @JsonProperty("typeId")
     public ReferenceTypeId getTypeId();
 
+    /**
+     * set key
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
+
+    /**
+     * set typeId
+     * @param typeId value to be set
+     */
 
     public void setTypeId(final ReferenceTypeId typeId);
 
+    /**
+     * factory method
+     * @return instance of KeyReference
+     */
     public static KeyReference of() {
         return new KeyReferenceImpl();
     }
 
+    /**
+     * factory method to copy an instance of KeyReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static KeyReference of(final KeyReference template) {
         KeyReferenceImpl instance = new KeyReferenceImpl();
         instance.setKey(template.getKey());
@@ -61,18 +80,37 @@ public interface KeyReference {
         return instance;
     }
 
+    /**
+     * builder factory method for KeyReference
+     * @return builder
+     */
     public static KeyReferenceBuilder builder() {
         return KeyReferenceBuilder.of();
     }
 
+    /**
+     * create builder for KeyReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static KeyReferenceBuilder builder(final KeyReference template) {
         return KeyReferenceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withKeyReference(Function<KeyReference, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<KeyReference> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<KeyReference>() {
             @Override

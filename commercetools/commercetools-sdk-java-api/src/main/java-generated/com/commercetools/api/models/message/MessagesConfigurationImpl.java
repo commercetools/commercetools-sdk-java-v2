@@ -24,6 +24,9 @@ public class MessagesConfigurationImpl implements MessagesConfiguration, ModelBa
 
     private Integer deleteDaysAfterCreation;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MessagesConfigurationImpl(@JsonProperty("enabled") final Boolean enabled,
             @JsonProperty("deleteDaysAfterCreation") final Integer deleteDaysAfterCreation) {
@@ -31,6 +34,9 @@ public class MessagesConfigurationImpl implements MessagesConfiguration, ModelBa
         this.deleteDaysAfterCreation = deleteDaysAfterCreation;
     }
 
+    /**
+     * create empty instance
+     */
     public MessagesConfigurationImpl() {
     }
 

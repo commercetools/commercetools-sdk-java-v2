@@ -26,6 +26,9 @@ public class DiscountCodeSetCustomTypeActionImpl implements DiscountCodeSetCusto
 
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DiscountCodeSetCustomTypeActionImpl(
             @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
@@ -35,6 +38,9 @@ public class DiscountCodeSetCustomTypeActionImpl implements DiscountCodeSetCusto
         this.action = SET_CUSTOM_TYPE;
     }
 
+    /**
+     * create empty instance
+     */
     public DiscountCodeSetCustomTypeActionImpl() {
         this.action = SET_CUSTOM_TYPE;
     }

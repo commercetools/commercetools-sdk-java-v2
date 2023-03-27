@@ -28,6 +28,9 @@ public class SetCustomerIdChangeImpl implements SetCustomerIdChange, ModelBase {
 
     private String nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetCustomerIdChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final String previousValue,
@@ -38,6 +41,9 @@ public class SetCustomerIdChangeImpl implements SetCustomerIdChange, ModelBase {
         this.type = SET_CUSTOMER_ID_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetCustomerIdChangeImpl() {
         this.type = SET_CUSTOMER_ID_CHANGE;
     }

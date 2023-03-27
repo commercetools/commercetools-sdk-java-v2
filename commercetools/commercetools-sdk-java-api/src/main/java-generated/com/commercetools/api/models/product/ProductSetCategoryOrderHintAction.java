@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductSetCategoryOrderHintActionImpl.class)
 public interface ProductSetCategoryOrderHintAction extends ProductUpdateAction {
 
+    /**
+     * discriminator value for ProductSetCategoryOrderHintAction
+     */
     String SET_CATEGORY_ORDER_HINT = "setCategoryOrderHint";
 
     /**
@@ -55,16 +58,40 @@ public interface ProductSetCategoryOrderHintAction extends ProductUpdateAction {
     @JsonProperty("staged")
     public Boolean getStaged();
 
+    /**
+     *  <p>The <code>id</code> of the Category to add the <code>orderHint</code>.</p>
+     * @param categoryId value to be set
+     */
+
     public void setCategoryId(final String categoryId);
+
+    /**
+     *  <p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If empty, any existing value will be removed.</p>
+     * @param orderHint value to be set
+     */
 
     public void setOrderHint(final String orderHint);
 
+    /**
+     *  <p>If <code>true</code>, only the staged <code>categoryOrderHints</code> is updated. If <code>false</code>, both the current and staged <code>categoryOrderHints</code> are updated.</p>
+     * @param staged value to be set
+     */
+
     public void setStaged(final Boolean staged);
 
+    /**
+     * factory method
+     * @return instance of ProductSetCategoryOrderHintAction
+     */
     public static ProductSetCategoryOrderHintAction of() {
         return new ProductSetCategoryOrderHintActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductSetCategoryOrderHintAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductSetCategoryOrderHintAction of(final ProductSetCategoryOrderHintAction template) {
         ProductSetCategoryOrderHintActionImpl instance = new ProductSetCategoryOrderHintActionImpl();
         instance.setCategoryId(template.getCategoryId());
@@ -73,18 +100,37 @@ public interface ProductSetCategoryOrderHintAction extends ProductUpdateAction {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductSetCategoryOrderHintAction
+     * @return builder
+     */
     public static ProductSetCategoryOrderHintActionBuilder builder() {
         return ProductSetCategoryOrderHintActionBuilder.of();
     }
 
+    /**
+     * create builder for ProductSetCategoryOrderHintAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSetCategoryOrderHintActionBuilder builder(final ProductSetCategoryOrderHintAction template) {
         return ProductSetCategoryOrderHintActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductSetCategoryOrderHintAction(Function<ProductSetCategoryOrderHintAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSetCategoryOrderHintAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductSetCategoryOrderHintAction>() {
             @Override

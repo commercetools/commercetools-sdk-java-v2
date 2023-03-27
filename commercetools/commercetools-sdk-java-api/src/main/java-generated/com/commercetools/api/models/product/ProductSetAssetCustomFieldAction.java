@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductSetAssetCustomFieldActionImpl.class)
 public interface ProductSetAssetCustomFieldAction extends ProductUpdateAction {
 
+    /**
+     * discriminator value for ProductSetAssetCustomFieldAction
+     */
     String SET_ASSET_CUSTOM_FIELD = "setAssetCustomField";
 
     /**
@@ -87,24 +90,68 @@ public interface ProductSetAssetCustomFieldAction extends ProductUpdateAction {
     @JsonProperty("value")
     public Object getValue();
 
+    /**
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @param variantId value to be set
+     */
+
     public void setVariantId(final Long variantId);
+
+    /**
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
+     * @param sku value to be set
+     */
 
     public void setSku(final String sku);
 
+    /**
+     *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
+     * @param staged value to be set
+     */
+
     public void setStaged(final Boolean staged);
+
+    /**
+     *  <p>The <code>id</code> of the Asset to update.</p>
+     * @param assetId value to be set
+     */
 
     public void setAssetId(final String assetId);
 
+    /**
+     *  <p>The <code>key</code> of the Asset to update.</p>
+     * @param assetKey value to be set
+     */
+
     public void setAssetKey(final String assetKey);
+
+    /**
+     *  <p>Name of the Custom Field.</p>
+     * @param name value to be set
+     */
 
     public void setName(final String name);
 
+    /**
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     * @param value value to be set
+     */
+
     public void setValue(final Object value);
 
+    /**
+     * factory method
+     * @return instance of ProductSetAssetCustomFieldAction
+     */
     public static ProductSetAssetCustomFieldAction of() {
         return new ProductSetAssetCustomFieldActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductSetAssetCustomFieldAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductSetAssetCustomFieldAction of(final ProductSetAssetCustomFieldAction template) {
         ProductSetAssetCustomFieldActionImpl instance = new ProductSetAssetCustomFieldActionImpl();
         instance.setVariantId(template.getVariantId());
@@ -117,18 +164,37 @@ public interface ProductSetAssetCustomFieldAction extends ProductUpdateAction {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductSetAssetCustomFieldAction
+     * @return builder
+     */
     public static ProductSetAssetCustomFieldActionBuilder builder() {
         return ProductSetAssetCustomFieldActionBuilder.of();
     }
 
+    /**
+     * create builder for ProductSetAssetCustomFieldAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSetAssetCustomFieldActionBuilder builder(final ProductSetAssetCustomFieldAction template) {
         return ProductSetAssetCustomFieldActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductSetAssetCustomFieldAction(Function<ProductSetAssetCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSetAssetCustomFieldAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductSetAssetCustomFieldAction>() {
             @Override

@@ -30,6 +30,9 @@ public class MoveImageToPositionChangeImpl implements MoveImageToPositionChange,
 
     private java.util.List<com.commercetools.history.models.common.Image> nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MoveImageToPositionChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("catalogData") final String catalogData,
@@ -42,6 +45,9 @@ public class MoveImageToPositionChangeImpl implements MoveImageToPositionChange,
         this.type = MOVE_IMAGE_TO_POSITION_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public MoveImageToPositionChangeImpl() {
         this.type = MOVE_IMAGE_TO_POSITION_CHANGE;
     }

@@ -26,6 +26,9 @@ public class ExternalOAuthFailedErrorImpl implements ExternalOAuthFailedError, M
 
     private Map<String, java.lang.Object> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ExternalOAuthFailedErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values) {
@@ -34,6 +37,9 @@ public class ExternalOAuthFailedErrorImpl implements ExternalOAuthFailedError, M
         this.code = EXTERNAL_O_AUTH_FAILED;
     }
 
+    /**
+     * create empty instance
+     */
     public ExternalOAuthFailedErrorImpl() {
         this.code = EXTERNAL_O_AUTH_FAILED;
     }

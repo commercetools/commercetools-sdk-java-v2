@@ -26,6 +26,9 @@ public class OrderCustomerGroupSetMessagePayloadImpl implements OrderCustomerGro
 
     private com.commercetools.api.models.customer_group.CustomerGroupReference oldCustomerGroup;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderCustomerGroupSetMessagePayloadImpl(
             @JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup,
@@ -35,6 +38,9 @@ public class OrderCustomerGroupSetMessagePayloadImpl implements OrderCustomerGro
         this.type = ORDER_CUSTOMER_GROUP_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderCustomerGroupSetMessagePayloadImpl() {
         this.type = ORDER_CUSTOMER_GROUP_SET;
     }

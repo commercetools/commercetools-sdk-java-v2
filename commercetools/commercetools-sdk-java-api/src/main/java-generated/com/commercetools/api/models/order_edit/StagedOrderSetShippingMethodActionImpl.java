@@ -26,6 +26,9 @@ public class StagedOrderSetShippingMethodActionImpl implements StagedOrderSetShi
 
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderSetShippingMethodActionImpl(
             @JsonProperty("shippingMethod") final com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod,
@@ -35,6 +38,9 @@ public class StagedOrderSetShippingMethodActionImpl implements StagedOrderSetShi
         this.action = SET_SHIPPING_METHOD;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderSetShippingMethodActionImpl() {
         this.action = SET_SHIPPING_METHOD;
     }

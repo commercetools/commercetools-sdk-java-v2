@@ -124,13 +124,29 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
         return this;
     }
 
+    /**
+     *  <p>HTTP status code corresponding to the error.</p>
+     * @return statusCode
+     */
+
     public Integer getStatusCode() {
         return this.statusCode;
     }
 
+    /**
+     *  <p>First error message in the <code>errors</code> array.</p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Errors returned for a request.</p>
+     *  <p>A single error response can contain multiple errors if the errors are related to the same HTTP status code such as <code>400</code>.</p>
+     * @return errors
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.error.ErrorObject> getErrors() {
@@ -155,10 +171,19 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
         return new ErrorResponseImpl(statusCode, message, errors);
     }
 
+    /**
+     * factory method for an instance of ErrorResponseBuilder
+     * @return builder
+     */
     public static ErrorResponseBuilder of() {
         return new ErrorResponseBuilder();
     }
 
+    /**
+     * create builder for ErrorResponse instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ErrorResponseBuilder of(final ErrorResponse template) {
         ErrorResponseBuilder builder = new ErrorResponseBuilder();
         builder.statusCode = template.getStatusCode();

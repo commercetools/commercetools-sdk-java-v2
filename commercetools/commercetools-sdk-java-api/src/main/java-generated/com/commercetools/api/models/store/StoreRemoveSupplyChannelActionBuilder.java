@@ -49,6 +49,11 @@ public class StoreRemoveSupplyChannelActionBuilder implements Builder<StoreRemov
         return this;
     }
 
+    /**
+     *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @return supplyChannel
+     */
+
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
         return this.supplyChannel;
     }
@@ -70,10 +75,19 @@ public class StoreRemoveSupplyChannelActionBuilder implements Builder<StoreRemov
         return new StoreRemoveSupplyChannelActionImpl(supplyChannel);
     }
 
+    /**
+     * factory method for an instance of StoreRemoveSupplyChannelActionBuilder
+     * @return builder
+     */
     public static StoreRemoveSupplyChannelActionBuilder of() {
         return new StoreRemoveSupplyChannelActionBuilder();
     }
 
+    /**
+     * create builder for StoreRemoveSupplyChannelAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreRemoveSupplyChannelActionBuilder of(final StoreRemoveSupplyChannelAction template) {
         StoreRemoveSupplyChannelActionBuilder builder = new StoreRemoveSupplyChannelActionBuilder();
         builder.supplyChannel = template.getSupplyChannel();

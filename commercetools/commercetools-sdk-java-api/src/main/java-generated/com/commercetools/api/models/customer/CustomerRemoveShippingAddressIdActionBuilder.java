@@ -50,10 +50,20 @@ public class CustomerRemoveShippingAddressIdActionBuilder implements Builder<Cus
         return this;
     }
 
+    /**
+     *  <p><code>id</code> of the Address to remove from <code>shippingAddressesIds</code>.</p>
+     * @return addressId
+     */
+
     @Nullable
     public String getAddressId() {
         return this.addressId;
     }
+
+    /**
+     *  <p><code>key</code> of the Address to remove from <code>shippingAddressesIds</code>.</p>
+     * @return addressKey
+     */
 
     @Nullable
     public String getAddressKey() {
@@ -76,10 +86,19 @@ public class CustomerRemoveShippingAddressIdActionBuilder implements Builder<Cus
         return new CustomerRemoveShippingAddressIdActionImpl(addressId, addressKey);
     }
 
+    /**
+     * factory method for an instance of CustomerRemoveShippingAddressIdActionBuilder
+     * @return builder
+     */
     public static CustomerRemoveShippingAddressIdActionBuilder of() {
         return new CustomerRemoveShippingAddressIdActionBuilder();
     }
 
+    /**
+     * create builder for CustomerRemoveShippingAddressIdAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerRemoveShippingAddressIdActionBuilder of(
             final CustomerRemoveShippingAddressIdAction template) {
         CustomerRemoveShippingAddressIdActionBuilder builder = new CustomerRemoveShippingAddressIdActionBuilder();

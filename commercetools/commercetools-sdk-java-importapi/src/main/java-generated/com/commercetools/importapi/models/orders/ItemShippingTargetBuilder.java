@@ -48,9 +48,19 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
         return this;
     }
 
+    /**
+     *  <p>Maps to <code>ItemShippingTarget.addressKey</code>.</p>
+     * @return addressKey
+     */
+
     public String getAddressKey() {
         return this.addressKey;
     }
+
+    /**
+     *  <p>Maps to <code>ItemShippingTarget.quantity</code>.</p>
+     * @return quantity
+     */
 
     public Double getQuantity() {
         return this.quantity;
@@ -74,10 +84,19 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
         return new ItemShippingTargetImpl(addressKey, quantity);
     }
 
+    /**
+     * factory method for an instance of ItemShippingTargetBuilder
+     * @return builder
+     */
     public static ItemShippingTargetBuilder of() {
         return new ItemShippingTargetBuilder();
     }
 
+    /**
+     * create builder for ItemShippingTarget instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ItemShippingTargetBuilder of(final ItemShippingTarget template) {
         ItemShippingTargetBuilder builder = new ItemShippingTargetBuilder();
         builder.addressKey = template.getAddressKey();

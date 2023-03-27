@@ -30,6 +30,9 @@ public class CartDiscountValueGiftLineItemDraftImpl implements CartDiscountValue
 
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartDiscountValueGiftLineItemDraftImpl(
             @JsonProperty("product") final com.commercetools.api.models.product.ProductResourceIdentifier product,
@@ -43,6 +46,9 @@ public class CartDiscountValueGiftLineItemDraftImpl implements CartDiscountValue
         this.type = GIFT_LINE_ITEM;
     }
 
+    /**
+     * create empty instance
+     */
     public CartDiscountValueGiftLineItemDraftImpl() {
         this.type = GIFT_LINE_ITEM;
     }

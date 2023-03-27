@@ -77,10 +77,20 @@ public class OrderShippingInfoSetMessagePayloadBuilder implements Builder<OrderS
         return this;
     }
 
+    /**
+     *  <p>ShippingInfo after the Set Shipping Method or Set Custom Shipping Method update action.</p>
+     * @return shippingInfo
+     */
+
     @Nullable
     public com.commercetools.api.models.cart.ShippingInfo getShippingInfo() {
         return this.shippingInfo;
     }
+
+    /**
+     *  <p>ShippingInfo before the Set Shipping Method or Set Custom Shipping Method update action.</p>
+     * @return oldShippingInfo
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.ShippingInfo getOldShippingInfo() {
@@ -103,10 +113,19 @@ public class OrderShippingInfoSetMessagePayloadBuilder implements Builder<OrderS
         return new OrderShippingInfoSetMessagePayloadImpl(shippingInfo, oldShippingInfo);
     }
 
+    /**
+     * factory method for an instance of OrderShippingInfoSetMessagePayloadBuilder
+     * @return builder
+     */
     public static OrderShippingInfoSetMessagePayloadBuilder of() {
         return new OrderShippingInfoSetMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for OrderShippingInfoSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderShippingInfoSetMessagePayloadBuilder of(final OrderShippingInfoSetMessagePayload template) {
         OrderShippingInfoSetMessagePayloadBuilder builder = new OrderShippingInfoSetMessagePayloadBuilder();
         builder.shippingInfo = template.getShippingInfo();

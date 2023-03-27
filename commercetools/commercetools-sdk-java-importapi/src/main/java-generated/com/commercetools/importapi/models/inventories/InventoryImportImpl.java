@@ -34,6 +34,9 @@ public class InventoryImportImpl implements InventoryImport, ModelBase {
 
     private com.commercetools.importapi.models.customfields.Custom custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     InventoryImportImpl(@JsonProperty("key") final String key, @JsonProperty("sku") final String sku,
             @JsonProperty("quantityOnStock") final Long quantityOnStock,
@@ -50,6 +53,9 @@ public class InventoryImportImpl implements InventoryImport, ModelBase {
         this.custom = custom;
     }
 
+    /**
+     * create empty instance
+     */
     public InventoryImportImpl() {
     }
 

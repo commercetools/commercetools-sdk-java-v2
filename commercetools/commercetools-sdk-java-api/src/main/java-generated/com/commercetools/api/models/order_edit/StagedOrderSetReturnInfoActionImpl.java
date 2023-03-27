@@ -24,6 +24,9 @@ public class StagedOrderSetReturnInfoActionImpl implements StagedOrderSetReturnI
 
     private java.util.List<com.commercetools.api.models.order.ReturnInfoDraft> items;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderSetReturnInfoActionImpl(
             @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.ReturnInfoDraft> items) {
@@ -31,6 +34,9 @@ public class StagedOrderSetReturnInfoActionImpl implements StagedOrderSetReturnI
         this.action = SET_RETURN_INFO;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderSetReturnInfoActionImpl() {
         this.action = SET_RETURN_INFO;
     }

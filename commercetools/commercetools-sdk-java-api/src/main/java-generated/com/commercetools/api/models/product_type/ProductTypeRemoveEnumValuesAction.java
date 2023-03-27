@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductTypeRemoveEnumValuesActionImpl.class)
 public interface ProductTypeRemoveEnumValuesAction extends ProductTypeUpdateAction {
 
+    /**
+     * discriminator value for ProductTypeRemoveEnumValuesAction
+     */
     String REMOVE_ENUM_VALUES = "removeEnumValues";
 
     /**
@@ -49,17 +52,41 @@ public interface ProductTypeRemoveEnumValuesAction extends ProductTypeUpdateActi
     @JsonProperty("keys")
     public List<String> getKeys();
 
+    /**
+     *  <p>Name of the AttributeDefinition to update.</p>
+     * @param attributeName value to be set
+     */
+
     public void setAttributeName(final String attributeName);
+
+    /**
+     *  <p>Keys of AttributeEnumType or AttributeLocalizedEnumType to remove.</p>
+     * @param keys values to be set
+     */
 
     @JsonIgnore
     public void setKeys(final String... keys);
 
+    /**
+     *  <p>Keys of AttributeEnumType or AttributeLocalizedEnumType to remove.</p>
+     * @param keys values to be set
+     */
+
     public void setKeys(final List<String> keys);
 
+    /**
+     * factory method
+     * @return instance of ProductTypeRemoveEnumValuesAction
+     */
     public static ProductTypeRemoveEnumValuesAction of() {
         return new ProductTypeRemoveEnumValuesActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductTypeRemoveEnumValuesAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductTypeRemoveEnumValuesAction of(final ProductTypeRemoveEnumValuesAction template) {
         ProductTypeRemoveEnumValuesActionImpl instance = new ProductTypeRemoveEnumValuesActionImpl();
         instance.setAttributeName(template.getAttributeName());
@@ -67,18 +94,37 @@ public interface ProductTypeRemoveEnumValuesAction extends ProductTypeUpdateActi
         return instance;
     }
 
+    /**
+     * builder factory method for ProductTypeRemoveEnumValuesAction
+     * @return builder
+     */
     public static ProductTypeRemoveEnumValuesActionBuilder builder() {
         return ProductTypeRemoveEnumValuesActionBuilder.of();
     }
 
+    /**
+     * create builder for ProductTypeRemoveEnumValuesAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductTypeRemoveEnumValuesActionBuilder builder(final ProductTypeRemoveEnumValuesAction template) {
         return ProductTypeRemoveEnumValuesActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductTypeRemoveEnumValuesAction(Function<ProductTypeRemoveEnumValuesAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductTypeRemoveEnumValuesAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductTypeRemoveEnumValuesAction>() {
             @Override

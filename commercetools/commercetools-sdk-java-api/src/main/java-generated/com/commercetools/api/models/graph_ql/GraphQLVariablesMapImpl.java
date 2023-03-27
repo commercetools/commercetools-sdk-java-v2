@@ -22,11 +22,17 @@ public class GraphQLVariablesMapImpl implements GraphQLVariablesMap, ModelBase {
 
     private Map<String, java.lang.Object> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     GraphQLVariablesMapImpl(@JsonProperty("values") final Map<String, java.lang.Object> values) {
         this.values = values;
     }
 
+    /**
+     * create empty instance
+     */
     public GraphQLVariablesMapImpl() {
     }
 

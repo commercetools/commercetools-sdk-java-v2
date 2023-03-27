@@ -46,6 +46,9 @@ public class PriceImportImpl implements PriceImport, ModelBase {
 
     private com.commercetools.importapi.models.common.ProductKeyReference product;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PriceImportImpl(@JsonProperty("key") final String key,
             @JsonProperty("value") final com.commercetools.importapi.models.common.TypedMoney value,
@@ -75,6 +78,9 @@ public class PriceImportImpl implements PriceImport, ModelBase {
         this.product = product;
     }
 
+    /**
+     * create empty instance
+     */
     public PriceImportImpl() {
     }
 

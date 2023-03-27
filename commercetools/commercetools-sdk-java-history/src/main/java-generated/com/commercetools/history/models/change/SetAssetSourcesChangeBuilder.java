@@ -45,7 +45,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
     }
 
     /**
-     *
+     * set the value to the asset using the builder function
      * @param builder function to build the asset value
      * @return Builder
      */
@@ -57,7 +57,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
     }
 
     /**
-     *
+     * set the value to the asset
      * @param asset value to be set
      * @return Builder
      */
@@ -69,7 +69,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
     }
 
     /**
-     *
+     * set values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
     }
 
     /**
-     *
+     * set value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -93,7 +93,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
     }
 
     /**
-     *
+     * add values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -108,7 +108,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
     }
 
     /**
-     *
+     * add the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -123,7 +123,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -136,7 +136,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
     }
 
     /**
-     *
+     * set values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -148,7 +148,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
     }
 
     /**
-     *
+     * set value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -160,7 +160,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
     }
 
     /**
-     *
+     * add values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -175,7 +175,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
     }
 
     /**
-     *
+     * add the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -190,7 +190,7 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -202,17 +202,37 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>setAssetSources</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of asset}
+     * @return asset
+     */
 
     public com.commercetools.history.models.change_value.AssetChangeValue getAsset() {
         return this.asset;
     }
 
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
+
     public java.util.List<com.commercetools.history.models.common.AssetSource> getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public java.util.List<com.commercetools.history.models.common.AssetSource> getPreviousValue() {
         return this.previousValue;
@@ -238,10 +258,19 @@ public class SetAssetSourcesChangeBuilder implements Builder<SetAssetSourcesChan
         return new SetAssetSourcesChangeImpl(change, asset, nextValue, previousValue);
     }
 
+    /**
+     * factory method for an instance of SetAssetSourcesChangeBuilder
+     * @return builder
+     */
     public static SetAssetSourcesChangeBuilder of() {
         return new SetAssetSourcesChangeBuilder();
     }
 
+    /**
+     * create builder for SetAssetSourcesChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetAssetSourcesChangeBuilder of(final SetAssetSourcesChange template) {
         SetAssetSourcesChangeBuilder builder = new SetAssetSourcesChangeBuilder();
         builder.change = template.getChange();

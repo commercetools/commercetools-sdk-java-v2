@@ -25,12 +25,18 @@ public class StagedOrderRemoveItemShippingAddressActionImpl
 
     private String addressKey;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderRemoveItemShippingAddressActionImpl(@JsonProperty("addressKey") final String addressKey) {
         this.addressKey = addressKey;
         this.action = REMOVE_ITEM_SHIPPING_ADDRESS;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderRemoveItemShippingAddressActionImpl() {
         this.action = REMOVE_ITEM_SHIPPING_ADDRESS;
     }

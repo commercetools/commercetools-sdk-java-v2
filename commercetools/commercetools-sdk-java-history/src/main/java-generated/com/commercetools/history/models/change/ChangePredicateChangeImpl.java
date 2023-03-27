@@ -28,6 +28,9 @@ public class ChangePredicateChangeImpl implements ChangePredicateChange, ModelBa
 
     private String nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangePredicateChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final String previousValue,
@@ -38,6 +41,9 @@ public class ChangePredicateChangeImpl implements ChangePredicateChange, ModelBa
         this.type = CHANGE_PREDICATE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangePredicateChangeImpl() {
         this.type = CHANGE_PREDICATE_CHANGE;
     }

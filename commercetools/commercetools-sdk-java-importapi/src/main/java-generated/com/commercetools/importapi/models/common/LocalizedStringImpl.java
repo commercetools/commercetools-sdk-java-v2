@@ -27,11 +27,17 @@ public class LocalizedStringImpl implements LocalizedString, ModelBase {
 
     private Map<String, String> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     LocalizedStringImpl(@JsonProperty("values") final Map<String, String> values) {
         this.values = values;
     }
 
+    /**
+     * create empty instance
+     */
     public LocalizedStringImpl() {
     }
 

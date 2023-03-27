@@ -24,7 +24,7 @@ public class VerifyEmailChangeBuilder implements Builder<VerifyEmailChange> {
     private String change;
 
     /**
-     *
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class VerifyEmailChangeBuilder implements Builder<VerifyEmailChange> {
         this.change = change;
         return this;
     }
+
+    /**
+     * value of change}
+     * @return change
+     */
 
     public String getChange() {
         return this.change;
@@ -55,10 +60,19 @@ public class VerifyEmailChangeBuilder implements Builder<VerifyEmailChange> {
         return new VerifyEmailChangeImpl(change);
     }
 
+    /**
+     * factory method for an instance of VerifyEmailChangeBuilder
+     * @return builder
+     */
     public static VerifyEmailChangeBuilder of() {
         return new VerifyEmailChangeBuilder();
     }
 
+    /**
+     * create builder for VerifyEmailChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static VerifyEmailChangeBuilder of(final VerifyEmailChange template) {
         VerifyEmailChangeBuilder builder = new VerifyEmailChangeBuilder();
         builder.change = template.getChange();

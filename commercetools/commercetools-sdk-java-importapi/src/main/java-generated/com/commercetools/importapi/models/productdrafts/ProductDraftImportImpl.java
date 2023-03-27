@@ -52,6 +52,9 @@ public class ProductDraftImportImpl implements ProductDraftImport, ModelBase {
 
     private com.commercetools.importapi.models.common.ProductPriceModeEnum priceMode;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductDraftImportImpl(@JsonProperty("key") final String key,
             @JsonProperty("productType") final com.commercetools.importapi.models.common.ProductTypeKeyReference productType,
@@ -87,6 +90,9 @@ public class ProductDraftImportImpl implements ProductDraftImport, ModelBase {
         this.priceMode = priceMode;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductDraftImportImpl() {
     }
 

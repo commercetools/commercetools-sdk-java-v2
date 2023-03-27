@@ -30,6 +30,9 @@ public class LineItemProductVariantImportDraftImpl implements LineItemProductVar
 
     private java.util.List<com.commercetools.importapi.models.common.Image> images;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     LineItemProductVariantImportDraftImpl(
             @JsonProperty("productVariant") final com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant,
@@ -44,6 +47,9 @@ public class LineItemProductVariantImportDraftImpl implements LineItemProductVar
         this.images = images;
     }
 
+    /**
+     * create empty instance
+     */
     public LineItemProductVariantImportDraftImpl() {
     }
 

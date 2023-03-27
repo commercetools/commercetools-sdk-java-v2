@@ -24,12 +24,18 @@ public class ShippingMethodChangeIsDefaultActionImpl implements ShippingMethodCh
 
     private Boolean isDefault;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShippingMethodChangeIsDefaultActionImpl(@JsonProperty("isDefault") final Boolean isDefault) {
         this.isDefault = isDefault;
         this.action = CHANGE_IS_DEFAULT;
     }
 
+    /**
+     * create empty instance
+     */
     public ShippingMethodChangeIsDefaultActionImpl() {
         this.action = CHANGE_IS_DEFAULT;
     }

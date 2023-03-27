@@ -78,14 +78,29 @@ public class ProductSetDiscountedPriceActionBuilder implements Builder<ProductSe
         return this;
     }
 
+    /**
+     *  <p>The <code>id</code> of the Price to set the Discount.</p>
+     * @return priceId
+     */
+
     public String getPriceId() {
         return this.priceId;
     }
+
+    /**
+     *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
+     * @return staged
+     */
 
     @Nullable
     public Boolean getStaged() {
         return this.staged;
     }
+
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed. The referenced ProductDiscount must have the Type <code>external</code>, be active, and its predicate must match the referenced Price.</p>
+     * @return discounted
+     */
 
     @Nullable
     public com.commercetools.api.models.common.DiscountedPriceDraft getDiscounted() {
@@ -109,10 +124,19 @@ public class ProductSetDiscountedPriceActionBuilder implements Builder<ProductSe
         return new ProductSetDiscountedPriceActionImpl(priceId, staged, discounted);
     }
 
+    /**
+     * factory method for an instance of ProductSetDiscountedPriceActionBuilder
+     * @return builder
+     */
     public static ProductSetDiscountedPriceActionBuilder of() {
         return new ProductSetDiscountedPriceActionBuilder();
     }
 
+    /**
+     * create builder for ProductSetDiscountedPriceAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSetDiscountedPriceActionBuilder of(final ProductSetDiscountedPriceAction template) {
         ProductSetDiscountedPriceActionBuilder builder = new ProductSetDiscountedPriceActionBuilder();
         builder.priceId = template.getPriceId();

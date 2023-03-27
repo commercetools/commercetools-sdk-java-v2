@@ -25,7 +25,7 @@ public class ImportResponseBuilder implements Builder<ImportResponse> {
     private java.util.List<com.commercetools.importapi.models.importoperations.ImportOperationStatus> operationStatus;
 
     /**
-     *
+     * set values to the operationStatus
      * @param operationStatus value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class ImportResponseBuilder implements Builder<ImportResponse> {
     }
 
     /**
-     *
+     * set value to the operationStatus
      * @param operationStatus value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class ImportResponseBuilder implements Builder<ImportResponse> {
     }
 
     /**
-     *
+     * add values to the operationStatus
      * @param operationStatus value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class ImportResponseBuilder implements Builder<ImportResponse> {
     }
 
     /**
-     *
+     * add the value to the operationStatus using the builder function
      * @param builder function to build the operationStatus value
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class ImportResponseBuilder implements Builder<ImportResponse> {
     }
 
     /**
-     *
+     * set the value to the operationStatus using the builder function
      * @param builder function to build the operationStatus value
      * @return Builder
      */
@@ -94,6 +94,11 @@ public class ImportResponseBuilder implements Builder<ImportResponse> {
                     .build());
         return this;
     }
+
+    /**
+     * value of operationStatus}
+     * @return operationStatus
+     */
 
     public java.util.List<com.commercetools.importapi.models.importoperations.ImportOperationStatus> getOperationStatus() {
         return this.operationStatus;
@@ -116,10 +121,19 @@ public class ImportResponseBuilder implements Builder<ImportResponse> {
         return new ImportResponseImpl(operationStatus);
     }
 
+    /**
+     * factory method for an instance of ImportResponseBuilder
+     * @return builder
+     */
     public static ImportResponseBuilder of() {
         return new ImportResponseBuilder();
     }
 
+    /**
+     * create builder for ImportResponse instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ImportResponseBuilder of(final ImportResponse template) {
         ImportResponseBuilder builder = new ImportResponseBuilder();
         builder.operationStatus = template.getOperationStatus();

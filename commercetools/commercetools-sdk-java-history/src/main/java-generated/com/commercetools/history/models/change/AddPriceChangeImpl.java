@@ -30,6 +30,9 @@ public class AddPriceChangeImpl implements AddPriceChange, ModelBase {
 
     private com.commercetools.history.models.common.Price nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AddPriceChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("catalogData") final String catalogData, @JsonProperty("priceId") final String priceId,
@@ -41,6 +44,9 @@ public class AddPriceChangeImpl implements AddPriceChange, ModelBase {
         this.type = ADD_PRICE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public AddPriceChangeImpl() {
         this.type = ADD_PRICE_CHANGE;
     }

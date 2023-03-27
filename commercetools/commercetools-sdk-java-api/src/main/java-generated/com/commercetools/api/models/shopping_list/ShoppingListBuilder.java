@@ -476,78 +476,163 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the ShoppingList.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Current version of the ShoppingList.</p>
+     * @return version
+     */
 
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *  <p>Date and time (UTC) the ShoppingList was initially created.</p>
+     * @return createdAt
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
+
+    /**
+     *  <p>Date and time (UTC) the ShoppingList was last updated.</p>
+     * @return lastModifiedAt
+     */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
 
+    /**
+     *  <p>Name of the ShoppingList.</p>
+     * @return name
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the ShoppingList.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>Reference to a Customer associated with the ShoppingList.</p>
+     * @return customer
+     */
+
     @Nullable
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
         return this.customer;
     }
+
+    /**
+     *  <p>Human-readable identifiers usually used as deep-link URL to the related ShoppingList. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. The slug must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set on the Project.</p>
+     * @return slug
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getSlug() {
         return this.slug;
     }
 
+    /**
+     *  <p>Description of the ShoppingList.</p>
+     * @return description
+     */
+
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
+    /**
+     *  <p>Line Items (containing Products) of the ShoppingList.</p>
+     * @return lineItems
+     */
+
     public java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItem> getLineItems() {
         return this.lineItems;
     }
 
+    /**
+     *  <p>Line Items (containing text values) of the ShoppingList.</p>
+     * @return textLineItems
+     */
+
     public java.util.List<com.commercetools.api.models.shopping_list.TextLineItem> getTextLineItems() {
         return this.textLineItems;
     }
+
+    /**
+     *  <p>Number of days after which the ShoppingList will be automatically deleted if it has not been modified.</p>
+     * @return deleteDaysAfterLastModification
+     */
 
     @Nullable
     public Long getDeleteDaysAfterLastModification() {
         return this.deleteDaysAfterLastModification;
     }
 
+    /**
+     *  <p>Identifies ShoppingLists belonging to an anonymous session.</p>
+     * @return anonymousId
+     */
+
     @Nullable
     public String getAnonymousId() {
         return this.anonymousId;
     }
+
+    /**
+     *  <p>Store to which the ShoppingList is assigned.</p>
+     * @return store
+     */
 
     @Nullable
     public com.commercetools.api.models.store.StoreKeyReference getStore() {
         return this.store;
     }
 
+    /**
+     *  <p>Custom Fields defined for the ShoppingList.</p>
+     * @return custom
+     */
+
     @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
+     */
+
     @Nullable
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
+     */
 
     @Nullable
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
@@ -581,10 +666,19 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
             createdBy);
     }
 
+    /**
+     * factory method for an instance of ShoppingListBuilder
+     * @return builder
+     */
     public static ShoppingListBuilder of() {
         return new ShoppingListBuilder();
     }
 
+    /**
+     * create builder for ShoppingList instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShoppingListBuilder of(final ShoppingList template) {
         ShoppingListBuilder builder = new ShoppingListBuilder();
         builder.id = template.getId();

@@ -26,6 +26,9 @@ public class SearchIndexingConfigurationValuesImpl implements SearchIndexingConf
 
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SearchIndexingConfigurationValuesImpl(
             @JsonProperty("status") final com.commercetools.api.models.project.SearchIndexingConfigurationStatus status,
@@ -36,6 +39,9 @@ public class SearchIndexingConfigurationValuesImpl implements SearchIndexingConf
         this.lastModifiedBy = lastModifiedBy;
     }
 
+    /**
+     * create empty instance
+     */
     public SearchIndexingConfigurationValuesImpl() {
     }
 

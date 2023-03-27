@@ -39,6 +39,14 @@ public class MyCartRecalculateActionBuilder implements Builder<MyCartRecalculate
         return this;
     }
 
+    /**
+     *  <ul>
+     *   <li>Leave empty or set to <code>false</code> to only update the Prices and TaxRates of the Line Items.</li>
+     *   <li>Set to <code>true</code> to update the Line Items' product data (like <code>name</code>, <code>variant</code> and <code>productType</code>) also.</li>
+     *  </ul>
+     * @return updateProductData
+     */
+
     @Nullable
     public Boolean getUpdateProductData() {
         return this.updateProductData;
@@ -60,10 +68,19 @@ public class MyCartRecalculateActionBuilder implements Builder<MyCartRecalculate
         return new MyCartRecalculateActionImpl(updateProductData);
     }
 
+    /**
+     * factory method for an instance of MyCartRecalculateActionBuilder
+     * @return builder
+     */
     public static MyCartRecalculateActionBuilder of() {
         return new MyCartRecalculateActionBuilder();
     }
 
+    /**
+     * create builder for MyCartRecalculateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCartRecalculateActionBuilder of(final MyCartRecalculateAction template) {
         MyCartRecalculateActionBuilder builder = new MyCartRecalculateActionBuilder();
         builder.updateProductData = template.getUpdateProductData();

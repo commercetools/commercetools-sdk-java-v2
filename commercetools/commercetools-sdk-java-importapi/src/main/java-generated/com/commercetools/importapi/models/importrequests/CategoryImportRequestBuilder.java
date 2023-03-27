@@ -93,6 +93,11 @@ public class CategoryImportRequestBuilder implements Builder<CategoryImportReque
         return this;
     }
 
+    /**
+     *  <p>The category import resources of this request.</p>
+     * @return resources
+     */
+
     public java.util.List<com.commercetools.importapi.models.categories.CategoryImport> getResources() {
         return this.resources;
     }
@@ -114,10 +119,19 @@ public class CategoryImportRequestBuilder implements Builder<CategoryImportReque
         return new CategoryImportRequestImpl(resources);
     }
 
+    /**
+     * factory method for an instance of CategoryImportRequestBuilder
+     * @return builder
+     */
     public static CategoryImportRequestBuilder of() {
         return new CategoryImportRequestBuilder();
     }
 
+    /**
+     * create builder for CategoryImportRequest instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategoryImportRequestBuilder of(final CategoryImportRequest template) {
         CategoryImportRequestBuilder builder = new CategoryImportRequestBuilder();
         builder.resources = template.getResources();

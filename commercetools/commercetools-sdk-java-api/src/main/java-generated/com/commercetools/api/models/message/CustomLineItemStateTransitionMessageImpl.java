@@ -52,6 +52,9 @@ public class CustomLineItemStateTransitionMessageImpl implements CustomLineItemS
 
     private com.commercetools.api.models.state.StateReference toState;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomLineItemStateTransitionMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -86,6 +89,9 @@ public class CustomLineItemStateTransitionMessageImpl implements CustomLineItemS
         this.type = CUSTOM_LINE_ITEM_STATE_TRANSITION;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomLineItemStateTransitionMessageImpl() {
         this.type = CUSTOM_LINE_ITEM_STATE_TRANSITION;
     }

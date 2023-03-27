@@ -46,6 +46,9 @@ public class ProductVariantAddedMessageImpl implements ProductVariantAddedMessag
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductVariantAddedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -73,6 +76,9 @@ public class ProductVariantAddedMessageImpl implements ProductVariantAddedMessag
         this.type = PRODUCT_VARIANT_ADDED;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductVariantAddedMessageImpl() {
         this.type = PRODUCT_VARIANT_ADDED;
     }

@@ -32,6 +32,9 @@ public class CustomerTokenImpl implements CustomerToken, ModelBase {
 
     private String value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerTokenImpl(@JsonProperty("id") final String id,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -47,6 +50,9 @@ public class CustomerTokenImpl implements CustomerToken, ModelBase {
         this.value = value;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerTokenImpl() {
     }
 

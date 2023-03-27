@@ -25,6 +25,9 @@ public class ProductRevertedStagedChangesMessagePayloadImpl
 
     private java.util.List<String> removedImageUrls;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductRevertedStagedChangesMessagePayloadImpl(
             @JsonProperty("removedImageUrls") final java.util.List<String> removedImageUrls) {
@@ -32,6 +35,9 @@ public class ProductRevertedStagedChangesMessagePayloadImpl
         this.type = PRODUCT_REVERTED_STAGED_CHANGES;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductRevertedStagedChangesMessagePayloadImpl() {
         this.type = PRODUCT_REVERTED_STAGED_CHANGES;
     }

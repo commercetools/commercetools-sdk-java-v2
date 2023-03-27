@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartDiscountChangeTargetActionImpl.class)
 public interface CartDiscountChangeTargetAction extends CartDiscountUpdateAction {
 
+    /**
+     * discriminator value for CartDiscountChangeTargetAction
+     */
     String CHANGE_TARGET = "changeTarget";
 
     /**
@@ -41,30 +44,63 @@ public interface CartDiscountChangeTargetAction extends CartDiscountUpdateAction
     @JsonProperty("target")
     public CartDiscountTarget getTarget();
 
+    /**
+     *  <p>New value to set.</p>
+     * @param target value to be set
+     */
+
     public void setTarget(final CartDiscountTarget target);
 
+    /**
+     * factory method
+     * @return instance of CartDiscountChangeTargetAction
+     */
     public static CartDiscountChangeTargetAction of() {
         return new CartDiscountChangeTargetActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartDiscountChangeTargetAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartDiscountChangeTargetAction of(final CartDiscountChangeTargetAction template) {
         CartDiscountChangeTargetActionImpl instance = new CartDiscountChangeTargetActionImpl();
         instance.setTarget(template.getTarget());
         return instance;
     }
 
+    /**
+     * builder factory method for CartDiscountChangeTargetAction
+     * @return builder
+     */
     public static CartDiscountChangeTargetActionBuilder builder() {
         return CartDiscountChangeTargetActionBuilder.of();
     }
 
+    /**
+     * create builder for CartDiscountChangeTargetAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartDiscountChangeTargetActionBuilder builder(final CartDiscountChangeTargetAction template) {
         return CartDiscountChangeTargetActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartDiscountChangeTargetAction(Function<CartDiscountChangeTargetAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountChangeTargetAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountChangeTargetAction>() {
             @Override

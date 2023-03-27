@@ -61,9 +61,19 @@ public class CartChangeCustomLineItemMoneyActionBuilder implements Builder<CartC
         return this;
     }
 
+    /**
+     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     * @return customLineItemId
+     */
+
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
+
+    /**
+     *  <p>Value to set. Must not be empty. Can be a negative amount.</p>
+     * @return money
+     */
 
     public com.commercetools.api.models.common.Money getMoney() {
         return this.money;
@@ -88,10 +98,19 @@ public class CartChangeCustomLineItemMoneyActionBuilder implements Builder<CartC
         return new CartChangeCustomLineItemMoneyActionImpl(customLineItemId, money);
     }
 
+    /**
+     * factory method for an instance of CartChangeCustomLineItemMoneyActionBuilder
+     * @return builder
+     */
     public static CartChangeCustomLineItemMoneyActionBuilder of() {
         return new CartChangeCustomLineItemMoneyActionBuilder();
     }
 
+    /**
+     * create builder for CartChangeCustomLineItemMoneyAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartChangeCustomLineItemMoneyActionBuilder of(final CartChangeCustomLineItemMoneyAction template) {
         CartChangeCustomLineItemMoneyActionBuilder builder = new CartChangeCustomLineItemMoneyActionBuilder();
         builder.customLineItemId = template.getCustomLineItemId();

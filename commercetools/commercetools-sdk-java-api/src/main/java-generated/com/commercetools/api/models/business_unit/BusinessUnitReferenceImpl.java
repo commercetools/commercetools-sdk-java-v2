@@ -27,6 +27,9 @@ public class BusinessUnitReferenceImpl implements BusinessUnitReference, ModelBa
 
     private com.commercetools.api.models.business_unit.BusinessUnit obj;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitReferenceImpl(@JsonProperty("id") final String id,
             @JsonProperty("obj") final com.commercetools.api.models.business_unit.BusinessUnit obj) {
@@ -35,6 +38,9 @@ public class BusinessUnitReferenceImpl implements BusinessUnitReference, ModelBa
         this.typeId = ReferenceTypeId.findEnum("business-unit");
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitReferenceImpl() {
         this.typeId = ReferenceTypeId.findEnum("business-unit");
     }

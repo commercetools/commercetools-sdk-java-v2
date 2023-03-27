@@ -270,61 +270,126 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
         return this;
     }
 
+    /**
+     *  <p>Name of the CartDiscount.</p>
+     * @return name
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
+
+    /**
+     *  <p>User-defined unique identifier for the CartDiscount.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>Description of the CartDiscount.</p>
+     * @return description
+     */
+
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
+    /**
+     *  <p>Effect of the CartDiscount. For a target, relative or absolute Discount values or a fixed item Price value can be specified. If no target is specified, a Gift Line Item can be added to the Cart.</p>
+     * @return value
+     */
+
     public com.commercetools.api.models.cart_discount.CartDiscountValueDraft getValue() {
         return this.value;
     }
 
+    /**
+     *  <p>Valid Cart Predicate.</p>
+     * @return cartPredicate
+     */
+
     public String getCartPredicate() {
         return this.cartPredicate;
     }
+
+    /**
+     *  <p>Must not be set when the <code>value</code> has type <code>giftLineItem</code>, otherwise a CartDiscountTarget must be set.</p>
+     * @return target
+     */
 
     @Nullable
     public com.commercetools.api.models.cart_discount.CartDiscountTarget getTarget() {
         return this.target;
     }
 
+    /**
+     *  <p>Value between <code>0</code> and <code>1</code>. A Discount with a higher sortOrder is prioritized. The sort order must be unambiguous among all CartDiscounts.</p>
+     * @return sortOrder
+     */
+
     public String getSortOrder() {
         return this.sortOrder;
     }
+
+    /**
+     *  <p>Only active Discounts can be applied to the Cart.</p>
+     * @return isActive
+     */
 
     @Nullable
     public Boolean getIsActive() {
         return this.isActive;
     }
 
+    /**
+     *  <p>Date and time (UTC) from which the Discount is effective.</p>
+     * @return validFrom
+     */
+
     @Nullable
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
+
+    /**
+     *  <p>Date and time (UTC) until which the Discount is effective.</p>
+     * @return validUntil
+     */
 
     @Nullable
     public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;
     }
 
+    /**
+     *  <p>States whether the Discount can only be used in a connection with a DiscountCode.</p>
+     * @return requiresDiscountCode
+     */
+
     @Nullable
     public Boolean getRequiresDiscountCode() {
         return this.requiresDiscountCode;
     }
 
+    /**
+     *  <p>Specifies whether the application of this discount causes the following discounts to be ignored.</p>
+     * @return stackingMode
+     */
+
     @Nullable
     public com.commercetools.api.models.cart_discount.StackingMode getStackingMode() {
         return this.stackingMode;
     }
+
+    /**
+     *  <p>Custom Fields of the CartDiscount.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -353,10 +418,19 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
             validFrom, validUntil, requiresDiscountCode, stackingMode, custom);
     }
 
+    /**
+     * factory method for an instance of CartDiscountDraftBuilder
+     * @return builder
+     */
     public static CartDiscountDraftBuilder of() {
         return new CartDiscountDraftBuilder();
     }
 
+    /**
+     * create builder for CartDiscountDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartDiscountDraftBuilder of(final CartDiscountDraft template) {
         CartDiscountDraftBuilder builder = new CartDiscountDraftBuilder();
         builder.name = template.getName();

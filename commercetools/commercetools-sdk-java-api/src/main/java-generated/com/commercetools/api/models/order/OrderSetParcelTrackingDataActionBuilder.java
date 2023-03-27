@@ -30,7 +30,7 @@ public class OrderSetParcelTrackingDataActionBuilder implements Builder<OrderSet
     private com.commercetools.api.models.order.TrackingData trackingData;
 
     /**
-     *
+     * set the value to the parcelId
      * @param parcelId value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class OrderSetParcelTrackingDataActionBuilder implements Builder<OrderSet
     }
 
     /**
-     *
+     * set the value to the trackingData using the builder function
      * @param builder function to build the trackingData value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class OrderSetParcelTrackingDataActionBuilder implements Builder<OrderSet
     }
 
     /**
-     *
+     * set the value to the trackingData
      * @param trackingData value to be set
      * @return Builder
      */
@@ -64,9 +64,19 @@ public class OrderSetParcelTrackingDataActionBuilder implements Builder<OrderSet
         return this;
     }
 
+    /**
+     * value of parcelId}
+     * @return parcelId
+     */
+
     public String getParcelId() {
         return this.parcelId;
     }
+
+    /**
+     * value of trackingData}
+     * @return trackingData
+     */
 
     @Nullable
     public com.commercetools.api.models.order.TrackingData getTrackingData() {
@@ -90,10 +100,19 @@ public class OrderSetParcelTrackingDataActionBuilder implements Builder<OrderSet
         return new OrderSetParcelTrackingDataActionImpl(parcelId, trackingData);
     }
 
+    /**
+     * factory method for an instance of OrderSetParcelTrackingDataActionBuilder
+     * @return builder
+     */
     public static OrderSetParcelTrackingDataActionBuilder of() {
         return new OrderSetParcelTrackingDataActionBuilder();
     }
 
+    /**
+     * create builder for OrderSetParcelTrackingDataAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderSetParcelTrackingDataActionBuilder of(final OrderSetParcelTrackingDataAction template) {
         OrderSetParcelTrackingDataActionBuilder builder = new OrderSetParcelTrackingDataActionBuilder();
         builder.parcelId = template.getParcelId();

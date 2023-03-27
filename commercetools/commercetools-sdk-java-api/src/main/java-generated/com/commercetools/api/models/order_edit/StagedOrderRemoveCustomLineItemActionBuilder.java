@@ -24,7 +24,7 @@ public class StagedOrderRemoveCustomLineItemActionBuilder implements Builder<Sta
     private String customLineItemId;
 
     /**
-     *
+     * set the value to the customLineItemId
      * @param customLineItemId value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class StagedOrderRemoveCustomLineItemActionBuilder implements Builder<Sta
         this.customLineItemId = customLineItemId;
         return this;
     }
+
+    /**
+     * value of customLineItemId}
+     * @return customLineItemId
+     */
 
     public String getCustomLineItemId() {
         return this.customLineItemId;
@@ -56,10 +61,19 @@ public class StagedOrderRemoveCustomLineItemActionBuilder implements Builder<Sta
         return new StagedOrderRemoveCustomLineItemActionImpl(customLineItemId);
     }
 
+    /**
+     * factory method for an instance of StagedOrderRemoveCustomLineItemActionBuilder
+     * @return builder
+     */
     public static StagedOrderRemoveCustomLineItemActionBuilder of() {
         return new StagedOrderRemoveCustomLineItemActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderRemoveCustomLineItemAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderRemoveCustomLineItemActionBuilder of(
             final StagedOrderRemoveCustomLineItemAction template) {
         StagedOrderRemoveCustomLineItemActionBuilder builder = new StagedOrderRemoveCustomLineItemActionBuilder();

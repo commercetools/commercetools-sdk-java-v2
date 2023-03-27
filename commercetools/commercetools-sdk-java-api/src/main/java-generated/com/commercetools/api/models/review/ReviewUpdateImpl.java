@@ -24,6 +24,9 @@ public class ReviewUpdateImpl implements ReviewUpdate, ModelBase {
 
     private java.util.List<com.commercetools.api.models.review.ReviewUpdateAction> actions;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReviewUpdateImpl(@JsonProperty("version") final Long version,
             @JsonProperty("actions") final java.util.List<com.commercetools.api.models.review.ReviewUpdateAction> actions) {
@@ -31,6 +34,9 @@ public class ReviewUpdateImpl implements ReviewUpdate, ModelBase {
         this.actions = actions;
     }
 
+    /**
+     * create empty instance
+     */
     public ReviewUpdateImpl() {
     }
 

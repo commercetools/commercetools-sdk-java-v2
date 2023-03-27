@@ -24,12 +24,18 @@ public class InvalidCredentialsErrorImpl implements InvalidCredentialsError, Mod
 
     private String message;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     InvalidCredentialsErrorImpl(@JsonProperty("message") final String message) {
         this.message = message;
         this.code = INVALID_CREDENTIALS;
     }
 
+    /**
+     * create empty instance
+     */
     public InvalidCredentialsErrorImpl() {
         this.code = INVALID_CREDENTIALS;
     }

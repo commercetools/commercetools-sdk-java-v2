@@ -28,6 +28,9 @@ public class ChangeIsActiveChangeImpl implements ChangeIsActiveChange, ModelBase
 
     private Boolean nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeIsActiveChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final Boolean previousValue,
@@ -38,6 +41,9 @@ public class ChangeIsActiveChangeImpl implements ChangeIsActiveChange, ModelBase
         this.type = CHANGE_IS_ACTIVE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeIsActiveChangeImpl() {
         this.type = CHANGE_IS_ACTIVE_CHANGE;
     }

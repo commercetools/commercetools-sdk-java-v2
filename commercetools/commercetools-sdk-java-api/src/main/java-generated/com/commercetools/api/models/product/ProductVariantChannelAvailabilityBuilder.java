@@ -92,24 +92,49 @@ public class ProductVariantChannelAvailabilityBuilder implements Builder<Product
         return this;
     }
 
+    /**
+     *  <p>Indicates whether a Product Variant is in stock in a specified Channel.</p>
+     * @return isOnStock
+     */
+
     @Nullable
     public Boolean getIsOnStock() {
         return this.isOnStock;
     }
+
+    /**
+     *  <p>Number of days to restock a Product Variant once it is out of stock in a specified Channel.</p>
+     * @return restockableInDays
+     */
 
     @Nullable
     public Long getRestockableInDays() {
         return this.restockableInDays;
     }
 
+    /**
+     *  <p>Number of items of this Product Variant that are in stock in a specified Channel.</p>
+     * @return availableQuantity
+     */
+
     @Nullable
     public Long getAvailableQuantity() {
         return this.availableQuantity;
     }
 
+    /**
+     *  <p>Unique identifier of the InventoryEntry.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Current version of the InventoryEntry.</p>
+     * @return version
+     */
 
     public Long getVersion() {
         return this.version;
@@ -133,10 +158,19 @@ public class ProductVariantChannelAvailabilityBuilder implements Builder<Product
         return new ProductVariantChannelAvailabilityImpl(isOnStock, restockableInDays, availableQuantity, id, version);
     }
 
+    /**
+     * factory method for an instance of ProductVariantChannelAvailabilityBuilder
+     * @return builder
+     */
     public static ProductVariantChannelAvailabilityBuilder of() {
         return new ProductVariantChannelAvailabilityBuilder();
     }
 
+    /**
+     * create builder for ProductVariantChannelAvailability instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductVariantChannelAvailabilityBuilder of(final ProductVariantChannelAvailability template) {
         ProductVariantChannelAvailabilityBuilder builder = new ProductVariantChannelAvailabilityBuilder();
         builder.isOnStock = template.getIsOnStock();

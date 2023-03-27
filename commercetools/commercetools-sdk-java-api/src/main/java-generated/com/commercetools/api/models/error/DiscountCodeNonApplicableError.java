@@ -35,6 +35,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = DiscountCodeNonApplicableErrorImpl.class)
 public interface DiscountCodeNonApplicableError extends ErrorObject {
 
+    /**
+     * discriminator value for DiscountCodeNonApplicableError
+     */
     String DISCOUNT_CODE_NON_APPLICABLE = "DiscountCodeNonApplicable";
 
     /**
@@ -101,24 +104,68 @@ public interface DiscountCodeNonApplicableError extends ErrorObject {
     @JsonProperty("validityCheckTime")
     public ZonedDateTime getValidityCheckTime();
 
+    /**
+     *  <p><code>"The discountCode $discountCodeId cannot be applied to the cart."</code></p>
+     * @param message value to be set
+     */
+
     public void setMessage(final String message);
+
+    /**
+     *  <p>Discount Code passed to the Cart.</p>
+     * @param discountCode value to be set
+     */
 
     public void setDiscountCode(final String discountCode);
 
+    /**
+     *  <p><code>"DoesNotExist"</code> or <code>"TimeRangeNonApplicable"</code></p>
+     * @param reason value to be set
+     */
+
     public void setReason(final String reason);
+
+    /**
+     *  <p>Unique identifier of the Discount Code.</p>
+     * @param discountCodeId value to be set
+     */
 
     public void setDiscountCodeId(final String discountCodeId);
 
+    /**
+     *  <p>Date and time (UTC) from which the Discount Code is valid.</p>
+     * @param validFrom value to be set
+     */
+
     public void setValidFrom(final ZonedDateTime validFrom);
+
+    /**
+     *  <p>Date and time (UTC) until which the Discount Code is valid.</p>
+     * @param validUntil value to be set
+     */
 
     public void setValidUntil(final ZonedDateTime validUntil);
 
+    /**
+     *  <p>Date and time (UTC) the Discount Code validity check was last performed.</p>
+     * @param validityCheckTime value to be set
+     */
+
     public void setValidityCheckTime(final ZonedDateTime validityCheckTime);
 
+    /**
+     * factory method
+     * @return instance of DiscountCodeNonApplicableError
+     */
     public static DiscountCodeNonApplicableError of() {
         return new DiscountCodeNonApplicableErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of DiscountCodeNonApplicableError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static DiscountCodeNonApplicableError of(final DiscountCodeNonApplicableError template) {
         DiscountCodeNonApplicableErrorImpl instance = new DiscountCodeNonApplicableErrorImpl();
         instance.setMessage(template.getMessage());
@@ -132,18 +179,37 @@ public interface DiscountCodeNonApplicableError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for DiscountCodeNonApplicableError
+     * @return builder
+     */
     public static DiscountCodeNonApplicableErrorBuilder builder() {
         return DiscountCodeNonApplicableErrorBuilder.of();
     }
 
+    /**
+     * create builder for DiscountCodeNonApplicableError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DiscountCodeNonApplicableErrorBuilder builder(final DiscountCodeNonApplicableError template) {
         return DiscountCodeNonApplicableErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withDiscountCodeNonApplicableError(Function<DiscountCodeNonApplicableError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodeNonApplicableError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodeNonApplicableError>() {
             @Override

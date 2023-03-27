@@ -50,9 +50,19 @@ public class LocationBuilder implements Builder<Location> {
         return this;
     }
 
+    /**
+     *  <p>Country code of the geographic location.</p>
+     * @return country
+     */
+
     public String getCountry() {
         return this.country;
     }
+
+    /**
+     *  <p>State within the country.</p>
+     * @return state
+     */
 
     @Nullable
     public String getState() {
@@ -76,10 +86,19 @@ public class LocationBuilder implements Builder<Location> {
         return new LocationImpl(country, state);
     }
 
+    /**
+     * factory method for an instance of LocationBuilder
+     * @return builder
+     */
     public static LocationBuilder of() {
         return new LocationBuilder();
     }
 
+    /**
+     * create builder for Location instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static LocationBuilder of(final Location template) {
         LocationBuilder builder = new LocationBuilder();
         builder.country = template.getCountry();

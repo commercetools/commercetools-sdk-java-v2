@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductSetDiscountedPriceActionImpl.class)
 public interface ProductSetDiscountedPriceAction extends ProductUpdateAction {
 
+    /**
+     * discriminator value for ProductSetDiscountedPriceAction
+     */
     String SET_DISCOUNTED_PRICE = "setDiscountedPrice";
 
     /**
@@ -57,16 +60,40 @@ public interface ProductSetDiscountedPriceAction extends ProductUpdateAction {
     @JsonProperty("discounted")
     public DiscountedPriceDraft getDiscounted();
 
+    /**
+     *  <p>The <code>id</code> of the Price to set the Discount.</p>
+     * @param priceId value to be set
+     */
+
     public void setPriceId(final String priceId);
+
+    /**
+     *  <p>If <code>true</code>, only the staged Embedded Price is updated. If <code>false</code>, both the current and staged Embedded Price are updated.</p>
+     * @param staged value to be set
+     */
 
     public void setStaged(final Boolean staged);
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed. The referenced ProductDiscount must have the Type <code>external</code>, be active, and its predicate must match the referenced Price.</p>
+     * @param discounted value to be set
+     */
+
     public void setDiscounted(final DiscountedPriceDraft discounted);
 
+    /**
+     * factory method
+     * @return instance of ProductSetDiscountedPriceAction
+     */
     public static ProductSetDiscountedPriceAction of() {
         return new ProductSetDiscountedPriceActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductSetDiscountedPriceAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductSetDiscountedPriceAction of(final ProductSetDiscountedPriceAction template) {
         ProductSetDiscountedPriceActionImpl instance = new ProductSetDiscountedPriceActionImpl();
         instance.setPriceId(template.getPriceId());
@@ -75,18 +102,37 @@ public interface ProductSetDiscountedPriceAction extends ProductUpdateAction {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductSetDiscountedPriceAction
+     * @return builder
+     */
     public static ProductSetDiscountedPriceActionBuilder builder() {
         return ProductSetDiscountedPriceActionBuilder.of();
     }
 
+    /**
+     * create builder for ProductSetDiscountedPriceAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSetDiscountedPriceActionBuilder builder(final ProductSetDiscountedPriceAction template) {
         return ProductSetDiscountedPriceActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductSetDiscountedPriceAction(Function<ProductSetDiscountedPriceAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSetDiscountedPriceAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductSetDiscountedPriceAction>() {
             @Override

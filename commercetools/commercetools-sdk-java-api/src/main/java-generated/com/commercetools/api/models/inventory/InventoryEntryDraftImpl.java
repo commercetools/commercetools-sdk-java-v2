@@ -34,6 +34,9 @@ public class InventoryEntryDraftImpl implements InventoryEntryDraft, ModelBase {
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     InventoryEntryDraftImpl(@JsonProperty("sku") final String sku, @JsonProperty("key") final String key,
             @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel,
@@ -50,6 +53,9 @@ public class InventoryEntryDraftImpl implements InventoryEntryDraft, ModelBase {
         this.custom = custom;
     }
 
+    /**
+     * create empty instance
+     */
     public InventoryEntryDraftImpl() {
     }
 

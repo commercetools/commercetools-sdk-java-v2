@@ -30,6 +30,9 @@ public class AddShippingAddressIdChangeImpl implements AddShippingAddressIdChang
 
     private com.commercetools.history.models.common.Address address;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AddShippingAddressIdChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final java.util.List<String> nextValue,
@@ -42,6 +45,9 @@ public class AddShippingAddressIdChangeImpl implements AddShippingAddressIdChang
         this.type = ADD_SHIPPING_ADDRESS_ID_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public AddShippingAddressIdChangeImpl() {
         this.type = ADD_SHIPPING_ADDRESS_ID_CHANGE;
     }

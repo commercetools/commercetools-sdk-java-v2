@@ -25,7 +25,7 @@ public class RangeFacetResultBuilder implements Builder<RangeFacetResult> {
     private java.util.List<com.commercetools.api.models.product.FacetRange> ranges;
 
     /**
-     *
+     * set values to the ranges
      * @param ranges value to be set
      * @return Builder
      */
@@ -36,7 +36,7 @@ public class RangeFacetResultBuilder implements Builder<RangeFacetResult> {
     }
 
     /**
-     *
+     * set value to the ranges
      * @param ranges value to be set
      * @return Builder
      */
@@ -48,7 +48,7 @@ public class RangeFacetResultBuilder implements Builder<RangeFacetResult> {
     }
 
     /**
-     *
+     * add values to the ranges
      * @param ranges value to be set
      * @return Builder
      */
@@ -62,7 +62,7 @@ public class RangeFacetResultBuilder implements Builder<RangeFacetResult> {
     }
 
     /**
-     *
+     * add the value to the ranges using the builder function
      * @param builder function to build the ranges value
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class RangeFacetResultBuilder implements Builder<RangeFacetResult> {
     }
 
     /**
-     *
+     * set the value to the ranges using the builder function
      * @param builder function to build the ranges value
      * @return Builder
      */
@@ -88,6 +88,11 @@ public class RangeFacetResultBuilder implements Builder<RangeFacetResult> {
         this.ranges.add(builder.apply(com.commercetools.api.models.product.FacetRangeBuilder.of()).build());
         return this;
     }
+
+    /**
+     * value of ranges}
+     * @return ranges
+     */
 
     public java.util.List<com.commercetools.api.models.product.FacetRange> getRanges() {
         return this.ranges;
@@ -110,10 +115,19 @@ public class RangeFacetResultBuilder implements Builder<RangeFacetResult> {
         return new RangeFacetResultImpl(ranges);
     }
 
+    /**
+     * factory method for an instance of RangeFacetResultBuilder
+     * @return builder
+     */
     public static RangeFacetResultBuilder of() {
         return new RangeFacetResultBuilder();
     }
 
+    /**
+     * create builder for RangeFacetResult instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static RangeFacetResultBuilder of(final RangeFacetResult template) {
         RangeFacetResultBuilder builder = new RangeFacetResultBuilder();
         builder.ranges = template.getRanges();

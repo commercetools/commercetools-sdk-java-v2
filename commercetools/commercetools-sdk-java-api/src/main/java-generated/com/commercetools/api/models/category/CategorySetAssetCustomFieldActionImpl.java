@@ -30,6 +30,9 @@ public class CategorySetAssetCustomFieldActionImpl implements CategorySetAssetCu
 
     private java.lang.Object value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CategorySetAssetCustomFieldActionImpl(@JsonProperty("assetId") final String assetId,
             @JsonProperty("assetKey") final String assetKey, @JsonProperty("name") final String name,
@@ -41,6 +44,9 @@ public class CategorySetAssetCustomFieldActionImpl implements CategorySetAssetCu
         this.action = SET_ASSET_CUSTOM_FIELD;
     }
 
+    /**
+     * create empty instance
+     */
     public CategorySetAssetCustomFieldActionImpl() {
         this.action = SET_ASSET_CUSTOM_FIELD;
     }

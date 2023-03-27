@@ -39,7 +39,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetailsToRemove;
 
     /**
-     *
+     * set the value to the lineItemId
      * @param lineItemId value to be set
      * @return Builder
      */
@@ -50,7 +50,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     *
+     * set the value to the quantity
      * @param quantity value to be set
      * @return Builder
      */
@@ -87,7 +87,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     *
+     * set the value to the externalTotalPrice using the builder function
      * @param builder function to build the externalTotalPrice value
      * @return Builder
      */
@@ -101,7 +101,7 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     *
+     * set the value to the externalTotalPrice
      * @param externalTotalPrice value to be set
      * @return Builder
      */
@@ -138,24 +138,50 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
         return this;
     }
 
+    /**
+     * value of lineItemId}
+     * @return lineItemId
+     */
+
     public String getLineItemId() {
         return this.lineItemId;
     }
+
+    /**
+     * value of quantity}
+     * @return quantity
+     */
 
     @Nullable
     public Long getQuantity() {
         return this.quantity;
     }
 
+    /**
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @return externalPrice
+     */
+
     @Nullable
     public com.commercetools.api.models.common.Money getExternalPrice() {
         return this.externalPrice;
     }
 
+    /**
+     * value of externalTotalPrice}
+     * @return externalTotalPrice
+     */
+
     @Nullable
     public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice() {
         return this.externalTotalPrice;
     }
+
+    /**
+     *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     * @return shippingDetailsToRemove
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetailsToRemove() {
@@ -181,10 +207,19 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
             shippingDetailsToRemove);
     }
 
+    /**
+     * factory method for an instance of StagedOrderRemoveLineItemActionBuilder
+     * @return builder
+     */
     public static StagedOrderRemoveLineItemActionBuilder of() {
         return new StagedOrderRemoveLineItemActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderRemoveLineItemAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderRemoveLineItemActionBuilder of(final StagedOrderRemoveLineItemAction template) {
         StagedOrderRemoveLineItemActionBuilder builder = new StagedOrderRemoveLineItemActionBuilder();
         builder.lineItemId = template.getLineItemId();

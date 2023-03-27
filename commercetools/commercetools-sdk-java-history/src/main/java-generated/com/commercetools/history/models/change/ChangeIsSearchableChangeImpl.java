@@ -30,6 +30,9 @@ public class ChangeIsSearchableChangeImpl implements ChangeIsSearchableChange, M
 
     private Boolean previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeIsSearchableChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("attributeName") final String attributeName,
@@ -42,6 +45,9 @@ public class ChangeIsSearchableChangeImpl implements ChangeIsSearchableChange, M
         this.type = CHANGE_IS_SEARCHABLE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeIsSearchableChangeImpl() {
         this.type = CHANGE_IS_SEARCHABLE_CHANGE;
     }

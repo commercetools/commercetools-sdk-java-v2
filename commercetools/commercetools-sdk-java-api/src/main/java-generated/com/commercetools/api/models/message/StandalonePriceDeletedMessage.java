@@ -33,12 +33,24 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StandalonePriceDeletedMessageImpl.class)
 public interface StandalonePriceDeletedMessage extends Message {
 
+    /**
+     * discriminator value for StandalonePriceDeletedMessage
+     */
     String STANDALONE_PRICE_DELETED = "StandalonePriceDeleted";
 
+    /**
+     * factory method
+     * @return instance of StandalonePriceDeletedMessage
+     */
     public static StandalonePriceDeletedMessage of() {
         return new StandalonePriceDeletedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of StandalonePriceDeletedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StandalonePriceDeletedMessage of(final StandalonePriceDeletedMessage template) {
         StandalonePriceDeletedMessageImpl instance = new StandalonePriceDeletedMessageImpl();
         instance.setId(template.getId());
@@ -54,18 +66,37 @@ public interface StandalonePriceDeletedMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for StandalonePriceDeletedMessage
+     * @return builder
+     */
     public static StandalonePriceDeletedMessageBuilder builder() {
         return StandalonePriceDeletedMessageBuilder.of();
     }
 
+    /**
+     * create builder for StandalonePriceDeletedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StandalonePriceDeletedMessageBuilder builder(final StandalonePriceDeletedMessage template) {
         return StandalonePriceDeletedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStandalonePriceDeletedMessage(Function<StandalonePriceDeletedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceDeletedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceDeletedMessage>() {
             @Override

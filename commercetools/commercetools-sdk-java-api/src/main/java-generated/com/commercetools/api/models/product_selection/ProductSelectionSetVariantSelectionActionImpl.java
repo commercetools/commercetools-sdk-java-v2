@@ -28,6 +28,9 @@ public class ProductSelectionSetVariantSelectionActionImpl
 
     private com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSelectionSetVariantSelectionActionImpl(
             @JsonProperty("product") final com.commercetools.api.models.product.ProductResourceIdentifier product,
@@ -37,6 +40,9 @@ public class ProductSelectionSetVariantSelectionActionImpl
         this.action = SET_VARIANT_SELECTION;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSelectionSetVariantSelectionActionImpl() {
         this.action = SET_VARIANT_SELECTION;
     }

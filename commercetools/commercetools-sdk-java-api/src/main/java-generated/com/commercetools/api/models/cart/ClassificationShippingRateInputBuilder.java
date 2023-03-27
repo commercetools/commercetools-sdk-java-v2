@@ -62,9 +62,19 @@ public class ClassificationShippingRateInputBuilder implements Builder<Classific
         return this;
     }
 
+    /**
+     *  <p>Key of the value used as a programmatic identifier.</p>
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     *  <p>Descriptive localized label of the value.</p>
+     * @return label
+     */
 
     public com.commercetools.api.models.common.LocalizedString getLabel() {
         return this.label;
@@ -88,10 +98,19 @@ public class ClassificationShippingRateInputBuilder implements Builder<Classific
         return new ClassificationShippingRateInputImpl(key, label);
     }
 
+    /**
+     * factory method for an instance of ClassificationShippingRateInputBuilder
+     * @return builder
+     */
     public static ClassificationShippingRateInputBuilder of() {
         return new ClassificationShippingRateInputBuilder();
     }
 
+    /**
+     * create builder for ClassificationShippingRateInput instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ClassificationShippingRateInputBuilder of(final ClassificationShippingRateInput template) {
         ClassificationShippingRateInputBuilder builder = new ClassificationShippingRateInputBuilder();
         builder.key = template.getKey();

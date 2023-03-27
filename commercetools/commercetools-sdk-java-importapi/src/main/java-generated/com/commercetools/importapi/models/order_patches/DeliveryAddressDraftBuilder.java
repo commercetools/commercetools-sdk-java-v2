@@ -30,7 +30,7 @@ public class DeliveryAddressDraftBuilder implements Builder<DeliveryAddressDraft
     private com.commercetools.importapi.models.common.Address address;
 
     /**
-     *
+     * set the value to the deliveryId
      * @param deliveryId value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class DeliveryAddressDraftBuilder implements Builder<DeliveryAddressDraft
     }
 
     /**
-     *
+     * set the value to the address using the builder function
      * @param builder function to build the address value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class DeliveryAddressDraftBuilder implements Builder<DeliveryAddressDraft
     }
 
     /**
-     *
+     * set the value to the address
      * @param address value to be set
      * @return Builder
      */
@@ -64,9 +64,19 @@ public class DeliveryAddressDraftBuilder implements Builder<DeliveryAddressDraft
         return this;
     }
 
+    /**
+     * value of deliveryId}
+     * @return deliveryId
+     */
+
     public String getDeliveryId() {
         return this.deliveryId;
     }
+
+    /**
+     * value of address}
+     * @return address
+     */
 
     @Nullable
     public com.commercetools.importapi.models.common.Address getAddress() {
@@ -90,10 +100,19 @@ public class DeliveryAddressDraftBuilder implements Builder<DeliveryAddressDraft
         return new DeliveryAddressDraftImpl(deliveryId, address);
     }
 
+    /**
+     * factory method for an instance of DeliveryAddressDraftBuilder
+     * @return builder
+     */
     public static DeliveryAddressDraftBuilder of() {
         return new DeliveryAddressDraftBuilder();
     }
 
+    /**
+     * create builder for DeliveryAddressDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DeliveryAddressDraftBuilder of(final DeliveryAddressDraft template) {
         DeliveryAddressDraftBuilder builder = new DeliveryAddressDraftBuilder();
         builder.deliveryId = template.getDeliveryId();

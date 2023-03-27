@@ -95,6 +95,11 @@ public class ProductPriceDiscountsSetMessagePayloadBuilder implements Builder<Pr
         return this;
     }
 
+    /**
+     *  <p>Array containing details about the Embedded Prices that were updated.</p>
+     * @return updatedPrices
+     */
+
     public java.util.List<com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice> getUpdatedPrices() {
         return this.updatedPrices;
     }
@@ -117,10 +122,19 @@ public class ProductPriceDiscountsSetMessagePayloadBuilder implements Builder<Pr
         return new ProductPriceDiscountsSetMessagePayloadImpl(updatedPrices);
     }
 
+    /**
+     * factory method for an instance of ProductPriceDiscountsSetMessagePayloadBuilder
+     * @return builder
+     */
     public static ProductPriceDiscountsSetMessagePayloadBuilder of() {
         return new ProductPriceDiscountsSetMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for ProductPriceDiscountsSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductPriceDiscountsSetMessagePayloadBuilder of(
             final ProductPriceDiscountsSetMessagePayload template) {
         ProductPriceDiscountsSetMessagePayloadBuilder builder = new ProductPriceDiscountsSetMessagePayloadBuilder();

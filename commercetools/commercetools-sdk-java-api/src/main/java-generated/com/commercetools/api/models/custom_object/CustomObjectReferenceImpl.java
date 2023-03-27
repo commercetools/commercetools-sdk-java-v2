@@ -27,6 +27,9 @@ public class CustomObjectReferenceImpl implements CustomObjectReference, ModelBa
 
     private com.commercetools.api.models.custom_object.CustomObject obj;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomObjectReferenceImpl(@JsonProperty("id") final String id,
             @JsonProperty("obj") final com.commercetools.api.models.custom_object.CustomObject obj) {
@@ -35,6 +38,9 @@ public class CustomObjectReferenceImpl implements CustomObjectReference, ModelBa
         this.typeId = ReferenceTypeId.findEnum("key-value-document");
     }
 
+    /**
+     * create empty instance
+     */
     public CustomObjectReferenceImpl() {
         this.typeId = ReferenceTypeId.findEnum("key-value-document");
     }

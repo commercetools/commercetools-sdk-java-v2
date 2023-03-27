@@ -28,6 +28,9 @@ public class OrderDiscountCodeStateSetMessagePayloadImpl implements OrderDiscoun
 
     private com.commercetools.api.models.cart.DiscountCodeState oldState;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderDiscountCodeStateSetMessagePayloadImpl(
             @JsonProperty("discountCode") final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode,
@@ -39,6 +42,9 @@ public class OrderDiscountCodeStateSetMessagePayloadImpl implements OrderDiscoun
         this.type = ORDER_DISCOUNT_CODE_STATE_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderDiscountCodeStateSetMessagePayloadImpl() {
         this.type = ORDER_DISCOUNT_CODE_STATE_SET;
     }

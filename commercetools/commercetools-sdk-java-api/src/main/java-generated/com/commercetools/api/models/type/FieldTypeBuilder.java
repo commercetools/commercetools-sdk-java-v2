@@ -59,6 +59,10 @@ public class FieldTypeBuilder {
         return com.commercetools.api.models.type.CustomFieldTimeTypeBuilder.of();
     }
 
+    /**
+     * factory method for an instance of FieldTypeBuilder
+     * @return builder
+     */
     public static FieldTypeBuilder of() {
         return new FieldTypeBuilder();
     }

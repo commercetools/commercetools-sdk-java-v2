@@ -27,6 +27,9 @@ public class MyBusinessUnitAddShippingAddressIdActionImpl
 
     private String addressKey;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyBusinessUnitAddShippingAddressIdActionImpl(@JsonProperty("addressId") final String addressId,
             @JsonProperty("addressKey") final String addressKey) {
@@ -35,6 +38,9 @@ public class MyBusinessUnitAddShippingAddressIdActionImpl
         this.action = ADD_SHIPPING_ADDRESS_ID;
     }
 
+    /**
+     * create empty instance
+     */
     public MyBusinessUnitAddShippingAddressIdActionImpl() {
         this.action = ADD_SHIPPING_ADDRESS_ID;
     }

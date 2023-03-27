@@ -305,65 +305,132 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
         return this;
     }
 
+    /**
+     *  <p><code>id</code> of a published Product.</p>
+     * @return productId
+     */
+
     @Nullable
     public String getProductId() {
         return this.productId;
     }
+
+    /**
+     *  <p><code>id</code> of the ProductVariant in the Product. If not provided, the Master Variant is used.</p>
+     * @return variantId
+     */
 
     @Nullable
     public Long getVariantId() {
         return this.variantId;
     }
 
+    /**
+     *  <p><code>sku</code> of the ProductVariant.</p>
+     * @return sku
+     */
+
     @Nullable
     public String getSku() {
         return this.sku;
     }
+
+    /**
+     *  <p>Quantity of the Product Variant to add to the Cart.</p>
+     * @return quantity
+     */
 
     @Nullable
     public Long getQuantity() {
         return this.quantity;
     }
 
+    /**
+     *  <p>Date and time (UTC) the Product Variant is added to the Cart. If not set, it defaults to the current date and time.</p>
+     *  <p>Optional for backwards compatibility reasons.</p>
+     * @return addedAt
+     */
+
     @Nullable
     public java.time.ZonedDateTime getAddedAt() {
         return this.addedAt;
     }
+
+    /**
+     *  <p>Used to select a Product Price. The referenced Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     *  <p>If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
+     * @return distributionChannel
+     */
 
     @Nullable
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
         return this.distributionChannel;
     }
 
+    /**
+     *  <p>Used to identify Inventory entries that must be reserved. The referenced Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @return supplyChannel
+     */
+
     @Nullable
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
         return this.supplyChannel;
     }
+
+    /**
+     *  <p>Sets the LineItem <code>price</code> value, and the <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
+     * @return externalPrice
+     */
 
     @Nullable
     public com.commercetools.api.models.common.Money getExternalPrice() {
         return this.externalPrice;
     }
 
+    /**
+     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> values, and the <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
+     * @return externalTotalPrice
+     */
+
     @Nullable
     public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice() {
         return this.externalTotalPrice;
     }
+
+    /**
+     *  <p>External Tax Rate for the Line Item if the Cart has the <code>External</code> TaxMode.</p>
+     * @return externalTaxRate
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
         return this.externalTaxRate;
     }
 
+    /**
+     *  <p>Inventory mode specific to the Line Item only, and valid for the entire <code>quantity</code> of the Line Item. Set only if the inventory mode should be different from the <code>inventoryMode</code> specified on the Cart.</p>
+     * @return inventoryMode
+     */
+
     @Nullable
     public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {
         return this.inventoryMode;
     }
 
+    /**
+     *  <p>Container for Line Item-specific addresses.</p>
+     * @return shippingDetails
+     */
+
     @Nullable
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {
         return this.shippingDetails;
     }
+
+    /**
+     *  <p>Custom Fields for the Line Item.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -388,10 +455,19 @@ public class LineItemDraftBuilder implements Builder<LineItemDraft> {
             externalPrice, externalTotalPrice, externalTaxRate, inventoryMode, shippingDetails, custom);
     }
 
+    /**
+     * factory method for an instance of LineItemDraftBuilder
+     * @return builder
+     */
     public static LineItemDraftBuilder of() {
         return new LineItemDraftBuilder();
     }
 
+    /**
+     * create builder for LineItemDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static LineItemDraftBuilder of(final LineItemDraft template) {
         LineItemDraftBuilder builder = new LineItemDraftBuilder();
         builder.productId = template.getProductId();

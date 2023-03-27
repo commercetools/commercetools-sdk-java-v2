@@ -26,6 +26,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartSetCustomerEmailActionImpl.class)
 public interface CartSetCustomerEmailAction extends CartUpdateAction {
 
+    /**
+     * discriminator value for CartSetCustomerEmailAction
+     */
     String SET_CUSTOMER_EMAIL = "setCustomerEmail";
 
     /**
@@ -36,30 +39,63 @@ public interface CartSetCustomerEmailAction extends CartUpdateAction {
     @JsonProperty("email")
     public String getEmail();
 
+    /**
+     *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @param email value to be set
+     */
+
     public void setEmail(final String email);
 
+    /**
+     * factory method
+     * @return instance of CartSetCustomerEmailAction
+     */
     public static CartSetCustomerEmailAction of() {
         return new CartSetCustomerEmailActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartSetCustomerEmailAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartSetCustomerEmailAction of(final CartSetCustomerEmailAction template) {
         CartSetCustomerEmailActionImpl instance = new CartSetCustomerEmailActionImpl();
         instance.setEmail(template.getEmail());
         return instance;
     }
 
+    /**
+     * builder factory method for CartSetCustomerEmailAction
+     * @return builder
+     */
     public static CartSetCustomerEmailActionBuilder builder() {
         return CartSetCustomerEmailActionBuilder.of();
     }
 
+    /**
+     * create builder for CartSetCustomerEmailAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartSetCustomerEmailActionBuilder builder(final CartSetCustomerEmailAction template) {
         return CartSetCustomerEmailActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartSetCustomerEmailAction(Function<CartSetCustomerEmailAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartSetCustomerEmailAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartSetCustomerEmailAction>() {
             @Override

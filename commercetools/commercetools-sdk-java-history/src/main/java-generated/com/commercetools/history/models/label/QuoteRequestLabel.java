@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = QuoteRequestLabelImpl.class)
 public interface QuoteRequestLabel extends Label {
 
+    /**
+     * discriminator value for QuoteRequestLabel
+     */
     String QUOTE_REQUEST_LABEL = "QuoteRequestLabel";
 
     /**
@@ -59,14 +62,33 @@ public interface QuoteRequestLabel extends Label {
     @JsonProperty("customer")
     public Reference getCustomer();
 
+    /**
+     * set key
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
+
+    /**
+     * set customer
+     * @param customer value to be set
+     */
 
     public void setCustomer(final Reference customer);
 
+    /**
+     * factory method
+     * @return instance of QuoteRequestLabel
+     */
     public static QuoteRequestLabel of() {
         return new QuoteRequestLabelImpl();
     }
 
+    /**
+     * factory method to copy an instance of QuoteRequestLabel
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static QuoteRequestLabel of(final QuoteRequestLabel template) {
         QuoteRequestLabelImpl instance = new QuoteRequestLabelImpl();
         instance.setKey(template.getKey());
@@ -74,18 +96,37 @@ public interface QuoteRequestLabel extends Label {
         return instance;
     }
 
+    /**
+     * builder factory method for QuoteRequestLabel
+     * @return builder
+     */
     public static QuoteRequestLabelBuilder builder() {
         return QuoteRequestLabelBuilder.of();
     }
 
+    /**
+     * create builder for QuoteRequestLabel instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static QuoteRequestLabelBuilder builder(final QuoteRequestLabel template) {
         return QuoteRequestLabelBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withQuoteRequestLabel(Function<QuoteRequestLabel, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<QuoteRequestLabel> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<QuoteRequestLabel>() {
             @Override

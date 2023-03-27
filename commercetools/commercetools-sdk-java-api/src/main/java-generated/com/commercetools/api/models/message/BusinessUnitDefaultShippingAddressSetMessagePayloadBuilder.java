@@ -51,6 +51,11 @@ public class BusinessUnitDefaultShippingAddressSetMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>The address that was set as the default shipping address.</p>
+     * @return address
+     */
+
     @Nullable
     public com.commercetools.api.models.common.Address getAddress() {
         return this.address;
@@ -72,10 +77,19 @@ public class BusinessUnitDefaultShippingAddressSetMessagePayloadBuilder
         return new BusinessUnitDefaultShippingAddressSetMessagePayloadImpl(address);
     }
 
+    /**
+     * factory method for an instance of BusinessUnitDefaultShippingAddressSetMessagePayloadBuilder
+     * @return builder
+     */
     public static BusinessUnitDefaultShippingAddressSetMessagePayloadBuilder of() {
         return new BusinessUnitDefaultShippingAddressSetMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for BusinessUnitDefaultShippingAddressSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitDefaultShippingAddressSetMessagePayloadBuilder of(
             final BusinessUnitDefaultShippingAddressSetMessagePayload template) {
         BusinessUnitDefaultShippingAddressSetMessagePayloadBuilder builder = new BusinessUnitDefaultShippingAddressSetMessagePayloadBuilder();

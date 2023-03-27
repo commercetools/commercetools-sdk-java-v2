@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ExtensionNoResponseErrorImpl.class)
 public interface ExtensionNoResponseError extends ErrorObject {
 
+    /**
+     * discriminator value for ExtensionNoResponseError
+     */
     String EXTENSION_NO_RESPONSE = "ExtensionNoResponse";
 
     /**
@@ -64,16 +67,40 @@ public interface ExtensionNoResponseError extends ErrorObject {
     @JsonProperty("extensionKey")
     public String getExtensionKey();
 
+    /**
+     *  <p><code>"Extension did not respond in time."</code></p>
+     * @param message value to be set
+     */
+
     public void setMessage(final String message);
+
+    /**
+     *  <p>Unique identifier of the API Extension.</p>
+     * @param extensionId value to be set
+     */
 
     public void setExtensionId(final String extensionId);
 
+    /**
+     *  <p>User-defined unique identifier of the API Extension, if available.</p>
+     * @param extensionKey value to be set
+     */
+
     public void setExtensionKey(final String extensionKey);
 
+    /**
+     * factory method
+     * @return instance of ExtensionNoResponseError
+     */
     public static ExtensionNoResponseError of() {
         return new ExtensionNoResponseErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of ExtensionNoResponseError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ExtensionNoResponseError of(final ExtensionNoResponseError template) {
         ExtensionNoResponseErrorImpl instance = new ExtensionNoResponseErrorImpl();
         instance.setMessage(template.getMessage());
@@ -83,18 +110,37 @@ public interface ExtensionNoResponseError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for ExtensionNoResponseError
+     * @return builder
+     */
     public static ExtensionNoResponseErrorBuilder builder() {
         return ExtensionNoResponseErrorBuilder.of();
     }
 
+    /**
+     * create builder for ExtensionNoResponseError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ExtensionNoResponseErrorBuilder builder(final ExtensionNoResponseError template) {
         return ExtensionNoResponseErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withExtensionNoResponseError(Function<ExtensionNoResponseError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ExtensionNoResponseError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ExtensionNoResponseError>() {
             @Override

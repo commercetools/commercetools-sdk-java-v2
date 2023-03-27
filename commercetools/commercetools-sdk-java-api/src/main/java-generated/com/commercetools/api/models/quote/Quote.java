@@ -362,94 +362,303 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
     @JsonProperty("businessUnit")
     public BusinessUnitKeyReference getBusinessUnit();
 
+    /**
+     *  <p>Unique identifier of the Quote.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>Current version of the Quote.</p>
+     * @param version value to be set
+     */
 
     public void setVersion(final Long version);
 
+    /**
+     *  <p>User-defined unique identifier of the Quote.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
+
+    /**
+     *  <p>Date and time (UTC) the Quote was initially created.</p>
+     * @param createdAt value to be set
+     */
 
     public void setCreatedAt(final ZonedDateTime createdAt);
 
+    /**
+     *  <p>Date and time (UTC) the Quote was last updated.</p>
+     * @param lastModifiedAt value to be set
+     */
+
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy value to be set
+     */
 
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy value to be set
+     */
+
     public void setCreatedBy(final CreatedBy createdBy);
+
+    /**
+     *  <p>Quote Request related to the Quote.</p>
+     * @param quoteRequest value to be set
+     */
 
     public void setQuoteRequest(final QuoteRequestReference quoteRequest);
 
+    /**
+     *  <p>Staged Quote related to the Quote.</p>
+     * @param stagedQuote value to be set
+     */
+
     public void setStagedQuote(final StagedQuoteReference stagedQuote);
+
+    /**
+     *  <p>The Buyer who requested the Quote.</p>
+     * @param customer value to be set
+     */
 
     public void setCustomer(final CustomerReference customer);
 
+    /**
+     *  <p>Set automatically when <code>customer</code> is set and the Customer is a member of a Customer Group. Used for Product Variant price selection.</p>
+     * @param customerGroup value to be set
+     */
+
     public void setCustomerGroup(final CustomerGroupReference customerGroup);
+
+    /**
+     *  <p>Expiration date for the Quote.</p>
+     * @param validTo value to be set
+     */
 
     public void setValidTo(final ZonedDateTime validTo);
 
+    /**
+     *  <p>Message from the Seller included in the offer.</p>
+     * @param sellerComment value to be set
+     */
+
     public void setSellerComment(final String sellerComment);
+
+    /**
+     *  <p>Message from the Buyer included in the renegotiation request.</p>
+     * @param buyerComment value to be set
+     */
 
     public void setBuyerComment(final String buyerComment);
 
+    /**
+     *  <p>The Store to which the Buyer belongs.</p>
+     * @param store value to be set
+     */
+
     public void setStore(final StoreKeyReference store);
+
+    /**
+     *  <p>The Line Items for which the Quote is requested.</p>
+     * @param lineItems values to be set
+     */
 
     @JsonIgnore
     public void setLineItems(final LineItem... lineItems);
 
+    /**
+     *  <p>The Line Items for which the Quote is requested.</p>
+     * @param lineItems values to be set
+     */
+
     public void setLineItems(final List<LineItem> lineItems);
+
+    /**
+     *  <p>The Custom Line Items for which the Quote is requested.</p>
+     * @param customLineItems values to be set
+     */
 
     @JsonIgnore
     public void setCustomLineItems(final CustomLineItem... customLineItems);
 
+    /**
+     *  <p>The Custom Line Items for which the Quote is requested.</p>
+     * @param customLineItems values to be set
+     */
+
     public void setCustomLineItems(final List<CustomLineItem> customLineItems);
+
+    /**
+     *  <p>Sum of all <code>totalPrice</code> fields of the <code>lineItems</code> and <code>customLineItems</code>, as well as the <code>price</code> field of <code>shippingInfo</code> (if it exists). <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property of each price.</p>
+     * @param totalPrice value to be set
+     */
 
     public void setTotalPrice(final TypedMoney totalPrice);
 
+    /**
+     *  <p>Not set until the shipping address is set. Will be set automatically in the <code>Platform</code> TaxMode. For the <code>External</code> tax mode it will be set as soon as the external tax rates for all line items, custom line items, and shipping in the cart are set.</p>
+     * @param taxedPrice value to be set
+     */
+
     public void setTaxedPrice(final TaxedPrice taxedPrice);
+
+    /**
+     *  <p>Used to determine the eligible ShippingMethods and rates as well as the tax rate of the Line Items.</p>
+     * @param shippingAddress value to be set
+     */
 
     public void setShippingAddress(final Address shippingAddress);
 
+    /**
+     *  <p>Address used for invoicing.</p>
+     * @param billingAddress value to be set
+     */
+
     public void setBillingAddress(final Address billingAddress);
+
+    /**
+     *  <p>Inventory mode of the Cart referenced in the QuoteRequestDraft.</p>
+     * @param inventoryMode value to be set
+     */
 
     public void setInventoryMode(final InventoryMode inventoryMode);
 
+    /**
+     *  <p>Tax mode of the Cart referenced in the QuoteRequestDraft.</p>
+     * @param taxMode value to be set
+     */
+
     public void setTaxMode(final TaxMode taxMode);
+
+    /**
+     *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for rounding.</p>
+     * @param taxRoundingMode value to be set
+     */
 
     public void setTaxRoundingMode(final RoundingMode taxRoundingMode);
 
+    /**
+     *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for calculating the price with <code>LineItemLevel</code> (horizontally) or <code>UnitPriceLevel</code> (vertically) calculation mode.</p>
+     * @param taxCalculationMode value to be set
+     */
+
     public void setTaxCalculationMode(final TaxCalculationMode taxCalculationMode);
+
+    /**
+     *  <p>Used for Product Variant price selection.</p>
+     * @param country value to be set
+     */
 
     public void setCountry(final String country);
 
+    /**
+     *  <p>Set automatically once the ShippingMethod is set.</p>
+     * @param shippingInfo value to be set
+     */
+
     public void setShippingInfo(final ShippingInfo shippingInfo);
+
+    /**
+     *  <p>Log of payment transactions related to the Quote.</p>
+     * @param paymentInfo value to be set
+     */
 
     public void setPaymentInfo(final PaymentInfo paymentInfo);
 
+    /**
+     *  <p>Used to select a ShippingRatePriceTier.</p>
+     * @param shippingRateInput value to be set
+     */
+
     public void setShippingRateInput(final ShippingRateInput shippingRateInput);
+
+    /**
+     *  <p>Contains addresses for carts with multiple shipping addresses. Line items reference these addresses under their <code>shippingDetails</code>. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's <code>shippingAddress</code> is used for this.</p>
+     * @param itemShippingAddresses values to be set
+     */
 
     @JsonIgnore
     public void setItemShippingAddresses(final Address... itemShippingAddresses);
 
+    /**
+     *  <p>Contains addresses for carts with multiple shipping addresses. Line items reference these addresses under their <code>shippingDetails</code>. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's <code>shippingAddress</code> is used for this.</p>
+     * @param itemShippingAddresses values to be set
+     */
+
     public void setItemShippingAddresses(final List<Address> itemShippingAddresses);
+
+    /**
+     *  <p>Discounts that are only valid for the Quote and cannot be associated to any other Cart or Order.</p>
+     * @param directDiscounts values to be set
+     */
 
     @JsonIgnore
     public void setDirectDiscounts(final DirectDiscount... directDiscounts);
 
+    /**
+     *  <p>Discounts that are only valid for the Quote and cannot be associated to any other Cart or Order.</p>
+     * @param directDiscounts values to be set
+     */
+
     public void setDirectDiscounts(final List<DirectDiscount> directDiscounts);
+
+    /**
+     *  <p>Custom Fields on the Quote.</p>
+     * @param custom value to be set
+     */
 
     public void setCustom(final CustomFields custom);
 
+    /**
+     *  <p>Predefined states tracking the status of the Quote.</p>
+     * @param quoteState value to be set
+     */
+
     public void setQuoteState(final QuoteState quoteState);
+
+    /**
+     *  <p>State of the Quote. This reference can point to a State in a custom workflow.</p>
+     * @param state value to be set
+     */
 
     public void setState(final StateReference state);
 
+    /**
+     *  <p>The Purchase Order Number is typically set by the Buyer on a QuoteRequest to track the purchase order during the quote and order flow.</p>
+     * @param purchaseOrderNumber value to be set
+     */
+
     public void setPurchaseOrderNumber(final String purchaseOrderNumber);
+
+    /**
+     *  <p>The BusinessUnit for the Quote.</p>
+     * @param businessUnit value to be set
+     */
 
     public void setBusinessUnit(final BusinessUnitKeyReference businessUnit);
 
+    /**
+     * factory method
+     * @return instance of Quote
+     */
     public static Quote of() {
         return new QuoteImpl();
     }
 
+    /**
+     * factory method to copy an instance of Quote
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static Quote of(final Quote template) {
         QuoteImpl instance = new QuoteImpl();
         instance.setId(template.getId());
@@ -491,14 +700,29 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
         return instance;
     }
 
+    /**
+     * builder factory method for Quote
+     * @return builder
+     */
     public static QuoteBuilder builder() {
         return QuoteBuilder.of();
     }
 
+    /**
+     * create builder for Quote instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static QuoteBuilder builder(final Quote template) {
         return QuoteBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withQuote(Function<Quote, T> helper) {
         return helper.apply(this);
     }
@@ -507,6 +731,10 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
         return com.commercetools.api.models.common.ReferenceTypeId.QUOTE;
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<Quote> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Quote>() {
             @Override

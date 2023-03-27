@@ -46,38 +46,76 @@ public interface StandalonePriceUpdateAction
     @JsonProperty("action")
     public String getAction();
 
+    /**
+     * builder for applyStagedChanges subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.standalone_price.StandalonePriceApplyStagedChangesActionBuilder applyStagedChangesBuilder() {
         return com.commercetools.api.models.standalone_price.StandalonePriceApplyStagedChangesActionBuilder.of();
     }
 
+    /**
+     * builder for changeActive subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.standalone_price.StandalonePriceChangeActiveActionBuilder changeActiveBuilder() {
         return com.commercetools.api.models.standalone_price.StandalonePriceChangeActiveActionBuilder.of();
     }
 
+    /**
+     * builder for changeValue subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.standalone_price.StandalonePriceChangeValueActionBuilder changeValueBuilder() {
         return com.commercetools.api.models.standalone_price.StandalonePriceChangeValueActionBuilder.of();
     }
 
+    /**
+     * builder for setCustomField subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.standalone_price.StandalonePriceSetCustomFieldActionBuilder setCustomFieldBuilder() {
         return com.commercetools.api.models.standalone_price.StandalonePriceSetCustomFieldActionBuilder.of();
     }
 
+    /**
+     * builder for setCustomType subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.standalone_price.StandalonePriceSetCustomTypeActionBuilder setCustomTypeBuilder() {
         return com.commercetools.api.models.standalone_price.StandalonePriceSetCustomTypeActionBuilder.of();
     }
 
+    /**
+     * builder for setDiscountedPrice subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.standalone_price.StandalonePriceSetDiscountedPriceActionBuilder setDiscountedPriceBuilder() {
         return com.commercetools.api.models.standalone_price.StandalonePriceSetDiscountedPriceActionBuilder.of();
     }
 
+    /**
+     * builder for setKey subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.standalone_price.StandalonePriceSetKeyActionBuilder setKeyBuilder() {
         return com.commercetools.api.models.standalone_price.StandalonePriceSetKeyActionBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStandalonePriceUpdateAction(Function<StandalonePriceUpdateAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceUpdateAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceUpdateAction>() {
             @Override

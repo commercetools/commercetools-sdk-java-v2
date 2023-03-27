@@ -27,6 +27,9 @@ public class CategoryResourceIdentifierImpl implements CategoryResourceIdentifie
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CategoryResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
@@ -34,6 +37,9 @@ public class CategoryResourceIdentifierImpl implements CategoryResourceIdentifie
         this.typeId = ReferenceTypeId.findEnum("category");
     }
 
+    /**
+     * create empty instance
+     */
     public CategoryResourceIdentifierImpl() {
         this.typeId = ReferenceTypeId.findEnum("category");
     }

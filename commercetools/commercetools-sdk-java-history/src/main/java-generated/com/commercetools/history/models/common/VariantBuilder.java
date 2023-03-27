@@ -30,7 +30,7 @@ public class VariantBuilder implements Builder<Variant> {
     private String key;
 
     /**
-     *
+     * set the value to the id
      * @param id value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class VariantBuilder implements Builder<Variant> {
     }
 
     /**
-     *
+     * set the value to the sku
      * @param sku value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class VariantBuilder implements Builder<Variant> {
     }
 
     /**
-     *
+     * set the value to the key
      * @param key value to be set
      * @return Builder
      */
@@ -62,13 +62,28 @@ public class VariantBuilder implements Builder<Variant> {
         return this;
     }
 
+    /**
+     * value of id}
+     * @return id
+     */
+
     public Integer getId() {
         return this.id;
     }
 
+    /**
+     * value of sku}
+     * @return sku
+     */
+
     public String getSku() {
         return this.sku;
     }
+
+    /**
+     * value of key}
+     * @return key
+     */
 
     public String getKey() {
         return this.key;
@@ -93,10 +108,19 @@ public class VariantBuilder implements Builder<Variant> {
         return new VariantImpl(id, sku, key);
     }
 
+    /**
+     * factory method for an instance of VariantBuilder
+     * @return builder
+     */
     public static VariantBuilder of() {
         return new VariantBuilder();
     }
 
+    /**
+     * create builder for Variant instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static VariantBuilder of(final Variant template) {
         VariantBuilder builder = new VariantBuilder();
         builder.id = template.getId();

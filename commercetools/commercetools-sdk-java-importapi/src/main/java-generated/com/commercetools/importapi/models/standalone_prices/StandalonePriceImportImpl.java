@@ -42,6 +42,9 @@ public class StandalonePriceImportImpl implements StandalonePriceImport, ModelBa
 
     private com.commercetools.importapi.models.customfields.Custom custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StandalonePriceImportImpl(@JsonProperty("key") final String key, @JsonProperty("sku") final String sku,
             @JsonProperty("value") final com.commercetools.importapi.models.common.TypedMoney value,
@@ -66,6 +69,9 @@ public class StandalonePriceImportImpl implements StandalonePriceImport, ModelBa
         this.custom = custom;
     }
 
+    /**
+     * create empty instance
+     */
     public StandalonePriceImportImpl() {
     }
 

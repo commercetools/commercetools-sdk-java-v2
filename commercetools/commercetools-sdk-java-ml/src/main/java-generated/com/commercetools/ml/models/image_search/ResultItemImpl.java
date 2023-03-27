@@ -24,6 +24,9 @@ public class ResultItemImpl implements ResultItem, ModelBase {
 
     private java.util.List<com.commercetools.ml.models.common.ProductVariant> productVariants;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ResultItemImpl(@JsonProperty("imageUrl") final String imageUrl,
             @JsonProperty("productVariants") final java.util.List<com.commercetools.ml.models.common.ProductVariant> productVariants) {
@@ -31,6 +34,9 @@ public class ResultItemImpl implements ResultItem, ModelBase {
         this.productVariants = productVariants;
     }
 
+    /**
+     * create empty instance
+     */
     public ResultItemImpl() {
     }
 

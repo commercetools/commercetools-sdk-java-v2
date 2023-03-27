@@ -90,17 +90,37 @@ public class EnumKeyAlreadyExistsErrorBuilder implements Builder<EnumKeyAlreadyE
         return this;
     }
 
+    /**
+     *  <p><code>"The $attributeName attribute definition already contains an enum value with the key $enumKey."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
     }
 
+    /**
+     *  <p>Conflicting enum key.</p>
+     * @return conflictingEnumKey
+     */
+
     public String getConflictingEnumKey() {
         return this.conflictingEnumKey;
     }
+
+    /**
+     *  <p>Name of the conflicting Attribute.</p>
+     * @return conflictingAttributeName
+     */
 
     public String getConflictingAttributeName() {
         return this.conflictingAttributeName;
@@ -126,10 +146,19 @@ public class EnumKeyAlreadyExistsErrorBuilder implements Builder<EnumKeyAlreadyE
         return new EnumKeyAlreadyExistsErrorImpl(message, values, conflictingEnumKey, conflictingAttributeName);
     }
 
+    /**
+     * factory method for an instance of EnumKeyAlreadyExistsErrorBuilder
+     * @return builder
+     */
     public static EnumKeyAlreadyExistsErrorBuilder of() {
         return new EnumKeyAlreadyExistsErrorBuilder();
     }
 
+    /**
+     * create builder for EnumKeyAlreadyExistsError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static EnumKeyAlreadyExistsErrorBuilder of(final EnumKeyAlreadyExistsError template) {
         EnumKeyAlreadyExistsErrorBuilder builder = new EnumKeyAlreadyExistsErrorBuilder();
         builder.message = template.getMessage();

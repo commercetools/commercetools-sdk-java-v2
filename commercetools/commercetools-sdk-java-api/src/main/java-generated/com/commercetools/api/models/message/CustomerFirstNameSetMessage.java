@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomerFirstNameSetMessageImpl.class)
 public interface CustomerFirstNameSetMessage extends Message {
 
+    /**
+     * discriminator value for CustomerFirstNameSetMessage
+     */
     String CUSTOMER_FIRST_NAME_SET = "CustomerFirstNameSet";
 
     /**
@@ -43,12 +46,26 @@ public interface CustomerFirstNameSetMessage extends Message {
     @JsonProperty("firstName")
     public String getFirstName();
 
+    /**
+     *  <p>The <code>firstName</code> that was set during the Set First Name update action.</p>
+     * @param firstName value to be set
+     */
+
     public void setFirstName(final String firstName);
 
+    /**
+     * factory method
+     * @return instance of CustomerFirstNameSetMessage
+     */
     public static CustomerFirstNameSetMessage of() {
         return new CustomerFirstNameSetMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomerFirstNameSetMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomerFirstNameSetMessage of(final CustomerFirstNameSetMessage template) {
         CustomerFirstNameSetMessageImpl instance = new CustomerFirstNameSetMessageImpl();
         instance.setId(template.getId());
@@ -65,18 +82,37 @@ public interface CustomerFirstNameSetMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for CustomerFirstNameSetMessage
+     * @return builder
+     */
     public static CustomerFirstNameSetMessageBuilder builder() {
         return CustomerFirstNameSetMessageBuilder.of();
     }
 
+    /**
+     * create builder for CustomerFirstNameSetMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerFirstNameSetMessageBuilder builder(final CustomerFirstNameSetMessage template) {
         return CustomerFirstNameSetMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomerFirstNameSetMessage(Function<CustomerFirstNameSetMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomerFirstNameSetMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomerFirstNameSetMessage>() {
             @Override

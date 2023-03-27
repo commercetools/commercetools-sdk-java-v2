@@ -26,6 +26,9 @@ public class TextAttributeImpl implements TextAttribute, ModelBase {
 
     private String value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TextAttributeImpl(@JsonProperty("name") final String name, @JsonProperty("value") final String value) {
         this.name = name;
@@ -33,6 +36,9 @@ public class TextAttributeImpl implements TextAttribute, ModelBase {
         this.type = TEXT;
     }
 
+    /**
+     * create empty instance
+     */
     public TextAttributeImpl() {
         this.type = TEXT;
     }

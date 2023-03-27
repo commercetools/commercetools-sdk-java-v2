@@ -24,12 +24,18 @@ public class DiscountCodeSetCartPredicateActionImpl implements DiscountCodeSetCa
 
     private String cartPredicate;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DiscountCodeSetCartPredicateActionImpl(@JsonProperty("cartPredicate") final String cartPredicate) {
         this.cartPredicate = cartPredicate;
         this.action = SET_CART_PREDICATE;
     }
 
+    /**
+     * create empty instance
+     */
     public DiscountCodeSetCartPredicateActionImpl() {
         this.action = SET_CART_PREDICATE;
     }

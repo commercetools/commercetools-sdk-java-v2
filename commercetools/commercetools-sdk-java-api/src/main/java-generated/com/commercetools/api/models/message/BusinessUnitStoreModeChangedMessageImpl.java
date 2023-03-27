@@ -50,6 +50,9 @@ public class BusinessUnitStoreModeChangedMessageImpl implements BusinessUnitStor
 
     private com.commercetools.api.models.business_unit.BusinessUnitStoreMode oldStoreMode;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitStoreModeChangedMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -82,6 +85,9 @@ public class BusinessUnitStoreModeChangedMessageImpl implements BusinessUnitStor
         this.type = BUSINESS_UNIT_STORE_MODE_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitStoreModeChangedMessageImpl() {
         this.type = BUSINESS_UNIT_STORE_MODE_CHANGED;
     }

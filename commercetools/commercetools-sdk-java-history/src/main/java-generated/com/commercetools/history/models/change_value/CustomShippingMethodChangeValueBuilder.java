@@ -24,7 +24,7 @@ public class CustomShippingMethodChangeValueBuilder implements Builder<CustomShi
     private String name;
 
     /**
-     *
+     * set the value to the name
      * @param name value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class CustomShippingMethodChangeValueBuilder implements Builder<CustomShi
         this.name = name;
         return this;
     }
+
+    /**
+     * value of name}
+     * @return name
+     */
 
     public String getName() {
         return this.name;
@@ -55,10 +60,19 @@ public class CustomShippingMethodChangeValueBuilder implements Builder<CustomShi
         return new CustomShippingMethodChangeValueImpl(name);
     }
 
+    /**
+     * factory method for an instance of CustomShippingMethodChangeValueBuilder
+     * @return builder
+     */
     public static CustomShippingMethodChangeValueBuilder of() {
         return new CustomShippingMethodChangeValueBuilder();
     }
 
+    /**
+     * create builder for CustomShippingMethodChangeValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomShippingMethodChangeValueBuilder of(final CustomShippingMethodChangeValue template) {
         CustomShippingMethodChangeValueBuilder builder = new CustomShippingMethodChangeValueBuilder();
         builder.name = template.getName();

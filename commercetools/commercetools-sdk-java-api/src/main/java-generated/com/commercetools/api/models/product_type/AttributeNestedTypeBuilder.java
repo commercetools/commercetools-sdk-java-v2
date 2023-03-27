@@ -49,6 +49,11 @@ public class AttributeNestedTypeBuilder implements Builder<AttributeNestedType> 
         return this;
     }
 
+    /**
+     *  <p>Attributes that can be stored as nested Attributes of the current Attribute.</p>
+     * @return typeReference
+     */
+
     public com.commercetools.api.models.product_type.ProductTypeReference getTypeReference() {
         return this.typeReference;
     }
@@ -70,10 +75,19 @@ public class AttributeNestedTypeBuilder implements Builder<AttributeNestedType> 
         return new AttributeNestedTypeImpl(typeReference);
     }
 
+    /**
+     * factory method for an instance of AttributeNestedTypeBuilder
+     * @return builder
+     */
     public static AttributeNestedTypeBuilder of() {
         return new AttributeNestedTypeBuilder();
     }
 
+    /**
+     * create builder for AttributeNestedType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeNestedTypeBuilder of(final AttributeNestedType template) {
         AttributeNestedTypeBuilder builder = new AttributeNestedTypeBuilder();
         builder.typeReference = template.getTypeReference();

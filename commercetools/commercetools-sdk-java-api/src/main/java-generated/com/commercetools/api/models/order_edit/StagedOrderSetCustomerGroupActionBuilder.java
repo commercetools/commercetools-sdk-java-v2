@@ -52,6 +52,11 @@ public class StagedOrderSetCustomerGroupActionBuilder implements Builder<StagedO
         return this;
     }
 
+    /**
+     *  <p>ResourceIdentifier to a CustomerGroup.</p>
+     * @return customerGroup
+     */
+
     @Nullable
     public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {
         return this.customerGroup;
@@ -73,10 +78,19 @@ public class StagedOrderSetCustomerGroupActionBuilder implements Builder<StagedO
         return new StagedOrderSetCustomerGroupActionImpl(customerGroup);
     }
 
+    /**
+     * factory method for an instance of StagedOrderSetCustomerGroupActionBuilder
+     * @return builder
+     */
     public static StagedOrderSetCustomerGroupActionBuilder of() {
         return new StagedOrderSetCustomerGroupActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderSetCustomerGroupAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetCustomerGroupActionBuilder of(final StagedOrderSetCustomerGroupAction template) {
         StagedOrderSetCustomerGroupActionBuilder builder = new StagedOrderSetCustomerGroupActionBuilder();
         builder.customerGroup = template.getCustomerGroup();

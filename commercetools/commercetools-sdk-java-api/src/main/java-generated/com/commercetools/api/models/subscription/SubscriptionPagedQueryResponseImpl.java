@@ -30,6 +30,9 @@ public class SubscriptionPagedQueryResponseImpl implements SubscriptionPagedQuer
 
     private java.util.List<com.commercetools.api.models.subscription.Subscription> results;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SubscriptionPagedQueryResponseImpl(@JsonProperty("limit") final Long limit,
             @JsonProperty("offset") final Long offset, @JsonProperty("count") final Long count,
@@ -42,6 +45,9 @@ public class SubscriptionPagedQueryResponseImpl implements SubscriptionPagedQuer
         this.results = results;
     }
 
+    /**
+     * create empty instance
+     */
     public SubscriptionPagedQueryResponseImpl() {
     }
 

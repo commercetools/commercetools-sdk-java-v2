@@ -49,6 +49,11 @@ public class BusinessUnitRemoveAssociateActionBuilder implements Builder<Busines
         return this;
     }
 
+    /**
+     *  <p>Associate to remove.</p>
+     * @return customer
+     */
+
     public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer() {
         return this.customer;
     }
@@ -70,10 +75,19 @@ public class BusinessUnitRemoveAssociateActionBuilder implements Builder<Busines
         return new BusinessUnitRemoveAssociateActionImpl(customer);
     }
 
+    /**
+     * factory method for an instance of BusinessUnitRemoveAssociateActionBuilder
+     * @return builder
+     */
     public static BusinessUnitRemoveAssociateActionBuilder of() {
         return new BusinessUnitRemoveAssociateActionBuilder();
     }
 
+    /**
+     * create builder for BusinessUnitRemoveAssociateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitRemoveAssociateActionBuilder of(final BusinessUnitRemoveAssociateAction template) {
         BusinessUnitRemoveAssociateActionBuilder builder = new BusinessUnitRemoveAssociateActionBuilder();
         builder.customer = template.getCustomer();

@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = BusinessUnitRemoveAssociateActionImpl.class)
 public interface BusinessUnitRemoveAssociateAction extends BusinessUnitUpdateAction {
 
+    /**
+     * discriminator value for BusinessUnitRemoveAssociateAction
+     */
     String REMOVE_ASSOCIATE = "removeAssociate";
 
     /**
@@ -42,30 +45,63 @@ public interface BusinessUnitRemoveAssociateAction extends BusinessUnitUpdateAct
     @JsonProperty("customer")
     public CustomerResourceIdentifier getCustomer();
 
+    /**
+     *  <p>Associate to remove.</p>
+     * @param customer value to be set
+     */
+
     public void setCustomer(final CustomerResourceIdentifier customer);
 
+    /**
+     * factory method
+     * @return instance of BusinessUnitRemoveAssociateAction
+     */
     public static BusinessUnitRemoveAssociateAction of() {
         return new BusinessUnitRemoveAssociateActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of BusinessUnitRemoveAssociateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static BusinessUnitRemoveAssociateAction of(final BusinessUnitRemoveAssociateAction template) {
         BusinessUnitRemoveAssociateActionImpl instance = new BusinessUnitRemoveAssociateActionImpl();
         instance.setCustomer(template.getCustomer());
         return instance;
     }
 
+    /**
+     * builder factory method for BusinessUnitRemoveAssociateAction
+     * @return builder
+     */
     public static BusinessUnitRemoveAssociateActionBuilder builder() {
         return BusinessUnitRemoveAssociateActionBuilder.of();
     }
 
+    /**
+     * create builder for BusinessUnitRemoveAssociateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitRemoveAssociateActionBuilder builder(final BusinessUnitRemoveAssociateAction template) {
         return BusinessUnitRemoveAssociateActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withBusinessUnitRemoveAssociateAction(Function<BusinessUnitRemoveAssociateAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitRemoveAssociateAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitRemoveAssociateAction>() {
             @Override

@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderCustomLineItemQuantityChangedMessagePayloadImpl.class)
 public interface OrderCustomLineItemQuantityChangedMessagePayload extends OrderMessagePayload {
 
+    /**
+     * discriminator value for OrderCustomLineItemQuantityChangedMessagePayload
+     */
     String ORDER_CUSTOM_LINE_ITEM_QUANTITY_CHANGED = "OrderCustomLineItemQuantityChanged";
 
     /**
@@ -57,16 +60,40 @@ public interface OrderCustomLineItemQuantityChangedMessagePayload extends OrderM
     @JsonProperty("oldQuantity")
     public Long getOldQuantity();
 
+    /**
+     *  <p>Unique identifier of the Custom Line Item.</p>
+     * @param customLineItemId value to be set
+     */
+
     public void setCustomLineItemId(final String customLineItemId);
+
+    /**
+     *  <p>Custom Line Item quantity after the Change Custom Line Item Quantity update action.</p>
+     * @param quantity value to be set
+     */
 
     public void setQuantity(final Long quantity);
 
+    /**
+     *  <p>Custom Line Item quantity before the Change Custom Line Item Quantity update action.</p>
+     * @param oldQuantity value to be set
+     */
+
     public void setOldQuantity(final Long oldQuantity);
 
+    /**
+     * factory method
+     * @return instance of OrderCustomLineItemQuantityChangedMessagePayload
+     */
     public static OrderCustomLineItemQuantityChangedMessagePayload of() {
         return new OrderCustomLineItemQuantityChangedMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderCustomLineItemQuantityChangedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderCustomLineItemQuantityChangedMessagePayload of(
             final OrderCustomLineItemQuantityChangedMessagePayload template) {
         OrderCustomLineItemQuantityChangedMessagePayloadImpl instance = new OrderCustomLineItemQuantityChangedMessagePayloadImpl();
@@ -76,20 +103,39 @@ public interface OrderCustomLineItemQuantityChangedMessagePayload extends OrderM
         return instance;
     }
 
+    /**
+     * builder factory method for OrderCustomLineItemQuantityChangedMessagePayload
+     * @return builder
+     */
     public static OrderCustomLineItemQuantityChangedMessagePayloadBuilder builder() {
         return OrderCustomLineItemQuantityChangedMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for OrderCustomLineItemQuantityChangedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderCustomLineItemQuantityChangedMessagePayloadBuilder builder(
             final OrderCustomLineItemQuantityChangedMessagePayload template) {
         return OrderCustomLineItemQuantityChangedMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderCustomLineItemQuantityChangedMessagePayload(
             Function<OrderCustomLineItemQuantityChangedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderCustomLineItemQuantityChangedMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderCustomLineItemQuantityChangedMessagePayload>() {
             @Override

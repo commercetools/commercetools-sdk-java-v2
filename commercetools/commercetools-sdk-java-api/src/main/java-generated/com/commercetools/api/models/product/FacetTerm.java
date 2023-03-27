@@ -53,16 +53,40 @@ public interface FacetTerm {
     @JsonProperty("productCount")
     public Long getProductCount();
 
+    /**
+     * set term
+     * @param term value to be set
+     */
+
     public void setTerm(final Object term);
+
+    /**
+     * set count
+     * @param count value to be set
+     */
 
     public void setCount(final Long count);
 
+    /**
+     * set productCount
+     * @param productCount value to be set
+     */
+
     public void setProductCount(final Long productCount);
 
+    /**
+     * factory method
+     * @return instance of FacetTerm
+     */
     public static FacetTerm of() {
         return new FacetTermImpl();
     }
 
+    /**
+     * factory method to copy an instance of FacetTerm
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static FacetTerm of(final FacetTerm template) {
         FacetTermImpl instance = new FacetTermImpl();
         instance.setTerm(template.getTerm());
@@ -71,18 +95,37 @@ public interface FacetTerm {
         return instance;
     }
 
+    /**
+     * builder factory method for FacetTerm
+     * @return builder
+     */
     public static FacetTermBuilder builder() {
         return FacetTermBuilder.of();
     }
 
+    /**
+     * create builder for FacetTerm instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static FacetTermBuilder builder(final FacetTerm template) {
         return FacetTermBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withFacetTerm(Function<FacetTerm, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<FacetTerm> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<FacetTerm>() {
             @Override

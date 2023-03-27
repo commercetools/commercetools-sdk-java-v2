@@ -98,26 +98,75 @@ public interface OrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<Order
     @JsonProperty("state")
     public StateResourceIdentifier getState();
 
+    /**
+     *  <p>ResourceIdentifier of the Quote from which this Order is created. If the Quote has <code>QuoteState</code> in <code>Accepted</code>, <code>Declined</code> or <code>Withdrawn</code> then the order creation will fail. The creation will also fail if the <code>Quote</code> has expired (<code>validTo</code> check).</p>
+     * @param quote value to be set
+     */
+
     public void setQuote(final QuoteResourceIdentifier quote);
+
+    /**
+     *  <p><code>version</code> of the Quote from which an Order is created.</p>
+     * @param version value to be set
+     */
 
     public void setVersion(final Long version);
 
+    /**
+     *  <p>If <code>true</code>, the <code>quoteState</code> of the referenced Quote will be set to <code>Accepted</code>.</p>
+     * @param quoteStateToAccepted value to be set
+     */
+
     public void setQuoteStateToAccepted(final Boolean quoteStateToAccepted);
+
+    /**
+     *  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed. For easier use on Get, Update and Delete actions we suggest assigning order numbers that match the regular expression <code>[a-z0-9_\-]{2,36}</code>.</p>
+     * @param orderNumber value to be set
+     */
 
     public void setOrderNumber(final String orderNumber);
 
+    /**
+     * set paymentState
+     * @param paymentState value to be set
+     */
+
     public void setPaymentState(final PaymentState paymentState);
+
+    /**
+     * set shipmentState
+     * @param shipmentState value to be set
+     */
 
     public void setShipmentState(final ShipmentState shipmentState);
 
+    /**
+     *  <p>Order will be created with <code>Open</code> status by default.</p>
+     * @param orderState value to be set
+     */
+
     public void setOrderState(final OrderState orderState);
+
+    /**
+     * set state
+     * @param state value to be set
+     */
 
     public void setState(final StateResourceIdentifier state);
 
+    /**
+     * factory method
+     * @return instance of OrderFromQuoteDraft
+     */
     public static OrderFromQuoteDraft of() {
         return new OrderFromQuoteDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderFromQuoteDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderFromQuoteDraft of(final OrderFromQuoteDraft template) {
         OrderFromQuoteDraftImpl instance = new OrderFromQuoteDraftImpl();
         instance.setQuote(template.getQuote());
@@ -131,18 +180,37 @@ public interface OrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<Order
         return instance;
     }
 
+    /**
+     * builder factory method for OrderFromQuoteDraft
+     * @return builder
+     */
     public static OrderFromQuoteDraftBuilder builder() {
         return OrderFromQuoteDraftBuilder.of();
     }
 
+    /**
+     * create builder for OrderFromQuoteDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderFromQuoteDraftBuilder builder(final OrderFromQuoteDraft template) {
         return OrderFromQuoteDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderFromQuoteDraft(Function<OrderFromQuoteDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderFromQuoteDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderFromQuoteDraft>() {
             @Override

@@ -51,10 +51,20 @@ public class DiscountCodeSetValidFromAndUntilActionBuilder implements Builder<Di
         return this;
     }
 
+    /**
+     *  <p>Value to set that must be earlier than <code>validUntil</code>. If empty, any existing value will be removed.</p>
+     * @return validFrom
+     */
+
     @Nullable
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
+
+    /**
+     *  <p>Value to set that must be later than <code>validFrom</code>. If empty, any existing value will be removed.</p>
+     * @return validUntil
+     */
 
     @Nullable
     public java.time.ZonedDateTime getValidUntil() {
@@ -77,10 +87,19 @@ public class DiscountCodeSetValidFromAndUntilActionBuilder implements Builder<Di
         return new DiscountCodeSetValidFromAndUntilActionImpl(validFrom, validUntil);
     }
 
+    /**
+     * factory method for an instance of DiscountCodeSetValidFromAndUntilActionBuilder
+     * @return builder
+     */
     public static DiscountCodeSetValidFromAndUntilActionBuilder of() {
         return new DiscountCodeSetValidFromAndUntilActionBuilder();
     }
 
+    /**
+     * create builder for DiscountCodeSetValidFromAndUntilAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DiscountCodeSetValidFromAndUntilActionBuilder of(
             final DiscountCodeSetValidFromAndUntilAction template) {
         DiscountCodeSetValidFromAndUntilActionBuilder builder = new DiscountCodeSetValidFromAndUntilActionBuilder();

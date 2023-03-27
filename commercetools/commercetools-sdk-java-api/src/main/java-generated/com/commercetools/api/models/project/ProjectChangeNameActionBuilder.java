@@ -34,6 +34,11 @@ public class ProjectChangeNameActionBuilder implements Builder<ProjectChangeName
         return this;
     }
 
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     * @return name
+     */
+
     public String getName() {
         return this.name;
     }
@@ -55,10 +60,19 @@ public class ProjectChangeNameActionBuilder implements Builder<ProjectChangeName
         return new ProjectChangeNameActionImpl(name);
     }
 
+    /**
+     * factory method for an instance of ProjectChangeNameActionBuilder
+     * @return builder
+     */
     public static ProjectChangeNameActionBuilder of() {
         return new ProjectChangeNameActionBuilder();
     }
 
+    /**
+     * create builder for ProjectChangeNameAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProjectChangeNameActionBuilder of(final ProjectChangeNameAction template) {
         ProjectChangeNameActionBuilder builder = new ProjectChangeNameActionBuilder();
         builder.name = template.getName();

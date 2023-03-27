@@ -34,6 +34,11 @@ public class ChannelChangeKeyActionBuilder implements Builder<ChannelChangeKeyAc
         return this;
     }
 
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
@@ -55,10 +60,19 @@ public class ChannelChangeKeyActionBuilder implements Builder<ChannelChangeKeyAc
         return new ChannelChangeKeyActionImpl(key);
     }
 
+    /**
+     * factory method for an instance of ChannelChangeKeyActionBuilder
+     * @return builder
+     */
     public static ChannelChangeKeyActionBuilder of() {
         return new ChannelChangeKeyActionBuilder();
     }
 
+    /**
+     * create builder for ChannelChangeKeyAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChannelChangeKeyActionBuilder of(final ChannelChangeKeyAction template) {
         ChannelChangeKeyActionBuilder builder = new ChannelChangeKeyActionBuilder();
         builder.key = template.getKey();

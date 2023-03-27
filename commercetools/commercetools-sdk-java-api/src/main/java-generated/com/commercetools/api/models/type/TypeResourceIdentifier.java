@@ -27,6 +27,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TypeResourceIdentifierImpl.class)
 public interface TypeResourceIdentifier extends ResourceIdentifier, com.commercetools.api.models.Identifiable<Type> {
 
+    /**
+     * discriminator value for TypeResourceIdentifier
+     */
     String TYPE = "type";
 
     /**
@@ -45,14 +48,33 @@ public interface TypeResourceIdentifier extends ResourceIdentifier, com.commerce
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     *  <p>Unique identifier of the referenced Type. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>User-defined unique identifier of the referenced Type. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param key value to be set
+     */
 
     public void setKey(final String key);
 
+    /**
+     * factory method
+     * @return instance of TypeResourceIdentifier
+     */
     public static TypeResourceIdentifier of() {
         return new TypeResourceIdentifierImpl();
     }
 
+    /**
+     * factory method to copy an instance of TypeResourceIdentifier
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static TypeResourceIdentifier of(final TypeResourceIdentifier template) {
         TypeResourceIdentifierImpl instance = new TypeResourceIdentifierImpl();
         instance.setId(template.getId());
@@ -60,18 +82,37 @@ public interface TypeResourceIdentifier extends ResourceIdentifier, com.commerce
         return instance;
     }
 
+    /**
+     * builder factory method for TypeResourceIdentifier
+     * @return builder
+     */
     public static TypeResourceIdentifierBuilder builder() {
         return TypeResourceIdentifierBuilder.of();
     }
 
+    /**
+     * create builder for TypeResourceIdentifier instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TypeResourceIdentifierBuilder builder(final TypeResourceIdentifier template) {
         return TypeResourceIdentifierBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTypeResourceIdentifier(Function<TypeResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<TypeResourceIdentifier> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TypeResourceIdentifier>() {
             @Override

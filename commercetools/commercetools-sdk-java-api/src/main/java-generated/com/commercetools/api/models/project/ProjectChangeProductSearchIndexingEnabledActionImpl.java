@@ -25,12 +25,18 @@ public class ProjectChangeProductSearchIndexingEnabledActionImpl
 
     private Boolean enabled;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProjectChangeProductSearchIndexingEnabledActionImpl(@JsonProperty("enabled") final Boolean enabled) {
         this.enabled = enabled;
         this.action = CHANGE_PRODUCT_SEARCH_INDEXING_ENABLED;
     }
 
+    /**
+     * create empty instance
+     */
     public ProjectChangeProductSearchIndexingEnabledActionImpl() {
         this.action = CHANGE_PRODUCT_SEARCH_INDEXING_ENABLED;
     }

@@ -59,6 +59,11 @@ public class CategoryChangeAssetOrderActionBuilder implements Builder<CategoryCh
         return this;
     }
 
+    /**
+     *  <p>New value to set. Must contain all Asset <code>id</code>s.</p>
+     * @return assetOrder
+     */
+
     public java.util.List<String> getAssetOrder() {
         return this.assetOrder;
     }
@@ -80,10 +85,19 @@ public class CategoryChangeAssetOrderActionBuilder implements Builder<CategoryCh
         return new CategoryChangeAssetOrderActionImpl(assetOrder);
     }
 
+    /**
+     * factory method for an instance of CategoryChangeAssetOrderActionBuilder
+     * @return builder
+     */
     public static CategoryChangeAssetOrderActionBuilder of() {
         return new CategoryChangeAssetOrderActionBuilder();
     }
 
+    /**
+     * create builder for CategoryChangeAssetOrderAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategoryChangeAssetOrderActionBuilder of(final CategoryChangeAssetOrderAction template) {
         CategoryChangeAssetOrderActionBuilder builder = new CategoryChangeAssetOrderActionBuilder();
         builder.assetOrder = template.getAssetOrder();

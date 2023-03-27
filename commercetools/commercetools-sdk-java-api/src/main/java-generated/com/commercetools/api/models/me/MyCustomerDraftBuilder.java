@@ -371,78 +371,158 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
         return this;
     }
 
+    /**
+     *  <p>Email address of the Customer that is unique for an entire Project or Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
+     * @return email
+     */
+
     public String getEmail() {
         return this.email;
     }
 
+    /**
+     *  <p>Password of the Customer.</p>
+     * @return password
+     */
+
     public String getPassword() {
         return this.password;
     }
+
+    /**
+     *  <p>Given name (first name) of the Customer.</p>
+     * @return firstName
+     */
 
     @Nullable
     public String getFirstName() {
         return this.firstName;
     }
 
+    /**
+     *  <p>Family name (last name) of the Customer.</p>
+     * @return lastName
+     */
+
     @Nullable
     public String getLastName() {
         return this.lastName;
     }
+
+    /**
+     *  <p>Middle name of the Customer.</p>
+     * @return middleName
+     */
 
     @Nullable
     public String getMiddleName() {
         return this.middleName;
     }
 
+    /**
+     *  <p>Title of the Customer, for example, 'Dr.'.</p>
+     * @return title
+     */
+
     @Nullable
     public String getTitle() {
         return this.title;
     }
+
+    /**
+     *  <p>Salutation of the Customer, for example, 'Mr.' or 'Mrs.'.</p>
+     * @return salutation
+     */
 
     @Nullable
     public String getSalutation() {
         return this.salutation;
     }
 
+    /**
+     *  <p>Date of birth of the Customer.</p>
+     * @return dateOfBirth
+     */
+
     @Nullable
     public java.time.LocalDate getDateOfBirth() {
         return this.dateOfBirth;
     }
+
+    /**
+     *  <p>Company name of the Customer.</p>
+     * @return companyName
+     */
 
     @Nullable
     public String getCompanyName() {
         return this.companyName;
     }
 
+    /**
+     *  <p>Unique VAT ID of the Customer.</p>
+     * @return vatId
+     */
+
     @Nullable
     public String getVatId() {
         return this.vatId;
     }
+
+    /**
+     *  <p>Addresses of the Customer.</p>
+     * @return addresses
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.common.BaseAddress> getAddresses() {
         return this.addresses;
     }
 
+    /**
+     *  <p>Index of the address in the <code>addresses</code> array to use as the default shipping address. The <code>defaultShippingAddressId</code> of the Customer will be set to the <code>id</code> of that address.</p>
+     * @return defaultShippingAddress
+     */
+
     @Nullable
     public Long getDefaultShippingAddress() {
         return this.defaultShippingAddress;
     }
+
+    /**
+     *  <p>Index of the address in the <code>addresses</code> array to use as the default billing address. The <code>defaultBillingAddressId</code> of the Customer will be set to the <code>id</code> of that address.</p>
+     * @return defaultBillingAddress
+     */
 
     @Nullable
     public Long getDefaultBillingAddress() {
         return this.defaultBillingAddress;
     }
 
+    /**
+     *  <p>Custom Fields for the Customer.</p>
+     * @return custom
+     */
+
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
 
+    /**
+     *  <p>Preferred language of the Customer. Must be one of the languages supported by the Project.</p>
+     * @return locale
+     */
+
     @Nullable
     public String getLocale() {
         return this.locale;
     }
+
+    /**
+     *  <p>Sets the Stores for the Customer.</p>
+     * @return stores
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> getStores() {
@@ -469,10 +549,19 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
             companyName, vatId, addresses, defaultShippingAddress, defaultBillingAddress, custom, locale, stores);
     }
 
+    /**
+     * factory method for an instance of MyCustomerDraftBuilder
+     * @return builder
+     */
     public static MyCustomerDraftBuilder of() {
         return new MyCustomerDraftBuilder();
     }
 
+    /**
+     * create builder for MyCustomerDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCustomerDraftBuilder of(final MyCustomerDraft template) {
         MyCustomerDraftBuilder builder = new MyCustomerDraftBuilder();
         builder.email = template.getEmail();

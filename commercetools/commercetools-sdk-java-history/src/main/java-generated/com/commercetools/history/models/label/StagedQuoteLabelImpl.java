@@ -28,6 +28,9 @@ public class StagedQuoteLabelImpl implements StagedQuoteLabel, ModelBase {
 
     private com.commercetools.history.models.common.Reference quoteRequest;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedQuoteLabelImpl(@JsonProperty("key") final String key,
             @JsonProperty("customer") final com.commercetools.history.models.common.Reference customer,
@@ -38,6 +41,9 @@ public class StagedQuoteLabelImpl implements StagedQuoteLabel, ModelBase {
         this.type = STAGED_QUOTE_LABEL;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedQuoteLabelImpl() {
         this.type = STAGED_QUOTE_LABEL;
     }

@@ -149,22 +149,47 @@ public class CustomObjectPagedQueryResponseBuilder implements Builder<CustomObje
         return this;
     }
 
+    /**
+     *  <p>Number of results requested.</p>
+     * @return limit
+     */
+
     public Long getLimit() {
         return this.limit;
     }
+
+    /**
+     *  <p>Number of elements skipped.</p>
+     * @return offset
+     */
 
     public Long getOffset() {
         return this.offset;
     }
 
+    /**
+     *  <p>Actual number of results returned.</p>
+     * @return count
+     */
+
     public Long getCount() {
         return this.count;
     }
+
+    /**
+     *  <p>The total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     * @return total
+     */
 
     @Nullable
     public Long getTotal() {
         return this.total;
     }
+
+    /**
+     *  <p>CustomObjects matching the query.</p>
+     * @return results
+     */
 
     public java.util.List<com.commercetools.api.models.custom_object.CustomObject> getResults() {
         return this.results;
@@ -190,10 +215,19 @@ public class CustomObjectPagedQueryResponseBuilder implements Builder<CustomObje
         return new CustomObjectPagedQueryResponseImpl(limit, offset, count, total, results);
     }
 
+    /**
+     * factory method for an instance of CustomObjectPagedQueryResponseBuilder
+     * @return builder
+     */
     public static CustomObjectPagedQueryResponseBuilder of() {
         return new CustomObjectPagedQueryResponseBuilder();
     }
 
+    /**
+     * create builder for CustomObjectPagedQueryResponse instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomObjectPagedQueryResponseBuilder of(final CustomObjectPagedQueryResponse template) {
         CustomObjectPagedQueryResponseBuilder builder = new CustomObjectPagedQueryResponseBuilder();
         builder.limit = template.getLimit();

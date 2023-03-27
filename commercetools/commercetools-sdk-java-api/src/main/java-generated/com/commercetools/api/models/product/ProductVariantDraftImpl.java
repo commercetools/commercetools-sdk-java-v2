@@ -32,6 +32,9 @@ public class ProductVariantDraftImpl implements ProductVariantDraft, ModelBase {
 
     private java.util.List<com.commercetools.api.models.common.AssetDraft> assets;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductVariantDraftImpl(@JsonProperty("sku") final String sku, @JsonProperty("key") final String key,
             @JsonProperty("prices") final java.util.List<com.commercetools.api.models.common.PriceDraft> prices,
@@ -46,6 +49,9 @@ public class ProductVariantDraftImpl implements ProductVariantDraft, ModelBase {
         this.assets = assets;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductVariantDraftImpl() {
     }
 

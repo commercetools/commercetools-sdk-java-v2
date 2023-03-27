@@ -53,7 +53,7 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
     private Double mean;
 
     /**
-     *
+     * set the value to the from
      * @param from value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
     }
 
     /**
-     *
+     * set the value to the fromStr
      * @param fromStr value to be set
      * @return Builder
      */
@@ -75,7 +75,7 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
     }
 
     /**
-     *
+     * set the value to the to
      * @param to value to be set
      * @return Builder
      */
@@ -86,7 +86,7 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
     }
 
     /**
-     *
+     * set the value to the toStr
      * @param toStr value to be set
      * @return Builder
      */
@@ -97,7 +97,7 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
     }
 
     /**
-     *
+     * set the value to the count
      * @param count value to be set
      * @return Builder
      */
@@ -108,7 +108,7 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
     }
 
     /**
-     *
+     * set the value to the productCount
      * @param productCount value to be set
      * @return Builder
      */
@@ -119,7 +119,7 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
     }
 
     /**
-     *
+     * set the value to the total
      * @param total value to be set
      * @return Builder
      */
@@ -130,7 +130,7 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
     }
 
     /**
-     *
+     * set the value to the min
      * @param min value to be set
      * @return Builder
      */
@@ -141,7 +141,7 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
     }
 
     /**
-     *
+     * set the value to the max
      * @param max value to be set
      * @return Builder
      */
@@ -152,7 +152,7 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
     }
 
     /**
-     *
+     * set the value to the mean
      * @param mean value to be set
      * @return Builder
      */
@@ -162,42 +162,92 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
         return this;
     }
 
+    /**
+     * value of from}
+     * @return from
+     */
+
     public Double getFrom() {
         return this.from;
     }
+
+    /**
+     * value of fromStr}
+     * @return fromStr
+     */
 
     public String getFromStr() {
         return this.fromStr;
     }
 
+    /**
+     * value of to}
+     * @return to
+     */
+
     public Double getTo() {
         return this.to;
     }
+
+    /**
+     * value of toStr}
+     * @return toStr
+     */
 
     public String getToStr() {
         return this.toStr;
     }
 
+    /**
+     * value of count}
+     * @return count
+     */
+
     public Long getCount() {
         return this.count;
     }
+
+    /**
+     * value of productCount}
+     * @return productCount
+     */
 
     @Nullable
     public Long getProductCount() {
         return this.productCount;
     }
 
+    /**
+     * value of total}
+     * @return total
+     */
+
     public Double getTotal() {
         return this.total;
     }
+
+    /**
+     * value of min}
+     * @return min
+     */
 
     public Double getMin() {
         return this.min;
     }
 
+    /**
+     * value of max}
+     * @return max
+     */
+
     public Double getMax() {
         return this.max;
     }
+
+    /**
+     * value of mean}
+     * @return mean
+     */
 
     public Double getMean() {
         return this.mean;
@@ -228,10 +278,19 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
         return new FacetRangeImpl(from, fromStr, to, toStr, count, productCount, total, min, max, mean);
     }
 
+    /**
+     * factory method for an instance of FacetRangeBuilder
+     * @return builder
+     */
     public static FacetRangeBuilder of() {
         return new FacetRangeBuilder();
     }
 
+    /**
+     * create builder for FacetRange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static FacetRangeBuilder of(final FacetRange template) {
         FacetRangeBuilder builder = new FacetRangeBuilder();
         builder.from = template.getFrom();

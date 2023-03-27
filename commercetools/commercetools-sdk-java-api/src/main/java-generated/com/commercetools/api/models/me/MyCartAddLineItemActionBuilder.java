@@ -210,45 +210,95 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
         return this;
     }
 
+    /**
+     *  <p><code>id</code> of the Product.</p>
+     *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
+     * @return productId
+     */
+
     @Nullable
     public String getProductId() {
         return this.productId;
     }
+
+    /**
+     *  <p><code>id</code> of the ProductVariant in the Product.</p>
+     *  <p>If not given, the Master Variant is used.</p>
+     *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
+     * @return variantId
+     */
 
     @Nullable
     public Long getVariantId() {
         return this.variantId;
     }
 
+    /**
+     *  <p><code>sku</code> of the ProductVariant.</p>
+     *  <p>Either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
+     * @return sku
+     */
+
     @Nullable
     public String getSku() {
         return this.sku;
     }
+
+    /**
+     *  <p>Number of Line Items to add to the Cart.</p>
+     * @return quantity
+     */
 
     @Nullable
     public Long getQuantity() {
         return this.quantity;
     }
 
+    /**
+     *  <p>Date and time (UTC) the Line Item was added to the Cart. If not set, it defaults to the current date and time.</p>
+     *  <p>Optional for backwards compatibility reasons.</p>
+     * @return addedAt
+     */
+
     @Nullable
     public java.time.ZonedDateTime getAddedAt() {
         return this.addedAt;
     }
+
+    /**
+     *  <p>Used to select a Product Price. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum. If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
+     * @return distributionChannel
+     */
 
     @Nullable
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
         return this.distributionChannel;
     }
 
+    /**
+     *  <p>Used to identify Inventory entries that must be reserved. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @return supplyChannel
+     */
+
     @Nullable
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
         return this.supplyChannel;
     }
 
+    /**
+     *  <p>Container for Line Item-specific addresses.</p>
+     * @return shippingDetails
+     */
+
     @Nullable
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {
         return this.shippingDetails;
     }
+
+    /**
+     *  <p>Custom Fields for the Line Item.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -273,10 +323,19 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
             supplyChannel, shippingDetails, custom);
     }
 
+    /**
+     * factory method for an instance of MyCartAddLineItemActionBuilder
+     * @return builder
+     */
     public static MyCartAddLineItemActionBuilder of() {
         return new MyCartAddLineItemActionBuilder();
     }
 
+    /**
+     * create builder for MyCartAddLineItemAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCartAddLineItemActionBuilder of(final MyCartAddLineItemAction template) {
         MyCartAddLineItemActionBuilder builder = new MyCartAddLineItemActionBuilder();
         builder.productId = template.getProductId();

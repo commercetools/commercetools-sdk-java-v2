@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StringLabelImpl.class)
 public interface StringLabel extends Label {
 
+    /**
+     * discriminator value for StringLabel
+     */
     String STRING_LABEL = "StringLabel";
 
     /**
@@ -47,30 +50,63 @@ public interface StringLabel extends Label {
     @JsonProperty("value")
     public String getValue();
 
+    /**
+     * set value
+     * @param value value to be set
+     */
+
     public void setValue(final String value);
 
+    /**
+     * factory method
+     * @return instance of StringLabel
+     */
     public static StringLabel of() {
         return new StringLabelImpl();
     }
 
+    /**
+     * factory method to copy an instance of StringLabel
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StringLabel of(final StringLabel template) {
         StringLabelImpl instance = new StringLabelImpl();
         instance.setValue(template.getValue());
         return instance;
     }
 
+    /**
+     * builder factory method for StringLabel
+     * @return builder
+     */
     public static StringLabelBuilder builder() {
         return StringLabelBuilder.of();
     }
 
+    /**
+     * create builder for StringLabel instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StringLabelBuilder builder(final StringLabel template) {
         return StringLabelBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStringLabel(Function<StringLabel, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StringLabel> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StringLabel>() {
             @Override

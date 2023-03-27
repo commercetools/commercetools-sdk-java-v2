@@ -31,6 +31,9 @@ public class SetShippingRateInputChangeImpl implements SetShippingRateInputChang
 
     private java.lang.Object previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetShippingRateInputChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final java.lang.Object nextValue,
@@ -41,6 +44,9 @@ public class SetShippingRateInputChangeImpl implements SetShippingRateInputChang
         this.type = SET_SHIPPING_RATE_INPUT_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetShippingRateInputChangeImpl() {
         this.type = SET_SHIPPING_RATE_INPUT_CHANGE;
     }

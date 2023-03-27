@@ -153,22 +153,52 @@ public class ShippingBuilder implements Builder<Shipping> {
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping in a Cart with <code>Multiple</code> ShippingMode.</p>
+     * @return shippingKey
+     */
+
     public String getShippingKey() {
         return this.shippingKey;
     }
+
+    /**
+     *  <p>Automatically set when the Shipping Method is added.</p>
+     * @return shippingInfo
+     */
 
     public com.commercetools.api.models.cart.ShippingInfo getShippingInfo() {
         return this.shippingInfo;
     }
 
+    /**
+     *  <p>Determines the shipping rates and Tax Rates of associated Line Items.</p>
+     * @return shippingAddress
+     */
+
     public com.commercetools.api.models.common.Address getShippingAddress() {
         return this.shippingAddress;
     }
+
+    /**
+     *  <p>Used as an input to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <ul>
+     *   <li>If <code>CartClassification</code>, it is ClassificationShippingRateInput.</li>
+     *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
+     *   <li>If <code>CartValue</code>, it cannot be used.</li>
+     *  </ul>
+     * @return shippingRateInput
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.ShippingRateInput getShippingRateInput() {
         return this.shippingRateInput;
     }
+
+    /**
+     *  <p>Custom Fields of Shipping.</p>
+     * @return shippingCustomFields
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFields getShippingCustomFields() {
@@ -194,10 +224,19 @@ public class ShippingBuilder implements Builder<Shipping> {
         return new ShippingImpl(shippingKey, shippingInfo, shippingAddress, shippingRateInput, shippingCustomFields);
     }
 
+    /**
+     * factory method for an instance of ShippingBuilder
+     * @return builder
+     */
     public static ShippingBuilder of() {
         return new ShippingBuilder();
     }
 
+    /**
+     * create builder for Shipping instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShippingBuilder of(final Shipping template) {
         ShippingBuilder builder = new ShippingBuilder();
         builder.shippingKey = template.getShippingKey();

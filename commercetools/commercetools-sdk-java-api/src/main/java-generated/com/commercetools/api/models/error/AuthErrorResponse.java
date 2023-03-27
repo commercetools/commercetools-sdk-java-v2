@@ -58,19 +58,48 @@ public interface AuthErrorResponse extends ErrorResponse {
     @JsonProperty("errors")
     public List<ErrorObject> getErrors();
 
+    /**
+     *  <p>Error code as per the OAuth 2.0 specification. For example: <code>"access_denied"</code>.</p>
+     * @param error value to be set
+     */
+
     public void setError(final String error);
 
+    /**
+     *  <p>Plain text description of the first error.</p>
+     * @param errorDescription value to be set
+     */
+
     public void setErrorDescription(final String errorDescription);
+
+    /**
+     *  <p>Authentication and authorization-related errors returned for a request.</p>
+     * @param errors values to be set
+     */
 
     @JsonIgnore
     public void setErrors(final ErrorObject... errors);
 
+    /**
+     *  <p>Authentication and authorization-related errors returned for a request.</p>
+     * @param errors values to be set
+     */
+
     public void setErrors(final List<ErrorObject> errors);
 
+    /**
+     * factory method
+     * @return instance of AuthErrorResponse
+     */
     public static AuthErrorResponse of() {
         return new AuthErrorResponseImpl();
     }
 
+    /**
+     * factory method to copy an instance of AuthErrorResponse
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static AuthErrorResponse of(final AuthErrorResponse template) {
         AuthErrorResponseImpl instance = new AuthErrorResponseImpl();
         instance.setStatusCode(template.getStatusCode());
@@ -81,18 +110,37 @@ public interface AuthErrorResponse extends ErrorResponse {
         return instance;
     }
 
+    /**
+     * builder factory method for AuthErrorResponse
+     * @return builder
+     */
     public static AuthErrorResponseBuilder builder() {
         return AuthErrorResponseBuilder.of();
     }
 
+    /**
+     * create builder for AuthErrorResponse instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AuthErrorResponseBuilder builder(final AuthErrorResponse template) {
         return AuthErrorResponseBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAuthErrorResponse(Function<AuthErrorResponse, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AuthErrorResponse> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AuthErrorResponse>() {
             @Override

@@ -154,28 +154,62 @@ public class QuoteDraftBuilder implements Builder<QuoteDraft> {
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier for the Quote.</p>
+     * @return key
+     */
+
     @Nullable
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>StagedQuote from which the Quote is created.</p>
+     * @return stagedQuote
+     */
+
     public com.commercetools.api.models.staged_quote.StagedQuoteResourceIdentifier getStagedQuote() {
         return this.stagedQuote;
     }
 
+    /**
+     *  <p>Current version of the StagedQuote.</p>
+     * @return stagedQuoteVersion
+     */
+
     public Long getStagedQuoteVersion() {
         return this.stagedQuoteVersion;
     }
+
+    /**
+     *  <p>If <code>true</code>, the <code>stagedQuoteState</code> of the referenced StagedQuote will be set to <code>Sent</code>.</p>
+     * @return stagedQuoteStateToSent
+     */
 
     @Nullable
     public Boolean getStagedQuoteStateToSent() {
         return this.stagedQuoteStateToSent;
     }
 
+    /**
+     *  <p>State of the Quote. This reference can point to a State in a custom workflow.</p>
+     * @return state
+     */
+
     @Nullable
     public com.commercetools.api.models.state.StateReference getState() {
         return this.state;
     }
+
+    /**
+     *  <p>Custom Fields to be added to the Quote.</p>
+     *  <ul>
+     *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced StagedQuote and added to the Quote.</li>
+     *   <li>If empty, the Custom Fields on the referenced StagedQuote are added to the Quote automatically.</li>
+     *  </ul>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -200,10 +234,19 @@ public class QuoteDraftBuilder implements Builder<QuoteDraft> {
         return new QuoteDraftImpl(key, stagedQuote, stagedQuoteVersion, stagedQuoteStateToSent, state, custom);
     }
 
+    /**
+     * factory method for an instance of QuoteDraftBuilder
+     * @return builder
+     */
     public static QuoteDraftBuilder of() {
         return new QuoteDraftBuilder();
     }
 
+    /**
+     * create builder for QuoteDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static QuoteDraftBuilder of(final QuoteDraft template) {
         QuoteDraftBuilder builder = new QuoteDraftBuilder();
         builder.key = template.getKey();

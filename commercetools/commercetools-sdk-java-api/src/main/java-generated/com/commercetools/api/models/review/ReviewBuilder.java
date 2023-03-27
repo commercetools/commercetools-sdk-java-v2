@@ -348,85 +348,175 @@ public class ReviewBuilder implements Builder<Review> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Review.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Current version of the Review.</p>
+     * @return version
+     */
 
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *  <p>Date and time (UTC) the Review was initially created.</p>
+     * @return createdAt
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+     *  <p>Date and time (UTC) the Review was last updated.</p>
+     * @return lastModifiedAt
+     */
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
+     */
+
     @Nullable
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the Review.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>Must be unique among Reviews. For example, if this value is set to Customer <code>id</code>&nbsp;+ Product <code>id</code>, only one Review per Customer and per Product is allowed.</p>
+     * @return uniquenessValue
+     */
+
     @Nullable
     public String getUniquenessValue() {
         return this.uniquenessValue;
     }
+
+    /**
+     *  <p>Language in which the content of the Review is written.</p>
+     * @return locale
+     */
 
     @Nullable
     public String getLocale() {
         return this.locale;
     }
 
+    /**
+     *  <p>Name of the author.</p>
+     * @return authorName
+     */
+
     @Nullable
     public String getAuthorName() {
         return this.authorName;
     }
+
+    /**
+     *  <p>Title of the Review.</p>
+     * @return title
+     */
 
     @Nullable
     public String getTitle() {
         return this.title;
     }
 
+    /**
+     *  <p>Content of the Review.</p>
+     * @return text
+     */
+
     @Nullable
     public String getText() {
         return this.text;
     }
+
+    /**
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     * @return target
+     */
 
     @Nullable
     public com.commercetools.api.models.common.Reference getTarget() {
         return this.target;
     }
 
+    /**
+     *  <p>Indicates if this Review is taken into account in the ratings statistics of the target. A Review is per default used in the statistics, unless the Review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>. If the role of a State is modified after the calculation of this field, the calculation is not updated.</p>
+     * @return includedInStatistics
+     */
+
     public Boolean getIncludedInStatistics() {
         return this.includedInStatistics;
     }
+
+    /**
+     *  <p>Rating of the Product or Channel.</p>
+     * @return rating
+     */
 
     @Nullable
     public Integer getRating() {
         return this.rating;
     }
 
+    /**
+     *  <p>State of the Review. Used for approval processes, see Review approval process for details.</p>
+     * @return state
+     */
+
     @Nullable
     public com.commercetools.api.models.state.StateReference getState() {
         return this.state;
     }
 
+    /**
+     *  <p>Customer who created the Review.</p>
+     * @return customer
+     */
+
     @Nullable
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
         return this.customer;
     }
+
+    /**
+     *  <p>Custom Fields of the Review.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -456,10 +546,19 @@ public class ReviewBuilder implements Builder<Review> {
             locale, authorName, title, text, target, includedInStatistics, rating, state, customer, custom);
     }
 
+    /**
+     * factory method for an instance of ReviewBuilder
+     * @return builder
+     */
     public static ReviewBuilder of() {
         return new ReviewBuilder();
     }
 
+    /**
+     * create builder for Review instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReviewBuilder of(final Review template) {
         ReviewBuilder builder = new ReviewBuilder();
         builder.id = template.getId();

@@ -24,12 +24,18 @@ public class ReviewSetRatingActionImpl implements ReviewSetRatingAction, ModelBa
 
     private Integer rating;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReviewSetRatingActionImpl(@JsonProperty("rating") final Integer rating) {
         this.rating = rating;
         this.action = SET_RATING;
     }
 
+    /**
+     * create empty instance
+     */
     public ReviewSetRatingActionImpl() {
         this.action = SET_RATING;
     }

@@ -24,7 +24,7 @@ public class CategoryOrderHintsBuilder implements Builder<CategoryOrderHints> {
     private Map<String, String> values = new HashMap<>();
 
     /**
-     *
+     * assign pattern properties to the builder
      * @param values properties to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class CategoryOrderHintsBuilder implements Builder<CategoryOrderHints> {
     }
 
     /**
-     *
+     * assign a pattern property to the builder
      * @param key property name
      * @param value property value
      * @return Builder
@@ -48,6 +48,11 @@ public class CategoryOrderHintsBuilder implements Builder<CategoryOrderHints> {
         values.put(key, value);
         return this;
     }
+
+    /**
+     * values of pattern properties
+     * @return pattern properties
+     */
 
     public Map<String, String> getValues() {
         return this.values;
@@ -69,10 +74,19 @@ public class CategoryOrderHintsBuilder implements Builder<CategoryOrderHints> {
         return new CategoryOrderHintsImpl(values);
     }
 
+    /**
+     * factory method for an instance of CategoryOrderHintsBuilder
+     * @return builder
+     */
     public static CategoryOrderHintsBuilder of() {
         return new CategoryOrderHintsBuilder();
     }
 
+    /**
+     * create builder for CategoryOrderHints instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategoryOrderHintsBuilder of(final CategoryOrderHints template) {
         CategoryOrderHintsBuilder builder = new CategoryOrderHintsBuilder();
         builder.values = template.values();

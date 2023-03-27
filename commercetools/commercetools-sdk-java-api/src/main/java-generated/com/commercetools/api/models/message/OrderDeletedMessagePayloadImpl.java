@@ -24,12 +24,18 @@ public class OrderDeletedMessagePayloadImpl implements OrderDeletedMessagePayloa
 
     private com.commercetools.api.models.order.Order order;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderDeletedMessagePayloadImpl(@JsonProperty("order") final com.commercetools.api.models.order.Order order) {
         this.order = order;
         this.type = ORDER_DELETED;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderDeletedMessagePayloadImpl() {
         this.type = ORDER_DELETED;
     }

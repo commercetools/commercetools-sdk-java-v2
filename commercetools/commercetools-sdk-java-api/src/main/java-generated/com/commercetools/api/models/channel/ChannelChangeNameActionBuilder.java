@@ -47,6 +47,11 @@ public class ChannelChangeNameActionBuilder implements Builder<ChannelChangeName
         return this;
     }
 
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     * @return name
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
@@ -68,10 +73,19 @@ public class ChannelChangeNameActionBuilder implements Builder<ChannelChangeName
         return new ChannelChangeNameActionImpl(name);
     }
 
+    /**
+     * factory method for an instance of ChannelChangeNameActionBuilder
+     * @return builder
+     */
     public static ChannelChangeNameActionBuilder of() {
         return new ChannelChangeNameActionBuilder();
     }
 
+    /**
+     * create builder for ChannelChangeNameAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChannelChangeNameActionBuilder of(final ChannelChangeNameAction template) {
         ChannelChangeNameActionBuilder builder = new ChannelChangeNameActionBuilder();
         builder.name = template.getName();

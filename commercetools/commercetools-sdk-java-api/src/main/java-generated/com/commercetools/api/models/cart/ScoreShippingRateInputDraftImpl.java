@@ -24,12 +24,18 @@ public class ScoreShippingRateInputDraftImpl implements ScoreShippingRateInputDr
 
     private Long score;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ScoreShippingRateInputDraftImpl(@JsonProperty("score") final Long score) {
         this.score = score;
         this.type = SCORE;
     }
 
+    /**
+     * create empty instance
+     */
     public ScoreShippingRateInputDraftImpl() {
         this.type = SCORE;
     }

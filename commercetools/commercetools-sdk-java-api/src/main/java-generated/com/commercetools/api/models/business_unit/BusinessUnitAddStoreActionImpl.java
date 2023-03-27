@@ -24,6 +24,9 @@ public class BusinessUnitAddStoreActionImpl implements BusinessUnitAddStoreActio
 
     private com.commercetools.api.models.store.StoreResourceIdentifier store;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitAddStoreActionImpl(
             @JsonProperty("store") final com.commercetools.api.models.store.StoreResourceIdentifier store) {
@@ -31,6 +34,9 @@ public class BusinessUnitAddStoreActionImpl implements BusinessUnitAddStoreActio
         this.action = ADD_STORE;
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitAddStoreActionImpl() {
         this.action = ADD_STORE;
     }

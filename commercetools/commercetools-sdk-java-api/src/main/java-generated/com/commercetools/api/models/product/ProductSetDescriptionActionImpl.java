@@ -26,6 +26,9 @@ public class ProductSetDescriptionActionImpl implements ProductSetDescriptionAct
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSetDescriptionActionImpl(
             @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description,
@@ -35,6 +38,9 @@ public class ProductSetDescriptionActionImpl implements ProductSetDescriptionAct
         this.action = SET_DESCRIPTION;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSetDescriptionActionImpl() {
         this.action = SET_DESCRIPTION;
     }

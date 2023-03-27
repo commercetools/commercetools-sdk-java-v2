@@ -30,6 +30,9 @@ public class CartPagedQueryResponseImpl implements CartPagedQueryResponse, Model
 
     private java.util.List<com.commercetools.api.models.cart.Cart> results;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartPagedQueryResponseImpl(@JsonProperty("limit") final Long limit, @JsonProperty("offset") final Long offset,
             @JsonProperty("count") final Long count, @JsonProperty("total") final Long total,
@@ -41,6 +44,9 @@ public class CartPagedQueryResponseImpl implements CartPagedQueryResponse, Model
         this.results = results;
     }
 
+    /**
+     * create empty instance
+     */
     public CartPagedQueryResponseImpl() {
     }
 

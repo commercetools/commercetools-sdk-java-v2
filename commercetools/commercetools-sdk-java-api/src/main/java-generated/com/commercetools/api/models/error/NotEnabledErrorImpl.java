@@ -26,6 +26,9 @@ public class NotEnabledErrorImpl implements NotEnabledError, ModelBase {
 
     private Map<String, java.lang.Object> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     NotEnabledErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values) {
@@ -34,6 +37,9 @@ public class NotEnabledErrorImpl implements NotEnabledError, ModelBase {
         this.code = NOT_ENABLED;
     }
 
+    /**
+     * create empty instance
+     */
     public NotEnabledErrorImpl() {
         this.code = NOT_ENABLED;
     }

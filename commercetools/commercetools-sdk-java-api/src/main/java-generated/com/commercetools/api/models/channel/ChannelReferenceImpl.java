@@ -27,6 +27,9 @@ public class ChannelReferenceImpl implements ChannelReference, ModelBase {
 
     private com.commercetools.api.models.channel.Channel obj;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChannelReferenceImpl(@JsonProperty("id") final String id,
             @JsonProperty("obj") final com.commercetools.api.models.channel.Channel obj) {
@@ -35,6 +38,9 @@ public class ChannelReferenceImpl implements ChannelReference, ModelBase {
         this.typeId = ReferenceTypeId.findEnum("channel");
     }
 
+    /**
+     * create empty instance
+     */
     public ChannelReferenceImpl() {
         this.typeId = ReferenceTypeId.findEnum("channel");
     }

@@ -48,6 +48,11 @@ public class CustomerAddressAddedMessagePayloadBuilder implements Builder<Custom
         return this;
     }
 
+    /**
+     *  <p>Address that was added during the Add Address update action.</p>
+     * @return address
+     */
+
     public com.commercetools.api.models.common.Address getAddress() {
         return this.address;
     }
@@ -69,10 +74,19 @@ public class CustomerAddressAddedMessagePayloadBuilder implements Builder<Custom
         return new CustomerAddressAddedMessagePayloadImpl(address);
     }
 
+    /**
+     * factory method for an instance of CustomerAddressAddedMessagePayloadBuilder
+     * @return builder
+     */
     public static CustomerAddressAddedMessagePayloadBuilder of() {
         return new CustomerAddressAddedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for CustomerAddressAddedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerAddressAddedMessagePayloadBuilder of(final CustomerAddressAddedMessagePayload template) {
         CustomerAddressAddedMessagePayloadBuilder builder = new CustomerAddressAddedMessagePayloadBuilder();
         builder.address = template.getAddress();

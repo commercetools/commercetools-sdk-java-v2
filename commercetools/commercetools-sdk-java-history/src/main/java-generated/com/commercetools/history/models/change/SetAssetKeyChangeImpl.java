@@ -30,6 +30,9 @@ public class SetAssetKeyChangeImpl implements SetAssetKeyChange, ModelBase {
 
     private String previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetAssetKeyChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("asset") final com.commercetools.history.models.change_value.AssetChangeValue asset,
@@ -42,6 +45,9 @@ public class SetAssetKeyChangeImpl implements SetAssetKeyChange, ModelBase {
         this.type = SET_ASSET_KEY_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetAssetKeyChangeImpl() {
         this.type = SET_ASSET_KEY_CHANGE;
     }

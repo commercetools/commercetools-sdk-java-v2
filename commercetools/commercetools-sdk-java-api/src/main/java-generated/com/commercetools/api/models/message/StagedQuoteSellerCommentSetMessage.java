@@ -36,6 +36,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedQuoteSellerCommentSetMessageImpl.class)
 public interface StagedQuoteSellerCommentSetMessage extends Message {
 
+    /**
+     * discriminator value for StagedQuoteSellerCommentSetMessage
+     */
     String STAGED_QUOTE_SELLER_COMMENT_SET = "StagedQuoteSellerCommentSet";
 
     /**
@@ -46,12 +49,26 @@ public interface StagedQuoteSellerCommentSetMessage extends Message {
     @JsonProperty("sellerComment")
     public String getSellerComment();
 
+    /**
+     *  <p><code>sellerComment</code> on the StagedQuote after a successful Set Seller Comment update action.</p>
+     * @param sellerComment value to be set
+     */
+
     public void setSellerComment(final String sellerComment);
 
+    /**
+     * factory method
+     * @return instance of StagedQuoteSellerCommentSetMessage
+     */
     public static StagedQuoteSellerCommentSetMessage of() {
         return new StagedQuoteSellerCommentSetMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedQuoteSellerCommentSetMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedQuoteSellerCommentSetMessage of(final StagedQuoteSellerCommentSetMessage template) {
         StagedQuoteSellerCommentSetMessageImpl instance = new StagedQuoteSellerCommentSetMessageImpl();
         instance.setId(template.getId());
@@ -68,18 +85,37 @@ public interface StagedQuoteSellerCommentSetMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for StagedQuoteSellerCommentSetMessage
+     * @return builder
+     */
     public static StagedQuoteSellerCommentSetMessageBuilder builder() {
         return StagedQuoteSellerCommentSetMessageBuilder.of();
     }
 
+    /**
+     * create builder for StagedQuoteSellerCommentSetMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedQuoteSellerCommentSetMessageBuilder builder(final StagedQuoteSellerCommentSetMessage template) {
         return StagedQuoteSellerCommentSetMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedQuoteSellerCommentSetMessage(Function<StagedQuoteSellerCommentSetMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedQuoteSellerCommentSetMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedQuoteSellerCommentSetMessage>() {
             @Override

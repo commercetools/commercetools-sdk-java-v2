@@ -24,12 +24,18 @@ public class ProductTypeReferenceImpl implements ProductTypeReference, ModelBase
 
     private String id;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductTypeReferenceImpl(@JsonProperty("id") final String id) {
         this.id = id;
         this.typeId = ReferenceTypeId.findEnum("product-type");
     }
 
+    /**
+     * create empty instance
+     */
     public ProductTypeReferenceImpl() {
         this.typeId = ReferenceTypeId.findEnum("product-type");
     }

@@ -61,6 +61,11 @@ public class ChannelRemoveRolesActionBuilder implements Builder<ChannelRemoveRol
         return this;
     }
 
+    /**
+     *  <p>Value to remove from the array.</p>
+     * @return roles
+     */
+
     public java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> getRoles() {
         return this.roles;
     }
@@ -82,10 +87,19 @@ public class ChannelRemoveRolesActionBuilder implements Builder<ChannelRemoveRol
         return new ChannelRemoveRolesActionImpl(roles);
     }
 
+    /**
+     * factory method for an instance of ChannelRemoveRolesActionBuilder
+     * @return builder
+     */
     public static ChannelRemoveRolesActionBuilder of() {
         return new ChannelRemoveRolesActionBuilder();
     }
 
+    /**
+     * create builder for ChannelRemoveRolesAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChannelRemoveRolesActionBuilder of(final ChannelRemoveRolesAction template) {
         ChannelRemoveRolesActionBuilder builder = new ChannelRemoveRolesActionBuilder();
         builder.roles = template.getRoles();

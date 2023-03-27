@@ -47,6 +47,9 @@ public class OverlappingStandalonePriceValidityErrorImpl implements OverlappingS
 
     private java.time.ZonedDateTime conflictingValidUntil;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OverlappingStandalonePriceValidityErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values,
@@ -74,6 +77,9 @@ public class OverlappingStandalonePriceValidityErrorImpl implements OverlappingS
         this.code = OVERLAPPING_STANDALONE_PRICE_VALIDITY;
     }
 
+    /**
+     * create empty instance
+     */
     public OverlappingStandalonePriceValidityErrorImpl() {
         this.code = OVERLAPPING_STANDALONE_PRICE_VALIDITY;
     }

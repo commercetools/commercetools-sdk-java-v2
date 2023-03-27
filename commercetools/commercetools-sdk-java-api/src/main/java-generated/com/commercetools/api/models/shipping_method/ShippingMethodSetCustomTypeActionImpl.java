@@ -26,6 +26,9 @@ public class ShippingMethodSetCustomTypeActionImpl implements ShippingMethodSetC
 
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShippingMethodSetCustomTypeActionImpl(
             @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
@@ -35,6 +38,9 @@ public class ShippingMethodSetCustomTypeActionImpl implements ShippingMethodSetC
         this.action = SET_CUSTOM_TYPE;
     }
 
+    /**
+     * create empty instance
+     */
     public ShippingMethodSetCustomTypeActionImpl() {
         this.action = SET_CUSTOM_TYPE;
     }

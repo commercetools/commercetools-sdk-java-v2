@@ -54,6 +54,9 @@ public class ProductPriceExternalDiscountSetMessageImpl implements ProductPriceE
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductPriceExternalDiscountSetMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -88,6 +91,9 @@ public class ProductPriceExternalDiscountSetMessageImpl implements ProductPriceE
         this.type = PRODUCT_PRICE_EXTERNAL_DISCOUNT_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductPriceExternalDiscountSetMessageImpl() {
         this.type = PRODUCT_PRICE_EXTERNAL_DISCOUNT_SET;
     }

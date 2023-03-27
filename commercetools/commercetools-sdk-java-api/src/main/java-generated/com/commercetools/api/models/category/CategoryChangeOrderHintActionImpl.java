@@ -24,12 +24,18 @@ public class CategoryChangeOrderHintActionImpl implements CategoryChangeOrderHin
 
     private String orderHint;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CategoryChangeOrderHintActionImpl(@JsonProperty("orderHint") final String orderHint) {
         this.orderHint = orderHint;
         this.action = CHANGE_ORDER_HINT;
     }
 
+    /**
+     * create empty instance
+     */
     public CategoryChangeOrderHintActionImpl() {
         this.action = CHANGE_ORDER_HINT;
     }

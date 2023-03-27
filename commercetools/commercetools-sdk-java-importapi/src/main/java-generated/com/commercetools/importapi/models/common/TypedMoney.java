@@ -67,24 +67,57 @@ public interface TypedMoney {
     @JsonProperty("currencyCode")
     public String getCurrencyCode();
 
+    /**
+     * set fractionDigits
+     * @param fractionDigits value to be set
+     */
+
     public void setFractionDigits(final Integer fractionDigits);
+
+    /**
+     * set centAmount
+     * @param centAmount value to be set
+     */
 
     public void setCentAmount(final Long centAmount);
 
+    /**
+     *  <p>The currency code compliant to ISO 4217.</p>
+     * @param currencyCode value to be set
+     */
+
     public void setCurrencyCode(final String currencyCode);
 
+    /**
+     * builder for highPrecision subtype
+     * @return builder
+     */
     public static com.commercetools.importapi.models.common.HighPrecisionMoneyBuilder highPrecisionBuilder() {
         return com.commercetools.importapi.models.common.HighPrecisionMoneyBuilder.of();
     }
 
+    /**
+     * builder for centPrecision subtype
+     * @return builder
+     */
     public static com.commercetools.importapi.models.common.MoneyBuilder centPrecisionBuilder() {
         return com.commercetools.importapi.models.common.MoneyBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTypedMoney(Function<TypedMoney, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<TypedMoney> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TypedMoney>() {
             @Override

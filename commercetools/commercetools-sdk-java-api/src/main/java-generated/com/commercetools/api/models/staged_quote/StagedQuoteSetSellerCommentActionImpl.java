@@ -24,12 +24,18 @@ public class StagedQuoteSetSellerCommentActionImpl implements StagedQuoteSetSell
 
     private String sellerComment;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedQuoteSetSellerCommentActionImpl(@JsonProperty("sellerComment") final String sellerComment) {
         this.sellerComment = sellerComment;
         this.action = SET_SELLER_COMMENT;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedQuoteSetSellerCommentActionImpl() {
         this.action = SET_SELLER_COMMENT;
     }

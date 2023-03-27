@@ -175,31 +175,66 @@ public class TaxRateBuilder implements Builder<TaxRate> {
         return this;
     }
 
+    /**
+     *  <p>Present if the TaxRate is part of a TaxCategory. Absent for external TaxRates in LineItem, CustomLineItem, and ShippingInfo.</p>
+     * @return id
+     */
+
     @Nullable
     public String getId() {
         return this.id;
     }
 
+    /**
+     *  <p>Name of the TaxRate.</p>
+     * @return name
+     */
+
     public String getName() {
         return this.name;
     }
+
+    /**
+     *  <p>Tax rate. If subrates are used, the amount must be the sum of all subrates.</p>
+     * @return amount
+     */
 
     public Double getAmount() {
         return this.amount;
     }
 
+    /**
+     *  <p>If <code>true</code>, tax is included in Embedded Prices or Standalone Prices, and the <code>taxedPrice</code> is present on LineItems. In this case, the <code>totalNet</code> price on TaxedPrice includes the TaxRate.</p>
+     * @return includedInPrice
+     */
+
     public Boolean getIncludedInPrice() {
         return this.includedInPrice;
     }
+
+    /**
+     *  <p>Country in which the tax rate is applied in ISO 3166-1 alpha-2 format.</p>
+     * @return country
+     */
 
     public String getCountry() {
         return this.country;
     }
 
+    /**
+     *  <p>State within the country, such as Texas in the United States.</p>
+     * @return state
+     */
+
     @Nullable
     public String getState() {
         return this.state;
     }
+
+    /**
+     *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
+     * @return subRates
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.tax_category.SubRate> getSubRates() {
@@ -226,10 +261,19 @@ public class TaxRateBuilder implements Builder<TaxRate> {
         return new TaxRateImpl(id, name, amount, includedInPrice, country, state, subRates);
     }
 
+    /**
+     * factory method for an instance of TaxRateBuilder
+     * @return builder
+     */
     public static TaxRateBuilder of() {
         return new TaxRateBuilder();
     }
 
+    /**
+     * create builder for TaxRate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TaxRateBuilder of(final TaxRate template) {
         TaxRateBuilder builder = new TaxRateBuilder();
         builder.id = template.getId();

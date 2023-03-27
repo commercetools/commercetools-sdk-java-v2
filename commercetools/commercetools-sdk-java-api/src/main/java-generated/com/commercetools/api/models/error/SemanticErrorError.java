@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SemanticErrorErrorImpl.class)
 public interface SemanticErrorError extends ErrorObject {
 
+    /**
+     * discriminator value for SemanticErrorError
+     */
     String SEMANTIC_ERROR = "SemanticError";
 
     /**
@@ -47,12 +50,26 @@ public interface SemanticErrorError extends ErrorObject {
     @JsonProperty("message")
     public String getMessage();
 
+    /**
+     *  <p>Plain text description of the error concerning the predicate. For example, <code>"Invalid country code $countryCode provided for the field $fieldDefinition."</code>.</p>
+     * @param message value to be set
+     */
+
     public void setMessage(final String message);
 
+    /**
+     * factory method
+     * @return instance of SemanticErrorError
+     */
     public static SemanticErrorError of() {
         return new SemanticErrorErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of SemanticErrorError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SemanticErrorError of(final SemanticErrorError template) {
         SemanticErrorErrorImpl instance = new SemanticErrorErrorImpl();
         instance.setMessage(template.getMessage());
@@ -60,18 +77,37 @@ public interface SemanticErrorError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for SemanticErrorError
+     * @return builder
+     */
     public static SemanticErrorErrorBuilder builder() {
         return SemanticErrorErrorBuilder.of();
     }
 
+    /**
+     * create builder for SemanticErrorError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SemanticErrorErrorBuilder builder(final SemanticErrorError template) {
         return SemanticErrorErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSemanticErrorError(Function<SemanticErrorError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SemanticErrorError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SemanticErrorError>() {
             @Override

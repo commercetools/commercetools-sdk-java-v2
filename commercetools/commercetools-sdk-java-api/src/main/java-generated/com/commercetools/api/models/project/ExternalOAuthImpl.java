@@ -25,6 +25,9 @@ public class ExternalOAuthImpl implements ExternalOAuth, ModelBase {
 
     private String authorizationHeader;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ExternalOAuthImpl(@JsonProperty("url") final String url,
             @JsonProperty("authorizationHeader") final String authorizationHeader) {
@@ -32,6 +35,9 @@ public class ExternalOAuthImpl implements ExternalOAuth, ModelBase {
         this.authorizationHeader = authorizationHeader;
     }
 
+    /**
+     * create empty instance
+     */
     public ExternalOAuthImpl() {
     }
 

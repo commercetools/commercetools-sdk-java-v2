@@ -28,6 +28,9 @@ public class ProductSelectionDraftImpl implements ProductSelectionDraft, ModelBa
 
     private com.commercetools.api.models.product_selection.ProductSelectionTypeEnum type;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSelectionDraftImpl(@JsonProperty("key") final String key,
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
@@ -39,6 +42,9 @@ public class ProductSelectionDraftImpl implements ProductSelectionDraft, ModelBa
         this.type = type;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSelectionDraftImpl() {
     }
 

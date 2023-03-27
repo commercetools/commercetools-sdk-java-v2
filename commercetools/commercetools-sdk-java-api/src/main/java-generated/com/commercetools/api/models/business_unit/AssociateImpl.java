@@ -24,6 +24,9 @@ public class AssociateImpl implements Associate, ModelBase {
 
     private com.commercetools.api.models.customer.CustomerReference customer;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AssociateImpl(
             @JsonProperty("roles") final java.util.List<com.commercetools.api.models.business_unit.AssociateRole> roles,
@@ -32,6 +35,9 @@ public class AssociateImpl implements Associate, ModelBase {
         this.customer = customer;
     }
 
+    /**
+     * create empty instance
+     */
     public AssociateImpl() {
     }
 

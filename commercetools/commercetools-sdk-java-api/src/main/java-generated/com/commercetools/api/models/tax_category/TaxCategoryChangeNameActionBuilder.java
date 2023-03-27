@@ -34,6 +34,11 @@ public class TaxCategoryChangeNameActionBuilder implements Builder<TaxCategoryCh
         return this;
     }
 
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     * @return name
+     */
+
     public String getName() {
         return this.name;
     }
@@ -55,10 +60,19 @@ public class TaxCategoryChangeNameActionBuilder implements Builder<TaxCategoryCh
         return new TaxCategoryChangeNameActionImpl(name);
     }
 
+    /**
+     * factory method for an instance of TaxCategoryChangeNameActionBuilder
+     * @return builder
+     */
     public static TaxCategoryChangeNameActionBuilder of() {
         return new TaxCategoryChangeNameActionBuilder();
     }
 
+    /**
+     * create builder for TaxCategoryChangeNameAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TaxCategoryChangeNameActionBuilder of(final TaxCategoryChangeNameAction template) {
         TaxCategoryChangeNameActionBuilder builder = new TaxCategoryChangeNameActionBuilder();
         builder.name = template.getName();

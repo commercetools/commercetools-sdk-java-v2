@@ -24,12 +24,18 @@ public class ShoppingListSetAnonymousIdActionImpl implements ShoppingListSetAnon
 
     private String anonymousId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShoppingListSetAnonymousIdActionImpl(@JsonProperty("anonymousId") final String anonymousId) {
         this.anonymousId = anonymousId;
         this.action = SET_ANONYMOUS_ID;
     }
 
+    /**
+     * create empty instance
+     */
     public ShoppingListSetAnonymousIdActionImpl() {
         this.action = SET_ANONYMOUS_ID;
     }

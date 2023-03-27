@@ -112,14 +112,31 @@ public class AssignedProductReferenceBuilder implements Builder<AssignedProductR
         return this;
     }
 
+    /**
+     *  <p>Reference to a Product that is assigned to the Product Selection.</p>
+     * @return product
+     */
+
     public com.commercetools.api.models.product.ProductReference getProduct() {
         return this.product;
     }
+
+    /**
+     *  <p>The Variants of the Product that are included from the Product Selection.</p>
+     *  <p>This field may exist only for the IndividualProductSelectionType. In absence of this field, all Variants are deemed to be included.</p>
+     * @return variantSelection
+     */
 
     @Nullable
     public com.commercetools.api.models.product_selection.ProductVariantSelection getVariantSelection() {
         return this.variantSelection;
     }
+
+    /**
+     *  <p>The Variants of the Product that are excluded from the Product Selection.</p>
+     *  <p>This field may exist only for the IndividualExclusionProductSelectionType. In absence of this field, all Variants are deemed to be excluded.</p>
+     * @return variantExclusion
+     */
 
     @Nullable
     public com.commercetools.api.models.product_selection.ProductVariantExclusion getVariantExclusion() {
@@ -143,10 +160,19 @@ public class AssignedProductReferenceBuilder implements Builder<AssignedProductR
         return new AssignedProductReferenceImpl(product, variantSelection, variantExclusion);
     }
 
+    /**
+     * factory method for an instance of AssignedProductReferenceBuilder
+     * @return builder
+     */
     public static AssignedProductReferenceBuilder of() {
         return new AssignedProductReferenceBuilder();
     }
 
+    /**
+     * create builder for AssignedProductReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AssignedProductReferenceBuilder of(final AssignedProductReference template) {
         AssignedProductReferenceBuilder builder = new AssignedProductReferenceBuilder();
         builder.product = template.getProduct();

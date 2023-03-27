@@ -34,6 +34,11 @@ public class AzureFunctionsAuthenticationBuilder implements Builder<AzureFunctio
         return this;
     }
 
+    /**
+     *  <p>Partially hidden on retrieval for security reasons.</p>
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
@@ -55,10 +60,19 @@ public class AzureFunctionsAuthenticationBuilder implements Builder<AzureFunctio
         return new AzureFunctionsAuthenticationImpl(key);
     }
 
+    /**
+     * factory method for an instance of AzureFunctionsAuthenticationBuilder
+     * @return builder
+     */
     public static AzureFunctionsAuthenticationBuilder of() {
         return new AzureFunctionsAuthenticationBuilder();
     }
 
+    /**
+     * create builder for AzureFunctionsAuthentication instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AzureFunctionsAuthenticationBuilder of(final AzureFunctionsAuthentication template) {
         AzureFunctionsAuthenticationBuilder builder = new AzureFunctionsAuthenticationBuilder();
         builder.key = template.getKey();

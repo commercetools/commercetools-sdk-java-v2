@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductImportRequestImpl.class)
 public interface ProductImportRequest extends ImportRequest {
 
+    /**
+     * discriminator value for ProductImportRequest
+     */
     String PRODUCT = "product";
 
     /**
@@ -42,33 +45,71 @@ public interface ProductImportRequest extends ImportRequest {
     @JsonProperty("resources")
     public List<ProductImport> getResources();
 
+    /**
+     *  <p>The product import resources of this request.</p>
+     * @param resources values to be set
+     */
+
     @JsonIgnore
     public void setResources(final ProductImport... resources);
 
+    /**
+     *  <p>The product import resources of this request.</p>
+     * @param resources values to be set
+     */
+
     public void setResources(final List<ProductImport> resources);
 
+    /**
+     * factory method
+     * @return instance of ProductImportRequest
+     */
     public static ProductImportRequest of() {
         return new ProductImportRequestImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductImportRequest
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductImportRequest of(final ProductImportRequest template) {
         ProductImportRequestImpl instance = new ProductImportRequestImpl();
         instance.setResources(template.getResources());
         return instance;
     }
 
+    /**
+     * builder factory method for ProductImportRequest
+     * @return builder
+     */
     public static ProductImportRequestBuilder builder() {
         return ProductImportRequestBuilder.of();
     }
 
+    /**
+     * create builder for ProductImportRequest instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductImportRequestBuilder builder(final ProductImportRequest template) {
         return ProductImportRequestBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductImportRequest(Function<ProductImportRequest, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductImportRequest> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductImportRequest>() {
             @Override

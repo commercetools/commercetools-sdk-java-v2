@@ -130,19 +130,39 @@ public class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
         return this;
     }
 
+    /**
+     *  <p>Money value the Payment intends to receive from the customer. The value usually matches the Cart or Order gross total.</p>
+     * @return amountPlanned
+     */
+
     public com.commercetools.api.models.common.Money getAmountPlanned() {
         return this.amountPlanned;
     }
+
+    /**
+     *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
+     * @return paymentMethodInfo
+     */
 
     @Nullable
     public com.commercetools.api.models.payment.PaymentMethodInfo getPaymentMethodInfo() {
         return this.paymentMethodInfo;
     }
 
+    /**
+     *  <p>Custom Fields for the Payment.</p>
+     * @return custom
+     */
+
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
+
+    /**
+     *  <p>Financial transactions of the TransactionTypes <code>Authorization</code> or <code>Charge</code>.</p>
+     * @return transaction
+     */
 
     @Nullable
     public com.commercetools.api.models.me.MyTransactionDraft getTransaction() {
@@ -166,10 +186,19 @@ public class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
         return new MyPaymentDraftImpl(amountPlanned, paymentMethodInfo, custom, transaction);
     }
 
+    /**
+     * factory method for an instance of MyPaymentDraftBuilder
+     * @return builder
+     */
     public static MyPaymentDraftBuilder of() {
         return new MyPaymentDraftBuilder();
     }
 
+    /**
+     * create builder for MyPaymentDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyPaymentDraftBuilder of(final MyPaymentDraft template) {
         MyPaymentDraftBuilder builder = new MyPaymentDraftBuilder();
         builder.amountPlanned = template.getAmountPlanned();

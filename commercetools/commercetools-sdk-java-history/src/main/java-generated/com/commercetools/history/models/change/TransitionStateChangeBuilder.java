@@ -42,7 +42,7 @@ public class TransitionStateChangeBuilder implements Builder<TransitionStateChan
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class TransitionStateChangeBuilder implements Builder<TransitionStateChan
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class TransitionStateChangeBuilder implements Builder<TransitionStateChan
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class TransitionStateChangeBuilder implements Builder<TransitionStateChan
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -88,13 +88,28 @@ public class TransitionStateChangeBuilder implements Builder<TransitionStateChan
         return this;
     }
 
+    /**
+     *  <p>Shape of the action for <code>transitionState</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public com.commercetools.history.models.common.Reference getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public com.commercetools.history.models.common.Reference getNextValue() {
         return this.nextValue;
@@ -119,10 +134,19 @@ public class TransitionStateChangeBuilder implements Builder<TransitionStateChan
         return new TransitionStateChangeImpl(change, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of TransitionStateChangeBuilder
+     * @return builder
+     */
     public static TransitionStateChangeBuilder of() {
         return new TransitionStateChangeBuilder();
     }
 
+    /**
+     * create builder for TransitionStateChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TransitionStateChangeBuilder of(final TransitionStateChange template) {
         TransitionStateChangeBuilder builder = new TransitionStateChangeBuilder();
         builder.change = template.getChange();

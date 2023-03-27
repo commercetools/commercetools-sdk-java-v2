@@ -21,6 +21,9 @@ public class CustomFieldLocalizedStringTypeImpl implements CustomFieldLocalizedS
 
     private String name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomFieldLocalizedStringTypeImpl() {
         this.name = LOCALIZED_STRING;

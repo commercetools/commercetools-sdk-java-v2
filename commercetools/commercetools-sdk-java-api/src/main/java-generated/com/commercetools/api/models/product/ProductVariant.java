@@ -131,46 +131,136 @@ public interface ProductVariant extends com.commercetools.api.models.WithKey {
     @JsonProperty("scopedPriceDiscounted")
     public Boolean getScopedPriceDiscounted();
 
+    /**
+     *  <p>A unique, sequential identifier of the Product Variant within the Product.</p>
+     * @param id value to be set
+     */
+
     public void setId(final Long id);
+
+    /**
+     *  <p>User-defined unique SKU of the Product Variant.</p>
+     * @param sku value to be set
+     */
 
     public void setSku(final String sku);
 
+    /**
+     *  <p>User-defined unique identifier of the ProductVariant.</p>
+     *  <p>This is different from Product <code>key</code>.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
+
+    /**
+     *  <p>The Embedded Prices of the Product Variant. Cannot contain two Prices of the same Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     * @param prices values to be set
+     */
 
     @JsonIgnore
     public void setPrices(final Price... prices);
 
+    /**
+     *  <p>The Embedded Prices of the Product Variant. Cannot contain two Prices of the same Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     * @param prices values to be set
+     */
+
     public void setPrices(final List<Price> prices);
+
+    /**
+     *  <p>Attributes of the Product Variant.</p>
+     * @param attributes values to be set
+     */
 
     @JsonIgnore
     public void setAttributes(final Attribute... attributes);
 
+    /**
+     *  <p>Attributes of the Product Variant.</p>
+     * @param attributes values to be set
+     */
+
     public void setAttributes(final List<Attribute> attributes);
 
+    /**
+     *  <p>Only available when Price selection is used. Cannot be used in a Query Predicate.</p>
+     * @param price value to be set
+     */
+
     public void setPrice(final Price price);
+
+    /**
+     *  <p>Images of the Product Variant.</p>
+     * @param images values to be set
+     */
 
     @JsonIgnore
     public void setImages(final Image... images);
 
+    /**
+     *  <p>Images of the Product Variant.</p>
+     * @param images values to be set
+     */
+
     public void setImages(final List<Image> images);
+
+    /**
+     *  <p>Media assets of the Product Variant.</p>
+     * @param assets values to be set
+     */
 
     @JsonIgnore
     public void setAssets(final Asset... assets);
 
+    /**
+     *  <p>Media assets of the Product Variant.</p>
+     * @param assets values to be set
+     */
+
     public void setAssets(final List<Asset> assets);
+
+    /**
+     *  <p>Set if the Product Variant is tracked by Inventory. Can be used as an optimization to reduce calls to the Inventory service. May not contain the latest Inventory State (it is eventually consistent).</p>
+     * @param availability value to be set
+     */
 
     public void setAvailability(final ProductVariantAvailability availability);
 
+    /**
+     *  <p><code>true</code> if the Product Variant matches the search query. Only available in response to a Product Projection Search request.</p>
+     * @param isMatchingVariant value to be set
+     */
+
     public void setIsMatchingVariant(final Boolean isMatchingVariant);
+
+    /**
+     *  <p>Only available in response to a Product Projection Search request with price selection. Can be used to sort, filter, and facet.</p>
+     * @param scopedPrice value to be set
+     */
 
     public void setScopedPrice(final ScopedPrice scopedPrice);
 
+    /**
+     *  <p>Only available in response to a Product Projection Search request with price selection.</p>
+     * @param scopedPriceDiscounted value to be set
+     */
+
     public void setScopedPriceDiscounted(final Boolean scopedPriceDiscounted);
 
+    /**
+     * factory method
+     * @return instance of ProductVariant
+     */
     public static ProductVariant of() {
         return new ProductVariantImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductVariant
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductVariant of(final ProductVariant template) {
         ProductVariantImpl instance = new ProductVariantImpl();
         instance.setId(template.getId());
@@ -188,18 +278,37 @@ public interface ProductVariant extends com.commercetools.api.models.WithKey {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductVariant
+     * @return builder
+     */
     public static ProductVariantBuilder builder() {
         return ProductVariantBuilder.of();
     }
 
+    /**
+     * create builder for ProductVariant instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductVariantBuilder builder(final ProductVariant template) {
         return ProductVariantBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductVariant(Function<ProductVariant, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductVariant> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductVariant>() {
             @Override

@@ -36,6 +36,11 @@ public class StagedQuoteSetValidToActionBuilder implements Builder<StagedQuoteSe
         return this;
     }
 
+    /**
+     *  <p>If <code>validTo</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+     * @return validTo
+     */
+
     @Nullable
     public java.time.ZonedDateTime getValidTo() {
         return this.validTo;
@@ -57,10 +62,19 @@ public class StagedQuoteSetValidToActionBuilder implements Builder<StagedQuoteSe
         return new StagedQuoteSetValidToActionImpl(validTo);
     }
 
+    /**
+     * factory method for an instance of StagedQuoteSetValidToActionBuilder
+     * @return builder
+     */
     public static StagedQuoteSetValidToActionBuilder of() {
         return new StagedQuoteSetValidToActionBuilder();
     }
 
+    /**
+     * create builder for StagedQuoteSetValidToAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedQuoteSetValidToActionBuilder of(final StagedQuoteSetValidToAction template) {
         StagedQuoteSetValidToActionBuilder builder = new StagedQuoteSetValidToActionBuilder();
         builder.validTo = template.getValidTo();

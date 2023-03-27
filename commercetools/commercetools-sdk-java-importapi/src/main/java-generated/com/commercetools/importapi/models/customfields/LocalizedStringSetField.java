@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = LocalizedStringSetFieldImpl.class)
 public interface LocalizedStringSetField extends CustomField {
 
+    /**
+     * discriminator value for LocalizedStringSetField
+     */
     String LOCALIZED_STRING_SET = "LocalizedStringSet";
 
     /**
@@ -42,33 +45,71 @@ public interface LocalizedStringSetField extends CustomField {
     @JsonProperty("value")
     public List<LocalizedString> getValue();
 
+    /**
+     * set value
+     * @param value values to be set
+     */
+
     @JsonIgnore
     public void setValue(final LocalizedString... value);
 
+    /**
+     * set value
+     * @param value values to be set
+     */
+
     public void setValue(final List<LocalizedString> value);
 
+    /**
+     * factory method
+     * @return instance of LocalizedStringSetField
+     */
     public static LocalizedStringSetField of() {
         return new LocalizedStringSetFieldImpl();
     }
 
+    /**
+     * factory method to copy an instance of LocalizedStringSetField
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static LocalizedStringSetField of(final LocalizedStringSetField template) {
         LocalizedStringSetFieldImpl instance = new LocalizedStringSetFieldImpl();
         instance.setValue(template.getValue());
         return instance;
     }
 
+    /**
+     * builder factory method for LocalizedStringSetField
+     * @return builder
+     */
     public static LocalizedStringSetFieldBuilder builder() {
         return LocalizedStringSetFieldBuilder.of();
     }
 
+    /**
+     * create builder for LocalizedStringSetField instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static LocalizedStringSetFieldBuilder builder(final LocalizedStringSetField template) {
         return LocalizedStringSetFieldBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withLocalizedStringSetField(Function<LocalizedStringSetField, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<LocalizedStringSetField> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<LocalizedStringSetField>() {
             @Override

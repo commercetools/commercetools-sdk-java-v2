@@ -28,7 +28,7 @@ public class DiscountedLineItemPriceForQuantityBuilder implements Builder<Discou
     private com.commercetools.history.models.common.DiscountedLineItemPrice discountedPrice;
 
     /**
-     *
+     * set the value to the quantity
      * @param quantity value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class DiscountedLineItemPriceForQuantityBuilder implements Builder<Discou
     }
 
     /**
-     *
+     * set the value to the discountedPrice using the builder function
      * @param builder function to build the discountedPrice value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class DiscountedLineItemPriceForQuantityBuilder implements Builder<Discou
     }
 
     /**
-     *
+     * set the value to the discountedPrice
      * @param discountedPrice value to be set
      * @return Builder
      */
@@ -64,9 +64,19 @@ public class DiscountedLineItemPriceForQuantityBuilder implements Builder<Discou
         return this;
     }
 
+    /**
+     * value of quantity}
+     * @return quantity
+     */
+
     public Integer getQuantity() {
         return this.quantity;
     }
+
+    /**
+     * value of discountedPrice}
+     * @return discountedPrice
+     */
 
     public com.commercetools.history.models.common.DiscountedLineItemPrice getDiscountedPrice() {
         return this.discountedPrice;
@@ -91,10 +101,19 @@ public class DiscountedLineItemPriceForQuantityBuilder implements Builder<Discou
         return new DiscountedLineItemPriceForQuantityImpl(quantity, discountedPrice);
     }
 
+    /**
+     * factory method for an instance of DiscountedLineItemPriceForQuantityBuilder
+     * @return builder
+     */
     public static DiscountedLineItemPriceForQuantityBuilder of() {
         return new DiscountedLineItemPriceForQuantityBuilder();
     }
 
+    /**
+     * create builder for DiscountedLineItemPriceForQuantity instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DiscountedLineItemPriceForQuantityBuilder of(final DiscountedLineItemPriceForQuantity template) {
         DiscountedLineItemPriceForQuantityBuilder builder = new DiscountedLineItemPriceForQuantityBuilder();
         builder.quantity = template.getQuantity();

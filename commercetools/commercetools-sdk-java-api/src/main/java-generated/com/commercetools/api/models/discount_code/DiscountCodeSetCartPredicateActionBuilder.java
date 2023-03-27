@@ -36,6 +36,11 @@ public class DiscountCodeSetCartPredicateActionBuilder implements Builder<Discou
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return cartPredicate
+     */
+
     @Nullable
     public String getCartPredicate() {
         return this.cartPredicate;
@@ -57,10 +62,19 @@ public class DiscountCodeSetCartPredicateActionBuilder implements Builder<Discou
         return new DiscountCodeSetCartPredicateActionImpl(cartPredicate);
     }
 
+    /**
+     * factory method for an instance of DiscountCodeSetCartPredicateActionBuilder
+     * @return builder
+     */
     public static DiscountCodeSetCartPredicateActionBuilder of() {
         return new DiscountCodeSetCartPredicateActionBuilder();
     }
 
+    /**
+     * create builder for DiscountCodeSetCartPredicateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DiscountCodeSetCartPredicateActionBuilder of(final DiscountCodeSetCartPredicateAction template) {
         DiscountCodeSetCartPredicateActionBuilder builder = new DiscountCodeSetCartPredicateActionBuilder();
         builder.cartPredicate = template.getCartPredicate();

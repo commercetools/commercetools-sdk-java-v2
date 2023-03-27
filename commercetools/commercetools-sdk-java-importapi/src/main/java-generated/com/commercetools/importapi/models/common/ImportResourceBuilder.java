@@ -34,6 +34,11 @@ public class ImportResourceBuilder implements Builder<ImportResource> {
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier.</p>
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
@@ -55,10 +60,19 @@ public class ImportResourceBuilder implements Builder<ImportResource> {
         return new ImportResourceImpl(key);
     }
 
+    /**
+     * factory method for an instance of ImportResourceBuilder
+     * @return builder
+     */
     public static ImportResourceBuilder of() {
         return new ImportResourceBuilder();
     }
 
+    /**
+     * create builder for ImportResource instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ImportResourceBuilder of(final ImportResource template) {
         ImportResourceBuilder builder = new ImportResourceBuilder();
         builder.key = template.getKey();

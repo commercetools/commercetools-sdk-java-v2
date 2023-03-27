@@ -88,13 +88,28 @@ public class RemoveTaxRateChangeBuilder implements Builder<RemoveTaxRateChange> 
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>removeTaxRate</code> on tax categories</p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @return previousValue
+     */
+
     public com.commercetools.history.models.common.TaxRate getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @return nextValue
+     */
 
     public com.commercetools.history.models.common.TaxRate getNextValue() {
         return this.nextValue;
@@ -119,10 +134,19 @@ public class RemoveTaxRateChangeBuilder implements Builder<RemoveTaxRateChange> 
         return new RemoveTaxRateChangeImpl(change, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of RemoveTaxRateChangeBuilder
+     * @return builder
+     */
     public static RemoveTaxRateChangeBuilder of() {
         return new RemoveTaxRateChangeBuilder();
     }
 
+    /**
+     * create builder for RemoveTaxRateChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static RemoveTaxRateChangeBuilder of(final RemoveTaxRateChange template) {
         RemoveTaxRateChangeBuilder builder = new RemoveTaxRateChangeBuilder();
         builder.change = template.getChange();

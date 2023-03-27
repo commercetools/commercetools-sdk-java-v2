@@ -24,12 +24,18 @@ public class MyCartSetCountryActionImpl implements MyCartSetCountryAction, Model
 
     private String country;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyCartSetCountryActionImpl(@JsonProperty("country") final String country) {
         this.country = country;
         this.action = SET_COUNTRY;
     }
 
+    /**
+     * create empty instance
+     */
     public MyCartSetCountryActionImpl() {
         this.action = SET_COUNTRY;
     }

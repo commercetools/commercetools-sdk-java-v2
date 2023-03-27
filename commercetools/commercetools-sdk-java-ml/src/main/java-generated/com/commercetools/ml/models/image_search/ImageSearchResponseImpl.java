@@ -28,6 +28,9 @@ public class ImageSearchResponseImpl implements ImageSearchResponse, ModelBase {
 
     private java.util.List<com.commercetools.ml.models.image_search.ResultItem> results;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ImageSearchResponseImpl(@JsonProperty("count") final Integer count, @JsonProperty("offset") final Double offset,
             @JsonProperty("total") final Integer total,
@@ -38,6 +41,9 @@ public class ImageSearchResponseImpl implements ImageSearchResponse, ModelBase {
         this.results = results;
     }
 
+    /**
+     * create empty instance
+     */
     public ImageSearchResponseImpl() {
     }
 

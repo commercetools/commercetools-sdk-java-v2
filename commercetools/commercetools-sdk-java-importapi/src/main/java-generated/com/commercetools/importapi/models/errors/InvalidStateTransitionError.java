@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = InvalidStateTransitionErrorImpl.class)
 public interface InvalidStateTransitionError extends ErrorObject {
 
+    /**
+     * discriminator value for InvalidStateTransitionError
+     */
     String INVALID_TRANSITION = "InvalidTransition";
 
     /**
@@ -50,14 +53,33 @@ public interface InvalidStateTransitionError extends ErrorObject {
     @JsonProperty("newState")
     public ProcessingState getNewState();
 
+    /**
+     *  <p>Every Import Operation is assigned with one of the following states.</p>
+     * @param currentState value to be set
+     */
+
     public void setCurrentState(final ProcessingState currentState);
+
+    /**
+     *  <p>Every Import Operation is assigned with one of the following states.</p>
+     * @param newState value to be set
+     */
 
     public void setNewState(final ProcessingState newState);
 
+    /**
+     * factory method
+     * @return instance of InvalidStateTransitionError
+     */
     public static InvalidStateTransitionError of() {
         return new InvalidStateTransitionErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of InvalidStateTransitionError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static InvalidStateTransitionError of(final InvalidStateTransitionError template) {
         InvalidStateTransitionErrorImpl instance = new InvalidStateTransitionErrorImpl();
         instance.setMessage(template.getMessage());
@@ -66,18 +88,37 @@ public interface InvalidStateTransitionError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for InvalidStateTransitionError
+     * @return builder
+     */
     public static InvalidStateTransitionErrorBuilder builder() {
         return InvalidStateTransitionErrorBuilder.of();
     }
 
+    /**
+     * create builder for InvalidStateTransitionError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InvalidStateTransitionErrorBuilder builder(final InvalidStateTransitionError template) {
         return InvalidStateTransitionErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withInvalidStateTransitionError(Function<InvalidStateTransitionError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<InvalidStateTransitionError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<InvalidStateTransitionError>() {
             @Override

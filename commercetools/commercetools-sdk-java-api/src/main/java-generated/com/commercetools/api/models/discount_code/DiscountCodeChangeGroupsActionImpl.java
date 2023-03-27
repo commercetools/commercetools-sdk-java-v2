@@ -24,12 +24,18 @@ public class DiscountCodeChangeGroupsActionImpl implements DiscountCodeChangeGro
 
     private java.util.List<String> groups;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DiscountCodeChangeGroupsActionImpl(@JsonProperty("groups") final java.util.List<String> groups) {
         this.groups = groups;
         this.action = CHANGE_GROUPS;
     }
 
+    /**
+     * create empty instance
+     */
     public DiscountCodeChangeGroupsActionImpl() {
         this.action = CHANGE_GROUPS;
     }

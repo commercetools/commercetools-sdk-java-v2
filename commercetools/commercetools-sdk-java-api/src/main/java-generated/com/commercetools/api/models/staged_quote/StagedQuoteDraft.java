@@ -88,22 +88,65 @@ public interface StagedQuoteDraft
     @JsonProperty("state")
     public StateReference getState();
 
+    /**
+     *  <p>QuoteRequest from which the StagedQuote is created.</p>
+     * @param quoteRequest value to be set
+     */
+
     public void setQuoteRequest(final QuoteRequestResourceIdentifier quoteRequest);
+
+    /**
+     *  <p>Current version of the QuoteRequest.</p>
+     * @param quoteRequestVersion value to be set
+     */
 
     public void setQuoteRequestVersion(final Long quoteRequestVersion);
 
+    /**
+     *  <p>If <code>true</code>, the <code>quoteRequestState</code> of the referenced QuoteRequest will be set to <code>Accepted</code>.</p>
+     * @param quoteRequestStateToAccepted value to be set
+     */
+
     public void setQuoteRequestStateToAccepted(final Boolean quoteRequestStateToAccepted);
+
+    /**
+     *  <p>User-defined unique identifier for the StagedQuote.</p>
+     * @param key value to be set
+     */
 
     public void setKey(final String key);
 
+    /**
+     *  <p>Custom Fields to be added to the StagedQuote.</p>
+     *  <ul>
+     *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced QuoteRequest and added to the StagedQuote.</li>
+     *   <li>If empty, the Custom Fields on the referenced QuoteRequest are added to the StagedQuote automatically.</li>
+     *  </ul>
+     * @param custom value to be set
+     */
+
     public void setCustom(final CustomFieldsDraft custom);
+
+    /**
+     *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
+     * @param state value to be set
+     */
 
     public void setState(final StateReference state);
 
+    /**
+     * factory method
+     * @return instance of StagedQuoteDraft
+     */
     public static StagedQuoteDraft of() {
         return new StagedQuoteDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedQuoteDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedQuoteDraft of(final StagedQuoteDraft template) {
         StagedQuoteDraftImpl instance = new StagedQuoteDraftImpl();
         instance.setQuoteRequest(template.getQuoteRequest());
@@ -115,18 +158,37 @@ public interface StagedQuoteDraft
         return instance;
     }
 
+    /**
+     * builder factory method for StagedQuoteDraft
+     * @return builder
+     */
     public static StagedQuoteDraftBuilder builder() {
         return StagedQuoteDraftBuilder.of();
     }
 
+    /**
+     * create builder for StagedQuoteDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedQuoteDraftBuilder builder(final StagedQuoteDraft template) {
         return StagedQuoteDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedQuoteDraft(Function<StagedQuoteDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedQuoteDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedQuoteDraft>() {
             @Override

@@ -105,19 +105,39 @@ public class CartScoreTierBuilder implements Builder<CartScoreTier> {
         return this;
     }
 
+    /**
+     *  <p>Abstract value for categorizing a Cart. The range starts at <code>0</code>. The default price covers <code>0</code>, tiers start at <code>1</code>. See Using Tiered Shipping Rates for details and examples.</p>
+     * @return score
+     */
+
     public Integer getScore() {
         return this.score;
     }
+
+    /**
+     *  <p>Defines a fixed price for the <code>score</code>.</p>
+     * @return price
+     */
 
     @Nullable
     public com.commercetools.api.models.common.Money getPrice() {
         return this.price;
     }
 
+    /**
+     *  <p>Dynamically calculates a Price for a range of scores.</p>
+     * @return priceFunction
+     */
+
     @Nullable
     public com.commercetools.api.models.shipping_method.PriceFunction getPriceFunction() {
         return this.priceFunction;
     }
+
+    /**
+     *  <p>Appears in response to Get ShippingMethods for a Cart if the shipping rate matches the search query.</p>
+     * @return isMatching
+     */
 
     @Nullable
     public Boolean getIsMatching() {
@@ -141,10 +161,19 @@ public class CartScoreTierBuilder implements Builder<CartScoreTier> {
         return new CartScoreTierImpl(score, price, priceFunction, isMatching);
     }
 
+    /**
+     * factory method for an instance of CartScoreTierBuilder
+     * @return builder
+     */
     public static CartScoreTierBuilder of() {
         return new CartScoreTierBuilder();
     }
 
+    /**
+     * create builder for CartScoreTier instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartScoreTierBuilder of(final CartScoreTier template) {
         CartScoreTierBuilder builder = new CartScoreTierBuilder();
         builder.score = template.getScore();

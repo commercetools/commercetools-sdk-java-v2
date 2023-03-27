@@ -72,18 +72,49 @@ public interface ProductSelectionAssignment {
     @JsonProperty("variantExclusion")
     public ProductVariantExclusion getVariantExclusion();
 
+    /**
+     *  <p>Reference to a Product that is assigned to the ProductSelection.</p>
+     * @param product value to be set
+     */
+
     public void setProduct(final ProductReference product);
+
+    /**
+     *  <p>Reference to the Product Selection that this assignment is part of.</p>
+     * @param productSelection value to be set
+     */
 
     public void setProductSelection(final ProductSelectionReference productSelection);
 
+    /**
+     *  <p>Define which Variants of the added Product will be included from the Product Selection.</p>
+     *  <p>This field is only available for Assignments to a Product Selection of type Individual. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     * @param variantSelection value to be set
+     */
+
     public void setVariantSelection(final ProductVariantSelection variantSelection);
+
+    /**
+     *  <p>Defines which Variants of the Product will be excluded from the Product Selection.</p>
+     *  <p>This field is only available for Assignments to a Product Selection of type Individual Exclusion. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     * @param variantExclusion value to be set
+     */
 
     public void setVariantExclusion(final ProductVariantExclusion variantExclusion);
 
+    /**
+     * factory method
+     * @return instance of ProductSelectionAssignment
+     */
     public static ProductSelectionAssignment of() {
         return new ProductSelectionAssignmentImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductSelectionAssignment
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductSelectionAssignment of(final ProductSelectionAssignment template) {
         ProductSelectionAssignmentImpl instance = new ProductSelectionAssignmentImpl();
         instance.setProduct(template.getProduct());
@@ -93,18 +124,37 @@ public interface ProductSelectionAssignment {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductSelectionAssignment
+     * @return builder
+     */
     public static ProductSelectionAssignmentBuilder builder() {
         return ProductSelectionAssignmentBuilder.of();
     }
 
+    /**
+     * create builder for ProductSelectionAssignment instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSelectionAssignmentBuilder builder(final ProductSelectionAssignment template) {
         return ProductSelectionAssignmentBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductSelectionAssignment(Function<ProductSelectionAssignment, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionAssignment> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionAssignment>() {
             @Override

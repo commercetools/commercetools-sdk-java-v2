@@ -53,19 +53,48 @@ public interface ProjectCategoryRecommendationMeta {
     @JsonProperty("generalCategoryNames")
     public List<String> getGeneralCategoryNames();
 
+    /**
+     *  <p>The product name that was used to generate recommendations.</p>
+     * @param productName value to be set
+     */
+
     public void setProductName(final String productName);
 
+    /**
+     *  <p>The product image that was used to generate recommendations.</p>
+     * @param productImageUrl value to be set
+     */
+
     public void setProductImageUrl(final String productImageUrl);
+
+    /**
+     *  <p>Top 5 general categories that were used internally to generate the project-specific categories. These category names are not related to the categories defined in the project, but they provide additional information to understand the project-specific categories in the results section.</p>
+     * @param generalCategoryNames values to be set
+     */
 
     @JsonIgnore
     public void setGeneralCategoryNames(final String... generalCategoryNames);
 
+    /**
+     *  <p>Top 5 general categories that were used internally to generate the project-specific categories. These category names are not related to the categories defined in the project, but they provide additional information to understand the project-specific categories in the results section.</p>
+     * @param generalCategoryNames values to be set
+     */
+
     public void setGeneralCategoryNames(final List<String> generalCategoryNames);
 
+    /**
+     * factory method
+     * @return instance of ProjectCategoryRecommendationMeta
+     */
     public static ProjectCategoryRecommendationMeta of() {
         return new ProjectCategoryRecommendationMetaImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProjectCategoryRecommendationMeta
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProjectCategoryRecommendationMeta of(final ProjectCategoryRecommendationMeta template) {
         ProjectCategoryRecommendationMetaImpl instance = new ProjectCategoryRecommendationMetaImpl();
         instance.setProductName(template.getProductName());
@@ -74,18 +103,37 @@ public interface ProjectCategoryRecommendationMeta {
         return instance;
     }
 
+    /**
+     * builder factory method for ProjectCategoryRecommendationMeta
+     * @return builder
+     */
     public static ProjectCategoryRecommendationMetaBuilder builder() {
         return ProjectCategoryRecommendationMetaBuilder.of();
     }
 
+    /**
+     * create builder for ProjectCategoryRecommendationMeta instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProjectCategoryRecommendationMetaBuilder builder(final ProjectCategoryRecommendationMeta template) {
         return ProjectCategoryRecommendationMetaBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProjectCategoryRecommendationMeta(Function<ProjectCategoryRecommendationMeta, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProjectCategoryRecommendationMeta> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProjectCategoryRecommendationMeta>() {
             @Override

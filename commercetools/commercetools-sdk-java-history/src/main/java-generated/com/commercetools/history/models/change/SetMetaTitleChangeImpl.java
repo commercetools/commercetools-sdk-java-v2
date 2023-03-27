@@ -28,6 +28,9 @@ public class SetMetaTitleChangeImpl implements SetMetaTitleChange, ModelBase {
 
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetMetaTitleChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.LocalizedString previousValue,
@@ -38,6 +41,9 @@ public class SetMetaTitleChangeImpl implements SetMetaTitleChange, ModelBase {
         this.type = SET_META_TITLE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetMetaTitleChangeImpl() {
         this.type = SET_META_TITLE_CHANGE;
     }

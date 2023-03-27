@@ -554,117 +554,240 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier.</p>
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     *  <p>Maps to <code>Customer.customerNumber</code>.</p>
+     * @return customerNumber
+     */
 
     @Nullable
     public String getCustomerNumber() {
         return this.customerNumber;
     }
 
+    /**
+     *  <p>Maps to <code>Customer.email</code>.</p>
+     * @return email
+     */
+
     public String getEmail() {
         return this.email;
     }
+
+    /**
+     *  <p>Maps to <code>Customer.password</code>.</p>
+     * @return password
+     */
 
     @Nullable
     public String getPassword() {
         return this.password;
     }
 
+    /**
+     *  <p>The References to the Stores with which the Customer is associated. If referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Stores are created.</p>
+     * @return stores
+     */
+
     @Nullable
     public java.util.List<com.commercetools.importapi.models.common.StoreKeyReference> getStores() {
         return this.stores;
     }
+
+    /**
+     *  <p>Maps to <code>Customer.firstName</code>.</p>
+     * @return firstName
+     */
 
     @Nullable
     public String getFirstName() {
         return this.firstName;
     }
 
+    /**
+     *  <p>Maps to <code>Customer.lastName</code>.</p>
+     * @return lastName
+     */
+
     @Nullable
     public String getLastName() {
         return this.lastName;
     }
+
+    /**
+     *  <p>Maps to <code>Customer.middleName</code>.</p>
+     * @return middleName
+     */
 
     @Nullable
     public String getMiddleName() {
         return this.middleName;
     }
 
+    /**
+     *  <p>Maps to <code>Customer.title</code>.</p>
+     * @return title
+     */
+
     @Nullable
     public String getTitle() {
         return this.title;
     }
+
+    /**
+     *  <p>Maps to <code>Customer.salutation</code>.</p>
+     * @return salutation
+     */
 
     @Nullable
     public String getSalutation() {
         return this.salutation;
     }
 
+    /**
+     *  <p>Maps to <code>Customer.externalId</code>.</p>
+     * @return externalId
+     */
+
     @Nullable
     public String getExternalId() {
         return this.externalId;
     }
+
+    /**
+     *  <p>Maps to <code>Customer.dateOfBirth</code>.</p>
+     * @return dateOfBirth
+     */
 
     @Nullable
     public java.time.LocalDate getDateOfBirth() {
         return this.dateOfBirth;
     }
 
+    /**
+     *  <p>Maps to <code>Customer.companyName</code>.</p>
+     * @return companyName
+     */
+
     @Nullable
     public String getCompanyName() {
         return this.companyName;
     }
+
+    /**
+     *  <p>Maps to <code>Customer.vatId</code>.</p>
+     * @return vatId
+     */
 
     @Nullable
     public String getVatId() {
         return this.vatId;
     }
 
+    /**
+     *  <p>Maps to <code>Customer.isEmailVerified</code>.</p>
+     * @return isEmailVerified
+     */
+
     @Nullable
     public Boolean getIsEmailVerified() {
         return this.isEmailVerified;
     }
+
+    /**
+     *  <p>The Reference to the CustomerGroup with which the Customer is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>
+     * @return customerGroup
+     */
 
     @Nullable
     public com.commercetools.importapi.models.common.CustomerGroupKeyReference getCustomerGroup() {
         return this.customerGroup;
     }
 
+    /**
+     *  <p>Maps to <code>Customer.addresses</code>.</p>
+     * @return addresses
+     */
+
     public java.util.List<com.commercetools.importapi.models.customers.CustomerAddress> getAddresses() {
         return this.addresses;
     }
+
+    /**
+     *  <p>The index of the address in the addresses array. The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p>
+     * @return defaultBillingAddress
+     */
 
     @Nullable
     public Integer getDefaultBillingAddress() {
         return this.defaultBillingAddress;
     }
 
+    /**
+     *  <p>The indices of the billing addresses in the addresses array. The <code>billingAddressIds</code> of the customer will be set to the IDs of that addresses.</p>
+     * @return billingAddresses
+     */
+
     @Nullable
     public java.util.List<Integer> getBillingAddresses() {
         return this.billingAddresses;
     }
+
+    /**
+     *  <p>The index of the address in the addresses array. The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p>
+     * @return defaultShippingAddress
+     */
 
     @Nullable
     public Integer getDefaultShippingAddress() {
         return this.defaultShippingAddress;
     }
 
+    /**
+     *  <p>The indices of the shipping addresses in the addresses array. The <code>shippingAddressIds</code> of the customer will be set to the IDs of that addresses.</p>
+     * @return shippingAddresses
+     */
+
     @Nullable
     public java.util.List<Integer> getShippingAddresses() {
         return this.shippingAddresses;
     }
+
+    /**
+     *  <p>Maps to <code>Customer.locale</code>.</p>
+     * @return locale
+     */
 
     @Nullable
     public String getLocale() {
         return this.locale;
     }
 
+    /**
+     *  <p>The Custom Fields for this Customer.</p>
+     * @return custom
+     */
+
     @Nullable
     public com.commercetools.importapi.models.customfields.Custom getCustom() {
         return this.custom;
     }
+
+    /**
+     *  <ul>
+     *   <li>Set to <code>Password</code> to make the <code>password</code> field required for the Customer.</li>
+     *   <li>Set to <code>ExternalAuth</code> when the password is not required for the Customer.</li>
+     *  </ul>
+     * @return authenticationMode
+     */
 
     @Nullable
     public com.commercetools.importapi.models.customers.AuthenticationMode getAuthenticationMode() {
@@ -696,10 +819,19 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
             authenticationMode);
     }
 
+    /**
+     * factory method for an instance of CustomerImportBuilder
+     * @return builder
+     */
     public static CustomerImportBuilder of() {
         return new CustomerImportBuilder();
     }
 
+    /**
+     * create builder for CustomerImport instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerImportBuilder of(final CustomerImport template) {
         CustomerImportBuilder builder = new CustomerImportBuilder();
         builder.key = template.getKey();

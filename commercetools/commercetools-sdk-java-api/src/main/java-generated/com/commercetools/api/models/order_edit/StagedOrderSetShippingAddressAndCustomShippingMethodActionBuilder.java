@@ -64,7 +64,7 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder
     }
 
     /**
-     *
+     * set the value to the shippingMethodName
      * @param shippingMethodName value to be set
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder
     }
 
     /**
-     *
+     * set the value to the shippingRate using the builder function
      * @param builder function to build the shippingRate value
      * @return Builder
      */
@@ -89,7 +89,7 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder
     }
 
     /**
-     *
+     * set the value to the shippingRate
      * @param shippingRate value to be set
      * @return Builder
      */
@@ -151,22 +151,47 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder
         return this;
     }
 
+    /**
+     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     * @return address
+     */
+
     public com.commercetools.api.models.common.BaseAddress getAddress() {
         return this.address;
     }
+
+    /**
+     * value of shippingMethodName}
+     * @return shippingMethodName
+     */
 
     public String getShippingMethodName() {
         return this.shippingMethodName;
     }
 
+    /**
+     * value of shippingRate}
+     * @return shippingRate
+     */
+
     public com.commercetools.api.models.shipping_method.ShippingRateDraft getShippingRate() {
         return this.shippingRate;
     }
+
+    /**
+     *  <p>ResourceIdentifier to a TaxCategory.</p>
+     * @return taxCategory
+     */
 
     @Nullable
     public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {
         return this.taxCategory;
     }
+
+    /**
+     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @return externalTaxRate
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
@@ -197,10 +222,19 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder
             shippingRate, taxCategory, externalTaxRate);
     }
 
+    /**
+     * factory method for an instance of StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder
+     * @return builder
+     */
     public static StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder of() {
         return new StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderSetShippingAddressAndCustomShippingMethodAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder of(
             final StagedOrderSetShippingAddressAndCustomShippingMethodAction template) {
         StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder builder = new StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder();

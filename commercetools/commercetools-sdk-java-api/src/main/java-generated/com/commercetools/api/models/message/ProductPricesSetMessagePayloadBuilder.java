@@ -117,13 +117,28 @@ public class ProductPricesSetMessagePayloadBuilder implements Builder<ProductPri
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the ProductVariant for which the Price was set.</p>
+     * @return variantId
+     */
+
     public Long getVariantId() {
         return this.variantId;
     }
 
+    /**
+     *  <p>The Embedded Prices that were set on the ProductVariant.</p>
+     * @return prices
+     */
+
     public java.util.List<com.commercetools.api.models.common.Price> getPrices() {
         return this.prices;
     }
+
+    /**
+     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     * @return staged
+     */
 
     public Boolean getStaged() {
         return this.staged;
@@ -148,10 +163,19 @@ public class ProductPricesSetMessagePayloadBuilder implements Builder<ProductPri
         return new ProductPricesSetMessagePayloadImpl(variantId, prices, staged);
     }
 
+    /**
+     * factory method for an instance of ProductPricesSetMessagePayloadBuilder
+     * @return builder
+     */
     public static ProductPricesSetMessagePayloadBuilder of() {
         return new ProductPricesSetMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for ProductPricesSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductPricesSetMessagePayloadBuilder of(final ProductPricesSetMessagePayload template) {
         ProductPricesSetMessagePayloadBuilder builder = new ProductPricesSetMessagePayloadBuilder();
         builder.variantId = template.getVariantId();

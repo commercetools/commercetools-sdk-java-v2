@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = QuoteStateChangedMessagePayloadImpl.class)
 public interface QuoteStateChangedMessagePayload extends MessagePayload {
 
+    /**
+     * discriminator value for QuoteStateChangedMessagePayload
+     */
     String QUOTE_STATE_CHANGED = "QuoteStateChanged";
 
     /**
@@ -49,14 +52,33 @@ public interface QuoteStateChangedMessagePayload extends MessagePayload {
     @JsonProperty("oldQuoteState")
     public QuoteState getOldQuoteState();
 
+    /**
+     *  <p>State of the Quote after the Change Quote State update action.</p>
+     * @param quoteState value to be set
+     */
+
     public void setQuoteState(final QuoteState quoteState);
+
+    /**
+     *  <p>State of the Quote before the Change Quote State update action.</p>
+     * @param oldQuoteState value to be set
+     */
 
     public void setOldQuoteState(final QuoteState oldQuoteState);
 
+    /**
+     * factory method
+     * @return instance of QuoteStateChangedMessagePayload
+     */
     public static QuoteStateChangedMessagePayload of() {
         return new QuoteStateChangedMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of QuoteStateChangedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static QuoteStateChangedMessagePayload of(final QuoteStateChangedMessagePayload template) {
         QuoteStateChangedMessagePayloadImpl instance = new QuoteStateChangedMessagePayloadImpl();
         instance.setQuoteState(template.getQuoteState());
@@ -64,18 +86,37 @@ public interface QuoteStateChangedMessagePayload extends MessagePayload {
         return instance;
     }
 
+    /**
+     * builder factory method for QuoteStateChangedMessagePayload
+     * @return builder
+     */
     public static QuoteStateChangedMessagePayloadBuilder builder() {
         return QuoteStateChangedMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for QuoteStateChangedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static QuoteStateChangedMessagePayloadBuilder builder(final QuoteStateChangedMessagePayload template) {
         return QuoteStateChangedMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withQuoteStateChangedMessagePayload(Function<QuoteStateChangedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<QuoteStateChangedMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<QuoteStateChangedMessagePayload>() {
             @Override

@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartSetDirectDiscountsActionImpl.class)
 public interface CartSetDirectDiscountsAction extends CartUpdateAction {
 
+    /**
+     * discriminator value for CartSetDirectDiscountsAction
+     */
     String SET_DIRECT_DISCOUNTS = "setDirectDiscounts";
 
     /**
@@ -44,33 +47,77 @@ public interface CartSetDirectDiscountsAction extends CartUpdateAction {
     @JsonProperty("discounts")
     public List<DirectDiscountDraft> getDiscounts();
 
+    /**
+     *  <ul>
+     *   <li>If set, all existing Direct Discounts are replaced. The discounts apply in the order they are added to the list.</li>
+     *   <li>If empty, all existing Direct Discounts are removed and all affected prices on the Cart or Order are recalculated.</li>
+     *  </ul>
+     * @param discounts values to be set
+     */
+
     @JsonIgnore
     public void setDiscounts(final DirectDiscountDraft... discounts);
 
+    /**
+     *  <ul>
+     *   <li>If set, all existing Direct Discounts are replaced. The discounts apply in the order they are added to the list.</li>
+     *   <li>If empty, all existing Direct Discounts are removed and all affected prices on the Cart or Order are recalculated.</li>
+     *  </ul>
+     * @param discounts values to be set
+     */
+
     public void setDiscounts(final List<DirectDiscountDraft> discounts);
 
+    /**
+     * factory method
+     * @return instance of CartSetDirectDiscountsAction
+     */
     public static CartSetDirectDiscountsAction of() {
         return new CartSetDirectDiscountsActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartSetDirectDiscountsAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartSetDirectDiscountsAction of(final CartSetDirectDiscountsAction template) {
         CartSetDirectDiscountsActionImpl instance = new CartSetDirectDiscountsActionImpl();
         instance.setDiscounts(template.getDiscounts());
         return instance;
     }
 
+    /**
+     * builder factory method for CartSetDirectDiscountsAction
+     * @return builder
+     */
     public static CartSetDirectDiscountsActionBuilder builder() {
         return CartSetDirectDiscountsActionBuilder.of();
     }
 
+    /**
+     * create builder for CartSetDirectDiscountsAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartSetDirectDiscountsActionBuilder builder(final CartSetDirectDiscountsAction template) {
         return CartSetDirectDiscountsActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartSetDirectDiscountsAction(Function<CartSetDirectDiscountsAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartSetDirectDiscountsAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartSetDirectDiscountsAction>() {
             @Override

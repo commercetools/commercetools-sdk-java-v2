@@ -26,6 +26,9 @@ public class SyncInfoImpl implements SyncInfo, ModelBase {
 
     private String syncedAt;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SyncInfoImpl(@JsonProperty("channel") final com.commercetools.history.models.common.Reference channel,
             @JsonProperty("externalId") final String externalId, @JsonProperty("syncedAt") final String syncedAt) {
@@ -34,6 +37,9 @@ public class SyncInfoImpl implements SyncInfo, ModelBase {
         this.syncedAt = syncedAt;
     }
 
+    /**
+     * create empty instance
+     */
     public SyncInfoImpl() {
     }
 

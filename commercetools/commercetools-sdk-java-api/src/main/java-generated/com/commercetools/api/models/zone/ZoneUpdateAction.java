@@ -44,30 +44,60 @@ public interface ZoneUpdateAction extends com.commercetools.api.models.ResourceU
     @JsonProperty("action")
     public String getAction();
 
+    /**
+     * builder for addLocation subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.zone.ZoneAddLocationActionBuilder addLocationBuilder() {
         return com.commercetools.api.models.zone.ZoneAddLocationActionBuilder.of();
     }
 
+    /**
+     * builder for changeName subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.zone.ZoneChangeNameActionBuilder changeNameBuilder() {
         return com.commercetools.api.models.zone.ZoneChangeNameActionBuilder.of();
     }
 
+    /**
+     * builder for removeLocation subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.zone.ZoneRemoveLocationActionBuilder removeLocationBuilder() {
         return com.commercetools.api.models.zone.ZoneRemoveLocationActionBuilder.of();
     }
 
+    /**
+     * builder for setDescription subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.zone.ZoneSetDescriptionActionBuilder setDescriptionBuilder() {
         return com.commercetools.api.models.zone.ZoneSetDescriptionActionBuilder.of();
     }
 
+    /**
+     * builder for setKey subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.zone.ZoneSetKeyActionBuilder setKeyBuilder() {
         return com.commercetools.api.models.zone.ZoneSetKeyActionBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withZoneUpdateAction(Function<ZoneUpdateAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ZoneUpdateAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ZoneUpdateAction>() {
             @Override

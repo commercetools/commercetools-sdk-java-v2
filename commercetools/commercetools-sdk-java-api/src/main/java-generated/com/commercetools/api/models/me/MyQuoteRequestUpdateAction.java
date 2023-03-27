@@ -40,14 +40,28 @@ public interface MyQuoteRequestUpdateAction
     @JsonProperty("action")
     public String getAction();
 
+    /**
+     * builder for cancelQuoteRequest subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.me.MyQuoteRequestCancelActionBuilder cancelQuoteRequestBuilder() {
         return com.commercetools.api.models.me.MyQuoteRequestCancelActionBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMyQuoteRequestUpdateAction(Function<MyQuoteRequestUpdateAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MyQuoteRequestUpdateAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MyQuoteRequestUpdateAction>() {
             @Override

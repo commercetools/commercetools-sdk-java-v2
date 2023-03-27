@@ -24,6 +24,9 @@ public class ProductSetPriceModeActionImpl implements ProductSetPriceModeAction,
 
     private com.commercetools.api.models.product.ProductPriceModeEnum priceMode;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSetPriceModeActionImpl(
             @JsonProperty("priceMode") final com.commercetools.api.models.product.ProductPriceModeEnum priceMode) {
@@ -31,6 +34,9 @@ public class ProductSetPriceModeActionImpl implements ProductSetPriceModeAction,
         this.action = SET_PRICE_MODE;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSetPriceModeActionImpl() {
         this.action = SET_PRICE_MODE;
     }

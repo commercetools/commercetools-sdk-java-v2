@@ -147,13 +147,29 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
         return this;
     }
 
+    /**
+     *  <p>Total net price of the Line Item or Custom Line Item.</p>
+     * @return totalNet
+     */
+
     public com.commercetools.api.models.common.Money getTotalNet() {
         return this.totalNet;
     }
 
+    /**
+     *  <p>Total gross price of the Line Item or Custom Line Item.</p>
+     * @return totalGross
+     */
+
     public com.commercetools.api.models.common.Money getTotalGross() {
         return this.totalGross;
     }
+
+    /**
+     *  <p>Taxable portions added to the <code>totalGross</code>.</p>
+     *  <p>Calculated from the TaxRates.</p>
+     * @return taxPortions
+     */
 
     public java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> getTaxPortions() {
         return this.taxPortions;
@@ -178,10 +194,19 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
         return new TaxedPriceDraftImpl(totalNet, totalGross, taxPortions);
     }
 
+    /**
+     * factory method for an instance of TaxedPriceDraftBuilder
+     * @return builder
+     */
     public static TaxedPriceDraftBuilder of() {
         return new TaxedPriceDraftBuilder();
     }
 
+    /**
+     * create builder for TaxedPriceDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TaxedPriceDraftBuilder of(final TaxedPriceDraft template) {
         TaxedPriceDraftBuilder builder = new TaxedPriceDraftBuilder();
         builder.totalNet = template.getTotalNet();

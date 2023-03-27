@@ -24,6 +24,9 @@ public class SubscriptionSetMessagesActionImpl implements SubscriptionSetMessage
 
     private java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SubscriptionSetMessagesActionImpl(
             @JsonProperty("messages") final java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages) {
@@ -31,6 +34,9 @@ public class SubscriptionSetMessagesActionImpl implements SubscriptionSetMessage
         this.action = SET_MESSAGES;
     }
 
+    /**
+     * create empty instance
+     */
     public SubscriptionSetMessagesActionImpl() {
         this.action = SET_MESSAGES;
     }

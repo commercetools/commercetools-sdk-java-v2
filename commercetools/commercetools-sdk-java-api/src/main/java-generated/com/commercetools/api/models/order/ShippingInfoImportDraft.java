@@ -112,31 +112,90 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     @JsonProperty("shippingMethodState")
     public ShippingMethodState getShippingMethodState();
 
+    /**
+     * set shippingMethodName
+     * @param shippingMethodName value to be set
+     */
+
     public void setShippingMethodName(final String shippingMethodName);
+
+    /**
+     * set price
+     * @param price value to be set
+     */
 
     public void setPrice(final Money price);
 
+    /**
+     *  <p>The shipping rate used to determine the price.</p>
+     * @param shippingRate value to be set
+     */
+
     public void setShippingRate(final ShippingRateDraft shippingRate);
+
+    /**
+     * set taxRate
+     * @param taxRate value to be set
+     */
 
     public void setTaxRate(final TaxRate taxRate);
 
+    /**
+     * set taxCategory
+     * @param taxCategory value to be set
+     */
+
     public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
 
+    /**
+     *  <p>Not set if custom shipping method is used.</p>
+     * @param shippingMethod value to be set
+     */
+
     public void setShippingMethod(final ShippingMethodResourceIdentifier shippingMethod);
+
+    /**
+     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+     * @param deliveries values to be set
+     */
 
     @JsonIgnore
     public void setDeliveries(final DeliveryDraft... deliveries);
 
+    /**
+     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+     * @param deliveries values to be set
+     */
+
     public void setDeliveries(final List<DeliveryDraft> deliveries);
+
+    /**
+     * set discountedPrice
+     * @param discountedPrice value to be set
+     */
 
     public void setDiscountedPrice(final DiscountedLineItemPriceDraft discountedPrice);
 
+    /**
+     *  <p>Indicates whether the ShippingMethod referenced is allowed for the cart or not.</p>
+     * @param shippingMethodState value to be set
+     */
+
     public void setShippingMethodState(final ShippingMethodState shippingMethodState);
 
+    /**
+     * factory method
+     * @return instance of ShippingInfoImportDraft
+     */
     public static ShippingInfoImportDraft of() {
         return new ShippingInfoImportDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of ShippingInfoImportDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ShippingInfoImportDraft of(final ShippingInfoImportDraft template) {
         ShippingInfoImportDraftImpl instance = new ShippingInfoImportDraftImpl();
         instance.setShippingMethodName(template.getShippingMethodName());
@@ -151,18 +210,37 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
         return instance;
     }
 
+    /**
+     * builder factory method for ShippingInfoImportDraft
+     * @return builder
+     */
     public static ShippingInfoImportDraftBuilder builder() {
         return ShippingInfoImportDraftBuilder.of();
     }
 
+    /**
+     * create builder for ShippingInfoImportDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShippingInfoImportDraftBuilder builder(final ShippingInfoImportDraft template) {
         return ShippingInfoImportDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withShippingInfoImportDraft(Function<ShippingInfoImportDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ShippingInfoImportDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ShippingInfoImportDraft>() {
             @Override

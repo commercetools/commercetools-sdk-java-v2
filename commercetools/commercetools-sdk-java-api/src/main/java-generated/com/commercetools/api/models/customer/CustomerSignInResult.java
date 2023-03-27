@@ -48,14 +48,33 @@ public interface CustomerSignInResult {
     @JsonProperty("cart")
     public Cart getCart();
 
+    /**
+     *  <p>Customer signed up or signed in after authentication.</p>
+     * @param customer value to be set
+     */
+
     public void setCustomer(final Customer customer);
+
+    /**
+     *  <p>Cart associated with the Customer. If empty, the Customer does not have a Cart assigned.</p>
+     * @param cart value to be set
+     */
 
     public void setCart(final Cart cart);
 
+    /**
+     * factory method
+     * @return instance of CustomerSignInResult
+     */
     public static CustomerSignInResult of() {
         return new CustomerSignInResultImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomerSignInResult
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomerSignInResult of(final CustomerSignInResult template) {
         CustomerSignInResultImpl instance = new CustomerSignInResultImpl();
         instance.setCustomer(template.getCustomer());
@@ -63,18 +82,37 @@ public interface CustomerSignInResult {
         return instance;
     }
 
+    /**
+     * builder factory method for CustomerSignInResult
+     * @return builder
+     */
     public static CustomerSignInResultBuilder builder() {
         return CustomerSignInResultBuilder.of();
     }
 
+    /**
+     * create builder for CustomerSignInResult instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerSignInResultBuilder builder(final CustomerSignInResult template) {
         return CustomerSignInResultBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomerSignInResult(Function<CustomerSignInResult, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomerSignInResult> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomerSignInResult>() {
             @Override

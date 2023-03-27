@@ -32,6 +32,9 @@ public class RemovePriceChangeImpl implements RemovePriceChange, ModelBase {
 
     private com.commercetools.history.models.common.Price nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     RemovePriceChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("catalogData") final String catalogData, @JsonProperty("priceId") final String priceId,
@@ -45,6 +48,9 @@ public class RemovePriceChangeImpl implements RemovePriceChange, ModelBase {
         this.type = REMOVE_PRICE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public RemovePriceChangeImpl() {
         this.type = REMOVE_PRICE_CHANGE;
     }

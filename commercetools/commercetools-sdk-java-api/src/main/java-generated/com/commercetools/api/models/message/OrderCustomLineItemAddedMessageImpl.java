@@ -44,6 +44,9 @@ public class OrderCustomLineItemAddedMessageImpl implements OrderCustomLineItemA
 
     private com.commercetools.api.models.cart.CustomLineItem customLineItem;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderCustomLineItemAddedMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -70,6 +73,9 @@ public class OrderCustomLineItemAddedMessageImpl implements OrderCustomLineItemA
         this.type = ORDER_CUSTOM_LINE_ITEM_ADDED;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderCustomLineItemAddedMessageImpl() {
         this.type = ORDER_CUSTOM_LINE_ITEM_ADDED;
     }

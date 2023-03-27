@@ -26,6 +26,9 @@ public class SyncInfoImpl implements SyncInfo, ModelBase {
 
     private java.time.ZonedDateTime syncedAt;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SyncInfoImpl(@JsonProperty("channel") final com.commercetools.api.models.channel.ChannelReference channel,
             @JsonProperty("externalId") final String externalId,
@@ -35,6 +38,9 @@ public class SyncInfoImpl implements SyncInfo, ModelBase {
         this.syncedAt = syncedAt;
     }
 
+    /**
+     * create empty instance
+     */
     public SyncInfoImpl() {
     }
 

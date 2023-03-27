@@ -34,6 +34,11 @@ public class MyCartAddDiscountCodeActionBuilder implements Builder<MyCartAddDisc
         return this;
     }
 
+    /**
+     *  <p><code>code</code> of a DiscountCode.</p>
+     * @return code
+     */
+
     public String getCode() {
         return this.code;
     }
@@ -55,10 +60,19 @@ public class MyCartAddDiscountCodeActionBuilder implements Builder<MyCartAddDisc
         return new MyCartAddDiscountCodeActionImpl(code);
     }
 
+    /**
+     * factory method for an instance of MyCartAddDiscountCodeActionBuilder
+     * @return builder
+     */
     public static MyCartAddDiscountCodeActionBuilder of() {
         return new MyCartAddDiscountCodeActionBuilder();
     }
 
+    /**
+     * create builder for MyCartAddDiscountCodeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCartAddDiscountCodeActionBuilder of(final MyCartAddDiscountCodeAction template) {
         MyCartAddDiscountCodeActionBuilder builder = new MyCartAddDiscountCodeActionBuilder();
         builder.code = template.getCode();

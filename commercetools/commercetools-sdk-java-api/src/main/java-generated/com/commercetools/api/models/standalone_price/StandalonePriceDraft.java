@@ -137,37 +137,111 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
     @JsonProperty("active")
     public Boolean getActive();
 
+    /**
+     *  <p>User-defined unique identifier for the StandalonePrice.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
+
+    /**
+     *  <p>Specifies to which ProductVariant the API associates this Price. It is not validated to exist in product variants.</p>
+     * @param sku value to be set
+     */
 
     public void setSku(final String sku);
 
+    /**
+     *  <p>Sets the money value of this Price.</p>
+     * @param value value to be set
+     */
+
     public void setValue(final Money value);
+
+    /**
+     *  <p>Sets the country for which this Price is valid.</p>
+     * @param country value to be set
+     */
 
     public void setCountry(final String country);
 
+    /**
+     *  <p>Sets the CustomerGroup for which this Price is valid.</p>
+     * @param customerGroup value to be set
+     */
+
     public void setCustomerGroup(final CustomerGroupResourceIdentifier customerGroup);
+
+    /**
+     *  <p>Sets the product distribution Channel for which this Price is valid.</p>
+     * @param channel value to be set
+     */
 
     public void setChannel(final ChannelResourceIdentifier channel);
 
+    /**
+     *  <p>Sets the date from which the Price is valid. Must be at least 1 ms earlier than <code>validUntil</code>.</p>
+     * @param validFrom value to be set
+     */
+
     public void setValidFrom(final ZonedDateTime validFrom);
 
+    /**
+     *  <p>Sets the date until the Price is valid. Must be at least 1 ms later than <code>validFrom</code>. Standalone Prices that are no longer valid are not automatically deleted, but they can be deleted if necessary.</p>
+     * @param validUntil value to be set
+     */
+
     public void setValidUntil(final ZonedDateTime validUntil);
+
+    /**
+     *  <p>Sets price tiers.</p>
+     * @param tiers values to be set
+     */
 
     @JsonIgnore
     public void setTiers(final PriceTierDraft... tiers);
 
+    /**
+     *  <p>Sets price tiers.</p>
+     * @param tiers values to be set
+     */
+
     public void setTiers(final List<PriceTierDraft> tiers);
+
+    /**
+     *  <p>Sets a discounted price for this Price that is different from the base price with <code>value</code>.</p>
+     * @param discounted value to be set
+     */
 
     public void setDiscounted(final DiscountedPriceDraft discounted);
 
+    /**
+     *  <p>Custom Fields for the StandalonePrice.</p>
+     * @param custom value to be set
+     */
+
     public void setCustom(final CustomFieldsDraft custom);
+
+    /**
+     *  <p>If set to <code>true</code>, the StandalonePrice is considered during price selection. If set to <code>false</code>, the StandalonePrice is not considered during price selection.</p>
+     * @param active value to be set
+     */
 
     public void setActive(final Boolean active);
 
+    /**
+     * factory method
+     * @return instance of StandalonePriceDraft
+     */
     public static StandalonePriceDraft of() {
         return new StandalonePriceDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of StandalonePriceDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StandalonePriceDraft of(final StandalonePriceDraft template) {
         StandalonePriceDraftImpl instance = new StandalonePriceDraftImpl();
         instance.setKey(template.getKey());
@@ -185,18 +259,37 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
         return instance;
     }
 
+    /**
+     * builder factory method for StandalonePriceDraft
+     * @return builder
+     */
     public static StandalonePriceDraftBuilder builder() {
         return StandalonePriceDraftBuilder.of();
     }
 
+    /**
+     * create builder for StandalonePriceDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StandalonePriceDraftBuilder builder(final StandalonePriceDraft template) {
         return StandalonePriceDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStandalonePriceDraft(Function<StandalonePriceDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceDraft>() {
             @Override

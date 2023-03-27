@@ -21,6 +21,9 @@ public class CartFreezeCartActionImpl implements CartFreezeCartAction, ModelBase
 
     private String action;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartFreezeCartActionImpl() {
         this.action = FREEZE_CART;

@@ -23,6 +23,10 @@ public class FacetResultBuilder {
         return com.commercetools.api.models.product.TermFacetResultBuilder.of();
     }
 
+    /**
+     * factory method for an instance of FacetResultBuilder
+     * @return builder
+     */
     public static FacetResultBuilder of() {
         return new FacetResultBuilder();
     }

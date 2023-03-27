@@ -82,10 +82,20 @@ public class BusinessUnitParentUnitChangedMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>Parent unit of the Business Unit before the Change Parent Unit update action.</p>
+     * @return oldParentUnit
+     */
+
     @Nullable
     public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getOldParentUnit() {
         return this.oldParentUnit;
     }
+
+    /**
+     *  <p>Parent unit of the Business Unit after the Change Parent Unit update action.</p>
+     * @return newParentUnit
+     */
 
     @Nullable
     public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getNewParentUnit() {
@@ -108,10 +118,19 @@ public class BusinessUnitParentUnitChangedMessagePayloadBuilder
         return new BusinessUnitParentUnitChangedMessagePayloadImpl(oldParentUnit, newParentUnit);
     }
 
+    /**
+     * factory method for an instance of BusinessUnitParentUnitChangedMessagePayloadBuilder
+     * @return builder
+     */
     public static BusinessUnitParentUnitChangedMessagePayloadBuilder of() {
         return new BusinessUnitParentUnitChangedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for BusinessUnitParentUnitChangedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitParentUnitChangedMessagePayloadBuilder of(
             final BusinessUnitParentUnitChangedMessagePayload template) {
         BusinessUnitParentUnitChangedMessagePayloadBuilder builder = new BusinessUnitParentUnitChangedMessagePayloadBuilder();

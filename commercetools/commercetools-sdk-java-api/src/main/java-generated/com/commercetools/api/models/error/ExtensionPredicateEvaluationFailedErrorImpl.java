@@ -28,6 +28,9 @@ public class ExtensionPredicateEvaluationFailedErrorImpl implements ExtensionPre
 
     private com.commercetools.api.models.error.ErrorByExtension errorByExtension;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ExtensionPredicateEvaluationFailedErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values,
@@ -38,6 +41,9 @@ public class ExtensionPredicateEvaluationFailedErrorImpl implements ExtensionPre
         this.code = EXTENSION_PREDICATE_EVALUATION_FAILED;
     }
 
+    /**
+     * create empty instance
+     */
     public ExtensionPredicateEvaluationFailedErrorImpl() {
         this.code = EXTENSION_PREDICATE_EVALUATION_FAILED;
     }

@@ -24,12 +24,18 @@ public class CartDiscountChangeCartPredicateActionImpl implements CartDiscountCh
 
     private String cartPredicate;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartDiscountChangeCartPredicateActionImpl(@JsonProperty("cartPredicate") final String cartPredicate) {
         this.cartPredicate = cartPredicate;
         this.action = CHANGE_CART_PREDICATE;
     }
 
+    /**
+     * create empty instance
+     */
     public CartDiscountChangeCartPredicateActionImpl() {
         this.action = CHANGE_CART_PREDICATE;
     }

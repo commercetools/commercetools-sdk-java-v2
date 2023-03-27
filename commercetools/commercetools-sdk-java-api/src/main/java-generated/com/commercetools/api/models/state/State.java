@@ -160,44 +160,141 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
     @JsonProperty("transitions")
     public List<StateReference> getTransitions();
 
+    /**
+     *  <p>Unique identifier of the State.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>Current version of the State.</p>
+     * @param version value to be set
+     */
 
     public void setVersion(final Long version);
 
+    /**
+     *  <p>Date and time (UTC) the State was initially created.</p>
+     * @param createdAt value to be set
+     */
+
     public void setCreatedAt(final ZonedDateTime createdAt);
+
+    /**
+     *  <p>Date and time (UTC) the State was last updated.</p>
+     * @param lastModifiedAt value to be set
+     */
 
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy value to be set
+     */
+
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy value to be set
+     */
 
     public void setCreatedBy(final CreatedBy createdBy);
 
+    /**
+     *  <p>User-defined unique identifier of the State.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
+
+    /**
+     *  <p>Indicates to which resource or object types the State is assigned to.</p>
+     * @param type value to be set
+     */
 
     public void setType(final StateTypeEnum type);
 
+    /**
+     *  <p>Name of the State.</p>
+     * @param name value to be set
+     */
+
     public void setName(final LocalizedString name);
+
+    /**
+     *  <p>Description of the State.</p>
+     * @param description value to be set
+     */
 
     public void setDescription(final LocalizedString description);
 
+    /**
+     *  <p><code>true</code> for an initial State, the first State in a workflow.</p>
+     * @param initial value to be set
+     */
+
     public void setInitial(final Boolean initial);
 
+    /**
+     *  <p><code>true</code> for States that are an integral part of the Project. Those States cannot be deleted and their <code>key</code> cannot be changed.</p>
+     * @param builtIn value to be set
+     */
+
     public void setBuiltIn(final Boolean builtIn);
+
+    /**
+     *  <p>Roles the State can fulfill for Reviews and Line Items.</p>
+     * @param roles values to be set
+     */
 
     @JsonIgnore
     public void setRoles(final StateRoleEnum... roles);
 
+    /**
+     *  <p>Roles the State can fulfill for Reviews and Line Items.</p>
+     * @param roles values to be set
+     */
+
     public void setRoles(final List<StateRoleEnum> roles);
+
+    /**
+     *  <ul>
+     *   <li>list of States of the same <code>type</code> that the current State can be transitioned to. For example, when the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and this list contains the reference to the <em>Shipped</em> <code>OrderState</code>, the transition <em>Initial</em> -&gt; <em>Shipped</em> is allowed.</li>
+     *   <li>if empty, no transitions are allowed from the current State, defining the current State as final for this workflow.</li>
+     *   <li>if not set, the validation is turned off and the current State can be transitioned to any other State of the same <code>type</code> as the current State.</li>
+     *  </ul>
+     * @param transitions values to be set
+     */
 
     @JsonIgnore
     public void setTransitions(final StateReference... transitions);
 
+    /**
+     *  <ul>
+     *   <li>list of States of the same <code>type</code> that the current State can be transitioned to. For example, when the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and this list contains the reference to the <em>Shipped</em> <code>OrderState</code>, the transition <em>Initial</em> -&gt; <em>Shipped</em> is allowed.</li>
+     *   <li>if empty, no transitions are allowed from the current State, defining the current State as final for this workflow.</li>
+     *   <li>if not set, the validation is turned off and the current State can be transitioned to any other State of the same <code>type</code> as the current State.</li>
+     *  </ul>
+     * @param transitions values to be set
+     */
+
     public void setTransitions(final List<StateReference> transitions);
 
+    /**
+     * factory method
+     * @return instance of State
+     */
     public static State of() {
         return new StateImpl();
     }
 
+    /**
+     * factory method to copy an instance of State
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static State of(final State template) {
         StateImpl instance = new StateImpl();
         instance.setId(template.getId());
@@ -217,14 +314,29 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
         return instance;
     }
 
+    /**
+     * builder factory method for State
+     * @return builder
+     */
     public static StateBuilder builder() {
         return StateBuilder.of();
     }
 
+    /**
+     * create builder for State instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StateBuilder builder(final State template) {
         return StateBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withState(Function<State, T> helper) {
         return helper.apply(this);
     }
@@ -233,6 +345,10 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
         return com.commercetools.api.models.common.ReferenceTypeId.STATE;
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<State> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<State>() {
             @Override

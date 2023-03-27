@@ -28,6 +28,9 @@ public class MyCartSetLineItemCustomTypeActionImpl implements MyCartSetLineItemC
 
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyCartSetLineItemCustomTypeActionImpl(@JsonProperty("lineItemId") final String lineItemId,
             @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
@@ -38,6 +41,9 @@ public class MyCartSetLineItemCustomTypeActionImpl implements MyCartSetLineItemC
         this.action = SET_LINE_ITEM_CUSTOM_TYPE;
     }
 
+    /**
+     * create empty instance
+     */
     public MyCartSetLineItemCustomTypeActionImpl() {
         this.action = SET_LINE_ITEM_CUSTOM_TYPE;
     }

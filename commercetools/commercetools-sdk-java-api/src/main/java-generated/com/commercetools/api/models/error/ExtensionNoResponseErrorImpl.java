@@ -30,6 +30,9 @@ public class ExtensionNoResponseErrorImpl implements ExtensionNoResponseError, M
 
     private String extensionKey;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ExtensionNoResponseErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values,
@@ -42,6 +45,9 @@ public class ExtensionNoResponseErrorImpl implements ExtensionNoResponseError, M
         this.code = EXTENSION_NO_RESPONSE;
     }
 
+    /**
+     * create empty instance
+     */
     public ExtensionNoResponseErrorImpl() {
         this.code = EXTENSION_NO_RESPONSE;
     }

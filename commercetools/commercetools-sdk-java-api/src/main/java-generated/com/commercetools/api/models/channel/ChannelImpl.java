@@ -48,6 +48,9 @@ public class ChannelImpl implements Channel, ModelBase {
 
     private com.commercetools.api.models.common.GeoJson geoLocation;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChannelImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -78,6 +81,9 @@ public class ChannelImpl implements Channel, ModelBase {
         this.geoLocation = geoLocation;
     }
 
+    /**
+     * create empty instance
+     */
     public ChannelImpl() {
     }
 

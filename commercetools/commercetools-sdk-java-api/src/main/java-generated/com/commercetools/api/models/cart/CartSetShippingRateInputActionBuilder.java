@@ -61,6 +61,16 @@ public class CartSetShippingRateInputActionBuilder implements Builder<CartSetShi
         return this;
     }
 
+    /**
+     *  <p>The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <ul>
+     *   <li>If <code>CartClassification</code>, it must be ClassificationShippingRateInputDraft.</li>
+     *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
+     *   <li>If <code>CartValue</code>, it cannot be set.</li>
+     *  </ul>
+     * @return shippingRateInput
+     */
+
     @Nullable
     public com.commercetools.api.models.cart.ShippingRateInputDraft getShippingRateInput() {
         return this.shippingRateInput;
@@ -82,10 +92,19 @@ public class CartSetShippingRateInputActionBuilder implements Builder<CartSetShi
         return new CartSetShippingRateInputActionImpl(shippingRateInput);
     }
 
+    /**
+     * factory method for an instance of CartSetShippingRateInputActionBuilder
+     * @return builder
+     */
     public static CartSetShippingRateInputActionBuilder of() {
         return new CartSetShippingRateInputActionBuilder();
     }
 
+    /**
+     * create builder for CartSetShippingRateInputAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartSetShippingRateInputActionBuilder of(final CartSetShippingRateInputAction template) {
         CartSetShippingRateInputActionBuilder builder = new CartSetShippingRateInputActionBuilder();
         builder.shippingRateInput = template.getShippingRateInput();

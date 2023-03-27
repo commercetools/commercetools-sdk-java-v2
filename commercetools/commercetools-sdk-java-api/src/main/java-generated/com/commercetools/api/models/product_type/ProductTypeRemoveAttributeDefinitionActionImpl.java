@@ -26,12 +26,18 @@ public class ProductTypeRemoveAttributeDefinitionActionImpl
 
     private String name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductTypeRemoveAttributeDefinitionActionImpl(@JsonProperty("name") final String name) {
         this.name = name;
         this.action = REMOVE_ATTRIBUTE_DEFINITION;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductTypeRemoveAttributeDefinitionActionImpl() {
         this.action = REMOVE_ATTRIBUTE_DEFINITION;
     }

@@ -28,6 +28,9 @@ public class CartAddShoppingListActionImpl implements CartAddShoppingListAction,
 
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartAddShoppingListActionImpl(
             @JsonProperty("shoppingList") final com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier shoppingList,
@@ -39,6 +42,9 @@ public class CartAddShoppingListActionImpl implements CartAddShoppingListAction,
         this.action = ADD_SHOPPING_LIST;
     }
 
+    /**
+     * create empty instance
+     */
     public CartAddShoppingListActionImpl() {
         this.action = ADD_SHOPPING_LIST;
     }

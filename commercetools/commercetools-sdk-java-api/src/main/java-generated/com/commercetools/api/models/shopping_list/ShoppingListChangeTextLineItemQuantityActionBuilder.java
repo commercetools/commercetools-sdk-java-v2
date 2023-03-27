@@ -49,9 +49,19 @@ public class ShoppingListChangeTextLineItemQuantityActionBuilder
         return this;
     }
 
+    /**
+     *  <p>The <code>id</code> of the TextLineItem to update.</p>
+     * @return textLineItemId
+     */
+
     public String getTextLineItemId() {
         return this.textLineItemId;
     }
+
+    /**
+     *  <p>New value to set. If <code>0</code>, the TextLineItem is removed from the ShoppingList.</p>
+     * @return quantity
+     */
 
     public Long getQuantity() {
         return this.quantity;
@@ -76,10 +86,19 @@ public class ShoppingListChangeTextLineItemQuantityActionBuilder
         return new ShoppingListChangeTextLineItemQuantityActionImpl(textLineItemId, quantity);
     }
 
+    /**
+     * factory method for an instance of ShoppingListChangeTextLineItemQuantityActionBuilder
+     * @return builder
+     */
     public static ShoppingListChangeTextLineItemQuantityActionBuilder of() {
         return new ShoppingListChangeTextLineItemQuantityActionBuilder();
     }
 
+    /**
+     * create builder for ShoppingListChangeTextLineItemQuantityAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShoppingListChangeTextLineItemQuantityActionBuilder of(
             final ShoppingListChangeTextLineItemQuantityAction template) {
         ShoppingListChangeTextLineItemQuantityActionBuilder builder = new ShoppingListChangeTextLineItemQuantityActionBuilder();

@@ -27,6 +27,9 @@ public class StateReferenceImpl implements StateReference, ModelBase {
 
     private com.commercetools.api.models.state.State obj;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StateReferenceImpl(@JsonProperty("id") final String id,
             @JsonProperty("obj") final com.commercetools.api.models.state.State obj) {
@@ -35,6 +38,9 @@ public class StateReferenceImpl implements StateReference, ModelBase {
         this.typeId = ReferenceTypeId.findEnum("state");
     }
 
+    /**
+     * create empty instance
+     */
     public StateReferenceImpl() {
         this.typeId = ReferenceTypeId.findEnum("state");
     }

@@ -27,6 +27,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderSetCountryActionImpl.class)
 public interface StagedOrderSetCountryAction extends StagedOrderUpdateAction {
 
+    /**
+     * discriminator value for StagedOrderSetCountryAction
+     */
     String SET_COUNTRY = "setCountry";
 
     /**
@@ -37,30 +40,63 @@ public interface StagedOrderSetCountryAction extends StagedOrderUpdateAction {
     @JsonProperty("country")
     public String getCountry();
 
+    /**
+     * set country
+     * @param country value to be set
+     */
+
     public void setCountry(final String country);
 
+    /**
+     * factory method
+     * @return instance of StagedOrderSetCountryAction
+     */
     public static StagedOrderSetCountryAction of() {
         return new StagedOrderSetCountryActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedOrderSetCountryAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedOrderSetCountryAction of(final StagedOrderSetCountryAction template) {
         StagedOrderSetCountryActionImpl instance = new StagedOrderSetCountryActionImpl();
         instance.setCountry(template.getCountry());
         return instance;
     }
 
+    /**
+     * builder factory method for StagedOrderSetCountryAction
+     * @return builder
+     */
     public static StagedOrderSetCountryActionBuilder builder() {
         return StagedOrderSetCountryActionBuilder.of();
     }
 
+    /**
+     * create builder for StagedOrderSetCountryAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetCountryActionBuilder builder(final StagedOrderSetCountryAction template) {
         return StagedOrderSetCountryActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedOrderSetCountryAction(Function<StagedOrderSetCountryAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetCountryAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetCountryAction>() {
             @Override

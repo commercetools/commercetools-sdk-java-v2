@@ -42,6 +42,9 @@ public class StagedQuoteDeletedMessageImpl implements StagedQuoteDeletedMessage,
 
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedQuoteDeletedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -65,6 +68,9 @@ public class StagedQuoteDeletedMessageImpl implements StagedQuoteDeletedMessage,
         this.type = STAGED_QUOTE_DELETED;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedQuoteDeletedMessageImpl() {
         this.type = STAGED_QUOTE_DELETED;
     }

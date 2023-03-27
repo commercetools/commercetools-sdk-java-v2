@@ -49,17 +49,41 @@ public interface ProductSelectionUpdate extends
     @JsonProperty("actions")
     public List<ProductSelectionUpdateAction> getActions();
 
+    /**
+     * set version
+     * @param version value to be set
+     */
+
     public void setVersion(final Long version);
+
+    /**
+     * set actions
+     * @param actions values to be set
+     */
 
     @JsonIgnore
     public void setActions(final ProductSelectionUpdateAction... actions);
 
+    /**
+     * set actions
+     * @param actions values to be set
+     */
+
     public void setActions(final List<ProductSelectionUpdateAction> actions);
 
+    /**
+     * factory method
+     * @return instance of ProductSelectionUpdate
+     */
     public static ProductSelectionUpdate of() {
         return new ProductSelectionUpdateImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductSelectionUpdate
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductSelectionUpdate of(final ProductSelectionUpdate template) {
         ProductSelectionUpdateImpl instance = new ProductSelectionUpdateImpl();
         instance.setVersion(template.getVersion());
@@ -67,18 +91,37 @@ public interface ProductSelectionUpdate extends
         return instance;
     }
 
+    /**
+     * builder factory method for ProductSelectionUpdate
+     * @return builder
+     */
     public static ProductSelectionUpdateBuilder builder() {
         return ProductSelectionUpdateBuilder.of();
     }
 
+    /**
+     * create builder for ProductSelectionUpdate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSelectionUpdateBuilder builder(final ProductSelectionUpdate template) {
         return ProductSelectionUpdateBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductSelectionUpdate(Function<ProductSelectionUpdate, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionUpdate> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionUpdate>() {
             @Override

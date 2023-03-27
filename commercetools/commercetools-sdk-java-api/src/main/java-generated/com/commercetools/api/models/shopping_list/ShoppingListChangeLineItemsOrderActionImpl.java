@@ -24,6 +24,9 @@ public class ShoppingListChangeLineItemsOrderActionImpl implements ShoppingListC
 
     private java.util.List<String> lineItemOrder;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShoppingListChangeLineItemsOrderActionImpl(
             @JsonProperty("lineItemOrder") final java.util.List<String> lineItemOrder) {
@@ -31,6 +34,9 @@ public class ShoppingListChangeLineItemsOrderActionImpl implements ShoppingListC
         this.action = CHANGE_LINE_ITEMS_ORDER;
     }
 
+    /**
+     * create empty instance
+     */
     public ShoppingListChangeLineItemsOrderActionImpl() {
         this.action = CHANGE_LINE_ITEMS_ORDER;
     }

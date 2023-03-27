@@ -25,6 +25,9 @@ public class ShoppingListChangeTextLineItemsOrderActionImpl
 
     private java.util.List<String> textLineItemOrder;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShoppingListChangeTextLineItemsOrderActionImpl(
             @JsonProperty("textLineItemOrder") final java.util.List<String> textLineItemOrder) {
@@ -32,6 +35,9 @@ public class ShoppingListChangeTextLineItemsOrderActionImpl
         this.action = CHANGE_TEXT_LINE_ITEMS_ORDER;
     }
 
+    /**
+     * create empty instance
+     */
     public ShoppingListChangeTextLineItemsOrderActionImpl() {
         this.action = CHANGE_TEXT_LINE_ITEMS_ORDER;
     }

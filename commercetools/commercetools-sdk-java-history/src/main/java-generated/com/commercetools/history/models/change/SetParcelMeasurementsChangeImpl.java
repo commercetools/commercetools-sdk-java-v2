@@ -30,6 +30,9 @@ public class SetParcelMeasurementsChangeImpl implements SetParcelMeasurementsCha
 
     private com.commercetools.history.models.common.ParcelMeasurements previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetParcelMeasurementsChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("parcel") final com.commercetools.history.models.change_value.ParcelChangeValue parcel,
@@ -42,6 +45,9 @@ public class SetParcelMeasurementsChangeImpl implements SetParcelMeasurementsCha
         this.type = SET_PARCEL_MEASUREMENTS_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetParcelMeasurementsChangeImpl() {
         this.type = SET_PARCEL_MEASUREMENTS_CHANGE;
     }

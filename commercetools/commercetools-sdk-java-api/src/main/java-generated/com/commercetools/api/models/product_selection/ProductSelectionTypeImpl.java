@@ -22,12 +22,18 @@ public class ProductSelectionTypeImpl implements ProductSelectionType, ModelBase
 
     private com.commercetools.api.models.product_selection.ProductSelectionTypeEnum type;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSelectionTypeImpl(
             @JsonProperty("type") final com.commercetools.api.models.product_selection.ProductSelectionTypeEnum type) {
         this.type = type;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSelectionTypeImpl() {
     }
 

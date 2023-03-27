@@ -215,53 +215,167 @@ public interface CartDiscount
     @JsonProperty("custom")
     public CustomFields getCustom();
 
+    /**
+     *  <p>Unique identifier of the CartDiscount.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>Current version of the CartDiscount.</p>
+     * @param version value to be set
+     */
 
     public void setVersion(final Long version);
 
+    /**
+     *  <p>Date and time (UTC) for the CartDiscount was initially created.</p>
+     * @param createdAt value to be set
+     */
+
     public void setCreatedAt(final ZonedDateTime createdAt);
+
+    /**
+     *  <p>Date and time (UTC) for the CartDiscount was last updated.</p>
+     * @param lastModifiedAt value to be set
+     */
 
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
+    /**
+     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy value to be set
+     */
+
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy value to be set
+     */
 
     public void setCreatedBy(final CreatedBy createdBy);
 
+    /**
+     *  <p>Name of the CartDiscount.</p>
+     * @param name value to be set
+     */
+
     public void setName(final LocalizedString name);
+
+    /**
+     *  <p>User-defined unique identifier of the CartDiscount.</p>
+     * @param key value to be set
+     */
 
     public void setKey(final String key);
 
+    /**
+     *  <p>Description of the CartDiscount.</p>
+     * @param description value to be set
+     */
+
     public void setDescription(final LocalizedString description);
+
+    /**
+     *  <p>Effect of the CartDiscount.</p>
+     * @param value value to be set
+     */
 
     public void setValue(final CartDiscountValue value);
 
+    /**
+     *  <p>Valid Cart Predicate.</p>
+     * @param cartPredicate value to be set
+     */
+
     public void setCartPredicate(final String cartPredicate);
+
+    /**
+     *  <p>Sets a CartDiscountTarget. Empty if <code>value</code> has type <code>giftLineItem</code>.</p>
+     * @param target value to be set
+     */
 
     public void setTarget(final CartDiscountTarget target);
 
+    /**
+     *  <p>Value between <code>0</code> and <code>1</code>. All matching CartDiscounts are applied to a Cart in the order defined by this field. A Discount with a higher sortOrder is prioritized. The sort order is unambiguous among all CartDiscounts.</p>
+     * @param sortOrder value to be set
+     */
+
     public void setSortOrder(final String sortOrder);
+
+    /**
+     *  <p>Indicates if the CartDiscount is active and can be applied to the Cart.</p>
+     * @param isActive value to be set
+     */
 
     public void setIsActive(final Boolean isActive);
 
+    /**
+     *  <p>Date and time (UTC) from which the Discount is effective.</p>
+     * @param validFrom value to be set
+     */
+
     public void setValidFrom(final ZonedDateTime validFrom);
+
+    /**
+     *  <p>Date and time (UTC) until which the Discount is effective.</p>
+     * @param validUntil value to be set
+     */
 
     public void setValidUntil(final ZonedDateTime validUntil);
 
+    /**
+     *  <p>Indicates if the Discount can be used in connection with a DiscountCode.</p>
+     * @param requiresDiscountCode value to be set
+     */
+
     public void setRequiresDiscountCode(final Boolean requiresDiscountCode);
+
+    /**
+     *  <p>References of all resources that are addressed in the predicate. The API generates this array from the predicate.</p>
+     * @param references values to be set
+     */
 
     @JsonIgnore
     public void setReferences(final Reference... references);
 
+    /**
+     *  <p>References of all resources that are addressed in the predicate. The API generates this array from the predicate.</p>
+     * @param references values to be set
+     */
+
     public void setReferences(final List<Reference> references);
+
+    /**
+     *  <p>Indicates whether the application of the CartDiscount causes other discounts to be ignored.</p>
+     * @param stackingMode value to be set
+     */
 
     public void setStackingMode(final StackingMode stackingMode);
 
+    /**
+     *  <p>Custom Fields of the CartDiscount.</p>
+     * @param custom value to be set
+     */
+
     public void setCustom(final CustomFields custom);
 
+    /**
+     * factory method
+     * @return instance of CartDiscount
+     */
     public static CartDiscount of() {
         return new CartDiscountImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartDiscount
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartDiscount of(final CartDiscount template) {
         CartDiscountImpl instance = new CartDiscountImpl();
         instance.setId(template.getId());
@@ -287,14 +401,29 @@ public interface CartDiscount
         return instance;
     }
 
+    /**
+     * builder factory method for CartDiscount
+     * @return builder
+     */
     public static CartDiscountBuilder builder() {
         return CartDiscountBuilder.of();
     }
 
+    /**
+     * create builder for CartDiscount instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartDiscountBuilder builder(final CartDiscount template) {
         return CartDiscountBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartDiscount(Function<CartDiscount, T> helper) {
         return helper.apply(this);
     }
@@ -303,6 +432,10 @@ public interface CartDiscount
         return com.commercetools.api.models.common.ReferenceTypeId.CART_DISCOUNT;
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartDiscount> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartDiscount>() {
             @Override

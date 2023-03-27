@@ -30,6 +30,9 @@ public class ProductDiscountPagedQueryResponseImpl implements ProductDiscountPag
 
     private java.util.List<com.commercetools.api.models.product_discount.ProductDiscount> results;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductDiscountPagedQueryResponseImpl(@JsonProperty("limit") final Long limit,
             @JsonProperty("offset") final Long offset, @JsonProperty("count") final Long count,
@@ -42,6 +45,9 @@ public class ProductDiscountPagedQueryResponseImpl implements ProductDiscountPag
         this.results = results;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductDiscountPagedQueryResponseImpl() {
     }
 

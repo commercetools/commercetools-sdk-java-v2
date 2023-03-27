@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = DuplicateAttributeValueErrorImpl.class)
 public interface DuplicateAttributeValueError extends ErrorObject {
 
+    /**
+     * discriminator value for DuplicateAttributeValueError
+     */
     String DUPLICATE_ATTRIBUTE_VALUE = "DuplicateAttributeValue";
 
     /**
@@ -43,12 +46,26 @@ public interface DuplicateAttributeValueError extends ErrorObject {
     @JsonProperty("attribute")
     public Attribute getAttribute();
 
+    /**
+     *  <p>The attribute in conflict.</p>
+     * @param attribute value to be set
+     */
+
     public void setAttribute(final Attribute attribute);
 
+    /**
+     * factory method
+     * @return instance of DuplicateAttributeValueError
+     */
     public static DuplicateAttributeValueError of() {
         return new DuplicateAttributeValueErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of DuplicateAttributeValueError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static DuplicateAttributeValueError of(final DuplicateAttributeValueError template) {
         DuplicateAttributeValueErrorImpl instance = new DuplicateAttributeValueErrorImpl();
         instance.setMessage(template.getMessage());
@@ -56,18 +73,37 @@ public interface DuplicateAttributeValueError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for DuplicateAttributeValueError
+     * @return builder
+     */
     public static DuplicateAttributeValueErrorBuilder builder() {
         return DuplicateAttributeValueErrorBuilder.of();
     }
 
+    /**
+     * create builder for DuplicateAttributeValueError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DuplicateAttributeValueErrorBuilder builder(final DuplicateAttributeValueError template) {
         return DuplicateAttributeValueErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withDuplicateAttributeValueError(Function<DuplicateAttributeValueError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<DuplicateAttributeValueError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<DuplicateAttributeValueError>() {
             @Override

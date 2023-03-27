@@ -26,29 +26,60 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = WhitespaceTokenizerImpl.class)
 public interface WhitespaceTokenizer extends SuggestTokenizer {
 
+    /**
+     * discriminator value for WhitespaceTokenizer
+     */
     String WHITESPACE = "whitespace";
 
+    /**
+     * factory method
+     * @return instance of WhitespaceTokenizer
+     */
     public static WhitespaceTokenizer of() {
         return new WhitespaceTokenizerImpl();
     }
 
+    /**
+     * factory method to copy an instance of WhitespaceTokenizer
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static WhitespaceTokenizer of(final WhitespaceTokenizer template) {
         WhitespaceTokenizerImpl instance = new WhitespaceTokenizerImpl();
         return instance;
     }
 
+    /**
+     * builder factory method for WhitespaceTokenizer
+     * @return builder
+     */
     public static WhitespaceTokenizerBuilder builder() {
         return WhitespaceTokenizerBuilder.of();
     }
 
+    /**
+     * create builder for WhitespaceTokenizer instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static WhitespaceTokenizerBuilder builder(final WhitespaceTokenizer template) {
         return WhitespaceTokenizerBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withWhitespaceTokenizer(Function<WhitespaceTokenizer, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<WhitespaceTokenizer> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<WhitespaceTokenizer>() {
             @Override

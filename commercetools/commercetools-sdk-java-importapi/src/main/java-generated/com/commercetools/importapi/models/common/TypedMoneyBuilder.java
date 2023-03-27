@@ -19,6 +19,10 @@ public class TypedMoneyBuilder {
         return com.commercetools.importapi.models.common.MoneyBuilder.of();
     }
 
+    /**
+     * factory method for an instance of TypedMoneyBuilder
+     * @return builder
+     */
     public static TypedMoneyBuilder of() {
         return new TypedMoneyBuilder();
     }

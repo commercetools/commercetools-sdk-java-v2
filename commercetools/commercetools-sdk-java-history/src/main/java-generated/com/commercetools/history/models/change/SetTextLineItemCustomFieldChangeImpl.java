@@ -34,6 +34,9 @@ public class SetTextLineItemCustomFieldChangeImpl implements SetTextLineItemCust
 
     private java.lang.Object previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetTextLineItemCustomFieldChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("name") final String name, @JsonProperty("customTypeId") final String customTypeId,
@@ -49,6 +52,9 @@ public class SetTextLineItemCustomFieldChangeImpl implements SetTextLineItemCust
         this.type = SET_TEXT_LINE_ITEM_CUSTOM_FIELD_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetTextLineItemCustomFieldChangeImpl() {
         this.type = SET_TEXT_LINE_ITEM_CUSTOM_FIELD_CHANGE;
     }

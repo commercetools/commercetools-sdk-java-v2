@@ -34,6 +34,11 @@ public class BusinessUnitNameChangedMessagePayloadBuilder implements Builder<Bus
         return this;
     }
 
+    /**
+     *  <p>Updated name of the Business Unit.</p>
+     * @return name
+     */
+
     public String getName() {
         return this.name;
     }
@@ -55,10 +60,19 @@ public class BusinessUnitNameChangedMessagePayloadBuilder implements Builder<Bus
         return new BusinessUnitNameChangedMessagePayloadImpl(name);
     }
 
+    /**
+     * factory method for an instance of BusinessUnitNameChangedMessagePayloadBuilder
+     * @return builder
+     */
     public static BusinessUnitNameChangedMessagePayloadBuilder of() {
         return new BusinessUnitNameChangedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for BusinessUnitNameChangedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitNameChangedMessagePayloadBuilder of(
             final BusinessUnitNameChangedMessagePayload template) {
         BusinessUnitNameChangedMessagePayloadBuilder builder = new BusinessUnitNameChangedMessagePayloadBuilder();

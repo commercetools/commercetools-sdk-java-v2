@@ -27,6 +27,9 @@ public class NoMatchingProductDiscountFoundErrorImpl implements NoMatchingProduc
 
     private Map<String, java.lang.Object> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     NoMatchingProductDiscountFoundErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values) {
@@ -35,6 +38,9 @@ public class NoMatchingProductDiscountFoundErrorImpl implements NoMatchingProduc
         this.code = NO_MATCHING_PRODUCT_DISCOUNT_FOUND;
     }
 
+    /**
+     * create empty instance
+     */
     public NoMatchingProductDiscountFoundErrorImpl() {
         this.code = NO_MATCHING_PRODUCT_DISCOUNT_FOUND;
     }

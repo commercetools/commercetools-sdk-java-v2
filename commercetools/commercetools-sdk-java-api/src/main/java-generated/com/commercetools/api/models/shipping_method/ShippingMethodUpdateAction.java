@@ -55,66 +55,132 @@ public interface ShippingMethodUpdateAction
     @JsonProperty("action")
     public String getAction();
 
+    /**
+     * builder for addShippingRate subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.shipping_method.ShippingMethodAddShippingRateActionBuilder addShippingRateBuilder() {
         return com.commercetools.api.models.shipping_method.ShippingMethodAddShippingRateActionBuilder.of();
     }
 
+    /**
+     * builder for addZone subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.shipping_method.ShippingMethodAddZoneActionBuilder addZoneBuilder() {
         return com.commercetools.api.models.shipping_method.ShippingMethodAddZoneActionBuilder.of();
     }
 
+    /**
+     * builder for changeIsDefault subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.shipping_method.ShippingMethodChangeIsDefaultActionBuilder changeIsDefaultBuilder() {
         return com.commercetools.api.models.shipping_method.ShippingMethodChangeIsDefaultActionBuilder.of();
     }
 
+    /**
+     * builder for changeName subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.shipping_method.ShippingMethodChangeNameActionBuilder changeNameBuilder() {
         return com.commercetools.api.models.shipping_method.ShippingMethodChangeNameActionBuilder.of();
     }
 
+    /**
+     * builder for changeTaxCategory subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.shipping_method.ShippingMethodChangeTaxCategoryActionBuilder changeTaxCategoryBuilder() {
         return com.commercetools.api.models.shipping_method.ShippingMethodChangeTaxCategoryActionBuilder.of();
     }
 
+    /**
+     * builder for removeShippingRate subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.shipping_method.ShippingMethodRemoveShippingRateActionBuilder removeShippingRateBuilder() {
         return com.commercetools.api.models.shipping_method.ShippingMethodRemoveShippingRateActionBuilder.of();
     }
 
+    /**
+     * builder for removeZone subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.shipping_method.ShippingMethodRemoveZoneActionBuilder removeZoneBuilder() {
         return com.commercetools.api.models.shipping_method.ShippingMethodRemoveZoneActionBuilder.of();
     }
 
+    /**
+     * builder for setCustomField subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.shipping_method.ShippingMethodSetCustomFieldActionBuilder setCustomFieldBuilder() {
         return com.commercetools.api.models.shipping_method.ShippingMethodSetCustomFieldActionBuilder.of();
     }
 
+    /**
+     * builder for setCustomType subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.shipping_method.ShippingMethodSetCustomTypeActionBuilder setCustomTypeBuilder() {
         return com.commercetools.api.models.shipping_method.ShippingMethodSetCustomTypeActionBuilder.of();
     }
 
+    /**
+     * builder for setDescription subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.shipping_method.ShippingMethodSetDescriptionActionBuilder setDescriptionBuilder() {
         return com.commercetools.api.models.shipping_method.ShippingMethodSetDescriptionActionBuilder.of();
     }
 
+    /**
+     * builder for setKey subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.shipping_method.ShippingMethodSetKeyActionBuilder setKeyBuilder() {
         return com.commercetools.api.models.shipping_method.ShippingMethodSetKeyActionBuilder.of();
     }
 
+    /**
+     * builder for setLocalizedDescription subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.shipping_method.ShippingMethodSetLocalizedDescriptionActionBuilder setLocalizedDescriptionBuilder() {
         return com.commercetools.api.models.shipping_method.ShippingMethodSetLocalizedDescriptionActionBuilder.of();
     }
 
+    /**
+     * builder for setLocalizedName subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.shipping_method.ShippingMethodSetLocalizedNameActionBuilder setLocalizedNameBuilder() {
         return com.commercetools.api.models.shipping_method.ShippingMethodSetLocalizedNameActionBuilder.of();
     }
 
+    /**
+     * builder for setPredicate subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.shipping_method.ShippingMethodSetPredicateActionBuilder setPredicateBuilder() {
         return com.commercetools.api.models.shipping_method.ShippingMethodSetPredicateActionBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withShippingMethodUpdateAction(Function<ShippingMethodUpdateAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodUpdateAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodUpdateAction>() {
             @Override

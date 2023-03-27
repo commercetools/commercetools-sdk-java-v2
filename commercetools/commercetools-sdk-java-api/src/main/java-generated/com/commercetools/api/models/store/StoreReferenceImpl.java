@@ -27,6 +27,9 @@ public class StoreReferenceImpl implements StoreReference, ModelBase {
 
     private com.commercetools.api.models.store.Store obj;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StoreReferenceImpl(@JsonProperty("id") final String id,
             @JsonProperty("obj") final com.commercetools.api.models.store.Store obj) {
@@ -35,6 +38,9 @@ public class StoreReferenceImpl implements StoreReference, ModelBase {
         this.typeId = ReferenceTypeId.findEnum("store");
     }
 
+    /**
+     * create empty instance
+     */
     public StoreReferenceImpl() {
         this.typeId = ReferenceTypeId.findEnum("store");
     }

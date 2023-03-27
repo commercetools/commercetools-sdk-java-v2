@@ -132,19 +132,39 @@ public class OrderPagedSearchResponseBuilder implements Builder<OrderPagedSearch
         return this;
     }
 
+    /**
+     *  <p>Total number of results matching the query.</p>
+     * @return total
+     */
+
     public Long getTotal() {
         return this.total;
     }
+
+    /**
+     *  <p>Number of elements skipped.</p>
+     * @return offset
+     */
 
     @Nullable
     public Long getOffset() {
         return this.offset;
     }
 
+    /**
+     *  <p>Number of results requested.</p>
+     * @return limit
+     */
+
     @Nullable
     public Long getLimit() {
         return this.limit;
     }
+
+    /**
+     *  <p>Actual results.</p>
+     * @return hits
+     */
 
     public java.util.List<com.commercetools.api.models.order.Hit> getHits() {
         return this.hits;
@@ -168,10 +188,19 @@ public class OrderPagedSearchResponseBuilder implements Builder<OrderPagedSearch
         return new OrderPagedSearchResponseImpl(total, offset, limit, hits);
     }
 
+    /**
+     * factory method for an instance of OrderPagedSearchResponseBuilder
+     * @return builder
+     */
     public static OrderPagedSearchResponseBuilder of() {
         return new OrderPagedSearchResponseBuilder();
     }
 
+    /**
+     * create builder for OrderPagedSearchResponse instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderPagedSearchResponseBuilder of(final OrderPagedSearchResponse template) {
         OrderPagedSearchResponseBuilder builder = new OrderPagedSearchResponseBuilder();
         builder.total = template.getTotal();

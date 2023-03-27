@@ -26,6 +26,9 @@ public class SimilarProductsTaskStatusImpl implements SimilarProductsTaskStatus,
 
     private com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResult result;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SimilarProductsTaskStatusImpl(@JsonProperty("state") final com.commercetools.ml.models.common.TaskStatusEnum state,
             @JsonProperty("expires") final java.time.ZonedDateTime expires,
@@ -35,6 +38,9 @@ public class SimilarProductsTaskStatusImpl implements SimilarProductsTaskStatus,
         this.result = result;
     }
 
+    /**
+     * create empty instance
+     */
     public SimilarProductsTaskStatusImpl() {
     }
 

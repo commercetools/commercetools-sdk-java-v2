@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = BusinessUnitKeyReferenceImpl.class)
 public interface BusinessUnitKeyReference extends KeyReference {
 
+    /**
+     * discriminator value for BusinessUnitKeyReference
+     */
     String BUSINESS_UNIT = "business-unit";
 
     /**
@@ -40,30 +43,63 @@ public interface BusinessUnitKeyReference extends KeyReference {
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     *  <p>Unique and immutable key of the referenced BusinessUnit.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
 
+    /**
+     * factory method
+     * @return instance of BusinessUnitKeyReference
+     */
     public static BusinessUnitKeyReference of() {
         return new BusinessUnitKeyReferenceImpl();
     }
 
+    /**
+     * factory method to copy an instance of BusinessUnitKeyReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static BusinessUnitKeyReference of(final BusinessUnitKeyReference template) {
         BusinessUnitKeyReferenceImpl instance = new BusinessUnitKeyReferenceImpl();
         instance.setKey(template.getKey());
         return instance;
     }
 
+    /**
+     * builder factory method for BusinessUnitKeyReference
+     * @return builder
+     */
     public static BusinessUnitKeyReferenceBuilder builder() {
         return BusinessUnitKeyReferenceBuilder.of();
     }
 
+    /**
+     * create builder for BusinessUnitKeyReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitKeyReferenceBuilder builder(final BusinessUnitKeyReference template) {
         return BusinessUnitKeyReferenceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withBusinessUnitKeyReference(Function<BusinessUnitKeyReference, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitKeyReference> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitKeyReference>() {
             @Override

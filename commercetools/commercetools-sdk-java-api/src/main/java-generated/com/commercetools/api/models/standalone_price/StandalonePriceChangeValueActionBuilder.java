@@ -63,9 +63,19 @@ public class StandalonePriceChangeValueActionBuilder implements Builder<Standalo
         return this;
     }
 
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     * @return value
+     */
+
     public com.commercetools.api.models.common.Money getValue() {
         return this.value;
     }
+
+    /**
+     *  <p>If set to <code>true</code> the update action applies to the StagedStandalonePrice. If set to <code>false</code>, the update action applies to the current StandalonePrice.</p>
+     * @return staged
+     */
 
     @Nullable
     public Boolean getStaged() {
@@ -89,10 +99,19 @@ public class StandalonePriceChangeValueActionBuilder implements Builder<Standalo
         return new StandalonePriceChangeValueActionImpl(value, staged);
     }
 
+    /**
+     * factory method for an instance of StandalonePriceChangeValueActionBuilder
+     * @return builder
+     */
     public static StandalonePriceChangeValueActionBuilder of() {
         return new StandalonePriceChangeValueActionBuilder();
     }
 
+    /**
+     * create builder for StandalonePriceChangeValueAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StandalonePriceChangeValueActionBuilder of(final StandalonePriceChangeValueAction template) {
         StandalonePriceChangeValueActionBuilder builder = new StandalonePriceChangeValueActionBuilder();
         builder.value = template.getValue();

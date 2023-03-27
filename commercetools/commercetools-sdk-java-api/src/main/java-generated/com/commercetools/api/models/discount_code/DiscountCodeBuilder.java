@@ -502,91 +502,191 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the DiscountCode.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Current version of the DiscountCode.</p>
+     * @return version
+     */
 
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *  <p>Date and time (UTC) the DiscountCode was initially created.</p>
+     * @return createdAt
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+     *  <p>Date and time (UTC) the DiscountCode was last updated.</p>
+     * @return lastModifiedAt
+     */
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
+     */
+
     @Nullable
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
+
+    /**
+     *  <p>Name of the DiscountCode.</p>
+     * @return name
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
 
+    /**
+     *  <p>Description of the DiscountCode.</p>
+     * @return description
+     */
+
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the DiscountCode added to the Cart to apply the related CartDiscounts.</p>
+     * @return code
+     */
+
     public String getCode() {
         return this.code;
     }
 
+    /**
+     *  <p>Reference to CartDiscounts that can be applied to the Cart once the DiscountCode is applied.</p>
+     * @return cartDiscounts
+     */
+
     public java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> getCartDiscounts() {
         return this.cartDiscounts;
     }
+
+    /**
+     *  <p>DiscountCode can only be applied to Carts that match this predicate.</p>
+     * @return cartPredicate
+     */
 
     @Nullable
     public String getCartPredicate() {
         return this.cartPredicate;
     }
 
+    /**
+     *  <p>Indicates if the DiscountCode is active and can be applied to the Cart.</p>
+     * @return isActive
+     */
+
     public Boolean getIsActive() {
         return this.isActive;
     }
 
+    /**
+     *  <p>Array generated from the Cart predicate. It contains the references of all the resources that are addressed in the predicate.</p>
+     * @return references
+     */
+
     public java.util.List<com.commercetools.api.models.common.Reference> getReferences() {
         return this.references;
     }
+
+    /**
+     *  <p>Number of times the DiscountCode can be applied. DiscountCode application is counted at the time of Order creation or edit. However, Order cancellation or deletion does not decrement the count.</p>
+     * @return maxApplications
+     */
 
     @Nullable
     public Long getMaxApplications() {
         return this.maxApplications;
     }
 
+    /**
+     *  <p>Number of times the DiscountCode can be applied per Customer (anonymous Carts are not supported). DiscountCode application is counted at the time of Order creation or edit. However, Order cancellation or deletion does not decrement the count.</p>
+     * @return maxApplicationsPerCustomer
+     */
+
     @Nullable
     public Long getMaxApplicationsPerCustomer() {
         return this.maxApplicationsPerCustomer;
     }
+
+    /**
+     *  <p>Custom Fields of the DiscountCode.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
 
+    /**
+     *  <p>Groups to which the DiscountCode belongs to.</p>
+     * @return groups
+     */
+
     public java.util.List<String> getGroups() {
         return this.groups;
     }
+
+    /**
+     *  <p>Date and time (UTC) from which the DiscountCode is effective.</p>
+     * @return validFrom
+     */
 
     @Nullable
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
 
+    /**
+     *  <p>Date and time (UTC) until which the DiscountCode is effective.</p>
+     * @return validUntil
+     */
+
     @Nullable
     public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;
     }
+
+    /**
+     *  <p>Used and managed by the API and must not be used in customer logic. The value can change at any time due to internal and external factors.</p>
+     * @return applicationVersion
+     */
 
     @Nullable
     public Long getApplicationVersion() {
@@ -622,10 +722,19 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
             maxApplicationsPerCustomer, custom, groups, validFrom, validUntil, applicationVersion);
     }
 
+    /**
+     * factory method for an instance of DiscountCodeBuilder
+     * @return builder
+     */
     public static DiscountCodeBuilder of() {
         return new DiscountCodeBuilder();
     }
 
+    /**
+     * create builder for DiscountCode instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DiscountCodeBuilder of(final DiscountCode template) {
         DiscountCodeBuilder builder = new DiscountCodeBuilder();
         builder.id = template.getId();

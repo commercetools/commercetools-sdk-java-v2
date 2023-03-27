@@ -89,17 +89,37 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
         return this;
     }
 
+    /**
+     *  <p><code>"A duplicate value $duplicateValue exists for field $field."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
     }
 
+    /**
+     *  <p>Name of the conflicting field.</p>
+     * @return field
+     */
+
     public String getField() {
         return this.field;
     }
+
+    /**
+     *  <p>Conflicting duplicate value.</p>
+     * @return duplicateValue
+     */
 
     public java.lang.Object getDuplicateValue() {
         return this.duplicateValue;
@@ -124,10 +144,19 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
         return new DuplicateFieldErrorImpl(message, values, field, duplicateValue);
     }
 
+    /**
+     * factory method for an instance of DuplicateFieldErrorBuilder
+     * @return builder
+     */
     public static DuplicateFieldErrorBuilder of() {
         return new DuplicateFieldErrorBuilder();
     }
 
+    /**
+     * create builder for DuplicateFieldError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DuplicateFieldErrorBuilder of(final DuplicateFieldError template) {
         DuplicateFieldErrorBuilder builder = new DuplicateFieldErrorBuilder();
         builder.message = template.getMessage();

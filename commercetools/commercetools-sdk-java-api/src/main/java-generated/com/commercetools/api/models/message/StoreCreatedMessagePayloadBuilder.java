@@ -402,32 +402,67 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
         return this;
     }
 
+    /**
+     *  <p>The <code>name</code> of the Store that was created.</p>
+     * @return name
+     */
+
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
+
+    /**
+     *  <p>Languages of the Store that was created. Languages are represented as IETF language tags.</p>
+     * @return languages
+     */
 
     @Nullable
     public java.util.List<String> getLanguages() {
         return this.languages;
     }
 
+    /**
+     *  <p>Countries of the Store that was created.</p>
+     * @return countries
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.store_country.StoreCountry> getCountries() {
         return this.countries;
     }
 
+    /**
+     *  <p>Distribution Channels of the Store that was created.</p>
+     * @return distributionChannels
+     */
+
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getDistributionChannels() {
         return this.distributionChannels;
     }
+
+    /**
+     *  <p>Supply Channels of the Store that was created.</p>
+     * @return supplyChannels
+     */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getSupplyChannels() {
         return this.supplyChannels;
     }
 
+    /**
+     *  <p>ProductSelectionSettings of the Store that was created.</p>
+     * @return productSelections
+     */
+
     public java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> getProductSelections() {
         return this.productSelections;
     }
+
+    /**
+     *  <p>Custom Fields on the Store that was created.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -456,10 +491,19 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
             productSelections, custom);
     }
 
+    /**
+     * factory method for an instance of StoreCreatedMessagePayloadBuilder
+     * @return builder
+     */
     public static StoreCreatedMessagePayloadBuilder of() {
         return new StoreCreatedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for StoreCreatedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreCreatedMessagePayloadBuilder of(final StoreCreatedMessagePayload template) {
         StoreCreatedMessagePayloadBuilder builder = new StoreCreatedMessagePayloadBuilder();
         builder.name = template.getName();

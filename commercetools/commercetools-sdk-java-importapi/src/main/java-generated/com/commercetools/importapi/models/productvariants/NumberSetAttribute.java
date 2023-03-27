@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = NumberSetAttributeImpl.class)
 public interface NumberSetAttribute extends Attribute {
 
+    /**
+     * discriminator value for NumberSetAttribute
+     */
     String NUMBER_SET = "number-set";
 
     /**
@@ -39,15 +42,34 @@ public interface NumberSetAttribute extends Attribute {
     @JsonProperty("value")
     public List<Double> getValue();
 
+    /**
+     * set value
+     * @param value values to be set
+     */
+
     @JsonIgnore
     public void setValue(final Double... value);
 
+    /**
+     * set value
+     * @param value values to be set
+     */
+
     public void setValue(final List<Double> value);
 
+    /**
+     * factory method
+     * @return instance of NumberSetAttribute
+     */
     public static NumberSetAttribute of() {
         return new NumberSetAttributeImpl();
     }
 
+    /**
+     * factory method to copy an instance of NumberSetAttribute
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static NumberSetAttribute of(final NumberSetAttribute template) {
         NumberSetAttributeImpl instance = new NumberSetAttributeImpl();
         instance.setName(template.getName());
@@ -55,18 +77,37 @@ public interface NumberSetAttribute extends Attribute {
         return instance;
     }
 
+    /**
+     * builder factory method for NumberSetAttribute
+     * @return builder
+     */
     public static NumberSetAttributeBuilder builder() {
         return NumberSetAttributeBuilder.of();
     }
 
+    /**
+     * create builder for NumberSetAttribute instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static NumberSetAttributeBuilder builder(final NumberSetAttribute template) {
         return NumberSetAttributeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withNumberSetAttribute(Function<NumberSetAttribute, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<NumberSetAttribute> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<NumberSetAttribute>() {
             @Override

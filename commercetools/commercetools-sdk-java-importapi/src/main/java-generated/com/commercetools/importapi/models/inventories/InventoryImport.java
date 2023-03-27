@@ -84,22 +84,61 @@ public interface InventoryImport extends ImportResource {
     @JsonProperty("custom")
     public Custom getCustom();
 
+    /**
+     *  <p>Maps to <code>Inventory.sku</code></p>
+     * @param sku value to be set
+     */
+
     public void setSku(final String sku);
+
+    /**
+     *  <p>Maps to <code>Inventory.quantityOnStock</code></p>
+     * @param quantityOnStock value to be set
+     */
 
     public void setQuantityOnStock(final Long quantityOnStock);
 
+    /**
+     *  <p>Maps to <code>Inventory.restockableInDays</code></p>
+     * @param restockableInDays value to be set
+     */
+
     public void setRestockableInDays(final Long restockableInDays);
+
+    /**
+     *  <p>Maps to <code>Inventory.expectedDelivery</code></p>
+     * @param expectedDelivery value to be set
+     */
 
     public void setExpectedDelivery(final ZonedDateTime expectedDelivery);
 
+    /**
+     *  <p>Maps to <code>Inventory.supplyChannel</code></p>
+     * @param supplyChannel value to be set
+     */
+
     public void setSupplyChannel(final ChannelKeyReference supplyChannel);
+
+    /**
+     *  <p>Maps to <code>Inventory.custom</code>.</p>
+     * @param custom value to be set
+     */
 
     public void setCustom(final Custom custom);
 
+    /**
+     * factory method
+     * @return instance of InventoryImport
+     */
     public static InventoryImport of() {
         return new InventoryImportImpl();
     }
 
+    /**
+     * factory method to copy an instance of InventoryImport
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static InventoryImport of(final InventoryImport template) {
         InventoryImportImpl instance = new InventoryImportImpl();
         instance.setKey(template.getKey());
@@ -112,18 +151,37 @@ public interface InventoryImport extends ImportResource {
         return instance;
     }
 
+    /**
+     * builder factory method for InventoryImport
+     * @return builder
+     */
     public static InventoryImportBuilder builder() {
         return InventoryImportBuilder.of();
     }
 
+    /**
+     * create builder for InventoryImport instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InventoryImportBuilder builder(final InventoryImport template) {
         return InventoryImportBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withInventoryImport(Function<InventoryImport, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<InventoryImport> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<InventoryImport>() {
             @Override

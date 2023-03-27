@@ -24,6 +24,9 @@ public class ParcelTrackingDataImpl implements ParcelTrackingData, ModelBase {
 
     private com.commercetools.importapi.models.orders.TrackingData trackingData;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ParcelTrackingDataImpl(@JsonProperty("parcelId") final String parcelId,
             @JsonProperty("trackingData") final com.commercetools.importapi.models.orders.TrackingData trackingData) {
@@ -31,6 +34,9 @@ public class ParcelTrackingDataImpl implements ParcelTrackingData, ModelBase {
         this.trackingData = trackingData;
     }
 
+    /**
+     * create empty instance
+     */
     public ParcelTrackingDataImpl() {
     }
 

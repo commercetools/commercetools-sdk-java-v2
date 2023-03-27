@@ -65,9 +65,19 @@ public class CartSetCustomLineItemTaxAmountActionBuilder implements Builder<Cart
         return this;
     }
 
+    /**
+     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     * @return customLineItemId
+     */
+
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
+
+    /**
+     *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @return externalTaxAmount
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.ExternalTaxAmountDraft getExternalTaxAmount() {
@@ -92,10 +102,19 @@ public class CartSetCustomLineItemTaxAmountActionBuilder implements Builder<Cart
         return new CartSetCustomLineItemTaxAmountActionImpl(customLineItemId, externalTaxAmount);
     }
 
+    /**
+     * factory method for an instance of CartSetCustomLineItemTaxAmountActionBuilder
+     * @return builder
+     */
     public static CartSetCustomLineItemTaxAmountActionBuilder of() {
         return new CartSetCustomLineItemTaxAmountActionBuilder();
     }
 
+    /**
+     * create builder for CartSetCustomLineItemTaxAmountAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartSetCustomLineItemTaxAmountActionBuilder of(final CartSetCustomLineItemTaxAmountAction template) {
         CartSetCustomLineItemTaxAmountActionBuilder builder = new CartSetCustomLineItemTaxAmountActionBuilder();
         builder.customLineItemId = template.getCustomLineItemId();

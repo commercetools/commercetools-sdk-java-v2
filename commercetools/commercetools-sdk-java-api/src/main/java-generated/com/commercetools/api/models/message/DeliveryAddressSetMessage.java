@@ -38,6 +38,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = DeliveryAddressSetMessageImpl.class)
 public interface DeliveryAddressSetMessage extends OrderMessage {
 
+    /**
+     * discriminator value for DeliveryAddressSetMessage
+     */
     String DELIVERY_ADDRESS_SET = "DeliveryAddressSet";
 
     /**
@@ -72,18 +75,47 @@ public interface DeliveryAddressSetMessage extends OrderMessage {
     @JsonProperty("shippingKey")
     public String getShippingKey();
 
+    /**
+     *  <p>Unique identifier of the Parcel.</p>
+     * @param deliveryId value to be set
+     */
+
     public void setDeliveryId(final String deliveryId);
+
+    /**
+     *  <p>Address after the Set Delivery Address update action.</p>
+     * @param address value to be set
+     */
 
     public void setAddress(final Address address);
 
+    /**
+     *  <p>Address before the Set Delivery Address update action.</p>
+     * @param oldAddress value to be set
+     */
+
     public void setOldAddress(final Address oldAddress);
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     * @param shippingKey value to be set
+     */
 
     public void setShippingKey(final String shippingKey);
 
+    /**
+     * factory method
+     * @return instance of DeliveryAddressSetMessage
+     */
     public static DeliveryAddressSetMessage of() {
         return new DeliveryAddressSetMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of DeliveryAddressSetMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static DeliveryAddressSetMessage of(final DeliveryAddressSetMessage template) {
         DeliveryAddressSetMessageImpl instance = new DeliveryAddressSetMessageImpl();
         instance.setId(template.getId());
@@ -103,18 +135,37 @@ public interface DeliveryAddressSetMessage extends OrderMessage {
         return instance;
     }
 
+    /**
+     * builder factory method for DeliveryAddressSetMessage
+     * @return builder
+     */
     public static DeliveryAddressSetMessageBuilder builder() {
         return DeliveryAddressSetMessageBuilder.of();
     }
 
+    /**
+     * create builder for DeliveryAddressSetMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DeliveryAddressSetMessageBuilder builder(final DeliveryAddressSetMessage template) {
         return DeliveryAddressSetMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withDeliveryAddressSetMessage(Function<DeliveryAddressSetMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<DeliveryAddressSetMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<DeliveryAddressSetMessage>() {
             @Override

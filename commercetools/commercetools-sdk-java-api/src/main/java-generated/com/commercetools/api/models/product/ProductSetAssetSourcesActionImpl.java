@@ -34,6 +34,9 @@ public class ProductSetAssetSourcesActionImpl implements ProductSetAssetSourcesA
 
     private java.util.List<com.commercetools.api.models.common.AssetSource> sources;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSetAssetSourcesActionImpl(@JsonProperty("variantId") final Long variantId,
             @JsonProperty("sku") final String sku, @JsonProperty("staged") final Boolean staged,
@@ -48,6 +51,9 @@ public class ProductSetAssetSourcesActionImpl implements ProductSetAssetSourcesA
         this.action = SET_ASSET_SOURCES;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSetAssetSourcesActionImpl() {
         this.action = SET_ASSET_SOURCES;
     }

@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductAssignmentMissingErrorImpl.class)
 public interface ProductAssignmentMissingError extends ErrorObject {
 
+    /**
+     * discriminator value for ProductAssignmentMissingError
+     */
     String PRODUCT_ASSIGNMENT_MISSING = "ProductAssignmentMissing";
 
     /**
@@ -63,14 +66,36 @@ public interface ProductAssignmentMissingError extends ErrorObject {
     @JsonProperty("product")
     public ProductReference getProduct();
 
+    /**
+     *  <p>For Product Selection of type Individual, the message is:</p>
+     *  <p><code>"A Product Variant Selection can only be set for a Product that has previously been added to the Product Selection."</code></p>
+     *  <p>For Product Selection of type Individual Exclusion, the message is:</p>
+     *  <p><code>"A Variant Exclusion can only be set for a Product that has previously been added to the Product Selection of type Individual Exclusion."</code></p>
+     * @param message value to be set
+     */
+
     public void setMessage(final String message);
+
+    /**
+     *  <p>Reference to the Product for which the error was returned.</p>
+     * @param product value to be set
+     */
 
     public void setProduct(final ProductReference product);
 
+    /**
+     * factory method
+     * @return instance of ProductAssignmentMissingError
+     */
     public static ProductAssignmentMissingError of() {
         return new ProductAssignmentMissingErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductAssignmentMissingError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductAssignmentMissingError of(final ProductAssignmentMissingError template) {
         ProductAssignmentMissingErrorImpl instance = new ProductAssignmentMissingErrorImpl();
         instance.setMessage(template.getMessage());
@@ -79,18 +104,37 @@ public interface ProductAssignmentMissingError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductAssignmentMissingError
+     * @return builder
+     */
     public static ProductAssignmentMissingErrorBuilder builder() {
         return ProductAssignmentMissingErrorBuilder.of();
     }
 
+    /**
+     * create builder for ProductAssignmentMissingError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductAssignmentMissingErrorBuilder builder(final ProductAssignmentMissingError template) {
         return ProductAssignmentMissingErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductAssignmentMissingError(Function<ProductAssignmentMissingError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductAssignmentMissingError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductAssignmentMissingError>() {
             @Override

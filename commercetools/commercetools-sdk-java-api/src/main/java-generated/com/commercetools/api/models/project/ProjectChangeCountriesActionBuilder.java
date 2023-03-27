@@ -59,6 +59,11 @@ public class ProjectChangeCountriesActionBuilder implements Builder<ProjectChang
         return this;
     }
 
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     * @return countries
+     */
+
     public java.util.List<String> getCountries() {
         return this.countries;
     }
@@ -80,10 +85,19 @@ public class ProjectChangeCountriesActionBuilder implements Builder<ProjectChang
         return new ProjectChangeCountriesActionImpl(countries);
     }
 
+    /**
+     * factory method for an instance of ProjectChangeCountriesActionBuilder
+     * @return builder
+     */
     public static ProjectChangeCountriesActionBuilder of() {
         return new ProjectChangeCountriesActionBuilder();
     }
 
+    /**
+     * create builder for ProjectChangeCountriesAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProjectChangeCountriesActionBuilder of(final ProjectChangeCountriesAction template) {
         ProjectChangeCountriesActionBuilder builder = new ProjectChangeCountriesActionBuilder();
         builder.countries = template.getCountries();

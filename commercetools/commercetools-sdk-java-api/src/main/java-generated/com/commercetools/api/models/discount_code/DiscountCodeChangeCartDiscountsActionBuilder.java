@@ -95,6 +95,11 @@ public class DiscountCodeChangeCartDiscountsActionBuilder implements Builder<Dis
         return this;
     }
 
+    /**
+     *  <p>New value to set.</p>
+     * @return cartDiscounts
+     */
+
     public java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> getCartDiscounts() {
         return this.cartDiscounts;
     }
@@ -117,10 +122,19 @@ public class DiscountCodeChangeCartDiscountsActionBuilder implements Builder<Dis
         return new DiscountCodeChangeCartDiscountsActionImpl(cartDiscounts);
     }
 
+    /**
+     * factory method for an instance of DiscountCodeChangeCartDiscountsActionBuilder
+     * @return builder
+     */
     public static DiscountCodeChangeCartDiscountsActionBuilder of() {
         return new DiscountCodeChangeCartDiscountsActionBuilder();
     }
 
+    /**
+     * create builder for DiscountCodeChangeCartDiscountsAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DiscountCodeChangeCartDiscountsActionBuilder of(
             final DiscountCodeChangeCartDiscountsAction template) {
         DiscountCodeChangeCartDiscountsActionBuilder builder = new DiscountCodeChangeCartDiscountsActionBuilder();

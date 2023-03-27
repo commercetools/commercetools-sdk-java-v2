@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProjectChangeCurrenciesActionImpl.class)
 public interface ProjectChangeCurrenciesAction extends ProjectUpdateAction {
 
+    /**
+     * discriminator value for ProjectChangeCurrenciesAction
+     */
     String CHANGE_CURRENCIES = "changeCurrencies";
 
     /**
@@ -39,33 +42,71 @@ public interface ProjectChangeCurrenciesAction extends ProjectUpdateAction {
     @JsonProperty("currencies")
     public List<String> getCurrencies();
 
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     * @param currencies values to be set
+     */
+
     @JsonIgnore
     public void setCurrencies(final String... currencies);
 
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     * @param currencies values to be set
+     */
+
     public void setCurrencies(final List<String> currencies);
 
+    /**
+     * factory method
+     * @return instance of ProjectChangeCurrenciesAction
+     */
     public static ProjectChangeCurrenciesAction of() {
         return new ProjectChangeCurrenciesActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProjectChangeCurrenciesAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProjectChangeCurrenciesAction of(final ProjectChangeCurrenciesAction template) {
         ProjectChangeCurrenciesActionImpl instance = new ProjectChangeCurrenciesActionImpl();
         instance.setCurrencies(template.getCurrencies());
         return instance;
     }
 
+    /**
+     * builder factory method for ProjectChangeCurrenciesAction
+     * @return builder
+     */
     public static ProjectChangeCurrenciesActionBuilder builder() {
         return ProjectChangeCurrenciesActionBuilder.of();
     }
 
+    /**
+     * create builder for ProjectChangeCurrenciesAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProjectChangeCurrenciesActionBuilder builder(final ProjectChangeCurrenciesAction template) {
         return ProjectChangeCurrenciesActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProjectChangeCurrenciesAction(Function<ProjectChangeCurrenciesAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProjectChangeCurrenciesAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProjectChangeCurrenciesAction>() {
             @Override

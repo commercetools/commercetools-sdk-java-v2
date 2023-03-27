@@ -27,6 +27,9 @@ public class CartDiscountResourceIdentifierImpl implements CartDiscountResourceI
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartDiscountResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
@@ -34,6 +37,9 @@ public class CartDiscountResourceIdentifierImpl implements CartDiscountResourceI
         this.typeId = ReferenceTypeId.findEnum("cart-discount");
     }
 
+    /**
+     * create empty instance
+     */
     public CartDiscountResourceIdentifierImpl() {
         this.typeId = ReferenceTypeId.findEnum("cart-discount");
     }

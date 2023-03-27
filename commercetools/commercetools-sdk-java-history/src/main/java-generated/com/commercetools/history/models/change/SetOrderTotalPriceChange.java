@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetOrderTotalPriceChangeImpl.class)
 public interface SetOrderTotalPriceChange extends Change {
 
+    /**
+     * discriminator value for SetOrderTotalPriceChange
+     */
     String SET_ORDER_TOTAL_PRICE_CHANGE = "SetOrderTotalPriceChange";
 
     /**
@@ -69,16 +72,40 @@ public interface SetOrderTotalPriceChange extends Change {
     @JsonProperty("previousValue")
     public Money getPreviousValue();
 
+    /**
+     *  <p>Update action for <code>setOrderTotalPrice</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
 
     public void setNextValue(final Money nextValue);
 
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
+
     public void setPreviousValue(final Money previousValue);
 
+    /**
+     * factory method
+     * @return instance of SetOrderTotalPriceChange
+     */
     public static SetOrderTotalPriceChange of() {
         return new SetOrderTotalPriceChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetOrderTotalPriceChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetOrderTotalPriceChange of(final SetOrderTotalPriceChange template) {
         SetOrderTotalPriceChangeImpl instance = new SetOrderTotalPriceChangeImpl();
         instance.setChange(template.getChange());
@@ -87,18 +114,37 @@ public interface SetOrderTotalPriceChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetOrderTotalPriceChange
+     * @return builder
+     */
     public static SetOrderTotalPriceChangeBuilder builder() {
         return SetOrderTotalPriceChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetOrderTotalPriceChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetOrderTotalPriceChangeBuilder builder(final SetOrderTotalPriceChange template) {
         return SetOrderTotalPriceChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetOrderTotalPriceChange(Function<SetOrderTotalPriceChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetOrderTotalPriceChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetOrderTotalPriceChange>() {
             @Override

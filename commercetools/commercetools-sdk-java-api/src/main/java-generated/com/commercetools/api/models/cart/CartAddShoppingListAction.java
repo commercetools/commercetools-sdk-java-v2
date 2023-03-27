@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartAddShoppingListActionImpl.class)
 public interface CartAddShoppingListAction extends CartUpdateAction {
 
+    /**
+     * discriminator value for CartAddShoppingListAction
+     */
     String ADD_SHOPPING_LIST = "addShoppingList";
 
     /**
@@ -59,16 +62,40 @@ public interface CartAddShoppingListAction extends CartUpdateAction {
     @JsonProperty("supplyChannel")
     public ChannelResourceIdentifier getSupplyChannel();
 
+    /**
+     *  <p>Shopping List that contains the Line Items to be added.</p>
+     * @param shoppingList value to be set
+     */
+
     public void setShoppingList(final ShoppingListResourceIdentifier shoppingList);
+
+    /**
+     *  <p><code>distributionChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     * @param distributionChannel value to be set
+     */
 
     public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);
 
+    /**
+     *  <p><code>supplyChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @param supplyChannel value to be set
+     */
+
     public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
 
+    /**
+     * factory method
+     * @return instance of CartAddShoppingListAction
+     */
     public static CartAddShoppingListAction of() {
         return new CartAddShoppingListActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartAddShoppingListAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartAddShoppingListAction of(final CartAddShoppingListAction template) {
         CartAddShoppingListActionImpl instance = new CartAddShoppingListActionImpl();
         instance.setShoppingList(template.getShoppingList());
@@ -77,18 +104,37 @@ public interface CartAddShoppingListAction extends CartUpdateAction {
         return instance;
     }
 
+    /**
+     * builder factory method for CartAddShoppingListAction
+     * @return builder
+     */
     public static CartAddShoppingListActionBuilder builder() {
         return CartAddShoppingListActionBuilder.of();
     }
 
+    /**
+     * create builder for CartAddShoppingListAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartAddShoppingListActionBuilder builder(final CartAddShoppingListAction template) {
         return CartAddShoppingListActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartAddShoppingListAction(Function<CartAddShoppingListAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartAddShoppingListAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartAddShoppingListAction>() {
             @Override

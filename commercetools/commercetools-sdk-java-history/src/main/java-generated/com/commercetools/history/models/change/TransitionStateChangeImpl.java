@@ -28,6 +28,9 @@ public class TransitionStateChangeImpl implements TransitionStateChange, ModelBa
 
     private com.commercetools.history.models.common.Reference nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TransitionStateChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.Reference previousValue,
@@ -38,6 +41,9 @@ public class TransitionStateChangeImpl implements TransitionStateChange, ModelBa
         this.type = TRANSITION_STATE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public TransitionStateChangeImpl() {
         this.type = TRANSITION_STATE_CHANGE;
     }

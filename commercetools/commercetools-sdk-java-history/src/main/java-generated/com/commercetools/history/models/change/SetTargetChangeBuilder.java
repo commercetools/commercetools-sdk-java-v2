@@ -42,7 +42,7 @@ public class SetTargetChangeBuilder implements Builder<SetTargetChange> {
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class SetTargetChangeBuilder implements Builder<SetTargetChange> {
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class SetTargetChangeBuilder implements Builder<SetTargetChange> {
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class SetTargetChangeBuilder implements Builder<SetTargetChange> {
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -87,13 +87,28 @@ public class SetTargetChangeBuilder implements Builder<SetTargetChange> {
         return this;
     }
 
+    /**
+     *  <p>Shape of the action for <code>setTarget</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public com.commercetools.history.models.common.Reference getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public com.commercetools.history.models.common.Reference getNextValue() {
         return this.nextValue;
@@ -118,10 +133,19 @@ public class SetTargetChangeBuilder implements Builder<SetTargetChange> {
         return new SetTargetChangeImpl(change, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of SetTargetChangeBuilder
+     * @return builder
+     */
     public static SetTargetChangeBuilder of() {
         return new SetTargetChangeBuilder();
     }
 
+    /**
+     * create builder for SetTargetChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetTargetChangeBuilder of(final SetTargetChange template) {
         SetTargetChangeBuilder builder = new SetTargetChangeBuilder();
         builder.change = template.getChange();

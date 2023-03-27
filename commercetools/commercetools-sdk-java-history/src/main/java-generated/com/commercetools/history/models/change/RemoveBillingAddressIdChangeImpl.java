@@ -30,6 +30,9 @@ public class RemoveBillingAddressIdChangeImpl implements RemoveBillingAddressIdC
 
     private com.commercetools.history.models.common.Address address;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     RemoveBillingAddressIdChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final java.util.List<String> nextValue,
@@ -42,6 +45,9 @@ public class RemoveBillingAddressIdChangeImpl implements RemoveBillingAddressIdC
         this.type = REMOVE_BILLING_ADDRESS_ID_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public RemoveBillingAddressIdChangeImpl() {
         this.type = REMOVE_BILLING_ADDRESS_ID_CHANGE;
     }

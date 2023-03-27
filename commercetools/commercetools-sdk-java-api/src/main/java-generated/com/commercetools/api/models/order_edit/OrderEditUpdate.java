@@ -57,19 +57,48 @@ public interface OrderEditUpdate extends
     @JsonProperty("dryRun")
     public Boolean getDryRun();
 
+    /**
+     * set version
+     * @param version value to be set
+     */
+
     public void setVersion(final Long version);
+
+    /**
+     * set actions
+     * @param actions values to be set
+     */
 
     @JsonIgnore
     public void setActions(final OrderEditUpdateAction... actions);
 
+    /**
+     * set actions
+     * @param actions values to be set
+     */
+
     public void setActions(final List<OrderEditUpdateAction> actions);
+
+    /**
+     * set dryRun
+     * @param dryRun value to be set
+     */
 
     public void setDryRun(final Boolean dryRun);
 
+    /**
+     * factory method
+     * @return instance of OrderEditUpdate
+     */
     public static OrderEditUpdate of() {
         return new OrderEditUpdateImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderEditUpdate
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderEditUpdate of(final OrderEditUpdate template) {
         OrderEditUpdateImpl instance = new OrderEditUpdateImpl();
         instance.setVersion(template.getVersion());
@@ -78,18 +107,37 @@ public interface OrderEditUpdate extends
         return instance;
     }
 
+    /**
+     * builder factory method for OrderEditUpdate
+     * @return builder
+     */
     public static OrderEditUpdateBuilder builder() {
         return OrderEditUpdateBuilder.of();
     }
 
+    /**
+     * create builder for OrderEditUpdate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderEditUpdateBuilder builder(final OrderEditUpdate template) {
         return OrderEditUpdateBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderEditUpdate(Function<OrderEditUpdate, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderEditUpdate> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderEditUpdate>() {
             @Override

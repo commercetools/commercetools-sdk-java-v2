@@ -26,6 +26,9 @@ public class ProductTypeChangeIsSearchableActionImpl implements ProductTypeChang
 
     private Boolean isSearchable;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductTypeChangeIsSearchableActionImpl(@JsonProperty("attributeName") final String attributeName,
             @JsonProperty("isSearchable") final Boolean isSearchable) {
@@ -34,6 +37,9 @@ public class ProductTypeChangeIsSearchableActionImpl implements ProductTypeChang
         this.action = CHANGE_IS_SEARCHABLE;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductTypeChangeIsSearchableActionImpl() {
         this.action = CHANGE_IS_SEARCHABLE;
     }

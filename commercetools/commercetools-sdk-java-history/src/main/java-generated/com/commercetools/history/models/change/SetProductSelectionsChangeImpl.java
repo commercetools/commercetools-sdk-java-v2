@@ -28,6 +28,9 @@ public class SetProductSelectionsChangeImpl implements SetProductSelectionsChang
 
     private java.util.List<com.commercetools.history.models.common.ProductSelectionSetting> nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetProductSelectionsChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.common.ProductSelectionSetting> previousValue,
@@ -38,6 +41,9 @@ public class SetProductSelectionsChangeImpl implements SetProductSelectionsChang
         this.type = SET_PRODUCT_SELECTIONS_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetProductSelectionsChangeImpl() {
         this.type = SET_PRODUCT_SELECTIONS_CHANGE;
     }

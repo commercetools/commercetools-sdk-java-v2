@@ -26,6 +26,9 @@ public class TimeAttributeImpl implements TimeAttribute, ModelBase {
 
     private java.time.LocalTime value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TimeAttributeImpl(@JsonProperty("name") final String name, @JsonProperty("value") final java.time.LocalTime value) {
         this.name = name;
@@ -33,6 +36,9 @@ public class TimeAttributeImpl implements TimeAttribute, ModelBase {
         this.type = TIME;
     }
 
+    /**
+     * create empty instance
+     */
     public TimeAttributeImpl() {
         this.type = TIME;
     }

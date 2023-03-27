@@ -38,6 +38,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = BusinessUnitAssociatesSetMessageImpl.class)
 public interface BusinessUnitAssociatesSetMessage extends Message {
 
+    /**
+     * discriminator value for BusinessUnitAssociatesSetMessage
+     */
     String BUSINESS_UNIT_ASSOCIATES_SET = "BusinessUnitAssociatesSet";
 
     /**
@@ -49,15 +52,34 @@ public interface BusinessUnitAssociatesSetMessage extends Message {
     @JsonProperty("associates")
     public List<Associate> getAssociates();
 
+    /**
+     *  <p>The list of Associates that was updated on the Business Unit.</p>
+     * @param associates values to be set
+     */
+
     @JsonIgnore
     public void setAssociates(final Associate... associates);
 
+    /**
+     *  <p>The list of Associates that was updated on the Business Unit.</p>
+     * @param associates values to be set
+     */
+
     public void setAssociates(final List<Associate> associates);
 
+    /**
+     * factory method
+     * @return instance of BusinessUnitAssociatesSetMessage
+     */
     public static BusinessUnitAssociatesSetMessage of() {
         return new BusinessUnitAssociatesSetMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of BusinessUnitAssociatesSetMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static BusinessUnitAssociatesSetMessage of(final BusinessUnitAssociatesSetMessage template) {
         BusinessUnitAssociatesSetMessageImpl instance = new BusinessUnitAssociatesSetMessageImpl();
         instance.setId(template.getId());
@@ -74,18 +96,37 @@ public interface BusinessUnitAssociatesSetMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for BusinessUnitAssociatesSetMessage
+     * @return builder
+     */
     public static BusinessUnitAssociatesSetMessageBuilder builder() {
         return BusinessUnitAssociatesSetMessageBuilder.of();
     }
 
+    /**
+     * create builder for BusinessUnitAssociatesSetMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitAssociatesSetMessageBuilder builder(final BusinessUnitAssociatesSetMessage template) {
         return BusinessUnitAssociatesSetMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withBusinessUnitAssociatesSetMessage(Function<BusinessUnitAssociatesSetMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitAssociatesSetMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitAssociatesSetMessage>() {
             @Override

@@ -24,12 +24,18 @@ public class ReviewCreatedMessagePayloadImpl implements ReviewCreatedMessagePayl
 
     private com.commercetools.api.models.review.Review review;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReviewCreatedMessagePayloadImpl(@JsonProperty("review") final com.commercetools.api.models.review.Review review) {
         this.review = review;
         this.type = REVIEW_CREATED;
     }
 
+    /**
+     * create empty instance
+     */
     public ReviewCreatedMessagePayloadImpl() {
         this.type = REVIEW_CREATED;
     }

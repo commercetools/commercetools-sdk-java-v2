@@ -26,6 +26,9 @@ public class ProductStateTransitionMessagePayloadImpl implements ProductStateTra
 
     private Boolean force;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductStateTransitionMessagePayloadImpl(
             @JsonProperty("state") final com.commercetools.api.models.state.StateReference state,
@@ -35,6 +38,9 @@ public class ProductStateTransitionMessagePayloadImpl implements ProductStateTra
         this.type = PRODUCT_STATE_TRANSITION;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductStateTransitionMessagePayloadImpl() {
         this.type = PRODUCT_STATE_TRANSITION;
     }

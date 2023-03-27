@@ -26,6 +26,9 @@ public class SimilarProductImpl implements SimilarProduct, ModelBase {
 
     private com.commercetools.ml.models.similar_products.SimilarProductMeta meta;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SimilarProductImpl(@JsonProperty("product") final com.commercetools.ml.models.common.ProductReference product,
             @JsonProperty("variantId") final Long variantId,
@@ -35,6 +38,9 @@ public class SimilarProductImpl implements SimilarProduct, ModelBase {
         this.meta = meta;
     }
 
+    /**
+     * create empty instance
+     */
     public SimilarProductImpl() {
     }
 

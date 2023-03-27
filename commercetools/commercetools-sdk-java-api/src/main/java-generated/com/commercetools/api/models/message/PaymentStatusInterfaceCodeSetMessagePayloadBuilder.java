@@ -51,9 +51,19 @@ public class PaymentStatusInterfaceCodeSetMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>Unique identifier for the Payment for which the Set StatusInterfaceCode update action was applied.</p>
+     * @return paymentId
+     */
+
     public String getPaymentId() {
         return this.paymentId;
     }
+
+    /**
+     *  <p>The <code>interfaceCode</code> that was set during the Set StatusInterfaceCode update action.</p>
+     * @return interfaceCode
+     */
 
     @Nullable
     public String getInterfaceCode() {
@@ -77,10 +87,19 @@ public class PaymentStatusInterfaceCodeSetMessagePayloadBuilder
         return new PaymentStatusInterfaceCodeSetMessagePayloadImpl(paymentId, interfaceCode);
     }
 
+    /**
+     * factory method for an instance of PaymentStatusInterfaceCodeSetMessagePayloadBuilder
+     * @return builder
+     */
     public static PaymentStatusInterfaceCodeSetMessagePayloadBuilder of() {
         return new PaymentStatusInterfaceCodeSetMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for PaymentStatusInterfaceCodeSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentStatusInterfaceCodeSetMessagePayloadBuilder of(
             final PaymentStatusInterfaceCodeSetMessagePayload template) {
         PaymentStatusInterfaceCodeSetMessagePayloadBuilder builder = new PaymentStatusInterfaceCodeSetMessagePayloadBuilder();

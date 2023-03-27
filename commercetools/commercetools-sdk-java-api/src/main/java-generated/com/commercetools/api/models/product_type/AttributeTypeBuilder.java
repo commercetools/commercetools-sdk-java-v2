@@ -63,6 +63,10 @@ public class AttributeTypeBuilder {
         return com.commercetools.api.models.product_type.AttributeTimeTypeBuilder.of();
     }
 
+    /**
+     * factory method for an instance of AttributeTypeBuilder
+     * @return builder
+     */
     public static AttributeTypeBuilder of() {
         return new AttributeTypeBuilder();
     }

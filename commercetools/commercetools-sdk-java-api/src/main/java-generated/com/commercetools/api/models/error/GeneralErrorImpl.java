@@ -27,6 +27,9 @@ public class GeneralErrorImpl implements GeneralError, ModelBase {
 
     private Map<String, java.lang.Object> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     GeneralErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values) {
@@ -35,6 +38,9 @@ public class GeneralErrorImpl implements GeneralError, ModelBase {
         this.code = GENERAL;
     }
 
+    /**
+     * create empty instance
+     */
     public GeneralErrorImpl() {
         this.code = GENERAL;
     }

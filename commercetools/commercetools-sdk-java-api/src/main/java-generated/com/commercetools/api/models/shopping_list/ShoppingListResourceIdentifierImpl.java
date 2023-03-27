@@ -27,6 +27,9 @@ public class ShoppingListResourceIdentifierImpl implements ShoppingListResourceI
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShoppingListResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
@@ -34,6 +37,9 @@ public class ShoppingListResourceIdentifierImpl implements ShoppingListResourceI
         this.typeId = ReferenceTypeId.findEnum("shopping-list");
     }
 
+    /**
+     * create empty instance
+     */
     public ShoppingListResourceIdentifierImpl() {
         this.typeId = ReferenceTypeId.findEnum("shopping-list");
     }

@@ -63,9 +63,19 @@ public class PaymentStatusStateTransitionMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>State of the Payment after the Transition State update action.</p>
+     * @return state
+     */
+
     public com.commercetools.api.models.state.StateReference getState() {
         return this.state;
     }
+
+    /**
+     *  <p>Whether State transition validations were turned off during the Change Transaction State update action.</p>
+     * @return force
+     */
 
     public Boolean getForce() {
         return this.force;
@@ -89,10 +99,19 @@ public class PaymentStatusStateTransitionMessagePayloadBuilder
         return new PaymentStatusStateTransitionMessagePayloadImpl(state, force);
     }
 
+    /**
+     * factory method for an instance of PaymentStatusStateTransitionMessagePayloadBuilder
+     * @return builder
+     */
     public static PaymentStatusStateTransitionMessagePayloadBuilder of() {
         return new PaymentStatusStateTransitionMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for PaymentStatusStateTransitionMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentStatusStateTransitionMessagePayloadBuilder of(
             final PaymentStatusStateTransitionMessagePayload template) {
         PaymentStatusStateTransitionMessagePayloadBuilder builder = new PaymentStatusStateTransitionMessagePayloadBuilder();

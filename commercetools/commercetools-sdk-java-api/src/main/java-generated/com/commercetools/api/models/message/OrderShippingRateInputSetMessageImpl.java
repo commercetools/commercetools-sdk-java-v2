@@ -46,6 +46,9 @@ public class OrderShippingRateInputSetMessageImpl implements OrderShippingRateIn
 
     private com.commercetools.api.models.cart.ShippingRateInput oldShippingRateInput;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderShippingRateInputSetMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -74,6 +77,9 @@ public class OrderShippingRateInputSetMessageImpl implements OrderShippingRateIn
         this.type = ORDER_SHIPPING_RATE_INPUT_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderShippingRateInputSetMessageImpl() {
         this.type = ORDER_SHIPPING_RATE_INPUT_SET;
     }

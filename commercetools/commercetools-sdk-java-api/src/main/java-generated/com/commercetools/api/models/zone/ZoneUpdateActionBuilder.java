@@ -31,6 +31,10 @@ public class ZoneUpdateActionBuilder {
         return com.commercetools.api.models.zone.ZoneSetKeyActionBuilder.of();
     }
 
+    /**
+     * factory method for an instance of ZoneUpdateActionBuilder
+     * @return builder
+     */
     public static ZoneUpdateActionBuilder of() {
         return new ZoneUpdateActionBuilder();
     }

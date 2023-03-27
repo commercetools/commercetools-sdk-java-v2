@@ -24,6 +24,9 @@ public class ImportSummaryImpl implements ImportSummary, ModelBase {
 
     private Long total;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ImportSummaryImpl(
             @JsonProperty("states") final com.commercetools.importapi.models.importsummaries.OperationStates states,
@@ -32,6 +35,9 @@ public class ImportSummaryImpl implements ImportSummary, ModelBase {
         this.total = total;
     }
 
+    /**
+     * create empty instance
+     */
     public ImportSummaryImpl() {
     }
 

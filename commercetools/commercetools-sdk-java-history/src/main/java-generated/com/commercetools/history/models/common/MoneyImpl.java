@@ -28,6 +28,9 @@ public class MoneyImpl implements Money, ModelBase {
 
     private com.commercetools.history.models.common.MoneyType type;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MoneyImpl(@JsonProperty("currencyCode") final String currencyCode,
             @JsonProperty("centAmount") final Integer centAmount,
@@ -39,6 +42,9 @@ public class MoneyImpl implements Money, ModelBase {
         this.type = type;
     }
 
+    /**
+     * create empty instance
+     */
     public MoneyImpl() {
     }
 

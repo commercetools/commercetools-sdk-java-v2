@@ -27,6 +27,9 @@ public class TypeResourceIdentifierImpl implements TypeResourceIdentifier, Model
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TypeResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
@@ -34,6 +37,9 @@ public class TypeResourceIdentifierImpl implements TypeResourceIdentifier, Model
         this.typeId = ReferenceTypeId.findEnum("type");
     }
 
+    /**
+     * create empty instance
+     */
     public TypeResourceIdentifierImpl() {
         this.typeId = ReferenceTypeId.findEnum("type");
     }

@@ -43,6 +43,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = LineItemStateTransitionMessageImpl.class)
 public interface LineItemStateTransitionMessage extends OrderMessage {
 
+    /**
+     * discriminator value for LineItemStateTransitionMessage
+     */
     String LINE_ITEM_STATE_TRANSITION = "LineItemStateTransition";
 
     /**
@@ -87,20 +90,54 @@ public interface LineItemStateTransitionMessage extends OrderMessage {
     @JsonProperty("toState")
     public StateReference getToState();
 
+    /**
+     *  <p>Unique identifier of the Line Item.</p>
+     * @param lineItemId value to be set
+     */
+
     public void setLineItemId(final String lineItemId);
+
+    /**
+     *  <p>Date and time (UTC) when the transition of the Line Item State was performed.</p>
+     * @param transitionDate value to be set
+     */
 
     public void setTransitionDate(final ZonedDateTime transitionDate);
 
+    /**
+     *  <p>Number of Line Items for which the State was transitioned.</p>
+     * @param quantity value to be set
+     */
+
     public void setQuantity(final Long quantity);
+
+    /**
+     *  <p>State the Line Item was transitioned from.</p>
+     * @param fromState value to be set
+     */
 
     public void setFromState(final StateReference fromState);
 
+    /**
+     *  <p>State the Line Item was transitioned to.</p>
+     * @param toState value to be set
+     */
+
     public void setToState(final StateReference toState);
 
+    /**
+     * factory method
+     * @return instance of LineItemStateTransitionMessage
+     */
     public static LineItemStateTransitionMessage of() {
         return new LineItemStateTransitionMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of LineItemStateTransitionMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static LineItemStateTransitionMessage of(final LineItemStateTransitionMessage template) {
         LineItemStateTransitionMessageImpl instance = new LineItemStateTransitionMessageImpl();
         instance.setId(template.getId());
@@ -121,18 +158,37 @@ public interface LineItemStateTransitionMessage extends OrderMessage {
         return instance;
     }
 
+    /**
+     * builder factory method for LineItemStateTransitionMessage
+     * @return builder
+     */
     public static LineItemStateTransitionMessageBuilder builder() {
         return LineItemStateTransitionMessageBuilder.of();
     }
 
+    /**
+     * create builder for LineItemStateTransitionMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static LineItemStateTransitionMessageBuilder builder(final LineItemStateTransitionMessage template) {
         return LineItemStateTransitionMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withLineItemStateTransitionMessage(Function<LineItemStateTransitionMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<LineItemStateTransitionMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<LineItemStateTransitionMessage>() {
             @Override

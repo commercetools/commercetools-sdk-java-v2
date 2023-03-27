@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AddTransactionChangeImpl.class)
 public interface AddTransactionChange extends Change {
 
+    /**
+     * discriminator value for AddTransactionChange
+     */
     String ADD_TRANSACTION_CHANGE = "AddTransactionChange";
 
     /**
@@ -59,14 +62,33 @@ public interface AddTransactionChange extends Change {
     @JsonProperty("nextValue")
     public Transaction getNextValue();
 
+    /**
+     *  <p>Update action for <code>addTransaction</code> on payments</p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
 
     public void setNextValue(final Transaction nextValue);
 
+    /**
+     * factory method
+     * @return instance of AddTransactionChange
+     */
     public static AddTransactionChange of() {
         return new AddTransactionChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of AddTransactionChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static AddTransactionChange of(final AddTransactionChange template) {
         AddTransactionChangeImpl instance = new AddTransactionChangeImpl();
         instance.setChange(template.getChange());
@@ -74,18 +96,37 @@ public interface AddTransactionChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for AddTransactionChange
+     * @return builder
+     */
     public static AddTransactionChangeBuilder builder() {
         return AddTransactionChangeBuilder.of();
     }
 
+    /**
+     * create builder for AddTransactionChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AddTransactionChangeBuilder builder(final AddTransactionChange template) {
         return AddTransactionChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAddTransactionChange(Function<AddTransactionChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AddTransactionChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AddTransactionChange>() {
             @Override

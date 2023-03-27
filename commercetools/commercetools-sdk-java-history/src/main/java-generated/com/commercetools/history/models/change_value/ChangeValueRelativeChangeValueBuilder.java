@@ -24,7 +24,7 @@ public class ChangeValueRelativeChangeValueBuilder implements Builder<ChangeValu
     private Integer permyriad;
 
     /**
-     *
+     * set the value to the permyriad
      * @param permyriad value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class ChangeValueRelativeChangeValueBuilder implements Builder<ChangeValu
         this.permyriad = permyriad;
         return this;
     }
+
+    /**
+     * value of permyriad}
+     * @return permyriad
+     */
 
     public Integer getPermyriad() {
         return this.permyriad;
@@ -55,10 +60,19 @@ public class ChangeValueRelativeChangeValueBuilder implements Builder<ChangeValu
         return new ChangeValueRelativeChangeValueImpl(permyriad);
     }
 
+    /**
+     * factory method for an instance of ChangeValueRelativeChangeValueBuilder
+     * @return builder
+     */
     public static ChangeValueRelativeChangeValueBuilder of() {
         return new ChangeValueRelativeChangeValueBuilder();
     }
 
+    /**
+     * create builder for ChangeValueRelativeChangeValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeValueRelativeChangeValueBuilder of(final ChangeValueRelativeChangeValue template) {
         ChangeValueRelativeChangeValueBuilder builder = new ChangeValueRelativeChangeValueBuilder();
         builder.permyriad = template.getPermyriad();

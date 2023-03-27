@@ -40,6 +40,9 @@ public class LineItemImpl implements LineItem, ModelBase {
 
     private Integer variantId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     LineItemImpl(@JsonProperty("addedAt") final String addedAt,
             @JsonProperty("custom") final com.commercetools.history.models.common.CustomFields custom,
@@ -63,6 +66,9 @@ public class LineItemImpl implements LineItem, ModelBase {
         this.variantId = variantId;
     }
 
+    /**
+     * create empty instance
+     */
     public LineItemImpl() {
     }
 

@@ -25,6 +25,9 @@ public class CategoryImportRequestImpl implements CategoryImportRequest, ModelBa
 
     private java.util.List<com.commercetools.importapi.models.categories.CategoryImport> resources;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CategoryImportRequestImpl(
             @JsonProperty("resources") final java.util.List<com.commercetools.importapi.models.categories.CategoryImport> resources) {
@@ -32,6 +35,9 @@ public class CategoryImportRequestImpl implements CategoryImportRequest, ModelBa
         this.type = ImportResourceType.findEnum("category");
     }
 
+    /**
+     * create empty instance
+     */
     public CategoryImportRequestImpl() {
         this.type = ImportResourceType.findEnum("category");
     }

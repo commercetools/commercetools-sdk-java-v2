@@ -33,7 +33,7 @@ public class ChangeAttributeConstraintChangeBuilder implements Builder<ChangeAtt
     private com.commercetools.history.models.common.AttributeConstraintEnum nextValue;
 
     /**
-     *
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -55,7 +55,7 @@ public class ChangeAttributeConstraintChangeBuilder implements Builder<ChangeAtt
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -67,7 +67,7 @@ public class ChangeAttributeConstraintChangeBuilder implements Builder<ChangeAtt
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -78,17 +78,37 @@ public class ChangeAttributeConstraintChangeBuilder implements Builder<ChangeAtt
         return this;
     }
 
+    /**
+     * value of change}
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     *  <p>name of the updated attribute</p>
+     * @return attributeName
+     */
 
     public String getAttributeName() {
         return this.attributeName;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public com.commercetools.history.models.common.AttributeConstraintEnum getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public com.commercetools.history.models.common.AttributeConstraintEnum getNextValue() {
         return this.nextValue;
@@ -114,10 +134,19 @@ public class ChangeAttributeConstraintChangeBuilder implements Builder<ChangeAtt
         return new ChangeAttributeConstraintChangeImpl(change, attributeName, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of ChangeAttributeConstraintChangeBuilder
+     * @return builder
+     */
     public static ChangeAttributeConstraintChangeBuilder of() {
         return new ChangeAttributeConstraintChangeBuilder();
     }
 
+    /**
+     * create builder for ChangeAttributeConstraintChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeAttributeConstraintChangeBuilder of(final ChangeAttributeConstraintChange template) {
         ChangeAttributeConstraintChangeBuilder builder = new ChangeAttributeConstraintChangeBuilder();
         builder.change = template.getChange();

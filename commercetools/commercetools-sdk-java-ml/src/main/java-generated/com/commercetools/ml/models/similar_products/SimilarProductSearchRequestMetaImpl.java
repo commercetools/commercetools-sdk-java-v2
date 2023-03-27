@@ -22,12 +22,18 @@ public class SimilarProductSearchRequestMetaImpl implements SimilarProductSearch
 
     private com.commercetools.ml.models.similar_products.SimilarityMeasures similarityMeasures;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SimilarProductSearchRequestMetaImpl(
             @JsonProperty("similarityMeasures") final com.commercetools.ml.models.similar_products.SimilarityMeasures similarityMeasures) {
         this.similarityMeasures = similarityMeasures;
     }
 
+    /**
+     * create empty instance
+     */
     public SimilarProductSearchRequestMetaImpl() {
     }
 

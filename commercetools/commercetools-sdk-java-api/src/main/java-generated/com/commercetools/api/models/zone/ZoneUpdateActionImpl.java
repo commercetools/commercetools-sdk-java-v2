@@ -22,11 +22,17 @@ public class ZoneUpdateActionImpl implements ZoneUpdateAction, ModelBase {
 
     private String action;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ZoneUpdateActionImpl(@JsonProperty("action") final String action) {
         this.action = action;
     }
 
+    /**
+     * create empty instance
+     */
     public ZoneUpdateActionImpl() {
     }
 

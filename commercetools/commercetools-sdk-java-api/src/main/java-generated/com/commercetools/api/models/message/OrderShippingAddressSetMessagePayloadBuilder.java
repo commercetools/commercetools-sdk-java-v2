@@ -77,10 +77,20 @@ public class OrderShippingAddressSetMessagePayloadBuilder implements Builder<Ord
         return this;
     }
 
+    /**
+     *  <p>Shipping address on the Order after the Set Shipping Address update action.</p>
+     * @return address
+     */
+
     @Nullable
     public com.commercetools.api.models.common.Address getAddress() {
         return this.address;
     }
+
+    /**
+     *  <p>Shipping address on the Order before the Set Shipping Address update action.</p>
+     * @return oldAddress
+     */
 
     @Nullable
     public com.commercetools.api.models.common.Address getOldAddress() {
@@ -103,10 +113,19 @@ public class OrderShippingAddressSetMessagePayloadBuilder implements Builder<Ord
         return new OrderShippingAddressSetMessagePayloadImpl(address, oldAddress);
     }
 
+    /**
+     * factory method for an instance of OrderShippingAddressSetMessagePayloadBuilder
+     * @return builder
+     */
     public static OrderShippingAddressSetMessagePayloadBuilder of() {
         return new OrderShippingAddressSetMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for OrderShippingAddressSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderShippingAddressSetMessagePayloadBuilder of(
             final OrderShippingAddressSetMessagePayload template) {
         OrderShippingAddressSetMessagePayloadBuilder builder = new OrderShippingAddressSetMessagePayloadBuilder();

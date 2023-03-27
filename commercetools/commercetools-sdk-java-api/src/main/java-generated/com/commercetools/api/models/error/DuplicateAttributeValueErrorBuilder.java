@@ -90,13 +90,28 @@ public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAtt
         return this;
     }
 
+    /**
+     *  <p><code>"Attribute can't have the same value in a different variant."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
 
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
+
     public Map<String, java.lang.Object> getValues() {
         return this.values;
     }
+
+    /**
+     *  <p>Conflicting Attributes.</p>
+     * @return attribute
+     */
 
     public com.commercetools.api.models.product.Attribute getAttribute() {
         return this.attribute;
@@ -120,10 +135,19 @@ public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAtt
         return new DuplicateAttributeValueErrorImpl(message, values, attribute);
     }
 
+    /**
+     * factory method for an instance of DuplicateAttributeValueErrorBuilder
+     * @return builder
+     */
     public static DuplicateAttributeValueErrorBuilder of() {
         return new DuplicateAttributeValueErrorBuilder();
     }
 
+    /**
+     * create builder for DuplicateAttributeValueError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DuplicateAttributeValueErrorBuilder of(final DuplicateAttributeValueError template) {
         DuplicateAttributeValueErrorBuilder builder = new DuplicateAttributeValueErrorBuilder();
         builder.message = template.getMessage();

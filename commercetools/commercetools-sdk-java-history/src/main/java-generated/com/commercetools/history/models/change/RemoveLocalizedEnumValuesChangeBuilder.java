@@ -53,7 +53,7 @@ public class RemoveLocalizedEnumValuesChangeBuilder implements Builder<RemoveLoc
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class RemoveLocalizedEnumValuesChangeBuilder implements Builder<RemoveLoc
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -77,13 +77,28 @@ public class RemoveLocalizedEnumValuesChangeBuilder implements Builder<RemoveLoc
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>removeEnumValues</code> on product types</p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     *  <p>The name of the attribute updated.</p>
+     * @return attributeName
+     */
+
     public String getAttributeName() {
         return this.attributeName;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public com.commercetools.history.models.change_value.LocalizedEnumValue getPreviousValue() {
         return this.previousValue;
@@ -108,10 +123,19 @@ public class RemoveLocalizedEnumValuesChangeBuilder implements Builder<RemoveLoc
         return new RemoveLocalizedEnumValuesChangeImpl(change, attributeName, previousValue);
     }
 
+    /**
+     * factory method for an instance of RemoveLocalizedEnumValuesChangeBuilder
+     * @return builder
+     */
     public static RemoveLocalizedEnumValuesChangeBuilder of() {
         return new RemoveLocalizedEnumValuesChangeBuilder();
     }
 
+    /**
+     * create builder for RemoveLocalizedEnumValuesChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static RemoveLocalizedEnumValuesChangeBuilder of(final RemoveLocalizedEnumValuesChange template) {
         RemoveLocalizedEnumValuesChangeBuilder builder = new RemoveLocalizedEnumValuesChangeBuilder();
         builder.change = template.getChange();

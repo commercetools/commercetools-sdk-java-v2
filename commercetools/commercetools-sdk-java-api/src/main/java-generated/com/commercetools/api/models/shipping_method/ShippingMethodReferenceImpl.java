@@ -27,6 +27,9 @@ public class ShippingMethodReferenceImpl implements ShippingMethodReference, Mod
 
     private com.commercetools.api.models.shipping_method.ShippingMethod obj;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShippingMethodReferenceImpl(@JsonProperty("id") final String id,
             @JsonProperty("obj") final com.commercetools.api.models.shipping_method.ShippingMethod obj) {
@@ -35,6 +38,9 @@ public class ShippingMethodReferenceImpl implements ShippingMethodReference, Mod
         this.typeId = ReferenceTypeId.findEnum("shipping-method");
     }
 
+    /**
+     * create empty instance
+     */
     public ShippingMethodReferenceImpl() {
         this.typeId = ReferenceTypeId.findEnum("shipping-method");
     }

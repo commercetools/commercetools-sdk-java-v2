@@ -75,9 +75,20 @@ public class ExternalLineItemTotalPriceBuilder implements Builder<ExternalLineIt
         return this;
     }
 
+    /**
+     *  <p>Price of the Line Item.</p>
+     *  <p>The value is selected from the Product Variant according to the Product <code>priceMode</code>.</p>
+     * @return price
+     */
+
     public com.commercetools.api.models.common.Money getPrice() {
         return this.price;
     }
+
+    /**
+     *  <p>Total price of the Line Item.</p>
+     * @return totalPrice
+     */
 
     public com.commercetools.api.models.common.Money getTotalPrice() {
         return this.totalPrice;
@@ -101,10 +112,19 @@ public class ExternalLineItemTotalPriceBuilder implements Builder<ExternalLineIt
         return new ExternalLineItemTotalPriceImpl(price, totalPrice);
     }
 
+    /**
+     * factory method for an instance of ExternalLineItemTotalPriceBuilder
+     * @return builder
+     */
     public static ExternalLineItemTotalPriceBuilder of() {
         return new ExternalLineItemTotalPriceBuilder();
     }
 
+    /**
+     * create builder for ExternalLineItemTotalPrice instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ExternalLineItemTotalPriceBuilder of(final ExternalLineItemTotalPrice template) {
         ExternalLineItemTotalPriceBuilder builder = new ExternalLineItemTotalPriceBuilder();
         builder.price = template.getPrice();

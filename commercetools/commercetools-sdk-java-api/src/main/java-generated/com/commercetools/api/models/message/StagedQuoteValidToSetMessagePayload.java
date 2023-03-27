@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedQuoteValidToSetMessagePayloadImpl.class)
 public interface StagedQuoteValidToSetMessagePayload extends MessagePayload {
 
+    /**
+     * discriminator value for StagedQuoteValidToSetMessagePayload
+     */
     String STAGED_QUOTE_VALID_TO_SET = "StagedQuoteValidToSet";
 
     /**
@@ -40,31 +43,64 @@ public interface StagedQuoteValidToSetMessagePayload extends MessagePayload {
     @JsonProperty("validTo")
     public ZonedDateTime getValidTo();
 
+    /**
+     *  <p>Expiration date for the Staged Quote after the Set Valid To update action.</p>
+     * @param validTo value to be set
+     */
+
     public void setValidTo(final ZonedDateTime validTo);
 
+    /**
+     * factory method
+     * @return instance of StagedQuoteValidToSetMessagePayload
+     */
     public static StagedQuoteValidToSetMessagePayload of() {
         return new StagedQuoteValidToSetMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedQuoteValidToSetMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedQuoteValidToSetMessagePayload of(final StagedQuoteValidToSetMessagePayload template) {
         StagedQuoteValidToSetMessagePayloadImpl instance = new StagedQuoteValidToSetMessagePayloadImpl();
         instance.setValidTo(template.getValidTo());
         return instance;
     }
 
+    /**
+     * builder factory method for StagedQuoteValidToSetMessagePayload
+     * @return builder
+     */
     public static StagedQuoteValidToSetMessagePayloadBuilder builder() {
         return StagedQuoteValidToSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for StagedQuoteValidToSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedQuoteValidToSetMessagePayloadBuilder builder(
             final StagedQuoteValidToSetMessagePayload template) {
         return StagedQuoteValidToSetMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedQuoteValidToSetMessagePayload(Function<StagedQuoteValidToSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedQuoteValidToSetMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedQuoteValidToSetMessagePayload>() {
             @Override

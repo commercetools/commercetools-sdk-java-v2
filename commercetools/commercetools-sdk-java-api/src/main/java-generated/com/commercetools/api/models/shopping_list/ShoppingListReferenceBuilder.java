@@ -64,9 +64,19 @@ public class ShoppingListReferenceBuilder implements Builder<ShoppingListReferen
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the referenced ShoppingList.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Contains the representation of the expanded ShoppingList. Only present in responses to requests with Reference Expansion for ShoppingLists.</p>
+     * @return obj
+     */
 
     @Nullable
     public com.commercetools.api.models.shopping_list.ShoppingList getObj() {
@@ -90,10 +100,19 @@ public class ShoppingListReferenceBuilder implements Builder<ShoppingListReferen
         return new ShoppingListReferenceImpl(id, obj);
     }
 
+    /**
+     * factory method for an instance of ShoppingListReferenceBuilder
+     * @return builder
+     */
     public static ShoppingListReferenceBuilder of() {
         return new ShoppingListReferenceBuilder();
     }
 
+    /**
+     * create builder for ShoppingListReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShoppingListReferenceBuilder of(final ShoppingListReference template) {
         ShoppingListReferenceBuilder builder = new ShoppingListReferenceBuilder();
         builder.id = template.getId();

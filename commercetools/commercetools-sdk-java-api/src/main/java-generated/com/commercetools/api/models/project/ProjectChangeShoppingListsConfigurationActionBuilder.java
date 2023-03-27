@@ -51,6 +51,11 @@ public class ProjectChangeShoppingListsConfigurationActionBuilder
         return this;
     }
 
+    /**
+     *  <p>Configuration for the Shopping Lists feature.</p>
+     * @return shoppingListsConfiguration
+     */
+
     public com.commercetools.api.models.project.ShoppingListsConfiguration getShoppingListsConfiguration() {
         return this.shoppingListsConfiguration;
     }
@@ -73,10 +78,19 @@ public class ProjectChangeShoppingListsConfigurationActionBuilder
         return new ProjectChangeShoppingListsConfigurationActionImpl(shoppingListsConfiguration);
     }
 
+    /**
+     * factory method for an instance of ProjectChangeShoppingListsConfigurationActionBuilder
+     * @return builder
+     */
     public static ProjectChangeShoppingListsConfigurationActionBuilder of() {
         return new ProjectChangeShoppingListsConfigurationActionBuilder();
     }
 
+    /**
+     * create builder for ProjectChangeShoppingListsConfigurationAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProjectChangeShoppingListsConfigurationActionBuilder of(
             final ProjectChangeShoppingListsConfigurationAction template) {
         ProjectChangeShoppingListsConfigurationActionBuilder builder = new ProjectChangeShoppingListsConfigurationActionBuilder();

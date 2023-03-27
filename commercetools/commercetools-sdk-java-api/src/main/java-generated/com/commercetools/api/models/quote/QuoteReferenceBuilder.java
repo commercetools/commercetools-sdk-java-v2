@@ -63,9 +63,19 @@ public class QuoteReferenceBuilder implements Builder<QuoteReference> {
         return this;
     }
 
+    /**
+     *  <p>Unique ID of the referenced resource.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Contains the representation of the expanded Quote. Only present in responses to requests with Reference Expansion for Quote.</p>
+     * @return obj
+     */
 
     @Nullable
     public com.commercetools.api.models.quote.Quote getObj() {
@@ -89,10 +99,19 @@ public class QuoteReferenceBuilder implements Builder<QuoteReference> {
         return new QuoteReferenceImpl(id, obj);
     }
 
+    /**
+     * factory method for an instance of QuoteReferenceBuilder
+     * @return builder
+     */
     public static QuoteReferenceBuilder of() {
         return new QuoteReferenceBuilder();
     }
 
+    /**
+     * create builder for QuoteReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static QuoteReferenceBuilder of(final QuoteReference template) {
         QuoteReferenceBuilder builder = new QuoteReferenceBuilder();
         builder.id = template.getId();

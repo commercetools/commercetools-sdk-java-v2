@@ -66,9 +66,19 @@ public class CartSetLineItemTotalPriceActionBuilder implements Builder<CartSetLi
         return this;
     }
 
+    /**
+     *  <p><code>id</code> of the LineItem to update.</p>
+     * @return lineItemId
+     */
+
     public String getLineItemId() {
         return this.lineItemId;
     }
+
+    /**
+     *  <p>Value to set. If <code>externalTotalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalTotal</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
+     * @return externalTotalPrice
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice() {
@@ -92,10 +102,19 @@ public class CartSetLineItemTotalPriceActionBuilder implements Builder<CartSetLi
         return new CartSetLineItemTotalPriceActionImpl(lineItemId, externalTotalPrice);
     }
 
+    /**
+     * factory method for an instance of CartSetLineItemTotalPriceActionBuilder
+     * @return builder
+     */
     public static CartSetLineItemTotalPriceActionBuilder of() {
         return new CartSetLineItemTotalPriceActionBuilder();
     }
 
+    /**
+     * create builder for CartSetLineItemTotalPriceAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartSetLineItemTotalPriceActionBuilder of(final CartSetLineItemTotalPriceAction template) {
         CartSetLineItemTotalPriceActionBuilder builder = new CartSetLineItemTotalPriceActionBuilder();
         builder.lineItemId = template.getLineItemId();

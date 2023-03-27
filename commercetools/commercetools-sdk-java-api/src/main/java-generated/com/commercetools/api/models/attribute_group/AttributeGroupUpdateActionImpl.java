@@ -22,11 +22,17 @@ public class AttributeGroupUpdateActionImpl implements AttributeGroupUpdateActio
 
     private String action;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AttributeGroupUpdateActionImpl(@JsonProperty("action") final String action) {
         this.action = action;
     }
 
+    /**
+     * create empty instance
+     */
     public AttributeGroupUpdateActionImpl() {
     }
 

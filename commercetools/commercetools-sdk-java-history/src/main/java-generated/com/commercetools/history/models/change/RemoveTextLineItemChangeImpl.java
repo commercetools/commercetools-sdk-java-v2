@@ -28,6 +28,9 @@ public class RemoveTextLineItemChangeImpl implements RemoveTextLineItemChange, M
 
     private com.commercetools.history.models.common.TextLineItem nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     RemoveTextLineItemChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.TextLineItem previousValue,
@@ -38,6 +41,9 @@ public class RemoveTextLineItemChangeImpl implements RemoveTextLineItemChange, M
         this.type = REMOVE_TEXT_LINE_ITEM_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public RemoveTextLineItemChangeImpl() {
         this.type = REMOVE_TEXT_LINE_ITEM_CHANGE;
     }

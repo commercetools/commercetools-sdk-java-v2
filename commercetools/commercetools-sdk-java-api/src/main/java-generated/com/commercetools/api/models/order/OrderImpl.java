@@ -115,6 +115,9 @@ public class OrderImpl implements Order, ModelBase {
 
     private java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> refusedGifts;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -210,6 +213,9 @@ public class OrderImpl implements Order, ModelBase {
         this.refusedGifts = refusedGifts;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderImpl() {
     }
 

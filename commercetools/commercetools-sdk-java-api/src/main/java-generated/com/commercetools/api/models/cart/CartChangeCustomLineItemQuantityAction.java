@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartChangeCustomLineItemQuantityActionImpl.class)
 public interface CartChangeCustomLineItemQuantityAction extends CartUpdateAction {
 
+    /**
+     * discriminator value for CartChangeCustomLineItemQuantityAction
+     */
     String CHANGE_CUSTOM_LINE_ITEM_QUANTITY = "changeCustomLineItemQuantity";
 
     /**
@@ -50,14 +53,34 @@ public interface CartChangeCustomLineItemQuantityAction extends CartUpdateAction
     @JsonProperty("quantity")
     public Long getQuantity();
 
+    /**
+     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     * @param customLineItemId value to be set
+     */
+
     public void setCustomLineItemId(final String customLineItemId);
+
+    /**
+     *  <p>New value to set.</p>
+     *  <p>If <code>0</code>, the Custom Line Item is removed from the Cart.</p>
+     * @param quantity value to be set
+     */
 
     public void setQuantity(final Long quantity);
 
+    /**
+     * factory method
+     * @return instance of CartChangeCustomLineItemQuantityAction
+     */
     public static CartChangeCustomLineItemQuantityAction of() {
         return new CartChangeCustomLineItemQuantityActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartChangeCustomLineItemQuantityAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartChangeCustomLineItemQuantityAction of(final CartChangeCustomLineItemQuantityAction template) {
         CartChangeCustomLineItemQuantityActionImpl instance = new CartChangeCustomLineItemQuantityActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
@@ -65,20 +88,39 @@ public interface CartChangeCustomLineItemQuantityAction extends CartUpdateAction
         return instance;
     }
 
+    /**
+     * builder factory method for CartChangeCustomLineItemQuantityAction
+     * @return builder
+     */
     public static CartChangeCustomLineItemQuantityActionBuilder builder() {
         return CartChangeCustomLineItemQuantityActionBuilder.of();
     }
 
+    /**
+     * create builder for CartChangeCustomLineItemQuantityAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartChangeCustomLineItemQuantityActionBuilder builder(
             final CartChangeCustomLineItemQuantityAction template) {
         return CartChangeCustomLineItemQuantityActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartChangeCustomLineItemQuantityAction(
             Function<CartChangeCustomLineItemQuantityAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartChangeCustomLineItemQuantityAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartChangeCustomLineItemQuantityAction>() {
             @Override

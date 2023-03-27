@@ -28,6 +28,9 @@ public class SetMaxApplicationsChangeImpl implements SetMaxApplicationsChange, M
 
     private Integer nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetMaxApplicationsChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final Integer previousValue,
@@ -38,6 +41,9 @@ public class SetMaxApplicationsChangeImpl implements SetMaxApplicationsChange, M
         this.type = SET_MAX_APPLICATIONS_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetMaxApplicationsChangeImpl() {
         this.type = SET_MAX_APPLICATIONS_CHANGE;
     }

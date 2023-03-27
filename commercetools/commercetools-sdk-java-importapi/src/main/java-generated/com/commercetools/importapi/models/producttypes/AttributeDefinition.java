@@ -110,26 +110,85 @@ public interface AttributeDefinition {
     @JsonProperty("isSearchable")
     public Boolean getIsSearchable();
 
+    /**
+     * set type
+     * @param type value to be set
+     */
+
     public void setType(final AttributeType type);
+
+    /**
+     * set name
+     * @param name value to be set
+     */
 
     public void setName(final String name);
 
+    /**
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     * @param label value to be set
+     */
+
     public void setLabel(final LocalizedString label);
+
+    /**
+     * set isRequired
+     * @param isRequired value to be set
+     */
 
     public void setIsRequired(final Boolean isRequired);
 
+    /**
+     * set attributeConstraint
+     * @param attributeConstraint value to be set
+     */
+
     public void setAttributeConstraint(final AttributeConstraintEnum attributeConstraint);
+
+    /**
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     * @param inputTip value to be set
+     */
 
     public void setInputTip(final LocalizedString inputTip);
 
+    /**
+     * set inputHint
+     * @param inputHint value to be set
+     */
+
     public void setInputHint(final TextInputHint inputHint);
+
+    /**
+     * set isSearchable
+     * @param isSearchable value to be set
+     */
 
     public void setIsSearchable(final Boolean isSearchable);
 
+    /**
+     * factory method
+     * @return instance of AttributeDefinition
+     */
     public static AttributeDefinition of() {
         return new AttributeDefinitionImpl();
     }
 
+    /**
+     * factory method to copy an instance of AttributeDefinition
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static AttributeDefinition of(final AttributeDefinition template) {
         AttributeDefinitionImpl instance = new AttributeDefinitionImpl();
         instance.setType(template.getType());
@@ -143,18 +202,37 @@ public interface AttributeDefinition {
         return instance;
     }
 
+    /**
+     * builder factory method for AttributeDefinition
+     * @return builder
+     */
     public static AttributeDefinitionBuilder builder() {
         return AttributeDefinitionBuilder.of();
     }
 
+    /**
+     * create builder for AttributeDefinition instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeDefinitionBuilder builder(final AttributeDefinition template) {
         return AttributeDefinitionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAttributeDefinition(Function<AttributeDefinition, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AttributeDefinition> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AttributeDefinition>() {
             @Override

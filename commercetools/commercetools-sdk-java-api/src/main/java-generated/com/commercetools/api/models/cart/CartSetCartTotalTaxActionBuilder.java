@@ -122,9 +122,19 @@ public class CartSetCartTotalTaxActionBuilder implements Builder<CartSetCartTota
         return this;
     }
 
+    /**
+     *  <p>The Cart's total gross price becoming the <code>totalGross</code> field (<code>totalNet</code> + taxes) on the Cart's <code>taxedPrice</code>.</p>
+     * @return externalTotalGross
+     */
+
     public com.commercetools.api.models.common.Money getExternalTotalGross() {
         return this.externalTotalGross;
     }
+
+    /**
+     *  <p>Set if the <code>externalTotalGross</code> price is a sum of portions with different tax rates.</p>
+     * @return externalTaxPortions
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> getExternalTaxPortions() {
@@ -148,10 +158,19 @@ public class CartSetCartTotalTaxActionBuilder implements Builder<CartSetCartTota
         return new CartSetCartTotalTaxActionImpl(externalTotalGross, externalTaxPortions);
     }
 
+    /**
+     * factory method for an instance of CartSetCartTotalTaxActionBuilder
+     * @return builder
+     */
     public static CartSetCartTotalTaxActionBuilder of() {
         return new CartSetCartTotalTaxActionBuilder();
     }
 
+    /**
+     * create builder for CartSetCartTotalTaxAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartSetCartTotalTaxActionBuilder of(final CartSetCartTotalTaxAction template) {
         CartSetCartTotalTaxActionBuilder builder = new CartSetCartTotalTaxActionBuilder();
         builder.externalTotalGross = template.getExternalTotalGross();

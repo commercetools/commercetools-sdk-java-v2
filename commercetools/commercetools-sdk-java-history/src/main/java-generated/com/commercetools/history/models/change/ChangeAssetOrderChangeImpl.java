@@ -28,6 +28,9 @@ public class ChangeAssetOrderChangeImpl implements ChangeAssetOrderChange, Model
 
     private java.util.List<com.commercetools.history.models.common.LocalizedString> nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeAssetOrderChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.common.LocalizedString> previousValue,
@@ -38,6 +41,9 @@ public class ChangeAssetOrderChangeImpl implements ChangeAssetOrderChange, Model
         this.type = CHANGE_ASSET_ORDER_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeAssetOrderChangeImpl() {
         this.type = CHANGE_ASSET_ORDER_CHANGE;
     }

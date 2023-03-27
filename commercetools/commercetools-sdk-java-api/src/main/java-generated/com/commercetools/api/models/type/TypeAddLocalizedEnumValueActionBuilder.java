@@ -62,9 +62,19 @@ public class TypeAddLocalizedEnumValueActionBuilder implements Builder<TypeAddLo
         return this;
     }
 
+    /**
+     *  <p><code>name</code> of the FieldDefinition to update.</p>
+     * @return fieldName
+     */
+
     public String getFieldName() {
         return this.fieldName;
     }
+
+    /**
+     *  <p>Value to append to the array.</p>
+     * @return value
+     */
 
     public com.commercetools.api.models.type.CustomFieldLocalizedEnumValue getValue() {
         return this.value;
@@ -88,10 +98,19 @@ public class TypeAddLocalizedEnumValueActionBuilder implements Builder<TypeAddLo
         return new TypeAddLocalizedEnumValueActionImpl(fieldName, value);
     }
 
+    /**
+     * factory method for an instance of TypeAddLocalizedEnumValueActionBuilder
+     * @return builder
+     */
     public static TypeAddLocalizedEnumValueActionBuilder of() {
         return new TypeAddLocalizedEnumValueActionBuilder();
     }
 
+    /**
+     * create builder for TypeAddLocalizedEnumValueAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TypeAddLocalizedEnumValueActionBuilder of(final TypeAddLocalizedEnumValueAction template) {
         TypeAddLocalizedEnumValueActionBuilder builder = new TypeAddLocalizedEnumValueActionBuilder();
         builder.fieldName = template.getFieldName();

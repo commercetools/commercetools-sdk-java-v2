@@ -48,6 +48,11 @@ public class CustomerRemoveStoreActionBuilder implements Builder<CustomerRemoveS
         return this;
     }
 
+    /**
+     *  <p>ResourceIdentifier of the Store to remove.</p>
+     * @return store
+     */
+
     public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {
         return this.store;
     }
@@ -69,10 +74,19 @@ public class CustomerRemoveStoreActionBuilder implements Builder<CustomerRemoveS
         return new CustomerRemoveStoreActionImpl(store);
     }
 
+    /**
+     * factory method for an instance of CustomerRemoveStoreActionBuilder
+     * @return builder
+     */
     public static CustomerRemoveStoreActionBuilder of() {
         return new CustomerRemoveStoreActionBuilder();
     }
 
+    /**
+     * create builder for CustomerRemoveStoreAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerRemoveStoreActionBuilder of(final CustomerRemoveStoreAction template) {
         CustomerRemoveStoreActionBuilder builder = new CustomerRemoveStoreActionBuilder();
         builder.store = template.getStore();

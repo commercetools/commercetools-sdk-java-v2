@@ -148,32 +148,67 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier.</p>
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     *  <p>Maps to <code>Inventory.sku</code></p>
+     * @return sku
+     */
 
     public String getSku() {
         return this.sku;
     }
 
+    /**
+     *  <p>Maps to <code>Inventory.quantityOnStock</code></p>
+     * @return quantityOnStock
+     */
+
     public Long getQuantityOnStock() {
         return this.quantityOnStock;
     }
+
+    /**
+     *  <p>Maps to <code>Inventory.restockableInDays</code></p>
+     * @return restockableInDays
+     */
 
     @Nullable
     public Long getRestockableInDays() {
         return this.restockableInDays;
     }
 
+    /**
+     *  <p>Maps to <code>Inventory.expectedDelivery</code></p>
+     * @return expectedDelivery
+     */
+
     @Nullable
     public java.time.ZonedDateTime getExpectedDelivery() {
         return this.expectedDelivery;
     }
 
+    /**
+     *  <p>Maps to <code>Inventory.supplyChannel</code></p>
+     * @return supplyChannel
+     */
+
     @Nullable
     public com.commercetools.importapi.models.common.ChannelKeyReference getSupplyChannel() {
         return this.supplyChannel;
     }
+
+    /**
+     *  <p>Maps to <code>Inventory.custom</code>.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.importapi.models.customfields.Custom getCustom() {
@@ -201,10 +236,19 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
             custom);
     }
 
+    /**
+     * factory method for an instance of InventoryImportBuilder
+     * @return builder
+     */
     public static InventoryImportBuilder of() {
         return new InventoryImportBuilder();
     }
 
+    /**
+     * create builder for InventoryImport instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InventoryImportBuilder of(final InventoryImport template) {
         InventoryImportBuilder builder = new InventoryImportBuilder();
         builder.key = template.getKey();

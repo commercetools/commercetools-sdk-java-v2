@@ -26,6 +26,9 @@ public class ProductRemovePriceActionImpl implements ProductRemovePriceAction, M
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductRemovePriceActionImpl(@JsonProperty("priceId") final String priceId,
             @JsonProperty("staged") final Boolean staged) {
@@ -34,6 +37,9 @@ public class ProductRemovePriceActionImpl implements ProductRemovePriceAction, M
         this.action = REMOVE_PRICE;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductRemovePriceActionImpl() {
         this.action = REMOVE_PRICE;
     }

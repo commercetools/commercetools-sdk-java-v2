@@ -76,9 +76,19 @@ public class ShippingMethodRemoveShippingRateActionBuilder implements Builder<Sh
         return this;
     }
 
+    /**
+     *  <p>Zone from which the ShippingRate should be removed.</p>
+     * @return zone
+     */
+
     public com.commercetools.api.models.zone.ZoneResourceIdentifier getZone() {
         return this.zone;
     }
+
+    /**
+     *  <p>Value to remove from <code>shippingRates</code>.</p>
+     * @return shippingRate
+     */
 
     public com.commercetools.api.models.shipping_method.ShippingRateDraft getShippingRate() {
         return this.shippingRate;
@@ -103,10 +113,19 @@ public class ShippingMethodRemoveShippingRateActionBuilder implements Builder<Sh
         return new ShippingMethodRemoveShippingRateActionImpl(zone, shippingRate);
     }
 
+    /**
+     * factory method for an instance of ShippingMethodRemoveShippingRateActionBuilder
+     * @return builder
+     */
     public static ShippingMethodRemoveShippingRateActionBuilder of() {
         return new ShippingMethodRemoveShippingRateActionBuilder();
     }
 
+    /**
+     * create builder for ShippingMethodRemoveShippingRateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShippingMethodRemoveShippingRateActionBuilder of(
             final ShippingMethodRemoveShippingRateAction template) {
         ShippingMethodRemoveShippingRateActionBuilder builder = new ShippingMethodRemoveShippingRateActionBuilder();

@@ -38,6 +38,9 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
 
     private com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomLineItemDraftImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("quantity") final Long quantity,
@@ -59,6 +62,9 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
         this.priceMode = priceMode;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomLineItemDraftImpl() {
     }
 

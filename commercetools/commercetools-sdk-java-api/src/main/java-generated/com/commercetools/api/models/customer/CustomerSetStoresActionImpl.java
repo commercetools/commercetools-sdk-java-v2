@@ -24,6 +24,9 @@ public class CustomerSetStoresActionImpl implements CustomerSetStoresAction, Mod
 
     private java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerSetStoresActionImpl(
             @JsonProperty("stores") final java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores) {
@@ -31,6 +34,9 @@ public class CustomerSetStoresActionImpl implements CustomerSetStoresAction, Mod
         this.action = SET_STORES;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerSetStoresActionImpl() {
         this.action = SET_STORES;
     }

@@ -34,6 +34,11 @@ public class InventoryEntryChangeQuantityActionBuilder implements Builder<Invent
         return this;
     }
 
+    /**
+     *  <p>Value to set for <code>quantityOnStock</code>.</p>
+     * @return quantity
+     */
+
     public Long getQuantity() {
         return this.quantity;
     }
@@ -55,10 +60,19 @@ public class InventoryEntryChangeQuantityActionBuilder implements Builder<Invent
         return new InventoryEntryChangeQuantityActionImpl(quantity);
     }
 
+    /**
+     * factory method for an instance of InventoryEntryChangeQuantityActionBuilder
+     * @return builder
+     */
     public static InventoryEntryChangeQuantityActionBuilder of() {
         return new InventoryEntryChangeQuantityActionBuilder();
     }
 
+    /**
+     * create builder for InventoryEntryChangeQuantityAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InventoryEntryChangeQuantityActionBuilder of(final InventoryEntryChangeQuantityAction template) {
         InventoryEntryChangeQuantityActionBuilder builder = new InventoryEntryChangeQuantityActionBuilder();
         builder.quantity = template.getQuantity();

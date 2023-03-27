@@ -45,7 +45,7 @@ public class SetDeliveryAddressChangeBuilder implements Builder<SetDeliveryAddre
     }
 
     /**
-     *
+     * set the value to the deliveryId
      * @param deliveryId value to be set
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class SetDeliveryAddressChangeBuilder implements Builder<SetDeliveryAddre
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class SetDeliveryAddressChangeBuilder implements Builder<SetDeliveryAddre
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -79,7 +79,7 @@ public class SetDeliveryAddressChangeBuilder implements Builder<SetDeliveryAddre
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -91,7 +91,7 @@ public class SetDeliveryAddressChangeBuilder implements Builder<SetDeliveryAddre
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -102,17 +102,37 @@ public class SetDeliveryAddressChangeBuilder implements Builder<SetDeliveryAddre
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>setDeliveryAddress</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of deliveryId}
+     * @return deliveryId
+     */
 
     public String getDeliveryId() {
         return this.deliveryId;
     }
 
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
+
     public com.commercetools.history.models.common.Address getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public com.commercetools.history.models.common.Address getPreviousValue() {
         return this.previousValue;
@@ -138,10 +158,19 @@ public class SetDeliveryAddressChangeBuilder implements Builder<SetDeliveryAddre
         return new SetDeliveryAddressChangeImpl(change, deliveryId, nextValue, previousValue);
     }
 
+    /**
+     * factory method for an instance of SetDeliveryAddressChangeBuilder
+     * @return builder
+     */
     public static SetDeliveryAddressChangeBuilder of() {
         return new SetDeliveryAddressChangeBuilder();
     }
 
+    /**
+     * create builder for SetDeliveryAddressChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetDeliveryAddressChangeBuilder of(final SetDeliveryAddressChange template) {
         SetDeliveryAddressChangeBuilder builder = new SetDeliveryAddressChangeBuilder();
         builder.change = template.getChange();

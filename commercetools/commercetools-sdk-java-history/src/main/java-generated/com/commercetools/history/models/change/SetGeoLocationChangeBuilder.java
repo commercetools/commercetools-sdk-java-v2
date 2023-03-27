@@ -42,7 +42,7 @@ public class SetGeoLocationChangeBuilder implements Builder<SetGeoLocationChange
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class SetGeoLocationChangeBuilder implements Builder<SetGeoLocationChange
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class SetGeoLocationChangeBuilder implements Builder<SetGeoLocationChange
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class SetGeoLocationChangeBuilder implements Builder<SetGeoLocationChange
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -88,13 +88,28 @@ public class SetGeoLocationChangeBuilder implements Builder<SetGeoLocationChange
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>setGeoLocation</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
+
     public com.commercetools.history.models.common.GeoLocation getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public com.commercetools.history.models.common.GeoLocation getPreviousValue() {
         return this.previousValue;
@@ -119,10 +134,19 @@ public class SetGeoLocationChangeBuilder implements Builder<SetGeoLocationChange
         return new SetGeoLocationChangeImpl(change, nextValue, previousValue);
     }
 
+    /**
+     * factory method for an instance of SetGeoLocationChangeBuilder
+     * @return builder
+     */
     public static SetGeoLocationChangeBuilder of() {
         return new SetGeoLocationChangeBuilder();
     }
 
+    /**
+     * create builder for SetGeoLocationChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetGeoLocationChangeBuilder of(final SetGeoLocationChange template) {
         SetGeoLocationChangeBuilder builder = new SetGeoLocationChangeBuilder();
         builder.change = template.getChange();

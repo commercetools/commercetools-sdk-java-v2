@@ -28,6 +28,9 @@ public class SetGeoLocationChangeImpl implements SetGeoLocationChange, ModelBase
 
     private com.commercetools.history.models.common.GeoLocation previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetGeoLocationChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.GeoLocation nextValue,
@@ -38,6 +41,9 @@ public class SetGeoLocationChangeImpl implements SetGeoLocationChange, ModelBase
         this.type = SET_GEO_LOCATION_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetGeoLocationChangeImpl() {
         this.type = SET_GEO_LOCATION_CHANGE;
     }

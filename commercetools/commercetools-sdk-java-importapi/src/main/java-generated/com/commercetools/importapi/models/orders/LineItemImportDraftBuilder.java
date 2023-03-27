@@ -164,7 +164,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *
+     * set values to the state
      * @param state value to be set
      * @return Builder
      */
@@ -176,7 +176,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *
+     * set value to the state
      * @param state value to be set
      * @return Builder
      */
@@ -188,7 +188,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *
+     * add values to the state
      * @param state value to be set
      * @return Builder
      */
@@ -203,7 +203,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *
+     * add the value to the state using the builder function
      * @param builder function to build the state value
      * @return Builder
      */
@@ -218,7 +218,7 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
-     *
+     * set the value to the state using the builder function
      * @param builder function to build the state value
      * @return Builder
      */
@@ -355,51 +355,106 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
         return this;
     }
 
+    /**
+     *  <p>Maps to <code>LineItem.productId</code>.</p>
+     * @return product
+     */
+
     @Nullable
     public com.commercetools.importapi.models.common.ProductKeyReference getProduct() {
         return this.product;
     }
 
+    /**
+     *  <p>Maps to <code>LineItem.name</code>.</p>
+     * @return name
+     */
+
     public com.commercetools.importapi.models.common.LocalizedString getName() {
         return this.name;
     }
+
+    /**
+     *  <p>Maps to <code>ProductVariantImportDraft</code>.</p>
+     * @return variant
+     */
 
     public com.commercetools.importapi.models.orders.LineItemProductVariantImportDraft getVariant() {
         return this.variant;
     }
 
+    /**
+     *  <p>Maps to <code>LineItem.price</code>.</p>
+     * @return price
+     */
+
     public com.commercetools.importapi.models.orders.LineItemPrice getPrice() {
         return this.price;
     }
 
+    /**
+     *  <p>Maps to <code>LineItem.quantity</code>.</p>
+     * @return quantity
+     */
+
     public Double getQuantity() {
         return this.quantity;
     }
+
+    /**
+     * value of state}
+     * @return state
+     */
 
     @Nullable
     public java.util.List<com.commercetools.importapi.models.orders.ItemState> getState() {
         return this.state;
     }
 
+    /**
+     *  <p>Maps to <code>LineItem.supplyChannel</code>. The Reference to the Supply Channel with which the LineItem is associated. If referenced Supply Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Supply Channel is created.</p>
+     * @return supplyChannel
+     */
+
     @Nullable
     public com.commercetools.importapi.models.common.ChannelKeyReference getSupplyChannel() {
         return this.supplyChannel;
     }
+
+    /**
+     *  <p>Maps to <code>LineItem.distributionChannel</code>. The Reference to the Distribution Channel with which the LineItem is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Distribution Channel is created.</p>
+     * @return distributionChannel
+     */
 
     @Nullable
     public com.commercetools.importapi.models.common.ChannelKeyReference getDistributionChannel() {
         return this.distributionChannel;
     }
 
+    /**
+     *  <p>Maps to <code>LineItem.taxRate</code>.</p>
+     * @return taxRate
+     */
+
     @Nullable
     public com.commercetools.importapi.models.prices.TaxRate getTaxRate() {
         return this.taxRate;
     }
 
+    /**
+     *  <p>Maps to LineItem.shippingDetails.</p>
+     * @return shippingDetails
+     */
+
     @Nullable
     public com.commercetools.importapi.models.orders.ItemShippingDetailsDraft getShippingDetails() {
         return this.shippingDetails;
     }
+
+    /**
+     *  <p>Custom Fields for this Line Item.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.importapi.models.customfields.Custom getCustom() {
@@ -428,10 +483,19 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
             distributionChannel, taxRate, shippingDetails, custom);
     }
 
+    /**
+     * factory method for an instance of LineItemImportDraftBuilder
+     * @return builder
+     */
     public static LineItemImportDraftBuilder of() {
         return new LineItemImportDraftBuilder();
     }
 
+    /**
+     * create builder for LineItemImportDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static LineItemImportDraftBuilder of(final LineItemImportDraft template) {
         LineItemImportDraftBuilder builder = new LineItemImportDraftBuilder();
         builder.product = template.getProduct();

@@ -30,6 +30,9 @@ public class AuthErrorResponseImpl implements AuthErrorResponse, ModelBase {
 
     private String errorDescription;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AuthErrorResponseImpl(@JsonProperty("statusCode") final Integer statusCode,
             @JsonProperty("message") final String message,
@@ -43,6 +46,9 @@ public class AuthErrorResponseImpl implements AuthErrorResponse, ModelBase {
         this.errorDescription = errorDescription;
     }
 
+    /**
+     * create empty instance
+     */
     public AuthErrorResponseImpl() {
     }
 

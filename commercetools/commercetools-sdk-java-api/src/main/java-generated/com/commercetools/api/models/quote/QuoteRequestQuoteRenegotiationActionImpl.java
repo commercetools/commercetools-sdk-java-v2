@@ -24,12 +24,18 @@ public class QuoteRequestQuoteRenegotiationActionImpl implements QuoteRequestQuo
 
     private String buyerComment;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     QuoteRequestQuoteRenegotiationActionImpl(@JsonProperty("buyerComment") final String buyerComment) {
         this.buyerComment = buyerComment;
         this.action = REQUEST_QUOTE_RENEGOTIATION;
     }
 
+    /**
+     * create empty instance
+     */
     public QuoteRequestQuoteRenegotiationActionImpl() {
         this.action = REQUEST_QUOTE_RENEGOTIATION;
     }

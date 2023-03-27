@@ -27,17 +27,38 @@ public interface DiscountCodeState {
 
     DiscountCodeState APPLICATION_STOPPED_BY_PREVIOUS_DISCOUNT = DiscountCodeStateEnum.APPLICATION_STOPPED_BY_PREVIOUS_DISCOUNT;
 
+    /**
+     * possible values of DiscountCodeState
+     */
     enum DiscountCodeStateEnum implements DiscountCodeState {
+        /**
+         * NotActive
+         */
         NOT_ACTIVE("NotActive"),
 
+        /**
+         * NotValid
+         */
         NOT_VALID("NotValid"),
 
+        /**
+         * DoesNotMatchCart
+         */
         DOES_NOT_MATCH_CART("DoesNotMatchCart"),
 
+        /**
+         * MatchesCart
+         */
         MATCHES_CART("MatchesCart"),
 
+        /**
+         * MaxApplicationReached
+         */
         MAX_APPLICATION_REACHED("MaxApplicationReached"),
 
+        /**
+         * ApplicationStoppedByPreviousDiscount
+         */
         APPLICATION_STOPPED_BY_PREVIOUS_DISCOUNT("ApplicationStoppedByPreviousDiscount");
         private final String jsonName;
 
@@ -54,13 +75,30 @@ public interface DiscountCodeState {
         }
     }
 
+    /**
+     * the JSON value
+     * @return json value
+     */
     @JsonValue
     String getJsonName();
 
+    /**
+     * the enum value
+     * @return name
+     */
     String name();
 
+    /**
+     * convert value to string
+     * @return string representation
+     */
     String toString();
 
+    /**
+     * factory method for a enum value of DiscountCodeState
+     * if no enum has been found an anonymous instance will be created
+     * @return enum instance
+     */
     @JsonCreator
     public static DiscountCodeState findEnum(String value) {
         return findEnumViaJsonName(value).orElse(new DiscountCodeState() {
@@ -80,10 +118,18 @@ public interface DiscountCodeState {
         });
     }
 
+    /**
+     * method to find enum using the JSON value
+     * @return optional of enum instance
+     */
     public static Optional<DiscountCodeState> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
 
+    /**
+     * possible enum values
+     * @return array of possible enum values
+     */
     public static DiscountCodeState[] values() {
         return DiscountCodeStateEnum.values();
     }

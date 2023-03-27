@@ -50,6 +50,11 @@ public class CategorySetMetaKeywordsActionBuilder implements Builder<CategorySet
         return this;
     }
 
+    /**
+     *  <p>Value to set.</p>
+     * @return metaKeywords
+     */
+
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getMetaKeywords() {
         return this.metaKeywords;
@@ -71,10 +76,19 @@ public class CategorySetMetaKeywordsActionBuilder implements Builder<CategorySet
         return new CategorySetMetaKeywordsActionImpl(metaKeywords);
     }
 
+    /**
+     * factory method for an instance of CategorySetMetaKeywordsActionBuilder
+     * @return builder
+     */
     public static CategorySetMetaKeywordsActionBuilder of() {
         return new CategorySetMetaKeywordsActionBuilder();
     }
 
+    /**
+     * create builder for CategorySetMetaKeywordsAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategorySetMetaKeywordsActionBuilder of(final CategorySetMetaKeywordsAction template) {
         CategorySetMetaKeywordsActionBuilder builder = new CategorySetMetaKeywordsActionBuilder();
         builder.metaKeywords = template.getMetaKeywords();

@@ -39,12 +39,26 @@ public interface AddressDraft extends BaseAddress, com.commercetools.api.models.
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
+    /**
+     *  <p>Custom Fields defined for the Address.</p>
+     * @param custom value to be set
+     */
+
     public void setCustom(final CustomFieldsDraft custom);
 
+    /**
+     * factory method
+     * @return instance of AddressDraft
+     */
     public static AddressDraft of() {
         return new AddressDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of AddressDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static AddressDraft of(final AddressDraft template) {
         AddressDraftImpl instance = new AddressDraftImpl();
         instance.setId(template.getId());
@@ -76,18 +90,37 @@ public interface AddressDraft extends BaseAddress, com.commercetools.api.models.
         return instance;
     }
 
+    /**
+     * builder factory method for AddressDraft
+     * @return builder
+     */
     public static AddressDraftBuilder builder() {
         return AddressDraftBuilder.of();
     }
 
+    /**
+     * create builder for AddressDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AddressDraftBuilder builder(final AddressDraft template) {
         return AddressDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAddressDraft(Function<AddressDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AddressDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AddressDraft>() {
             @Override

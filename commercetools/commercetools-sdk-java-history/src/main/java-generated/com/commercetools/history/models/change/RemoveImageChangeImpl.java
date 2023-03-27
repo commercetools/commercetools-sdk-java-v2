@@ -30,6 +30,9 @@ public class RemoveImageChangeImpl implements RemoveImageChange, ModelBase {
 
     private java.util.List<com.commercetools.history.models.common.Image> nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     RemoveImageChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("catalogData") final String catalogData,
@@ -42,6 +45,9 @@ public class RemoveImageChangeImpl implements RemoveImageChange, ModelBase {
         this.type = REMOVE_IMAGE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public RemoveImageChangeImpl() {
         this.type = REMOVE_IMAGE_CHANGE;
     }

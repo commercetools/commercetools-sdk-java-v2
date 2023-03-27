@@ -26,6 +26,9 @@ public class ProductRemoveFromCategoryActionImpl implements ProductRemoveFromCat
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductRemoveFromCategoryActionImpl(
             @JsonProperty("category") final com.commercetools.api.models.category.CategoryResourceIdentifier category,
@@ -35,6 +38,9 @@ public class ProductRemoveFromCategoryActionImpl implements ProductRemoveFromCat
         this.action = REMOVE_FROM_CATEGORY;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductRemoveFromCategoryActionImpl() {
         this.action = REMOVE_FROM_CATEGORY;
     }

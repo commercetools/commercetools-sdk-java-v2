@@ -50,9 +50,19 @@ public class ShoppingListRemoveTextLineItemActionBuilder implements Builder<Shop
         return this;
     }
 
+    /**
+     *  <p>The <code>id</code> of the TextLineItem to update.</p>
+     * @return textLineItemId
+     */
+
     public String getTextLineItemId() {
         return this.textLineItemId;
     }
+
+    /**
+     *  <p>Amount to remove from the <code>quantity</code> of the TextLineItem. If not set, the TextLineItem is removed from the ShoppingList. If this value matches or exceeds the current <code>quantity</code> of the TextLineItem, the TextLineItem is removed from the ShoppingList.</p>
+     * @return quantity
+     */
 
     @Nullable
     public Long getQuantity() {
@@ -77,10 +87,19 @@ public class ShoppingListRemoveTextLineItemActionBuilder implements Builder<Shop
         return new ShoppingListRemoveTextLineItemActionImpl(textLineItemId, quantity);
     }
 
+    /**
+     * factory method for an instance of ShoppingListRemoveTextLineItemActionBuilder
+     * @return builder
+     */
     public static ShoppingListRemoveTextLineItemActionBuilder of() {
         return new ShoppingListRemoveTextLineItemActionBuilder();
     }
 
+    /**
+     * create builder for ShoppingListRemoveTextLineItemAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShoppingListRemoveTextLineItemActionBuilder of(final ShoppingListRemoveTextLineItemAction template) {
         ShoppingListRemoveTextLineItemActionBuilder builder = new ShoppingListRemoveTextLineItemActionBuilder();
         builder.textLineItemId = template.getTextLineItemId();

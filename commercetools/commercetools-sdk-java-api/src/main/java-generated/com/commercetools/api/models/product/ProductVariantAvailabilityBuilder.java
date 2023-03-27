@@ -94,20 +94,40 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
         return this;
     }
 
+    /**
+     *  <p>For each InventoryEntry with a supply Channel, an entry is added to <code>channels</code>.</p>
+     * @return channels
+     */
+
     @Nullable
     public com.commercetools.api.models.product.ProductVariantChannelAvailabilityMap getChannels() {
         return this.channels;
     }
+
+    /**
+     *  <p>Indicates whether a Product Variant is in stock.</p>
+     * @return isOnStock
+     */
 
     @Nullable
     public Boolean getIsOnStock() {
         return this.isOnStock;
     }
 
+    /**
+     *  <p>Number of days to restock a Product Variant once it is out of stock.</p>
+     * @return restockableInDays
+     */
+
     @Nullable
     public Long getRestockableInDays() {
         return this.restockableInDays;
     }
+
+    /**
+     *  <p>Number of items of the Product Variant that are in stock.</p>
+     * @return availableQuantity
+     */
 
     @Nullable
     public Long getAvailableQuantity() {
@@ -130,10 +150,19 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
         return new ProductVariantAvailabilityImpl(channels, isOnStock, restockableInDays, availableQuantity);
     }
 
+    /**
+     * factory method for an instance of ProductVariantAvailabilityBuilder
+     * @return builder
+     */
     public static ProductVariantAvailabilityBuilder of() {
         return new ProductVariantAvailabilityBuilder();
     }
 
+    /**
+     * create builder for ProductVariantAvailability instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductVariantAvailabilityBuilder of(final ProductVariantAvailability template) {
         ProductVariantAvailabilityBuilder builder = new ProductVariantAvailabilityBuilder();
         builder.channels = template.getChannels();

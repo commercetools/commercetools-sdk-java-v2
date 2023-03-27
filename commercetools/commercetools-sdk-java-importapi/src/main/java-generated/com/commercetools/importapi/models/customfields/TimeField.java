@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TimeFieldImpl.class)
 public interface TimeField extends CustomField {
 
+    /**
+     * discriminator value for TimeField
+     */
     String TIME = "Time";
 
     /**
@@ -40,30 +43,63 @@ public interface TimeField extends CustomField {
     @JsonProperty("value")
     public LocalTime getValue();
 
+    /**
+     * set value
+     * @param value value to be set
+     */
+
     public void setValue(final LocalTime value);
 
+    /**
+     * factory method
+     * @return instance of TimeField
+     */
     public static TimeField of() {
         return new TimeFieldImpl();
     }
 
+    /**
+     * factory method to copy an instance of TimeField
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static TimeField of(final TimeField template) {
         TimeFieldImpl instance = new TimeFieldImpl();
         instance.setValue(template.getValue());
         return instance;
     }
 
+    /**
+     * builder factory method for TimeField
+     * @return builder
+     */
     public static TimeFieldBuilder builder() {
         return TimeFieldBuilder.of();
     }
 
+    /**
+     * create builder for TimeField instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TimeFieldBuilder builder(final TimeField template) {
         return TimeFieldBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTimeField(Function<TimeField, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<TimeField> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TimeField>() {
             @Override

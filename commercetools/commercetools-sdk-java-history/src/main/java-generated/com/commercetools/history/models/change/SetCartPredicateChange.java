@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetCartPredicateChangeImpl.class)
 public interface SetCartPredicateChange extends Change {
 
+    /**
+     * discriminator value for SetCartPredicateChange
+     */
     String SET_CART_PREDICATE_CHANGE = "SetCartPredicateChange";
 
     /**
@@ -65,16 +68,40 @@ public interface SetCartPredicateChange extends Change {
     @JsonProperty("nextValue")
     public String getNextValue();
 
+    /**
+     *  <p>Shape of the action for <code>setCartPredicate</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
 
     public void setPreviousValue(final String previousValue);
 
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
+
     public void setNextValue(final String nextValue);
 
+    /**
+     * factory method
+     * @return instance of SetCartPredicateChange
+     */
     public static SetCartPredicateChange of() {
         return new SetCartPredicateChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetCartPredicateChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetCartPredicateChange of(final SetCartPredicateChange template) {
         SetCartPredicateChangeImpl instance = new SetCartPredicateChangeImpl();
         instance.setChange(template.getChange());
@@ -83,18 +110,37 @@ public interface SetCartPredicateChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetCartPredicateChange
+     * @return builder
+     */
     public static SetCartPredicateChangeBuilder builder() {
         return SetCartPredicateChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetCartPredicateChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetCartPredicateChangeBuilder builder(final SetCartPredicateChange template) {
         return SetCartPredicateChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetCartPredicateChange(Function<SetCartPredicateChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetCartPredicateChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetCartPredicateChange>() {
             @Override

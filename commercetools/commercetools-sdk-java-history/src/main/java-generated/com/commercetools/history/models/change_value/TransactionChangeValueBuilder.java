@@ -30,7 +30,7 @@ public class TransactionChangeValueBuilder implements Builder<TransactionChangeV
     private String timestamp;
 
     /**
-     *
+     * set the value to the id
      * @param id value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class TransactionChangeValueBuilder implements Builder<TransactionChangeV
     }
 
     /**
-     *
+     * set the value to the interactionId
      * @param interactionId value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class TransactionChangeValueBuilder implements Builder<TransactionChangeV
     }
 
     /**
-     *
+     * set the value to the timestamp
      * @param timestamp value to be set
      * @return Builder
      */
@@ -62,13 +62,28 @@ public class TransactionChangeValueBuilder implements Builder<TransactionChangeV
         return this;
     }
 
+    /**
+     * value of id}
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
 
+    /**
+     * value of interactionId}
+     * @return interactionId
+     */
+
     public String getInteractionId() {
         return this.interactionId;
     }
+
+    /**
+     * value of timestamp}
+     * @return timestamp
+     */
 
     public String getTimestamp() {
         return this.timestamp;
@@ -93,10 +108,19 @@ public class TransactionChangeValueBuilder implements Builder<TransactionChangeV
         return new TransactionChangeValueImpl(id, interactionId, timestamp);
     }
 
+    /**
+     * factory method for an instance of TransactionChangeValueBuilder
+     * @return builder
+     */
     public static TransactionChangeValueBuilder of() {
         return new TransactionChangeValueBuilder();
     }
 
+    /**
+     * create builder for TransactionChangeValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TransactionChangeValueBuilder of(final TransactionChangeValue template) {
         TransactionChangeValueBuilder builder = new TransactionChangeValueBuilder();
         builder.id = template.getId();

@@ -26,6 +26,9 @@ public class SemanticErrorErrorImpl implements SemanticErrorError, ModelBase {
 
     private Map<String, java.lang.Object> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SemanticErrorErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values) {
@@ -34,6 +37,9 @@ public class SemanticErrorErrorImpl implements SemanticErrorError, ModelBase {
         this.code = SEMANTIC_ERROR;
     }
 
+    /**
+     * create empty instance
+     */
     public SemanticErrorErrorImpl() {
         this.code = SEMANTIC_ERROR;
     }

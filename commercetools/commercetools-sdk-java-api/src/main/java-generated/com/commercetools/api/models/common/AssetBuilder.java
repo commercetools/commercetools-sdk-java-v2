@@ -56,7 +56,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *
+     * set values to the sources
      * @param sources value to be set
      * @return Builder
      */
@@ -67,7 +67,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *
+     * set value to the sources
      * @param sources value to be set
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *
+     * add values to the sources
      * @param sources value to be set
      * @return Builder
      */
@@ -92,7 +92,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *
+     * add the value to the sources using the builder function
      * @param builder function to build the sources value
      * @return Builder
      */
@@ -107,7 +107,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *
+     * set the value to the sources using the builder function
      * @param builder function to build the sources value
      * @return Builder
      */
@@ -235,32 +235,67 @@ public class AssetBuilder implements Builder<Asset> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Asset.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     * value of sources}
+     * @return sources
+     */
 
     public java.util.List<com.commercetools.api.models.common.AssetSource> getSources() {
         return this.sources;
     }
 
+    /**
+     *  <p>Name of the Asset.</p>
+     * @return name
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
+
+    /**
+     *  <p>Description of the Asset.</p>
+     * @return description
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
+    /**
+     *  <p>Keywords for categorizing and organizing Assets.</p>
+     * @return tags
+     */
+
     @Nullable
     public java.util.List<String> getTags() {
         return this.tags;
     }
 
+    /**
+     *  <p>Custom Fields defined for the Asset.</p>
+     * @return custom
+     */
+
     @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the Asset.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
@@ -286,10 +321,19 @@ public class AssetBuilder implements Builder<Asset> {
         return new AssetImpl(id, sources, name, description, tags, custom, key);
     }
 
+    /**
+     * factory method for an instance of AssetBuilder
+     * @return builder
+     */
     public static AssetBuilder of() {
         return new AssetBuilder();
     }
 
+    /**
+     * create builder for Asset instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AssetBuilder of(final Asset template) {
         AssetBuilder builder = new AssetBuilder();
         builder.id = template.getId();

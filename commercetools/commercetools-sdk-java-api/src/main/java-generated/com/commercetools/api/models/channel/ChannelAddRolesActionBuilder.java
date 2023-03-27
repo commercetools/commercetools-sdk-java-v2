@@ -60,6 +60,11 @@ public class ChannelAddRolesActionBuilder implements Builder<ChannelAddRolesActi
         return this;
     }
 
+    /**
+     *  <p>Value to append to the array.</p>
+     * @return roles
+     */
+
     public java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> getRoles() {
         return this.roles;
     }
@@ -81,10 +86,19 @@ public class ChannelAddRolesActionBuilder implements Builder<ChannelAddRolesActi
         return new ChannelAddRolesActionImpl(roles);
     }
 
+    /**
+     * factory method for an instance of ChannelAddRolesActionBuilder
+     * @return builder
+     */
     public static ChannelAddRolesActionBuilder of() {
         return new ChannelAddRolesActionBuilder();
     }
 
+    /**
+     * create builder for ChannelAddRolesAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChannelAddRolesActionBuilder of(final ChannelAddRolesAction template) {
         ChannelAddRolesActionBuilder builder = new ChannelAddRolesActionBuilder();
         builder.roles = template.getRoles();

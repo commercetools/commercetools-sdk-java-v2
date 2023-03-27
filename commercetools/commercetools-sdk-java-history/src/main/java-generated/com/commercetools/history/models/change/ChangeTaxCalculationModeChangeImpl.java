@@ -28,6 +28,9 @@ public class ChangeTaxCalculationModeChangeImpl implements ChangeTaxCalculationM
 
     private com.commercetools.history.models.common.TaxCalculationMode nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeTaxCalculationModeChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.TaxCalculationMode previousValue,
@@ -38,6 +41,9 @@ public class ChangeTaxCalculationModeChangeImpl implements ChangeTaxCalculationM
         this.type = CHANGE_TAX_CALCULATION_MODE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeTaxCalculationModeChangeImpl() {
         this.type = CHANGE_TAX_CALCULATION_MODE_CHANGE;
     }

@@ -35,6 +35,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderSetCustomShippingMethodActionImpl.class)
 public interface StagedOrderSetCustomShippingMethodAction extends StagedOrderUpdateAction {
 
+    /**
+     * discriminator value for StagedOrderSetCustomShippingMethodAction
+     */
     String SET_CUSTOM_SHIPPING_METHOD = "setCustomShippingMethod";
 
     /**
@@ -70,18 +73,47 @@ public interface StagedOrderSetCustomShippingMethodAction extends StagedOrderUpd
     @JsonProperty("externalTaxRate")
     public ExternalTaxRateDraft getExternalTaxRate();
 
+    /**
+     * set shippingMethodName
+     * @param shippingMethodName value to be set
+     */
+
     public void setShippingMethodName(final String shippingMethodName);
+
+    /**
+     * set shippingRate
+     * @param shippingRate value to be set
+     */
 
     public void setShippingRate(final ShippingRateDraft shippingRate);
 
+    /**
+     *  <p>ResourceIdentifier to a TaxCategory.</p>
+     * @param taxCategory value to be set
+     */
+
     public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
+
+    /**
+     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @param externalTaxRate value to be set
+     */
 
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
 
+    /**
+     * factory method
+     * @return instance of StagedOrderSetCustomShippingMethodAction
+     */
     public static StagedOrderSetCustomShippingMethodAction of() {
         return new StagedOrderSetCustomShippingMethodActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedOrderSetCustomShippingMethodAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedOrderSetCustomShippingMethodAction of(final StagedOrderSetCustomShippingMethodAction template) {
         StagedOrderSetCustomShippingMethodActionImpl instance = new StagedOrderSetCustomShippingMethodActionImpl();
         instance.setShippingMethodName(template.getShippingMethodName());
@@ -91,20 +123,39 @@ public interface StagedOrderSetCustomShippingMethodAction extends StagedOrderUpd
         return instance;
     }
 
+    /**
+     * builder factory method for StagedOrderSetCustomShippingMethodAction
+     * @return builder
+     */
     public static StagedOrderSetCustomShippingMethodActionBuilder builder() {
         return StagedOrderSetCustomShippingMethodActionBuilder.of();
     }
 
+    /**
+     * create builder for StagedOrderSetCustomShippingMethodAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetCustomShippingMethodActionBuilder builder(
             final StagedOrderSetCustomShippingMethodAction template) {
         return StagedOrderSetCustomShippingMethodActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedOrderSetCustomShippingMethodAction(
             Function<StagedOrderSetCustomShippingMethodAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetCustomShippingMethodAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetCustomShippingMethodAction>() {
             @Override

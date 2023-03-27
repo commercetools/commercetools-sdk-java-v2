@@ -32,6 +32,9 @@ public class AssetImpl implements Asset, ModelBase {
 
     private com.commercetools.importapi.models.customfields.Custom custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AssetImpl(@JsonProperty("key") final String key,
             @JsonProperty("sources") final java.util.List<com.commercetools.importapi.models.common.AssetSource> sources,
@@ -47,6 +50,9 @@ public class AssetImpl implements Asset, ModelBase {
         this.custom = custom;
     }
 
+    /**
+     * create empty instance
+     */
     public AssetImpl() {
     }
 

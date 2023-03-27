@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AddAddressChangeImpl.class)
 public interface AddAddressChange extends Change {
 
+    /**
+     * discriminator value for AddAddressChange
+     */
     String ADD_ADDRESS_CHANGE = "AddAddressChange";
 
     /**
@@ -69,16 +72,40 @@ public interface AddAddressChange extends Change {
     @JsonProperty("previousValue")
     public Address getPreviousValue();
 
+    /**
+     *  <p>Update action for <code>setAddress</code> action.</p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
 
     public void setNextValue(final Address nextValue);
 
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
+
     public void setPreviousValue(final Address previousValue);
 
+    /**
+     * factory method
+     * @return instance of AddAddressChange
+     */
     public static AddAddressChange of() {
         return new AddAddressChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of AddAddressChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static AddAddressChange of(final AddAddressChange template) {
         AddAddressChangeImpl instance = new AddAddressChangeImpl();
         instance.setChange(template.getChange());
@@ -87,18 +114,37 @@ public interface AddAddressChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for AddAddressChange
+     * @return builder
+     */
     public static AddAddressChangeBuilder builder() {
         return AddAddressChangeBuilder.of();
     }
 
+    /**
+     * create builder for AddAddressChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AddAddressChangeBuilder builder(final AddAddressChange template) {
         return AddAddressChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAddAddressChange(Function<AddAddressChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AddAddressChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AddAddressChange>() {
             @Override

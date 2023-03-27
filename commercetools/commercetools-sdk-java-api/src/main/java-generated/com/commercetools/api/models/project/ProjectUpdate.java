@@ -49,17 +49,41 @@ public interface ProjectUpdate
     @JsonProperty("actions")
     public List<ProjectUpdateAction> getActions();
 
+    /**
+     *  <p>Expected version of the Project on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     * @param version value to be set
+     */
+
     public void setVersion(final Long version);
+
+    /**
+     *  <p>Update actions to be performed on the Project.</p>
+     * @param actions values to be set
+     */
 
     @JsonIgnore
     public void setActions(final ProjectUpdateAction... actions);
 
+    /**
+     *  <p>Update actions to be performed on the Project.</p>
+     * @param actions values to be set
+     */
+
     public void setActions(final List<ProjectUpdateAction> actions);
 
+    /**
+     * factory method
+     * @return instance of ProjectUpdate
+     */
     public static ProjectUpdate of() {
         return new ProjectUpdateImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProjectUpdate
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProjectUpdate of(final ProjectUpdate template) {
         ProjectUpdateImpl instance = new ProjectUpdateImpl();
         instance.setVersion(template.getVersion());
@@ -67,18 +91,37 @@ public interface ProjectUpdate
         return instance;
     }
 
+    /**
+     * builder factory method for ProjectUpdate
+     * @return builder
+     */
     public static ProjectUpdateBuilder builder() {
         return ProjectUpdateBuilder.of();
     }
 
+    /**
+     * create builder for ProjectUpdate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProjectUpdateBuilder builder(final ProjectUpdate template) {
         return ProjectUpdateBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProjectUpdate(Function<ProjectUpdate, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProjectUpdate> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProjectUpdate>() {
             @Override

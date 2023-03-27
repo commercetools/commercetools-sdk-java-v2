@@ -28,6 +28,9 @@ public class ProductCatalogDataImpl implements ProductCatalogData, ModelBase {
 
     private Boolean hasStagedChanges;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductCatalogDataImpl(@JsonProperty("published") final Boolean published,
             @JsonProperty("current") final com.commercetools.api.models.product.ProductData current,
@@ -39,6 +42,9 @@ public class ProductCatalogDataImpl implements ProductCatalogData, ModelBase {
         this.hasStagedChanges = hasStagedChanges;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductCatalogDataImpl() {
     }
 

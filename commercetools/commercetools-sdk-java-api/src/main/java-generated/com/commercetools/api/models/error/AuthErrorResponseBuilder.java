@@ -147,21 +147,46 @@ public class AuthErrorResponseBuilder implements Builder<AuthErrorResponse> {
         return this;
     }
 
+    /**
+     *  <p>HTTP status code corresponding to the error.</p>
+     * @return statusCode
+     */
+
     public Integer getStatusCode() {
         return this.statusCode;
     }
+
+    /**
+     *  <p>First error message in the <code>errors</code> array.</p>
+     * @return message
+     */
 
     public String getMessage() {
         return this.message;
     }
 
+    /**
+     *  <p>Authentication and authorization-related errors returned for a request.</p>
+     * @return errors
+     */
+
     public java.util.List<com.commercetools.api.models.error.ErrorObject> getErrors() {
         return this.errors;
     }
 
+    /**
+     *  <p>Error code as per the OAuth 2.0 specification. For example: <code>"access_denied"</code>.</p>
+     * @return error
+     */
+
     public String getError() {
         return this.error;
     }
+
+    /**
+     *  <p>Plain text description of the first error.</p>
+     * @return error_description
+     */
 
     @Nullable
     public String getError_description() {
@@ -188,10 +213,19 @@ public class AuthErrorResponseBuilder implements Builder<AuthErrorResponse> {
         return new AuthErrorResponseImpl(statusCode, message, errors, error, error_description);
     }
 
+    /**
+     * factory method for an instance of AuthErrorResponseBuilder
+     * @return builder
+     */
     public static AuthErrorResponseBuilder of() {
         return new AuthErrorResponseBuilder();
     }
 
+    /**
+     * create builder for AuthErrorResponse instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AuthErrorResponseBuilder of(final AuthErrorResponse template) {
         AuthErrorResponseBuilder builder = new AuthErrorResponseBuilder();
         builder.statusCode = template.getStatusCode();

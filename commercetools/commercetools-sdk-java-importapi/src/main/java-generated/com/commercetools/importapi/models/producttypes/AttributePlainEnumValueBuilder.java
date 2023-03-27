@@ -27,7 +27,7 @@ public class AttributePlainEnumValueBuilder implements Builder<AttributePlainEnu
     private String label;
 
     /**
-     *
+     * set the value to the key
      * @param key value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class AttributePlainEnumValueBuilder implements Builder<AttributePlainEnu
     }
 
     /**
-     *
+     * set the value to the label
      * @param label value to be set
      * @return Builder
      */
@@ -48,9 +48,19 @@ public class AttributePlainEnumValueBuilder implements Builder<AttributePlainEnu
         return this;
     }
 
+    /**
+     * value of key}
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     * value of label}
+     * @return label
+     */
 
     public String getLabel() {
         return this.label;
@@ -74,10 +84,19 @@ public class AttributePlainEnumValueBuilder implements Builder<AttributePlainEnu
         return new AttributePlainEnumValueImpl(key, label);
     }
 
+    /**
+     * factory method for an instance of AttributePlainEnumValueBuilder
+     * @return builder
+     */
     public static AttributePlainEnumValueBuilder of() {
         return new AttributePlainEnumValueBuilder();
     }
 
+    /**
+     * create builder for AttributePlainEnumValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributePlainEnumValueBuilder of(final AttributePlainEnumValue template) {
         AttributePlainEnumValueBuilder builder = new AttributePlainEnumValueBuilder();
         builder.key = template.getKey();

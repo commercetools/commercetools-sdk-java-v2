@@ -65,9 +65,19 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
         return this;
     }
 
+    /**
+     *  <p>Text to return in the result of a suggest query.</p>
+     * @return text
+     */
+
     public String getText() {
         return this.text;
     }
+
+    /**
+     *  <p>If no tokenizer is defined, the <code>text</code> is used as a single token.</p>
+     * @return suggestTokenizer
+     */
 
     @Nullable
     public com.commercetools.api.models.product.SuggestTokenizer getSuggestTokenizer() {
@@ -91,10 +101,19 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
         return new SearchKeywordImpl(text, suggestTokenizer);
     }
 
+    /**
+     * factory method for an instance of SearchKeywordBuilder
+     * @return builder
+     */
     public static SearchKeywordBuilder of() {
         return new SearchKeywordBuilder();
     }
 
+    /**
+     * create builder for SearchKeyword instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SearchKeywordBuilder of(final SearchKeyword template) {
         SearchKeywordBuilder builder = new SearchKeywordBuilder();
         builder.text = template.getText();

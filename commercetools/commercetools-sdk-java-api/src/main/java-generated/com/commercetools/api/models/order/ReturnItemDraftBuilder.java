@@ -42,7 +42,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     *
+     * set the value to the quantity
      * @param quantity value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     /**
-     *
+     * set the value to the lineItemId
      * @param lineItemId value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     /**
-     *
+     * set the value to the customLineItemId
      * @param customLineItemId value to be set
      * @return Builder
      */
@@ -75,7 +75,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     /**
-     *
+     * set the value to the comment
      * @param comment value to be set
      * @return Builder
      */
@@ -86,7 +86,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     /**
-     *
+     * set the value to the shipmentState
      * @param shipmentState value to be set
      * @return Builder
      */
@@ -120,28 +120,58 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
         return this;
     }
 
+    /**
+     * value of quantity}
+     * @return quantity
+     */
+
     public Long getQuantity() {
         return this.quantity;
     }
+
+    /**
+     * value of lineItemId}
+     * @return lineItemId
+     */
 
     @Nullable
     public String getLineItemId() {
         return this.lineItemId;
     }
 
+    /**
+     * value of customLineItemId}
+     * @return customLineItemId
+     */
+
     @Nullable
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
+
+    /**
+     * value of comment}
+     * @return comment
+     */
 
     @Nullable
     public String getComment() {
         return this.comment;
     }
 
+    /**
+     * value of shipmentState}
+     * @return shipmentState
+     */
+
     public com.commercetools.api.models.order.ReturnShipmentState getShipmentState() {
         return this.shipmentState;
     }
+
+    /**
+     *  <p>Custom Fields of this return item.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -166,10 +196,19 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
         return new ReturnItemDraftImpl(quantity, lineItemId, customLineItemId, comment, shipmentState, custom);
     }
 
+    /**
+     * factory method for an instance of ReturnItemDraftBuilder
+     * @return builder
+     */
     public static ReturnItemDraftBuilder of() {
         return new ReturnItemDraftBuilder();
     }
 
+    /**
+     * create builder for ReturnItemDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReturnItemDraftBuilder of(final ReturnItemDraft template) {
         ReturnItemDraftBuilder builder = new ReturnItemDraftBuilder();
         builder.quantity = template.getQuantity();

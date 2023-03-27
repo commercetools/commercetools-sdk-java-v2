@@ -24,6 +24,9 @@ public class CustomFieldsDraftImpl implements CustomFieldsDraft, ModelBase {
 
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomFieldsDraftImpl(@JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
             @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
@@ -31,6 +34,9 @@ public class CustomFieldsDraftImpl implements CustomFieldsDraft, ModelBase {
         this.fields = fields;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomFieldsDraftImpl() {
     }
 

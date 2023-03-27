@@ -34,6 +34,9 @@ public class AssetImpl implements Asset, ModelBase {
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AssetImpl(@JsonProperty("id") final String id,
             @JsonProperty("sources") final java.util.List<com.commercetools.api.models.common.AssetSource> sources,
@@ -51,6 +54,9 @@ public class AssetImpl implements Asset, ModelBase {
         this.key = key;
     }
 
+    /**
+     * create empty instance
+     */
     public AssetImpl() {
     }
 

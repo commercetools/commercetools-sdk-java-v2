@@ -24,12 +24,18 @@ public class StateKeyReferenceImpl implements StateKeyReference, ModelBase {
 
     private com.commercetools.importapi.models.common.ReferenceType typeId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StateKeyReferenceImpl(@JsonProperty("key") final String key) {
         this.key = key;
         this.typeId = ReferenceType.findEnum("state");
     }
 
+    /**
+     * create empty instance
+     */
     public StateKeyReferenceImpl() {
         this.typeId = ReferenceType.findEnum("state");
     }

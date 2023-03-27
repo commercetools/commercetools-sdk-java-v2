@@ -24,6 +24,9 @@ public class AttributeNestedTypeImpl implements AttributeNestedType, ModelBase {
 
     private com.commercetools.api.models.product_type.ProductTypeReference typeReference;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AttributeNestedTypeImpl(
             @JsonProperty("typeReference") final com.commercetools.api.models.product_type.ProductTypeReference typeReference) {
@@ -31,6 +34,9 @@ public class AttributeNestedTypeImpl implements AttributeNestedType, ModelBase {
         this.name = NESTED;
     }
 
+    /**
+     * create empty instance
+     */
     public AttributeNestedTypeImpl() {
         this.name = NESTED;
     }

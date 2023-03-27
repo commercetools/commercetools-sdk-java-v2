@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StandalonePriceStagedChangesAppliedMessagePayloadImpl.class)
 public interface StandalonePriceStagedChangesAppliedMessagePayload extends MessagePayload {
 
+    /**
+     * discriminator value for StandalonePriceStagedChangesAppliedMessagePayload
+     */
     String STANDALONE_PRICE_STAGED_CHANGES_APPLIED = "StandalonePriceStagedChangesApplied";
 
     /**
@@ -42,12 +45,26 @@ public interface StandalonePriceStagedChangesAppliedMessagePayload extends Messa
     @JsonProperty("stagedChanges")
     public StagedStandalonePrice getStagedChanges();
 
+    /**
+     *  <p>Applied changes of the StandalonePrice after the Apply Staged Changes update action.</p>
+     * @param stagedChanges value to be set
+     */
+
     public void setStagedChanges(final StagedStandalonePrice stagedChanges);
 
+    /**
+     * factory method
+     * @return instance of StandalonePriceStagedChangesAppliedMessagePayload
+     */
     public static StandalonePriceStagedChangesAppliedMessagePayload of() {
         return new StandalonePriceStagedChangesAppliedMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of StandalonePriceStagedChangesAppliedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StandalonePriceStagedChangesAppliedMessagePayload of(
             final StandalonePriceStagedChangesAppliedMessagePayload template) {
         StandalonePriceStagedChangesAppliedMessagePayloadImpl instance = new StandalonePriceStagedChangesAppliedMessagePayloadImpl();
@@ -55,20 +72,39 @@ public interface StandalonePriceStagedChangesAppliedMessagePayload extends Messa
         return instance;
     }
 
+    /**
+     * builder factory method for StandalonePriceStagedChangesAppliedMessagePayload
+     * @return builder
+     */
     public static StandalonePriceStagedChangesAppliedMessagePayloadBuilder builder() {
         return StandalonePriceStagedChangesAppliedMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for StandalonePriceStagedChangesAppliedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StandalonePriceStagedChangesAppliedMessagePayloadBuilder builder(
             final StandalonePriceStagedChangesAppliedMessagePayload template) {
         return StandalonePriceStagedChangesAppliedMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStandalonePriceStagedChangesAppliedMessagePayload(
             Function<StandalonePriceStagedChangesAppliedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceStagedChangesAppliedMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceStagedChangesAppliedMessagePayload>() {
             @Override

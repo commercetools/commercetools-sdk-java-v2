@@ -24,6 +24,9 @@ public class ImportContainerDraftImpl implements ImportContainerDraft, ModelBase
 
     private com.commercetools.importapi.models.common.ImportResourceType resourceType;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ImportContainerDraftImpl(@JsonProperty("key") final String key,
             @JsonProperty("resourceType") final com.commercetools.importapi.models.common.ImportResourceType resourceType) {
@@ -31,6 +34,9 @@ public class ImportContainerDraftImpl implements ImportContainerDraft, ModelBase
         this.resourceType = resourceType;
     }
 
+    /**
+     * create empty instance
+     */
     public ImportContainerDraftImpl() {
     }
 

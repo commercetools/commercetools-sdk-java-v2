@@ -90,13 +90,28 @@ public class DuplicateVariantValuesErrorBuilder implements Builder<DuplicateVari
         return this;
     }
 
+    /**
+     *  <p><code>"A duplicate combination of the variant values (sku, key, images, prices, attributes) exists."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
 
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
+
     public Map<String, java.lang.Object> getValues() {
         return this.values;
     }
+
+    /**
+     *  <p>Every Product Variant must have a distinct combination of SKU, prices, and custom Attribute values.</p>
+     * @return variantValues
+     */
 
     public com.commercetools.api.models.error.VariantValues getVariantValues() {
         return this.variantValues;
@@ -120,10 +135,19 @@ public class DuplicateVariantValuesErrorBuilder implements Builder<DuplicateVari
         return new DuplicateVariantValuesErrorImpl(message, values, variantValues);
     }
 
+    /**
+     * factory method for an instance of DuplicateVariantValuesErrorBuilder
+     * @return builder
+     */
     public static DuplicateVariantValuesErrorBuilder of() {
         return new DuplicateVariantValuesErrorBuilder();
     }
 
+    /**
+     * create builder for DuplicateVariantValuesError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DuplicateVariantValuesErrorBuilder of(final DuplicateVariantValuesError template) {
         DuplicateVariantValuesErrorBuilder builder = new DuplicateVariantValuesErrorBuilder();
         builder.message = template.getMessage();

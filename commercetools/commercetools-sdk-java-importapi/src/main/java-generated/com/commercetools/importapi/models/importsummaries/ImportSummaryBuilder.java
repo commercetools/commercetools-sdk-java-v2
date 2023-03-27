@@ -63,9 +63,19 @@ public class ImportSummaryBuilder implements Builder<ImportSummary> {
         return this;
     }
 
+    /**
+     *  <p>The import status of an ImportContainer given by the number of resources in each Processing State.</p>
+     * @return states
+     */
+
     public com.commercetools.importapi.models.importsummaries.OperationStates getStates() {
         return this.states;
     }
+
+    /**
+     *  <p>The total number of ImportOperations received for this Import Summary.</p>
+     * @return total
+     */
 
     public Long getTotal() {
         return this.total;
@@ -89,10 +99,19 @@ public class ImportSummaryBuilder implements Builder<ImportSummary> {
         return new ImportSummaryImpl(states, total);
     }
 
+    /**
+     * factory method for an instance of ImportSummaryBuilder
+     * @return builder
+     */
     public static ImportSummaryBuilder of() {
         return new ImportSummaryBuilder();
     }
 
+    /**
+     * create builder for ImportSummary instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ImportSummaryBuilder of(final ImportSummary template) {
         ImportSummaryBuilder builder = new ImportSummaryBuilder();
         builder.states = template.getStates();

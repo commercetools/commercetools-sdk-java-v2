@@ -28,6 +28,9 @@ public class ConcurrentModificationErrorImpl implements ConcurrentModificationEr
 
     private Long currentVersion;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ConcurrentModificationErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values,
@@ -38,6 +41,9 @@ public class ConcurrentModificationErrorImpl implements ConcurrentModificationEr
         this.code = CONCURRENT_MODIFICATION;
     }
 
+    /**
+     * create empty instance
+     */
     public ConcurrentModificationErrorImpl() {
         this.code = CONCURRENT_MODIFICATION;
     }

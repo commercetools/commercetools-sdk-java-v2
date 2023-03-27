@@ -36,6 +36,11 @@ public class OrderEditSetKeyActionBuilder implements Builder<OrderEditSetKeyActi
         return this;
     }
 
+    /**
+     *  <p>If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+     * @return key
+     */
+
     @Nullable
     public String getKey() {
         return this.key;
@@ -57,10 +62,19 @@ public class OrderEditSetKeyActionBuilder implements Builder<OrderEditSetKeyActi
         return new OrderEditSetKeyActionImpl(key);
     }
 
+    /**
+     * factory method for an instance of OrderEditSetKeyActionBuilder
+     * @return builder
+     */
     public static OrderEditSetKeyActionBuilder of() {
         return new OrderEditSetKeyActionBuilder();
     }
 
+    /**
+     * create builder for OrderEditSetKeyAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderEditSetKeyActionBuilder of(final OrderEditSetKeyAction template) {
         OrderEditSetKeyActionBuilder builder = new OrderEditSetKeyActionBuilder();
         builder.key = template.getKey();

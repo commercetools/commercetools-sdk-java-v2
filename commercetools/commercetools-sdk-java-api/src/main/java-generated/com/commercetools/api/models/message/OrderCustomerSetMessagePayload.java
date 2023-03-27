@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderCustomerSetMessagePayloadImpl.class)
 public interface OrderCustomerSetMessagePayload extends OrderMessagePayload {
 
+    /**
+     * discriminator value for OrderCustomerSetMessagePayload
+     */
     String ORDER_CUSTOMER_SET = "OrderCustomerSet";
 
     /**
@@ -64,18 +67,47 @@ public interface OrderCustomerSetMessagePayload extends OrderMessagePayload {
     @JsonProperty("oldCustomerGroup")
     public CustomerGroupReference getOldCustomerGroup();
 
+    /**
+     *  <p>Customer on the Order after the Set Customer Id update action.</p>
+     * @param customer value to be set
+     */
+
     public void setCustomer(final CustomerReference customer);
+
+    /**
+     *  <p>CustomerGroup on the Order after the Set Customer Id update action.</p>
+     * @param customerGroup value to be set
+     */
 
     public void setCustomerGroup(final CustomerGroupReference customerGroup);
 
+    /**
+     *  <p>Customer on the Order before the Set Customer Id update action.</p>
+     * @param oldCustomer value to be set
+     */
+
     public void setOldCustomer(final CustomerReference oldCustomer);
+
+    /**
+     *  <p>CustomerGroup on the Order before the Set Customer Id update action.</p>
+     * @param oldCustomerGroup value to be set
+     */
 
     public void setOldCustomerGroup(final CustomerGroupReference oldCustomerGroup);
 
+    /**
+     * factory method
+     * @return instance of OrderCustomerSetMessagePayload
+     */
     public static OrderCustomerSetMessagePayload of() {
         return new OrderCustomerSetMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderCustomerSetMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderCustomerSetMessagePayload of(final OrderCustomerSetMessagePayload template) {
         OrderCustomerSetMessagePayloadImpl instance = new OrderCustomerSetMessagePayloadImpl();
         instance.setCustomer(template.getCustomer());
@@ -85,18 +117,37 @@ public interface OrderCustomerSetMessagePayload extends OrderMessagePayload {
         return instance;
     }
 
+    /**
+     * builder factory method for OrderCustomerSetMessagePayload
+     * @return builder
+     */
     public static OrderCustomerSetMessagePayloadBuilder builder() {
         return OrderCustomerSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for OrderCustomerSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderCustomerSetMessagePayloadBuilder builder(final OrderCustomerSetMessagePayload template) {
         return OrderCustomerSetMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderCustomerSetMessagePayload(Function<OrderCustomerSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderCustomerSetMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderCustomerSetMessagePayload>() {
             @Override

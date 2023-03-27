@@ -84,6 +84,9 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
 
     private com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     QuoteRequestImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -150,6 +153,9 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
         this.businessUnit = businessUnit;
     }
 
+    /**
+     * create empty instance
+     */
     public QuoteRequestImpl() {
     }
 

@@ -38,6 +38,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetLineItemTaxAmountChangeImpl.class)
 public interface SetLineItemTaxAmountChange extends Change {
 
+    /**
+     * discriminator value for SetLineItemTaxAmountChange
+     */
     String SET_LINE_ITEM_TAX_AMOUNT_CHANGE = "SetLineItemTaxAmountChange";
 
     /**
@@ -99,22 +102,61 @@ public interface SetLineItemTaxAmountChange extends Change {
     @JsonProperty("previousValue")
     public TaxRate getPreviousValue();
 
+    /**
+     *  <p>Update action for <code>setLineItemTaxAmount</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set lineItem
+     * @param lineItem value to be set
+     */
 
     public void setLineItem(final LocalizedString lineItem);
 
+    /**
+     * set variant
+     * @param variant value to be set
+     */
+
     public void setVariant(final String variant);
+
+    /**
+     * set taxMode
+     * @param taxMode value to be set
+     */
 
     public void setTaxMode(final TaxMode taxMode);
 
+    /**
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @param nextValue value to be set
+     */
+
     public void setNextValue(final TaxRate nextValue);
+
+    /**
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @param previousValue value to be set
+     */
 
     public void setPreviousValue(final TaxRate previousValue);
 
+    /**
+     * factory method
+     * @return instance of SetLineItemTaxAmountChange
+     */
     public static SetLineItemTaxAmountChange of() {
         return new SetLineItemTaxAmountChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetLineItemTaxAmountChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetLineItemTaxAmountChange of(final SetLineItemTaxAmountChange template) {
         SetLineItemTaxAmountChangeImpl instance = new SetLineItemTaxAmountChangeImpl();
         instance.setChange(template.getChange());
@@ -126,18 +168,37 @@ public interface SetLineItemTaxAmountChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetLineItemTaxAmountChange
+     * @return builder
+     */
     public static SetLineItemTaxAmountChangeBuilder builder() {
         return SetLineItemTaxAmountChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetLineItemTaxAmountChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetLineItemTaxAmountChangeBuilder builder(final SetLineItemTaxAmountChange template) {
         return SetLineItemTaxAmountChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetLineItemTaxAmountChange(Function<SetLineItemTaxAmountChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetLineItemTaxAmountChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetLineItemTaxAmountChange>() {
             @Override

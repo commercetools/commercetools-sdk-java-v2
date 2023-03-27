@@ -66,9 +66,19 @@ public class CartSetCustomLineItemShippingDetailsActionBuilder
         return this;
     }
 
+    /**
+     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     * @return customLineItemId
+     */
+
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
+
+    /**
+     *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @return shippingDetails
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {
@@ -93,10 +103,19 @@ public class CartSetCustomLineItemShippingDetailsActionBuilder
         return new CartSetCustomLineItemShippingDetailsActionImpl(customLineItemId, shippingDetails);
     }
 
+    /**
+     * factory method for an instance of CartSetCustomLineItemShippingDetailsActionBuilder
+     * @return builder
+     */
     public static CartSetCustomLineItemShippingDetailsActionBuilder of() {
         return new CartSetCustomLineItemShippingDetailsActionBuilder();
     }
 
+    /**
+     * create builder for CartSetCustomLineItemShippingDetailsAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartSetCustomLineItemShippingDetailsActionBuilder of(
             final CartSetCustomLineItemShippingDetailsAction template) {
         CartSetCustomLineItemShippingDetailsActionBuilder builder = new CartSetCustomLineItemShippingDetailsActionBuilder();

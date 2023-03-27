@@ -24,12 +24,18 @@ public class ParcelChangeValueImpl implements ParcelChangeValue, ModelBase {
 
     private String createdAt;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ParcelChangeValueImpl(@JsonProperty("id") final String id, @JsonProperty("createdAt") final String createdAt) {
         this.id = id;
         this.createdAt = createdAt;
     }
 
+    /**
+     * create empty instance
+     */
     public ParcelChangeValueImpl() {
     }
 

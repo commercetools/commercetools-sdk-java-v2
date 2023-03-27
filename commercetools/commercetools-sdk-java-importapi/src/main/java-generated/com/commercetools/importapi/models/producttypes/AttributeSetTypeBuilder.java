@@ -25,7 +25,7 @@ public class AttributeSetTypeBuilder implements Builder<AttributeSetType> {
     private com.commercetools.importapi.models.producttypes.AttributeType elementType;
 
     /**
-     *
+     * set the value to the elementType
      * @param elementType value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class AttributeSetTypeBuilder implements Builder<AttributeSetType> {
     }
 
     /**
-     *
+     * set the value to the elementType using the builder function
      * @param builder function to build the elementType value
      * @return Builder
      */
@@ -48,6 +48,11 @@ public class AttributeSetTypeBuilder implements Builder<AttributeSetType> {
                 .build();
         return this;
     }
+
+    /**
+     * value of elementType}
+     * @return elementType
+     */
 
     public com.commercetools.importapi.models.producttypes.AttributeType getElementType() {
         return this.elementType;
@@ -70,10 +75,19 @@ public class AttributeSetTypeBuilder implements Builder<AttributeSetType> {
         return new AttributeSetTypeImpl(elementType);
     }
 
+    /**
+     * factory method for an instance of AttributeSetTypeBuilder
+     * @return builder
+     */
     public static AttributeSetTypeBuilder of() {
         return new AttributeSetTypeBuilder();
     }
 
+    /**
+     * create builder for AttributeSetType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeSetTypeBuilder of(final AttributeSetType template) {
         AttributeSetTypeBuilder builder = new AttributeSetTypeBuilder();
         builder.elementType = template.getElementType();

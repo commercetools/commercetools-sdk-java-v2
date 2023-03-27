@@ -187,7 +187,7 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
     }
 
     /**
-     *
+     * set the value to the confidenceMin
      * @param confidenceMin value to be set
      * @return Builder
      */
@@ -198,7 +198,7 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
     }
 
     /**
-     *
+     * set the value to the confidenceMax
      * @param confidenceMax value to be set
      * @return Builder
      */
@@ -208,40 +208,80 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
         return this;
     }
 
+    /**
+     *  <p>Number of results requested.</p>
+     * @return limit
+     */
+
     @Nullable
     public Long getLimit() {
         return this.limit;
     }
+
+    /**
+     *  <p>Number of elements skipped.</p>
+     * @return offset
+     */
 
     @Nullable
     public Long getOffset() {
         return this.offset;
     }
 
+    /**
+     *  <p>language tag used to prioritize language for text comparisons.</p>
+     * @return language
+     */
+
     @Nullable
     public String getLanguage() {
         return this.language;
     }
+
+    /**
+     *  <p>The three-digit currency code to compare prices in. When a product has multiple prices, all prices for the product are converted to the currency provided by the currency attribute and the median price is calculated for comparison. Currencies are converted using the ECB currency exchange rates at the time the request is made. Of the currency codes, only currencies with currency exchange rates provided by the ECB are supported.</p>
+     * @return currencyCode
+     */
 
     @Nullable
     public String getCurrencyCode() {
         return this.currencyCode;
     }
 
+    /**
+     *  <p><code>similarityMeasures</code> defines the attributes taken into account to measure product similarity.</p>
+     * @return similarityMeasures
+     */
+
     @Nullable
     public com.commercetools.ml.models.similar_products.SimilarityMeasures getSimilarityMeasures() {
         return this.similarityMeasures;
     }
+
+    /**
+     *  <p>Array of length 2 of ProductSetSelector</p>
+     * @return productSetSelectors
+     */
 
     @Nullable
     public java.util.List<com.commercetools.ml.models.similar_products.ProductSetSelector> getProductSetSelectors() {
         return this.productSetSelectors;
     }
 
+    /**
+     * value of confidenceMin}
+     * @return confidenceMin
+     */
+
     @Nullable
     public Double getConfidenceMin() {
         return this.confidenceMin;
     }
+
+    /**
+     * value of confidenceMax}
+     * @return confidenceMax
+     */
 
     @Nullable
     public Double getConfidenceMax() {
@@ -266,10 +306,19 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
             productSetSelectors, confidenceMin, confidenceMax);
     }
 
+    /**
+     * factory method for an instance of SimilarProductSearchRequestBuilder
+     * @return builder
+     */
     public static SimilarProductSearchRequestBuilder of() {
         return new SimilarProductSearchRequestBuilder();
     }
 
+    /**
+     * create builder for SimilarProductSearchRequest instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SimilarProductSearchRequestBuilder of(final SimilarProductSearchRequest template) {
         SimilarProductSearchRequestBuilder builder = new SimilarProductSearchRequestBuilder();
         builder.limit = template.getLimit();

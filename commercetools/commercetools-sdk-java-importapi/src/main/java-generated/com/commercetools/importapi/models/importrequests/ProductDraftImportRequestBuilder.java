@@ -93,6 +93,11 @@ public class ProductDraftImportRequestBuilder implements Builder<ProductDraftImp
         return this;
     }
 
+    /**
+     *  <p>The product draft import resources of this request.</p>
+     * @return resources
+     */
+
     public java.util.List<com.commercetools.importapi.models.productdrafts.ProductDraftImport> getResources() {
         return this.resources;
     }
@@ -114,10 +119,19 @@ public class ProductDraftImportRequestBuilder implements Builder<ProductDraftImp
         return new ProductDraftImportRequestImpl(resources);
     }
 
+    /**
+     * factory method for an instance of ProductDraftImportRequestBuilder
+     * @return builder
+     */
     public static ProductDraftImportRequestBuilder of() {
         return new ProductDraftImportRequestBuilder();
     }
 
+    /**
+     * create builder for ProductDraftImportRequest instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductDraftImportRequestBuilder of(final ProductDraftImportRequest template) {
         ProductDraftImportRequestBuilder builder = new ProductDraftImportRequestBuilder();
         builder.resources = template.getResources();

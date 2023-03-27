@@ -41,7 +41,7 @@ public class ChangeTaxRoundingModeChangeBuilder implements Builder<ChangeTaxRoun
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class ChangeTaxRoundingModeChangeBuilder implements Builder<ChangeTaxRoun
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -64,13 +64,28 @@ public class ChangeTaxRoundingModeChangeBuilder implements Builder<ChangeTaxRoun
         return this;
     }
 
+    /**
+     *  <p>Shape of the action for <code>changeTaxRoundingMode</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public com.commercetools.history.models.common.RoundingMode getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public com.commercetools.history.models.common.RoundingMode getNextValue() {
         return this.nextValue;
@@ -95,10 +110,19 @@ public class ChangeTaxRoundingModeChangeBuilder implements Builder<ChangeTaxRoun
         return new ChangeTaxRoundingModeChangeImpl(change, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of ChangeTaxRoundingModeChangeBuilder
+     * @return builder
+     */
     public static ChangeTaxRoundingModeChangeBuilder of() {
         return new ChangeTaxRoundingModeChangeBuilder();
     }
 
+    /**
+     * create builder for ChangeTaxRoundingModeChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeTaxRoundingModeChangeBuilder of(final ChangeTaxRoundingModeChange template) {
         ChangeTaxRoundingModeChangeBuilder builder = new ChangeTaxRoundingModeChangeBuilder();
         builder.change = template.getChange();

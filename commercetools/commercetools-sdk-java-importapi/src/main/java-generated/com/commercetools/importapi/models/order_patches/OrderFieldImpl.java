@@ -38,6 +38,9 @@ public class OrderFieldImpl implements OrderField, ModelBase {
 
     private java.util.List<com.commercetools.importapi.models.order_patches.ParcelItems> setParcelItems;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderFieldImpl(
             @JsonProperty("addReturnInfo") final com.commercetools.importapi.models.order_patches.ReturnInfo addReturnInfo,
@@ -60,6 +63,9 @@ public class OrderFieldImpl implements OrderField, ModelBase {
         this.setParcelItems = setParcelItems;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderFieldImpl() {
     }
 

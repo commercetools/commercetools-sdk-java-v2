@@ -59,16 +59,41 @@ public interface DirectDiscount {
     @JsonProperty("target")
     public CartDiscountTarget getTarget();
 
+    /**
+     *  <p>Unique identifier of the Direct Discount.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>Effect of the Discount on the Cart.</p>
+     * @param value value to be set
+     */
 
     public void setValue(final CartDiscountValue value);
 
+    /**
+     *  <p>Part of the Cart that is discounted.</p>
+     *  <p>Empty when the <code>value</code> is set to <code>giftLineItem</code>.</p>
+     * @param target value to be set
+     */
+
     public void setTarget(final CartDiscountTarget target);
 
+    /**
+     * factory method
+     * @return instance of DirectDiscount
+     */
     public static DirectDiscount of() {
         return new DirectDiscountImpl();
     }
 
+    /**
+     * factory method to copy an instance of DirectDiscount
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static DirectDiscount of(final DirectDiscount template) {
         DirectDiscountImpl instance = new DirectDiscountImpl();
         instance.setId(template.getId());
@@ -77,18 +102,37 @@ public interface DirectDiscount {
         return instance;
     }
 
+    /**
+     * builder factory method for DirectDiscount
+     * @return builder
+     */
     public static DirectDiscountBuilder builder() {
         return DirectDiscountBuilder.of();
     }
 
+    /**
+     * create builder for DirectDiscount instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DirectDiscountBuilder builder(final DirectDiscount template) {
         return DirectDiscountBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withDirectDiscount(Function<DirectDiscount, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<DirectDiscount> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<DirectDiscount>() {
             @Override

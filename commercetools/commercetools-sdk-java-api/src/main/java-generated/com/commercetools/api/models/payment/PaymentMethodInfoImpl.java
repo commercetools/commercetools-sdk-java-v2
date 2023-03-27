@@ -26,6 +26,9 @@ public class PaymentMethodInfoImpl implements PaymentMethodInfo, ModelBase {
 
     private com.commercetools.api.models.common.LocalizedString name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PaymentMethodInfoImpl(@JsonProperty("paymentInterface") final String paymentInterface,
             @JsonProperty("method") final String method,
@@ -35,6 +38,9 @@ public class PaymentMethodInfoImpl implements PaymentMethodInfo, ModelBase {
         this.name = name;
     }
 
+    /**
+     * create empty instance
+     */
     public PaymentMethodInfoImpl() {
     }
 

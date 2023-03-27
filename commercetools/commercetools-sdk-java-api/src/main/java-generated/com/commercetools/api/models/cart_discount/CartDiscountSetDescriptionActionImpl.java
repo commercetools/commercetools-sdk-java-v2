@@ -24,6 +24,9 @@ public class CartDiscountSetDescriptionActionImpl implements CartDiscountSetDesc
 
     private com.commercetools.api.models.common.LocalizedString description;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartDiscountSetDescriptionActionImpl(
             @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description) {
@@ -31,6 +34,9 @@ public class CartDiscountSetDescriptionActionImpl implements CartDiscountSetDesc
         this.action = SET_DESCRIPTION;
     }
 
+    /**
+     * create empty instance
+     */
     public CartDiscountSetDescriptionActionImpl() {
         this.action = SET_DESCRIPTION;
     }

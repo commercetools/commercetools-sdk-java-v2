@@ -26,6 +26,9 @@ public class DiscountCodeSetValidFromAndUntilActionImpl implements DiscountCodeS
 
     private java.time.ZonedDateTime validUntil;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DiscountCodeSetValidFromAndUntilActionImpl(@JsonProperty("validFrom") final java.time.ZonedDateTime validFrom,
             @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil) {
@@ -34,6 +37,9 @@ public class DiscountCodeSetValidFromAndUntilActionImpl implements DiscountCodeS
         this.action = SET_VALID_FROM_AND_UNTIL;
     }
 
+    /**
+     * create empty instance
+     */
     public DiscountCodeSetValidFromAndUntilActionImpl() {
         this.action = SET_VALID_FROM_AND_UNTIL;
     }

@@ -51,7 +51,7 @@ public class RemovePropertyChangeBuilder implements Builder<RemovePropertyChange
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -61,13 +61,28 @@ public class RemovePropertyChangeBuilder implements Builder<RemovePropertyChange
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>removeProperty</code> on custom objects</p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     *  <p>Value path to the property that was removed</p>
+     * @return path
+     */
+
     public String getPath() {
         return this.path;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public java.lang.Object getPreviousValue() {
         return this.previousValue;
@@ -92,10 +107,19 @@ public class RemovePropertyChangeBuilder implements Builder<RemovePropertyChange
         return new RemovePropertyChangeImpl(change, path, previousValue);
     }
 
+    /**
+     * factory method for an instance of RemovePropertyChangeBuilder
+     * @return builder
+     */
     public static RemovePropertyChangeBuilder of() {
         return new RemovePropertyChangeBuilder();
     }
 
+    /**
+     * create builder for RemovePropertyChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static RemovePropertyChangeBuilder of(final RemovePropertyChange template) {
         RemovePropertyChangeBuilder builder = new RemovePropertyChangeBuilder();
         builder.change = template.getChange();

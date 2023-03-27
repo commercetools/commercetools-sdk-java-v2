@@ -24,12 +24,18 @@ public class TaxCategoryChangeNameActionImpl implements TaxCategoryChangeNameAct
 
     private String name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TaxCategoryChangeNameActionImpl(@JsonProperty("name") final String name) {
         this.name = name;
         this.action = CHANGE_NAME;
     }
 
+    /**
+     * create empty instance
+     */
     public TaxCategoryChangeNameActionImpl() {
         this.action = CHANGE_NAME;
     }

@@ -46,14 +46,33 @@ public interface UnresolvedReferences {
     @JsonProperty("typeId")
     public ReferenceType getTypeId();
 
+    /**
+     * set key
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
+
+    /**
+     *  <p>The type of the referenced resource.</p>
+     * @param typeId value to be set
+     */
 
     public void setTypeId(final ReferenceType typeId);
 
+    /**
+     * factory method
+     * @return instance of UnresolvedReferences
+     */
     public static UnresolvedReferences of() {
         return new UnresolvedReferencesImpl();
     }
 
+    /**
+     * factory method to copy an instance of UnresolvedReferences
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static UnresolvedReferences of(final UnresolvedReferences template) {
         UnresolvedReferencesImpl instance = new UnresolvedReferencesImpl();
         instance.setKey(template.getKey());
@@ -61,18 +80,37 @@ public interface UnresolvedReferences {
         return instance;
     }
 
+    /**
+     * builder factory method for UnresolvedReferences
+     * @return builder
+     */
     public static UnresolvedReferencesBuilder builder() {
         return UnresolvedReferencesBuilder.of();
     }
 
+    /**
+     * create builder for UnresolvedReferences instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static UnresolvedReferencesBuilder builder(final UnresolvedReferences template) {
         return UnresolvedReferencesBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withUnresolvedReferences(Function<UnresolvedReferences, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<UnresolvedReferences> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<UnresolvedReferences>() {
             @Override

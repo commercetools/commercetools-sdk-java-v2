@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProjectChangeOrderSearchStatusActionImpl.class)
 public interface ProjectChangeOrderSearchStatusAction extends ProjectUpdateAction {
 
+    /**
+     * discriminator value for ProjectChangeOrderSearchStatusAction
+     */
     String CHANGE_ORDER_SEARCH_STATUS = "changeOrderSearchStatus";
 
     /**
@@ -39,31 +42,64 @@ public interface ProjectChangeOrderSearchStatusAction extends ProjectUpdateActio
     @JsonProperty("status")
     public OrderSearchStatus getStatus();
 
+    /**
+     *  <p>Activates or deactivates the Order Search feature. Activation will trigger building a search index for the Orders in the Project.</p>
+     * @param status value to be set
+     */
+
     public void setStatus(final OrderSearchStatus status);
 
+    /**
+     * factory method
+     * @return instance of ProjectChangeOrderSearchStatusAction
+     */
     public static ProjectChangeOrderSearchStatusAction of() {
         return new ProjectChangeOrderSearchStatusActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProjectChangeOrderSearchStatusAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProjectChangeOrderSearchStatusAction of(final ProjectChangeOrderSearchStatusAction template) {
         ProjectChangeOrderSearchStatusActionImpl instance = new ProjectChangeOrderSearchStatusActionImpl();
         instance.setStatus(template.getStatus());
         return instance;
     }
 
+    /**
+     * builder factory method for ProjectChangeOrderSearchStatusAction
+     * @return builder
+     */
     public static ProjectChangeOrderSearchStatusActionBuilder builder() {
         return ProjectChangeOrderSearchStatusActionBuilder.of();
     }
 
+    /**
+     * create builder for ProjectChangeOrderSearchStatusAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProjectChangeOrderSearchStatusActionBuilder builder(
             final ProjectChangeOrderSearchStatusAction template) {
         return ProjectChangeOrderSearchStatusActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProjectChangeOrderSearchStatusAction(Function<ProjectChangeOrderSearchStatusAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProjectChangeOrderSearchStatusAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProjectChangeOrderSearchStatusAction>() {
             @Override

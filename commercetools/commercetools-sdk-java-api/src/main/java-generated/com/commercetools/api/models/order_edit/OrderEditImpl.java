@@ -44,6 +44,9 @@ public class OrderEditImpl implements OrderEdit, ModelBase {
 
     private String comment;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderEditImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -70,6 +73,9 @@ public class OrderEditImpl implements OrderEdit, ModelBase {
         this.comment = comment;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderEditImpl() {
     }
 

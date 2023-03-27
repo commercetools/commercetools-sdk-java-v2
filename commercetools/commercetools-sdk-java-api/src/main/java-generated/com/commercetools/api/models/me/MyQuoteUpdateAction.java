@@ -40,14 +40,28 @@ public interface MyQuoteUpdateAction extends com.commercetools.api.models.Resour
     @JsonProperty("action")
     public String getAction();
 
+    /**
+     * builder for changeMyQuoteState subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.me.MyQuoteChangeMyQuoteStateActionBuilder changeMyQuoteStateBuilder() {
         return com.commercetools.api.models.me.MyQuoteChangeMyQuoteStateActionBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMyQuoteUpdateAction(Function<MyQuoteUpdateAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MyQuoteUpdateAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MyQuoteUpdateAction>() {
             @Override

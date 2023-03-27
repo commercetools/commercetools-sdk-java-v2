@@ -27,6 +27,9 @@ public class OrderEditReferenceImpl implements OrderEditReference, ModelBase {
 
     private com.commercetools.api.models.order_edit.OrderEdit obj;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderEditReferenceImpl(@JsonProperty("id") final String id,
             @JsonProperty("obj") final com.commercetools.api.models.order_edit.OrderEdit obj) {
@@ -35,6 +38,9 @@ public class OrderEditReferenceImpl implements OrderEditReference, ModelBase {
         this.typeId = ReferenceTypeId.findEnum("order-edit");
     }
 
+    /**
+     * create empty instance
+     */
     public OrderEditReferenceImpl() {
         this.typeId = ReferenceTypeId.findEnum("order-edit");
     }

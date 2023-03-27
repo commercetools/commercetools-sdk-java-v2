@@ -63,9 +63,19 @@ public class DiscountedLineItemPriceForQuantityBuilder implements Builder<Discou
         return this;
     }
 
+    /**
+     *  <p>Number of Line Items or Custom Line Items in the Cart.</p>
+     * @return quantity
+     */
+
     public Long getQuantity() {
         return this.quantity;
     }
+
+    /**
+     *  <p>Discounted price of the Line Item or Custom Line Item.</p>
+     * @return discountedPrice
+     */
 
     public com.commercetools.api.models.cart.DiscountedLineItemPrice getDiscountedPrice() {
         return this.discountedPrice;
@@ -90,10 +100,19 @@ public class DiscountedLineItemPriceForQuantityBuilder implements Builder<Discou
         return new DiscountedLineItemPriceForQuantityImpl(quantity, discountedPrice);
     }
 
+    /**
+     * factory method for an instance of DiscountedLineItemPriceForQuantityBuilder
+     * @return builder
+     */
     public static DiscountedLineItemPriceForQuantityBuilder of() {
         return new DiscountedLineItemPriceForQuantityBuilder();
     }
 
+    /**
+     * create builder for DiscountedLineItemPriceForQuantity instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DiscountedLineItemPriceForQuantityBuilder of(final DiscountedLineItemPriceForQuantity template) {
         DiscountedLineItemPriceForQuantityBuilder builder = new DiscountedLineItemPriceForQuantityBuilder();
         builder.quantity = template.getQuantity();

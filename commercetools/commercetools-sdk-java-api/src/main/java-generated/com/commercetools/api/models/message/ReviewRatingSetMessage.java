@@ -38,6 +38,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ReviewRatingSetMessageImpl.class)
 public interface ReviewRatingSetMessage extends Message {
 
+    /**
+     * discriminator value for ReviewRatingSetMessage
+     */
     String REVIEW_RATING_SET = "ReviewRatingSet";
 
     /**
@@ -72,18 +75,47 @@ public interface ReviewRatingSetMessage extends Message {
     @JsonProperty("target")
     public Reference getTarget();
 
+    /**
+     *  <p>The <code>rating</code> of the Review before the Set Rating update action.</p>
+     * @param oldRating value to be set
+     */
+
     public void setOldRating(final Double oldRating);
+
+    /**
+     *  <p>The <code>rating</code> of the Review after the Set Rating update action.</p>
+     * @param newRating value to be set
+     */
 
     public void setNewRating(final Double newRating);
 
+    /**
+     *  <p>Whether the Review was taken into account in the ratings statistics of the target.</p>
+     * @param includedInStatistics value to be set
+     */
+
     public void setIncludedInStatistics(final Boolean includedInStatistics);
+
+    /**
+     *  <p>Reference to the resource that the Review belongs to.</p>
+     * @param target value to be set
+     */
 
     public void setTarget(final Reference target);
 
+    /**
+     * factory method
+     * @return instance of ReviewRatingSetMessage
+     */
     public static ReviewRatingSetMessage of() {
         return new ReviewRatingSetMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of ReviewRatingSetMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ReviewRatingSetMessage of(final ReviewRatingSetMessage template) {
         ReviewRatingSetMessageImpl instance = new ReviewRatingSetMessageImpl();
         instance.setId(template.getId());
@@ -103,18 +135,37 @@ public interface ReviewRatingSetMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for ReviewRatingSetMessage
+     * @return builder
+     */
     public static ReviewRatingSetMessageBuilder builder() {
         return ReviewRatingSetMessageBuilder.of();
     }
 
+    /**
+     * create builder for ReviewRatingSetMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReviewRatingSetMessageBuilder builder(final ReviewRatingSetMessage template) {
         return ReviewRatingSetMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withReviewRatingSetMessage(Function<ReviewRatingSetMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ReviewRatingSetMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ReviewRatingSetMessage>() {
             @Override

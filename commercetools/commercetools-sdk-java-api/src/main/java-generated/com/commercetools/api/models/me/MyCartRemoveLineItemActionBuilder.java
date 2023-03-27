@@ -137,24 +137,50 @@ public class MyCartRemoveLineItemActionBuilder implements Builder<MyCartRemoveLi
         return this;
     }
 
+    /**
+     *  <p><code>id</code> of the Line Item to remove.</p>
+     * @return lineItemId
+     */
+
     public String getLineItemId() {
         return this.lineItemId;
     }
+
+    /**
+     *  <p>New value to set.</p>
+     *  <p>If <code>0</code>, the Line Item is removed from the Cart.</p>
+     * @return quantity
+     */
 
     @Nullable
     public Long getQuantity() {
         return this.quantity;
     }
 
+    /**
+     *  <p>Sets the LineItem <code>price</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
+     * @return externalPrice
+     */
+
     @Nullable
     public com.commercetools.api.models.common.Money getExternalPrice() {
         return this.externalPrice;
     }
 
+    /**
+     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
+     * @return externalTotalPrice
+     */
+
     @Nullable
     public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice() {
         return this.externalTotalPrice;
     }
+
+    /**
+     *  <p>Container for Line Item-specific addresses to remove.</p>
+     * @return shippingDetailsToRemove
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetailsToRemove() {
@@ -180,10 +206,19 @@ public class MyCartRemoveLineItemActionBuilder implements Builder<MyCartRemoveLi
             shippingDetailsToRemove);
     }
 
+    /**
+     * factory method for an instance of MyCartRemoveLineItemActionBuilder
+     * @return builder
+     */
     public static MyCartRemoveLineItemActionBuilder of() {
         return new MyCartRemoveLineItemActionBuilder();
     }
 
+    /**
+     * create builder for MyCartRemoveLineItemAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCartRemoveLineItemActionBuilder of(final MyCartRemoveLineItemAction template) {
         MyCartRemoveLineItemActionBuilder builder = new MyCartRemoveLineItemActionBuilder();
         builder.lineItemId = template.getLineItemId();

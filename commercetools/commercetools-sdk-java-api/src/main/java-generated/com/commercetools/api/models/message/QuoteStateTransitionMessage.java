@@ -39,6 +39,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = QuoteStateTransitionMessageImpl.class)
 public interface QuoteStateTransitionMessage extends Message {
 
+    /**
+     * discriminator value for QuoteStateTransitionMessage
+     */
     String QUOTE_STATE_TRANSITION = "QuoteStateTransition";
 
     /**
@@ -66,16 +69,40 @@ public interface QuoteStateTransitionMessage extends Message {
     @JsonProperty("force")
     public Boolean getForce();
 
+    /**
+     *  <p>State of the Quote after the Transition State update action.</p>
+     * @param state value to be set
+     */
+
     public void setState(final StateReference state);
+
+    /**
+     *  <p>State of the Quote before the Transition State update action.</p>
+     * @param oldState value to be set
+     */
 
     public void setOldState(final StateReference oldState);
 
+    /**
+     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     * @param force value to be set
+     */
+
     public void setForce(final Boolean force);
 
+    /**
+     * factory method
+     * @return instance of QuoteStateTransitionMessage
+     */
     public static QuoteStateTransitionMessage of() {
         return new QuoteStateTransitionMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of QuoteStateTransitionMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static QuoteStateTransitionMessage of(final QuoteStateTransitionMessage template) {
         QuoteStateTransitionMessageImpl instance = new QuoteStateTransitionMessageImpl();
         instance.setId(template.getId());
@@ -94,18 +121,37 @@ public interface QuoteStateTransitionMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for QuoteStateTransitionMessage
+     * @return builder
+     */
     public static QuoteStateTransitionMessageBuilder builder() {
         return QuoteStateTransitionMessageBuilder.of();
     }
 
+    /**
+     * create builder for QuoteStateTransitionMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static QuoteStateTransitionMessageBuilder builder(final QuoteStateTransitionMessage template) {
         return QuoteStateTransitionMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withQuoteStateTransitionMessage(Function<QuoteStateTransitionMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<QuoteStateTransitionMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<QuoteStateTransitionMessage>() {
             @Override

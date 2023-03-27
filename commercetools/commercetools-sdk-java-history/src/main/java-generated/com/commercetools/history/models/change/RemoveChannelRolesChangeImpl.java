@@ -28,6 +28,9 @@ public class RemoveChannelRolesChangeImpl implements RemoveChannelRolesChange, M
 
     private java.util.List<com.commercetools.history.models.common.ChannelRole> nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     RemoveChannelRolesChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.common.ChannelRole> previousValue,
@@ -38,6 +41,9 @@ public class RemoveChannelRolesChangeImpl implements RemoveChannelRolesChange, M
         this.type = REMOVE_CHANNEL_ROLES_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public RemoveChannelRolesChangeImpl() {
         this.type = REMOVE_CHANNEL_ROLES_CHANGE;
     }

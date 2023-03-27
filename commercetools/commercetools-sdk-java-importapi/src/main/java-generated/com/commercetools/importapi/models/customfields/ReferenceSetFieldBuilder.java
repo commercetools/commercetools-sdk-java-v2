@@ -25,7 +25,7 @@ public class ReferenceSetFieldBuilder implements Builder<ReferenceSetField> {
     private java.util.List<com.commercetools.importapi.models.common.KeyReference> value;
 
     /**
-     *
+     * set values to the value
      * @param value value to be set
      * @return Builder
      */
@@ -36,7 +36,7 @@ public class ReferenceSetFieldBuilder implements Builder<ReferenceSetField> {
     }
 
     /**
-     *
+     * set value to the value
      * @param value value to be set
      * @return Builder
      */
@@ -48,7 +48,7 @@ public class ReferenceSetFieldBuilder implements Builder<ReferenceSetField> {
     }
 
     /**
-     *
+     * add values to the value
      * @param value value to be set
      * @return Builder
      */
@@ -62,7 +62,7 @@ public class ReferenceSetFieldBuilder implements Builder<ReferenceSetField> {
     }
 
     /**
-     *
+     * add a value to the value using the builder function
      * @param builder function to build the value value
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class ReferenceSetFieldBuilder implements Builder<ReferenceSetField> {
     }
 
     /**
-     *
+     * set the value to the value using the builder function
      * @param builder function to build the value value
      * @return Builder
      */
@@ -88,6 +88,11 @@ public class ReferenceSetFieldBuilder implements Builder<ReferenceSetField> {
         this.value.add(builder.apply(com.commercetools.importapi.models.common.KeyReferenceBuilder.of()).build());
         return this;
     }
+
+    /**
+     * value of value}
+     * @return value
+     */
 
     public java.util.List<com.commercetools.importapi.models.common.KeyReference> getValue() {
         return this.value;
@@ -110,10 +115,19 @@ public class ReferenceSetFieldBuilder implements Builder<ReferenceSetField> {
         return new ReferenceSetFieldImpl(value);
     }
 
+    /**
+     * factory method for an instance of ReferenceSetFieldBuilder
+     * @return builder
+     */
     public static ReferenceSetFieldBuilder of() {
         return new ReferenceSetFieldBuilder();
     }
 
+    /**
+     * create builder for ReferenceSetField instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReferenceSetFieldBuilder of(final ReferenceSetField template) {
         ReferenceSetFieldBuilder builder = new ReferenceSetFieldBuilder();
         builder.value = template.getValue();

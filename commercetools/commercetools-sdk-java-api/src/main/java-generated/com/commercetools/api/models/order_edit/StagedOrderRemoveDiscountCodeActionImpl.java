@@ -24,6 +24,9 @@ public class StagedOrderRemoveDiscountCodeActionImpl implements StagedOrderRemov
 
     private com.commercetools.api.models.discount_code.DiscountCodeReference discountCode;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderRemoveDiscountCodeActionImpl(
             @JsonProperty("discountCode") final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode) {
@@ -31,6 +34,9 @@ public class StagedOrderRemoveDiscountCodeActionImpl implements StagedOrderRemov
         this.action = REMOVE_DISCOUNT_CODE;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderRemoveDiscountCodeActionImpl() {
         this.action = REMOVE_DISCOUNT_CODE;
     }

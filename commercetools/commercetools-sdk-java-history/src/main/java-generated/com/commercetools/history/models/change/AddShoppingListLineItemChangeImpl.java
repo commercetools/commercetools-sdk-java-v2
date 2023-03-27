@@ -28,6 +28,9 @@ public class AddShoppingListLineItemChangeImpl implements AddShoppingListLineIte
 
     private com.commercetools.history.models.common.LineItem nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AddShoppingListLineItemChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.LineItem previousValue,
@@ -38,6 +41,9 @@ public class AddShoppingListLineItemChangeImpl implements AddShoppingListLineIte
         this.type = ADD_SHOPPING_LIST_LINE_ITEM_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public AddShoppingListLineItemChangeImpl() {
         this.type = ADD_SHOPPING_LIST_LINE_ITEM_CHANGE;
     }

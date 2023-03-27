@@ -46,6 +46,9 @@ public class ProductVariantDeletedMessageImpl implements ProductVariantDeletedMe
 
     private java.util.List<String> removedImageUrls;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductVariantDeletedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -73,6 +76,9 @@ public class ProductVariantDeletedMessageImpl implements ProductVariantDeletedMe
         this.type = PRODUCT_VARIANT_DELETED;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductVariantDeletedMessageImpl() {
         this.type = PRODUCT_VARIANT_DELETED;
     }

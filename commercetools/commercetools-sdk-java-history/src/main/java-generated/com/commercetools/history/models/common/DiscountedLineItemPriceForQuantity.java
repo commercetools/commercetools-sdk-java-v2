@@ -48,14 +48,33 @@ public interface DiscountedLineItemPriceForQuantity {
     @JsonProperty("discountedPrice")
     public DiscountedLineItemPrice getDiscountedPrice();
 
+    /**
+     * set quantity
+     * @param quantity value to be set
+     */
+
     public void setQuantity(final Integer quantity);
+
+    /**
+     * set discountedPrice
+     * @param discountedPrice value to be set
+     */
 
     public void setDiscountedPrice(final DiscountedLineItemPrice discountedPrice);
 
+    /**
+     * factory method
+     * @return instance of DiscountedLineItemPriceForQuantity
+     */
     public static DiscountedLineItemPriceForQuantity of() {
         return new DiscountedLineItemPriceForQuantityImpl();
     }
 
+    /**
+     * factory method to copy an instance of DiscountedLineItemPriceForQuantity
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static DiscountedLineItemPriceForQuantity of(final DiscountedLineItemPriceForQuantity template) {
         DiscountedLineItemPriceForQuantityImpl instance = new DiscountedLineItemPriceForQuantityImpl();
         instance.setQuantity(template.getQuantity());
@@ -63,18 +82,37 @@ public interface DiscountedLineItemPriceForQuantity {
         return instance;
     }
 
+    /**
+     * builder factory method for DiscountedLineItemPriceForQuantity
+     * @return builder
+     */
     public static DiscountedLineItemPriceForQuantityBuilder builder() {
         return DiscountedLineItemPriceForQuantityBuilder.of();
     }
 
+    /**
+     * create builder for DiscountedLineItemPriceForQuantity instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DiscountedLineItemPriceForQuantityBuilder builder(final DiscountedLineItemPriceForQuantity template) {
         return DiscountedLineItemPriceForQuantityBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withDiscountedLineItemPriceForQuantity(Function<DiscountedLineItemPriceForQuantity, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<DiscountedLineItemPriceForQuantity> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<DiscountedLineItemPriceForQuantity>() {
             @Override

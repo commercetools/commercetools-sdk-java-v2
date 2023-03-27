@@ -24,12 +24,18 @@ public class MyCustomerSetLocaleActionImpl implements MyCustomerSetLocaleAction,
 
     private String locale;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyCustomerSetLocaleActionImpl(@JsonProperty("locale") final String locale) {
         this.locale = locale;
         this.action = SET_LOCALE;
     }
 
+    /**
+     * create empty instance
+     */
     public MyCustomerSetLocaleActionImpl() {
         this.action = SET_LOCALE;
     }

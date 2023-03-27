@@ -31,6 +31,10 @@ public class QuoteUpdateActionBuilder {
         return com.commercetools.api.models.quote.QuoteTransitionStateActionBuilder.of();
     }
 
+    /**
+     * factory method for an instance of QuoteUpdateActionBuilder
+     * @return builder
+     */
     public static QuoteUpdateActionBuilder of() {
         return new QuoteUpdateActionBuilder();
     }

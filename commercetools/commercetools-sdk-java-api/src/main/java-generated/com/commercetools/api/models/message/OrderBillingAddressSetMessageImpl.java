@@ -46,6 +46,9 @@ public class OrderBillingAddressSetMessageImpl implements OrderBillingAddressSet
 
     private com.commercetools.api.models.common.Address oldAddress;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderBillingAddressSetMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -73,6 +76,9 @@ public class OrderBillingAddressSetMessageImpl implements OrderBillingAddressSet
         this.type = ORDER_BILLING_ADDRESS_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderBillingAddressSetMessageImpl() {
         this.type = ORDER_BILLING_ADDRESS_SET;
     }

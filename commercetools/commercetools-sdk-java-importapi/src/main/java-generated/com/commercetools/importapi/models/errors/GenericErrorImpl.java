@@ -24,12 +24,18 @@ public class GenericErrorImpl implements GenericError, ModelBase {
 
     private String message;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     GenericErrorImpl(@JsonProperty("message") final String message) {
         this.message = message;
         this.code = GENERIC;
     }
 
+    /**
+     * create empty instance
+     */
     public GenericErrorImpl() {
         this.code = GENERIC;
     }

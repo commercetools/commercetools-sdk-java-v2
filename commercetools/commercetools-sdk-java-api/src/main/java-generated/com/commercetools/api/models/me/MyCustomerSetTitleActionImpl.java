@@ -24,12 +24,18 @@ public class MyCustomerSetTitleActionImpl implements MyCustomerSetTitleAction, M
 
     private String title;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyCustomerSetTitleActionImpl(@JsonProperty("title") final String title) {
         this.title = title;
         this.action = SET_TITLE;
     }
 
+    /**
+     * create empty instance
+     */
     public MyCustomerSetTitleActionImpl() {
         this.action = SET_TITLE;
     }

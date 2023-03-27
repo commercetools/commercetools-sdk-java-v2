@@ -25,6 +25,9 @@ public class QuoteRequestChangeQuoteRequestStateActionImpl
 
     private com.commercetools.api.models.quote_request.QuoteRequestState quoteRequestState;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     QuoteRequestChangeQuoteRequestStateActionImpl(
             @JsonProperty("quoteRequestState") final com.commercetools.api.models.quote_request.QuoteRequestState quoteRequestState) {
@@ -32,6 +35,9 @@ public class QuoteRequestChangeQuoteRequestStateActionImpl
         this.action = CHANGE_QUOTE_REQUEST_STATE;
     }
 
+    /**
+     * create empty instance
+     */
     public QuoteRequestChangeQuoteRequestStateActionImpl() {
         this.action = CHANGE_QUOTE_REQUEST_STATE;
     }

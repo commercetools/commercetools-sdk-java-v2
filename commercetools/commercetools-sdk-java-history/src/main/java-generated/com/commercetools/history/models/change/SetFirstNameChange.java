@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetFirstNameChangeImpl.class)
 public interface SetFirstNameChange extends Change {
 
+    /**
+     * discriminator value for SetFirstNameChange
+     */
     String SET_FIRST_NAME_CHANGE = "SetFirstNameChange";
 
     /**
@@ -65,16 +68,40 @@ public interface SetFirstNameChange extends Change {
     @JsonProperty("nextValue")
     public String getNextValue();
 
+    /**
+     *  <p>Shape of the action for <code>setFirstName</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
 
     public void setPreviousValue(final String previousValue);
 
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
+
     public void setNextValue(final String nextValue);
 
+    /**
+     * factory method
+     * @return instance of SetFirstNameChange
+     */
     public static SetFirstNameChange of() {
         return new SetFirstNameChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetFirstNameChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetFirstNameChange of(final SetFirstNameChange template) {
         SetFirstNameChangeImpl instance = new SetFirstNameChangeImpl();
         instance.setChange(template.getChange());
@@ -83,18 +110,37 @@ public interface SetFirstNameChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetFirstNameChange
+     * @return builder
+     */
     public static SetFirstNameChangeBuilder builder() {
         return SetFirstNameChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetFirstNameChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetFirstNameChangeBuilder builder(final SetFirstNameChange template) {
         return SetFirstNameChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetFirstNameChange(Function<SetFirstNameChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetFirstNameChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetFirstNameChange>() {
             @Override

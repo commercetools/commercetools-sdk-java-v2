@@ -26,6 +26,9 @@ public class FilteredFacetResultImpl implements FilteredFacetResult, ModelBase {
 
     private Long productCount;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     FilteredFacetResultImpl(@JsonProperty("count") final Long count,
             @JsonProperty("productCount") final Long productCount) {
@@ -34,6 +37,9 @@ public class FilteredFacetResultImpl implements FilteredFacetResult, ModelBase {
         this.type = FacetTypes.findEnum("filter");
     }
 
+    /**
+     * create empty instance
+     */
     public FilteredFacetResultImpl() {
         this.type = FacetTypes.findEnum("filter");
     }

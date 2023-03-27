@@ -34,6 +34,9 @@ public class SetDiscountedPriceChangeImpl implements SetDiscountedPriceChange, M
 
     private com.commercetools.history.models.common.Price nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetDiscountedPriceChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("catalogData") final String catalogData, @JsonProperty("variant") final String variant,
@@ -49,6 +52,9 @@ public class SetDiscountedPriceChangeImpl implements SetDiscountedPriceChange, M
         this.type = SET_DISCOUNTED_PRICE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetDiscountedPriceChangeImpl() {
         this.type = SET_DISCOUNTED_PRICE_CHANGE;
     }

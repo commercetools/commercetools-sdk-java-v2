@@ -45,7 +45,7 @@ public class ChangeTextLineItemNameChangeBuilder implements Builder<ChangeTextLi
     }
 
     /**
-     *
+     * set the value to the textLineItem using the builder function
      * @param builder function to build the textLineItem value
      * @return Builder
      */
@@ -58,7 +58,7 @@ public class ChangeTextLineItemNameChangeBuilder implements Builder<ChangeTextLi
     }
 
     /**
-     *
+     * set the value to the textLineItem
      * @param textLineItem value to be set
      * @return Builder
      */
@@ -70,7 +70,7 @@ public class ChangeTextLineItemNameChangeBuilder implements Builder<ChangeTextLi
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -82,7 +82,7 @@ public class ChangeTextLineItemNameChangeBuilder implements Builder<ChangeTextLi
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -94,7 +94,7 @@ public class ChangeTextLineItemNameChangeBuilder implements Builder<ChangeTextLi
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -106,7 +106,7 @@ public class ChangeTextLineItemNameChangeBuilder implements Builder<ChangeTextLi
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -117,17 +117,37 @@ public class ChangeTextLineItemNameChangeBuilder implements Builder<ChangeTextLi
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>changeTextLineItemName</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of textLineItem}
+     * @return textLineItem
+     */
 
     public com.commercetools.history.models.change_value.TextLineItemValue getTextLineItem() {
         return this.textLineItem;
     }
 
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
+
     public com.commercetools.history.models.common.LocalizedString getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public com.commercetools.history.models.common.LocalizedString getPreviousValue() {
         return this.previousValue;
@@ -153,10 +173,19 @@ public class ChangeTextLineItemNameChangeBuilder implements Builder<ChangeTextLi
         return new ChangeTextLineItemNameChangeImpl(change, textLineItem, nextValue, previousValue);
     }
 
+    /**
+     * factory method for an instance of ChangeTextLineItemNameChangeBuilder
+     * @return builder
+     */
     public static ChangeTextLineItemNameChangeBuilder of() {
         return new ChangeTextLineItemNameChangeBuilder();
     }
 
+    /**
+     * create builder for ChangeTextLineItemNameChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeTextLineItemNameChangeBuilder of(final ChangeTextLineItemNameChange template) {
         ChangeTextLineItemNameChangeBuilder builder = new ChangeTextLineItemNameChangeBuilder();
         builder.change = template.getChange();

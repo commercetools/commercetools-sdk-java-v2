@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductDiscountReference
         extends Reference, com.commercetools.api.models.Identifiable<ProductDiscount> {
 
+    /**
+     * discriminator value for ProductDiscountReference
+     */
     String PRODUCT_DISCOUNT = "product-discount";
 
     /**
@@ -50,14 +53,33 @@ public interface ProductDiscountReference
     @JsonProperty("id")
     public String getId();
 
+    /**
+     *  <p>Contains the representation of the expanded ProductDiscount. Only present in responses to requests with Reference Expansion for ProductDiscounts.</p>
+     * @param obj value to be set
+     */
+
     public void setObj(final ProductDiscount obj);
+
+    /**
+     *  <p>Unique identifier of the referenced ProductDiscount.</p>
+     * @param id value to be set
+     */
 
     public void setId(final String id);
 
+    /**
+     * factory method
+     * @return instance of ProductDiscountReference
+     */
     public static ProductDiscountReference of() {
         return new ProductDiscountReferenceImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductDiscountReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductDiscountReference of(final ProductDiscountReference template) {
         ProductDiscountReferenceImpl instance = new ProductDiscountReferenceImpl();
         instance.setId(template.getId());
@@ -65,18 +87,37 @@ public interface ProductDiscountReference
         return instance;
     }
 
+    /**
+     * builder factory method for ProductDiscountReference
+     * @return builder
+     */
     public static ProductDiscountReferenceBuilder builder() {
         return ProductDiscountReferenceBuilder.of();
     }
 
+    /**
+     * create builder for ProductDiscountReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductDiscountReferenceBuilder builder(final ProductDiscountReference template) {
         return ProductDiscountReferenceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductDiscountReference(Function<ProductDiscountReference, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountReference> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountReference>() {
             @Override

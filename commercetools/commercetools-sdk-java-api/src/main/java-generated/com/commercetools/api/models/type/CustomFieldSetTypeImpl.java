@@ -24,12 +24,18 @@ public class CustomFieldSetTypeImpl implements CustomFieldSetType, ModelBase {
 
     private com.commercetools.api.models.type.FieldType elementType;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomFieldSetTypeImpl(@JsonProperty("elementType") final com.commercetools.api.models.type.FieldType elementType) {
         this.elementType = elementType;
         this.name = SET;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomFieldSetTypeImpl() {
         this.name = SET;
     }

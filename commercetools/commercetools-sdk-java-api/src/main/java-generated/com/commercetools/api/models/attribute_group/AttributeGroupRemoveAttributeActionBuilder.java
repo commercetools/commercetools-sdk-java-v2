@@ -49,6 +49,11 @@ public class AttributeGroupRemoveAttributeActionBuilder implements Builder<Attri
         return this;
     }
 
+    /**
+     *  <p>Value to remove.</p>
+     * @return attribute
+     */
+
     public com.commercetools.api.models.attribute_group.AttributeReference getAttribute() {
         return this.attribute;
     }
@@ -70,10 +75,19 @@ public class AttributeGroupRemoveAttributeActionBuilder implements Builder<Attri
         return new AttributeGroupRemoveAttributeActionImpl(attribute);
     }
 
+    /**
+     * factory method for an instance of AttributeGroupRemoveAttributeActionBuilder
+     * @return builder
+     */
     public static AttributeGroupRemoveAttributeActionBuilder of() {
         return new AttributeGroupRemoveAttributeActionBuilder();
     }
 
+    /**
+     * create builder for AttributeGroupRemoveAttributeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeGroupRemoveAttributeActionBuilder of(final AttributeGroupRemoveAttributeAction template) {
         AttributeGroupRemoveAttributeActionBuilder builder = new AttributeGroupRemoveAttributeActionBuilder();
         builder.attribute = template.getAttribute();

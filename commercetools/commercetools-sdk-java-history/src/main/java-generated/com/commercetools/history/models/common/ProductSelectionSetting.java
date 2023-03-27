@@ -48,14 +48,33 @@ public interface ProductSelectionSetting {
     @JsonProperty("active")
     public Boolean getActive();
 
+    /**
+     * set productSelection
+     * @param productSelection value to be set
+     */
+
     public void setProductSelection(final Reference productSelection);
+
+    /**
+     * set active
+     * @param active value to be set
+     */
 
     public void setActive(final Boolean active);
 
+    /**
+     * factory method
+     * @return instance of ProductSelectionSetting
+     */
     public static ProductSelectionSetting of() {
         return new ProductSelectionSettingImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductSelectionSetting
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductSelectionSetting of(final ProductSelectionSetting template) {
         ProductSelectionSettingImpl instance = new ProductSelectionSettingImpl();
         instance.setProductSelection(template.getProductSelection());
@@ -63,18 +82,37 @@ public interface ProductSelectionSetting {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductSelectionSetting
+     * @return builder
+     */
     public static ProductSelectionSettingBuilder builder() {
         return ProductSelectionSettingBuilder.of();
     }
 
+    /**
+     * create builder for ProductSelectionSetting instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSelectionSettingBuilder builder(final ProductSelectionSetting template) {
         return ProductSelectionSettingBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductSelectionSetting(Function<ProductSelectionSetting, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionSetting> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionSetting>() {
             @Override

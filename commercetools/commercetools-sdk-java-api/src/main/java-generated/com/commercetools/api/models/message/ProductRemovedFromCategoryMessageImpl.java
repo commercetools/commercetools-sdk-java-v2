@@ -46,6 +46,9 @@ public class ProductRemovedFromCategoryMessageImpl implements ProductRemovedFrom
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductRemovedFromCategoryMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -74,6 +77,9 @@ public class ProductRemovedFromCategoryMessageImpl implements ProductRemovedFrom
         this.type = PRODUCT_REMOVED_FROM_CATEGORY;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductRemovedFromCategoryMessageImpl() {
         this.type = PRODUCT_REMOVED_FROM_CATEGORY;
     }

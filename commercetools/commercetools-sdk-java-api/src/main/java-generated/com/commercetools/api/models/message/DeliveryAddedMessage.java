@@ -38,6 +38,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = DeliveryAddedMessageImpl.class)
 public interface DeliveryAddedMessage extends OrderMessage {
 
+    /**
+     * discriminator value for DeliveryAddedMessage
+     */
     String DELIVERY_ADDED = "DeliveryAdded";
 
     /**
@@ -57,14 +60,33 @@ public interface DeliveryAddedMessage extends OrderMessage {
     @JsonProperty("shippingKey")
     public String getShippingKey();
 
+    /**
+     *  <p>Delivery that was added to the Order. The Delivery in the Message body does not contain Parcels if those were part of the initial Add Delivery update action. In that case, the update action produces an additional ParcelAddedToDelivery Message containing information about the Parcels.</p>
+     * @param delivery value to be set
+     */
+
     public void setDelivery(final Delivery delivery);
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     * @param shippingKey value to be set
+     */
 
     public void setShippingKey(final String shippingKey);
 
+    /**
+     * factory method
+     * @return instance of DeliveryAddedMessage
+     */
     public static DeliveryAddedMessage of() {
         return new DeliveryAddedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of DeliveryAddedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static DeliveryAddedMessage of(final DeliveryAddedMessage template) {
         DeliveryAddedMessageImpl instance = new DeliveryAddedMessageImpl();
         instance.setId(template.getId());
@@ -82,18 +104,37 @@ public interface DeliveryAddedMessage extends OrderMessage {
         return instance;
     }
 
+    /**
+     * builder factory method for DeliveryAddedMessage
+     * @return builder
+     */
     public static DeliveryAddedMessageBuilder builder() {
         return DeliveryAddedMessageBuilder.of();
     }
 
+    /**
+     * create builder for DeliveryAddedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DeliveryAddedMessageBuilder builder(final DeliveryAddedMessage template) {
         return DeliveryAddedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withDeliveryAddedMessage(Function<DeliveryAddedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<DeliveryAddedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<DeliveryAddedMessage>() {
             @Override

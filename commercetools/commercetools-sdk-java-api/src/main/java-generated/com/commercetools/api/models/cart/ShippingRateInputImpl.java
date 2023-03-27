@@ -22,11 +22,17 @@ public class ShippingRateInputImpl implements ShippingRateInput, ModelBase {
 
     private String type;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShippingRateInputImpl(@JsonProperty("type") final String type) {
         this.type = type;
     }
 
+    /**
+     * create empty instance
+     */
     public ShippingRateInputImpl() {
     }
 

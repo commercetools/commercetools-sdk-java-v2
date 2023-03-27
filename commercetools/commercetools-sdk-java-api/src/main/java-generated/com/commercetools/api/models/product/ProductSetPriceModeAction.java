@@ -26,6 +26,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductSetPriceModeActionImpl.class)
 public interface ProductSetPriceModeAction extends ProductUpdateAction {
 
+    /**
+     * discriminator value for ProductSetPriceModeAction
+     */
     String SET_PRICE_MODE = "setPriceMode";
 
     /**
@@ -36,30 +39,63 @@ public interface ProductSetPriceModeAction extends ProductUpdateAction {
     @JsonProperty("priceMode")
     public ProductPriceModeEnum getPriceMode();
 
+    /**
+     *  <p>Specifies which type of Prices should be used when looking up a price for the Product.</p>
+     * @param priceMode value to be set
+     */
+
     public void setPriceMode(final ProductPriceModeEnum priceMode);
 
+    /**
+     * factory method
+     * @return instance of ProductSetPriceModeAction
+     */
     public static ProductSetPriceModeAction of() {
         return new ProductSetPriceModeActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductSetPriceModeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductSetPriceModeAction of(final ProductSetPriceModeAction template) {
         ProductSetPriceModeActionImpl instance = new ProductSetPriceModeActionImpl();
         instance.setPriceMode(template.getPriceMode());
         return instance;
     }
 
+    /**
+     * builder factory method for ProductSetPriceModeAction
+     * @return builder
+     */
     public static ProductSetPriceModeActionBuilder builder() {
         return ProductSetPriceModeActionBuilder.of();
     }
 
+    /**
+     * create builder for ProductSetPriceModeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSetPriceModeActionBuilder builder(final ProductSetPriceModeAction template) {
         return ProductSetPriceModeActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductSetPriceModeAction(Function<ProductSetPriceModeAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSetPriceModeAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductSetPriceModeAction>() {
             @Override

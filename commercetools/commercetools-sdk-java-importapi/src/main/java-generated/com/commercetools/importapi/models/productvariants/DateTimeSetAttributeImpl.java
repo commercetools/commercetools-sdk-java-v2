@@ -26,6 +26,9 @@ public class DateTimeSetAttributeImpl implements DateTimeSetAttribute, ModelBase
 
     private java.util.List<java.time.ZonedDateTime> value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DateTimeSetAttributeImpl(@JsonProperty("name") final String name,
             @JsonProperty("value") final java.util.List<java.time.ZonedDateTime> value) {
@@ -34,6 +37,9 @@ public class DateTimeSetAttributeImpl implements DateTimeSetAttribute, ModelBase
         this.type = DATETIME_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public DateTimeSetAttributeImpl() {
         this.type = DATETIME_SET;
     }

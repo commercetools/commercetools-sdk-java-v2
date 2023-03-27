@@ -44,6 +44,9 @@ public class BusinessUnitAssociateRemovedMessageImpl implements BusinessUnitAsso
 
     private com.commercetools.api.models.business_unit.Associate associate;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitAssociateRemovedMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -70,6 +73,9 @@ public class BusinessUnitAssociateRemovedMessageImpl implements BusinessUnitAsso
         this.type = BUSINESS_UNIT_ASSOCIATE_REMOVED;
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitAssociateRemovedMessageImpl() {
         this.type = BUSINESS_UNIT_ASSOCIATE_REMOVED;
     }

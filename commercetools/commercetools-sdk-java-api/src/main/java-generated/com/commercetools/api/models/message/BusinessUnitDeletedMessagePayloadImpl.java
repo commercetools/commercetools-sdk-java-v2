@@ -21,6 +21,9 @@ public class BusinessUnitDeletedMessagePayloadImpl implements BusinessUnitDelete
 
     private String type;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitDeletedMessagePayloadImpl() {
         this.type = BUSINESS_UNIT_DELETED;

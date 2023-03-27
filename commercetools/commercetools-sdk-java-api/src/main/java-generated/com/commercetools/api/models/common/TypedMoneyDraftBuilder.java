@@ -19,6 +19,10 @@ public class TypedMoneyDraftBuilder {
         return com.commercetools.api.models.common.HighPrecisionMoneyDraftBuilder.of();
     }
 
+    /**
+     * factory method for an instance of TypedMoneyDraftBuilder
+     * @return builder
+     */
     public static TypedMoneyDraftBuilder of() {
         return new TypedMoneyDraftBuilder();
     }

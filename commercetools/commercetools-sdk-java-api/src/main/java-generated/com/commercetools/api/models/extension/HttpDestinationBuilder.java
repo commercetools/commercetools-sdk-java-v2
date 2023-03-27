@@ -66,9 +66,19 @@ public class HttpDestinationBuilder implements Builder<HttpDestination> {
         return this;
     }
 
+    /**
+     *  <p>URL to the target destination.</p>
+     * @return url
+     */
+
     public String getUrl() {
         return this.url;
     }
+
+    /**
+     *  <p>Authentication methods (such as <code>Basic</code> or <code>Bearer</code>).</p>
+     * @return authentication
+     */
 
     @Nullable
     public com.commercetools.api.models.extension.HttpDestinationAuthentication getAuthentication() {
@@ -92,10 +102,19 @@ public class HttpDestinationBuilder implements Builder<HttpDestination> {
         return new HttpDestinationImpl(url, authentication);
     }
 
+    /**
+     * factory method for an instance of HttpDestinationBuilder
+     * @return builder
+     */
     public static HttpDestinationBuilder of() {
         return new HttpDestinationBuilder();
     }
 
+    /**
+     * create builder for HttpDestination instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static HttpDestinationBuilder of(final HttpDestination template) {
         HttpDestinationBuilder builder = new HttpDestinationBuilder();
         builder.url = template.getUrl();

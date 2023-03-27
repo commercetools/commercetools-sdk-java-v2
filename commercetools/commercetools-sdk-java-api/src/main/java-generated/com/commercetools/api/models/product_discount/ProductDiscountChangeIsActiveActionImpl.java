@@ -24,12 +24,18 @@ public class ProductDiscountChangeIsActiveActionImpl implements ProductDiscountC
 
     private Boolean isActive;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductDiscountChangeIsActiveActionImpl(@JsonProperty("isActive") final Boolean isActive) {
         this.isActive = isActive;
         this.action = CHANGE_IS_ACTIVE;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductDiscountChangeIsActiveActionImpl() {
         this.action = CHANGE_IS_ACTIVE;
     }

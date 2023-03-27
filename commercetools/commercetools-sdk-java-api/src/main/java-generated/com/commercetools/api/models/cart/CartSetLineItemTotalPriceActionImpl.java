@@ -26,6 +26,9 @@ public class CartSetLineItemTotalPriceActionImpl implements CartSetLineItemTotal
 
     private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartSetLineItemTotalPriceActionImpl(@JsonProperty("lineItemId") final String lineItemId,
             @JsonProperty("externalTotalPrice") final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
@@ -34,6 +37,9 @@ public class CartSetLineItemTotalPriceActionImpl implements CartSetLineItemTotal
         this.action = SET_LINE_ITEM_TOTAL_PRICE;
     }
 
+    /**
+     * create empty instance
+     */
     public CartSetLineItemTotalPriceActionImpl() {
         this.action = SET_LINE_ITEM_TOTAL_PRICE;
     }

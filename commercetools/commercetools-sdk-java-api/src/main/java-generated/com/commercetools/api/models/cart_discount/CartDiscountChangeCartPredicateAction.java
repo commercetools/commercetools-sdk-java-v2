@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartDiscountChangeCartPredicateActionImpl.class)
 public interface CartDiscountChangeCartPredicateAction extends CartDiscountUpdateAction {
 
+    /**
+     * discriminator value for CartDiscountChangeCartPredicateAction
+     */
     String CHANGE_CART_PREDICATE = "changeCartPredicate";
 
     /**
@@ -39,31 +42,64 @@ public interface CartDiscountChangeCartPredicateAction extends CartDiscountUpdat
     @JsonProperty("cartPredicate")
     public String getCartPredicate();
 
+    /**
+     *  <p>New value to set.</p>
+     * @param cartPredicate value to be set
+     */
+
     public void setCartPredicate(final String cartPredicate);
 
+    /**
+     * factory method
+     * @return instance of CartDiscountChangeCartPredicateAction
+     */
     public static CartDiscountChangeCartPredicateAction of() {
         return new CartDiscountChangeCartPredicateActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartDiscountChangeCartPredicateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartDiscountChangeCartPredicateAction of(final CartDiscountChangeCartPredicateAction template) {
         CartDiscountChangeCartPredicateActionImpl instance = new CartDiscountChangeCartPredicateActionImpl();
         instance.setCartPredicate(template.getCartPredicate());
         return instance;
     }
 
+    /**
+     * builder factory method for CartDiscountChangeCartPredicateAction
+     * @return builder
+     */
     public static CartDiscountChangeCartPredicateActionBuilder builder() {
         return CartDiscountChangeCartPredicateActionBuilder.of();
     }
 
+    /**
+     * create builder for CartDiscountChangeCartPredicateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartDiscountChangeCartPredicateActionBuilder builder(
             final CartDiscountChangeCartPredicateAction template) {
         return CartDiscountChangeCartPredicateActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartDiscountChangeCartPredicateAction(Function<CartDiscountChangeCartPredicateAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountChangeCartPredicateAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountChangeCartPredicateAction>() {
             @Override

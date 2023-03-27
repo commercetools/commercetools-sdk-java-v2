@@ -24,6 +24,9 @@ public class MyShoppingListUpdateImpl implements MyShoppingListUpdate, ModelBase
 
     private java.util.List<com.commercetools.api.models.me.MyShoppingListUpdateAction> actions;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyShoppingListUpdateImpl(@JsonProperty("version") final Long version,
             @JsonProperty("actions") final java.util.List<com.commercetools.api.models.me.MyShoppingListUpdateAction> actions) {
@@ -31,6 +34,9 @@ public class MyShoppingListUpdateImpl implements MyShoppingListUpdate, ModelBase
         this.actions = actions;
     }
 
+    /**
+     * create empty instance
+     */
     public MyShoppingListUpdateImpl() {
     }
 

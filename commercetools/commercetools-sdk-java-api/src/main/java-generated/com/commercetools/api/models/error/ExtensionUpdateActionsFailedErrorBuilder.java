@@ -177,23 +177,48 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
         return this;
     }
 
+    /**
+     *  <p><code>"The extension returned update actions that could not be executed."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
 
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
+
     public Map<String, java.lang.Object> getValues() {
         return this.values;
     }
+
+    /**
+     *  <p>User-defined localized description of the error.</p>
+     * @return localizedMessage
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getLocalizedMessage() {
         return this.localizedMessage;
     }
 
+    /**
+     *  <p>Any information that should be returned to the API caller.</p>
+     * @return extensionExtraInfo
+     */
+
     @Nullable
     public java.lang.Object getExtensionExtraInfo() {
         return this.extensionExtraInfo;
     }
+
+    /**
+     *  <p>Additional errors related to the API Extension.</p>
+     * @return extensionErrors
+     */
 
     public java.util.List<com.commercetools.api.models.error.ExtensionError> getExtensionErrors() {
         return this.extensionErrors;
@@ -220,10 +245,19 @@ public class ExtensionUpdateActionsFailedErrorBuilder implements Builder<Extensi
             extensionErrors);
     }
 
+    /**
+     * factory method for an instance of ExtensionUpdateActionsFailedErrorBuilder
+     * @return builder
+     */
     public static ExtensionUpdateActionsFailedErrorBuilder of() {
         return new ExtensionUpdateActionsFailedErrorBuilder();
     }
 
+    /**
+     * create builder for ExtensionUpdateActionsFailedError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ExtensionUpdateActionsFailedErrorBuilder of(final ExtensionUpdateActionsFailedError template) {
         ExtensionUpdateActionsFailedErrorBuilder builder = new ExtensionUpdateActionsFailedErrorBuilder();
         builder.message = template.getMessage();

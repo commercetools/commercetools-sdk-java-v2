@@ -339,70 +339,150 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
+     * @return version
+     */
 
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *  <p>Date and time (UTC) the Message was generated.</p>
+     * @return createdAt
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+     *  <p>Value of <code>createdAt</code>.</p>
+     * @return lastModifiedAt
+     */
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
+
+    /**
+     *  <p>Value of <code>createdBy</code>.</p>
+     * @return lastModifiedBy
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
+     */
+
     @Nullable
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
 
+    /**
+     *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
+     * @return sequenceNumber
+     */
+
     public Long getSequenceNumber() {
         return this.sequenceNumber;
     }
+
+    /**
+     *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @return resource
+     */
 
     public com.commercetools.api.models.common.Reference getResource() {
         return this.resource;
     }
 
+    /**
+     *  <p>Version of the resource on which the change or action was performed.</p>
+     * @return resourceVersion
+     */
+
     public Long getResourceVersion() {
         return this.resourceVersion;
     }
+
+    /**
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @return resourceUserProvidedIdentifiers
+     */
 
     @Nullable
     public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers() {
         return this.resourceUserProvidedIdentifiers;
     }
 
+    /**
+     *  <p>State of the Review before the Transition State update action.</p>
+     * @return oldState
+     */
+
     @Nullable
     public com.commercetools.api.models.state.StateReference getOldState() {
         return this.oldState;
     }
 
+    /**
+     *  <p>State of the Review after the Transition State update action.</p>
+     * @return newState
+     */
+
     public com.commercetools.api.models.state.StateReference getNewState() {
         return this.newState;
     }
+
+    /**
+     *  <p>Whether the old Review was taken into account in the rating statistics of the target before the state transition.</p>
+     * @return oldIncludedInStatistics
+     */
 
     public Boolean getOldIncludedInStatistics() {
         return this.oldIncludedInStatistics;
     }
 
+    /**
+     *  <p>Whether the new Review was taken into account in the rating statistics of the target after the state transition.</p>
+     * @return newIncludedInStatistics
+     */
+
     public Boolean getNewIncludedInStatistics() {
         return this.newIncludedInStatistics;
     }
+
+    /**
+     *  <p>Reference to the resource that the Review belongs to.</p>
+     * @return target
+     */
 
     @Nullable
     public com.commercetools.api.models.common.Reference getTarget() {
         return this.target;
     }
+
+    /**
+     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     * @return force
+     */
 
     public Boolean getForce() {
         return this.force;
@@ -441,10 +521,19 @@ public class ReviewStateTransitionMessageBuilder implements Builder<ReviewStateT
             oldIncludedInStatistics, newIncludedInStatistics, target, force);
     }
 
+    /**
+     * factory method for an instance of ReviewStateTransitionMessageBuilder
+     * @return builder
+     */
     public static ReviewStateTransitionMessageBuilder of() {
         return new ReviewStateTransitionMessageBuilder();
     }
 
+    /**
+     * create builder for ReviewStateTransitionMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReviewStateTransitionMessageBuilder of(final ReviewStateTransitionMessage template) {
         ReviewStateTransitionMessageBuilder builder = new ReviewStateTransitionMessageBuilder();
         builder.id = template.getId();

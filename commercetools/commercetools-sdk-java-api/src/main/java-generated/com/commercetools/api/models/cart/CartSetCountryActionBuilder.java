@@ -37,6 +37,12 @@ public class CartSetCountryActionBuilder implements Builder<CartSetCountryAction
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value is removed.</p>
+     *  <p>If the Cart is bound to a <code>store</code>, the provided value must be included in the Store's <code>countries</code>. Otherwise a CountryNotConfiguredInStore error is returned.</p>
+     * @return country
+     */
+
     @Nullable
     public String getCountry() {
         return this.country;
@@ -58,10 +64,19 @@ public class CartSetCountryActionBuilder implements Builder<CartSetCountryAction
         return new CartSetCountryActionImpl(country);
     }
 
+    /**
+     * factory method for an instance of CartSetCountryActionBuilder
+     * @return builder
+     */
     public static CartSetCountryActionBuilder of() {
         return new CartSetCountryActionBuilder();
     }
 
+    /**
+     * create builder for CartSetCountryAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartSetCountryActionBuilder of(final CartSetCountryAction template) {
         CartSetCountryActionBuilder builder = new CartSetCountryActionBuilder();
         builder.country = template.getCountry();

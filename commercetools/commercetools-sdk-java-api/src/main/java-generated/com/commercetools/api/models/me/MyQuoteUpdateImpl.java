@@ -24,6 +24,9 @@ public class MyQuoteUpdateImpl implements MyQuoteUpdate, ModelBase {
 
     private java.util.List<com.commercetools.api.models.me.MyQuoteUpdateAction> actions;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyQuoteUpdateImpl(@JsonProperty("version") final Long version,
             @JsonProperty("actions") final java.util.List<com.commercetools.api.models.me.MyQuoteUpdateAction> actions) {
@@ -31,6 +34,9 @@ public class MyQuoteUpdateImpl implements MyQuoteUpdate, ModelBase {
         this.actions = actions;
     }
 
+    /**
+     * create empty instance
+     */
     public MyQuoteUpdateImpl() {
     }
 

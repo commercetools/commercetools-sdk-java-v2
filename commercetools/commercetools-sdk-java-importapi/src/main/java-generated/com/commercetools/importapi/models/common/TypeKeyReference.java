@@ -27,30 +27,61 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TypeKeyReferenceImpl.class)
 public interface TypeKeyReference extends KeyReference {
 
+    /**
+     * discriminator value for TypeKeyReference
+     */
     String TYPE = "type";
 
+    /**
+     * factory method
+     * @return instance of TypeKeyReference
+     */
     public static TypeKeyReference of() {
         return new TypeKeyReferenceImpl();
     }
 
+    /**
+     * factory method to copy an instance of TypeKeyReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static TypeKeyReference of(final TypeKeyReference template) {
         TypeKeyReferenceImpl instance = new TypeKeyReferenceImpl();
         instance.setKey(template.getKey());
         return instance;
     }
 
+    /**
+     * builder factory method for TypeKeyReference
+     * @return builder
+     */
     public static TypeKeyReferenceBuilder builder() {
         return TypeKeyReferenceBuilder.of();
     }
 
+    /**
+     * create builder for TypeKeyReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TypeKeyReferenceBuilder builder(final TypeKeyReference template) {
         return TypeKeyReferenceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTypeKeyReference(Function<TypeKeyReference, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<TypeKeyReference> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TypeKeyReference>() {
             @Override

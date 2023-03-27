@@ -34,6 +34,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetInputTipChangeImpl.class)
 public interface SetInputTipChange extends Change {
 
+    /**
+     * discriminator value for SetInputTipChange
+     */
     String SET_INPUT_TIP_CHANGE = "SetInputTipChange";
 
     /**
@@ -78,18 +81,47 @@ public interface SetInputTipChange extends Change {
     @JsonProperty("previousValue")
     public LocalizedString getPreviousValue();
 
+    /**
+     *  <p>Update action for <code>setInputTip</code> on product types</p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     *  <p>The name of the updated attribute.</p>
+     * @param attributeName value to be set
+     */
 
     public void setAttributeName(final String attributeName);
 
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
+
     public void setNextValue(final LocalizedString nextValue);
+
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
 
     public void setPreviousValue(final LocalizedString previousValue);
 
+    /**
+     * factory method
+     * @return instance of SetInputTipChange
+     */
     public static SetInputTipChange of() {
         return new SetInputTipChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetInputTipChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetInputTipChange of(final SetInputTipChange template) {
         SetInputTipChangeImpl instance = new SetInputTipChangeImpl();
         instance.setChange(template.getChange());
@@ -99,18 +131,37 @@ public interface SetInputTipChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetInputTipChange
+     * @return builder
+     */
     public static SetInputTipChangeBuilder builder() {
         return SetInputTipChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetInputTipChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetInputTipChangeBuilder builder(final SetInputTipChange template) {
         return SetInputTipChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetInputTipChange(Function<SetInputTipChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetInputTipChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetInputTipChange>() {
             @Override

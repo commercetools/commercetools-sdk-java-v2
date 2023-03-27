@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ChangeQuantityChangeImpl.class)
 public interface ChangeQuantityChange extends Change {
 
+    /**
+     * discriminator value for ChangeQuantityChange
+     */
     String CHANGE_QUANTITY_CHANGE = "ChangeQuantityChange";
 
     /**
@@ -69,16 +72,40 @@ public interface ChangeQuantityChange extends Change {
     @JsonProperty("previousValue")
     public InventoryQuantityValue getPreviousValue();
 
+    /**
+     * set change
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
 
     public void setNextValue(final InventoryQuantityValue nextValue);
 
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
+
     public void setPreviousValue(final InventoryQuantityValue previousValue);
 
+    /**
+     * factory method
+     * @return instance of ChangeQuantityChange
+     */
     public static ChangeQuantityChange of() {
         return new ChangeQuantityChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of ChangeQuantityChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ChangeQuantityChange of(final ChangeQuantityChange template) {
         ChangeQuantityChangeImpl instance = new ChangeQuantityChangeImpl();
         instance.setChange(template.getChange());
@@ -87,18 +114,37 @@ public interface ChangeQuantityChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for ChangeQuantityChange
+     * @return builder
+     */
     public static ChangeQuantityChangeBuilder builder() {
         return ChangeQuantityChangeBuilder.of();
     }
 
+    /**
+     * create builder for ChangeQuantityChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeQuantityChangeBuilder builder(final ChangeQuantityChange template) {
         return ChangeQuantityChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withChangeQuantityChange(Function<ChangeQuantityChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ChangeQuantityChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ChangeQuantityChange>() {
             @Override

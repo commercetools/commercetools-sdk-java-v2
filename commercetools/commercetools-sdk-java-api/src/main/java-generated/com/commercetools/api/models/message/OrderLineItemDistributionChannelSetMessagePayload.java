@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderLineItemDistributionChannelSetMessagePayloadImpl.class)
 public interface OrderLineItemDistributionChannelSetMessagePayload extends OrderMessagePayload {
 
+    /**
+     * discriminator value for OrderLineItemDistributionChannelSetMessagePayload
+     */
     String ORDER_LINE_ITEM_DISTRIBUTION_CHANNEL_SET = "OrderLineItemDistributionChannelSet";
 
     /**
@@ -49,14 +52,33 @@ public interface OrderLineItemDistributionChannelSetMessagePayload extends Order
     @JsonProperty("distributionChannel")
     public ChannelReference getDistributionChannel();
 
+    /**
+     *  <p>Unique identifier of the Line Item.</p>
+     * @param lineItemId value to be set
+     */
+
     public void setLineItemId(final String lineItemId);
+
+    /**
+     *  <p>Distribution Channel that was set.</p>
+     * @param distributionChannel value to be set
+     */
 
     public void setDistributionChannel(final ChannelReference distributionChannel);
 
+    /**
+     * factory method
+     * @return instance of OrderLineItemDistributionChannelSetMessagePayload
+     */
     public static OrderLineItemDistributionChannelSetMessagePayload of() {
         return new OrderLineItemDistributionChannelSetMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderLineItemDistributionChannelSetMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderLineItemDistributionChannelSetMessagePayload of(
             final OrderLineItemDistributionChannelSetMessagePayload template) {
         OrderLineItemDistributionChannelSetMessagePayloadImpl instance = new OrderLineItemDistributionChannelSetMessagePayloadImpl();
@@ -65,20 +87,39 @@ public interface OrderLineItemDistributionChannelSetMessagePayload extends Order
         return instance;
     }
 
+    /**
+     * builder factory method for OrderLineItemDistributionChannelSetMessagePayload
+     * @return builder
+     */
     public static OrderLineItemDistributionChannelSetMessagePayloadBuilder builder() {
         return OrderLineItemDistributionChannelSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for OrderLineItemDistributionChannelSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderLineItemDistributionChannelSetMessagePayloadBuilder builder(
             final OrderLineItemDistributionChannelSetMessagePayload template) {
         return OrderLineItemDistributionChannelSetMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderLineItemDistributionChannelSetMessagePayload(
             Function<OrderLineItemDistributionChannelSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderLineItemDistributionChannelSetMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderLineItemDistributionChannelSetMessagePayload>() {
             @Override

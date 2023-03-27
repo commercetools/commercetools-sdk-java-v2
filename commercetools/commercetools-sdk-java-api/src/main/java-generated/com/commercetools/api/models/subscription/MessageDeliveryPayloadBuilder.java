@@ -205,42 +205,92 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
         return this;
     }
 
+    /**
+     *  <p><code>key</code> of the Project. Useful in message processing if the Destination receives events from multiple Projects.</p>
+     * @return projectKey
+     */
+
     public String getProjectKey() {
         return this.projectKey;
     }
 
+    /**
+     *  <p>Reference to the resource that triggered the message.</p>
+     * @return resource
+     */
+
     public com.commercetools.api.models.common.Reference getResource() {
         return this.resource;
     }
+
+    /**
+     *  <p>User-defined unique identifiers of the resource.</p>
+     * @return resourceUserProvidedIdentifiers
+     */
 
     @Nullable
     public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers() {
         return this.resourceUserProvidedIdentifiers;
     }
 
+    /**
+     *  <p>Unique ID of the message.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Last seen version of the resource.</p>
+     * @return version
+     */
 
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *  <p>Date and time (UTC) the resource was initially created.</p>
+     * @return createdAt
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
+
+    /**
+     *  <p>Date and time (UTC) the resource was last modified.</p>
+     * @return lastModifiedAt
+     */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
 
+    /**
+     *  <p>Used to ensure all messages of the resource are processed in correct order. The <code>sequenceNumber</code> of the next message of the resource is a successor of the <code>sequenceNumber</code> of the current message.</p>
+     * @return sequenceNumber
+     */
+
     public Long getSequenceNumber() {
         return this.sequenceNumber;
     }
 
+    /**
+     *  <p>Version of the resource on which the change was performed.</p>
+     * @return resourceVersion
+     */
+
     public Long getResourceVersion() {
         return this.resourceVersion;
     }
+
+    /**
+     *  <p>If the payload does not fit into the size limit or its format is not accepted by the messaging service, the <code>payloadNotIncluded</code> field is present.</p>
+     * @return payloadNotIncluded
+     */
 
     @Nullable
     public com.commercetools.api.models.subscription.PayloadNotIncluded getPayloadNotIncluded() {
@@ -273,10 +323,19 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
             createdAt, lastModifiedAt, sequenceNumber, resourceVersion, payloadNotIncluded);
     }
 
+    /**
+     * factory method for an instance of MessageDeliveryPayloadBuilder
+     * @return builder
+     */
     public static MessageDeliveryPayloadBuilder of() {
         return new MessageDeliveryPayloadBuilder();
     }
 
+    /**
+     * create builder for MessageDeliveryPayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MessageDeliveryPayloadBuilder of(final MessageDeliveryPayload template) {
         MessageDeliveryPayloadBuilder builder = new MessageDeliveryPayloadBuilder();
         builder.projectKey = template.getProjectKey();

@@ -25,7 +25,7 @@ public class LocalizedLabelBuilder implements Builder<LocalizedLabel> {
     private com.commercetools.history.models.common.LocalizedString value;
 
     /**
-     *
+     * set the value to the value using the builder function
      * @param builder function to build the value value
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class LocalizedLabelBuilder implements Builder<LocalizedLabel> {
     }
 
     /**
-     *
+     * set the value to the value
      * @param value value to be set
      * @return Builder
      */
@@ -46,6 +46,11 @@ public class LocalizedLabelBuilder implements Builder<LocalizedLabel> {
         this.value = value;
         return this;
     }
+
+    /**
+     * value of value}
+     * @return value
+     */
 
     public com.commercetools.history.models.common.LocalizedString getValue() {
         return this.value;
@@ -68,10 +73,19 @@ public class LocalizedLabelBuilder implements Builder<LocalizedLabel> {
         return new LocalizedLabelImpl(value);
     }
 
+    /**
+     * factory method for an instance of LocalizedLabelBuilder
+     * @return builder
+     */
     public static LocalizedLabelBuilder of() {
         return new LocalizedLabelBuilder();
     }
 
+    /**
+     * create builder for LocalizedLabel instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static LocalizedLabelBuilder of(final LocalizedLabel template) {
         LocalizedLabelBuilder builder = new LocalizedLabelBuilder();
         builder.value = template.getValue();

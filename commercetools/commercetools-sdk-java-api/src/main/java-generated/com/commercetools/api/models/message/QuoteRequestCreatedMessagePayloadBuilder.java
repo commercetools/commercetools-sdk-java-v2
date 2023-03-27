@@ -48,6 +48,11 @@ public class QuoteRequestCreatedMessagePayloadBuilder implements Builder<QuoteRe
         return this;
     }
 
+    /**
+     *  <p>Quote Request that was created.</p>
+     * @return quoteRequest
+     */
+
     public com.commercetools.api.models.quote_request.QuoteRequest getQuoteRequest() {
         return this.quoteRequest;
     }
@@ -69,10 +74,19 @@ public class QuoteRequestCreatedMessagePayloadBuilder implements Builder<QuoteRe
         return new QuoteRequestCreatedMessagePayloadImpl(quoteRequest);
     }
 
+    /**
+     * factory method for an instance of QuoteRequestCreatedMessagePayloadBuilder
+     * @return builder
+     */
     public static QuoteRequestCreatedMessagePayloadBuilder of() {
         return new QuoteRequestCreatedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for QuoteRequestCreatedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static QuoteRequestCreatedMessagePayloadBuilder of(final QuoteRequestCreatedMessagePayload template) {
         QuoteRequestCreatedMessagePayloadBuilder builder = new QuoteRequestCreatedMessagePayloadBuilder();
         builder.quoteRequest = template.getQuoteRequest();

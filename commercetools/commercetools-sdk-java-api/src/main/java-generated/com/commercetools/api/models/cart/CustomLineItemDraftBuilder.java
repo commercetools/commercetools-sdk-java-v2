@@ -233,42 +233,90 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
         return this;
     }
 
+    /**
+     *  <p>Name of the Custom Line Item.</p>
+     * @return name
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
+
+    /**
+     *  <p>Number of Custom Line Items to add to the Cart.</p>
+     * @return quantity
+     */
 
     @Nullable
     public Long getQuantity() {
         return this.quantity;
     }
 
+    /**
+     *  <p>Money value of the Custom Line Item. The value can be negative.</p>
+     * @return money
+     */
+
     public com.commercetools.api.models.common.Money getMoney() {
         return this.money;
     }
 
+    /**
+     *  <p>User-defined identifier used in a deep-link URL for the Custom Line Item. It must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>.</p>
+     * @return slug
+     */
+
     public String getSlug() {
         return this.slug;
     }
+
+    /**
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode. This field is required for <code>Platform</code> TaxMode.</p>
+     * @return taxCategory
+     */
 
     @Nullable
     public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {
         return this.taxCategory;
     }
 
+    /**
+     *  <p>External Tax Rate for the Custom Line Item if the Cart has the <code>External</code> TaxMode.</p>
+     * @return externalTaxRate
+     */
+
     @Nullable
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
         return this.externalTaxRate;
     }
+
+    /**
+     *  <p>Custom Fields for the Custom Line Item.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
 
+    /**
+     *  <p>Container for Custom Line Item-specific addresses.</p>
+     * @return shippingDetails
+     */
+
     @Nullable
     public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {
         return this.shippingDetails;
     }
+
+    /**
+     *  <ul>
+     *   <li>If <code>Standard</code>, Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</li>
+     *   <li>If <code>External</code>, Cart Discounts are not considered on the Custom Line Item.</li>
+     *  </ul>
+     * @return priceMode
+     */
 
     public com.commercetools.api.models.cart.CustomLineItemPriceMode getPriceMode() {
         return this.priceMode;
@@ -296,10 +344,19 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
             shippingDetails, priceMode);
     }
 
+    /**
+     * factory method for an instance of CustomLineItemDraftBuilder
+     * @return builder
+     */
     public static CustomLineItemDraftBuilder of() {
         return new CustomLineItemDraftBuilder();
     }
 
+    /**
+     * create builder for CustomLineItemDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomLineItemDraftBuilder of(final CustomLineItemDraft template) {
         CustomLineItemDraftBuilder builder = new CustomLineItemDraftBuilder();
         builder.name = template.getName();

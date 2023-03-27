@@ -54,16 +54,40 @@ public interface GraphQLRequest {
     @JsonProperty("variables")
     public GraphQLVariablesMap getVariables();
 
+    /**
+     * set query
+     * @param query value to be set
+     */
+
     public void setQuery(final String query);
+
+    /**
+     * set operationName
+     * @param operationName value to be set
+     */
 
     public void setOperationName(final String operationName);
 
+    /**
+     * set variables
+     * @param variables value to be set
+     */
+
     public void setVariables(final GraphQLVariablesMap variables);
 
+    /**
+     * factory method
+     * @return instance of GraphQLRequest
+     */
     public static GraphQLRequest of() {
         return new GraphQLRequestImpl();
     }
 
+    /**
+     * factory method to copy an instance of GraphQLRequest
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static GraphQLRequest of(final GraphQLRequest template) {
         GraphQLRequestImpl instance = new GraphQLRequestImpl();
         instance.setQuery(template.getQuery());
@@ -72,18 +96,37 @@ public interface GraphQLRequest {
         return instance;
     }
 
+    /**
+     * builder factory method for GraphQLRequest
+     * @return builder
+     */
     public static GraphQLRequestBuilder builder() {
         return GraphQLRequestBuilder.of();
     }
 
+    /**
+     * create builder for GraphQLRequest instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static GraphQLRequestBuilder builder(final GraphQLRequest template) {
         return GraphQLRequestBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withGraphQLRequest(Function<GraphQLRequest, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<GraphQLRequest> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<GraphQLRequest>() {
             @Override

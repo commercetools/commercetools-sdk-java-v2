@@ -177,50 +177,154 @@ public interface ProductDraft
     @JsonProperty("priceMode")
     public ProductPriceModeEnum getPriceMode();
 
+    /**
+     *  <p>The Product Type defining the Attributes for the Product. Cannot be changed later.</p>
+     * @param productType value to be set
+     */
+
     public void setProductType(final ProductTypeResourceIdentifier productType);
+
+    /**
+     *  <p>Name of the Product.</p>
+     * @param name value to be set
+     */
 
     public void setName(final LocalizedString name);
 
+    /**
+     *  <p>User-defined identifier used in a deep-link URL for the Product. It must be unique across a Project, but a Product can have the same slug in different Locales. It must match the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
+     * @param slug value to be set
+     */
+
     public void setSlug(final LocalizedString slug);
+
+    /**
+     *  <p>User-defined unique identifier for the Product.</p>
+     * @param key value to be set
+     */
 
     public void setKey(final String key);
 
+    /**
+     *  <p>Description of the Product.</p>
+     * @param description value to be set
+     */
+
     public void setDescription(final LocalizedString description);
+
+    /**
+     *  <p>Categories assigned to the Product.</p>
+     * @param categories values to be set
+     */
 
     @JsonIgnore
     public void setCategories(final CategoryResourceIdentifier... categories);
 
+    /**
+     *  <p>Categories assigned to the Product.</p>
+     * @param categories values to be set
+     */
+
     public void setCategories(final List<CategoryResourceIdentifier> categories);
+
+    /**
+     *  <p>Numerical values to allow ordering of Products within a specified Category.</p>
+     * @param categoryOrderHints value to be set
+     */
 
     public void setCategoryOrderHints(final CategoryOrderHints categoryOrderHints);
 
+    /**
+     *  <p>Title of the Product displayed in search results.</p>
+     * @param metaTitle value to be set
+     */
+
     public void setMetaTitle(final LocalizedString metaTitle);
+
+    /**
+     *  <p>Description of the Product displayed in search results.</p>
+     * @param metaDescription value to be set
+     */
 
     public void setMetaDescription(final LocalizedString metaDescription);
 
+    /**
+     *  <p>Keywords that give additional information about the Product to search engines.</p>
+     * @param metaKeywords value to be set
+     */
+
     public void setMetaKeywords(final LocalizedString metaKeywords);
 
+    /**
+     *  <p>The Product Variant to be the Master Variant for the Product. Required if <code>variants</code> are provided also.</p>
+     * @param masterVariant value to be set
+     */
+
     public void setMasterVariant(final ProductVariantDraft masterVariant);
+
+    /**
+     *  <p>The additional Product Variants for the Product.</p>
+     * @param variants values to be set
+     */
 
     @JsonIgnore
     public void setVariants(final ProductVariantDraft... variants);
 
+    /**
+     *  <p>The additional Product Variants for the Product.</p>
+     * @param variants values to be set
+     */
+
     public void setVariants(final List<ProductVariantDraft> variants);
+
+    /**
+     *  <p>The Tax Category to be assigned to the Product.</p>
+     * @param taxCategory value to be set
+     */
 
     public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
 
+    /**
+     *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     * @param searchKeywords value to be set
+     */
+
     public void setSearchKeywords(final SearchKeywords searchKeywords);
+
+    /**
+     *  <p>State to be assigned to the Product.</p>
+     * @param state value to be set
+     */
 
     public void setState(final StateResourceIdentifier state);
 
+    /**
+     *  <p>If <code>true</code>, the Product is published immediately to the current projection.</p>
+     * @param publish value to be set
+     */
+
     public void setPublish(final Boolean publish);
+
+    /**
+     *  <p>Specifies the type of prices used when looking up a price for the Product.</p>
+     * @param priceMode value to be set
+     */
 
     public void setPriceMode(final ProductPriceModeEnum priceMode);
 
+    /**
+     * factory method
+     * @return instance of ProductDraft
+     */
     public static ProductDraft of() {
         return new ProductDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductDraft of(final ProductDraft template) {
         ProductDraftImpl instance = new ProductDraftImpl();
         instance.setProductType(template.getProductType());
@@ -243,18 +347,37 @@ public interface ProductDraft
         return instance;
     }
 
+    /**
+     * builder factory method for ProductDraft
+     * @return builder
+     */
     public static ProductDraftBuilder builder() {
         return ProductDraftBuilder.of();
     }
 
+    /**
+     * create builder for ProductDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductDraftBuilder builder(final ProductDraft template) {
         return ProductDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductDraft(Function<ProductDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductDraft>() {
             @Override

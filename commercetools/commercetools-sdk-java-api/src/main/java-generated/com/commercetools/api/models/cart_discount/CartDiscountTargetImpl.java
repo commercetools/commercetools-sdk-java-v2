@@ -22,11 +22,17 @@ public class CartDiscountTargetImpl implements CartDiscountTarget, ModelBase {
 
     private String type;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartDiscountTargetImpl(@JsonProperty("type") final String type) {
         this.type = type;
     }
 
+    /**
+     * create empty instance
+     */
     public CartDiscountTargetImpl() {
     }
 

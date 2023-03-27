@@ -93,6 +93,11 @@ public class AttributeEnumTypeBuilder implements Builder<AttributeEnumType> {
         return this;
     }
 
+    /**
+     *  <p>Available values that can be assigned to Products.</p>
+     * @return values
+     */
+
     public java.util.List<com.commercetools.api.models.product_type.AttributePlainEnumValue> getValues() {
         return this.values;
     }
@@ -114,10 +119,19 @@ public class AttributeEnumTypeBuilder implements Builder<AttributeEnumType> {
         return new AttributeEnumTypeImpl(values);
     }
 
+    /**
+     * factory method for an instance of AttributeEnumTypeBuilder
+     * @return builder
+     */
     public static AttributeEnumTypeBuilder of() {
         return new AttributeEnumTypeBuilder();
     }
 
+    /**
+     * create builder for AttributeEnumType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeEnumTypeBuilder of(final AttributeEnumType template) {
         AttributeEnumTypeBuilder builder = new AttributeEnumTypeBuilder();
         builder.values = template.getValues();

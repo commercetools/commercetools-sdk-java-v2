@@ -24,7 +24,7 @@ public class UnpublishChangeBuilder implements Builder<UnpublishChange> {
     private String change;
 
     /**
-     *
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class UnpublishChangeBuilder implements Builder<UnpublishChange> {
         this.change = change;
         return this;
     }
+
+    /**
+     * value of change}
+     * @return change
+     */
 
     public String getChange() {
         return this.change;
@@ -55,10 +60,19 @@ public class UnpublishChangeBuilder implements Builder<UnpublishChange> {
         return new UnpublishChangeImpl(change);
     }
 
+    /**
+     * factory method for an instance of UnpublishChangeBuilder
+     * @return builder
+     */
     public static UnpublishChangeBuilder of() {
         return new UnpublishChangeBuilder();
     }
 
+    /**
+     * create builder for UnpublishChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static UnpublishChangeBuilder of(final UnpublishChange template) {
         UnpublishChangeBuilder builder = new UnpublishChangeBuilder();
         builder.change = template.getChange();

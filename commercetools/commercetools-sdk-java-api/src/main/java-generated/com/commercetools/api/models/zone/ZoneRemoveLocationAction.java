@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ZoneRemoveLocationActionImpl.class)
 public interface ZoneRemoveLocationAction extends ZoneUpdateAction {
 
+    /**
+     * discriminator value for ZoneRemoveLocationAction
+     */
     String REMOVE_LOCATION = "removeLocation";
 
     /**
@@ -41,30 +44,63 @@ public interface ZoneRemoveLocationAction extends ZoneUpdateAction {
     @JsonProperty("location")
     public Location getLocation();
 
+    /**
+     *  <p>Location to be removed from the Zone.</p>
+     * @param location value to be set
+     */
+
     public void setLocation(final Location location);
 
+    /**
+     * factory method
+     * @return instance of ZoneRemoveLocationAction
+     */
     public static ZoneRemoveLocationAction of() {
         return new ZoneRemoveLocationActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ZoneRemoveLocationAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ZoneRemoveLocationAction of(final ZoneRemoveLocationAction template) {
         ZoneRemoveLocationActionImpl instance = new ZoneRemoveLocationActionImpl();
         instance.setLocation(template.getLocation());
         return instance;
     }
 
+    /**
+     * builder factory method for ZoneRemoveLocationAction
+     * @return builder
+     */
     public static ZoneRemoveLocationActionBuilder builder() {
         return ZoneRemoveLocationActionBuilder.of();
     }
 
+    /**
+     * create builder for ZoneRemoveLocationAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ZoneRemoveLocationActionBuilder builder(final ZoneRemoveLocationAction template) {
         return ZoneRemoveLocationActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withZoneRemoveLocationAction(Function<ZoneRemoveLocationAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ZoneRemoveLocationAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ZoneRemoveLocationAction>() {
             @Override

@@ -19,6 +19,10 @@ public class BusinessUnitBuilder {
         return com.commercetools.api.models.business_unit.DivisionBuilder.of();
     }
 
+    /**
+     * factory method for an instance of BusinessUnitBuilder
+     * @return builder
+     */
     public static BusinessUnitBuilder of() {
         return new BusinessUnitBuilder();
     }

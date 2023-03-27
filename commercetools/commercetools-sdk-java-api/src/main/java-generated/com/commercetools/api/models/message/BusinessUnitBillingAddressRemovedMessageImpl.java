@@ -45,6 +45,9 @@ public class BusinessUnitBillingAddressRemovedMessageImpl
 
     private com.commercetools.api.models.common.Address address;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitBillingAddressRemovedMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -71,6 +74,9 @@ public class BusinessUnitBillingAddressRemovedMessageImpl
         this.type = BUSINESS_UNIT_BILLING_ADDRESS_REMOVED;
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitBillingAddressRemovedMessageImpl() {
         this.type = BUSINESS_UNIT_BILLING_ADDRESS_REMOVED;
     }

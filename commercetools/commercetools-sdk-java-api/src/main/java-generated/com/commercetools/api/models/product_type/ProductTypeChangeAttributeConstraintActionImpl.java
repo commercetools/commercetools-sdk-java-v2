@@ -27,6 +27,9 @@ public class ProductTypeChangeAttributeConstraintActionImpl
 
     private com.commercetools.api.models.product_type.AttributeConstraintEnumDraft newValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductTypeChangeAttributeConstraintActionImpl(@JsonProperty("attributeName") final String attributeName,
             @JsonProperty("newValue") final com.commercetools.api.models.product_type.AttributeConstraintEnumDraft newValue) {
@@ -35,6 +38,9 @@ public class ProductTypeChangeAttributeConstraintActionImpl
         this.action = CHANGE_ATTRIBUTE_CONSTRAINT;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductTypeChangeAttributeConstraintActionImpl() {
         this.action = CHANGE_ATTRIBUTE_CONSTRAINT;
     }

@@ -36,10 +36,19 @@ public class OrderEditNotProcessedBuilder implements Builder<OrderEditNotProcess
         return new OrderEditNotProcessedImpl();
     }
 
+    /**
+     * factory method for an instance of OrderEditNotProcessedBuilder
+     * @return builder
+     */
     public static OrderEditNotProcessedBuilder of() {
         return new OrderEditNotProcessedBuilder();
     }
 
+    /**
+     * create builder for OrderEditNotProcessed instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderEditNotProcessedBuilder of(final OrderEditNotProcessed template) {
         OrderEditNotProcessedBuilder builder = new OrderEditNotProcessedBuilder();
         return builder;

@@ -30,6 +30,9 @@ public class SetLineItemTotalPriceChangeImpl implements SetLineItemTotalPriceCha
 
     private com.commercetools.history.models.common.Money previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetLineItemTotalPriceChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("lineItem") final com.commercetools.history.models.common.LocalizedString lineItem,
@@ -42,6 +45,9 @@ public class SetLineItemTotalPriceChangeImpl implements SetLineItemTotalPriceCha
         this.type = SET_LINE_ITEM_TOTAL_PRICE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetLineItemTotalPriceChangeImpl() {
         this.type = SET_LINE_ITEM_TOTAL_PRICE_CHANGE;
     }

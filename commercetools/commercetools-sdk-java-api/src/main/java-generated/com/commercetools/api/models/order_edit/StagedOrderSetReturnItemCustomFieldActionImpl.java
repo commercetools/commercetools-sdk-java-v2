@@ -29,6 +29,9 @@ public class StagedOrderSetReturnItemCustomFieldActionImpl
 
     private java.lang.Object value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderSetReturnItemCustomFieldActionImpl(@JsonProperty("returnItemId") final String returnItemId,
             @JsonProperty("name") final String name, @JsonProperty("value") final java.lang.Object value) {
@@ -38,6 +41,9 @@ public class StagedOrderSetReturnItemCustomFieldActionImpl
         this.action = SET_RETURN_ITEM_CUSTOM_FIELD;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderSetReturnItemCustomFieldActionImpl() {
         this.action = SET_RETURN_ITEM_CUSTOM_FIELD;
     }

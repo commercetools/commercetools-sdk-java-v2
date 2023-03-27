@@ -24,6 +24,9 @@ public class BusinessUnitSetAssociatesActionImpl implements BusinessUnitSetAssoc
 
     private java.util.List<com.commercetools.api.models.business_unit.AssociateDraft> associates;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitSetAssociatesActionImpl(
             @JsonProperty("associates") final java.util.List<com.commercetools.api.models.business_unit.AssociateDraft> associates) {
@@ -31,6 +34,9 @@ public class BusinessUnitSetAssociatesActionImpl implements BusinessUnitSetAssoc
         this.action = SET_ASSOCIATES;
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitSetAssociatesActionImpl() {
         this.action = SET_ASSOCIATES;
     }

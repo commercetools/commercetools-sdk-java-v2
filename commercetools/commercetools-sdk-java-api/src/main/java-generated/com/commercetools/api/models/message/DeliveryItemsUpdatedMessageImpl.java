@@ -50,6 +50,9 @@ public class DeliveryItemsUpdatedMessageImpl implements DeliveryItemsUpdatedMess
 
     private String shippingKey;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DeliveryItemsUpdatedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -81,6 +84,9 @@ public class DeliveryItemsUpdatedMessageImpl implements DeliveryItemsUpdatedMess
         this.type = DELIVERY_ITEMS_UPDATED;
     }
 
+    /**
+     * create empty instance
+     */
     public DeliveryItemsUpdatedMessageImpl() {
         this.type = DELIVERY_ITEMS_UPDATED;
     }

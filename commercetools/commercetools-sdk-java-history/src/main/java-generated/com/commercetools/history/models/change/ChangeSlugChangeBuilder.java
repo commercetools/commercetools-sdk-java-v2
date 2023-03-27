@@ -42,7 +42,7 @@ public class ChangeSlugChangeBuilder implements Builder<ChangeSlugChange> {
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class ChangeSlugChangeBuilder implements Builder<ChangeSlugChange> {
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class ChangeSlugChangeBuilder implements Builder<ChangeSlugChange> {
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class ChangeSlugChangeBuilder implements Builder<ChangeSlugChange> {
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -88,13 +88,28 @@ public class ChangeSlugChangeBuilder implements Builder<ChangeSlugChange> {
         return this;
     }
 
+    /**
+     *  <p>Shape of the action for <code>changeSlug</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public com.commercetools.history.models.common.LocalizedString getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public com.commercetools.history.models.common.LocalizedString getNextValue() {
         return this.nextValue;
@@ -119,10 +134,19 @@ public class ChangeSlugChangeBuilder implements Builder<ChangeSlugChange> {
         return new ChangeSlugChangeImpl(change, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of ChangeSlugChangeBuilder
+     * @return builder
+     */
     public static ChangeSlugChangeBuilder of() {
         return new ChangeSlugChangeBuilder();
     }
 
+    /**
+     * create builder for ChangeSlugChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeSlugChangeBuilder of(final ChangeSlugChange template) {
         ChangeSlugChangeBuilder builder = new ChangeSlugChangeBuilder();
         builder.change = template.getChange();

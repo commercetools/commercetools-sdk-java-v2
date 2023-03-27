@@ -24,12 +24,18 @@ public class ShippingMethodChangeNameActionImpl implements ShippingMethodChangeN
 
     private String name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShippingMethodChangeNameActionImpl(@JsonProperty("name") final String name) {
         this.name = name;
         this.action = CHANGE_NAME;
     }
 
+    /**
+     * create empty instance
+     */
     public ShippingMethodChangeNameActionImpl() {
         this.action = CHANGE_NAME;
     }

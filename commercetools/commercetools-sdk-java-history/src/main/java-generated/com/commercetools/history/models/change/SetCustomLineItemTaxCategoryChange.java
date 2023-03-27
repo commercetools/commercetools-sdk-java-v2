@@ -36,6 +36,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetCustomLineItemTaxCategoryChangeImpl.class)
 public interface SetCustomLineItemTaxCategoryChange extends Change {
 
+    /**
+     * discriminator value for SetCustomLineItemTaxCategoryChange
+     */
     String SET_CUSTOM_LINE_ITEM_TAX_CATEGORY_CHANGE = "SetCustomLineItemTaxCategoryChange";
 
     /**
@@ -89,20 +92,54 @@ public interface SetCustomLineItemTaxCategoryChange extends Change {
     @JsonProperty("previousValue")
     public Reference getPreviousValue();
 
+    /**
+     *  <p>Update action for <code>setCustomLineItemTaxCategory</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set customLineItem
+     * @param customLineItem value to be set
+     */
 
     public void setCustomLineItem(final LocalizedString customLineItem);
 
+    /**
+     * set customLineItemId
+     * @param customLineItemId value to be set
+     */
+
     public void setCustomLineItemId(final String customLineItemId);
+
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
 
     public void setNextValue(final Reference nextValue);
 
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
+
     public void setPreviousValue(final Reference previousValue);
 
+    /**
+     * factory method
+     * @return instance of SetCustomLineItemTaxCategoryChange
+     */
     public static SetCustomLineItemTaxCategoryChange of() {
         return new SetCustomLineItemTaxCategoryChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetCustomLineItemTaxCategoryChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetCustomLineItemTaxCategoryChange of(final SetCustomLineItemTaxCategoryChange template) {
         SetCustomLineItemTaxCategoryChangeImpl instance = new SetCustomLineItemTaxCategoryChangeImpl();
         instance.setChange(template.getChange());
@@ -113,18 +150,37 @@ public interface SetCustomLineItemTaxCategoryChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetCustomLineItemTaxCategoryChange
+     * @return builder
+     */
     public static SetCustomLineItemTaxCategoryChangeBuilder builder() {
         return SetCustomLineItemTaxCategoryChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetCustomLineItemTaxCategoryChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetCustomLineItemTaxCategoryChangeBuilder builder(final SetCustomLineItemTaxCategoryChange template) {
         return SetCustomLineItemTaxCategoryChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetCustomLineItemTaxCategoryChange(Function<SetCustomLineItemTaxCategoryChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetCustomLineItemTaxCategoryChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetCustomLineItemTaxCategoryChange>() {
             @Override

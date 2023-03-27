@@ -34,6 +34,11 @@ public class CartDiscountChangeIsActiveActionBuilder implements Builder<CartDisc
         return this;
     }
 
+    /**
+     *  <p>New value to set. If set to <code>true</code>, the Discount will be applied to the Cart.</p>
+     * @return isActive
+     */
+
     public Boolean getIsActive() {
         return this.isActive;
     }
@@ -55,10 +60,19 @@ public class CartDiscountChangeIsActiveActionBuilder implements Builder<CartDisc
         return new CartDiscountChangeIsActiveActionImpl(isActive);
     }
 
+    /**
+     * factory method for an instance of CartDiscountChangeIsActiveActionBuilder
+     * @return builder
+     */
     public static CartDiscountChangeIsActiveActionBuilder of() {
         return new CartDiscountChangeIsActiveActionBuilder();
     }
 
+    /**
+     * create builder for CartDiscountChangeIsActiveAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartDiscountChangeIsActiveActionBuilder of(final CartDiscountChangeIsActiveAction template) {
         CartDiscountChangeIsActiveActionBuilder builder = new CartDiscountChangeIsActiveActionBuilder();
         builder.isActive = template.getIsActive();

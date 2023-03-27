@@ -32,6 +32,9 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
 
     private Boolean includedInPrice;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ExternalTaxRateDraftImpl(@JsonProperty("name") final String name, @JsonProperty("amount") final Double amount,
             @JsonProperty("country") final String country, @JsonProperty("state") final String state,
@@ -45,6 +48,9 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
         this.includedInPrice = includedInPrice;
     }
 
+    /**
+     * create empty instance
+     */
     public ExternalTaxRateDraftImpl() {
     }
 

@@ -30,6 +30,9 @@ public class SetCustomLineItemShippingDetailsChangeImpl implements SetCustomLine
 
     private com.commercetools.history.models.common.ItemShippingDetails previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetCustomLineItemShippingDetailsChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("customLineItemId") final String customLineItemId,
@@ -42,6 +45,9 @@ public class SetCustomLineItemShippingDetailsChangeImpl implements SetCustomLine
         this.type = SET_CUSTOM_LINE_ITEM_SHIPPING_DETAILS_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetCustomLineItemShippingDetailsChangeImpl() {
         this.type = SET_CUSTOM_LINE_ITEM_SHIPPING_DETAILS_CHANGE;
     }

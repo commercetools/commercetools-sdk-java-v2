@@ -29,7 +29,7 @@ public class ResourceNotFoundErrorBuilder implements Builder<ResourceNotFoundErr
     private java.lang.Object resource;
 
     /**
-     *
+     * set the value to the message
      * @param message value to be set
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class ResourceNotFoundErrorBuilder implements Builder<ResourceNotFoundErr
     }
 
     /**
-     *
+     * set the value to the resource
      * @param resource value to be set
      * @return Builder
      */
@@ -50,9 +50,19 @@ public class ResourceNotFoundErrorBuilder implements Builder<ResourceNotFoundErr
         return this;
     }
 
+    /**
+     * value of message}
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     * value of resource}
+     * @return resource
+     */
 
     @Nullable
     public java.lang.Object getResource() {
@@ -76,10 +86,19 @@ public class ResourceNotFoundErrorBuilder implements Builder<ResourceNotFoundErr
         return new ResourceNotFoundErrorImpl(message, resource);
     }
 
+    /**
+     * factory method for an instance of ResourceNotFoundErrorBuilder
+     * @return builder
+     */
     public static ResourceNotFoundErrorBuilder of() {
         return new ResourceNotFoundErrorBuilder();
     }
 
+    /**
+     * create builder for ResourceNotFoundError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ResourceNotFoundErrorBuilder of(final ResourceNotFoundError template) {
         ResourceNotFoundErrorBuilder builder = new ResourceNotFoundErrorBuilder();
         builder.message = template.getMessage();

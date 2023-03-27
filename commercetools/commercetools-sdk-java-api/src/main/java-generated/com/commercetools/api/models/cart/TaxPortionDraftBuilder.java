@@ -77,14 +77,29 @@ public class TaxPortionDraftBuilder implements Builder<TaxPortionDraft> {
         return this;
     }
 
+    /**
+     *  <p>Name of the tax portion.</p>
+     * @return name
+     */
+
     @Nullable
     public String getName() {
         return this.name;
     }
 
+    /**
+     *  <p>A number in the range 0-1.</p>
+     * @return rate
+     */
+
     public Double getRate() {
         return this.rate;
     }
+
+    /**
+     *  <p>Money value for the tax portion.</p>
+     * @return amount
+     */
 
     public com.commercetools.api.models.common.Money getAmount() {
         return this.amount;
@@ -108,10 +123,19 @@ public class TaxPortionDraftBuilder implements Builder<TaxPortionDraft> {
         return new TaxPortionDraftImpl(name, rate, amount);
     }
 
+    /**
+     * factory method for an instance of TaxPortionDraftBuilder
+     * @return builder
+     */
     public static TaxPortionDraftBuilder of() {
         return new TaxPortionDraftBuilder();
     }
 
+    /**
+     * create builder for TaxPortionDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TaxPortionDraftBuilder of(final TaxPortionDraft template) {
         TaxPortionDraftBuilder builder = new TaxPortionDraftBuilder();
         builder.name = template.getName();

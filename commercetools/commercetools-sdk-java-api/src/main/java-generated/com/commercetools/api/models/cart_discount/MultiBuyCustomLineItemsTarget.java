@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MultiBuyCustomLineItemsTargetImpl.class)
 public interface MultiBuyCustomLineItemsTarget extends CartDiscountTarget {
 
+    /**
+     * discriminator value for MultiBuyCustomLineItemsTarget
+     */
     String MULTI_BUY_CUSTOM_LINE_ITEMS = "multiBuyCustomLineItems";
 
     /**
@@ -74,20 +77,54 @@ public interface MultiBuyCustomLineItemsTarget extends CartDiscountTarget {
     @JsonProperty("selectionMode")
     public SelectionMode getSelectionMode();
 
+    /**
+     *  <p>Valid CustomLineItems target predicate. The Discount will be applied to Custom Line Items that are matched by the predicate.</p>
+     * @param predicate value to be set
+     */
+
     public void setPredicate(final String predicate);
+
+    /**
+     *  <p>Number of Custom Line Items to be present in order to trigger an application of this Discount.</p>
+     * @param triggerQuantity value to be set
+     */
 
     public void setTriggerQuantity(final Integer triggerQuantity);
 
+    /**
+     *  <p>Number of Custom Line Items that are discounted per application of this Discount.</p>
+     * @param discountedQuantity value to be set
+     */
+
     public void setDiscountedQuantity(final Integer discountedQuantity);
+
+    /**
+     *  <p>Maximum number of times this Discount can be applied.</p>
+     * @param maxOccurrence value to be set
+     */
 
     public void setMaxOccurrence(final Integer maxOccurrence);
 
+    /**
+     *  <p>Discounts particular Line Items only according to the SelectionMode.</p>
+     * @param selectionMode value to be set
+     */
+
     public void setSelectionMode(final SelectionMode selectionMode);
 
+    /**
+     * factory method
+     * @return instance of MultiBuyCustomLineItemsTarget
+     */
     public static MultiBuyCustomLineItemsTarget of() {
         return new MultiBuyCustomLineItemsTargetImpl();
     }
 
+    /**
+     * factory method to copy an instance of MultiBuyCustomLineItemsTarget
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static MultiBuyCustomLineItemsTarget of(final MultiBuyCustomLineItemsTarget template) {
         MultiBuyCustomLineItemsTargetImpl instance = new MultiBuyCustomLineItemsTargetImpl();
         instance.setPredicate(template.getPredicate());
@@ -98,18 +135,37 @@ public interface MultiBuyCustomLineItemsTarget extends CartDiscountTarget {
         return instance;
     }
 
+    /**
+     * builder factory method for MultiBuyCustomLineItemsTarget
+     * @return builder
+     */
     public static MultiBuyCustomLineItemsTargetBuilder builder() {
         return MultiBuyCustomLineItemsTargetBuilder.of();
     }
 
+    /**
+     * create builder for MultiBuyCustomLineItemsTarget instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MultiBuyCustomLineItemsTargetBuilder builder(final MultiBuyCustomLineItemsTarget template) {
         return MultiBuyCustomLineItemsTargetBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMultiBuyCustomLineItemsTarget(Function<MultiBuyCustomLineItemsTarget, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MultiBuyCustomLineItemsTarget> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MultiBuyCustomLineItemsTarget>() {
             @Override

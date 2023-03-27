@@ -34,6 +34,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ChangeTargetMultiBuyCustomLineItemsChangeValueImpl.class)
 public interface ChangeTargetMultiBuyCustomLineItemsChangeValue extends ChangeTargetChangeValue {
 
+    /**
+     * discriminator value for ChangeTargetMultiBuyCustomLineItemsChangeValue
+     */
     String MULTI_BUY_CUSTOM_LINE_ITEMS = "multiBuyCustomLineItems";
 
     /**
@@ -84,20 +87,54 @@ public interface ChangeTargetMultiBuyCustomLineItemsChangeValue extends ChangeTa
     @JsonProperty("selectionMode")
     public SelectionMode getSelectionMode();
 
+    /**
+     * set predicate
+     * @param predicate value to be set
+     */
+
     public void setPredicate(final String predicate);
+
+    /**
+     *  <p>Quantity of line items that need to be present in order to trigger an application of this discount.</p>
+     * @param triggerQuantity value to be set
+     */
 
     public void setTriggerQuantity(final Integer triggerQuantity);
 
+    /**
+     *  <p>Quantity of line items that are discounted per application of this discount.</p>
+     * @param discountedQuantity value to be set
+     */
+
     public void setDiscountedQuantity(final Integer discountedQuantity);
+
+    /**
+     *  <p>Maximum number of applications of this discount.</p>
+     * @param maxOccurrence value to be set
+     */
 
     public void setMaxOccurrence(final Integer maxOccurrence);
 
+    /**
+     * set selectionMode
+     * @param selectionMode value to be set
+     */
+
     public void setSelectionMode(final SelectionMode selectionMode);
 
+    /**
+     * factory method
+     * @return instance of ChangeTargetMultiBuyCustomLineItemsChangeValue
+     */
     public static ChangeTargetMultiBuyCustomLineItemsChangeValue of() {
         return new ChangeTargetMultiBuyCustomLineItemsChangeValueImpl();
     }
 
+    /**
+     * factory method to copy an instance of ChangeTargetMultiBuyCustomLineItemsChangeValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ChangeTargetMultiBuyCustomLineItemsChangeValue of(
             final ChangeTargetMultiBuyCustomLineItemsChangeValue template) {
         ChangeTargetMultiBuyCustomLineItemsChangeValueImpl instance = new ChangeTargetMultiBuyCustomLineItemsChangeValueImpl();
@@ -109,20 +146,39 @@ public interface ChangeTargetMultiBuyCustomLineItemsChangeValue extends ChangeTa
         return instance;
     }
 
+    /**
+     * builder factory method for ChangeTargetMultiBuyCustomLineItemsChangeValue
+     * @return builder
+     */
     public static ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder builder() {
         return ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder.of();
     }
 
+    /**
+     * create builder for ChangeTargetMultiBuyCustomLineItemsChangeValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder builder(
             final ChangeTargetMultiBuyCustomLineItemsChangeValue template) {
         return ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withChangeTargetMultiBuyCustomLineItemsChangeValue(
             Function<ChangeTargetMultiBuyCustomLineItemsChangeValue, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ChangeTargetMultiBuyCustomLineItemsChangeValue> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ChangeTargetMultiBuyCustomLineItemsChangeValue>() {
             @Override

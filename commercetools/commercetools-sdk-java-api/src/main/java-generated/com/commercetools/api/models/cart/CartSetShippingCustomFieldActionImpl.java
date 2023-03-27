@@ -28,6 +28,9 @@ public class CartSetShippingCustomFieldActionImpl implements CartSetShippingCust
 
     private java.lang.Object value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartSetShippingCustomFieldActionImpl(@JsonProperty("shippingKey") final String shippingKey,
             @JsonProperty("name") final String name, @JsonProperty("value") final java.lang.Object value) {
@@ -37,6 +40,9 @@ public class CartSetShippingCustomFieldActionImpl implements CartSetShippingCust
         this.action = SET_SHIPPING_CUSTOM_FIELD;
     }
 
+    /**
+     * create empty instance
+     */
     public CartSetShippingCustomFieldActionImpl() {
         this.action = SET_SHIPPING_CUSTOM_FIELD;
     }

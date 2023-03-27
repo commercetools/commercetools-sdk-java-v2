@@ -39,7 +39,7 @@ public class AddTransactionChangeBuilder implements Builder<AddTransactionChange
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class AddTransactionChangeBuilder implements Builder<AddTransactionChange
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -61,9 +61,19 @@ public class AddTransactionChangeBuilder implements Builder<AddTransactionChange
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>addTransaction</code> on payments</p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public com.commercetools.history.models.common.Transaction getNextValue() {
         return this.nextValue;
@@ -87,10 +97,19 @@ public class AddTransactionChangeBuilder implements Builder<AddTransactionChange
         return new AddTransactionChangeImpl(change, nextValue);
     }
 
+    /**
+     * factory method for an instance of AddTransactionChangeBuilder
+     * @return builder
+     */
     public static AddTransactionChangeBuilder of() {
         return new AddTransactionChangeBuilder();
     }
 
+    /**
+     * create builder for AddTransactionChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AddTransactionChangeBuilder of(final AddTransactionChange template) {
         AddTransactionChangeBuilder builder = new AddTransactionChangeBuilder();
         builder.change = template.getChange();

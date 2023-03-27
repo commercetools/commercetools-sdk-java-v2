@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = QuoteRequestTransitionStateActionImpl.class)
 public interface QuoteRequestTransitionStateAction extends QuoteRequestUpdateAction {
 
+    /**
+     * discriminator value for QuoteRequestTransitionStateAction
+     */
     String TRANSITION_STATE = "transitionState";
 
     /**
@@ -50,14 +53,33 @@ public interface QuoteRequestTransitionStateAction extends QuoteRequestUpdateAct
     @JsonProperty("force")
     public Boolean getForce();
 
+    /**
+     *  <p>Value to set. If there is no State yet, this must be an initial State.</p>
+     * @param state value to be set
+     */
+
     public void setState(final StateResourceIdentifier state);
+
+    /**
+     *  <p>Switch validations on or off.</p>
+     * @param force value to be set
+     */
 
     public void setForce(final Boolean force);
 
+    /**
+     * factory method
+     * @return instance of QuoteRequestTransitionStateAction
+     */
     public static QuoteRequestTransitionStateAction of() {
         return new QuoteRequestTransitionStateActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of QuoteRequestTransitionStateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static QuoteRequestTransitionStateAction of(final QuoteRequestTransitionStateAction template) {
         QuoteRequestTransitionStateActionImpl instance = new QuoteRequestTransitionStateActionImpl();
         instance.setState(template.getState());
@@ -65,18 +87,37 @@ public interface QuoteRequestTransitionStateAction extends QuoteRequestUpdateAct
         return instance;
     }
 
+    /**
+     * builder factory method for QuoteRequestTransitionStateAction
+     * @return builder
+     */
     public static QuoteRequestTransitionStateActionBuilder builder() {
         return QuoteRequestTransitionStateActionBuilder.of();
     }
 
+    /**
+     * create builder for QuoteRequestTransitionStateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static QuoteRequestTransitionStateActionBuilder builder(final QuoteRequestTransitionStateAction template) {
         return QuoteRequestTransitionStateActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withQuoteRequestTransitionStateAction(Function<QuoteRequestTransitionStateAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<QuoteRequestTransitionStateAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<QuoteRequestTransitionStateAction>() {
             @Override

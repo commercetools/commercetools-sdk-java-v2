@@ -26,6 +26,9 @@ public class PaymentStatusDraftImpl implements PaymentStatusDraft, ModelBase {
 
     private com.commercetools.api.models.state.StateResourceIdentifier state;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PaymentStatusDraftImpl(@JsonProperty("interfaceCode") final String interfaceCode,
             @JsonProperty("interfaceText") final String interfaceText,
@@ -35,6 +38,9 @@ public class PaymentStatusDraftImpl implements PaymentStatusDraft, ModelBase {
         this.state = state;
     }
 
+    /**
+     * create empty instance
+     */
     public PaymentStatusDraftImpl() {
     }
 

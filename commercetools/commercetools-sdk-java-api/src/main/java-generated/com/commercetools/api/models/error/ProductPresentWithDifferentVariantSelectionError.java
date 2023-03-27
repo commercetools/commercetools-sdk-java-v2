@@ -35,6 +35,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductPresentWithDifferentVariantSelectionErrorImpl.class)
 public interface ProductPresentWithDifferentVariantSelectionError extends ErrorObject {
 
+    /**
+     * discriminator value for ProductPresentWithDifferentVariantSelectionError
+     */
     String PRODUCT_PRESENT_WITH_DIFFERENT_VARIANT_SELECTION = "ProductPresentWithDifferentVariantSelection";
 
     /**
@@ -71,16 +74,40 @@ public interface ProductPresentWithDifferentVariantSelectionError extends ErrorO
     @JsonProperty("existingVariantSelection")
     public ProductVariantSelection getExistingVariantSelection();
 
+    /**
+     *  <p><code>"Product is already present with the following different $variantSelections."</code></p>
+     * @param message value to be set
+     */
+
     public void setMessage(final String message);
+
+    /**
+     *  <p>Reference to the Product for which the error was returned.</p>
+     * @param product value to be set
+     */
 
     public void setProduct(final ProductReference product);
 
+    /**
+     *  <p>Existing Product Variant Selection or Exclusion for the Product in the Product Selection.</p>
+     * @param existingVariantSelection value to be set
+     */
+
     public void setExistingVariantSelection(final ProductVariantSelection existingVariantSelection);
 
+    /**
+     * factory method
+     * @return instance of ProductPresentWithDifferentVariantSelectionError
+     */
     public static ProductPresentWithDifferentVariantSelectionError of() {
         return new ProductPresentWithDifferentVariantSelectionErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductPresentWithDifferentVariantSelectionError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductPresentWithDifferentVariantSelectionError of(
             final ProductPresentWithDifferentVariantSelectionError template) {
         ProductPresentWithDifferentVariantSelectionErrorImpl instance = new ProductPresentWithDifferentVariantSelectionErrorImpl();
@@ -91,20 +118,39 @@ public interface ProductPresentWithDifferentVariantSelectionError extends ErrorO
         return instance;
     }
 
+    /**
+     * builder factory method for ProductPresentWithDifferentVariantSelectionError
+     * @return builder
+     */
     public static ProductPresentWithDifferentVariantSelectionErrorBuilder builder() {
         return ProductPresentWithDifferentVariantSelectionErrorBuilder.of();
     }
 
+    /**
+     * create builder for ProductPresentWithDifferentVariantSelectionError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductPresentWithDifferentVariantSelectionErrorBuilder builder(
             final ProductPresentWithDifferentVariantSelectionError template) {
         return ProductPresentWithDifferentVariantSelectionErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductPresentWithDifferentVariantSelectionError(
             Function<ProductPresentWithDifferentVariantSelectionError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductPresentWithDifferentVariantSelectionError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductPresentWithDifferentVariantSelectionError>() {
             @Override

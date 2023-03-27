@@ -45,6 +45,9 @@ public class BusinessUnitDefaultShippingAddressSetMessageImpl
 
     private com.commercetools.api.models.common.Address address;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitDefaultShippingAddressSetMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -71,6 +74,9 @@ public class BusinessUnitDefaultShippingAddressSetMessageImpl
         this.type = BUSINESS_UNIT_DEFAULT_SHIPPING_ADDRESS_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitDefaultShippingAddressSetMessageImpl() {
         this.type = BUSINESS_UNIT_DEFAULT_SHIPPING_ADDRESS_SET;
     }

@@ -27,6 +27,9 @@ public class StagedOrderChangeCustomLineItemMoneyActionImpl
 
     private com.commercetools.api.models.common.Money money;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderChangeCustomLineItemMoneyActionImpl(@JsonProperty("customLineItemId") final String customLineItemId,
             @JsonProperty("money") final com.commercetools.api.models.common.Money money) {
@@ -35,6 +38,9 @@ public class StagedOrderChangeCustomLineItemMoneyActionImpl
         this.action = CHANGE_CUSTOM_LINE_ITEM_MONEY;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderChangeCustomLineItemMoneyActionImpl() {
         this.action = CHANGE_CUSTOM_LINE_ITEM_MONEY;
     }

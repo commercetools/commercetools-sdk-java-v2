@@ -26,6 +26,9 @@ public class StagedOrderSetReturnPaymentStateActionImpl implements StagedOrderSe
 
     private com.commercetools.api.models.order.ReturnPaymentState paymentState;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderSetReturnPaymentStateActionImpl(@JsonProperty("returnItemId") final String returnItemId,
             @JsonProperty("paymentState") final com.commercetools.api.models.order.ReturnPaymentState paymentState) {
@@ -34,6 +37,9 @@ public class StagedOrderSetReturnPaymentStateActionImpl implements StagedOrderSe
         this.action = SET_RETURN_PAYMENT_STATE;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderSetReturnPaymentStateActionImpl() {
         this.action = SET_RETURN_PAYMENT_STATE;
     }

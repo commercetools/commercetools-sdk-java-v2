@@ -41,7 +41,7 @@ public class SetAuthorNameChangeBuilder implements Builder<SetAuthorNameChange> 
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class SetAuthorNameChangeBuilder implements Builder<SetAuthorNameChange> 
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -62,13 +62,28 @@ public class SetAuthorNameChangeBuilder implements Builder<SetAuthorNameChange> 
         return this;
     }
 
+    /**
+     *  <p>Shape of the action for <code>setAuthorName</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public String getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public String getNextValue() {
         return this.nextValue;
@@ -93,10 +108,19 @@ public class SetAuthorNameChangeBuilder implements Builder<SetAuthorNameChange> 
         return new SetAuthorNameChangeImpl(change, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of SetAuthorNameChangeBuilder
+     * @return builder
+     */
     public static SetAuthorNameChangeBuilder of() {
         return new SetAuthorNameChangeBuilder();
     }
 
+    /**
+     * create builder for SetAuthorNameChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetAuthorNameChangeBuilder of(final SetAuthorNameChange template) {
         SetAuthorNameChangeBuilder builder = new SetAuthorNameChangeBuilder();
         builder.change = template.getChange();

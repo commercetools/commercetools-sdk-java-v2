@@ -24,6 +24,9 @@ public class ProductDiscountChangeValueActionImpl implements ProductDiscountChan
 
     private com.commercetools.api.models.product_discount.ProductDiscountValueDraft value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductDiscountChangeValueActionImpl(
             @JsonProperty("value") final com.commercetools.api.models.product_discount.ProductDiscountValueDraft value) {
@@ -31,6 +34,9 @@ public class ProductDiscountChangeValueActionImpl implements ProductDiscountChan
         this.action = CHANGE_VALUE;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductDiscountChangeValueActionImpl() {
         this.action = CHANGE_VALUE;
     }

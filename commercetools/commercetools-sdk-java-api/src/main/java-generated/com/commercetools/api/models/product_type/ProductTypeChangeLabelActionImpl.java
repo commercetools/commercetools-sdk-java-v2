@@ -26,6 +26,9 @@ public class ProductTypeChangeLabelActionImpl implements ProductTypeChangeLabelA
 
     private com.commercetools.api.models.common.LocalizedString label;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductTypeChangeLabelActionImpl(@JsonProperty("attributeName") final String attributeName,
             @JsonProperty("label") final com.commercetools.api.models.common.LocalizedString label) {
@@ -34,6 +37,9 @@ public class ProductTypeChangeLabelActionImpl implements ProductTypeChangeLabelA
         this.action = CHANGE_LABEL;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductTypeChangeLabelActionImpl() {
         this.action = CHANGE_LABEL;
     }

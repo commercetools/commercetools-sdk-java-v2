@@ -186,73 +186,178 @@ public interface ChangeSubscriptionResourceTypeId {
     */
     ChangeSubscriptionResourceTypeId ZONE = ChangeSubscriptionResourceTypeIdEnum.ZONE;
 
+    /**
+     * possible values of ChangeSubscriptionResourceTypeId
+     */
     enum ChangeSubscriptionResourceTypeIdEnum implements ChangeSubscriptionResourceTypeId {
+        /**
+         * business-unit
+         */
         BUSINESS_UNIT("business-unit"),
 
+        /**
+         * cart
+         */
         CART("cart"),
 
+        /**
+         * cart-discount
+         */
         CART_DISCOUNT("cart-discount"),
 
+        /**
+         * category
+         */
         CATEGORY("category"),
 
+        /**
+         * channel
+         */
         CHANNEL("channel"),
 
+        /**
+         * customer
+         */
         CUSTOMER("customer"),
 
+        /**
+         * customer-email-token
+         */
         CUSTOMER_EMAIL_TOKEN("customer-email-token"),
 
+        /**
+         * customer-group
+         */
         CUSTOMER_GROUP("customer-group"),
 
+        /**
+         * customer-password-token
+         */
         CUSTOMER_PASSWORD_TOKEN("customer-password-token"),
 
+        /**
+         * discount-code
+         */
         DISCOUNT_CODE("discount-code"),
 
+        /**
+         * extension
+         */
         EXTENSION("extension"),
 
+        /**
+         * inventory-entry
+         */
         INVENTORY_ENTRY("inventory-entry"),
 
+        /**
+         * key-value-document
+         */
         KEY_VALUE_DOCUMENT("key-value-document"),
 
+        /**
+         * order
+         */
         ORDER("order"),
 
+        /**
+         * order-edit
+         */
         ORDER_EDIT("order-edit"),
 
+        /**
+         * payment
+         */
         PAYMENT("payment"),
 
+        /**
+         * product
+         */
         PRODUCT("product"),
 
+        /**
+         * product-discount
+         */
         PRODUCT_DISCOUNT("product-discount"),
 
+        /**
+         * product-price
+         */
         PRODUCT_PRICE("product-price"),
 
+        /**
+         * product-selection
+         */
         PRODUCT_SELECTION("product-selection"),
 
+        /**
+         * product-type
+         */
         PRODUCT_TYPE("product-type"),
 
+        /**
+         * quote
+         */
         QUOTE("quote"),
 
+        /**
+         * quote-request
+         */
         QUOTE_REQUEST("quote-request"),
 
+        /**
+         * review
+         */
         REVIEW("review"),
 
+        /**
+         * shipping-method
+         */
         SHIPPING_METHOD("shipping-method"),
 
+        /**
+         * shopping-list
+         */
         SHOPPING_LIST("shopping-list"),
 
+        /**
+         * staged-quote
+         */
         STAGED_QUOTE("staged-quote"),
 
+        /**
+         * standalone-price
+         */
         STANDALONE_PRICE("standalone-price"),
 
+        /**
+         * state
+         */
         STATE("state"),
 
+        /**
+         * store
+         */
         STORE("store"),
 
+        /**
+         * subscription
+         */
         SUBSCRIPTION("subscription"),
 
+        /**
+         * tax-category
+         */
         TAX_CATEGORY("tax-category"),
 
+        /**
+         * type
+         */
         TYPE("type"),
 
+        /**
+         * zone
+         */
         ZONE("zone");
         private final String jsonName;
 
@@ -269,13 +374,30 @@ public interface ChangeSubscriptionResourceTypeId {
         }
     }
 
+    /**
+     * the JSON value
+     * @return json value
+     */
     @JsonValue
     String getJsonName();
 
+    /**
+     * the enum value
+     * @return name
+     */
     String name();
 
+    /**
+     * convert value to string
+     * @return string representation
+     */
     String toString();
 
+    /**
+     * factory method for a enum value of ChangeSubscriptionResourceTypeId
+     * if no enum has been found an anonymous instance will be created
+     * @return enum instance
+     */
     @JsonCreator
     public static ChangeSubscriptionResourceTypeId findEnum(String value) {
         return findEnumViaJsonName(value).orElse(new ChangeSubscriptionResourceTypeId() {
@@ -295,10 +417,18 @@ public interface ChangeSubscriptionResourceTypeId {
         });
     }
 
+    /**
+     * method to find enum using the JSON value
+     * @return optional of enum instance
+     */
     public static Optional<ChangeSubscriptionResourceTypeId> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
 
+    /**
+     * possible enum values
+     * @return array of possible enum values
+     */
     public static ChangeSubscriptionResourceTypeId[] values() {
         return ChangeSubscriptionResourceTypeIdEnum.values();
     }

@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = BusinessUnitCreatedMessagePayloadImpl.class)
 public interface BusinessUnitCreatedMessagePayload extends MessagePayload {
 
+    /**
+     * discriminator value for BusinessUnitCreatedMessagePayload
+     */
     String BUSINESS_UNIT_CREATED = "BusinessUnitCreated";
 
     /**
@@ -42,30 +45,63 @@ public interface BusinessUnitCreatedMessagePayload extends MessagePayload {
     @JsonProperty("businessUnit")
     public BusinessUnit getBusinessUnit();
 
+    /**
+     *  <p>The Business Unit that was created.</p>
+     * @param businessUnit value to be set
+     */
+
     public void setBusinessUnit(final BusinessUnit businessUnit);
 
+    /**
+     * factory method
+     * @return instance of BusinessUnitCreatedMessagePayload
+     */
     public static BusinessUnitCreatedMessagePayload of() {
         return new BusinessUnitCreatedMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of BusinessUnitCreatedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static BusinessUnitCreatedMessagePayload of(final BusinessUnitCreatedMessagePayload template) {
         BusinessUnitCreatedMessagePayloadImpl instance = new BusinessUnitCreatedMessagePayloadImpl();
         instance.setBusinessUnit(template.getBusinessUnit());
         return instance;
     }
 
+    /**
+     * builder factory method for BusinessUnitCreatedMessagePayload
+     * @return builder
+     */
     public static BusinessUnitCreatedMessagePayloadBuilder builder() {
         return BusinessUnitCreatedMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for BusinessUnitCreatedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitCreatedMessagePayloadBuilder builder(final BusinessUnitCreatedMessagePayload template) {
         return BusinessUnitCreatedMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withBusinessUnitCreatedMessagePayload(Function<BusinessUnitCreatedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitCreatedMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitCreatedMessagePayload>() {
             @Override

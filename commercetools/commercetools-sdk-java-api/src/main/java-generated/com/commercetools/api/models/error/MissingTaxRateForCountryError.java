@@ -35,6 +35,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MissingTaxRateForCountryErrorImpl.class)
 public interface MissingTaxRateForCountryError extends ErrorObject {
 
+    /**
+     * discriminator value for MissingTaxRateForCountryError
+     */
     String MISSING_TAX_RATE_FOR_COUNTRY = "MissingTaxRateForCountry";
 
     /**
@@ -77,18 +80,47 @@ public interface MissingTaxRateForCountryError extends ErrorObject {
     @JsonProperty("state")
     public String getState();
 
+    /**
+     *  <p><code>"Tax category $taxCategoryId is missing a tax rate for country $countriesAndStates."</code></p>
+     * @param message value to be set
+     */
+
     public void setMessage(final String message);
+
+    /**
+     *  <p>Unique identifier of the TaxCategory.</p>
+     * @param taxCategoryId value to be set
+     */
 
     public void setTaxCategoryId(final String taxCategoryId);
 
+    /**
+     *  <p>Country code of the geographic location.</p>
+     * @param country value to be set
+     */
+
     public void setCountry(final String country);
+
+    /**
+     *  <p>State within the country, such as Texas in the United States.</p>
+     * @param state value to be set
+     */
 
     public void setState(final String state);
 
+    /**
+     * factory method
+     * @return instance of MissingTaxRateForCountryError
+     */
     public static MissingTaxRateForCountryError of() {
         return new MissingTaxRateForCountryErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of MissingTaxRateForCountryError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static MissingTaxRateForCountryError of(final MissingTaxRateForCountryError template) {
         MissingTaxRateForCountryErrorImpl instance = new MissingTaxRateForCountryErrorImpl();
         instance.setMessage(template.getMessage());
@@ -99,18 +131,37 @@ public interface MissingTaxRateForCountryError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for MissingTaxRateForCountryError
+     * @return builder
+     */
     public static MissingTaxRateForCountryErrorBuilder builder() {
         return MissingTaxRateForCountryErrorBuilder.of();
     }
 
+    /**
+     * create builder for MissingTaxRateForCountryError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MissingTaxRateForCountryErrorBuilder builder(final MissingTaxRateForCountryError template) {
         return MissingTaxRateForCountryErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMissingTaxRateForCountryError(Function<MissingTaxRateForCountryError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MissingTaxRateForCountryError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MissingTaxRateForCountryError>() {
             @Override

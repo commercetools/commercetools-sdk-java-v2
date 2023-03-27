@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductTypeChangeAttributeConstraintActionImpl.class)
 public interface ProductTypeChangeAttributeConstraintAction extends ProductTypeUpdateAction {
 
+    /**
+     * discriminator value for ProductTypeChangeAttributeConstraintAction
+     */
     String CHANGE_ATTRIBUTE_CONSTRAINT = "changeAttributeConstraint";
 
     /**
@@ -48,14 +51,33 @@ public interface ProductTypeChangeAttributeConstraintAction extends ProductTypeU
     @JsonProperty("newValue")
     public AttributeConstraintEnumDraft getNewValue();
 
+    /**
+     *  <p>Name of the AttributeDefinition to update.</p>
+     * @param attributeName value to be set
+     */
+
     public void setAttributeName(final String attributeName);
+
+    /**
+     *  <p><code>None</code></p>
+     * @param newValue value to be set
+     */
 
     public void setNewValue(final AttributeConstraintEnumDraft newValue);
 
+    /**
+     * factory method
+     * @return instance of ProductTypeChangeAttributeConstraintAction
+     */
     public static ProductTypeChangeAttributeConstraintAction of() {
         return new ProductTypeChangeAttributeConstraintActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductTypeChangeAttributeConstraintAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductTypeChangeAttributeConstraintAction of(
             final ProductTypeChangeAttributeConstraintAction template) {
         ProductTypeChangeAttributeConstraintActionImpl instance = new ProductTypeChangeAttributeConstraintActionImpl();
@@ -64,20 +86,39 @@ public interface ProductTypeChangeAttributeConstraintAction extends ProductTypeU
         return instance;
     }
 
+    /**
+     * builder factory method for ProductTypeChangeAttributeConstraintAction
+     * @return builder
+     */
     public static ProductTypeChangeAttributeConstraintActionBuilder builder() {
         return ProductTypeChangeAttributeConstraintActionBuilder.of();
     }
 
+    /**
+     * create builder for ProductTypeChangeAttributeConstraintAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductTypeChangeAttributeConstraintActionBuilder builder(
             final ProductTypeChangeAttributeConstraintAction template) {
         return ProductTypeChangeAttributeConstraintActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductTypeChangeAttributeConstraintAction(
             Function<ProductTypeChangeAttributeConstraintAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductTypeChangeAttributeConstraintAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductTypeChangeAttributeConstraintAction>() {
             @Override

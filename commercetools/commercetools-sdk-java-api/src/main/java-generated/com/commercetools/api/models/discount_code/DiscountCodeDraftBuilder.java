@@ -313,58 +313,118 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
         return this;
     }
 
+    /**
+     *  <p>Name of the DiscountCode.</p>
+     * @return name
+     */
+
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
+
+    /**
+     *  <p>Description of the DiscountCode.</p>
+     * @return description
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
+    /**
+     *  <p>User-defined unique identifier for the DiscountCode that can be added to the Cart to apply the related CartDiscounts. It cannot be modified after the DiscountCode is created.</p>
+     * @return code
+     */
+
     public String getCode() {
         return this.code;
     }
 
+    /**
+     *  <p>Specify what CartDiscounts the API applies when you add the DiscountCode to the Cart.</p>
+     * @return cartDiscounts
+     */
+
     public java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> getCartDiscounts() {
         return this.cartDiscounts;
     }
+
+    /**
+     *  <p>DiscountCode can only be applied to Carts that match this predicate.</p>
+     * @return cartPredicate
+     */
 
     @Nullable
     public String getCartPredicate() {
         return this.cartPredicate;
     }
 
+    /**
+     *  <p>Only active DiscountCodes can be applied to the Cart.</p>
+     * @return isActive
+     */
+
     @Nullable
     public Boolean getIsActive() {
         return this.isActive;
     }
+
+    /**
+     *  <p>Number of times the DiscountCode can be applied.</p>
+     * @return maxApplications
+     */
 
     @Nullable
     public Long getMaxApplications() {
         return this.maxApplications;
     }
 
+    /**
+     *  <p>Number of times the DiscountCode can be applied per Customer.</p>
+     * @return maxApplicationsPerCustomer
+     */
+
     @Nullable
     public Long getMaxApplicationsPerCustomer() {
         return this.maxApplicationsPerCustomer;
     }
+
+    /**
+     *  <p>Custom Fields for the DiscountCode.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
 
+    /**
+     *  <p>Groups to which the DiscountCode will belong to.</p>
+     * @return groups
+     */
+
     @Nullable
     public java.util.List<String> getGroups() {
         return this.groups;
     }
 
+    /**
+     *  <p>Date and time (UTC) from which the DiscountCode is effective. Must be earlier than <code>validUntil</code>.</p>
+     * @return validFrom
+     */
+
     @Nullable
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
+
+    /**
+     *  <p>Date and time (UTC) until which the DiscountCode is effective. Must be later than <code>validFrom</code>.</p>
+     * @return validUntil
+     */
 
     @Nullable
     public java.time.ZonedDateTime getValidUntil() {
@@ -391,10 +451,19 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
             maxApplications, maxApplicationsPerCustomer, custom, groups, validFrom, validUntil);
     }
 
+    /**
+     * factory method for an instance of DiscountCodeDraftBuilder
+     * @return builder
+     */
     public static DiscountCodeDraftBuilder of() {
         return new DiscountCodeDraftBuilder();
     }
 
+    /**
+     * create builder for DiscountCodeDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DiscountCodeDraftBuilder of(final DiscountCodeDraft template) {
         DiscountCodeDraftBuilder builder = new DiscountCodeDraftBuilder();
         builder.name = template.getName();

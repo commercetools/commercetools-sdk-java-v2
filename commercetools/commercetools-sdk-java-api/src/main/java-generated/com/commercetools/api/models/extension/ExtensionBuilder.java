@@ -255,44 +255,94 @@ public class ExtensionBuilder implements Builder<Extension> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Extension.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Current version of the Extension.</p>
+     * @return version
+     */
 
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *  <p>Date and time (UTC) the Extension was initially created.</p>
+     * @return createdAt
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+     *  <p>Date and time (UTC) the Extension was last updated.</p>
+     * @return lastModifiedAt
+     */
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
+     */
+
     @Nullable
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the Extension.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>The configuration for the Extension, including its type, location and authentication details.</p>
+     * @return destination
+     */
+
     public com.commercetools.api.models.extension.ExtensionDestination getDestination() {
         return this.destination;
     }
 
+    /**
+     *  <p>Describes what triggers the Extension.</p>
+     * @return triggers
+     */
+
     public java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> getTriggers() {
         return this.triggers;
     }
+
+    /**
+     *  <p>Maximum time (in milliseconds) that the Extension can respond within. If no timeout is provided, the default value is used for all types of Extensions. The maximum value is 10000 ms (10 seconds) for <code>payment</code> Extensions and 2000 ms (2 seconds) for all other Extensions.</p>
+     * @return timeoutInMs
+     */
 
     @Nullable
     public Integer getTimeoutInMs() {
@@ -323,10 +373,19 @@ public class ExtensionBuilder implements Builder<Extension> {
             triggers, timeoutInMs);
     }
 
+    /**
+     * factory method for an instance of ExtensionBuilder
+     * @return builder
+     */
     public static ExtensionBuilder of() {
         return new ExtensionBuilder();
     }
 
+    /**
+     * create builder for Extension instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ExtensionBuilder of(final Extension template) {
         ExtensionBuilder builder = new ExtensionBuilder();
         builder.id = template.getId();

@@ -46,7 +46,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     private Boolean isSearchable;
 
     /**
-     *
+     * set the value to the type using the builder function
      * @param builder function to build the type value
      * @return Builder
      */
@@ -58,7 +58,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *
+     * set the value to the type
      * @param type value to be set
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *
+     * set the value to the label using the builder function
      * @param builder function to build the label value
      * @return Builder
      */
@@ -92,7 +92,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *
+     * set the value to the label
      * @param label value to be set
      * @return Builder
      */
@@ -114,7 +114,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *
+     * set the value to the attributeConstraint
      * @param attributeConstraint value to be set
      * @return Builder
      */
@@ -126,7 +126,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *
+     * set the value to the inputTip using the builder function
      * @param builder function to build the inputTip value
      * @return Builder
      */
@@ -138,7 +138,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *
+     * set the value to the inputTip
      * @param inputTip value to be set
      * @return Builder
      */
@@ -149,7 +149,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
-     *
+     * set the value to the inputHint
      * @param inputHint value to be set
      * @return Builder
      */
@@ -170,33 +170,73 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
         return this;
     }
 
+    /**
+     * value of type}
+     * @return type
+     */
+
     public com.commercetools.history.models.common.AttributeType getType() {
         return this.type;
     }
+
+    /**
+     *  <p>The unique name of the attribute used in the API. The name must be between two and 256 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>). When using the same <code>name</code> for an attribute in two or more product types all fields of the AttributeDefinition of this attribute need to be the same across the product types, otherwise an AttributeDefinitionAlreadyExists error code will be returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> type and sets thereof.</p>
+     * @return name
+     */
 
     public String getName() {
         return this.name;
     }
 
+    /**
+     * value of label}
+     * @return label
+     */
+
     public com.commercetools.history.models.common.LocalizedString getLabel() {
         return this.label;
     }
+
+    /**
+     *  <p>Whether the attribute is required to have a value.</p>
+     * @return isRequired
+     */
 
     public Boolean getIsRequired() {
         return this.isRequired;
     }
 
+    /**
+     * value of attributeConstraint}
+     * @return attributeConstraint
+     */
+
     public com.commercetools.history.models.common.AttributeConstraintEnum getAttributeConstraint() {
         return this.attributeConstraint;
     }
+
+    /**
+     * value of inputTip}
+     * @return inputTip
+     */
 
     public com.commercetools.history.models.common.LocalizedString getInputTip() {
         return this.inputTip;
     }
 
+    /**
+     * value of inputHint}
+     * @return inputHint
+     */
+
     public com.commercetools.history.models.common.TextInputHint getInputHint() {
         return this.inputHint;
     }
+
+    /**
+     *  <p>Whether the attribute's values should generally be enabled in product search. This determines whether the value is stored in products for matching terms in the context of full-text search queries and can be used in facets &amp; filters as part of product search queries. The exact features that are enabled/disabled with this flag depend on the concrete attribute type and are described there. The max size of a searchable field is <strong>restricted to 10922 characters</strong>. This constraint is enforced at both product creation and product update. If the length of the input exceeds the maximum size an InvalidField error is returned.</p>
+     * @return isSearchable
+     */
 
     public Boolean getIsSearchable() {
         return this.isSearchable;
@@ -228,10 +268,19 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
             isSearchable);
     }
 
+    /**
+     * factory method for an instance of AttributeDefinitionBuilder
+     * @return builder
+     */
     public static AttributeDefinitionBuilder of() {
         return new AttributeDefinitionBuilder();
     }
 
+    /**
+     * create builder for AttributeDefinition instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeDefinitionBuilder of(final AttributeDefinition template) {
         AttributeDefinitionBuilder builder = new AttributeDefinitionBuilder();
         builder.type = template.getType();

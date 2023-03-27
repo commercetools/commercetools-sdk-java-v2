@@ -29,6 +29,9 @@ public class StagedQuoteStateTransitionMessagePayloadImpl
 
     private Boolean force;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedQuoteStateTransitionMessagePayloadImpl(
             @JsonProperty("state") final com.commercetools.api.models.state.StateReference state,
@@ -40,6 +43,9 @@ public class StagedQuoteStateTransitionMessagePayloadImpl
         this.type = STAGED_QUOTE_STATE_TRANSITION;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedQuoteStateTransitionMessagePayloadImpl() {
         this.type = STAGED_QUOTE_STATE_TRANSITION;
     }

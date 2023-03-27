@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductSetAssetCustomTypeActionImpl.class)
 public interface ProductSetAssetCustomTypeAction extends ProductUpdateAction {
 
+    /**
+     * discriminator value for ProductSetAssetCustomTypeAction
+     */
     String SET_ASSET_CUSTOM_TYPE = "setAssetCustomType";
 
     /**
@@ -88,24 +91,68 @@ public interface ProductSetAssetCustomTypeAction extends ProductUpdateAction {
     @JsonProperty("fields")
     public FieldContainer getFields();
 
+    /**
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @param variantId value to be set
+     */
+
     public void setVariantId(final Long variantId);
+
+    /**
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
+     * @param sku value to be set
+     */
 
     public void setSku(final String sku);
 
+    /**
+     *  <p>If <code>true</code>, only the staged Asset is updated. If <code>false</code>, both the current and staged Asset is updated.</p>
+     * @param staged value to be set
+     */
+
     public void setStaged(final Boolean staged);
+
+    /**
+     *  <p>The <code>id</code> of the Asset to update.</p>
+     * @param assetId value to be set
+     */
 
     public void setAssetId(final String assetId);
 
+    /**
+     *  <p>The <code>key</code> of the Asset to update.</p>
+     * @param assetKey value to be set
+     */
+
     public void setAssetKey(final String assetKey);
+
+    /**
+     *  <p>Defines the Type that extends the Asset with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Asset.</p>
+     * @param type value to be set
+     */
 
     public void setType(final TypeResourceIdentifier type);
 
+    /**
+     *  <p>Sets the Custom Fields fields for the Asset.</p>
+     * @param fields value to be set
+     */
+
     public void setFields(final FieldContainer fields);
 
+    /**
+     * factory method
+     * @return instance of ProductSetAssetCustomTypeAction
+     */
     public static ProductSetAssetCustomTypeAction of() {
         return new ProductSetAssetCustomTypeActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductSetAssetCustomTypeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductSetAssetCustomTypeAction of(final ProductSetAssetCustomTypeAction template) {
         ProductSetAssetCustomTypeActionImpl instance = new ProductSetAssetCustomTypeActionImpl();
         instance.setVariantId(template.getVariantId());
@@ -118,18 +165,37 @@ public interface ProductSetAssetCustomTypeAction extends ProductUpdateAction {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductSetAssetCustomTypeAction
+     * @return builder
+     */
     public static ProductSetAssetCustomTypeActionBuilder builder() {
         return ProductSetAssetCustomTypeActionBuilder.of();
     }
 
+    /**
+     * create builder for ProductSetAssetCustomTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSetAssetCustomTypeActionBuilder builder(final ProductSetAssetCustomTypeAction template) {
         return ProductSetAssetCustomTypeActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductSetAssetCustomTypeAction(Function<ProductSetAssetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSetAssetCustomTypeAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductSetAssetCustomTypeAction>() {
             @Override

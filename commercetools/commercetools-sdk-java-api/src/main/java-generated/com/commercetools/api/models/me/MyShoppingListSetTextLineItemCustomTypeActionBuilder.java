@@ -92,14 +92,29 @@ public class MyShoppingListSetTextLineItemCustomTypeActionBuilder
         return this;
     }
 
+    /**
+     *  <p>The <code>id</code> of the TextLineItem to update.</p>
+     * @return textLineItemId
+     */
+
     public String getTextLineItemId() {
         return this.textLineItemId;
     }
+
+    /**
+     *  <p>Defines the Type that extends the TextLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the TextLineItem.</p>
+     * @return type
+     */
 
     @Nullable
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }
+
+    /**
+     *  <p>Sets the Custom Fields fields for the TextLineItem.</p>
+     * @return fields
+     */
 
     @Nullable
     public com.commercetools.api.models.type.FieldContainer getFields() {
@@ -124,10 +139,19 @@ public class MyShoppingListSetTextLineItemCustomTypeActionBuilder
         return new MyShoppingListSetTextLineItemCustomTypeActionImpl(textLineItemId, type, fields);
     }
 
+    /**
+     * factory method for an instance of MyShoppingListSetTextLineItemCustomTypeActionBuilder
+     * @return builder
+     */
     public static MyShoppingListSetTextLineItemCustomTypeActionBuilder of() {
         return new MyShoppingListSetTextLineItemCustomTypeActionBuilder();
     }
 
+    /**
+     * create builder for MyShoppingListSetTextLineItemCustomTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyShoppingListSetTextLineItemCustomTypeActionBuilder of(
             final MyShoppingListSetTextLineItemCustomTypeAction template) {
         MyShoppingListSetTextLineItemCustomTypeActionBuilder builder = new MyShoppingListSetTextLineItemCustomTypeActionBuilder();

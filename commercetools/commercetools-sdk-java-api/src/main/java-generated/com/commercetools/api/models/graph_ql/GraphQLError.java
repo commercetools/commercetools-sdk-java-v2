@@ -57,22 +57,56 @@ public interface GraphQLError {
     @JsonProperty("path")
     public List<Object> getPath();
 
+    /**
+     * set message
+     * @param message value to be set
+     */
+
     public void setMessage(final String message);
+
+    /**
+     * set locations
+     * @param locations values to be set
+     */
 
     @JsonIgnore
     public void setLocations(final GraphQLErrorLocation... locations);
 
+    /**
+     * set locations
+     * @param locations values to be set
+     */
+
     public void setLocations(final List<GraphQLErrorLocation> locations);
+
+    /**
+     * set path
+     * @param path values to be set
+     */
 
     @JsonIgnore
     public void setPath(final Object... path);
 
+    /**
+     * set path
+     * @param path values to be set
+     */
+
     public void setPath(final List<Object> path);
 
+    /**
+     * factory method
+     * @return instance of GraphQLError
+     */
     public static GraphQLError of() {
         return new GraphQLErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of GraphQLError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static GraphQLError of(final GraphQLError template) {
         GraphQLErrorImpl instance = new GraphQLErrorImpl();
         instance.setMessage(template.getMessage());
@@ -81,18 +115,37 @@ public interface GraphQLError {
         return instance;
     }
 
+    /**
+     * builder factory method for GraphQLError
+     * @return builder
+     */
     public static GraphQLErrorBuilder builder() {
         return GraphQLErrorBuilder.of();
     }
 
+    /**
+     * create builder for GraphQLError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static GraphQLErrorBuilder builder(final GraphQLError template) {
         return GraphQLErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withGraphQLError(Function<GraphQLError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<GraphQLError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<GraphQLError>() {
             @Override

@@ -22,11 +22,17 @@ public class ExtensionDestinationImpl implements ExtensionDestination, ModelBase
 
     private String type;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ExtensionDestinationImpl(@JsonProperty("type") final String type) {
         this.type = type;
     }
 
+    /**
+     * create empty instance
+     */
     public ExtensionDestinationImpl() {
     }
 

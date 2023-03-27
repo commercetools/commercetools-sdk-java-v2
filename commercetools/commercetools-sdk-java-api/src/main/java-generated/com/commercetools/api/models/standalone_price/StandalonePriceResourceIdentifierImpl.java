@@ -27,6 +27,9 @@ public class StandalonePriceResourceIdentifierImpl implements StandalonePriceRes
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StandalonePriceResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
@@ -34,6 +37,9 @@ public class StandalonePriceResourceIdentifierImpl implements StandalonePriceRes
         this.typeId = ReferenceTypeId.findEnum("standalone-price");
     }
 
+    /**
+     * create empty instance
+     */
     public StandalonePriceResourceIdentifierImpl() {
         this.typeId = ReferenceTypeId.findEnum("standalone-price");
     }

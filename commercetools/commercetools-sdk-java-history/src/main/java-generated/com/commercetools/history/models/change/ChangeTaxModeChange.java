@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ChangeTaxModeChangeImpl.class)
 public interface ChangeTaxModeChange extends Change {
 
+    /**
+     * discriminator value for ChangeTaxModeChange
+     */
     String CHANGE_TAX_MODE_CHANGE = "ChangeTaxModeChange";
 
     /**
@@ -66,16 +69,40 @@ public interface ChangeTaxModeChange extends Change {
     @JsonProperty("nextValue")
     public TaxMode getNextValue();
 
+    /**
+     *  <p>Shape of the action for <code>changeTaxMode</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
 
     public void setPreviousValue(final TaxMode previousValue);
 
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
+
     public void setNextValue(final TaxMode nextValue);
 
+    /**
+     * factory method
+     * @return instance of ChangeTaxModeChange
+     */
     public static ChangeTaxModeChange of() {
         return new ChangeTaxModeChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of ChangeTaxModeChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ChangeTaxModeChange of(final ChangeTaxModeChange template) {
         ChangeTaxModeChangeImpl instance = new ChangeTaxModeChangeImpl();
         instance.setChange(template.getChange());
@@ -84,18 +111,37 @@ public interface ChangeTaxModeChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for ChangeTaxModeChange
+     * @return builder
+     */
     public static ChangeTaxModeChangeBuilder builder() {
         return ChangeTaxModeChangeBuilder.of();
     }
 
+    /**
+     * create builder for ChangeTaxModeChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeTaxModeChangeBuilder builder(final ChangeTaxModeChange template) {
         return ChangeTaxModeChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withChangeTaxModeChange(Function<ChangeTaxModeChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ChangeTaxModeChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ChangeTaxModeChange>() {
             @Override

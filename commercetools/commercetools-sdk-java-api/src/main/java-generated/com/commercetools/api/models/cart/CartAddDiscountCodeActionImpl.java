@@ -26,12 +26,18 @@ public class CartAddDiscountCodeActionImpl implements CartAddDiscountCodeAction,
 
     private String code;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartAddDiscountCodeActionImpl(@JsonProperty("code") final String code) {
         this.code = code;
         this.action = ADD_DISCOUNT_CODE;
     }
 
+    /**
+     * create empty instance
+     */
     public CartAddDiscountCodeActionImpl() {
         this.action = ADD_DISCOUNT_CODE;
     }

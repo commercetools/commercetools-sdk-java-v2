@@ -48,6 +48,11 @@ public class PaymentAddTransactionActionBuilder implements Builder<PaymentAddTra
         return this;
     }
 
+    /**
+     *  <p>Value to append to the <code>transactions</code> array.</p>
+     * @return transaction
+     */
+
     public com.commercetools.api.models.payment.TransactionDraft getTransaction() {
         return this.transaction;
     }
@@ -69,10 +74,19 @@ public class PaymentAddTransactionActionBuilder implements Builder<PaymentAddTra
         return new PaymentAddTransactionActionImpl(transaction);
     }
 
+    /**
+     * factory method for an instance of PaymentAddTransactionActionBuilder
+     * @return builder
+     */
     public static PaymentAddTransactionActionBuilder of() {
         return new PaymentAddTransactionActionBuilder();
     }
 
+    /**
+     * create builder for PaymentAddTransactionAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentAddTransactionActionBuilder of(final PaymentAddTransactionAction template) {
         PaymentAddTransactionActionBuilder builder = new PaymentAddTransactionActionBuilder();
         builder.transaction = template.getTransaction();

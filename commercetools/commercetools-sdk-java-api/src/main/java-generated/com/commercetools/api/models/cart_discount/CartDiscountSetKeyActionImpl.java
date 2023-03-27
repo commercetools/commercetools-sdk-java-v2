@@ -24,12 +24,18 @@ public class CartDiscountSetKeyActionImpl implements CartDiscountSetKeyAction, M
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartDiscountSetKeyActionImpl(@JsonProperty("key") final String key) {
         this.key = key;
         this.action = SET_KEY;
     }
 
+    /**
+     * create empty instance
+     */
     public CartDiscountSetKeyActionImpl() {
         this.action = SET_KEY;
     }

@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = NumberAttributeImpl.class)
 public interface NumberAttribute extends Attribute {
 
+    /**
+     * discriminator value for NumberAttribute
+     */
     String NUMBER = "number";
 
     /**
@@ -39,12 +42,26 @@ public interface NumberAttribute extends Attribute {
     @JsonProperty("value")
     public Double getValue();
 
+    /**
+     * set value
+     * @param value value to be set
+     */
+
     public void setValue(final Double value);
 
+    /**
+     * factory method
+     * @return instance of NumberAttribute
+     */
     public static NumberAttribute of() {
         return new NumberAttributeImpl();
     }
 
+    /**
+     * factory method to copy an instance of NumberAttribute
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static NumberAttribute of(final NumberAttribute template) {
         NumberAttributeImpl instance = new NumberAttributeImpl();
         instance.setName(template.getName());
@@ -52,18 +69,37 @@ public interface NumberAttribute extends Attribute {
         return instance;
     }
 
+    /**
+     * builder factory method for NumberAttribute
+     * @return builder
+     */
     public static NumberAttributeBuilder builder() {
         return NumberAttributeBuilder.of();
     }
 
+    /**
+     * create builder for NumberAttribute instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static NumberAttributeBuilder builder(final NumberAttribute template) {
         return NumberAttributeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withNumberAttribute(Function<NumberAttribute, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<NumberAttribute> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<NumberAttribute>() {
             @Override

@@ -36,6 +36,9 @@ public class StoreDraftImpl implements StoreDraft, ModelBase {
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StoreDraftImpl(@JsonProperty("key") final String key,
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
@@ -55,6 +58,9 @@ public class StoreDraftImpl implements StoreDraft, ModelBase {
         this.custom = custom;
     }
 
+    /**
+     * create empty instance
+     */
     public StoreDraftImpl() {
     }
 

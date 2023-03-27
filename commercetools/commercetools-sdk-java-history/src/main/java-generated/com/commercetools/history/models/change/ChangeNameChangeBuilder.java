@@ -41,7 +41,7 @@ public class ChangeNameChangeBuilder implements Builder<ChangeNameChange> {
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class ChangeNameChangeBuilder implements Builder<ChangeNameChange> {
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -62,13 +62,28 @@ public class ChangeNameChangeBuilder implements Builder<ChangeNameChange> {
         return this;
     }
 
+    /**
+     *  <p>Shape of the action for <code>changeName</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public String getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public String getNextValue() {
         return this.nextValue;
@@ -93,10 +108,19 @@ public class ChangeNameChangeBuilder implements Builder<ChangeNameChange> {
         return new ChangeNameChangeImpl(change, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of ChangeNameChangeBuilder
+     * @return builder
+     */
     public static ChangeNameChangeBuilder of() {
         return new ChangeNameChangeBuilder();
     }
 
+    /**
+     * create builder for ChangeNameChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeNameChangeBuilder of(final ChangeNameChange template) {
         ChangeNameChangeBuilder builder = new ChangeNameChangeBuilder();
         builder.change = template.getChange();

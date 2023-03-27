@@ -28,6 +28,9 @@ public class ProductSelectionSetVariantExclusionActionImpl
 
     private com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSelectionSetVariantExclusionActionImpl(
             @JsonProperty("product") final com.commercetools.api.models.product.ProductResourceIdentifier product,
@@ -37,6 +40,9 @@ public class ProductSelectionSetVariantExclusionActionImpl
         this.action = SET_VARIANT_EXCLUSION;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSelectionSetVariantExclusionActionImpl() {
         this.action = SET_VARIANT_EXCLUSION;
     }

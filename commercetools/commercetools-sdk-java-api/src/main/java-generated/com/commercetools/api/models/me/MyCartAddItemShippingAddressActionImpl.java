@@ -24,6 +24,9 @@ public class MyCartAddItemShippingAddressActionImpl implements MyCartAddItemShip
 
     private com.commercetools.api.models.common.BaseAddress address;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyCartAddItemShippingAddressActionImpl(
             @JsonProperty("address") final com.commercetools.api.models.common.BaseAddress address) {
@@ -31,6 +34,9 @@ public class MyCartAddItemShippingAddressActionImpl implements MyCartAddItemShip
         this.action = ADD_ITEM_SHIPPING_ADDRESS;
     }
 
+    /**
+     * create empty instance
+     */
     public MyCartAddItemShippingAddressActionImpl() {
         this.action = ADD_ITEM_SHIPPING_ADDRESS;
     }

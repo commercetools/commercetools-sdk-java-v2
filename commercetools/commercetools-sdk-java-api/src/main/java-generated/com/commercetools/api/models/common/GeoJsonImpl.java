@@ -22,11 +22,17 @@ public class GeoJsonImpl implements GeoJson, ModelBase {
 
     private String type;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     GeoJsonImpl(@JsonProperty("type") final String type) {
         this.type = type;
     }
 
+    /**
+     * create empty instance
+     */
     public GeoJsonImpl() {
     }
 

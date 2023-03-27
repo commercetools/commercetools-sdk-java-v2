@@ -115,17 +115,37 @@ public class CountryNotConfiguredInStoreErrorBuilder implements Builder<CountryN
         return this;
     }
 
+    /**
+     *  <p><code>"The country $country is not configured for the store $store."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
     }
 
+    /**
+     *  <p>Countries configured for the Store.</p>
+     * @return storeCountries
+     */
+
     public java.util.List<String> getStoreCountries() {
         return this.storeCountries;
     }
+
+    /**
+     *  <p>The country that is not configured for the Store but referenced on the Cart or Order.</p>
+     * @return country
+     */
 
     public String getCountry() {
         return this.country;
@@ -150,10 +170,19 @@ public class CountryNotConfiguredInStoreErrorBuilder implements Builder<CountryN
         return new CountryNotConfiguredInStoreErrorImpl(message, values, storeCountries, country);
     }
 
+    /**
+     * factory method for an instance of CountryNotConfiguredInStoreErrorBuilder
+     * @return builder
+     */
     public static CountryNotConfiguredInStoreErrorBuilder of() {
         return new CountryNotConfiguredInStoreErrorBuilder();
     }
 
+    /**
+     * create builder for CountryNotConfiguredInStoreError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CountryNotConfiguredInStoreErrorBuilder of(final CountryNotConfiguredInStoreError template) {
         CountryNotConfiguredInStoreErrorBuilder builder = new CountryNotConfiguredInStoreErrorBuilder();
         builder.message = template.getMessage();

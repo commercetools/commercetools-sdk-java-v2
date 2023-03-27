@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartRemoveShippingMethodActionImpl.class)
 public interface CartRemoveShippingMethodAction extends CartUpdateAction {
 
+    /**
+     * discriminator value for CartRemoveShippingMethodAction
+     */
     String REMOVE_SHIPPING_METHOD = "removeShippingMethod";
 
     /**
@@ -39,30 +42,63 @@ public interface CartRemoveShippingMethodAction extends CartUpdateAction {
     @JsonProperty("shippingKey")
     public String getShippingKey();
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method to remove from the Cart.</p>
+     * @param shippingKey value to be set
+     */
+
     public void setShippingKey(final String shippingKey);
 
+    /**
+     * factory method
+     * @return instance of CartRemoveShippingMethodAction
+     */
     public static CartRemoveShippingMethodAction of() {
         return new CartRemoveShippingMethodActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartRemoveShippingMethodAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartRemoveShippingMethodAction of(final CartRemoveShippingMethodAction template) {
         CartRemoveShippingMethodActionImpl instance = new CartRemoveShippingMethodActionImpl();
         instance.setShippingKey(template.getShippingKey());
         return instance;
     }
 
+    /**
+     * builder factory method for CartRemoveShippingMethodAction
+     * @return builder
+     */
     public static CartRemoveShippingMethodActionBuilder builder() {
         return CartRemoveShippingMethodActionBuilder.of();
     }
 
+    /**
+     * create builder for CartRemoveShippingMethodAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartRemoveShippingMethodActionBuilder builder(final CartRemoveShippingMethodAction template) {
         return CartRemoveShippingMethodActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartRemoveShippingMethodAction(Function<CartRemoveShippingMethodAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartRemoveShippingMethodAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartRemoveShippingMethodAction>() {
             @Override

@@ -26,6 +26,9 @@ public class OrderExcerptImpl implements OrderExcerpt, ModelBase {
 
     private Long version;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderExcerptImpl(@JsonProperty("totalPrice") final com.commercetools.api.models.common.TypedMoney totalPrice,
             @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedPrice taxedPrice,
@@ -35,6 +38,9 @@ public class OrderExcerptImpl implements OrderExcerpt, ModelBase {
         this.version = version;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderExcerptImpl() {
     }
 

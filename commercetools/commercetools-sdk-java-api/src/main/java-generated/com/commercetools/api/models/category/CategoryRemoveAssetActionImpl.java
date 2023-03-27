@@ -26,6 +26,9 @@ public class CategoryRemoveAssetActionImpl implements CategoryRemoveAssetAction,
 
     private String assetKey;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CategoryRemoveAssetActionImpl(@JsonProperty("assetId") final String assetId,
             @JsonProperty("assetKey") final String assetKey) {
@@ -34,6 +37,9 @@ public class CategoryRemoveAssetActionImpl implements CategoryRemoveAssetAction,
         this.action = REMOVE_ASSET;
     }
 
+    /**
+     * create empty instance
+     */
     public CategoryRemoveAssetActionImpl() {
         this.action = REMOVE_ASSET;
     }

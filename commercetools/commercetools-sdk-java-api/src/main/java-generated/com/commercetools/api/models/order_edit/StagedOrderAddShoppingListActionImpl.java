@@ -28,6 +28,9 @@ public class StagedOrderAddShoppingListActionImpl implements StagedOrderAddShopp
 
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderAddShoppingListActionImpl(
             @JsonProperty("shoppingList") final com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier shoppingList,
@@ -39,6 +42,9 @@ public class StagedOrderAddShoppingListActionImpl implements StagedOrderAddShopp
         this.action = ADD_SHOPPING_LIST;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderAddShoppingListActionImpl() {
         this.action = ADD_SHOPPING_LIST;
     }

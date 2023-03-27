@@ -26,7 +26,7 @@ public class StagedOrderChangePaymentStateActionBuilder implements Builder<Stage
     private com.commercetools.api.models.order.PaymentState paymentState;
 
     /**
-     *
+     * set the value to the paymentState
      * @param paymentState value to be set
      * @return Builder
      */
@@ -36,6 +36,11 @@ public class StagedOrderChangePaymentStateActionBuilder implements Builder<Stage
         this.paymentState = paymentState;
         return this;
     }
+
+    /**
+     * value of paymentState}
+     * @return paymentState
+     */
 
     @Nullable
     public com.commercetools.api.models.order.PaymentState getPaymentState() {
@@ -58,10 +63,19 @@ public class StagedOrderChangePaymentStateActionBuilder implements Builder<Stage
         return new StagedOrderChangePaymentStateActionImpl(paymentState);
     }
 
+    /**
+     * factory method for an instance of StagedOrderChangePaymentStateActionBuilder
+     * @return builder
+     */
     public static StagedOrderChangePaymentStateActionBuilder of() {
         return new StagedOrderChangePaymentStateActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderChangePaymentStateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderChangePaymentStateActionBuilder of(final StagedOrderChangePaymentStateAction template) {
         StagedOrderChangePaymentStateActionBuilder builder = new StagedOrderChangePaymentStateActionBuilder();
         builder.paymentState = template.getPaymentState();

@@ -36,6 +36,9 @@ public class ProductVariantImportImpl implements ProductVariantImport, ModelBase
 
     private com.commercetools.importapi.models.common.ProductKeyReference product;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductVariantImportImpl(@JsonProperty("key") final String key, @JsonProperty("sku") final String sku,
             @JsonProperty("isMasterVariant") final Boolean isMasterVariant,
@@ -54,6 +57,9 @@ public class ProductVariantImportImpl implements ProductVariantImport, ModelBase
         this.product = product;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductVariantImportImpl() {
     }
 

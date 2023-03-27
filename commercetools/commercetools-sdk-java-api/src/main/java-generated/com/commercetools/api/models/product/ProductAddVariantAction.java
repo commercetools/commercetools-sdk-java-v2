@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductAddVariantActionImpl.class)
 public interface ProductAddVariantAction extends ProductUpdateAction {
 
+    /**
+     * discriminator value for ProductAddVariantAction
+     */
     String ADD_VARIANT = "addVariant";
 
     /**
@@ -89,36 +92,100 @@ public interface ProductAddVariantAction extends ProductUpdateAction {
     @JsonProperty("assets")
     public List<AssetDraft> getAssets();
 
+    /**
+     *  <p>Value to set. Must be unique.</p>
+     * @param sku value to be set
+     */
+
     public void setSku(final String sku);
 
+    /**
+     *  <p>Value to set. Must be unique.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
+
+    /**
+     *  <p>Embedded Prices for the Product Variant.</p>
+     * @param prices values to be set
+     */
 
     @JsonIgnore
     public void setPrices(final PriceDraft... prices);
 
+    /**
+     *  <p>Embedded Prices for the Product Variant.</p>
+     * @param prices values to be set
+     */
+
     public void setPrices(final List<PriceDraft> prices);
+
+    /**
+     *  <p>Images for the Product Variant.</p>
+     * @param images values to be set
+     */
 
     @JsonIgnore
     public void setImages(final Image... images);
 
+    /**
+     *  <p>Images for the Product Variant.</p>
+     * @param images values to be set
+     */
+
     public void setImages(final List<Image> images);
+
+    /**
+     *  <p>Attributes for the Product Variant.</p>
+     * @param attributes values to be set
+     */
 
     @JsonIgnore
     public void setAttributes(final Attribute... attributes);
 
+    /**
+     *  <p>Attributes for the Product Variant.</p>
+     * @param attributes values to be set
+     */
+
     public void setAttributes(final List<Attribute> attributes);
 
+    /**
+     *  <p>If <code>true</code> the new Product Variant is only staged. If <code>false</code> the new Product Variant is both current and staged.</p>
+     * @param staged value to be set
+     */
+
     public void setStaged(final Boolean staged);
+
+    /**
+     *  <p>Media assets for the Product Variant.</p>
+     * @param assets values to be set
+     */
 
     @JsonIgnore
     public void setAssets(final AssetDraft... assets);
 
+    /**
+     *  <p>Media assets for the Product Variant.</p>
+     * @param assets values to be set
+     */
+
     public void setAssets(final List<AssetDraft> assets);
 
+    /**
+     * factory method
+     * @return instance of ProductAddVariantAction
+     */
     public static ProductAddVariantAction of() {
         return new ProductAddVariantActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductAddVariantAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductAddVariantAction of(final ProductAddVariantAction template) {
         ProductAddVariantActionImpl instance = new ProductAddVariantActionImpl();
         instance.setSku(template.getSku());
@@ -131,18 +198,37 @@ public interface ProductAddVariantAction extends ProductUpdateAction {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductAddVariantAction
+     * @return builder
+     */
     public static ProductAddVariantActionBuilder builder() {
         return ProductAddVariantActionBuilder.of();
     }
 
+    /**
+     * create builder for ProductAddVariantAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductAddVariantActionBuilder builder(final ProductAddVariantAction template) {
         return ProductAddVariantActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductAddVariantAction(Function<ProductAddVariantAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductAddVariantAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductAddVariantAction>() {
             @Override

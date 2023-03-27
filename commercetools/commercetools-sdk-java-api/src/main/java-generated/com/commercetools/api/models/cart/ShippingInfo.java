@@ -122,33 +122,98 @@ public interface ShippingInfo {
     @JsonProperty("shippingMethodState")
     public ShippingMethodState getShippingMethodState();
 
+    /**
+     *  <p>Name of the Shipping Method.</p>
+     * @param shippingMethodName value to be set
+     */
+
     public void setShippingMethodName(final String shippingMethodName);
+
+    /**
+     *  <p>Determined based on the ShippingRate and its tiered prices, and either the sum of LineItem prices or the <code>shippingRateInput</code> field.</p>
+     * @param price value to be set
+     */
 
     public void setPrice(final CentPrecisionMoney price);
 
+    /**
+     *  <p>Used to determine the price.</p>
+     * @param shippingRate value to be set
+     */
+
     public void setShippingRate(final ShippingRate shippingRate);
+
+    /**
+     *  <p>Automatically set after the <code>taxRate</code> is set.</p>
+     * @param taxedPrice value to be set
+     */
 
     public void setTaxedPrice(final TaxedItemPrice taxedPrice);
 
+    /**
+     *  <p>Automatically set in the <code>Platform</code> TaxMode after the shipping address is set.</p>
+     *  <p>For the <code>External</code> TaxMode the Tax Rate must be set explicitly with the ExternalTaxRateDraft.</p>
+     * @param taxRate value to be set
+     */
+
     public void setTaxRate(final TaxRate taxRate);
+
+    /**
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode.</p>
+     * @param taxCategory value to be set
+     */
 
     public void setTaxCategory(final TaxCategoryReference taxCategory);
 
+    /**
+     *  <p>Not set if a custom Shipping Method is used.</p>
+     * @param shippingMethod value to be set
+     */
+
     public void setShippingMethod(final ShippingMethodReference shippingMethod);
+
+    /**
+     *  <p>Information on how items are delivered to customers.</p>
+     * @param deliveries values to be set
+     */
 
     @JsonIgnore
     public void setDeliveries(final Delivery... deliveries);
 
+    /**
+     *  <p>Information on how items are delivered to customers.</p>
+     * @param deliveries values to be set
+     */
+
     public void setDeliveries(final List<Delivery> deliveries);
+
+    /**
+     *  <p>Discounted price of the Shipping Method.</p>
+     * @param discountedPrice value to be set
+     */
 
     public void setDiscountedPrice(final DiscountedLineItemPrice discountedPrice);
 
+    /**
+     *  <p>Indicates whether the ShippingMethod referenced in this ShippingInfo is allowed for the Cart.</p>
+     * @param shippingMethodState value to be set
+     */
+
     public void setShippingMethodState(final ShippingMethodState shippingMethodState);
 
+    /**
+     * factory method
+     * @return instance of ShippingInfo
+     */
     public static ShippingInfo of() {
         return new ShippingInfoImpl();
     }
 
+    /**
+     * factory method to copy an instance of ShippingInfo
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ShippingInfo of(final ShippingInfo template) {
         ShippingInfoImpl instance = new ShippingInfoImpl();
         instance.setShippingMethodName(template.getShippingMethodName());
@@ -164,18 +229,37 @@ public interface ShippingInfo {
         return instance;
     }
 
+    /**
+     * builder factory method for ShippingInfo
+     * @return builder
+     */
     public static ShippingInfoBuilder builder() {
         return ShippingInfoBuilder.of();
     }
 
+    /**
+     * create builder for ShippingInfo instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShippingInfoBuilder builder(final ShippingInfo template) {
         return ShippingInfoBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withShippingInfo(Function<ShippingInfo, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ShippingInfo> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ShippingInfo>() {
             @Override

@@ -49,6 +49,11 @@ public class ProductSelectionRemoveProductActionBuilder implements Builder<Produ
         return this;
     }
 
+    /**
+     *  <p>ResourceIdentifier of the Product</p>
+     * @return product
+     */
+
     public com.commercetools.api.models.product.ProductResourceIdentifier getProduct() {
         return this.product;
     }
@@ -70,10 +75,19 @@ public class ProductSelectionRemoveProductActionBuilder implements Builder<Produ
         return new ProductSelectionRemoveProductActionImpl(product);
     }
 
+    /**
+     * factory method for an instance of ProductSelectionRemoveProductActionBuilder
+     * @return builder
+     */
     public static ProductSelectionRemoveProductActionBuilder of() {
         return new ProductSelectionRemoveProductActionBuilder();
     }
 
+    /**
+     * create builder for ProductSelectionRemoveProductAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSelectionRemoveProductActionBuilder of(final ProductSelectionRemoveProductAction template) {
         ProductSelectionRemoveProductActionBuilder builder = new ProductSelectionRemoveProductActionBuilder();
         builder.product = template.getProduct();

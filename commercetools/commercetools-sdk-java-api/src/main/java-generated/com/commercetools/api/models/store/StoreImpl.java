@@ -48,6 +48,9 @@ public class StoreImpl implements Store, ModelBase {
 
     private com.commercetools.api.models.type.CustomFields custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StoreImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -78,6 +81,9 @@ public class StoreImpl implements Store, ModelBase {
         this.custom = custom;
     }
 
+    /**
+     * create empty instance
+     */
     public StoreImpl() {
     }
 

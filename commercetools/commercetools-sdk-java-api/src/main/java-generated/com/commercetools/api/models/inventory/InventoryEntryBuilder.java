@@ -269,63 +269,133 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the InventoryEntry.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Current version of the InventoryEntry.</p>
+     * @return version
+     */
 
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *  <p>Date and time (UTC) the InventoryEntry was initially created.</p>
+     * @return createdAt
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+     *  <p>Date and time (UTC) the InventoryEntry was last updated.</p>
+     * @return lastModifiedAt
+     */
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
+     */
+
     @Nullable
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the InventoryEntry.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>ProductVariant <code>sku</code> of the InventoryEntry.</p>
+     * @return sku
+     */
+
     public String getSku() {
         return this.sku;
     }
+
+    /**
+     *  <p>Channel that supplies this InventoryEntry.</p>
+     * @return supplyChannel
+     */
 
     @Nullable
     public com.commercetools.api.models.channel.ChannelReference getSupplyChannel() {
         return this.supplyChannel;
     }
 
+    /**
+     *  <p>Overall amount of stock (<code>availableQuantity</code> + reserved).</p>
+     * @return quantityOnStock
+     */
+
     public Long getQuantityOnStock() {
         return this.quantityOnStock;
     }
 
+    /**
+     *  <p>Available amount of stock (<code>quantityOnStock</code> - reserved).</p>
+     * @return availableQuantity
+     */
+
     public Long getAvailableQuantity() {
         return this.availableQuantity;
     }
+
+    /**
+     *  <p>How often the InventoryEntry is restocked (in days).</p>
+     * @return restockableInDays
+     */
 
     @Nullable
     public Long getRestockableInDays() {
         return this.restockableInDays;
     }
 
+    /**
+     *  <p>Date and time of the next restock.</p>
+     * @return expectedDelivery
+     */
+
     @Nullable
     public java.time.ZonedDateTime getExpectedDelivery() {
         return this.expectedDelivery;
     }
+
+    /**
+     *  <p>Custom Fields of the InventoryEntry.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -357,10 +427,19 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
             supplyChannel, quantityOnStock, availableQuantity, restockableInDays, expectedDelivery, custom);
     }
 
+    /**
+     * factory method for an instance of InventoryEntryBuilder
+     * @return builder
+     */
     public static InventoryEntryBuilder of() {
         return new InventoryEntryBuilder();
     }
 
+    /**
+     * create builder for InventoryEntry instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InventoryEntryBuilder of(final InventoryEntry template) {
         InventoryEntryBuilder builder = new InventoryEntryBuilder();
         builder.id = template.getId();

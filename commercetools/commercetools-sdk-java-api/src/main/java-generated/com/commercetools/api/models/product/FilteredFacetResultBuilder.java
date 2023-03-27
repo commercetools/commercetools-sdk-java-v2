@@ -29,7 +29,7 @@ public class FilteredFacetResultBuilder implements Builder<FilteredFacetResult> 
     private Long productCount;
 
     /**
-     *
+     * set the value to the count
      * @param count value to be set
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class FilteredFacetResultBuilder implements Builder<FilteredFacetResult> 
     }
 
     /**
-     *
+     * set the value to the productCount
      * @param productCount value to be set
      * @return Builder
      */
@@ -50,9 +50,19 @@ public class FilteredFacetResultBuilder implements Builder<FilteredFacetResult> 
         return this;
     }
 
+    /**
+     * value of count}
+     * @return count
+     */
+
     public Long getCount() {
         return this.count;
     }
+
+    /**
+     * value of productCount}
+     * @return productCount
+     */
 
     @Nullable
     public Long getProductCount() {
@@ -76,10 +86,19 @@ public class FilteredFacetResultBuilder implements Builder<FilteredFacetResult> 
         return new FilteredFacetResultImpl(count, productCount);
     }
 
+    /**
+     * factory method for an instance of FilteredFacetResultBuilder
+     * @return builder
+     */
     public static FilteredFacetResultBuilder of() {
         return new FilteredFacetResultBuilder();
     }
 
+    /**
+     * create builder for FilteredFacetResult instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static FilteredFacetResultBuilder of(final FilteredFacetResult template) {
         FilteredFacetResultBuilder builder = new FilteredFacetResultBuilder();
         builder.count = template.getCount();

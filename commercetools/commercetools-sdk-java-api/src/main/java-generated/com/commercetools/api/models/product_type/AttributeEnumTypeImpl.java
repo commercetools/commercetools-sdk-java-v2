@@ -24,6 +24,9 @@ public class AttributeEnumTypeImpl implements AttributeEnumType, ModelBase {
 
     private java.util.List<com.commercetools.api.models.product_type.AttributePlainEnumValue> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AttributeEnumTypeImpl(
             @JsonProperty("values") final java.util.List<com.commercetools.api.models.product_type.AttributePlainEnumValue> values) {
@@ -31,6 +34,9 @@ public class AttributeEnumTypeImpl implements AttributeEnumType, ModelBase {
         this.name = ENUM;
     }
 
+    /**
+     * create empty instance
+     */
     public AttributeEnumTypeImpl() {
         this.name = ENUM;
     }

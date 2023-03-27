@@ -22,11 +22,17 @@ public class SuggestTokenizerImpl implements SuggestTokenizer, ModelBase {
 
     private String type;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SuggestTokenizerImpl(@JsonProperty("type") final String type) {
         this.type = type;
     }
 
+    /**
+     * create empty instance
+     */
     public SuggestTokenizerImpl() {
     }
 

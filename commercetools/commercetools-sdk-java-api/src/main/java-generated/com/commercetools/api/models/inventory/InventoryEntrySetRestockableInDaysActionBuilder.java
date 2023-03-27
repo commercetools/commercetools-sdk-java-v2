@@ -37,6 +37,11 @@ public class InventoryEntrySetRestockableInDaysActionBuilder
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return restockableInDays
+     */
+
     @Nullable
     public Long getRestockableInDays() {
         return this.restockableInDays;
@@ -58,10 +63,19 @@ public class InventoryEntrySetRestockableInDaysActionBuilder
         return new InventoryEntrySetRestockableInDaysActionImpl(restockableInDays);
     }
 
+    /**
+     * factory method for an instance of InventoryEntrySetRestockableInDaysActionBuilder
+     * @return builder
+     */
     public static InventoryEntrySetRestockableInDaysActionBuilder of() {
         return new InventoryEntrySetRestockableInDaysActionBuilder();
     }
 
+    /**
+     * create builder for InventoryEntrySetRestockableInDaysAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InventoryEntrySetRestockableInDaysActionBuilder of(
             final InventoryEntrySetRestockableInDaysAction template) {
         InventoryEntrySetRestockableInDaysActionBuilder builder = new InventoryEntrySetRestockableInDaysActionBuilder();

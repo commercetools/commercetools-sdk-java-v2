@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MyPaymentChangeAmountPlannedActionImpl.class)
 public interface MyPaymentChangeAmountPlannedAction extends MyPaymentUpdateAction {
 
+    /**
+     * discriminator value for MyPaymentChangeAmountPlannedAction
+     */
     String CHANGE_AMOUNT_PLANNED = "changeAmountPlanned";
 
     /**
@@ -42,30 +45,63 @@ public interface MyPaymentChangeAmountPlannedAction extends MyPaymentUpdateActio
     @JsonProperty("amount")
     public Money getAmount();
 
+    /**
+     *  <p>New value to set.</p>
+     * @param amount value to be set
+     */
+
     public void setAmount(final Money amount);
 
+    /**
+     * factory method
+     * @return instance of MyPaymentChangeAmountPlannedAction
+     */
     public static MyPaymentChangeAmountPlannedAction of() {
         return new MyPaymentChangeAmountPlannedActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of MyPaymentChangeAmountPlannedAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static MyPaymentChangeAmountPlannedAction of(final MyPaymentChangeAmountPlannedAction template) {
         MyPaymentChangeAmountPlannedActionImpl instance = new MyPaymentChangeAmountPlannedActionImpl();
         instance.setAmount(template.getAmount());
         return instance;
     }
 
+    /**
+     * builder factory method for MyPaymentChangeAmountPlannedAction
+     * @return builder
+     */
     public static MyPaymentChangeAmountPlannedActionBuilder builder() {
         return MyPaymentChangeAmountPlannedActionBuilder.of();
     }
 
+    /**
+     * create builder for MyPaymentChangeAmountPlannedAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyPaymentChangeAmountPlannedActionBuilder builder(final MyPaymentChangeAmountPlannedAction template) {
         return MyPaymentChangeAmountPlannedActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMyPaymentChangeAmountPlannedAction(Function<MyPaymentChangeAmountPlannedAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MyPaymentChangeAmountPlannedAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MyPaymentChangeAmountPlannedAction>() {
             @Override

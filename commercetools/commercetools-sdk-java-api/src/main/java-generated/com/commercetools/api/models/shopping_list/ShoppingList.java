@@ -187,50 +187,154 @@ public interface ShoppingList
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
 
+    /**
+     *  <p>Unique identifier of the ShoppingList.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>Current version of the ShoppingList.</p>
+     * @param version value to be set
+     */
 
     public void setVersion(final Long version);
 
+    /**
+     *  <p>Name of the ShoppingList.</p>
+     * @param name value to be set
+     */
+
     public void setName(final LocalizedString name);
+
+    /**
+     *  <p>User-defined unique identifier of the ShoppingList.</p>
+     * @param key value to be set
+     */
 
     public void setKey(final String key);
 
+    /**
+     *  <p>Reference to a Customer associated with the ShoppingList.</p>
+     * @param customer value to be set
+     */
+
     public void setCustomer(final CustomerReference customer);
+
+    /**
+     *  <p>Human-readable identifiers usually used as deep-link URL to the related ShoppingList. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. The slug must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set on the Project.</p>
+     * @param slug value to be set
+     */
 
     public void setSlug(final LocalizedString slug);
 
+    /**
+     *  <p>Description of the ShoppingList.</p>
+     * @param description value to be set
+     */
+
     public void setDescription(final LocalizedString description);
+
+    /**
+     *  <p>Line Items (containing Products) of the ShoppingList.</p>
+     * @param lineItems values to be set
+     */
 
     @JsonIgnore
     public void setLineItems(final ShoppingListLineItem... lineItems);
 
+    /**
+     *  <p>Line Items (containing Products) of the ShoppingList.</p>
+     * @param lineItems values to be set
+     */
+
     public void setLineItems(final List<ShoppingListLineItem> lineItems);
+
+    /**
+     *  <p>Line Items (containing text values) of the ShoppingList.</p>
+     * @param textLineItems values to be set
+     */
 
     @JsonIgnore
     public void setTextLineItems(final TextLineItem... textLineItems);
 
+    /**
+     *  <p>Line Items (containing text values) of the ShoppingList.</p>
+     * @param textLineItems values to be set
+     */
+
     public void setTextLineItems(final List<TextLineItem> textLineItems);
+
+    /**
+     *  <p>Number of days after which the ShoppingList will be automatically deleted if it has not been modified.</p>
+     * @param deleteDaysAfterLastModification value to be set
+     */
 
     public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification);
 
+    /**
+     *  <p>Identifies ShoppingLists belonging to an anonymous session.</p>
+     * @param anonymousId value to be set
+     */
+
     public void setAnonymousId(final String anonymousId);
+
+    /**
+     *  <p>Store to which the ShoppingList is assigned.</p>
+     * @param store value to be set
+     */
 
     public void setStore(final StoreKeyReference store);
 
+    /**
+     *  <p>Custom Fields defined for the ShoppingList.</p>
+     * @param custom value to be set
+     */
+
     public void setCustom(final CustomFields custom);
+
+    /**
+     *  <p>Date and time (UTC) the ShoppingList was initially created.</p>
+     * @param createdAt value to be set
+     */
 
     public void setCreatedAt(final ZonedDateTime createdAt);
 
+    /**
+     *  <p>Date and time (UTC) the ShoppingList was last updated.</p>
+     * @param lastModifiedAt value to be set
+     */
+
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy value to be set
+     */
 
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy value to be set
+     */
+
     public void setCreatedBy(final CreatedBy createdBy);
 
+    /**
+     * factory method
+     * @return instance of ShoppingList
+     */
     public static ShoppingList of() {
         return new ShoppingListImpl();
     }
 
+    /**
+     * factory method to copy an instance of ShoppingList
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ShoppingList of(final ShoppingList template) {
         ShoppingListImpl instance = new ShoppingListImpl();
         instance.setId(template.getId());
@@ -253,14 +357,29 @@ public interface ShoppingList
         return instance;
     }
 
+    /**
+     * builder factory method for ShoppingList
+     * @return builder
+     */
     public static ShoppingListBuilder builder() {
         return ShoppingListBuilder.of();
     }
 
+    /**
+     * create builder for ShoppingList instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShoppingListBuilder builder(final ShoppingList template) {
         return ShoppingListBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withShoppingList(Function<ShoppingList, T> helper) {
         return helper.apply(this);
     }
@@ -269,6 +388,10 @@ public interface ShoppingList
         return com.commercetools.api.models.common.ReferenceTypeId.SHOPPING_LIST;
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ShoppingList> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ShoppingList>() {
             @Override

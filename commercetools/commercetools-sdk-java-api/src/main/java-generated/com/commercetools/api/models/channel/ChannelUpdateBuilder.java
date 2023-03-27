@@ -103,9 +103,19 @@ public class ChannelUpdateBuilder implements Builder<ChannelUpdate> {
         return this;
     }
 
+    /**
+     *  <p>Expected version of the Channel on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     * @return version
+     */
+
     public Long getVersion() {
         return this.version;
     }
+
+    /**
+     *  <p>Update actions to be performed on the Channel.</p>
+     * @return actions
+     */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelUpdateAction> getActions() {
         return this.actions;
@@ -129,10 +139,19 @@ public class ChannelUpdateBuilder implements Builder<ChannelUpdate> {
         return new ChannelUpdateImpl(version, actions);
     }
 
+    /**
+     * factory method for an instance of ChannelUpdateBuilder
+     * @return builder
+     */
     public static ChannelUpdateBuilder of() {
         return new ChannelUpdateBuilder();
     }
 
+    /**
+     * create builder for ChannelUpdate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChannelUpdateBuilder of(final ChannelUpdate template) {
         ChannelUpdateBuilder builder = new ChannelUpdateBuilder();
         builder.version = template.getVersion();

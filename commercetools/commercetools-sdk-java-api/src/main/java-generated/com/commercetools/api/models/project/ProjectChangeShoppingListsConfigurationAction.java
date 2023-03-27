@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProjectChangeShoppingListsConfigurationActionImpl.class)
 public interface ProjectChangeShoppingListsConfigurationAction extends ProjectUpdateAction {
 
+    /**
+     * discriminator value for ProjectChangeShoppingListsConfigurationAction
+     */
     String CHANGE_SHOPPING_LISTS_CONFIGURATION = "changeShoppingListsConfiguration";
 
     /**
@@ -41,12 +44,26 @@ public interface ProjectChangeShoppingListsConfigurationAction extends ProjectUp
     @JsonProperty("shoppingListsConfiguration")
     public ShoppingListsConfiguration getShoppingListsConfiguration();
 
+    /**
+     *  <p>Configuration for the Shopping Lists feature.</p>
+     * @param shoppingListsConfiguration value to be set
+     */
+
     public void setShoppingListsConfiguration(final ShoppingListsConfiguration shoppingListsConfiguration);
 
+    /**
+     * factory method
+     * @return instance of ProjectChangeShoppingListsConfigurationAction
+     */
     public static ProjectChangeShoppingListsConfigurationAction of() {
         return new ProjectChangeShoppingListsConfigurationActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProjectChangeShoppingListsConfigurationAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProjectChangeShoppingListsConfigurationAction of(
             final ProjectChangeShoppingListsConfigurationAction template) {
         ProjectChangeShoppingListsConfigurationActionImpl instance = new ProjectChangeShoppingListsConfigurationActionImpl();
@@ -54,20 +71,39 @@ public interface ProjectChangeShoppingListsConfigurationAction extends ProjectUp
         return instance;
     }
 
+    /**
+     * builder factory method for ProjectChangeShoppingListsConfigurationAction
+     * @return builder
+     */
     public static ProjectChangeShoppingListsConfigurationActionBuilder builder() {
         return ProjectChangeShoppingListsConfigurationActionBuilder.of();
     }
 
+    /**
+     * create builder for ProjectChangeShoppingListsConfigurationAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProjectChangeShoppingListsConfigurationActionBuilder builder(
             final ProjectChangeShoppingListsConfigurationAction template) {
         return ProjectChangeShoppingListsConfigurationActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProjectChangeShoppingListsConfigurationAction(
             Function<ProjectChangeShoppingListsConfigurationAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProjectChangeShoppingListsConfigurationAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProjectChangeShoppingListsConfigurationAction>() {
             @Override

@@ -34,6 +34,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductPriceChangedMessagePayloadImpl.class)
 public interface ProductPriceChangedMessagePayload extends MessagePayload {
 
+    /**
+     * discriminator value for ProductPriceChangedMessagePayload
+     */
     String PRODUCT_PRICE_CHANGED = "ProductPriceChanged";
 
     /**
@@ -78,20 +81,54 @@ public interface ProductPriceChangedMessagePayload extends MessagePayload {
     @JsonProperty("oldStagedPrice")
     public Price getOldStagedPrice();
 
+    /**
+     *  <p>Unique identifier of the ProductVariant for which the Price was changed.</p>
+     * @param variantId value to be set
+     */
+
     public void setVariantId(final Long variantId);
+
+    /**
+     *  <p>The current Embedded Price before the Change Embedded Price update action.</p>
+     * @param oldPrice value to be set
+     */
 
     public void setOldPrice(final Price oldPrice);
 
+    /**
+     *  <p>The Embedded Price after the Change Embedded Price update action.</p>
+     * @param newPrice value to be set
+     */
+
     public void setNewPrice(final Price newPrice);
+
+    /**
+     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     * @param staged value to be set
+     */
 
     public void setStaged(final Boolean staged);
 
+    /**
+     *  <p>The staged Embedded Price before the Change Embedded Price update action.</p>
+     * @param oldStagedPrice value to be set
+     */
+
     public void setOldStagedPrice(final Price oldStagedPrice);
 
+    /**
+     * factory method
+     * @return instance of ProductPriceChangedMessagePayload
+     */
     public static ProductPriceChangedMessagePayload of() {
         return new ProductPriceChangedMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductPriceChangedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductPriceChangedMessagePayload of(final ProductPriceChangedMessagePayload template) {
         ProductPriceChangedMessagePayloadImpl instance = new ProductPriceChangedMessagePayloadImpl();
         instance.setVariantId(template.getVariantId());
@@ -102,18 +139,37 @@ public interface ProductPriceChangedMessagePayload extends MessagePayload {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductPriceChangedMessagePayload
+     * @return builder
+     */
     public static ProductPriceChangedMessagePayloadBuilder builder() {
         return ProductPriceChangedMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for ProductPriceChangedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductPriceChangedMessagePayloadBuilder builder(final ProductPriceChangedMessagePayload template) {
         return ProductPriceChangedMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductPriceChangedMessagePayload(Function<ProductPriceChangedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductPriceChangedMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductPriceChangedMessagePayload>() {
             @Override

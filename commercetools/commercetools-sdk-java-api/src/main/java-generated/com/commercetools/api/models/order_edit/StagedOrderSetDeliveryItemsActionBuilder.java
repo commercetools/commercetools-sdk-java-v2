@@ -28,7 +28,7 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
     /**
-     *
+     * set the value to the deliveryId
      * @param deliveryId value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
     }
 
     /**
-     *
+     * set values to the items
      * @param items value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
     }
 
     /**
-     *
+     * set value to the items
      * @param items value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
     }
 
     /**
-     *
+     * add values to the items
      * @param items value to be set
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
     }
 
     /**
-     *
+     * add the value to the items using the builder function
      * @param builder function to build the items value
      * @return Builder
      */
@@ -93,7 +93,7 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
     }
 
     /**
-     *
+     * set the value to the items using the builder function
      * @param builder function to build the items value
      * @return Builder
      */
@@ -105,9 +105,19 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
         return this;
     }
 
+    /**
+     * value of deliveryId}
+     * @return deliveryId
+     */
+
     public String getDeliveryId() {
         return this.deliveryId;
     }
+
+    /**
+     * value of items}
+     * @return items
+     */
 
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
         return this.items;
@@ -131,10 +141,19 @@ public class StagedOrderSetDeliveryItemsActionBuilder implements Builder<StagedO
         return new StagedOrderSetDeliveryItemsActionImpl(deliveryId, items);
     }
 
+    /**
+     * factory method for an instance of StagedOrderSetDeliveryItemsActionBuilder
+     * @return builder
+     */
     public static StagedOrderSetDeliveryItemsActionBuilder of() {
         return new StagedOrderSetDeliveryItemsActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderSetDeliveryItemsAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetDeliveryItemsActionBuilder of(final StagedOrderSetDeliveryItemsAction template) {
         StagedOrderSetDeliveryItemsActionBuilder builder = new StagedOrderSetDeliveryItemsActionBuilder();
         builder.deliveryId = template.getDeliveryId();

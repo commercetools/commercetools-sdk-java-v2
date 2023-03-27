@@ -93,27 +93,76 @@ public interface TaxRate {
     @JsonProperty("subRates")
     public List<SubRate> getSubRates();
 
+    /**
+     *  <p>The ID is always set if the tax rate is part of a TaxCategory. The external tax rates in a Cart do not contain an <code>id</code>.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     * set name
+     * @param name value to be set
+     */
 
     public void setName(final String name);
 
+    /**
+     *  <p>Percentage in the range of [0..1]. The sum of the amounts of all <code>subRates</code>, if there are any.</p>
+     * @param amount value to be set
+     */
+
     public void setAmount(final Integer amount);
+
+    /**
+     * set includedInPrice
+     * @param includedInPrice value to be set
+     */
 
     public void setIncludedInPrice(final Boolean includedInPrice);
 
+    /**
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     * @param country value to be set
+     */
+
     public void setCountry(final String country);
 
+    /**
+     *  <p>The state in the country</p>
+     * @param state value to be set
+     */
+
     public void setState(final String state);
+
+    /**
+     * set subRates
+     * @param subRates values to be set
+     */
 
     @JsonIgnore
     public void setSubRates(final SubRate... subRates);
 
+    /**
+     * set subRates
+     * @param subRates values to be set
+     */
+
     public void setSubRates(final List<SubRate> subRates);
 
+    /**
+     * factory method
+     * @return instance of TaxRate
+     */
     public static TaxRate of() {
         return new TaxRateImpl();
     }
 
+    /**
+     * factory method to copy an instance of TaxRate
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static TaxRate of(final TaxRate template) {
         TaxRateImpl instance = new TaxRateImpl();
         instance.setId(template.getId());
@@ -126,18 +175,37 @@ public interface TaxRate {
         return instance;
     }
 
+    /**
+     * builder factory method for TaxRate
+     * @return builder
+     */
     public static TaxRateBuilder builder() {
         return TaxRateBuilder.of();
     }
 
+    /**
+     * create builder for TaxRate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TaxRateBuilder builder(final TaxRate template) {
         return TaxRateBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTaxRate(Function<TaxRate, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<TaxRate> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TaxRate>() {
             @Override

@@ -26,6 +26,9 @@ public class PaymentAddInterfaceInteractionActionImpl implements PaymentAddInter
 
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PaymentAddInterfaceInteractionActionImpl(
             @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
@@ -35,6 +38,9 @@ public class PaymentAddInterfaceInteractionActionImpl implements PaymentAddInter
         this.action = ADD_INTERFACE_INTERACTION;
     }
 
+    /**
+     * create empty instance
+     */
     public PaymentAddInterfaceInteractionActionImpl() {
         this.action = ADD_INTERFACE_INTERACTION;
     }

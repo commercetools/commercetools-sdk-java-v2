@@ -57,16 +57,40 @@ public interface Image {
     @JsonProperty("label")
     public String getLabel();
 
+    /**
+     * set url
+     * @param url value to be set
+     */
+
     public void setUrl(final String url);
+
+    /**
+     * set dimensions
+     * @param dimensions value to be set
+     */
 
     public void setDimensions(final ImageDimensions dimensions);
 
+    /**
+     * set label
+     * @param label value to be set
+     */
+
     public void setLabel(final String label);
 
+    /**
+     * factory method
+     * @return instance of Image
+     */
     public static Image of() {
         return new ImageImpl();
     }
 
+    /**
+     * factory method to copy an instance of Image
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static Image of(final Image template) {
         ImageImpl instance = new ImageImpl();
         instance.setUrl(template.getUrl());
@@ -75,18 +99,37 @@ public interface Image {
         return instance;
     }
 
+    /**
+     * builder factory method for Image
+     * @return builder
+     */
     public static ImageBuilder builder() {
         return ImageBuilder.of();
     }
 
+    /**
+     * create builder for Image instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ImageBuilder builder(final Image template) {
         return ImageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withImage(Function<Image, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<Image> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Image>() {
             @Override

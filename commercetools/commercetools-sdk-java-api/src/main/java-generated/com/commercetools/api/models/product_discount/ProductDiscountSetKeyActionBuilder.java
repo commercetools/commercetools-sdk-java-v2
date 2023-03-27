@@ -36,6 +36,11 @@ public class ProductDiscountSetKeyActionBuilder implements Builder<ProductDiscou
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return key
+     */
+
     @Nullable
     public String getKey() {
         return this.key;
@@ -57,10 +62,19 @@ public class ProductDiscountSetKeyActionBuilder implements Builder<ProductDiscou
         return new ProductDiscountSetKeyActionImpl(key);
     }
 
+    /**
+     * factory method for an instance of ProductDiscountSetKeyActionBuilder
+     * @return builder
+     */
     public static ProductDiscountSetKeyActionBuilder of() {
         return new ProductDiscountSetKeyActionBuilder();
     }
 
+    /**
+     * create builder for ProductDiscountSetKeyAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductDiscountSetKeyActionBuilder of(final ProductDiscountSetKeyAction template) {
         ProductDiscountSetKeyActionBuilder builder = new ProductDiscountSetKeyActionBuilder();
         builder.key = template.getKey();

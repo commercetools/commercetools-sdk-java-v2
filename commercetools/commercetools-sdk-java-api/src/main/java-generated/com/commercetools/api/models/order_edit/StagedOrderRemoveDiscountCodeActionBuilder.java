@@ -49,6 +49,11 @@ public class StagedOrderRemoveDiscountCodeActionBuilder implements Builder<Stage
         return this;
     }
 
+    /**
+     *  <p>Reference to a DiscountCode.</p>
+     * @return discountCode
+     */
+
     public com.commercetools.api.models.discount_code.DiscountCodeReference getDiscountCode() {
         return this.discountCode;
     }
@@ -70,10 +75,19 @@ public class StagedOrderRemoveDiscountCodeActionBuilder implements Builder<Stage
         return new StagedOrderRemoveDiscountCodeActionImpl(discountCode);
     }
 
+    /**
+     * factory method for an instance of StagedOrderRemoveDiscountCodeActionBuilder
+     * @return builder
+     */
     public static StagedOrderRemoveDiscountCodeActionBuilder of() {
         return new StagedOrderRemoveDiscountCodeActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderRemoveDiscountCodeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderRemoveDiscountCodeActionBuilder of(final StagedOrderRemoveDiscountCodeAction template) {
         StagedOrderRemoveDiscountCodeActionBuilder builder = new StagedOrderRemoveDiscountCodeActionBuilder();
         builder.discountCode = template.getDiscountCode();

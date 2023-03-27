@@ -62,9 +62,19 @@ public class LanguageUsedInStoresErrorBuilder implements Builder<LanguageUsedInS
         return this;
     }
 
+    /**
+     *  <p><code>"Language(s) in use by a store cannot be deleted. Remove them in all the stores of this project first."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
@@ -87,10 +97,19 @@ public class LanguageUsedInStoresErrorBuilder implements Builder<LanguageUsedInS
         return new LanguageUsedInStoresErrorImpl(message, values);
     }
 
+    /**
+     * factory method for an instance of LanguageUsedInStoresErrorBuilder
+     * @return builder
+     */
     public static LanguageUsedInStoresErrorBuilder of() {
         return new LanguageUsedInStoresErrorBuilder();
     }
 
+    /**
+     * create builder for LanguageUsedInStoresError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static LanguageUsedInStoresErrorBuilder of(final LanguageUsedInStoresError template) {
         LanguageUsedInStoresErrorBuilder builder = new LanguageUsedInStoresErrorBuilder();
         builder.message = template.getMessage();

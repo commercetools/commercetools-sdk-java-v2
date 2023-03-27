@@ -30,6 +30,9 @@ public class ExtensionPagedQueryResponseImpl implements ExtensionPagedQueryRespo
 
     private java.util.List<com.commercetools.api.models.extension.Extension> results;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ExtensionPagedQueryResponseImpl(@JsonProperty("limit") final Long limit, @JsonProperty("offset") final Long offset,
             @JsonProperty("count") final Long count, @JsonProperty("total") final Long total,
@@ -41,6 +44,9 @@ public class ExtensionPagedQueryResponseImpl implements ExtensionPagedQueryRespo
         this.results = results;
     }
 
+    /**
+     * create empty instance
+     */
     public ExtensionPagedQueryResponseImpl() {
     }
 

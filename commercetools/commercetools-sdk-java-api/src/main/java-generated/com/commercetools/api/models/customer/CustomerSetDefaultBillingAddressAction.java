@@ -26,6 +26,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomerSetDefaultBillingAddressActionImpl.class)
 public interface CustomerSetDefaultBillingAddressAction extends CustomerUpdateAction {
 
+    /**
+     * discriminator value for CustomerSetDefaultBillingAddressAction
+     */
     String SET_DEFAULT_BILLING_ADDRESS = "setDefaultBillingAddress";
 
     /**
@@ -44,14 +47,33 @@ public interface CustomerSetDefaultBillingAddressAction extends CustomerUpdateAc
     @JsonProperty("addressKey")
     public String getAddressKey();
 
+    /**
+     *  <p><code>id</code> of the Address to become the default billing address.</p>
+     * @param addressId value to be set
+     */
+
     public void setAddressId(final String addressId);
+
+    /**
+     *  <p><code>key</code> of the Address to become the default billing address.</p>
+     * @param addressKey value to be set
+     */
 
     public void setAddressKey(final String addressKey);
 
+    /**
+     * factory method
+     * @return instance of CustomerSetDefaultBillingAddressAction
+     */
     public static CustomerSetDefaultBillingAddressAction of() {
         return new CustomerSetDefaultBillingAddressActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomerSetDefaultBillingAddressAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomerSetDefaultBillingAddressAction of(final CustomerSetDefaultBillingAddressAction template) {
         CustomerSetDefaultBillingAddressActionImpl instance = new CustomerSetDefaultBillingAddressActionImpl();
         instance.setAddressId(template.getAddressId());
@@ -59,20 +81,39 @@ public interface CustomerSetDefaultBillingAddressAction extends CustomerUpdateAc
         return instance;
     }
 
+    /**
+     * builder factory method for CustomerSetDefaultBillingAddressAction
+     * @return builder
+     */
     public static CustomerSetDefaultBillingAddressActionBuilder builder() {
         return CustomerSetDefaultBillingAddressActionBuilder.of();
     }
 
+    /**
+     * create builder for CustomerSetDefaultBillingAddressAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerSetDefaultBillingAddressActionBuilder builder(
             final CustomerSetDefaultBillingAddressAction template) {
         return CustomerSetDefaultBillingAddressActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomerSetDefaultBillingAddressAction(
             Function<CustomerSetDefaultBillingAddressAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomerSetDefaultBillingAddressAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomerSetDefaultBillingAddressAction>() {
             @Override

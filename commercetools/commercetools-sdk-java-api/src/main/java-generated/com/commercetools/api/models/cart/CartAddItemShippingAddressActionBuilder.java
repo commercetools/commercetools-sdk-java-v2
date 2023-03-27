@@ -50,6 +50,12 @@ public class CartAddItemShippingAddressActionBuilder implements Builder<CartAddI
         return this;
     }
 
+    /**
+     *  <p>Address to append to <code>itemShippingAddresses</code>.</p>
+     *  <p>The new Address must have a <code>key</code> that is unique accross this Cart.</p>
+     * @return address
+     */
+
     public com.commercetools.api.models.common.BaseAddress getAddress() {
         return this.address;
     }
@@ -71,10 +77,19 @@ public class CartAddItemShippingAddressActionBuilder implements Builder<CartAddI
         return new CartAddItemShippingAddressActionImpl(address);
     }
 
+    /**
+     * factory method for an instance of CartAddItemShippingAddressActionBuilder
+     * @return builder
+     */
     public static CartAddItemShippingAddressActionBuilder of() {
         return new CartAddItemShippingAddressActionBuilder();
     }
 
+    /**
+     * create builder for CartAddItemShippingAddressAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartAddItemShippingAddressActionBuilder of(final CartAddItemShippingAddressAction template) {
         CartAddItemShippingAddressActionBuilder builder = new CartAddItemShippingAddressActionBuilder();
         builder.address = template.getAddress();

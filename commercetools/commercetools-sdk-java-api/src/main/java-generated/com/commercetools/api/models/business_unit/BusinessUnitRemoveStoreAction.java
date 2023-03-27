@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = BusinessUnitRemoveStoreActionImpl.class)
 public interface BusinessUnitRemoveStoreAction extends BusinessUnitUpdateAction {
 
+    /**
+     * discriminator value for BusinessUnitRemoveStoreAction
+     */
     String REMOVE_STORE = "removeStore";
 
     /**
@@ -42,30 +45,63 @@ public interface BusinessUnitRemoveStoreAction extends BusinessUnitUpdateAction 
     @JsonProperty("store")
     public StoreResourceIdentifier getStore();
 
+    /**
+     *  <p>Store to remove.</p>
+     * @param store value to be set
+     */
+
     public void setStore(final StoreResourceIdentifier store);
 
+    /**
+     * factory method
+     * @return instance of BusinessUnitRemoveStoreAction
+     */
     public static BusinessUnitRemoveStoreAction of() {
         return new BusinessUnitRemoveStoreActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of BusinessUnitRemoveStoreAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static BusinessUnitRemoveStoreAction of(final BusinessUnitRemoveStoreAction template) {
         BusinessUnitRemoveStoreActionImpl instance = new BusinessUnitRemoveStoreActionImpl();
         instance.setStore(template.getStore());
         return instance;
     }
 
+    /**
+     * builder factory method for BusinessUnitRemoveStoreAction
+     * @return builder
+     */
     public static BusinessUnitRemoveStoreActionBuilder builder() {
         return BusinessUnitRemoveStoreActionBuilder.of();
     }
 
+    /**
+     * create builder for BusinessUnitRemoveStoreAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitRemoveStoreActionBuilder builder(final BusinessUnitRemoveStoreAction template) {
         return BusinessUnitRemoveStoreActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withBusinessUnitRemoveStoreAction(Function<BusinessUnitRemoveStoreAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitRemoveStoreAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitRemoveStoreAction>() {
             @Override

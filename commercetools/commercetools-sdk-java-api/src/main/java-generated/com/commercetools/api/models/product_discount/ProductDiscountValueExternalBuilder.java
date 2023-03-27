@@ -36,10 +36,19 @@ public class ProductDiscountValueExternalBuilder implements Builder<ProductDisco
         return new ProductDiscountValueExternalImpl();
     }
 
+    /**
+     * factory method for an instance of ProductDiscountValueExternalBuilder
+     * @return builder
+     */
     public static ProductDiscountValueExternalBuilder of() {
         return new ProductDiscountValueExternalBuilder();
     }
 
+    /**
+     * create builder for ProductDiscountValueExternal instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductDiscountValueExternalBuilder of(final ProductDiscountValueExternal template) {
         ProductDiscountValueExternalBuilder builder = new ProductDiscountValueExternalBuilder();
         return builder;

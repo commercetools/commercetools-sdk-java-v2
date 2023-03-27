@@ -50,6 +50,11 @@ public class StagedOrderSetBillingAddressActionBuilder implements Builder<Staged
         return this;
     }
 
+    /**
+     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     * @return address
+     */
+
     @Nullable
     public com.commercetools.api.models.common.BaseAddress getAddress() {
         return this.address;
@@ -71,10 +76,19 @@ public class StagedOrderSetBillingAddressActionBuilder implements Builder<Staged
         return new StagedOrderSetBillingAddressActionImpl(address);
     }
 
+    /**
+     * factory method for an instance of StagedOrderSetBillingAddressActionBuilder
+     * @return builder
+     */
     public static StagedOrderSetBillingAddressActionBuilder of() {
         return new StagedOrderSetBillingAddressActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderSetBillingAddressAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetBillingAddressActionBuilder of(final StagedOrderSetBillingAddressAction template) {
         StagedOrderSetBillingAddressActionBuilder builder = new StagedOrderSetBillingAddressActionBuilder();
         builder.address = template.getAddress();

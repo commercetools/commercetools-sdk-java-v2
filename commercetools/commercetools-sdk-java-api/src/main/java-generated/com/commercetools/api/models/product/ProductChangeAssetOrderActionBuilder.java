@@ -103,20 +103,40 @@ public class ProductChangeAssetOrderActionBuilder implements Builder<ProductChan
         return this;
     }
 
+    /**
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @return variantId
+     */
+
     @Nullable
     public Long getVariantId() {
         return this.variantId;
     }
+
+    /**
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
+     * @return sku
+     */
 
     @Nullable
     public String getSku() {
         return this.sku;
     }
 
+    /**
+     *  <p>If <code>true</code>, only the staged <code>assets</code> is updated. If <code>false</code>, both the current and staged <code>assets</code> are updated.</p>
+     * @return staged
+     */
+
     @Nullable
     public Boolean getStaged() {
         return this.staged;
     }
+
+    /**
+     *  <p>All existing Asset <code>id</code>s of the ProductVariant in the desired new order.</p>
+     * @return assetOrder
+     */
 
     public java.util.List<String> getAssetOrder() {
         return this.assetOrder;
@@ -139,10 +159,19 @@ public class ProductChangeAssetOrderActionBuilder implements Builder<ProductChan
         return new ProductChangeAssetOrderActionImpl(variantId, sku, staged, assetOrder);
     }
 
+    /**
+     * factory method for an instance of ProductChangeAssetOrderActionBuilder
+     * @return builder
+     */
     public static ProductChangeAssetOrderActionBuilder of() {
         return new ProductChangeAssetOrderActionBuilder();
     }
 
+    /**
+     * create builder for ProductChangeAssetOrderAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductChangeAssetOrderActionBuilder of(final ProductChangeAssetOrderAction template) {
         ProductChangeAssetOrderActionBuilder builder = new ProductChangeAssetOrderActionBuilder();
         builder.variantId = template.getVariantId();

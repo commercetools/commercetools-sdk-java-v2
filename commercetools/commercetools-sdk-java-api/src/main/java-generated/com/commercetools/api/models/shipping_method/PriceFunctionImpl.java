@@ -24,6 +24,9 @@ public class PriceFunctionImpl implements PriceFunction, ModelBase {
 
     private String function;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PriceFunctionImpl(@JsonProperty("currencyCode") final String currencyCode,
             @JsonProperty("function") final String function) {
@@ -31,6 +34,9 @@ public class PriceFunctionImpl implements PriceFunction, ModelBase {
         this.function = function;
     }
 
+    /**
+     * create empty instance
+     */
     public PriceFunctionImpl() {
     }
 

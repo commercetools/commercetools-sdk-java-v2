@@ -104,7 +104,7 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
     }
 
     /**
-     *
+     * set the value to the paymentState
      * @param paymentState value to be set
      * @return Builder
      */
@@ -116,7 +116,7 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
     }
 
     /**
-     *
+     * set the value to the shipmentState
      * @param shipmentState value to be set
      * @return Builder
      */
@@ -140,7 +140,7 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
     }
 
     /**
-     *
+     * set the value to the state using the builder function
      * @param builder function to build the state value
      * @return Builder
      */
@@ -152,7 +152,7 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
     }
 
     /**
-     *
+     * set the value to the state
      * @param state value to be set
      * @return Builder
      */
@@ -163,38 +163,78 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
         return this;
     }
 
+    /**
+     *  <p>ResourceIdentifier of the Quote from which this Order is created. If the Quote has <code>QuoteState</code> in <code>Accepted</code>, <code>Declined</code> or <code>Withdrawn</code> then the order creation will fail. The creation will also fail if the <code>Quote</code> has expired (<code>validTo</code> check).</p>
+     * @return quote
+     */
+
     public com.commercetools.api.models.quote.QuoteResourceIdentifier getQuote() {
         return this.quote;
     }
 
+    /**
+     *  <p><code>version</code> of the Quote from which an Order is created.</p>
+     * @return version
+     */
+
     public Long getVersion() {
         return this.version;
     }
+
+    /**
+     *  <p>If <code>true</code>, the <code>quoteState</code> of the referenced Quote will be set to <code>Accepted</code>.</p>
+     * @return quoteStateToAccepted
+     */
 
     @Nullable
     public Boolean getQuoteStateToAccepted() {
         return this.quoteStateToAccepted;
     }
 
+    /**
+     *  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed. For easier use on Get, Update and Delete actions we suggest assigning order numbers that match the regular expression <code>[a-z0-9_\-]{2,36}</code>.</p>
+     * @return orderNumber
+     */
+
     @Nullable
     public String getOrderNumber() {
         return this.orderNumber;
     }
+
+    /**
+     * value of paymentState}
+     * @return paymentState
+     */
 
     @Nullable
     public com.commercetools.api.models.order.PaymentState getPaymentState() {
         return this.paymentState;
     }
 
+    /**
+     * value of shipmentState}
+     * @return shipmentState
+     */
+
     @Nullable
     public com.commercetools.api.models.order.ShipmentState getShipmentState() {
         return this.shipmentState;
     }
 
+    /**
+     *  <p>Order will be created with <code>Open</code> status by default.</p>
+     * @return orderState
+     */
+
     @Nullable
     public com.commercetools.api.models.order.OrderState getOrderState() {
         return this.orderState;
     }
+
+    /**
+     * value of state}
+     * @return state
+     */
 
     @Nullable
     public com.commercetools.api.models.state.StateResourceIdentifier getState() {
@@ -221,10 +261,19 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
             shipmentState, orderState, state);
     }
 
+    /**
+     * factory method for an instance of OrderFromQuoteDraftBuilder
+     * @return builder
+     */
     public static OrderFromQuoteDraftBuilder of() {
         return new OrderFromQuoteDraftBuilder();
     }
 
+    /**
+     * create builder for OrderFromQuoteDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderFromQuoteDraftBuilder of(final OrderFromQuoteDraft template) {
         OrderFromQuoteDraftBuilder builder = new OrderFromQuoteDraftBuilder();
         builder.quote = template.getQuote();

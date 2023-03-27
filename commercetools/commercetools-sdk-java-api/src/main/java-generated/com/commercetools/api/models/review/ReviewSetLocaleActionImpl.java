@@ -24,12 +24,18 @@ public class ReviewSetLocaleActionImpl implements ReviewSetLocaleAction, ModelBa
 
     private String locale;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReviewSetLocaleActionImpl(@JsonProperty("locale") final String locale) {
         this.locale = locale;
         this.action = SET_LOCALE;
     }
 
+    /**
+     * create empty instance
+     */
     public ReviewSetLocaleActionImpl() {
         this.action = SET_LOCALE;
     }

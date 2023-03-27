@@ -27,6 +27,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ResourceCreationErrorImpl.class)
 public interface ResourceCreationError extends ErrorObject {
 
+    /**
+     * discriminator value for ResourceCreationError
+     */
     String RESOURCE_CREATION = "ResourceCreation";
 
     /**
@@ -37,12 +40,26 @@ public interface ResourceCreationError extends ErrorObject {
     @JsonProperty("resource")
     public Object getResource();
 
+    /**
+     * set resource
+     * @param resource value to be set
+     */
+
     public void setResource(final Object resource);
 
+    /**
+     * factory method
+     * @return instance of ResourceCreationError
+     */
     public static ResourceCreationError of() {
         return new ResourceCreationErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of ResourceCreationError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ResourceCreationError of(final ResourceCreationError template) {
         ResourceCreationErrorImpl instance = new ResourceCreationErrorImpl();
         instance.setMessage(template.getMessage());
@@ -50,18 +67,37 @@ public interface ResourceCreationError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for ResourceCreationError
+     * @return builder
+     */
     public static ResourceCreationErrorBuilder builder() {
         return ResourceCreationErrorBuilder.of();
     }
 
+    /**
+     * create builder for ResourceCreationError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ResourceCreationErrorBuilder builder(final ResourceCreationError template) {
         return ResourceCreationErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withResourceCreationError(Function<ResourceCreationError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ResourceCreationError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ResourceCreationError>() {
             @Override

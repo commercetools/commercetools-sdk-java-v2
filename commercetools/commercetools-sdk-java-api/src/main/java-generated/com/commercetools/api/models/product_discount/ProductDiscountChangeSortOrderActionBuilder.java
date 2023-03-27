@@ -34,6 +34,11 @@ public class ProductDiscountChangeSortOrderActionBuilder implements Builder<Prod
         return this;
     }
 
+    /**
+     *  <p>New value to set. Must not be empty. The string value must be a number between <code>0</code> and <code>1</code>. A Discount with a higher sortOrder is prioritized.</p>
+     * @return sortOrder
+     */
+
     public String getSortOrder() {
         return this.sortOrder;
     }
@@ -55,10 +60,19 @@ public class ProductDiscountChangeSortOrderActionBuilder implements Builder<Prod
         return new ProductDiscountChangeSortOrderActionImpl(sortOrder);
     }
 
+    /**
+     * factory method for an instance of ProductDiscountChangeSortOrderActionBuilder
+     * @return builder
+     */
     public static ProductDiscountChangeSortOrderActionBuilder of() {
         return new ProductDiscountChangeSortOrderActionBuilder();
     }
 
+    /**
+     * create builder for ProductDiscountChangeSortOrderAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductDiscountChangeSortOrderActionBuilder of(final ProductDiscountChangeSortOrderAction template) {
         ProductDiscountChangeSortOrderActionBuilder builder = new ProductDiscountChangeSortOrderActionBuilder();
         builder.sortOrder = template.getSortOrder();

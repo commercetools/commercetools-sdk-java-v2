@@ -48,17 +48,41 @@ public interface SimilarProductPair {
     @JsonProperty("products")
     public List<SimilarProduct> getProducts();
 
+    /**
+     *  <p>The probability of product similarity.</p>
+     * @param confidence value to be set
+     */
+
     public void setConfidence(final Double confidence);
+
+    /**
+     * set products
+     * @param products values to be set
+     */
 
     @JsonIgnore
     public void setProducts(final SimilarProduct... products);
 
+    /**
+     * set products
+     * @param products values to be set
+     */
+
     public void setProducts(final List<SimilarProduct> products);
 
+    /**
+     * factory method
+     * @return instance of SimilarProductPair
+     */
     public static SimilarProductPair of() {
         return new SimilarProductPairImpl();
     }
 
+    /**
+     * factory method to copy an instance of SimilarProductPair
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SimilarProductPair of(final SimilarProductPair template) {
         SimilarProductPairImpl instance = new SimilarProductPairImpl();
         instance.setConfidence(template.getConfidence());
@@ -66,18 +90,37 @@ public interface SimilarProductPair {
         return instance;
     }
 
+    /**
+     * builder factory method for SimilarProductPair
+     * @return builder
+     */
     public static SimilarProductPairBuilder builder() {
         return SimilarProductPairBuilder.of();
     }
 
+    /**
+     * create builder for SimilarProductPair instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SimilarProductPairBuilder builder(final SimilarProductPair template) {
         return SimilarProductPairBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSimilarProductPair(Function<SimilarProductPair, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SimilarProductPair> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SimilarProductPair>() {
             @Override

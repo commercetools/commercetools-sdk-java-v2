@@ -225,68 +225,215 @@ public interface CustomerImport extends ImportResource {
     @JsonProperty("authenticationMode")
     public AuthenticationMode getAuthenticationMode();
 
+    /**
+     *  <p>Maps to <code>Customer.customerNumber</code>.</p>
+     * @param customerNumber value to be set
+     */
+
     public void setCustomerNumber(final String customerNumber);
+
+    /**
+     *  <p>Maps to <code>Customer.email</code>.</p>
+     * @param email value to be set
+     */
 
     public void setEmail(final String email);
 
+    /**
+     *  <p>Maps to <code>Customer.password</code>.</p>
+     * @param password value to be set
+     */
+
     public void setPassword(final String password);
+
+    /**
+     *  <p>The References to the Stores with which the Customer is associated. If referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Stores are created.</p>
+     * @param stores values to be set
+     */
 
     @JsonIgnore
     public void setStores(final StoreKeyReference... stores);
 
+    /**
+     *  <p>The References to the Stores with which the Customer is associated. If referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Stores are created.</p>
+     * @param stores values to be set
+     */
+
     public void setStores(final List<StoreKeyReference> stores);
+
+    /**
+     *  <p>Maps to <code>Customer.firstName</code>.</p>
+     * @param firstName value to be set
+     */
 
     public void setFirstName(final String firstName);
 
+    /**
+     *  <p>Maps to <code>Customer.lastName</code>.</p>
+     * @param lastName value to be set
+     */
+
     public void setLastName(final String lastName);
+
+    /**
+     *  <p>Maps to <code>Customer.middleName</code>.</p>
+     * @param middleName value to be set
+     */
 
     public void setMiddleName(final String middleName);
 
+    /**
+     *  <p>Maps to <code>Customer.title</code>.</p>
+     * @param title value to be set
+     */
+
     public void setTitle(final String title);
+
+    /**
+     *  <p>Maps to <code>Customer.salutation</code>.</p>
+     * @param salutation value to be set
+     */
 
     public void setSalutation(final String salutation);
 
+    /**
+     *  <p>Maps to <code>Customer.externalId</code>.</p>
+     * @param externalId value to be set
+     */
+
     public void setExternalId(final String externalId);
+
+    /**
+     *  <p>Maps to <code>Customer.dateOfBirth</code>.</p>
+     * @param dateOfBirth value to be set
+     */
 
     public void setDateOfBirth(final LocalDate dateOfBirth);
 
+    /**
+     *  <p>Maps to <code>Customer.companyName</code>.</p>
+     * @param companyName value to be set
+     */
+
     public void setCompanyName(final String companyName);
+
+    /**
+     *  <p>Maps to <code>Customer.vatId</code>.</p>
+     * @param vatId value to be set
+     */
 
     public void setVatId(final String vatId);
 
+    /**
+     *  <p>Maps to <code>Customer.isEmailVerified</code>.</p>
+     * @param isEmailVerified value to be set
+     */
+
     public void setIsEmailVerified(final Boolean isEmailVerified);
 
+    /**
+     *  <p>The Reference to the CustomerGroup with which the Customer is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>
+     * @param customerGroup value to be set
+     */
+
     public void setCustomerGroup(final CustomerGroupKeyReference customerGroup);
+
+    /**
+     *  <p>Maps to <code>Customer.addresses</code>.</p>
+     * @param addresses values to be set
+     */
 
     @JsonIgnore
     public void setAddresses(final CustomerAddress... addresses);
 
+    /**
+     *  <p>Maps to <code>Customer.addresses</code>.</p>
+     * @param addresses values to be set
+     */
+
     public void setAddresses(final List<CustomerAddress> addresses);
 
+    /**
+     *  <p>The index of the address in the addresses array. The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p>
+     * @param defaultBillingAddress value to be set
+     */
+
     public void setDefaultBillingAddress(final Integer defaultBillingAddress);
+
+    /**
+     *  <p>The indices of the billing addresses in the addresses array. The <code>billingAddressIds</code> of the customer will be set to the IDs of that addresses.</p>
+     * @param billingAddresses values to be set
+     */
 
     @JsonIgnore
     public void setBillingAddresses(final Integer... billingAddresses);
 
+    /**
+     *  <p>The indices of the billing addresses in the addresses array. The <code>billingAddressIds</code> of the customer will be set to the IDs of that addresses.</p>
+     * @param billingAddresses values to be set
+     */
+
     public void setBillingAddresses(final List<Integer> billingAddresses);
 
+    /**
+     *  <p>The index of the address in the addresses array. The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p>
+     * @param defaultShippingAddress value to be set
+     */
+
     public void setDefaultShippingAddress(final Integer defaultShippingAddress);
+
+    /**
+     *  <p>The indices of the shipping addresses in the addresses array. The <code>shippingAddressIds</code> of the customer will be set to the IDs of that addresses.</p>
+     * @param shippingAddresses values to be set
+     */
 
     @JsonIgnore
     public void setShippingAddresses(final Integer... shippingAddresses);
 
+    /**
+     *  <p>The indices of the shipping addresses in the addresses array. The <code>shippingAddressIds</code> of the customer will be set to the IDs of that addresses.</p>
+     * @param shippingAddresses values to be set
+     */
+
     public void setShippingAddresses(final List<Integer> shippingAddresses);
+
+    /**
+     *  <p>Maps to <code>Customer.locale</code>.</p>
+     * @param locale value to be set
+     */
 
     public void setLocale(final String locale);
 
+    /**
+     *  <p>The Custom Fields for this Customer.</p>
+     * @param custom value to be set
+     */
+
     public void setCustom(final Custom custom);
+
+    /**
+     *  <ul>
+     *   <li>Set to <code>Password</code> to make the <code>password</code> field required for the Customer.</li>
+     *   <li>Set to <code>ExternalAuth</code> when the password is not required for the Customer.</li>
+     *  </ul>
+     * @param authenticationMode value to be set
+     */
 
     public void setAuthenticationMode(final AuthenticationMode authenticationMode);
 
+    /**
+     * factory method
+     * @return instance of CustomerImport
+     */
     public static CustomerImport of() {
         return new CustomerImportImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomerImport
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomerImport of(final CustomerImport template) {
         CustomerImportImpl instance = new CustomerImportImpl();
         instance.setKey(template.getKey());
@@ -316,18 +463,37 @@ public interface CustomerImport extends ImportResource {
         return instance;
     }
 
+    /**
+     * builder factory method for CustomerImport
+     * @return builder
+     */
     public static CustomerImportBuilder builder() {
         return CustomerImportBuilder.of();
     }
 
+    /**
+     * create builder for CustomerImport instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerImportBuilder builder(final CustomerImport template) {
         return CustomerImportBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomerImport(Function<CustomerImport, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomerImport> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomerImport>() {
             @Override

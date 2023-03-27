@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ExtensionPredicateEvaluationFailedErrorImpl.class)
 public interface ExtensionPredicateEvaluationFailedError extends ErrorObject {
 
+    /**
+     * discriminator value for ExtensionPredicateEvaluationFailedError
+     */
     String EXTENSION_PREDICATE_EVALUATION_FAILED = "ExtensionPredicateEvaluationFailed";
 
     /**
@@ -58,14 +61,33 @@ public interface ExtensionPredicateEvaluationFailedError extends ErrorObject {
     @JsonProperty("errorByExtension")
     public ErrorByExtension getErrorByExtension();
 
+    /**
+     *  <p><code>"The compared field $fieldName is not present."</code></p>
+     * @param message value to be set
+     */
+
     public void setMessage(final String message);
+
+    /**
+     *  <p>Details about the API Extension that was involved in the error.</p>
+     * @param errorByExtension value to be set
+     */
 
     public void setErrorByExtension(final ErrorByExtension errorByExtension);
 
+    /**
+     * factory method
+     * @return instance of ExtensionPredicateEvaluationFailedError
+     */
     public static ExtensionPredicateEvaluationFailedError of() {
         return new ExtensionPredicateEvaluationFailedErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of ExtensionPredicateEvaluationFailedError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ExtensionPredicateEvaluationFailedError of(final ExtensionPredicateEvaluationFailedError template) {
         ExtensionPredicateEvaluationFailedErrorImpl instance = new ExtensionPredicateEvaluationFailedErrorImpl();
         instance.setMessage(template.getMessage());
@@ -74,20 +96,39 @@ public interface ExtensionPredicateEvaluationFailedError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for ExtensionPredicateEvaluationFailedError
+     * @return builder
+     */
     public static ExtensionPredicateEvaluationFailedErrorBuilder builder() {
         return ExtensionPredicateEvaluationFailedErrorBuilder.of();
     }
 
+    /**
+     * create builder for ExtensionPredicateEvaluationFailedError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ExtensionPredicateEvaluationFailedErrorBuilder builder(
             final ExtensionPredicateEvaluationFailedError template) {
         return ExtensionPredicateEvaluationFailedErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withExtensionPredicateEvaluationFailedError(
             Function<ExtensionPredicateEvaluationFailedError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ExtensionPredicateEvaluationFailedError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ExtensionPredicateEvaluationFailedError>() {
             @Override

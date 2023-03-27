@@ -22,12 +22,18 @@ public class ShippingRateInputImpl implements ShippingRateInput, ModelBase {
 
     private com.commercetools.importapi.models.orders.ShippingRateInputType type;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShippingRateInputImpl(
             @JsonProperty("type") final com.commercetools.importapi.models.orders.ShippingRateInputType type) {
         this.type = type;
     }
 
+    /**
+     * create empty instance
+     */
     public ShippingRateInputImpl() {
     }
 

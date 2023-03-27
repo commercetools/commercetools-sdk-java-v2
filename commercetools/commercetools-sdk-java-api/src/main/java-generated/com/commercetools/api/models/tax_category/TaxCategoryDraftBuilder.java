@@ -135,19 +135,39 @@ public class TaxCategoryDraftBuilder implements Builder<TaxCategoryDraft> {
         return this;
     }
 
+    /**
+     *  <p>Name of the TaxCategory.</p>
+     * @return name
+     */
+
     public String getName() {
         return this.name;
     }
+
+    /**
+     *  <p>Description of the TaxCategory.</p>
+     * @return description
+     */
 
     @Nullable
     public String getDescription() {
         return this.description;
     }
 
+    /**
+     *  <p>Tax rates and subrates of states and countries.</p>
+     * @return rates
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.tax_category.TaxRateDraft> getRates() {
         return this.rates;
     }
+
+    /**
+     *  <p>User-defined unique identifier for the TaxCategory.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
@@ -171,10 +191,19 @@ public class TaxCategoryDraftBuilder implements Builder<TaxCategoryDraft> {
         return new TaxCategoryDraftImpl(name, description, rates, key);
     }
 
+    /**
+     * factory method for an instance of TaxCategoryDraftBuilder
+     * @return builder
+     */
     public static TaxCategoryDraftBuilder of() {
         return new TaxCategoryDraftBuilder();
     }
 
+    /**
+     * create builder for TaxCategoryDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TaxCategoryDraftBuilder of(final TaxCategoryDraft template) {
         TaxCategoryDraftBuilder builder = new TaxCategoryDraftBuilder();
         builder.name = template.getName();

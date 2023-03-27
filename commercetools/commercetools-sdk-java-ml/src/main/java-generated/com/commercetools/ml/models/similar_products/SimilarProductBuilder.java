@@ -90,15 +90,30 @@ public class SimilarProductBuilder implements Builder<SimilarProduct> {
         return this;
     }
 
+    /**
+     *  <p>Reference to Product</p>
+     * @return product
+     */
+
     @Nullable
     public com.commercetools.ml.models.common.ProductReference getProduct() {
         return this.product;
     }
 
+    /**
+     *  <p>ID of the ProductVariant that was compared.</p>
+     * @return variantId
+     */
+
     @Nullable
     public Long getVariantId() {
         return this.variantId;
     }
+
+    /**
+     *  <p>Supplementary information about the data used for similarity estimation. This information helps you understand the estimated confidence score, but it should not be used to identify a product.</p>
+     * @return meta
+     */
 
     @Nullable
     public com.commercetools.ml.models.similar_products.SimilarProductMeta getMeta() {
@@ -121,10 +136,19 @@ public class SimilarProductBuilder implements Builder<SimilarProduct> {
         return new SimilarProductImpl(product, variantId, meta);
     }
 
+    /**
+     * factory method for an instance of SimilarProductBuilder
+     * @return builder
+     */
     public static SimilarProductBuilder of() {
         return new SimilarProductBuilder();
     }
 
+    /**
+     * create builder for SimilarProduct instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SimilarProductBuilder of(final SimilarProduct template) {
         SimilarProductBuilder builder = new SimilarProductBuilder();
         builder.product = template.getProduct();

@@ -34,6 +34,11 @@ public class TaxCategoryRemoveTaxRateActionBuilder implements Builder<TaxCategor
         return this;
     }
 
+    /**
+     *  <p>ID of the TaxRate to remove.</p>
+     * @return taxRateId
+     */
+
     public String getTaxRateId() {
         return this.taxRateId;
     }
@@ -55,10 +60,19 @@ public class TaxCategoryRemoveTaxRateActionBuilder implements Builder<TaxCategor
         return new TaxCategoryRemoveTaxRateActionImpl(taxRateId);
     }
 
+    /**
+     * factory method for an instance of TaxCategoryRemoveTaxRateActionBuilder
+     * @return builder
+     */
     public static TaxCategoryRemoveTaxRateActionBuilder of() {
         return new TaxCategoryRemoveTaxRateActionBuilder();
     }
 
+    /**
+     * create builder for TaxCategoryRemoveTaxRateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TaxCategoryRemoveTaxRateActionBuilder of(final TaxCategoryRemoveTaxRateAction template) {
         TaxCategoryRemoveTaxRateActionBuilder builder = new TaxCategoryRemoveTaxRateActionBuilder();
         builder.taxRateId = template.getTaxRateId();

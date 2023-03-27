@@ -24,12 +24,18 @@ public class ProductDiscountSetValidUntilActionImpl implements ProductDiscountSe
 
     private java.time.ZonedDateTime validUntil;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductDiscountSetValidUntilActionImpl(@JsonProperty("validUntil") final java.time.ZonedDateTime validUntil) {
         this.validUntil = validUntil;
         this.action = SET_VALID_UNTIL;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductDiscountSetValidUntilActionImpl() {
         this.action = SET_VALID_UNTIL;
     }

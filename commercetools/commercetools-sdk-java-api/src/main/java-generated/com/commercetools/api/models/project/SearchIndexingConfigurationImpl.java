@@ -24,6 +24,9 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
 
     private com.commercetools.api.models.project.SearchIndexingConfigurationValues orders;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SearchIndexingConfigurationImpl(
             @JsonProperty("products") final com.commercetools.api.models.project.SearchIndexingConfigurationValues products,
@@ -32,6 +35,9 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
         this.orders = orders;
     }
 
+    /**
+     * create empty instance
+     */
     public SearchIndexingConfigurationImpl() {
     }
 

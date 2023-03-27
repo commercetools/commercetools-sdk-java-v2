@@ -35,6 +35,9 @@ public class ProductPriceExternalDiscountSetMessagePayloadImpl
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductPriceExternalDiscountSetMessagePayloadImpl(@JsonProperty("variantId") final Integer variantId,
             @JsonProperty("variantKey") final String variantKey, @JsonProperty("sku") final String sku,
@@ -50,6 +53,9 @@ public class ProductPriceExternalDiscountSetMessagePayloadImpl
         this.type = PRODUCT_PRICE_EXTERNAL_DISCOUNT_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductPriceExternalDiscountSetMessagePayloadImpl() {
         this.type = PRODUCT_PRICE_EXTERNAL_DISCOUNT_SET;
     }

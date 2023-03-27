@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ScoreShippingRateInputImpl.class)
 public interface ScoreShippingRateInput extends ShippingRateInput {
 
+    /**
+     * discriminator value for ScoreShippingRateInput
+     */
     String SCORE = "Score";
 
     /**
@@ -39,30 +42,63 @@ public interface ScoreShippingRateInput extends ShippingRateInput {
     @JsonProperty("score")
     public Double getScore();
 
+    /**
+     * set score
+     * @param score value to be set
+     */
+
     public void setScore(final Double score);
 
+    /**
+     * factory method
+     * @return instance of ScoreShippingRateInput
+     */
     public static ScoreShippingRateInput of() {
         return new ScoreShippingRateInputImpl();
     }
 
+    /**
+     * factory method to copy an instance of ScoreShippingRateInput
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ScoreShippingRateInput of(final ScoreShippingRateInput template) {
         ScoreShippingRateInputImpl instance = new ScoreShippingRateInputImpl();
         instance.setScore(template.getScore());
         return instance;
     }
 
+    /**
+     * builder factory method for ScoreShippingRateInput
+     * @return builder
+     */
     public static ScoreShippingRateInputBuilder builder() {
         return ScoreShippingRateInputBuilder.of();
     }
 
+    /**
+     * create builder for ScoreShippingRateInput instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ScoreShippingRateInputBuilder builder(final ScoreShippingRateInput template) {
         return ScoreShippingRateInputBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withScoreShippingRateInput(Function<ScoreShippingRateInput, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ScoreShippingRateInput> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ScoreShippingRateInput>() {
             @Override

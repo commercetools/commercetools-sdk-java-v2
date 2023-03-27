@@ -24,12 +24,18 @@ public class DateTimeFieldImpl implements DateTimeField, ModelBase {
 
     private java.time.ZonedDateTime value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DateTimeFieldImpl(@JsonProperty("value") final java.time.ZonedDateTime value) {
         this.value = value;
         this.type = DATE_TIME;
     }
 
+    /**
+     * create empty instance
+     */
     public DateTimeFieldImpl() {
         this.type = DATE_TIME;
     }

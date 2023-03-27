@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderAddPaymentActionImpl.class)
 public interface StagedOrderAddPaymentAction extends StagedOrderUpdateAction {
 
+    /**
+     * discriminator value for StagedOrderAddPaymentAction
+     */
     String ADD_PAYMENT = "addPayment";
 
     /**
@@ -43,30 +46,63 @@ public interface StagedOrderAddPaymentAction extends StagedOrderUpdateAction {
     @JsonProperty("payment")
     public PaymentResourceIdentifier getPayment();
 
+    /**
+     *  <p>ResourceIdentifier of a Payment.</p>
+     * @param payment value to be set
+     */
+
     public void setPayment(final PaymentResourceIdentifier payment);
 
+    /**
+     * factory method
+     * @return instance of StagedOrderAddPaymentAction
+     */
     public static StagedOrderAddPaymentAction of() {
         return new StagedOrderAddPaymentActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedOrderAddPaymentAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedOrderAddPaymentAction of(final StagedOrderAddPaymentAction template) {
         StagedOrderAddPaymentActionImpl instance = new StagedOrderAddPaymentActionImpl();
         instance.setPayment(template.getPayment());
         return instance;
     }
 
+    /**
+     * builder factory method for StagedOrderAddPaymentAction
+     * @return builder
+     */
     public static StagedOrderAddPaymentActionBuilder builder() {
         return StagedOrderAddPaymentActionBuilder.of();
     }
 
+    /**
+     * create builder for StagedOrderAddPaymentAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderAddPaymentActionBuilder builder(final StagedOrderAddPaymentAction template) {
         return StagedOrderAddPaymentActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedOrderAddPaymentAction(Function<StagedOrderAddPaymentAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderAddPaymentAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderAddPaymentAction>() {
             @Override

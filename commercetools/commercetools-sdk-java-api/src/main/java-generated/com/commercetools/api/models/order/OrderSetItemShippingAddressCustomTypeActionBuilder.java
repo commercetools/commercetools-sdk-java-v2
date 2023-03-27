@@ -34,7 +34,7 @@ public class OrderSetItemShippingAddressCustomTypeActionBuilder
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *
+     * set the value to the addressKey
      * @param addressKey value to be set
      * @return Builder
      */
@@ -92,14 +92,29 @@ public class OrderSetItemShippingAddressCustomTypeActionBuilder
         return this;
     }
 
+    /**
+     * value of addressKey}
+     * @return addressKey
+     */
+
     public String getAddressKey() {
         return this.addressKey;
     }
+
+    /**
+     *  <p>Defines the Type that extends the <code>itemShippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>itemShippingAddress</code>.</p>
+     * @return type
+     */
 
     @Nullable
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }
+
+    /**
+     *  <p>Sets the Custom Fields fields for the <code>itemShippingAddress</code>.</p>
+     * @return fields
+     */
 
     @Nullable
     public com.commercetools.api.models.type.FieldContainer getFields() {
@@ -124,10 +139,19 @@ public class OrderSetItemShippingAddressCustomTypeActionBuilder
         return new OrderSetItemShippingAddressCustomTypeActionImpl(addressKey, type, fields);
     }
 
+    /**
+     * factory method for an instance of OrderSetItemShippingAddressCustomTypeActionBuilder
+     * @return builder
+     */
     public static OrderSetItemShippingAddressCustomTypeActionBuilder of() {
         return new OrderSetItemShippingAddressCustomTypeActionBuilder();
     }
 
+    /**
+     * create builder for OrderSetItemShippingAddressCustomTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderSetItemShippingAddressCustomTypeActionBuilder of(
             final OrderSetItemShippingAddressCustomTypeAction template) {
         OrderSetItemShippingAddressCustomTypeActionBuilder builder = new OrderSetItemShippingAddressCustomTypeActionBuilder();

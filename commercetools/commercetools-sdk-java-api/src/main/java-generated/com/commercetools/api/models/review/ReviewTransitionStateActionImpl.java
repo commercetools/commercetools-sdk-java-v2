@@ -26,6 +26,9 @@ public class ReviewTransitionStateActionImpl implements ReviewTransitionStateAct
 
     private Boolean force;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReviewTransitionStateActionImpl(
             @JsonProperty("state") final com.commercetools.api.models.state.StateResourceIdentifier state,
@@ -35,6 +38,9 @@ public class ReviewTransitionStateActionImpl implements ReviewTransitionStateAct
         this.action = TRANSITION_STATE;
     }
 
+    /**
+     * create empty instance
+     */
     public ReviewTransitionStateActionImpl() {
         this.action = TRANSITION_STATE;
     }

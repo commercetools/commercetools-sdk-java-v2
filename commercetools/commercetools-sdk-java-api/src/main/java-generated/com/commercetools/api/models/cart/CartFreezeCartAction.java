@@ -26,29 +26,60 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartFreezeCartActionImpl.class)
 public interface CartFreezeCartAction extends CartUpdateAction {
 
+    /**
+     * discriminator value for CartFreezeCartAction
+     */
     String FREEZE_CART = "freezeCart";
 
+    /**
+     * factory method
+     * @return instance of CartFreezeCartAction
+     */
     public static CartFreezeCartAction of() {
         return new CartFreezeCartActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartFreezeCartAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartFreezeCartAction of(final CartFreezeCartAction template) {
         CartFreezeCartActionImpl instance = new CartFreezeCartActionImpl();
         return instance;
     }
 
+    /**
+     * builder factory method for CartFreezeCartAction
+     * @return builder
+     */
     public static CartFreezeCartActionBuilder builder() {
         return CartFreezeCartActionBuilder.of();
     }
 
+    /**
+     * create builder for CartFreezeCartAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartFreezeCartActionBuilder builder(final CartFreezeCartAction template) {
         return CartFreezeCartActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartFreezeCartAction(Function<CartFreezeCartAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartFreezeCartAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartFreezeCartAction>() {
             @Override

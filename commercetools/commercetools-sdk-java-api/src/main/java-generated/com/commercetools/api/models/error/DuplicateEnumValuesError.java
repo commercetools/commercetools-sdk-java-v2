@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = DuplicateEnumValuesErrorImpl.class)
 public interface DuplicateEnumValuesError extends ErrorObject {
 
+    /**
+     * discriminator value for DuplicateEnumValuesError
+     */
     String DUPLICATE_ENUM_VALUES = "DuplicateEnumValues";
 
     /**
@@ -56,17 +59,41 @@ public interface DuplicateEnumValuesError extends ErrorObject {
     @JsonProperty("duplicates")
     public List<String> getDuplicates();
 
+    /**
+     *  <p><code>"The enum values contain duplicate keys: $listOfDuplicateKeys."</code></p>
+     * @param message value to be set
+     */
+
     public void setMessage(final String message);
+
+    /**
+     *  <p>Duplicate keys.</p>
+     * @param duplicates values to be set
+     */
 
     @JsonIgnore
     public void setDuplicates(final String... duplicates);
 
+    /**
+     *  <p>Duplicate keys.</p>
+     * @param duplicates values to be set
+     */
+
     public void setDuplicates(final List<String> duplicates);
 
+    /**
+     * factory method
+     * @return instance of DuplicateEnumValuesError
+     */
     public static DuplicateEnumValuesError of() {
         return new DuplicateEnumValuesErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of DuplicateEnumValuesError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static DuplicateEnumValuesError of(final DuplicateEnumValuesError template) {
         DuplicateEnumValuesErrorImpl instance = new DuplicateEnumValuesErrorImpl();
         instance.setMessage(template.getMessage());
@@ -75,18 +102,37 @@ public interface DuplicateEnumValuesError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for DuplicateEnumValuesError
+     * @return builder
+     */
     public static DuplicateEnumValuesErrorBuilder builder() {
         return DuplicateEnumValuesErrorBuilder.of();
     }
 
+    /**
+     * create builder for DuplicateEnumValuesError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DuplicateEnumValuesErrorBuilder builder(final DuplicateEnumValuesError template) {
         return DuplicateEnumValuesErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withDuplicateEnumValuesError(Function<DuplicateEnumValuesError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<DuplicateEnumValuesError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<DuplicateEnumValuesError>() {
             @Override

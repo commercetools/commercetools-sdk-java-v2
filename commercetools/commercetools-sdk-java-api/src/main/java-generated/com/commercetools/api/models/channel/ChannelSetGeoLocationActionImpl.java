@@ -24,6 +24,9 @@ public class ChannelSetGeoLocationActionImpl implements ChannelSetGeoLocationAct
 
     private com.commercetools.api.models.common.GeoJson geoLocation;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChannelSetGeoLocationActionImpl(
             @JsonProperty("geoLocation") final com.commercetools.api.models.common.GeoJson geoLocation) {
@@ -31,6 +34,9 @@ public class ChannelSetGeoLocationActionImpl implements ChannelSetGeoLocationAct
         this.action = SET_GEO_LOCATION;
     }
 
+    /**
+     * create empty instance
+     */
     public ChannelSetGeoLocationActionImpl() {
         this.action = SET_GEO_LOCATION;
     }

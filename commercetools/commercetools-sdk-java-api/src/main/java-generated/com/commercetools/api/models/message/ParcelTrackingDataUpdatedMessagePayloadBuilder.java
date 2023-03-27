@@ -93,18 +93,38 @@ public class ParcelTrackingDataUpdatedMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Delivery.</p>
+     * @return deliveryId
+     */
+
     public String getDeliveryId() {
         return this.deliveryId;
     }
+
+    /**
+     *  <p>Unique identifier of the Parcel.</p>
+     * @return parcelId
+     */
 
     public String getParcelId() {
         return this.parcelId;
     }
 
+    /**
+     *  <p>The Tracking Data that was added to the Parcel.</p>
+     * @return trackingData
+     */
+
     @Nullable
     public com.commercetools.api.models.order.TrackingData getTrackingData() {
         return this.trackingData;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     * @return shippingKey
+     */
 
     @Nullable
     public String getShippingKey() {
@@ -129,10 +149,19 @@ public class ParcelTrackingDataUpdatedMessagePayloadBuilder
         return new ParcelTrackingDataUpdatedMessagePayloadImpl(deliveryId, parcelId, trackingData, shippingKey);
     }
 
+    /**
+     * factory method for an instance of ParcelTrackingDataUpdatedMessagePayloadBuilder
+     * @return builder
+     */
     public static ParcelTrackingDataUpdatedMessagePayloadBuilder of() {
         return new ParcelTrackingDataUpdatedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for ParcelTrackingDataUpdatedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ParcelTrackingDataUpdatedMessagePayloadBuilder of(
             final ParcelTrackingDataUpdatedMessagePayload template) {
         ParcelTrackingDataUpdatedMessagePayloadBuilder builder = new ParcelTrackingDataUpdatedMessagePayloadBuilder();

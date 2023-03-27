@@ -43,14 +43,34 @@ public interface CartsConfiguration {
     @JsonProperty("countryTaxRateFallbackEnabled")
     public Boolean getCountryTaxRateFallbackEnabled();
 
+    /**
+     *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the CartDraft and MyCartDraft. If a ChangeSubscription for Carts exists, a ResourceDeletedDeliveryPayload is sent upon deletion of a Cart.</p>
+     *  <p>This field may not be present on Projects created before January 2020.</p>
+     * @param deleteDaysAfterLastModification value to be set
+     */
+
     public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification);
+
+    /**
+     *  <p>Indicates if country <em>- no state</em> Tax Rate fallback should be used when a shipping address state is not explicitly covered in the rates lists of all Tax Categories of a Cart Line Items. This field may not be present on Projects created before June 2020.</p>
+     * @param countryTaxRateFallbackEnabled value to be set
+     */
 
     public void setCountryTaxRateFallbackEnabled(final Boolean countryTaxRateFallbackEnabled);
 
+    /**
+     * factory method
+     * @return instance of CartsConfiguration
+     */
     public static CartsConfiguration of() {
         return new CartsConfigurationImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartsConfiguration
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartsConfiguration of(final CartsConfiguration template) {
         CartsConfigurationImpl instance = new CartsConfigurationImpl();
         instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
@@ -58,18 +78,37 @@ public interface CartsConfiguration {
         return instance;
     }
 
+    /**
+     * builder factory method for CartsConfiguration
+     * @return builder
+     */
     public static CartsConfigurationBuilder builder() {
         return CartsConfigurationBuilder.of();
     }
 
+    /**
+     * create builder for CartsConfiguration instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartsConfigurationBuilder builder(final CartsConfiguration template) {
         return CartsConfigurationBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartsConfiguration(Function<CartsConfiguration, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartsConfiguration> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartsConfiguration>() {
             @Override

@@ -46,34 +46,68 @@ public interface Destination {
     @JsonProperty("type")
     public String getType();
 
+    /**
+     * builder for eventGrid subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.subscription.AzureEventGridDestinationBuilder eventGridBuilder() {
         return com.commercetools.api.models.subscription.AzureEventGridDestinationBuilder.of();
     }
 
+    /**
+     * builder for azureServiceBus subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.subscription.AzureServiceBusDestinationBuilder azureServiceBusBuilder() {
         return com.commercetools.api.models.subscription.AzureServiceBusDestinationBuilder.of();
     }
 
+    /**
+     * builder for eventBridge subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.subscription.EventBridgeDestinationBuilder eventBridgeBuilder() {
         return com.commercetools.api.models.subscription.EventBridgeDestinationBuilder.of();
     }
 
+    /**
+     * builder for googleCloudPubSub subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.subscription.GoogleCloudPubSubDestinationBuilder googleCloudPubSubBuilder() {
         return com.commercetools.api.models.subscription.GoogleCloudPubSubDestinationBuilder.of();
     }
 
+    /**
+     * builder for sns subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.subscription.SnsDestinationBuilder snsBuilder() {
         return com.commercetools.api.models.subscription.SnsDestinationBuilder.of();
     }
 
+    /**
+     * builder for sqs subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.subscription.SqsDestinationBuilder sqsBuilder() {
         return com.commercetools.api.models.subscription.SqsDestinationBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withDestination(Function<Destination, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<Destination> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Destination>() {
             @Override

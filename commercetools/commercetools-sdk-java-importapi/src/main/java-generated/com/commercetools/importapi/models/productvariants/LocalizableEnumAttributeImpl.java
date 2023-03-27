@@ -26,6 +26,9 @@ public class LocalizableEnumAttributeImpl implements LocalizableEnumAttribute, M
 
     private String value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     LocalizableEnumAttributeImpl(@JsonProperty("name") final String name, @JsonProperty("value") final String value) {
         this.name = name;
@@ -33,6 +36,9 @@ public class LocalizableEnumAttributeImpl implements LocalizableEnumAttribute, M
         this.type = LENUM;
     }
 
+    /**
+     * create empty instance
+     */
     public LocalizableEnumAttributeImpl() {
         this.type = LENUM;
     }

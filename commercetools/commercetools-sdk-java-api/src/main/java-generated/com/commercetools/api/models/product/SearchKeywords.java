@@ -39,30 +39,64 @@ public interface SearchKeywords {
     @JsonAnyGetter
     public Map<String, List<SearchKeyword>> values();
 
+    /**
+     * set pattern property
+     * @param key property name
+     * @param value property value
+     */
+
     @JsonAnySetter
     public void setValue(String key, List<SearchKeyword> value);
 
+    /**
+     * factory method
+     * @return instance of SearchKeywords
+     */
     public static SearchKeywords of() {
         return new SearchKeywordsImpl();
     }
 
+    /**
+     * factory method to copy an instance of SearchKeywords
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SearchKeywords of(final SearchKeywords template) {
         SearchKeywordsImpl instance = new SearchKeywordsImpl();
         return instance;
     }
 
+    /**
+     * builder factory method for SearchKeywords
+     * @return builder
+     */
     public static SearchKeywordsBuilder builder() {
         return SearchKeywordsBuilder.of();
     }
 
+    /**
+     * create builder for SearchKeywords instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SearchKeywordsBuilder builder(final SearchKeywords template) {
         return SearchKeywordsBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSearchKeywords(Function<SearchKeywords, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SearchKeywords> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SearchKeywords>() {
             @Override

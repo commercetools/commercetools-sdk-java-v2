@@ -68,6 +68,9 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
 
     private com.commercetools.importapi.models.customers.AuthenticationMode authenticationMode;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerImportImpl(@JsonProperty("key") final String key,
             @JsonProperty("customerNumber") final String customerNumber, @JsonProperty("email") final String email,
@@ -114,6 +117,9 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
         this.authenticationMode = authenticationMode;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerImportImpl() {
     }
 

@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProjectChangeMessagesConfigurationActionImpl.class)
 public interface ProjectChangeMessagesConfigurationAction extends ProjectUpdateAction {
 
+    /**
+     * discriminator value for ProjectChangeMessagesConfigurationAction
+     */
     String CHANGE_MESSAGES_CONFIGURATION = "changeMessagesConfiguration";
 
     /**
@@ -42,32 +45,65 @@ public interface ProjectChangeMessagesConfigurationAction extends ProjectUpdateA
     @JsonProperty("messagesConfiguration")
     public MessagesConfigurationDraft getMessagesConfiguration();
 
+    /**
+     *  <p>Configuration for the Messages Query feature.</p>
+     * @param messagesConfiguration value to be set
+     */
+
     public void setMessagesConfiguration(final MessagesConfigurationDraft messagesConfiguration);
 
+    /**
+     * factory method
+     * @return instance of ProjectChangeMessagesConfigurationAction
+     */
     public static ProjectChangeMessagesConfigurationAction of() {
         return new ProjectChangeMessagesConfigurationActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProjectChangeMessagesConfigurationAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProjectChangeMessagesConfigurationAction of(final ProjectChangeMessagesConfigurationAction template) {
         ProjectChangeMessagesConfigurationActionImpl instance = new ProjectChangeMessagesConfigurationActionImpl();
         instance.setMessagesConfiguration(template.getMessagesConfiguration());
         return instance;
     }
 
+    /**
+     * builder factory method for ProjectChangeMessagesConfigurationAction
+     * @return builder
+     */
     public static ProjectChangeMessagesConfigurationActionBuilder builder() {
         return ProjectChangeMessagesConfigurationActionBuilder.of();
     }
 
+    /**
+     * create builder for ProjectChangeMessagesConfigurationAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProjectChangeMessagesConfigurationActionBuilder builder(
             final ProjectChangeMessagesConfigurationAction template) {
         return ProjectChangeMessagesConfigurationActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProjectChangeMessagesConfigurationAction(
             Function<ProjectChangeMessagesConfigurationAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProjectChangeMessagesConfigurationAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProjectChangeMessagesConfigurationAction>() {
             @Override

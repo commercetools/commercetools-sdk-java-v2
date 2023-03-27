@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductVariantSelectionIncludeAllExceptImpl.class)
 public interface ProductVariantSelectionIncludeAllExcept extends ProductVariantSelection {
 
+    /**
+     * discriminator value for ProductVariantSelectionIncludeAllExcept
+     */
     String INCLUDE_ALL_EXCEPT = "includeAllExcept";
 
     /**
@@ -47,35 +50,73 @@ public interface ProductVariantSelectionIncludeAllExcept extends ProductVariantS
     @JsonProperty("skus")
     public List<String> getSkus();
 
+    /**
+     *  <p>Non-empty array of SKUs representing Product Variants to be excluded from the Product Selection.</p>
+     * @param skus values to be set
+     */
+
     @JsonIgnore
     public void setSkus(final String... skus);
 
+    /**
+     *  <p>Non-empty array of SKUs representing Product Variants to be excluded from the Product Selection.</p>
+     * @param skus values to be set
+     */
+
     public void setSkus(final List<String> skus);
 
+    /**
+     * factory method
+     * @return instance of ProductVariantSelectionIncludeAllExcept
+     */
     public static ProductVariantSelectionIncludeAllExcept of() {
         return new ProductVariantSelectionIncludeAllExceptImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductVariantSelectionIncludeAllExcept
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductVariantSelectionIncludeAllExcept of(final ProductVariantSelectionIncludeAllExcept template) {
         ProductVariantSelectionIncludeAllExceptImpl instance = new ProductVariantSelectionIncludeAllExceptImpl();
         instance.setSkus(template.getSkus());
         return instance;
     }
 
+    /**
+     * builder factory method for ProductVariantSelectionIncludeAllExcept
+     * @return builder
+     */
     public static ProductVariantSelectionIncludeAllExceptBuilder builder() {
         return ProductVariantSelectionIncludeAllExceptBuilder.of();
     }
 
+    /**
+     * create builder for ProductVariantSelectionIncludeAllExcept instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductVariantSelectionIncludeAllExceptBuilder builder(
             final ProductVariantSelectionIncludeAllExcept template) {
         return ProductVariantSelectionIncludeAllExceptBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductVariantSelectionIncludeAllExcept(
             Function<ProductVariantSelectionIncludeAllExcept, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductVariantSelectionIncludeAllExcept> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductVariantSelectionIncludeAllExcept>() {
             @Override

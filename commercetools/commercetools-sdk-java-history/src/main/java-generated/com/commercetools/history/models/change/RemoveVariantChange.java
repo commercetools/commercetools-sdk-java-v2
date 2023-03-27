@@ -34,6 +34,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = RemoveVariantChangeImpl.class)
 public interface RemoveVariantChange extends Change {
 
+    /**
+     * discriminator value for RemoveVariantChange
+     */
     String REMOVE_VARIANT_CHANGE = "RemoveVariantChange";
 
     /**
@@ -78,18 +81,47 @@ public interface RemoveVariantChange extends Change {
     @JsonProperty("nextValue")
     public Variant getNextValue();
 
+    /**
+     *  <p>Update action for <code>removeVariant</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set catalogData
+     * @param catalogData value to be set
+     */
 
     public void setCatalogData(final String catalogData);
 
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
+
     public void setPreviousValue(final Variant previousValue);
+
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
 
     public void setNextValue(final Variant nextValue);
 
+    /**
+     * factory method
+     * @return instance of RemoveVariantChange
+     */
     public static RemoveVariantChange of() {
         return new RemoveVariantChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of RemoveVariantChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static RemoveVariantChange of(final RemoveVariantChange template) {
         RemoveVariantChangeImpl instance = new RemoveVariantChangeImpl();
         instance.setChange(template.getChange());
@@ -99,18 +131,37 @@ public interface RemoveVariantChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for RemoveVariantChange
+     * @return builder
+     */
     public static RemoveVariantChangeBuilder builder() {
         return RemoveVariantChangeBuilder.of();
     }
 
+    /**
+     * create builder for RemoveVariantChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static RemoveVariantChangeBuilder builder(final RemoveVariantChange template) {
         return RemoveVariantChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withRemoveVariantChange(Function<RemoveVariantChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<RemoveVariantChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<RemoveVariantChange>() {
             @Override

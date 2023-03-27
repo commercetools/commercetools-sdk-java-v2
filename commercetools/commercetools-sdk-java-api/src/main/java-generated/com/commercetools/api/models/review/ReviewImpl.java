@@ -56,6 +56,9 @@ public class ReviewImpl implements Review, ModelBase {
 
     private com.commercetools.api.models.type.CustomFields custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReviewImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -91,6 +94,9 @@ public class ReviewImpl implements Review, ModelBase {
         this.custom = custom;
     }
 
+    /**
+     * create empty instance
+     */
     public ReviewImpl() {
     }
 

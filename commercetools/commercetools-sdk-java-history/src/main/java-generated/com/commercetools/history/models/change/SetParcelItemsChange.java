@@ -35,6 +35,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetParcelItemsChangeImpl.class)
 public interface SetParcelItemsChange extends Change {
 
+    /**
+     * discriminator value for SetParcelItemsChange
+     */
     String SET_PARCEL_ITEMS_CHANGE = "SetParcelItemsChange";
 
     /**
@@ -80,24 +83,63 @@ public interface SetParcelItemsChange extends Change {
     @JsonProperty("previousValue")
     public List<DeliveryItem> getPreviousValue();
 
+    /**
+     *  <p>Update action for <code>setParcelItems</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
 
+    /**
+     * set parcel
+     * @param parcel value to be set
+     */
+
     public void setParcel(final ParcelChangeValue parcel);
+
+    /**
+     * set nextValue
+     * @param nextValue values to be set
+     */
 
     @JsonIgnore
     public void setNextValue(final DeliveryItem... nextValue);
 
+    /**
+     * set nextValue
+     * @param nextValue values to be set
+     */
+
     public void setNextValue(final List<DeliveryItem> nextValue);
+
+    /**
+     * set previousValue
+     * @param previousValue values to be set
+     */
 
     @JsonIgnore
     public void setPreviousValue(final DeliveryItem... previousValue);
 
+    /**
+     * set previousValue
+     * @param previousValue values to be set
+     */
+
     public void setPreviousValue(final List<DeliveryItem> previousValue);
 
+    /**
+     * factory method
+     * @return instance of SetParcelItemsChange
+     */
     public static SetParcelItemsChange of() {
         return new SetParcelItemsChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetParcelItemsChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetParcelItemsChange of(final SetParcelItemsChange template) {
         SetParcelItemsChangeImpl instance = new SetParcelItemsChangeImpl();
         instance.setChange(template.getChange());
@@ -107,18 +149,37 @@ public interface SetParcelItemsChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetParcelItemsChange
+     * @return builder
+     */
     public static SetParcelItemsChangeBuilder builder() {
         return SetParcelItemsChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetParcelItemsChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetParcelItemsChangeBuilder builder(final SetParcelItemsChange template) {
         return SetParcelItemsChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetParcelItemsChange(Function<SetParcelItemsChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetParcelItemsChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetParcelItemsChange>() {
             @Override

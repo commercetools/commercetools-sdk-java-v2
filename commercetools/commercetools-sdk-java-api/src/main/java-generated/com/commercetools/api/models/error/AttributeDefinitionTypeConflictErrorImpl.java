@@ -33,6 +33,9 @@ public class AttributeDefinitionTypeConflictErrorImpl implements AttributeDefini
 
     private String conflictingAttributeName;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AttributeDefinitionTypeConflictErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values,
@@ -47,6 +50,9 @@ public class AttributeDefinitionTypeConflictErrorImpl implements AttributeDefini
         this.code = ATTRIBUTE_DEFINITION_TYPE_CONFLICT;
     }
 
+    /**
+     * create empty instance
+     */
     public AttributeDefinitionTypeConflictErrorImpl() {
         this.code = ATTRIBUTE_DEFINITION_TYPE_CONFLICT;
     }

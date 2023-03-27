@@ -28,6 +28,9 @@ public class SetCustomShippingMethodChangeImpl implements SetCustomShippingMetho
 
     private com.commercetools.history.models.change_value.CustomShippingMethodChangeValue previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetCustomShippingMethodChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final com.commercetools.history.models.change_value.CustomShippingMethodChangeValue nextValue,
@@ -38,6 +41,9 @@ public class SetCustomShippingMethodChangeImpl implements SetCustomShippingMetho
         this.type = SET_CUSTOM_SHIPPING_METHOD_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetCustomShippingMethodChangeImpl() {
         this.type = SET_CUSTOM_SHIPPING_METHOD_CHANGE;
     }

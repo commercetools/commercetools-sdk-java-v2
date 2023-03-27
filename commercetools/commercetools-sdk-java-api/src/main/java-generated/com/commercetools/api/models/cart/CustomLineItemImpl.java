@@ -48,6 +48,9 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
 
     private com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomLineItemImpl(@JsonProperty("id") final String id,
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
@@ -78,6 +81,9 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
         this.priceMode = priceMode;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomLineItemImpl() {
     }
 

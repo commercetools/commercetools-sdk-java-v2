@@ -36,6 +36,11 @@ public class ZoneSetDescriptionActionBuilder implements Builder<ZoneSetDescripti
         return this;
     }
 
+    /**
+     *  <p>Description of the Zone.</p>
+     * @return description
+     */
+
     @Nullable
     public String getDescription() {
         return this.description;
@@ -57,10 +62,19 @@ public class ZoneSetDescriptionActionBuilder implements Builder<ZoneSetDescripti
         return new ZoneSetDescriptionActionImpl(description);
     }
 
+    /**
+     * factory method for an instance of ZoneSetDescriptionActionBuilder
+     * @return builder
+     */
     public static ZoneSetDescriptionActionBuilder of() {
         return new ZoneSetDescriptionActionBuilder();
     }
 
+    /**
+     * create builder for ZoneSetDescriptionAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ZoneSetDescriptionActionBuilder of(final ZoneSetDescriptionAction template) {
         ZoneSetDescriptionActionBuilder builder = new ZoneSetDescriptionActionBuilder();
         builder.description = template.getDescription();

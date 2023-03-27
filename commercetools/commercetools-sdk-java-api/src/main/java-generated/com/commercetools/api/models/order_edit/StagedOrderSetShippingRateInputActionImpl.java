@@ -24,6 +24,9 @@ public class StagedOrderSetShippingRateInputActionImpl implements StagedOrderSet
 
     private com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderSetShippingRateInputActionImpl(
             @JsonProperty("shippingRateInput") final com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput) {
@@ -31,6 +34,9 @@ public class StagedOrderSetShippingRateInputActionImpl implements StagedOrderSet
         this.action = SET_SHIPPING_RATE_INPUT;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderSetShippingRateInputActionImpl() {
         this.action = SET_SHIPPING_RATE_INPUT;
     }

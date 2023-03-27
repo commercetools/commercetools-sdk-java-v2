@@ -56,7 +56,7 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
     }
 
     /**
-     *
+     * set values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
     }
 
     /**
-     *
+     * set value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
     }
 
     /**
-     *
+     * add values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -95,7 +95,7 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
     }
 
     /**
-     *
+     * add the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -110,7 +110,7 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -123,7 +123,7 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
     }
 
     /**
-     *
+     * set values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -135,7 +135,7 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
     }
 
     /**
-     *
+     * set value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -147,7 +147,7 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
     }
 
     /**
-     *
+     * add values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -162,7 +162,7 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
     }
 
     /**
-     *
+     * add the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -178,7 +178,7 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -191,17 +191,37 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>changeEnumValueOrder</code> on types</p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     *  <p>The name of the field/attribute definition updated.</p>
+     * @return fieldName
+     */
 
     public String getFieldName() {
         return this.fieldName;
     }
 
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
+
     public java.util.List<com.commercetools.history.models.change_value.EnumValue> getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public java.util.List<com.commercetools.history.models.change_value.EnumValue> getPreviousValue() {
         return this.previousValue;
@@ -227,10 +247,19 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
         return new ChangeEnumValueOrderChangeImpl(change, fieldName, nextValue, previousValue);
     }
 
+    /**
+     * factory method for an instance of ChangeEnumValueOrderChangeBuilder
+     * @return builder
+     */
     public static ChangeEnumValueOrderChangeBuilder of() {
         return new ChangeEnumValueOrderChangeBuilder();
     }
 
+    /**
+     * create builder for ChangeEnumValueOrderChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeEnumValueOrderChangeBuilder of(final ChangeEnumValueOrderChange template) {
         ChangeEnumValueOrderChangeBuilder builder = new ChangeEnumValueOrderChangeBuilder();
         builder.change = template.getChange();

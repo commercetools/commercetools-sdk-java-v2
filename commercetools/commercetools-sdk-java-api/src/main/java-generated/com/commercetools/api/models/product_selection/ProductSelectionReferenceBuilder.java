@@ -64,9 +64,19 @@ public class ProductSelectionReferenceBuilder implements Builder<ProductSelectio
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the referenced ProductSelection.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Contains the representation of the expanded ProductSelection. Only present in responses to requests with Reference Expansion for ProductSelections.</p>
+     * @return obj
+     */
 
     @Nullable
     public com.commercetools.api.models.product_selection.ProductSelection getObj() {
@@ -90,10 +100,19 @@ public class ProductSelectionReferenceBuilder implements Builder<ProductSelectio
         return new ProductSelectionReferenceImpl(id, obj);
     }
 
+    /**
+     * factory method for an instance of ProductSelectionReferenceBuilder
+     * @return builder
+     */
     public static ProductSelectionReferenceBuilder of() {
         return new ProductSelectionReferenceBuilder();
     }
 
+    /**
+     * create builder for ProductSelectionReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSelectionReferenceBuilder of(final ProductSelectionReference template) {
         ProductSelectionReferenceBuilder builder = new ProductSelectionReferenceBuilder();
         builder.id = template.getId();

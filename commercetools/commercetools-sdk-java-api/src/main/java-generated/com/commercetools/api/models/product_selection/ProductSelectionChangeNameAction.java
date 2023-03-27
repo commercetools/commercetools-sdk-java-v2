@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductSelectionChangeNameActionImpl.class)
 public interface ProductSelectionChangeNameAction extends ProductSelectionUpdateAction {
 
+    /**
+     * discriminator value for ProductSelectionChangeNameAction
+     */
     String CHANGE_NAME = "changeName";
 
     /**
@@ -42,30 +45,63 @@ public interface ProductSelectionChangeNameAction extends ProductSelectionUpdate
     @JsonProperty("name")
     public LocalizedString getName();
 
+    /**
+     *  <p>The new name to be set for the ProductSelection.</p>
+     * @param name value to be set
+     */
+
     public void setName(final LocalizedString name);
 
+    /**
+     * factory method
+     * @return instance of ProductSelectionChangeNameAction
+     */
     public static ProductSelectionChangeNameAction of() {
         return new ProductSelectionChangeNameActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductSelectionChangeNameAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductSelectionChangeNameAction of(final ProductSelectionChangeNameAction template) {
         ProductSelectionChangeNameActionImpl instance = new ProductSelectionChangeNameActionImpl();
         instance.setName(template.getName());
         return instance;
     }
 
+    /**
+     * builder factory method for ProductSelectionChangeNameAction
+     * @return builder
+     */
     public static ProductSelectionChangeNameActionBuilder builder() {
         return ProductSelectionChangeNameActionBuilder.of();
     }
 
+    /**
+     * create builder for ProductSelectionChangeNameAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSelectionChangeNameActionBuilder builder(final ProductSelectionChangeNameAction template) {
         return ProductSelectionChangeNameActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductSelectionChangeNameAction(Function<ProductSelectionChangeNameAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionChangeNameAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionChangeNameAction>() {
             @Override

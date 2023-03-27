@@ -26,6 +26,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SubscriptionSetKeyActionImpl.class)
 public interface SubscriptionSetKeyAction extends SubscriptionUpdateAction {
 
+    /**
+     * discriminator value for SubscriptionSetKeyAction
+     */
     String SET_KEY = "setKey";
 
     /**
@@ -36,30 +39,63 @@ public interface SubscriptionSetKeyAction extends SubscriptionUpdateAction {
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
 
+    /**
+     * factory method
+     * @return instance of SubscriptionSetKeyAction
+     */
     public static SubscriptionSetKeyAction of() {
         return new SubscriptionSetKeyActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of SubscriptionSetKeyAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SubscriptionSetKeyAction of(final SubscriptionSetKeyAction template) {
         SubscriptionSetKeyActionImpl instance = new SubscriptionSetKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;
     }
 
+    /**
+     * builder factory method for SubscriptionSetKeyAction
+     * @return builder
+     */
     public static SubscriptionSetKeyActionBuilder builder() {
         return SubscriptionSetKeyActionBuilder.of();
     }
 
+    /**
+     * create builder for SubscriptionSetKeyAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SubscriptionSetKeyActionBuilder builder(final SubscriptionSetKeyAction template) {
         return SubscriptionSetKeyActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSubscriptionSetKeyAction(Function<SubscriptionSetKeyAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SubscriptionSetKeyAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SubscriptionSetKeyAction>() {
             @Override

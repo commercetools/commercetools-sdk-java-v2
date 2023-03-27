@@ -26,6 +26,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TaxCategorySetKeyActionImpl.class)
 public interface TaxCategorySetKeyAction extends TaxCategoryUpdateAction {
 
+    /**
+     * discriminator value for TaxCategorySetKeyAction
+     */
     String SET_KEY = "setKey";
 
     /**
@@ -36,30 +39,63 @@ public interface TaxCategorySetKeyAction extends TaxCategoryUpdateAction {
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
 
+    /**
+     * factory method
+     * @return instance of TaxCategorySetKeyAction
+     */
     public static TaxCategorySetKeyAction of() {
         return new TaxCategorySetKeyActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of TaxCategorySetKeyAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static TaxCategorySetKeyAction of(final TaxCategorySetKeyAction template) {
         TaxCategorySetKeyActionImpl instance = new TaxCategorySetKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;
     }
 
+    /**
+     * builder factory method for TaxCategorySetKeyAction
+     * @return builder
+     */
     public static TaxCategorySetKeyActionBuilder builder() {
         return TaxCategorySetKeyActionBuilder.of();
     }
 
+    /**
+     * create builder for TaxCategorySetKeyAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TaxCategorySetKeyActionBuilder builder(final TaxCategorySetKeyAction template) {
         return TaxCategorySetKeyActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTaxCategorySetKeyAction(Function<TaxCategorySetKeyAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<TaxCategorySetKeyAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TaxCategorySetKeyAction>() {
             @Override

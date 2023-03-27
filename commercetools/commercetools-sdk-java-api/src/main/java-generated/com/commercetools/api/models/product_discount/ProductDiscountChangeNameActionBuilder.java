@@ -47,6 +47,11 @@ public class ProductDiscountChangeNameActionBuilder implements Builder<ProductDi
         return this;
     }
 
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     * @return name
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
@@ -68,10 +73,19 @@ public class ProductDiscountChangeNameActionBuilder implements Builder<ProductDi
         return new ProductDiscountChangeNameActionImpl(name);
     }
 
+    /**
+     * factory method for an instance of ProductDiscountChangeNameActionBuilder
+     * @return builder
+     */
     public static ProductDiscountChangeNameActionBuilder of() {
         return new ProductDiscountChangeNameActionBuilder();
     }
 
+    /**
+     * create builder for ProductDiscountChangeNameAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductDiscountChangeNameActionBuilder of(final ProductDiscountChangeNameAction template) {
         ProductDiscountChangeNameActionBuilder builder = new ProductDiscountChangeNameActionBuilder();
         builder.name = template.getName();

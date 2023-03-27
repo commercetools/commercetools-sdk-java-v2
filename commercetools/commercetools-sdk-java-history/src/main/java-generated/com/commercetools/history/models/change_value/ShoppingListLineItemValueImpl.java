@@ -26,6 +26,9 @@ public class ShoppingListLineItemValueImpl implements ShoppingListLineItemValue,
 
     private Integer variantId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShoppingListLineItemValueImpl(@JsonProperty("id") final String id,
             @JsonProperty("name") final com.commercetools.history.models.common.LocalizedString name,
@@ -35,6 +38,9 @@ public class ShoppingListLineItemValueImpl implements ShoppingListLineItemValue,
         this.variantId = variantId;
     }
 
+    /**
+     * create empty instance
+     */
     public ShoppingListLineItemValueImpl() {
     }
 

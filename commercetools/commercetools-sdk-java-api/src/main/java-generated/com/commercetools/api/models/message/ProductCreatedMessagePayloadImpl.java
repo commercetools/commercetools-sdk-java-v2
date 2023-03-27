@@ -24,6 +24,9 @@ public class ProductCreatedMessagePayloadImpl implements ProductCreatedMessagePa
 
     private com.commercetools.api.models.product.ProductProjection productProjection;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductCreatedMessagePayloadImpl(
             @JsonProperty("productProjection") final com.commercetools.api.models.product.ProductProjection productProjection) {
@@ -31,6 +34,9 @@ public class ProductCreatedMessagePayloadImpl implements ProductCreatedMessagePa
         this.type = PRODUCT_CREATED;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductCreatedMessagePayloadImpl() {
         this.type = PRODUCT_CREATED;
     }

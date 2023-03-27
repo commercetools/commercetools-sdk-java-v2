@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PaymentChangeTransactionStateActionImpl.class)
 public interface PaymentChangeTransactionStateAction extends PaymentUpdateAction {
 
+    /**
+     * discriminator value for PaymentChangeTransactionStateAction
+     */
     String CHANGE_TRANSACTION_STATE = "changeTransactionState";
 
     /**
@@ -48,14 +51,33 @@ public interface PaymentChangeTransactionStateAction extends PaymentUpdateAction
     @JsonProperty("state")
     public TransactionState getState();
 
+    /**
+     *  <p>Unique identifier of the Transaction.</p>
+     * @param transactionId value to be set
+     */
+
     public void setTransactionId(final String transactionId);
+
+    /**
+     *  <p>New TransactionState.</p>
+     * @param state value to be set
+     */
 
     public void setState(final TransactionState state);
 
+    /**
+     * factory method
+     * @return instance of PaymentChangeTransactionStateAction
+     */
     public static PaymentChangeTransactionStateAction of() {
         return new PaymentChangeTransactionStateActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of PaymentChangeTransactionStateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static PaymentChangeTransactionStateAction of(final PaymentChangeTransactionStateAction template) {
         PaymentChangeTransactionStateActionImpl instance = new PaymentChangeTransactionStateActionImpl();
         instance.setTransactionId(template.getTransactionId());
@@ -63,19 +85,38 @@ public interface PaymentChangeTransactionStateAction extends PaymentUpdateAction
         return instance;
     }
 
+    /**
+     * builder factory method for PaymentChangeTransactionStateAction
+     * @return builder
+     */
     public static PaymentChangeTransactionStateActionBuilder builder() {
         return PaymentChangeTransactionStateActionBuilder.of();
     }
 
+    /**
+     * create builder for PaymentChangeTransactionStateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentChangeTransactionStateActionBuilder builder(
             final PaymentChangeTransactionStateAction template) {
         return PaymentChangeTransactionStateActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withPaymentChangeTransactionStateAction(Function<PaymentChangeTransactionStateAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<PaymentChangeTransactionStateAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<PaymentChangeTransactionStateAction>() {
             @Override

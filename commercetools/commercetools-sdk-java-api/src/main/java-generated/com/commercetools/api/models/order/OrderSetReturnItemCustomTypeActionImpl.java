@@ -28,6 +28,9 @@ public class OrderSetReturnItemCustomTypeActionImpl implements OrderSetReturnIte
 
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderSetReturnItemCustomTypeActionImpl(@JsonProperty("returnItemId") final String returnItemId,
             @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
@@ -38,6 +41,9 @@ public class OrderSetReturnItemCustomTypeActionImpl implements OrderSetReturnIte
         this.action = SET_RETURN_ITEM_CUSTOM_TYPE;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderSetReturnItemCustomTypeActionImpl() {
         this.action = SET_RETURN_ITEM_CUSTOM_TYPE;
     }

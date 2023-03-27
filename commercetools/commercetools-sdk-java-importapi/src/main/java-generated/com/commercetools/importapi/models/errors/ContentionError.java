@@ -27,30 +27,61 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ContentionErrorImpl.class)
 public interface ContentionError extends ErrorObject {
 
+    /**
+     * discriminator value for ContentionError
+     */
     String CONTENTION = "Contention";
 
+    /**
+     * factory method
+     * @return instance of ContentionError
+     */
     public static ContentionError of() {
         return new ContentionErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of ContentionError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ContentionError of(final ContentionError template) {
         ContentionErrorImpl instance = new ContentionErrorImpl();
         instance.setMessage(template.getMessage());
         return instance;
     }
 
+    /**
+     * builder factory method for ContentionError
+     * @return builder
+     */
     public static ContentionErrorBuilder builder() {
         return ContentionErrorBuilder.of();
     }
 
+    /**
+     * create builder for ContentionError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ContentionErrorBuilder builder(final ContentionError template) {
         return ContentionErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withContentionError(Function<ContentionError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ContentionError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ContentionError>() {
             @Override

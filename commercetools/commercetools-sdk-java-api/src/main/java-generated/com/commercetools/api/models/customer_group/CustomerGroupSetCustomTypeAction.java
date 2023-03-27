@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomerGroupSetCustomTypeActionImpl.class)
 public interface CustomerGroupSetCustomTypeAction extends CustomerGroupUpdateAction {
 
+    /**
+     * discriminator value for CustomerGroupSetCustomTypeAction
+     */
     String SET_CUSTOM_TYPE = "setCustomType";
 
     /**
@@ -48,14 +51,33 @@ public interface CustomerGroupSetCustomTypeAction extends CustomerGroupUpdateAct
     @JsonProperty("fields")
     public FieldContainer getFields();
 
+    /**
+     *  <p>Defines the Type that extends the CustomerGroup with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomerGroup.</p>
+     * @param type value to be set
+     */
+
     public void setType(final TypeResourceIdentifier type);
+
+    /**
+     *  <p>Sets the Custom Fields fields for the CustomerGroup.</p>
+     * @param fields value to be set
+     */
 
     public void setFields(final FieldContainer fields);
 
+    /**
+     * factory method
+     * @return instance of CustomerGroupSetCustomTypeAction
+     */
     public static CustomerGroupSetCustomTypeAction of() {
         return new CustomerGroupSetCustomTypeActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomerGroupSetCustomTypeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomerGroupSetCustomTypeAction of(final CustomerGroupSetCustomTypeAction template) {
         CustomerGroupSetCustomTypeActionImpl instance = new CustomerGroupSetCustomTypeActionImpl();
         instance.setType(template.getType());
@@ -63,18 +85,37 @@ public interface CustomerGroupSetCustomTypeAction extends CustomerGroupUpdateAct
         return instance;
     }
 
+    /**
+     * builder factory method for CustomerGroupSetCustomTypeAction
+     * @return builder
+     */
     public static CustomerGroupSetCustomTypeActionBuilder builder() {
         return CustomerGroupSetCustomTypeActionBuilder.of();
     }
 
+    /**
+     * create builder for CustomerGroupSetCustomTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerGroupSetCustomTypeActionBuilder builder(final CustomerGroupSetCustomTypeAction template) {
         return CustomerGroupSetCustomTypeActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomerGroupSetCustomTypeAction(Function<CustomerGroupSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomerGroupSetCustomTypeAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomerGroupSetCustomTypeAction>() {
             @Override

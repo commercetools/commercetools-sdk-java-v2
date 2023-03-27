@@ -44,6 +44,9 @@ public class ProductCreatedMessageImpl implements ProductCreatedMessage, ModelBa
 
     private com.commercetools.api.models.product.ProductProjection productProjection;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductCreatedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -69,6 +72,9 @@ public class ProductCreatedMessageImpl implements ProductCreatedMessage, ModelBa
         this.type = PRODUCT_CREATED;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductCreatedMessageImpl() {
         this.type = PRODUCT_CREATED;
     }

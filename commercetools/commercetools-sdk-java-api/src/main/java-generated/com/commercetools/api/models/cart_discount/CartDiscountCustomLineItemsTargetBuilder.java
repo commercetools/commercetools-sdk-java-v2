@@ -34,6 +34,11 @@ public class CartDiscountCustomLineItemsTargetBuilder implements Builder<CartDis
         return this;
     }
 
+    /**
+     *  <p>Valid CustomLineItem target predicate.</p>
+     * @return predicate
+     */
+
     public String getPredicate() {
         return this.predicate;
     }
@@ -55,10 +60,19 @@ public class CartDiscountCustomLineItemsTargetBuilder implements Builder<CartDis
         return new CartDiscountCustomLineItemsTargetImpl(predicate);
     }
 
+    /**
+     * factory method for an instance of CartDiscountCustomLineItemsTargetBuilder
+     * @return builder
+     */
     public static CartDiscountCustomLineItemsTargetBuilder of() {
         return new CartDiscountCustomLineItemsTargetBuilder();
     }
 
+    /**
+     * create builder for CartDiscountCustomLineItemsTarget instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartDiscountCustomLineItemsTargetBuilder of(final CartDiscountCustomLineItemsTarget template) {
         CartDiscountCustomLineItemsTargetBuilder builder = new CartDiscountCustomLineItemsTargetBuilder();
         builder.predicate = template.getPredicate();

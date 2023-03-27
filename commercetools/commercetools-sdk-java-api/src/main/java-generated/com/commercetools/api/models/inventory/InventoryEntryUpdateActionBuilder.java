@@ -47,6 +47,10 @@ public class InventoryEntryUpdateActionBuilder {
         return com.commercetools.api.models.inventory.InventoryEntrySetSupplyChannelActionBuilder.of();
     }
 
+    /**
+     * factory method for an instance of InventoryEntryUpdateActionBuilder
+     * @return builder
+     */
     public static InventoryEntryUpdateActionBuilder of() {
         return new InventoryEntryUpdateActionBuilder();
     }

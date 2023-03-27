@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetSlugChangeImpl.class)
 public interface SetSlugChange extends Change {
 
+    /**
+     * discriminator value for SetSlugChange
+     */
     String SET_SLUG_CHANGE = "SetSlugChange";
 
     /**
@@ -69,16 +72,40 @@ public interface SetSlugChange extends Change {
     @JsonProperty("nextValue")
     public LocalizedString getNextValue();
 
+    /**
+     *  <p>Shape of the action for <code>setSlug</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
 
     public void setPreviousValue(final LocalizedString previousValue);
 
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
+
     public void setNextValue(final LocalizedString nextValue);
 
+    /**
+     * factory method
+     * @return instance of SetSlugChange
+     */
     public static SetSlugChange of() {
         return new SetSlugChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetSlugChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetSlugChange of(final SetSlugChange template) {
         SetSlugChangeImpl instance = new SetSlugChangeImpl();
         instance.setChange(template.getChange());
@@ -87,18 +114,37 @@ public interface SetSlugChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetSlugChange
+     * @return builder
+     */
     public static SetSlugChangeBuilder builder() {
         return SetSlugChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetSlugChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetSlugChangeBuilder builder(final SetSlugChange template) {
         return SetSlugChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetSlugChange(Function<SetSlugChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetSlugChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetSlugChange>() {
             @Override

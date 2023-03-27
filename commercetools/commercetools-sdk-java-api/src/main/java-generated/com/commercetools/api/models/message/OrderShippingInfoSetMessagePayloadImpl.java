@@ -26,6 +26,9 @@ public class OrderShippingInfoSetMessagePayloadImpl implements OrderShippingInfo
 
     private com.commercetools.api.models.cart.ShippingInfo oldShippingInfo;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderShippingInfoSetMessagePayloadImpl(
             @JsonProperty("shippingInfo") final com.commercetools.api.models.cart.ShippingInfo shippingInfo,
@@ -35,6 +38,9 @@ public class OrderShippingInfoSetMessagePayloadImpl implements OrderShippingInfo
         this.type = ORDER_SHIPPING_INFO_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderShippingInfoSetMessagePayloadImpl() {
         this.type = ORDER_SHIPPING_INFO_SET;
     }

@@ -45,7 +45,7 @@ public class ChangeTransactionTimestampChangeBuilder implements Builder<ChangeTr
     }
 
     /**
-     *
+     * set the value to the transaction using the builder function
      * @param builder function to build the transaction value
      * @return Builder
      */
@@ -59,7 +59,7 @@ public class ChangeTransactionTimestampChangeBuilder implements Builder<ChangeTr
     }
 
     /**
-     *
+     * set the value to the transaction
      * @param transaction value to be set
      * @return Builder
      */
@@ -71,7 +71,7 @@ public class ChangeTransactionTimestampChangeBuilder implements Builder<ChangeTr
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -82,7 +82,7 @@ public class ChangeTransactionTimestampChangeBuilder implements Builder<ChangeTr
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -92,17 +92,37 @@ public class ChangeTransactionTimestampChangeBuilder implements Builder<ChangeTr
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>changeTransactionTimestamp</code> on payments</p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of transaction}
+     * @return transaction
+     */
 
     public com.commercetools.history.models.change_value.TransactionChangeValue getTransaction() {
         return this.transaction;
     }
 
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
+
     public String getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public String getPreviousValue() {
         return this.previousValue;
@@ -128,10 +148,19 @@ public class ChangeTransactionTimestampChangeBuilder implements Builder<ChangeTr
         return new ChangeTransactionTimestampChangeImpl(change, transaction, nextValue, previousValue);
     }
 
+    /**
+     * factory method for an instance of ChangeTransactionTimestampChangeBuilder
+     * @return builder
+     */
     public static ChangeTransactionTimestampChangeBuilder of() {
         return new ChangeTransactionTimestampChangeBuilder();
     }
 
+    /**
+     * create builder for ChangeTransactionTimestampChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeTransactionTimestampChangeBuilder of(final ChangeTransactionTimestampChange template) {
         ChangeTransactionTimestampChangeBuilder builder = new ChangeTransactionTimestampChangeBuilder();
         builder.change = template.getChange();

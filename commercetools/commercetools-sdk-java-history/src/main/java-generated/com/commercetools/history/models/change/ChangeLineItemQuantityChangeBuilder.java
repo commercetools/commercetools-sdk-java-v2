@@ -48,7 +48,7 @@ public class ChangeLineItemQuantityChangeBuilder implements Builder<ChangeLineIt
     }
 
     /**
-     *
+     * set the value to the lineItem using the builder function
      * @param builder function to build the lineItem value
      * @return Builder
      */
@@ -60,7 +60,7 @@ public class ChangeLineItemQuantityChangeBuilder implements Builder<ChangeLineIt
     }
 
     /**
-     *
+     * set the value to the lineItem
      * @param lineItem value to be set
      * @return Builder
      */
@@ -72,7 +72,7 @@ public class ChangeLineItemQuantityChangeBuilder implements Builder<ChangeLineIt
     }
 
     /**
-     *
+     * set the value to the lineItemId
      * @param lineItemId value to be set
      * @return Builder
      */
@@ -104,21 +104,46 @@ public class ChangeLineItemQuantityChangeBuilder implements Builder<ChangeLineIt
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>changeLineItemQuantity</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of lineItem}
+     * @return lineItem
+     */
 
     public com.commercetools.history.models.common.LocalizedString getLineItem() {
         return this.lineItem;
     }
 
+    /**
+     * value of lineItemId}
+     * @return lineItemId
+     */
+
     public String getLineItemId() {
         return this.lineItemId;
     }
 
+    /**
+     *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
+     * @return nextValue
+     */
+
     public Integer getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     *  <p>The amount of a LineItem in the cart. Must be a positive integer.</p>
+     * @return previousValue
+     */
 
     public Integer getPreviousValue() {
         return this.previousValue;
@@ -145,10 +170,19 @@ public class ChangeLineItemQuantityChangeBuilder implements Builder<ChangeLineIt
         return new ChangeLineItemQuantityChangeImpl(change, lineItem, lineItemId, nextValue, previousValue);
     }
 
+    /**
+     * factory method for an instance of ChangeLineItemQuantityChangeBuilder
+     * @return builder
+     */
     public static ChangeLineItemQuantityChangeBuilder of() {
         return new ChangeLineItemQuantityChangeBuilder();
     }
 
+    /**
+     * create builder for ChangeLineItemQuantityChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeLineItemQuantityChangeBuilder of(final ChangeLineItemQuantityChange template) {
         ChangeLineItemQuantityChangeBuilder builder = new ChangeLineItemQuantityChangeBuilder();
         builder.change = template.getChange();

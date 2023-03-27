@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = LocalizableTextSetAttributeImpl.class)
 public interface LocalizableTextSetAttribute extends Attribute {
 
+    /**
+     * discriminator value for LocalizableTextSetAttribute
+     */
     String LTEXT_SET = "ltext-set";
 
     /**
@@ -42,15 +45,34 @@ public interface LocalizableTextSetAttribute extends Attribute {
     @JsonProperty("value")
     public List<LocalizedString> getValue();
 
+    /**
+     * set value
+     * @param value values to be set
+     */
+
     @JsonIgnore
     public void setValue(final LocalizedString... value);
 
+    /**
+     * set value
+     * @param value values to be set
+     */
+
     public void setValue(final List<LocalizedString> value);
 
+    /**
+     * factory method
+     * @return instance of LocalizableTextSetAttribute
+     */
     public static LocalizableTextSetAttribute of() {
         return new LocalizableTextSetAttributeImpl();
     }
 
+    /**
+     * factory method to copy an instance of LocalizableTextSetAttribute
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static LocalizableTextSetAttribute of(final LocalizableTextSetAttribute template) {
         LocalizableTextSetAttributeImpl instance = new LocalizableTextSetAttributeImpl();
         instance.setName(template.getName());
@@ -58,18 +80,37 @@ public interface LocalizableTextSetAttribute extends Attribute {
         return instance;
     }
 
+    /**
+     * builder factory method for LocalizableTextSetAttribute
+     * @return builder
+     */
     public static LocalizableTextSetAttributeBuilder builder() {
         return LocalizableTextSetAttributeBuilder.of();
     }
 
+    /**
+     * create builder for LocalizableTextSetAttribute instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static LocalizableTextSetAttributeBuilder builder(final LocalizableTextSetAttribute template) {
         return LocalizableTextSetAttributeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withLocalizableTextSetAttribute(Function<LocalizableTextSetAttribute, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<LocalizableTextSetAttribute> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<LocalizableTextSetAttribute>() {
             @Override

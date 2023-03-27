@@ -26,6 +26,9 @@ public class ChannelSetAddressCustomFieldActionImpl implements ChannelSetAddress
 
     private java.lang.Object value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChannelSetAddressCustomFieldActionImpl(@JsonProperty("name") final String name,
             @JsonProperty("value") final java.lang.Object value) {
@@ -34,6 +37,9 @@ public class ChannelSetAddressCustomFieldActionImpl implements ChannelSetAddress
         this.action = SET_ADDRESS_CUSTOM_FIELD;
     }
 
+    /**
+     * create empty instance
+     */
     public ChannelSetAddressCustomFieldActionImpl() {
         this.action = SET_ADDRESS_CUSTOM_FIELD;
     }

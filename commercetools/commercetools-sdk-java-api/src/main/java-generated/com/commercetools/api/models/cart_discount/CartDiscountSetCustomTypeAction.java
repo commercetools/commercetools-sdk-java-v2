@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartDiscountSetCustomTypeActionImpl.class)
 public interface CartDiscountSetCustomTypeAction extends CartDiscountUpdateAction {
 
+    /**
+     * discriminator value for CartDiscountSetCustomTypeAction
+     */
     String SET_CUSTOM_TYPE = "setCustomType";
 
     /**
@@ -48,14 +51,33 @@ public interface CartDiscountSetCustomTypeAction extends CartDiscountUpdateActio
     @JsonProperty("fields")
     public FieldContainer getFields();
 
+    /**
+     *  <p>Defines the Type that extends the CartDiscount with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CartDiscount.</p>
+     * @param type value to be set
+     */
+
     public void setType(final TypeResourceIdentifier type);
+
+    /**
+     *  <p>Sets the Custom Fields fields for the CartDiscount.</p>
+     * @param fields value to be set
+     */
 
     public void setFields(final FieldContainer fields);
 
+    /**
+     * factory method
+     * @return instance of CartDiscountSetCustomTypeAction
+     */
     public static CartDiscountSetCustomTypeAction of() {
         return new CartDiscountSetCustomTypeActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartDiscountSetCustomTypeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartDiscountSetCustomTypeAction of(final CartDiscountSetCustomTypeAction template) {
         CartDiscountSetCustomTypeActionImpl instance = new CartDiscountSetCustomTypeActionImpl();
         instance.setType(template.getType());
@@ -63,18 +85,37 @@ public interface CartDiscountSetCustomTypeAction extends CartDiscountUpdateActio
         return instance;
     }
 
+    /**
+     * builder factory method for CartDiscountSetCustomTypeAction
+     * @return builder
+     */
     public static CartDiscountSetCustomTypeActionBuilder builder() {
         return CartDiscountSetCustomTypeActionBuilder.of();
     }
 
+    /**
+     * create builder for CartDiscountSetCustomTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartDiscountSetCustomTypeActionBuilder builder(final CartDiscountSetCustomTypeAction template) {
         return CartDiscountSetCustomTypeActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartDiscountSetCustomTypeAction(Function<CartDiscountSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountSetCustomTypeAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountSetCustomTypeAction>() {
             @Override

@@ -27,7 +27,7 @@ public class RequiredFieldErrorBuilder implements Builder<RequiredFieldError> {
     private String field;
 
     /**
-     *
+     * set the value to the message
      * @param message value to be set
      * @return Builder
      */
@@ -48,9 +48,19 @@ public class RequiredFieldErrorBuilder implements Builder<RequiredFieldError> {
         return this;
     }
 
+    /**
+     * value of message}
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>The name of the field.</p>
+     * @return field
+     */
 
     public String getField() {
         return this.field;
@@ -74,10 +84,19 @@ public class RequiredFieldErrorBuilder implements Builder<RequiredFieldError> {
         return new RequiredFieldErrorImpl(message, field);
     }
 
+    /**
+     * factory method for an instance of RequiredFieldErrorBuilder
+     * @return builder
+     */
     public static RequiredFieldErrorBuilder of() {
         return new RequiredFieldErrorBuilder();
     }
 
+    /**
+     * create builder for RequiredFieldError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static RequiredFieldErrorBuilder of(final RequiredFieldError template) {
         RequiredFieldErrorBuilder builder = new RequiredFieldErrorBuilder();
         builder.message = template.getMessage();

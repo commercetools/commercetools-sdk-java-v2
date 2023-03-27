@@ -36,7 +36,7 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
     private com.commercetools.history.models.common.Reference distributionChannel;
 
     /**
-     *
+     * set the value to the product using the builder function
      * @param builder function to build the product value
      * @return Builder
      */
@@ -48,7 +48,7 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
     }
 
     /**
-     *
+     * set the value to the product
      * @param product value to be set
      * @return Builder
      */
@@ -60,7 +60,7 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
     }
 
     /**
-     *
+     * set the value to the variantId
      * @param variantId value to be set
      * @return Builder
      */
@@ -71,7 +71,7 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
     }
 
     /**
-     *
+     * set the value to the supplyChannel using the builder function
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
@@ -83,7 +83,7 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
     }
 
     /**
-     *
+     * set the value to the supplyChannel
      * @param supplyChannel value to be set
      * @return Builder
      */
@@ -95,7 +95,7 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
     }
 
     /**
-     *
+     * set the value to the distributionChannel using the builder function
      * @param builder function to build the distributionChannel value
      * @return Builder
      */
@@ -107,7 +107,7 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
     }
 
     /**
-     *
+     * set the value to the distributionChannel
      * @param distributionChannel value to be set
      * @return Builder
      */
@@ -118,18 +118,38 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
         return this;
     }
 
+    /**
+     * value of product}
+     * @return product
+     */
+
     public com.commercetools.history.models.common.Reference getProduct() {
         return this.product;
     }
+
+    /**
+     * value of variantId}
+     * @return variantId
+     */
 
     public Integer getVariantId() {
         return this.variantId;
     }
 
+    /**
+     * value of supplyChannel}
+     * @return supplyChannel
+     */
+
     @Nullable
     public com.commercetools.history.models.common.Reference getSupplyChannel() {
         return this.supplyChannel;
     }
+
+    /**
+     * value of distributionChannel}
+     * @return distributionChannel
+     */
 
     public com.commercetools.history.models.common.Reference getDistributionChannel() {
         return this.distributionChannel;
@@ -155,10 +175,19 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
         return new ChangeValueGiftLineItemChangeValueImpl(product, variantId, supplyChannel, distributionChannel);
     }
 
+    /**
+     * factory method for an instance of ChangeValueGiftLineItemChangeValueBuilder
+     * @return builder
+     */
     public static ChangeValueGiftLineItemChangeValueBuilder of() {
         return new ChangeValueGiftLineItemChangeValueBuilder();
     }
 
+    /**
+     * create builder for ChangeValueGiftLineItemChangeValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeValueGiftLineItemChangeValueBuilder of(final ChangeValueGiftLineItemChangeValue template) {
         ChangeValueGiftLineItemChangeValueBuilder builder = new ChangeValueGiftLineItemChangeValueBuilder();
         builder.product = template.getProduct();

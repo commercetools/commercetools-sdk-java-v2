@@ -34,6 +34,9 @@ public class ChangeLocalizedEnumValueLabelChangeImpl implements ChangeLocalizedE
 
     private com.commercetools.history.models.common.LocalizedString nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeLocalizedEnumValueLabelChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("fieldName") final String fieldName,
@@ -49,6 +52,9 @@ public class ChangeLocalizedEnumValueLabelChangeImpl implements ChangeLocalizedE
         this.type = CHANGE_LOCALIZED_ENUM_VALUE_LABEL_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeLocalizedEnumValueLabelChangeImpl() {
         this.type = CHANGE_LOCALIZED_ENUM_VALUE_LABEL_CHANGE;
     }

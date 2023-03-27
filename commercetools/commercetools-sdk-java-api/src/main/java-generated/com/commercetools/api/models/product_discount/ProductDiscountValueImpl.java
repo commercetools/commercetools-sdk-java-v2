@@ -22,11 +22,17 @@ public class ProductDiscountValueImpl implements ProductDiscountValue, ModelBase
 
     private String type;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductDiscountValueImpl(@JsonProperty("type") final String type) {
         this.type = type;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductDiscountValueImpl() {
     }
 

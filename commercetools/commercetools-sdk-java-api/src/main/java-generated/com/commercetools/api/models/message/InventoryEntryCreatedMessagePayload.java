@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = InventoryEntryCreatedMessagePayloadImpl.class)
 public interface InventoryEntryCreatedMessagePayload extends MessagePayload {
 
+    /**
+     * discriminator value for InventoryEntryCreatedMessagePayload
+     */
     String INVENTORY_ENTRY_CREATED = "InventoryEntryCreated";
 
     /**
@@ -42,31 +45,64 @@ public interface InventoryEntryCreatedMessagePayload extends MessagePayload {
     @JsonProperty("inventoryEntry")
     public InventoryEntry getInventoryEntry();
 
+    /**
+     *  <p>InventoryEntry that was created.</p>
+     * @param inventoryEntry value to be set
+     */
+
     public void setInventoryEntry(final InventoryEntry inventoryEntry);
 
+    /**
+     * factory method
+     * @return instance of InventoryEntryCreatedMessagePayload
+     */
     public static InventoryEntryCreatedMessagePayload of() {
         return new InventoryEntryCreatedMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of InventoryEntryCreatedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static InventoryEntryCreatedMessagePayload of(final InventoryEntryCreatedMessagePayload template) {
         InventoryEntryCreatedMessagePayloadImpl instance = new InventoryEntryCreatedMessagePayloadImpl();
         instance.setInventoryEntry(template.getInventoryEntry());
         return instance;
     }
 
+    /**
+     * builder factory method for InventoryEntryCreatedMessagePayload
+     * @return builder
+     */
     public static InventoryEntryCreatedMessagePayloadBuilder builder() {
         return InventoryEntryCreatedMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for InventoryEntryCreatedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InventoryEntryCreatedMessagePayloadBuilder builder(
             final InventoryEntryCreatedMessagePayload template) {
         return InventoryEntryCreatedMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withInventoryEntryCreatedMessagePayload(Function<InventoryEntryCreatedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<InventoryEntryCreatedMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<InventoryEntryCreatedMessagePayload>() {
             @Override

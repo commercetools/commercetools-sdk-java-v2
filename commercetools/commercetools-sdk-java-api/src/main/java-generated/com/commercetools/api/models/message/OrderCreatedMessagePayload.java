@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderCreatedMessagePayloadImpl.class)
 public interface OrderCreatedMessagePayload extends OrderMessagePayload {
 
+    /**
+     * discriminator value for OrderCreatedMessagePayload
+     */
     String ORDER_CREATED = "OrderCreated";
 
     /**
@@ -42,30 +45,63 @@ public interface OrderCreatedMessagePayload extends OrderMessagePayload {
     @JsonProperty("order")
     public Order getOrder();
 
+    /**
+     *  <p>Order that was created.</p>
+     * @param order value to be set
+     */
+
     public void setOrder(final Order order);
 
+    /**
+     * factory method
+     * @return instance of OrderCreatedMessagePayload
+     */
     public static OrderCreatedMessagePayload of() {
         return new OrderCreatedMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderCreatedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderCreatedMessagePayload of(final OrderCreatedMessagePayload template) {
         OrderCreatedMessagePayloadImpl instance = new OrderCreatedMessagePayloadImpl();
         instance.setOrder(template.getOrder());
         return instance;
     }
 
+    /**
+     * builder factory method for OrderCreatedMessagePayload
+     * @return builder
+     */
     public static OrderCreatedMessagePayloadBuilder builder() {
         return OrderCreatedMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for OrderCreatedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderCreatedMessagePayloadBuilder builder(final OrderCreatedMessagePayload template) {
         return OrderCreatedMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderCreatedMessagePayload(Function<OrderCreatedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderCreatedMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderCreatedMessagePayload>() {
             @Override

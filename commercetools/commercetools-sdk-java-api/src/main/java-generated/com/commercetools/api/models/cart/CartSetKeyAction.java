@@ -26,6 +26,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartSetKeyActionImpl.class)
 public interface CartSetKeyAction extends CartUpdateAction {
 
+    /**
+     * discriminator value for CartSetKeyAction
+     */
     String SET_KEY = "setKey";
 
     /**
@@ -36,26 +39,55 @@ public interface CartSetKeyAction extends CartUpdateAction {
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     *  <p>Value to set. If empty, any existing key will be removed.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
 
+    /**
+     * factory method
+     * @return instance of CartSetKeyAction
+     */
     public static CartSetKeyAction of() {
         return new CartSetKeyActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartSetKeyAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartSetKeyAction of(final CartSetKeyAction template) {
         CartSetKeyActionImpl instance = new CartSetKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;
     }
 
+    /**
+     * builder factory method for CartSetKeyAction
+     * @return builder
+     */
     public static CartSetKeyActionBuilder builder() {
         return CartSetKeyActionBuilder.of();
     }
 
+    /**
+     * create builder for CartSetKeyAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartSetKeyActionBuilder builder(final CartSetKeyAction template) {
         return CartSetKeyActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartSetKeyAction(Function<CartSetKeyAction, T> helper) {
         return helper.apply(this);
     }
@@ -64,6 +96,10 @@ public interface CartSetKeyAction extends CartUpdateAction {
         return CartSetKeyAction.of();
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartSetKeyAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartSetKeyAction>() {
             @Override

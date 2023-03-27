@@ -24,12 +24,18 @@ public class StagedOrderSetCountryActionImpl implements StagedOrderSetCountryAct
 
     private String country;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderSetCountryActionImpl(@JsonProperty("country") final String country) {
         this.country = country;
         this.action = SET_COUNTRY;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderSetCountryActionImpl() {
         this.action = SET_COUNTRY;
     }

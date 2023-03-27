@@ -36,10 +36,19 @@ public class AttributeNumberTypeBuilder implements Builder<AttributeNumberType> 
         return new AttributeNumberTypeImpl();
     }
 
+    /**
+     * factory method for an instance of AttributeNumberTypeBuilder
+     * @return builder
+     */
     public static AttributeNumberTypeBuilder of() {
         return new AttributeNumberTypeBuilder();
     }
 
+    /**
+     * create builder for AttributeNumberType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeNumberTypeBuilder of(final AttributeNumberType template) {
         AttributeNumberTypeBuilder builder = new AttributeNumberTypeBuilder();
         return builder;

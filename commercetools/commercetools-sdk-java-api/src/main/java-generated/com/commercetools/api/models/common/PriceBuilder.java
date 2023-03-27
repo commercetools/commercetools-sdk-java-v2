@@ -293,53 +293,108 @@ public class PriceBuilder implements Builder<Price> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of this Price.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>User-defined identifier of the Price. It is unique per ProductVariant.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>Money value of this Price.</p>
+     * @return value
+     */
+
     public com.commercetools.api.models.common.TypedMoney getValue() {
         return this.value;
     }
+
+    /**
+     *  <p>Country for which this Price is valid.</p>
+     * @return country
+     */
 
     @Nullable
     public String getCountry() {
         return this.country;
     }
 
+    /**
+     *  <p>CustomerGroup for which this Price is valid.</p>
+     * @return customerGroup
+     */
+
     @Nullable
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
         return this.customerGroup;
     }
+
+    /**
+     *  <p><code>ProductDistribution</code> Channel for which this Price is valid.</p>
+     * @return channel
+     */
 
     @Nullable
     public com.commercetools.api.models.channel.ChannelReference getChannel() {
         return this.channel;
     }
 
+    /**
+     *  <p>Date and time from which this Price is valid.</p>
+     * @return validFrom
+     */
+
     @Nullable
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
+
+    /**
+     *  <p>Date and time until this Price is valid. Prices that are no longer valid are not automatically removed, but they can be removed if necessary.</p>
+     * @return validUntil
+     */
 
     @Nullable
     public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;
     }
 
+    /**
+     *  <p>Is set if a ProductDiscount has been applied. If set, the API uses the DiscountedPrice value for the Line Item Price selection. When a relative discount has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with half-down rounding.</p>
+     * @return discounted
+     */
+
     @Nullable
     public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {
         return this.discounted;
     }
 
+    /**
+     *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     * @return tiers
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.common.PriceTier> getTiers() {
         return this.tiers;
     }
+
+    /**
+     *  <p>Custom Fields defined for the Price.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -366,10 +421,19 @@ public class PriceBuilder implements Builder<Price> {
             custom);
     }
 
+    /**
+     * factory method for an instance of PriceBuilder
+     * @return builder
+     */
     public static PriceBuilder of() {
         return new PriceBuilder();
     }
 
+    /**
+     * create builder for Price instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PriceBuilder of(final Price template) {
         PriceBuilder builder = new PriceBuilder();
         builder.id = template.getId();

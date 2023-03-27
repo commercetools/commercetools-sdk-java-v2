@@ -50,6 +50,11 @@ public class OrderSetStoreActionBuilder implements Builder<OrderSetStoreAction> 
         return this;
     }
 
+    /**
+     *  <p>ResourceIdentifier to a Store.</p>
+     * @return store
+     */
+
     @Nullable
     public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {
         return this.store;
@@ -71,10 +76,19 @@ public class OrderSetStoreActionBuilder implements Builder<OrderSetStoreAction> 
         return new OrderSetStoreActionImpl(store);
     }
 
+    /**
+     * factory method for an instance of OrderSetStoreActionBuilder
+     * @return builder
+     */
     public static OrderSetStoreActionBuilder of() {
         return new OrderSetStoreActionBuilder();
     }
 
+    /**
+     * create builder for OrderSetStoreAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderSetStoreActionBuilder of(final OrderSetStoreAction template) {
         OrderSetStoreActionBuilder builder = new OrderSetStoreActionBuilder();
         builder.store = template.getStore();

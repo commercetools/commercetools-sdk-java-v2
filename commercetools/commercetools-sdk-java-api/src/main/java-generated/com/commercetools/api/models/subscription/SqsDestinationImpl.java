@@ -34,6 +34,9 @@ public class SqsDestinationImpl implements SqsDestination, ModelBase {
 
     private com.commercetools.api.models.subscription.AwsAuthenticationMode authenticationMode;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SqsDestinationImpl(@JsonProperty("accessKey") final String accessKey,
             @JsonProperty("accessSecret") final String accessSecret, @JsonProperty("queueUrl") final String queueUrl,
@@ -47,6 +50,9 @@ public class SqsDestinationImpl implements SqsDestination, ModelBase {
         this.type = SQS;
     }
 
+    /**
+     * create empty instance
+     */
     public SqsDestinationImpl() {
         this.type = SQS;
     }

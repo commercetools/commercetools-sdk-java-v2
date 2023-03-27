@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = FeatureRemovedErrorImpl.class)
 public interface FeatureRemovedError extends ErrorObject {
 
+    /**
+     * discriminator value for FeatureRemovedError
+     */
     String FEATURE_REMOVED = "FeatureRemoved";
 
     /**
@@ -47,12 +50,26 @@ public interface FeatureRemovedError extends ErrorObject {
     @JsonProperty("message")
     public String getMessage();
 
+    /**
+     *  <p>Description of the feature that is removed.</p>
+     * @param message value to be set
+     */
+
     public void setMessage(final String message);
 
+    /**
+     * factory method
+     * @return instance of FeatureRemovedError
+     */
     public static FeatureRemovedError of() {
         return new FeatureRemovedErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of FeatureRemovedError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static FeatureRemovedError of(final FeatureRemovedError template) {
         FeatureRemovedErrorImpl instance = new FeatureRemovedErrorImpl();
         instance.setMessage(template.getMessage());
@@ -60,18 +77,37 @@ public interface FeatureRemovedError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for FeatureRemovedError
+     * @return builder
+     */
     public static FeatureRemovedErrorBuilder builder() {
         return FeatureRemovedErrorBuilder.of();
     }
 
+    /**
+     * create builder for FeatureRemovedError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static FeatureRemovedErrorBuilder builder(final FeatureRemovedError template) {
         return FeatureRemovedErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withFeatureRemovedError(Function<FeatureRemovedError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<FeatureRemovedError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<FeatureRemovedError>() {
             @Override

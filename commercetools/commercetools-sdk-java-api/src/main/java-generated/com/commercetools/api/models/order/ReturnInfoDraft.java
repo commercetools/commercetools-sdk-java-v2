@@ -56,19 +56,48 @@ public interface ReturnInfoDraft extends io.vrap.rmf.base.client.Draft<ReturnInf
     @JsonProperty("returnDate")
     public ZonedDateTime getReturnDate();
 
+    /**
+     * set items
+     * @param items values to be set
+     */
+
     @JsonIgnore
     public void setItems(final ReturnItemDraft... items);
 
+    /**
+     * set items
+     * @param items values to be set
+     */
+
     public void setItems(final List<ReturnItemDraft> items);
+
+    /**
+     *  <p>Identifies, which return tracking ID is connected to this particular return.</p>
+     * @param returnTrackingId value to be set
+     */
 
     public void setReturnTrackingId(final String returnTrackingId);
 
+    /**
+     * set returnDate
+     * @param returnDate value to be set
+     */
+
     public void setReturnDate(final ZonedDateTime returnDate);
 
+    /**
+     * factory method
+     * @return instance of ReturnInfoDraft
+     */
     public static ReturnInfoDraft of() {
         return new ReturnInfoDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of ReturnInfoDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ReturnInfoDraft of(final ReturnInfoDraft template) {
         ReturnInfoDraftImpl instance = new ReturnInfoDraftImpl();
         instance.setItems(template.getItems());
@@ -77,18 +106,37 @@ public interface ReturnInfoDraft extends io.vrap.rmf.base.client.Draft<ReturnInf
         return instance;
     }
 
+    /**
+     * builder factory method for ReturnInfoDraft
+     * @return builder
+     */
     public static ReturnInfoDraftBuilder builder() {
         return ReturnInfoDraftBuilder.of();
     }
 
+    /**
+     * create builder for ReturnInfoDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReturnInfoDraftBuilder builder(final ReturnInfoDraft template) {
         return ReturnInfoDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withReturnInfoDraft(Function<ReturnInfoDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ReturnInfoDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ReturnInfoDraft>() {
             @Override

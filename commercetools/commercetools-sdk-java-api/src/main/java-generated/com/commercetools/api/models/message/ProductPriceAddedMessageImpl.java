@@ -48,6 +48,9 @@ public class ProductPriceAddedMessageImpl implements ProductPriceAddedMessage, M
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductPriceAddedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -77,6 +80,9 @@ public class ProductPriceAddedMessageImpl implements ProductPriceAddedMessage, M
         this.type = PRODUCT_PRICE_ADDED;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductPriceAddedMessageImpl() {
         this.type = PRODUCT_PRICE_ADDED;
     }

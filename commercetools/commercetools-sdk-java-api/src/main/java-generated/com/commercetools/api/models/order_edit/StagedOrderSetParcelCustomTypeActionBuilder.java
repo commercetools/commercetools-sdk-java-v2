@@ -33,7 +33,7 @@ public class StagedOrderSetParcelCustomTypeActionBuilder implements Builder<Stag
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *
+     * set the value to the parcelId
      * @param parcelId value to be set
      * @return Builder
      */
@@ -91,14 +91,29 @@ public class StagedOrderSetParcelCustomTypeActionBuilder implements Builder<Stag
         return this;
     }
 
+    /**
+     * value of parcelId}
+     * @return parcelId
+     */
+
     public String getParcelId() {
         return this.parcelId;
     }
+
+    /**
+     *  <p>Defines the Type that extends the Parcel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Parcel.</p>
+     * @return type
+     */
 
     @Nullable
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }
+
+    /**
+     *  <p>Sets the Custom Fields fields for the Parcel.</p>
+     * @return fields
+     */
 
     @Nullable
     public com.commercetools.api.models.type.FieldContainer getFields() {
@@ -122,10 +137,19 @@ public class StagedOrderSetParcelCustomTypeActionBuilder implements Builder<Stag
         return new StagedOrderSetParcelCustomTypeActionImpl(parcelId, type, fields);
     }
 
+    /**
+     * factory method for an instance of StagedOrderSetParcelCustomTypeActionBuilder
+     * @return builder
+     */
     public static StagedOrderSetParcelCustomTypeActionBuilder of() {
         return new StagedOrderSetParcelCustomTypeActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderSetParcelCustomTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetParcelCustomTypeActionBuilder of(final StagedOrderSetParcelCustomTypeAction template) {
         StagedOrderSetParcelCustomTypeActionBuilder builder = new StagedOrderSetParcelCustomTypeActionBuilder();
         builder.parcelId = template.getParcelId();

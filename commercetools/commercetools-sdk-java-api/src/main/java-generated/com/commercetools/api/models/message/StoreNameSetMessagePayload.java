@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StoreNameSetMessagePayloadImpl.class)
 public interface StoreNameSetMessagePayload extends MessagePayload {
 
+    /**
+     * discriminator value for StoreNameSetMessagePayload
+     */
     String STORE_NAME_SET = "StoreNameSet";
 
     /**
@@ -47,17 +50,41 @@ public interface StoreNameSetMessagePayload extends MessagePayload {
     @JsonProperty("nameAllLocales")
     public List<LocalizedString> getNameAllLocales();
 
+    /**
+     *  <p>Name of the Store set during the Set Name update action.</p>
+     * @param name value to be set
+     */
+
     public void setName(final LocalizedString name);
+
+    /**
+     *  <p>Names set for the Store in different locales.</p>
+     * @param nameAllLocales values to be set
+     */
 
     @JsonIgnore
     public void setNameAllLocales(final LocalizedString... nameAllLocales);
 
+    /**
+     *  <p>Names set for the Store in different locales.</p>
+     * @param nameAllLocales values to be set
+     */
+
     public void setNameAllLocales(final List<LocalizedString> nameAllLocales);
 
+    /**
+     * factory method
+     * @return instance of StoreNameSetMessagePayload
+     */
     public static StoreNameSetMessagePayload of() {
         return new StoreNameSetMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of StoreNameSetMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StoreNameSetMessagePayload of(final StoreNameSetMessagePayload template) {
         StoreNameSetMessagePayloadImpl instance = new StoreNameSetMessagePayloadImpl();
         instance.setName(template.getName());
@@ -65,18 +92,37 @@ public interface StoreNameSetMessagePayload extends MessagePayload {
         return instance;
     }
 
+    /**
+     * builder factory method for StoreNameSetMessagePayload
+     * @return builder
+     */
     public static StoreNameSetMessagePayloadBuilder builder() {
         return StoreNameSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for StoreNameSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreNameSetMessagePayloadBuilder builder(final StoreNameSetMessagePayload template) {
         return StoreNameSetMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStoreNameSetMessagePayload(Function<StoreNameSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StoreNameSetMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StoreNameSetMessagePayload>() {
             @Override

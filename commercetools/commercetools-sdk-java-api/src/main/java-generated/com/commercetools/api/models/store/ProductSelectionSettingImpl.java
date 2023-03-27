@@ -24,6 +24,9 @@ public class ProductSelectionSettingImpl implements ProductSelectionSetting, Mod
 
     private Boolean active;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSelectionSettingImpl(
             @JsonProperty("productSelection") final com.commercetools.api.models.product_selection.ProductSelectionReference productSelection,
@@ -32,6 +35,9 @@ public class ProductSelectionSettingImpl implements ProductSelectionSetting, Mod
         this.active = active;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSelectionSettingImpl() {
     }
 

@@ -27,7 +27,7 @@ public class StagedOrderSetReturnPaymentStateActionBuilder implements Builder<St
     private com.commercetools.api.models.order.ReturnPaymentState paymentState;
 
     /**
-     *
+     * set the value to the returnItemId
      * @param returnItemId value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class StagedOrderSetReturnPaymentStateActionBuilder implements Builder<St
     }
 
     /**
-     *
+     * set the value to the paymentState
      * @param paymentState value to be set
      * @return Builder
      */
@@ -49,9 +49,19 @@ public class StagedOrderSetReturnPaymentStateActionBuilder implements Builder<St
         return this;
     }
 
+    /**
+     * value of returnItemId}
+     * @return returnItemId
+     */
+
     public String getReturnItemId() {
         return this.returnItemId;
     }
+
+    /**
+     * value of paymentState}
+     * @return paymentState
+     */
 
     public com.commercetools.api.models.order.ReturnPaymentState getPaymentState() {
         return this.paymentState;
@@ -77,10 +87,19 @@ public class StagedOrderSetReturnPaymentStateActionBuilder implements Builder<St
         return new StagedOrderSetReturnPaymentStateActionImpl(returnItemId, paymentState);
     }
 
+    /**
+     * factory method for an instance of StagedOrderSetReturnPaymentStateActionBuilder
+     * @return builder
+     */
     public static StagedOrderSetReturnPaymentStateActionBuilder of() {
         return new StagedOrderSetReturnPaymentStateActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderSetReturnPaymentStateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetReturnPaymentStateActionBuilder of(
             final StagedOrderSetReturnPaymentStateAction template) {
         StagedOrderSetReturnPaymentStateActionBuilder builder = new StagedOrderSetReturnPaymentStateActionBuilder();

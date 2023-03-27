@@ -54,6 +54,9 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
 
     private com.commercetools.api.models.common.CreatedBy createdBy;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShoppingListImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -90,6 +93,9 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
         this.createdBy = createdBy;
     }
 
+    /**
+     * create empty instance
+     */
     public ShoppingListImpl() {
     }
 

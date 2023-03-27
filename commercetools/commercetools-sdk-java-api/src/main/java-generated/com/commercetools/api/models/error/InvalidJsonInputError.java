@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = InvalidJsonInputErrorImpl.class)
 public interface InvalidJsonInputError extends ErrorObject {
 
+    /**
+     * discriminator value for InvalidJsonInputError
+     */
     String INVALID_JSON_INPUT = "InvalidJsonInput";
 
     /**
@@ -57,14 +60,33 @@ public interface InvalidJsonInputError extends ErrorObject {
     @JsonProperty("detailedErrorMessage")
     public String getDetailedErrorMessage();
 
+    /**
+     *  <p><code>"Request body does not contain valid JSON."</code></p>
+     * @param message value to be set
+     */
+
     public void setMessage(final String message);
+
+    /**
+     *  <p>Further explanation about why the JSON is invalid.</p>
+     * @param detailedErrorMessage value to be set
+     */
 
     public void setDetailedErrorMessage(final String detailedErrorMessage);
 
+    /**
+     * factory method
+     * @return instance of InvalidJsonInputError
+     */
     public static InvalidJsonInputError of() {
         return new InvalidJsonInputErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of InvalidJsonInputError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static InvalidJsonInputError of(final InvalidJsonInputError template) {
         InvalidJsonInputErrorImpl instance = new InvalidJsonInputErrorImpl();
         instance.setMessage(template.getMessage());
@@ -73,18 +95,37 @@ public interface InvalidJsonInputError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for InvalidJsonInputError
+     * @return builder
+     */
     public static InvalidJsonInputErrorBuilder builder() {
         return InvalidJsonInputErrorBuilder.of();
     }
 
+    /**
+     * create builder for InvalidJsonInputError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InvalidJsonInputErrorBuilder builder(final InvalidJsonInputError template) {
         return InvalidJsonInputErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withInvalidJsonInputError(Function<InvalidJsonInputError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<InvalidJsonInputError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<InvalidJsonInputError>() {
             @Override

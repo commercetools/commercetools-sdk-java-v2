@@ -107,9 +107,19 @@ public class ShoppingListUpdateBuilder implements Builder<ShoppingListUpdate> {
         return this;
     }
 
+    /**
+     *  <p>Expected version of the ShoppingList on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+     * @return version
+     */
+
     public Long getVersion() {
         return this.version;
     }
+
+    /**
+     *  <p>List of update actions to be performed on the ShoppingList.</p>
+     * @return actions
+     */
 
     public java.util.List<com.commercetools.api.models.shopping_list.ShoppingListUpdateAction> getActions() {
         return this.actions;
@@ -133,10 +143,19 @@ public class ShoppingListUpdateBuilder implements Builder<ShoppingListUpdate> {
         return new ShoppingListUpdateImpl(version, actions);
     }
 
+    /**
+     * factory method for an instance of ShoppingListUpdateBuilder
+     * @return builder
+     */
     public static ShoppingListUpdateBuilder of() {
         return new ShoppingListUpdateBuilder();
     }
 
+    /**
+     * create builder for ShoppingListUpdate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShoppingListUpdateBuilder of(final ShoppingListUpdate template) {
         ShoppingListUpdateBuilder builder = new ShoppingListUpdateBuilder();
         builder.version = template.getVersion();

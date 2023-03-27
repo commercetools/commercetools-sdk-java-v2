@@ -41,7 +41,7 @@ public class ChangeIsActiveChangeBuilder implements Builder<ChangeIsActiveChange
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class ChangeIsActiveChangeBuilder implements Builder<ChangeIsActiveChange
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -62,13 +62,28 @@ public class ChangeIsActiveChangeBuilder implements Builder<ChangeIsActiveChange
         return this;
     }
 
+    /**
+     *  <p>Shape of the action for <code>changeIsActive</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public Boolean getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public Boolean getNextValue() {
         return this.nextValue;
@@ -93,10 +108,19 @@ public class ChangeIsActiveChangeBuilder implements Builder<ChangeIsActiveChange
         return new ChangeIsActiveChangeImpl(change, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of ChangeIsActiveChangeBuilder
+     * @return builder
+     */
     public static ChangeIsActiveChangeBuilder of() {
         return new ChangeIsActiveChangeBuilder();
     }
 
+    /**
+     * create builder for ChangeIsActiveChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeIsActiveChangeBuilder of(final ChangeIsActiveChange template) {
         ChangeIsActiveChangeBuilder builder = new ChangeIsActiveChangeBuilder();
         builder.change = template.getChange();

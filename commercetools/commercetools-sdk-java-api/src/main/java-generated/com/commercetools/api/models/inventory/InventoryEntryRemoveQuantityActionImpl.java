@@ -24,12 +24,18 @@ public class InventoryEntryRemoveQuantityActionImpl implements InventoryEntryRem
 
     private Long quantity;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     InventoryEntryRemoveQuantityActionImpl(@JsonProperty("quantity") final Long quantity) {
         this.quantity = quantity;
         this.action = REMOVE_QUANTITY;
     }
 
+    /**
+     * create empty instance
+     */
     public InventoryEntryRemoveQuantityActionImpl() {
         this.action = REMOVE_QUANTITY;
     }

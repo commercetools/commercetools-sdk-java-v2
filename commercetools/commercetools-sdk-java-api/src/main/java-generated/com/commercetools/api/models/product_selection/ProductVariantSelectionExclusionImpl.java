@@ -25,12 +25,18 @@ public class ProductVariantSelectionExclusionImpl implements ProductVariantSelec
 
     private java.util.List<String> skus;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductVariantSelectionExclusionImpl(@JsonProperty("skus") final java.util.List<String> skus) {
         this.skus = skus;
         this.type = ProductVariantSelectionTypeEnum.findEnum("exclusion");
     }
 
+    /**
+     * create empty instance
+     */
     public ProductVariantSelectionExclusionImpl() {
         this.type = ProductVariantSelectionTypeEnum.findEnum("exclusion");
     }

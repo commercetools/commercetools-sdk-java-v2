@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AttributeNameDoesNotExistErrorImpl.class)
 public interface AttributeNameDoesNotExistError extends ErrorObject {
 
+    /**
+     * discriminator value for AttributeNameDoesNotExistError
+     */
     String ATTRIBUTE_NAME_DOES_NOT_EXIST = "AttributeNameDoesNotExist";
 
     /**
@@ -57,14 +60,33 @@ public interface AttributeNameDoesNotExistError extends ErrorObject {
     @JsonProperty("invalidAttributeName")
     public String getInvalidAttributeName();
 
+    /**
+     *  <p><code>"Attribute definition for $attributeName does not exist on type $typeName."</code></p>
+     * @param message value to be set
+     */
+
     public void setMessage(final String message);
+
+    /**
+     *  <p>Non-existent Attribute name.</p>
+     * @param invalidAttributeName value to be set
+     */
 
     public void setInvalidAttributeName(final String invalidAttributeName);
 
+    /**
+     * factory method
+     * @return instance of AttributeNameDoesNotExistError
+     */
     public static AttributeNameDoesNotExistError of() {
         return new AttributeNameDoesNotExistErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of AttributeNameDoesNotExistError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static AttributeNameDoesNotExistError of(final AttributeNameDoesNotExistError template) {
         AttributeNameDoesNotExistErrorImpl instance = new AttributeNameDoesNotExistErrorImpl();
         instance.setMessage(template.getMessage());
@@ -73,18 +95,37 @@ public interface AttributeNameDoesNotExistError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for AttributeNameDoesNotExistError
+     * @return builder
+     */
     public static AttributeNameDoesNotExistErrorBuilder builder() {
         return AttributeNameDoesNotExistErrorBuilder.of();
     }
 
+    /**
+     * create builder for AttributeNameDoesNotExistError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeNameDoesNotExistErrorBuilder builder(final AttributeNameDoesNotExistError template) {
         return AttributeNameDoesNotExistErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAttributeNameDoesNotExistError(Function<AttributeNameDoesNotExistError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AttributeNameDoesNotExistError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AttributeNameDoesNotExistError>() {
             @Override

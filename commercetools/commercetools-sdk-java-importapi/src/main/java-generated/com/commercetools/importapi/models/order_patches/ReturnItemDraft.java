@@ -70,20 +70,54 @@ public interface ReturnItemDraft extends io.vrap.rmf.base.client.Draft<ReturnIte
     @JsonProperty("shipmentState")
     public ReturnShipmentState getShipmentState();
 
+    /**
+     * set quantity
+     * @param quantity value to be set
+     */
+
     public void setQuantity(final Double quantity);
+
+    /**
+     * set lineItemId
+     * @param lineItemId value to be set
+     */
 
     public void setLineItemId(final String lineItemId);
 
+    /**
+     * set customLineItemId
+     * @param customLineItemId value to be set
+     */
+
     public void setCustomLineItemId(final String customLineItemId);
+
+    /**
+     * set comment
+     * @param comment value to be set
+     */
 
     public void setComment(final String comment);
 
+    /**
+     *  <p>Maps to <code>ReturnItem.shipmentState</code></p>
+     * @param shipmentState value to be set
+     */
+
     public void setShipmentState(final ReturnShipmentState shipmentState);
 
+    /**
+     * factory method
+     * @return instance of ReturnItemDraft
+     */
     public static ReturnItemDraft of() {
         return new ReturnItemDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of ReturnItemDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ReturnItemDraft of(final ReturnItemDraft template) {
         ReturnItemDraftImpl instance = new ReturnItemDraftImpl();
         instance.setQuantity(template.getQuantity());
@@ -94,18 +128,37 @@ public interface ReturnItemDraft extends io.vrap.rmf.base.client.Draft<ReturnIte
         return instance;
     }
 
+    /**
+     * builder factory method for ReturnItemDraft
+     * @return builder
+     */
     public static ReturnItemDraftBuilder builder() {
         return ReturnItemDraftBuilder.of();
     }
 
+    /**
+     * create builder for ReturnItemDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReturnItemDraftBuilder builder(final ReturnItemDraft template) {
         return ReturnItemDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withReturnItemDraft(Function<ReturnItemDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ReturnItemDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ReturnItemDraft>() {
             @Override

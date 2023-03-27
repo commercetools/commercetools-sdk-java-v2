@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TypeChangeEnumValueOrderActionImpl.class)
 public interface TypeChangeEnumValueOrderAction extends TypeUpdateAction {
 
+    /**
+     * discriminator value for TypeChangeEnumValueOrderAction
+     */
     String CHANGE_ENUM_VALUE_ORDER = "changeEnumValueOrder";
 
     /**
@@ -48,17 +51,41 @@ public interface TypeChangeEnumValueOrderAction extends TypeUpdateAction {
     @JsonProperty("keys")
     public List<String> getKeys();
 
+    /**
+     *  <p><code>name</code> of the FieldDefinition to update.</p>
+     * @param fieldName value to be set
+     */
+
     public void setFieldName(final String fieldName);
+
+    /**
+     *  <p>Must match the set of <code>key</code>s of the EnumValues in the FieldDefinition (apart from their order).</p>
+     * @param keys values to be set
+     */
 
     @JsonIgnore
     public void setKeys(final String... keys);
 
+    /**
+     *  <p>Must match the set of <code>key</code>s of the EnumValues in the FieldDefinition (apart from their order).</p>
+     * @param keys values to be set
+     */
+
     public void setKeys(final List<String> keys);
 
+    /**
+     * factory method
+     * @return instance of TypeChangeEnumValueOrderAction
+     */
     public static TypeChangeEnumValueOrderAction of() {
         return new TypeChangeEnumValueOrderActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of TypeChangeEnumValueOrderAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static TypeChangeEnumValueOrderAction of(final TypeChangeEnumValueOrderAction template) {
         TypeChangeEnumValueOrderActionImpl instance = new TypeChangeEnumValueOrderActionImpl();
         instance.setFieldName(template.getFieldName());
@@ -66,18 +93,37 @@ public interface TypeChangeEnumValueOrderAction extends TypeUpdateAction {
         return instance;
     }
 
+    /**
+     * builder factory method for TypeChangeEnumValueOrderAction
+     * @return builder
+     */
     public static TypeChangeEnumValueOrderActionBuilder builder() {
         return TypeChangeEnumValueOrderActionBuilder.of();
     }
 
+    /**
+     * create builder for TypeChangeEnumValueOrderAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TypeChangeEnumValueOrderActionBuilder builder(final TypeChangeEnumValueOrderAction template) {
         return TypeChangeEnumValueOrderActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTypeChangeEnumValueOrderAction(Function<TypeChangeEnumValueOrderAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<TypeChangeEnumValueOrderAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TypeChangeEnumValueOrderAction>() {
             @Override

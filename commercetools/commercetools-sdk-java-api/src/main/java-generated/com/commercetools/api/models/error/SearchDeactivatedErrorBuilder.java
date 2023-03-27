@@ -62,9 +62,19 @@ public class SearchDeactivatedErrorBuilder implements Builder<SearchDeactivatedE
         return this;
     }
 
+    /**
+     *  <p><code>"The endpoint is deactivated for this project. Please enable it via the Project endpoint, via the Merchant Center in the Project settings, or reach out to Support to enable it."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
@@ -87,10 +97,19 @@ public class SearchDeactivatedErrorBuilder implements Builder<SearchDeactivatedE
         return new SearchDeactivatedErrorImpl(message, values);
     }
 
+    /**
+     * factory method for an instance of SearchDeactivatedErrorBuilder
+     * @return builder
+     */
     public static SearchDeactivatedErrorBuilder of() {
         return new SearchDeactivatedErrorBuilder();
     }
 
+    /**
+     * create builder for SearchDeactivatedError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SearchDeactivatedErrorBuilder of(final SearchDeactivatedError template) {
         SearchDeactivatedErrorBuilder builder = new SearchDeactivatedErrorBuilder();
         builder.message = template.getMessage();

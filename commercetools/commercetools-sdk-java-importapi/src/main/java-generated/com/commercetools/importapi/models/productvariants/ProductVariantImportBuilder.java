@@ -318,38 +318,78 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier.</p>
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     *  <p>Maps to <code>ProductVariant.sku</code>.</p>
+     * @return sku
+     */
 
     @Nullable
     public String getSku() {
         return this.sku;
     }
 
+    /**
+     *  <p>Maps to <code>ProductVariant.isMasterVariant</code>.</p>
+     * @return isMasterVariant
+     */
+
     public Boolean getIsMasterVariant() {
         return this.isMasterVariant;
     }
+
+    /**
+     *  <p>Maps to <code>ProductVariant.attributes</code>. The referenced attribute must be defined in an already existing ProductType in the project, or the <code>state</code> of the ImportOperation will be <code>unresolved</code>.</p>
+     * @return attributes
+     */
 
     @Nullable
     public java.util.List<com.commercetools.importapi.models.productvariants.Attribute> getAttributes() {
         return this.attributes;
     }
 
+    /**
+     *  <p>Maps to <code>ProductVariant.images</code>.</p>
+     * @return images
+     */
+
     @Nullable
     public java.util.List<com.commercetools.importapi.models.common.Image> getImages() {
         return this.images;
     }
+
+    /**
+     *  <p>Maps to <code>ProductVariant.assets</code>.</p>
+     * @return assets
+     */
 
     @Nullable
     public java.util.List<com.commercetools.importapi.models.common.Asset> getAssets() {
         return this.assets;
     }
 
+    /**
+     *  <p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data. If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p>
+     * @return publish
+     */
+
     @Nullable
     public Boolean getPublish() {
         return this.publish;
     }
+
+    /**
+     *  <p>The Product to which this Product Variant belongs. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the ProductVariant is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
+     * @return product
+     */
 
     public com.commercetools.importapi.models.common.ProductKeyReference getProduct() {
         return this.product;
@@ -374,10 +414,19 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
         return new ProductVariantImportImpl(key, sku, isMasterVariant, attributes, images, assets, publish, product);
     }
 
+    /**
+     * factory method for an instance of ProductVariantImportBuilder
+     * @return builder
+     */
     public static ProductVariantImportBuilder of() {
         return new ProductVariantImportBuilder();
     }
 
+    /**
+     * create builder for ProductVariantImport instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductVariantImportBuilder of(final ProductVariantImport template) {
         ProductVariantImportBuilder builder = new ProductVariantImportBuilder();
         builder.key = template.getKey();

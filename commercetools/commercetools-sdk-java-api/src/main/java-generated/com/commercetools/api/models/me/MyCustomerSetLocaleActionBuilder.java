@@ -36,6 +36,11 @@ public class MyCustomerSetLocaleActionBuilder implements Builder<MyCustomerSetLo
         return this;
     }
 
+    /**
+     *  <p>Value to set. Must be one of the languages supported by the Project.</p>
+     * @return locale
+     */
+
     @Nullable
     public String getLocale() {
         return this.locale;
@@ -57,10 +62,19 @@ public class MyCustomerSetLocaleActionBuilder implements Builder<MyCustomerSetLo
         return new MyCustomerSetLocaleActionImpl(locale);
     }
 
+    /**
+     * factory method for an instance of MyCustomerSetLocaleActionBuilder
+     * @return builder
+     */
     public static MyCustomerSetLocaleActionBuilder of() {
         return new MyCustomerSetLocaleActionBuilder();
     }
 
+    /**
+     * create builder for MyCustomerSetLocaleAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCustomerSetLocaleActionBuilder of(final MyCustomerSetLocaleAction template) {
         MyCustomerSetLocaleActionBuilder builder = new MyCustomerSetLocaleActionBuilder();
         builder.locale = template.getLocale();

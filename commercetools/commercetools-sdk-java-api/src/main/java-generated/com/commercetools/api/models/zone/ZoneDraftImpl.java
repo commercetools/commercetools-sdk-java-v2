@@ -28,6 +28,9 @@ public class ZoneDraftImpl implements ZoneDraft, ModelBase {
 
     private java.util.List<com.commercetools.api.models.zone.Location> locations;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ZoneDraftImpl(@JsonProperty("key") final String key, @JsonProperty("name") final String name,
             @JsonProperty("description") final String description,
@@ -38,6 +41,9 @@ public class ZoneDraftImpl implements ZoneDraft, ModelBase {
         this.locations = locations;
     }
 
+    /**
+     * create empty instance
+     */
     public ZoneDraftImpl() {
     }
 

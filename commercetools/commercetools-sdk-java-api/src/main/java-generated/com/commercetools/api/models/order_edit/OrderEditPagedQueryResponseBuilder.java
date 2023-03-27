@@ -50,7 +50,7 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
     }
 
     /**
-     *
+     * set the value to the count
      * @param count value to be set
      * @return Builder
      */
@@ -61,7 +61,7 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
     }
 
     /**
-     *
+     * set the value to the total
      * @param total value to be set
      * @return Builder
      */
@@ -83,7 +83,7 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
     }
 
     /**
-     *
+     * set values to the results
      * @param results value to be set
      * @return Builder
      */
@@ -95,7 +95,7 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
     }
 
     /**
-     *
+     * set value to the results
      * @param results value to be set
      * @return Builder
      */
@@ -107,7 +107,7 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
     }
 
     /**
-     *
+     * add values to the results
      * @param results value to be set
      * @return Builder
      */
@@ -122,7 +122,7 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
     }
 
     /**
-     *
+     * add the value to the results using the builder function
      * @param builder function to build the results value
      * @return Builder
      */
@@ -137,7 +137,7 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
     }
 
     /**
-     *
+     * set the value to the results using the builder function
      * @param builder function to build the results value
      * @return Builder
      */
@@ -149,22 +149,47 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
         return this;
     }
 
+    /**
+     *  <p>Number of results requested.</p>
+     * @return limit
+     */
+
     public Long getLimit() {
         return this.limit;
     }
 
+    /**
+     * value of count}
+     * @return count
+     */
+
     public Long getCount() {
         return this.count;
     }
+
+    /**
+     * value of total}
+     * @return total
+     */
 
     @Nullable
     public Long getTotal() {
         return this.total;
     }
 
+    /**
+     *  <p>Number of elements skipped.</p>
+     * @return offset
+     */
+
     public Long getOffset() {
         return this.offset;
     }
+
+    /**
+     * value of results}
+     * @return results
+     */
 
     public java.util.List<com.commercetools.api.models.order_edit.OrderEdit> getResults() {
         return this.results;
@@ -190,10 +215,19 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
         return new OrderEditPagedQueryResponseImpl(limit, count, total, offset, results);
     }
 
+    /**
+     * factory method for an instance of OrderEditPagedQueryResponseBuilder
+     * @return builder
+     */
     public static OrderEditPagedQueryResponseBuilder of() {
         return new OrderEditPagedQueryResponseBuilder();
     }
 
+    /**
+     * create builder for OrderEditPagedQueryResponse instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderEditPagedQueryResponseBuilder of(final OrderEditPagedQueryResponse template) {
         OrderEditPagedQueryResponseBuilder builder = new OrderEditPagedQueryResponseBuilder();
         builder.limit = template.getLimit();

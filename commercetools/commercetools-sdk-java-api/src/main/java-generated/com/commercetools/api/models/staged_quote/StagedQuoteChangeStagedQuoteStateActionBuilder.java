@@ -36,6 +36,11 @@ public class StagedQuoteChangeStagedQuoteStateActionBuilder
         return this;
     }
 
+    /**
+     *  <p>New state to be set for the Staged Quote.</p>
+     * @return stagedQuoteState
+     */
+
     public com.commercetools.api.models.staged_quote.StagedQuoteState getStagedQuoteState() {
         return this.stagedQuoteState;
     }
@@ -58,10 +63,19 @@ public class StagedQuoteChangeStagedQuoteStateActionBuilder
         return new StagedQuoteChangeStagedQuoteStateActionImpl(stagedQuoteState);
     }
 
+    /**
+     * factory method for an instance of StagedQuoteChangeStagedQuoteStateActionBuilder
+     * @return builder
+     */
     public static StagedQuoteChangeStagedQuoteStateActionBuilder of() {
         return new StagedQuoteChangeStagedQuoteStateActionBuilder();
     }
 
+    /**
+     * create builder for StagedQuoteChangeStagedQuoteStateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedQuoteChangeStagedQuoteStateActionBuilder of(
             final StagedQuoteChangeStagedQuoteStateAction template) {
         StagedQuoteChangeStagedQuoteStateActionBuilder builder = new StagedQuoteChangeStagedQuoteStateActionBuilder();

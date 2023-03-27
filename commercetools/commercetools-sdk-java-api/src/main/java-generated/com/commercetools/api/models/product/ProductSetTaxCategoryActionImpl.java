@@ -24,6 +24,9 @@ public class ProductSetTaxCategoryActionImpl implements ProductSetTaxCategoryAct
 
     private com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSetTaxCategoryActionImpl(
             @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {
@@ -31,6 +34,9 @@ public class ProductSetTaxCategoryActionImpl implements ProductSetTaxCategoryAct
         this.action = SET_TAX_CATEGORY;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSetTaxCategoryActionImpl() {
         this.action = SET_TAX_CATEGORY;
     }

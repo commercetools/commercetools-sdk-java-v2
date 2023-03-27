@@ -62,9 +62,19 @@ public class InvalidOperationErrorBuilder implements Builder<InvalidOperationErr
         return this;
     }
 
+    /**
+     *  <p>Plain text description of the error.</p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
@@ -87,10 +97,19 @@ public class InvalidOperationErrorBuilder implements Builder<InvalidOperationErr
         return new InvalidOperationErrorImpl(message, values);
     }
 
+    /**
+     * factory method for an instance of InvalidOperationErrorBuilder
+     * @return builder
+     */
     public static InvalidOperationErrorBuilder of() {
         return new InvalidOperationErrorBuilder();
     }
 
+    /**
+     * create builder for InvalidOperationError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InvalidOperationErrorBuilder of(final InvalidOperationError template) {
         InvalidOperationErrorBuilder builder = new InvalidOperationErrorBuilder();
         builder.message = template.getMessage();

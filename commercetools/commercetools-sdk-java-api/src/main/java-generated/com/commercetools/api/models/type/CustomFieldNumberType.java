@@ -26,29 +26,60 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomFieldNumberTypeImpl.class)
 public interface CustomFieldNumberType extends FieldType {
 
+    /**
+     * discriminator value for CustomFieldNumberType
+     */
     String NUMBER = "Number";
 
+    /**
+     * factory method
+     * @return instance of CustomFieldNumberType
+     */
     public static CustomFieldNumberType of() {
         return new CustomFieldNumberTypeImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomFieldNumberType
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomFieldNumberType of(final CustomFieldNumberType template) {
         CustomFieldNumberTypeImpl instance = new CustomFieldNumberTypeImpl();
         return instance;
     }
 
+    /**
+     * builder factory method for CustomFieldNumberType
+     * @return builder
+     */
     public static CustomFieldNumberTypeBuilder builder() {
         return CustomFieldNumberTypeBuilder.of();
     }
 
+    /**
+     * create builder for CustomFieldNumberType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomFieldNumberTypeBuilder builder(final CustomFieldNumberType template) {
         return CustomFieldNumberTypeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomFieldNumberType(Function<CustomFieldNumberType, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomFieldNumberType> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomFieldNumberType>() {
             @Override

@@ -36,10 +36,19 @@ public class CartFreezeCartActionBuilder implements Builder<CartFreezeCartAction
         return new CartFreezeCartActionImpl();
     }
 
+    /**
+     * factory method for an instance of CartFreezeCartActionBuilder
+     * @return builder
+     */
     public static CartFreezeCartActionBuilder of() {
         return new CartFreezeCartActionBuilder();
     }
 
+    /**
+     * create builder for CartFreezeCartAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartFreezeCartActionBuilder of(final CartFreezeCartAction template) {
         CartFreezeCartActionBuilder builder = new CartFreezeCartActionBuilder();
         return builder;

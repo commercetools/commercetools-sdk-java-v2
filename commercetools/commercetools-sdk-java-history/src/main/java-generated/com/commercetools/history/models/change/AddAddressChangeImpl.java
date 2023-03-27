@@ -28,6 +28,9 @@ public class AddAddressChangeImpl implements AddAddressChange, ModelBase {
 
     private com.commercetools.history.models.common.Address previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AddAddressChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.Address nextValue,
@@ -38,6 +41,9 @@ public class AddAddressChangeImpl implements AddAddressChange, ModelBase {
         this.type = ADD_ADDRESS_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public AddAddressChangeImpl() {
         this.type = ADD_ADDRESS_CHANGE;
     }

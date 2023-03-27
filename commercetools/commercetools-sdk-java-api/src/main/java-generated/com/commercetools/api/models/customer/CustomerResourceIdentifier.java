@@ -28,6 +28,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomerResourceIdentifier
         extends ResourceIdentifier, com.commercetools.api.models.Identifiable<Customer> {
 
+    /**
+     * discriminator value for CustomerResourceIdentifier
+     */
     String CUSTOMER = "customer";
 
     /**
@@ -46,14 +49,33 @@ public interface CustomerResourceIdentifier
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     *  <p>Unique identifier of the referenced Customer.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>User-defined unique identifier of the referenced Customer.</p>
+     * @param key value to be set
+     */
 
     public void setKey(final String key);
 
+    /**
+     * factory method
+     * @return instance of CustomerResourceIdentifier
+     */
     public static CustomerResourceIdentifier of() {
         return new CustomerResourceIdentifierImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomerResourceIdentifier
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomerResourceIdentifier of(final CustomerResourceIdentifier template) {
         CustomerResourceIdentifierImpl instance = new CustomerResourceIdentifierImpl();
         instance.setId(template.getId());
@@ -61,18 +83,37 @@ public interface CustomerResourceIdentifier
         return instance;
     }
 
+    /**
+     * builder factory method for CustomerResourceIdentifier
+     * @return builder
+     */
     public static CustomerResourceIdentifierBuilder builder() {
         return CustomerResourceIdentifierBuilder.of();
     }
 
+    /**
+     * create builder for CustomerResourceIdentifier instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerResourceIdentifierBuilder builder(final CustomerResourceIdentifier template) {
         return CustomerResourceIdentifierBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomerResourceIdentifier(Function<CustomerResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomerResourceIdentifier> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomerResourceIdentifier>() {
             @Override

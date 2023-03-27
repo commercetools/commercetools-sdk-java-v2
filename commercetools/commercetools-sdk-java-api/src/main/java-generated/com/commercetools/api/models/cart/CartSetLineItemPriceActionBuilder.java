@@ -64,9 +64,19 @@ public class CartSetLineItemPriceActionBuilder implements Builder<CartSetLineIte
         return this;
     }
 
+    /**
+     *  <p><code>id</code> of the LineItem to update.</p>
+     * @return lineItemId
+     */
+
     public String getLineItemId() {
         return this.lineItemId;
     }
+
+    /**
+     *  <p>Value to set. If <code>externalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalPrice</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
+     * @return externalPrice
+     */
 
     @Nullable
     public com.commercetools.api.models.common.Money getExternalPrice() {
@@ -90,10 +100,19 @@ public class CartSetLineItemPriceActionBuilder implements Builder<CartSetLineIte
         return new CartSetLineItemPriceActionImpl(lineItemId, externalPrice);
     }
 
+    /**
+     * factory method for an instance of CartSetLineItemPriceActionBuilder
+     * @return builder
+     */
     public static CartSetLineItemPriceActionBuilder of() {
         return new CartSetLineItemPriceActionBuilder();
     }
 
+    /**
+     * create builder for CartSetLineItemPriceAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartSetLineItemPriceActionBuilder of(final CartSetLineItemPriceAction template) {
         CartSetLineItemPriceActionBuilder builder = new CartSetLineItemPriceActionBuilder();
         builder.lineItemId = template.getLineItemId();

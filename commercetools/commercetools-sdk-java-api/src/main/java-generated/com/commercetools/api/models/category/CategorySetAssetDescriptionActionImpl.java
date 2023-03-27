@@ -28,6 +28,9 @@ public class CategorySetAssetDescriptionActionImpl implements CategorySetAssetDe
 
     private com.commercetools.api.models.common.LocalizedString description;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CategorySetAssetDescriptionActionImpl(@JsonProperty("assetId") final String assetId,
             @JsonProperty("assetKey") final String assetKey,
@@ -38,6 +41,9 @@ public class CategorySetAssetDescriptionActionImpl implements CategorySetAssetDe
         this.action = SET_ASSET_DESCRIPTION;
     }
 
+    /**
+     * create empty instance
+     */
     public CategorySetAssetDescriptionActionImpl() {
         this.action = SET_ASSET_DESCRIPTION;
     }

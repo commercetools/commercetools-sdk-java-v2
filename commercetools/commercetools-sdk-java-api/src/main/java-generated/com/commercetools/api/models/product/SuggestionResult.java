@@ -39,30 +39,64 @@ public interface SuggestionResult {
     @JsonAnyGetter
     public Map<String, List<Suggestion>> values();
 
+    /**
+     * set pattern property
+     * @param key property name
+     * @param value property value
+     */
+
     @JsonAnySetter
     public void setValue(String key, List<Suggestion> value);
 
+    /**
+     * factory method
+     * @return instance of SuggestionResult
+     */
     public static SuggestionResult of() {
         return new SuggestionResultImpl();
     }
 
+    /**
+     * factory method to copy an instance of SuggestionResult
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SuggestionResult of(final SuggestionResult template) {
         SuggestionResultImpl instance = new SuggestionResultImpl();
         return instance;
     }
 
+    /**
+     * builder factory method for SuggestionResult
+     * @return builder
+     */
     public static SuggestionResultBuilder builder() {
         return SuggestionResultBuilder.of();
     }
 
+    /**
+     * create builder for SuggestionResult instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SuggestionResultBuilder builder(final SuggestionResult template) {
         return SuggestionResultBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSuggestionResult(Function<SuggestionResult, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SuggestionResult> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SuggestionResult>() {
             @Override

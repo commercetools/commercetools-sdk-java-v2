@@ -26,6 +26,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = BusinessUnitRemoveShippingAddressIdActionImpl.class)
 public interface BusinessUnitRemoveShippingAddressIdAction extends BusinessUnitUpdateAction {
 
+    /**
+     * discriminator value for BusinessUnitRemoveShippingAddressIdAction
+     */
     String REMOVE_SHIPPING_ADDRESS_ID = "removeShippingAddressId";
 
     /**
@@ -44,14 +47,33 @@ public interface BusinessUnitRemoveShippingAddressIdAction extends BusinessUnitU
     @JsonProperty("addressKey")
     public String getAddressKey();
 
+    /**
+     *  <p>ID of the address to be removed from <code>shippingAddressIds</code>. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
+     * @param addressId value to be set
+     */
+
     public void setAddressId(final String addressId);
+
+    /**
+     *  <p>Key of the address to be removed from <code>shippingAddressIds</code>. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
+     * @param addressKey value to be set
+     */
 
     public void setAddressKey(final String addressKey);
 
+    /**
+     * factory method
+     * @return instance of BusinessUnitRemoveShippingAddressIdAction
+     */
     public static BusinessUnitRemoveShippingAddressIdAction of() {
         return new BusinessUnitRemoveShippingAddressIdActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of BusinessUnitRemoveShippingAddressIdAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static BusinessUnitRemoveShippingAddressIdAction of(
             final BusinessUnitRemoveShippingAddressIdAction template) {
         BusinessUnitRemoveShippingAddressIdActionImpl instance = new BusinessUnitRemoveShippingAddressIdActionImpl();
@@ -60,20 +82,39 @@ public interface BusinessUnitRemoveShippingAddressIdAction extends BusinessUnitU
         return instance;
     }
 
+    /**
+     * builder factory method for BusinessUnitRemoveShippingAddressIdAction
+     * @return builder
+     */
     public static BusinessUnitRemoveShippingAddressIdActionBuilder builder() {
         return BusinessUnitRemoveShippingAddressIdActionBuilder.of();
     }
 
+    /**
+     * create builder for BusinessUnitRemoveShippingAddressIdAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitRemoveShippingAddressIdActionBuilder builder(
             final BusinessUnitRemoveShippingAddressIdAction template) {
         return BusinessUnitRemoveShippingAddressIdActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withBusinessUnitRemoveShippingAddressIdAction(
             Function<BusinessUnitRemoveShippingAddressIdAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitRemoveShippingAddressIdAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitRemoveShippingAddressIdAction>() {
             @Override

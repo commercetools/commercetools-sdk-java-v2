@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ZoneChangeNameActionImpl.class)
 public interface ZoneChangeNameAction extends ZoneUpdateAction {
 
+    /**
+     * discriminator value for ZoneChangeNameAction
+     */
     String CHANGE_NAME = "changeName";
 
     /**
@@ -39,30 +42,63 @@ public interface ZoneChangeNameAction extends ZoneUpdateAction {
     @JsonProperty("name")
     public String getName();
 
+    /**
+     *  <p>New name of the Zone.</p>
+     * @param name value to be set
+     */
+
     public void setName(final String name);
 
+    /**
+     * factory method
+     * @return instance of ZoneChangeNameAction
+     */
     public static ZoneChangeNameAction of() {
         return new ZoneChangeNameActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ZoneChangeNameAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ZoneChangeNameAction of(final ZoneChangeNameAction template) {
         ZoneChangeNameActionImpl instance = new ZoneChangeNameActionImpl();
         instance.setName(template.getName());
         return instance;
     }
 
+    /**
+     * builder factory method for ZoneChangeNameAction
+     * @return builder
+     */
     public static ZoneChangeNameActionBuilder builder() {
         return ZoneChangeNameActionBuilder.of();
     }
 
+    /**
+     * create builder for ZoneChangeNameAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ZoneChangeNameActionBuilder builder(final ZoneChangeNameAction template) {
         return ZoneChangeNameActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withZoneChangeNameAction(Function<ZoneChangeNameAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ZoneChangeNameAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ZoneChangeNameAction>() {
             @Override

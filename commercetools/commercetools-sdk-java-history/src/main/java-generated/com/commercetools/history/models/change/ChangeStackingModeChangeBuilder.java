@@ -41,7 +41,7 @@ public class ChangeStackingModeChangeBuilder implements Builder<ChangeStackingMo
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class ChangeStackingModeChangeBuilder implements Builder<ChangeStackingMo
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -64,13 +64,28 @@ public class ChangeStackingModeChangeBuilder implements Builder<ChangeStackingMo
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>changeStackingMode</code> on cart discounts</p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
+
     public com.commercetools.history.models.common.StackingMode getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public com.commercetools.history.models.common.StackingMode getPreviousValue() {
         return this.previousValue;
@@ -95,10 +110,19 @@ public class ChangeStackingModeChangeBuilder implements Builder<ChangeStackingMo
         return new ChangeStackingModeChangeImpl(change, nextValue, previousValue);
     }
 
+    /**
+     * factory method for an instance of ChangeStackingModeChangeBuilder
+     * @return builder
+     */
     public static ChangeStackingModeChangeBuilder of() {
         return new ChangeStackingModeChangeBuilder();
     }
 
+    /**
+     * create builder for ChangeStackingModeChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeStackingModeChangeBuilder of(final ChangeStackingModeChange template) {
         ChangeStackingModeChangeBuilder builder = new ChangeStackingModeChangeBuilder();
         builder.change = template.getChange();

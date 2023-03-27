@@ -48,6 +48,9 @@ public class StagedQuoteStateTransitionMessageImpl implements StagedQuoteStateTr
 
     private Boolean force;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedQuoteStateTransitionMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -78,6 +81,9 @@ public class StagedQuoteStateTransitionMessageImpl implements StagedQuoteStateTr
         this.type = STAGED_QUOTE_STATE_TRANSITION;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedQuoteStateTransitionMessageImpl() {
         this.type = STAGED_QUOTE_STATE_TRANSITION;
     }

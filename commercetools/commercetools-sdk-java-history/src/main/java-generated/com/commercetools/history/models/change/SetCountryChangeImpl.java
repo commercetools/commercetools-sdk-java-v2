@@ -28,6 +28,9 @@ public class SetCountryChangeImpl implements SetCountryChange, ModelBase {
 
     private String nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetCountryChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final String previousValue,
@@ -38,6 +41,9 @@ public class SetCountryChangeImpl implements SetCountryChange, ModelBase {
         this.type = SET_COUNTRY_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetCountryChangeImpl() {
         this.type = SET_COUNTRY_CHANGE;
     }

@@ -48,6 +48,9 @@ public class ProductImageAddedMessageImpl implements ProductImageAddedMessage, M
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductImageAddedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -77,6 +80,9 @@ public class ProductImageAddedMessageImpl implements ProductImageAddedMessage, M
         this.type = PRODUCT_IMAGE_ADDED;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductImageAddedMessageImpl() {
         this.type = PRODUCT_IMAGE_ADDED;
     }

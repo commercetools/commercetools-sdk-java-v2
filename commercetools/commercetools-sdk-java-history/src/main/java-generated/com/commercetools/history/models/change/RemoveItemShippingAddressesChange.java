@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = RemoveItemShippingAddressesChangeImpl.class)
 public interface RemoveItemShippingAddressesChange extends Change {
 
+    /**
+     * discriminator value for RemoveItemShippingAddressesChange
+     */
     String REMOVE_ITEM_SHIPPING_ADDRESSES_CHANGE = "RemoveItemShippingAddressesChange";
 
     /**
@@ -69,16 +72,40 @@ public interface RemoveItemShippingAddressesChange extends Change {
     @JsonProperty("previousValue")
     public Address getPreviousValue();
 
+    /**
+     *  <p>Update action for <code>removeItemShippingAddress</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
 
     public void setNextValue(final Address nextValue);
 
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
+
     public void setPreviousValue(final Address previousValue);
 
+    /**
+     * factory method
+     * @return instance of RemoveItemShippingAddressesChange
+     */
     public static RemoveItemShippingAddressesChange of() {
         return new RemoveItemShippingAddressesChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of RemoveItemShippingAddressesChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static RemoveItemShippingAddressesChange of(final RemoveItemShippingAddressesChange template) {
         RemoveItemShippingAddressesChangeImpl instance = new RemoveItemShippingAddressesChangeImpl();
         instance.setChange(template.getChange());
@@ -87,18 +114,37 @@ public interface RemoveItemShippingAddressesChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for RemoveItemShippingAddressesChange
+     * @return builder
+     */
     public static RemoveItemShippingAddressesChangeBuilder builder() {
         return RemoveItemShippingAddressesChangeBuilder.of();
     }
 
+    /**
+     * create builder for RemoveItemShippingAddressesChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static RemoveItemShippingAddressesChangeBuilder builder(final RemoveItemShippingAddressesChange template) {
         return RemoveItemShippingAddressesChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withRemoveItemShippingAddressesChange(Function<RemoveItemShippingAddressesChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<RemoveItemShippingAddressesChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<RemoveItemShippingAddressesChange>() {
             @Override

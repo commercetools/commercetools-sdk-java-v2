@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ConcurrentModificationErrorImpl.class)
 public interface ConcurrentModificationError extends ErrorObject {
 
+    /**
+     * discriminator value for ConcurrentModificationError
+     */
     String CONCURRENT_MODIFICATION = "ConcurrentModification";
 
     /**
@@ -56,16 +59,40 @@ public interface ConcurrentModificationError extends ErrorObject {
     @JsonProperty("conflictedResource")
     public Object getConflictedResource();
 
+    /**
+     *  <p>The version specified in the failed request.</p>
+     * @param specifiedVersion value to be set
+     */
+
     public void setSpecifiedVersion(final Long specifiedVersion);
+
+    /**
+     *  <p>The current version of the resource.</p>
+     * @param currentVersion value to be set
+     */
 
     public void setCurrentVersion(final Long currentVersion);
 
+    /**
+     *  <p>The resource in conflict.</p>
+     * @param conflictedResource value to be set
+     */
+
     public void setConflictedResource(final Object conflictedResource);
 
+    /**
+     * factory method
+     * @return instance of ConcurrentModificationError
+     */
     public static ConcurrentModificationError of() {
         return new ConcurrentModificationErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of ConcurrentModificationError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ConcurrentModificationError of(final ConcurrentModificationError template) {
         ConcurrentModificationErrorImpl instance = new ConcurrentModificationErrorImpl();
         instance.setMessage(template.getMessage());
@@ -75,18 +102,37 @@ public interface ConcurrentModificationError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for ConcurrentModificationError
+     * @return builder
+     */
     public static ConcurrentModificationErrorBuilder builder() {
         return ConcurrentModificationErrorBuilder.of();
     }
 
+    /**
+     * create builder for ConcurrentModificationError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ConcurrentModificationErrorBuilder builder(final ConcurrentModificationError template) {
         return ConcurrentModificationErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withConcurrentModificationError(Function<ConcurrentModificationError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ConcurrentModificationError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ConcurrentModificationError>() {
             @Override

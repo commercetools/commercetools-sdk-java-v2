@@ -295,49 +295,105 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
         return this;
     }
 
+    /**
+     *  <p>User-defined identifier for the Price. It must be unique per ProductVariant.</p>
+     * @return key
+     */
+
     @Nullable
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>Money value of this Price.</p>
+     * @return value
+     */
+
     public com.commercetools.api.models.common.Money getValue() {
         return this.value;
     }
+
+    /**
+     *  <p>Set this field if this Price is only valid for the specified country.</p>
+     * @return country
+     */
 
     @Nullable
     public String getCountry() {
         return this.country;
     }
 
+    /**
+     *  <p>Set this field if this Price is only valid for the referenced CustomerGroup.</p>
+     * @return customerGroup
+     */
+
     @Nullable
     public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {
         return this.customerGroup;
     }
+
+    /**
+     *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> Channel.</p>
+     * @return channel
+     */
 
     @Nullable
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel() {
         return this.channel;
     }
 
+    /**
+     *  <p>Set this field if this Price is only valid from the specified date and time. Must be at least 1 ms earlier than <code>validUntil</code>.</p>
+     * @return validFrom
+     */
+
     @Nullable
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
+
+    /**
+     *  <p>Set this field if this Price is only valid until the specified date and time. Must be at least 1 ms later than <code>validFrom</code>. Prices that are no longer valid are not automatically removed, but they can be removed if necessary.</p>
+     * @return validUntil
+     */
 
     @Nullable
     public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;
     }
 
+    /**
+     *  <p>Set this field to add a DiscountedPrice from an <strong>external service</strong>.</p>
+     *  <p>Otherwise, Composable Commerce sets this field automatically if at least one ProductDiscount applies. The DiscountedPrice must reference a ProductDiscount with:</p>
+     *  <ul>
+     *   <li>The <code>isActive</code> flag set to <code>true</code>.</li>
+     *   <li>A ProductDiscountValue of type <code>external</code>.</li>
+     *   <li>A <code>predicate</code> that matches the ProductVariant the Price is referenced from.</li>
+     *  </ul>
+     * @return discounted
+     */
+
     @Nullable
     public com.commercetools.api.models.common.DiscountedPriceDraft getDiscounted() {
         return this.discounted;
     }
 
+    /**
+     *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
+     * @return tiers
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.common.PriceTierDraft> getTiers() {
         return this.tiers;
     }
+
+    /**
+     *  <p>Custom Fields for the Price.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -363,10 +419,19 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
             custom);
     }
 
+    /**
+     * factory method for an instance of PriceDraftBuilder
+     * @return builder
+     */
     public static PriceDraftBuilder of() {
         return new PriceDraftBuilder();
     }
 
+    /**
+     * create builder for PriceDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PriceDraftBuilder of(final PriceDraft template) {
         PriceDraftBuilder builder = new PriceDraftBuilder();
         builder.key = template.getKey();

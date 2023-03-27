@@ -28,6 +28,9 @@ public class ProductTypeImportImpl implements ProductTypeImport, ModelBase {
 
     private java.util.List<com.commercetools.importapi.models.producttypes.AttributeDefinition> attributes;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductTypeImportImpl(@JsonProperty("key") final String key, @JsonProperty("name") final String name,
             @JsonProperty("description") final String description,
@@ -38,6 +41,9 @@ public class ProductTypeImportImpl implements ProductTypeImport, ModelBase {
         this.attributes = attributes;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductTypeImportImpl() {
     }
 

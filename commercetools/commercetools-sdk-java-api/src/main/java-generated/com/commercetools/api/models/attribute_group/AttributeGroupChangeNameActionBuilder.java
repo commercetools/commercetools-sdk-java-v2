@@ -47,6 +47,11 @@ public class AttributeGroupChangeNameActionBuilder implements Builder<AttributeG
         return this;
     }
 
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     * @return name
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
@@ -68,10 +73,19 @@ public class AttributeGroupChangeNameActionBuilder implements Builder<AttributeG
         return new AttributeGroupChangeNameActionImpl(name);
     }
 
+    /**
+     * factory method for an instance of AttributeGroupChangeNameActionBuilder
+     * @return builder
+     */
     public static AttributeGroupChangeNameActionBuilder of() {
         return new AttributeGroupChangeNameActionBuilder();
     }
 
+    /**
+     * create builder for AttributeGroupChangeNameAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeGroupChangeNameActionBuilder of(final AttributeGroupChangeNameAction template) {
         AttributeGroupChangeNameActionBuilder builder = new AttributeGroupChangeNameActionBuilder();
         builder.name = template.getName();

@@ -28,6 +28,9 @@ public class SetInterfaceIdChangeImpl implements SetInterfaceIdChange, ModelBase
 
     private String nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetInterfaceIdChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final String previousValue,
@@ -38,6 +41,9 @@ public class SetInterfaceIdChangeImpl implements SetInterfaceIdChange, ModelBase
         this.type = SET_INTERFACE_ID_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetInterfaceIdChangeImpl() {
         this.type = SET_INTERFACE_ID_CHANGE;
     }

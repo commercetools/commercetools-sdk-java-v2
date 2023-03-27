@@ -50,9 +50,19 @@ public class QuoteRequestStateChangedMessagePayloadBuilder implements Builder<Qu
         return this;
     }
 
+    /**
+     *  <p>State of the Quote Request after the Change Quote Request State update action.</p>
+     * @return quoteRequestState
+     */
+
     public com.commercetools.api.models.quote_request.QuoteRequestState getQuoteRequestState() {
         return this.quoteRequestState;
     }
+
+    /**
+     *  <p>State of the Quote Request before the Change Quote Request State update action.</p>
+     * @return oldQuoteRequestState
+     */
 
     public com.commercetools.api.models.quote_request.QuoteRequestState getOldQuoteRequestState() {
         return this.oldQuoteRequestState;
@@ -78,10 +88,19 @@ public class QuoteRequestStateChangedMessagePayloadBuilder implements Builder<Qu
         return new QuoteRequestStateChangedMessagePayloadImpl(quoteRequestState, oldQuoteRequestState);
     }
 
+    /**
+     * factory method for an instance of QuoteRequestStateChangedMessagePayloadBuilder
+     * @return builder
+     */
     public static QuoteRequestStateChangedMessagePayloadBuilder of() {
         return new QuoteRequestStateChangedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for QuoteRequestStateChangedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static QuoteRequestStateChangedMessagePayloadBuilder of(
             final QuoteRequestStateChangedMessagePayload template) {
         QuoteRequestStateChangedMessagePayloadBuilder builder = new QuoteRequestStateChangedMessagePayloadBuilder();

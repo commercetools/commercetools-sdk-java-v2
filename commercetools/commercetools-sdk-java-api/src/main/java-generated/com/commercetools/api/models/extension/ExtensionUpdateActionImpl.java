@@ -22,11 +22,17 @@ public class ExtensionUpdateActionImpl implements ExtensionUpdateAction, ModelBa
 
     private String action;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ExtensionUpdateActionImpl(@JsonProperty("action") final String action) {
         this.action = action;
     }
 
+    /**
+     * create empty instance
+     */
     public ExtensionUpdateActionImpl() {
     }
 

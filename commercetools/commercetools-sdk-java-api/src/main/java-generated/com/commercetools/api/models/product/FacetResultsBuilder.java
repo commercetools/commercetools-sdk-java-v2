@@ -24,7 +24,7 @@ public class FacetResultsBuilder implements Builder<FacetResults> {
     private Map<String, com.commercetools.api.models.product.FacetResult> values = new HashMap<>();
 
     /**
-     *
+     * assign pattern properties to the builder
      * @param values properties to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class FacetResultsBuilder implements Builder<FacetResults> {
     }
 
     /**
-     *
+     * assign a pattern property to the builder
      * @param key property name
      * @param value property value
      * @return Builder
@@ -49,6 +49,11 @@ public class FacetResultsBuilder implements Builder<FacetResults> {
         values.put(key, value);
         return this;
     }
+
+    /**
+     * values of pattern properties
+     * @return pattern properties
+     */
 
     public Map<String, com.commercetools.api.models.product.FacetResult> getValues() {
         return this.values;
@@ -70,10 +75,19 @@ public class FacetResultsBuilder implements Builder<FacetResults> {
         return new FacetResultsImpl(values);
     }
 
+    /**
+     * factory method for an instance of FacetResultsBuilder
+     * @return builder
+     */
     public static FacetResultsBuilder of() {
         return new FacetResultsBuilder();
     }
 
+    /**
+     * create builder for FacetResults instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static FacetResultsBuilder of(final FacetResults template) {
         FacetResultsBuilder builder = new FacetResultsBuilder();
         builder.values = template.values();

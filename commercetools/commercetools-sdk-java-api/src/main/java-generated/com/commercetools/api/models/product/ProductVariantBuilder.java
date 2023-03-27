@@ -449,59 +449,120 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
         return this;
     }
 
+    /**
+     *  <p>A unique, sequential identifier of the Product Variant within the Product.</p>
+     * @return id
+     */
+
     public Long getId() {
         return this.id;
     }
+
+    /**
+     *  <p>User-defined unique SKU of the Product Variant.</p>
+     * @return sku
+     */
 
     @Nullable
     public String getSku() {
         return this.sku;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the ProductVariant.</p>
+     *  <p>This is different from Product <code>key</code>.</p>
+     * @return key
+     */
+
     @Nullable
     public String getKey() {
         return this.key;
     }
+
+    /**
+     *  <p>The Embedded Prices of the Product Variant. Cannot contain two Prices of the same Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     * @return prices
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.common.Price> getPrices() {
         return this.prices;
     }
 
+    /**
+     *  <p>Attributes of the Product Variant.</p>
+     * @return attributes
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes() {
         return this.attributes;
     }
+
+    /**
+     *  <p>Only available when Price selection is used. Cannot be used in a Query Predicate.</p>
+     * @return price
+     */
 
     @Nullable
     public com.commercetools.api.models.common.Price getPrice() {
         return this.price;
     }
 
+    /**
+     *  <p>Images of the Product Variant.</p>
+     * @return images
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.common.Image> getImages() {
         return this.images;
     }
+
+    /**
+     *  <p>Media assets of the Product Variant.</p>
+     * @return assets
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.common.Asset> getAssets() {
         return this.assets;
     }
 
+    /**
+     *  <p>Set if the Product Variant is tracked by Inventory. Can be used as an optimization to reduce calls to the Inventory service. May not contain the latest Inventory State (it is eventually consistent).</p>
+     * @return availability
+     */
+
     @Nullable
     public com.commercetools.api.models.product.ProductVariantAvailability getAvailability() {
         return this.availability;
     }
+
+    /**
+     *  <p><code>true</code> if the Product Variant matches the search query. Only available in response to a Product Projection Search request.</p>
+     * @return isMatchingVariant
+     */
 
     @Nullable
     public Boolean getIsMatchingVariant() {
         return this.isMatchingVariant;
     }
 
+    /**
+     *  <p>Only available in response to a Product Projection Search request with price selection. Can be used to sort, filter, and facet.</p>
+     * @return scopedPrice
+     */
+
     @Nullable
     public com.commercetools.api.models.common.ScopedPrice getScopedPrice() {
         return this.scopedPrice;
     }
+
+    /**
+     *  <p>Only available in response to a Product Projection Search request with price selection.</p>
+     * @return scopedPriceDiscounted
+     */
 
     @Nullable
     public Boolean getScopedPriceDiscounted() {
@@ -527,10 +588,19 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
             isMatchingVariant, scopedPrice, scopedPriceDiscounted);
     }
 
+    /**
+     * factory method for an instance of ProductVariantBuilder
+     * @return builder
+     */
     public static ProductVariantBuilder of() {
         return new ProductVariantBuilder();
     }
 
+    /**
+     * create builder for ProductVariant instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductVariantBuilder of(final ProductVariant template) {
         ProductVariantBuilder builder = new ProductVariantBuilder();
         builder.id = template.getId();

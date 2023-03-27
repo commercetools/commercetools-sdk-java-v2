@@ -78,19 +78,39 @@ public class ProductRemoveImageActionBuilder implements Builder<ProductRemoveIma
         return this;
     }
 
+    /**
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @return variantId
+     */
+
     @Nullable
     public Long getVariantId() {
         return this.variantId;
     }
+
+    /**
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
+     * @return sku
+     */
 
     @Nullable
     public String getSku() {
         return this.sku;
     }
 
+    /**
+     *  <p>The URL of the image to remove.</p>
+     * @return imageUrl
+     */
+
     public String getImageUrl() {
         return this.imageUrl;
     }
+
+    /**
+     *  <p>If <code>true</code>, only the staged image is removed. If <code>false</code>, both the current and staged image is removed.</p>
+     * @return staged
+     */
 
     @Nullable
     public Boolean getStaged() {
@@ -114,10 +134,19 @@ public class ProductRemoveImageActionBuilder implements Builder<ProductRemoveIma
         return new ProductRemoveImageActionImpl(variantId, sku, imageUrl, staged);
     }
 
+    /**
+     * factory method for an instance of ProductRemoveImageActionBuilder
+     * @return builder
+     */
     public static ProductRemoveImageActionBuilder of() {
         return new ProductRemoveImageActionBuilder();
     }
 
+    /**
+     * create builder for ProductRemoveImageAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductRemoveImageActionBuilder of(final ProductRemoveImageAction template) {
         ProductRemoveImageActionBuilder builder = new ProductRemoveImageActionBuilder();
         builder.variantId = template.getVariantId();

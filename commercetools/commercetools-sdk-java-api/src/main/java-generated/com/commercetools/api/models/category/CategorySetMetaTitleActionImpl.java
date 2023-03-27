@@ -24,6 +24,9 @@ public class CategorySetMetaTitleActionImpl implements CategorySetMetaTitleActio
 
     private com.commercetools.api.models.common.LocalizedString metaTitle;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CategorySetMetaTitleActionImpl(
             @JsonProperty("metaTitle") final com.commercetools.api.models.common.LocalizedString metaTitle) {
@@ -31,6 +34,9 @@ public class CategorySetMetaTitleActionImpl implements CategorySetMetaTitleActio
         this.action = SET_META_TITLE;
     }
 
+    /**
+     * create empty instance
+     */
     public CategorySetMetaTitleActionImpl() {
         this.action = SET_META_TITLE;
     }

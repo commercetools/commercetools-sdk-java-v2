@@ -49,7 +49,7 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
     }
 
     /**
-     *
+     * set the value to the name
      * @param name value to be set
      * @return Builder
      */
@@ -60,7 +60,7 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
     }
 
     /**
-     *
+     * set the value to the customTypeId
      * @param customTypeId value to be set
      * @return Builder
      */
@@ -71,7 +71,7 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
     }
 
     /**
-     *
+     * set the value to the asset using the builder function
      * @param builder function to build the asset value
      * @return Builder
      */
@@ -83,7 +83,7 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
     }
 
     /**
-     *
+     * set the value to the asset
      * @param asset value to be set
      * @return Builder
      */
@@ -95,7 +95,7 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -106,7 +106,7 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -116,25 +116,55 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>setAssetCustomField</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of name}
+     * @return name
+     */
 
     public String getName() {
         return this.name;
     }
 
+    /**
+     * value of customTypeId}
+     * @return customTypeId
+     */
+
     public String getCustomTypeId() {
         return this.customTypeId;
     }
+
+    /**
+     * value of asset}
+     * @return asset
+     */
 
     public com.commercetools.history.models.change_value.AssetChangeValue getAsset() {
         return this.asset;
     }
 
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
+
     public java.lang.Object getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public java.lang.Object getPreviousValue() {
         return this.previousValue;
@@ -162,10 +192,19 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
         return new SetAssetCustomFieldChangeImpl(change, name, customTypeId, asset, nextValue, previousValue);
     }
 
+    /**
+     * factory method for an instance of SetAssetCustomFieldChangeBuilder
+     * @return builder
+     */
     public static SetAssetCustomFieldChangeBuilder of() {
         return new SetAssetCustomFieldChangeBuilder();
     }
 
+    /**
+     * create builder for SetAssetCustomFieldChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetAssetCustomFieldChangeBuilder of(final SetAssetCustomFieldChange template) {
         SetAssetCustomFieldChangeBuilder builder = new SetAssetCustomFieldChangeBuilder();
         builder.change = template.getChange();

@@ -36,6 +36,11 @@ public class CustomerCompanyNameSetMessagePayloadBuilder implements Builder<Cust
         return this;
     }
 
+    /**
+     *  <p>The <code>companyName</code> that was set during the Set Company Name update action.</p>
+     * @return companyName
+     */
+
     @Nullable
     public String getCompanyName() {
         return this.companyName;
@@ -57,10 +62,19 @@ public class CustomerCompanyNameSetMessagePayloadBuilder implements Builder<Cust
         return new CustomerCompanyNameSetMessagePayloadImpl(companyName);
     }
 
+    /**
+     * factory method for an instance of CustomerCompanyNameSetMessagePayloadBuilder
+     * @return builder
+     */
     public static CustomerCompanyNameSetMessagePayloadBuilder of() {
         return new CustomerCompanyNameSetMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for CustomerCompanyNameSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerCompanyNameSetMessagePayloadBuilder of(final CustomerCompanyNameSetMessagePayload template) {
         CustomerCompanyNameSetMessagePayloadBuilder builder = new CustomerCompanyNameSetMessagePayloadBuilder();
         builder.companyName = template.getCompanyName();

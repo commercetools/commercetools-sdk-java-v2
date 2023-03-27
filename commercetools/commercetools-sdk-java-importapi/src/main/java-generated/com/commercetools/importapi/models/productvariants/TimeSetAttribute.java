@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TimeSetAttributeImpl.class)
 public interface TimeSetAttribute extends Attribute {
 
+    /**
+     * discriminator value for TimeSetAttribute
+     */
     String TIME_SET = "time-set";
 
     /**
@@ -40,15 +43,34 @@ public interface TimeSetAttribute extends Attribute {
     @JsonProperty("value")
     public List<LocalTime> getValue();
 
+    /**
+     * set value
+     * @param value values to be set
+     */
+
     @JsonIgnore
     public void setValue(final LocalTime... value);
 
+    /**
+     * set value
+     * @param value values to be set
+     */
+
     public void setValue(final List<LocalTime> value);
 
+    /**
+     * factory method
+     * @return instance of TimeSetAttribute
+     */
     public static TimeSetAttribute of() {
         return new TimeSetAttributeImpl();
     }
 
+    /**
+     * factory method to copy an instance of TimeSetAttribute
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static TimeSetAttribute of(final TimeSetAttribute template) {
         TimeSetAttributeImpl instance = new TimeSetAttributeImpl();
         instance.setName(template.getName());
@@ -56,18 +78,37 @@ public interface TimeSetAttribute extends Attribute {
         return instance;
     }
 
+    /**
+     * builder factory method for TimeSetAttribute
+     * @return builder
+     */
     public static TimeSetAttributeBuilder builder() {
         return TimeSetAttributeBuilder.of();
     }
 
+    /**
+     * create builder for TimeSetAttribute instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TimeSetAttributeBuilder builder(final TimeSetAttribute template) {
         return TimeSetAttributeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTimeSetAttribute(Function<TimeSetAttribute, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<TimeSetAttribute> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TimeSetAttribute>() {
             @Override

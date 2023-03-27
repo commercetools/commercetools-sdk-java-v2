@@ -28,6 +28,9 @@ public class ProductVariantAvailabilityImpl implements ProductVariantAvailabilit
 
     private Long availableQuantity;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductVariantAvailabilityImpl(
             @JsonProperty("channels") final com.commercetools.api.models.product.ProductVariantChannelAvailabilityMap channels,
@@ -40,6 +43,9 @@ public class ProductVariantAvailabilityImpl implements ProductVariantAvailabilit
         this.availableQuantity = availableQuantity;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductVariantAvailabilityImpl() {
     }
 

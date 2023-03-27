@@ -61,9 +61,19 @@ public class ProductTypeChangeLabelActionBuilder implements Builder<ProductTypeC
         return this;
     }
 
+    /**
+     *  <p>Name of the AttributeDefinition to update.</p>
+     * @return attributeName
+     */
+
     public String getAttributeName() {
         return this.attributeName;
     }
+
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     * @return label
+     */
 
     public com.commercetools.api.models.common.LocalizedString getLabel() {
         return this.label;
@@ -87,10 +97,19 @@ public class ProductTypeChangeLabelActionBuilder implements Builder<ProductTypeC
         return new ProductTypeChangeLabelActionImpl(attributeName, label);
     }
 
+    /**
+     * factory method for an instance of ProductTypeChangeLabelActionBuilder
+     * @return builder
+     */
     public static ProductTypeChangeLabelActionBuilder of() {
         return new ProductTypeChangeLabelActionBuilder();
     }
 
+    /**
+     * create builder for ProductTypeChangeLabelAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductTypeChangeLabelActionBuilder of(final ProductTypeChangeLabelAction template) {
         ProductTypeChangeLabelActionBuilder builder = new ProductTypeChangeLabelActionBuilder();
         builder.attributeName = template.getAttributeName();

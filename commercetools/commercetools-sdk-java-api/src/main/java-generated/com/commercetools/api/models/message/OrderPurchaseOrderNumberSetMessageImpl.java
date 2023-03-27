@@ -46,6 +46,9 @@ public class OrderPurchaseOrderNumberSetMessageImpl implements OrderPurchaseOrde
 
     private String oldPurchaseOrderNumber;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderPurchaseOrderNumberSetMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -74,6 +77,9 @@ public class OrderPurchaseOrderNumberSetMessageImpl implements OrderPurchaseOrde
         this.type = ORDER_PURCHASE_ORDER_NUMBER_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderPurchaseOrderNumberSetMessageImpl() {
         this.type = ORDER_PURCHASE_ORDER_NUMBER_SET;
     }

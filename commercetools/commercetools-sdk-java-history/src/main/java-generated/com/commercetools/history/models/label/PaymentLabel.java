@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PaymentLabelImpl.class)
 public interface PaymentLabel extends Label {
 
+    /**
+     * discriminator value for PaymentLabel
+     */
     String PAYMENT_LABEL = "PaymentLabel";
 
     /**
@@ -59,14 +62,33 @@ public interface PaymentLabel extends Label {
     @JsonProperty("amountPlanned")
     public Money getAmountPlanned();
 
+    /**
+     * set key
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
+
+    /**
+     * set amountPlanned
+     * @param amountPlanned value to be set
+     */
 
     public void setAmountPlanned(final Money amountPlanned);
 
+    /**
+     * factory method
+     * @return instance of PaymentLabel
+     */
     public static PaymentLabel of() {
         return new PaymentLabelImpl();
     }
 
+    /**
+     * factory method to copy an instance of PaymentLabel
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static PaymentLabel of(final PaymentLabel template) {
         PaymentLabelImpl instance = new PaymentLabelImpl();
         instance.setKey(template.getKey());
@@ -74,18 +96,37 @@ public interface PaymentLabel extends Label {
         return instance;
     }
 
+    /**
+     * builder factory method for PaymentLabel
+     * @return builder
+     */
     public static PaymentLabelBuilder builder() {
         return PaymentLabelBuilder.of();
     }
 
+    /**
+     * create builder for PaymentLabel instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentLabelBuilder builder(final PaymentLabel template) {
         return PaymentLabelBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withPaymentLabel(Function<PaymentLabel, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<PaymentLabel> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<PaymentLabel>() {
             @Override

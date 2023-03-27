@@ -55,6 +55,10 @@ public class LabelBuilder {
         return com.commercetools.history.models.label.StringLabelBuilder.of();
     }
 
+    /**
+     * factory method for an instance of LabelBuilder
+     * @return builder
+     */
     public static LabelBuilder of() {
         return new LabelBuilder();
     }

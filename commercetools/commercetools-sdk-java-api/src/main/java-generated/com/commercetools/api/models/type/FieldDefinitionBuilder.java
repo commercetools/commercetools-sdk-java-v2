@@ -118,21 +118,46 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
         return this;
     }
 
+    /**
+     *  <p>Data type of the Custom Field to define.</p>
+     * @return type
+     */
+
     public com.commercetools.api.models.type.FieldType getType() {
         return this.type;
     }
+
+    /**
+     *  <p>Name of the Custom Field to define. Must be unique for a given ResourceTypeId. In case there is a FieldDefinition with the same <code>name</code> in another Type, both FieldDefinitions must have the same <code>type</code>.</p>
+     * @return name
+     */
 
     public String getName() {
         return this.name;
     }
 
+    /**
+     *  <p>A human-readable label for the field.</p>
+     * @return label
+     */
+
     public com.commercetools.api.models.common.LocalizedString getLabel() {
         return this.label;
     }
 
+    /**
+     *  <p>Defines whether the field is required to have a value.</p>
+     * @return required
+     */
+
     public Boolean getRequired() {
         return this.required;
     }
+
+    /**
+     *  <p>Defines the visual representation of the field in user interfaces like the Merchant Center. It is only relevant for string-based FieldTypes like CustomFieldStringType and CustomFieldLocalizedStringType.</p>
+     * @return inputHint
+     */
 
     @Nullable
     public com.commercetools.api.models.type.TypeTextInputHint getInputHint() {
@@ -159,10 +184,19 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
         return new FieldDefinitionImpl(type, name, label, required, inputHint);
     }
 
+    /**
+     * factory method for an instance of FieldDefinitionBuilder
+     * @return builder
+     */
     public static FieldDefinitionBuilder of() {
         return new FieldDefinitionBuilder();
     }
 
+    /**
+     * create builder for FieldDefinition instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static FieldDefinitionBuilder of(final FieldDefinition template) {
         FieldDefinitionBuilder builder = new FieldDefinitionBuilder();
         builder.type = template.getType();

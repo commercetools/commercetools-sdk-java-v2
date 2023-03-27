@@ -62,13 +62,28 @@ public class ProductTypeChangeEnumKeyActionBuilder implements Builder<ProductTyp
         return this;
     }
 
+    /**
+     *  <p>Name of the AttributeDefinition to update.</p>
+     * @return attributeName
+     */
+
     public String getAttributeName() {
         return this.attributeName;
     }
 
+    /**
+     *  <p>Existing key to be changed.</p>
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     *  <p>New key to be set.</p>
+     * @return newKey
+     */
 
     public String getNewKey() {
         return this.newKey;
@@ -93,10 +108,19 @@ public class ProductTypeChangeEnumKeyActionBuilder implements Builder<ProductTyp
         return new ProductTypeChangeEnumKeyActionImpl(attributeName, key, newKey);
     }
 
+    /**
+     * factory method for an instance of ProductTypeChangeEnumKeyActionBuilder
+     * @return builder
+     */
     public static ProductTypeChangeEnumKeyActionBuilder of() {
         return new ProductTypeChangeEnumKeyActionBuilder();
     }
 
+    /**
+     * create builder for ProductTypeChangeEnumKeyAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductTypeChangeEnumKeyActionBuilder of(final ProductTypeChangeEnumKeyAction template) {
         ProductTypeChangeEnumKeyActionBuilder builder = new ProductTypeChangeEnumKeyActionBuilder();
         builder.attributeName = template.getAttributeName();

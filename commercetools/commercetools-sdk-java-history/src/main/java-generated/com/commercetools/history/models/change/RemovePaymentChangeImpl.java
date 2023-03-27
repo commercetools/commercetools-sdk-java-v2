@@ -28,6 +28,9 @@ public class RemovePaymentChangeImpl implements RemovePaymentChange, ModelBase {
 
     private com.commercetools.history.models.common.PaymentInfo previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     RemovePaymentChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.PaymentInfo nextValue,
@@ -38,6 +41,9 @@ public class RemovePaymentChangeImpl implements RemovePaymentChange, ModelBase {
         this.type = REMOVE_PAYMENT_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public RemovePaymentChangeImpl() {
         this.type = REMOVE_PAYMENT_CHANGE;
     }

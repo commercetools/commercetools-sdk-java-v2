@@ -27,6 +27,9 @@ public class ZoneReferenceImpl implements ZoneReference, ModelBase {
 
     private com.commercetools.api.models.zone.Zone obj;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ZoneReferenceImpl(@JsonProperty("id") final String id,
             @JsonProperty("obj") final com.commercetools.api.models.zone.Zone obj) {
@@ -35,6 +38,9 @@ public class ZoneReferenceImpl implements ZoneReference, ModelBase {
         this.typeId = ReferenceTypeId.findEnum("zone");
     }
 
+    /**
+     * create empty instance
+     */
     public ZoneReferenceImpl() {
         this.typeId = ReferenceTypeId.findEnum("zone");
     }

@@ -51,58 +51,116 @@ public interface ChannelUpdateAction extends com.commercetools.api.models.Resour
     @JsonProperty("action")
     public String getAction();
 
+    /**
+     * builder for addRoles subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.channel.ChannelAddRolesActionBuilder addRolesBuilder() {
         return com.commercetools.api.models.channel.ChannelAddRolesActionBuilder.of();
     }
 
+    /**
+     * builder for changeDescription subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.channel.ChannelChangeDescriptionActionBuilder changeDescriptionBuilder() {
         return com.commercetools.api.models.channel.ChannelChangeDescriptionActionBuilder.of();
     }
 
+    /**
+     * builder for changeKey subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.channel.ChannelChangeKeyActionBuilder changeKeyBuilder() {
         return com.commercetools.api.models.channel.ChannelChangeKeyActionBuilder.of();
     }
 
+    /**
+     * builder for changeName subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.channel.ChannelChangeNameActionBuilder changeNameBuilder() {
         return com.commercetools.api.models.channel.ChannelChangeNameActionBuilder.of();
     }
 
+    /**
+     * builder for removeRoles subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.channel.ChannelRemoveRolesActionBuilder removeRolesBuilder() {
         return com.commercetools.api.models.channel.ChannelRemoveRolesActionBuilder.of();
     }
 
+    /**
+     * builder for setAddress subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.channel.ChannelSetAddressActionBuilder setAddressBuilder() {
         return com.commercetools.api.models.channel.ChannelSetAddressActionBuilder.of();
     }
 
+    /**
+     * builder for setAddressCustomField subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.channel.ChannelSetAddressCustomFieldActionBuilder setAddressCustomFieldBuilder() {
         return com.commercetools.api.models.channel.ChannelSetAddressCustomFieldActionBuilder.of();
     }
 
+    /**
+     * builder for setAddressCustomType subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.channel.ChannelSetAddressCustomTypeActionBuilder setAddressCustomTypeBuilder() {
         return com.commercetools.api.models.channel.ChannelSetAddressCustomTypeActionBuilder.of();
     }
 
+    /**
+     * builder for setCustomField subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.channel.ChannelSetCustomFieldActionBuilder setCustomFieldBuilder() {
         return com.commercetools.api.models.channel.ChannelSetCustomFieldActionBuilder.of();
     }
 
+    /**
+     * builder for setCustomType subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.channel.ChannelSetCustomTypeActionBuilder setCustomTypeBuilder() {
         return com.commercetools.api.models.channel.ChannelSetCustomTypeActionBuilder.of();
     }
 
+    /**
+     * builder for setGeoLocation subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.channel.ChannelSetGeoLocationActionBuilder setGeoLocationBuilder() {
         return com.commercetools.api.models.channel.ChannelSetGeoLocationActionBuilder.of();
     }
 
+    /**
+     * builder for setRoles subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.channel.ChannelSetRolesActionBuilder setRolesBuilder() {
         return com.commercetools.api.models.channel.ChannelSetRolesActionBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withChannelUpdateAction(Function<ChannelUpdateAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ChannelUpdateAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ChannelUpdateAction>() {
             @Override

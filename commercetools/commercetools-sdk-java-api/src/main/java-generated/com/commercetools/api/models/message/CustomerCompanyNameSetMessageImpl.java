@@ -44,6 +44,9 @@ public class CustomerCompanyNameSetMessageImpl implements CustomerCompanyNameSet
 
     private String companyName;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerCompanyNameSetMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -69,6 +72,9 @@ public class CustomerCompanyNameSetMessageImpl implements CustomerCompanyNameSet
         this.type = CUSTOMER_COMPANY_NAME_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerCompanyNameSetMessageImpl() {
         this.type = CUSTOMER_COMPANY_NAME_SET;
     }

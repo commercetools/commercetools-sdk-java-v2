@@ -116,45 +116,108 @@ public interface ReferenceType {
     */
     ReferenceType KEY_VALUE_DOCUMENT = ReferenceTypeEnum.KEY_VALUE_DOCUMENT;
 
+    /**
+     * possible values of ReferenceType
+     */
     enum ReferenceTypeEnum implements ReferenceType {
+        /**
+         * cart
+         */
         CART("cart"),
 
+        /**
+         * cart-discount
+         */
         CART_DISCOUNT("cart-discount"),
 
+        /**
+         * category
+         */
         CATEGORY("category"),
 
+        /**
+         * channel
+         */
         CHANNEL("channel"),
 
+        /**
+         * customer
+         */
         CUSTOMER("customer"),
 
+        /**
+         * customer-group
+         */
         CUSTOMER_GROUP("customer-group"),
 
+        /**
+         * discount-code
+         */
         DISCOUNT_CODE("discount-code"),
 
+        /**
+         * order
+         */
         ORDER("order"),
 
+        /**
+         * payment
+         */
         PAYMENT("payment"),
 
+        /**
+         * price
+         */
         PRICE("price"),
 
+        /**
+         * product
+         */
         PRODUCT("product"),
 
+        /**
+         * product-discount
+         */
         PRODUCT_DISCOUNT("product-discount"),
 
+        /**
+         * product-type
+         */
         PRODUCT_TYPE("product-type"),
 
+        /**
+         * product-variant
+         */
         PRODUCT_VARIANT("product-variant"),
 
+        /**
+         * shipping-method
+         */
         SHIPPING_METHOD("shipping-method"),
 
+        /**
+         * state
+         */
         STATE("state"),
 
+        /**
+         * store
+         */
         STORE("store"),
 
+        /**
+         * tax-category
+         */
         TAX_CATEGORY("tax-category"),
 
+        /**
+         * type
+         */
         TYPE("type"),
 
+        /**
+         * key-value-document
+         */
         KEY_VALUE_DOCUMENT("key-value-document");
         private final String jsonName;
 
@@ -171,13 +234,30 @@ public interface ReferenceType {
         }
     }
 
+    /**
+     * the JSON value
+     * @return json value
+     */
     @JsonValue
     String getJsonName();
 
+    /**
+     * the enum value
+     * @return name
+     */
     String name();
 
+    /**
+     * convert value to string
+     * @return string representation
+     */
     String toString();
 
+    /**
+     * factory method for a enum value of ReferenceType
+     * if no enum has been found an anonymous instance will be created
+     * @return enum instance
+     */
     @JsonCreator
     public static ReferenceType findEnum(String value) {
         return findEnumViaJsonName(value).orElse(new ReferenceType() {
@@ -197,10 +277,18 @@ public interface ReferenceType {
         });
     }
 
+    /**
+     * method to find enum using the JSON value
+     * @return optional of enum instance
+     */
     public static Optional<ReferenceType> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
 
+    /**
+     * possible enum values
+     * @return array of possible enum values
+     */
     public static ReferenceType[] values() {
         return ReferenceTypeEnum.values();
     }

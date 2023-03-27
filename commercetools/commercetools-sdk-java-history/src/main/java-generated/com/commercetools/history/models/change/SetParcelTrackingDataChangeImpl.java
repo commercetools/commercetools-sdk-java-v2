@@ -30,6 +30,9 @@ public class SetParcelTrackingDataChangeImpl implements SetParcelTrackingDataCha
 
     private com.commercetools.history.models.common.TrackingData previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetParcelTrackingDataChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("parcel") final com.commercetools.history.models.change_value.ParcelChangeValue parcel,
@@ -42,6 +45,9 @@ public class SetParcelTrackingDataChangeImpl implements SetParcelTrackingDataCha
         this.type = SET_PARCEL_TRACKING_DATA_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetParcelTrackingDataChangeImpl() {
         this.type = SET_PARCEL_TRACKING_DATA_CHANGE;
     }

@@ -27,7 +27,7 @@ public class ShippingMethodChangeValueBuilder implements Builder<ShippingMethodC
     private String name;
 
     /**
-     *
+     * set the value to the id
      * @param id value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class ShippingMethodChangeValueBuilder implements Builder<ShippingMethodC
     }
 
     /**
-     *
+     * set the value to the name
      * @param name value to be set
      * @return Builder
      */
@@ -48,9 +48,19 @@ public class ShippingMethodChangeValueBuilder implements Builder<ShippingMethodC
         return this;
     }
 
+    /**
+     * value of id}
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     * value of name}
+     * @return name
+     */
 
     public String getName() {
         return this.name;
@@ -74,10 +84,19 @@ public class ShippingMethodChangeValueBuilder implements Builder<ShippingMethodC
         return new ShippingMethodChangeValueImpl(id, name);
     }
 
+    /**
+     * factory method for an instance of ShippingMethodChangeValueBuilder
+     * @return builder
+     */
     public static ShippingMethodChangeValueBuilder of() {
         return new ShippingMethodChangeValueBuilder();
     }
 
+    /**
+     * create builder for ShippingMethodChangeValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShippingMethodChangeValueBuilder of(final ShippingMethodChangeValue template) {
         ShippingMethodChangeValueBuilder builder = new ShippingMethodChangeValueBuilder();
         builder.id = template.getId();

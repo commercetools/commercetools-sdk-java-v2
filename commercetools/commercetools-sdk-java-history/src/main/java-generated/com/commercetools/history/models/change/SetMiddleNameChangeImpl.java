@@ -28,6 +28,9 @@ public class SetMiddleNameChangeImpl implements SetMiddleNameChange, ModelBase {
 
     private String nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetMiddleNameChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final String previousValue,
@@ -38,6 +41,9 @@ public class SetMiddleNameChangeImpl implements SetMiddleNameChange, ModelBase {
         this.type = SET_MIDDLE_NAME_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetMiddleNameChangeImpl() {
         this.type = SET_MIDDLE_NAME_CHANGE;
     }

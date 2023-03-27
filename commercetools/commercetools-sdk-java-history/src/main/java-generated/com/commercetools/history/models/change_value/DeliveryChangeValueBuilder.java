@@ -31,7 +31,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     private java.util.List<com.commercetools.history.models.common.Parcel> parcels;
 
     /**
-     *
+     * set values to the items
      * @param items value to be set
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     *
+     * set value to the items
      * @param items value to be set
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     *
+     * add values to the items
      * @param items value to be set
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     *
+     * add the value to the items using the builder function
      * @param builder function to build the items value
      * @return Builder
      */
@@ -83,7 +83,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     *
+     * set the value to the items using the builder function
      * @param builder function to build the items value
      * @return Builder
      */
@@ -96,7 +96,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     *
+     * set the value to the address using the builder function
      * @param builder function to build the address value
      * @return Builder
      */
@@ -108,7 +108,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     *
+     * set the value to the address
      * @param address value to be set
      * @return Builder
      */
@@ -119,7 +119,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     *
+     * set values to the parcels
      * @param parcels value to be set
      * @return Builder
      */
@@ -130,7 +130,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     *
+     * set value to the parcels
      * @param parcels value to be set
      * @return Builder
      */
@@ -142,7 +142,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     *
+     * add values to the parcels
      * @param parcels value to be set
      * @return Builder
      */
@@ -156,7 +156,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     *
+     * add the value to the parcels using the builder function
      * @param builder function to build the parcels value
      * @return Builder
      */
@@ -171,7 +171,7 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
-     *
+     * set the value to the parcels using the builder function
      * @param builder function to build the parcels value
      * @return Builder
      */
@@ -183,13 +183,28 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
         return this;
     }
 
+    /**
+     * value of items}
+     * @return items
+     */
+
     public java.util.List<com.commercetools.history.models.common.DeliveryItem> getItems() {
         return this.items;
     }
 
+    /**
+     * value of address}
+     * @return address
+     */
+
     public com.commercetools.history.models.common.Address getAddress() {
         return this.address;
     }
+
+    /**
+     * value of parcels}
+     * @return parcels
+     */
 
     public java.util.List<com.commercetools.history.models.common.Parcel> getParcels() {
         return this.parcels;
@@ -214,10 +229,19 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
         return new DeliveryChangeValueImpl(items, address, parcels);
     }
 
+    /**
+     * factory method for an instance of DeliveryChangeValueBuilder
+     * @return builder
+     */
     public static DeliveryChangeValueBuilder of() {
         return new DeliveryChangeValueBuilder();
     }
 
+    /**
+     * create builder for DeliveryChangeValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DeliveryChangeValueBuilder of(final DeliveryChangeValue template) {
         DeliveryChangeValueBuilder builder = new DeliveryChangeValueBuilder();
         builder.items = template.getItems();

@@ -39,7 +39,7 @@ public class RemoveDiscountCodeChangeBuilder implements Builder<RemoveDiscountCo
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class RemoveDiscountCodeChangeBuilder implements Builder<RemoveDiscountCo
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -63,9 +63,19 @@ public class RemoveDiscountCodeChangeBuilder implements Builder<RemoveDiscountCo
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>removeDiscountCode</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public com.commercetools.history.models.common.DiscountCodeInfo getPreviousValue() {
         return this.previousValue;
@@ -89,10 +99,19 @@ public class RemoveDiscountCodeChangeBuilder implements Builder<RemoveDiscountCo
         return new RemoveDiscountCodeChangeImpl(change, previousValue);
     }
 
+    /**
+     * factory method for an instance of RemoveDiscountCodeChangeBuilder
+     * @return builder
+     */
     public static RemoveDiscountCodeChangeBuilder of() {
         return new RemoveDiscountCodeChangeBuilder();
     }
 
+    /**
+     * create builder for RemoveDiscountCodeChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static RemoveDiscountCodeChangeBuilder of(final RemoveDiscountCodeChange template) {
         RemoveDiscountCodeChangeBuilder builder = new RemoveDiscountCodeChangeBuilder();
         builder.change = template.getChange();

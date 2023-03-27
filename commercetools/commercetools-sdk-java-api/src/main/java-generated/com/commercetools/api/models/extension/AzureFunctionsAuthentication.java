@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AzureFunctionsAuthenticationImpl.class)
 public interface AzureFunctionsAuthentication extends HttpDestinationAuthentication {
 
+    /**
+     * discriminator value for AzureFunctionsAuthentication
+     */
     String AZURE_FUNCTIONS = "AzureFunctions";
 
     /**
@@ -40,30 +43,63 @@ public interface AzureFunctionsAuthentication extends HttpDestinationAuthenticat
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     *  <p>Partially hidden on retrieval for security reasons.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
 
+    /**
+     * factory method
+     * @return instance of AzureFunctionsAuthentication
+     */
     public static AzureFunctionsAuthentication of() {
         return new AzureFunctionsAuthenticationImpl();
     }
 
+    /**
+     * factory method to copy an instance of AzureFunctionsAuthentication
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static AzureFunctionsAuthentication of(final AzureFunctionsAuthentication template) {
         AzureFunctionsAuthenticationImpl instance = new AzureFunctionsAuthenticationImpl();
         instance.setKey(template.getKey());
         return instance;
     }
 
+    /**
+     * builder factory method for AzureFunctionsAuthentication
+     * @return builder
+     */
     public static AzureFunctionsAuthenticationBuilder builder() {
         return AzureFunctionsAuthenticationBuilder.of();
     }
 
+    /**
+     * create builder for AzureFunctionsAuthentication instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AzureFunctionsAuthenticationBuilder builder(final AzureFunctionsAuthentication template) {
         return AzureFunctionsAuthenticationBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAzureFunctionsAuthentication(Function<AzureFunctionsAuthentication, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AzureFunctionsAuthentication> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AzureFunctionsAuthentication>() {
             @Override

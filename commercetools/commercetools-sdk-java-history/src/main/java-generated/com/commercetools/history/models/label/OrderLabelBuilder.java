@@ -27,7 +27,7 @@ public class OrderLabelBuilder implements Builder<OrderLabel> {
     private String orderNumber;
 
     /**
-     *
+     * set the value to the customerEmail
      * @param customerEmail value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class OrderLabelBuilder implements Builder<OrderLabel> {
     }
 
     /**
-     *
+     * set the value to the orderNumber
      * @param orderNumber value to be set
      * @return Builder
      */
@@ -48,9 +48,19 @@ public class OrderLabelBuilder implements Builder<OrderLabel> {
         return this;
     }
 
+    /**
+     * value of customerEmail}
+     * @return customerEmail
+     */
+
     public String getCustomerEmail() {
         return this.customerEmail;
     }
+
+    /**
+     * value of orderNumber}
+     * @return orderNumber
+     */
 
     public String getOrderNumber() {
         return this.orderNumber;
@@ -74,10 +84,19 @@ public class OrderLabelBuilder implements Builder<OrderLabel> {
         return new OrderLabelImpl(customerEmail, orderNumber);
     }
 
+    /**
+     * factory method for an instance of OrderLabelBuilder
+     * @return builder
+     */
     public static OrderLabelBuilder of() {
         return new OrderLabelBuilder();
     }
 
+    /**
+     * create builder for OrderLabel instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderLabelBuilder of(final OrderLabel template) {
         OrderLabelBuilder builder = new OrderLabelBuilder();
         builder.customerEmail = template.getCustomerEmail();

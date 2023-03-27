@@ -30,6 +30,9 @@ public class TaxCategoryPagedQueryResponseImpl implements TaxCategoryPagedQueryR
 
     private java.util.List<com.commercetools.api.models.tax_category.TaxCategory> results;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TaxCategoryPagedQueryResponseImpl(@JsonProperty("limit") final Long limit,
             @JsonProperty("offset") final Long offset, @JsonProperty("count") final Long count,
@@ -42,6 +45,9 @@ public class TaxCategoryPagedQueryResponseImpl implements TaxCategoryPagedQueryR
         this.results = results;
     }
 
+    /**
+     * create empty instance
+     */
     public TaxCategoryPagedQueryResponseImpl() {
     }
 

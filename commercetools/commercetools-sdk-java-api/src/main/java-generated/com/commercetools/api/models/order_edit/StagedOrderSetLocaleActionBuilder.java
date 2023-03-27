@@ -26,7 +26,7 @@ public class StagedOrderSetLocaleActionBuilder implements Builder<StagedOrderSet
     private String locale;
 
     /**
-     *
+     * set the value to the locale
      * @param locale value to be set
      * @return Builder
      */
@@ -35,6 +35,11 @@ public class StagedOrderSetLocaleActionBuilder implements Builder<StagedOrderSet
         this.locale = locale;
         return this;
     }
+
+    /**
+     * value of locale}
+     * @return locale
+     */
 
     @Nullable
     public String getLocale() {
@@ -57,10 +62,19 @@ public class StagedOrderSetLocaleActionBuilder implements Builder<StagedOrderSet
         return new StagedOrderSetLocaleActionImpl(locale);
     }
 
+    /**
+     * factory method for an instance of StagedOrderSetLocaleActionBuilder
+     * @return builder
+     */
     public static StagedOrderSetLocaleActionBuilder of() {
         return new StagedOrderSetLocaleActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderSetLocaleAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetLocaleActionBuilder of(final StagedOrderSetLocaleAction template) {
         StagedOrderSetLocaleActionBuilder builder = new StagedOrderSetLocaleActionBuilder();
         builder.locale = template.getLocale();

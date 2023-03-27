@@ -26,6 +26,9 @@ public class TextSetAttributeImpl implements TextSetAttribute, ModelBase {
 
     private java.util.List<String> value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TextSetAttributeImpl(@JsonProperty("name") final String name,
             @JsonProperty("value") final java.util.List<String> value) {
@@ -34,6 +37,9 @@ public class TextSetAttributeImpl implements TextSetAttribute, ModelBase {
         this.type = TEXT_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public TextSetAttributeImpl() {
         this.type = TEXT_SET;
     }

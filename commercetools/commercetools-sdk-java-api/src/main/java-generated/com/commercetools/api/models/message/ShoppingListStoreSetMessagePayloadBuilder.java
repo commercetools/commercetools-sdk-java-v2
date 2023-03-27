@@ -48,6 +48,11 @@ public class ShoppingListStoreSetMessagePayloadBuilder implements Builder<Shoppi
         return this;
     }
 
+    /**
+     *  <p>Reference to a Store by its key.</p>
+     * @return store
+     */
+
     public com.commercetools.api.models.store.StoreKeyReference getStore() {
         return this.store;
     }
@@ -69,10 +74,19 @@ public class ShoppingListStoreSetMessagePayloadBuilder implements Builder<Shoppi
         return new ShoppingListStoreSetMessagePayloadImpl(store);
     }
 
+    /**
+     * factory method for an instance of ShoppingListStoreSetMessagePayloadBuilder
+     * @return builder
+     */
     public static ShoppingListStoreSetMessagePayloadBuilder of() {
         return new ShoppingListStoreSetMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for ShoppingListStoreSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShoppingListStoreSetMessagePayloadBuilder of(final ShoppingListStoreSetMessagePayload template) {
         ShoppingListStoreSetMessagePayloadBuilder builder = new ShoppingListStoreSetMessagePayloadBuilder();
         builder.store = template.getStore();

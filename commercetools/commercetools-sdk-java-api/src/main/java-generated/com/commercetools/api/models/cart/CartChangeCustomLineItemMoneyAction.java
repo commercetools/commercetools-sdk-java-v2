@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartChangeCustomLineItemMoneyActionImpl.class)
 public interface CartChangeCustomLineItemMoneyAction extends CartUpdateAction {
 
+    /**
+     * discriminator value for CartChangeCustomLineItemMoneyAction
+     */
     String CHANGE_CUSTOM_LINE_ITEM_MONEY = "changeCustomLineItemMoney";
 
     /**
@@ -51,14 +54,33 @@ public interface CartChangeCustomLineItemMoneyAction extends CartUpdateAction {
     @JsonProperty("money")
     public Money getMoney();
 
+    /**
+     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     * @param customLineItemId value to be set
+     */
+
     public void setCustomLineItemId(final String customLineItemId);
+
+    /**
+     *  <p>Value to set. Must not be empty. Can be a negative amount.</p>
+     * @param money value to be set
+     */
 
     public void setMoney(final Money money);
 
+    /**
+     * factory method
+     * @return instance of CartChangeCustomLineItemMoneyAction
+     */
     public static CartChangeCustomLineItemMoneyAction of() {
         return new CartChangeCustomLineItemMoneyActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartChangeCustomLineItemMoneyAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartChangeCustomLineItemMoneyAction of(final CartChangeCustomLineItemMoneyAction template) {
         CartChangeCustomLineItemMoneyActionImpl instance = new CartChangeCustomLineItemMoneyActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
@@ -66,19 +88,38 @@ public interface CartChangeCustomLineItemMoneyAction extends CartUpdateAction {
         return instance;
     }
 
+    /**
+     * builder factory method for CartChangeCustomLineItemMoneyAction
+     * @return builder
+     */
     public static CartChangeCustomLineItemMoneyActionBuilder builder() {
         return CartChangeCustomLineItemMoneyActionBuilder.of();
     }
 
+    /**
+     * create builder for CartChangeCustomLineItemMoneyAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartChangeCustomLineItemMoneyActionBuilder builder(
             final CartChangeCustomLineItemMoneyAction template) {
         return CartChangeCustomLineItemMoneyActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartChangeCustomLineItemMoneyAction(Function<CartChangeCustomLineItemMoneyAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartChangeCustomLineItemMoneyAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartChangeCustomLineItemMoneyAction>() {
             @Override

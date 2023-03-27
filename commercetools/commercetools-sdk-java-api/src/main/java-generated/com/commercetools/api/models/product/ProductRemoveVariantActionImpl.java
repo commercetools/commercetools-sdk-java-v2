@@ -28,6 +28,9 @@ public class ProductRemoveVariantActionImpl implements ProductRemoveVariantActio
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductRemoveVariantActionImpl(@JsonProperty("id") final Long id, @JsonProperty("sku") final String sku,
             @JsonProperty("staged") final Boolean staged) {
@@ -37,6 +40,9 @@ public class ProductRemoveVariantActionImpl implements ProductRemoveVariantActio
         this.action = REMOVE_VARIANT;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductRemoveVariantActionImpl() {
         this.action = REMOVE_VARIANT;
     }

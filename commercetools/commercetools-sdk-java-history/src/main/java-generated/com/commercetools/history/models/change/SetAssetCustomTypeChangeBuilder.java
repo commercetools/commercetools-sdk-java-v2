@@ -45,7 +45,7 @@ public class SetAssetCustomTypeChangeBuilder implements Builder<SetAssetCustomTy
     }
 
     /**
-     *
+     * set the value to the asset using the builder function
      * @param builder function to build the asset value
      * @return Builder
      */
@@ -57,7 +57,7 @@ public class SetAssetCustomTypeChangeBuilder implements Builder<SetAssetCustomTy
     }
 
     /**
-     *
+     * set the value to the asset
      * @param asset value to be set
      * @return Builder
      */
@@ -69,7 +69,7 @@ public class SetAssetCustomTypeChangeBuilder implements Builder<SetAssetCustomTy
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class SetAssetCustomTypeChangeBuilder implements Builder<SetAssetCustomTy
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -93,7 +93,7 @@ public class SetAssetCustomTypeChangeBuilder implements Builder<SetAssetCustomTy
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -105,7 +105,7 @@ public class SetAssetCustomTypeChangeBuilder implements Builder<SetAssetCustomTy
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -116,17 +116,37 @@ public class SetAssetCustomTypeChangeBuilder implements Builder<SetAssetCustomTy
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>setAssetCustomType</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of asset}
+     * @return asset
+     */
 
     public com.commercetools.history.models.change_value.AssetChangeValue getAsset() {
         return this.asset;
     }
 
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
+
     public com.commercetools.history.models.common.CustomFields getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public com.commercetools.history.models.common.CustomFields getPreviousValue() {
         return this.previousValue;
@@ -152,10 +172,19 @@ public class SetAssetCustomTypeChangeBuilder implements Builder<SetAssetCustomTy
         return new SetAssetCustomTypeChangeImpl(change, asset, nextValue, previousValue);
     }
 
+    /**
+     * factory method for an instance of SetAssetCustomTypeChangeBuilder
+     * @return builder
+     */
     public static SetAssetCustomTypeChangeBuilder of() {
         return new SetAssetCustomTypeChangeBuilder();
     }
 
+    /**
+     * create builder for SetAssetCustomTypeChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetAssetCustomTypeChangeBuilder of(final SetAssetCustomTypeChange template) {
         SetAssetCustomTypeChangeBuilder builder = new SetAssetCustomTypeChangeBuilder();
         builder.change = template.getChange();

@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ReviewLabelImpl.class)
 public interface ReviewLabel extends Label {
 
+    /**
+     * discriminator value for ReviewLabel
+     */
     String REVIEW_LABEL = "ReviewLabel";
 
     /**
@@ -56,14 +59,33 @@ public interface ReviewLabel extends Label {
     @JsonProperty("title")
     public String getTitle();
 
+    /**
+     * set key
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
+
+    /**
+     * set title
+     * @param title value to be set
+     */
 
     public void setTitle(final String title);
 
+    /**
+     * factory method
+     * @return instance of ReviewLabel
+     */
     public static ReviewLabel of() {
         return new ReviewLabelImpl();
     }
 
+    /**
+     * factory method to copy an instance of ReviewLabel
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ReviewLabel of(final ReviewLabel template) {
         ReviewLabelImpl instance = new ReviewLabelImpl();
         instance.setKey(template.getKey());
@@ -71,18 +93,37 @@ public interface ReviewLabel extends Label {
         return instance;
     }
 
+    /**
+     * builder factory method for ReviewLabel
+     * @return builder
+     */
     public static ReviewLabelBuilder builder() {
         return ReviewLabelBuilder.of();
     }
 
+    /**
+     * create builder for ReviewLabel instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReviewLabelBuilder builder(final ReviewLabel template) {
         return ReviewLabelBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withReviewLabel(Function<ReviewLabel, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ReviewLabel> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ReviewLabel>() {
             @Override

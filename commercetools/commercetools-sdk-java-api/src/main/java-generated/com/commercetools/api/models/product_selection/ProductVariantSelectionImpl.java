@@ -22,12 +22,18 @@ public class ProductVariantSelectionImpl implements ProductVariantSelection, Mod
 
     private com.commercetools.api.models.product_selection.ProductVariantSelectionTypeEnum type;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductVariantSelectionImpl(
             @JsonProperty("type") final com.commercetools.api.models.product_selection.ProductVariantSelectionTypeEnum type) {
         this.type = type;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductVariantSelectionImpl() {
     }
 

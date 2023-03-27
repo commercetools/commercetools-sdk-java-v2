@@ -25,6 +25,9 @@ public class CustomerImportRequestImpl implements CustomerImportRequest, ModelBa
 
     private java.util.List<com.commercetools.importapi.models.customers.CustomerImport> resources;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerImportRequestImpl(
             @JsonProperty("resources") final java.util.List<com.commercetools.importapi.models.customers.CustomerImport> resources) {
@@ -32,6 +35,9 @@ public class CustomerImportRequestImpl implements CustomerImportRequest, ModelBa
         this.type = ImportResourceType.findEnum("customer");
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerImportRequestImpl() {
         this.type = ImportResourceType.findEnum("customer");
     }

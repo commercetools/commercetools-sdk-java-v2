@@ -46,6 +46,9 @@ public class OrderReturnShipmentStateChangedMessageImpl implements OrderReturnSh
 
     private com.commercetools.api.models.order.ReturnShipmentState returnShipmentState;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderReturnShipmentStateChangedMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -74,6 +77,9 @@ public class OrderReturnShipmentStateChangedMessageImpl implements OrderReturnSh
         this.type = ORDER_RETURN_SHIPMENT_STATE_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderReturnShipmentStateChangedMessageImpl() {
         this.type = ORDER_RETURN_SHIPMENT_STATE_CHANGED;
     }

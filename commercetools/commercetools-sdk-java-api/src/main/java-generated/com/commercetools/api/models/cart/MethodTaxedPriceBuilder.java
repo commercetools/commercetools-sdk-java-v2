@@ -64,9 +64,19 @@ public class MethodTaxedPriceBuilder implements Builder<MethodTaxedPrice> {
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     * @return shippingMethodKey
+     */
+
     public String getShippingMethodKey() {
         return this.shippingMethodKey;
     }
+
+    /**
+     *  <p>Taxed price for the Shipping Method.</p>
+     * @return taxedPrice
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.TaxedItemPrice getTaxedPrice() {
@@ -90,10 +100,19 @@ public class MethodTaxedPriceBuilder implements Builder<MethodTaxedPrice> {
         return new MethodTaxedPriceImpl(shippingMethodKey, taxedPrice);
     }
 
+    /**
+     * factory method for an instance of MethodTaxedPriceBuilder
+     * @return builder
+     */
     public static MethodTaxedPriceBuilder of() {
         return new MethodTaxedPriceBuilder();
     }
 
+    /**
+     * create builder for MethodTaxedPrice instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MethodTaxedPriceBuilder of(final MethodTaxedPrice template) {
         MethodTaxedPriceBuilder builder = new MethodTaxedPriceBuilder();
         builder.shippingMethodKey = template.getShippingMethodKey();

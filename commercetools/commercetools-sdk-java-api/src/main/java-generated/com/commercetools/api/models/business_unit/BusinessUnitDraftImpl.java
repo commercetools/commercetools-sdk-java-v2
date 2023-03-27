@@ -48,6 +48,9 @@ public class BusinessUnitDraftImpl implements BusinessUnitDraft, ModelBase {
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitDraftImpl(@JsonProperty("key") final String key,
             @JsonProperty("status") final com.commercetools.api.models.business_unit.BusinessUnitStatus status,
@@ -78,6 +81,9 @@ public class BusinessUnitDraftImpl implements BusinessUnitDraft, ModelBase {
         this.custom = custom;
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitDraftImpl() {
     }
 

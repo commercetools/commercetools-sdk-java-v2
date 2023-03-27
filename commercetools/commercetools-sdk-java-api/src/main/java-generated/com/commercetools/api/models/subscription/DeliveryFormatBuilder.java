@@ -19,6 +19,10 @@ public class DeliveryFormatBuilder {
         return com.commercetools.api.models.subscription.PlatformFormatBuilder.of();
     }
 
+    /**
+     * factory method for an instance of DeliveryFormatBuilder
+     * @return builder
+     */
     public static DeliveryFormatBuilder of() {
         return new DeliveryFormatBuilder();
     }

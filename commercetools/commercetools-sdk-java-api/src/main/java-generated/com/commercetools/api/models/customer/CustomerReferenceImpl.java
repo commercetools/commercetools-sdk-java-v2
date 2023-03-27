@@ -27,6 +27,9 @@ public class CustomerReferenceImpl implements CustomerReference, ModelBase {
 
     private com.commercetools.api.models.customer.Customer obj;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerReferenceImpl(@JsonProperty("id") final String id,
             @JsonProperty("obj") final com.commercetools.api.models.customer.Customer obj) {
@@ -35,6 +38,9 @@ public class CustomerReferenceImpl implements CustomerReference, ModelBase {
         this.typeId = ReferenceTypeId.findEnum("customer");
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerReferenceImpl() {
         this.typeId = ReferenceTypeId.findEnum("customer");
     }

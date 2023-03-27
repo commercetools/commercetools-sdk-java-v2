@@ -27,6 +27,9 @@ public class ChannelResourceIdentifierImpl implements ChannelResourceIdentifier,
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChannelResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
@@ -34,6 +37,9 @@ public class ChannelResourceIdentifierImpl implements ChannelResourceIdentifier,
         this.typeId = ReferenceTypeId.findEnum("channel");
     }
 
+    /**
+     * create empty instance
+     */
     public ChannelResourceIdentifierImpl() {
         this.typeId = ReferenceTypeId.findEnum("channel");
     }

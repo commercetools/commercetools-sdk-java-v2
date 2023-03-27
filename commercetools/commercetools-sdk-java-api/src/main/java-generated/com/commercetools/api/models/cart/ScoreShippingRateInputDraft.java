@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ScoreShippingRateInputDraft
         extends ShippingRateInputDraft, io.vrap.rmf.base.client.Draft<ScoreShippingRateInputDraft> {
 
+    /**
+     * discriminator value for ScoreShippingRateInputDraft
+     */
     String SCORE = "Score";
 
     /**
@@ -40,30 +43,63 @@ public interface ScoreShippingRateInputDraft
     @JsonProperty("score")
     public Long getScore();
 
+    /**
+     *  <p>Abstract value for categorizing a Cart.</p>
+     * @param score value to be set
+     */
+
     public void setScore(final Long score);
 
+    /**
+     * factory method
+     * @return instance of ScoreShippingRateInputDraft
+     */
     public static ScoreShippingRateInputDraft of() {
         return new ScoreShippingRateInputDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of ScoreShippingRateInputDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ScoreShippingRateInputDraft of(final ScoreShippingRateInputDraft template) {
         ScoreShippingRateInputDraftImpl instance = new ScoreShippingRateInputDraftImpl();
         instance.setScore(template.getScore());
         return instance;
     }
 
+    /**
+     * builder factory method for ScoreShippingRateInputDraft
+     * @return builder
+     */
     public static ScoreShippingRateInputDraftBuilder builder() {
         return ScoreShippingRateInputDraftBuilder.of();
     }
 
+    /**
+     * create builder for ScoreShippingRateInputDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ScoreShippingRateInputDraftBuilder builder(final ScoreShippingRateInputDraft template) {
         return ScoreShippingRateInputDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withScoreShippingRateInputDraft(Function<ScoreShippingRateInputDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ScoreShippingRateInputDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ScoreShippingRateInputDraft>() {
             @Override

@@ -44,6 +44,9 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
 
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     LineItemImportDraftImpl(@JsonProperty("productId") final String productId,
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
@@ -71,6 +74,9 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
         this.shippingDetails = shippingDetails;
     }
 
+    /**
+     * create empty instance
+     */
     public LineItemImportDraftImpl() {
     }
 

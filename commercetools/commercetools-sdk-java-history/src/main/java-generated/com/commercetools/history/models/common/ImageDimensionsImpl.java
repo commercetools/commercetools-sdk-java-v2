@@ -24,12 +24,18 @@ public class ImageDimensionsImpl implements ImageDimensions, ModelBase {
 
     private Integer h;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ImageDimensionsImpl(@JsonProperty("w") final Integer w, @JsonProperty("h") final Integer h) {
         this.w = w;
         this.h = h;
     }
 
+    /**
+     * create empty instance
+     */
     public ImageDimensionsImpl() {
     }
 

@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductTypeChangeDescriptionActionImpl.class)
 public interface ProductTypeChangeDescriptionAction extends ProductTypeUpdateAction {
 
+    /**
+     * discriminator value for ProductTypeChangeDescriptionAction
+     */
     String CHANGE_DESCRIPTION = "changeDescription";
 
     /**
@@ -39,30 +42,63 @@ public interface ProductTypeChangeDescriptionAction extends ProductTypeUpdateAct
     @JsonProperty("description")
     public String getDescription();
 
+    /**
+     *  <p>New value to set.</p>
+     * @param description value to be set
+     */
+
     public void setDescription(final String description);
 
+    /**
+     * factory method
+     * @return instance of ProductTypeChangeDescriptionAction
+     */
     public static ProductTypeChangeDescriptionAction of() {
         return new ProductTypeChangeDescriptionActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductTypeChangeDescriptionAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductTypeChangeDescriptionAction of(final ProductTypeChangeDescriptionAction template) {
         ProductTypeChangeDescriptionActionImpl instance = new ProductTypeChangeDescriptionActionImpl();
         instance.setDescription(template.getDescription());
         return instance;
     }
 
+    /**
+     * builder factory method for ProductTypeChangeDescriptionAction
+     * @return builder
+     */
     public static ProductTypeChangeDescriptionActionBuilder builder() {
         return ProductTypeChangeDescriptionActionBuilder.of();
     }
 
+    /**
+     * create builder for ProductTypeChangeDescriptionAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductTypeChangeDescriptionActionBuilder builder(final ProductTypeChangeDescriptionAction template) {
         return ProductTypeChangeDescriptionActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductTypeChangeDescriptionAction(Function<ProductTypeChangeDescriptionAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductTypeChangeDescriptionAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductTypeChangeDescriptionAction>() {
             @Override

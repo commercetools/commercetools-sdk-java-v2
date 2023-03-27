@@ -30,7 +30,7 @@ public class RemoveChannelRolesChangeBuilder implements Builder<RemoveChannelRol
     private java.util.List<com.commercetools.history.models.common.ChannelRole> nextValue;
 
     /**
-     *
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class RemoveChannelRolesChangeBuilder implements Builder<RemoveChannelRol
     }
 
     /**
-     *
+     * set values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class RemoveChannelRolesChangeBuilder implements Builder<RemoveChannelRol
     }
 
     /**
-     *
+     * set value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class RemoveChannelRolesChangeBuilder implements Builder<RemoveChannelRol
     }
 
     /**
-     *
+     * add values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class RemoveChannelRolesChangeBuilder implements Builder<RemoveChannelRol
     }
 
     /**
-     *
+     * set values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -92,7 +92,7 @@ public class RemoveChannelRolesChangeBuilder implements Builder<RemoveChannelRol
     }
 
     /**
-     *
+     * set value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -104,7 +104,7 @@ public class RemoveChannelRolesChangeBuilder implements Builder<RemoveChannelRol
     }
 
     /**
-     *
+     * add values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -118,13 +118,28 @@ public class RemoveChannelRolesChangeBuilder implements Builder<RemoveChannelRol
         return this;
     }
 
+    /**
+     * value of change}
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public java.util.List<com.commercetools.history.models.common.ChannelRole> getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public java.util.List<com.commercetools.history.models.common.ChannelRole> getNextValue() {
         return this.nextValue;
@@ -149,10 +164,19 @@ public class RemoveChannelRolesChangeBuilder implements Builder<RemoveChannelRol
         return new RemoveChannelRolesChangeImpl(change, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of RemoveChannelRolesChangeBuilder
+     * @return builder
+     */
     public static RemoveChannelRolesChangeBuilder of() {
         return new RemoveChannelRolesChangeBuilder();
     }
 
+    /**
+     * create builder for RemoveChannelRolesChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static RemoveChannelRolesChangeBuilder of(final RemoveChannelRolesChange template) {
         RemoveChannelRolesChangeBuilder builder = new RemoveChannelRolesChangeBuilder();
         builder.change = template.getChange();

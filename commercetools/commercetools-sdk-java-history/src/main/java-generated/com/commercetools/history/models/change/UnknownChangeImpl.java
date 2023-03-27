@@ -28,6 +28,9 @@ public class UnknownChangeImpl implements UnknownChange, ModelBase {
 
     private java.lang.Object nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     UnknownChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final java.lang.Object previousValue,
@@ -38,6 +41,9 @@ public class UnknownChangeImpl implements UnknownChange, ModelBase {
         this.type = UNKNOWN_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public UnknownChangeImpl() {
         this.type = UNKNOWN_CHANGE;
     }

@@ -35,7 +35,7 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
     private java.util.List<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendation> results;
 
     /**
-     *
+     * set the value to the count
      * @param count value to be set
      * @return Builder
      */
@@ -46,7 +46,7 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
     }
 
     /**
-     *
+     * set the value to the total
      * @param total value to be set
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
     }
 
     /**
-     *
+     * set values to the results
      * @param results value to be set
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
     }
 
     /**
-     *
+     * set value to the results
      * @param results value to be set
      * @return Builder
      */
@@ -92,7 +92,7 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
     }
 
     /**
-     *
+     * add values to the results
      * @param results value to be set
      * @return Builder
      */
@@ -107,7 +107,7 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
     }
 
     /**
-     *
+     * add the value to the results using the builder function
      * @param builder function to build the results value
      * @return Builder
      */
@@ -125,7 +125,7 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
     }
 
     /**
-     *
+     * set the value to the results using the builder function
      * @param builder function to build the results value
      * @return Builder
      */
@@ -140,17 +140,37 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
         return this;
     }
 
+    /**
+     * value of count}
+     * @return count
+     */
+
     public Long getCount() {
         return this.count;
     }
+
+    /**
+     * value of total}
+     * @return total
+     */
 
     public Long getTotal() {
         return this.total;
     }
 
+    /**
+     *  <p>Number of elements skipped.</p>
+     * @return offset
+     */
+
     public Long getOffset() {
         return this.offset;
     }
+
+    /**
+     * value of results}
+     * @return results
+     */
 
     public java.util.List<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendation> getResults() {
         return this.results;
@@ -176,10 +196,19 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
         return new GeneralCategoryRecommendationPagedQueryResponseImpl(count, total, offset, results);
     }
 
+    /**
+     * factory method for an instance of GeneralCategoryRecommendationPagedQueryResponseBuilder
+     * @return builder
+     */
     public static GeneralCategoryRecommendationPagedQueryResponseBuilder of() {
         return new GeneralCategoryRecommendationPagedQueryResponseBuilder();
     }
 
+    /**
+     * create builder for GeneralCategoryRecommendationPagedQueryResponse instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static GeneralCategoryRecommendationPagedQueryResponseBuilder of(
             final GeneralCategoryRecommendationPagedQueryResponse template) {
         GeneralCategoryRecommendationPagedQueryResponseBuilder builder = new GeneralCategoryRecommendationPagedQueryResponseBuilder();

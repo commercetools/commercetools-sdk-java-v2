@@ -51,7 +51,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     private com.commercetools.importapi.models.orders.ShippingMethodState shippingMethodState;
 
     /**
-     *
+     * set the value to the shippingMethodName
      * @param shippingMethodName value to be set
      * @return Builder
      */
@@ -62,7 +62,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *
+     * set the value to the price
      * @param price value to be set
      * @return Builder
      */
@@ -73,7 +73,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *
+     * set the value to the price using the builder function
      * @param builder function to build the price value
      * @return Builder
      */
@@ -85,7 +85,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *
+     * set the value to the shippingRate using the builder function
      * @param builder function to build the shippingRate value
      * @return Builder
      */
@@ -98,7 +98,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *
+     * set the value to the shippingRate
      * @param shippingRate value to be set
      * @return Builder
      */
@@ -110,7 +110,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *
+     * set the value to the taxRate using the builder function
      * @param builder function to build the taxRate value
      * @return Builder
      */
@@ -122,7 +122,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *
+     * set the value to the taxRate
      * @param taxRate value to be set
      * @return Builder
      */
@@ -252,7 +252,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *
+     * set the value to the discountedPrice using the builder function
      * @param builder function to build the discountedPrice value
      * @return Builder
      */
@@ -266,7 +266,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *
+     * set the value to the discountedPrice
      * @param discountedPrice value to be set
      * @return Builder
      */
@@ -278,7 +278,7 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
-     *
+     * set the value to the shippingMethodState
      * @param shippingMethodState value to be set
      * @return Builder
      */
@@ -289,42 +289,87 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
         return this;
     }
 
+    /**
+     * value of shippingMethodName}
+     * @return shippingMethodName
+     */
+
     public String getShippingMethodName() {
         return this.shippingMethodName;
     }
+
+    /**
+     * value of price}
+     * @return price
+     */
 
     public com.commercetools.importapi.models.common.TypedMoney getPrice() {
         return this.price;
     }
 
+    /**
+     * value of shippingRate}
+     * @return shippingRate
+     */
+
     public com.commercetools.importapi.models.orders.ShippingRateDraft getShippingRate() {
         return this.shippingRate;
     }
+
+    /**
+     * value of taxRate}
+     * @return taxRate
+     */
 
     @Nullable
     public com.commercetools.importapi.models.prices.TaxRate getTaxRate() {
         return this.taxRate;
     }
 
+    /**
+     *  <p>References a tax category by key.</p>
+     * @return taxCategory
+     */
+
     @Nullable
     public com.commercetools.importapi.models.common.TaxCategoryKeyReference getTaxCategory() {
         return this.taxCategory;
     }
+
+    /**
+     *  <p>References a shipping method by key.</p>
+     * @return shippingMethod
+     */
 
     @Nullable
     public com.commercetools.importapi.models.common.ShippingMethodKeyReference getShippingMethod() {
         return this.shippingMethod;
     }
 
+    /**
+     *  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>
+     * @return deliveries
+     */
+
     @Nullable
     public java.util.List<com.commercetools.importapi.models.orders.Delivery> getDeliveries() {
         return this.deliveries;
     }
 
+    /**
+     * value of discountedPrice}
+     * @return discountedPrice
+     */
+
     @Nullable
     public com.commercetools.importapi.models.orders.DiscountedLineItemPriceDraft getDiscountedPrice() {
         return this.discountedPrice;
     }
+
+    /**
+     * value of shippingMethodState}
+     * @return shippingMethodState
+     */
 
     @Nullable
     public com.commercetools.importapi.models.orders.ShippingMethodState getShippingMethodState() {
@@ -352,10 +397,19 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
             shippingMethod, deliveries, discountedPrice, shippingMethodState);
     }
 
+    /**
+     * factory method for an instance of ShippingInfoImportDraftBuilder
+     * @return builder
+     */
     public static ShippingInfoImportDraftBuilder of() {
         return new ShippingInfoImportDraftBuilder();
     }
 
+    /**
+     * create builder for ShippingInfoImportDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShippingInfoImportDraftBuilder of(final ShippingInfoImportDraft template) {
         ShippingInfoImportDraftBuilder builder = new ShippingInfoImportDraftBuilder();
         builder.shippingMethodName = template.getShippingMethodName();

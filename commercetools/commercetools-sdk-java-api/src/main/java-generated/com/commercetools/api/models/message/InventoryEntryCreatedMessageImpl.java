@@ -44,6 +44,9 @@ public class InventoryEntryCreatedMessageImpl implements InventoryEntryCreatedMe
 
     private com.commercetools.api.models.inventory.InventoryEntry inventoryEntry;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     InventoryEntryCreatedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -69,6 +72,9 @@ public class InventoryEntryCreatedMessageImpl implements InventoryEntryCreatedMe
         this.type = INVENTORY_ENTRY_CREATED;
     }
 
+    /**
+     * create empty instance
+     */
     public InventoryEntryCreatedMessageImpl() {
         this.type = INVENTORY_ENTRY_CREATED;
     }

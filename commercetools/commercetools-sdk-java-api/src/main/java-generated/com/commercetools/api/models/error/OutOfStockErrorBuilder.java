@@ -140,17 +140,37 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
         return this;
     }
 
+    /**
+     *  <p><code>"Some line items are out of stock at the time of placing the order: $itemSku."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
     }
 
+    /**
+     *  <p>Unique identifiers of the Line Items that are out of stock.</p>
+     * @return lineItems
+     */
+
     public java.util.List<String> getLineItems() {
         return this.lineItems;
     }
+
+    /**
+     *  <p>SKUs of the Line Items that are out of stock.</p>
+     * @return skus
+     */
 
     public java.util.List<String> getSkus() {
         return this.skus;
@@ -175,10 +195,19 @@ public class OutOfStockErrorBuilder implements Builder<OutOfStockError> {
         return new OutOfStockErrorImpl(message, values, lineItems, skus);
     }
 
+    /**
+     * factory method for an instance of OutOfStockErrorBuilder
+     * @return builder
+     */
     public static OutOfStockErrorBuilder of() {
         return new OutOfStockErrorBuilder();
     }
 
+    /**
+     * create builder for OutOfStockError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OutOfStockErrorBuilder of(final OutOfStockError template) {
         OutOfStockErrorBuilder builder = new OutOfStockErrorBuilder();
         builder.message = template.getMessage();

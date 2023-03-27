@@ -42,7 +42,7 @@ public class SetStoreChangeBuilder implements Builder<SetStoreChange> {
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class SetStoreChangeBuilder implements Builder<SetStoreChange> {
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class SetStoreChangeBuilder implements Builder<SetStoreChange> {
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class SetStoreChangeBuilder implements Builder<SetStoreChange> {
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -87,13 +87,28 @@ public class SetStoreChangeBuilder implements Builder<SetStoreChange> {
         return this;
     }
 
+    /**
+     *  <p>Shape of the action for <code>setStore</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public com.commercetools.history.models.common.Reference getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public com.commercetools.history.models.common.Reference getNextValue() {
         return this.nextValue;
@@ -118,10 +133,19 @@ public class SetStoreChangeBuilder implements Builder<SetStoreChange> {
         return new SetStoreChangeImpl(change, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of SetStoreChangeBuilder
+     * @return builder
+     */
     public static SetStoreChangeBuilder of() {
         return new SetStoreChangeBuilder();
     }
 
+    /**
+     * create builder for SetStoreChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetStoreChangeBuilder of(final SetStoreChange template) {
         SetStoreChangeBuilder builder = new SetStoreChangeBuilder();
         builder.change = template.getChange();

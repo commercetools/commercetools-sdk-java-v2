@@ -30,7 +30,7 @@ public class CustomerLabelBuilder implements Builder<CustomerLabel> {
     private String customerNumber;
 
     /**
-     *
+     * set the value to the firstName
      * @param firstName value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class CustomerLabelBuilder implements Builder<CustomerLabel> {
     }
 
     /**
-     *
+     * set the value to the lastName
      * @param lastName value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class CustomerLabelBuilder implements Builder<CustomerLabel> {
     }
 
     /**
-     *
+     * set the value to the customerNumber
      * @param customerNumber value to be set
      * @return Builder
      */
@@ -62,13 +62,28 @@ public class CustomerLabelBuilder implements Builder<CustomerLabel> {
         return this;
     }
 
+    /**
+     * value of firstName}
+     * @return firstName
+     */
+
     public String getFirstName() {
         return this.firstName;
     }
 
+    /**
+     * value of lastName}
+     * @return lastName
+     */
+
     public String getLastName() {
         return this.lastName;
     }
+
+    /**
+     * value of customerNumber}
+     * @return customerNumber
+     */
 
     public String getCustomerNumber() {
         return this.customerNumber;
@@ -93,10 +108,19 @@ public class CustomerLabelBuilder implements Builder<CustomerLabel> {
         return new CustomerLabelImpl(firstName, lastName, customerNumber);
     }
 
+    /**
+     * factory method for an instance of CustomerLabelBuilder
+     * @return builder
+     */
     public static CustomerLabelBuilder of() {
         return new CustomerLabelBuilder();
     }
 
+    /**
+     * create builder for CustomerLabel instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerLabelBuilder of(final CustomerLabel template) {
         CustomerLabelBuilder builder = new CustomerLabelBuilder();
         builder.firstName = template.getFirstName();

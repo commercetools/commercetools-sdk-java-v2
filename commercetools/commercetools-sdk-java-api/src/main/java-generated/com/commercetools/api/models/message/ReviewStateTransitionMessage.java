@@ -42,6 +42,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ReviewStateTransitionMessageImpl.class)
 public interface ReviewStateTransitionMessage extends Message {
 
+    /**
+     * discriminator value for ReviewStateTransitionMessage
+     */
     String REVIEW_STATE_TRANSITION = "ReviewStateTransition";
 
     /**
@@ -93,22 +96,61 @@ public interface ReviewStateTransitionMessage extends Message {
     @JsonProperty("force")
     public Boolean getForce();
 
+    /**
+     *  <p>State of the Review before the Transition State update action.</p>
+     * @param oldState value to be set
+     */
+
     public void setOldState(final StateReference oldState);
+
+    /**
+     *  <p>State of the Review after the Transition State update action.</p>
+     * @param newState value to be set
+     */
 
     public void setNewState(final StateReference newState);
 
+    /**
+     *  <p>Whether the old Review was taken into account in the rating statistics of the target before the state transition.</p>
+     * @param oldIncludedInStatistics value to be set
+     */
+
     public void setOldIncludedInStatistics(final Boolean oldIncludedInStatistics);
+
+    /**
+     *  <p>Whether the new Review was taken into account in the rating statistics of the target after the state transition.</p>
+     * @param newIncludedInStatistics value to be set
+     */
 
     public void setNewIncludedInStatistics(final Boolean newIncludedInStatistics);
 
+    /**
+     *  <p>Reference to the resource that the Review belongs to.</p>
+     * @param target value to be set
+     */
+
     public void setTarget(final Reference target);
+
+    /**
+     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     * @param force value to be set
+     */
 
     public void setForce(final Boolean force);
 
+    /**
+     * factory method
+     * @return instance of ReviewStateTransitionMessage
+     */
     public static ReviewStateTransitionMessage of() {
         return new ReviewStateTransitionMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of ReviewStateTransitionMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ReviewStateTransitionMessage of(final ReviewStateTransitionMessage template) {
         ReviewStateTransitionMessageImpl instance = new ReviewStateTransitionMessageImpl();
         instance.setId(template.getId());
@@ -130,18 +172,37 @@ public interface ReviewStateTransitionMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for ReviewStateTransitionMessage
+     * @return builder
+     */
     public static ReviewStateTransitionMessageBuilder builder() {
         return ReviewStateTransitionMessageBuilder.of();
     }
 
+    /**
+     * create builder for ReviewStateTransitionMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReviewStateTransitionMessageBuilder builder(final ReviewStateTransitionMessage template) {
         return ReviewStateTransitionMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withReviewStateTransitionMessage(Function<ReviewStateTransitionMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ReviewStateTransitionMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ReviewStateTransitionMessage>() {
             @Override

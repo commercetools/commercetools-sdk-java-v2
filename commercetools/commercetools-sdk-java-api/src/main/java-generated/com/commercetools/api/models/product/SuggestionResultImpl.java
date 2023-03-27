@@ -22,12 +22,18 @@ public class SuggestionResultImpl implements SuggestionResult, ModelBase {
 
     private Map<String, java.util.List<com.commercetools.api.models.product.Suggestion>> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SuggestionResultImpl(
             @JsonProperty("values") final Map<String, java.util.List<com.commercetools.api.models.product.Suggestion>> values) {
         this.values = values;
     }
 
+    /**
+     * create empty instance
+     */
     public SuggestionResultImpl() {
     }
 

@@ -156,29 +156,59 @@ public class ProductSetSelectorBuilder implements Builder<ProductSetSelector> {
         return this;
     }
 
+    /**
+     *  <p>The project containing the project set.</p>
+     * @return projectKey
+     */
+
     public String getProjectKey() {
         return this.projectKey;
     }
+
+    /**
+     *  <p>An array of Product IDs to compare. If unspecified, no Product ID filter is applied.</p>
+     * @return productIds
+     */
 
     @Nullable
     public java.util.List<String> getProductIds() {
         return this.productIds;
     }
 
+    /**
+     *  <p>An array of product type IDs. Only products with product types in this array are compared. If unspecified, no product type filter is applied.</p>
+     * @return productTypeIds
+     */
+
     @Nullable
     public java.util.List<String> getProductTypeIds() {
         return this.productTypeIds;
     }
+
+    /**
+     *  <p>Specifies use of staged or current product data.</p>
+     * @return staged
+     */
 
     @Nullable
     public Boolean getStaged() {
         return this.staged;
     }
 
+    /**
+     *  <p>Specifies use of product variants. If set to <code>true</code>, all product variants are compared, not just the master variant.</p>
+     * @return includeVariants
+     */
+
     @Nullable
     public Boolean getIncludeVariants() {
         return this.includeVariants;
     }
+
+    /**
+     *  <p>Maximum number of products to check (if unspecified, all products are considered). Note that the maximum number of product comparisons between two productSets is 20,000,000. This limit cannot be exceeded. If you need a higher limit, contact https://support.commercetools.com</p>
+     * @return productSetLimit
+     */
 
     @Nullable
     public Long getProductSetLimit() {
@@ -204,10 +234,19 @@ public class ProductSetSelectorBuilder implements Builder<ProductSetSelector> {
             productSetLimit);
     }
 
+    /**
+     * factory method for an instance of ProductSetSelectorBuilder
+     * @return builder
+     */
     public static ProductSetSelectorBuilder of() {
         return new ProductSetSelectorBuilder();
     }
 
+    /**
+     * create builder for ProductSetSelector instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSetSelectorBuilder of(final ProductSetSelector template) {
         ProductSetSelectorBuilder builder = new ProductSetSelectorBuilder();
         builder.projectKey = template.getProjectKey();

@@ -31,6 +31,9 @@ public class ChangeShoppingListLineItemQuantityChangeImpl
 
     private Integer nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeShoppingListLineItemQuantityChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("lineItem") final com.commercetools.history.models.change_value.ShoppingListLineItemValue lineItem,
@@ -43,6 +46,9 @@ public class ChangeShoppingListLineItemQuantityChangeImpl
         this.type = CHANGE_SHOPPING_LIST_LINE_ITEM_QUANTITY_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeShoppingListLineItemQuantityChangeImpl() {
         this.type = CHANGE_SHOPPING_LIST_LINE_ITEM_QUANTITY_CHANGE;
     }

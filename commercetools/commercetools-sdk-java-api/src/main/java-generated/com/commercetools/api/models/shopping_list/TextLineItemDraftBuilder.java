@@ -130,24 +130,49 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
         return this;
     }
 
+    /**
+     *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     * @return addedAt
+     */
+
     @Nullable
     public java.time.ZonedDateTime getAddedAt() {
         return this.addedAt;
     }
+
+    /**
+     *  <p>Custom Fields for the TextLineItem.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
 
+    /**
+     *  <p>Description of the TextLineItem.</p>
+     * @return description
+     */
+
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
+    /**
+     *  <p>Name of the TextLineItem.</p>
+     * @return name
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
+
+    /**
+     *  <p>Number of entries in the TextLineItem.</p>
+     * @return quantity
+     */
 
     @Nullable
     public Long getQuantity() {
@@ -171,10 +196,19 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
         return new TextLineItemDraftImpl(addedAt, custom, description, name, quantity);
     }
 
+    /**
+     * factory method for an instance of TextLineItemDraftBuilder
+     * @return builder
+     */
     public static TextLineItemDraftBuilder of() {
         return new TextLineItemDraftBuilder();
     }
 
+    /**
+     * create builder for TextLineItemDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TextLineItemDraftBuilder of(final TextLineItemDraft template) {
         TextLineItemDraftBuilder builder = new TextLineItemDraftBuilder();
         builder.addedAt = template.getAddedAt();

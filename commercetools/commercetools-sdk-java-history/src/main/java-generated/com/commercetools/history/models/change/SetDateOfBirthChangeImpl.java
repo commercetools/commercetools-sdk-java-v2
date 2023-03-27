@@ -28,6 +28,9 @@ public class SetDateOfBirthChangeImpl implements SetDateOfBirthChange, ModelBase
 
     private String nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetDateOfBirthChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final String previousValue,
@@ -38,6 +41,9 @@ public class SetDateOfBirthChangeImpl implements SetDateOfBirthChange, ModelBase
         this.type = SET_DATE_OF_BIRTH_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetDateOfBirthChangeImpl() {
         this.type = SET_DATE_OF_BIRTH_CHANGE;
     }

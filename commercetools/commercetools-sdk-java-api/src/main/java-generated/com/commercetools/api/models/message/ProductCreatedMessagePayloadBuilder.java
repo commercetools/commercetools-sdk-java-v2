@@ -49,6 +49,11 @@ public class ProductCreatedMessagePayloadBuilder implements Builder<ProductCreat
         return this;
     }
 
+    /**
+     *  <p>The staged Product Projection of the Product at the time of creation.</p>
+     * @return productProjection
+     */
+
     public com.commercetools.api.models.product.ProductProjection getProductProjection() {
         return this.productProjection;
     }
@@ -71,10 +76,19 @@ public class ProductCreatedMessagePayloadBuilder implements Builder<ProductCreat
         return new ProductCreatedMessagePayloadImpl(productProjection);
     }
 
+    /**
+     * factory method for an instance of ProductCreatedMessagePayloadBuilder
+     * @return builder
+     */
     public static ProductCreatedMessagePayloadBuilder of() {
         return new ProductCreatedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for ProductCreatedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductCreatedMessagePayloadBuilder of(final ProductCreatedMessagePayload template) {
         ProductCreatedMessagePayloadBuilder builder = new ProductCreatedMessagePayloadBuilder();
         builder.productProjection = template.getProductProjection();

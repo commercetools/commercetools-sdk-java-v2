@@ -34,6 +34,11 @@ public class ZoneChangeNameActionBuilder implements Builder<ZoneChangeNameAction
         return this;
     }
 
+    /**
+     *  <p>New name of the Zone.</p>
+     * @return name
+     */
+
     public String getName() {
         return this.name;
     }
@@ -55,10 +60,19 @@ public class ZoneChangeNameActionBuilder implements Builder<ZoneChangeNameAction
         return new ZoneChangeNameActionImpl(name);
     }
 
+    /**
+     * factory method for an instance of ZoneChangeNameActionBuilder
+     * @return builder
+     */
     public static ZoneChangeNameActionBuilder of() {
         return new ZoneChangeNameActionBuilder();
     }
 
+    /**
+     * create builder for ZoneChangeNameAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ZoneChangeNameActionBuilder of(final ZoneChangeNameAction template) {
         ZoneChangeNameActionBuilder builder = new ZoneChangeNameActionBuilder();
         builder.name = template.getName();

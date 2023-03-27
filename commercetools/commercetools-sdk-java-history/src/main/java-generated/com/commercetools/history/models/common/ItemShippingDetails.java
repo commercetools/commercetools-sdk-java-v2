@@ -48,17 +48,41 @@ public interface ItemShippingDetails {
     @JsonProperty("valid")
     public Boolean getValid();
 
+    /**
+     * set targets
+     * @param targets values to be set
+     */
+
     @JsonIgnore
     public void setTargets(final ItemShippingTarget... targets);
 
+    /**
+     * set targets
+     * @param targets values to be set
+     */
+
     public void setTargets(final List<ItemShippingTarget> targets);
+
+    /**
+     *  <p>true if the quantity of the (custom) line item is equal to the sum of the sub-quantities in <code>targets</code>, <code>false</code> otherwise. A cart cannot be ordered when the value is <code>false</code>. The error InvalidItemShippingDetails will be triggered.</p>
+     * @param valid value to be set
+     */
 
     public void setValid(final Boolean valid);
 
+    /**
+     * factory method
+     * @return instance of ItemShippingDetails
+     */
     public static ItemShippingDetails of() {
         return new ItemShippingDetailsImpl();
     }
 
+    /**
+     * factory method to copy an instance of ItemShippingDetails
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ItemShippingDetails of(final ItemShippingDetails template) {
         ItemShippingDetailsImpl instance = new ItemShippingDetailsImpl();
         instance.setTargets(template.getTargets());
@@ -66,18 +90,37 @@ public interface ItemShippingDetails {
         return instance;
     }
 
+    /**
+     * builder factory method for ItemShippingDetails
+     * @return builder
+     */
     public static ItemShippingDetailsBuilder builder() {
         return ItemShippingDetailsBuilder.of();
     }
 
+    /**
+     * create builder for ItemShippingDetails instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ItemShippingDetailsBuilder builder(final ItemShippingDetails template) {
         return ItemShippingDetailsBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withItemShippingDetails(Function<ItemShippingDetails, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ItemShippingDetails> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ItemShippingDetails>() {
             @Override

@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = BusinessUnitDefaultBillingAddressSetMessagePayloadImpl.class)
 public interface BusinessUnitDefaultBillingAddressSetMessagePayload extends MessagePayload {
 
+    /**
+     * discriminator value for BusinessUnitDefaultBillingAddressSetMessagePayload
+     */
     String BUSINESS_UNIT_DEFAULT_BILLING_ADDRESS_SET = "BusinessUnitDefaultBillingAddressSet";
 
     /**
@@ -39,12 +42,26 @@ public interface BusinessUnitDefaultBillingAddressSetMessagePayload extends Mess
     @JsonProperty("address")
     public Address getAddress();
 
+    /**
+     *  <p>The address that was set as the default billing address.</p>
+     * @param address value to be set
+     */
+
     public void setAddress(final Address address);
 
+    /**
+     * factory method
+     * @return instance of BusinessUnitDefaultBillingAddressSetMessagePayload
+     */
     public static BusinessUnitDefaultBillingAddressSetMessagePayload of() {
         return new BusinessUnitDefaultBillingAddressSetMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of BusinessUnitDefaultBillingAddressSetMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static BusinessUnitDefaultBillingAddressSetMessagePayload of(
             final BusinessUnitDefaultBillingAddressSetMessagePayload template) {
         BusinessUnitDefaultBillingAddressSetMessagePayloadImpl instance = new BusinessUnitDefaultBillingAddressSetMessagePayloadImpl();
@@ -52,20 +69,39 @@ public interface BusinessUnitDefaultBillingAddressSetMessagePayload extends Mess
         return instance;
     }
 
+    /**
+     * builder factory method for BusinessUnitDefaultBillingAddressSetMessagePayload
+     * @return builder
+     */
     public static BusinessUnitDefaultBillingAddressSetMessagePayloadBuilder builder() {
         return BusinessUnitDefaultBillingAddressSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for BusinessUnitDefaultBillingAddressSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitDefaultBillingAddressSetMessagePayloadBuilder builder(
             final BusinessUnitDefaultBillingAddressSetMessagePayload template) {
         return BusinessUnitDefaultBillingAddressSetMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withBusinessUnitDefaultBillingAddressSetMessagePayload(
             Function<BusinessUnitDefaultBillingAddressSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitDefaultBillingAddressSetMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitDefaultBillingAddressSetMessagePayload>() {
             @Override

@@ -24,6 +24,9 @@ public class MyBusinessUnitAddAddressActionImpl implements MyBusinessUnitAddAddr
 
     private com.commercetools.api.models.common.BaseAddress address;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyBusinessUnitAddAddressActionImpl(
             @JsonProperty("address") final com.commercetools.api.models.common.BaseAddress address) {
@@ -31,6 +34,9 @@ public class MyBusinessUnitAddAddressActionImpl implements MyBusinessUnitAddAddr
         this.action = ADD_ADDRESS;
     }
 
+    /**
+     * create empty instance
+     */
     public MyBusinessUnitAddAddressActionImpl() {
         this.action = ADD_ADDRESS;
     }

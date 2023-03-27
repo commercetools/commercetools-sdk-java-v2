@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartSetCustomLineItemCustomFieldActionImpl.class)
 public interface CartSetCustomLineItemCustomFieldAction extends CartUpdateAction {
 
+    /**
+     * discriminator value for CartSetCustomLineItemCustomFieldAction
+     */
     String SET_CUSTOM_LINE_ITEM_CUSTOM_FIELD = "setCustomLineItemCustomField";
 
     /**
@@ -56,16 +59,40 @@ public interface CartSetCustomLineItemCustomFieldAction extends CartUpdateAction
     @JsonProperty("value")
     public Object getValue();
 
+    /**
+     *  <p><code>id</code> of the CustomLineItem to update.</p>
+     * @param customLineItemId value to be set
+     */
+
     public void setCustomLineItemId(final String customLineItemId);
+
+    /**
+     *  <p>Name of the Custom Field.</p>
+     * @param name value to be set
+     */
 
     public void setName(final String name);
 
+    /**
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     * @param value value to be set
+     */
+
     public void setValue(final Object value);
 
+    /**
+     * factory method
+     * @return instance of CartSetCustomLineItemCustomFieldAction
+     */
     public static CartSetCustomLineItemCustomFieldAction of() {
         return new CartSetCustomLineItemCustomFieldActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartSetCustomLineItemCustomFieldAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartSetCustomLineItemCustomFieldAction of(final CartSetCustomLineItemCustomFieldAction template) {
         CartSetCustomLineItemCustomFieldActionImpl instance = new CartSetCustomLineItemCustomFieldActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
@@ -74,15 +101,30 @@ public interface CartSetCustomLineItemCustomFieldAction extends CartUpdateAction
         return instance;
     }
 
+    /**
+     * builder factory method for CartSetCustomLineItemCustomFieldAction
+     * @return builder
+     */
     public static CartSetCustomLineItemCustomFieldActionBuilder builder() {
         return CartSetCustomLineItemCustomFieldActionBuilder.of();
     }
 
+    /**
+     * create builder for CartSetCustomLineItemCustomFieldAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartSetCustomLineItemCustomFieldActionBuilder builder(
             final CartSetCustomLineItemCustomFieldAction template) {
         return CartSetCustomLineItemCustomFieldActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartSetCustomLineItemCustomFieldAction(
             Function<CartSetCustomLineItemCustomFieldAction, T> helper) {
         return helper.apply(this);
@@ -92,6 +134,10 @@ public interface CartSetCustomLineItemCustomFieldAction extends CartUpdateAction
         return CartSetCustomLineItemCustomFieldActionBuilder.of().name(name).customLineItemId(customLineItemId).build();
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartSetCustomLineItemCustomFieldAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartSetCustomLineItemCustomFieldAction>() {
             @Override

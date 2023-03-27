@@ -36,6 +36,11 @@ public class ReviewSetLocaleActionBuilder implements Builder<ReviewSetLocaleActi
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return locale
+     */
+
     @Nullable
     public String getLocale() {
         return this.locale;
@@ -57,10 +62,19 @@ public class ReviewSetLocaleActionBuilder implements Builder<ReviewSetLocaleActi
         return new ReviewSetLocaleActionImpl(locale);
     }
 
+    /**
+     * factory method for an instance of ReviewSetLocaleActionBuilder
+     * @return builder
+     */
     public static ReviewSetLocaleActionBuilder of() {
         return new ReviewSetLocaleActionBuilder();
     }
 
+    /**
+     * create builder for ReviewSetLocaleAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReviewSetLocaleActionBuilder of(final ReviewSetLocaleAction template) {
         ReviewSetLocaleActionBuilder builder = new ReviewSetLocaleActionBuilder();
         builder.locale = template.getLocale();

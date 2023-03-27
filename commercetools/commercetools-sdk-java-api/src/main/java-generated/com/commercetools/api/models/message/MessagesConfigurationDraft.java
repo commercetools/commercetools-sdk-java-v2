@@ -46,14 +46,33 @@ public interface MessagesConfigurationDraft extends io.vrap.rmf.base.client.Draf
     @JsonProperty("deleteDaysAfterCreation")
     public Integer getDeleteDaysAfterCreation();
 
+    /**
+     *  <p>Setting to <code>true</code> activates the Messages Query feature.</p>
+     * @param enabled value to be set
+     */
+
     public void setEnabled(final Boolean enabled);
+
+    /**
+     *  <p>Specifies the number of days each Message should be available via the Messages Query API. For Messages older than the specified period, it is not guaranteed that they are still accessible via the API.</p>
+     * @param deleteDaysAfterCreation value to be set
+     */
 
     public void setDeleteDaysAfterCreation(final Integer deleteDaysAfterCreation);
 
+    /**
+     * factory method
+     * @return instance of MessagesConfigurationDraft
+     */
     public static MessagesConfigurationDraft of() {
         return new MessagesConfigurationDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of MessagesConfigurationDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static MessagesConfigurationDraft of(final MessagesConfigurationDraft template) {
         MessagesConfigurationDraftImpl instance = new MessagesConfigurationDraftImpl();
         instance.setEnabled(template.getEnabled());
@@ -61,18 +80,37 @@ public interface MessagesConfigurationDraft extends io.vrap.rmf.base.client.Draf
         return instance;
     }
 
+    /**
+     * builder factory method for MessagesConfigurationDraft
+     * @return builder
+     */
     public static MessagesConfigurationDraftBuilder builder() {
         return MessagesConfigurationDraftBuilder.of();
     }
 
+    /**
+     * create builder for MessagesConfigurationDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MessagesConfigurationDraftBuilder builder(final MessagesConfigurationDraft template) {
         return MessagesConfigurationDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMessagesConfigurationDraft(Function<MessagesConfigurationDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MessagesConfigurationDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MessagesConfigurationDraft>() {
             @Override

@@ -49,9 +49,19 @@ public class PaymentChangeTransactionInteractionIdActionBuilder
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Transaction.</p>
+     * @return transactionId
+     */
+
     public String getTransactionId() {
         return this.transactionId;
     }
+
+    /**
+     *  <p>New value to set.</p>
+     * @return interactionId
+     */
 
     public String getInteractionId() {
         return this.interactionId;
@@ -77,10 +87,19 @@ public class PaymentChangeTransactionInteractionIdActionBuilder
         return new PaymentChangeTransactionInteractionIdActionImpl(transactionId, interactionId);
     }
 
+    /**
+     * factory method for an instance of PaymentChangeTransactionInteractionIdActionBuilder
+     * @return builder
+     */
     public static PaymentChangeTransactionInteractionIdActionBuilder of() {
         return new PaymentChangeTransactionInteractionIdActionBuilder();
     }
 
+    /**
+     * create builder for PaymentChangeTransactionInteractionIdAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentChangeTransactionInteractionIdActionBuilder of(
             final PaymentChangeTransactionInteractionIdAction template) {
         PaymentChangeTransactionInteractionIdActionBuilder builder = new PaymentChangeTransactionInteractionIdActionBuilder();

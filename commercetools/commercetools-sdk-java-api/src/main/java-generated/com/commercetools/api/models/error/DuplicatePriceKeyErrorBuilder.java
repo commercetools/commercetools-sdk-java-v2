@@ -90,13 +90,28 @@ public class DuplicatePriceKeyErrorBuilder implements Builder<DuplicatePriceKeyE
         return this;
     }
 
+    /**
+     *  <p><code>"Duplicate price key: $priceKey. The price key must be unique per variant."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
 
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
+
     public Map<String, java.lang.Object> getValues() {
         return this.values;
     }
+
+    /**
+     *  <p>Conflicting Embedded Price.</p>
+     * @return conflictingPrice
+     */
 
     public com.commercetools.api.models.common.Price getConflictingPrice() {
         return this.conflictingPrice;
@@ -120,10 +135,19 @@ public class DuplicatePriceKeyErrorBuilder implements Builder<DuplicatePriceKeyE
         return new DuplicatePriceKeyErrorImpl(message, values, conflictingPrice);
     }
 
+    /**
+     * factory method for an instance of DuplicatePriceKeyErrorBuilder
+     * @return builder
+     */
     public static DuplicatePriceKeyErrorBuilder of() {
         return new DuplicatePriceKeyErrorBuilder();
     }
 
+    /**
+     * create builder for DuplicatePriceKeyError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DuplicatePriceKeyErrorBuilder of(final DuplicatePriceKeyError template) {
         DuplicatePriceKeyErrorBuilder builder = new DuplicatePriceKeyErrorBuilder();
         builder.message = template.getMessage();

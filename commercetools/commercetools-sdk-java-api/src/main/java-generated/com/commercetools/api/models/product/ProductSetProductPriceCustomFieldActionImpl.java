@@ -30,6 +30,9 @@ public class ProductSetProductPriceCustomFieldActionImpl implements ProductSetPr
 
     private java.lang.Object value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSetProductPriceCustomFieldActionImpl(@JsonProperty("priceId") final String priceId,
             @JsonProperty("staged") final Boolean staged, @JsonProperty("name") final String name,
@@ -41,6 +44,9 @@ public class ProductSetProductPriceCustomFieldActionImpl implements ProductSetPr
         this.action = SET_PRODUCT_PRICE_CUSTOM_FIELD;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSetProductPriceCustomFieldActionImpl() {
         this.action = SET_PRODUCT_PRICE_CUSTOM_FIELD;
     }

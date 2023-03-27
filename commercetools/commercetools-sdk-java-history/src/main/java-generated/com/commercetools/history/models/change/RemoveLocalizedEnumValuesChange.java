@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = RemoveLocalizedEnumValuesChangeImpl.class)
 public interface RemoveLocalizedEnumValuesChange extends Change {
 
+    /**
+     * discriminator value for RemoveLocalizedEnumValuesChange
+     */
     String REMOVE_LOCALIZED_ENUM_VALUES_CHANGE = "RemoveLocalizedEnumValuesChange";
 
     /**
@@ -68,16 +71,40 @@ public interface RemoveLocalizedEnumValuesChange extends Change {
     @JsonProperty("previousValue")
     public LocalizedEnumValue getPreviousValue();
 
+    /**
+     *  <p>Update action for <code>removeEnumValues</code> on product types</p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     *  <p>The name of the attribute updated.</p>
+     * @param attributeName value to be set
+     */
 
     public void setAttributeName(final String attributeName);
 
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
+
     public void setPreviousValue(final LocalizedEnumValue previousValue);
 
+    /**
+     * factory method
+     * @return instance of RemoveLocalizedEnumValuesChange
+     */
     public static RemoveLocalizedEnumValuesChange of() {
         return new RemoveLocalizedEnumValuesChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of RemoveLocalizedEnumValuesChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static RemoveLocalizedEnumValuesChange of(final RemoveLocalizedEnumValuesChange template) {
         RemoveLocalizedEnumValuesChangeImpl instance = new RemoveLocalizedEnumValuesChangeImpl();
         instance.setChange(template.getChange());
@@ -86,18 +113,37 @@ public interface RemoveLocalizedEnumValuesChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for RemoveLocalizedEnumValuesChange
+     * @return builder
+     */
     public static RemoveLocalizedEnumValuesChangeBuilder builder() {
         return RemoveLocalizedEnumValuesChangeBuilder.of();
     }
 
+    /**
+     * create builder for RemoveLocalizedEnumValuesChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static RemoveLocalizedEnumValuesChangeBuilder builder(final RemoveLocalizedEnumValuesChange template) {
         return RemoveLocalizedEnumValuesChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withRemoveLocalizedEnumValuesChange(Function<RemoveLocalizedEnumValuesChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<RemoveLocalizedEnumValuesChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<RemoveLocalizedEnumValuesChange>() {
             @Override

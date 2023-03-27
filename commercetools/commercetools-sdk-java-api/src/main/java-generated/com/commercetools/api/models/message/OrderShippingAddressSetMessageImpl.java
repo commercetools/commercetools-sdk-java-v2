@@ -46,6 +46,9 @@ public class OrderShippingAddressSetMessageImpl implements OrderShippingAddressS
 
     private com.commercetools.api.models.common.Address oldAddress;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderShippingAddressSetMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -73,6 +76,9 @@ public class OrderShippingAddressSetMessageImpl implements OrderShippingAddressS
         this.type = ORDER_SHIPPING_ADDRESS_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderShippingAddressSetMessageImpl() {
         this.type = ORDER_SHIPPING_ADDRESS_SET;
     }

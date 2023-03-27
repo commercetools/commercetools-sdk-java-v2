@@ -34,6 +34,9 @@ public class StateDraftImpl implements StateDraft, ModelBase {
 
     private java.util.List<com.commercetools.api.models.state.StateResourceIdentifier> transitions;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StateDraftImpl(@JsonProperty("key") final String key,
             @JsonProperty("type") final com.commercetools.api.models.state.StateTypeEnum type,
@@ -51,6 +54,9 @@ public class StateDraftImpl implements StateDraft, ModelBase {
         this.transitions = transitions;
     }
 
+    /**
+     * create empty instance
+     */
     public StateDraftImpl() {
     }
 

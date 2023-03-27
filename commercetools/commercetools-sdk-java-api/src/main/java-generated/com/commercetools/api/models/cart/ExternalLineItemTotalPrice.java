@@ -51,14 +51,34 @@ public interface ExternalLineItemTotalPrice {
     @JsonProperty("totalPrice")
     public Money getTotalPrice();
 
+    /**
+     *  <p>Price of the Line Item.</p>
+     *  <p>The value is selected from the Product Variant according to the Product <code>priceMode</code>.</p>
+     * @param price value to be set
+     */
+
     public void setPrice(final Money price);
+
+    /**
+     *  <p>Total price of the Line Item.</p>
+     * @param totalPrice value to be set
+     */
 
     public void setTotalPrice(final Money totalPrice);
 
+    /**
+     * factory method
+     * @return instance of ExternalLineItemTotalPrice
+     */
     public static ExternalLineItemTotalPrice of() {
         return new ExternalLineItemTotalPriceImpl();
     }
 
+    /**
+     * factory method to copy an instance of ExternalLineItemTotalPrice
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ExternalLineItemTotalPrice of(final ExternalLineItemTotalPrice template) {
         ExternalLineItemTotalPriceImpl instance = new ExternalLineItemTotalPriceImpl();
         instance.setPrice(template.getPrice());
@@ -66,18 +86,37 @@ public interface ExternalLineItemTotalPrice {
         return instance;
     }
 
+    /**
+     * builder factory method for ExternalLineItemTotalPrice
+     * @return builder
+     */
     public static ExternalLineItemTotalPriceBuilder builder() {
         return ExternalLineItemTotalPriceBuilder.of();
     }
 
+    /**
+     * create builder for ExternalLineItemTotalPrice instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ExternalLineItemTotalPriceBuilder builder(final ExternalLineItemTotalPrice template) {
         return ExternalLineItemTotalPriceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withExternalLineItemTotalPrice(Function<ExternalLineItemTotalPrice, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ExternalLineItemTotalPrice> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ExternalLineItemTotalPrice>() {
             @Override

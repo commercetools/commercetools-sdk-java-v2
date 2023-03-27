@@ -33,7 +33,7 @@ public class OrderSetLineItemCustomTypeActionBuilder implements Builder<OrderSet
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *
+     * set the value to the lineItemId
      * @param lineItemId value to be set
      * @return Builder
      */
@@ -91,14 +91,29 @@ public class OrderSetLineItemCustomTypeActionBuilder implements Builder<OrderSet
         return this;
     }
 
+    /**
+     * value of lineItemId}
+     * @return lineItemId
+     */
+
     public String getLineItemId() {
         return this.lineItemId;
     }
+
+    /**
+     *  <p>Defines the Type that extends the LineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the LineItem.</p>
+     * @return type
+     */
 
     @Nullable
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }
+
+    /**
+     *  <p>Sets the Custom Fields fields for the LineItem.</p>
+     * @return fields
+     */
 
     @Nullable
     public com.commercetools.api.models.type.FieldContainer getFields() {
@@ -122,10 +137,19 @@ public class OrderSetLineItemCustomTypeActionBuilder implements Builder<OrderSet
         return new OrderSetLineItemCustomTypeActionImpl(lineItemId, type, fields);
     }
 
+    /**
+     * factory method for an instance of OrderSetLineItemCustomTypeActionBuilder
+     * @return builder
+     */
     public static OrderSetLineItemCustomTypeActionBuilder of() {
         return new OrderSetLineItemCustomTypeActionBuilder();
     }
 
+    /**
+     * create builder for OrderSetLineItemCustomTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderSetLineItemCustomTypeActionBuilder of(final OrderSetLineItemCustomTypeAction template) {
         OrderSetLineItemCustomTypeActionBuilder builder = new OrderSetLineItemCustomTypeActionBuilder();
         builder.lineItemId = template.getLineItemId();

@@ -25,6 +25,9 @@ public class ProductTypeChangeAttributeOrderByNameActionImpl
 
     private java.util.List<String> attributeNames;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductTypeChangeAttributeOrderByNameActionImpl(
             @JsonProperty("attributeNames") final java.util.List<String> attributeNames) {
@@ -32,6 +35,9 @@ public class ProductTypeChangeAttributeOrderByNameActionImpl
         this.action = CHANGE_ATTRIBUTE_ORDER_BY_NAME;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductTypeChangeAttributeOrderByNameActionImpl() {
         this.action = CHANGE_ATTRIBUTE_ORDER_BY_NAME;
     }

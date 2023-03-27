@@ -37,7 +37,7 @@ public class AssetBuilder implements Builder<Asset> {
     private String key;
 
     /**
-     *
+     * set the value to the id
      * @param id value to be set
      * @return Builder
      */
@@ -48,7 +48,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *
+     * set the value to the name using the builder function
      * @param builder function to build the name value
      * @return Builder
      */
@@ -60,7 +60,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *
+     * set the value to the name
      * @param name value to be set
      * @return Builder
      */
@@ -71,7 +71,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *
+     * set the value to the description using the builder function
      * @param builder function to build the description value
      * @return Builder
      */
@@ -83,7 +83,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *
+     * set the value to the description
      * @param description value to be set
      * @return Builder
      */
@@ -94,7 +94,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *
+     * set the value to the custom using the builder function
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -106,7 +106,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *
+     * set the value to the custom
      * @param custom value to be set
      * @return Builder
      */
@@ -117,7 +117,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *
+     * set the value to the key
      * @param key value to be set
      * @return Builder
      */
@@ -127,21 +127,46 @@ public class AssetBuilder implements Builder<Asset> {
         return this;
     }
 
+    /**
+     * value of id}
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     * value of name}
+     * @return name
+     */
 
     public com.commercetools.history.models.common.LocalizedString getName() {
         return this.name;
     }
 
+    /**
+     * value of description}
+     * @return description
+     */
+
     public com.commercetools.history.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
+    /**
+     * value of custom}
+     * @return custom
+     */
+
     public com.commercetools.history.models.common.CustomFields getCustom() {
         return this.custom;
     }
+
+    /**
+     * value of key}
+     * @return key
+     */
 
     public String getKey() {
         return this.key;
@@ -168,10 +193,19 @@ public class AssetBuilder implements Builder<Asset> {
         return new AssetImpl(id, name, description, custom, key);
     }
 
+    /**
+     * factory method for an instance of AssetBuilder
+     * @return builder
+     */
     public static AssetBuilder of() {
         return new AssetBuilder();
     }
 
+    /**
+     * create builder for Asset instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AssetBuilder of(final Asset template) {
         AssetBuilder builder = new AssetBuilder();
         builder.id = template.getId();

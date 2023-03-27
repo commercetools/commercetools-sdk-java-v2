@@ -123,33 +123,97 @@ public interface TaxCategory
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     *  <p>Unique identifier of the TaxCategory.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>Current version of the TaxCategory.</p>
+     * @param version value to be set
+     */
 
     public void setVersion(final Long version);
 
+    /**
+     *  <p>Date and time (UTC) the TaxCategory was initially created.</p>
+     * @param createdAt value to be set
+     */
+
     public void setCreatedAt(final ZonedDateTime createdAt);
+
+    /**
+     *  <p>Date and time (UTC) the TaxCategory was last updated.</p>
+     * @param lastModifiedAt value to be set
+     */
 
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy value to be set
+     */
+
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy value to be set
+     */
 
     public void setCreatedBy(final CreatedBy createdBy);
 
+    /**
+     *  <p>Name of the TaxCategory.</p>
+     * @param name value to be set
+     */
+
     public void setName(final String name);
 
+    /**
+     *  <p>Description of the TaxCategory.</p>
+     * @param description value to be set
+     */
+
     public void setDescription(final String description);
+
+    /**
+     *  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID.</p>
+     * @param rates values to be set
+     */
 
     @JsonIgnore
     public void setRates(final TaxRate... rates);
 
+    /**
+     *  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID.</p>
+     * @param rates values to be set
+     */
+
     public void setRates(final List<TaxRate> rates);
+
+    /**
+     *  <p>User-defined unique identifier of the TaxCategory.</p>
+     * @param key value to be set
+     */
 
     public void setKey(final String key);
 
+    /**
+     * factory method
+     * @return instance of TaxCategory
+     */
     public static TaxCategory of() {
         return new TaxCategoryImpl();
     }
 
+    /**
+     * factory method to copy an instance of TaxCategory
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static TaxCategory of(final TaxCategory template) {
         TaxCategoryImpl instance = new TaxCategoryImpl();
         instance.setId(template.getId());
@@ -165,14 +229,29 @@ public interface TaxCategory
         return instance;
     }
 
+    /**
+     * builder factory method for TaxCategory
+     * @return builder
+     */
     public static TaxCategoryBuilder builder() {
         return TaxCategoryBuilder.of();
     }
 
+    /**
+     * create builder for TaxCategory instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TaxCategoryBuilder builder(final TaxCategory template) {
         return TaxCategoryBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTaxCategory(Function<TaxCategory, T> helper) {
         return helper.apply(this);
     }
@@ -181,6 +260,10 @@ public interface TaxCategory
         return com.commercetools.api.models.common.ReferenceTypeId.TAX_CATEGORY;
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<TaxCategory> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TaxCategory>() {
             @Override

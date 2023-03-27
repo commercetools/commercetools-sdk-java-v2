@@ -24,6 +24,9 @@ public class IndividualProductSelectionTypeImpl implements IndividualProductSele
 
     private com.commercetools.api.models.common.LocalizedString name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     IndividualProductSelectionTypeImpl(
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name) {
@@ -31,6 +34,9 @@ public class IndividualProductSelectionTypeImpl implements IndividualProductSele
         this.type = ProductSelectionTypeEnum.findEnum("individual");
     }
 
+    /**
+     * create empty instance
+     */
     public IndividualProductSelectionTypeImpl() {
         this.type = ProductSelectionTypeEnum.findEnum("individual");
     }

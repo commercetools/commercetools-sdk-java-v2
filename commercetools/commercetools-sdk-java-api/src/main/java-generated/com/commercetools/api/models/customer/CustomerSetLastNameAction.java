@@ -26,6 +26,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomerSetLastNameActionImpl.class)
 public interface CustomerSetLastNameAction extends CustomerUpdateAction {
 
+    /**
+     * discriminator value for CustomerSetLastNameAction
+     */
     String SET_LAST_NAME = "setLastName";
 
     /**
@@ -36,30 +39,63 @@ public interface CustomerSetLastNameAction extends CustomerUpdateAction {
     @JsonProperty("lastName")
     public String getLastName();
 
+    /**
+     *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @param lastName value to be set
+     */
+
     public void setLastName(final String lastName);
 
+    /**
+     * factory method
+     * @return instance of CustomerSetLastNameAction
+     */
     public static CustomerSetLastNameAction of() {
         return new CustomerSetLastNameActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomerSetLastNameAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomerSetLastNameAction of(final CustomerSetLastNameAction template) {
         CustomerSetLastNameActionImpl instance = new CustomerSetLastNameActionImpl();
         instance.setLastName(template.getLastName());
         return instance;
     }
 
+    /**
+     * builder factory method for CustomerSetLastNameAction
+     * @return builder
+     */
     public static CustomerSetLastNameActionBuilder builder() {
         return CustomerSetLastNameActionBuilder.of();
     }
 
+    /**
+     * create builder for CustomerSetLastNameAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerSetLastNameActionBuilder builder(final CustomerSetLastNameAction template) {
         return CustomerSetLastNameActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomerSetLastNameAction(Function<CustomerSetLastNameAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomerSetLastNameAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomerSetLastNameAction>() {
             @Override

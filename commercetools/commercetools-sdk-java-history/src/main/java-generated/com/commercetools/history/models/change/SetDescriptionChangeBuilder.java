@@ -41,7 +41,7 @@ public class SetDescriptionChangeBuilder implements Builder<SetDescriptionChange
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class SetDescriptionChangeBuilder implements Builder<SetDescriptionChange
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -62,13 +62,28 @@ public class SetDescriptionChangeBuilder implements Builder<SetDescriptionChange
         return this;
     }
 
+    /**
+     *  <p>Shape of the action for <code>setDescription</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public String getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public String getNextValue() {
         return this.nextValue;
@@ -93,10 +108,19 @@ public class SetDescriptionChangeBuilder implements Builder<SetDescriptionChange
         return new SetDescriptionChangeImpl(change, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of SetDescriptionChangeBuilder
+     * @return builder
+     */
     public static SetDescriptionChangeBuilder of() {
         return new SetDescriptionChangeBuilder();
     }
 
+    /**
+     * create builder for SetDescriptionChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetDescriptionChangeBuilder of(final SetDescriptionChange template) {
         SetDescriptionChangeBuilder builder = new SetDescriptionChangeBuilder();
         builder.change = template.getChange();

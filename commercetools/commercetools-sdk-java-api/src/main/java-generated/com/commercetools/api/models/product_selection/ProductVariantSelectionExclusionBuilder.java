@@ -60,6 +60,11 @@ public class ProductVariantSelectionExclusionBuilder implements Builder<ProductV
         return this;
     }
 
+    /**
+     *  <p>Non-empty array of SKUs representing Product Variants to be excluded from the Product Selection.</p>
+     * @return skus
+     */
+
     public java.util.List<String> getSkus() {
         return this.skus;
     }
@@ -81,10 +86,19 @@ public class ProductVariantSelectionExclusionBuilder implements Builder<ProductV
         return new ProductVariantSelectionExclusionImpl(skus);
     }
 
+    /**
+     * factory method for an instance of ProductVariantSelectionExclusionBuilder
+     * @return builder
+     */
     public static ProductVariantSelectionExclusionBuilder of() {
         return new ProductVariantSelectionExclusionBuilder();
     }
 
+    /**
+     * create builder for ProductVariantSelectionExclusion instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductVariantSelectionExclusionBuilder of(final ProductVariantSelectionExclusion template) {
         ProductVariantSelectionExclusionBuilder builder = new ProductVariantSelectionExclusionBuilder();
         builder.skus = template.getSkus();

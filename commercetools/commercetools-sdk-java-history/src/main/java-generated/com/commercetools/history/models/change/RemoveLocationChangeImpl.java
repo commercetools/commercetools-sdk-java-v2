@@ -28,6 +28,9 @@ public class RemoveLocationChangeImpl implements RemoveLocationChange, ModelBase
 
     private com.commercetools.history.models.common.Location nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     RemoveLocationChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.Location previousValue,
@@ -38,6 +41,9 @@ public class RemoveLocationChangeImpl implements RemoveLocationChange, ModelBase
         this.type = REMOVE_LOCATION_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public RemoveLocationChangeImpl() {
         this.type = REMOVE_LOCATION_CHANGE;
     }

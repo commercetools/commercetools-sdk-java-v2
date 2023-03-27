@@ -67,92 +67,187 @@ public interface KeyReference {
     @JsonProperty("typeId")
     public ReferenceType getTypeId();
 
+    /**
+     * set key
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
 
+    /**
+     * builder for cartDiscount subtype
+     * @return builder
+     */
     public static com.commercetools.importapi.models.common.CartDiscountKeyReferenceBuilder cartDiscountBuilder() {
         return com.commercetools.importapi.models.common.CartDiscountKeyReferenceBuilder.of();
     }
 
+    /**
+     * builder for cart subtype
+     * @return builder
+     */
     public static com.commercetools.importapi.models.common.CartKeyReferenceBuilder cartBuilder() {
         return com.commercetools.importapi.models.common.CartKeyReferenceBuilder.of();
     }
 
+    /**
+     * builder for category subtype
+     * @return builder
+     */
     public static com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder categoryBuilder() {
         return com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder.of();
     }
 
+    /**
+     * builder for channel subtype
+     * @return builder
+     */
     public static com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder channelBuilder() {
         return com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder.of();
     }
 
+    /**
+     * builder for keyValueDocument subtype
+     * @return builder
+     */
     public static com.commercetools.importapi.models.common.CustomObjectKeyReferenceBuilder keyValueDocumentBuilder() {
         return com.commercetools.importapi.models.common.CustomObjectKeyReferenceBuilder.of();
     }
 
+    /**
+     * builder for customerGroup subtype
+     * @return builder
+     */
     public static com.commercetools.importapi.models.common.CustomerGroupKeyReferenceBuilder customerGroupBuilder() {
         return com.commercetools.importapi.models.common.CustomerGroupKeyReferenceBuilder.of();
     }
 
+    /**
+     * builder for customer subtype
+     * @return builder
+     */
     public static com.commercetools.importapi.models.common.CustomerKeyReferenceBuilder customerBuilder() {
         return com.commercetools.importapi.models.common.CustomerKeyReferenceBuilder.of();
     }
 
+    /**
+     * builder for discountCode subtype
+     * @return builder
+     */
     public static com.commercetools.importapi.models.common.DiscountCodeKeyReferenceBuilder discountCodeBuilder() {
         return com.commercetools.importapi.models.common.DiscountCodeKeyReferenceBuilder.of();
     }
 
+    /**
+     * builder for order subtype
+     * @return builder
+     */
     public static com.commercetools.importapi.models.common.OrderKeyReferenceBuilder orderBuilder() {
         return com.commercetools.importapi.models.common.OrderKeyReferenceBuilder.of();
     }
 
+    /**
+     * builder for payment subtype
+     * @return builder
+     */
     public static com.commercetools.importapi.models.common.PaymentKeyReferenceBuilder paymentBuilder() {
         return com.commercetools.importapi.models.common.PaymentKeyReferenceBuilder.of();
     }
 
+    /**
+     * builder for price subtype
+     * @return builder
+     */
     public static com.commercetools.importapi.models.common.PriceKeyReferenceBuilder priceBuilder() {
         return com.commercetools.importapi.models.common.PriceKeyReferenceBuilder.of();
     }
 
+    /**
+     * builder for productDiscount subtype
+     * @return builder
+     */
     public static com.commercetools.importapi.models.common.ProductDiscountKeyReferenceBuilder productDiscountBuilder() {
         return com.commercetools.importapi.models.common.ProductDiscountKeyReferenceBuilder.of();
     }
 
+    /**
+     * builder for product subtype
+     * @return builder
+     */
     public static com.commercetools.importapi.models.common.ProductKeyReferenceBuilder productBuilder() {
         return com.commercetools.importapi.models.common.ProductKeyReferenceBuilder.of();
     }
 
+    /**
+     * builder for productType subtype
+     * @return builder
+     */
     public static com.commercetools.importapi.models.common.ProductTypeKeyReferenceBuilder productTypeBuilder() {
         return com.commercetools.importapi.models.common.ProductTypeKeyReferenceBuilder.of();
     }
 
+    /**
+     * builder for productVariant subtype
+     * @return builder
+     */
     public static com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder productVariantBuilder() {
         return com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder.of();
     }
 
+    /**
+     * builder for shippingMethod subtype
+     * @return builder
+     */
     public static com.commercetools.importapi.models.common.ShippingMethodKeyReferenceBuilder shippingMethodBuilder() {
         return com.commercetools.importapi.models.common.ShippingMethodKeyReferenceBuilder.of();
     }
 
+    /**
+     * builder for state subtype
+     * @return builder
+     */
     public static com.commercetools.importapi.models.common.StateKeyReferenceBuilder stateBuilder() {
         return com.commercetools.importapi.models.common.StateKeyReferenceBuilder.of();
     }
 
+    /**
+     * builder for store subtype
+     * @return builder
+     */
     public static com.commercetools.importapi.models.common.StoreKeyReferenceBuilder storeBuilder() {
         return com.commercetools.importapi.models.common.StoreKeyReferenceBuilder.of();
     }
 
+    /**
+     * builder for taxCategory subtype
+     * @return builder
+     */
     public static com.commercetools.importapi.models.common.TaxCategoryKeyReferenceBuilder taxCategoryBuilder() {
         return com.commercetools.importapi.models.common.TaxCategoryKeyReferenceBuilder.of();
     }
 
+    /**
+     * builder for type subtype
+     * @return builder
+     */
     public static com.commercetools.importapi.models.common.TypeKeyReferenceBuilder typeBuilder() {
         return com.commercetools.importapi.models.common.TypeKeyReferenceBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withKeyReference(Function<KeyReference, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<KeyReference> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<KeyReference>() {
             @Override

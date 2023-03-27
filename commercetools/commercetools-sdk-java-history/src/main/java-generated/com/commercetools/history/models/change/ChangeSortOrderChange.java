@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ChangeSortOrderChangeImpl.class)
 public interface ChangeSortOrderChange extends Change {
 
+    /**
+     * discriminator value for ChangeSortOrderChange
+     */
     String CHANGE_SORT_ORDER_CHANGE = "ChangeSortOrderChange";
 
     /**
@@ -65,16 +68,40 @@ public interface ChangeSortOrderChange extends Change {
     @JsonProperty("nextValue")
     public String getNextValue();
 
+    /**
+     *  <p>Shape of the action for <code>changeSortOrder</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
 
     public void setPreviousValue(final String previousValue);
 
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
+
     public void setNextValue(final String nextValue);
 
+    /**
+     * factory method
+     * @return instance of ChangeSortOrderChange
+     */
     public static ChangeSortOrderChange of() {
         return new ChangeSortOrderChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of ChangeSortOrderChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ChangeSortOrderChange of(final ChangeSortOrderChange template) {
         ChangeSortOrderChangeImpl instance = new ChangeSortOrderChangeImpl();
         instance.setChange(template.getChange());
@@ -83,18 +110,37 @@ public interface ChangeSortOrderChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for ChangeSortOrderChange
+     * @return builder
+     */
     public static ChangeSortOrderChangeBuilder builder() {
         return ChangeSortOrderChangeBuilder.of();
     }
 
+    /**
+     * create builder for ChangeSortOrderChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeSortOrderChangeBuilder builder(final ChangeSortOrderChange template) {
         return ChangeSortOrderChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withChangeSortOrderChange(Function<ChangeSortOrderChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ChangeSortOrderChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ChangeSortOrderChange>() {
             @Override

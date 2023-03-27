@@ -119,30 +119,90 @@ public interface ScopedPrice extends com.commercetools.api.models.Customizable<S
     @JsonProperty("custom")
     public CustomFields getCustom();
 
+    /**
+     *  <p>Platform-generated unique identifier of the Price.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>Original value of the Price.</p>
+     * @param value value to be set
+     */
 
     public void setValue(final TypedMoney value);
 
+    /**
+     *  <p>If available, either the original price <code>value</code> or <code>discounted</code> value.</p>
+     * @param currentValue value to be set
+     */
+
     public void setCurrentValue(final TypedMoney currentValue);
+
+    /**
+     *  <p>Country code of the geographic location.</p>
+     * @param country value to be set
+     */
 
     public void setCountry(final String country);
 
+    /**
+     *  <p>Reference to a CustomerGroup.</p>
+     * @param customerGroup value to be set
+     */
+
     public void setCustomerGroup(final CustomerGroupReference customerGroup);
+
+    /**
+     *  <p>Reference to a Channel.</p>
+     * @param channel value to be set
+     */
 
     public void setChannel(final ChannelReference channel);
 
+    /**
+     *  <p>Date and time from which the Price is valid.</p>
+     * @param validFrom value to be set
+     */
+
     public void setValidFrom(final ZonedDateTime validFrom);
+
+    /**
+     *  <p>Date and time until which the Price is valid.</p>
+     * @param validUntil value to be set
+     */
 
     public void setValidUntil(final ZonedDateTime validUntil);
 
+    /**
+     *  <p>Is set when a matching ProductDiscount exists. If set, the Cart uses the discounted value for the Cart Price calculation.</p>
+     *  <p>When a relative Product Discount is applied and the fractional part of the discounted Price is 0.5, the discounted Price is rounded half down in favor of the Customer.</p>
+     * @param discounted value to be set
+     */
+
     public void setDiscounted(final DiscountedPrice discounted);
+
+    /**
+     *  <p>Custom Fields for the Price.</p>
+     * @param custom value to be set
+     */
 
     public void setCustom(final CustomFields custom);
 
+    /**
+     * factory method
+     * @return instance of ScopedPrice
+     */
     public static ScopedPrice of() {
         return new ScopedPriceImpl();
     }
 
+    /**
+     * factory method to copy an instance of ScopedPrice
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ScopedPrice of(final ScopedPrice template) {
         ScopedPriceImpl instance = new ScopedPriceImpl();
         instance.setId(template.getId());
@@ -158,18 +218,37 @@ public interface ScopedPrice extends com.commercetools.api.models.Customizable<S
         return instance;
     }
 
+    /**
+     * builder factory method for ScopedPrice
+     * @return builder
+     */
     public static ScopedPriceBuilder builder() {
         return ScopedPriceBuilder.of();
     }
 
+    /**
+     * create builder for ScopedPrice instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ScopedPriceBuilder builder(final ScopedPrice template) {
         return ScopedPriceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withScopedPrice(Function<ScopedPrice, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ScopedPrice> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ScopedPrice>() {
             @Override

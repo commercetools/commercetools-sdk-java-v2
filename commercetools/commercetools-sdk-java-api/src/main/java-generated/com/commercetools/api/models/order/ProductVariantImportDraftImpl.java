@@ -30,6 +30,9 @@ public class ProductVariantImportDraftImpl implements ProductVariantImportDraft,
 
     private java.util.List<com.commercetools.api.models.common.Image> images;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductVariantImportDraftImpl(@JsonProperty("id") final Long id, @JsonProperty("sku") final String sku,
             @JsonProperty("prices") final java.util.List<com.commercetools.api.models.common.PriceDraft> prices,
@@ -42,6 +45,9 @@ public class ProductVariantImportDraftImpl implements ProductVariantImportDraft,
         this.images = images;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductVariantImportDraftImpl() {
     }
 

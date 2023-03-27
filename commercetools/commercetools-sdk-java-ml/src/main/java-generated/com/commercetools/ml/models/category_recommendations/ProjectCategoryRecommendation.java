@@ -58,16 +58,40 @@ public interface ProjectCategoryRecommendation {
     @JsonProperty("path")
     public String getPath();
 
+    /**
+     *  <p>A category that is recommended for a product.</p>
+     * @param category value to be set
+     */
+
     public void setCategory(final CategoryReference category);
+
+    /**
+     *  <p>Probability score for the category recommendation.</p>
+     * @param confidence value to be set
+     */
 
     public void setConfidence(final Double confidence);
 
+    /**
+     *  <p>Breadcrumb path to the recommended category. This only picks up one language, not all available languages for the category. English is prioritized, but if English data is not available, an arbitrary language is selected. Do not use this to identify a category,use the category ID from the category reference instead.</p>
+     * @param path value to be set
+     */
+
     public void setPath(final String path);
 
+    /**
+     * factory method
+     * @return instance of ProjectCategoryRecommendation
+     */
     public static ProjectCategoryRecommendation of() {
         return new ProjectCategoryRecommendationImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProjectCategoryRecommendation
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProjectCategoryRecommendation of(final ProjectCategoryRecommendation template) {
         ProjectCategoryRecommendationImpl instance = new ProjectCategoryRecommendationImpl();
         instance.setCategory(template.getCategory());
@@ -76,18 +100,37 @@ public interface ProjectCategoryRecommendation {
         return instance;
     }
 
+    /**
+     * builder factory method for ProjectCategoryRecommendation
+     * @return builder
+     */
     public static ProjectCategoryRecommendationBuilder builder() {
         return ProjectCategoryRecommendationBuilder.of();
     }
 
+    /**
+     * create builder for ProjectCategoryRecommendation instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProjectCategoryRecommendationBuilder builder(final ProjectCategoryRecommendation template) {
         return ProjectCategoryRecommendationBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProjectCategoryRecommendation(Function<ProjectCategoryRecommendation, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProjectCategoryRecommendation> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProjectCategoryRecommendation>() {
             @Override

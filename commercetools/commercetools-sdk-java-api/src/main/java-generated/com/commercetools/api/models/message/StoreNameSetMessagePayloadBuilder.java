@@ -120,10 +120,20 @@ public class StoreNameSetMessagePayloadBuilder implements Builder<StoreNameSetMe
         return this;
     }
 
+    /**
+     *  <p>Name of the Store set during the Set Name update action.</p>
+     * @return name
+     */
+
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
+
+    /**
+     *  <p>Names set for the Store in different locales.</p>
+     * @return nameAllLocales
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.common.LocalizedString> getNameAllLocales() {
@@ -146,10 +156,19 @@ public class StoreNameSetMessagePayloadBuilder implements Builder<StoreNameSetMe
         return new StoreNameSetMessagePayloadImpl(name, nameAllLocales);
     }
 
+    /**
+     * factory method for an instance of StoreNameSetMessagePayloadBuilder
+     * @return builder
+     */
     public static StoreNameSetMessagePayloadBuilder of() {
         return new StoreNameSetMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for StoreNameSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreNameSetMessagePayloadBuilder of(final StoreNameSetMessagePayload template) {
         StoreNameSetMessagePayloadBuilder builder = new StoreNameSetMessagePayloadBuilder();
         builder.name = template.getName();

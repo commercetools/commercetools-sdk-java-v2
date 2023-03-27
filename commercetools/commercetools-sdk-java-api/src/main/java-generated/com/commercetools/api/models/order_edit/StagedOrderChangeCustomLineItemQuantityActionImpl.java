@@ -27,6 +27,9 @@ public class StagedOrderChangeCustomLineItemQuantityActionImpl
 
     private Long quantity;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderChangeCustomLineItemQuantityActionImpl(@JsonProperty("customLineItemId") final String customLineItemId,
             @JsonProperty("quantity") final Long quantity) {
@@ -35,6 +38,9 @@ public class StagedOrderChangeCustomLineItemQuantityActionImpl
         this.action = CHANGE_CUSTOM_LINE_ITEM_QUANTITY;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderChangeCustomLineItemQuantityActionImpl() {
         this.action = CHANGE_CUSTOM_LINE_ITEM_QUANTITY;
     }

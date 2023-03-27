@@ -28,6 +28,9 @@ public class StagedOrderSetDeliveryCustomFieldActionImpl implements StagedOrderS
 
     private java.lang.Object value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderSetDeliveryCustomFieldActionImpl(@JsonProperty("deliveryId") final String deliveryId,
             @JsonProperty("name") final String name, @JsonProperty("value") final java.lang.Object value) {
@@ -37,6 +40,9 @@ public class StagedOrderSetDeliveryCustomFieldActionImpl implements StagedOrderS
         this.action = SET_DELIVERY_CUSTOM_FIELD;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderSetDeliveryCustomFieldActionImpl() {
         this.action = SET_DELIVERY_CUSTOM_FIELD;
     }

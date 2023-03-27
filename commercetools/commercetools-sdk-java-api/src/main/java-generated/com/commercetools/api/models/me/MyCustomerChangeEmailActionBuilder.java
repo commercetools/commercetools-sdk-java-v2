@@ -34,6 +34,11 @@ public class MyCustomerChangeEmailActionBuilder implements Builder<MyCustomerCha
         return this;
     }
 
+    /**
+     *  <p>New value to set.</p>
+     * @return email
+     */
+
     public String getEmail() {
         return this.email;
     }
@@ -55,10 +60,19 @@ public class MyCustomerChangeEmailActionBuilder implements Builder<MyCustomerCha
         return new MyCustomerChangeEmailActionImpl(email);
     }
 
+    /**
+     * factory method for an instance of MyCustomerChangeEmailActionBuilder
+     * @return builder
+     */
     public static MyCustomerChangeEmailActionBuilder of() {
         return new MyCustomerChangeEmailActionBuilder();
     }
 
+    /**
+     * create builder for MyCustomerChangeEmailAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCustomerChangeEmailActionBuilder of(final MyCustomerChangeEmailAction template) {
         MyCustomerChangeEmailActionBuilder builder = new MyCustomerChangeEmailActionBuilder();
         builder.email = template.getEmail();

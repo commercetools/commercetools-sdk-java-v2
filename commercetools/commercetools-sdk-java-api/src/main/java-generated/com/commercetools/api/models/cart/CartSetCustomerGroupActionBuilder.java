@@ -52,6 +52,11 @@ public class CartSetCustomerGroupActionBuilder implements Builder<CartSetCustome
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @return customerGroup
+     */
+
     @Nullable
     public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {
         return this.customerGroup;
@@ -73,10 +78,19 @@ public class CartSetCustomerGroupActionBuilder implements Builder<CartSetCustome
         return new CartSetCustomerGroupActionImpl(customerGroup);
     }
 
+    /**
+     * factory method for an instance of CartSetCustomerGroupActionBuilder
+     * @return builder
+     */
     public static CartSetCustomerGroupActionBuilder of() {
         return new CartSetCustomerGroupActionBuilder();
     }
 
+    /**
+     * create builder for CartSetCustomerGroupAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartSetCustomerGroupActionBuilder of(final CartSetCustomerGroupAction template) {
         CartSetCustomerGroupActionBuilder builder = new CartSetCustomerGroupActionBuilder();
         builder.customerGroup = template.getCustomerGroup();

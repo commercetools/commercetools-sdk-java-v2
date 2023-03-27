@@ -78,32 +78,73 @@ public interface DeliveryPayload {
     @JsonProperty("resourceUserProvidedIdentifiers")
     public UserProvidedIdentifiers getResourceUserProvidedIdentifiers();
 
+    /**
+     *  <p><code>key</code> of the Project. Useful in message processing if the Destination receives events from multiple Projects.</p>
+     * @param projectKey value to be set
+     */
+
     public void setProjectKey(final String projectKey);
+
+    /**
+     *  <p>Reference to the resource that triggered the message.</p>
+     * @param resource value to be set
+     */
 
     public void setResource(final Reference resource);
 
+    /**
+     *  <p>User-defined unique identifiers of the resource.</p>
+     * @param resourceUserProvidedIdentifiers value to be set
+     */
+
     public void setResourceUserProvidedIdentifiers(final UserProvidedIdentifiers resourceUserProvidedIdentifiers);
 
+    /**
+     * builder for message subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.subscription.MessageDeliveryPayloadBuilder messageBuilder() {
         return com.commercetools.api.models.subscription.MessageDeliveryPayloadBuilder.of();
     }
 
+    /**
+     * builder for resourceCreated subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.subscription.ResourceCreatedDeliveryPayloadBuilder resourceCreatedBuilder() {
         return com.commercetools.api.models.subscription.ResourceCreatedDeliveryPayloadBuilder.of();
     }
 
+    /**
+     * builder for resourceDeleted subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.subscription.ResourceDeletedDeliveryPayloadBuilder resourceDeletedBuilder() {
         return com.commercetools.api.models.subscription.ResourceDeletedDeliveryPayloadBuilder.of();
     }
 
+    /**
+     * builder for resourceUpdated subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.subscription.ResourceUpdatedDeliveryPayloadBuilder resourceUpdatedBuilder() {
         return com.commercetools.api.models.subscription.ResourceUpdatedDeliveryPayloadBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withDeliveryPayload(Function<DeliveryPayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<DeliveryPayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<DeliveryPayload>() {
             @Override

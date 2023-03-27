@@ -24,6 +24,9 @@ public class CustomFieldLocalizedEnumTypeImpl implements CustomFieldLocalizedEnu
 
     private java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomFieldLocalizedEnumTypeImpl(
             @JsonProperty("values") final java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values) {
@@ -31,6 +34,9 @@ public class CustomFieldLocalizedEnumTypeImpl implements CustomFieldLocalizedEnu
         this.name = LOCALIZED_ENUM;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomFieldLocalizedEnumTypeImpl() {
         this.name = LOCALIZED_ENUM;
     }

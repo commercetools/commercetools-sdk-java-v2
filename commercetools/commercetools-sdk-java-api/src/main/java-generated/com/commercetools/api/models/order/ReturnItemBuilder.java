@@ -19,6 +19,10 @@ public class ReturnItemBuilder {
         return com.commercetools.api.models.order.LineItemReturnItemBuilder.of();
     }
 
+    /**
+     * factory method for an instance of ReturnItemBuilder
+     * @return builder
+     */
     public static ReturnItemBuilder of() {
         return new ReturnItemBuilder();
     }

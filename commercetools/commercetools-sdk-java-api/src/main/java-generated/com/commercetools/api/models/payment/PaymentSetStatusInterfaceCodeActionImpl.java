@@ -24,12 +24,18 @@ public class PaymentSetStatusInterfaceCodeActionImpl implements PaymentSetStatus
 
     private String interfaceCode;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PaymentSetStatusInterfaceCodeActionImpl(@JsonProperty("interfaceCode") final String interfaceCode) {
         this.interfaceCode = interfaceCode;
         this.action = SET_STATUS_INTERFACE_CODE;
     }
 
+    /**
+     * create empty instance
+     */
     public PaymentSetStatusInterfaceCodeActionImpl() {
         this.action = SET_STATUS_INTERFACE_CODE;
     }

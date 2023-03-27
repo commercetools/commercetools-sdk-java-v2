@@ -38,6 +38,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = BusinessUnitAssociateRemovedMessageImpl.class)
 public interface BusinessUnitAssociateRemovedMessage extends Message {
 
+    /**
+     * discriminator value for BusinessUnitAssociateRemovedMessage
+     */
     String BUSINESS_UNIT_ASSOCIATE_REMOVED = "BusinessUnitAssociateRemoved";
 
     /**
@@ -49,12 +52,26 @@ public interface BusinessUnitAssociateRemovedMessage extends Message {
     @JsonProperty("associate")
     public Associate getAssociate();
 
+    /**
+     *  <p>The Associate that was removed from the Business Unit.</p>
+     * @param associate value to be set
+     */
+
     public void setAssociate(final Associate associate);
 
+    /**
+     * factory method
+     * @return instance of BusinessUnitAssociateRemovedMessage
+     */
     public static BusinessUnitAssociateRemovedMessage of() {
         return new BusinessUnitAssociateRemovedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of BusinessUnitAssociateRemovedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static BusinessUnitAssociateRemovedMessage of(final BusinessUnitAssociateRemovedMessage template) {
         BusinessUnitAssociateRemovedMessageImpl instance = new BusinessUnitAssociateRemovedMessageImpl();
         instance.setId(template.getId());
@@ -71,19 +88,38 @@ public interface BusinessUnitAssociateRemovedMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for BusinessUnitAssociateRemovedMessage
+     * @return builder
+     */
     public static BusinessUnitAssociateRemovedMessageBuilder builder() {
         return BusinessUnitAssociateRemovedMessageBuilder.of();
     }
 
+    /**
+     * create builder for BusinessUnitAssociateRemovedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitAssociateRemovedMessageBuilder builder(
             final BusinessUnitAssociateRemovedMessage template) {
         return BusinessUnitAssociateRemovedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withBusinessUnitAssociateRemovedMessage(Function<BusinessUnitAssociateRemovedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitAssociateRemovedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitAssociateRemovedMessage>() {
             @Override

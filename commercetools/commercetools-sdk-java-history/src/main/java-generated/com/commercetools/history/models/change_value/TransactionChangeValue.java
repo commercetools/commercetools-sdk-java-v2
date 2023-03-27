@@ -55,16 +55,40 @@ public interface TransactionChangeValue {
     @JsonProperty("timestamp")
     public String getTimestamp();
 
+    /**
+     * set id
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     * set interactionId
+     * @param interactionId value to be set
+     */
 
     public void setInteractionId(final String interactionId);
 
+    /**
+     * set timestamp
+     * @param timestamp value to be set
+     */
+
     public void setTimestamp(final String timestamp);
 
+    /**
+     * factory method
+     * @return instance of TransactionChangeValue
+     */
     public static TransactionChangeValue of() {
         return new TransactionChangeValueImpl();
     }
 
+    /**
+     * factory method to copy an instance of TransactionChangeValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static TransactionChangeValue of(final TransactionChangeValue template) {
         TransactionChangeValueImpl instance = new TransactionChangeValueImpl();
         instance.setId(template.getId());
@@ -73,18 +97,37 @@ public interface TransactionChangeValue {
         return instance;
     }
 
+    /**
+     * builder factory method for TransactionChangeValue
+     * @return builder
+     */
     public static TransactionChangeValueBuilder builder() {
         return TransactionChangeValueBuilder.of();
     }
 
+    /**
+     * create builder for TransactionChangeValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TransactionChangeValueBuilder builder(final TransactionChangeValue template) {
         return TransactionChangeValueBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTransactionChangeValue(Function<TransactionChangeValue, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<TransactionChangeValue> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TransactionChangeValue>() {
             @Override

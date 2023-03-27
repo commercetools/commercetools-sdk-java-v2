@@ -30,6 +30,9 @@ public class ChangeTransactionTimestampChangeImpl implements ChangeTransactionTi
 
     private String previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeTransactionTimestampChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("transaction") final com.commercetools.history.models.change_value.TransactionChangeValue transaction,
@@ -42,6 +45,9 @@ public class ChangeTransactionTimestampChangeImpl implements ChangeTransactionTi
         this.type = CHANGE_TRANSACTION_TIMESTAMP_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeTransactionTimestampChangeImpl() {
         this.type = CHANGE_TRANSACTION_TIMESTAMP_CHANGE;
     }

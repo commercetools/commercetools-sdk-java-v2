@@ -32,6 +32,9 @@ public class SetCustomLineItemCustomTypeChangeImpl implements SetCustomLineItemC
 
     private com.commercetools.history.models.common.CustomFields previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetCustomLineItemCustomTypeChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("customLineItem") final com.commercetools.history.models.common.LocalizedString customLineItem,
@@ -46,6 +49,9 @@ public class SetCustomLineItemCustomTypeChangeImpl implements SetCustomLineItemC
         this.type = SET_CUSTOM_LINE_ITEM_CUSTOM_TYPE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetCustomLineItemCustomTypeChangeImpl() {
         this.type = SET_CUSTOM_LINE_ITEM_CUSTOM_TYPE_CHANGE;
     }

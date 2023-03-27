@@ -38,7 +38,7 @@ public class SubRateBuilder implements Builder<SubRate> {
     }
 
     /**
-     *
+     * set the value to the amount
      * @param amount value to be set
      * @return Builder
      */
@@ -48,9 +48,19 @@ public class SubRateBuilder implements Builder<SubRate> {
         return this;
     }
 
+    /**
+     *  <p>Name of the SubRate.</p>
+     * @return name
+     */
+
     public String getName() {
         return this.name;
     }
+
+    /**
+     * value of amount}
+     * @return amount
+     */
 
     public Double getAmount() {
         return this.amount;
@@ -74,10 +84,19 @@ public class SubRateBuilder implements Builder<SubRate> {
         return new SubRateImpl(name, amount);
     }
 
+    /**
+     * factory method for an instance of SubRateBuilder
+     * @return builder
+     */
     public static SubRateBuilder of() {
         return new SubRateBuilder();
     }
 
+    /**
+     * create builder for SubRate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SubRateBuilder of(final SubRate template) {
         SubRateBuilder builder = new SubRateBuilder();
         builder.name = template.getName();

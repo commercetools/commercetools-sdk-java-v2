@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderSetLineItemTaxAmountActionImpl.class)
 public interface StagedOrderSetLineItemTaxAmountAction extends StagedOrderUpdateAction {
 
+    /**
+     * discriminator value for StagedOrderSetLineItemTaxAmountAction
+     */
     String SET_LINE_ITEM_TAX_AMOUNT = "setLineItemTaxAmount";
 
     /**
@@ -63,16 +66,45 @@ public interface StagedOrderSetLineItemTaxAmountAction extends StagedOrderUpdate
     @JsonProperty("shippingKey")
     public String getShippingKey();
 
+    /**
+     * set lineItemId
+     * @param lineItemId value to be set
+     */
+
     public void setLineItemId(final String lineItemId);
+
+    /**
+     *  <p>Cannot be used in LineItemDraft or CustomLineItemDraft.</p>
+     *  <p>Can only be set by these update actions:</p>
+     *  <ul>
+     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Carts</li>
+     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Order Edits</li>
+     *  </ul>
+     * @param externalTaxAmount value to be set
+     */
 
     public void setExternalTaxAmount(final ExternalTaxAmountDraft externalTaxAmount);
 
+    /**
+     *  <p><code>key</code> of the ShippingMethod used for this Line Item.``` This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     * @param shippingKey value to be set
+     */
+
     public void setShippingKey(final String shippingKey);
 
+    /**
+     * factory method
+     * @return instance of StagedOrderSetLineItemTaxAmountAction
+     */
     public static StagedOrderSetLineItemTaxAmountAction of() {
         return new StagedOrderSetLineItemTaxAmountActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedOrderSetLineItemTaxAmountAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedOrderSetLineItemTaxAmountAction of(final StagedOrderSetLineItemTaxAmountAction template) {
         StagedOrderSetLineItemTaxAmountActionImpl instance = new StagedOrderSetLineItemTaxAmountActionImpl();
         instance.setLineItemId(template.getLineItemId());
@@ -81,19 +113,38 @@ public interface StagedOrderSetLineItemTaxAmountAction extends StagedOrderUpdate
         return instance;
     }
 
+    /**
+     * builder factory method for StagedOrderSetLineItemTaxAmountAction
+     * @return builder
+     */
     public static StagedOrderSetLineItemTaxAmountActionBuilder builder() {
         return StagedOrderSetLineItemTaxAmountActionBuilder.of();
     }
 
+    /**
+     * create builder for StagedOrderSetLineItemTaxAmountAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetLineItemTaxAmountActionBuilder builder(
             final StagedOrderSetLineItemTaxAmountAction template) {
         return StagedOrderSetLineItemTaxAmountActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedOrderSetLineItemTaxAmountAction(Function<StagedOrderSetLineItemTaxAmountAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetLineItemTaxAmountAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetLineItemTaxAmountAction>() {
             @Override

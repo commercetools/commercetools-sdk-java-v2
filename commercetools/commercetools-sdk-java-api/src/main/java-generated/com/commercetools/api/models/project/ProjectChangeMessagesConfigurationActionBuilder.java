@@ -51,6 +51,11 @@ public class ProjectChangeMessagesConfigurationActionBuilder
         return this;
     }
 
+    /**
+     *  <p>Configuration for the Messages Query feature.</p>
+     * @return messagesConfiguration
+     */
+
     public com.commercetools.api.models.message.MessagesConfigurationDraft getMessagesConfiguration() {
         return this.messagesConfiguration;
     }
@@ -73,10 +78,19 @@ public class ProjectChangeMessagesConfigurationActionBuilder
         return new ProjectChangeMessagesConfigurationActionImpl(messagesConfiguration);
     }
 
+    /**
+     * factory method for an instance of ProjectChangeMessagesConfigurationActionBuilder
+     * @return builder
+     */
     public static ProjectChangeMessagesConfigurationActionBuilder of() {
         return new ProjectChangeMessagesConfigurationActionBuilder();
     }
 
+    /**
+     * create builder for ProjectChangeMessagesConfigurationAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProjectChangeMessagesConfigurationActionBuilder of(
             final ProjectChangeMessagesConfigurationAction template) {
         ProjectChangeMessagesConfigurationActionBuilder builder = new ProjectChangeMessagesConfigurationActionBuilder();

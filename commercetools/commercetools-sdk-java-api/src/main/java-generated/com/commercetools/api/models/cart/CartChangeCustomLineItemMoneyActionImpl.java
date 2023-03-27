@@ -26,6 +26,9 @@ public class CartChangeCustomLineItemMoneyActionImpl implements CartChangeCustom
 
     private com.commercetools.api.models.common.Money money;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartChangeCustomLineItemMoneyActionImpl(@JsonProperty("customLineItemId") final String customLineItemId,
             @JsonProperty("money") final com.commercetools.api.models.common.Money money) {
@@ -34,6 +37,9 @@ public class CartChangeCustomLineItemMoneyActionImpl implements CartChangeCustom
         this.action = CHANGE_CUSTOM_LINE_ITEM_MONEY;
     }
 
+    /**
+     * create empty instance
+     */
     public CartChangeCustomLineItemMoneyActionImpl() {
         this.action = CHANGE_CUSTOM_LINE_ITEM_MONEY;
     }

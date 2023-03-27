@@ -24,7 +24,7 @@ public class PublishChangeBuilder implements Builder<PublishChange> {
     private String change;
 
     /**
-     *
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class PublishChangeBuilder implements Builder<PublishChange> {
         this.change = change;
         return this;
     }
+
+    /**
+     * value of change}
+     * @return change
+     */
 
     public String getChange() {
         return this.change;
@@ -55,10 +60,19 @@ public class PublishChangeBuilder implements Builder<PublishChange> {
         return new PublishChangeImpl(change);
     }
 
+    /**
+     * factory method for an instance of PublishChangeBuilder
+     * @return builder
+     */
     public static PublishChangeBuilder of() {
         return new PublishChangeBuilder();
     }
 
+    /**
+     * create builder for PublishChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PublishChangeBuilder of(final PublishChange template) {
         PublishChangeBuilder builder = new PublishChangeBuilder();
         builder.change = template.getChange();

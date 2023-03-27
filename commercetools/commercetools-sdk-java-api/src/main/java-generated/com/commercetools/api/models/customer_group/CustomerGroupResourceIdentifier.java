@@ -28,6 +28,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomerGroupResourceIdentifier
         extends ResourceIdentifier, com.commercetools.api.models.Identifiable<CustomerGroup> {
 
+    /**
+     * discriminator value for CustomerGroupResourceIdentifier
+     */
     String CUSTOMER_GROUP = "customer-group";
 
     /**
@@ -46,14 +49,33 @@ public interface CustomerGroupResourceIdentifier
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     *  <p>Unique identifier of the referenced CustomerGroup. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>User-defined unique identifier of the referenced CustomerGroup. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param key value to be set
+     */
 
     public void setKey(final String key);
 
+    /**
+     * factory method
+     * @return instance of CustomerGroupResourceIdentifier
+     */
     public static CustomerGroupResourceIdentifier of() {
         return new CustomerGroupResourceIdentifierImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomerGroupResourceIdentifier
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomerGroupResourceIdentifier of(final CustomerGroupResourceIdentifier template) {
         CustomerGroupResourceIdentifierImpl instance = new CustomerGroupResourceIdentifierImpl();
         instance.setId(template.getId());
@@ -61,18 +83,37 @@ public interface CustomerGroupResourceIdentifier
         return instance;
     }
 
+    /**
+     * builder factory method for CustomerGroupResourceIdentifier
+     * @return builder
+     */
     public static CustomerGroupResourceIdentifierBuilder builder() {
         return CustomerGroupResourceIdentifierBuilder.of();
     }
 
+    /**
+     * create builder for CustomerGroupResourceIdentifier instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerGroupResourceIdentifierBuilder builder(final CustomerGroupResourceIdentifier template) {
         return CustomerGroupResourceIdentifierBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomerGroupResourceIdentifier(Function<CustomerGroupResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomerGroupResourceIdentifier> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomerGroupResourceIdentifier>() {
             @Override

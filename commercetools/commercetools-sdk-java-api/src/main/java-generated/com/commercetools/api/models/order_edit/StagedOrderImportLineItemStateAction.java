@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderImportLineItemStateActionImpl.class)
 public interface StagedOrderImportLineItemStateAction extends StagedOrderUpdateAction {
 
+    /**
+     * discriminator value for StagedOrderImportLineItemStateAction
+     */
     String IMPORT_LINE_ITEM_STATE = "importLineItemState";
 
     /**
@@ -52,17 +55,41 @@ public interface StagedOrderImportLineItemStateAction extends StagedOrderUpdateA
     @JsonProperty("state")
     public List<ItemState> getState();
 
+    /**
+     * set lineItemId
+     * @param lineItemId value to be set
+     */
+
     public void setLineItemId(final String lineItemId);
+
+    /**
+     * set state
+     * @param state values to be set
+     */
 
     @JsonIgnore
     public void setState(final ItemState... state);
 
+    /**
+     * set state
+     * @param state values to be set
+     */
+
     public void setState(final List<ItemState> state);
 
+    /**
+     * factory method
+     * @return instance of StagedOrderImportLineItemStateAction
+     */
     public static StagedOrderImportLineItemStateAction of() {
         return new StagedOrderImportLineItemStateActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedOrderImportLineItemStateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedOrderImportLineItemStateAction of(final StagedOrderImportLineItemStateAction template) {
         StagedOrderImportLineItemStateActionImpl instance = new StagedOrderImportLineItemStateActionImpl();
         instance.setLineItemId(template.getLineItemId());
@@ -70,19 +97,38 @@ public interface StagedOrderImportLineItemStateAction extends StagedOrderUpdateA
         return instance;
     }
 
+    /**
+     * builder factory method for StagedOrderImportLineItemStateAction
+     * @return builder
+     */
     public static StagedOrderImportLineItemStateActionBuilder builder() {
         return StagedOrderImportLineItemStateActionBuilder.of();
     }
 
+    /**
+     * create builder for StagedOrderImportLineItemStateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderImportLineItemStateActionBuilder builder(
             final StagedOrderImportLineItemStateAction template) {
         return StagedOrderImportLineItemStateActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedOrderImportLineItemStateAction(Function<StagedOrderImportLineItemStateAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderImportLineItemStateAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderImportLineItemStateAction>() {
             @Override

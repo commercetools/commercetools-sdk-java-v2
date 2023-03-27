@@ -28,6 +28,9 @@ public class SetSellerCommentChangeImpl implements SetSellerCommentChange, Model
 
     private String nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetSellerCommentChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final String previousValue,
@@ -38,6 +41,9 @@ public class SetSellerCommentChangeImpl implements SetSellerCommentChange, Model
         this.type = SET_SELLER_COMMENT_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetSellerCommentChangeImpl() {
         this.type = SET_SELLER_COMMENT_CHANGE;
     }

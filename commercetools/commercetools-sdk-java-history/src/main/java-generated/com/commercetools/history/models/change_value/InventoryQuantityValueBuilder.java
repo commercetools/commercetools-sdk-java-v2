@@ -27,7 +27,7 @@ public class InventoryQuantityValueBuilder implements Builder<InventoryQuantityV
     private Integer availableQuantity;
 
     /**
-     *
+     * set the value to the quantityOnStock
      * @param quantityOnStock value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class InventoryQuantityValueBuilder implements Builder<InventoryQuantityV
     }
 
     /**
-     *
+     * set the value to the availableQuantity
      * @param availableQuantity value to be set
      * @return Builder
      */
@@ -48,9 +48,19 @@ public class InventoryQuantityValueBuilder implements Builder<InventoryQuantityV
         return this;
     }
 
+    /**
+     * value of quantityOnStock}
+     * @return quantityOnStock
+     */
+
     public Integer getQuantityOnStock() {
         return this.quantityOnStock;
     }
+
+    /**
+     * value of availableQuantity}
+     * @return availableQuantity
+     */
 
     public Integer getAvailableQuantity() {
         return this.availableQuantity;
@@ -74,10 +84,19 @@ public class InventoryQuantityValueBuilder implements Builder<InventoryQuantityV
         return new InventoryQuantityValueImpl(quantityOnStock, availableQuantity);
     }
 
+    /**
+     * factory method for an instance of InventoryQuantityValueBuilder
+     * @return builder
+     */
     public static InventoryQuantityValueBuilder of() {
         return new InventoryQuantityValueBuilder();
     }
 
+    /**
+     * create builder for InventoryQuantityValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InventoryQuantityValueBuilder of(final InventoryQuantityValue template) {
         InventoryQuantityValueBuilder builder = new InventoryQuantityValueBuilder();
         builder.quantityOnStock = template.getQuantityOnStock();

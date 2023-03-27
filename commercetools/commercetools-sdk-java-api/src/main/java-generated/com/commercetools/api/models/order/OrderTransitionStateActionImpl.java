@@ -26,6 +26,9 @@ public class OrderTransitionStateActionImpl implements OrderTransitionStateActio
 
     private Boolean force;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderTransitionStateActionImpl(
             @JsonProperty("state") final com.commercetools.api.models.state.StateResourceIdentifier state,
@@ -35,6 +38,9 @@ public class OrderTransitionStateActionImpl implements OrderTransitionStateActio
         this.action = TRANSITION_STATE;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderTransitionStateActionImpl() {
         this.action = TRANSITION_STATE;
     }

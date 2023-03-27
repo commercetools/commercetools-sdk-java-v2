@@ -62,9 +62,19 @@ public class ProductStateTransitionMessagePayloadBuilder implements Builder<Prod
         return this;
     }
 
+    /**
+     *  <p>Product State after the Transition State update action.</p>
+     * @return state
+     */
+
     public com.commercetools.api.models.state.StateReference getState() {
         return this.state;
     }
+
+    /**
+     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     * @return force
+     */
 
     public Boolean getForce() {
         return this.force;
@@ -88,10 +98,19 @@ public class ProductStateTransitionMessagePayloadBuilder implements Builder<Prod
         return new ProductStateTransitionMessagePayloadImpl(state, force);
     }
 
+    /**
+     * factory method for an instance of ProductStateTransitionMessagePayloadBuilder
+     * @return builder
+     */
     public static ProductStateTransitionMessagePayloadBuilder of() {
         return new ProductStateTransitionMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for ProductStateTransitionMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductStateTransitionMessagePayloadBuilder of(final ProductStateTransitionMessagePayload template) {
         ProductStateTransitionMessagePayloadBuilder builder = new ProductStateTransitionMessagePayloadBuilder();
         builder.state = template.getState();

@@ -29,6 +29,9 @@ public class GeneralCategoryRecommendationPagedQueryResponseImpl
 
     private java.util.List<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendation> results;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     GeneralCategoryRecommendationPagedQueryResponseImpl(@JsonProperty("count") final Long count,
             @JsonProperty("total") final Long total, @JsonProperty("offset") final Long offset,
@@ -39,6 +42,9 @@ public class GeneralCategoryRecommendationPagedQueryResponseImpl
         this.results = results;
     }
 
+    /**
+     * create empty instance
+     */
     public GeneralCategoryRecommendationPagedQueryResponseImpl() {
     }
 

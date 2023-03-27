@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StoreChangeProductSelectionActionImpl.class)
 public interface StoreChangeProductSelectionAction extends StoreUpdateAction {
 
+    /**
+     * discriminator value for StoreChangeProductSelectionAction
+     */
     String CHANGE_PRODUCT_SELECTION_ACTIVE = "changeProductSelectionActive";
 
     /**
@@ -50,14 +53,33 @@ public interface StoreChangeProductSelectionAction extends StoreUpdateAction {
     @JsonProperty("active")
     public Boolean getActive();
 
+    /**
+     *  <p>Current Product Selection of the Store to be activated or deactivated.</p>
+     * @param productSelection value to be set
+     */
+
     public void setProductSelection(final ProductSelectionResourceIdentifier productSelection);
+
+    /**
+     *  <p>Set to <code>true</code> if all Products assigned to the Product Selection should become part of the Store's assortment.</p>
+     * @param active value to be set
+     */
 
     public void setActive(final Boolean active);
 
+    /**
+     * factory method
+     * @return instance of StoreChangeProductSelectionAction
+     */
     public static StoreChangeProductSelectionAction of() {
         return new StoreChangeProductSelectionActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StoreChangeProductSelectionAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StoreChangeProductSelectionAction of(final StoreChangeProductSelectionAction template) {
         StoreChangeProductSelectionActionImpl instance = new StoreChangeProductSelectionActionImpl();
         instance.setProductSelection(template.getProductSelection());
@@ -65,18 +87,37 @@ public interface StoreChangeProductSelectionAction extends StoreUpdateAction {
         return instance;
     }
 
+    /**
+     * builder factory method for StoreChangeProductSelectionAction
+     * @return builder
+     */
     public static StoreChangeProductSelectionActionBuilder builder() {
         return StoreChangeProductSelectionActionBuilder.of();
     }
 
+    /**
+     * create builder for StoreChangeProductSelectionAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreChangeProductSelectionActionBuilder builder(final StoreChangeProductSelectionAction template) {
         return StoreChangeProductSelectionActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStoreChangeProductSelectionAction(Function<StoreChangeProductSelectionAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StoreChangeProductSelectionAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StoreChangeProductSelectionAction>() {
             @Override

@@ -42,7 +42,7 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
     private String key;
 
     /**
-     *
+     * set values to the sources
      * @param sources value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
     }
 
     /**
-     *
+     * set value to the sources
      * @param sources value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
     }
 
     /**
-     *
+     * add values to the sources
      * @param sources value to be set
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
     }
 
     /**
-     *
+     * add the value to the sources using the builder function
      * @param builder function to build the sources value
      * @return Builder
      */
@@ -93,7 +93,7 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
     }
 
     /**
-     *
+     * set the value to the sources using the builder function
      * @param builder function to build the sources value
      * @return Builder
      */
@@ -222,28 +222,58 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
         return this;
     }
 
+    /**
+     * value of sources}
+     * @return sources
+     */
+
     public java.util.List<com.commercetools.api.models.common.AssetSource> getSources() {
         return this.sources;
     }
 
+    /**
+     *  <p>Name of the Asset.</p>
+     * @return name
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
+
+    /**
+     *  <p>Description of the Asset.</p>
+     * @return description
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
+    /**
+     *  <p>Keywords for categorizing and organizing Assets.</p>
+     * @return tags
+     */
+
     @Nullable
     public java.util.List<String> getTags() {
         return this.tags;
     }
 
+    /**
+     *  <p>Custom Fields defined for the Asset.</p>
+     * @return custom
+     */
+
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
+
+    /**
+     *  <p>User-defined unique identifier for the Asset.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
@@ -268,10 +298,19 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
         return new AssetDraftImpl(sources, name, description, tags, custom, key);
     }
 
+    /**
+     * factory method for an instance of AssetDraftBuilder
+     * @return builder
+     */
     public static AssetDraftBuilder of() {
         return new AssetDraftBuilder();
     }
 
+    /**
+     * create builder for AssetDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AssetDraftBuilder of(final AssetDraft template) {
         AssetDraftBuilder builder = new AssetDraftBuilder();
         builder.sources = template.getSources();

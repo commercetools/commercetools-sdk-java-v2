@@ -26,6 +26,9 @@ public class StagedOrderTransitionStateActionImpl implements StagedOrderTransiti
 
     private Boolean force;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderTransitionStateActionImpl(
             @JsonProperty("state") final com.commercetools.api.models.state.StateResourceIdentifier state,
@@ -35,6 +38,9 @@ public class StagedOrderTransitionStateActionImpl implements StagedOrderTransiti
         this.action = TRANSITION_STATE;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderTransitionStateActionImpl() {
         this.action = TRANSITION_STATE;
     }

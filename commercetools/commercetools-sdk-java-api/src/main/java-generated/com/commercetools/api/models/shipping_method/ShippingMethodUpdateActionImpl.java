@@ -22,11 +22,17 @@ public class ShippingMethodUpdateActionImpl implements ShippingMethodUpdateActio
 
     private String action;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShippingMethodUpdateActionImpl(@JsonProperty("action") final String action) {
         this.action = action;
     }
 
+    /**
+     * create empty instance
+     */
     public ShippingMethodUpdateActionImpl() {
     }
 

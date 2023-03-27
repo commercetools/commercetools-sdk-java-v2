@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AddProductChangeImpl.class)
 public interface AddProductChange extends Change {
 
+    /**
+     * discriminator value for AddProductChange
+     */
     String ADD_PRODUCT_CHANGE = "AddProductChange";
 
     /**
@@ -59,14 +62,33 @@ public interface AddProductChange extends Change {
     @JsonProperty("nextValue")
     public Reference getNextValue();
 
+    /**
+     *  <p>Update action for when a product is assigned to a product selection</p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
 
     public void setNextValue(final Reference nextValue);
 
+    /**
+     * factory method
+     * @return instance of AddProductChange
+     */
     public static AddProductChange of() {
         return new AddProductChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of AddProductChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static AddProductChange of(final AddProductChange template) {
         AddProductChangeImpl instance = new AddProductChangeImpl();
         instance.setChange(template.getChange());
@@ -74,18 +96,37 @@ public interface AddProductChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for AddProductChange
+     * @return builder
+     */
     public static AddProductChangeBuilder builder() {
         return AddProductChangeBuilder.of();
     }
 
+    /**
+     * create builder for AddProductChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AddProductChangeBuilder builder(final AddProductChange template) {
         return AddProductChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAddProductChange(Function<AddProductChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AddProductChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AddProductChange>() {
             @Override

@@ -48,6 +48,11 @@ public class OrderPaymentAddedMessagePayloadBuilder implements Builder<OrderPaym
         return this;
     }
 
+    /**
+     *  <p>Payment that was added to the Order.</p>
+     * @return payment
+     */
+
     public com.commercetools.api.models.payment.PaymentReference getPayment() {
         return this.payment;
     }
@@ -69,10 +74,19 @@ public class OrderPaymentAddedMessagePayloadBuilder implements Builder<OrderPaym
         return new OrderPaymentAddedMessagePayloadImpl(payment);
     }
 
+    /**
+     * factory method for an instance of OrderPaymentAddedMessagePayloadBuilder
+     * @return builder
+     */
     public static OrderPaymentAddedMessagePayloadBuilder of() {
         return new OrderPaymentAddedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for OrderPaymentAddedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderPaymentAddedMessagePayloadBuilder of(final OrderPaymentAddedMessagePayload template) {
         OrderPaymentAddedMessagePayloadBuilder builder = new OrderPaymentAddedMessagePayloadBuilder();
         builder.payment = template.getPayment();

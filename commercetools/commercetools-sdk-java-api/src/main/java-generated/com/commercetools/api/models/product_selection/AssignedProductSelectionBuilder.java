@@ -128,19 +128,41 @@ public class AssignedProductSelectionBuilder implements Builder<AssignedProductS
         return this;
     }
 
+    /**
+     *  <p>Reference to the Product Selection that this assignment is part of.</p>
+     * @return productSelection
+     */
+
     public com.commercetools.api.models.product_selection.ProductSelectionReference getProductSelection() {
         return this.productSelection;
     }
+
+    /**
+     *  <p>Defines which Variants of the Product will be included from the Product Selection.</p>
+     *  <p>This field is only available for Assignments to a Product Selection of type Individual.</p>
+     * @return variantSelection
+     */
 
     @Nullable
     public com.commercetools.api.models.product_selection.ProductVariantSelection getVariantSelection() {
         return this.variantSelection;
     }
 
+    /**
+     *  <p>Defines which Variants of the Product will be excluded from the Product Selection.</p>
+     *  <p>This field is only available for Assignments to a Product Selection of type Individual Exclusion.</p>
+     * @return variantExclusion
+     */
+
     @Nullable
     public com.commercetools.api.models.product_selection.ProductVariantExclusion getVariantExclusion() {
         return this.variantExclusion;
     }
+
+    /**
+     *  <p>Date and time (UTC) this assignment was initially created.</p>
+     * @return createdAt
+     */
 
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
@@ -164,10 +186,19 @@ public class AssignedProductSelectionBuilder implements Builder<AssignedProductS
         return new AssignedProductSelectionImpl(productSelection, variantSelection, variantExclusion, createdAt);
     }
 
+    /**
+     * factory method for an instance of AssignedProductSelectionBuilder
+     * @return builder
+     */
     public static AssignedProductSelectionBuilder of() {
         return new AssignedProductSelectionBuilder();
     }
 
+    /**
+     * create builder for AssignedProductSelection instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AssignedProductSelectionBuilder of(final AssignedProductSelection template) {
         AssignedProductSelectionBuilder builder = new AssignedProductSelectionBuilder();
         builder.productSelection = template.getProductSelection();

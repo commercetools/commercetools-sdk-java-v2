@@ -22,11 +22,17 @@ public class MessagePayloadImpl implements MessagePayload, ModelBase {
 
     private String type;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MessagePayloadImpl(@JsonProperty("type") final String type) {
         this.type = type;
     }
 
+    /**
+     * create empty instance
+     */
     public MessagePayloadImpl() {
     }
 

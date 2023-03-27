@@ -26,6 +26,9 @@ public class AddTransactionChangeImpl implements AddTransactionChange, ModelBase
 
     private com.commercetools.history.models.common.Transaction nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AddTransactionChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.Transaction nextValue) {
@@ -34,6 +37,9 @@ public class AddTransactionChangeImpl implements AddTransactionChange, ModelBase
         this.type = ADD_TRANSACTION_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public AddTransactionChangeImpl() {
         this.type = ADD_TRANSACTION_CHANGE;
     }

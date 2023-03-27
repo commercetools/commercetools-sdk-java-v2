@@ -36,6 +36,11 @@ public class CustomerSetCustomerNumberActionBuilder implements Builder<CustomerS
         return this;
     }
 
+    /**
+     *  <p>Value to set. Once set, it cannot be changed.</p>
+     * @return customerNumber
+     */
+
     @Nullable
     public String getCustomerNumber() {
         return this.customerNumber;
@@ -57,10 +62,19 @@ public class CustomerSetCustomerNumberActionBuilder implements Builder<CustomerS
         return new CustomerSetCustomerNumberActionImpl(customerNumber);
     }
 
+    /**
+     * factory method for an instance of CustomerSetCustomerNumberActionBuilder
+     * @return builder
+     */
     public static CustomerSetCustomerNumberActionBuilder of() {
         return new CustomerSetCustomerNumberActionBuilder();
     }
 
+    /**
+     * create builder for CustomerSetCustomerNumberAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerSetCustomerNumberActionBuilder of(final CustomerSetCustomerNumberAction template) {
         CustomerSetCustomerNumberActionBuilder builder = new CustomerSetCustomerNumberActionBuilder();
         builder.customerNumber = template.getCustomerNumber();

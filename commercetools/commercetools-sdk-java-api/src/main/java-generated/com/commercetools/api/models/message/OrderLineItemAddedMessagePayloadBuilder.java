@@ -61,9 +61,19 @@ public class OrderLineItemAddedMessagePayloadBuilder implements Builder<OrderLin
         return this;
     }
 
+    /**
+     *  <p>Line Item that was added to the Order.</p>
+     * @return lineItem
+     */
+
     public com.commercetools.api.models.cart.LineItem getLineItem() {
         return this.lineItem;
     }
+
+    /**
+     *  <p>Quantity of Line Items that were added to the Order.</p>
+     * @return addedQuantity
+     */
 
     public Long getAddedQuantity() {
         return this.addedQuantity;
@@ -87,10 +97,19 @@ public class OrderLineItemAddedMessagePayloadBuilder implements Builder<OrderLin
         return new OrderLineItemAddedMessagePayloadImpl(lineItem, addedQuantity);
     }
 
+    /**
+     * factory method for an instance of OrderLineItemAddedMessagePayloadBuilder
+     * @return builder
+     */
     public static OrderLineItemAddedMessagePayloadBuilder of() {
         return new OrderLineItemAddedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for OrderLineItemAddedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderLineItemAddedMessagePayloadBuilder of(final OrderLineItemAddedMessagePayload template) {
         OrderLineItemAddedMessagePayloadBuilder builder = new OrderLineItemAddedMessagePayloadBuilder();
         builder.lineItem = template.getLineItem();

@@ -79,14 +79,29 @@ public class ProductAddToCategoryActionBuilder implements Builder<ProductAddToCa
         return this;
     }
 
+    /**
+     *  <p>The Category to add.</p>
+     * @return category
+     */
+
     public com.commercetools.api.models.category.CategoryResourceIdentifier getCategory() {
         return this.category;
     }
+
+    /**
+     *  <p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If empty, any existing value will be removed.</p>
+     * @return orderHint
+     */
 
     @Nullable
     public String getOrderHint() {
         return this.orderHint;
     }
+
+    /**
+     *  <p>If <code>true</code>, only the staged <code>categories</code> and <code>categoryOrderHints</code> are updated. If <code>false</code>, both the current and staged <code>categories</code> and <code>categoryOrderHints</code> are updated.</p>
+     * @return staged
+     */
 
     @Nullable
     public Boolean getStaged() {
@@ -110,10 +125,19 @@ public class ProductAddToCategoryActionBuilder implements Builder<ProductAddToCa
         return new ProductAddToCategoryActionImpl(category, orderHint, staged);
     }
 
+    /**
+     * factory method for an instance of ProductAddToCategoryActionBuilder
+     * @return builder
+     */
     public static ProductAddToCategoryActionBuilder of() {
         return new ProductAddToCategoryActionBuilder();
     }
 
+    /**
+     * create builder for ProductAddToCategoryAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductAddToCategoryActionBuilder of(final ProductAddToCategoryAction template) {
         ProductAddToCategoryActionBuilder builder = new ProductAddToCategoryActionBuilder();
         builder.category = template.getCategory();

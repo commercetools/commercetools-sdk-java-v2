@@ -674,143 +674,298 @@ public class CustomerBuilder implements Builder<Customer> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Customer.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Current version of the Customer.</p>
+     * @return version
+     */
 
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *  <p>Date and time (UTC) the Customer was initially created.</p>
+     * @return createdAt
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+     *  <p>Date and time (UTC) the Customer was last updated.</p>
+     * @return lastModifiedAt
+     */
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the Customer.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the Customer.</p>
+     *  <p>Can be used to refer to a Customer in a human-readable way (in emails, invoices, and other correspondence).</p>
+     * @return customerNumber
+     */
+
     @Nullable
     public String getCustomerNumber() {
         return this.customerNumber;
     }
+
+    /**
+     *  <p>Optional identifier for use in external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     * @return externalId
+     */
 
     @Nullable
     public String getExternalId() {
         return this.externalId;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
+     */
+
     @Nullable
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
+     */
 
     @Nullable
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
 
+    /**
+     *  <p>Email address of the Customer that is unique for an entire Project or to a Store the Customer is assigned to. It is the mandatory unique identifier of a Customer.</p>
+     * @return email
+     */
+
     public String getEmail() {
         return this.email;
     }
+
+    /**
+     *  <p>Present only when <code>authenticationMode</code> is set to <code>Password</code>.</p>
+     * @return password
+     */
 
     @Nullable
     public String getPassword() {
         return this.password;
     }
 
+    /**
+     *  <p>Given name (first name) of the Customer.</p>
+     * @return firstName
+     */
+
     @Nullable
     public String getFirstName() {
         return this.firstName;
     }
+
+    /**
+     *  <p>Family name (last name) of the Customer.</p>
+     * @return lastName
+     */
 
     @Nullable
     public String getLastName() {
         return this.lastName;
     }
 
+    /**
+     *  <p>Middle name of the Customer.</p>
+     * @return middleName
+     */
+
     @Nullable
     public String getMiddleName() {
         return this.middleName;
     }
+
+    /**
+     *  <p>Title of the Customer, for example, 'Dr.'.</p>
+     * @return title
+     */
 
     @Nullable
     public String getTitle() {
         return this.title;
     }
 
+    /**
+     *  <p>Date of birth of the Customer.</p>
+     * @return dateOfBirth
+     */
+
     @Nullable
     public java.time.LocalDate getDateOfBirth() {
         return this.dateOfBirth;
     }
+
+    /**
+     *  <p>Company name of the Customer.</p>
+     * @return companyName
+     */
 
     @Nullable
     public String getCompanyName() {
         return this.companyName;
     }
 
+    /**
+     *  <p>Unique VAT ID of the Customer.</p>
+     * @return vatId
+     */
+
     @Nullable
     public String getVatId() {
         return this.vatId;
     }
 
+    /**
+     *  <p>Addresses used by the Customer.</p>
+     * @return addresses
+     */
+
     public java.util.List<com.commercetools.api.models.common.Address> getAddresses() {
         return this.addresses;
     }
+
+    /**
+     *  <p>ID of the address in <code>addresses</code> used as the default shipping address.</p>
+     * @return defaultShippingAddressId
+     */
 
     @Nullable
     public String getDefaultShippingAddressId() {
         return this.defaultShippingAddressId;
     }
 
+    /**
+     *  <p>IDs of addresses in <code>addresses</code> used as shipping addresses.</p>
+     * @return shippingAddressIds
+     */
+
     @Nullable
     public java.util.List<String> getShippingAddressIds() {
         return this.shippingAddressIds;
     }
+
+    /**
+     *  <p>ID of the address in <code>addresses</code> used as the default billing address.</p>
+     * @return defaultBillingAddressId
+     */
 
     @Nullable
     public String getDefaultBillingAddressId() {
         return this.defaultBillingAddressId;
     }
 
+    /**
+     *  <p>IDs of addresses in <code>addresses</code> used as billing addresses.</p>
+     * @return billingAddressIds
+     */
+
     @Nullable
     public java.util.List<String> getBillingAddressIds() {
         return this.billingAddressIds;
     }
 
+    /**
+     *  <p>Indicates whether the email address of the Customer is verified.</p>
+     * @return isEmailVerified
+     */
+
     public Boolean getIsEmailVerified() {
         return this.isEmailVerified;
     }
+
+    /**
+     *  <p>CustomerGroup to which the Customer belongs.</p>
+     * @return customerGroup
+     */
 
     @Nullable
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
         return this.customerGroup;
     }
 
+    /**
+     *  <p>Custom Fields for the Customer.</p>
+     * @return custom
+     */
+
     @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
+
+    /**
+     *  <p>Preferred language of the Customer.</p>
+     * @return locale
+     */
 
     @Nullable
     public String getLocale() {
         return this.locale;
     }
 
+    /**
+     *  <p>Salutation of the Customer, for example, 'Mr.' or 'Mrs.'.</p>
+     * @return salutation
+     */
+
     @Nullable
     public String getSalutation() {
         return this.salutation;
     }
 
+    /**
+     *  <p>Stores to which the Customer is assigned to.</p>
+     *  <ul>
+     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *  </ul>
+     * @return stores
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.store.StoreKeyReference> getStores() {
         return this.stores;
     }
+
+    /**
+     *  <p>Indicates whether the <code>password</code> is required for the Customer.</p>
+     * @return authenticationMode
+     */
 
     public com.commercetools.api.models.customer.AuthenticationMode getAuthenticationMode() {
         return this.authenticationMode;
@@ -846,10 +1001,19 @@ public class CustomerBuilder implements Builder<Customer> {
             isEmailVerified, customerGroup, custom, locale, salutation, stores, authenticationMode);
     }
 
+    /**
+     * factory method for an instance of CustomerBuilder
+     * @return builder
+     */
     public static CustomerBuilder of() {
         return new CustomerBuilder();
     }
 
+    /**
+     * create builder for Customer instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerBuilder of(final Customer template) {
         CustomerBuilder builder = new CustomerBuilder();
         builder.id = template.getId();

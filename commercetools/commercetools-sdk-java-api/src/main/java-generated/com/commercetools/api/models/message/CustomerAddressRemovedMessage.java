@@ -38,6 +38,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomerAddressRemovedMessageImpl.class)
 public interface CustomerAddressRemovedMessage extends Message {
 
+    /**
+     * discriminator value for CustomerAddressRemovedMessage
+     */
     String CUSTOMER_ADDRESS_REMOVED = "CustomerAddressRemoved";
 
     /**
@@ -49,12 +52,26 @@ public interface CustomerAddressRemovedMessage extends Message {
     @JsonProperty("address")
     public Address getAddress();
 
+    /**
+     *  <p>Address that was removed during the Remove Address update action.</p>
+     * @param address value to be set
+     */
+
     public void setAddress(final Address address);
 
+    /**
+     * factory method
+     * @return instance of CustomerAddressRemovedMessage
+     */
     public static CustomerAddressRemovedMessage of() {
         return new CustomerAddressRemovedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomerAddressRemovedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomerAddressRemovedMessage of(final CustomerAddressRemovedMessage template) {
         CustomerAddressRemovedMessageImpl instance = new CustomerAddressRemovedMessageImpl();
         instance.setId(template.getId());
@@ -71,18 +88,37 @@ public interface CustomerAddressRemovedMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for CustomerAddressRemovedMessage
+     * @return builder
+     */
     public static CustomerAddressRemovedMessageBuilder builder() {
         return CustomerAddressRemovedMessageBuilder.of();
     }
 
+    /**
+     * create builder for CustomerAddressRemovedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerAddressRemovedMessageBuilder builder(final CustomerAddressRemovedMessage template) {
         return CustomerAddressRemovedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomerAddressRemovedMessage(Function<CustomerAddressRemovedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomerAddressRemovedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomerAddressRemovedMessage>() {
             @Override

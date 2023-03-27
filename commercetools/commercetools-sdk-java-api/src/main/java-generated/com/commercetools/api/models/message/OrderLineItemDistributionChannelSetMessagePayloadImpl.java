@@ -27,6 +27,9 @@ public class OrderLineItemDistributionChannelSetMessagePayloadImpl
 
     private com.commercetools.api.models.channel.ChannelReference distributionChannel;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderLineItemDistributionChannelSetMessagePayloadImpl(@JsonProperty("lineItemId") final String lineItemId,
             @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelReference distributionChannel) {
@@ -35,6 +38,9 @@ public class OrderLineItemDistributionChannelSetMessagePayloadImpl
         this.type = ORDER_LINE_ITEM_DISTRIBUTION_CHANNEL_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderLineItemDistributionChannelSetMessagePayloadImpl() {
         this.type = ORDER_LINE_ITEM_DISTRIBUTION_CHANNEL_SET;
     }

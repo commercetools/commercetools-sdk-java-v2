@@ -35,6 +35,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetShippingMethodTaxAmountChangeImpl.class)
 public interface SetShippingMethodTaxAmountChange extends Change {
 
+    /**
+     * discriminator value for SetShippingMethodTaxAmountChange
+     */
     String SET_SHIPPING_METHOD_TAX_AMOUNT_CHANGE = "SetShippingMethodTaxAmountChange";
 
     /**
@@ -79,18 +82,47 @@ public interface SetShippingMethodTaxAmountChange extends Change {
     @JsonProperty("previousValue")
     public ShippingMethodTaxAmountChangeValue getPreviousValue();
 
+    /**
+     *  <p>Update action for <code>setShippingMethodTaxAmount</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set taxMode
+     * @param taxMode value to be set
+     */
 
     public void setTaxMode(final TaxMode taxMode);
 
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
+
     public void setNextValue(final ShippingMethodTaxAmountChangeValue nextValue);
+
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
 
     public void setPreviousValue(final ShippingMethodTaxAmountChangeValue previousValue);
 
+    /**
+     * factory method
+     * @return instance of SetShippingMethodTaxAmountChange
+     */
     public static SetShippingMethodTaxAmountChange of() {
         return new SetShippingMethodTaxAmountChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetShippingMethodTaxAmountChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetShippingMethodTaxAmountChange of(final SetShippingMethodTaxAmountChange template) {
         SetShippingMethodTaxAmountChangeImpl instance = new SetShippingMethodTaxAmountChangeImpl();
         instance.setChange(template.getChange());
@@ -100,18 +132,37 @@ public interface SetShippingMethodTaxAmountChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetShippingMethodTaxAmountChange
+     * @return builder
+     */
     public static SetShippingMethodTaxAmountChangeBuilder builder() {
         return SetShippingMethodTaxAmountChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetShippingMethodTaxAmountChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetShippingMethodTaxAmountChangeBuilder builder(final SetShippingMethodTaxAmountChange template) {
         return SetShippingMethodTaxAmountChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetShippingMethodTaxAmountChange(Function<SetShippingMethodTaxAmountChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetShippingMethodTaxAmountChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetShippingMethodTaxAmountChange>() {
             @Override

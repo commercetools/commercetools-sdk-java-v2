@@ -53,7 +53,7 @@ public class AddEnumValueChangeBuilder implements Builder<AddEnumValueChange> {
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class AddEnumValueChangeBuilder implements Builder<AddEnumValueChange> {
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -76,13 +76,28 @@ public class AddEnumValueChangeBuilder implements Builder<AddEnumValueChange> {
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>addEnumValue</code> on types</p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     *  <p>The name of the field/attribute definition updated.</p>
+     * @return fieldName
+     */
+
     public String getFieldName() {
         return this.fieldName;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public com.commercetools.history.models.change_value.EnumValue getNextValue() {
         return this.nextValue;
@@ -107,10 +122,19 @@ public class AddEnumValueChangeBuilder implements Builder<AddEnumValueChange> {
         return new AddEnumValueChangeImpl(change, fieldName, nextValue);
     }
 
+    /**
+     * factory method for an instance of AddEnumValueChangeBuilder
+     * @return builder
+     */
     public static AddEnumValueChangeBuilder of() {
         return new AddEnumValueChangeBuilder();
     }
 
+    /**
+     * create builder for AddEnumValueChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AddEnumValueChangeBuilder of(final AddEnumValueChange template) {
         AddEnumValueChangeBuilder builder = new AddEnumValueChangeBuilder();
         builder.change = template.getChange();

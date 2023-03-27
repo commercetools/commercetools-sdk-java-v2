@@ -34,6 +34,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface StagedOrderAddDeliveryAction
         extends StagedOrderUpdateAction, com.commercetools.api.models.CustomizableDraft<StagedOrderAddDeliveryAction> {
 
+    /**
+     * discriminator value for StagedOrderAddDeliveryAction
+     */
     String ADD_DELIVERY = "addDelivery";
 
     /**
@@ -68,24 +71,63 @@ public interface StagedOrderAddDeliveryAction
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
+    /**
+     * set items
+     * @param items values to be set
+     */
+
     @JsonIgnore
     public void setItems(final DeliveryItem... items);
 
+    /**
+     * set items
+     * @param items values to be set
+     */
+
     public void setItems(final List<DeliveryItem> items);
 
+    /**
+     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     * @param address value to be set
+     */
+
     public void setAddress(final BaseAddress address);
+
+    /**
+     * set parcels
+     * @param parcels values to be set
+     */
 
     @JsonIgnore
     public void setParcels(final ParcelDraft... parcels);
 
+    /**
+     * set parcels
+     * @param parcels values to be set
+     */
+
     public void setParcels(final List<ParcelDraft> parcels);
+
+    /**
+     *  <p>Custom Fields for the Transaction.</p>
+     * @param custom value to be set
+     */
 
     public void setCustom(final CustomFieldsDraft custom);
 
+    /**
+     * factory method
+     * @return instance of StagedOrderAddDeliveryAction
+     */
     public static StagedOrderAddDeliveryAction of() {
         return new StagedOrderAddDeliveryActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedOrderAddDeliveryAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedOrderAddDeliveryAction of(final StagedOrderAddDeliveryAction template) {
         StagedOrderAddDeliveryActionImpl instance = new StagedOrderAddDeliveryActionImpl();
         instance.setItems(template.getItems());
@@ -95,18 +137,37 @@ public interface StagedOrderAddDeliveryAction
         return instance;
     }
 
+    /**
+     * builder factory method for StagedOrderAddDeliveryAction
+     * @return builder
+     */
     public static StagedOrderAddDeliveryActionBuilder builder() {
         return StagedOrderAddDeliveryActionBuilder.of();
     }
 
+    /**
+     * create builder for StagedOrderAddDeliveryAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderAddDeliveryActionBuilder builder(final StagedOrderAddDeliveryAction template) {
         return StagedOrderAddDeliveryActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedOrderAddDeliveryAction(Function<StagedOrderAddDeliveryAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderAddDeliveryAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderAddDeliveryAction>() {
             @Override

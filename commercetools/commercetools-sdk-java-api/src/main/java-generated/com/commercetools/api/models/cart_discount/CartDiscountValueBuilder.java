@@ -27,6 +27,10 @@ public class CartDiscountValueBuilder {
         return com.commercetools.api.models.cart_discount.CartDiscountValueRelativeBuilder.of();
     }
 
+    /**
+     * factory method for an instance of CartDiscountValueBuilder
+     * @return builder
+     */
     public static CartDiscountValueBuilder of() {
         return new CartDiscountValueBuilder();
     }

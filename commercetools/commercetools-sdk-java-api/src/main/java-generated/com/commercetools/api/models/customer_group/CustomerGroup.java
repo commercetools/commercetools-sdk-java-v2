@@ -115,28 +115,82 @@ public interface CustomerGroup
     @JsonProperty("custom")
     public CustomFields getCustom();
 
+    /**
+     *  <p>Unique identifier of the CustomerGroup.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>Current version of the CustomerGroup.</p>
+     * @param version value to be set
+     */
 
     public void setVersion(final Long version);
 
+    /**
+     *  <p>Date and time (UTC) the CustomerGroup was initially created.</p>
+     * @param createdAt value to be set
+     */
+
     public void setCreatedAt(final ZonedDateTime createdAt);
+
+    /**
+     *  <p>Date and time (UTC) the CustomerGroup was last updated.</p>
+     * @param lastModifiedAt value to be set
+     */
 
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
+    /**
+     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy value to be set
+     */
+
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy value to be set
+     */
 
     public void setCreatedBy(final CreatedBy createdBy);
 
+    /**
+     *  <p>User-defined unique identifier for the CustomerGroup.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
+
+    /**
+     *  <p>Unique name of the CustomerGroup.</p>
+     * @param name value to be set
+     */
 
     public void setName(final String name);
 
+    /**
+     *  <p>Custom Fields for the CustomerGroup.</p>
+     * @param custom value to be set
+     */
+
     public void setCustom(final CustomFields custom);
 
+    /**
+     * factory method
+     * @return instance of CustomerGroup
+     */
     public static CustomerGroup of() {
         return new CustomerGroupImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomerGroup
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomerGroup of(final CustomerGroup template) {
         CustomerGroupImpl instance = new CustomerGroupImpl();
         instance.setId(template.getId());
@@ -151,14 +205,29 @@ public interface CustomerGroup
         return instance;
     }
 
+    /**
+     * builder factory method for CustomerGroup
+     * @return builder
+     */
     public static CustomerGroupBuilder builder() {
         return CustomerGroupBuilder.of();
     }
 
+    /**
+     * create builder for CustomerGroup instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerGroupBuilder builder(final CustomerGroup template) {
         return CustomerGroupBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomerGroup(Function<CustomerGroup, T> helper) {
         return helper.apply(this);
     }
@@ -167,6 +236,10 @@ public interface CustomerGroup
         return com.commercetools.api.models.common.ReferenceTypeId.CUSTOMER_GROUP;
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomerGroup> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomerGroup>() {
             @Override

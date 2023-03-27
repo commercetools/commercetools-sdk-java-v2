@@ -64,14 +64,29 @@ public class ProductSetCategoryOrderHintActionBuilder implements Builder<Product
         return this;
     }
 
+    /**
+     *  <p>The <code>id</code> of the Category to add the <code>orderHint</code>.</p>
+     * @return categoryId
+     */
+
     public String getCategoryId() {
         return this.categoryId;
     }
+
+    /**
+     *  <p>A string representing a number between 0 and 1. Must start with <code>0.</code> and cannot end with <code>0</code>. If empty, any existing value will be removed.</p>
+     * @return orderHint
+     */
 
     @Nullable
     public String getOrderHint() {
         return this.orderHint;
     }
+
+    /**
+     *  <p>If <code>true</code>, only the staged <code>categoryOrderHints</code> is updated. If <code>false</code>, both the current and staged <code>categoryOrderHints</code> are updated.</p>
+     * @return staged
+     */
 
     @Nullable
     public Boolean getStaged() {
@@ -95,10 +110,19 @@ public class ProductSetCategoryOrderHintActionBuilder implements Builder<Product
         return new ProductSetCategoryOrderHintActionImpl(categoryId, orderHint, staged);
     }
 
+    /**
+     * factory method for an instance of ProductSetCategoryOrderHintActionBuilder
+     * @return builder
+     */
     public static ProductSetCategoryOrderHintActionBuilder of() {
         return new ProductSetCategoryOrderHintActionBuilder();
     }
 
+    /**
+     * create builder for ProductSetCategoryOrderHintAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSetCategoryOrderHintActionBuilder of(final ProductSetCategoryOrderHintAction template) {
         ProductSetCategoryOrderHintActionBuilder builder = new ProductSetCategoryOrderHintActionBuilder();
         builder.categoryId = template.getCategoryId();

@@ -30,6 +30,9 @@ public class SetTextLineItemCustomTypeChangeImpl implements SetTextLineItemCusto
 
     private com.commercetools.history.models.common.CustomFields previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetTextLineItemCustomTypeChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("textLineItem") final com.commercetools.history.models.change_value.TextLineItemValue textLineItem,
@@ -42,6 +45,9 @@ public class SetTextLineItemCustomTypeChangeImpl implements SetTextLineItemCusto
         this.type = SET_TEXT_LINE_ITEM_CUSTOM_TYPE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetTextLineItemCustomTypeChangeImpl() {
         this.type = SET_TEXT_LINE_ITEM_CUSTOM_TYPE_CHANGE;
     }

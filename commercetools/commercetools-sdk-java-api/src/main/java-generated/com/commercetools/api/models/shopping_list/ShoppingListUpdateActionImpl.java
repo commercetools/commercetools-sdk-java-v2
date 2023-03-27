@@ -22,11 +22,17 @@ public class ShoppingListUpdateActionImpl implements ShoppingListUpdateAction, M
 
     private String action;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShoppingListUpdateActionImpl(@JsonProperty("action") final String action) {
         this.action = action;
     }
 
+    /**
+     * create empty instance
+     */
     public ShoppingListUpdateActionImpl() {
     }
 

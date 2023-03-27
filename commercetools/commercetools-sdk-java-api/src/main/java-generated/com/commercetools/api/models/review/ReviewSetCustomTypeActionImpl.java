@@ -26,6 +26,9 @@ public class ReviewSetCustomTypeActionImpl implements ReviewSetCustomTypeAction,
 
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReviewSetCustomTypeActionImpl(
             @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
@@ -35,6 +38,9 @@ public class ReviewSetCustomTypeActionImpl implements ReviewSetCustomTypeAction,
         this.action = SET_CUSTOM_TYPE;
     }
 
+    /**
+     * create empty instance
+     */
     public ReviewSetCustomTypeActionImpl() {
         this.action = SET_CUSTOM_TYPE;
     }

@@ -24,12 +24,18 @@ public class InventoryEntrySetKeyActionImpl implements InventoryEntrySetKeyActio
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     InventoryEntrySetKeyActionImpl(@JsonProperty("key") final String key) {
         this.key = key;
         this.action = SET_KEY;
     }
 
+    /**
+     * create empty instance
+     */
     public InventoryEntrySetKeyActionImpl() {
         this.action = SET_KEY;
     }

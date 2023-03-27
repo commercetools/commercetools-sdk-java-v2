@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ReturnInfoSetMessagePayloadImpl.class)
 public interface ReturnInfoSetMessagePayload extends OrderMessagePayload {
 
+    /**
+     * discriminator value for ReturnInfoSetMessagePayload
+     */
     String RETURN_INFO_SET = "ReturnInfoSet";
 
     /**
@@ -39,33 +42,71 @@ public interface ReturnInfoSetMessagePayload extends OrderMessagePayload {
     @JsonProperty("returnInfo")
     public List<ReturnInfo> getReturnInfo();
 
+    /**
+     *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
+     * @param returnInfo values to be set
+     */
+
     @JsonIgnore
     public void setReturnInfo(final ReturnInfo... returnInfo);
 
+    /**
+     *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
+     * @param returnInfo values to be set
+     */
+
     public void setReturnInfo(final List<ReturnInfo> returnInfo);
 
+    /**
+     * factory method
+     * @return instance of ReturnInfoSetMessagePayload
+     */
     public static ReturnInfoSetMessagePayload of() {
         return new ReturnInfoSetMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of ReturnInfoSetMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ReturnInfoSetMessagePayload of(final ReturnInfoSetMessagePayload template) {
         ReturnInfoSetMessagePayloadImpl instance = new ReturnInfoSetMessagePayloadImpl();
         instance.setReturnInfo(template.getReturnInfo());
         return instance;
     }
 
+    /**
+     * builder factory method for ReturnInfoSetMessagePayload
+     * @return builder
+     */
     public static ReturnInfoSetMessagePayloadBuilder builder() {
         return ReturnInfoSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for ReturnInfoSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReturnInfoSetMessagePayloadBuilder builder(final ReturnInfoSetMessagePayload template) {
         return ReturnInfoSetMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withReturnInfoSetMessagePayload(Function<ReturnInfoSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ReturnInfoSetMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ReturnInfoSetMessagePayload>() {
             @Override

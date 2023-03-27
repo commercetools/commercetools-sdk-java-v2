@@ -24,12 +24,18 @@ public class AccessDeniedErrorImpl implements AccessDeniedError, ModelBase {
 
     private String message;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AccessDeniedErrorImpl(@JsonProperty("message") final String message) {
         this.message = message;
         this.code = ACCESS_DENIED;
     }
 
+    /**
+     * create empty instance
+     */
     public AccessDeniedErrorImpl() {
         this.code = ACCESS_DENIED;
     }

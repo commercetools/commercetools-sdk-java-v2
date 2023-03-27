@@ -50,9 +50,19 @@ public class ProductTypeChangeAttributeConstraintActionBuilder
         return this;
     }
 
+    /**
+     *  <p>Name of the AttributeDefinition to update.</p>
+     * @return attributeName
+     */
+
     public String getAttributeName() {
         return this.attributeName;
     }
+
+    /**
+     *  <p><code>None</code></p>
+     * @return newValue
+     */
 
     public com.commercetools.api.models.product_type.AttributeConstraintEnumDraft getNewValue() {
         return this.newValue;
@@ -77,10 +87,19 @@ public class ProductTypeChangeAttributeConstraintActionBuilder
         return new ProductTypeChangeAttributeConstraintActionImpl(attributeName, newValue);
     }
 
+    /**
+     * factory method for an instance of ProductTypeChangeAttributeConstraintActionBuilder
+     * @return builder
+     */
     public static ProductTypeChangeAttributeConstraintActionBuilder of() {
         return new ProductTypeChangeAttributeConstraintActionBuilder();
     }
 
+    /**
+     * create builder for ProductTypeChangeAttributeConstraintAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductTypeChangeAttributeConstraintActionBuilder of(
             final ProductTypeChangeAttributeConstraintAction template) {
         ProductTypeChangeAttributeConstraintActionBuilder builder = new ProductTypeChangeAttributeConstraintActionBuilder();

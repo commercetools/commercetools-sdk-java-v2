@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ClassificationShippingRateInputDraft
         extends ShippingRateInputDraft, io.vrap.rmf.base.client.Draft<ClassificationShippingRateInputDraft> {
 
+    /**
+     * discriminator value for ClassificationShippingRateInputDraft
+     */
     String CLASSIFICATION = "Classification";
 
     /**
@@ -40,31 +43,64 @@ public interface ClassificationShippingRateInputDraft
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     *  <p>Key of the value used as a programmatic identifier.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
 
+    /**
+     * factory method
+     * @return instance of ClassificationShippingRateInputDraft
+     */
     public static ClassificationShippingRateInputDraft of() {
         return new ClassificationShippingRateInputDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of ClassificationShippingRateInputDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ClassificationShippingRateInputDraft of(final ClassificationShippingRateInputDraft template) {
         ClassificationShippingRateInputDraftImpl instance = new ClassificationShippingRateInputDraftImpl();
         instance.setKey(template.getKey());
         return instance;
     }
 
+    /**
+     * builder factory method for ClassificationShippingRateInputDraft
+     * @return builder
+     */
     public static ClassificationShippingRateInputDraftBuilder builder() {
         return ClassificationShippingRateInputDraftBuilder.of();
     }
 
+    /**
+     * create builder for ClassificationShippingRateInputDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ClassificationShippingRateInputDraftBuilder builder(
             final ClassificationShippingRateInputDraft template) {
         return ClassificationShippingRateInputDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withClassificationShippingRateInputDraft(Function<ClassificationShippingRateInputDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ClassificationShippingRateInputDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ClassificationShippingRateInputDraft>() {
             @Override

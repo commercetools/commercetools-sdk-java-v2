@@ -30,6 +30,9 @@ public class InventoryPagedQueryResponseImpl implements InventoryPagedQueryRespo
 
     private java.util.List<com.commercetools.api.models.inventory.InventoryEntry> results;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     InventoryPagedQueryResponseImpl(@JsonProperty("limit") final Long limit, @JsonProperty("offset") final Long offset,
             @JsonProperty("count") final Long count, @JsonProperty("total") final Long total,
@@ -41,6 +44,9 @@ public class InventoryPagedQueryResponseImpl implements InventoryPagedQueryRespo
         this.results = results;
     }
 
+    /**
+     * create empty instance
+     */
     public InventoryPagedQueryResponseImpl() {
     }
 

@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderUpdateSyncInfoActionImpl.class)
 public interface OrderUpdateSyncInfoAction extends OrderUpdateAction {
 
+    /**
+     * discriminator value for OrderUpdateSyncInfoAction
+     */
     String UPDATE_SYNC_INFO = "updateSyncInfo";
 
     /**
@@ -59,16 +62,40 @@ public interface OrderUpdateSyncInfoAction extends OrderUpdateAction {
     @JsonProperty("syncedAt")
     public ZonedDateTime getSyncedAt();
 
+    /**
+     *  <p>ResourceIdentifier to a Channel.</p>
+     * @param channel value to be set
+     */
+
     public void setChannel(final ChannelResourceIdentifier channel);
+
+    /**
+     * set externalId
+     * @param externalId value to be set
+     */
 
     public void setExternalId(final String externalId);
 
+    /**
+     * set syncedAt
+     * @param syncedAt value to be set
+     */
+
     public void setSyncedAt(final ZonedDateTime syncedAt);
 
+    /**
+     * factory method
+     * @return instance of OrderUpdateSyncInfoAction
+     */
     public static OrderUpdateSyncInfoAction of() {
         return new OrderUpdateSyncInfoActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderUpdateSyncInfoAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderUpdateSyncInfoAction of(final OrderUpdateSyncInfoAction template) {
         OrderUpdateSyncInfoActionImpl instance = new OrderUpdateSyncInfoActionImpl();
         instance.setChannel(template.getChannel());
@@ -77,18 +104,37 @@ public interface OrderUpdateSyncInfoAction extends OrderUpdateAction {
         return instance;
     }
 
+    /**
+     * builder factory method for OrderUpdateSyncInfoAction
+     * @return builder
+     */
     public static OrderUpdateSyncInfoActionBuilder builder() {
         return OrderUpdateSyncInfoActionBuilder.of();
     }
 
+    /**
+     * create builder for OrderUpdateSyncInfoAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderUpdateSyncInfoActionBuilder builder(final OrderUpdateSyncInfoAction template) {
         return OrderUpdateSyncInfoActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderUpdateSyncInfoAction(Function<OrderUpdateSyncInfoAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderUpdateSyncInfoAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderUpdateSyncInfoAction>() {
             @Override

@@ -33,12 +33,24 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductSelectionDeletedMessageImpl.class)
 public interface ProductSelectionDeletedMessage extends Message {
 
+    /**
+     * discriminator value for ProductSelectionDeletedMessage
+     */
     String PRODUCT_SELECTION_DELETED = "ProductSelectionDeleted";
 
+    /**
+     * factory method
+     * @return instance of ProductSelectionDeletedMessage
+     */
     public static ProductSelectionDeletedMessage of() {
         return new ProductSelectionDeletedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductSelectionDeletedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductSelectionDeletedMessage of(final ProductSelectionDeletedMessage template) {
         ProductSelectionDeletedMessageImpl instance = new ProductSelectionDeletedMessageImpl();
         instance.setId(template.getId());
@@ -54,18 +66,37 @@ public interface ProductSelectionDeletedMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductSelectionDeletedMessage
+     * @return builder
+     */
     public static ProductSelectionDeletedMessageBuilder builder() {
         return ProductSelectionDeletedMessageBuilder.of();
     }
 
+    /**
+     * create builder for ProductSelectionDeletedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSelectionDeletedMessageBuilder builder(final ProductSelectionDeletedMessage template) {
         return ProductSelectionDeletedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductSelectionDeletedMessage(Function<ProductSelectionDeletedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSelectionDeletedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductSelectionDeletedMessage>() {
             @Override

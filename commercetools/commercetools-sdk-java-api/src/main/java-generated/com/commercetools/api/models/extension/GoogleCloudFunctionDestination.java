@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = GoogleCloudFunctionDestinationImpl.class)
 public interface GoogleCloudFunctionDestination extends ExtensionDestination {
 
+    /**
+     * discriminator value for GoogleCloudFunctionDestination
+     */
     String GOOGLE_CLOUD_FUNCTION = "GoogleCloudFunction";
 
     /**
@@ -39,30 +42,63 @@ public interface GoogleCloudFunctionDestination extends ExtensionDestination {
     @JsonProperty("url")
     public String getUrl();
 
+    /**
+     *  <p>URL to the target function.</p>
+     * @param url value to be set
+     */
+
     public void setUrl(final String url);
 
+    /**
+     * factory method
+     * @return instance of GoogleCloudFunctionDestination
+     */
     public static GoogleCloudFunctionDestination of() {
         return new GoogleCloudFunctionDestinationImpl();
     }
 
+    /**
+     * factory method to copy an instance of GoogleCloudFunctionDestination
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static GoogleCloudFunctionDestination of(final GoogleCloudFunctionDestination template) {
         GoogleCloudFunctionDestinationImpl instance = new GoogleCloudFunctionDestinationImpl();
         instance.setUrl(template.getUrl());
         return instance;
     }
 
+    /**
+     * builder factory method for GoogleCloudFunctionDestination
+     * @return builder
+     */
     public static GoogleCloudFunctionDestinationBuilder builder() {
         return GoogleCloudFunctionDestinationBuilder.of();
     }
 
+    /**
+     * create builder for GoogleCloudFunctionDestination instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static GoogleCloudFunctionDestinationBuilder builder(final GoogleCloudFunctionDestination template) {
         return GoogleCloudFunctionDestinationBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withGoogleCloudFunctionDestination(Function<GoogleCloudFunctionDestination, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<GoogleCloudFunctionDestination> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<GoogleCloudFunctionDestination>() {
             @Override

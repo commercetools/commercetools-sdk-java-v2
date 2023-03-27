@@ -24,6 +24,9 @@ public class LocalizedStringFieldImpl implements LocalizedStringField, ModelBase
 
     private com.commercetools.importapi.models.common.LocalizedString value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     LocalizedStringFieldImpl(
             @JsonProperty("value") final com.commercetools.importapi.models.common.LocalizedString value) {
@@ -31,6 +34,9 @@ public class LocalizedStringFieldImpl implements LocalizedStringField, ModelBase
         this.type = LOCALIZED_STRING;
     }
 
+    /**
+     * create empty instance
+     */
     public LocalizedStringFieldImpl() {
         this.type = LOCALIZED_STRING;
     }

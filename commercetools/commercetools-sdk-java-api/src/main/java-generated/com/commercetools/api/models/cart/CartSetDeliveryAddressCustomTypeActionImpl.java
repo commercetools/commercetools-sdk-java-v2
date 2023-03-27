@@ -28,6 +28,9 @@ public class CartSetDeliveryAddressCustomTypeActionImpl implements CartSetDelive
 
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartSetDeliveryAddressCustomTypeActionImpl(@JsonProperty("deliveryId") final String deliveryId,
             @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
@@ -38,6 +41,9 @@ public class CartSetDeliveryAddressCustomTypeActionImpl implements CartSetDelive
         this.action = SET_DELIVERY_ADDRESS_CUSTOM_TYPE;
     }
 
+    /**
+     * create empty instance
+     */
     public CartSetDeliveryAddressCustomTypeActionImpl() {
         this.action = SET_DELIVERY_ADDRESS_CUSTOM_TYPE;
     }

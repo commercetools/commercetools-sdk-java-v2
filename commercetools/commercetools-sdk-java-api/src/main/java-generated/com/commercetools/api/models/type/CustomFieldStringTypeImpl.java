@@ -21,6 +21,9 @@ public class CustomFieldStringTypeImpl implements CustomFieldStringType, ModelBa
 
     private String name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomFieldStringTypeImpl() {
         this.name = STRING;

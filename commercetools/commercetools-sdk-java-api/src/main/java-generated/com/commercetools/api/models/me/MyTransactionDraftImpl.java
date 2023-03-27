@@ -30,6 +30,9 @@ public class MyTransactionDraftImpl implements MyTransactionDraft, ModelBase {
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyTransactionDraftImpl(@JsonProperty("timestamp") final java.time.ZonedDateTime timestamp,
             @JsonProperty("type") final com.commercetools.api.models.payment.TransactionType type,
@@ -43,6 +46,9 @@ public class MyTransactionDraftImpl implements MyTransactionDraft, ModelBase {
         this.custom = custom;
     }
 
+    /**
+     * create empty instance
+     */
     public MyTransactionDraftImpl() {
     }
 

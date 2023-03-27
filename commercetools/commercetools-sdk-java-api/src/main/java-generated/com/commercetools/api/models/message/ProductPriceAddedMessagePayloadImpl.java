@@ -28,6 +28,9 @@ public class ProductPriceAddedMessagePayloadImpl implements ProductPriceAddedMes
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductPriceAddedMessagePayloadImpl(@JsonProperty("variantId") final Long variantId,
             @JsonProperty("price") final com.commercetools.api.models.common.Price price,
@@ -38,6 +41,9 @@ public class ProductPriceAddedMessagePayloadImpl implements ProductPriceAddedMes
         this.type = PRODUCT_PRICE_ADDED;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductPriceAddedMessagePayloadImpl() {
         this.type = PRODUCT_PRICE_ADDED;
     }

@@ -105,24 +105,49 @@ public class ProductAddAssetActionBuilder implements Builder<ProductAddAssetActi
         return this;
     }
 
+    /**
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @return variantId
+     */
+
     @Nullable
     public Long getVariantId() {
         return this.variantId;
     }
+
+    /**
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
+     * @return sku
+     */
 
     @Nullable
     public String getSku() {
         return this.sku;
     }
 
+    /**
+     *  <p>If <code>true</code>, only the staged <code>assets</code> are updated. If <code>false</code>, both the current and staged <code>assets</code> are updated.</p>
+     * @return staged
+     */
+
     @Nullable
     public Boolean getStaged() {
         return this.staged;
     }
 
+    /**
+     *  <p>Value to append.</p>
+     * @return asset
+     */
+
     public com.commercetools.api.models.common.AssetDraft getAsset() {
         return this.asset;
     }
+
+    /**
+     *  <p>Position in <code>assets</code> where the Asset should be put. When specified, the value must be between <code>0</code> and the total number of Assets minus <code>1</code>.</p>
+     * @return position
+     */
 
     @Nullable
     public Integer getPosition() {
@@ -146,10 +171,19 @@ public class ProductAddAssetActionBuilder implements Builder<ProductAddAssetActi
         return new ProductAddAssetActionImpl(variantId, sku, staged, asset, position);
     }
 
+    /**
+     * factory method for an instance of ProductAddAssetActionBuilder
+     * @return builder
+     */
     public static ProductAddAssetActionBuilder of() {
         return new ProductAddAssetActionBuilder();
     }
 
+    /**
+     * create builder for ProductAddAssetAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductAddAssetActionBuilder of(final ProductAddAssetAction template) {
         ProductAddAssetActionBuilder builder = new ProductAddAssetActionBuilder();
         builder.variantId = template.getVariantId();

@@ -26,6 +26,9 @@ public class AddDiscountCodeChangeImpl implements AddDiscountCodeChange, ModelBa
 
     private com.commercetools.history.models.common.DiscountCodeInfo nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AddDiscountCodeChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.DiscountCodeInfo nextValue) {
@@ -34,6 +37,9 @@ public class AddDiscountCodeChangeImpl implements AddDiscountCodeChange, ModelBa
         this.type = ADD_DISCOUNT_CODE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public AddDiscountCodeChangeImpl() {
         this.type = ADD_DISCOUNT_CODE_CHANGE;
     }

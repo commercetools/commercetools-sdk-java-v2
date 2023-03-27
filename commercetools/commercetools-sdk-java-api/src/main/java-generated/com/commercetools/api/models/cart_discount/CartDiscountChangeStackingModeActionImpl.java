@@ -24,6 +24,9 @@ public class CartDiscountChangeStackingModeActionImpl implements CartDiscountCha
 
     private com.commercetools.api.models.cart_discount.StackingMode stackingMode;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartDiscountChangeStackingModeActionImpl(
             @JsonProperty("stackingMode") final com.commercetools.api.models.cart_discount.StackingMode stackingMode) {
@@ -31,6 +34,9 @@ public class CartDiscountChangeStackingModeActionImpl implements CartDiscountCha
         this.action = CHANGE_STACKING_MODE;
     }
 
+    /**
+     * create empty instance
+     */
     public CartDiscountChangeStackingModeActionImpl() {
         this.action = CHANGE_STACKING_MODE;
     }

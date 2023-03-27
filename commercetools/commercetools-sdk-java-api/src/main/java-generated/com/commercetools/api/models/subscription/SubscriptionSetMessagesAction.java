@@ -28,6 +28,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SubscriptionSetMessagesActionImpl.class)
 public interface SubscriptionSetMessagesAction extends SubscriptionUpdateAction {
 
+    /**
+     * discriminator value for SubscriptionSetMessagesAction
+     */
     String SET_MESSAGES = "setMessages";
 
     /**
@@ -38,29 +41,63 @@ public interface SubscriptionSetMessagesAction extends SubscriptionUpdateAction 
     @JsonProperty("messages")
     public List<MessageSubscription> getMessages();
 
+    /**
+     *  <p>Value to set. Can only be unset if <code>changes</code> is set.</p>
+     * @param messages values to be set
+     */
+
     @JsonIgnore
     public void setMessages(final MessageSubscription... messages);
 
+    /**
+     *  <p>Value to set. Can only be unset if <code>changes</code> is set.</p>
+     * @param messages values to be set
+     */
+
     public void setMessages(final List<MessageSubscription> messages);
 
+    /**
+     * factory method
+     * @return instance of SubscriptionSetMessagesAction
+     */
     public static SubscriptionSetMessagesAction of() {
         return new SubscriptionSetMessagesActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of SubscriptionSetMessagesAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SubscriptionSetMessagesAction of(final SubscriptionSetMessagesAction template) {
         SubscriptionSetMessagesActionImpl instance = new SubscriptionSetMessagesActionImpl();
         instance.setMessages(template.getMessages());
         return instance;
     }
 
+    /**
+     * builder factory method for SubscriptionSetMessagesAction
+     * @return builder
+     */
     public static SubscriptionSetMessagesActionBuilder builder() {
         return SubscriptionSetMessagesActionBuilder.of();
     }
 
+    /**
+     * create builder for SubscriptionSetMessagesAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SubscriptionSetMessagesActionBuilder builder(final SubscriptionSetMessagesAction template) {
         return SubscriptionSetMessagesActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSubscriptionSetMessagesAction(Function<SubscriptionSetMessagesAction, T> helper) {
         return helper.apply(this);
     }
@@ -69,6 +106,10 @@ public interface SubscriptionSetMessagesAction extends SubscriptionUpdateAction 
         return SubscriptionSetMessagesAction.of();
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SubscriptionSetMessagesAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SubscriptionSetMessagesAction>() {
             @Override

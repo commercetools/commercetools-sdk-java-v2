@@ -36,10 +36,19 @@ public class ProductUnpublishedMessagePayloadBuilder implements Builder<ProductU
         return new ProductUnpublishedMessagePayloadImpl();
     }
 
+    /**
+     * factory method for an instance of ProductUnpublishedMessagePayloadBuilder
+     * @return builder
+     */
     public static ProductUnpublishedMessagePayloadBuilder of() {
         return new ProductUnpublishedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for ProductUnpublishedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductUnpublishedMessagePayloadBuilder of(final ProductUnpublishedMessagePayload template) {
         ProductUnpublishedMessagePayloadBuilder builder = new ProductUnpublishedMessagePayloadBuilder();
         return builder;

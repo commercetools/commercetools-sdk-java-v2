@@ -26,6 +26,9 @@ public class ProductSlugChangedMessagePayloadImpl implements ProductSlugChangedM
 
     private com.commercetools.api.models.common.LocalizedString oldSlug;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSlugChangedMessagePayloadImpl(
             @JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug,
@@ -35,6 +38,9 @@ public class ProductSlugChangedMessagePayloadImpl implements ProductSlugChangedM
         this.type = PRODUCT_SLUG_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSlugChangedMessagePayloadImpl() {
         this.type = PRODUCT_SLUG_CHANGED;
     }

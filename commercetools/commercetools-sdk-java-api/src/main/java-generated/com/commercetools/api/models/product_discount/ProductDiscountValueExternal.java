@@ -26,29 +26,60 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductDiscountValueExternalImpl.class)
 public interface ProductDiscountValueExternal extends ProductDiscountValue {
 
+    /**
+     * discriminator value for ProductDiscountValueExternal
+     */
     String EXTERNAL = "external";
 
+    /**
+     * factory method
+     * @return instance of ProductDiscountValueExternal
+     */
     public static ProductDiscountValueExternal of() {
         return new ProductDiscountValueExternalImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductDiscountValueExternal
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductDiscountValueExternal of(final ProductDiscountValueExternal template) {
         ProductDiscountValueExternalImpl instance = new ProductDiscountValueExternalImpl();
         return instance;
     }
 
+    /**
+     * builder factory method for ProductDiscountValueExternal
+     * @return builder
+     */
     public static ProductDiscountValueExternalBuilder builder() {
         return ProductDiscountValueExternalBuilder.of();
     }
 
+    /**
+     * create builder for ProductDiscountValueExternal instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductDiscountValueExternalBuilder builder(final ProductDiscountValueExternal template) {
         return ProductDiscountValueExternalBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductDiscountValueExternal(Function<ProductDiscountValueExternal, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountValueExternal> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountValueExternal>() {
             @Override

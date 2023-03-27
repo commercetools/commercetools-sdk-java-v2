@@ -28,6 +28,9 @@ public class RemoveLocalizedEnumValuesChangeImpl implements RemoveLocalizedEnumV
 
     private com.commercetools.history.models.change_value.LocalizedEnumValue previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     RemoveLocalizedEnumValuesChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("attributeName") final String attributeName,
@@ -38,6 +41,9 @@ public class RemoveLocalizedEnumValuesChangeImpl implements RemoveLocalizedEnumV
         this.type = REMOVE_LOCALIZED_ENUM_VALUES_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public RemoveLocalizedEnumValuesChangeImpl() {
         this.type = REMOVE_LOCALIZED_ENUM_VALUES_CHANGE;
     }

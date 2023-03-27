@@ -44,26 +44,52 @@ public interface QuoteRequestUpdateAction
     @JsonProperty("action")
     public String getAction();
 
+    /**
+     * builder for changeQuoteRequestState subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.quote_request.QuoteRequestChangeQuoteRequestStateActionBuilder changeQuoteRequestStateBuilder() {
         return com.commercetools.api.models.quote_request.QuoteRequestChangeQuoteRequestStateActionBuilder.of();
     }
 
+    /**
+     * builder for setCustomField subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.quote_request.QuoteRequestSetCustomFieldActionBuilder setCustomFieldBuilder() {
         return com.commercetools.api.models.quote_request.QuoteRequestSetCustomFieldActionBuilder.of();
     }
 
+    /**
+     * builder for setCustomType subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.quote_request.QuoteRequestSetCustomTypeActionBuilder setCustomTypeBuilder() {
         return com.commercetools.api.models.quote_request.QuoteRequestSetCustomTypeActionBuilder.of();
     }
 
+    /**
+     * builder for transitionState subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.quote_request.QuoteRequestTransitionStateActionBuilder transitionStateBuilder() {
         return com.commercetools.api.models.quote_request.QuoteRequestTransitionStateActionBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withQuoteRequestUpdateAction(Function<QuoteRequestUpdateAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<QuoteRequestUpdateAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<QuoteRequestUpdateAction>() {
             @Override

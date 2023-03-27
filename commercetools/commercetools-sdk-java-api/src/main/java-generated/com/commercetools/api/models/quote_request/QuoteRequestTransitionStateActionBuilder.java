@@ -64,9 +64,19 @@ public class QuoteRequestTransitionStateActionBuilder implements Builder<QuoteRe
         return this;
     }
 
+    /**
+     *  <p>Value to set. If there is no State yet, this must be an initial State.</p>
+     * @return state
+     */
+
     public com.commercetools.api.models.state.StateResourceIdentifier getState() {
         return this.state;
     }
+
+    /**
+     *  <p>Switch validations on or off.</p>
+     * @return force
+     */
 
     @Nullable
     public Boolean getForce() {
@@ -90,10 +100,19 @@ public class QuoteRequestTransitionStateActionBuilder implements Builder<QuoteRe
         return new QuoteRequestTransitionStateActionImpl(state, force);
     }
 
+    /**
+     * factory method for an instance of QuoteRequestTransitionStateActionBuilder
+     * @return builder
+     */
     public static QuoteRequestTransitionStateActionBuilder of() {
         return new QuoteRequestTransitionStateActionBuilder();
     }
 
+    /**
+     * create builder for QuoteRequestTransitionStateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static QuoteRequestTransitionStateActionBuilder of(final QuoteRequestTransitionStateAction template) {
         QuoteRequestTransitionStateActionBuilder builder = new QuoteRequestTransitionStateActionBuilder();
         builder.state = template.getState();

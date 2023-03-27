@@ -241,44 +241,94 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the TaxCategory.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Current version of the TaxCategory.</p>
+     * @return version
+     */
 
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *  <p>Date and time (UTC) the TaxCategory was initially created.</p>
+     * @return createdAt
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+     *  <p>Date and time (UTC) the TaxCategory was last updated.</p>
+     * @return lastModifiedAt
+     */
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
+     */
+
     @Nullable
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
 
+    /**
+     *  <p>Name of the TaxCategory.</p>
+     * @return name
+     */
+
     public String getName() {
         return this.name;
     }
+
+    /**
+     *  <p>Description of the TaxCategory.</p>
+     * @return description
+     */
 
     @Nullable
     public String getDescription() {
         return this.description;
     }
 
+    /**
+     *  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID.</p>
+     * @return rates
+     */
+
     public java.util.List<com.commercetools.api.models.tax_category.TaxRate> getRates() {
         return this.rates;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the TaxCategory.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
@@ -309,10 +359,19 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
             rates, key);
     }
 
+    /**
+     * factory method for an instance of TaxCategoryBuilder
+     * @return builder
+     */
     public static TaxCategoryBuilder of() {
         return new TaxCategoryBuilder();
     }
 
+    /**
+     * create builder for TaxCategory instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TaxCategoryBuilder of(final TaxCategory template) {
         TaxCategoryBuilder builder = new TaxCategoryBuilder();
         builder.id = template.getId();

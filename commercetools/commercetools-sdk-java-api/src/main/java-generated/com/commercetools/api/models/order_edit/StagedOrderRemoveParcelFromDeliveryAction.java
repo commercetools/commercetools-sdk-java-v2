@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderRemoveParcelFromDeliveryActionImpl.class)
 public interface StagedOrderRemoveParcelFromDeliveryAction extends StagedOrderUpdateAction {
 
+    /**
+     * discriminator value for StagedOrderRemoveParcelFromDeliveryAction
+     */
     String REMOVE_PARCEL_FROM_DELIVERY = "removeParcelFromDelivery";
 
     /**
@@ -40,12 +43,26 @@ public interface StagedOrderRemoveParcelFromDeliveryAction extends StagedOrderUp
     @JsonProperty("parcelId")
     public String getParcelId();
 
+    /**
+     * set parcelId
+     * @param parcelId value to be set
+     */
+
     public void setParcelId(final String parcelId);
 
+    /**
+     * factory method
+     * @return instance of StagedOrderRemoveParcelFromDeliveryAction
+     */
     public static StagedOrderRemoveParcelFromDeliveryAction of() {
         return new StagedOrderRemoveParcelFromDeliveryActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedOrderRemoveParcelFromDeliveryAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedOrderRemoveParcelFromDeliveryAction of(
             final StagedOrderRemoveParcelFromDeliveryAction template) {
         StagedOrderRemoveParcelFromDeliveryActionImpl instance = new StagedOrderRemoveParcelFromDeliveryActionImpl();
@@ -53,20 +70,39 @@ public interface StagedOrderRemoveParcelFromDeliveryAction extends StagedOrderUp
         return instance;
     }
 
+    /**
+     * builder factory method for StagedOrderRemoveParcelFromDeliveryAction
+     * @return builder
+     */
     public static StagedOrderRemoveParcelFromDeliveryActionBuilder builder() {
         return StagedOrderRemoveParcelFromDeliveryActionBuilder.of();
     }
 
+    /**
+     * create builder for StagedOrderRemoveParcelFromDeliveryAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderRemoveParcelFromDeliveryActionBuilder builder(
             final StagedOrderRemoveParcelFromDeliveryAction template) {
         return StagedOrderRemoveParcelFromDeliveryActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedOrderRemoveParcelFromDeliveryAction(
             Function<StagedOrderRemoveParcelFromDeliveryAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderRemoveParcelFromDeliveryAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderRemoveParcelFromDeliveryAction>() {
             @Override

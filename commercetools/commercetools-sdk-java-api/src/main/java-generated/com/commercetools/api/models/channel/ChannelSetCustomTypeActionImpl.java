@@ -26,6 +26,9 @@ public class ChannelSetCustomTypeActionImpl implements ChannelSetCustomTypeActio
 
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChannelSetCustomTypeActionImpl(
             @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
@@ -35,6 +38,9 @@ public class ChannelSetCustomTypeActionImpl implements ChannelSetCustomTypeActio
         this.action = SET_CUSTOM_TYPE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChannelSetCustomTypeActionImpl() {
         this.action = SET_CUSTOM_TYPE;
     }

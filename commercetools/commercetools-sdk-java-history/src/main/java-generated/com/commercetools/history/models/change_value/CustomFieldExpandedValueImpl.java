@@ -26,6 +26,9 @@ public class CustomFieldExpandedValueImpl implements CustomFieldExpandedValue, M
 
     private com.commercetools.history.models.common.LocalizedString label;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomFieldExpandedValueImpl(@JsonProperty("name") final String name,
             @JsonProperty("value") final java.lang.Object value,
@@ -35,6 +38,9 @@ public class CustomFieldExpandedValueImpl implements CustomFieldExpandedValue, M
         this.label = label;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomFieldExpandedValueImpl() {
     }
 

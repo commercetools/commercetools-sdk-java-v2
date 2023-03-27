@@ -62,9 +62,19 @@ public class ProductVariantAddedMessagePayloadBuilder implements Builder<Product
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Product Variant that was added.</p>
+     * @return variant
+     */
+
     public com.commercetools.api.models.product.ProductVariant getVariant() {
         return this.variant;
     }
+
+    /**
+     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     * @return staged
+     */
 
     public Boolean getStaged() {
         return this.staged;
@@ -88,10 +98,19 @@ public class ProductVariantAddedMessagePayloadBuilder implements Builder<Product
         return new ProductVariantAddedMessagePayloadImpl(variant, staged);
     }
 
+    /**
+     * factory method for an instance of ProductVariantAddedMessagePayloadBuilder
+     * @return builder
+     */
     public static ProductVariantAddedMessagePayloadBuilder of() {
         return new ProductVariantAddedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for ProductVariantAddedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductVariantAddedMessagePayloadBuilder of(final ProductVariantAddedMessagePayload template) {
         ProductVariantAddedMessagePayloadBuilder builder = new ProductVariantAddedMessagePayloadBuilder();
         builder.variant = template.getVariant();

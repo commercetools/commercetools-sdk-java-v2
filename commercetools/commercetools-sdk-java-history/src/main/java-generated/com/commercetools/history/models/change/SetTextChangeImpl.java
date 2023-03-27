@@ -28,6 +28,9 @@ public class SetTextChangeImpl implements SetTextChange, ModelBase {
 
     private String nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetTextChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final String previousValue,
@@ -38,6 +41,9 @@ public class SetTextChangeImpl implements SetTextChange, ModelBase {
         this.type = SET_TEXT_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetTextChangeImpl() {
         this.type = SET_TEXT_CHANGE;
     }

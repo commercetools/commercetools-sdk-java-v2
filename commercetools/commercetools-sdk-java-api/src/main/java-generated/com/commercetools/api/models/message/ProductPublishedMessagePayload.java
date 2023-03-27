@@ -34,6 +34,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductPublishedMessagePayloadImpl.class)
 public interface ProductPublishedMessagePayload extends MessagePayload {
 
+    /**
+     * discriminator value for ProductPublishedMessagePayload
+     */
     String PRODUCT_PUBLISHED = "ProductPublished";
 
     /**
@@ -61,19 +64,48 @@ public interface ProductPublishedMessagePayload extends MessagePayload {
     @JsonProperty("scope")
     public ProductPublishScope getScope();
 
+    /**
+     *  <p>List of image URLs which were removed during the Publish update action.</p>
+     * @param removedImageUrls values to be set
+     */
+
     @JsonIgnore
     public void setRemovedImageUrls(final String... removedImageUrls);
 
+    /**
+     *  <p>List of image URLs which were removed during the Publish update action.</p>
+     * @param removedImageUrls values to be set
+     */
+
     public void setRemovedImageUrls(final List<String> removedImageUrls);
+
+    /**
+     *  <p>Current Product Projection of the Product at the time of creation.</p>
+     * @param productProjection value to be set
+     */
 
     public void setProductProjection(final ProductProjection productProjection);
 
+    /**
+     *  <p>Publishing Scope that was used during the Publish update action.</p>
+     * @param scope value to be set
+     */
+
     public void setScope(final ProductPublishScope scope);
 
+    /**
+     * factory method
+     * @return instance of ProductPublishedMessagePayload
+     */
     public static ProductPublishedMessagePayload of() {
         return new ProductPublishedMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductPublishedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductPublishedMessagePayload of(final ProductPublishedMessagePayload template) {
         ProductPublishedMessagePayloadImpl instance = new ProductPublishedMessagePayloadImpl();
         instance.setRemovedImageUrls(template.getRemovedImageUrls());
@@ -82,18 +114,37 @@ public interface ProductPublishedMessagePayload extends MessagePayload {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductPublishedMessagePayload
+     * @return builder
+     */
     public static ProductPublishedMessagePayloadBuilder builder() {
         return ProductPublishedMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for ProductPublishedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductPublishedMessagePayloadBuilder builder(final ProductPublishedMessagePayload template) {
         return ProductPublishedMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductPublishedMessagePayload(Function<ProductPublishedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductPublishedMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductPublishedMessagePayload>() {
             @Override

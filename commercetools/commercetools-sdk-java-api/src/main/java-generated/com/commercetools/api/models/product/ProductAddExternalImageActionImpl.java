@@ -30,6 +30,9 @@ public class ProductAddExternalImageActionImpl implements ProductAddExternalImag
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductAddExternalImageActionImpl(@JsonProperty("variantId") final Long variantId,
             @JsonProperty("sku") final String sku,
@@ -42,6 +45,9 @@ public class ProductAddExternalImageActionImpl implements ProductAddExternalImag
         this.action = ADD_EXTERNAL_IMAGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductAddExternalImageActionImpl() {
         this.action = ADD_EXTERNAL_IMAGE;
     }

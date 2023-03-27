@@ -41,7 +41,7 @@ public class CustomFieldExpandedValueBuilder implements Builder<CustomFieldExpan
     }
 
     /**
-     *
+     * set the value to the value
      * @param value value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class CustomFieldExpandedValueBuilder implements Builder<CustomFieldExpan
     }
 
     /**
-     *
+     * set the value to the label using the builder function
      * @param builder function to build the label value
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class CustomFieldExpandedValueBuilder implements Builder<CustomFieldExpan
     }
 
     /**
-     *
+     * set the value to the label
      * @param label value to be set
      * @return Builder
      */
@@ -74,13 +74,28 @@ public class CustomFieldExpandedValueBuilder implements Builder<CustomFieldExpan
         return this;
     }
 
+    /**
+     *  <p>Name of a custom field.</p>
+     * @return name
+     */
+
     public String getName() {
         return this.name;
     }
 
+    /**
+     * value of value}
+     * @return value
+     */
+
     public java.lang.Object getValue() {
         return this.value;
     }
+
+    /**
+     * value of label}
+     * @return label
+     */
 
     public com.commercetools.history.models.common.LocalizedString getLabel() {
         return this.label;
@@ -105,10 +120,19 @@ public class CustomFieldExpandedValueBuilder implements Builder<CustomFieldExpan
         return new CustomFieldExpandedValueImpl(name, value, label);
     }
 
+    /**
+     * factory method for an instance of CustomFieldExpandedValueBuilder
+     * @return builder
+     */
     public static CustomFieldExpandedValueBuilder of() {
         return new CustomFieldExpandedValueBuilder();
     }
 
+    /**
+     * create builder for CustomFieldExpandedValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomFieldExpandedValueBuilder of(final CustomFieldExpandedValue template) {
         CustomFieldExpandedValueBuilder builder = new CustomFieldExpandedValueBuilder();
         builder.name = template.getName();

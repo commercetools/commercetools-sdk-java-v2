@@ -24,6 +24,9 @@ public class ReferenceImpl implements Reference, ModelBase {
 
     private com.commercetools.history.models.common.ReferenceTypeId typeId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReferenceImpl(@JsonProperty("id") final String id,
             @JsonProperty("typeId") final com.commercetools.history.models.common.ReferenceTypeId typeId) {
@@ -31,6 +34,9 @@ public class ReferenceImpl implements Reference, ModelBase {
         this.typeId = typeId;
     }
 
+    /**
+     * create empty instance
+     */
     public ReferenceImpl() {
     }
 

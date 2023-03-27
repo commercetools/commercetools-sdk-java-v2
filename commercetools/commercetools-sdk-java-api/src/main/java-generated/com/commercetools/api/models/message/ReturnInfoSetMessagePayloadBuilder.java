@@ -93,6 +93,11 @@ public class ReturnInfoSetMessagePayloadBuilder implements Builder<ReturnInfoSet
         return this;
     }
 
+    /**
+     *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
+     * @return returnInfo
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.order.ReturnInfo> getReturnInfo() {
         return this.returnInfo;
@@ -114,10 +119,19 @@ public class ReturnInfoSetMessagePayloadBuilder implements Builder<ReturnInfoSet
         return new ReturnInfoSetMessagePayloadImpl(returnInfo);
     }
 
+    /**
+     * factory method for an instance of ReturnInfoSetMessagePayloadBuilder
+     * @return builder
+     */
     public static ReturnInfoSetMessagePayloadBuilder of() {
         return new ReturnInfoSetMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for ReturnInfoSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReturnInfoSetMessagePayloadBuilder of(final ReturnInfoSetMessagePayload template) {
         ReturnInfoSetMessagePayloadBuilder builder = new ReturnInfoSetMessagePayloadBuilder();
         builder.returnInfo = template.getReturnInfo();

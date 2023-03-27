@@ -30,6 +30,9 @@ public class ProductAddPriceActionImpl implements ProductAddPriceAction, ModelBa
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductAddPriceActionImpl(@JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku,
             @JsonProperty("price") final com.commercetools.api.models.common.PriceDraft price,
@@ -41,6 +44,9 @@ public class ProductAddPriceActionImpl implements ProductAddPriceAction, ModelBa
         this.action = ADD_PRICE;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductAddPriceActionImpl() {
         this.action = ADD_PRICE;
     }

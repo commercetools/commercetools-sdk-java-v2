@@ -24,6 +24,9 @@ public class ProjectUpdateImpl implements ProjectUpdate, ModelBase {
 
     private java.util.List<com.commercetools.api.models.project.ProjectUpdateAction> actions;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProjectUpdateImpl(@JsonProperty("version") final Long version,
             @JsonProperty("actions") final java.util.List<com.commercetools.api.models.project.ProjectUpdateAction> actions) {
@@ -31,6 +34,9 @@ public class ProjectUpdateImpl implements ProjectUpdate, ModelBase {
         this.actions = actions;
     }
 
+    /**
+     * create empty instance
+     */
     public ProjectUpdateImpl() {
     }
 

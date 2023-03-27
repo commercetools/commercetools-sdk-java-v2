@@ -24,6 +24,9 @@ public class ProductSelectionSettingDraftImpl implements ProductSelectionSetting
 
     private Boolean active;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSelectionSettingDraftImpl(
             @JsonProperty("productSelection") final com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier productSelection,
@@ -32,6 +35,9 @@ public class ProductSelectionSettingDraftImpl implements ProductSelectionSetting
         this.active = active;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSelectionSettingDraftImpl() {
     }
 

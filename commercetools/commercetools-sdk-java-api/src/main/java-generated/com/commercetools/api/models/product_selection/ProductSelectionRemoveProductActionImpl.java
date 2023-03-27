@@ -24,6 +24,9 @@ public class ProductSelectionRemoveProductActionImpl implements ProductSelection
 
     private com.commercetools.api.models.product.ProductResourceIdentifier product;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSelectionRemoveProductActionImpl(
             @JsonProperty("product") final com.commercetools.api.models.product.ProductResourceIdentifier product) {
@@ -31,6 +34,9 @@ public class ProductSelectionRemoveProductActionImpl implements ProductSelection
         this.action = REMOVE_PRODUCT;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSelectionRemoveProductActionImpl() {
         this.action = REMOVE_PRODUCT;
     }

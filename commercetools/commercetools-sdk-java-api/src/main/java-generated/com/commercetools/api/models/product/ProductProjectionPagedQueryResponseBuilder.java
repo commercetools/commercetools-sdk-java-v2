@@ -149,22 +149,47 @@ public class ProductProjectionPagedQueryResponseBuilder implements Builder<Produ
         return this;
     }
 
+    /**
+     *  <p>Number of results requested.</p>
+     * @return limit
+     */
+
     public Long getLimit() {
         return this.limit;
     }
 
+    /**
+     *  <p>Actual number of results returned.</p>
+     * @return count
+     */
+
     public Long getCount() {
         return this.count;
     }
+
+    /**
+     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     * @return total
+     */
 
     @Nullable
     public Long getTotal() {
         return this.total;
     }
 
+    /**
+     *  <p>Number of elements skipped.</p>
+     * @return offset
+     */
+
     public Long getOffset() {
         return this.offset;
     }
+
+    /**
+     *  <p>ProductProjections matching the query.</p>
+     * @return results
+     */
 
     public java.util.List<com.commercetools.api.models.product.ProductProjection> getResults() {
         return this.results;
@@ -190,10 +215,19 @@ public class ProductProjectionPagedQueryResponseBuilder implements Builder<Produ
         return new ProductProjectionPagedQueryResponseImpl(limit, count, total, offset, results);
     }
 
+    /**
+     * factory method for an instance of ProductProjectionPagedQueryResponseBuilder
+     * @return builder
+     */
     public static ProductProjectionPagedQueryResponseBuilder of() {
         return new ProductProjectionPagedQueryResponseBuilder();
     }
 
+    /**
+     * create builder for ProductProjectionPagedQueryResponse instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductProjectionPagedQueryResponseBuilder of(final ProductProjectionPagedQueryResponse template) {
         ProductProjectionPagedQueryResponseBuilder builder = new ProductProjectionPagedQueryResponseBuilder();
         builder.limit = template.getLimit();

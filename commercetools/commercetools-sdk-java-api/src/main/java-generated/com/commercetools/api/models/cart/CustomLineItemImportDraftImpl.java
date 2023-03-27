@@ -40,6 +40,9 @@ public class CustomLineItemImportDraftImpl implements CustomLineItemImportDraft,
 
     private com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomLineItemImportDraftImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("quantity") final Long quantity,
@@ -63,6 +66,9 @@ public class CustomLineItemImportDraftImpl implements CustomLineItemImportDraft,
         this.priceMode = priceMode;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomLineItemImportDraftImpl() {
     }
 

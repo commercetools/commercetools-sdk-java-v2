@@ -74,9 +74,19 @@ public class TypeChangeLocalizedEnumValueOrderActionBuilder
         return this;
     }
 
+    /**
+     *  <p><code>name</code> of the Field Definition to update.</p>
+     * @return fieldName
+     */
+
     public String getFieldName() {
         return this.fieldName;
     }
+
+    /**
+     *  <p>Must match the set of <code>key</code>s of the LocalizedEnumValues in the FieldDefinition (up to order).</p>
+     * @return keys
+     */
 
     public java.util.List<String> getKeys() {
         return this.keys;
@@ -100,10 +110,19 @@ public class TypeChangeLocalizedEnumValueOrderActionBuilder
         return new TypeChangeLocalizedEnumValueOrderActionImpl(fieldName, keys);
     }
 
+    /**
+     * factory method for an instance of TypeChangeLocalizedEnumValueOrderActionBuilder
+     * @return builder
+     */
     public static TypeChangeLocalizedEnumValueOrderActionBuilder of() {
         return new TypeChangeLocalizedEnumValueOrderActionBuilder();
     }
 
+    /**
+     * create builder for TypeChangeLocalizedEnumValueOrderAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TypeChangeLocalizedEnumValueOrderActionBuilder of(
             final TypeChangeLocalizedEnumValueOrderAction template) {
         TypeChangeLocalizedEnumValueOrderActionBuilder builder = new TypeChangeLocalizedEnumValueOrderActionBuilder();

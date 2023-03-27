@@ -34,6 +34,11 @@ public class GoogleCloudFunctionDestinationBuilder implements Builder<GoogleClou
         return this;
     }
 
+    /**
+     *  <p>URL to the target function.</p>
+     * @return url
+     */
+
     public String getUrl() {
         return this.url;
     }
@@ -55,10 +60,19 @@ public class GoogleCloudFunctionDestinationBuilder implements Builder<GoogleClou
         return new GoogleCloudFunctionDestinationImpl(url);
     }
 
+    /**
+     * factory method for an instance of GoogleCloudFunctionDestinationBuilder
+     * @return builder
+     */
     public static GoogleCloudFunctionDestinationBuilder of() {
         return new GoogleCloudFunctionDestinationBuilder();
     }
 
+    /**
+     * create builder for GoogleCloudFunctionDestination instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static GoogleCloudFunctionDestinationBuilder of(final GoogleCloudFunctionDestination template) {
         GoogleCloudFunctionDestinationBuilder builder = new GoogleCloudFunctionDestinationBuilder();
         builder.url = template.getUrl();

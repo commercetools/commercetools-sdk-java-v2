@@ -35,6 +35,11 @@ public class CartChangeTaxCalculationModeActionBuilder implements Builder<CartCh
         return this;
     }
 
+    /**
+     *  <p>New value to set.</p>
+     * @return taxCalculationMode
+     */
+
     public com.commercetools.api.models.cart.TaxCalculationMode getTaxCalculationMode() {
         return this.taxCalculationMode;
     }
@@ -57,10 +62,19 @@ public class CartChangeTaxCalculationModeActionBuilder implements Builder<CartCh
         return new CartChangeTaxCalculationModeActionImpl(taxCalculationMode);
     }
 
+    /**
+     * factory method for an instance of CartChangeTaxCalculationModeActionBuilder
+     * @return builder
+     */
     public static CartChangeTaxCalculationModeActionBuilder of() {
         return new CartChangeTaxCalculationModeActionBuilder();
     }
 
+    /**
+     * create builder for CartChangeTaxCalculationModeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartChangeTaxCalculationModeActionBuilder of(final CartChangeTaxCalculationModeAction template) {
         CartChangeTaxCalculationModeActionBuilder builder = new CartChangeTaxCalculationModeActionBuilder();
         builder.taxCalculationMode = template.getTaxCalculationMode();

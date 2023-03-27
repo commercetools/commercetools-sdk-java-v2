@@ -26,6 +26,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ShoppingListSetKeyActionImpl.class)
 public interface ShoppingListSetKeyAction extends ShoppingListUpdateAction {
 
+    /**
+     * discriminator value for ShoppingListSetKeyAction
+     */
     String SET_KEY = "setKey";
 
     /**
@@ -36,26 +39,55 @@ public interface ShoppingListSetKeyAction extends ShoppingListUpdateAction {
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
 
+    /**
+     * factory method
+     * @return instance of ShoppingListSetKeyAction
+     */
     public static ShoppingListSetKeyAction of() {
         return new ShoppingListSetKeyActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ShoppingListSetKeyAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ShoppingListSetKeyAction of(final ShoppingListSetKeyAction template) {
         ShoppingListSetKeyActionImpl instance = new ShoppingListSetKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;
     }
 
+    /**
+     * builder factory method for ShoppingListSetKeyAction
+     * @return builder
+     */
     public static ShoppingListSetKeyActionBuilder builder() {
         return ShoppingListSetKeyActionBuilder.of();
     }
 
+    /**
+     * create builder for ShoppingListSetKeyAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShoppingListSetKeyActionBuilder builder(final ShoppingListSetKeyAction template) {
         return ShoppingListSetKeyActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withShoppingListSetKeyAction(Function<ShoppingListSetKeyAction, T> helper) {
         return helper.apply(this);
     }
@@ -64,6 +96,10 @@ public interface ShoppingListSetKeyAction extends ShoppingListUpdateAction {
         return ShoppingListSetKeyAction.of();
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListSetKeyAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListSetKeyAction>() {
             @Override

@@ -45,7 +45,7 @@ public class ChangeMasterVariantChangeBuilder implements Builder<ChangeMasterVar
     }
 
     /**
-     *
+     * set the value to the catalogData
      * @param catalogData value to be set
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class ChangeMasterVariantChangeBuilder implements Builder<ChangeMasterVar
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class ChangeMasterVariantChangeBuilder implements Builder<ChangeMasterVar
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class ChangeMasterVariantChangeBuilder implements Builder<ChangeMasterVar
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -92,7 +92,7 @@ public class ChangeMasterVariantChangeBuilder implements Builder<ChangeMasterVar
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -102,17 +102,37 @@ public class ChangeMasterVariantChangeBuilder implements Builder<ChangeMasterVar
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>changeMasterVariant</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of catalogData}
+     * @return catalogData
+     */
 
     public String getCatalogData() {
         return this.catalogData;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public com.commercetools.history.models.common.Variant getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public com.commercetools.history.models.common.Variant getNextValue() {
         return this.nextValue;
@@ -138,10 +158,19 @@ public class ChangeMasterVariantChangeBuilder implements Builder<ChangeMasterVar
         return new ChangeMasterVariantChangeImpl(change, catalogData, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of ChangeMasterVariantChangeBuilder
+     * @return builder
+     */
     public static ChangeMasterVariantChangeBuilder of() {
         return new ChangeMasterVariantChangeBuilder();
     }
 
+    /**
+     * create builder for ChangeMasterVariantChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeMasterVariantChangeBuilder of(final ChangeMasterVariantChange template) {
         ChangeMasterVariantChangeBuilder builder = new ChangeMasterVariantChangeBuilder();
         builder.change = template.getChange();

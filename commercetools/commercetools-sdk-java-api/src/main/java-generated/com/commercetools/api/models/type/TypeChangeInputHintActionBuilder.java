@@ -49,9 +49,19 @@ public class TypeChangeInputHintActionBuilder implements Builder<TypeChangeInput
         return this;
     }
 
+    /**
+     *  <p><code>name</code> of the Field Definition to update.</p>
+     * @return fieldName
+     */
+
     public String getFieldName() {
         return this.fieldName;
     }
+
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     * @return inputHint
+     */
 
     public com.commercetools.api.models.type.TypeTextInputHint getInputHint() {
         return this.inputHint;
@@ -75,10 +85,19 @@ public class TypeChangeInputHintActionBuilder implements Builder<TypeChangeInput
         return new TypeChangeInputHintActionImpl(fieldName, inputHint);
     }
 
+    /**
+     * factory method for an instance of TypeChangeInputHintActionBuilder
+     * @return builder
+     */
     public static TypeChangeInputHintActionBuilder of() {
         return new TypeChangeInputHintActionBuilder();
     }
 
+    /**
+     * create builder for TypeChangeInputHintAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TypeChangeInputHintActionBuilder of(final TypeChangeInputHintAction template) {
         TypeChangeInputHintActionBuilder builder = new TypeChangeInputHintActionBuilder();
         builder.fieldName = template.getFieldName();

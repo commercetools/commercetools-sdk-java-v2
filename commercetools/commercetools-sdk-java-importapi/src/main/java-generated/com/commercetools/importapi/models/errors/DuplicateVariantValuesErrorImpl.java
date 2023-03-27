@@ -26,6 +26,9 @@ public class DuplicateVariantValuesErrorImpl implements DuplicateVariantValuesEr
 
     private com.commercetools.importapi.models.errors.VariantValues variantValues;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DuplicateVariantValuesErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("variantValues") final com.commercetools.importapi.models.errors.VariantValues variantValues) {
@@ -34,6 +37,9 @@ public class DuplicateVariantValuesErrorImpl implements DuplicateVariantValuesEr
         this.code = DUPLICATE_VARIANT_VALUES;
     }
 
+    /**
+     * create empty instance
+     */
     public DuplicateVariantValuesErrorImpl() {
         this.code = DUPLICATE_VARIANT_VALUES;
     }

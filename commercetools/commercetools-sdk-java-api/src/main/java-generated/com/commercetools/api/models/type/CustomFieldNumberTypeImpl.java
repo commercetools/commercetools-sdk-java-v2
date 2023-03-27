@@ -21,6 +21,9 @@ public class CustomFieldNumberTypeImpl implements CustomFieldNumberType, ModelBa
 
     private String name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomFieldNumberTypeImpl() {
         this.name = NUMBER;

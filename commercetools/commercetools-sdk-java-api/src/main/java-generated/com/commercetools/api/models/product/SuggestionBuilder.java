@@ -34,6 +34,11 @@ public class SuggestionBuilder implements Builder<Suggestion> {
         return this;
     }
 
+    /**
+     *  <p>The suggested text.</p>
+     * @return text
+     */
+
     public String getText() {
         return this.text;
     }
@@ -55,10 +60,19 @@ public class SuggestionBuilder implements Builder<Suggestion> {
         return new SuggestionImpl(text);
     }
 
+    /**
+     * factory method for an instance of SuggestionBuilder
+     * @return builder
+     */
     public static SuggestionBuilder of() {
         return new SuggestionBuilder();
     }
 
+    /**
+     * create builder for Suggestion instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SuggestionBuilder of(final Suggestion template) {
         SuggestionBuilder builder = new SuggestionBuilder();
         builder.text = template.getText();

@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = LocalizableEnumAttributeImpl.class)
 public interface LocalizableEnumAttribute extends Attribute {
 
+    /**
+     * discriminator value for LocalizableEnumAttribute
+     */
     String LENUM = "lenum";
 
     /**
@@ -39,12 +42,26 @@ public interface LocalizableEnumAttribute extends Attribute {
     @JsonProperty("value")
     public String getValue();
 
+    /**
+     * set value
+     * @param value value to be set
+     */
+
     public void setValue(final String value);
 
+    /**
+     * factory method
+     * @return instance of LocalizableEnumAttribute
+     */
     public static LocalizableEnumAttribute of() {
         return new LocalizableEnumAttributeImpl();
     }
 
+    /**
+     * factory method to copy an instance of LocalizableEnumAttribute
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static LocalizableEnumAttribute of(final LocalizableEnumAttribute template) {
         LocalizableEnumAttributeImpl instance = new LocalizableEnumAttributeImpl();
         instance.setName(template.getName());
@@ -52,18 +69,37 @@ public interface LocalizableEnumAttribute extends Attribute {
         return instance;
     }
 
+    /**
+     * builder factory method for LocalizableEnumAttribute
+     * @return builder
+     */
     public static LocalizableEnumAttributeBuilder builder() {
         return LocalizableEnumAttributeBuilder.of();
     }
 
+    /**
+     * create builder for LocalizableEnumAttribute instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static LocalizableEnumAttributeBuilder builder(final LocalizableEnumAttribute template) {
         return LocalizableEnumAttributeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withLocalizableEnumAttribute(Function<LocalizableEnumAttribute, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<LocalizableEnumAttribute> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<LocalizableEnumAttribute>() {
             @Override

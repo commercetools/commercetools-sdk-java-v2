@@ -77,15 +77,30 @@ public class CategoryChangeAssetNameActionBuilder implements Builder<CategoryCha
         return this;
     }
 
+    /**
+     *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
+     * @return assetId
+     */
+
     @Nullable
     public String getAssetId() {
         return this.assetId;
     }
 
+    /**
+     *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
+     * @return assetKey
+     */
+
     @Nullable
     public String getAssetKey() {
         return this.assetKey;
     }
+
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     * @return name
+     */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
@@ -108,10 +123,19 @@ public class CategoryChangeAssetNameActionBuilder implements Builder<CategoryCha
         return new CategoryChangeAssetNameActionImpl(assetId, assetKey, name);
     }
 
+    /**
+     * factory method for an instance of CategoryChangeAssetNameActionBuilder
+     * @return builder
+     */
     public static CategoryChangeAssetNameActionBuilder of() {
         return new CategoryChangeAssetNameActionBuilder();
     }
 
+    /**
+     * create builder for CategoryChangeAssetNameAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategoryChangeAssetNameActionBuilder of(final CategoryChangeAssetNameAction template) {
         CategoryChangeAssetNameActionBuilder builder = new CategoryChangeAssetNameActionBuilder();
         builder.assetId = template.getAssetId();

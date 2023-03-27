@@ -39,7 +39,7 @@ public class RemoveAddressChangeBuilder implements Builder<RemoveAddressChange> 
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class RemoveAddressChangeBuilder implements Builder<RemoveAddressChange> 
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -62,9 +62,19 @@ public class RemoveAddressChangeBuilder implements Builder<RemoveAddressChange> 
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>removeAddress</code> action.</p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public com.commercetools.history.models.common.Address getPreviousValue() {
         return this.previousValue;
@@ -88,10 +98,19 @@ public class RemoveAddressChangeBuilder implements Builder<RemoveAddressChange> 
         return new RemoveAddressChangeImpl(change, previousValue);
     }
 
+    /**
+     * factory method for an instance of RemoveAddressChangeBuilder
+     * @return builder
+     */
     public static RemoveAddressChangeBuilder of() {
         return new RemoveAddressChangeBuilder();
     }
 
+    /**
+     * create builder for RemoveAddressChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static RemoveAddressChangeBuilder of(final RemoveAddressChange template) {
         RemoveAddressChangeBuilder builder = new RemoveAddressChangeBuilder();
         builder.change = template.getChange();

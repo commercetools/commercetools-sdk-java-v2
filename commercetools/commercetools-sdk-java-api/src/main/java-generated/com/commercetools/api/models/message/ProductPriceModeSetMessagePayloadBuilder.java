@@ -35,6 +35,11 @@ public class ProductPriceModeSetMessagePayloadBuilder implements Builder<Product
         return this;
     }
 
+    /**
+     *  <p>The PriceMode that was set.</p>
+     * @return to
+     */
+
     public com.commercetools.api.models.product.ProductPriceModeEnum getTo() {
         return this.to;
     }
@@ -56,10 +61,19 @@ public class ProductPriceModeSetMessagePayloadBuilder implements Builder<Product
         return new ProductPriceModeSetMessagePayloadImpl(to);
     }
 
+    /**
+     * factory method for an instance of ProductPriceModeSetMessagePayloadBuilder
+     * @return builder
+     */
     public static ProductPriceModeSetMessagePayloadBuilder of() {
         return new ProductPriceModeSetMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for ProductPriceModeSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductPriceModeSetMessagePayloadBuilder of(final ProductPriceModeSetMessagePayload template) {
         ProductPriceModeSetMessagePayloadBuilder builder = new ProductPriceModeSetMessagePayloadBuilder();
         builder.to = template.getTo();

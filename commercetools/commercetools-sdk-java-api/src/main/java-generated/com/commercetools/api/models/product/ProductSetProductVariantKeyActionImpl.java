@@ -30,6 +30,9 @@ public class ProductSetProductVariantKeyActionImpl implements ProductSetProductV
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSetProductVariantKeyActionImpl(@JsonProperty("variantId") final Long variantId,
             @JsonProperty("sku") final String sku, @JsonProperty("key") final String key,
@@ -41,6 +44,9 @@ public class ProductSetProductVariantKeyActionImpl implements ProductSetProductV
         this.action = SET_PRODUCT_VARIANT_KEY;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSetProductVariantKeyActionImpl() {
         this.action = SET_PRODUCT_VARIANT_KEY;
     }

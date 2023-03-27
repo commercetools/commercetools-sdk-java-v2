@@ -26,6 +26,9 @@ public class TransactionChangeValueImpl implements TransactionChangeValue, Model
 
     private String timestamp;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TransactionChangeValueImpl(@JsonProperty("id") final String id,
             @JsonProperty("interactionId") final String interactionId,
@@ -35,6 +38,9 @@ public class TransactionChangeValueImpl implements TransactionChangeValue, Model
         this.timestamp = timestamp;
     }
 
+    /**
+     * create empty instance
+     */
     public TransactionChangeValueImpl() {
     }
 

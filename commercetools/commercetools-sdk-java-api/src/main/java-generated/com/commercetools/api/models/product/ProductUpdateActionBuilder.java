@@ -203,6 +203,10 @@ public class ProductUpdateActionBuilder {
         return com.commercetools.api.models.product.ProductUnpublishActionBuilder.of();
     }
 
+    /**
+     * factory method for an instance of ProductUpdateActionBuilder
+     * @return builder
+     */
     public static ProductUpdateActionBuilder of() {
         return new ProductUpdateActionBuilder();
     }

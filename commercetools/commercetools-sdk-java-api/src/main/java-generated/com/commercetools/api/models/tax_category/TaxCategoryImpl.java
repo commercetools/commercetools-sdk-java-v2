@@ -40,6 +40,9 @@ public class TaxCategoryImpl implements TaxCategory, ModelBase {
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TaxCategoryImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -61,6 +64,9 @@ public class TaxCategoryImpl implements TaxCategory, ModelBase {
         this.key = key;
     }
 
+    /**
+     * create empty instance
+     */
     public TaxCategoryImpl() {
     }
 

@@ -27,6 +27,9 @@ public class PaymentStatusInterfaceCodeSetMessagePayloadImpl
 
     private String interfaceCode;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PaymentStatusInterfaceCodeSetMessagePayloadImpl(@JsonProperty("paymentId") final String paymentId,
             @JsonProperty("interfaceCode") final String interfaceCode) {
@@ -35,6 +38,9 @@ public class PaymentStatusInterfaceCodeSetMessagePayloadImpl
         this.type = PAYMENT_STATUS_INTERFACE_CODE_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public PaymentStatusInterfaceCodeSetMessagePayloadImpl() {
         this.type = PAYMENT_STATUS_INTERFACE_CODE_SET;
     }

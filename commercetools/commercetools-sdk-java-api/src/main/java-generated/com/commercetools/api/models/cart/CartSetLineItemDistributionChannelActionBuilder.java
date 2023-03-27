@@ -73,9 +73,22 @@ public class CartSetLineItemDistributionChannelActionBuilder
         return this;
     }
 
+    /**
+     *  <p><code>id</code> of the LineItem to update.</p>
+     * @return lineItemId
+     */
+
     public String getLineItemId() {
         return this.lineItemId;
     }
+
+    /**
+     *  <ul>
+     *   <li>If present, a Reference to the Channel is set for the LineItem specified by <code>lineItemId</code>.</li>
+     *   <li>If not present, the current Reference to a distribution channel is removed from the LineItem specified by <code>lineItemId</code>. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</li>
+     *  </ul>
+     * @return distributionChannel
+     */
 
     @Nullable
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
@@ -99,10 +112,19 @@ public class CartSetLineItemDistributionChannelActionBuilder
         return new CartSetLineItemDistributionChannelActionImpl(lineItemId, distributionChannel);
     }
 
+    /**
+     * factory method for an instance of CartSetLineItemDistributionChannelActionBuilder
+     * @return builder
+     */
     public static CartSetLineItemDistributionChannelActionBuilder of() {
         return new CartSetLineItemDistributionChannelActionBuilder();
     }
 
+    /**
+     * create builder for CartSetLineItemDistributionChannelAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartSetLineItemDistributionChannelActionBuilder of(
             final CartSetLineItemDistributionChannelAction template) {
         CartSetLineItemDistributionChannelActionBuilder builder = new CartSetLineItemDistributionChannelActionBuilder();

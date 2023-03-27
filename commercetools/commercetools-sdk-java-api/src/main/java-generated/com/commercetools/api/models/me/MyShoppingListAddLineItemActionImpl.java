@@ -34,6 +34,9 @@ public class MyShoppingListAddLineItemActionImpl implements MyShoppingListAddLin
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyShoppingListAddLineItemActionImpl(@JsonProperty("sku") final String sku,
             @JsonProperty("productId") final String productId, @JsonProperty("variantId") final Long variantId,
@@ -49,6 +52,9 @@ public class MyShoppingListAddLineItemActionImpl implements MyShoppingListAddLin
         this.action = ADD_LINE_ITEM;
     }
 
+    /**
+     * create empty instance
+     */
     public MyShoppingListAddLineItemActionImpl() {
         this.action = ADD_LINE_ITEM;
     }

@@ -79,6 +79,10 @@ public class StoreUpdateActionBuilder {
         return com.commercetools.api.models.store.StoreSetSupplyChannelsActionBuilder.of();
     }
 
+    /**
+     * factory method for an instance of StoreUpdateActionBuilder
+     * @return builder
+     */
     public static StoreUpdateActionBuilder of() {
         return new StoreUpdateActionBuilder();
     }

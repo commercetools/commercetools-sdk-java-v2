@@ -45,6 +45,9 @@ public class StandalonePriceExternalDiscountSetMessageImpl
 
     private com.commercetools.api.models.common.DiscountedPrice discounted;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StandalonePriceExternalDiscountSetMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -71,6 +74,9 @@ public class StandalonePriceExternalDiscountSetMessageImpl
         this.type = STANDALONE_PRICE_EXTERNAL_DISCOUNT_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public StandalonePriceExternalDiscountSetMessageImpl() {
         this.type = STANDALONE_PRICE_EXTERNAL_DISCOUNT_SET;
     }

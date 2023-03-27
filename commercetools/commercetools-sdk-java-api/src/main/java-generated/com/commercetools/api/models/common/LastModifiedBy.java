@@ -61,18 +61,47 @@ public interface LastModifiedBy extends ClientLogging {
     @JsonProperty("anonymousId")
     public String getAnonymousId();
 
+    /**
+     *  <p><code>id</code> of the APIClient which modified the resource.</p>
+     * @param clientId value to be set
+     */
+
     public void setClientId(final String clientId);
+
+    /**
+     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
+     * @param externalUserId value to be set
+     */
 
     public void setExternalUserId(final String externalUserId);
 
+    /**
+     *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
+     * @param customer value to be set
+     */
+
     public void setCustomer(final CustomerReference customer);
+
+    /**
+     *  <p>Indicates the anonymous session during which the resource was modified.</p>
+     * @param anonymousId value to be set
+     */
 
     public void setAnonymousId(final String anonymousId);
 
+    /**
+     * factory method
+     * @return instance of LastModifiedBy
+     */
     public static LastModifiedBy of() {
         return new LastModifiedByImpl();
     }
 
+    /**
+     * factory method to copy an instance of LastModifiedBy
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static LastModifiedBy of(final LastModifiedBy template) {
         LastModifiedByImpl instance = new LastModifiedByImpl();
         instance.setClientId(template.getClientId());
@@ -82,18 +111,37 @@ public interface LastModifiedBy extends ClientLogging {
         return instance;
     }
 
+    /**
+     * builder factory method for LastModifiedBy
+     * @return builder
+     */
     public static LastModifiedByBuilder builder() {
         return LastModifiedByBuilder.of();
     }
 
+    /**
+     * create builder for LastModifiedBy instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static LastModifiedByBuilder builder(final LastModifiedBy template) {
         return LastModifiedByBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withLastModifiedBy(Function<LastModifiedBy, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<LastModifiedBy> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<LastModifiedBy>() {
             @Override

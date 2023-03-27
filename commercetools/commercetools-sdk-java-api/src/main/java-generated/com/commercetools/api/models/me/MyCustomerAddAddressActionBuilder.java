@@ -47,6 +47,11 @@ public class MyCustomerAddAddressActionBuilder implements Builder<MyCustomerAddA
         return this;
     }
 
+    /**
+     *  <p>Value to append to the <code>addresses</code> array.</p>
+     * @return address
+     */
+
     public com.commercetools.api.models.common.BaseAddress getAddress() {
         return this.address;
     }
@@ -68,10 +73,19 @@ public class MyCustomerAddAddressActionBuilder implements Builder<MyCustomerAddA
         return new MyCustomerAddAddressActionImpl(address);
     }
 
+    /**
+     * factory method for an instance of MyCustomerAddAddressActionBuilder
+     * @return builder
+     */
     public static MyCustomerAddAddressActionBuilder of() {
         return new MyCustomerAddAddressActionBuilder();
     }
 
+    /**
+     * create builder for MyCustomerAddAddressAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCustomerAddAddressActionBuilder of(final MyCustomerAddAddressAction template) {
         MyCustomerAddAddressActionBuilder builder = new MyCustomerAddAddressActionBuilder();
         builder.address = template.getAddress();

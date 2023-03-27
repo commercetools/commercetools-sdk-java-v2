@@ -72,29 +72,78 @@ public interface LineItemProductVariantImportDraft
     @JsonProperty("images")
     public List<Image> getImages();
 
+    /**
+     *  <p>Maps to <code>ProductVariant.product</code>.</p>
+     * @param productVariant value to be set
+     */
+
     public void setProductVariant(final ProductVariantKeyReference productVariant);
 
+    /**
+     *  <p>Maps to <code>ProductVariantImportDraft.sku</code>.</p>
+     * @param sku value to be set
+     */
+
     public void setSku(final String sku);
+
+    /**
+     *  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>
+     * @param prices values to be set
+     */
 
     @JsonIgnore
     public void setPrices(final LineItemPrice... prices);
 
+    /**
+     *  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>
+     * @param prices values to be set
+     */
+
     public void setPrices(final List<LineItemPrice> prices);
+
+    /**
+     *  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>
+     * @param attributes values to be set
+     */
 
     @JsonIgnore
     public void setAttributes(final Attribute... attributes);
 
+    /**
+     *  <p>Maps to <code>ProductVariantImportDraft.attributes</code></p>
+     * @param attributes values to be set
+     */
+
     public void setAttributes(final List<Attribute> attributes);
+
+    /**
+     *  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>
+     * @param images values to be set
+     */
 
     @JsonIgnore
     public void setImages(final Image... images);
 
+    /**
+     *  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>
+     * @param images values to be set
+     */
+
     public void setImages(final List<Image> images);
 
+    /**
+     * factory method
+     * @return instance of LineItemProductVariantImportDraft
+     */
     public static LineItemProductVariantImportDraft of() {
         return new LineItemProductVariantImportDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of LineItemProductVariantImportDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static LineItemProductVariantImportDraft of(final LineItemProductVariantImportDraft template) {
         LineItemProductVariantImportDraftImpl instance = new LineItemProductVariantImportDraftImpl();
         instance.setProductVariant(template.getProductVariant());
@@ -105,18 +154,37 @@ public interface LineItemProductVariantImportDraft
         return instance;
     }
 
+    /**
+     * builder factory method for LineItemProductVariantImportDraft
+     * @return builder
+     */
     public static LineItemProductVariantImportDraftBuilder builder() {
         return LineItemProductVariantImportDraftBuilder.of();
     }
 
+    /**
+     * create builder for LineItemProductVariantImportDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static LineItemProductVariantImportDraftBuilder builder(final LineItemProductVariantImportDraft template) {
         return LineItemProductVariantImportDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withLineItemProductVariantImportDraft(Function<LineItemProductVariantImportDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<LineItemProductVariantImportDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<LineItemProductVariantImportDraft>() {
             @Override

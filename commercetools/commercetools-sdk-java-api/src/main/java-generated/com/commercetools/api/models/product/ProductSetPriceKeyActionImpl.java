@@ -28,6 +28,9 @@ public class ProductSetPriceKeyActionImpl implements ProductSetPriceKeyAction, M
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSetPriceKeyActionImpl(@JsonProperty("priceId") final String priceId,
             @JsonProperty("staged") final Boolean staged, @JsonProperty("key") final String key) {
@@ -37,6 +40,9 @@ public class ProductSetPriceKeyActionImpl implements ProductSetPriceKeyAction, M
         this.action = SET_PRICE_KEY;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSetPriceKeyActionImpl() {
         this.action = SET_PRICE_KEY;
     }

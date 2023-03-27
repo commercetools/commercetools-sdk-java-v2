@@ -76,23 +76,62 @@ public interface ProjectCategoryRecommendationPagedQueryResponse {
     @JsonProperty("meta")
     public ProjectCategoryRecommendationMeta getMeta();
 
+    /**
+     * set count
+     * @param count value to be set
+     */
+
     public void setCount(final Long count);
+
+    /**
+     * set total
+     * @param total value to be set
+     */
 
     public void setTotal(final Long total);
 
+    /**
+     *  <p>Number of elements skipped.</p>
+     * @param offset value to be set
+     */
+
     public void setOffset(final Long offset);
+
+    /**
+     * set results
+     * @param results values to be set
+     */
 
     @JsonIgnore
     public void setResults(final ProjectCategoryRecommendation... results);
 
+    /**
+     * set results
+     * @param results values to be set
+     */
+
     public void setResults(final List<ProjectCategoryRecommendation> results);
+
+    /**
+     * set meta
+     * @param meta value to be set
+     */
 
     public void setMeta(final ProjectCategoryRecommendationMeta meta);
 
+    /**
+     * factory method
+     * @return instance of ProjectCategoryRecommendationPagedQueryResponse
+     */
     public static ProjectCategoryRecommendationPagedQueryResponse of() {
         return new ProjectCategoryRecommendationPagedQueryResponseImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProjectCategoryRecommendationPagedQueryResponse
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProjectCategoryRecommendationPagedQueryResponse of(
             final ProjectCategoryRecommendationPagedQueryResponse template) {
         ProjectCategoryRecommendationPagedQueryResponseImpl instance = new ProjectCategoryRecommendationPagedQueryResponseImpl();
@@ -104,20 +143,39 @@ public interface ProjectCategoryRecommendationPagedQueryResponse {
         return instance;
     }
 
+    /**
+     * builder factory method for ProjectCategoryRecommendationPagedQueryResponse
+     * @return builder
+     */
     public static ProjectCategoryRecommendationPagedQueryResponseBuilder builder() {
         return ProjectCategoryRecommendationPagedQueryResponseBuilder.of();
     }
 
+    /**
+     * create builder for ProjectCategoryRecommendationPagedQueryResponse instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProjectCategoryRecommendationPagedQueryResponseBuilder builder(
             final ProjectCategoryRecommendationPagedQueryResponse template) {
         return ProjectCategoryRecommendationPagedQueryResponseBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProjectCategoryRecommendationPagedQueryResponse(
             Function<ProjectCategoryRecommendationPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProjectCategoryRecommendationPagedQueryResponse> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProjectCategoryRecommendationPagedQueryResponse>() {
             @Override

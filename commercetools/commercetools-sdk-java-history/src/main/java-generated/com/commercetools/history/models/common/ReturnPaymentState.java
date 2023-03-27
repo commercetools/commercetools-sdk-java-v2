@@ -23,13 +23,28 @@ public interface ReturnPaymentState {
 
     ReturnPaymentState NOT_REFUNDED = ReturnPaymentStateEnum.NOT_REFUNDED;
 
+    /**
+     * possible values of ReturnPaymentState
+     */
     enum ReturnPaymentStateEnum implements ReturnPaymentState {
+        /**
+         * NonRefundable
+         */
         NON_REFUNDABLE("NonRefundable"),
 
+        /**
+         * Initial
+         */
         INITIAL("Initial"),
 
+        /**
+         * Refunded
+         */
         REFUNDED("Refunded"),
 
+        /**
+         * NotRefunded
+         */
         NOT_REFUNDED("NotRefunded");
         private final String jsonName;
 
@@ -46,13 +61,30 @@ public interface ReturnPaymentState {
         }
     }
 
+    /**
+     * the JSON value
+     * @return json value
+     */
     @JsonValue
     String getJsonName();
 
+    /**
+     * the enum value
+     * @return name
+     */
     String name();
 
+    /**
+     * convert value to string
+     * @return string representation
+     */
     String toString();
 
+    /**
+     * factory method for a enum value of ReturnPaymentState
+     * if no enum has been found an anonymous instance will be created
+     * @return enum instance
+     */
     @JsonCreator
     public static ReturnPaymentState findEnum(String value) {
         return findEnumViaJsonName(value).orElse(new ReturnPaymentState() {
@@ -72,10 +104,18 @@ public interface ReturnPaymentState {
         });
     }
 
+    /**
+     * method to find enum using the JSON value
+     * @return optional of enum instance
+     */
     public static Optional<ReturnPaymentState> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
 
+    /**
+     * possible enum values
+     * @return array of possible enum values
+     */
     public static ReturnPaymentState[] values() {
         return ReturnPaymentStateEnum.values();
     }

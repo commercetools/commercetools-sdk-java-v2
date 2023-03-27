@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AddTextLineItemChangeImpl.class)
 public interface AddTextLineItemChange extends Change {
 
+    /**
+     * discriminator value for AddTextLineItemChange
+     */
     String ADD_TEXT_LINE_ITEM_CHANGE = "AddTextLineItemChange";
 
     /**
@@ -59,14 +62,33 @@ public interface AddTextLineItemChange extends Change {
     @JsonProperty("nextValue")
     public TextLineItem getNextValue();
 
+    /**
+     * set change
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
 
     public void setNextValue(final TextLineItem nextValue);
 
+    /**
+     * factory method
+     * @return instance of AddTextLineItemChange
+     */
     public static AddTextLineItemChange of() {
         return new AddTextLineItemChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of AddTextLineItemChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static AddTextLineItemChange of(final AddTextLineItemChange template) {
         AddTextLineItemChangeImpl instance = new AddTextLineItemChangeImpl();
         instance.setChange(template.getChange());
@@ -74,18 +96,37 @@ public interface AddTextLineItemChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for AddTextLineItemChange
+     * @return builder
+     */
     public static AddTextLineItemChangeBuilder builder() {
         return AddTextLineItemChangeBuilder.of();
     }
 
+    /**
+     * create builder for AddTextLineItemChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AddTextLineItemChangeBuilder builder(final AddTextLineItemChange template) {
         return AddTextLineItemChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAddTextLineItemChange(Function<AddTextLineItemChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AddTextLineItemChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AddTextLineItemChange>() {
             @Override

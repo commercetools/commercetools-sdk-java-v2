@@ -48,6 +48,9 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
 
     private com.commercetools.api.models.type.CustomFields custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     InventoryEntryImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -77,6 +80,9 @@ public class InventoryEntryImpl implements InventoryEntry, ModelBase {
         this.custom = custom;
     }
 
+    /**
+     * create empty instance
+     */
     public InventoryEntryImpl() {
     }
 

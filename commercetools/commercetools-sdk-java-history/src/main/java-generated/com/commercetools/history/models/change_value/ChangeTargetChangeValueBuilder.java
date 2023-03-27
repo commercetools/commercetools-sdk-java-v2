@@ -31,6 +31,10 @@ public class ChangeTargetChangeValueBuilder {
         return com.commercetools.history.models.change_value.ChangeTargetShippingChangeValueBuilder.of();
     }
 
+    /**
+     * factory method for an instance of ChangeTargetChangeValueBuilder
+     * @return builder
+     */
     public static ChangeTargetChangeValueBuilder of() {
         return new ChangeTargetChangeValueBuilder();
     }

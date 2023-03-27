@@ -53,10 +53,20 @@ public class ProductDiscountSetValidFromAndUntilActionBuilder
         return this;
     }
 
+    /**
+     *  <p>Value to set. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     * @return validFrom
+     */
+
     @Nullable
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
+
+    /**
+     *  <p>Value to set. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     * @return validUntil
+     */
 
     @Nullable
     public java.time.ZonedDateTime getValidUntil() {
@@ -79,10 +89,19 @@ public class ProductDiscountSetValidFromAndUntilActionBuilder
         return new ProductDiscountSetValidFromAndUntilActionImpl(validFrom, validUntil);
     }
 
+    /**
+     * factory method for an instance of ProductDiscountSetValidFromAndUntilActionBuilder
+     * @return builder
+     */
     public static ProductDiscountSetValidFromAndUntilActionBuilder of() {
         return new ProductDiscountSetValidFromAndUntilActionBuilder();
     }
 
+    /**
+     * create builder for ProductDiscountSetValidFromAndUntilAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductDiscountSetValidFromAndUntilActionBuilder of(
             final ProductDiscountSetValidFromAndUntilAction template) {
         ProductDiscountSetValidFromAndUntilActionBuilder builder = new ProductDiscountSetValidFromAndUntilActionBuilder();

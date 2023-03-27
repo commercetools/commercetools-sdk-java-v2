@@ -45,7 +45,7 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
     }
 
     /**
-     *
+     * set the value to the category using the builder function
      * @param builder function to build the category value
      * @return Builder
      */
@@ -57,7 +57,7 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
     }
 
     /**
-     *
+     * set the value to the category
      * @param category value to be set
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
     }
 
     /**
-     *
+     * set values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
     }
 
     /**
-     *
+     * set value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -92,7 +92,7 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
     }
 
     /**
-     *
+     * add values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -107,7 +107,7 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
     }
 
     /**
-     *
+     * add the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -122,7 +122,7 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -135,7 +135,7 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
     }
 
     /**
-     *
+     * set values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -146,7 +146,7 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
     }
 
     /**
-     *
+     * set value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -158,7 +158,7 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
     }
 
     /**
-     *
+     * add values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -173,7 +173,7 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
     }
 
     /**
-     *
+     * add the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -188,7 +188,7 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -200,17 +200,37 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>addToCategory</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of category}
+     * @return category
+     */
 
     public com.commercetools.history.models.common.Reference getCategory() {
         return this.category;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public java.util.List<com.commercetools.history.models.common.Reference> getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public java.util.List<com.commercetools.history.models.common.Reference> getNextValue() {
         return this.nextValue;
@@ -236,10 +256,19 @@ public class AddToCategoryChangeBuilder implements Builder<AddToCategoryChange> 
         return new AddToCategoryChangeImpl(change, category, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of AddToCategoryChangeBuilder
+     * @return builder
+     */
     public static AddToCategoryChangeBuilder of() {
         return new AddToCategoryChangeBuilder();
     }
 
+    /**
+     * create builder for AddToCategoryChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AddToCategoryChangeBuilder of(final AddToCategoryChange template) {
         AddToCategoryChangeBuilder builder = new AddToCategoryChangeBuilder();
         builder.change = template.getChange();

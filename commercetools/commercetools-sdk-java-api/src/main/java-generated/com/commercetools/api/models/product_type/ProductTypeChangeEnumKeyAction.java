@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductTypeChangeEnumKeyActionImpl.class)
 public interface ProductTypeChangeEnumKeyAction extends ProductTypeUpdateAction {
 
+    /**
+     * discriminator value for ProductTypeChangeEnumKeyAction
+     */
     String CHANGE_ENUM_KEY = "changeEnumKey";
 
     /**
@@ -59,16 +62,40 @@ public interface ProductTypeChangeEnumKeyAction extends ProductTypeUpdateAction 
     @JsonProperty("newKey")
     public String getNewKey();
 
+    /**
+     *  <p>Name of the AttributeDefinition to update.</p>
+     * @param attributeName value to be set
+     */
+
     public void setAttributeName(final String attributeName);
+
+    /**
+     *  <p>Existing key to be changed.</p>
+     * @param key value to be set
+     */
 
     public void setKey(final String key);
 
+    /**
+     *  <p>New key to be set.</p>
+     * @param newKey value to be set
+     */
+
     public void setNewKey(final String newKey);
 
+    /**
+     * factory method
+     * @return instance of ProductTypeChangeEnumKeyAction
+     */
     public static ProductTypeChangeEnumKeyAction of() {
         return new ProductTypeChangeEnumKeyActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductTypeChangeEnumKeyAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductTypeChangeEnumKeyAction of(final ProductTypeChangeEnumKeyAction template) {
         ProductTypeChangeEnumKeyActionImpl instance = new ProductTypeChangeEnumKeyActionImpl();
         instance.setAttributeName(template.getAttributeName());
@@ -77,18 +104,37 @@ public interface ProductTypeChangeEnumKeyAction extends ProductTypeUpdateAction 
         return instance;
     }
 
+    /**
+     * builder factory method for ProductTypeChangeEnumKeyAction
+     * @return builder
+     */
     public static ProductTypeChangeEnumKeyActionBuilder builder() {
         return ProductTypeChangeEnumKeyActionBuilder.of();
     }
 
+    /**
+     * create builder for ProductTypeChangeEnumKeyAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductTypeChangeEnumKeyActionBuilder builder(final ProductTypeChangeEnumKeyAction template) {
         return ProductTypeChangeEnumKeyActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductTypeChangeEnumKeyAction(Function<ProductTypeChangeEnumKeyAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductTypeChangeEnumKeyAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductTypeChangeEnumKeyAction>() {
             @Override

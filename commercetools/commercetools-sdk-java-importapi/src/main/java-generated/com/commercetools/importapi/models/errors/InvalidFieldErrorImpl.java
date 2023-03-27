@@ -32,6 +32,9 @@ public class InvalidFieldErrorImpl implements InvalidFieldError, ModelBase {
 
     private Long resourceIndex;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     InvalidFieldErrorImpl(@JsonProperty("message") final String message, @JsonProperty("field") final String field,
             @JsonProperty("invalidValue") final java.lang.Object invalidValue,
@@ -45,6 +48,9 @@ public class InvalidFieldErrorImpl implements InvalidFieldError, ModelBase {
         this.code = INVALID_FIELD;
     }
 
+    /**
+     * create empty instance
+     */
     public InvalidFieldErrorImpl() {
         this.code = INVALID_FIELD;
     }

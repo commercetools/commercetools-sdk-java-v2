@@ -52,6 +52,9 @@ public class ProductPriceKeySetMessageImpl implements ProductPriceKeySetMessage,
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductPriceKeySetMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -83,6 +86,9 @@ public class ProductPriceKeySetMessageImpl implements ProductPriceKeySetMessage,
         this.type = PRODUCT_PRICE_KEY_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductPriceKeySetMessageImpl() {
         this.type = PRODUCT_PRICE_KEY_SET;
     }

@@ -22,11 +22,17 @@ public class MyCustomerEmailVerifyImpl implements MyCustomerEmailVerify, ModelBa
 
     private String tokenValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyCustomerEmailVerifyImpl(@JsonProperty("tokenValue") final String tokenValue) {
         this.tokenValue = tokenValue;
     }
 
+    /**
+     * create empty instance
+     */
     public MyCustomerEmailVerifyImpl() {
     }
 

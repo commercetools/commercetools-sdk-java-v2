@@ -28,6 +28,9 @@ public class TypedMoneyDraftImpl implements TypedMoneyDraft, ModelBase {
 
     private Integer fractionDigits;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TypedMoneyDraftImpl(@JsonProperty("centAmount") final Long centAmount,
             @JsonProperty("currencyCode") final String currencyCode,
@@ -39,6 +42,9 @@ public class TypedMoneyDraftImpl implements TypedMoneyDraft, ModelBase {
         this.fractionDigits = fractionDigits;
     }
 
+    /**
+     * create empty instance
+     */
     public TypedMoneyDraftImpl() {
     }
 

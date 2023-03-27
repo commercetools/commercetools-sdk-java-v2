@@ -42,6 +42,9 @@ public class QuoteRequestDeletedMessageImpl implements QuoteRequestDeletedMessag
 
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     QuoteRequestDeletedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -65,6 +68,9 @@ public class QuoteRequestDeletedMessageImpl implements QuoteRequestDeletedMessag
         this.type = QUOTE_REQUEST_DELETED;
     }
 
+    /**
+     * create empty instance
+     */
     public QuoteRequestDeletedMessageImpl() {
         this.type = QUOTE_REQUEST_DELETED;
     }

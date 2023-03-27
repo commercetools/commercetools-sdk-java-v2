@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TimeAttributeImpl.class)
 public interface TimeAttribute extends Attribute {
 
+    /**
+     * discriminator value for TimeAttribute
+     */
     String TIME = "time";
 
     /**
@@ -40,12 +43,26 @@ public interface TimeAttribute extends Attribute {
     @JsonProperty("value")
     public LocalTime getValue();
 
+    /**
+     * set value
+     * @param value value to be set
+     */
+
     public void setValue(final LocalTime value);
 
+    /**
+     * factory method
+     * @return instance of TimeAttribute
+     */
     public static TimeAttribute of() {
         return new TimeAttributeImpl();
     }
 
+    /**
+     * factory method to copy an instance of TimeAttribute
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static TimeAttribute of(final TimeAttribute template) {
         TimeAttributeImpl instance = new TimeAttributeImpl();
         instance.setName(template.getName());
@@ -53,18 +70,37 @@ public interface TimeAttribute extends Attribute {
         return instance;
     }
 
+    /**
+     * builder factory method for TimeAttribute
+     * @return builder
+     */
     public static TimeAttributeBuilder builder() {
         return TimeAttributeBuilder.of();
     }
 
+    /**
+     * create builder for TimeAttribute instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TimeAttributeBuilder builder(final TimeAttribute template) {
         return TimeAttributeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTimeAttribute(Function<TimeAttribute, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<TimeAttribute> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TimeAttribute>() {
             @Override

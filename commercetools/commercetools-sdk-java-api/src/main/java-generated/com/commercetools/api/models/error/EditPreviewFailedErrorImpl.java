@@ -29,6 +29,9 @@ public class EditPreviewFailedErrorImpl implements EditPreviewFailedError, Model
 
     private com.commercetools.api.models.order_edit.OrderEditPreviewFailure result;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     EditPreviewFailedErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values,
@@ -39,6 +42,9 @@ public class EditPreviewFailedErrorImpl implements EditPreviewFailedError, Model
         this.code = EDIT_PREVIEW_FAILED;
     }
 
+    /**
+     * create empty instance
+     */
     public EditPreviewFailedErrorImpl() {
         this.code = EDIT_PREVIEW_FAILED;
     }

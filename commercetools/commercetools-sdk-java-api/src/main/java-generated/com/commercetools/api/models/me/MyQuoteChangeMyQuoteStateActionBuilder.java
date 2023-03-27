@@ -35,6 +35,11 @@ public class MyQuoteChangeMyQuoteStateActionBuilder implements Builder<MyQuoteCh
         return this;
     }
 
+    /**
+     *  <p>New state to be set for the Quote.</p>
+     * @return quoteState
+     */
+
     public com.commercetools.api.models.me.MyQuoteState getQuoteState() {
         return this.quoteState;
     }
@@ -56,10 +61,19 @@ public class MyQuoteChangeMyQuoteStateActionBuilder implements Builder<MyQuoteCh
         return new MyQuoteChangeMyQuoteStateActionImpl(quoteState);
     }
 
+    /**
+     * factory method for an instance of MyQuoteChangeMyQuoteStateActionBuilder
+     * @return builder
+     */
     public static MyQuoteChangeMyQuoteStateActionBuilder of() {
         return new MyQuoteChangeMyQuoteStateActionBuilder();
     }
 
+    /**
+     * create builder for MyQuoteChangeMyQuoteStateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyQuoteChangeMyQuoteStateActionBuilder of(final MyQuoteChangeMyQuoteStateAction template) {
         MyQuoteChangeMyQuoteStateActionBuilder builder = new MyQuoteChangeMyQuoteStateActionBuilder();
         builder.quoteState = template.getQuoteState();

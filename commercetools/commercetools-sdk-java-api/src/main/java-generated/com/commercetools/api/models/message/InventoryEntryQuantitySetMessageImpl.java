@@ -52,6 +52,9 @@ public class InventoryEntryQuantitySetMessageImpl implements InventoryEntryQuant
 
     private com.commercetools.api.models.channel.ChannelReference supplyChannel;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     InventoryEntryQuantitySetMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -86,6 +89,9 @@ public class InventoryEntryQuantitySetMessageImpl implements InventoryEntryQuant
         this.type = INVENTORY_ENTRY_QUANTITY_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public InventoryEntryQuantitySetMessageImpl() {
         this.type = INVENTORY_ENTRY_QUANTITY_SET;
     }

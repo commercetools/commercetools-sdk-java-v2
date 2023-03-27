@@ -27,7 +27,7 @@ public class GraphQLErrorLocationBuilder implements Builder<GraphQLErrorLocation
     private Integer column;
 
     /**
-     *
+     * set the value to the line
      * @param line value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class GraphQLErrorLocationBuilder implements Builder<GraphQLErrorLocation
     }
 
     /**
-     *
+     * set the value to the column
      * @param column value to be set
      * @return Builder
      */
@@ -48,9 +48,19 @@ public class GraphQLErrorLocationBuilder implements Builder<GraphQLErrorLocation
         return this;
     }
 
+    /**
+     * value of line}
+     * @return line
+     */
+
     public Integer getLine() {
         return this.line;
     }
+
+    /**
+     * value of column}
+     * @return column
+     */
 
     public Integer getColumn() {
         return this.column;
@@ -74,10 +84,19 @@ public class GraphQLErrorLocationBuilder implements Builder<GraphQLErrorLocation
         return new GraphQLErrorLocationImpl(line, column);
     }
 
+    /**
+     * factory method for an instance of GraphQLErrorLocationBuilder
+     * @return builder
+     */
     public static GraphQLErrorLocationBuilder of() {
         return new GraphQLErrorLocationBuilder();
     }
 
+    /**
+     * create builder for GraphQLErrorLocation instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static GraphQLErrorLocationBuilder of(final GraphQLErrorLocation template) {
         GraphQLErrorLocationBuilder builder = new GraphQLErrorLocationBuilder();
         builder.line = template.getLine();

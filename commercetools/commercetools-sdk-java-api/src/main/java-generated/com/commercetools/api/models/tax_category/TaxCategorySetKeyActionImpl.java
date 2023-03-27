@@ -24,12 +24,18 @@ public class TaxCategorySetKeyActionImpl implements TaxCategorySetKeyAction, Mod
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TaxCategorySetKeyActionImpl(@JsonProperty("key") final String key) {
         this.key = key;
         this.action = SET_KEY;
     }
 
+    /**
+     * create empty instance
+     */
     public TaxCategorySetKeyActionImpl() {
         this.action = SET_KEY;
     }

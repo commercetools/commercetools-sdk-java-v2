@@ -63,53 +63,128 @@ public interface ChangeHistoryResourceType {
 
     ChangeHistoryResourceType ZONE = ChangeHistoryResourceTypeEnum.ZONE;
 
+    /**
+     * possible values of ChangeHistoryResourceType
+     */
     enum ChangeHistoryResourceTypeEnum implements ChangeHistoryResourceType {
+        /**
+         * cart-discount
+         */
         CART_DISCOUNT("cart-discount"),
 
+        /**
+         * category
+         */
         CATEGORY("category"),
 
+        /**
+         * channel
+         */
         CHANNEL("channel"),
 
+        /**
+         * customer
+         */
         CUSTOMER("customer"),
 
+        /**
+         * customer-group
+         */
         CUSTOMER_GROUP("customer-group"),
 
+        /**
+         * discount-code
+         */
         DISCOUNT_CODE("discount-code"),
 
+        /**
+         * inventory-entry
+         */
         INVENTORY_ENTRY("inventory-entry"),
 
+        /**
+         * key-value-document
+         */
         KEY_VALUE_DOCUMENT("key-value-document"),
 
+        /**
+         * order
+         */
         ORDER("order"),
 
+        /**
+         * payment
+         */
         PAYMENT("payment"),
 
+        /**
+         * product
+         */
         PRODUCT("product"),
 
+        /**
+         * product-discount
+         */
         PRODUCT_DISCOUNT("product-discount"),
 
+        /**
+         * product-selection
+         */
         PRODUCT_SELECTION("product-selection"),
 
+        /**
+         * product-type
+         */
         PRODUCT_TYPE("product-type"),
 
+        /**
+         * quote-request
+         */
         QUOTE_REQUEST("quote-request"),
 
+        /**
+         * quote
+         */
         QUOTE("quote"),
 
+        /**
+         * review
+         */
         REVIEW("review"),
 
+        /**
+         * shopping-list
+         */
         SHOPPING_LIST("shopping-list"),
 
+        /**
+         * staged-quote
+         */
         STAGED_QUOTE("staged-quote"),
 
+        /**
+         * state
+         */
         STATE("state"),
 
+        /**
+         * store
+         */
         STORE("store"),
 
+        /**
+         * tax-category
+         */
         TAX_CATEGORY("tax-category"),
 
+        /**
+         * type
+         */
         TYPE("type"),
 
+        /**
+         * zone
+         */
         ZONE("zone");
         private final String jsonName;
 
@@ -126,13 +201,30 @@ public interface ChangeHistoryResourceType {
         }
     }
 
+    /**
+     * the JSON value
+     * @return json value
+     */
     @JsonValue
     String getJsonName();
 
+    /**
+     * the enum value
+     * @return name
+     */
     String name();
 
+    /**
+     * convert value to string
+     * @return string representation
+     */
     String toString();
 
+    /**
+     * factory method for a enum value of ChangeHistoryResourceType
+     * if no enum has been found an anonymous instance will be created
+     * @return enum instance
+     */
     @JsonCreator
     public static ChangeHistoryResourceType findEnum(String value) {
         return findEnumViaJsonName(value).orElse(new ChangeHistoryResourceType() {
@@ -152,10 +244,18 @@ public interface ChangeHistoryResourceType {
         });
     }
 
+    /**
+     * method to find enum using the JSON value
+     * @return optional of enum instance
+     */
     public static Optional<ChangeHistoryResourceType> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
 
+    /**
+     * possible enum values
+     * @return array of possible enum values
+     */
     public static ChangeHistoryResourceType[] values() {
         return ChangeHistoryResourceTypeEnum.values();
     }

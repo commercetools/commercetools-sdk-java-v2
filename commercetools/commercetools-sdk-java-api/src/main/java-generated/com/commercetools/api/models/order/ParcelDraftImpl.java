@@ -28,6 +28,9 @@ public class ParcelDraftImpl implements ParcelDraft, ModelBase {
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ParcelDraftImpl(
             @JsonProperty("measurements") final com.commercetools.api.models.order.ParcelMeasurements measurements,
@@ -40,6 +43,9 @@ public class ParcelDraftImpl implements ParcelDraft, ModelBase {
         this.custom = custom;
     }
 
+    /**
+     * create empty instance
+     */
     public ParcelDraftImpl() {
     }
 

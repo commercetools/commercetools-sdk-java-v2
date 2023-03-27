@@ -34,6 +34,11 @@ public class CartDiscountChangeCartPredicateActionBuilder implements Builder<Car
         return this;
     }
 
+    /**
+     *  <p>New value to set.</p>
+     * @return cartPredicate
+     */
+
     public String getCartPredicate() {
         return this.cartPredicate;
     }
@@ -56,10 +61,19 @@ public class CartDiscountChangeCartPredicateActionBuilder implements Builder<Car
         return new CartDiscountChangeCartPredicateActionImpl(cartPredicate);
     }
 
+    /**
+     * factory method for an instance of CartDiscountChangeCartPredicateActionBuilder
+     * @return builder
+     */
     public static CartDiscountChangeCartPredicateActionBuilder of() {
         return new CartDiscountChangeCartPredicateActionBuilder();
     }
 
+    /**
+     * create builder for CartDiscountChangeCartPredicateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartDiscountChangeCartPredicateActionBuilder of(
             final CartDiscountChangeCartPredicateAction template) {
         CartDiscountChangeCartPredicateActionBuilder builder = new CartDiscountChangeCartPredicateActionBuilder();

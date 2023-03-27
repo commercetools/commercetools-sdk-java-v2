@@ -50,10 +50,20 @@ public class StagedQuoteResourceIdentifierBuilder implements Builder<StagedQuote
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the referenced resource. Required if <code>key</code> is absent.</p>
+     * @return id
+     */
+
     @Nullable
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the referenced resource. Required if <code>id</code> is absent.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
@@ -76,10 +86,19 @@ public class StagedQuoteResourceIdentifierBuilder implements Builder<StagedQuote
         return new StagedQuoteResourceIdentifierImpl(id, key);
     }
 
+    /**
+     * factory method for an instance of StagedQuoteResourceIdentifierBuilder
+     * @return builder
+     */
     public static StagedQuoteResourceIdentifierBuilder of() {
         return new StagedQuoteResourceIdentifierBuilder();
     }
 
+    /**
+     * create builder for StagedQuoteResourceIdentifier instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedQuoteResourceIdentifierBuilder of(final StagedQuoteResourceIdentifier template) {
         StagedQuoteResourceIdentifierBuilder builder = new StagedQuoteResourceIdentifierBuilder();
         builder.id = template.getId();

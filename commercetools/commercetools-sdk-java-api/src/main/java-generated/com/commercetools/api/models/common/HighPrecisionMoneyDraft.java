@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface HighPrecisionMoneyDraft
         extends TypedMoneyDraft, io.vrap.rmf.base.client.Draft<HighPrecisionMoneyDraft> {
 
+    /**
+     * discriminator value for HighPrecisionMoneyDraft
+     */
     String HIGH_PRECISION = "highPrecision";
 
     /**
@@ -60,16 +63,42 @@ public interface HighPrecisionMoneyDraft
     @JsonProperty("centAmount")
     public Long getCentAmount();
 
+    /**
+     *  <p>Number of fraction digits for a specified high precision money. It must be greater than the default number of fraction digits for the specified currency.</p>
+     * @param fractionDigits value to be set
+     */
+
     public void setFractionDigits(final Integer fractionDigits);
+
+    /**
+     *  <p>Amount in 1 / (10 ^ <code>fractionDigits</code>) of a currency.</p>
+     * @param preciseAmount value to be set
+     */
 
     public void setPreciseAmount(final Long preciseAmount);
 
+    /**
+     *  <p>Amount in the smallest indivisible unit of a currency. This field is optional for high precision. If provided, it is checked for validity. Example:</p>
+     *  <p>A Price of 1.015 USD can be rounded either to 1.01 USD or 1.02 USD. If it lies outside of this range, an error message stating that centAmount must be rounded correctly will be returned.</p>
+     *  <p>If <code>centAmount</code> is not provided, the API calculates the value automatically using the default rounding mode half even.</p>
+     * @param centAmount value to be set
+     */
+
     public void setCentAmount(final Long centAmount);
 
+    /**
+     * factory method
+     * @return instance of HighPrecisionMoneyDraft
+     */
     public static HighPrecisionMoneyDraft of() {
         return new HighPrecisionMoneyDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of HighPrecisionMoneyDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static HighPrecisionMoneyDraft of(final HighPrecisionMoneyDraft template) {
         HighPrecisionMoneyDraftImpl instance = new HighPrecisionMoneyDraftImpl();
         instance.setCentAmount(template.getCentAmount());
@@ -79,14 +108,29 @@ public interface HighPrecisionMoneyDraft
         return instance;
     }
 
+    /**
+     * builder factory method for HighPrecisionMoneyDraft
+     * @return builder
+     */
     public static HighPrecisionMoneyDraftBuilder builder() {
         return HighPrecisionMoneyDraftBuilder.of();
     }
 
+    /**
+     * create builder for HighPrecisionMoneyDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static HighPrecisionMoneyDraftBuilder builder(final HighPrecisionMoneyDraft template) {
         return HighPrecisionMoneyDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withHighPrecisionMoneyDraft(Function<HighPrecisionMoneyDraft, T> helper) {
         return helper.apply(this);
     }
@@ -109,6 +153,10 @@ public interface HighPrecisionMoneyDraft
         return amount -> MoneyUtil.draftOf(amount, getFractionDigits());
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<HighPrecisionMoneyDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<HighPrecisionMoneyDraft>() {
             @Override

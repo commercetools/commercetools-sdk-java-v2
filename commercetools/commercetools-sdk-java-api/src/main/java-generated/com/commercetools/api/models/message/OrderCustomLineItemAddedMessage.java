@@ -38,6 +38,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderCustomLineItemAddedMessageImpl.class)
 public interface OrderCustomLineItemAddedMessage extends OrderMessage {
 
+    /**
+     * discriminator value for OrderCustomLineItemAddedMessage
+     */
     String ORDER_CUSTOM_LINE_ITEM_ADDED = "OrderCustomLineItemAdded";
 
     /**
@@ -49,12 +52,26 @@ public interface OrderCustomLineItemAddedMessage extends OrderMessage {
     @JsonProperty("customLineItem")
     public CustomLineItem getCustomLineItem();
 
+    /**
+     *  <p>Custom Line Item that was added to the Order.</p>
+     * @param customLineItem value to be set
+     */
+
     public void setCustomLineItem(final CustomLineItem customLineItem);
 
+    /**
+     * factory method
+     * @return instance of OrderCustomLineItemAddedMessage
+     */
     public static OrderCustomLineItemAddedMessage of() {
         return new OrderCustomLineItemAddedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderCustomLineItemAddedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderCustomLineItemAddedMessage of(final OrderCustomLineItemAddedMessage template) {
         OrderCustomLineItemAddedMessageImpl instance = new OrderCustomLineItemAddedMessageImpl();
         instance.setId(template.getId());
@@ -71,18 +88,37 @@ public interface OrderCustomLineItemAddedMessage extends OrderMessage {
         return instance;
     }
 
+    /**
+     * builder factory method for OrderCustomLineItemAddedMessage
+     * @return builder
+     */
     public static OrderCustomLineItemAddedMessageBuilder builder() {
         return OrderCustomLineItemAddedMessageBuilder.of();
     }
 
+    /**
+     * create builder for OrderCustomLineItemAddedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderCustomLineItemAddedMessageBuilder builder(final OrderCustomLineItemAddedMessage template) {
         return OrderCustomLineItemAddedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderCustomLineItemAddedMessage(Function<OrderCustomLineItemAddedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderCustomLineItemAddedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderCustomLineItemAddedMessage>() {
             @Override

@@ -48,6 +48,9 @@ public class CompanyDraftImpl implements CompanyDraft, ModelBase {
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CompanyDraftImpl(@JsonProperty("key") final String key,
             @JsonProperty("status") final com.commercetools.api.models.business_unit.BusinessUnitStatus status,
@@ -77,6 +80,9 @@ public class CompanyDraftImpl implements CompanyDraft, ModelBase {
         this.unitType = BusinessUnitType.findEnum("Company");
     }
 
+    /**
+     * create empty instance
+     */
     public CompanyDraftImpl() {
         this.unitType = BusinessUnitType.findEnum("Company");
     }

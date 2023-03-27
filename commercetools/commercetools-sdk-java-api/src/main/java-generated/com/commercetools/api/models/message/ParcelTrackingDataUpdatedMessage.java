@@ -39,6 +39,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ParcelTrackingDataUpdatedMessageImpl.class)
 public interface ParcelTrackingDataUpdatedMessage extends OrderMessage {
 
+    /**
+     * discriminator value for ParcelTrackingDataUpdatedMessage
+     */
     String PARCEL_TRACKING_DATA_UPDATED = "ParcelTrackingDataUpdated";
 
     /**
@@ -73,18 +76,47 @@ public interface ParcelTrackingDataUpdatedMessage extends OrderMessage {
     @JsonProperty("shippingKey")
     public String getShippingKey();
 
+    /**
+     *  <p>Unique identifier of the Delivery.</p>
+     * @param deliveryId value to be set
+     */
+
     public void setDeliveryId(final String deliveryId);
+
+    /**
+     *  <p>Unique identifier of the Parcel.</p>
+     * @param parcelId value to be set
+     */
 
     public void setParcelId(final String parcelId);
 
+    /**
+     *  <p>The Tracking Data that was added to the Parcel.</p>
+     * @param trackingData value to be set
+     */
+
     public void setTrackingData(final TrackingData trackingData);
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     * @param shippingKey value to be set
+     */
 
     public void setShippingKey(final String shippingKey);
 
+    /**
+     * factory method
+     * @return instance of ParcelTrackingDataUpdatedMessage
+     */
     public static ParcelTrackingDataUpdatedMessage of() {
         return new ParcelTrackingDataUpdatedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of ParcelTrackingDataUpdatedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ParcelTrackingDataUpdatedMessage of(final ParcelTrackingDataUpdatedMessage template) {
         ParcelTrackingDataUpdatedMessageImpl instance = new ParcelTrackingDataUpdatedMessageImpl();
         instance.setId(template.getId());
@@ -104,18 +136,37 @@ public interface ParcelTrackingDataUpdatedMessage extends OrderMessage {
         return instance;
     }
 
+    /**
+     * builder factory method for ParcelTrackingDataUpdatedMessage
+     * @return builder
+     */
     public static ParcelTrackingDataUpdatedMessageBuilder builder() {
         return ParcelTrackingDataUpdatedMessageBuilder.of();
     }
 
+    /**
+     * create builder for ParcelTrackingDataUpdatedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ParcelTrackingDataUpdatedMessageBuilder builder(final ParcelTrackingDataUpdatedMessage template) {
         return ParcelTrackingDataUpdatedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withParcelTrackingDataUpdatedMessage(Function<ParcelTrackingDataUpdatedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ParcelTrackingDataUpdatedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ParcelTrackingDataUpdatedMessage>() {
             @Override

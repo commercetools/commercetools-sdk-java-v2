@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CategoryChangeAssetOrderActionImpl.class)
 public interface CategoryChangeAssetOrderAction extends CategoryUpdateAction {
 
+    /**
+     * discriminator value for CategoryChangeAssetOrderAction
+     */
     String CHANGE_ASSET_ORDER = "changeAssetOrder";
 
     /**
@@ -39,33 +42,71 @@ public interface CategoryChangeAssetOrderAction extends CategoryUpdateAction {
     @JsonProperty("assetOrder")
     public List<String> getAssetOrder();
 
+    /**
+     *  <p>New value to set. Must contain all Asset <code>id</code>s.</p>
+     * @param assetOrder values to be set
+     */
+
     @JsonIgnore
     public void setAssetOrder(final String... assetOrder);
 
+    /**
+     *  <p>New value to set. Must contain all Asset <code>id</code>s.</p>
+     * @param assetOrder values to be set
+     */
+
     public void setAssetOrder(final List<String> assetOrder);
 
+    /**
+     * factory method
+     * @return instance of CategoryChangeAssetOrderAction
+     */
     public static CategoryChangeAssetOrderAction of() {
         return new CategoryChangeAssetOrderActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CategoryChangeAssetOrderAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CategoryChangeAssetOrderAction of(final CategoryChangeAssetOrderAction template) {
         CategoryChangeAssetOrderActionImpl instance = new CategoryChangeAssetOrderActionImpl();
         instance.setAssetOrder(template.getAssetOrder());
         return instance;
     }
 
+    /**
+     * builder factory method for CategoryChangeAssetOrderAction
+     * @return builder
+     */
     public static CategoryChangeAssetOrderActionBuilder builder() {
         return CategoryChangeAssetOrderActionBuilder.of();
     }
 
+    /**
+     * create builder for CategoryChangeAssetOrderAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategoryChangeAssetOrderActionBuilder builder(final CategoryChangeAssetOrderAction template) {
         return CategoryChangeAssetOrderActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCategoryChangeAssetOrderAction(Function<CategoryChangeAssetOrderAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CategoryChangeAssetOrderAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CategoryChangeAssetOrderAction>() {
             @Override

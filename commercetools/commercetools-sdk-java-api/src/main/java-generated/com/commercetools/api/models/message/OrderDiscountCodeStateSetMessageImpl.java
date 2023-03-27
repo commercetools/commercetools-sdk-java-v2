@@ -48,6 +48,9 @@ public class OrderDiscountCodeStateSetMessageImpl implements OrderDiscountCodeSt
 
     private com.commercetools.api.models.cart.DiscountCodeState oldState;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderDiscountCodeStateSetMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -78,6 +81,9 @@ public class OrderDiscountCodeStateSetMessageImpl implements OrderDiscountCodeSt
         this.type = ORDER_DISCOUNT_CODE_STATE_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderDiscountCodeStateSetMessageImpl() {
         this.type = ORDER_DISCOUNT_CODE_STATE_SET;
     }

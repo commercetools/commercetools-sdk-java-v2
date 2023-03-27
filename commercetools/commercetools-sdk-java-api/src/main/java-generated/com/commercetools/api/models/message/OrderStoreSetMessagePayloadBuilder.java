@@ -50,6 +50,11 @@ public class OrderStoreSetMessagePayloadBuilder implements Builder<OrderStoreSet
         return this;
     }
 
+    /**
+     *  <p>Store that was set.</p>
+     * @return store
+     */
+
     @Nullable
     public com.commercetools.api.models.store.StoreKeyReference getStore() {
         return this.store;
@@ -71,10 +76,19 @@ public class OrderStoreSetMessagePayloadBuilder implements Builder<OrderStoreSet
         return new OrderStoreSetMessagePayloadImpl(store);
     }
 
+    /**
+     * factory method for an instance of OrderStoreSetMessagePayloadBuilder
+     * @return builder
+     */
     public static OrderStoreSetMessagePayloadBuilder of() {
         return new OrderStoreSetMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for OrderStoreSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderStoreSetMessagePayloadBuilder of(final OrderStoreSetMessagePayload template) {
         OrderStoreSetMessagePayloadBuilder builder = new OrderStoreSetMessagePayloadBuilder();
         builder.store = template.getStore();

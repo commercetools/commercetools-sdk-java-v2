@@ -107,9 +107,19 @@ public class SubscriptionUpdateBuilder implements Builder<SubscriptionUpdate> {
         return this;
     }
 
+    /**
+     *  <p>Expected version of the Subscription on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict will be returned.</p>
+     * @return version
+     */
+
     public Long getVersion() {
         return this.version;
     }
+
+    /**
+     *  <p>Update actions to be performed on the Subscription.</p>
+     * @return actions
+     */
 
     public java.util.List<com.commercetools.api.models.subscription.SubscriptionUpdateAction> getActions() {
         return this.actions;
@@ -133,10 +143,19 @@ public class SubscriptionUpdateBuilder implements Builder<SubscriptionUpdate> {
         return new SubscriptionUpdateImpl(version, actions);
     }
 
+    /**
+     * factory method for an instance of SubscriptionUpdateBuilder
+     * @return builder
+     */
     public static SubscriptionUpdateBuilder of() {
         return new SubscriptionUpdateBuilder();
     }
 
+    /**
+     * create builder for SubscriptionUpdate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SubscriptionUpdateBuilder of(final SubscriptionUpdate template) {
         SubscriptionUpdateBuilder builder = new SubscriptionUpdateBuilder();
         builder.version = template.getVersion();

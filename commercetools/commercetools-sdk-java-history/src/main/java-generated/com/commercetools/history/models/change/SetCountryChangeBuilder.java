@@ -62,13 +62,28 @@ public class SetCountryChangeBuilder implements Builder<SetCountryChange> {
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>setCountry</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     * @return previousValue
+     */
+
     public String getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     *  <p>Two-digit country code as per ISO 3166-1 alpha-2.</p>
+     * @return nextValue
+     */
 
     public String getNextValue() {
         return this.nextValue;
@@ -93,10 +108,19 @@ public class SetCountryChangeBuilder implements Builder<SetCountryChange> {
         return new SetCountryChangeImpl(change, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of SetCountryChangeBuilder
+     * @return builder
+     */
     public static SetCountryChangeBuilder of() {
         return new SetCountryChangeBuilder();
     }
 
+    /**
+     * create builder for SetCountryChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetCountryChangeBuilder of(final SetCountryChange template) {
         SetCountryChangeBuilder builder = new SetCountryChangeBuilder();
         builder.change = template.getChange();

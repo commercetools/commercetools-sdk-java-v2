@@ -26,6 +26,9 @@ public class StandalonePriceKeySetMessagePayloadImpl implements StandalonePriceK
 
     private String oldKey;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StandalonePriceKeySetMessagePayloadImpl(@JsonProperty("key") final String key,
             @JsonProperty("oldKey") final String oldKey) {
@@ -34,6 +37,9 @@ public class StandalonePriceKeySetMessagePayloadImpl implements StandalonePriceK
         this.type = STANDALONE_PRICE_KEY_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public StandalonePriceKeySetMessagePayloadImpl() {
         this.type = STANDALONE_PRICE_KEY_SET;
     }

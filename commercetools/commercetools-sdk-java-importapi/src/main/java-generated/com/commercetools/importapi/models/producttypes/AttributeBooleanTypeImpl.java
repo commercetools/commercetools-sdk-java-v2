@@ -21,6 +21,9 @@ public class AttributeBooleanTypeImpl implements AttributeBooleanType, ModelBase
 
     private String name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AttributeBooleanTypeImpl() {
         this.name = BOOLEAN;

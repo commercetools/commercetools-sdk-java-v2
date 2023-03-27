@@ -27,6 +27,9 @@ public class PaymentChangeTransactionInteractionIdActionImpl
 
     private String interactionId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PaymentChangeTransactionInteractionIdActionImpl(@JsonProperty("transactionId") final String transactionId,
             @JsonProperty("interactionId") final String interactionId) {
@@ -35,6 +38,9 @@ public class PaymentChangeTransactionInteractionIdActionImpl
         this.action = CHANGE_TRANSACTION_INTERACTION_ID;
     }
 
+    /**
+     * create empty instance
+     */
     public PaymentChangeTransactionInteractionIdActionImpl() {
         this.action = CHANGE_TRANSACTION_INTERACTION_ID;
     }

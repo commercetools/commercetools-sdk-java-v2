@@ -763,111 +763,246 @@ public class LineItemBuilder implements Builder<LineItem> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Line Item.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
 
+    /**
+     *  <p><code>id</code> of the Product the Line Item is based on.</p>
+     * @return productId
+     */
+
     public String getProductId() {
         return this.productId;
     }
+
+    /**
+     *  <p><code>key</code> of the Product.</p>
+     *  <p>This field is only present on:</p>
+     *  <ul>
+     *   <li>Line Items in a Cart when the <code>key</code> is available on that specific Product at the time the Line Item was created or updated on the Cart.</li>
+     *   <li>Orders when the <code>key</code> is available on the specific Product at the time the Order was created from the Cart.</li>
+     *  </ul>
+     *  <p>Present on resources created or updated after 3 December 2021.</p>
+     * @return productKey
+     */
 
     @Nullable
     public String getProductKey() {
         return this.productKey;
     }
 
+    /**
+     *  <p>Name of the Product.</p>
+     * @return name
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
+
+    /**
+     *  <p><code>slug</code> of the current version of the Product. Updated automatically if the <code>slug</code> changes. Empty if the Product has been deleted. The <code>productSlug</code> field of LineItem is not expanded when using Reference Expansion.</p>
+     * @return productSlug
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getProductSlug() {
         return this.productSlug;
     }
 
+    /**
+     *  <p>Product Type of the Product.</p>
+     * @return productType
+     */
+
     public com.commercetools.api.models.product_type.ProductTypeReference getProductType() {
         return this.productType;
     }
+
+    /**
+     *  <p>Holds the data of the Product Variant added to the Cart.</p>
+     *  <p>The data is saved at the time the Product Variant is added to the Cart and is not updated automatically when Product Variant data changes. Must be updated using the Recalculate update action.</p>
+     * @return variant
+     */
 
     public com.commercetools.api.models.product.ProductVariant getVariant() {
         return this.variant;
     }
 
+    /**
+     *  <p>Price of a Line Item selected from the Product Variant according to the Product <code>priceMode</code>. If the <code>priceMode</code> is <code>Embedded</code> ProductPriceMode and the <code>variant</code> field hasn't been updated, the price may not correspond to a price in <code>variant.prices</code>.</p>
+     * @return price
+     */
+
     public com.commercetools.api.models.common.Price getPrice() {
         return this.price;
     }
+
+    /**
+     *  <p>Number of Line Items of the given Product Variant present in the Cart.</p>
+     * @return quantity
+     */
 
     public Long getQuantity() {
         return this.quantity;
     }
 
+    /**
+     *  <p>Total price of this Line Item equalling <code>price</code> multiplied by <code>quantity</code>. If the Line Item is discounted, the total price is the <code>discountedPricePerQuantity</code> multiplied by <code>quantity</code>. Includes taxes if the TaxRate <code>includedInPrice</code> is <code>true</code>.</p>
+     * @return totalPrice
+     */
+
     public com.commercetools.api.models.common.CentPrecisionMoney getTotalPrice() {
         return this.totalPrice;
     }
 
+    /**
+     *  <p>Discounted price of a single quantity of the Line Item.</p>
+     * @return discountedPricePerQuantity
+     */
+
     public java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity() {
         return this.discountedPricePerQuantity;
     }
+
+    /**
+     *  <p>Automatically set after <code>taxRate</code> is set.</p>
+     * @return taxedPrice
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.TaxedItemPrice getTaxedPrice() {
         return this.taxedPrice;
     }
 
+    /**
+     *  <p>Taxed price of the Shipping Method that is automatically set after <code>perMethodTaxRate</code> is set.</p>
+     * @return taxedPricePortions
+     */
+
     public java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> getTaxedPricePortions() {
         return this.taxedPricePortions;
     }
 
+    /**
+     *  <p>State of the Line Item in the Cart.</p>
+     * @return state
+     */
+
     public java.util.List<com.commercetools.api.models.order.ItemState> getState() {
         return this.state;
     }
+
+    /**
+     *  <ul>
+     *   <li>For a Cart with <code>Platform</code> TaxMode, the <code>taxRate</code> of Line Items is set automatically once a shipping address is set. The rate is based on the TaxCategory that applies for the shipping address.</li>
+     *   <li>For a Cart with <code>External</code> TaxMode, the <code>taxRate</code> of Line Items can be set using ExternalTaxRateDraft.</li>
+     *  </ul>
+     * @return taxRate
+     */
 
     @Nullable
     public com.commercetools.api.models.tax_category.TaxRate getTaxRate() {
         return this.taxRate;
     }
 
+    /**
+     *  <p>Tax Rate per Shipping Method for a Cart with <code>Multiple</code> ShippingMode. For a Cart with <code>Platform</code> TaxMode it is automatically set after the Shipping Method is added. For a Cart with <code>External</code> TaxMode, the Tax Rate must be set with ExternalTaxRateDraft.</p>
+     * @return perMethodTaxRate
+     */
+
     public java.util.List<com.commercetools.api.models.cart.MethodTaxRate> getPerMethodTaxRate() {
         return this.perMethodTaxRate;
     }
+
+    /**
+     *  <p>Identifies Inventory entries that are reserved. The referenced Channel has the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @return supplyChannel
+     */
 
     @Nullable
     public com.commercetools.api.models.channel.ChannelReference getSupplyChannel() {
         return this.supplyChannel;
     }
 
+    /**
+     *  <p>Used to select a Product Price. The referenced Channel has the <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     * @return distributionChannel
+     */
+
     @Nullable
     public com.commercetools.api.models.channel.ChannelReference getDistributionChannel() {
         return this.distributionChannel;
     }
 
+    /**
+     *  <p>Indicates how the Price for the Line Item is set.</p>
+     * @return priceMode
+     */
+
     public com.commercetools.api.models.cart.LineItemPriceMode getPriceMode() {
         return this.priceMode;
     }
 
+    /**
+     *  <p>Indicates how the Line Item is added to the Cart.</p>
+     * @return lineItemMode
+     */
+
     public com.commercetools.api.models.cart.LineItemMode getLineItemMode() {
         return this.lineItemMode;
     }
+
+    /**
+     *  <p>Inventory mode specific to this Line Item only, and valid for the entire <code>quantity</code> of the Line Item. Only present if the inventory mode is different from the <code>inventoryMode</code> specified on the Cart.</p>
+     * @return inventoryMode
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {
         return this.inventoryMode;
     }
 
+    /**
+     *  <p>Container for Line Item-specific addresses.</p>
+     * @return shippingDetails
+     */
+
     @Nullable
     public com.commercetools.api.models.cart.ItemShippingDetails getShippingDetails() {
         return this.shippingDetails;
     }
+
+    /**
+     *  <p>Custom Fields of the Line Item.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
 
+    /**
+     *  <p>Date and time (UTC) the Line Item was added to the Cart.</p>
+     * @return addedAt
+     */
+
     @Nullable
     public java.time.ZonedDateTime getAddedAt() {
         return this.addedAt;
     }
+
+    /**
+     *  <p>Date and time (UTC) the Line Item was last updated.</p>
+     * @return lastModifiedAt
+     */
 
     @Nullable
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -910,10 +1045,19 @@ public class LineItemBuilder implements Builder<LineItem> {
             addedAt, lastModifiedAt);
     }
 
+    /**
+     * factory method for an instance of LineItemBuilder
+     * @return builder
+     */
     public static LineItemBuilder of() {
         return new LineItemBuilder();
     }
 
+    /**
+     * create builder for LineItem instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static LineItemBuilder of(final LineItem template) {
         LineItemBuilder builder = new LineItemBuilder();
         builder.id = template.getId();

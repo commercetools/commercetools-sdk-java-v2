@@ -38,6 +38,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderImportedMessageImpl.class)
 public interface OrderImportedMessage extends OrderMessage {
 
+    /**
+     * discriminator value for OrderImportedMessage
+     */
     String ORDER_IMPORTED = "OrderImported";
 
     /**
@@ -49,12 +52,26 @@ public interface OrderImportedMessage extends OrderMessage {
     @JsonProperty("order")
     public Order getOrder();
 
+    /**
+     *  <p>Order that was imported.</p>
+     * @param order value to be set
+     */
+
     public void setOrder(final Order order);
 
+    /**
+     * factory method
+     * @return instance of OrderImportedMessage
+     */
     public static OrderImportedMessage of() {
         return new OrderImportedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderImportedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderImportedMessage of(final OrderImportedMessage template) {
         OrderImportedMessageImpl instance = new OrderImportedMessageImpl();
         instance.setId(template.getId());
@@ -71,18 +88,37 @@ public interface OrderImportedMessage extends OrderMessage {
         return instance;
     }
 
+    /**
+     * builder factory method for OrderImportedMessage
+     * @return builder
+     */
     public static OrderImportedMessageBuilder builder() {
         return OrderImportedMessageBuilder.of();
     }
 
+    /**
+     * create builder for OrderImportedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderImportedMessageBuilder builder(final OrderImportedMessage template) {
         return OrderImportedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderImportedMessage(Function<OrderImportedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderImportedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderImportedMessage>() {
             @Override

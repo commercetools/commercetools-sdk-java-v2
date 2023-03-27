@@ -28,6 +28,9 @@ public class DuplicateEnumValuesErrorImpl implements DuplicateEnumValuesError, M
 
     private java.util.List<String> duplicates;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DuplicateEnumValuesErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values,
@@ -38,6 +41,9 @@ public class DuplicateEnumValuesErrorImpl implements DuplicateEnumValuesError, M
         this.code = DUPLICATE_ENUM_VALUES;
     }
 
+    /**
+     * create empty instance
+     */
     public DuplicateEnumValuesErrorImpl() {
         this.code = DUPLICATE_ENUM_VALUES;
     }

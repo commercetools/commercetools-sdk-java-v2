@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderAddShoppingListActionImpl.class)
 public interface StagedOrderAddShoppingListAction extends StagedOrderUpdateAction {
 
+    /**
+     * discriminator value for StagedOrderAddShoppingListAction
+     */
     String ADD_SHOPPING_LIST = "addShoppingList";
 
     /**
@@ -60,16 +63,40 @@ public interface StagedOrderAddShoppingListAction extends StagedOrderUpdateActio
     @JsonProperty("distributionChannel")
     public ChannelResourceIdentifier getDistributionChannel();
 
+    /**
+     *  <p>ResourceIdentifier to a ShoppingList.</p>
+     * @param shoppingList value to be set
+     */
+
     public void setShoppingList(final ShoppingListResourceIdentifier shoppingList);
+
+    /**
+     *  <p>ResourceIdentifier to a Channel.</p>
+     * @param supplyChannel value to be set
+     */
 
     public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
 
+    /**
+     *  <p>ResourceIdentifier to a Channel.</p>
+     * @param distributionChannel value to be set
+     */
+
     public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);
 
+    /**
+     * factory method
+     * @return instance of StagedOrderAddShoppingListAction
+     */
     public static StagedOrderAddShoppingListAction of() {
         return new StagedOrderAddShoppingListActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedOrderAddShoppingListAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedOrderAddShoppingListAction of(final StagedOrderAddShoppingListAction template) {
         StagedOrderAddShoppingListActionImpl instance = new StagedOrderAddShoppingListActionImpl();
         instance.setShoppingList(template.getShoppingList());
@@ -78,18 +105,37 @@ public interface StagedOrderAddShoppingListAction extends StagedOrderUpdateActio
         return instance;
     }
 
+    /**
+     * builder factory method for StagedOrderAddShoppingListAction
+     * @return builder
+     */
     public static StagedOrderAddShoppingListActionBuilder builder() {
         return StagedOrderAddShoppingListActionBuilder.of();
     }
 
+    /**
+     * create builder for StagedOrderAddShoppingListAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderAddShoppingListActionBuilder builder(final StagedOrderAddShoppingListAction template) {
         return StagedOrderAddShoppingListActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedOrderAddShoppingListAction(Function<StagedOrderAddShoppingListAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderAddShoppingListAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderAddShoppingListAction>() {
             @Override

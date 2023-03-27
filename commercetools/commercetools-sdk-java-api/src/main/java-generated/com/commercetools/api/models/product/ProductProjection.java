@@ -238,62 +238,196 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
     @JsonProperty("priceMode")
     public ProductPriceModeEnum getPriceMode();
 
+    /**
+     *  <p>Unique identifier of the Product.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>Current version of the Product.</p>
+     * @param version value to be set
+     */
 
     public void setVersion(final Long version);
 
+    /**
+     *  <p>User-defined unique identifier of the Product.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
+
+    /**
+     *  <p>Date and time (UTC) the ProductProjection was initially created.</p>
+     * @param createdAt value to be set
+     */
 
     public void setCreatedAt(final ZonedDateTime createdAt);
 
+    /**
+     *  <p>Date and time (UTC) the ProductProjection was last updated.</p>
+     * @param lastModifiedAt value to be set
+     */
+
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
+
+    /**
+     *  <p>The ProductType defining the Attributes of the Product.</p>
+     * @param productType value to be set
+     */
 
     public void setProductType(final ProductTypeReference productType);
 
+    /**
+     *  <p>Name of the Product.</p>
+     * @param name value to be set
+     */
+
     public void setName(final LocalizedString name);
+
+    /**
+     *  <p>Description of the Product.</p>
+     * @param description value to be set
+     */
 
     public void setDescription(final LocalizedString description);
 
+    /**
+     *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different locales. Matches the pattern <code>[a-zA-Z0-9_\-]{2,256}</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set in the Project.</p>
+     * @param slug value to be set
+     */
+
     public void setSlug(final LocalizedString slug);
+
+    /**
+     *  <p>Categories assigned to the Product.</p>
+     * @param categories values to be set
+     */
 
     @JsonIgnore
     public void setCategories(final CategoryReference... categories);
 
+    /**
+     *  <p>Categories assigned to the Product.</p>
+     * @param categories values to be set
+     */
+
     public void setCategories(final List<CategoryReference> categories);
+
+    /**
+     *  <p>Order of Product in Categories.</p>
+     * @param categoryOrderHints value to be set
+     */
 
     public void setCategoryOrderHints(final CategoryOrderHints categoryOrderHints);
 
+    /**
+     *  <p>Title of the Product displayed in search results.</p>
+     * @param metaTitle value to be set
+     */
+
     public void setMetaTitle(final LocalizedString metaTitle);
+
+    /**
+     *  <p>Description of the Product displayed in search results below the meta title.</p>
+     * @param metaDescription value to be set
+     */
 
     public void setMetaDescription(final LocalizedString metaDescription);
 
+    /**
+     *  <p>Keywords that give additional information about the Product to search engines.</p>
+     * @param metaKeywords value to be set
+     */
+
     public void setMetaKeywords(final LocalizedString metaKeywords);
+
+    /**
+     *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     * @param searchKeywords value to be set
+     */
 
     public void setSearchKeywords(final SearchKeywords searchKeywords);
 
+    /**
+     *  <p><code>true</code> if the staged data is different from the current data.</p>
+     * @param hasStagedChanges value to be set
+     */
+
     public void setHasStagedChanges(final Boolean hasStagedChanges);
+
+    /**
+     *  <p><code>true</code> if the Product is published.</p>
+     * @param published value to be set
+     */
 
     public void setPublished(final Boolean published);
 
+    /**
+     *  <p>The Master Variant of the Product.</p>
+     * @param masterVariant value to be set
+     */
+
     public void setMasterVariant(final ProductVariant masterVariant);
+
+    /**
+     *  <p>Additional Product Variants.</p>
+     * @param variants values to be set
+     */
 
     @JsonIgnore
     public void setVariants(final ProductVariant... variants);
 
+    /**
+     *  <p>Additional Product Variants.</p>
+     * @param variants values to be set
+     */
+
     public void setVariants(final List<ProductVariant> variants);
+
+    /**
+     *  <p>The TaxCategory of the Product.</p>
+     * @param taxCategory value to be set
+     */
 
     public void setTaxCategory(final TaxCategoryReference taxCategory);
 
+    /**
+     *  <p>State of the Product.</p>
+     * @param state value to be set
+     */
+
     public void setState(final StateReference state);
+
+    /**
+     *  <p>Review statistics of the Product.</p>
+     * @param reviewRatingStatistics value to be set
+     */
 
     public void setReviewRatingStatistics(final ReviewRatingStatistics reviewRatingStatistics);
 
+    /**
+     *  <p>Indicates whether the Prices of the Product Projection are embedded or standalone. Projecting Prices only works with <code>Embedded</code>, there is currently no support for <code>Standalone</code>.</p>
+     * @param priceMode value to be set
+     */
+
     public void setPriceMode(final ProductPriceModeEnum priceMode);
 
+    /**
+     * factory method
+     * @return instance of ProductProjection
+     */
     public static ProductProjection of() {
         return new ProductProjectionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductProjection
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductProjection of(final ProductProjection template) {
         ProductProjectionImpl instance = new ProductProjectionImpl();
         instance.setId(template.getId());
@@ -322,18 +456,37 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
         return instance;
     }
 
+    /**
+     * builder factory method for ProductProjection
+     * @return builder
+     */
     public static ProductProjectionBuilder builder() {
         return ProductProjectionBuilder.of();
     }
 
+    /**
+     * create builder for ProductProjection instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductProjectionBuilder builder(final ProductProjection template) {
         return ProductProjectionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductProjection(Function<ProductProjection, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductProjection> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductProjection>() {
             @Override

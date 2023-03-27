@@ -48,9 +48,19 @@ public class EventBridgeDestinationBuilder implements Builder<EventBridgeDestina
         return this;
     }
 
+    /**
+     *  <p>AWS region that receives the events.</p>
+     * @return region
+     */
+
     public String getRegion() {
         return this.region;
     }
+
+    /**
+     *  <p>ID of the AWS account that receives the events.</p>
+     * @return accountId
+     */
 
     public String getAccountId() {
         return this.accountId;
@@ -74,10 +84,19 @@ public class EventBridgeDestinationBuilder implements Builder<EventBridgeDestina
         return new EventBridgeDestinationImpl(region, accountId);
     }
 
+    /**
+     * factory method for an instance of EventBridgeDestinationBuilder
+     * @return builder
+     */
     public static EventBridgeDestinationBuilder of() {
         return new EventBridgeDestinationBuilder();
     }
 
+    /**
+     * create builder for EventBridgeDestination instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static EventBridgeDestinationBuilder of(final EventBridgeDestination template) {
         EventBridgeDestinationBuilder builder = new EventBridgeDestinationBuilder();
         builder.region = template.getRegion();

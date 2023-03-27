@@ -36,10 +36,19 @@ public class ChangeTargetShippingChangeValueBuilder implements Builder<ChangeTar
         return new ChangeTargetShippingChangeValueImpl();
     }
 
+    /**
+     * factory method for an instance of ChangeTargetShippingChangeValueBuilder
+     * @return builder
+     */
     public static ChangeTargetShippingChangeValueBuilder of() {
         return new ChangeTargetShippingChangeValueBuilder();
     }
 
+    /**
+     * create builder for ChangeTargetShippingChangeValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeTargetShippingChangeValueBuilder of(final ChangeTargetShippingChangeValue template) {
         ChangeTargetShippingChangeValueBuilder builder = new ChangeTargetShippingChangeValueBuilder();
         return builder;

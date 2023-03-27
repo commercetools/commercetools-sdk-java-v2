@@ -22,11 +22,17 @@ public class LabelImpl implements Label, ModelBase {
 
     private String type;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     LabelImpl(@JsonProperty("type") final String type) {
         this.type = type;
     }
 
+    /**
+     * create empty instance
+     */
     public LabelImpl() {
     }
 

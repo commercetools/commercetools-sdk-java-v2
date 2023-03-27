@@ -24,6 +24,9 @@ public class OrderStoreSetMessagePayloadImpl implements OrderStoreSetMessagePayl
 
     private com.commercetools.api.models.store.StoreKeyReference store;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderStoreSetMessagePayloadImpl(
             @JsonProperty("store") final com.commercetools.api.models.store.StoreKeyReference store) {
@@ -31,6 +34,9 @@ public class OrderStoreSetMessagePayloadImpl implements OrderStoreSetMessagePayl
         this.type = ORDER_STORE_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderStoreSetMessagePayloadImpl() {
         this.type = ORDER_STORE_SET;
     }

@@ -67,7 +67,7 @@ public class AddLocalizedEnumValueChangeBuilder implements Builder<AddLocalizedE
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class AddLocalizedEnumValueChangeBuilder implements Builder<AddLocalizedE
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -91,17 +91,37 @@ public class AddLocalizedEnumValueChangeBuilder implements Builder<AddLocalizedE
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>addLocalizedEnumValue</code> on types</p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     *  <p>The name of the field definition updated.</p>
+     * @return fieldName
+     */
 
     public String getFieldName() {
         return this.fieldName;
     }
 
+    /**
+     *  <p>The name of the attribute updated.</p>
+     * @return attributeName
+     */
+
     public String getAttributeName() {
         return this.attributeName;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public com.commercetools.history.models.change_value.LocalizedEnumValue getNextValue() {
         return this.nextValue;
@@ -127,10 +147,19 @@ public class AddLocalizedEnumValueChangeBuilder implements Builder<AddLocalizedE
         return new AddLocalizedEnumValueChangeImpl(change, fieldName, attributeName, nextValue);
     }
 
+    /**
+     * factory method for an instance of AddLocalizedEnumValueChangeBuilder
+     * @return builder
+     */
     public static AddLocalizedEnumValueChangeBuilder of() {
         return new AddLocalizedEnumValueChangeBuilder();
     }
 
+    /**
+     * create builder for AddLocalizedEnumValueChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AddLocalizedEnumValueChangeBuilder of(final AddLocalizedEnumValueChange template) {
         AddLocalizedEnumValueChangeBuilder builder = new AddLocalizedEnumValueChangeBuilder();
         builder.change = template.getChange();

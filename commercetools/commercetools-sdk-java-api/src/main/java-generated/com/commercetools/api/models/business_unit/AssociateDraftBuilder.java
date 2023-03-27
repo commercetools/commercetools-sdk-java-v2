@@ -89,9 +89,19 @@ public class AssociateDraftBuilder implements Builder<AssociateDraft> {
         return this;
     }
 
+    /**
+     *  <p>Roles the Associate should hold within the Business Unit.</p>
+     * @return roles
+     */
+
     public java.util.List<com.commercetools.api.models.business_unit.AssociateRole> getRoles() {
         return this.roles;
     }
+
+    /**
+     *  <p>The Customer to be part of the Business Unit.</p>
+     * @return customer
+     */
 
     public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer() {
         return this.customer;
@@ -115,10 +125,19 @@ public class AssociateDraftBuilder implements Builder<AssociateDraft> {
         return new AssociateDraftImpl(roles, customer);
     }
 
+    /**
+     * factory method for an instance of AssociateDraftBuilder
+     * @return builder
+     */
     public static AssociateDraftBuilder of() {
         return new AssociateDraftBuilder();
     }
 
+    /**
+     * create builder for AssociateDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AssociateDraftBuilder of(final AssociateDraft template) {
         AssociateDraftBuilder builder = new AssociateDraftBuilder();
         builder.roles = template.getRoles();

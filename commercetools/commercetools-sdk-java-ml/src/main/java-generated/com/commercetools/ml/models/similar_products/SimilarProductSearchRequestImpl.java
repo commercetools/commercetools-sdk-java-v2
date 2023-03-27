@@ -36,6 +36,9 @@ public class SimilarProductSearchRequestImpl implements SimilarProductSearchRequ
 
     private Double confidenceMax;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SimilarProductSearchRequestImpl(@JsonProperty("limit") final Long limit, @JsonProperty("offset") final Long offset,
             @JsonProperty("language") final String language, @JsonProperty("currencyCode") final String currencyCode,
@@ -53,6 +56,9 @@ public class SimilarProductSearchRequestImpl implements SimilarProductSearchRequ
         this.confidenceMax = confidenceMax;
     }
 
+    /**
+     * create empty instance
+     */
     public SimilarProductSearchRequestImpl() {
     }
 

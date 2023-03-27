@@ -36,10 +36,19 @@ public class AttributeDateTypeBuilder implements Builder<AttributeDateType> {
         return new AttributeDateTypeImpl();
     }
 
+    /**
+     * factory method for an instance of AttributeDateTypeBuilder
+     * @return builder
+     */
     public static AttributeDateTypeBuilder of() {
         return new AttributeDateTypeBuilder();
     }
 
+    /**
+     * create builder for AttributeDateType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeDateTypeBuilder of(final AttributeDateType template) {
         AttributeDateTypeBuilder builder = new AttributeDateTypeBuilder();
         return builder;

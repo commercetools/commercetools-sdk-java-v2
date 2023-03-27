@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StoreDistributionChannelsChangedMessagePayloadImpl.class)
 public interface StoreDistributionChannelsChangedMessagePayload extends MessagePayload {
 
+    /**
+     * discriminator value for StoreDistributionChannelsChangedMessagePayload
+     */
     String STORE_DISTRIBUTION_CHANNELS_CHANGED = "StoreDistributionChannelsChanged";
 
     /**
@@ -47,20 +50,49 @@ public interface StoreDistributionChannelsChangedMessagePayload extends MessageP
     @JsonProperty("removedDistributionChannels")
     public List<ChannelReference> getRemovedDistributionChannels();
 
+    /**
+     *  <p>Product distribution Channels that have been added to the Store.</p>
+     * @param addedDistributionChannels values to be set
+     */
+
     @JsonIgnore
     public void setAddedDistributionChannels(final ChannelReference... addedDistributionChannels);
 
+    /**
+     *  <p>Product distribution Channels that have been added to the Store.</p>
+     * @param addedDistributionChannels values to be set
+     */
+
     public void setAddedDistributionChannels(final List<ChannelReference> addedDistributionChannels);
+
+    /**
+     *  <p>Product distribution Channels that have been removed from the Store.</p>
+     * @param removedDistributionChannels values to be set
+     */
 
     @JsonIgnore
     public void setRemovedDistributionChannels(final ChannelReference... removedDistributionChannels);
 
+    /**
+     *  <p>Product distribution Channels that have been removed from the Store.</p>
+     * @param removedDistributionChannels values to be set
+     */
+
     public void setRemovedDistributionChannels(final List<ChannelReference> removedDistributionChannels);
 
+    /**
+     * factory method
+     * @return instance of StoreDistributionChannelsChangedMessagePayload
+     */
     public static StoreDistributionChannelsChangedMessagePayload of() {
         return new StoreDistributionChannelsChangedMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of StoreDistributionChannelsChangedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StoreDistributionChannelsChangedMessagePayload of(
             final StoreDistributionChannelsChangedMessagePayload template) {
         StoreDistributionChannelsChangedMessagePayloadImpl instance = new StoreDistributionChannelsChangedMessagePayloadImpl();
@@ -69,20 +101,39 @@ public interface StoreDistributionChannelsChangedMessagePayload extends MessageP
         return instance;
     }
 
+    /**
+     * builder factory method for StoreDistributionChannelsChangedMessagePayload
+     * @return builder
+     */
     public static StoreDistributionChannelsChangedMessagePayloadBuilder builder() {
         return StoreDistributionChannelsChangedMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for StoreDistributionChannelsChangedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreDistributionChannelsChangedMessagePayloadBuilder builder(
             final StoreDistributionChannelsChangedMessagePayload template) {
         return StoreDistributionChannelsChangedMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStoreDistributionChannelsChangedMessagePayload(
             Function<StoreDistributionChannelsChangedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StoreDistributionChannelsChangedMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StoreDistributionChannelsChangedMessagePayload>() {
             @Override

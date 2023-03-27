@@ -30,7 +30,7 @@ public class SetStateRolesChangeBuilder implements Builder<SetStateRolesChange> 
     private java.util.List<com.commercetools.history.models.common.StateRole> nextValue;
 
     /**
-     *
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class SetStateRolesChangeBuilder implements Builder<SetStateRolesChange> 
     }
 
     /**
-     *
+     * set values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class SetStateRolesChangeBuilder implements Builder<SetStateRolesChange> 
     }
 
     /**
-     *
+     * set value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class SetStateRolesChangeBuilder implements Builder<SetStateRolesChange> 
     }
 
     /**
-     *
+     * add values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class SetStateRolesChangeBuilder implements Builder<SetStateRolesChange> 
     }
 
     /**
-     *
+     * set values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -91,7 +91,7 @@ public class SetStateRolesChangeBuilder implements Builder<SetStateRolesChange> 
     }
 
     /**
-     *
+     * set value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -103,7 +103,7 @@ public class SetStateRolesChangeBuilder implements Builder<SetStateRolesChange> 
     }
 
     /**
-     *
+     * add values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -117,13 +117,28 @@ public class SetStateRolesChangeBuilder implements Builder<SetStateRolesChange> 
         return this;
     }
 
+    /**
+     * value of change}
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public java.util.List<com.commercetools.history.models.common.StateRole> getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public java.util.List<com.commercetools.history.models.common.StateRole> getNextValue() {
         return this.nextValue;
@@ -148,10 +163,19 @@ public class SetStateRolesChangeBuilder implements Builder<SetStateRolesChange> 
         return new SetStateRolesChangeImpl(change, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of SetStateRolesChangeBuilder
+     * @return builder
+     */
     public static SetStateRolesChangeBuilder of() {
         return new SetStateRolesChangeBuilder();
     }
 
+    /**
+     * create builder for SetStateRolesChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetStateRolesChangeBuilder of(final SetStateRolesChange template) {
         SetStateRolesChangeBuilder builder = new SetStateRolesChangeBuilder();
         builder.change = template.getChange();

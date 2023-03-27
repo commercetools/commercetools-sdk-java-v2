@@ -36,6 +36,11 @@ public class CustomerSetMiddleNameActionBuilder implements Builder<CustomerSetMi
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @return middleName
+     */
+
     @Nullable
     public String getMiddleName() {
         return this.middleName;
@@ -57,10 +62,19 @@ public class CustomerSetMiddleNameActionBuilder implements Builder<CustomerSetMi
         return new CustomerSetMiddleNameActionImpl(middleName);
     }
 
+    /**
+     * factory method for an instance of CustomerSetMiddleNameActionBuilder
+     * @return builder
+     */
     public static CustomerSetMiddleNameActionBuilder of() {
         return new CustomerSetMiddleNameActionBuilder();
     }
 
+    /**
+     * create builder for CustomerSetMiddleNameAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerSetMiddleNameActionBuilder of(final CustomerSetMiddleNameAction template) {
         CustomerSetMiddleNameActionBuilder builder = new CustomerSetMiddleNameActionBuilder();
         builder.middleName = template.getMiddleName();

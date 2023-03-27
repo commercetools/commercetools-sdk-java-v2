@@ -30,6 +30,9 @@ public class SetLineItemDeactivatedAtChangeImpl implements SetLineItemDeactivate
 
     private String nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetLineItemDeactivatedAtChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("lineItem") final com.commercetools.history.models.change_value.ShoppingListLineItemValue lineItem,
@@ -42,6 +45,9 @@ public class SetLineItemDeactivatedAtChangeImpl implements SetLineItemDeactivate
         this.type = SET_LINE_ITEM_DEACTIVATED_AT_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetLineItemDeactivatedAtChangeImpl() {
         this.type = SET_LINE_ITEM_DEACTIVATED_AT_CHANGE;
     }

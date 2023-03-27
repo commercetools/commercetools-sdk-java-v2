@@ -27,6 +27,10 @@ public class OrderEditResultBuilder {
         return com.commercetools.api.models.order_edit.OrderEditPreviewSuccessBuilder.of();
     }
 
+    /**
+     * factory method for an instance of OrderEditResultBuilder
+     * @return builder
+     */
     public static OrderEditResultBuilder of() {
         return new OrderEditResultBuilder();
     }

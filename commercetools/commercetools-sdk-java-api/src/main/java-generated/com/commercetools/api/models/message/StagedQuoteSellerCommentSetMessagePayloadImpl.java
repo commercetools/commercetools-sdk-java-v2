@@ -25,12 +25,18 @@ public class StagedQuoteSellerCommentSetMessagePayloadImpl
 
     private String sellerComment;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedQuoteSellerCommentSetMessagePayloadImpl(@JsonProperty("sellerComment") final String sellerComment) {
         this.sellerComment = sellerComment;
         this.type = STAGED_QUOTE_SELLER_COMMENT_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedQuoteSellerCommentSetMessagePayloadImpl() {
         this.type = STAGED_QUOTE_SELLER_COMMENT_SET;
     }

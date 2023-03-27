@@ -28,12 +28,24 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MyCompanyDraftImpl.class)
 public interface MyCompanyDraft extends MyBusinessUnitDraft, io.vrap.rmf.base.client.Draft<MyCompanyDraft> {
 
+    /**
+     * discriminator value for MyCompanyDraft
+     */
     String COMPANY = "Company";
 
+    /**
+     * factory method
+     * @return instance of MyCompanyDraft
+     */
     public static MyCompanyDraft of() {
         return new MyCompanyDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of MyCompanyDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static MyCompanyDraft of(final MyCompanyDraft template) {
         MyCompanyDraftImpl instance = new MyCompanyDraftImpl();
         instance.setKey(template.getKey());
@@ -48,18 +60,37 @@ public interface MyCompanyDraft extends MyBusinessUnitDraft, io.vrap.rmf.base.cl
         return instance;
     }
 
+    /**
+     * builder factory method for MyCompanyDraft
+     * @return builder
+     */
     public static MyCompanyDraftBuilder builder() {
         return MyCompanyDraftBuilder.of();
     }
 
+    /**
+     * create builder for MyCompanyDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCompanyDraftBuilder builder(final MyCompanyDraft template) {
         return MyCompanyDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMyCompanyDraft(Function<MyCompanyDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MyCompanyDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MyCompanyDraft>() {
             @Override

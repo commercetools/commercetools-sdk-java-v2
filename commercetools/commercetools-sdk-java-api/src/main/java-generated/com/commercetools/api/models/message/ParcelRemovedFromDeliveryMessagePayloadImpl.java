@@ -28,6 +28,9 @@ public class ParcelRemovedFromDeliveryMessagePayloadImpl implements ParcelRemove
 
     private String shippingKey;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ParcelRemovedFromDeliveryMessagePayloadImpl(@JsonProperty("deliveryId") final String deliveryId,
             @JsonProperty("parcel") final com.commercetools.api.models.order.Parcel parcel,
@@ -38,6 +41,9 @@ public class ParcelRemovedFromDeliveryMessagePayloadImpl implements ParcelRemove
         this.type = PARCEL_REMOVED_FROM_DELIVERY;
     }
 
+    /**
+     * create empty instance
+     */
     public ParcelRemovedFromDeliveryMessagePayloadImpl() {
         this.type = PARCEL_REMOVED_FROM_DELIVERY;
     }

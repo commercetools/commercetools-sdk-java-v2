@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderSetCustomLineItemTaxRateActionImpl.class)
 public interface StagedOrderSetCustomLineItemTaxRateAction extends StagedOrderUpdateAction {
 
+    /**
+     * discriminator value for StagedOrderSetCustomLineItemTaxRateAction
+     */
     String SET_CUSTOM_LINE_ITEM_TAX_RATE = "setCustomLineItemTaxRate";
 
     /**
@@ -50,14 +53,33 @@ public interface StagedOrderSetCustomLineItemTaxRateAction extends StagedOrderUp
     @JsonProperty("externalTaxRate")
     public ExternalTaxRateDraft getExternalTaxRate();
 
+    /**
+     * set customLineItemId
+     * @param customLineItemId value to be set
+     */
+
     public void setCustomLineItemId(final String customLineItemId);
+
+    /**
+     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @param externalTaxRate value to be set
+     */
 
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
 
+    /**
+     * factory method
+     * @return instance of StagedOrderSetCustomLineItemTaxRateAction
+     */
     public static StagedOrderSetCustomLineItemTaxRateAction of() {
         return new StagedOrderSetCustomLineItemTaxRateActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedOrderSetCustomLineItemTaxRateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedOrderSetCustomLineItemTaxRateAction of(
             final StagedOrderSetCustomLineItemTaxRateAction template) {
         StagedOrderSetCustomLineItemTaxRateActionImpl instance = new StagedOrderSetCustomLineItemTaxRateActionImpl();
@@ -66,20 +88,39 @@ public interface StagedOrderSetCustomLineItemTaxRateAction extends StagedOrderUp
         return instance;
     }
 
+    /**
+     * builder factory method for StagedOrderSetCustomLineItemTaxRateAction
+     * @return builder
+     */
     public static StagedOrderSetCustomLineItemTaxRateActionBuilder builder() {
         return StagedOrderSetCustomLineItemTaxRateActionBuilder.of();
     }
 
+    /**
+     * create builder for StagedOrderSetCustomLineItemTaxRateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetCustomLineItemTaxRateActionBuilder builder(
             final StagedOrderSetCustomLineItemTaxRateAction template) {
         return StagedOrderSetCustomLineItemTaxRateActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedOrderSetCustomLineItemTaxRateAction(
             Function<StagedOrderSetCustomLineItemTaxRateAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetCustomLineItemTaxRateAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetCustomLineItemTaxRateAction>() {
             @Override

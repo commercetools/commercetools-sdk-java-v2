@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetGeoLocationChangeImpl.class)
 public interface SetGeoLocationChange extends Change {
 
+    /**
+     * discriminator value for SetGeoLocationChange
+     */
     String SET_GEO_LOCATION_CHANGE = "SetGeoLocationChange";
 
     /**
@@ -69,16 +72,40 @@ public interface SetGeoLocationChange extends Change {
     @JsonProperty("previousValue")
     public GeoLocation getPreviousValue();
 
+    /**
+     *  <p>Update action for <code>setGeoLocation</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
 
     public void setNextValue(final GeoLocation nextValue);
 
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
+
     public void setPreviousValue(final GeoLocation previousValue);
 
+    /**
+     * factory method
+     * @return instance of SetGeoLocationChange
+     */
     public static SetGeoLocationChange of() {
         return new SetGeoLocationChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetGeoLocationChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetGeoLocationChange of(final SetGeoLocationChange template) {
         SetGeoLocationChangeImpl instance = new SetGeoLocationChangeImpl();
         instance.setChange(template.getChange());
@@ -87,18 +114,37 @@ public interface SetGeoLocationChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetGeoLocationChange
+     * @return builder
+     */
     public static SetGeoLocationChangeBuilder builder() {
         return SetGeoLocationChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetGeoLocationChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetGeoLocationChangeBuilder builder(final SetGeoLocationChange template) {
         return SetGeoLocationChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetGeoLocationChange(Function<SetGeoLocationChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetGeoLocationChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetGeoLocationChange>() {
             @Override

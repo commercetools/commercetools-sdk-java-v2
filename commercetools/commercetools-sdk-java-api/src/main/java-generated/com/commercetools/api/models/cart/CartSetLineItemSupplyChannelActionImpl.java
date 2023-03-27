@@ -26,6 +26,9 @@ public class CartSetLineItemSupplyChannelActionImpl implements CartSetLineItemSu
 
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartSetLineItemSupplyChannelActionImpl(@JsonProperty("lineItemId") final String lineItemId,
             @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
@@ -34,6 +37,9 @@ public class CartSetLineItemSupplyChannelActionImpl implements CartSetLineItemSu
         this.action = SET_LINE_ITEM_SUPPLY_CHANNEL;
     }
 
+    /**
+     * create empty instance
+     */
     public CartSetLineItemSupplyChannelActionImpl() {
         this.action = SET_LINE_ITEM_SUPPLY_CHANNEL;
     }

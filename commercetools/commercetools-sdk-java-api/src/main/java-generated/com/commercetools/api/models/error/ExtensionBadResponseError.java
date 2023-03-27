@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ExtensionBadResponseErrorImpl.class)
 public interface ExtensionBadResponseError extends ErrorObject {
 
+    /**
+     * discriminator value for ExtensionBadResponseError
+     */
     String EXTENSION_BAD_RESPONSE = "ExtensionBadResponse";
 
     /**
@@ -108,29 +111,83 @@ public interface ExtensionBadResponseError extends ErrorObject {
     @JsonProperty("extensionKey")
     public String getExtensionKey();
 
+    /**
+     *  <p>Description of the invalid Extension response. For example, <code>"The extension did not return the expected JSON."</code>.</p>
+     * @param message value to be set
+     */
+
     public void setMessage(final String message);
+
+    /**
+     *  <p>User-defined localized description of the error.</p>
+     * @param localizedMessage value to be set
+     */
 
     public void setLocalizedMessage(final LocalizedString localizedMessage);
 
+    /**
+     *  <p>Any information that should be returned to the API caller.</p>
+     * @param extensionExtraInfo value to be set
+     */
+
     public void setExtensionExtraInfo(final Object extensionExtraInfo);
+
+    /**
+     *  <p>Additional errors related to the API Extension.</p>
+     * @param extensionErrors values to be set
+     */
 
     @JsonIgnore
     public void setExtensionErrors(final ExtensionError... extensionErrors);
 
+    /**
+     *  <p>Additional errors related to the API Extension.</p>
+     * @param extensionErrors values to be set
+     */
+
     public void setExtensionErrors(final List<ExtensionError> extensionErrors);
+
+    /**
+     *  <p>The response body returned by the Extension.</p>
+     * @param extensionBody value to be set
+     */
 
     public void setExtensionBody(final String extensionBody);
 
+    /**
+     *  <p>Http status code returned by the Extension.</p>
+     * @param extensionStatusCode value to be set
+     */
+
     public void setExtensionStatusCode(final Integer extensionStatusCode);
+
+    /**
+     *  <p>Unique identifier of the Extension.</p>
+     * @param extensionId value to be set
+     */
 
     public void setExtensionId(final String extensionId);
 
+    /**
+     *  <p>User-defined unique identifier of the Extension.</p>
+     * @param extensionKey value to be set
+     */
+
     public void setExtensionKey(final String extensionKey);
 
+    /**
+     * factory method
+     * @return instance of ExtensionBadResponseError
+     */
     public static ExtensionBadResponseError of() {
         return new ExtensionBadResponseErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of ExtensionBadResponseError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ExtensionBadResponseError of(final ExtensionBadResponseError template) {
         ExtensionBadResponseErrorImpl instance = new ExtensionBadResponseErrorImpl();
         instance.setMessage(template.getMessage());
@@ -145,18 +202,37 @@ public interface ExtensionBadResponseError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for ExtensionBadResponseError
+     * @return builder
+     */
     public static ExtensionBadResponseErrorBuilder builder() {
         return ExtensionBadResponseErrorBuilder.of();
     }
 
+    /**
+     * create builder for ExtensionBadResponseError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ExtensionBadResponseErrorBuilder builder(final ExtensionBadResponseError template) {
         return ExtensionBadResponseErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withExtensionBadResponseError(Function<ExtensionBadResponseError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ExtensionBadResponseError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ExtensionBadResponseError>() {
             @Override

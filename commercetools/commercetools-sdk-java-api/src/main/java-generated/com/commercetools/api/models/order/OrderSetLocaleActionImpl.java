@@ -24,12 +24,18 @@ public class OrderSetLocaleActionImpl implements OrderSetLocaleAction, ModelBase
 
     private String locale;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderSetLocaleActionImpl(@JsonProperty("locale") final String locale) {
         this.locale = locale;
         this.action = SET_LOCALE;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderSetLocaleActionImpl() {
         this.action = SET_LOCALE;
     }

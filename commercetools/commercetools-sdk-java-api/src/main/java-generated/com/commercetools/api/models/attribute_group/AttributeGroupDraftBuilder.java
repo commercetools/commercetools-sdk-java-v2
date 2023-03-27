@@ -162,18 +162,38 @@ public class AttributeGroupDraftBuilder implements Builder<AttributeGroupDraft> 
         return this;
     }
 
+    /**
+     *  <p>Name of the AttributeGroup.</p>
+     * @return name
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
+
+    /**
+     *  <p>Description of the AttributeGroup.</p>
+     * @return description
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
+    /**
+     *  <p>Attributes with unique values.</p>
+     * @return attributes
+     */
+
     public java.util.List<com.commercetools.api.models.attribute_group.AttributeReference> getAttributes() {
         return this.attributes;
     }
+
+    /**
+     *  <p>User-defined unique identifier for the AttributeGroup.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
@@ -198,10 +218,19 @@ public class AttributeGroupDraftBuilder implements Builder<AttributeGroupDraft> 
         return new AttributeGroupDraftImpl(name, description, attributes, key);
     }
 
+    /**
+     * factory method for an instance of AttributeGroupDraftBuilder
+     * @return builder
+     */
     public static AttributeGroupDraftBuilder of() {
         return new AttributeGroupDraftBuilder();
     }
 
+    /**
+     * create builder for AttributeGroupDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeGroupDraftBuilder of(final AttributeGroupDraft template) {
         AttributeGroupDraftBuilder builder = new AttributeGroupDraftBuilder();
         builder.name = template.getName();

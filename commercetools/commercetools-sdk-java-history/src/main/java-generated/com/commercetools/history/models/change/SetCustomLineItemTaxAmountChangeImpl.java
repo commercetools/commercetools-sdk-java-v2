@@ -34,6 +34,9 @@ public class SetCustomLineItemTaxAmountChangeImpl implements SetCustomLineItemTa
 
     private com.commercetools.history.models.common.TaxRate previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetCustomLineItemTaxAmountChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("customLineItem") final com.commercetools.history.models.common.LocalizedString customLineItem,
@@ -50,6 +53,9 @@ public class SetCustomLineItemTaxAmountChangeImpl implements SetCustomLineItemTa
         this.type = SET_CUSTOM_LINE_ITEM_TAX_AMOUNT_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetCustomLineItemTaxAmountChangeImpl() {
         this.type = SET_CUSTOM_LINE_ITEM_TAX_AMOUNT_CHANGE;
     }

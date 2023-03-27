@@ -75,23 +75,62 @@ public interface OrderEditPagedQueryResponse
     @JsonProperty("results")
     public List<OrderEdit> getResults();
 
+    /**
+     *  <p>Number of results requested.</p>
+     * @param limit value to be set
+     */
+
     public void setLimit(final Long limit);
+
+    /**
+     * set count
+     * @param count value to be set
+     */
 
     public void setCount(final Long count);
 
+    /**
+     * set total
+     * @param total value to be set
+     */
+
     public void setTotal(final Long total);
 
+    /**
+     *  <p>Number of elements skipped.</p>
+     * @param offset value to be set
+     */
+
     public void setOffset(final Long offset);
+
+    /**
+     * set results
+     * @param results values to be set
+     */
 
     @JsonIgnore
     public void setResults(final OrderEdit... results);
 
+    /**
+     * set results
+     * @param results values to be set
+     */
+
     public void setResults(final List<OrderEdit> results);
 
+    /**
+     * factory method
+     * @return instance of OrderEditPagedQueryResponse
+     */
     public static OrderEditPagedQueryResponse of() {
         return new OrderEditPagedQueryResponseImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderEditPagedQueryResponse
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderEditPagedQueryResponse of(final OrderEditPagedQueryResponse template) {
         OrderEditPagedQueryResponseImpl instance = new OrderEditPagedQueryResponseImpl();
         instance.setLimit(template.getLimit());
@@ -102,18 +141,37 @@ public interface OrderEditPagedQueryResponse
         return instance;
     }
 
+    /**
+     * builder factory method for OrderEditPagedQueryResponse
+     * @return builder
+     */
     public static OrderEditPagedQueryResponseBuilder builder() {
         return OrderEditPagedQueryResponseBuilder.of();
     }
 
+    /**
+     * create builder for OrderEditPagedQueryResponse instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderEditPagedQueryResponseBuilder builder(final OrderEditPagedQueryResponse template) {
         return OrderEditPagedQueryResponseBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderEditPagedQueryResponse(Function<OrderEditPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderEditPagedQueryResponse> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderEditPagedQueryResponse>() {
             @Override

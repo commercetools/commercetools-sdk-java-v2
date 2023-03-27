@@ -28,6 +28,9 @@ public class SetValidFromAndUntilChangeImpl implements SetValidFromAndUntilChang
 
     private com.commercetools.history.models.change_value.ValidFromAndUntilValue nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetValidFromAndUntilChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.change_value.ValidFromAndUntilValue previousValue,
@@ -38,6 +41,9 @@ public class SetValidFromAndUntilChangeImpl implements SetValidFromAndUntilChang
         this.type = SET_VALID_FROM_AND_UNTIL_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetValidFromAndUntilChangeImpl() {
         this.type = SET_VALID_FROM_AND_UNTIL_CHANGE;
     }

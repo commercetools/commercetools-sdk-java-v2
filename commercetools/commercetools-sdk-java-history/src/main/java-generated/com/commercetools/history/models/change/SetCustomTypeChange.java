@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetCustomTypeChangeImpl.class)
 public interface SetCustomTypeChange extends Change {
 
+    /**
+     * discriminator value for SetCustomTypeChange
+     */
     String SET_CUSTOM_TYPE_CHANGE = "SetCustomTypeChange";
 
     /**
@@ -69,16 +72,40 @@ public interface SetCustomTypeChange extends Change {
     @JsonProperty("previousValue")
     public CustomFields getPreviousValue();
 
+    /**
+     *  <p>Update action for setting a custom type</p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
 
     public void setNextValue(final CustomFields nextValue);
 
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
+
     public void setPreviousValue(final CustomFields previousValue);
 
+    /**
+     * factory method
+     * @return instance of SetCustomTypeChange
+     */
     public static SetCustomTypeChange of() {
         return new SetCustomTypeChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetCustomTypeChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetCustomTypeChange of(final SetCustomTypeChange template) {
         SetCustomTypeChangeImpl instance = new SetCustomTypeChangeImpl();
         instance.setChange(template.getChange());
@@ -87,18 +114,37 @@ public interface SetCustomTypeChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetCustomTypeChange
+     * @return builder
+     */
     public static SetCustomTypeChangeBuilder builder() {
         return SetCustomTypeChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetCustomTypeChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetCustomTypeChangeBuilder builder(final SetCustomTypeChange template) {
         return SetCustomTypeChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetCustomTypeChange(Function<SetCustomTypeChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetCustomTypeChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetCustomTypeChange>() {
             @Override

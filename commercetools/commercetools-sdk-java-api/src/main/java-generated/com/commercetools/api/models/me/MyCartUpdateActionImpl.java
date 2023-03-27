@@ -22,11 +22,17 @@ public class MyCartUpdateActionImpl implements MyCartUpdateAction, ModelBase {
 
     private String action;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyCartUpdateActionImpl(@JsonProperty("action") final String action) {
         this.action = action;
     }
 
+    /**
+     * create empty instance
+     */
     public MyCartUpdateActionImpl() {
     }
 

@@ -26,6 +26,9 @@ public class PaymentChangeTransactionTimestampActionImpl implements PaymentChang
 
     private java.time.ZonedDateTime timestamp;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PaymentChangeTransactionTimestampActionImpl(@JsonProperty("transactionId") final String transactionId,
             @JsonProperty("timestamp") final java.time.ZonedDateTime timestamp) {
@@ -34,6 +37,9 @@ public class PaymentChangeTransactionTimestampActionImpl implements PaymentChang
         this.action = CHANGE_TRANSACTION_TIMESTAMP;
     }
 
+    /**
+     * create empty instance
+     */
     public PaymentChangeTransactionTimestampActionImpl() {
         this.action = CHANGE_TRANSACTION_TIMESTAMP;
     }

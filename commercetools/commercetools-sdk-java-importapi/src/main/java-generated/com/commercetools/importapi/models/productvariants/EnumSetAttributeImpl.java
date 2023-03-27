@@ -26,6 +26,9 @@ public class EnumSetAttributeImpl implements EnumSetAttribute, ModelBase {
 
     private java.util.List<String> value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     EnumSetAttributeImpl(@JsonProperty("name") final String name,
             @JsonProperty("value") final java.util.List<String> value) {
@@ -34,6 +37,9 @@ public class EnumSetAttributeImpl implements EnumSetAttribute, ModelBase {
         this.type = ENUM_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public EnumSetAttributeImpl() {
         this.type = ENUM_SET;
     }

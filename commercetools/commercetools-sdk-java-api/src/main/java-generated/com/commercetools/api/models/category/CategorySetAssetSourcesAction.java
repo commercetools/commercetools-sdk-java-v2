@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CategorySetAssetSourcesActionImpl.class)
 public interface CategorySetAssetSourcesAction extends CategoryUpdateAction {
 
+    /**
+     * discriminator value for CategorySetAssetSourcesAction
+     */
     String SET_ASSET_SOURCES = "setAssetSources";
 
     /**
@@ -58,19 +61,48 @@ public interface CategorySetAssetSourcesAction extends CategoryUpdateAction {
     @JsonProperty("sources")
     public List<AssetSource> getSources();
 
+    /**
+     *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
+     * @param assetId value to be set
+     */
+
     public void setAssetId(final String assetId);
 
+    /**
+     *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
+     * @param assetKey value to be set
+     */
+
     public void setAssetKey(final String assetKey);
+
+    /**
+     *  <p>Must not be empty. At least one entry is required.</p>
+     * @param sources values to be set
+     */
 
     @JsonIgnore
     public void setSources(final AssetSource... sources);
 
+    /**
+     *  <p>Must not be empty. At least one entry is required.</p>
+     * @param sources values to be set
+     */
+
     public void setSources(final List<AssetSource> sources);
 
+    /**
+     * factory method
+     * @return instance of CategorySetAssetSourcesAction
+     */
     public static CategorySetAssetSourcesAction of() {
         return new CategorySetAssetSourcesActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CategorySetAssetSourcesAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CategorySetAssetSourcesAction of(final CategorySetAssetSourcesAction template) {
         CategorySetAssetSourcesActionImpl instance = new CategorySetAssetSourcesActionImpl();
         instance.setAssetId(template.getAssetId());
@@ -79,18 +111,37 @@ public interface CategorySetAssetSourcesAction extends CategoryUpdateAction {
         return instance;
     }
 
+    /**
+     * builder factory method for CategorySetAssetSourcesAction
+     * @return builder
+     */
     public static CategorySetAssetSourcesActionBuilder builder() {
         return CategorySetAssetSourcesActionBuilder.of();
     }
 
+    /**
+     * create builder for CategorySetAssetSourcesAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategorySetAssetSourcesActionBuilder builder(final CategorySetAssetSourcesAction template) {
         return CategorySetAssetSourcesActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCategorySetAssetSourcesAction(Function<CategorySetAssetSourcesAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CategorySetAssetSourcesAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CategorySetAssetSourcesAction>() {
             @Override

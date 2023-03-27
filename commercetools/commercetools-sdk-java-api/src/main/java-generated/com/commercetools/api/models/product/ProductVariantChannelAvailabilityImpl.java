@@ -30,6 +30,9 @@ public class ProductVariantChannelAvailabilityImpl implements ProductVariantChan
 
     private Long version;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductVariantChannelAvailabilityImpl(@JsonProperty("isOnStock") final Boolean isOnStock,
             @JsonProperty("restockableInDays") final Long restockableInDays,
@@ -42,6 +45,9 @@ public class ProductVariantChannelAvailabilityImpl implements ProductVariantChan
         this.version = version;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductVariantChannelAvailabilityImpl() {
     }
 

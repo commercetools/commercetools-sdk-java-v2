@@ -40,10 +40,19 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderImpl.class)
 public interface StagedOrder extends Order {
 
+    /**
+     * factory method
+     * @return instance of StagedOrder
+     */
     public static StagedOrder of() {
         return new StagedOrderImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedOrder
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedOrder of(final StagedOrder template) {
         StagedOrderImpl instance = new StagedOrderImpl();
         instance.setId(template.getId());
@@ -96,18 +105,37 @@ public interface StagedOrder extends Order {
         return instance;
     }
 
+    /**
+     * builder factory method for StagedOrder
+     * @return builder
+     */
     public static StagedOrderBuilder builder() {
         return StagedOrderBuilder.of();
     }
 
+    /**
+     * create builder for StagedOrder instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderBuilder builder(final StagedOrder template) {
         return StagedOrderBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedOrder(Function<StagedOrder, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedOrder> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedOrder>() {
             @Override

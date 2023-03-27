@@ -34,6 +34,11 @@ public class CartRemoveShippingMethodActionBuilder implements Builder<CartRemove
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method to remove from the Cart.</p>
+     * @return shippingKey
+     */
+
     public String getShippingKey() {
         return this.shippingKey;
     }
@@ -55,10 +60,19 @@ public class CartRemoveShippingMethodActionBuilder implements Builder<CartRemove
         return new CartRemoveShippingMethodActionImpl(shippingKey);
     }
 
+    /**
+     * factory method for an instance of CartRemoveShippingMethodActionBuilder
+     * @return builder
+     */
     public static CartRemoveShippingMethodActionBuilder of() {
         return new CartRemoveShippingMethodActionBuilder();
     }
 
+    /**
+     * create builder for CartRemoveShippingMethodAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartRemoveShippingMethodActionBuilder of(final CartRemoveShippingMethodAction template) {
         CartRemoveShippingMethodActionBuilder builder = new CartRemoveShippingMethodActionBuilder();
         builder.shippingKey = template.getShippingKey();

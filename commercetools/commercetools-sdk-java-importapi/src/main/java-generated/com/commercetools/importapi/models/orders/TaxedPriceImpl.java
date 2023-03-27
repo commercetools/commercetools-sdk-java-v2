@@ -26,6 +26,9 @@ public class TaxedPriceImpl implements TaxedPrice, ModelBase {
 
     private java.util.List<com.commercetools.importapi.models.orders.TaxPortion> taxPortions;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TaxedPriceImpl(@JsonProperty("totalNet") final com.commercetools.importapi.models.common.Money totalNet,
             @JsonProperty("totalGross") final com.commercetools.importapi.models.common.Money totalGross,
@@ -35,6 +38,9 @@ public class TaxedPriceImpl implements TaxedPrice, ModelBase {
         this.taxPortions = taxPortions;
     }
 
+    /**
+     * create empty instance
+     */
     public TaxedPriceImpl() {
     }
 

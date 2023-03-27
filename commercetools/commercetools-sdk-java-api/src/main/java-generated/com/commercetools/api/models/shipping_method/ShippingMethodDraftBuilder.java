@@ -277,47 +277,96 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier for the ShippingMethod.</p>
+     * @return key
+     */
+
     @Nullable
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>Name of the ShippingMethod.</p>
+     * @return name
+     */
+
     public String getName() {
         return this.name;
     }
+
+    /**
+     *  <p>Localized name of the ShippingMethod.</p>
+     * @return localizedName
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getLocalizedName() {
         return this.localizedName;
     }
 
+    /**
+     *  <p>Description of the ShippingMethod.</p>
+     * @return description
+     */
     @Deprecated
     @Nullable
     public String getDescription() {
         return this.description;
     }
 
+    /**
+     *  <p>Localized description of the ShippingMethod.</p>
+     * @return localizedDescription
+     */
+
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getLocalizedDescription() {
         return this.localizedDescription;
     }
 
+    /**
+     *  <p>TaxCategory for all ZoneRates of the ShippingMethod.</p>
+     * @return taxCategory
+     */
+
     public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {
         return this.taxCategory;
     }
+
+    /**
+     *  <p>Defines ShippingRates (prices) for specific zones.</p>
+     * @return zoneRates
+     */
 
     public java.util.List<com.commercetools.api.models.shipping_method.ZoneRateDraft> getZoneRates() {
         return this.zoneRates;
     }
 
+    /**
+     *  <p>If <code>true</code> the ShippingMethod will be the Project's default ShippingMethod.</p>
+     * @return isDefault
+     */
+
     public Boolean getIsDefault() {
         return this.isDefault;
     }
+
+    /**
+     *  <p>Valid Cart predicate to select a ShippingMethod for a Cart.</p>
+     * @return predicate
+     */
 
     @Nullable
     public String getPredicate() {
         return this.predicate;
     }
+
+    /**
+     *  <p>Custom Fields for the ShippingMethod.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -346,10 +395,19 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
             zoneRates, isDefault, predicate, custom);
     }
 
+    /**
+     * factory method for an instance of ShippingMethodDraftBuilder
+     * @return builder
+     */
     public static ShippingMethodDraftBuilder of() {
         return new ShippingMethodDraftBuilder();
     }
 
+    /**
+     * create builder for ShippingMethodDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShippingMethodDraftBuilder of(final ShippingMethodDraft template) {
         ShippingMethodDraftBuilder builder = new ShippingMethodDraftBuilder();
         builder.key = template.getKey();

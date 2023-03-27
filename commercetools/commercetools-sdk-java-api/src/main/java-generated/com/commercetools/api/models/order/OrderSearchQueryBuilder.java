@@ -36,10 +36,19 @@ public class OrderSearchQueryBuilder implements Builder<OrderSearchQuery> {
         return new OrderSearchQueryImpl();
     }
 
+    /**
+     * factory method for an instance of OrderSearchQueryBuilder
+     * @return builder
+     */
     public static OrderSearchQueryBuilder of() {
         return new OrderSearchQueryBuilder();
     }
 
+    /**
+     * create builder for OrderSearchQuery instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderSearchQueryBuilder of(final OrderSearchQuery template) {
         OrderSearchQueryBuilder builder = new OrderSearchQueryBuilder();
         return builder;

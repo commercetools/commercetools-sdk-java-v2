@@ -24,6 +24,9 @@ public class ReferenceSetFieldImpl implements ReferenceSetField, ModelBase {
 
     private java.util.List<com.commercetools.importapi.models.common.KeyReference> value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReferenceSetFieldImpl(
             @JsonProperty("value") final java.util.List<com.commercetools.importapi.models.common.KeyReference> value) {
@@ -31,6 +34,9 @@ public class ReferenceSetFieldImpl implements ReferenceSetField, ModelBase {
         this.type = REFERENCE_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public ReferenceSetFieldImpl() {
         this.type = REFERENCE_SET;
     }

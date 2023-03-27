@@ -91,6 +91,10 @@ public class PaymentUpdateActionBuilder {
         return com.commercetools.api.models.payment.PaymentTransitionStateActionBuilder.of();
     }
 
+    /**
+     * factory method for an instance of PaymentUpdateActionBuilder
+     * @return builder
+     */
     public static PaymentUpdateActionBuilder of() {
         return new PaymentUpdateActionBuilder();
     }

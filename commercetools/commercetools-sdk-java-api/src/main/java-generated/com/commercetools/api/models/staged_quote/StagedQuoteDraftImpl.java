@@ -32,6 +32,9 @@ public class StagedQuoteDraftImpl implements StagedQuoteDraft, ModelBase {
 
     private com.commercetools.api.models.state.StateReference state;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedQuoteDraftImpl(
             @JsonProperty("quoteRequest") final com.commercetools.api.models.quote_request.QuoteRequestResourceIdentifier quoteRequest,
@@ -48,6 +51,9 @@ public class StagedQuoteDraftImpl implements StagedQuoteDraft, ModelBase {
         this.state = state;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedQuoteDraftImpl() {
     }
 

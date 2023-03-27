@@ -30,6 +30,9 @@ public class DeliveryAddressSetMessagePayloadImpl implements DeliveryAddressSetM
 
     private String shippingKey;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DeliveryAddressSetMessagePayloadImpl(@JsonProperty("deliveryId") final String deliveryId,
             @JsonProperty("address") final com.commercetools.api.models.common.Address address,
@@ -42,6 +45,9 @@ public class DeliveryAddressSetMessagePayloadImpl implements DeliveryAddressSetM
         this.type = DELIVERY_ADDRESS_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public DeliveryAddressSetMessagePayloadImpl() {
         this.type = DELIVERY_ADDRESS_SET;
     }

@@ -36,6 +36,11 @@ public class StagedQuoteSetSellerCommentActionBuilder implements Builder<StagedQ
         return this;
     }
 
+    /**
+     *  <p>If <code>sellerComment</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+     * @return sellerComment
+     */
+
     @Nullable
     public String getSellerComment() {
         return this.sellerComment;
@@ -57,10 +62,19 @@ public class StagedQuoteSetSellerCommentActionBuilder implements Builder<StagedQ
         return new StagedQuoteSetSellerCommentActionImpl(sellerComment);
     }
 
+    /**
+     * factory method for an instance of StagedQuoteSetSellerCommentActionBuilder
+     * @return builder
+     */
     public static StagedQuoteSetSellerCommentActionBuilder of() {
         return new StagedQuoteSetSellerCommentActionBuilder();
     }
 
+    /**
+     * create builder for StagedQuoteSetSellerCommentAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedQuoteSetSellerCommentActionBuilder of(final StagedQuoteSetSellerCommentAction template) {
         StagedQuoteSetSellerCommentActionBuilder builder = new StagedQuoteSetSellerCommentActionBuilder();
         builder.sellerComment = template.getSellerComment();

@@ -44,6 +44,9 @@ public class StagedQuoteValidToSetMessageImpl implements StagedQuoteValidToSetMe
 
     private java.time.ZonedDateTime validTo;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedQuoteValidToSetMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -69,6 +72,9 @@ public class StagedQuoteValidToSetMessageImpl implements StagedQuoteValidToSetMe
         this.type = STAGED_QUOTE_VALID_TO_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedQuoteValidToSetMessageImpl() {
         this.type = STAGED_QUOTE_VALID_TO_SET;
     }

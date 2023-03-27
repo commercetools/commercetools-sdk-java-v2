@@ -35,6 +35,9 @@ public class PriceChangedErrorImpl implements PriceChangedError, ModelBase {
 
     private Boolean shipping;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PriceChangedErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values,
@@ -47,6 +50,9 @@ public class PriceChangedErrorImpl implements PriceChangedError, ModelBase {
         this.code = PRICE_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public PriceChangedErrorImpl() {
         this.code = PRICE_CHANGED;
     }

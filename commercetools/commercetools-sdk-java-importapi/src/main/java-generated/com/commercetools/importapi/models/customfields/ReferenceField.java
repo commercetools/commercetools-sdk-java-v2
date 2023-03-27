@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ReferenceFieldImpl.class)
 public interface ReferenceField extends CustomField {
 
+    /**
+     * discriminator value for ReferenceField
+     */
     String REFERENCE = "Reference";
 
     /**
@@ -42,30 +45,63 @@ public interface ReferenceField extends CustomField {
     @JsonProperty("value")
     public KeyReference getValue();
 
+    /**
+     *  <p>References a resource by key</p>
+     * @param value value to be set
+     */
+
     public void setValue(final KeyReference value);
 
+    /**
+     * factory method
+     * @return instance of ReferenceField
+     */
     public static ReferenceField of() {
         return new ReferenceFieldImpl();
     }
 
+    /**
+     * factory method to copy an instance of ReferenceField
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ReferenceField of(final ReferenceField template) {
         ReferenceFieldImpl instance = new ReferenceFieldImpl();
         instance.setValue(template.getValue());
         return instance;
     }
 
+    /**
+     * builder factory method for ReferenceField
+     * @return builder
+     */
     public static ReferenceFieldBuilder builder() {
         return ReferenceFieldBuilder.of();
     }
 
+    /**
+     * create builder for ReferenceField instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReferenceFieldBuilder builder(final ReferenceField template) {
         return ReferenceFieldBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withReferenceField(Function<ReferenceField, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ReferenceField> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ReferenceField>() {
             @Override

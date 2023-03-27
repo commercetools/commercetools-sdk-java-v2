@@ -30,6 +30,9 @@ public class SetAssetSourcesChangeImpl implements SetAssetSourcesChange, ModelBa
 
     private java.util.List<com.commercetools.history.models.common.AssetSource> previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetAssetSourcesChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("asset") final com.commercetools.history.models.change_value.AssetChangeValue asset,
@@ -42,6 +45,9 @@ public class SetAssetSourcesChangeImpl implements SetAssetSourcesChange, ModelBa
         this.type = SET_ASSET_SOURCES_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetAssetSourcesChangeImpl() {
         this.type = SET_ASSET_SOURCES_CHANGE;
     }

@@ -62,9 +62,19 @@ public class MyBusinessUnitAssociateDraftBuilder implements Builder<MyBusinessUn
         return this;
     }
 
+    /**
+     *  <p>Expected version of the BusinessUnit on which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
+     * @return version
+     */
+
     public Long getVersion() {
         return this.version;
     }
+
+    /**
+     *  <p>Customer to create and assign to the Business Unit.</p>
+     * @return customer
+     */
 
     public com.commercetools.api.models.me.MyCustomerDraft getCustomer() {
         return this.customer;
@@ -88,10 +98,19 @@ public class MyBusinessUnitAssociateDraftBuilder implements Builder<MyBusinessUn
         return new MyBusinessUnitAssociateDraftImpl(version, customer);
     }
 
+    /**
+     * factory method for an instance of MyBusinessUnitAssociateDraftBuilder
+     * @return builder
+     */
     public static MyBusinessUnitAssociateDraftBuilder of() {
         return new MyBusinessUnitAssociateDraftBuilder();
     }
 
+    /**
+     * create builder for MyBusinessUnitAssociateDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyBusinessUnitAssociateDraftBuilder of(final MyBusinessUnitAssociateDraft template) {
         MyBusinessUnitAssociateDraftBuilder builder = new MyBusinessUnitAssociateDraftBuilder();
         builder.version = template.getVersion();

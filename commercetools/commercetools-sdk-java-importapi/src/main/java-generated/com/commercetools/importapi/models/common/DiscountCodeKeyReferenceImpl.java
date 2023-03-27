@@ -24,12 +24,18 @@ public class DiscountCodeKeyReferenceImpl implements DiscountCodeKeyReference, M
 
     private com.commercetools.importapi.models.common.ReferenceType typeId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DiscountCodeKeyReferenceImpl(@JsonProperty("key") final String key) {
         this.key = key;
         this.typeId = ReferenceType.findEnum("discount-code");
     }
 
+    /**
+     * create empty instance
+     */
     public DiscountCodeKeyReferenceImpl() {
         this.typeId = ReferenceType.findEnum("discount-code");
     }

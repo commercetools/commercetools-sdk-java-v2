@@ -24,12 +24,18 @@ public class CustomerCompanyNameSetMessagePayloadImpl implements CustomerCompany
 
     private String companyName;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerCompanyNameSetMessagePayloadImpl(@JsonProperty("companyName") final String companyName) {
         this.companyName = companyName;
         this.type = CUSTOMER_COMPANY_NAME_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerCompanyNameSetMessagePayloadImpl() {
         this.type = CUSTOMER_COMPANY_NAME_SET;
     }

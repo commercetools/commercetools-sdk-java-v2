@@ -615,6 +615,10 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.StoreSupplyChannelsChangedMessageBuilder.of();
     }
 
+    /**
+     * factory method for an instance of MessageBuilder
+     * @return builder
+     */
     public static MessageBuilder of() {
         return new MessageBuilder();
     }

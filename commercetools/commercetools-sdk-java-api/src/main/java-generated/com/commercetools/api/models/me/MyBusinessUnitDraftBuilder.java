@@ -19,6 +19,10 @@ public class MyBusinessUnitDraftBuilder {
         return com.commercetools.api.models.me.MyDivisionDraftBuilder.of();
     }
 
+    /**
+     * factory method for an instance of MyBusinessUnitDraftBuilder
+     * @return builder
+     */
     public static MyBusinessUnitDraftBuilder of() {
         return new MyBusinessUnitDraftBuilder();
     }

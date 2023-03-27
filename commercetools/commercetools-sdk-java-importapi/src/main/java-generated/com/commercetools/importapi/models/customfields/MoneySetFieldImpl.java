@@ -24,6 +24,9 @@ public class MoneySetFieldImpl implements MoneySetField, ModelBase {
 
     private java.util.List<com.commercetools.importapi.models.common.Money> value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MoneySetFieldImpl(
             @JsonProperty("value") final java.util.List<com.commercetools.importapi.models.common.Money> value) {
@@ -31,6 +34,9 @@ public class MoneySetFieldImpl implements MoneySetField, ModelBase {
         this.type = MONEY_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public MoneySetFieldImpl() {
         this.type = MONEY_SET;
     }

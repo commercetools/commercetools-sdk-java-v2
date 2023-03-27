@@ -42,14 +42,28 @@ public interface ShippingRatePriceTier {
     @JsonProperty("type")
     public ShippingRateTierType getType();
 
+    /**
+     * builder for cartClassification subtype
+     * @return builder
+     */
     public static com.commercetools.importapi.models.orders.CartClassificationTierBuilder cartClassificationBuilder() {
         return com.commercetools.importapi.models.orders.CartClassificationTierBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withShippingRatePriceTier(Function<ShippingRatePriceTier, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ShippingRatePriceTier> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ShippingRatePriceTier>() {
             @Override

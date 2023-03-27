@@ -51,20 +51,43 @@ public interface KeyReference extends com.commercetools.api.models.WithKey {
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     *  <p>User-defined unique and immutable key of the referenced resource.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
 
+    /**
+     * builder for businessUnit subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder businessUnitBuilder() {
         return com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder.of();
     }
 
+    /**
+     * builder for store subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.store.StoreKeyReferenceBuilder storeBuilder() {
         return com.commercetools.api.models.store.StoreKeyReferenceBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withKeyReference(Function<KeyReference, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<KeyReference> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<KeyReference>() {
             @Override

@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = BusinessUnitSetStoreModeActionImpl.class)
 public interface BusinessUnitSetStoreModeAction extends BusinessUnitUpdateAction {
 
+    /**
+     * discriminator value for BusinessUnitSetStoreModeAction
+     */
     String SET_STORE_MODE = "setStoreMode";
 
     /**
@@ -49,17 +52,41 @@ public interface BusinessUnitSetStoreModeAction extends BusinessUnitUpdateAction
     @JsonProperty("stores")
     public List<StoreResourceIdentifier> getStores();
 
+    /**
+     *  <p>Set to <code>Explicit</code> to specify Stores for the Business Unit. Set to <code>FromParent</code> to inherit Stores from a parent.</p>
+     * @param storeMode value to be set
+     */
+
     public void setStoreMode(final BusinessUnitStoreMode storeMode);
+
+    /**
+     *  <p>Set the Stores the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
+     * @param stores values to be set
+     */
 
     @JsonIgnore
     public void setStores(final StoreResourceIdentifier... stores);
 
+    /**
+     *  <p>Set the Stores the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
+     * @param stores values to be set
+     */
+
     public void setStores(final List<StoreResourceIdentifier> stores);
 
+    /**
+     * factory method
+     * @return instance of BusinessUnitSetStoreModeAction
+     */
     public static BusinessUnitSetStoreModeAction of() {
         return new BusinessUnitSetStoreModeActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of BusinessUnitSetStoreModeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static BusinessUnitSetStoreModeAction of(final BusinessUnitSetStoreModeAction template) {
         BusinessUnitSetStoreModeActionImpl instance = new BusinessUnitSetStoreModeActionImpl();
         instance.setStoreMode(template.getStoreMode());
@@ -67,18 +94,37 @@ public interface BusinessUnitSetStoreModeAction extends BusinessUnitUpdateAction
         return instance;
     }
 
+    /**
+     * builder factory method for BusinessUnitSetStoreModeAction
+     * @return builder
+     */
     public static BusinessUnitSetStoreModeActionBuilder builder() {
         return BusinessUnitSetStoreModeActionBuilder.of();
     }
 
+    /**
+     * create builder for BusinessUnitSetStoreModeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitSetStoreModeActionBuilder builder(final BusinessUnitSetStoreModeAction template) {
         return BusinessUnitSetStoreModeActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withBusinessUnitSetStoreModeAction(Function<BusinessUnitSetStoreModeAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitSetStoreModeAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitSetStoreModeAction>() {
             @Override

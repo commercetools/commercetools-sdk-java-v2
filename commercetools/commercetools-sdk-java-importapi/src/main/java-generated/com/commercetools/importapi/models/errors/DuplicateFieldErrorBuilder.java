@@ -32,7 +32,7 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
     private java.lang.Object duplicateValue;
 
     /**
-     *
+     * set the value to the message
      * @param message value to be set
      * @return Builder
      */
@@ -64,14 +64,29 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
         return this;
     }
 
+    /**
+     * value of message}
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>The name of the field.</p>
+     * @return field
+     */
 
     @Nullable
     public String getField() {
         return this.field;
     }
+
+    /**
+     *  <p>The offending duplicate value.</p>
+     * @return duplicateValue
+     */
 
     @Nullable
     public java.lang.Object getDuplicateValue() {
@@ -95,10 +110,19 @@ public class DuplicateFieldErrorBuilder implements Builder<DuplicateFieldError> 
         return new DuplicateFieldErrorImpl(message, field, duplicateValue);
     }
 
+    /**
+     * factory method for an instance of DuplicateFieldErrorBuilder
+     * @return builder
+     */
     public static DuplicateFieldErrorBuilder of() {
         return new DuplicateFieldErrorBuilder();
     }
 
+    /**
+     * create builder for DuplicateFieldError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DuplicateFieldErrorBuilder of(final DuplicateFieldError template) {
         DuplicateFieldErrorBuilder builder = new DuplicateFieldErrorBuilder();
         builder.message = template.getMessage();

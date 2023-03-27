@@ -25,6 +25,9 @@ public class MessageSubscriptionImpl implements MessageSubscription, ModelBase {
 
     private java.util.List<String> types;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MessageSubscriptionImpl(
             @JsonProperty("resourceTypeId") final com.commercetools.api.models.subscription.MessageSubscriptionResourceTypeId resourceTypeId,
@@ -33,6 +36,9 @@ public class MessageSubscriptionImpl implements MessageSubscription, ModelBase {
         this.types = types;
     }
 
+    /**
+     * create empty instance
+     */
     public MessageSubscriptionImpl() {
     }
 

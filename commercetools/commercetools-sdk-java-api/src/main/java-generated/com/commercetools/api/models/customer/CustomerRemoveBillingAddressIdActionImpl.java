@@ -26,6 +26,9 @@ public class CustomerRemoveBillingAddressIdActionImpl implements CustomerRemoveB
 
     private String addressKey;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerRemoveBillingAddressIdActionImpl(@JsonProperty("addressId") final String addressId,
             @JsonProperty("addressKey") final String addressKey) {
@@ -34,6 +37,9 @@ public class CustomerRemoveBillingAddressIdActionImpl implements CustomerRemoveB
         this.action = REMOVE_BILLING_ADDRESS_ID;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerRemoveBillingAddressIdActionImpl() {
         this.action = REMOVE_BILLING_ADDRESS_ID;
     }

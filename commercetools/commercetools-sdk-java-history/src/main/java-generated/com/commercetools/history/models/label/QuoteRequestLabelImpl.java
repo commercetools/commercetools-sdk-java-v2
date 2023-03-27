@@ -26,6 +26,9 @@ public class QuoteRequestLabelImpl implements QuoteRequestLabel, ModelBase {
 
     private com.commercetools.history.models.common.Reference customer;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     QuoteRequestLabelImpl(@JsonProperty("key") final String key,
             @JsonProperty("customer") final com.commercetools.history.models.common.Reference customer) {
@@ -34,6 +37,9 @@ public class QuoteRequestLabelImpl implements QuoteRequestLabel, ModelBase {
         this.type = QUOTE_REQUEST_LABEL;
     }
 
+    /**
+     * create empty instance
+     */
     public QuoteRequestLabelImpl() {
         this.type = QUOTE_REQUEST_LABEL;
     }

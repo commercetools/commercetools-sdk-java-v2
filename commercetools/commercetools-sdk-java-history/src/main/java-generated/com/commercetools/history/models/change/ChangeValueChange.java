@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ChangeValueChangeImpl.class)
 public interface ChangeValueChange extends Change {
 
+    /**
+     * discriminator value for ChangeValueChange
+     */
     String CHANGE_VALUE_CHANGE = "ChangeValueChange";
 
     /**
@@ -69,16 +72,40 @@ public interface ChangeValueChange extends Change {
     @JsonProperty("previousValue")
     public ChangeValueChangeValue getPreviousValue();
 
+    /**
+     *  <p>Update action for <code>changeValue</code> on cart discounts and product discounts</p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
 
     public void setNextValue(final ChangeValueChangeValue nextValue);
 
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
+
     public void setPreviousValue(final ChangeValueChangeValue previousValue);
 
+    /**
+     * factory method
+     * @return instance of ChangeValueChange
+     */
     public static ChangeValueChange of() {
         return new ChangeValueChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of ChangeValueChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ChangeValueChange of(final ChangeValueChange template) {
         ChangeValueChangeImpl instance = new ChangeValueChangeImpl();
         instance.setChange(template.getChange());
@@ -87,18 +114,37 @@ public interface ChangeValueChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for ChangeValueChange
+     * @return builder
+     */
     public static ChangeValueChangeBuilder builder() {
         return ChangeValueChangeBuilder.of();
     }
 
+    /**
+     * create builder for ChangeValueChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeValueChangeBuilder builder(final ChangeValueChange template) {
         return ChangeValueChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withChangeValueChange(Function<ChangeValueChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ChangeValueChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ChangeValueChange>() {
             @Override

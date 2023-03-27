@@ -36,6 +36,11 @@ public class PaymentSetKeyActionBuilder implements Builder<PaymentSetKeyAction> 
         return this;
     }
 
+    /**
+     *  <p>Value to set. If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
+     * @return key
+     */
+
     @Nullable
     public String getKey() {
         return this.key;
@@ -57,10 +62,19 @@ public class PaymentSetKeyActionBuilder implements Builder<PaymentSetKeyAction> 
         return new PaymentSetKeyActionImpl(key);
     }
 
+    /**
+     * factory method for an instance of PaymentSetKeyActionBuilder
+     * @return builder
+     */
     public static PaymentSetKeyActionBuilder of() {
         return new PaymentSetKeyActionBuilder();
     }
 
+    /**
+     * create builder for PaymentSetKeyAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentSetKeyActionBuilder of(final PaymentSetKeyAction template) {
         PaymentSetKeyActionBuilder builder = new PaymentSetKeyActionBuilder();
         builder.key = template.getKey();

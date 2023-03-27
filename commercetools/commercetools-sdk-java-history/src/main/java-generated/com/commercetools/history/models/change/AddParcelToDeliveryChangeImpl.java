@@ -28,6 +28,9 @@ public class AddParcelToDeliveryChangeImpl implements AddParcelToDeliveryChange,
 
     private com.commercetools.history.models.common.Parcel nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AddParcelToDeliveryChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("deliveryId") final String deliveryId,
@@ -38,6 +41,9 @@ public class AddParcelToDeliveryChangeImpl implements AddParcelToDeliveryChange,
         this.type = ADD_PARCEL_TO_DELIVERY_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public AddParcelToDeliveryChangeImpl() {
         this.type = ADD_PARCEL_TO_DELIVERY_CHANGE;
     }

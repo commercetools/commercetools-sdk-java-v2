@@ -41,7 +41,7 @@ public class SetMiddleNameChangeBuilder implements Builder<SetMiddleNameChange> 
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class SetMiddleNameChangeBuilder implements Builder<SetMiddleNameChange> 
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -62,13 +62,28 @@ public class SetMiddleNameChangeBuilder implements Builder<SetMiddleNameChange> 
         return this;
     }
 
+    /**
+     *  <p>Shape of the action for <code>setMiddleName</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public String getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public String getNextValue() {
         return this.nextValue;
@@ -93,10 +108,19 @@ public class SetMiddleNameChangeBuilder implements Builder<SetMiddleNameChange> 
         return new SetMiddleNameChangeImpl(change, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of SetMiddleNameChangeBuilder
+     * @return builder
+     */
     public static SetMiddleNameChangeBuilder of() {
         return new SetMiddleNameChangeBuilder();
     }
 
+    /**
+     * create builder for SetMiddleNameChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetMiddleNameChangeBuilder of(final SetMiddleNameChange template) {
         SetMiddleNameChangeBuilder builder = new SetMiddleNameChangeBuilder();
         builder.change = template.getChange();

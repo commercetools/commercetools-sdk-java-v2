@@ -24,6 +24,9 @@ public class CategorySetMetaKeywordsActionImpl implements CategorySetMetaKeyword
 
     private com.commercetools.api.models.common.LocalizedString metaKeywords;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CategorySetMetaKeywordsActionImpl(
             @JsonProperty("metaKeywords") final com.commercetools.api.models.common.LocalizedString metaKeywords) {
@@ -31,6 +34,9 @@ public class CategorySetMetaKeywordsActionImpl implements CategorySetMetaKeyword
         this.action = SET_META_KEYWORDS;
     }
 
+    /**
+     * create empty instance
+     */
     public CategorySetMetaKeywordsActionImpl() {
         this.action = SET_META_KEYWORDS;
     }

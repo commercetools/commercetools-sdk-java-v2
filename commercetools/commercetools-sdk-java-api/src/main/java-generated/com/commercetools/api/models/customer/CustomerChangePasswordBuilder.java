@@ -77,17 +77,38 @@ public class CustomerChangePasswordBuilder implements Builder<CustomerChangePass
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Customer.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Expected version of the Customer on which the changes should be applied.</p>
+     * @return version
+     */
 
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *  <p>Current password of the Customer.</p>
+     *  <p>If the current password does not match, an InvalidCurrentPassword error is returned.</p>
+     * @return currentPassword
+     */
+
     public String getCurrentPassword() {
         return this.currentPassword;
     }
+
+    /**
+     *  <p>New password to be set.</p>
+     * @return newPassword
+     */
 
     public String getNewPassword() {
         return this.newPassword;
@@ -113,10 +134,19 @@ public class CustomerChangePasswordBuilder implements Builder<CustomerChangePass
         return new CustomerChangePasswordImpl(id, version, currentPassword, newPassword);
     }
 
+    /**
+     * factory method for an instance of CustomerChangePasswordBuilder
+     * @return builder
+     */
     public static CustomerChangePasswordBuilder of() {
         return new CustomerChangePasswordBuilder();
     }
 
+    /**
+     * create builder for CustomerChangePassword instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerChangePasswordBuilder of(final CustomerChangePassword template) {
         CustomerChangePasswordBuilder builder = new CustomerChangePasswordBuilder();
         builder.id = template.getId();

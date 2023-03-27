@@ -35,6 +35,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetParcelTrackingDataChangeImpl.class)
 public interface SetParcelTrackingDataChange extends Change {
 
+    /**
+     * discriminator value for SetParcelTrackingDataChange
+     */
     String SET_PARCEL_TRACKING_DATA_CHANGE = "SetParcelTrackingDataChange";
 
     /**
@@ -80,18 +83,47 @@ public interface SetParcelTrackingDataChange extends Change {
     @JsonProperty("previousValue")
     public TrackingData getPreviousValue();
 
+    /**
+     *  <p>Update action for <code>setParcelTrackingData</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set parcel
+     * @param parcel value to be set
+     */
 
     public void setParcel(final ParcelChangeValue parcel);
 
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
+
     public void setNextValue(final TrackingData nextValue);
+
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
 
     public void setPreviousValue(final TrackingData previousValue);
 
+    /**
+     * factory method
+     * @return instance of SetParcelTrackingDataChange
+     */
     public static SetParcelTrackingDataChange of() {
         return new SetParcelTrackingDataChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetParcelTrackingDataChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetParcelTrackingDataChange of(final SetParcelTrackingDataChange template) {
         SetParcelTrackingDataChangeImpl instance = new SetParcelTrackingDataChangeImpl();
         instance.setChange(template.getChange());
@@ -101,18 +133,37 @@ public interface SetParcelTrackingDataChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetParcelTrackingDataChange
+     * @return builder
+     */
     public static SetParcelTrackingDataChangeBuilder builder() {
         return SetParcelTrackingDataChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetParcelTrackingDataChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetParcelTrackingDataChangeBuilder builder(final SetParcelTrackingDataChange template) {
         return SetParcelTrackingDataChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetParcelTrackingDataChange(Function<SetParcelTrackingDataChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetParcelTrackingDataChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetParcelTrackingDataChange>() {
             @Override

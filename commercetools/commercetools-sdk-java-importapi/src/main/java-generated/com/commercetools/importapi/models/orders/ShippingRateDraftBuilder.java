@@ -33,7 +33,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
     private java.util.List<com.commercetools.importapi.models.orders.ShippingRatePriceTier> tiers;
 
     /**
-     *
+     * set the value to the price using the builder function
      * @param builder function to build the price value
      * @return Builder
      */
@@ -45,7 +45,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
     }
 
     /**
-     *
+     * set the value to the price
      * @param price value to be set
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
     }
 
     /**
-     *
+     * set the value to the freeAbove using the builder function
      * @param builder function to build the freeAbove value
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
     }
 
     /**
-     *
+     * set the value to the freeAbove
      * @param freeAbove value to be set
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
     }
 
     /**
-     *
+     * set values to the tiers
      * @param tiers value to be set
      * @return Builder
      */
@@ -92,7 +92,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
     }
 
     /**
-     *
+     * set value to the tiers
      * @param tiers value to be set
      * @return Builder
      */
@@ -104,7 +104,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
     }
 
     /**
-     *
+     * add values to the tiers
      * @param tiers value to be set
      * @return Builder
      */
@@ -119,7 +119,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
     }
 
     /**
-     *
+     * add a value to the tiers using the builder function
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -135,7 +135,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
     }
 
     /**
-     *
+     * set the value to the tiers using the builder function
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -148,14 +148,29 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
         return this;
     }
 
+    /**
+     * value of price}
+     * @return price
+     */
+
     public com.commercetools.importapi.models.common.Money getPrice() {
         return this.price;
     }
+
+    /**
+     * value of freeAbove}
+     * @return freeAbove
+     */
 
     @Nullable
     public com.commercetools.importapi.models.common.Money getFreeAbove() {
         return this.freeAbove;
     }
+
+    /**
+     * value of tiers}
+     * @return tiers
+     */
 
     @Nullable
     public java.util.List<com.commercetools.importapi.models.orders.ShippingRatePriceTier> getTiers() {
@@ -179,10 +194,19 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
         return new ShippingRateDraftImpl(price, freeAbove, tiers);
     }
 
+    /**
+     * factory method for an instance of ShippingRateDraftBuilder
+     * @return builder
+     */
     public static ShippingRateDraftBuilder of() {
         return new ShippingRateDraftBuilder();
     }
 
+    /**
+     * create builder for ShippingRateDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShippingRateDraftBuilder of(final ShippingRateDraft template) {
         ShippingRateDraftBuilder builder = new ShippingRateDraftBuilder();
         builder.price = template.getPrice();

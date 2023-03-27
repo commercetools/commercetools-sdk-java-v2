@@ -77,10 +77,20 @@ public class OrderBillingAddressSetMessagePayloadBuilder implements Builder<Orde
         return this;
     }
 
+    /**
+     *  <p>Billing address on the Order after the Set Billing Address update action.</p>
+     * @return address
+     */
+
     @Nullable
     public com.commercetools.api.models.common.Address getAddress() {
         return this.address;
     }
+
+    /**
+     *  <p>Billing address on the Order before the Set Billing Address update action.</p>
+     * @return oldAddress
+     */
 
     @Nullable
     public com.commercetools.api.models.common.Address getOldAddress() {
@@ -103,10 +113,19 @@ public class OrderBillingAddressSetMessagePayloadBuilder implements Builder<Orde
         return new OrderBillingAddressSetMessagePayloadImpl(address, oldAddress);
     }
 
+    /**
+     * factory method for an instance of OrderBillingAddressSetMessagePayloadBuilder
+     * @return builder
+     */
     public static OrderBillingAddressSetMessagePayloadBuilder of() {
         return new OrderBillingAddressSetMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for OrderBillingAddressSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderBillingAddressSetMessagePayloadBuilder of(final OrderBillingAddressSetMessagePayload template) {
         OrderBillingAddressSetMessagePayloadBuilder builder = new OrderBillingAddressSetMessagePayloadBuilder();
         builder.address = template.getAddress();

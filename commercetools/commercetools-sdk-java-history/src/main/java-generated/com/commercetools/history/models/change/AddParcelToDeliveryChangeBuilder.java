@@ -42,7 +42,7 @@ public class AddParcelToDeliveryChangeBuilder implements Builder<AddParcelToDeli
     }
 
     /**
-     *
+     * set the value to the deliveryId
      * @param deliveryId value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class AddParcelToDeliveryChangeBuilder implements Builder<AddParcelToDeli
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class AddParcelToDeliveryChangeBuilder implements Builder<AddParcelToDeli
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -75,13 +75,28 @@ public class AddParcelToDeliveryChangeBuilder implements Builder<AddParcelToDeli
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>addParcelToDelivery</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of deliveryId}
+     * @return deliveryId
+     */
+
     public String getDeliveryId() {
         return this.deliveryId;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public com.commercetools.history.models.common.Parcel getNextValue() {
         return this.nextValue;
@@ -106,10 +121,19 @@ public class AddParcelToDeliveryChangeBuilder implements Builder<AddParcelToDeli
         return new AddParcelToDeliveryChangeImpl(change, deliveryId, nextValue);
     }
 
+    /**
+     * factory method for an instance of AddParcelToDeliveryChangeBuilder
+     * @return builder
+     */
     public static AddParcelToDeliveryChangeBuilder of() {
         return new AddParcelToDeliveryChangeBuilder();
     }
 
+    /**
+     * create builder for AddParcelToDeliveryChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AddParcelToDeliveryChangeBuilder of(final AddParcelToDeliveryChange template) {
         AddParcelToDeliveryChangeBuilder builder = new AddParcelToDeliveryChangeBuilder();
         builder.change = template.getChange();

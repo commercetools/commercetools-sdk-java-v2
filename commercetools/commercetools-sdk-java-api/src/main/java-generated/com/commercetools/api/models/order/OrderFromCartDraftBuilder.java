@@ -90,7 +90,7 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
     }
 
     /**
-     *
+     * set the value to the version
      * @param version value to be set
      * @return Builder
      */
@@ -123,7 +123,7 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
     }
 
     /**
-     *
+     * set the value to the paymentState
      * @param paymentState value to be set
      * @return Builder
      */
@@ -135,7 +135,7 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
     }
 
     /**
-     *
+     * set the value to the shipmentState
      * @param shipmentState value to be set
      * @return Builder
      */
@@ -159,7 +159,7 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
     }
 
     /**
-     *
+     * set the value to the state using the builder function
      * @param builder function to build the state value
      * @return Builder
      */
@@ -171,7 +171,7 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
     }
 
     /**
-     *
+     * set the value to the state
      * @param state value to be set
      * @return Builder
      */
@@ -206,50 +206,99 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Cart from which you can create an Order.</p>
+     * @return id
+     */
     @Deprecated
     @Nullable
     public String getId() {
         return this.id;
     }
 
+    /**
+     *  <p>ResourceIdentifier of the Cart from which this order is created.</p>
+     * @return cart
+     */
+
     @Nullable
     public com.commercetools.api.models.cart.CartResourceIdentifier getCart() {
         return this.cart;
     }
 
+    /**
+     * value of version}
+     * @return version
+     */
+
     public Long getVersion() {
         return this.version;
     }
+
+    /**
+     *  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed. For easier use on Get, Update and Delete actions we suggest assigning order numbers that match the regular expression <code>[a-z0-9_\-]{2,36}</code>.</p>
+     * @return orderNumber
+     */
 
     @Nullable
     public String getOrderNumber() {
         return this.orderNumber;
     }
 
+    /**
+     *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer and can also be used with Quotes.</p>
+     * @return purchaseOrderNumber
+     */
+
     @Nullable
     public String getPurchaseOrderNumber() {
         return this.purchaseOrderNumber;
     }
+
+    /**
+     * value of paymentState}
+     * @return paymentState
+     */
 
     @Nullable
     public com.commercetools.api.models.order.PaymentState getPaymentState() {
         return this.paymentState;
     }
 
+    /**
+     * value of shipmentState}
+     * @return shipmentState
+     */
+
     @Nullable
     public com.commercetools.api.models.order.ShipmentState getShipmentState() {
         return this.shipmentState;
     }
+
+    /**
+     *  <p>Order will be created with <code>Open</code> status by default.</p>
+     * @return orderState
+     */
 
     @Nullable
     public com.commercetools.api.models.order.OrderState getOrderState() {
         return this.orderState;
     }
 
+    /**
+     * value of state}
+     * @return state
+     */
+
     @Nullable
     public com.commercetools.api.models.state.StateResourceIdentifier getState() {
         return this.state;
     }
+
+    /**
+     *  <p>Custom Fields for the Order. The Custom Field type must match the type of the Custom Fields in the referenced Cart. If specified, the Custom Fields are merged with the Custom Fields on the referenced Cart and added to the Order. If empty, the Custom Fields on the referenced Cart are added to the Order automatically.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -275,10 +324,19 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
             shipmentState, orderState, state, custom);
     }
 
+    /**
+     * factory method for an instance of OrderFromCartDraftBuilder
+     * @return builder
+     */
     public static OrderFromCartDraftBuilder of() {
         return new OrderFromCartDraftBuilder();
     }
 
+    /**
+     * create builder for OrderFromCartDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderFromCartDraftBuilder of(final OrderFromCartDraft template) {
         OrderFromCartDraftBuilder builder = new OrderFromCartDraftBuilder();
         builder.id = template.getId();

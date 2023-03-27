@@ -67,21 +67,55 @@ public interface AttributeGroupDraft
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     *  <p>Name of the AttributeGroup.</p>
+     * @param name value to be set
+     */
+
     public void setName(final LocalizedString name);
 
+    /**
+     *  <p>Description of the AttributeGroup.</p>
+     * @param description value to be set
+     */
+
     public void setDescription(final LocalizedString description);
+
+    /**
+     *  <p>Attributes with unique values.</p>
+     * @param attributes values to be set
+     */
 
     @JsonIgnore
     public void setAttributes(final AttributeReference... attributes);
 
+    /**
+     *  <p>Attributes with unique values.</p>
+     * @param attributes values to be set
+     */
+
     public void setAttributes(final List<AttributeReference> attributes);
+
+    /**
+     *  <p>User-defined unique identifier for the AttributeGroup.</p>
+     * @param key value to be set
+     */
 
     public void setKey(final String key);
 
+    /**
+     * factory method
+     * @return instance of AttributeGroupDraft
+     */
     public static AttributeGroupDraft of() {
         return new AttributeGroupDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of AttributeGroupDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static AttributeGroupDraft of(final AttributeGroupDraft template) {
         AttributeGroupDraftImpl instance = new AttributeGroupDraftImpl();
         instance.setName(template.getName());
@@ -91,18 +125,37 @@ public interface AttributeGroupDraft
         return instance;
     }
 
+    /**
+     * builder factory method for AttributeGroupDraft
+     * @return builder
+     */
     public static AttributeGroupDraftBuilder builder() {
         return AttributeGroupDraftBuilder.of();
     }
 
+    /**
+     * create builder for AttributeGroupDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeGroupDraftBuilder builder(final AttributeGroupDraft template) {
         return AttributeGroupDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAttributeGroupDraft(Function<AttributeGroupDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AttributeGroupDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AttributeGroupDraft>() {
             @Override

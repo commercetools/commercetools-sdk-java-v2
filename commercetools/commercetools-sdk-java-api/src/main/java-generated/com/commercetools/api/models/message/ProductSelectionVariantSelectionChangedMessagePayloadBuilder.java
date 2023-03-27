@@ -107,13 +107,28 @@ public class ProductSelectionVariantSelectionChangedMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>Product for which the Product Variant Selection changed.</p>
+     * @return product
+     */
+
     public com.commercetools.api.models.product.ProductReference getProduct() {
         return this.product;
     }
 
+    /**
+     *  <p>Product Variant Selection before the Set Variant Selection update action.</p>
+     * @return oldVariantSelection
+     */
+
     public com.commercetools.api.models.product_selection.ProductVariantSelection getOldVariantSelection() {
         return this.oldVariantSelection;
     }
+
+    /**
+     *  <p>Product Variant Selection after the Set Variant Selection update action.</p>
+     * @return newVariantSelection
+     */
 
     public com.commercetools.api.models.product_selection.ProductVariantSelection getNewVariantSelection() {
         return this.newVariantSelection;
@@ -143,10 +158,19 @@ public class ProductSelectionVariantSelectionChangedMessagePayloadBuilder
             newVariantSelection);
     }
 
+    /**
+     * factory method for an instance of ProductSelectionVariantSelectionChangedMessagePayloadBuilder
+     * @return builder
+     */
     public static ProductSelectionVariantSelectionChangedMessagePayloadBuilder of() {
         return new ProductSelectionVariantSelectionChangedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for ProductSelectionVariantSelectionChangedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSelectionVariantSelectionChangedMessagePayloadBuilder of(
             final ProductSelectionVariantSelectionChangedMessagePayload template) {
         ProductSelectionVariantSelectionChangedMessagePayloadBuilder builder = new ProductSelectionVariantSelectionChangedMessagePayloadBuilder();

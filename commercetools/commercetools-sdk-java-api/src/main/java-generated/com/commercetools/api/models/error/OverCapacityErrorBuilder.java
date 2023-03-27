@@ -62,9 +62,19 @@ public class OverCapacityErrorBuilder implements Builder<OverCapacityError> {
         return this;
     }
 
+    /**
+     *  <p>Plain text description of the error.</p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
@@ -87,10 +97,19 @@ public class OverCapacityErrorBuilder implements Builder<OverCapacityError> {
         return new OverCapacityErrorImpl(message, values);
     }
 
+    /**
+     * factory method for an instance of OverCapacityErrorBuilder
+     * @return builder
+     */
     public static OverCapacityErrorBuilder of() {
         return new OverCapacityErrorBuilder();
     }
 
+    /**
+     * create builder for OverCapacityError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OverCapacityErrorBuilder of(final OverCapacityError template) {
         OverCapacityErrorBuilder builder = new OverCapacityErrorBuilder();
         builder.message = template.getMessage();

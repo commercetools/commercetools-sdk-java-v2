@@ -24,6 +24,9 @@ public class ProductDiscountValueAbsoluteImpl implements ProductDiscountValueAbs
 
     private java.util.List<com.commercetools.api.models.common.CentPrecisionMoney> money;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductDiscountValueAbsoluteImpl(
             @JsonProperty("money") final java.util.List<com.commercetools.api.models.common.CentPrecisionMoney> money) {
@@ -31,6 +34,9 @@ public class ProductDiscountValueAbsoluteImpl implements ProductDiscountValueAbs
         this.type = ABSOLUTE;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductDiscountValueAbsoluteImpl() {
         this.type = ABSOLUTE;
     }

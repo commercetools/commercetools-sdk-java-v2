@@ -55,14 +55,33 @@ public interface ExternalTaxAmountDraft extends io.vrap.rmf.base.client.Draft<Ex
     @JsonProperty("taxRate")
     public ExternalTaxRateDraft getTaxRate();
 
+    /**
+     *  <p>Total gross amount (<code>totalNet</code> + <code>taxPortions</code>) of the Line Item or Custom Line Item.</p>
+     * @param totalGross value to be set
+     */
+
     public void setTotalGross(final Money totalGross);
+
+    /**
+     *  <p>Tax Rates and subrates of states and countries.</p>
+     * @param taxRate value to be set
+     */
 
     public void setTaxRate(final ExternalTaxRateDraft taxRate);
 
+    /**
+     * factory method
+     * @return instance of ExternalTaxAmountDraft
+     */
     public static ExternalTaxAmountDraft of() {
         return new ExternalTaxAmountDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of ExternalTaxAmountDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ExternalTaxAmountDraft of(final ExternalTaxAmountDraft template) {
         ExternalTaxAmountDraftImpl instance = new ExternalTaxAmountDraftImpl();
         instance.setTotalGross(template.getTotalGross());
@@ -70,18 +89,37 @@ public interface ExternalTaxAmountDraft extends io.vrap.rmf.base.client.Draft<Ex
         return instance;
     }
 
+    /**
+     * builder factory method for ExternalTaxAmountDraft
+     * @return builder
+     */
     public static ExternalTaxAmountDraftBuilder builder() {
         return ExternalTaxAmountDraftBuilder.of();
     }
 
+    /**
+     * create builder for ExternalTaxAmountDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ExternalTaxAmountDraftBuilder builder(final ExternalTaxAmountDraft template) {
         return ExternalTaxAmountDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withExternalTaxAmountDraft(Function<ExternalTaxAmountDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ExternalTaxAmountDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ExternalTaxAmountDraft>() {
             @Override

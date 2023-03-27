@@ -22,11 +22,17 @@ public class ReviewUpdateActionImpl implements ReviewUpdateAction, ModelBase {
 
     private String action;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReviewUpdateActionImpl(@JsonProperty("action") final String action) {
         this.action = action;
     }
 
+    /**
+     * create empty instance
+     */
     public ReviewUpdateActionImpl() {
     }
 

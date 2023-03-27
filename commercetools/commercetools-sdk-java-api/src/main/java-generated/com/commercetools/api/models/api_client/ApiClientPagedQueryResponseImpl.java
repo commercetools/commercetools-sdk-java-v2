@@ -30,6 +30,9 @@ public class ApiClientPagedQueryResponseImpl implements ApiClientPagedQueryRespo
 
     private java.util.List<com.commercetools.api.models.api_client.ApiClient> results;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ApiClientPagedQueryResponseImpl(@JsonProperty("limit") final Long limit, @JsonProperty("offset") final Long offset,
             @JsonProperty("count") final Long count, @JsonProperty("total") final Long total,
@@ -41,6 +44,9 @@ public class ApiClientPagedQueryResponseImpl implements ApiClientPagedQueryRespo
         this.results = results;
     }
 
+    /**
+     * create empty instance
+     */
     public ApiClientPagedQueryResponseImpl() {
     }
 

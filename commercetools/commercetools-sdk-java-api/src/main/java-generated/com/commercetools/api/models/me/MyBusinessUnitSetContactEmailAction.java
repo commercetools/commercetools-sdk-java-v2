@@ -26,6 +26,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MyBusinessUnitSetContactEmailActionImpl.class)
 public interface MyBusinessUnitSetContactEmailAction extends MyBusinessUnitUpdateAction {
 
+    /**
+     * discriminator value for MyBusinessUnitSetContactEmailAction
+     */
     String SET_CONTACT_EMAIL = "setContactEmail";
 
     /**
@@ -36,31 +39,64 @@ public interface MyBusinessUnitSetContactEmailAction extends MyBusinessUnitUpdat
     @JsonProperty("contactEmail")
     public String getContactEmail();
 
+    /**
+     *  <p>Email to set. If <code>contactEmail</code> is absent or <code>null</code>, the existing contact email, if any, will be removed.</p>
+     * @param contactEmail value to be set
+     */
+
     public void setContactEmail(final String contactEmail);
 
+    /**
+     * factory method
+     * @return instance of MyBusinessUnitSetContactEmailAction
+     */
     public static MyBusinessUnitSetContactEmailAction of() {
         return new MyBusinessUnitSetContactEmailActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of MyBusinessUnitSetContactEmailAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static MyBusinessUnitSetContactEmailAction of(final MyBusinessUnitSetContactEmailAction template) {
         MyBusinessUnitSetContactEmailActionImpl instance = new MyBusinessUnitSetContactEmailActionImpl();
         instance.setContactEmail(template.getContactEmail());
         return instance;
     }
 
+    /**
+     * builder factory method for MyBusinessUnitSetContactEmailAction
+     * @return builder
+     */
     public static MyBusinessUnitSetContactEmailActionBuilder builder() {
         return MyBusinessUnitSetContactEmailActionBuilder.of();
     }
 
+    /**
+     * create builder for MyBusinessUnitSetContactEmailAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyBusinessUnitSetContactEmailActionBuilder builder(
             final MyBusinessUnitSetContactEmailAction template) {
         return MyBusinessUnitSetContactEmailActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMyBusinessUnitSetContactEmailAction(Function<MyBusinessUnitSetContactEmailAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MyBusinessUnitSetContactEmailAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MyBusinessUnitSetContactEmailAction>() {
             @Override

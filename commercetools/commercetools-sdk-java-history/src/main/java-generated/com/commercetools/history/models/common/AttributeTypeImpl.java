@@ -22,11 +22,17 @@ public class AttributeTypeImpl implements AttributeType, ModelBase {
 
     private String name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AttributeTypeImpl(@JsonProperty("name") final String name) {
         this.name = name;
     }
 
+    /**
+     * create empty instance
+     */
     public AttributeTypeImpl() {
     }
 

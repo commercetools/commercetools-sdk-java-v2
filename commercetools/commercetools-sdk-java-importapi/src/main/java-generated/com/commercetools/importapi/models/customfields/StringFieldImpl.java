@@ -24,12 +24,18 @@ public class StringFieldImpl implements StringField, ModelBase {
 
     private String value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StringFieldImpl(@JsonProperty("value") final String value) {
         this.value = value;
         this.type = STRING;
     }
 
+    /**
+     * create empty instance
+     */
     public StringFieldImpl() {
         this.type = STRING;
     }

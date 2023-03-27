@@ -48,46 +48,92 @@ public interface StateUpdateAction extends com.commercetools.api.models.Resource
     @JsonProperty("action")
     public String getAction();
 
+    /**
+     * builder for addRoles subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.state.StateAddRolesActionBuilder addRolesBuilder() {
         return com.commercetools.api.models.state.StateAddRolesActionBuilder.of();
     }
 
+    /**
+     * builder for changeInitial subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.state.StateChangeInitialActionBuilder changeInitialBuilder() {
         return com.commercetools.api.models.state.StateChangeInitialActionBuilder.of();
     }
 
+    /**
+     * builder for changeKey subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.state.StateChangeKeyActionBuilder changeKeyBuilder() {
         return com.commercetools.api.models.state.StateChangeKeyActionBuilder.of();
     }
 
+    /**
+     * builder for changeType subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.state.StateChangeTypeActionBuilder changeTypeBuilder() {
         return com.commercetools.api.models.state.StateChangeTypeActionBuilder.of();
     }
 
+    /**
+     * builder for removeRoles subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.state.StateRemoveRolesActionBuilder removeRolesBuilder() {
         return com.commercetools.api.models.state.StateRemoveRolesActionBuilder.of();
     }
 
+    /**
+     * builder for setDescription subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.state.StateSetDescriptionActionBuilder setDescriptionBuilder() {
         return com.commercetools.api.models.state.StateSetDescriptionActionBuilder.of();
     }
 
+    /**
+     * builder for setName subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.state.StateSetNameActionBuilder setNameBuilder() {
         return com.commercetools.api.models.state.StateSetNameActionBuilder.of();
     }
 
+    /**
+     * builder for setRoles subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.state.StateSetRolesActionBuilder setRolesBuilder() {
         return com.commercetools.api.models.state.StateSetRolesActionBuilder.of();
     }
 
+    /**
+     * builder for setTransitions subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.state.StateSetTransitionsActionBuilder setTransitionsBuilder() {
         return com.commercetools.api.models.state.StateSetTransitionsActionBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStateUpdateAction(Function<StateUpdateAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StateUpdateAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StateUpdateAction>() {
             @Override

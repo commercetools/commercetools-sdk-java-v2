@@ -39,6 +39,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductRemovedFromCategoryMessageImpl.class)
 public interface ProductRemovedFromCategoryMessage extends Message {
 
+    /**
+     * discriminator value for ProductRemovedFromCategoryMessage
+     */
     String PRODUCT_REMOVED_FROM_CATEGORY = "ProductRemovedFromCategory";
 
     /**
@@ -58,14 +61,33 @@ public interface ProductRemovedFromCategoryMessage extends Message {
     @JsonProperty("staged")
     public Boolean getStaged();
 
+    /**
+     *  <p>Category the Product was removed from.</p>
+     * @param category value to be set
+     */
+
     public void setCategory(final CategoryReference category);
+
+    /**
+     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     * @param staged value to be set
+     */
 
     public void setStaged(final Boolean staged);
 
+    /**
+     * factory method
+     * @return instance of ProductRemovedFromCategoryMessage
+     */
     public static ProductRemovedFromCategoryMessage of() {
         return new ProductRemovedFromCategoryMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductRemovedFromCategoryMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductRemovedFromCategoryMessage of(final ProductRemovedFromCategoryMessage template) {
         ProductRemovedFromCategoryMessageImpl instance = new ProductRemovedFromCategoryMessageImpl();
         instance.setId(template.getId());
@@ -83,18 +105,37 @@ public interface ProductRemovedFromCategoryMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductRemovedFromCategoryMessage
+     * @return builder
+     */
     public static ProductRemovedFromCategoryMessageBuilder builder() {
         return ProductRemovedFromCategoryMessageBuilder.of();
     }
 
+    /**
+     * create builder for ProductRemovedFromCategoryMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductRemovedFromCategoryMessageBuilder builder(final ProductRemovedFromCategoryMessage template) {
         return ProductRemovedFromCategoryMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductRemovedFromCategoryMessage(Function<ProductRemovedFromCategoryMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductRemovedFromCategoryMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductRemovedFromCategoryMessage>() {
             @Override

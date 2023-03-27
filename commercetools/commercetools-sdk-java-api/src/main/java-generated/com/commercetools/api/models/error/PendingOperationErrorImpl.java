@@ -27,6 +27,9 @@ public class PendingOperationErrorImpl implements PendingOperationError, ModelBa
 
     private Map<String, java.lang.Object> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PendingOperationErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values) {
@@ -35,6 +38,9 @@ public class PendingOperationErrorImpl implements PendingOperationError, ModelBa
         this.code = PENDING_OPERATION;
     }
 
+    /**
+     * create empty instance
+     */
     public PendingOperationErrorImpl() {
         this.code = PENDING_OPERATION;
     }

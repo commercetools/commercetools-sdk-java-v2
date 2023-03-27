@@ -26,6 +26,9 @@ public class InvalidSubjectErrorImpl implements InvalidSubjectError, ModelBase {
 
     private Map<String, java.lang.Object> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     InvalidSubjectErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values) {
@@ -34,6 +37,9 @@ public class InvalidSubjectErrorImpl implements InvalidSubjectError, ModelBase {
         this.code = INVALID_SUBJECT;
     }
 
+    /**
+     * create empty instance
+     */
     public InvalidSubjectErrorImpl() {
         this.code = INVALID_SUBJECT;
     }

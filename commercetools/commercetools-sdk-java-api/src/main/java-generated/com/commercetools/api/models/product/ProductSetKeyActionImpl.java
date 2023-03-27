@@ -24,12 +24,18 @@ public class ProductSetKeyActionImpl implements ProductSetKeyAction, ModelBase {
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSetKeyActionImpl(@JsonProperty("key") final String key) {
         this.key = key;
         this.action = SET_KEY;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSetKeyActionImpl() {
         this.action = SET_KEY;
     }

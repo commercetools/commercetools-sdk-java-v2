@@ -30,6 +30,9 @@ public class ProductChangeAssetOrderActionImpl implements ProductChangeAssetOrde
 
     private java.util.List<String> assetOrder;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductChangeAssetOrderActionImpl(@JsonProperty("variantId") final Long variantId,
             @JsonProperty("sku") final String sku, @JsonProperty("staged") final Boolean staged,
@@ -41,6 +44,9 @@ public class ProductChangeAssetOrderActionImpl implements ProductChangeAssetOrde
         this.action = CHANGE_ASSET_ORDER;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductChangeAssetOrderActionImpl() {
         this.action = CHANGE_ASSET_ORDER;
     }

@@ -261,25 +261,50 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
         return this;
     }
 
+    /**
+     *  <p>The sequential ID of the variant within the product. The variant with provided ID should exist in some existing product, so you also need to specify the productId if this property is set, or alternatively you can just specify SKU of the product variant.</p>
+     * @return id
+     */
+
     @Nullable
     public Long getId() {
         return this.id;
     }
+
+    /**
+     *  <p>The SKU of the existing variant.</p>
+     * @return sku
+     */
 
     @Nullable
     public String getSku() {
         return this.sku;
     }
 
+    /**
+     *  <p>The Embedded Prices of the variant. The prices should not contain two prices for the same price scope (same currency, country, customer group, channel, valid from and valid until). If this property is defined, then it will override the <code>prices</code> property from the original product variant, otherwise <code>prices</code> property from the original product variant would be copied in the resulting order.</p>
+     * @return prices
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.common.PriceDraft> getPrices() {
         return this.prices;
     }
 
+    /**
+     *  <p>If this property is defined, then it will override the <code>attributes</code> property from the original product variant, otherwise <code>attributes</code> property from the original product variant would be copied in the resulting order.</p>
+     * @return attributes
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes() {
         return this.attributes;
     }
+
+    /**
+     *  <p>If this property is defined, then it will override the <code>images</code> property from the original product variant, otherwise <code>images</code> property from the original product variant would be copied in the resulting order.</p>
+     * @return images
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.common.Image> getImages() {
@@ -302,10 +327,19 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
         return new ProductVariantImportDraftImpl(id, sku, prices, attributes, images);
     }
 
+    /**
+     * factory method for an instance of ProductVariantImportDraftBuilder
+     * @return builder
+     */
     public static ProductVariantImportDraftBuilder of() {
         return new ProductVariantImportDraftBuilder();
     }
 
+    /**
+     * create builder for ProductVariantImportDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductVariantImportDraftBuilder of(final ProductVariantImportDraft template) {
         ProductVariantImportDraftBuilder builder = new ProductVariantImportDraftBuilder();
         builder.id = template.getId();

@@ -61,18 +61,47 @@ public interface ClientLogging {
     @JsonProperty("anonymousId")
     public String getAnonymousId();
 
+    /**
+     *  <p><code>id</code> of the APIClient which created the resource.</p>
+     * @param clientId value to be set
+     */
+
     public void setClientId(final String clientId);
+
+    /**
+     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header.</p>
+     * @param externalUserId value to be set
+     */
 
     public void setExternalUserId(final String externalUserId);
 
+    /**
+     *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
+     * @param customer value to be set
+     */
+
     public void setCustomer(final CustomerReference customer);
+
+    /**
+     *  <p>Indicates that the resource was modified during an anonymous session with the logged ID.</p>
+     * @param anonymousId value to be set
+     */
 
     public void setAnonymousId(final String anonymousId);
 
+    /**
+     * factory method
+     * @return instance of ClientLogging
+     */
     public static ClientLogging of() {
         return new ClientLoggingImpl();
     }
 
+    /**
+     * factory method to copy an instance of ClientLogging
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ClientLogging of(final ClientLogging template) {
         ClientLoggingImpl instance = new ClientLoggingImpl();
         instance.setClientId(template.getClientId());
@@ -82,18 +111,37 @@ public interface ClientLogging {
         return instance;
     }
 
+    /**
+     * builder factory method for ClientLogging
+     * @return builder
+     */
     public static ClientLoggingBuilder builder() {
         return ClientLoggingBuilder.of();
     }
 
+    /**
+     * create builder for ClientLogging instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ClientLoggingBuilder builder(final ClientLogging template) {
         return ClientLoggingBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withClientLogging(Function<ClientLogging, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ClientLogging> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ClientLogging>() {
             @Override

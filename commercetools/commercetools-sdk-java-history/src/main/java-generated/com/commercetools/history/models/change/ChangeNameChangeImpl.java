@@ -28,6 +28,9 @@ public class ChangeNameChangeImpl implements ChangeNameChange, ModelBase {
 
     private String nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeNameChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final String previousValue,
@@ -38,6 +41,9 @@ public class ChangeNameChangeImpl implements ChangeNameChange, ModelBase {
         this.type = CHANGE_NAME_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeNameChangeImpl() {
         this.type = CHANGE_NAME_CHANGE;
     }

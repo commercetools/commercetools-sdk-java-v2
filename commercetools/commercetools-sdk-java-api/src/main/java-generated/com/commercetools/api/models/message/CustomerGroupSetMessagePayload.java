@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomerGroupSetMessagePayloadImpl.class)
 public interface CustomerGroupSetMessagePayload extends MessagePayload {
 
+    /**
+     * discriminator value for CustomerGroupSetMessagePayload
+     */
     String CUSTOMER_GROUP_SET = "CustomerGroupSet";
 
     /**
@@ -39,30 +42,63 @@ public interface CustomerGroupSetMessagePayload extends MessagePayload {
     @JsonProperty("customerGroup")
     public CustomerGroupReference getCustomerGroup();
 
+    /**
+     *  <p>Customer Group that was set during the Set Customer Group update action.</p>
+     * @param customerGroup value to be set
+     */
+
     public void setCustomerGroup(final CustomerGroupReference customerGroup);
 
+    /**
+     * factory method
+     * @return instance of CustomerGroupSetMessagePayload
+     */
     public static CustomerGroupSetMessagePayload of() {
         return new CustomerGroupSetMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomerGroupSetMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomerGroupSetMessagePayload of(final CustomerGroupSetMessagePayload template) {
         CustomerGroupSetMessagePayloadImpl instance = new CustomerGroupSetMessagePayloadImpl();
         instance.setCustomerGroup(template.getCustomerGroup());
         return instance;
     }
 
+    /**
+     * builder factory method for CustomerGroupSetMessagePayload
+     * @return builder
+     */
     public static CustomerGroupSetMessagePayloadBuilder builder() {
         return CustomerGroupSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for CustomerGroupSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerGroupSetMessagePayloadBuilder builder(final CustomerGroupSetMessagePayload template) {
         return CustomerGroupSetMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomerGroupSetMessagePayload(Function<CustomerGroupSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomerGroupSetMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomerGroupSetMessagePayload>() {
             @Override

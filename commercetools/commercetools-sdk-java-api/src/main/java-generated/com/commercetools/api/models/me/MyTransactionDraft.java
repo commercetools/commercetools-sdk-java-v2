@@ -77,20 +77,54 @@ public interface MyTransactionDraft extends com.commercetools.api.models.Customi
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
+    /**
+     *  <p>Date and time (UTC) the Transaction took place.</p>
+     * @param timestamp value to be set
+     */
+
     public void setTimestamp(final ZonedDateTime timestamp);
+
+    /**
+     *  <p>Type of the Transaction. Only <code>Authorization</code> or <code>Charge</code> is allowed.</p>
+     * @param type value to be set
+     */
 
     public void setType(final TransactionType type);
 
+    /**
+     *  <p>Money value for the Transaction.</p>
+     * @param amount value to be set
+     */
+
     public void setAmount(final Money amount);
+
+    /**
+     *  <p>Identifier used by the payment service that manages the Transaction. Can be used to correlate the Transaction to an interface interaction.</p>
+     * @param interactionId value to be set
+     */
 
     public void setInteractionId(final String interactionId);
 
+    /**
+     *  <p>Custom Fields of the Transaction.</p>
+     * @param custom value to be set
+     */
+
     public void setCustom(final CustomFieldsDraft custom);
 
+    /**
+     * factory method
+     * @return instance of MyTransactionDraft
+     */
     public static MyTransactionDraft of() {
         return new MyTransactionDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of MyTransactionDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static MyTransactionDraft of(final MyTransactionDraft template) {
         MyTransactionDraftImpl instance = new MyTransactionDraftImpl();
         instance.setTimestamp(template.getTimestamp());
@@ -101,18 +135,37 @@ public interface MyTransactionDraft extends com.commercetools.api.models.Customi
         return instance;
     }
 
+    /**
+     * builder factory method for MyTransactionDraft
+     * @return builder
+     */
     public static MyTransactionDraftBuilder builder() {
         return MyTransactionDraftBuilder.of();
     }
 
+    /**
+     * create builder for MyTransactionDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyTransactionDraftBuilder builder(final MyTransactionDraft template) {
         return MyTransactionDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMyTransactionDraft(Function<MyTransactionDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MyTransactionDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MyTransactionDraft>() {
             @Override

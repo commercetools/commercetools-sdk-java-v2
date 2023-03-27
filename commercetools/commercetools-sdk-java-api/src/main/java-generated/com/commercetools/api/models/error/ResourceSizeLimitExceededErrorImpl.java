@@ -26,6 +26,9 @@ public class ResourceSizeLimitExceededErrorImpl implements ResourceSizeLimitExce
 
     private Map<String, java.lang.Object> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ResourceSizeLimitExceededErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values) {
@@ -34,6 +37,9 @@ public class ResourceSizeLimitExceededErrorImpl implements ResourceSizeLimitExce
         this.code = RESOURCE_SIZE_LIMIT_EXCEEDED;
     }
 
+    /**
+     * create empty instance
+     */
     public ResourceSizeLimitExceededErrorImpl() {
         this.code = RESOURCE_SIZE_LIMIT_EXCEEDED;
     }

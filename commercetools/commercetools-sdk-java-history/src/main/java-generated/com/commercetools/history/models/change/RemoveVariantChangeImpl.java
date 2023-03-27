@@ -30,6 +30,9 @@ public class RemoveVariantChangeImpl implements RemoveVariantChange, ModelBase {
 
     private com.commercetools.history.models.common.Variant nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     RemoveVariantChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("catalogData") final String catalogData,
@@ -42,6 +45,9 @@ public class RemoveVariantChangeImpl implements RemoveVariantChange, ModelBase {
         this.type = REMOVE_VARIANT_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public RemoveVariantChangeImpl() {
         this.type = REMOVE_VARIANT_CHANGE;
     }

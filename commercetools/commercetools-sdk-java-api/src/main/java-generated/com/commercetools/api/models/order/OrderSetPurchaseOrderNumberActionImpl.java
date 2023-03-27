@@ -24,12 +24,18 @@ public class OrderSetPurchaseOrderNumberActionImpl implements OrderSetPurchaseOr
 
     private String purchaseOrderNumber;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderSetPurchaseOrderNumberActionImpl(@JsonProperty("purchaseOrderNumber") final String purchaseOrderNumber) {
         this.purchaseOrderNumber = purchaseOrderNumber;
         this.action = SET_PURCHASE_ORDER_NUMBER;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderSetPurchaseOrderNumberActionImpl() {
         this.action = SET_PURCHASE_ORDER_NUMBER;
     }

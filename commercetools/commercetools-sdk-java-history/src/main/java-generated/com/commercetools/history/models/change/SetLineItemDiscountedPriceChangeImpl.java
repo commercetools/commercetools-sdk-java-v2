@@ -32,6 +32,9 @@ public class SetLineItemDiscountedPriceChangeImpl implements SetLineItemDiscount
 
     private com.commercetools.history.models.common.DiscountedLineItemPrice previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetLineItemDiscountedPriceChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("lineItem") final com.commercetools.history.models.common.LocalizedString lineItem,
@@ -46,6 +49,9 @@ public class SetLineItemDiscountedPriceChangeImpl implements SetLineItemDiscount
         this.type = SET_LINE_ITEM_DISCOUNTED_PRICE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetLineItemDiscountedPriceChangeImpl() {
         this.type = SET_LINE_ITEM_DISCOUNTED_PRICE_CHANGE;
     }

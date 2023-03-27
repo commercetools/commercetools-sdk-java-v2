@@ -26,6 +26,9 @@ public class EnumAttributeImpl implements EnumAttribute, ModelBase {
 
     private String value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     EnumAttributeImpl(@JsonProperty("name") final String name, @JsonProperty("value") final String value) {
         this.name = name;
@@ -33,6 +36,9 @@ public class EnumAttributeImpl implements EnumAttribute, ModelBase {
         this.type = ENUM;
     }
 
+    /**
+     * create empty instance
+     */
     public EnumAttributeImpl() {
         this.type = ENUM;
     }

@@ -44,26 +44,52 @@ public interface ExtensionUpdateAction
     @JsonProperty("action")
     public String getAction();
 
+    /**
+     * builder for changeDestination subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.extension.ExtensionChangeDestinationActionBuilder changeDestinationBuilder() {
         return com.commercetools.api.models.extension.ExtensionChangeDestinationActionBuilder.of();
     }
 
+    /**
+     * builder for changeTriggers subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.extension.ExtensionChangeTriggersActionBuilder changeTriggersBuilder() {
         return com.commercetools.api.models.extension.ExtensionChangeTriggersActionBuilder.of();
     }
 
+    /**
+     * builder for setKey subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.extension.ExtensionSetKeyActionBuilder setKeyBuilder() {
         return com.commercetools.api.models.extension.ExtensionSetKeyActionBuilder.of();
     }
 
+    /**
+     * builder for setTimeoutInMs subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.extension.ExtensionSetTimeoutInMsActionBuilder setTimeoutInMsBuilder() {
         return com.commercetools.api.models.extension.ExtensionSetTimeoutInMsActionBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withExtensionUpdateAction(Function<ExtensionUpdateAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ExtensionUpdateAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ExtensionUpdateAction>() {
             @Override

@@ -26,6 +26,9 @@ public class AddTextLineItemChangeImpl implements AddTextLineItemChange, ModelBa
 
     private com.commercetools.history.models.common.TextLineItem nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AddTextLineItemChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.TextLineItem nextValue) {
@@ -34,6 +37,9 @@ public class AddTextLineItemChangeImpl implements AddTextLineItemChange, ModelBa
         this.type = ADD_TEXT_LINE_ITEM_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public AddTextLineItemChangeImpl() {
         this.type = ADD_TEXT_LINE_ITEM_CHANGE;
     }

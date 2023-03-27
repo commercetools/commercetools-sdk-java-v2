@@ -92,17 +92,37 @@ public class ExtensionNoResponseErrorBuilder implements Builder<ExtensionNoRespo
         return this;
     }
 
+    /**
+     *  <p><code>"Extension did not respond in time."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
     }
 
+    /**
+     *  <p>Unique identifier of the API Extension.</p>
+     * @return extensionId
+     */
+
     public String getExtensionId() {
         return this.extensionId;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the API Extension, if available.</p>
+     * @return extensionKey
+     */
 
     @Nullable
     public String getExtensionKey() {
@@ -127,10 +147,19 @@ public class ExtensionNoResponseErrorBuilder implements Builder<ExtensionNoRespo
         return new ExtensionNoResponseErrorImpl(message, values, extensionId, extensionKey);
     }
 
+    /**
+     * factory method for an instance of ExtensionNoResponseErrorBuilder
+     * @return builder
+     */
     public static ExtensionNoResponseErrorBuilder of() {
         return new ExtensionNoResponseErrorBuilder();
     }
 
+    /**
+     * create builder for ExtensionNoResponseError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ExtensionNoResponseErrorBuilder of(final ExtensionNoResponseError template) {
         ExtensionNoResponseErrorBuilder builder = new ExtensionNoResponseErrorBuilder();
         builder.message = template.getMessage();

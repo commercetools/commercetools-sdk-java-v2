@@ -26,6 +26,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomerCompanyNameSetMessagePayloadImpl.class)
 public interface CustomerCompanyNameSetMessagePayload extends MessagePayload {
 
+    /**
+     * discriminator value for CustomerCompanyNameSetMessagePayload
+     */
     String CUSTOMER_COMPANY_NAME_SET = "CustomerCompanyNameSet";
 
     /**
@@ -36,31 +39,64 @@ public interface CustomerCompanyNameSetMessagePayload extends MessagePayload {
     @JsonProperty("companyName")
     public String getCompanyName();
 
+    /**
+     *  <p>The <code>companyName</code> that was set during the Set Company Name update action.</p>
+     * @param companyName value to be set
+     */
+
     public void setCompanyName(final String companyName);
 
+    /**
+     * factory method
+     * @return instance of CustomerCompanyNameSetMessagePayload
+     */
     public static CustomerCompanyNameSetMessagePayload of() {
         return new CustomerCompanyNameSetMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomerCompanyNameSetMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomerCompanyNameSetMessagePayload of(final CustomerCompanyNameSetMessagePayload template) {
         CustomerCompanyNameSetMessagePayloadImpl instance = new CustomerCompanyNameSetMessagePayloadImpl();
         instance.setCompanyName(template.getCompanyName());
         return instance;
     }
 
+    /**
+     * builder factory method for CustomerCompanyNameSetMessagePayload
+     * @return builder
+     */
     public static CustomerCompanyNameSetMessagePayloadBuilder builder() {
         return CustomerCompanyNameSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for CustomerCompanyNameSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerCompanyNameSetMessagePayloadBuilder builder(
             final CustomerCompanyNameSetMessagePayload template) {
         return CustomerCompanyNameSetMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomerCompanyNameSetMessagePayload(Function<CustomerCompanyNameSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomerCompanyNameSetMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomerCompanyNameSetMessagePayload>() {
             @Override

@@ -28,6 +28,9 @@ public class SetDistributionChannelsChangeImpl implements SetDistributionChannel
 
     private java.util.List<com.commercetools.history.models.common.Reference> nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetDistributionChannelsChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.common.Reference> previousValue,
@@ -38,6 +41,9 @@ public class SetDistributionChannelsChangeImpl implements SetDistributionChannel
         this.type = SET_DISTRIBUTION_CHANNELS_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetDistributionChannelsChangeImpl() {
         this.type = SET_DISTRIBUTION_CHANNELS_CHANGE;
     }

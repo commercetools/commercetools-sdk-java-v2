@@ -111,28 +111,82 @@ public interface ProductDiscountDraft
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();
 
+    /**
+     *  <p>Name of the ProductDiscount.</p>
+     * @param name value to be set
+     */
+
     public void setName(final LocalizedString name);
+
+    /**
+     *  <p>User-defined unique identifier for the ProductDiscount.</p>
+     * @param key value to be set
+     */
 
     public void setKey(final String key);
 
+    /**
+     *  <p>Description of the ProductDiscount.</p>
+     * @param description value to be set
+     */
+
     public void setDescription(final LocalizedString description);
+
+    /**
+     *  <p>Type of Discount and its corresponding value.</p>
+     * @param value value to be set
+     */
 
     public void setValue(final ProductDiscountValueDraft value);
 
+    /**
+     *  <p>Valid ProductDiscount predicate.</p>
+     * @param predicate value to be set
+     */
+
     public void setPredicate(final String predicate);
+
+    /**
+     *  <p>Decimal value between 0 and 1 (passed as String literal) that defines the order of ProductDiscounts to apply in case more than one is applicable and active. A ProductDiscount with a higher <code>sortOrder</code> is prioritized. The value must be <strong>unique</strong> among all ProductDiscounts in the Project.</p>
+     * @param sortOrder value to be set
+     */
 
     public void setSortOrder(final String sortOrder);
 
+    /**
+     *  <p>Set to <code>true</code> to activate the ProductDiscount, set to <code>false</code> to deactivate it (even though the <code>predicate</code> matches).</p>
+     * @param isActive value to be set
+     */
+
     public void setIsActive(final Boolean isActive);
+
+    /**
+     *  <p>Date and time (UTC) from which the Discount is effective. Take Eventual Consistency into account for calculated discount values.</p>
+     * @param validFrom value to be set
+     */
 
     public void setValidFrom(final ZonedDateTime validFrom);
 
+    /**
+     *  <p>Date and time (UTC) until which the Discount is effective. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     * @param validUntil value to be set
+     */
+
     public void setValidUntil(final ZonedDateTime validUntil);
 
+    /**
+     * factory method
+     * @return instance of ProductDiscountDraft
+     */
     public static ProductDiscountDraft of() {
         return new ProductDiscountDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductDiscountDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductDiscountDraft of(final ProductDiscountDraft template) {
         ProductDiscountDraftImpl instance = new ProductDiscountDraftImpl();
         instance.setName(template.getName());
@@ -147,18 +201,37 @@ public interface ProductDiscountDraft
         return instance;
     }
 
+    /**
+     * builder factory method for ProductDiscountDraft
+     * @return builder
+     */
     public static ProductDiscountDraftBuilder builder() {
         return ProductDiscountDraftBuilder.of();
     }
 
+    /**
+     * create builder for ProductDiscountDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductDiscountDraftBuilder builder(final ProductDiscountDraft template) {
         return ProductDiscountDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductDiscountDraft(Function<ProductDiscountDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountDraft>() {
             @Override

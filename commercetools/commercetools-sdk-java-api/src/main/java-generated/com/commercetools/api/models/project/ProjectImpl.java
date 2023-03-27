@@ -50,6 +50,9 @@ public class ProjectImpl implements Project, ModelBase {
 
     private com.commercetools.api.models.project.BusinessUnitConfiguration businessUnits;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProjectImpl(@JsonProperty("version") final Long version, @JsonProperty("key") final String key,
             @JsonProperty("name") final String name, @JsonProperty("countries") final java.util.List<String> countries,
@@ -81,6 +84,9 @@ public class ProjectImpl implements Project, ModelBase {
         this.businessUnits = businessUnits;
     }
 
+    /**
+     * create empty instance
+     */
     public ProjectImpl() {
     }
 

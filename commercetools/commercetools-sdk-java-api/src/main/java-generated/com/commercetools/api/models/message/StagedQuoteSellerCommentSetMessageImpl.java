@@ -44,6 +44,9 @@ public class StagedQuoteSellerCommentSetMessageImpl implements StagedQuoteSeller
 
     private String sellerComment;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedQuoteSellerCommentSetMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -70,6 +73,9 @@ public class StagedQuoteSellerCommentSetMessageImpl implements StagedQuoteSeller
         this.type = STAGED_QUOTE_SELLER_COMMENT_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedQuoteSellerCommentSetMessageImpl() {
         this.type = STAGED_QUOTE_SELLER_COMMENT_SET;
     }

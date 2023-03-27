@@ -24,6 +24,9 @@ public class TaxedItemPriceImpl implements TaxedItemPrice, ModelBase {
 
     private com.commercetools.history.models.common.Money totalGross;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TaxedItemPriceImpl(@JsonProperty("totalNet") final com.commercetools.history.models.common.Money totalNet,
             @JsonProperty("totalGross") final com.commercetools.history.models.common.Money totalGross) {
@@ -31,6 +34,9 @@ public class TaxedItemPriceImpl implements TaxedItemPrice, ModelBase {
         this.totalGross = totalGross;
     }
 
+    /**
+     * create empty instance
+     */
     public TaxedItemPriceImpl() {
     }
 

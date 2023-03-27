@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ShoppingListChangeNameActionImpl.class)
 public interface ShoppingListChangeNameAction extends ShoppingListUpdateAction {
 
+    /**
+     * discriminator value for ShoppingListChangeNameAction
+     */
     String CHANGE_NAME = "changeName";
 
     /**
@@ -42,30 +45,63 @@ public interface ShoppingListChangeNameAction extends ShoppingListUpdateAction {
     @JsonProperty("name")
     public LocalizedString getName();
 
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     * @param name value to be set
+     */
+
     public void setName(final LocalizedString name);
 
+    /**
+     * factory method
+     * @return instance of ShoppingListChangeNameAction
+     */
     public static ShoppingListChangeNameAction of() {
         return new ShoppingListChangeNameActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ShoppingListChangeNameAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ShoppingListChangeNameAction of(final ShoppingListChangeNameAction template) {
         ShoppingListChangeNameActionImpl instance = new ShoppingListChangeNameActionImpl();
         instance.setName(template.getName());
         return instance;
     }
 
+    /**
+     * builder factory method for ShoppingListChangeNameAction
+     * @return builder
+     */
     public static ShoppingListChangeNameActionBuilder builder() {
         return ShoppingListChangeNameActionBuilder.of();
     }
 
+    /**
+     * create builder for ShoppingListChangeNameAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShoppingListChangeNameActionBuilder builder(final ShoppingListChangeNameAction template) {
         return ShoppingListChangeNameActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withShoppingListChangeNameAction(Function<ShoppingListChangeNameAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListChangeNameAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListChangeNameAction>() {
             @Override

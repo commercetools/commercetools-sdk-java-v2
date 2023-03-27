@@ -31,11 +31,23 @@ public interface StagedQuoteState {
     */
     StagedQuoteState CLOSED = StagedQuoteStateEnum.CLOSED;
 
+    /**
+     * possible values of StagedQuoteState
+     */
     enum StagedQuoteStateEnum implements StagedQuoteState {
+        /**
+         * InProgress
+         */
         IN_PROGRESS("InProgress"),
 
+        /**
+         * Sent
+         */
         SENT("Sent"),
 
+        /**
+         * Closed
+         */
         CLOSED("Closed");
         private final String jsonName;
 
@@ -52,13 +64,30 @@ public interface StagedQuoteState {
         }
     }
 
+    /**
+     * the JSON value
+     * @return json value
+     */
     @JsonValue
     String getJsonName();
 
+    /**
+     * the enum value
+     * @return name
+     */
     String name();
 
+    /**
+     * convert value to string
+     * @return string representation
+     */
     String toString();
 
+    /**
+     * factory method for a enum value of StagedQuoteState
+     * if no enum has been found an anonymous instance will be created
+     * @return enum instance
+     */
     @JsonCreator
     public static StagedQuoteState findEnum(String value) {
         return findEnumViaJsonName(value).orElse(new StagedQuoteState() {
@@ -78,10 +107,18 @@ public interface StagedQuoteState {
         });
     }
 
+    /**
+     * method to find enum using the JSON value
+     * @return optional of enum instance
+     */
     public static Optional<StagedQuoteState> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
 
+    /**
+     * possible enum values
+     * @return array of possible enum values
+     */
     public static StagedQuoteState[] values() {
         return StagedQuoteStateEnum.values();
     }

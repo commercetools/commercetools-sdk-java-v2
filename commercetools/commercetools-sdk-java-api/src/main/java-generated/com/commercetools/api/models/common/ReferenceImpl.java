@@ -24,6 +24,9 @@ public class ReferenceImpl implements Reference, ModelBase {
 
     private String id;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReferenceImpl(@JsonProperty("typeId") final com.commercetools.api.models.common.ReferenceTypeId typeId,
             @JsonProperty("id") final String id) {
@@ -31,6 +34,9 @@ public class ReferenceImpl implements Reference, ModelBase {
         this.id = id;
     }
 
+    /**
+     * create empty instance
+     */
     public ReferenceImpl() {
     }
 

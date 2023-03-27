@@ -28,6 +28,9 @@ public class ProductSetAttributeInAllVariantsActionImpl implements ProductSetAtt
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSetAttributeInAllVariantsActionImpl(@JsonProperty("name") final String name,
             @JsonProperty("value") final java.lang.Object value, @JsonProperty("staged") final Boolean staged) {
@@ -37,6 +40,9 @@ public class ProductSetAttributeInAllVariantsActionImpl implements ProductSetAtt
         this.action = SET_ATTRIBUTE_IN_ALL_VARIANTS;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSetAttributeInAllVariantsActionImpl() {
         this.action = SET_ATTRIBUTE_IN_ALL_VARIANTS;
     }

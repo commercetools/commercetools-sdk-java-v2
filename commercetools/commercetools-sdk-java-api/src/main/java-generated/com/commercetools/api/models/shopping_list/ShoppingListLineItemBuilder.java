@@ -248,49 +248,108 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
         return this;
     }
 
+    /**
+     *  <p>Date and time (UTC) the ShoppingListLineItem was added to the ShoppingList.</p>
+     * @return addedAt
+     */
+
     public java.time.ZonedDateTime getAddedAt() {
         return this.addedAt;
     }
+
+    /**
+     *  <p>Custom Fields of the ShoppingListLineItem.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
 
+    /**
+     *  <p>If the Product or Product Variant is deleted, <code>deactivatedAt</code> is the date and time (UTC) of deletion.</p>
+     *  <p>This data is updated in an eventual consistent manner when the Product Variant cannot be ordered anymore.</p>
+     * @return deactivatedAt
+     */
+
     @Nullable
     public java.time.ZonedDateTime getDeactivatedAt() {
         return this.deactivatedAt;
     }
 
+    /**
+     *  <p>Unique identifier of the ShoppingListLineItem.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Name of the Product.</p>
+     *  <p>This data is updated in an eventual consistent manner when the Product's name changes.</p>
+     * @return name
+     */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
 
+    /**
+     *  <p>Unique identifier of a Product.</p>
+     * @return productId
+     */
+
     public String getProductId() {
         return this.productId;
     }
+
+    /**
+     *  <p>The Product Type defining the Attributes of the Product.</p>
+     * @return productType
+     */
 
     public com.commercetools.api.models.product_type.ProductTypeReference getProductType() {
         return this.productType;
     }
 
+    /**
+     *  <p>Number of Products in the ShoppingListLineItem.</p>
+     * @return quantity
+     */
+
     public Long getQuantity() {
         return this.quantity;
     }
+
+    /**
+     *  <p><code>id</code> of the ProductVariant the ShoppingListLineItem refers to. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
+     * @return variantId
+     */
 
     @Nullable
     public Long getVariantId() {
         return this.variantId;
     }
 
+    /**
+     *  <p>Data of the ProductVariant.</p>
+     *  <p>Returned when expanded using <code>expand=lineItems[*].variant</code>. You cannot expand only a single element of the array.</p>
+     * @return variant
+     */
+
     @Nullable
     public com.commercetools.api.models.product.ProductVariant getVariant() {
         return this.variant;
     }
+
+    /**
+     *  <p>Slug of the current ProductData.</p>
+     *  <p>Returned when expanded using <code>expand=lineItems[*].productSlug</code>. You cannot expand only a single element of the array.</p>
+     * @return productSlug
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getProductSlug() {
@@ -321,10 +380,19 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
             variantId, variant, productSlug);
     }
 
+    /**
+     * factory method for an instance of ShoppingListLineItemBuilder
+     * @return builder
+     */
     public static ShoppingListLineItemBuilder of() {
         return new ShoppingListLineItemBuilder();
     }
 
+    /**
+     * create builder for ShoppingListLineItem instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShoppingListLineItemBuilder of(final ShoppingListLineItem template) {
         ShoppingListLineItemBuilder builder = new ShoppingListLineItemBuilder();
         builder.addedAt = template.getAddedAt();

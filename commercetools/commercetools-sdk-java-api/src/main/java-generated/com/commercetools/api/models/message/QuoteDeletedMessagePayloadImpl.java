@@ -21,6 +21,9 @@ public class QuoteDeletedMessagePayloadImpl implements QuoteDeletedMessagePayloa
 
     private String type;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     QuoteDeletedMessagePayloadImpl() {
         this.type = QUOTE_DELETED;

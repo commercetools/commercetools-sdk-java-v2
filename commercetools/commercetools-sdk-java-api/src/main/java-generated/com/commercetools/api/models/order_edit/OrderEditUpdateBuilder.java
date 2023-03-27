@@ -33,7 +33,7 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
     private Boolean dryRun;
 
     /**
-     *
+     * set the value to the version
      * @param version value to be set
      * @return Builder
      */
@@ -44,7 +44,7 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
     }
 
     /**
-     *
+     * set values to the actions
      * @param actions value to be set
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
     }
 
     /**
-     *
+     * set value to the actions
      * @param actions value to be set
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
     }
 
     /**
-     *
+     * add values to the actions
      * @param actions value to be set
      * @return Builder
      */
@@ -83,7 +83,7 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
     }
 
     /**
-     *
+     * add a value to the actions using the builder function
      * @param builder function to build the actions value
      * @return Builder
      */
@@ -99,7 +99,7 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
     }
 
     /**
-     *
+     * set the value to the actions using the builder function
      * @param builder function to build the actions value
      * @return Builder
      */
@@ -113,7 +113,7 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
     }
 
     /**
-     *
+     * set the value to the dryRun
      * @param dryRun value to be set
      * @return Builder
      */
@@ -123,13 +123,28 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
         return this;
     }
 
+    /**
+     * value of version}
+     * @return version
+     */
+
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     * value of actions}
+     * @return actions
+     */
+
     public java.util.List<com.commercetools.api.models.order_edit.OrderEditUpdateAction> getActions() {
         return this.actions;
     }
+
+    /**
+     * value of dryRun}
+     * @return dryRun
+     */
 
     @Nullable
     public Boolean getDryRun() {
@@ -154,10 +169,19 @@ public class OrderEditUpdateBuilder implements Builder<OrderEditUpdate> {
         return new OrderEditUpdateImpl(version, actions, dryRun);
     }
 
+    /**
+     * factory method for an instance of OrderEditUpdateBuilder
+     * @return builder
+     */
     public static OrderEditUpdateBuilder of() {
         return new OrderEditUpdateBuilder();
     }
 
+    /**
+     * create builder for OrderEditUpdate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderEditUpdateBuilder of(final OrderEditUpdate template) {
         OrderEditUpdateBuilder builder = new OrderEditUpdateBuilder();
         builder.version = template.getVersion();

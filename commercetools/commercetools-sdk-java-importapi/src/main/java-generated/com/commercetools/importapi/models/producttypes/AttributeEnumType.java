@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AttributeEnumTypeImpl.class)
 public interface AttributeEnumType extends AttributeType {
 
+    /**
+     * discriminator value for AttributeEnumType
+     */
     String ENUM = "enum";
 
     /**
@@ -41,33 +44,71 @@ public interface AttributeEnumType extends AttributeType {
     @JsonProperty("values")
     public List<AttributePlainEnumValue> getValues();
 
+    /**
+     * set values
+     * @param values values to be set
+     */
+
     @JsonIgnore
     public void setValues(final AttributePlainEnumValue... values);
 
+    /**
+     * set values
+     * @param values values to be set
+     */
+
     public void setValues(final List<AttributePlainEnumValue> values);
 
+    /**
+     * factory method
+     * @return instance of AttributeEnumType
+     */
     public static AttributeEnumType of() {
         return new AttributeEnumTypeImpl();
     }
 
+    /**
+     * factory method to copy an instance of AttributeEnumType
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static AttributeEnumType of(final AttributeEnumType template) {
         AttributeEnumTypeImpl instance = new AttributeEnumTypeImpl();
         instance.setValues(template.getValues());
         return instance;
     }
 
+    /**
+     * builder factory method for AttributeEnumType
+     * @return builder
+     */
     public static AttributeEnumTypeBuilder builder() {
         return AttributeEnumTypeBuilder.of();
     }
 
+    /**
+     * create builder for AttributeEnumType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeEnumTypeBuilder builder(final AttributeEnumType template) {
         return AttributeEnumTypeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAttributeEnumType(Function<AttributeEnumType, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AttributeEnumType> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AttributeEnumType>() {
             @Override

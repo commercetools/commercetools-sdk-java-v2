@@ -47,6 +47,11 @@ public class ZoneRemoveLocationActionBuilder implements Builder<ZoneRemoveLocati
         return this;
     }
 
+    /**
+     *  <p>Location to be removed from the Zone.</p>
+     * @return location
+     */
+
     public com.commercetools.api.models.zone.Location getLocation() {
         return this.location;
     }
@@ -68,10 +73,19 @@ public class ZoneRemoveLocationActionBuilder implements Builder<ZoneRemoveLocati
         return new ZoneRemoveLocationActionImpl(location);
     }
 
+    /**
+     * factory method for an instance of ZoneRemoveLocationActionBuilder
+     * @return builder
+     */
     public static ZoneRemoveLocationActionBuilder of() {
         return new ZoneRemoveLocationActionBuilder();
     }
 
+    /**
+     * create builder for ZoneRemoveLocationAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ZoneRemoveLocationActionBuilder of(final ZoneRemoveLocationAction template) {
         ZoneRemoveLocationActionBuilder builder = new ZoneRemoveLocationActionBuilder();
         builder.location = template.getLocation();

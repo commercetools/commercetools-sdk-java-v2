@@ -64,9 +64,19 @@ public class ProductTypeSetInputTipActionBuilder implements Builder<ProductTypeS
         return this;
     }
 
+    /**
+     *  <p>Name of the AttributeDefinition to update.</p>
+     * @return attributeName
+     */
+
     public String getAttributeName() {
         return this.attributeName;
     }
+
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return inputTip
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getInputTip() {
@@ -90,10 +100,19 @@ public class ProductTypeSetInputTipActionBuilder implements Builder<ProductTypeS
         return new ProductTypeSetInputTipActionImpl(attributeName, inputTip);
     }
 
+    /**
+     * factory method for an instance of ProductTypeSetInputTipActionBuilder
+     * @return builder
+     */
     public static ProductTypeSetInputTipActionBuilder of() {
         return new ProductTypeSetInputTipActionBuilder();
     }
 
+    /**
+     * create builder for ProductTypeSetInputTipAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductTypeSetInputTipActionBuilder of(final ProductTypeSetInputTipAction template) {
         ProductTypeSetInputTipActionBuilder builder = new ProductTypeSetInputTipActionBuilder();
         builder.attributeName = template.getAttributeName();

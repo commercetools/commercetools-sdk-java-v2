@@ -36,6 +36,11 @@ public class MyCustomerSetSalutationActionBuilder implements Builder<MyCustomerS
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @return salutation
+     */
+
     @Nullable
     public String getSalutation() {
         return this.salutation;
@@ -57,10 +62,19 @@ public class MyCustomerSetSalutationActionBuilder implements Builder<MyCustomerS
         return new MyCustomerSetSalutationActionImpl(salutation);
     }
 
+    /**
+     * factory method for an instance of MyCustomerSetSalutationActionBuilder
+     * @return builder
+     */
     public static MyCustomerSetSalutationActionBuilder of() {
         return new MyCustomerSetSalutationActionBuilder();
     }
 
+    /**
+     * create builder for MyCustomerSetSalutationAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCustomerSetSalutationActionBuilder of(final MyCustomerSetSalutationAction template) {
         MyCustomerSetSalutationActionBuilder builder = new MyCustomerSetSalutationActionBuilder();
         builder.salutation = template.getSalutation();

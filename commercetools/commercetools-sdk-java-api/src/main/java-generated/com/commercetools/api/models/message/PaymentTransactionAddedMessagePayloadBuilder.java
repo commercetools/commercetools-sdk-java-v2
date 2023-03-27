@@ -48,6 +48,11 @@ public class PaymentTransactionAddedMessagePayloadBuilder implements Builder<Pay
         return this;
     }
 
+    /**
+     *  <p>Transaction that was added to the Payment.</p>
+     * @return transaction
+     */
+
     public com.commercetools.api.models.payment.Transaction getTransaction() {
         return this.transaction;
     }
@@ -69,10 +74,19 @@ public class PaymentTransactionAddedMessagePayloadBuilder implements Builder<Pay
         return new PaymentTransactionAddedMessagePayloadImpl(transaction);
     }
 
+    /**
+     * factory method for an instance of PaymentTransactionAddedMessagePayloadBuilder
+     * @return builder
+     */
     public static PaymentTransactionAddedMessagePayloadBuilder of() {
         return new PaymentTransactionAddedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for PaymentTransactionAddedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentTransactionAddedMessagePayloadBuilder of(
             final PaymentTransactionAddedMessagePayload template) {
         PaymentTransactionAddedMessagePayloadBuilder builder = new PaymentTransactionAddedMessagePayloadBuilder();

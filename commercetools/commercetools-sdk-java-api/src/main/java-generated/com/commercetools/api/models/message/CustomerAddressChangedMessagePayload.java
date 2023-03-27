@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomerAddressChangedMessagePayloadImpl.class)
 public interface CustomerAddressChangedMessagePayload extends MessagePayload {
 
+    /**
+     * discriminator value for CustomerAddressChangedMessagePayload
+     */
     String CUSTOMER_ADDRESS_CHANGED = "CustomerAddressChanged";
 
     /**
@@ -42,31 +45,64 @@ public interface CustomerAddressChangedMessagePayload extends MessagePayload {
     @JsonProperty("address")
     public Address getAddress();
 
+    /**
+     *  <p>Address that was set during the Change Address update action.</p>
+     * @param address value to be set
+     */
+
     public void setAddress(final Address address);
 
+    /**
+     * factory method
+     * @return instance of CustomerAddressChangedMessagePayload
+     */
     public static CustomerAddressChangedMessagePayload of() {
         return new CustomerAddressChangedMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomerAddressChangedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomerAddressChangedMessagePayload of(final CustomerAddressChangedMessagePayload template) {
         CustomerAddressChangedMessagePayloadImpl instance = new CustomerAddressChangedMessagePayloadImpl();
         instance.setAddress(template.getAddress());
         return instance;
     }
 
+    /**
+     * builder factory method for CustomerAddressChangedMessagePayload
+     * @return builder
+     */
     public static CustomerAddressChangedMessagePayloadBuilder builder() {
         return CustomerAddressChangedMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for CustomerAddressChangedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerAddressChangedMessagePayloadBuilder builder(
             final CustomerAddressChangedMessagePayload template) {
         return CustomerAddressChangedMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomerAddressChangedMessagePayload(Function<CustomerAddressChangedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomerAddressChangedMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomerAddressChangedMessagePayload>() {
             @Override

@@ -46,34 +46,68 @@ public interface OrderEditUpdateAction
     @JsonProperty("action")
     public String getAction();
 
+    /**
+     * builder for addStagedAction subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.order_edit.OrderEditAddStagedActionActionBuilder addStagedActionBuilder() {
         return com.commercetools.api.models.order_edit.OrderEditAddStagedActionActionBuilder.of();
     }
 
+    /**
+     * builder for setComment subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.order_edit.OrderEditSetCommentActionBuilder setCommentBuilder() {
         return com.commercetools.api.models.order_edit.OrderEditSetCommentActionBuilder.of();
     }
 
+    /**
+     * builder for setCustomField subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.order_edit.OrderEditSetCustomFieldActionBuilder setCustomFieldBuilder() {
         return com.commercetools.api.models.order_edit.OrderEditSetCustomFieldActionBuilder.of();
     }
 
+    /**
+     * builder for setCustomType subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.order_edit.OrderEditSetCustomTypeActionBuilder setCustomTypeBuilder() {
         return com.commercetools.api.models.order_edit.OrderEditSetCustomTypeActionBuilder.of();
     }
 
+    /**
+     * builder for setKey subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.order_edit.OrderEditSetKeyActionBuilder setKeyBuilder() {
         return com.commercetools.api.models.order_edit.OrderEditSetKeyActionBuilder.of();
     }
 
+    /**
+     * builder for setStagedActions subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.order_edit.OrderEditSetStagedActionsActionBuilder setStagedActionsBuilder() {
         return com.commercetools.api.models.order_edit.OrderEditSetStagedActionsActionBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderEditUpdateAction(Function<OrderEditUpdateAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderEditUpdateAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderEditUpdateAction>() {
             @Override

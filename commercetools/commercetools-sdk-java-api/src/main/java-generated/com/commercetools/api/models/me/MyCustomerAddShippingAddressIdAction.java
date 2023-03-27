@@ -26,6 +26,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MyCustomerAddShippingAddressIdActionImpl.class)
 public interface MyCustomerAddShippingAddressIdAction extends MyCustomerUpdateAction {
 
+    /**
+     * discriminator value for MyCustomerAddShippingAddressIdAction
+     */
     String ADD_SHIPPING_ADDRESS_ID = "addShippingAddressId";
 
     /**
@@ -44,14 +47,33 @@ public interface MyCustomerAddShippingAddressIdAction extends MyCustomerUpdateAc
     @JsonProperty("addressKey")
     public String getAddressKey();
 
+    /**
+     *  <p><code>id</code> of the Address to become a shipping address.</p>
+     * @param addressId value to be set
+     */
+
     public void setAddressId(final String addressId);
+
+    /**
+     *  <p><code>key</code> of the Address to become a shipping address.</p>
+     * @param addressKey value to be set
+     */
 
     public void setAddressKey(final String addressKey);
 
+    /**
+     * factory method
+     * @return instance of MyCustomerAddShippingAddressIdAction
+     */
     public static MyCustomerAddShippingAddressIdAction of() {
         return new MyCustomerAddShippingAddressIdActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of MyCustomerAddShippingAddressIdAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static MyCustomerAddShippingAddressIdAction of(final MyCustomerAddShippingAddressIdAction template) {
         MyCustomerAddShippingAddressIdActionImpl instance = new MyCustomerAddShippingAddressIdActionImpl();
         instance.setAddressId(template.getAddressId());
@@ -59,19 +81,38 @@ public interface MyCustomerAddShippingAddressIdAction extends MyCustomerUpdateAc
         return instance;
     }
 
+    /**
+     * builder factory method for MyCustomerAddShippingAddressIdAction
+     * @return builder
+     */
     public static MyCustomerAddShippingAddressIdActionBuilder builder() {
         return MyCustomerAddShippingAddressIdActionBuilder.of();
     }
 
+    /**
+     * create builder for MyCustomerAddShippingAddressIdAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCustomerAddShippingAddressIdActionBuilder builder(
             final MyCustomerAddShippingAddressIdAction template) {
         return MyCustomerAddShippingAddressIdActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMyCustomerAddShippingAddressIdAction(Function<MyCustomerAddShippingAddressIdAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MyCustomerAddShippingAddressIdAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MyCustomerAddShippingAddressIdAction>() {
             @Override

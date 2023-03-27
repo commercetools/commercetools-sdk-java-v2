@@ -127,33 +127,100 @@ public interface CustomLineItemImportDraft
     @JsonProperty("priceMode")
     public CustomLineItemPriceMode getPriceMode();
 
+    /**
+     * set name
+     * @param name value to be set
+     */
+
     public void setName(final LocalizedString name);
+
+    /**
+     *  <p>The amount of a CustomLineItem in the cart. Must be a positive integer.</p>
+     * @param quantity value to be set
+     */
 
     public void setQuantity(final Long quantity);
 
+    /**
+     *  <p>The cost to add to the cart. The amount can be negative.</p>
+     * @param money value to be set
+     */
+
     public void setMoney(final Money money);
 
+    /**
+     * set slug
+     * @param slug value to be set
+     */
+
     public void setSlug(final String slug);
+
+    /**
+     * set state
+     * @param state values to be set
+     */
 
     @JsonIgnore
     public void setState(final ItemState... state);
 
+    /**
+     * set state
+     * @param state values to be set
+     */
+
     public void setState(final List<ItemState> state);
+
+    /**
+     * set taxRate
+     * @param taxRate value to be set
+     */
 
     public void setTaxRate(final TaxRate taxRate);
 
+    /**
+     * set taxCategory
+     * @param taxCategory value to be set
+     */
+
     public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
+
+    /**
+     *  <p>The custom fields.</p>
+     * @param custom value to be set
+     */
 
     public void setCustom(final CustomFieldsDraft custom);
 
+    /**
+     * set shippingDetails
+     * @param shippingDetails value to be set
+     */
+
     public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
+
+    /**
+     *  <ul>
+     *   <li>If <code>Standard</code>, Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</li>
+     *   <li>If <code>External</code>, Cart Discounts are not considered on the Custom Line Item.</li>
+     *  </ul>
+     * @param priceMode value to be set
+     */
 
     public void setPriceMode(final CustomLineItemPriceMode priceMode);
 
+    /**
+     * factory method
+     * @return instance of CustomLineItemImportDraft
+     */
     public static CustomLineItemImportDraft of() {
         return new CustomLineItemImportDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomLineItemImportDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomLineItemImportDraft of(final CustomLineItemImportDraft template) {
         CustomLineItemImportDraftImpl instance = new CustomLineItemImportDraftImpl();
         instance.setName(template.getName());
@@ -169,18 +236,37 @@ public interface CustomLineItemImportDraft
         return instance;
     }
 
+    /**
+     * builder factory method for CustomLineItemImportDraft
+     * @return builder
+     */
     public static CustomLineItemImportDraftBuilder builder() {
         return CustomLineItemImportDraftBuilder.of();
     }
 
+    /**
+     * create builder for CustomLineItemImportDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomLineItemImportDraftBuilder builder(final CustomLineItemImportDraft template) {
         return CustomLineItemImportDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomLineItemImportDraft(Function<CustomLineItemImportDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomLineItemImportDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomLineItemImportDraft>() {
             @Override

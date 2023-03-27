@@ -28,6 +28,9 @@ public class ParcelMeasurementsImpl implements ParcelMeasurements, ModelBase {
 
     private Integer weightInGram;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ParcelMeasurementsImpl(@JsonProperty("heightInMillimeter") final Integer heightInMillimeter,
             @JsonProperty("lengthInMillimeter") final Integer lengthInMillimeter,
@@ -39,6 +42,9 @@ public class ParcelMeasurementsImpl implements ParcelMeasurements, ModelBase {
         this.weightInGram = weightInGram;
     }
 
+    /**
+     * create empty instance
+     */
     public ParcelMeasurementsImpl() {
     }
 

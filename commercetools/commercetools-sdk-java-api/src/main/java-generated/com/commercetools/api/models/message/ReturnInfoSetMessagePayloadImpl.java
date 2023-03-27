@@ -24,6 +24,9 @@ public class ReturnInfoSetMessagePayloadImpl implements ReturnInfoSetMessagePayl
 
     private java.util.List<com.commercetools.api.models.order.ReturnInfo> returnInfo;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReturnInfoSetMessagePayloadImpl(
             @JsonProperty("returnInfo") final java.util.List<com.commercetools.api.models.order.ReturnInfo> returnInfo) {
@@ -31,6 +34,9 @@ public class ReturnInfoSetMessagePayloadImpl implements ReturnInfoSetMessagePayl
         this.type = RETURN_INFO_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public ReturnInfoSetMessagePayloadImpl() {
         this.type = RETURN_INFO_SET;
     }

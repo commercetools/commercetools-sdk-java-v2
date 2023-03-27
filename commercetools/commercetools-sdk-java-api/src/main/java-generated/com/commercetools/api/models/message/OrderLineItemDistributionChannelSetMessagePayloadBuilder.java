@@ -66,9 +66,19 @@ public class OrderLineItemDistributionChannelSetMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Line Item.</p>
+     * @return lineItemId
+     */
+
     public String getLineItemId() {
         return this.lineItemId;
     }
+
+    /**
+     *  <p>Distribution Channel that was set.</p>
+     * @return distributionChannel
+     */
 
     @Nullable
     public com.commercetools.api.models.channel.ChannelReference getDistributionChannel() {
@@ -93,10 +103,19 @@ public class OrderLineItemDistributionChannelSetMessagePayloadBuilder
         return new OrderLineItemDistributionChannelSetMessagePayloadImpl(lineItemId, distributionChannel);
     }
 
+    /**
+     * factory method for an instance of OrderLineItemDistributionChannelSetMessagePayloadBuilder
+     * @return builder
+     */
     public static OrderLineItemDistributionChannelSetMessagePayloadBuilder of() {
         return new OrderLineItemDistributionChannelSetMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for OrderLineItemDistributionChannelSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderLineItemDistributionChannelSetMessagePayloadBuilder of(
             final OrderLineItemDistributionChannelSetMessagePayload template) {
         OrderLineItemDistributionChannelSetMessagePayloadBuilder builder = new OrderLineItemDistributionChannelSetMessagePayloadBuilder();

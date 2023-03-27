@@ -48,6 +48,11 @@ public class BusinessUnitCreatedMessagePayloadBuilder implements Builder<Busines
         return this;
     }
 
+    /**
+     *  <p>The Business Unit that was created.</p>
+     * @return businessUnit
+     */
+
     public com.commercetools.api.models.business_unit.BusinessUnit getBusinessUnit() {
         return this.businessUnit;
     }
@@ -69,10 +74,19 @@ public class BusinessUnitCreatedMessagePayloadBuilder implements Builder<Busines
         return new BusinessUnitCreatedMessagePayloadImpl(businessUnit);
     }
 
+    /**
+     * factory method for an instance of BusinessUnitCreatedMessagePayloadBuilder
+     * @return builder
+     */
     public static BusinessUnitCreatedMessagePayloadBuilder of() {
         return new BusinessUnitCreatedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for BusinessUnitCreatedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitCreatedMessagePayloadBuilder of(final BusinessUnitCreatedMessagePayload template) {
         BusinessUnitCreatedMessagePayloadBuilder builder = new BusinessUnitCreatedMessagePayloadBuilder();
         builder.businessUnit = template.getBusinessUnit();

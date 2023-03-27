@@ -89,15 +89,30 @@ public class CategorySetAssetTagsActionBuilder implements Builder<CategorySetAss
         return this;
     }
 
+    /**
+     *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
+     * @return assetId
+     */
+
     @Nullable
     public String getAssetId() {
         return this.assetId;
     }
 
+    /**
+     *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
+     * @return assetKey
+     */
+
     @Nullable
     public String getAssetKey() {
         return this.assetKey;
     }
+
+    /**
+     *  <p>Keywords for categorizing and organizing Assets.</p>
+     * @return tags
+     */
 
     @Nullable
     public java.util.List<String> getTags() {
@@ -120,10 +135,19 @@ public class CategorySetAssetTagsActionBuilder implements Builder<CategorySetAss
         return new CategorySetAssetTagsActionImpl(assetId, assetKey, tags);
     }
 
+    /**
+     * factory method for an instance of CategorySetAssetTagsActionBuilder
+     * @return builder
+     */
     public static CategorySetAssetTagsActionBuilder of() {
         return new CategorySetAssetTagsActionBuilder();
     }
 
+    /**
+     * create builder for CategorySetAssetTagsAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategorySetAssetTagsActionBuilder of(final CategorySetAssetTagsAction template) {
         CategorySetAssetTagsActionBuilder builder = new CategorySetAssetTagsActionBuilder();
         builder.assetId = template.getAssetId();

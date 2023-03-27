@@ -26,6 +26,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomerSetLocaleActionImpl.class)
 public interface CustomerSetLocaleAction extends CustomerUpdateAction {
 
+    /**
+     * discriminator value for CustomerSetLocaleAction
+     */
     String SET_LOCALE = "setLocale";
 
     /**
@@ -36,30 +39,63 @@ public interface CustomerSetLocaleAction extends CustomerUpdateAction {
     @JsonProperty("locale")
     public String getLocale();
 
+    /**
+     *  <p>Value to set. Must be one of the languages supported by the Project.</p>
+     * @param locale value to be set
+     */
+
     public void setLocale(final String locale);
 
+    /**
+     * factory method
+     * @return instance of CustomerSetLocaleAction
+     */
     public static CustomerSetLocaleAction of() {
         return new CustomerSetLocaleActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomerSetLocaleAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomerSetLocaleAction of(final CustomerSetLocaleAction template) {
         CustomerSetLocaleActionImpl instance = new CustomerSetLocaleActionImpl();
         instance.setLocale(template.getLocale());
         return instance;
     }
 
+    /**
+     * builder factory method for CustomerSetLocaleAction
+     * @return builder
+     */
     public static CustomerSetLocaleActionBuilder builder() {
         return CustomerSetLocaleActionBuilder.of();
     }
 
+    /**
+     * create builder for CustomerSetLocaleAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerSetLocaleActionBuilder builder(final CustomerSetLocaleAction template) {
         return CustomerSetLocaleActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomerSetLocaleAction(Function<CustomerSetLocaleAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomerSetLocaleAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomerSetLocaleAction>() {
             @Override

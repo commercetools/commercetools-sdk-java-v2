@@ -30,7 +30,7 @@ public class ChangeQuoteRequestStateChangeBuilder implements Builder<ChangeQuote
     private com.commercetools.history.models.common.QuoteRequestState previousValue;
 
     /**
-     *
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class ChangeQuoteRequestStateChangeBuilder implements Builder<ChangeQuote
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class ChangeQuoteRequestStateChangeBuilder implements Builder<ChangeQuote
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -64,13 +64,28 @@ public class ChangeQuoteRequestStateChangeBuilder implements Builder<ChangeQuote
         return this;
     }
 
+    /**
+     * value of change}
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
+
     public com.commercetools.history.models.common.QuoteRequestState getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public com.commercetools.history.models.common.QuoteRequestState getPreviousValue() {
         return this.previousValue;
@@ -95,10 +110,19 @@ public class ChangeQuoteRequestStateChangeBuilder implements Builder<ChangeQuote
         return new ChangeQuoteRequestStateChangeImpl(change, nextValue, previousValue);
     }
 
+    /**
+     * factory method for an instance of ChangeQuoteRequestStateChangeBuilder
+     * @return builder
+     */
     public static ChangeQuoteRequestStateChangeBuilder of() {
         return new ChangeQuoteRequestStateChangeBuilder();
     }
 
+    /**
+     * create builder for ChangeQuoteRequestStateChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeQuoteRequestStateChangeBuilder of(final ChangeQuoteRequestStateChange template) {
         ChangeQuoteRequestStateChangeBuilder builder = new ChangeQuoteRequestStateChangeBuilder();
         builder.change = template.getChange();

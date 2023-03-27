@@ -120,30 +120,60 @@ public class ShoppingListAddLineItemActionBuilder implements Builder<ShoppingLis
         return this;
     }
 
+    /**
+     *  <p><code>sku</code> of the ProductVariant.</p>
+     * @return sku
+     */
+
     @Nullable
     public String getSku() {
         return this.sku;
     }
+
+    /**
+     *  <p>Unique identifier of a Product.</p>
+     * @return productId
+     */
 
     @Nullable
     public String getProductId() {
         return this.productId;
     }
 
+    /**
+     *  <p><code>id</code> of the ProductVariant. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
+     * @return variantId
+     */
+
     @Nullable
     public Long getVariantId() {
         return this.variantId;
     }
+
+    /**
+     *  <p>Number of Products in the ShoppingListLineItem.</p>
+     * @return quantity
+     */
 
     @Nullable
     public Long getQuantity() {
         return this.quantity;
     }
 
+    /**
+     *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     * @return addedAt
+     */
+
     @Nullable
     public java.time.ZonedDateTime getAddedAt() {
         return this.addedAt;
     }
+
+    /**
+     *  <p>Custom Fields defined for the ShoppingListLineItem.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -166,10 +196,19 @@ public class ShoppingListAddLineItemActionBuilder implements Builder<ShoppingLis
         return new ShoppingListAddLineItemActionImpl(sku, productId, variantId, quantity, addedAt, custom);
     }
 
+    /**
+     * factory method for an instance of ShoppingListAddLineItemActionBuilder
+     * @return builder
+     */
     public static ShoppingListAddLineItemActionBuilder of() {
         return new ShoppingListAddLineItemActionBuilder();
     }
 
+    /**
+     * create builder for ShoppingListAddLineItemAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShoppingListAddLineItemActionBuilder of(final ShoppingListAddLineItemAction template) {
         ShoppingListAddLineItemActionBuilder builder = new ShoppingListAddLineItemActionBuilder();
         builder.sku = template.getSku();

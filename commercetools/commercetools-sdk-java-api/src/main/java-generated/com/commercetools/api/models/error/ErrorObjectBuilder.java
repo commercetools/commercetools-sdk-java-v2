@@ -291,6 +291,10 @@ public class ErrorObjectBuilder {
         return com.commercetools.api.models.error.SyntaxErrorErrorBuilder.of();
     }
 
+    /**
+     * factory method for an instance of ErrorObjectBuilder
+     * @return builder
+     */
     public static ErrorObjectBuilder of() {
         return new ErrorObjectBuilder();
     }

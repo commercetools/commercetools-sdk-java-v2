@@ -22,11 +22,17 @@ public class DiscountCodeUpdateActionImpl implements DiscountCodeUpdateAction, M
 
     private String action;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DiscountCodeUpdateActionImpl(@JsonProperty("action") final String action) {
         this.action = action;
     }
 
+    /**
+     * create empty instance
+     */
     public DiscountCodeUpdateActionImpl() {
     }
 

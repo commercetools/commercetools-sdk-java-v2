@@ -134,38 +134,112 @@ public interface Type extends BaseResource, TypeMixin, com.commercetools.api.mod
     @JsonProperty("fieldDefinitions")
     public List<FieldDefinition> getFieldDefinitions();
 
+    /**
+     *  <p>Unique identifier of the Type.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>Current version of the Type.</p>
+     * @param version value to be set
+     */
 
     public void setVersion(final Long version);
 
+    /**
+     *  <p>Date and time (UTC) the Type was initially created.</p>
+     * @param createdAt value to be set
+     */
+
     public void setCreatedAt(final ZonedDateTime createdAt);
+
+    /**
+     *  <p>Date and time (UTC) the Type was last updated.</p>
+     * @param lastModifiedAt value to be set
+     */
 
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy value to be set
+     */
+
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy value to be set
+     */
 
     public void setCreatedBy(final CreatedBy createdBy);
 
+    /**
+     *  <p>User-defined unique identifier of the Type.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
+
+    /**
+     *  <p>Name of the Type.</p>
+     * @param name value to be set
+     */
 
     public void setName(final LocalizedString name);
 
+    /**
+     *  <p>Description of the Type.</p>
+     * @param description value to be set
+     */
+
     public void setDescription(final LocalizedString description);
+
+    /**
+     *  <p>Resources and/or data types for which the Type is defined.</p>
+     * @param resourceTypeIds values to be set
+     */
 
     @JsonIgnore
     public void setResourceTypeIds(final ResourceTypeId... resourceTypeIds);
 
+    /**
+     *  <p>Resources and/or data types for which the Type is defined.</p>
+     * @param resourceTypeIds values to be set
+     */
+
     public void setResourceTypeIds(final List<ResourceTypeId> resourceTypeIds);
+
+    /**
+     *  <p>Defines Custom Fields.</p>
+     * @param fieldDefinitions values to be set
+     */
 
     @JsonIgnore
     public void setFieldDefinitions(final FieldDefinition... fieldDefinitions);
 
+    /**
+     *  <p>Defines Custom Fields.</p>
+     * @param fieldDefinitions values to be set
+     */
+
     public void setFieldDefinitions(final List<FieldDefinition> fieldDefinitions);
 
+    /**
+     * factory method
+     * @return instance of Type
+     */
     public static Type of() {
         return new TypeImpl();
     }
 
+    /**
+     * factory method to copy an instance of Type
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static Type of(final Type template) {
         TypeImpl instance = new TypeImpl();
         instance.setId(template.getId());
@@ -182,14 +256,29 @@ public interface Type extends BaseResource, TypeMixin, com.commercetools.api.mod
         return instance;
     }
 
+    /**
+     * builder factory method for Type
+     * @return builder
+     */
     public static TypeBuilder builder() {
         return TypeBuilder.of();
     }
 
+    /**
+     * create builder for Type instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TypeBuilder builder(final Type template) {
         return TypeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withType(Function<Type, T> helper) {
         return helper.apply(this);
     }
@@ -198,6 +287,10 @@ public interface Type extends BaseResource, TypeMixin, com.commercetools.api.mod
         return com.commercetools.api.models.common.ReferenceTypeId.TYPE;
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<Type> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Type>() {
             @Override

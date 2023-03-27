@@ -28,6 +28,9 @@ public class SetCompanyNameChangeImpl implements SetCompanyNameChange, ModelBase
 
     private String nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetCompanyNameChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final String previousValue,
@@ -38,6 +41,9 @@ public class SetCompanyNameChangeImpl implements SetCompanyNameChange, ModelBase
         this.type = SET_COMPANY_NAME_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetCompanyNameChangeImpl() {
         this.type = SET_COMPANY_NAME_CHANGE;
     }

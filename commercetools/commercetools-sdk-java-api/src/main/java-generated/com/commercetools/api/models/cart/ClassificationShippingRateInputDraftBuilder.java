@@ -34,6 +34,11 @@ public class ClassificationShippingRateInputDraftBuilder implements Builder<Clas
         return this;
     }
 
+    /**
+     *  <p>Key of the value used as a programmatic identifier.</p>
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
@@ -55,10 +60,19 @@ public class ClassificationShippingRateInputDraftBuilder implements Builder<Clas
         return new ClassificationShippingRateInputDraftImpl(key);
     }
 
+    /**
+     * factory method for an instance of ClassificationShippingRateInputDraftBuilder
+     * @return builder
+     */
     public static ClassificationShippingRateInputDraftBuilder of() {
         return new ClassificationShippingRateInputDraftBuilder();
     }
 
+    /**
+     * create builder for ClassificationShippingRateInputDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ClassificationShippingRateInputDraftBuilder of(final ClassificationShippingRateInputDraft template) {
         ClassificationShippingRateInputDraftBuilder builder = new ClassificationShippingRateInputDraftBuilder();
         builder.key = template.getKey();

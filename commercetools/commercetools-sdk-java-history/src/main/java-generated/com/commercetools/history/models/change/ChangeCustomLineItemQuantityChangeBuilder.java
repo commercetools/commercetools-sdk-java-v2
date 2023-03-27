@@ -48,7 +48,7 @@ public class ChangeCustomLineItemQuantityChangeBuilder implements Builder<Change
     }
 
     /**
-     *
+     * set the value to the customLineItem using the builder function
      * @param builder function to build the customLineItem value
      * @return Builder
      */
@@ -61,7 +61,7 @@ public class ChangeCustomLineItemQuantityChangeBuilder implements Builder<Change
     }
 
     /**
-     *
+     * set the value to the customLineItem
      * @param customLineItem value to be set
      * @return Builder
      */
@@ -73,7 +73,7 @@ public class ChangeCustomLineItemQuantityChangeBuilder implements Builder<Change
     }
 
     /**
-     *
+     * set the value to the customLineItemId
      * @param customLineItemId value to be set
      * @return Builder
      */
@@ -84,7 +84,7 @@ public class ChangeCustomLineItemQuantityChangeBuilder implements Builder<Change
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -95,7 +95,7 @@ public class ChangeCustomLineItemQuantityChangeBuilder implements Builder<Change
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -105,21 +105,46 @@ public class ChangeCustomLineItemQuantityChangeBuilder implements Builder<Change
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>changeCustomLineItemQuantity</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of customLineItem}
+     * @return customLineItem
+     */
 
     public com.commercetools.history.models.common.LocalizedString getCustomLineItem() {
         return this.customLineItem;
     }
 
+    /**
+     * value of customLineItemId}
+     * @return customLineItemId
+     */
+
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
 
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
+
     public Integer getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public Integer getPreviousValue() {
         return this.previousValue;
@@ -150,10 +175,19 @@ public class ChangeCustomLineItemQuantityChangeBuilder implements Builder<Change
             previousValue);
     }
 
+    /**
+     * factory method for an instance of ChangeCustomLineItemQuantityChangeBuilder
+     * @return builder
+     */
     public static ChangeCustomLineItemQuantityChangeBuilder of() {
         return new ChangeCustomLineItemQuantityChangeBuilder();
     }
 
+    /**
+     * create builder for ChangeCustomLineItemQuantityChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeCustomLineItemQuantityChangeBuilder of(final ChangeCustomLineItemQuantityChange template) {
         ChangeCustomLineItemQuantityChangeBuilder builder = new ChangeCustomLineItemQuantityChangeBuilder();
         builder.change = template.getChange();

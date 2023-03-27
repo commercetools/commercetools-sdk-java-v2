@@ -34,6 +34,11 @@ public class ProductDiscountChangeIsActiveActionBuilder implements Builder<Produ
         return this;
     }
 
+    /**
+     *  <p>New value to set. If set to <code>true</code>, the Discount will be applied to Product Prices.</p>
+     * @return isActive
+     */
+
     public Boolean getIsActive() {
         return this.isActive;
     }
@@ -55,10 +60,19 @@ public class ProductDiscountChangeIsActiveActionBuilder implements Builder<Produ
         return new ProductDiscountChangeIsActiveActionImpl(isActive);
     }
 
+    /**
+     * factory method for an instance of ProductDiscountChangeIsActiveActionBuilder
+     * @return builder
+     */
     public static ProductDiscountChangeIsActiveActionBuilder of() {
         return new ProductDiscountChangeIsActiveActionBuilder();
     }
 
+    /**
+     * create builder for ProductDiscountChangeIsActiveAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductDiscountChangeIsActiveActionBuilder of(final ProductDiscountChangeIsActiveAction template) {
         ProductDiscountChangeIsActiveActionBuilder builder = new ProductDiscountChangeIsActiveActionBuilder();
         builder.isActive = template.getIsActive();

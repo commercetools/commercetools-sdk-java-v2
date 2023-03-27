@@ -29,6 +29,9 @@ public class ProjectNotConfiguredForLanguagesErrorImpl implements ProjectNotConf
 
     private java.util.List<String> languages;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProjectNotConfiguredForLanguagesErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values,
@@ -39,6 +42,9 @@ public class ProjectNotConfiguredForLanguagesErrorImpl implements ProjectNotConf
         this.code = PROJECT_NOT_CONFIGURED_FOR_LANGUAGES;
     }
 
+    /**
+     * create empty instance
+     */
     public ProjectNotConfiguredForLanguagesErrorImpl() {
         this.code = PROJECT_NOT_CONFIGURED_FOR_LANGUAGES;
     }

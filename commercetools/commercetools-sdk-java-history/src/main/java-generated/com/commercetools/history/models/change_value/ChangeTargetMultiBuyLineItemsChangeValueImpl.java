@@ -33,6 +33,9 @@ public class ChangeTargetMultiBuyLineItemsChangeValueImpl
 
     private com.commercetools.history.models.common.SelectionMode selectionMode;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeTargetMultiBuyLineItemsChangeValueImpl(@JsonProperty("predicate") final String predicate,
             @JsonProperty("triggerQuantity") final Integer triggerQuantity,
@@ -47,6 +50,9 @@ public class ChangeTargetMultiBuyLineItemsChangeValueImpl
         this.type = MULTI_BUY_LINE_ITEMS;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeTargetMultiBuyLineItemsChangeValueImpl() {
         this.type = MULTI_BUY_LINE_ITEMS;
     }

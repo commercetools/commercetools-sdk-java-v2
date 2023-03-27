@@ -76,9 +76,19 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
         return this;
     }
 
+    /**
+     *  <p>Cart Discount applicable on the Line Item.</p>
+     * @return discount
+     */
+
     public com.commercetools.api.models.cart_discount.CartDiscountReference getDiscount() {
         return this.discount;
     }
+
+    /**
+     *  <p>Money value of the discount applicable.</p>
+     * @return discountedAmount
+     */
 
     public com.commercetools.api.models.common.TypedMoney getDiscountedAmount() {
         return this.discountedAmount;
@@ -102,10 +112,19 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
         return new DiscountedLineItemPortionImpl(discount, discountedAmount);
     }
 
+    /**
+     * factory method for an instance of DiscountedLineItemPortionBuilder
+     * @return builder
+     */
     public static DiscountedLineItemPortionBuilder of() {
         return new DiscountedLineItemPortionBuilder();
     }
 
+    /**
+     * create builder for DiscountedLineItemPortion instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DiscountedLineItemPortionBuilder of(final DiscountedLineItemPortion template) {
         DiscountedLineItemPortionBuilder builder = new DiscountedLineItemPortionBuilder();
         builder.discount = template.getDiscount();

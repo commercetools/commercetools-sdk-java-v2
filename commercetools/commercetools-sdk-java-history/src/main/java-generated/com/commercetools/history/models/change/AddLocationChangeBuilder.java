@@ -88,13 +88,28 @@ public class AddLocationChangeBuilder implements Builder<AddLocationChange> {
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>addLocation</code> on zones</p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
+     * @return previousValue
+     */
+
     public com.commercetools.history.models.common.Location getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
+     * @return nextValue
+     */
 
     public com.commercetools.history.models.common.Location getNextValue() {
         return this.nextValue;
@@ -119,10 +134,19 @@ public class AddLocationChangeBuilder implements Builder<AddLocationChange> {
         return new AddLocationChangeImpl(change, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of AddLocationChangeBuilder
+     * @return builder
+     */
     public static AddLocationChangeBuilder of() {
         return new AddLocationChangeBuilder();
     }
 
+    /**
+     * create builder for AddLocationChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AddLocationChangeBuilder of(final AddLocationChange template) {
         AddLocationChangeBuilder builder = new AddLocationChangeBuilder();
         builder.change = template.getChange();

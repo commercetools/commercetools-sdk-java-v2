@@ -34,6 +34,11 @@ public class ShippingMethodChangeIsDefaultActionBuilder implements Builder<Shipp
         return this;
     }
 
+    /**
+     *  <p>Value to set. Only one ShippingMethod can be default in a Project.</p>
+     * @return isDefault
+     */
+
     public Boolean getIsDefault() {
         return this.isDefault;
     }
@@ -55,10 +60,19 @@ public class ShippingMethodChangeIsDefaultActionBuilder implements Builder<Shipp
         return new ShippingMethodChangeIsDefaultActionImpl(isDefault);
     }
 
+    /**
+     * factory method for an instance of ShippingMethodChangeIsDefaultActionBuilder
+     * @return builder
+     */
     public static ShippingMethodChangeIsDefaultActionBuilder of() {
         return new ShippingMethodChangeIsDefaultActionBuilder();
     }
 
+    /**
+     * create builder for ShippingMethodChangeIsDefaultAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShippingMethodChangeIsDefaultActionBuilder of(final ShippingMethodChangeIsDefaultAction template) {
         ShippingMethodChangeIsDefaultActionBuilder builder = new ShippingMethodChangeIsDefaultActionBuilder();
         builder.isDefault = template.getIsDefault();

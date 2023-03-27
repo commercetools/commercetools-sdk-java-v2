@@ -27,6 +27,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = DiscountCodeSetValidFromActionImpl.class)
 public interface DiscountCodeSetValidFromAction extends DiscountCodeUpdateAction {
 
+    /**
+     * discriminator value for DiscountCodeSetValidFromAction
+     */
     String SET_VALID_FROM = "setValidFrom";
 
     /**
@@ -37,30 +40,63 @@ public interface DiscountCodeSetValidFromAction extends DiscountCodeUpdateAction
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
 
+    /**
+     *  <p>Value to set that must be earlier than <code>validUntil</code>. If empty, any existing value will be removed.</p>
+     * @param validFrom value to be set
+     */
+
     public void setValidFrom(final ZonedDateTime validFrom);
 
+    /**
+     * factory method
+     * @return instance of DiscountCodeSetValidFromAction
+     */
     public static DiscountCodeSetValidFromAction of() {
         return new DiscountCodeSetValidFromActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of DiscountCodeSetValidFromAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static DiscountCodeSetValidFromAction of(final DiscountCodeSetValidFromAction template) {
         DiscountCodeSetValidFromActionImpl instance = new DiscountCodeSetValidFromActionImpl();
         instance.setValidFrom(template.getValidFrom());
         return instance;
     }
 
+    /**
+     * builder factory method for DiscountCodeSetValidFromAction
+     * @return builder
+     */
     public static DiscountCodeSetValidFromActionBuilder builder() {
         return DiscountCodeSetValidFromActionBuilder.of();
     }
 
+    /**
+     * create builder for DiscountCodeSetValidFromAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DiscountCodeSetValidFromActionBuilder builder(final DiscountCodeSetValidFromAction template) {
         return DiscountCodeSetValidFromActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withDiscountCodeSetValidFromAction(Function<DiscountCodeSetValidFromAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetValidFromAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodeSetValidFromAction>() {
             @Override

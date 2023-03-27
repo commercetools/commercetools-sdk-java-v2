@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetProductVariantKeyChangeImpl.class)
 public interface SetProductVariantKeyChange extends Change {
 
+    /**
+     * discriminator value for SetProductVariantKeyChange
+     */
     String SET_PRODUCT_VARIANT_KEY_CHANGE = "SetProductVariantKeyChange";
 
     /**
@@ -74,18 +77,47 @@ public interface SetProductVariantKeyChange extends Change {
     @JsonProperty("nextValue")
     public String getNextValue();
 
+    /**
+     *  <p>Update action for <code>setProductVariantKey</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set catalogData
+     * @param catalogData value to be set
+     */
 
     public void setCatalogData(final String catalogData);
 
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
+
     public void setPreviousValue(final String previousValue);
+
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
 
     public void setNextValue(final String nextValue);
 
+    /**
+     * factory method
+     * @return instance of SetProductVariantKeyChange
+     */
     public static SetProductVariantKeyChange of() {
         return new SetProductVariantKeyChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetProductVariantKeyChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetProductVariantKeyChange of(final SetProductVariantKeyChange template) {
         SetProductVariantKeyChangeImpl instance = new SetProductVariantKeyChangeImpl();
         instance.setChange(template.getChange());
@@ -95,18 +127,37 @@ public interface SetProductVariantKeyChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetProductVariantKeyChange
+     * @return builder
+     */
     public static SetProductVariantKeyChangeBuilder builder() {
         return SetProductVariantKeyChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetProductVariantKeyChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetProductVariantKeyChangeBuilder builder(final SetProductVariantKeyChange template) {
         return SetProductVariantKeyChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetProductVariantKeyChange(Function<SetProductVariantKeyChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetProductVariantKeyChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetProductVariantKeyChange>() {
             @Override

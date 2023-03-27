@@ -50,10 +50,20 @@ public class TypeResourceIdentifierBuilder implements Builder<TypeResourceIdenti
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the referenced Type. Either <code>id</code> or <code>key</code> is required.</p>
+     * @return id
+     */
+
     @Nullable
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the referenced Type. Either <code>id</code> or <code>key</code> is required.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
@@ -76,10 +86,19 @@ public class TypeResourceIdentifierBuilder implements Builder<TypeResourceIdenti
         return new TypeResourceIdentifierImpl(id, key);
     }
 
+    /**
+     * factory method for an instance of TypeResourceIdentifierBuilder
+     * @return builder
+     */
     public static TypeResourceIdentifierBuilder of() {
         return new TypeResourceIdentifierBuilder();
     }
 
+    /**
+     * create builder for TypeResourceIdentifier instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TypeResourceIdentifierBuilder of(final TypeResourceIdentifier template) {
         TypeResourceIdentifierBuilder builder = new TypeResourceIdentifierBuilder();
         builder.id = template.getId();

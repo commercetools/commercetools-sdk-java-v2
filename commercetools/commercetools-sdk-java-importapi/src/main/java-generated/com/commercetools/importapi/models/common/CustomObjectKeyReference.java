@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomObjectKeyReferenceImpl.class)
 public interface CustomObjectKeyReference extends KeyReference {
 
+    /**
+     * discriminator value for CustomObjectKeyReference
+     */
     String KEY_VALUE_DOCUMENT = "key-value-document";
 
     /**
@@ -40,12 +43,26 @@ public interface CustomObjectKeyReference extends KeyReference {
     @JsonProperty("container")
     public String getContainer();
 
+    /**
+     * set container
+     * @param container value to be set
+     */
+
     public void setContainer(final String container);
 
+    /**
+     * factory method
+     * @return instance of CustomObjectKeyReference
+     */
     public static CustomObjectKeyReference of() {
         return new CustomObjectKeyReferenceImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomObjectKeyReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomObjectKeyReference of(final CustomObjectKeyReference template) {
         CustomObjectKeyReferenceImpl instance = new CustomObjectKeyReferenceImpl();
         instance.setKey(template.getKey());
@@ -53,18 +70,37 @@ public interface CustomObjectKeyReference extends KeyReference {
         return instance;
     }
 
+    /**
+     * builder factory method for CustomObjectKeyReference
+     * @return builder
+     */
     public static CustomObjectKeyReferenceBuilder builder() {
         return CustomObjectKeyReferenceBuilder.of();
     }
 
+    /**
+     * create builder for CustomObjectKeyReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomObjectKeyReferenceBuilder builder(final CustomObjectKeyReference template) {
         return CustomObjectKeyReferenceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomObjectKeyReference(Function<CustomObjectKeyReference, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomObjectKeyReference> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomObjectKeyReference>() {
             @Override

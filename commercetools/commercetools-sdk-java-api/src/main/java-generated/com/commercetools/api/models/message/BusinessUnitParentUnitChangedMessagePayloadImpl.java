@@ -27,6 +27,9 @@ public class BusinessUnitParentUnitChangedMessagePayloadImpl
 
     private com.commercetools.api.models.business_unit.BusinessUnitKeyReference newParentUnit;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitParentUnitChangedMessagePayloadImpl(
             @JsonProperty("oldParentUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference oldParentUnit,
@@ -36,6 +39,9 @@ public class BusinessUnitParentUnitChangedMessagePayloadImpl
         this.type = BUSINESS_UNIT_PARENT_UNIT_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitParentUnitChangedMessagePayloadImpl() {
         this.type = BUSINESS_UNIT_PARENT_UNIT_CHANGED;
     }

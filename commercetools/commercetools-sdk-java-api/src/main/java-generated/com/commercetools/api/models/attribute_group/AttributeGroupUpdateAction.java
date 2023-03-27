@@ -46,34 +46,68 @@ public interface AttributeGroupUpdateAction
     @JsonProperty("action")
     public String getAction();
 
+    /**
+     * builder for addAttribute subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.attribute_group.AttributeGroupAddAttributeActionBuilder addAttributeBuilder() {
         return com.commercetools.api.models.attribute_group.AttributeGroupAddAttributeActionBuilder.of();
     }
 
+    /**
+     * builder for changeName subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.attribute_group.AttributeGroupChangeNameActionBuilder changeNameBuilder() {
         return com.commercetools.api.models.attribute_group.AttributeGroupChangeNameActionBuilder.of();
     }
 
+    /**
+     * builder for removeAttribute subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.attribute_group.AttributeGroupRemoveAttributeActionBuilder removeAttributeBuilder() {
         return com.commercetools.api.models.attribute_group.AttributeGroupRemoveAttributeActionBuilder.of();
     }
 
+    /**
+     * builder for setAttributes subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.attribute_group.AttributeGroupSetAttributesActionBuilder setAttributesBuilder() {
         return com.commercetools.api.models.attribute_group.AttributeGroupSetAttributesActionBuilder.of();
     }
 
+    /**
+     * builder for setDescription subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.attribute_group.AttributeGroupSetDescriptionActionBuilder setDescriptionBuilder() {
         return com.commercetools.api.models.attribute_group.AttributeGroupSetDescriptionActionBuilder.of();
     }
 
+    /**
+     * builder for setKey subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.attribute_group.AttributeGroupSetKeyActionBuilder setKeyBuilder() {
         return com.commercetools.api.models.attribute_group.AttributeGroupSetKeyActionBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAttributeGroupUpdateAction(Function<AttributeGroupUpdateAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AttributeGroupUpdateAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AttributeGroupUpdateAction>() {
             @Override

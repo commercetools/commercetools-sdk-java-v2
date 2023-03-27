@@ -45,7 +45,7 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
     }
 
     /**
-     *
+     * set the value to the asset using the builder function
      * @param builder function to build the asset value
      * @return Builder
      */
@@ -57,7 +57,7 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
     }
 
     /**
-     *
+     * set the value to the asset
      * @param asset value to be set
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -79,7 +79,7 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -89,17 +89,37 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>setAssetKey</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of asset}
+     * @return asset
+     */
 
     public com.commercetools.history.models.change_value.AssetChangeValue getAsset() {
         return this.asset;
     }
 
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
+
     public String getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public String getPreviousValue() {
         return this.previousValue;
@@ -125,10 +145,19 @@ public class SetAssetKeyChangeBuilder implements Builder<SetAssetKeyChange> {
         return new SetAssetKeyChangeImpl(change, asset, nextValue, previousValue);
     }
 
+    /**
+     * factory method for an instance of SetAssetKeyChangeBuilder
+     * @return builder
+     */
     public static SetAssetKeyChangeBuilder of() {
         return new SetAssetKeyChangeBuilder();
     }
 
+    /**
+     * create builder for SetAssetKeyChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetAssetKeyChangeBuilder of(final SetAssetKeyChange template) {
         SetAssetKeyChangeBuilder builder = new SetAssetKeyChangeBuilder();
         builder.change = template.getChange();

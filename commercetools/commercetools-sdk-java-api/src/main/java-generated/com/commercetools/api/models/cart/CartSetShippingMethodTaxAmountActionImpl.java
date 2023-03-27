@@ -24,6 +24,9 @@ public class CartSetShippingMethodTaxAmountActionImpl implements CartSetShipping
 
     private com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartSetShippingMethodTaxAmountActionImpl(
             @JsonProperty("externalTaxAmount") final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount) {
@@ -31,6 +34,9 @@ public class CartSetShippingMethodTaxAmountActionImpl implements CartSetShipping
         this.action = SET_SHIPPING_METHOD_TAX_AMOUNT;
     }
 
+    /**
+     * create empty instance
+     */
     public CartSetShippingMethodTaxAmountActionImpl() {
         this.action = SET_SHIPPING_METHOD_TAX_AMOUNT;
     }

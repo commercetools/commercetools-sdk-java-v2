@@ -41,18 +41,36 @@ public interface SuggestTokenizer {
     @JsonProperty("type")
     public String getType();
 
+    /**
+     * builder for custom subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.product.CustomTokenizerBuilder customBuilder() {
         return com.commercetools.api.models.product.CustomTokenizerBuilder.of();
     }
 
+    /**
+     * builder for whitespace subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.product.WhitespaceTokenizerBuilder whitespaceBuilder() {
         return com.commercetools.api.models.product.WhitespaceTokenizerBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSuggestTokenizer(Function<SuggestTokenizer, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SuggestTokenizer> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SuggestTokenizer>() {
             @Override

@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderChangeTaxRoundingModeActionImpl.class)
 public interface StagedOrderChangeTaxRoundingModeAction extends StagedOrderUpdateAction {
 
+    /**
+     * discriminator value for StagedOrderChangeTaxRoundingModeAction
+     */
     String CHANGE_TAX_ROUNDING_MODE = "changeTaxRoundingMode";
 
     /**
@@ -41,32 +44,65 @@ public interface StagedOrderChangeTaxRoundingModeAction extends StagedOrderUpdat
     @JsonProperty("taxRoundingMode")
     public RoundingMode getTaxRoundingMode();
 
+    /**
+     *  <p>Determines how monetary values are rounded.</p>
+     * @param taxRoundingMode value to be set
+     */
+
     public void setTaxRoundingMode(final RoundingMode taxRoundingMode);
 
+    /**
+     * factory method
+     * @return instance of StagedOrderChangeTaxRoundingModeAction
+     */
     public static StagedOrderChangeTaxRoundingModeAction of() {
         return new StagedOrderChangeTaxRoundingModeActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedOrderChangeTaxRoundingModeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedOrderChangeTaxRoundingModeAction of(final StagedOrderChangeTaxRoundingModeAction template) {
         StagedOrderChangeTaxRoundingModeActionImpl instance = new StagedOrderChangeTaxRoundingModeActionImpl();
         instance.setTaxRoundingMode(template.getTaxRoundingMode());
         return instance;
     }
 
+    /**
+     * builder factory method for StagedOrderChangeTaxRoundingModeAction
+     * @return builder
+     */
     public static StagedOrderChangeTaxRoundingModeActionBuilder builder() {
         return StagedOrderChangeTaxRoundingModeActionBuilder.of();
     }
 
+    /**
+     * create builder for StagedOrderChangeTaxRoundingModeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderChangeTaxRoundingModeActionBuilder builder(
             final StagedOrderChangeTaxRoundingModeAction template) {
         return StagedOrderChangeTaxRoundingModeActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedOrderChangeTaxRoundingModeAction(
             Function<StagedOrderChangeTaxRoundingModeAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderChangeTaxRoundingModeAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderChangeTaxRoundingModeAction>() {
             @Override

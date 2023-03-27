@@ -28,6 +28,9 @@ public class ProductSetCategoryOrderHintActionImpl implements ProductSetCategory
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSetCategoryOrderHintActionImpl(@JsonProperty("categoryId") final String categoryId,
             @JsonProperty("orderHint") final String orderHint, @JsonProperty("staged") final Boolean staged) {
@@ -37,6 +40,9 @@ public class ProductSetCategoryOrderHintActionImpl implements ProductSetCategory
         this.action = SET_CATEGORY_ORDER_HINT;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSetCategoryOrderHintActionImpl() {
         this.action = SET_CATEGORY_ORDER_HINT;
     }

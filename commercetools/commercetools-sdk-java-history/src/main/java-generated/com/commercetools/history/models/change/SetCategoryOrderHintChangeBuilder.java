@@ -48,7 +48,7 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
     }
 
     /**
-     *
+     * set the value to the catalogData
      * @param catalogData value to be set
      * @return Builder
      */
@@ -59,7 +59,7 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
     }
 
     /**
-     *
+     * set the value to the categoryId
      * @param categoryId value to be set
      * @return Builder
      */
@@ -70,7 +70,7 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -83,7 +83,7 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -95,7 +95,7 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -107,7 +107,7 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -118,21 +118,46 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>setCategoryOrderHint</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of catalogData}
+     * @return catalogData
+     */
 
     public String getCatalogData() {
         return this.catalogData;
     }
 
+    /**
+     * value of categoryId}
+     * @return categoryId
+     */
+
     public String getCategoryId() {
         return this.categoryId;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public com.commercetools.history.models.common.CategoryOrderHints getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public com.commercetools.history.models.common.CategoryOrderHints getNextValue() {
         return this.nextValue;
@@ -159,10 +184,19 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
         return new SetCategoryOrderHintChangeImpl(change, catalogData, categoryId, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of SetCategoryOrderHintChangeBuilder
+     * @return builder
+     */
     public static SetCategoryOrderHintChangeBuilder of() {
         return new SetCategoryOrderHintChangeBuilder();
     }
 
+    /**
+     * create builder for SetCategoryOrderHintChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetCategoryOrderHintChangeBuilder of(final SetCategoryOrderHintChange template) {
         SetCategoryOrderHintChangeBuilder builder = new SetCategoryOrderHintChangeBuilder();
         builder.change = template.getChange();

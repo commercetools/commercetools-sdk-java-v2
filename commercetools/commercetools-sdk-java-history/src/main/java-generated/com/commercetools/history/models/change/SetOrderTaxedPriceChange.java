@@ -35,6 +35,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetOrderTaxedPriceChangeImpl.class)
 public interface SetOrderTaxedPriceChange extends Change {
 
+    /**
+     * discriminator value for SetOrderTaxedPriceChange
+     */
     String SET_ORDER_TAXED_PRICE_CHANGE = "SetOrderTaxedPriceChange";
 
     /**
@@ -79,18 +82,47 @@ public interface SetOrderTaxedPriceChange extends Change {
     @JsonProperty("previousValue")
     public TaxedItemPrice getPreviousValue();
 
+    /**
+     *  <p>Update action for <code>setOrderTaxedPrice</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set taxMode
+     * @param taxMode value to be set
+     */
 
     public void setTaxMode(final TaxMode taxMode);
 
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
+
     public void setNextValue(final TaxedItemPrice nextValue);
+
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
 
     public void setPreviousValue(final TaxedItemPrice previousValue);
 
+    /**
+     * factory method
+     * @return instance of SetOrderTaxedPriceChange
+     */
     public static SetOrderTaxedPriceChange of() {
         return new SetOrderTaxedPriceChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetOrderTaxedPriceChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetOrderTaxedPriceChange of(final SetOrderTaxedPriceChange template) {
         SetOrderTaxedPriceChangeImpl instance = new SetOrderTaxedPriceChangeImpl();
         instance.setChange(template.getChange());
@@ -100,18 +132,37 @@ public interface SetOrderTaxedPriceChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetOrderTaxedPriceChange
+     * @return builder
+     */
     public static SetOrderTaxedPriceChangeBuilder builder() {
         return SetOrderTaxedPriceChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetOrderTaxedPriceChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetOrderTaxedPriceChangeBuilder builder(final SetOrderTaxedPriceChange template) {
         return SetOrderTaxedPriceChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetOrderTaxedPriceChange(Function<SetOrderTaxedPriceChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetOrderTaxedPriceChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetOrderTaxedPriceChange>() {
             @Override

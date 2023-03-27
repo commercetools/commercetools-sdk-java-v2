@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductTypeChangeNameActionImpl.class)
 public interface ProductTypeChangeNameAction extends ProductTypeUpdateAction {
 
+    /**
+     * discriminator value for ProductTypeChangeNameAction
+     */
     String CHANGE_NAME = "changeName";
 
     /**
@@ -39,30 +42,63 @@ public interface ProductTypeChangeNameAction extends ProductTypeUpdateAction {
     @JsonProperty("name")
     public String getName();
 
+    /**
+     *  <p>New value to set.</p>
+     * @param name value to be set
+     */
+
     public void setName(final String name);
 
+    /**
+     * factory method
+     * @return instance of ProductTypeChangeNameAction
+     */
     public static ProductTypeChangeNameAction of() {
         return new ProductTypeChangeNameActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductTypeChangeNameAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductTypeChangeNameAction of(final ProductTypeChangeNameAction template) {
         ProductTypeChangeNameActionImpl instance = new ProductTypeChangeNameActionImpl();
         instance.setName(template.getName());
         return instance;
     }
 
+    /**
+     * builder factory method for ProductTypeChangeNameAction
+     * @return builder
+     */
     public static ProductTypeChangeNameActionBuilder builder() {
         return ProductTypeChangeNameActionBuilder.of();
     }
 
+    /**
+     * create builder for ProductTypeChangeNameAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductTypeChangeNameActionBuilder builder(final ProductTypeChangeNameAction template) {
         return ProductTypeChangeNameActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductTypeChangeNameAction(Function<ProductTypeChangeNameAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductTypeChangeNameAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductTypeChangeNameAction>() {
             @Override

@@ -40,6 +40,9 @@ public class LineItemReturnItemImpl implements LineItemReturnItem, ModelBase {
 
     private String lineItemId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     LineItemReturnItemImpl(@JsonProperty("id") final String id, @JsonProperty("quantity") final Long quantity,
             @JsonProperty("comment") final String comment,
@@ -61,6 +64,9 @@ public class LineItemReturnItemImpl implements LineItemReturnItem, ModelBase {
         this.type = LINE_ITEM_RETURN_ITEM;
     }
 
+    /**
+     * create empty instance
+     */
     public LineItemReturnItemImpl() {
         this.type = LINE_ITEM_RETURN_ITEM;
     }

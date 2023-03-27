@@ -46,34 +46,68 @@ public interface TaxCategoryUpdateAction
     @JsonProperty("action")
     public String getAction();
 
+    /**
+     * builder for addTaxRate subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.tax_category.TaxCategoryAddTaxRateActionBuilder addTaxRateBuilder() {
         return com.commercetools.api.models.tax_category.TaxCategoryAddTaxRateActionBuilder.of();
     }
 
+    /**
+     * builder for changeName subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.tax_category.TaxCategoryChangeNameActionBuilder changeNameBuilder() {
         return com.commercetools.api.models.tax_category.TaxCategoryChangeNameActionBuilder.of();
     }
 
+    /**
+     * builder for removeTaxRate subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.tax_category.TaxCategoryRemoveTaxRateActionBuilder removeTaxRateBuilder() {
         return com.commercetools.api.models.tax_category.TaxCategoryRemoveTaxRateActionBuilder.of();
     }
 
+    /**
+     * builder for replaceTaxRate subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.tax_category.TaxCategoryReplaceTaxRateActionBuilder replaceTaxRateBuilder() {
         return com.commercetools.api.models.tax_category.TaxCategoryReplaceTaxRateActionBuilder.of();
     }
 
+    /**
+     * builder for setDescription subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.tax_category.TaxCategorySetDescriptionActionBuilder setDescriptionBuilder() {
         return com.commercetools.api.models.tax_category.TaxCategorySetDescriptionActionBuilder.of();
     }
 
+    /**
+     * builder for setKey subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.tax_category.TaxCategorySetKeyActionBuilder setKeyBuilder() {
         return com.commercetools.api.models.tax_category.TaxCategorySetKeyActionBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTaxCategoryUpdateAction(Function<TaxCategoryUpdateAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<TaxCategoryUpdateAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TaxCategoryUpdateAction>() {
             @Override

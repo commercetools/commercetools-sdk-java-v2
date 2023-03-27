@@ -42,6 +42,9 @@ public class QuoteDeletedMessageImpl implements QuoteDeletedMessage, ModelBase {
 
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     QuoteDeletedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -65,6 +68,9 @@ public class QuoteDeletedMessageImpl implements QuoteDeletedMessage, ModelBase {
         this.type = QUOTE_DELETED;
     }
 
+    /**
+     * create empty instance
+     */
     public QuoteDeletedMessageImpl() {
         this.type = QUOTE_DELETED;
     }

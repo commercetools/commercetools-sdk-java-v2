@@ -280,86 +280,282 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
+    /**
+     *  <p>Currency the Cart uses.</p>
+     * @param currency value to be set
+     */
+
     public void setCurrency(final String currency);
+
+    /**
+     *  <p>User-defined unique identifier for the Cart.</p>
+     * @param key value to be set
+     */
 
     public void setKey(final String key);
 
+    /**
+     *  <p><code>id</code> of the Customer that the Cart belongs to.</p>
+     * @param customerId value to be set
+     */
+
     public void setCustomerId(final String customerId);
+
+    /**
+     *  <p>Email address of the Customer that the Cart belongs to.</p>
+     * @param customerEmail value to be set
+     */
 
     public void setCustomerEmail(final String customerEmail);
 
+    /**
+     *  <p>ResourceIdentifier to the Customer Group of the Customer that the Cart belongs to. Used for LineItem Price selection.</p>
+     *  <p>It is automatically set if the Customer referenced in <code>customerId</code> belongs to a Customer Group. It can also be set explicitly when no <code>customerId</code> is present.</p>
+     * @param customerGroup value to be set
+     */
+
     public void setCustomerGroup(final CustomerGroupResourceIdentifier customerGroup);
+
+    /**
+     *  <p>Anonymous session associated with the Cart.</p>
+     * @param anonymousId value to be set
+     */
 
     public void setAnonymousId(final String anonymousId);
 
+    /**
+     *  <p>ResourceIdentifier to the Business Unit the Cart should belong to.</p>
+     * @param businessUnit value to be set
+     */
+
     public void setBusinessUnit(final BusinessUnitResourceIdentifier businessUnit);
 
+    /**
+     *  <p>ResourceIdentifier to the Store the Cart should belong to. Once set, it cannot be updated.</p>
+     * @param store value to be set
+     */
+
     public void setStore(final StoreResourceIdentifier store);
+
+    /**
+     *  <p>Line Items to add to the Cart.</p>
+     * @param lineItems values to be set
+     */
 
     @JsonIgnore
     public void setLineItems(final LineItemDraft... lineItems);
 
+    /**
+     *  <p>Line Items to add to the Cart.</p>
+     * @param lineItems values to be set
+     */
+
     public void setLineItems(final List<LineItemDraft> lineItems);
+
+    /**
+     *  <p>Custom Line Items to add to the Cart.</p>
+     * @param customLineItems values to be set
+     */
 
     @JsonIgnore
     public void setCustomLineItems(final CustomLineItemDraft... customLineItems);
 
+    /**
+     *  <p>Custom Line Items to add to the Cart.</p>
+     * @param customLineItems values to be set
+     */
+
     public void setCustomLineItems(final List<CustomLineItemDraft> customLineItems);
+
+    /**
+     *  <p>Determines how Tax Rates are set.</p>
+     * @param taxMode value to be set
+     */
 
     public void setTaxMode(final TaxMode taxMode);
 
+    /**
+     *  <p>External Tax Rate for the <code>shippingMethod</code> if the Cart has <code>External</code> TaxMode.</p>
+     * @param externalTaxRateForShippingMethod value to be set
+     */
+
     public void setExternalTaxRateForShippingMethod(final ExternalTaxRateDraft externalTaxRateForShippingMethod);
+
+    /**
+     *  <p>Determines how monetary values are rounded when calculating taxes for <code>taxedPrice</code>.</p>
+     * @param taxRoundingMode value to be set
+     */
 
     public void setTaxRoundingMode(final RoundingMode taxRoundingMode);
 
+    /**
+     *  <p>Determines how taxes are calculated when calculating taxes for <code>taxedPrice</code>.</p>
+     * @param taxCalculationMode value to be set
+     */
+
     public void setTaxCalculationMode(final TaxCalculationMode taxCalculationMode);
+
+    /**
+     *  <p>Determines how stock quantities are tracked for Line Items in the Cart.</p>
+     * @param inventoryMode value to be set
+     */
 
     public void setInventoryMode(final InventoryMode inventoryMode);
 
+    /**
+     *  <p>Billing address associated with the Cart.</p>
+     * @param billingAddress value to be set
+     */
+
     public void setBillingAddress(final BaseAddress billingAddress);
+
+    /**
+     *  <p>Shipping address associated with the Cart. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     * @param shippingAddress value to be set
+     */
 
     public void setShippingAddress(final BaseAddress shippingAddress);
 
+    /**
+     *  <p>Shipping Method for a Cart with <code>Single</code> ShippingMode. If the referenced ShippingMethod has a <code>predicate</code> that does not match the Cart, an InvalidOperation error is returned when creating a Cart.</p>
+     * @param shippingMethod value to be set
+     */
+
     public void setShippingMethod(final ShippingMethodResourceIdentifier shippingMethod);
+
+    /**
+     *  <p>Used as an input to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <ul>
+     *   <li>If <code>CartClassification</code>, it must be ClassificationShippingRateInputDraft.</li>
+     *   <li>If <code>CartScore</code>, it must be ScoreShippingRateInputDraft.</li>
+     *   <li>If <code>CartValue</code>, it cannot be set.</li>
+     *  </ul>
+     * @param shippingRateInput value to be set
+     */
 
     public void setShippingRateInput(final ShippingRateInputDraft shippingRateInput);
 
+    /**
+     *  <ul>
+     *   <li>If set to <code>Single</code>, only a single Shipping Method can be added to the Cart.</li>
+     *   <li>If set to <code>Multiple</code>, multiple Shipping Methods can be added to the Cart.</li>
+     *  </ul>
+     * @param shippingMode value to be set
+     */
+
     public void setShippingMode(final ShippingMode shippingMode);
+
+    /**
+     *  <p>Custom Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
+     * @param customShipping values to be set
+     */
 
     @JsonIgnore
     public void setCustomShipping(final CustomShippingDraft... customShipping);
 
+    /**
+     *  <p>Custom Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
+     * @param customShipping values to be set
+     */
+
     public void setCustomShipping(final List<CustomShippingDraft> customShipping);
+
+    /**
+     *  <p>Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
+     * @param shipping values to be set
+     */
 
     @JsonIgnore
     public void setShipping(final ShippingDraft... shipping);
 
+    /**
+     *  <p>Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
+     * @param shipping values to be set
+     */
+
     public void setShipping(final List<ShippingDraft> shipping);
+
+    /**
+     *  <p>Multiple shipping addresses of the Cart. Each address must contain a <code>key</code> that is unique in this Cart. The keys are used by LineItems to reference these addresses under their <code>shippingDetails</code>.</p>
+     *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     * @param itemShippingAddresses values to be set
+     */
 
     @JsonIgnore
     public void setItemShippingAddresses(final BaseAddress... itemShippingAddresses);
 
+    /**
+     *  <p>Multiple shipping addresses of the Cart. Each address must contain a <code>key</code> that is unique in this Cart. The keys are used by LineItems to reference these addresses under their <code>shippingDetails</code>.</p>
+     *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     * @param itemShippingAddresses values to be set
+     */
+
     public void setItemShippingAddresses(final List<BaseAddress> itemShippingAddresses);
+
+    /**
+     *  <p><code>code</code> of the existing DiscountCodes to add to the Cart.</p>
+     * @param discountCodes values to be set
+     */
 
     @JsonIgnore
     public void setDiscountCodes(final String... discountCodes);
 
+    /**
+     *  <p><code>code</code> of the existing DiscountCodes to add to the Cart.</p>
+     * @param discountCodes values to be set
+     */
+
     public void setDiscountCodes(final List<String> discountCodes);
+
+    /**
+     *  <p>Used for LineItem Price selection. If used for Create Cart in Store, the provided country must be one of the Store's <code>countries</code>.</p>
+     * @param country value to be set
+     */
 
     public void setCountry(final String country);
 
+    /**
+     *  <p>Languages of the Cart. Can only contain languages supported by the Project.</p>
+     * @param locale value to be set
+     */
+
     public void setLocale(final String locale);
+
+    /**
+     *  <p>Indicates how the Cart was created.</p>
+     * @param origin value to be set
+     */
 
     public void setOrigin(final CartOrigin origin);
 
+    /**
+     *  <p>Number of days after which an active Cart is deleted since its last modification. If not provided, the default value for this field configured in Project settings is assigned.</p>
+     *  <p>Create a ChangeSubscription for Carts to receive a ResourceDeletedDeliveryPayload upon deletion of the Cart.</p>
+     * @param deleteDaysAfterLastModification value to be set
+     */
+
     public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification);
+
+    /**
+     *  <p>Custom Fields for the Cart.</p>
+     * @param custom value to be set
+     */
 
     public void setCustom(final CustomFieldsDraft custom);
 
+    /**
+     * factory method
+     * @return instance of CartDraft
+     */
     public static CartDraft of() {
         return new CartDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartDraft of(final CartDraft template) {
         CartDraftImpl instance = new CartDraftImpl();
         instance.setCurrency(template.getCurrency());
@@ -394,18 +590,37 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
         return instance;
     }
 
+    /**
+     * builder factory method for CartDraft
+     * @return builder
+     */
     public static CartDraftBuilder builder() {
         return CartDraftBuilder.of();
     }
 
+    /**
+     * create builder for CartDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartDraftBuilder builder(final CartDraft template) {
         return CartDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartDraft(Function<CartDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartDraft>() {
             @Override

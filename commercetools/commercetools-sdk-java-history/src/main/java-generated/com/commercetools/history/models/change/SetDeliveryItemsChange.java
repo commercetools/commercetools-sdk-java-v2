@@ -34,6 +34,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetDeliveryItemsChangeImpl.class)
 public interface SetDeliveryItemsChange extends Change {
 
+    /**
+     * discriminator value for SetDeliveryItemsChange
+     */
     String SET_DELIVERY_ITEMS_CHANGE = "SetDeliveryItemsChange";
 
     /**
@@ -78,24 +81,63 @@ public interface SetDeliveryItemsChange extends Change {
     @JsonProperty("previousValue")
     public List<DeliveryItem> getPreviousValue();
 
+    /**
+     *  <p>Update action for <code>setDeliveryItems</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
 
+    /**
+     * set deliveryId
+     * @param deliveryId value to be set
+     */
+
     public void setDeliveryId(final String deliveryId);
+
+    /**
+     * set nextValue
+     * @param nextValue values to be set
+     */
 
     @JsonIgnore
     public void setNextValue(final DeliveryItem... nextValue);
 
+    /**
+     * set nextValue
+     * @param nextValue values to be set
+     */
+
     public void setNextValue(final List<DeliveryItem> nextValue);
+
+    /**
+     * set previousValue
+     * @param previousValue values to be set
+     */
 
     @JsonIgnore
     public void setPreviousValue(final DeliveryItem... previousValue);
 
+    /**
+     * set previousValue
+     * @param previousValue values to be set
+     */
+
     public void setPreviousValue(final List<DeliveryItem> previousValue);
 
+    /**
+     * factory method
+     * @return instance of SetDeliveryItemsChange
+     */
     public static SetDeliveryItemsChange of() {
         return new SetDeliveryItemsChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetDeliveryItemsChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetDeliveryItemsChange of(final SetDeliveryItemsChange template) {
         SetDeliveryItemsChangeImpl instance = new SetDeliveryItemsChangeImpl();
         instance.setChange(template.getChange());
@@ -105,18 +147,37 @@ public interface SetDeliveryItemsChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetDeliveryItemsChange
+     * @return builder
+     */
     public static SetDeliveryItemsChangeBuilder builder() {
         return SetDeliveryItemsChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetDeliveryItemsChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetDeliveryItemsChangeBuilder builder(final SetDeliveryItemsChange template) {
         return SetDeliveryItemsChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetDeliveryItemsChange(Function<SetDeliveryItemsChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetDeliveryItemsChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetDeliveryItemsChange>() {
             @Override

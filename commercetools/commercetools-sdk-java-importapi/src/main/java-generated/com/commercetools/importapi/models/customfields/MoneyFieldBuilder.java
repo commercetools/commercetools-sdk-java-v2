@@ -25,7 +25,7 @@ public class MoneyFieldBuilder implements Builder<MoneyField> {
     private com.commercetools.importapi.models.common.TypedMoney value;
 
     /**
-     *
+     * set the value to the value
      * @param value value to be set
      * @return Builder
      */
@@ -36,7 +36,7 @@ public class MoneyFieldBuilder implements Builder<MoneyField> {
     }
 
     /**
-     *
+     * set the value to the value using the builder function
      * @param builder function to build the value value
      * @return Builder
      */
@@ -46,6 +46,11 @@ public class MoneyFieldBuilder implements Builder<MoneyField> {
         this.value = builder.apply(com.commercetools.importapi.models.common.TypedMoneyBuilder.of()).build();
         return this;
     }
+
+    /**
+     * value of value}
+     * @return value
+     */
 
     public com.commercetools.importapi.models.common.TypedMoney getValue() {
         return this.value;
@@ -68,10 +73,19 @@ public class MoneyFieldBuilder implements Builder<MoneyField> {
         return new MoneyFieldImpl(value);
     }
 
+    /**
+     * factory method for an instance of MoneyFieldBuilder
+     * @return builder
+     */
     public static MoneyFieldBuilder of() {
         return new MoneyFieldBuilder();
     }
 
+    /**
+     * create builder for MoneyField instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MoneyFieldBuilder of(final MoneyField template) {
         MoneyFieldBuilder builder = new MoneyFieldBuilder();
         builder.value = template.getValue();

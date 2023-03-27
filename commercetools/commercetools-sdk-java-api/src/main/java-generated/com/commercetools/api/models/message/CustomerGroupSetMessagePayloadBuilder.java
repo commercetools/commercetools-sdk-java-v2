@@ -52,6 +52,11 @@ public class CustomerGroupSetMessagePayloadBuilder implements Builder<CustomerGr
         return this;
     }
 
+    /**
+     *  <p>Customer Group that was set during the Set Customer Group update action.</p>
+     * @return customerGroup
+     */
+
     @Nullable
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
         return this.customerGroup;
@@ -73,10 +78,19 @@ public class CustomerGroupSetMessagePayloadBuilder implements Builder<CustomerGr
         return new CustomerGroupSetMessagePayloadImpl(customerGroup);
     }
 
+    /**
+     * factory method for an instance of CustomerGroupSetMessagePayloadBuilder
+     * @return builder
+     */
     public static CustomerGroupSetMessagePayloadBuilder of() {
         return new CustomerGroupSetMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for CustomerGroupSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerGroupSetMessagePayloadBuilder of(final CustomerGroupSetMessagePayload template) {
         CustomerGroupSetMessagePayloadBuilder builder = new CustomerGroupSetMessagePayloadBuilder();
         builder.customerGroup = template.getCustomerGroup();

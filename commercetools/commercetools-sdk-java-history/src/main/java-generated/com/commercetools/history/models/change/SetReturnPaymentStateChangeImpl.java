@@ -28,6 +28,9 @@ public class SetReturnPaymentStateChangeImpl implements SetReturnPaymentStateCha
 
     private com.commercetools.history.models.common.ReturnPaymentState previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetReturnPaymentStateChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.ReturnPaymentState nextValue,
@@ -38,6 +41,9 @@ public class SetReturnPaymentStateChangeImpl implements SetReturnPaymentStateCha
         this.type = SET_RETURN_PAYMENT_STATE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetReturnPaymentStateChangeImpl() {
         this.type = SET_RETURN_PAYMENT_STATE_CHANGE;
     }

@@ -46,6 +46,9 @@ public class BusinessUnitParentUnitChangedMessageImpl implements BusinessUnitPar
 
     private com.commercetools.api.models.business_unit.BusinessUnitKeyReference newParentUnit;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitParentUnitChangedMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -74,6 +77,9 @@ public class BusinessUnitParentUnitChangedMessageImpl implements BusinessUnitPar
         this.type = BUSINESS_UNIT_PARENT_UNIT_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitParentUnitChangedMessageImpl() {
         this.type = BUSINESS_UNIT_PARENT_UNIT_CHANGED;
     }

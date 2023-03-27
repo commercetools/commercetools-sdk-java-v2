@@ -46,6 +46,9 @@ public class ProductStateTransitionMessageImpl implements ProductStateTransition
 
     private Boolean force;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductStateTransitionMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -73,6 +76,9 @@ public class ProductStateTransitionMessageImpl implements ProductStateTransition
         this.type = PRODUCT_STATE_TRANSITION;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductStateTransitionMessageImpl() {
         this.type = PRODUCT_STATE_TRANSITION;
     }

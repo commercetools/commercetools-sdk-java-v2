@@ -46,14 +46,33 @@ public interface Address extends BaseAddress, com.commercetools.api.models.Custo
     @JsonProperty("id")
     public String getId();
 
+    /**
+     *  <p>Custom Fields defined for the Address.</p>
+     * @param custom value to be set
+     */
+
     public void setCustom(final CustomFields custom);
+
+    /**
+     * set id
+     * @param id value to be set
+     */
 
     public void setId(final String id);
 
+    /**
+     * factory method
+     * @return instance of Address
+     */
     public static Address of() {
         return new AddressImpl();
     }
 
+    /**
+     * factory method to copy an instance of Address
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static Address of(final Address template) {
         AddressImpl instance = new AddressImpl();
         instance.setId(template.getId());
@@ -85,18 +104,37 @@ public interface Address extends BaseAddress, com.commercetools.api.models.Custo
         return instance;
     }
 
+    /**
+     * builder factory method for Address
+     * @return builder
+     */
     public static AddressBuilder builder() {
         return AddressBuilder.of();
     }
 
+    /**
+     * create builder for Address instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AddressBuilder builder(final Address template) {
         return AddressBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAddress(Function<Address, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<Address> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Address>() {
             @Override

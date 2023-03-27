@@ -90,6 +90,11 @@ public class CartDiscountValueFixedBuilder implements Builder<CartDiscountValueF
         return this;
     }
 
+    /**
+     *  <p>Cent precision money values in different currencies.</p>
+     * @return money
+     */
+
     public java.util.List<com.commercetools.api.models.common.CentPrecisionMoney> getMoney() {
         return this.money;
     }
@@ -111,10 +116,19 @@ public class CartDiscountValueFixedBuilder implements Builder<CartDiscountValueF
         return new CartDiscountValueFixedImpl(money);
     }
 
+    /**
+     * factory method for an instance of CartDiscountValueFixedBuilder
+     * @return builder
+     */
     public static CartDiscountValueFixedBuilder of() {
         return new CartDiscountValueFixedBuilder();
     }
 
+    /**
+     * create builder for CartDiscountValueFixed instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartDiscountValueFixedBuilder of(final CartDiscountValueFixed template) {
         CartDiscountValueFixedBuilder builder = new CartDiscountValueFixedBuilder();
         builder.money = template.getMoney();

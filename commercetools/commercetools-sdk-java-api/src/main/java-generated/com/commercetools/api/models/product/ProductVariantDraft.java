@@ -80,34 +80,93 @@ public interface ProductVariantDraft
     @JsonProperty("assets")
     public List<AssetDraft> getAssets();
 
+    /**
+     *  <p>User-defined unique SKU of the Product Variant.</p>
+     * @param sku value to be set
+     */
+
     public void setSku(final String sku);
 
+    /**
+     *  <p>User-defined unique identifier for the ProductVariant.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
+
+    /**
+     *  <p>The Embedded Prices for the Product Variant. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     * @param prices values to be set
+     */
 
     @JsonIgnore
     public void setPrices(final PriceDraft... prices);
 
+    /**
+     *  <p>The Embedded Prices for the Product Variant. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     * @param prices values to be set
+     */
+
     public void setPrices(final List<PriceDraft> prices);
+
+    /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @param attributes values to be set
+     */
 
     @JsonIgnore
     public void setAttributes(final Attribute... attributes);
 
+    /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @param attributes values to be set
+     */
+
     public void setAttributes(final List<Attribute> attributes);
+
+    /**
+     *  <p>Images for the Product Variant.</p>
+     * @param images values to be set
+     */
 
     @JsonIgnore
     public void setImages(final Image... images);
 
+    /**
+     *  <p>Images for the Product Variant.</p>
+     * @param images values to be set
+     */
+
     public void setImages(final List<Image> images);
+
+    /**
+     *  <p>Media assets for the Product Variant.</p>
+     * @param assets values to be set
+     */
 
     @JsonIgnore
     public void setAssets(final AssetDraft... assets);
 
+    /**
+     *  <p>Media assets for the Product Variant.</p>
+     * @param assets values to be set
+     */
+
     public void setAssets(final List<AssetDraft> assets);
 
+    /**
+     * factory method
+     * @return instance of ProductVariantDraft
+     */
     public static ProductVariantDraft of() {
         return new ProductVariantDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductVariantDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductVariantDraft of(final ProductVariantDraft template) {
         ProductVariantDraftImpl instance = new ProductVariantDraftImpl();
         instance.setSku(template.getSku());
@@ -119,18 +178,37 @@ public interface ProductVariantDraft
         return instance;
     }
 
+    /**
+     * builder factory method for ProductVariantDraft
+     * @return builder
+     */
     public static ProductVariantDraftBuilder builder() {
         return ProductVariantDraftBuilder.of();
     }
 
+    /**
+     * create builder for ProductVariantDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductVariantDraftBuilder builder(final ProductVariantDraft template) {
         return ProductVariantDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductVariantDraft(Function<ProductVariantDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductVariantDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductVariantDraft>() {
             @Override

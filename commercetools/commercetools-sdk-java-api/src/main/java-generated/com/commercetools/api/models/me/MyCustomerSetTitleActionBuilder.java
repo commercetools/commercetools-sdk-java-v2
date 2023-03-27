@@ -36,6 +36,11 @@ public class MyCustomerSetTitleActionBuilder implements Builder<MyCustomerSetTit
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @return title
+     */
+
     @Nullable
     public String getTitle() {
         return this.title;
@@ -57,10 +62,19 @@ public class MyCustomerSetTitleActionBuilder implements Builder<MyCustomerSetTit
         return new MyCustomerSetTitleActionImpl(title);
     }
 
+    /**
+     * factory method for an instance of MyCustomerSetTitleActionBuilder
+     * @return builder
+     */
     public static MyCustomerSetTitleActionBuilder of() {
         return new MyCustomerSetTitleActionBuilder();
     }
 
+    /**
+     * create builder for MyCustomerSetTitleAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCustomerSetTitleActionBuilder of(final MyCustomerSetTitleAction template) {
         MyCustomerSetTitleActionBuilder builder = new MyCustomerSetTitleActionBuilder();
         builder.title = template.getTitle();

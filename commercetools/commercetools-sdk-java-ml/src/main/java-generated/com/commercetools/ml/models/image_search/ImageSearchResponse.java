@@ -66,21 +66,55 @@ public interface ImageSearchResponse {
     @JsonProperty("results")
     public List<ResultItem> getResults();
 
+    /**
+     *  <p>The maximum number of results to return from a query.</p>
+     * @param count value to be set
+     */
+
     public void setCount(final Integer count);
+
+    /**
+     *  <p>Number of elements skipped.</p>
+     * @param offset value to be set
+     */
 
     public void setOffset(final Double offset);
 
+    /**
+     *  <p>The total number of product images that were have been analyzed.</p>
+     * @param total value to be set
+     */
+
     public void setTotal(final Integer total);
+
+    /**
+     *  <p>An array of image URLs of images that are similar to the query image. If no matching images are found, results is empty.</p>
+     * @param results values to be set
+     */
 
     @JsonIgnore
     public void setResults(final ResultItem... results);
 
+    /**
+     *  <p>An array of image URLs of images that are similar to the query image. If no matching images are found, results is empty.</p>
+     * @param results values to be set
+     */
+
     public void setResults(final List<ResultItem> results);
 
+    /**
+     * factory method
+     * @return instance of ImageSearchResponse
+     */
     public static ImageSearchResponse of() {
         return new ImageSearchResponseImpl();
     }
 
+    /**
+     * factory method to copy an instance of ImageSearchResponse
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ImageSearchResponse of(final ImageSearchResponse template) {
         ImageSearchResponseImpl instance = new ImageSearchResponseImpl();
         instance.setCount(template.getCount());
@@ -90,18 +124,37 @@ public interface ImageSearchResponse {
         return instance;
     }
 
+    /**
+     * builder factory method for ImageSearchResponse
+     * @return builder
+     */
     public static ImageSearchResponseBuilder builder() {
         return ImageSearchResponseBuilder.of();
     }
 
+    /**
+     * create builder for ImageSearchResponse instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ImageSearchResponseBuilder builder(final ImageSearchResponse template) {
         return ImageSearchResponseBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withImageSearchResponse(Function<ImageSearchResponse, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ImageSearchResponse> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ImageSearchResponse>() {
             @Override

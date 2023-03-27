@@ -31,7 +31,7 @@ public class ShoppingListLineItemValueBuilder implements Builder<ShoppingListLin
     private Integer variantId;
 
     /**
-     *
+     * set the value to the id
      * @param id value to be set
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class ShoppingListLineItemValueBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     *
+     * set the value to the name using the builder function
      * @param builder function to build the name value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class ShoppingListLineItemValueBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     *
+     * set the value to the name
      * @param name value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class ShoppingListLineItemValueBuilder implements Builder<ShoppingListLin
     }
 
     /**
-     *
+     * set the value to the variantId
      * @param variantId value to be set
      * @return Builder
      */
@@ -75,13 +75,28 @@ public class ShoppingListLineItemValueBuilder implements Builder<ShoppingListLin
         return this;
     }
 
+    /**
+     * value of id}
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
 
+    /**
+     * value of name}
+     * @return name
+     */
+
     public com.commercetools.history.models.common.LocalizedString getName() {
         return this.name;
     }
+
+    /**
+     * value of variantId}
+     * @return variantId
+     */
 
     public Integer getVariantId() {
         return this.variantId;
@@ -106,10 +121,19 @@ public class ShoppingListLineItemValueBuilder implements Builder<ShoppingListLin
         return new ShoppingListLineItemValueImpl(id, name, variantId);
     }
 
+    /**
+     * factory method for an instance of ShoppingListLineItemValueBuilder
+     * @return builder
+     */
     public static ShoppingListLineItemValueBuilder of() {
         return new ShoppingListLineItemValueBuilder();
     }
 
+    /**
+     * create builder for ShoppingListLineItemValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShoppingListLineItemValueBuilder of(final ShoppingListLineItemValue template) {
         ShoppingListLineItemValueBuilder builder = new ShoppingListLineItemValueBuilder();
         builder.id = template.getId();

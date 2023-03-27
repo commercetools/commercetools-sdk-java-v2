@@ -34,6 +34,11 @@ public class ProductTypeChangeNameActionBuilder implements Builder<ProductTypeCh
         return this;
     }
 
+    /**
+     *  <p>New value to set.</p>
+     * @return name
+     */
+
     public String getName() {
         return this.name;
     }
@@ -55,10 +60,19 @@ public class ProductTypeChangeNameActionBuilder implements Builder<ProductTypeCh
         return new ProductTypeChangeNameActionImpl(name);
     }
 
+    /**
+     * factory method for an instance of ProductTypeChangeNameActionBuilder
+     * @return builder
+     */
     public static ProductTypeChangeNameActionBuilder of() {
         return new ProductTypeChangeNameActionBuilder();
     }
 
+    /**
+     * create builder for ProductTypeChangeNameAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductTypeChangeNameActionBuilder of(final ProductTypeChangeNameAction template) {
         ProductTypeChangeNameActionBuilder builder = new ProductTypeChangeNameActionBuilder();
         builder.name = template.getName();

@@ -79,14 +79,29 @@ public class CartSetLineItemTaxRateActionBuilder implements Builder<CartSetLineI
         return this;
     }
 
+    /**
+     *  <p><code>id</code> of the LineItem to update.</p>
+     * @return lineItemId
+     */
+
     public String getLineItemId() {
         return this.lineItemId;
     }
+
+    /**
+     *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @return externalTaxRate
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
         return this.externalTaxRate;
     }
+
+    /**
+     *  <p><code>key</code> of the ShippingMethod used for this Line Item. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     * @return shippingKey
+     */
 
     @Nullable
     public String getShippingKey() {
@@ -110,10 +125,19 @@ public class CartSetLineItemTaxRateActionBuilder implements Builder<CartSetLineI
         return new CartSetLineItemTaxRateActionImpl(lineItemId, externalTaxRate, shippingKey);
     }
 
+    /**
+     * factory method for an instance of CartSetLineItemTaxRateActionBuilder
+     * @return builder
+     */
     public static CartSetLineItemTaxRateActionBuilder of() {
         return new CartSetLineItemTaxRateActionBuilder();
     }
 
+    /**
+     * create builder for CartSetLineItemTaxRateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartSetLineItemTaxRateActionBuilder of(final CartSetLineItemTaxRateAction template) {
         CartSetLineItemTaxRateActionBuilder builder = new CartSetLineItemTaxRateActionBuilder();
         builder.lineItemId = template.getLineItemId();

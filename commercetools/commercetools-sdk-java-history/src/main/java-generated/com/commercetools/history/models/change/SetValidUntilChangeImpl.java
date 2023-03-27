@@ -28,6 +28,9 @@ public class SetValidUntilChangeImpl implements SetValidUntilChange, ModelBase {
 
     private String nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetValidUntilChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final String previousValue,
@@ -38,6 +41,9 @@ public class SetValidUntilChangeImpl implements SetValidUntilChange, ModelBase {
         this.type = SET_VALID_UNTIL_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetValidUntilChangeImpl() {
         this.type = SET_VALID_UNTIL_CHANGE;
     }

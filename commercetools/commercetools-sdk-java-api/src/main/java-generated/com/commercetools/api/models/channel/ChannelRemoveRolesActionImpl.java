@@ -24,6 +24,9 @@ public class ChannelRemoveRolesActionImpl implements ChannelRemoveRolesAction, M
 
     private java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> roles;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChannelRemoveRolesActionImpl(
             @JsonProperty("roles") final java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> roles) {
@@ -31,6 +34,9 @@ public class ChannelRemoveRolesActionImpl implements ChannelRemoveRolesAction, M
         this.action = REMOVE_ROLES;
     }
 
+    /**
+     * create empty instance
+     */
     public ChannelRemoveRolesActionImpl() {
         this.action = REMOVE_ROLES;
     }

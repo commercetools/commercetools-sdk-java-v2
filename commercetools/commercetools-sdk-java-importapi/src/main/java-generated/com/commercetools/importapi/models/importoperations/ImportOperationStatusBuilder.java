@@ -122,14 +122,29 @@ public class ImportOperationStatusBuilder implements Builder<ImportOperationStat
         return this;
     }
 
+    /**
+     *  <p>The ID of the ImportOperation.</p>
+     * @return operationId
+     */
+
     @Nullable
     public String getOperationId() {
         return this.operationId;
     }
 
+    /**
+     *  <p>The validation state of the ImportOperation.</p>
+     * @return state
+     */
+
     public com.commercetools.importapi.models.importoperations.ImportOperationState getState() {
         return this.state;
     }
+
+    /**
+     *  <p>The validation errors for the ImportOperation. See Errors.</p>
+     * @return errors
+     */
 
     @Nullable
     public java.util.List<com.commercetools.importapi.models.errors.ErrorObject> getErrors() {
@@ -153,10 +168,19 @@ public class ImportOperationStatusBuilder implements Builder<ImportOperationStat
         return new ImportOperationStatusImpl(operationId, state, errors);
     }
 
+    /**
+     * factory method for an instance of ImportOperationStatusBuilder
+     * @return builder
+     */
     public static ImportOperationStatusBuilder of() {
         return new ImportOperationStatusBuilder();
     }
 
+    /**
+     * create builder for ImportOperationStatus instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ImportOperationStatusBuilder of(final ImportOperationStatus template) {
         ImportOperationStatusBuilder builder = new ImportOperationStatusBuilder();
         builder.operationId = template.getOperationId();

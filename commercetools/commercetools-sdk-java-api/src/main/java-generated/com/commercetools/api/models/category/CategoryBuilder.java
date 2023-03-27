@@ -520,87 +520,182 @@ public class CategoryBuilder implements Builder<Category> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Category.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Current version of the Category.</p>
+     * @return version
+     */
 
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *  <p>Date and time (UTC) the Category was initially created.</p>
+     * @return createdAt
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+     *  <p>Date and time (UTC) the Category was last updated.</p>
+     * @return lastModifiedAt
+     */
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
+
+    /**
+     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
+     */
+
     @Nullable
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
 
+    /**
+     *  <p>Name of the Category.</p>
+     * @return name
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
 
+    /**
+     *  <p>User-defined identifier used as a deep-link URL to the related Category per Locale. A Category can have the same slug for different Locales, but they are unique across the Project. Valid slugs match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set in a Project.</p>
+     * @return slug
+     */
+
     public com.commercetools.api.models.common.LocalizedString getSlug() {
         return this.slug;
     }
+
+    /**
+     *  <p>Description of the Category.</p>
+     * @return description
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
+    /**
+     *  <p>Contains the parent path towards the root Category.</p>
+     * @return ancestors
+     */
+
     public java.util.List<com.commercetools.api.models.category.CategoryReference> getAncestors() {
         return this.ancestors;
     }
+
+    /**
+     *  <p>Parent Category of this Category.</p>
+     * @return parent
+     */
 
     @Nullable
     public com.commercetools.api.models.category.CategoryReference getParent() {
         return this.parent;
     }
 
+    /**
+     *  <p>Decimal value between 0 and 1 used to order Categories that are on the same level in the Category tree.</p>
+     * @return orderHint
+     */
+
     public String getOrderHint() {
         return this.orderHint;
     }
+
+    /**
+     *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     * @return externalId
+     */
 
     @Nullable
     public String getExternalId() {
         return this.externalId;
     }
 
+    /**
+     *  <p>Name of the Category used by external search engines for improved search engine performance.</p>
+     * @return metaTitle
+     */
+
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getMetaTitle() {
         return this.metaTitle;
     }
+
+    /**
+     *  <p>Description of the Category used by external search engines for improved search engine performance.</p>
+     * @return metaDescription
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getMetaDescription() {
         return this.metaDescription;
     }
 
+    /**
+     *  <p>Keywords related to the Category for improved search engine performance.</p>
+     * @return metaKeywords
+     */
+
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getMetaKeywords() {
         return this.metaKeywords;
     }
+
+    /**
+     *  <p>Custom Fields for the Category.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
 
+    /**
+     *  <p>Media related to the Category.</p>
+     * @return assets
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.common.Asset> getAssets() {
         return this.assets;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the Category.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
@@ -635,10 +730,19 @@ public class CategoryBuilder implements Builder<Category> {
             assets, key);
     }
 
+    /**
+     * factory method for an instance of CategoryBuilder
+     * @return builder
+     */
     public static CategoryBuilder of() {
         return new CategoryBuilder();
     }
 
+    /**
+     * create builder for Category instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategoryBuilder of(final Category template) {
         CategoryBuilder builder = new CategoryBuilder();
         builder.id = template.getId();

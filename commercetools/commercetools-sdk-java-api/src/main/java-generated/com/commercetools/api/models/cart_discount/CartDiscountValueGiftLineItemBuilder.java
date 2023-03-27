@@ -119,18 +119,38 @@ public class CartDiscountValueGiftLineItemBuilder implements Builder<CartDiscoun
         return this;
     }
 
+    /**
+     *  <p>Reference to a Product.</p>
+     * @return product
+     */
+
     public com.commercetools.api.models.product.ProductReference getProduct() {
         return this.product;
     }
+
+    /**
+     *  <p>ProductVariant of the Product.</p>
+     * @return variantId
+     */
 
     public Long getVariantId() {
         return this.variantId;
     }
 
+    /**
+     *  <p>Channel must have the ChannelRoleEnum <code>InventorySupply</code>.</p>
+     * @return supplyChannel
+     */
+
     @Nullable
     public com.commercetools.api.models.channel.ChannelReference getSupplyChannel() {
         return this.supplyChannel;
     }
+
+    /**
+     *  <p>Channel must have the ChannelRoleEnum <code>ProductDistribution</code>.</p>
+     * @return distributionChannel
+     */
 
     @Nullable
     public com.commercetools.api.models.channel.ChannelReference getDistributionChannel() {
@@ -155,10 +175,19 @@ public class CartDiscountValueGiftLineItemBuilder implements Builder<CartDiscoun
         return new CartDiscountValueGiftLineItemImpl(product, variantId, supplyChannel, distributionChannel);
     }
 
+    /**
+     * factory method for an instance of CartDiscountValueGiftLineItemBuilder
+     * @return builder
+     */
     public static CartDiscountValueGiftLineItemBuilder of() {
         return new CartDiscountValueGiftLineItemBuilder();
     }
 
+    /**
+     * create builder for CartDiscountValueGiftLineItem instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartDiscountValueGiftLineItemBuilder of(final CartDiscountValueGiftLineItem template) {
         CartDiscountValueGiftLineItemBuilder builder = new CartDiscountValueGiftLineItemBuilder();
         builder.product = template.getProduct();

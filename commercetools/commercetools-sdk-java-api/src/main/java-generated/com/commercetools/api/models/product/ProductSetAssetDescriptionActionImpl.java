@@ -34,6 +34,9 @@ public class ProductSetAssetDescriptionActionImpl implements ProductSetAssetDesc
 
     private com.commercetools.api.models.common.LocalizedString description;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSetAssetDescriptionActionImpl(@JsonProperty("variantId") final Long variantId,
             @JsonProperty("sku") final String sku, @JsonProperty("staged") final Boolean staged,
@@ -48,6 +51,9 @@ public class ProductSetAssetDescriptionActionImpl implements ProductSetAssetDesc
         this.action = SET_ASSET_DESCRIPTION;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSetAssetDescriptionActionImpl() {
         this.action = SET_ASSET_DESCRIPTION;
     }

@@ -75,9 +75,19 @@ public class CustomFieldsDraftBuilder implements Builder<CustomFieldsDraft> {
         return this;
     }
 
+    /**
+     *  <p><code>id</code> or <code>key</code> of the Type.</p>
+     * @return type
+     */
+
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }
+
+    /**
+     *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
+     * @return fields
+     */
 
     @Nullable
     public com.commercetools.api.models.type.FieldContainer getFields() {
@@ -101,10 +111,19 @@ public class CustomFieldsDraftBuilder implements Builder<CustomFieldsDraft> {
         return new CustomFieldsDraftImpl(type, fields);
     }
 
+    /**
+     * factory method for an instance of CustomFieldsDraftBuilder
+     * @return builder
+     */
     public static CustomFieldsDraftBuilder of() {
         return new CustomFieldsDraftBuilder();
     }
 
+    /**
+     * create builder for CustomFieldsDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomFieldsDraftBuilder of(final CustomFieldsDraft template) {
         CustomFieldsDraftBuilder builder = new CustomFieldsDraftBuilder();
         builder.type = template.getType();

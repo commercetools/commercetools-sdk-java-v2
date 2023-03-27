@@ -34,6 +34,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ParcelItemsUpdatedMessagePayloadImpl.class)
 public interface ParcelItemsUpdatedMessagePayload extends OrderMessagePayload {
 
+    /**
+     * discriminator value for ParcelItemsUpdatedMessagePayload
+     */
     String PARCEL_ITEMS_UPDATED = "ParcelItemsUpdated";
 
     /**
@@ -78,26 +81,70 @@ public interface ParcelItemsUpdatedMessagePayload extends OrderMessagePayload {
     @JsonProperty("shippingKey")
     public String getShippingKey();
 
+    /**
+     *  <p>Unique identifier of the Parcel.</p>
+     * @param parcelId value to be set
+     */
+
     public void setParcelId(final String parcelId);
 
+    /**
+     *  <p>Unique identifier of the Delivery.</p>
+     * @param deliveryId value to be set
+     */
+
     public void setDeliveryId(final String deliveryId);
+
+    /**
+     *  <p>Delivery Items after the Set Parcel Items update action.</p>
+     * @param items values to be set
+     */
 
     @JsonIgnore
     public void setItems(final DeliveryItem... items);
 
+    /**
+     *  <p>Delivery Items after the Set Parcel Items update action.</p>
+     * @param items values to be set
+     */
+
     public void setItems(final List<DeliveryItem> items);
+
+    /**
+     *  <p>Delivery Items before the Set Parcel Items update action.</p>
+     * @param oldItems values to be set
+     */
 
     @JsonIgnore
     public void setOldItems(final DeliveryItem... oldItems);
 
+    /**
+     *  <p>Delivery Items before the Set Parcel Items update action.</p>
+     * @param oldItems values to be set
+     */
+
     public void setOldItems(final List<DeliveryItem> oldItems);
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     * @param shippingKey value to be set
+     */
 
     public void setShippingKey(final String shippingKey);
 
+    /**
+     * factory method
+     * @return instance of ParcelItemsUpdatedMessagePayload
+     */
     public static ParcelItemsUpdatedMessagePayload of() {
         return new ParcelItemsUpdatedMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of ParcelItemsUpdatedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ParcelItemsUpdatedMessagePayload of(final ParcelItemsUpdatedMessagePayload template) {
         ParcelItemsUpdatedMessagePayloadImpl instance = new ParcelItemsUpdatedMessagePayloadImpl();
         instance.setParcelId(template.getParcelId());
@@ -108,18 +155,37 @@ public interface ParcelItemsUpdatedMessagePayload extends OrderMessagePayload {
         return instance;
     }
 
+    /**
+     * builder factory method for ParcelItemsUpdatedMessagePayload
+     * @return builder
+     */
     public static ParcelItemsUpdatedMessagePayloadBuilder builder() {
         return ParcelItemsUpdatedMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for ParcelItemsUpdatedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ParcelItemsUpdatedMessagePayloadBuilder builder(final ParcelItemsUpdatedMessagePayload template) {
         return ParcelItemsUpdatedMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withParcelItemsUpdatedMessagePayload(Function<ParcelItemsUpdatedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ParcelItemsUpdatedMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ParcelItemsUpdatedMessagePayload>() {
             @Override

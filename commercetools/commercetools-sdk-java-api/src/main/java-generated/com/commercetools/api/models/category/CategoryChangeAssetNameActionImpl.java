@@ -28,6 +28,9 @@ public class CategoryChangeAssetNameActionImpl implements CategoryChangeAssetNam
 
     private com.commercetools.api.models.common.LocalizedString name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CategoryChangeAssetNameActionImpl(@JsonProperty("assetId") final String assetId,
             @JsonProperty("assetKey") final String assetKey,
@@ -38,6 +41,9 @@ public class CategoryChangeAssetNameActionImpl implements CategoryChangeAssetNam
         this.action = CHANGE_ASSET_NAME;
     }
 
+    /**
+     * create empty instance
+     */
     public CategoryChangeAssetNameActionImpl() {
         this.action = CHANGE_ASSET_NAME;
     }

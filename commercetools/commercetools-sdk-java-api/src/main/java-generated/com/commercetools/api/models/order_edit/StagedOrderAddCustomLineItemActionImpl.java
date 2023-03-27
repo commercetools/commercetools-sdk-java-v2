@@ -38,6 +38,9 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
 
     private com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderAddCustomLineItemActionImpl(@JsonProperty("money") final com.commercetools.api.models.common.Money money,
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
@@ -57,6 +60,9 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
         this.action = ADD_CUSTOM_LINE_ITEM;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderAddCustomLineItemActionImpl() {
         this.action = ADD_CUSTOM_LINE_ITEM;
     }

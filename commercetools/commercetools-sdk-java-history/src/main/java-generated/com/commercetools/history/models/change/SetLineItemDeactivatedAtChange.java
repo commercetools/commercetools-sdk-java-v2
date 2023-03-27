@@ -34,6 +34,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetLineItemDeactivatedAtChangeImpl.class)
 public interface SetLineItemDeactivatedAtChange extends Change {
 
+    /**
+     * discriminator value for SetLineItemDeactivatedAtChange
+     */
     String SET_LINE_ITEM_DEACTIVATED_AT_CHANGE = "SetLineItemDeactivatedAtChange";
 
     /**
@@ -77,18 +80,47 @@ public interface SetLineItemDeactivatedAtChange extends Change {
     @JsonProperty("nextValue")
     public String getNextValue();
 
+    /**
+     *  <p>Update action for <code>setLineItemDeactivatedAt</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set lineItem
+     * @param lineItem value to be set
+     */
 
     public void setLineItem(final ShoppingListLineItemValue lineItem);
 
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
+
     public void setPreviousValue(final String previousValue);
+
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
 
     public void setNextValue(final String nextValue);
 
+    /**
+     * factory method
+     * @return instance of SetLineItemDeactivatedAtChange
+     */
     public static SetLineItemDeactivatedAtChange of() {
         return new SetLineItemDeactivatedAtChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetLineItemDeactivatedAtChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetLineItemDeactivatedAtChange of(final SetLineItemDeactivatedAtChange template) {
         SetLineItemDeactivatedAtChangeImpl instance = new SetLineItemDeactivatedAtChangeImpl();
         instance.setChange(template.getChange());
@@ -98,18 +130,37 @@ public interface SetLineItemDeactivatedAtChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetLineItemDeactivatedAtChange
+     * @return builder
+     */
     public static SetLineItemDeactivatedAtChangeBuilder builder() {
         return SetLineItemDeactivatedAtChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetLineItemDeactivatedAtChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetLineItemDeactivatedAtChangeBuilder builder(final SetLineItemDeactivatedAtChange template) {
         return SetLineItemDeactivatedAtChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetLineItemDeactivatedAtChange(Function<SetLineItemDeactivatedAtChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetLineItemDeactivatedAtChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetLineItemDeactivatedAtChange>() {
             @Override

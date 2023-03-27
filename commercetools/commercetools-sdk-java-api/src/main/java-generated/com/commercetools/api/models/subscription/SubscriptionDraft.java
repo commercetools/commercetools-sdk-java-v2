@@ -72,26 +72,70 @@ public interface SubscriptionDraft
     @JsonProperty("format")
     public DeliveryFormat getFormat();
 
+    /**
+     *  <p>Change notifications to be subscribed to.</p>
+     * @param changes values to be set
+     */
+
     @JsonIgnore
     public void setChanges(final ChangeSubscription... changes);
 
+    /**
+     *  <p>Change notifications to be subscribed to.</p>
+     * @param changes values to be set
+     */
+
     public void setChanges(final List<ChangeSubscription> changes);
+
+    /**
+     *  <p>Messaging service to which the messages are sent.</p>
+     * @param destination value to be set
+     */
 
     public void setDestination(final Destination destination);
 
+    /**
+     *  <p>User-defined unique identifier for the Subscription.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
+
+    /**
+     *  <p>Messages to be subscribed to.</p>
+     * @param messages values to be set
+     */
 
     @JsonIgnore
     public void setMessages(final MessageSubscription... messages);
 
+    /**
+     *  <p>Messages to be subscribed to.</p>
+     * @param messages values to be set
+     */
+
     public void setMessages(final List<MessageSubscription> messages);
+
+    /**
+     *  <p>Format in which the payload is delivered. When not provided, the PlatformFormat is selected by default.</p>
+     * @param format value to be set
+     */
 
     public void setFormat(final DeliveryFormat format);
 
+    /**
+     * factory method
+     * @return instance of SubscriptionDraft
+     */
     public static SubscriptionDraft of() {
         return new SubscriptionDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of SubscriptionDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SubscriptionDraft of(final SubscriptionDraft template) {
         SubscriptionDraftImpl instance = new SubscriptionDraftImpl();
         instance.setChanges(template.getChanges());
@@ -102,18 +146,37 @@ public interface SubscriptionDraft
         return instance;
     }
 
+    /**
+     * builder factory method for SubscriptionDraft
+     * @return builder
+     */
     public static SubscriptionDraftBuilder builder() {
         return SubscriptionDraftBuilder.of();
     }
 
+    /**
+     * create builder for SubscriptionDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SubscriptionDraftBuilder builder(final SubscriptionDraft template) {
         return SubscriptionDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSubscriptionDraft(Function<SubscriptionDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SubscriptionDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SubscriptionDraft>() {
             @Override

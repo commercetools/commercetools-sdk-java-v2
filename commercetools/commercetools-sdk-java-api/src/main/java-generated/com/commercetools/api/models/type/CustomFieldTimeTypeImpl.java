@@ -21,6 +21,9 @@ public class CustomFieldTimeTypeImpl implements CustomFieldTimeType, ModelBase {
 
     private String name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomFieldTimeTypeImpl() {
         this.name = TIME;

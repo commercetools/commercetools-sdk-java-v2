@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = DuplicateFieldWithConflictingResourceErrorImpl.class)
 public interface DuplicateFieldWithConflictingResourceError extends ErrorObject {
 
+    /**
+     * discriminator value for DuplicateFieldWithConflictingResourceError
+     */
     String DUPLICATE_FIELD_WITH_CONFLICTING_RESOURCE = "DuplicateFieldWithConflictingResource";
 
     /**
@@ -76,18 +79,47 @@ public interface DuplicateFieldWithConflictingResourceError extends ErrorObject 
     @JsonProperty("conflictingResource")
     public Reference getConflictingResource();
 
+    /**
+     *  <p><code>"A duplicate value $duplicateValue exists for field $field on $conflictingResource."</code></p>
+     * @param message value to be set
+     */
+
     public void setMessage(final String message);
+
+    /**
+     *  <p>Name of the conflicting field.</p>
+     * @param field value to be set
+     */
 
     public void setField(final String field);
 
+    /**
+     *  <p>Conflicting duplicate value.</p>
+     * @param duplicateValue value to be set
+     */
+
     public void setDuplicateValue(final Object duplicateValue);
+
+    /**
+     *  <p>Reference to the resource that has the conflicting value.</p>
+     * @param conflictingResource value to be set
+     */
 
     public void setConflictingResource(final Reference conflictingResource);
 
+    /**
+     * factory method
+     * @return instance of DuplicateFieldWithConflictingResourceError
+     */
     public static DuplicateFieldWithConflictingResourceError of() {
         return new DuplicateFieldWithConflictingResourceErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of DuplicateFieldWithConflictingResourceError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static DuplicateFieldWithConflictingResourceError of(
             final DuplicateFieldWithConflictingResourceError template) {
         DuplicateFieldWithConflictingResourceErrorImpl instance = new DuplicateFieldWithConflictingResourceErrorImpl();
@@ -99,20 +131,39 @@ public interface DuplicateFieldWithConflictingResourceError extends ErrorObject 
         return instance;
     }
 
+    /**
+     * builder factory method for DuplicateFieldWithConflictingResourceError
+     * @return builder
+     */
     public static DuplicateFieldWithConflictingResourceErrorBuilder builder() {
         return DuplicateFieldWithConflictingResourceErrorBuilder.of();
     }
 
+    /**
+     * create builder for DuplicateFieldWithConflictingResourceError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DuplicateFieldWithConflictingResourceErrorBuilder builder(
             final DuplicateFieldWithConflictingResourceError template) {
         return DuplicateFieldWithConflictingResourceErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withDuplicateFieldWithConflictingResourceError(
             Function<DuplicateFieldWithConflictingResourceError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<DuplicateFieldWithConflictingResourceError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<DuplicateFieldWithConflictingResourceError>() {
             @Override

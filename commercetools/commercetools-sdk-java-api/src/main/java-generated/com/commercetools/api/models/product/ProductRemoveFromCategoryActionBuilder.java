@@ -65,9 +65,19 @@ public class ProductRemoveFromCategoryActionBuilder implements Builder<ProductRe
         return this;
     }
 
+    /**
+     *  <p>The Category to remove.</p>
+     * @return category
+     */
+
     public com.commercetools.api.models.category.CategoryResourceIdentifier getCategory() {
         return this.category;
     }
+
+    /**
+     *  <p>If <code>true</code>, only the staged <code>categories</code> and <code>categoryOrderHints</code> are removed. If <code>false</code>, both the current and staged <code>categories</code> and <code>categoryOrderHints</code> are removed.</p>
+     * @return staged
+     */
 
     @Nullable
     public Boolean getStaged() {
@@ -91,10 +101,19 @@ public class ProductRemoveFromCategoryActionBuilder implements Builder<ProductRe
         return new ProductRemoveFromCategoryActionImpl(category, staged);
     }
 
+    /**
+     * factory method for an instance of ProductRemoveFromCategoryActionBuilder
+     * @return builder
+     */
     public static ProductRemoveFromCategoryActionBuilder of() {
         return new ProductRemoveFromCategoryActionBuilder();
     }
 
+    /**
+     * create builder for ProductRemoveFromCategoryAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductRemoveFromCategoryActionBuilder of(final ProductRemoveFromCategoryAction template) {
         ProductRemoveFromCategoryActionBuilder builder = new ProductRemoveFromCategoryActionBuilder();
         builder.category = template.getCategory();

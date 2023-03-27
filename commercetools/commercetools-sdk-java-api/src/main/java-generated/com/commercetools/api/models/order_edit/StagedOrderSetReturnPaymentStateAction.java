@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderSetReturnPaymentStateActionImpl.class)
 public interface StagedOrderSetReturnPaymentStateAction extends StagedOrderUpdateAction {
 
+    /**
+     * discriminator value for StagedOrderSetReturnPaymentStateAction
+     */
     String SET_RETURN_PAYMENT_STATE = "setReturnPaymentState";
 
     /**
@@ -50,14 +53,33 @@ public interface StagedOrderSetReturnPaymentStateAction extends StagedOrderUpdat
     @JsonProperty("paymentState")
     public ReturnPaymentState getPaymentState();
 
+    /**
+     * set returnItemId
+     * @param returnItemId value to be set
+     */
+
     public void setReturnItemId(final String returnItemId);
+
+    /**
+     * set paymentState
+     * @param paymentState value to be set
+     */
 
     public void setPaymentState(final ReturnPaymentState paymentState);
 
+    /**
+     * factory method
+     * @return instance of StagedOrderSetReturnPaymentStateAction
+     */
     public static StagedOrderSetReturnPaymentStateAction of() {
         return new StagedOrderSetReturnPaymentStateActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedOrderSetReturnPaymentStateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedOrderSetReturnPaymentStateAction of(final StagedOrderSetReturnPaymentStateAction template) {
         StagedOrderSetReturnPaymentStateActionImpl instance = new StagedOrderSetReturnPaymentStateActionImpl();
         instance.setReturnItemId(template.getReturnItemId());
@@ -65,20 +87,39 @@ public interface StagedOrderSetReturnPaymentStateAction extends StagedOrderUpdat
         return instance;
     }
 
+    /**
+     * builder factory method for StagedOrderSetReturnPaymentStateAction
+     * @return builder
+     */
     public static StagedOrderSetReturnPaymentStateActionBuilder builder() {
         return StagedOrderSetReturnPaymentStateActionBuilder.of();
     }
 
+    /**
+     * create builder for StagedOrderSetReturnPaymentStateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetReturnPaymentStateActionBuilder builder(
             final StagedOrderSetReturnPaymentStateAction template) {
         return StagedOrderSetReturnPaymentStateActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedOrderSetReturnPaymentStateAction(
             Function<StagedOrderSetReturnPaymentStateAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetReturnPaymentStateAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetReturnPaymentStateAction>() {
             @Override

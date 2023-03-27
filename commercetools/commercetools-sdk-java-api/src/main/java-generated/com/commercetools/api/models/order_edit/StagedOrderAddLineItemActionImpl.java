@@ -46,6 +46,9 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
 
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderAddLineItemActionImpl(
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
@@ -73,6 +76,9 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
         this.action = ADD_LINE_ITEM;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderAddLineItemActionImpl() {
         this.action = ADD_LINE_ITEM;
     }

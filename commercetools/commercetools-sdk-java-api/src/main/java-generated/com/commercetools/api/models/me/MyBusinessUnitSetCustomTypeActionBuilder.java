@@ -77,10 +77,20 @@ public class MyBusinessUnitSetCustomTypeActionBuilder implements Builder<MyBusin
         return this;
     }
 
+    /**
+     *  <p>Defines the Type that extends the BusinessUnit with Custom Fields. If absent, any existing Type and Custom Fields are removed from the BusinessUnit.</p>
+     * @return type
+     */
+
     @Nullable
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }
+
+    /**
+     *  <p>Sets the Custom Fields for the BusinessUnit.</p>
+     * @return fields
+     */
 
     @Nullable
     public com.commercetools.api.models.type.FieldContainer getFields() {
@@ -103,10 +113,19 @@ public class MyBusinessUnitSetCustomTypeActionBuilder implements Builder<MyBusin
         return new MyBusinessUnitSetCustomTypeActionImpl(type, fields);
     }
 
+    /**
+     * factory method for an instance of MyBusinessUnitSetCustomTypeActionBuilder
+     * @return builder
+     */
     public static MyBusinessUnitSetCustomTypeActionBuilder of() {
         return new MyBusinessUnitSetCustomTypeActionBuilder();
     }
 
+    /**
+     * create builder for MyBusinessUnitSetCustomTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyBusinessUnitSetCustomTypeActionBuilder of(final MyBusinessUnitSetCustomTypeAction template) {
         MyBusinessUnitSetCustomTypeActionBuilder builder = new MyBusinessUnitSetCustomTypeActionBuilder();
         builder.type = template.getType();

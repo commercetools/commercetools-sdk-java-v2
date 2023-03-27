@@ -103,9 +103,19 @@ public class MyCartUpdateBuilder implements Builder<MyCartUpdate> {
         return this;
     }
 
+    /**
+     *  <p>Expected version of the Cart on which the changes apply. If it does not match the actual version, a 409 Conflict error is returned.</p>
+     * @return version
+     */
+
     public Long getVersion() {
         return this.version;
     }
+
+    /**
+     *  <p>Update actions to be performed on the Cart.</p>
+     * @return actions
+     */
 
     public java.util.List<com.commercetools.api.models.me.MyCartUpdateAction> getActions() {
         return this.actions;
@@ -129,10 +139,19 @@ public class MyCartUpdateBuilder implements Builder<MyCartUpdate> {
         return new MyCartUpdateImpl(version, actions);
     }
 
+    /**
+     * factory method for an instance of MyCartUpdateBuilder
+     * @return builder
+     */
     public static MyCartUpdateBuilder of() {
         return new MyCartUpdateBuilder();
     }
 
+    /**
+     * create builder for MyCartUpdate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCartUpdateBuilder of(final MyCartUpdate template) {
         MyCartUpdateBuilder builder = new MyCartUpdateBuilder();
         builder.version = template.getVersion();

@@ -36,10 +36,19 @@ public class CustomFieldDateTimeTypeBuilder implements Builder<CustomFieldDateTi
         return new CustomFieldDateTimeTypeImpl();
     }
 
+    /**
+     * factory method for an instance of CustomFieldDateTimeTypeBuilder
+     * @return builder
+     */
     public static CustomFieldDateTimeTypeBuilder of() {
         return new CustomFieldDateTimeTypeBuilder();
     }
 
+    /**
+     * create builder for CustomFieldDateTimeType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomFieldDateTimeTypeBuilder of(final CustomFieldDateTimeType template) {
         CustomFieldDateTimeTypeBuilder builder = new CustomFieldDateTimeTypeBuilder();
         return builder;

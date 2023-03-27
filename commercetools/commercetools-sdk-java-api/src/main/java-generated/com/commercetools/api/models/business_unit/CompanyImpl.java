@@ -64,6 +64,9 @@ public class CompanyImpl implements Company, ModelBase {
 
     private com.commercetools.api.models.business_unit.BusinessUnitKeyReference topLevelUnit;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CompanyImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -108,6 +111,9 @@ public class CompanyImpl implements Company, ModelBase {
         this.unitType = BusinessUnitType.findEnum("Company");
     }
 
+    /**
+     * create empty instance
+     */
     public CompanyImpl() {
         this.unitType = BusinessUnitType.findEnum("Company");
     }

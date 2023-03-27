@@ -30,6 +30,9 @@ public class ProductProjectionPagedQueryResponseImpl implements ProductProjectio
 
     private java.util.List<com.commercetools.api.models.product.ProductProjection> results;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductProjectionPagedQueryResponseImpl(@JsonProperty("limit") final Long limit,
             @JsonProperty("count") final Long count, @JsonProperty("total") final Long total,
@@ -42,6 +45,9 @@ public class ProductProjectionPagedQueryResponseImpl implements ProductProjectio
         this.results = results;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductProjectionPagedQueryResponseImpl() {
     }
 

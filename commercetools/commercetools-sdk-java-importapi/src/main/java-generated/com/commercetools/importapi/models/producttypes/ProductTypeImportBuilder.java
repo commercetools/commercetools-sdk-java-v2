@@ -137,17 +137,37 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier.</p>
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     *  <p>Maps to <code>ProductType.name</code>.</p>
+     * @return name
+     */
 
     public String getName() {
         return this.name;
     }
 
+    /**
+     *  <p>Maps to <code>ProductType.description</code>.</p>
+     * @return description
+     */
+
     public String getDescription() {
         return this.description;
     }
+
+    /**
+     *  <p>The <code>attributes</code> of ProductType.</p>
+     * @return attributes
+     */
 
     @Nullable
     public java.util.List<com.commercetools.importapi.models.producttypes.AttributeDefinition> getAttributes() {
@@ -173,10 +193,19 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
         return new ProductTypeImportImpl(key, name, description, attributes);
     }
 
+    /**
+     * factory method for an instance of ProductTypeImportBuilder
+     * @return builder
+     */
     public static ProductTypeImportBuilder of() {
         return new ProductTypeImportBuilder();
     }
 
+    /**
+     * create builder for ProductTypeImport instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductTypeImportBuilder of(final ProductTypeImport template) {
         ProductTypeImportBuilder builder = new ProductTypeImportBuilder();
         builder.key = template.getKey();

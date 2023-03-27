@@ -26,6 +26,9 @@ public class CategorySetAssetKeyActionImpl implements CategorySetAssetKeyAction,
 
     private String assetKey;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CategorySetAssetKeyActionImpl(@JsonProperty("assetId") final String assetId,
             @JsonProperty("assetKey") final String assetKey) {
@@ -34,6 +37,9 @@ public class CategorySetAssetKeyActionImpl implements CategorySetAssetKeyAction,
         this.action = SET_ASSET_KEY;
     }
 
+    /**
+     * create empty instance
+     */
     public CategorySetAssetKeyActionImpl() {
         this.action = SET_ASSET_KEY;
     }

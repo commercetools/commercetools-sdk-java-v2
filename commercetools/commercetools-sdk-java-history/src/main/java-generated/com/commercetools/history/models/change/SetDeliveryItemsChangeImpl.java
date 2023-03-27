@@ -30,6 +30,9 @@ public class SetDeliveryItemsChangeImpl implements SetDeliveryItemsChange, Model
 
     private java.util.List<com.commercetools.history.models.common.DeliveryItem> previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetDeliveryItemsChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("deliveryId") final String deliveryId,
@@ -42,6 +45,9 @@ public class SetDeliveryItemsChangeImpl implements SetDeliveryItemsChange, Model
         this.type = SET_DELIVERY_ITEMS_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetDeliveryItemsChangeImpl() {
         this.type = SET_DELIVERY_ITEMS_CHANGE;
     }

@@ -24,12 +24,18 @@ public class StagedQuoteValidToSetMessagePayloadImpl implements StagedQuoteValid
 
     private java.time.ZonedDateTime validTo;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedQuoteValidToSetMessagePayloadImpl(@JsonProperty("validTo") final java.time.ZonedDateTime validTo) {
         this.validTo = validTo;
         this.type = STAGED_QUOTE_VALID_TO_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedQuoteValidToSetMessagePayloadImpl() {
         this.type = STAGED_QUOTE_VALID_TO_SET;
     }

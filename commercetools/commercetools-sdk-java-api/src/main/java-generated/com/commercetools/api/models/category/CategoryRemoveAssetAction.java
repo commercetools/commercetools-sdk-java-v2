@@ -26,6 +26,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CategoryRemoveAssetActionImpl.class)
 public interface CategoryRemoveAssetAction extends CategoryUpdateAction {
 
+    /**
+     * discriminator value for CategoryRemoveAssetAction
+     */
     String REMOVE_ASSET = "removeAsset";
 
     /**
@@ -44,14 +47,33 @@ public interface CategoryRemoveAssetAction extends CategoryUpdateAction {
     @JsonProperty("assetKey")
     public String getAssetKey();
 
+    /**
+     *  <p>Value to remove. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
+     * @param assetId value to be set
+     */
+
     public void setAssetId(final String assetId);
+
+    /**
+     *  <p>Value to remove. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
+     * @param assetKey value to be set
+     */
 
     public void setAssetKey(final String assetKey);
 
+    /**
+     * factory method
+     * @return instance of CategoryRemoveAssetAction
+     */
     public static CategoryRemoveAssetAction of() {
         return new CategoryRemoveAssetActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CategoryRemoveAssetAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CategoryRemoveAssetAction of(final CategoryRemoveAssetAction template) {
         CategoryRemoveAssetActionImpl instance = new CategoryRemoveAssetActionImpl();
         instance.setAssetId(template.getAssetId());
@@ -59,18 +81,37 @@ public interface CategoryRemoveAssetAction extends CategoryUpdateAction {
         return instance;
     }
 
+    /**
+     * builder factory method for CategoryRemoveAssetAction
+     * @return builder
+     */
     public static CategoryRemoveAssetActionBuilder builder() {
         return CategoryRemoveAssetActionBuilder.of();
     }
 
+    /**
+     * create builder for CategoryRemoveAssetAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategoryRemoveAssetActionBuilder builder(final CategoryRemoveAssetAction template) {
         return CategoryRemoveAssetActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCategoryRemoveAssetAction(Function<CategoryRemoveAssetAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CategoryRemoveAssetAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CategoryRemoveAssetAction>() {
             @Override

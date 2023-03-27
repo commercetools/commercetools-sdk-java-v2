@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedQuoteStateTransitionMessagePayloadImpl.class)
 public interface StagedQuoteStateTransitionMessagePayload extends MessagePayload {
 
+    /**
+     * discriminator value for StagedQuoteStateTransitionMessagePayload
+     */
     String STAGED_QUOTE_STATE_TRANSITION = "StagedQuoteStateTransition";
 
     /**
@@ -59,16 +62,40 @@ public interface StagedQuoteStateTransitionMessagePayload extends MessagePayload
     @JsonProperty("force")
     public Boolean getForce();
 
+    /**
+     *  <p>State of the Quote after the Transition State update action.</p>
+     * @param state value to be set
+     */
+
     public void setState(final StateReference state);
+
+    /**
+     *  <p>State of the Quote before the Transition State update action.</p>
+     * @param oldState value to be set
+     */
 
     public void setOldState(final StateReference oldState);
 
+    /**
+     *  <p>Whether State transition validations were turned off during the Transition State update action.</p>
+     * @param force value to be set
+     */
+
     public void setForce(final Boolean force);
 
+    /**
+     * factory method
+     * @return instance of StagedQuoteStateTransitionMessagePayload
+     */
     public static StagedQuoteStateTransitionMessagePayload of() {
         return new StagedQuoteStateTransitionMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedQuoteStateTransitionMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedQuoteStateTransitionMessagePayload of(final StagedQuoteStateTransitionMessagePayload template) {
         StagedQuoteStateTransitionMessagePayloadImpl instance = new StagedQuoteStateTransitionMessagePayloadImpl();
         instance.setState(template.getState());
@@ -77,20 +104,39 @@ public interface StagedQuoteStateTransitionMessagePayload extends MessagePayload
         return instance;
     }
 
+    /**
+     * builder factory method for StagedQuoteStateTransitionMessagePayload
+     * @return builder
+     */
     public static StagedQuoteStateTransitionMessagePayloadBuilder builder() {
         return StagedQuoteStateTransitionMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for StagedQuoteStateTransitionMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedQuoteStateTransitionMessagePayloadBuilder builder(
             final StagedQuoteStateTransitionMessagePayload template) {
         return StagedQuoteStateTransitionMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedQuoteStateTransitionMessagePayload(
             Function<StagedQuoteStateTransitionMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedQuoteStateTransitionMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedQuoteStateTransitionMessagePayload>() {
             @Override

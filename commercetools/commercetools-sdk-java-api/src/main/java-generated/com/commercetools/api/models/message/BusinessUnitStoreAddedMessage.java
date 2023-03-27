@@ -38,6 +38,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = BusinessUnitStoreAddedMessageImpl.class)
 public interface BusinessUnitStoreAddedMessage extends Message {
 
+    /**
+     * discriminator value for BusinessUnitStoreAddedMessage
+     */
     String BUSINESS_UNIT_STORE_ADDED = "BusinessUnitStoreAdded";
 
     /**
@@ -49,12 +52,26 @@ public interface BusinessUnitStoreAddedMessage extends Message {
     @JsonProperty("store")
     public StoreKeyReference getStore();
 
+    /**
+     *  <p>The Store that was added to the Business Unit.</p>
+     * @param store value to be set
+     */
+
     public void setStore(final StoreKeyReference store);
 
+    /**
+     * factory method
+     * @return instance of BusinessUnitStoreAddedMessage
+     */
     public static BusinessUnitStoreAddedMessage of() {
         return new BusinessUnitStoreAddedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of BusinessUnitStoreAddedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static BusinessUnitStoreAddedMessage of(final BusinessUnitStoreAddedMessage template) {
         BusinessUnitStoreAddedMessageImpl instance = new BusinessUnitStoreAddedMessageImpl();
         instance.setId(template.getId());
@@ -71,18 +88,37 @@ public interface BusinessUnitStoreAddedMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for BusinessUnitStoreAddedMessage
+     * @return builder
+     */
     public static BusinessUnitStoreAddedMessageBuilder builder() {
         return BusinessUnitStoreAddedMessageBuilder.of();
     }
 
+    /**
+     * create builder for BusinessUnitStoreAddedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitStoreAddedMessageBuilder builder(final BusinessUnitStoreAddedMessage template) {
         return BusinessUnitStoreAddedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withBusinessUnitStoreAddedMessage(Function<BusinessUnitStoreAddedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitStoreAddedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitStoreAddedMessage>() {
             @Override

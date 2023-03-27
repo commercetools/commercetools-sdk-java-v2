@@ -26,6 +26,9 @@ public class StoreLanguagesChangedMessagePayloadImpl implements StoreLanguagesCh
 
     private java.util.List<String> removedLanguages;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StoreLanguagesChangedMessagePayloadImpl(@JsonProperty("addedLanguages") final java.util.List<String> addedLanguages,
             @JsonProperty("removedLanguages") final java.util.List<String> removedLanguages) {
@@ -34,6 +37,9 @@ public class StoreLanguagesChangedMessagePayloadImpl implements StoreLanguagesCh
         this.type = STORE_LANGUAGES_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public StoreLanguagesChangedMessagePayloadImpl() {
         this.type = STORE_LANGUAGES_CHANGED;
     }

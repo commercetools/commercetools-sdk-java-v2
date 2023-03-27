@@ -39,33 +39,71 @@ public interface ItemShippingDetailsDraft extends io.vrap.rmf.base.client.Draft<
     @JsonProperty("targets")
     public List<ItemShippingTarget> getTargets();
 
+    /**
+     *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
+     * @param targets values to be set
+     */
+
     @JsonIgnore
     public void setTargets(final ItemShippingTarget... targets);
 
+    /**
+     *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
+     * @param targets values to be set
+     */
+
     public void setTargets(final List<ItemShippingTarget> targets);
 
+    /**
+     * factory method
+     * @return instance of ItemShippingDetailsDraft
+     */
     public static ItemShippingDetailsDraft of() {
         return new ItemShippingDetailsDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of ItemShippingDetailsDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ItemShippingDetailsDraft of(final ItemShippingDetailsDraft template) {
         ItemShippingDetailsDraftImpl instance = new ItemShippingDetailsDraftImpl();
         instance.setTargets(template.getTargets());
         return instance;
     }
 
+    /**
+     * builder factory method for ItemShippingDetailsDraft
+     * @return builder
+     */
     public static ItemShippingDetailsDraftBuilder builder() {
         return ItemShippingDetailsDraftBuilder.of();
     }
 
+    /**
+     * create builder for ItemShippingDetailsDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ItemShippingDetailsDraftBuilder builder(final ItemShippingDetailsDraft template) {
         return ItemShippingDetailsDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withItemShippingDetailsDraft(Function<ItemShippingDetailsDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ItemShippingDetailsDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ItemShippingDetailsDraft>() {
             @Override

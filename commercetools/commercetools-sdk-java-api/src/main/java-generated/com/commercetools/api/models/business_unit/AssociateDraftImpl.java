@@ -24,6 +24,9 @@ public class AssociateDraftImpl implements AssociateDraft, ModelBase {
 
     private com.commercetools.api.models.customer.CustomerResourceIdentifier customer;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AssociateDraftImpl(
             @JsonProperty("roles") final java.util.List<com.commercetools.api.models.business_unit.AssociateRole> roles,
@@ -32,6 +35,9 @@ public class AssociateDraftImpl implements AssociateDraft, ModelBase {
         this.customer = customer;
     }
 
+    /**
+     * create empty instance
+     */
     public AssociateDraftImpl() {
     }
 

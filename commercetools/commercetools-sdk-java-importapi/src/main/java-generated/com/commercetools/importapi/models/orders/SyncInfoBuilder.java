@@ -77,14 +77,29 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
         return this;
     }
 
+    /**
+     *  <p>Maps to <code>SyncInfo.channel</code></p>
+     * @return channel
+     */
+
     public com.commercetools.importapi.models.common.ChannelKeyReference getChannel() {
         return this.channel;
     }
+
+    /**
+     *  <p>Maps to <code>SyncInfo.externalId</code></p>
+     * @return externalId
+     */
 
     @Nullable
     public String getExternalId() {
         return this.externalId;
     }
+
+    /**
+     *  <p>Maps to <code>SyncInfo.syncedAt</code></p>
+     * @return syncedAt
+     */
 
     public java.time.ZonedDateTime getSyncedAt() {
         return this.syncedAt;
@@ -108,10 +123,19 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
         return new SyncInfoImpl(channel, externalId, syncedAt);
     }
 
+    /**
+     * factory method for an instance of SyncInfoBuilder
+     * @return builder
+     */
     public static SyncInfoBuilder of() {
         return new SyncInfoBuilder();
     }
 
+    /**
+     * create builder for SyncInfo instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SyncInfoBuilder of(final SyncInfo template) {
         SyncInfoBuilder builder = new SyncInfoBuilder();
         builder.channel = template.getChannel();

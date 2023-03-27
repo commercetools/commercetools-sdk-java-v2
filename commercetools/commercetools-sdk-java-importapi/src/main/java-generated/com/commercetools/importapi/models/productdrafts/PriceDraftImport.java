@@ -118,33 +118,97 @@ public interface PriceDraftImport {
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     * set value
+     * @param value value to be set
+     */
+
     public void setValue(final TypedMoney value);
+
+    /**
+     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     * @param country value to be set
+     */
 
     public void setCountry(final String country);
 
+    /**
+     *  <p>References a customer group by key.</p>
+     * @param customerGroup value to be set
+     */
+
     public void setCustomerGroup(final CustomerGroupKeyReference customerGroup);
+
+    /**
+     *  <p>References a channel by key.</p>
+     * @param channel value to be set
+     */
 
     public void setChannel(final ChannelKeyReference channel);
 
+    /**
+     * set validFrom
+     * @param validFrom value to be set
+     */
+
     public void setValidFrom(final ZonedDateTime validFrom);
+
+    /**
+     * set validUntil
+     * @param validUntil value to be set
+     */
 
     public void setValidUntil(final ZonedDateTime validUntil);
 
+    /**
+     *  <p>The custom fields for this category.</p>
+     * @param custom value to be set
+     */
+
     public void setCustom(final Custom custom);
 
+    /**
+     *  <p>Sets a discounted price from an external service.</p>
+     * @param discounted value to be set
+     */
+
     public void setDiscounted(final DiscountedPrice discounted);
+
+    /**
+     *  <p>The tiered prices for this price.</p>
+     * @param tiers values to be set
+     */
 
     @JsonIgnore
     public void setTiers(final PriceTier... tiers);
 
+    /**
+     *  <p>The tiered prices for this price.</p>
+     * @param tiers values to be set
+     */
+
     public void setTiers(final List<PriceTier> tiers);
+
+    /**
+     *  <p>User-defined unique identifier for the Embedded Price.</p>
+     * @param key value to be set
+     */
 
     public void setKey(final String key);
 
+    /**
+     * factory method
+     * @return instance of PriceDraftImport
+     */
     public static PriceDraftImport of() {
         return new PriceDraftImportImpl();
     }
 
+    /**
+     * factory method to copy an instance of PriceDraftImport
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static PriceDraftImport of(final PriceDraftImport template) {
         PriceDraftImportImpl instance = new PriceDraftImportImpl();
         instance.setValue(template.getValue());
@@ -160,18 +224,37 @@ public interface PriceDraftImport {
         return instance;
     }
 
+    /**
+     * builder factory method for PriceDraftImport
+     * @return builder
+     */
     public static PriceDraftImportBuilder builder() {
         return PriceDraftImportBuilder.of();
     }
 
+    /**
+     * create builder for PriceDraftImport instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PriceDraftImportBuilder builder(final PriceDraftImport template) {
         return PriceDraftImportBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withPriceDraftImport(Function<PriceDraftImport, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<PriceDraftImport> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<PriceDraftImport>() {
             @Override

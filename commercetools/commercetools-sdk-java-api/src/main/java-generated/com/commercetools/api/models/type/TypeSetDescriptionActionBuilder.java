@@ -50,6 +50,11 @@ public class TypeSetDescriptionActionBuilder implements Builder<TypeSetDescripti
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return description
+     */
+
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
@@ -71,10 +76,19 @@ public class TypeSetDescriptionActionBuilder implements Builder<TypeSetDescripti
         return new TypeSetDescriptionActionImpl(description);
     }
 
+    /**
+     * factory method for an instance of TypeSetDescriptionActionBuilder
+     * @return builder
+     */
     public static TypeSetDescriptionActionBuilder of() {
         return new TypeSetDescriptionActionBuilder();
     }
 
+    /**
+     * create builder for TypeSetDescriptionAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TypeSetDescriptionActionBuilder of(final TypeSetDescriptionAction template) {
         TypeSetDescriptionActionBuilder builder = new TypeSetDescriptionActionBuilder();
         builder.description = template.getDescription();

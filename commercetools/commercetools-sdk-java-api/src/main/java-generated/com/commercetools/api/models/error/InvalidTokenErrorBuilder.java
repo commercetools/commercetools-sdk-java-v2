@@ -62,9 +62,19 @@ public class InvalidTokenErrorBuilder implements Builder<InvalidTokenError> {
         return this;
     }
 
+    /**
+     *  <p>Plain text description of the cause of the error.</p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
@@ -87,10 +97,19 @@ public class InvalidTokenErrorBuilder implements Builder<InvalidTokenError> {
         return new InvalidTokenErrorImpl(message, values);
     }
 
+    /**
+     * factory method for an instance of InvalidTokenErrorBuilder
+     * @return builder
+     */
     public static InvalidTokenErrorBuilder of() {
         return new InvalidTokenErrorBuilder();
     }
 
+    /**
+     * create builder for InvalidTokenError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InvalidTokenErrorBuilder of(final InvalidTokenError template) {
         InvalidTokenErrorBuilder builder = new InvalidTokenErrorBuilder();
         builder.message = template.getMessage();

@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartUpdateItemShippingAddressActionImpl.class)
 public interface CartUpdateItemShippingAddressAction extends CartUpdateAction {
 
+    /**
+     * discriminator value for CartUpdateItemShippingAddressAction
+     */
     String UPDATE_ITEM_SHIPPING_ADDRESS = "updateItemShippingAddress";
 
     /**
@@ -42,31 +45,64 @@ public interface CartUpdateItemShippingAddressAction extends CartUpdateAction {
     @JsonProperty("address")
     public BaseAddress getAddress();
 
+    /**
+     *  <p>The new Address with the same <code>key</code> as the Address it will replace.</p>
+     * @param address value to be set
+     */
+
     public void setAddress(final BaseAddress address);
 
+    /**
+     * factory method
+     * @return instance of CartUpdateItemShippingAddressAction
+     */
     public static CartUpdateItemShippingAddressAction of() {
         return new CartUpdateItemShippingAddressActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartUpdateItemShippingAddressAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartUpdateItemShippingAddressAction of(final CartUpdateItemShippingAddressAction template) {
         CartUpdateItemShippingAddressActionImpl instance = new CartUpdateItemShippingAddressActionImpl();
         instance.setAddress(template.getAddress());
         return instance;
     }
 
+    /**
+     * builder factory method for CartUpdateItemShippingAddressAction
+     * @return builder
+     */
     public static CartUpdateItemShippingAddressActionBuilder builder() {
         return CartUpdateItemShippingAddressActionBuilder.of();
     }
 
+    /**
+     * create builder for CartUpdateItemShippingAddressAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartUpdateItemShippingAddressActionBuilder builder(
             final CartUpdateItemShippingAddressAction template) {
         return CartUpdateItemShippingAddressActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartUpdateItemShippingAddressAction(Function<CartUpdateItemShippingAddressAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartUpdateItemShippingAddressAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartUpdateItemShippingAddressAction>() {
             @Override

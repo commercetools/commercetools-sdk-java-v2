@@ -24,6 +24,9 @@ public class DiscountCodeChangeCartDiscountsActionImpl implements DiscountCodeCh
 
     private java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DiscountCodeChangeCartDiscountsActionImpl(
             @JsonProperty("cartDiscounts") final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts) {
@@ -31,6 +34,9 @@ public class DiscountCodeChangeCartDiscountsActionImpl implements DiscountCodeCh
         this.action = CHANGE_CART_DISCOUNTS;
     }
 
+    /**
+     * create empty instance
+     */
     public DiscountCodeChangeCartDiscountsActionImpl() {
         this.action = CHANGE_CART_DISCOUNTS;
     }

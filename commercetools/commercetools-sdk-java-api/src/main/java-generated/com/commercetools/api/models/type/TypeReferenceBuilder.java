@@ -63,9 +63,19 @@ public class TypeReferenceBuilder implements Builder<TypeReference> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the referenced Type.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Contains the representation of the expanded Type. Only present in responses to requests with Reference Expansion for Types.</p>
+     * @return obj
+     */
 
     @Nullable
     public com.commercetools.api.models.type.Type getObj() {
@@ -89,10 +99,19 @@ public class TypeReferenceBuilder implements Builder<TypeReference> {
         return new TypeReferenceImpl(id, obj);
     }
 
+    /**
+     * factory method for an instance of TypeReferenceBuilder
+     * @return builder
+     */
     public static TypeReferenceBuilder of() {
         return new TypeReferenceBuilder();
     }
 
+    /**
+     * create builder for TypeReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TypeReferenceBuilder of(final TypeReference template) {
         TypeReferenceBuilder builder = new TypeReferenceBuilder();
         builder.id = template.getId();

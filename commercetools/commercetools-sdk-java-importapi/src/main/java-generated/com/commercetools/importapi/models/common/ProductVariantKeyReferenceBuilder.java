@@ -24,7 +24,7 @@ public class ProductVariantKeyReferenceBuilder implements Builder<ProductVariant
     private String key;
 
     /**
-     *
+     * set the value to the key
      * @param key value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class ProductVariantKeyReferenceBuilder implements Builder<ProductVariant
         this.key = key;
         return this;
     }
+
+    /**
+     * value of key}
+     * @return key
+     */
 
     public String getKey() {
         return this.key;
@@ -55,10 +60,19 @@ public class ProductVariantKeyReferenceBuilder implements Builder<ProductVariant
         return new ProductVariantKeyReferenceImpl(key);
     }
 
+    /**
+     * factory method for an instance of ProductVariantKeyReferenceBuilder
+     * @return builder
+     */
     public static ProductVariantKeyReferenceBuilder of() {
         return new ProductVariantKeyReferenceBuilder();
     }
 
+    /**
+     * create builder for ProductVariantKeyReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductVariantKeyReferenceBuilder of(final ProductVariantKeyReference template) {
         ProductVariantKeyReferenceBuilder builder = new ProductVariantKeyReferenceBuilder();
         builder.key = template.getKey();

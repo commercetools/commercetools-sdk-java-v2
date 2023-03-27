@@ -27,6 +27,9 @@ public class ProductSelectionAddProductActionImpl implements ProductSelectionAdd
 
     private com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSelectionAddProductActionImpl(
             @JsonProperty("product") final com.commercetools.api.models.product.ProductResourceIdentifier product,
@@ -36,6 +39,9 @@ public class ProductSelectionAddProductActionImpl implements ProductSelectionAdd
         this.action = ADD_PRODUCT;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSelectionAddProductActionImpl() {
         this.action = ADD_PRODUCT;
     }

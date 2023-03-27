@@ -28,6 +28,9 @@ public class AssignedProductSelectionImpl implements AssignedProductSelection, M
 
     private java.time.ZonedDateTime createdAt;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AssignedProductSelectionImpl(
             @JsonProperty("productSelection") final com.commercetools.api.models.product_selection.ProductSelectionReference productSelection,
@@ -40,6 +43,9 @@ public class AssignedProductSelectionImpl implements AssignedProductSelection, M
         this.createdAt = createdAt;
     }
 
+    /**
+     * create empty instance
+     */
     public AssignedProductSelectionImpl() {
     }
 

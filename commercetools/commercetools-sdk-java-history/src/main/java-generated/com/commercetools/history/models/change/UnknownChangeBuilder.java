@@ -28,7 +28,7 @@ public class UnknownChangeBuilder implements Builder<UnknownChange> {
     private java.lang.Object nextValue;
 
     /**
-     *
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class UnknownChangeBuilder implements Builder<UnknownChange> {
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -50,7 +50,7 @@ public class UnknownChangeBuilder implements Builder<UnknownChange> {
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -60,13 +60,28 @@ public class UnknownChangeBuilder implements Builder<UnknownChange> {
         return this;
     }
 
+    /**
+     * value of change}
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public java.lang.Object getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public java.lang.Object getNextValue() {
         return this.nextValue;
@@ -91,10 +106,19 @@ public class UnknownChangeBuilder implements Builder<UnknownChange> {
         return new UnknownChangeImpl(change, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of UnknownChangeBuilder
+     * @return builder
+     */
     public static UnknownChangeBuilder of() {
         return new UnknownChangeBuilder();
     }
 
+    /**
+     * create builder for UnknownChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static UnknownChangeBuilder of(final UnknownChange template) {
         UnknownChangeBuilder builder = new UnknownChangeBuilder();
         builder.change = template.getChange();

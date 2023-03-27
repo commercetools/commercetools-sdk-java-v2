@@ -344,35 +344,70 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
         return this;
     }
 
+    /**
+     *  <p>Value to set. Must be unique.</p>
+     * @return sku
+     */
+
     @Nullable
     public String getSku() {
         return this.sku;
     }
+
+    /**
+     *  <p>Value to set. Must be unique.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>Embedded Prices for the Product Variant.</p>
+     * @return prices
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.common.PriceDraft> getPrices() {
         return this.prices;
     }
+
+    /**
+     *  <p>Images for the Product Variant.</p>
+     * @return images
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.common.Image> getImages() {
         return this.images;
     }
 
+    /**
+     *  <p>Attributes for the Product Variant.</p>
+     * @return attributes
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes() {
         return this.attributes;
     }
 
+    /**
+     *  <p>If <code>true</code> the new Product Variant is only staged. If <code>false</code> the new Product Variant is both current and staged.</p>
+     * @return staged
+     */
+
     @Nullable
     public Boolean getStaged() {
         return this.staged;
     }
+
+    /**
+     *  <p>Media assets for the Product Variant.</p>
+     * @return assets
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.common.AssetDraft> getAssets() {
@@ -395,10 +430,19 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
         return new ProductAddVariantActionImpl(sku, key, prices, images, attributes, staged, assets);
     }
 
+    /**
+     * factory method for an instance of ProductAddVariantActionBuilder
+     * @return builder
+     */
     public static ProductAddVariantActionBuilder of() {
         return new ProductAddVariantActionBuilder();
     }
 
+    /**
+     * create builder for ProductAddVariantAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductAddVariantActionBuilder of(final ProductAddVariantAction template) {
         ProductAddVariantActionBuilder builder = new ProductAddVariantActionBuilder();
         builder.sku = template.getSku();

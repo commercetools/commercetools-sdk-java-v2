@@ -36,10 +36,19 @@ public class StoreDeletedMessagePayloadBuilder implements Builder<StoreDeletedMe
         return new StoreDeletedMessagePayloadImpl();
     }
 
+    /**
+     * factory method for an instance of StoreDeletedMessagePayloadBuilder
+     * @return builder
+     */
     public static StoreDeletedMessagePayloadBuilder of() {
         return new StoreDeletedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for StoreDeletedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreDeletedMessagePayloadBuilder of(final StoreDeletedMessagePayload template) {
         StoreDeletedMessagePayloadBuilder builder = new StoreDeletedMessagePayloadBuilder();
         return builder;

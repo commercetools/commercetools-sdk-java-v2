@@ -55,16 +55,40 @@ public interface Variant {
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     * set id
+     * @param id value to be set
+     */
+
     public void setId(final Integer id);
+
+    /**
+     * set sku
+     * @param sku value to be set
+     */
 
     public void setSku(final String sku);
 
+    /**
+     * set key
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
 
+    /**
+     * factory method
+     * @return instance of Variant
+     */
     public static Variant of() {
         return new VariantImpl();
     }
 
+    /**
+     * factory method to copy an instance of Variant
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static Variant of(final Variant template) {
         VariantImpl instance = new VariantImpl();
         instance.setId(template.getId());
@@ -73,18 +97,37 @@ public interface Variant {
         return instance;
     }
 
+    /**
+     * builder factory method for Variant
+     * @return builder
+     */
     public static VariantBuilder builder() {
         return VariantBuilder.of();
     }
 
+    /**
+     * create builder for Variant instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static VariantBuilder builder(final Variant template) {
         return VariantBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withVariant(Function<Variant, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<Variant> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Variant>() {
             @Override

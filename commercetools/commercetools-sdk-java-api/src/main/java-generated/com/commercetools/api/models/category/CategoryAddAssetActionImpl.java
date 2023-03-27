@@ -26,6 +26,9 @@ public class CategoryAddAssetActionImpl implements CategoryAddAssetAction, Model
 
     private Integer position;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CategoryAddAssetActionImpl(@JsonProperty("asset") final com.commercetools.api.models.common.AssetDraft asset,
             @JsonProperty("position") final Integer position) {
@@ -34,6 +37,9 @@ public class CategoryAddAssetActionImpl implements CategoryAddAssetAction, Model
         this.action = ADD_ASSET;
     }
 
+    /**
+     * create empty instance
+     */
     public CategoryAddAssetActionImpl() {
         this.action = ADD_ASSET;
     }

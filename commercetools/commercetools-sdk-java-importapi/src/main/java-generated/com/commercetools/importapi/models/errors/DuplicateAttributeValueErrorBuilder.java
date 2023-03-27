@@ -28,7 +28,7 @@ public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAtt
     private com.commercetools.importapi.models.productvariants.Attribute attribute;
 
     /**
-     *
+     * set the value to the message
      * @param message value to be set
      * @return Builder
      */
@@ -63,9 +63,19 @@ public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAtt
         return this;
     }
 
+    /**
+     * value of message}
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>The attribute in conflict.</p>
+     * @return attribute
+     */
 
     public com.commercetools.importapi.models.productvariants.Attribute getAttribute() {
         return this.attribute;
@@ -89,10 +99,19 @@ public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAtt
         return new DuplicateAttributeValueErrorImpl(message, attribute);
     }
 
+    /**
+     * factory method for an instance of DuplicateAttributeValueErrorBuilder
+     * @return builder
+     */
     public static DuplicateAttributeValueErrorBuilder of() {
         return new DuplicateAttributeValueErrorBuilder();
     }
 
+    /**
+     * create builder for DuplicateAttributeValueError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DuplicateAttributeValueErrorBuilder of(final DuplicateAttributeValueError template) {
         DuplicateAttributeValueErrorBuilder builder = new DuplicateAttributeValueErrorBuilder();
         builder.message = template.getMessage();

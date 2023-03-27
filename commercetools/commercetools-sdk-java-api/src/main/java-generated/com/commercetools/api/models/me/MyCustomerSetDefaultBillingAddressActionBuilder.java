@@ -51,10 +51,20 @@ public class MyCustomerSetDefaultBillingAddressActionBuilder
         return this;
     }
 
+    /**
+     *  <p><code>id</code> of the Address to become the default billing address.</p>
+     * @return addressId
+     */
+
     @Nullable
     public String getAddressId() {
         return this.addressId;
     }
+
+    /**
+     *  <p><code>key</code> of the Address to become the default billing address.</p>
+     * @return addressKey
+     */
 
     @Nullable
     public String getAddressKey() {
@@ -77,10 +87,19 @@ public class MyCustomerSetDefaultBillingAddressActionBuilder
         return new MyCustomerSetDefaultBillingAddressActionImpl(addressId, addressKey);
     }
 
+    /**
+     * factory method for an instance of MyCustomerSetDefaultBillingAddressActionBuilder
+     * @return builder
+     */
     public static MyCustomerSetDefaultBillingAddressActionBuilder of() {
         return new MyCustomerSetDefaultBillingAddressActionBuilder();
     }
 
+    /**
+     * create builder for MyCustomerSetDefaultBillingAddressAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCustomerSetDefaultBillingAddressActionBuilder of(
             final MyCustomerSetDefaultBillingAddressAction template) {
         MyCustomerSetDefaultBillingAddressActionBuilder builder = new MyCustomerSetDefaultBillingAddressActionBuilder();

@@ -34,7 +34,7 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
     private com.commercetools.history.models.common.TextInputHint inputHint;
 
     /**
-     *
+     * set the value to the type using the builder function
      * @param builder function to build the type value
      * @return Builder
      */
@@ -46,7 +46,7 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
     }
 
     /**
-     *
+     * set the value to the type
      * @param type value to be set
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
     }
 
     /**
-     *
+     * set the value to the label using the builder function
      * @param builder function to build the label value
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
     }
 
     /**
-     *
+     * set the value to the label
      * @param label value to be set
      * @return Builder
      */
@@ -91,7 +91,7 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
     }
 
     /**
-     *
+     * set the value to the inputHint
      * @param inputHint value to be set
      * @return Builder
      */
@@ -101,17 +101,37 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
         return this;
     }
 
+    /**
+     * value of type}
+     * @return type
+     */
+
     public com.commercetools.history.models.common.FieldType getType() {
         return this.type;
     }
+
+    /**
+     *  <p>The name of the field. The name must be between two and 36 characters long and can contain the ASCII letters A to Z in lowercase or uppercase, digits, underscores (<code>_</code>) and the hyphen-minus (<code>-</code>). The name must be unique for a given resource type ID. In case there is a field with the same name in another type it has to have the same FieldType also.</p>
+     * @return name
+     */
 
     public String getName() {
         return this.name;
     }
 
+    /**
+     * value of label}
+     * @return label
+     */
+
     public com.commercetools.history.models.common.LocalizedString getLabel() {
         return this.label;
     }
+
+    /**
+     * value of inputHint}
+     * @return inputHint
+     */
 
     public com.commercetools.history.models.common.TextInputHint getInputHint() {
         return this.inputHint;
@@ -137,10 +157,19 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
         return new FieldDefinitionImpl(type, name, label, inputHint);
     }
 
+    /**
+     * factory method for an instance of FieldDefinitionBuilder
+     * @return builder
+     */
     public static FieldDefinitionBuilder of() {
         return new FieldDefinitionBuilder();
     }
 
+    /**
+     * create builder for FieldDefinition instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static FieldDefinitionBuilder of(final FieldDefinition template) {
         FieldDefinitionBuilder builder = new FieldDefinitionBuilder();
         builder.type = template.getType();

@@ -40,6 +40,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAction,
         com.commercetools.api.models.CustomizableDraft<StagedOrderAddCustomLineItemAction> {
 
+    /**
+     * discriminator value for StagedOrderAddCustomLineItemAction
+     */
     String ADD_CUSTOM_LINE_ITEM = "addCustomLineItem";
 
     /**
@@ -112,26 +115,79 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
     @JsonProperty("priceMode")
     public CustomLineItemPriceMode getPriceMode();
 
+    /**
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @param money value to be set
+     */
+
     public void setMoney(final Money money);
+
+    /**
+     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     * @param name value to be set
+     */
 
     public void setName(final LocalizedString name);
 
+    /**
+     * set quantity
+     * @param quantity value to be set
+     */
+
     public void setQuantity(final Long quantity);
+
+    /**
+     * set slug
+     * @param slug value to be set
+     */
 
     public void setSlug(final String slug);
 
+    /**
+     *  <p>ResourceIdentifier to a TaxCategory.</p>
+     * @param taxCategory value to be set
+     */
+
     public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
+
+    /**
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     * @param custom value to be set
+     */
 
     public void setCustom(final CustomFieldsDraft custom);
 
+    /**
+     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @param externalTaxRate value to be set
+     */
+
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
+
+    /**
+     *  <ul>
+     *   <li>If <code>Standard</code>, Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</li>
+     *   <li>If <code>External</code>, Cart Discounts are not considered on the Custom Line Item.</li>
+     *  </ul>
+     * @param priceMode value to be set
+     */
 
     public void setPriceMode(final CustomLineItemPriceMode priceMode);
 
+    /**
+     * factory method
+     * @return instance of StagedOrderAddCustomLineItemAction
+     */
     public static StagedOrderAddCustomLineItemAction of() {
         return new StagedOrderAddCustomLineItemActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedOrderAddCustomLineItemAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedOrderAddCustomLineItemAction of(final StagedOrderAddCustomLineItemAction template) {
         StagedOrderAddCustomLineItemActionImpl instance = new StagedOrderAddCustomLineItemActionImpl();
         instance.setMoney(template.getMoney());
@@ -145,18 +201,37 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
         return instance;
     }
 
+    /**
+     * builder factory method for StagedOrderAddCustomLineItemAction
+     * @return builder
+     */
     public static StagedOrderAddCustomLineItemActionBuilder builder() {
         return StagedOrderAddCustomLineItemActionBuilder.of();
     }
 
+    /**
+     * create builder for StagedOrderAddCustomLineItemAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderAddCustomLineItemActionBuilder builder(final StagedOrderAddCustomLineItemAction template) {
         return StagedOrderAddCustomLineItemActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedOrderAddCustomLineItemAction(Function<StagedOrderAddCustomLineItemAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderAddCustomLineItemAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderAddCustomLineItemAction>() {
             @Override

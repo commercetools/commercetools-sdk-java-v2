@@ -232,41 +232,86 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
         return this;
     }
 
+    /**
+     *  <p>Description of the invalid Extension response. For example, <code>"The extension did not return the expected JSON."</code>.</p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
 
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
+
     public Map<String, java.lang.Object> getValues() {
         return this.values;
     }
+
+    /**
+     *  <p>User-defined localized description of the error.</p>
+     * @return localizedMessage
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getLocalizedMessage() {
         return this.localizedMessage;
     }
 
+    /**
+     *  <p>Any information that should be returned to the API caller.</p>
+     * @return extensionExtraInfo
+     */
+
     @Nullable
     public java.lang.Object getExtensionExtraInfo() {
         return this.extensionExtraInfo;
     }
 
+    /**
+     *  <p>Additional errors related to the API Extension.</p>
+     * @return extensionErrors
+     */
+
     public java.util.List<com.commercetools.api.models.error.ExtensionError> getExtensionErrors() {
         return this.extensionErrors;
     }
+
+    /**
+     *  <p>The response body returned by the Extension.</p>
+     * @return extensionBody
+     */
 
     @Nullable
     public String getExtensionBody() {
         return this.extensionBody;
     }
 
+    /**
+     *  <p>Http status code returned by the Extension.</p>
+     * @return extensionStatusCode
+     */
+
     @Nullable
     public Integer getExtensionStatusCode() {
         return this.extensionStatusCode;
     }
 
+    /**
+     *  <p>Unique identifier of the Extension.</p>
+     * @return extensionId
+     */
+
     public String getExtensionId() {
         return this.extensionId;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the Extension.</p>
+     * @return extensionKey
+     */
 
     @Nullable
     public String getExtensionKey() {
@@ -294,10 +339,19 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
             extensionBody, extensionStatusCode, extensionId, extensionKey);
     }
 
+    /**
+     * factory method for an instance of ExtensionBadResponseErrorBuilder
+     * @return builder
+     */
     public static ExtensionBadResponseErrorBuilder of() {
         return new ExtensionBadResponseErrorBuilder();
     }
 
+    /**
+     * create builder for ExtensionBadResponseError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ExtensionBadResponseErrorBuilder of(final ExtensionBadResponseError template) {
         ExtensionBadResponseErrorBuilder builder = new ExtensionBadResponseErrorBuilder();
         builder.message = template.getMessage();

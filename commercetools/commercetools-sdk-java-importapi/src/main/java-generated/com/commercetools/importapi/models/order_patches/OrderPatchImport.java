@@ -48,14 +48,33 @@ public interface OrderPatchImport {
     @JsonProperty("fields")
     public OrderField getFields();
 
+    /**
+     *  <p>Maps to <code>Order.orderNumber</code>, String that uniquely identifies an order, unique across a project.</p>
+     * @param orderNumber value to be set
+     */
+
     public void setOrderNumber(final String orderNumber);
+
+    /**
+     *  <p>Each field referenced must be defined in an already existing order in the project or the import operation state is set to <code>validationFailed</code>.</p>
+     * @param fields value to be set
+     */
 
     public void setFields(final OrderField fields);
 
+    /**
+     * factory method
+     * @return instance of OrderPatchImport
+     */
     public static OrderPatchImport of() {
         return new OrderPatchImportImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderPatchImport
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderPatchImport of(final OrderPatchImport template) {
         OrderPatchImportImpl instance = new OrderPatchImportImpl();
         instance.setOrderNumber(template.getOrderNumber());
@@ -63,18 +82,37 @@ public interface OrderPatchImport {
         return instance;
     }
 
+    /**
+     * builder factory method for OrderPatchImport
+     * @return builder
+     */
     public static OrderPatchImportBuilder builder() {
         return OrderPatchImportBuilder.of();
     }
 
+    /**
+     * create builder for OrderPatchImport instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderPatchImportBuilder builder(final OrderPatchImport template) {
         return OrderPatchImportBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderPatchImport(Function<OrderPatchImport, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderPatchImport> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderPatchImport>() {
             @Override

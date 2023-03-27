@@ -115,33 +115,97 @@ public interface QueryPrice extends com.commercetools.api.models.Customizable<Qu
     @JsonProperty("tiers")
     public List<PriceTierDraft> getTiers();
 
+    /**
+     *  <p>Unique identifier of the given Price.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>Money value of the given Price.</p>
+     * @param value value to be set
+     */
 
     public void setValue(final Money value);
 
+    /**
+     *  <p>Country for which the given Price is valid.</p>
+     * @param country value to be set
+     */
+
     public void setCountry(final String country);
+
+    /**
+     *  <p>CustomerGroup for which the given Price is valid.</p>
+     * @param customerGroup value to be set
+     */
 
     public void setCustomerGroup(final CustomerGroupReference customerGroup);
 
+    /**
+     *  <p><code>ProductDistribution</code> Channel for which the given Price is valid.</p>
+     * @param channel value to be set
+     */
+
     public void setChannel(final ChannelReference channel);
+
+    /**
+     *  <p>Date from which the given Price is valid.</p>
+     * @param validFrom value to be set
+     */
 
     public void setValidFrom(final ZonedDateTime validFrom);
 
+    /**
+     *  <p>Date until which the given Price is valid.</p>
+     * @param validUntil value to be set
+     */
+
     public void setValidUntil(final ZonedDateTime validUntil);
+
+    /**
+     *  <p>DiscountedPrice you specify for the given Price.</p>
+     * @param discounted value to be set
+     */
 
     public void setDiscounted(final DiscountedPriceDraft discounted);
 
+    /**
+     *  <p>Custom Fields for the Price.</p>
+     * @param custom value to be set
+     */
+
     public void setCustom(final CustomFields custom);
+
+    /**
+     *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
+     * @param tiers values to be set
+     */
 
     @JsonIgnore
     public void setTiers(final PriceTierDraft... tiers);
 
+    /**
+     *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
+     * @param tiers values to be set
+     */
+
     public void setTiers(final List<PriceTierDraft> tiers);
 
+    /**
+     * factory method
+     * @return instance of QueryPrice
+     */
     public static QueryPrice of() {
         return new QueryPriceImpl();
     }
 
+    /**
+     * factory method to copy an instance of QueryPrice
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static QueryPrice of(final QueryPrice template) {
         QueryPriceImpl instance = new QueryPriceImpl();
         instance.setId(template.getId());
@@ -157,18 +221,37 @@ public interface QueryPrice extends com.commercetools.api.models.Customizable<Qu
         return instance;
     }
 
+    /**
+     * builder factory method for QueryPrice
+     * @return builder
+     */
     public static QueryPriceBuilder builder() {
         return QueryPriceBuilder.of();
     }
 
+    /**
+     * create builder for QueryPrice instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static QueryPriceBuilder builder(final QueryPrice template) {
         return QueryPriceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withQueryPrice(Function<QueryPrice, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<QueryPrice> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<QueryPrice>() {
             @Override

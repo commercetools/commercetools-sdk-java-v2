@@ -42,30 +42,64 @@ public interface LocalizedString {
     @JsonAnyGetter
     public Map<String, String> values();
 
+    /**
+     * set pattern property
+     * @param key property name
+     * @param value property value
+     */
+
     @JsonAnySetter
     public void setValue(String key, String value);
 
+    /**
+     * factory method
+     * @return instance of LocalizedString
+     */
     public static LocalizedString of() {
         return new LocalizedStringImpl();
     }
 
+    /**
+     * factory method to copy an instance of LocalizedString
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static LocalizedString of(final LocalizedString template) {
         LocalizedStringImpl instance = new LocalizedStringImpl();
         return instance;
     }
 
+    /**
+     * builder factory method for LocalizedString
+     * @return builder
+     */
     public static LocalizedStringBuilder builder() {
         return LocalizedStringBuilder.of();
     }
 
+    /**
+     * create builder for LocalizedString instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static LocalizedStringBuilder builder(final LocalizedString template) {
         return LocalizedStringBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withLocalizedString(Function<LocalizedString, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<LocalizedString> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<LocalizedString>() {
             @Override

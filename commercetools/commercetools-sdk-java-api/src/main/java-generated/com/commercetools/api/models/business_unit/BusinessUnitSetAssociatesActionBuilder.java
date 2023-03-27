@@ -93,6 +93,11 @@ public class BusinessUnitSetAssociatesActionBuilder implements Builder<BusinessU
         return this;
     }
 
+    /**
+     *  <p>The new list of Associates. If not provided, any existing list is removed.</p>
+     * @return associates
+     */
+
     public java.util.List<com.commercetools.api.models.business_unit.AssociateDraft> getAssociates() {
         return this.associates;
     }
@@ -114,10 +119,19 @@ public class BusinessUnitSetAssociatesActionBuilder implements Builder<BusinessU
         return new BusinessUnitSetAssociatesActionImpl(associates);
     }
 
+    /**
+     * factory method for an instance of BusinessUnitSetAssociatesActionBuilder
+     * @return builder
+     */
     public static BusinessUnitSetAssociatesActionBuilder of() {
         return new BusinessUnitSetAssociatesActionBuilder();
     }
 
+    /**
+     * create builder for BusinessUnitSetAssociatesAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitSetAssociatesActionBuilder of(final BusinessUnitSetAssociatesAction template) {
         BusinessUnitSetAssociatesActionBuilder builder = new BusinessUnitSetAssociatesActionBuilder();
         builder.associates = template.getAssociates();

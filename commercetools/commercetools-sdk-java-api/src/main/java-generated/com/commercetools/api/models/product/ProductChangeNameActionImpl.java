@@ -26,6 +26,9 @@ public class ProductChangeNameActionImpl implements ProductChangeNameAction, Mod
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductChangeNameActionImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("staged") final Boolean staged) {
@@ -34,6 +37,9 @@ public class ProductChangeNameActionImpl implements ProductChangeNameAction, Mod
         this.action = CHANGE_NAME;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductChangeNameActionImpl() {
         this.action = CHANGE_NAME;
     }

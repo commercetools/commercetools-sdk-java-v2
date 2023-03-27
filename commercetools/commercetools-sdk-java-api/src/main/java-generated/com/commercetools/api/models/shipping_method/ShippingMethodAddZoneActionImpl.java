@@ -24,6 +24,9 @@ public class ShippingMethodAddZoneActionImpl implements ShippingMethodAddZoneAct
 
     private com.commercetools.api.models.zone.ZoneResourceIdentifier zone;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShippingMethodAddZoneActionImpl(
             @JsonProperty("zone") final com.commercetools.api.models.zone.ZoneResourceIdentifier zone) {
@@ -31,6 +34,9 @@ public class ShippingMethodAddZoneActionImpl implements ShippingMethodAddZoneAct
         this.action = ADD_ZONE;
     }
 
+    /**
+     * create empty instance
+     */
     public ShippingMethodAddZoneActionImpl() {
         this.action = ADD_ZONE;
     }

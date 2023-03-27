@@ -46,6 +46,9 @@ public class StoreNameSetMessageImpl implements StoreNameSetMessage, ModelBase {
 
     private java.util.List<com.commercetools.api.models.common.LocalizedString> nameAllLocales;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StoreNameSetMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -73,6 +76,9 @@ public class StoreNameSetMessageImpl implements StoreNameSetMessage, ModelBase {
         this.type = STORE_NAME_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public StoreNameSetMessageImpl() {
         this.type = STORE_NAME_SET;
     }

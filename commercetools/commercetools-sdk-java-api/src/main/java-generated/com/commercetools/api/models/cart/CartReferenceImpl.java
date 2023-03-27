@@ -27,6 +27,9 @@ public class CartReferenceImpl implements CartReference, ModelBase {
 
     private com.commercetools.api.models.cart.Cart obj;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartReferenceImpl(@JsonProperty("id") final String id,
             @JsonProperty("obj") final com.commercetools.api.models.cart.Cart obj) {
@@ -35,6 +38,9 @@ public class CartReferenceImpl implements CartReference, ModelBase {
         this.typeId = ReferenceTypeId.findEnum("cart");
     }
 
+    /**
+     * create empty instance
+     */
     public CartReferenceImpl() {
         this.typeId = ReferenceTypeId.findEnum("cart");
     }

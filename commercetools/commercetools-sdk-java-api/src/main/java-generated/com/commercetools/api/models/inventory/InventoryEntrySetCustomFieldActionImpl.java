@@ -26,6 +26,9 @@ public class InventoryEntrySetCustomFieldActionImpl implements InventoryEntrySet
 
     private java.lang.Object value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     InventoryEntrySetCustomFieldActionImpl(@JsonProperty("name") final String name,
             @JsonProperty("value") final java.lang.Object value) {
@@ -34,6 +37,9 @@ public class InventoryEntrySetCustomFieldActionImpl implements InventoryEntrySet
         this.action = SET_CUSTOM_FIELD;
     }
 
+    /**
+     * create empty instance
+     */
     public InventoryEntrySetCustomFieldActionImpl() {
         this.action = SET_CUSTOM_FIELD;
     }

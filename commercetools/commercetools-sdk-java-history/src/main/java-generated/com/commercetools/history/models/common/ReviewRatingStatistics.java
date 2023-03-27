@@ -75,20 +75,54 @@ public interface ReviewRatingStatistics {
     @JsonProperty("ratingsDistribution")
     public Object getRatingsDistribution();
 
+    /**
+     *  <p>Average rating of one target This number is rounded with 5 decimals.</p>
+     * @param averageRating value to be set
+     */
+
     public void setAverageRating(final Integer averageRating);
+
+    /**
+     *  <p>Highest rating of one target</p>
+     * @param highestRating value to be set
+     */
 
     public void setHighestRating(final Integer highestRating);
 
+    /**
+     *  <p>Lowest rating of one target</p>
+     * @param lowestRating value to be set
+     */
+
     public void setLowestRating(final Integer lowestRating);
+
+    /**
+     *  <p>Number of ratings taken into account</p>
+     * @param count value to be set
+     */
 
     public void setCount(final Integer count);
 
+    /**
+     *  <p>The full distribution of the ratings. The keys are the different ratings and the values are the count of reviews having this rating. Only the used ratings appear in this object.</p>
+     * @param ratingsDistribution value to be set
+     */
+
     public void setRatingsDistribution(final Object ratingsDistribution);
 
+    /**
+     * factory method
+     * @return instance of ReviewRatingStatistics
+     */
     public static ReviewRatingStatistics of() {
         return new ReviewRatingStatisticsImpl();
     }
 
+    /**
+     * factory method to copy an instance of ReviewRatingStatistics
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ReviewRatingStatistics of(final ReviewRatingStatistics template) {
         ReviewRatingStatisticsImpl instance = new ReviewRatingStatisticsImpl();
         instance.setAverageRating(template.getAverageRating());
@@ -99,18 +133,37 @@ public interface ReviewRatingStatistics {
         return instance;
     }
 
+    /**
+     * builder factory method for ReviewRatingStatistics
+     * @return builder
+     */
     public static ReviewRatingStatisticsBuilder builder() {
         return ReviewRatingStatisticsBuilder.of();
     }
 
+    /**
+     * create builder for ReviewRatingStatistics instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReviewRatingStatisticsBuilder builder(final ReviewRatingStatistics template) {
         return ReviewRatingStatisticsBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withReviewRatingStatistics(Function<ReviewRatingStatistics, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ReviewRatingStatistics> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ReviewRatingStatistics>() {
             @Override

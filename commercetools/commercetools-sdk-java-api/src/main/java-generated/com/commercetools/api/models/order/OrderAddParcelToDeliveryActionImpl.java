@@ -30,6 +30,9 @@ public class OrderAddParcelToDeliveryActionImpl implements OrderAddParcelToDeliv
 
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderAddParcelToDeliveryActionImpl(@JsonProperty("deliveryId") final String deliveryId,
             @JsonProperty("measurements") final com.commercetools.api.models.order.ParcelMeasurements measurements,
@@ -42,6 +45,9 @@ public class OrderAddParcelToDeliveryActionImpl implements OrderAddParcelToDeliv
         this.action = ADD_PARCEL_TO_DELIVERY;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderAddParcelToDeliveryActionImpl() {
         this.action = ADD_PARCEL_TO_DELIVERY;
     }

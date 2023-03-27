@@ -36,6 +36,11 @@ public class CustomerLastNameSetMessagePayloadBuilder implements Builder<Custome
         return this;
     }
 
+    /**
+     *  <p>The <code>lastName</code> that was set during the Set Last Name update action.</p>
+     * @return lastName
+     */
+
     @Nullable
     public String getLastName() {
         return this.lastName;
@@ -57,10 +62,19 @@ public class CustomerLastNameSetMessagePayloadBuilder implements Builder<Custome
         return new CustomerLastNameSetMessagePayloadImpl(lastName);
     }
 
+    /**
+     * factory method for an instance of CustomerLastNameSetMessagePayloadBuilder
+     * @return builder
+     */
     public static CustomerLastNameSetMessagePayloadBuilder of() {
         return new CustomerLastNameSetMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for CustomerLastNameSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerLastNameSetMessagePayloadBuilder of(final CustomerLastNameSetMessagePayload template) {
         CustomerLastNameSetMessagePayloadBuilder builder = new CustomerLastNameSetMessagePayloadBuilder();
         builder.lastName = template.getLastName();

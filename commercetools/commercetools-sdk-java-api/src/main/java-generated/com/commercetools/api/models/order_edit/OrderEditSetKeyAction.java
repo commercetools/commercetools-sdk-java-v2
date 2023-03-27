@@ -26,6 +26,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderEditSetKeyActionImpl.class)
 public interface OrderEditSetKeyAction extends OrderEditUpdateAction {
 
+    /**
+     * discriminator value for OrderEditSetKeyAction
+     */
     String SET_KEY = "setKey";
 
     /**
@@ -36,26 +39,55 @@ public interface OrderEditSetKeyAction extends OrderEditUpdateAction {
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     *  <p>If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
 
+    /**
+     * factory method
+     * @return instance of OrderEditSetKeyAction
+     */
     public static OrderEditSetKeyAction of() {
         return new OrderEditSetKeyActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderEditSetKeyAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderEditSetKeyAction of(final OrderEditSetKeyAction template) {
         OrderEditSetKeyActionImpl instance = new OrderEditSetKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;
     }
 
+    /**
+     * builder factory method for OrderEditSetKeyAction
+     * @return builder
+     */
     public static OrderEditSetKeyActionBuilder builder() {
         return OrderEditSetKeyActionBuilder.of();
     }
 
+    /**
+     * create builder for OrderEditSetKeyAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderEditSetKeyActionBuilder builder(final OrderEditSetKeyAction template) {
         return OrderEditSetKeyActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderEditSetKeyAction(Function<OrderEditSetKeyAction, T> helper) {
         return helper.apply(this);
     }
@@ -64,6 +96,10 @@ public interface OrderEditSetKeyAction extends OrderEditUpdateAction {
         return OrderEditSetKeyAction.of();
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderEditSetKeyAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderEditSetKeyAction>() {
             @Override

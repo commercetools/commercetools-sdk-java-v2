@@ -47,38 +47,76 @@ public interface MyPaymentUpdateAction
     @JsonProperty("action")
     public String getAction();
 
+    /**
+     * builder for addTransaction subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.me.MyPaymentAddTransactionActionBuilder addTransactionBuilder() {
         return com.commercetools.api.models.me.MyPaymentAddTransactionActionBuilder.of();
     }
 
+    /**
+     * builder for changeAmountPlanned subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.me.MyPaymentChangeAmountPlannedActionBuilder changeAmountPlannedBuilder() {
         return com.commercetools.api.models.me.MyPaymentChangeAmountPlannedActionBuilder.of();
     }
 
+    /**
+     * builder for setCustomField subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.me.MyPaymentSetCustomFieldActionBuilder setCustomFieldBuilder() {
         return com.commercetools.api.models.me.MyPaymentSetCustomFieldActionBuilder.of();
     }
 
+    /**
+     * builder for setMethodInfoInterface subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.me.MyPaymentSetMethodInfoInterfaceActionBuilder setMethodInfoInterfaceBuilder() {
         return com.commercetools.api.models.me.MyPaymentSetMethodInfoInterfaceActionBuilder.of();
     }
 
+    /**
+     * builder for setMethodInfoMethod subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.me.MyPaymentSetMethodInfoMethodActionBuilder setMethodInfoMethodBuilder() {
         return com.commercetools.api.models.me.MyPaymentSetMethodInfoMethodActionBuilder.of();
     }
 
+    /**
+     * builder for setMethodInfoName subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.me.MyPaymentSetMethodInfoNameActionBuilder setMethodInfoNameBuilder() {
         return com.commercetools.api.models.me.MyPaymentSetMethodInfoNameActionBuilder.of();
     }
 
+    /**
+     * builder for setTransactionCustomField subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.me.MyPaymentSetTransactionCustomFieldActionBuilder setTransactionCustomFieldBuilder() {
         return com.commercetools.api.models.me.MyPaymentSetTransactionCustomFieldActionBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMyPaymentUpdateAction(Function<MyPaymentUpdateAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MyPaymentUpdateAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MyPaymentUpdateAction>() {
             @Override

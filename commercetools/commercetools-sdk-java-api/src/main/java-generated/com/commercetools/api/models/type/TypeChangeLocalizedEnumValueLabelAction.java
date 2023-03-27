@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TypeChangeLocalizedEnumValueLabelActionImpl.class)
 public interface TypeChangeLocalizedEnumValueLabelAction extends TypeUpdateAction {
 
+    /**
+     * discriminator value for TypeChangeLocalizedEnumValueLabelAction
+     */
     String CHANGE_LOCALIZED_ENUM_VALUE_LABEL = "changeLocalizedEnumValueLabel";
 
     /**
@@ -50,14 +53,33 @@ public interface TypeChangeLocalizedEnumValueLabelAction extends TypeUpdateActio
     @JsonProperty("value")
     public CustomFieldLocalizedEnumValue getValue();
 
+    /**
+     *  <p><code>name</code> of the FieldDefinition to update.</p>
+     * @param fieldName value to be set
+     */
+
     public void setFieldName(final String fieldName);
+
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     * @param value value to be set
+     */
 
     public void setValue(final CustomFieldLocalizedEnumValue value);
 
+    /**
+     * factory method
+     * @return instance of TypeChangeLocalizedEnumValueLabelAction
+     */
     public static TypeChangeLocalizedEnumValueLabelAction of() {
         return new TypeChangeLocalizedEnumValueLabelActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of TypeChangeLocalizedEnumValueLabelAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static TypeChangeLocalizedEnumValueLabelAction of(final TypeChangeLocalizedEnumValueLabelAction template) {
         TypeChangeLocalizedEnumValueLabelActionImpl instance = new TypeChangeLocalizedEnumValueLabelActionImpl();
         instance.setFieldName(template.getFieldName());
@@ -65,20 +87,39 @@ public interface TypeChangeLocalizedEnumValueLabelAction extends TypeUpdateActio
         return instance;
     }
 
+    /**
+     * builder factory method for TypeChangeLocalizedEnumValueLabelAction
+     * @return builder
+     */
     public static TypeChangeLocalizedEnumValueLabelActionBuilder builder() {
         return TypeChangeLocalizedEnumValueLabelActionBuilder.of();
     }
 
+    /**
+     * create builder for TypeChangeLocalizedEnumValueLabelAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TypeChangeLocalizedEnumValueLabelActionBuilder builder(
             final TypeChangeLocalizedEnumValueLabelAction template) {
         return TypeChangeLocalizedEnumValueLabelActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTypeChangeLocalizedEnumValueLabelAction(
             Function<TypeChangeLocalizedEnumValueLabelAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<TypeChangeLocalizedEnumValueLabelAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TypeChangeLocalizedEnumValueLabelAction>() {
             @Override

@@ -52,6 +52,9 @@ public class ParcelItemsUpdatedMessageImpl implements ParcelItemsUpdatedMessage,
 
     private String shippingKey;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ParcelItemsUpdatedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -84,6 +87,9 @@ public class ParcelItemsUpdatedMessageImpl implements ParcelItemsUpdatedMessage,
         this.type = PARCEL_ITEMS_UPDATED;
     }
 
+    /**
+     * create empty instance
+     */
     public ParcelItemsUpdatedMessageImpl() {
         this.type = PARCEL_ITEMS_UPDATED;
     }

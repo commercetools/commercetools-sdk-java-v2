@@ -24,7 +24,7 @@ public class DateFieldBuilder implements Builder<DateField> {
     private java.time.LocalDate value;
 
     /**
-     *
+     * set the value to the value
      * @param value value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class DateFieldBuilder implements Builder<DateField> {
         this.value = value;
         return this;
     }
+
+    /**
+     * value of value}
+     * @return value
+     */
 
     public java.time.LocalDate getValue() {
         return this.value;
@@ -55,10 +60,19 @@ public class DateFieldBuilder implements Builder<DateField> {
         return new DateFieldImpl(value);
     }
 
+    /**
+     * factory method for an instance of DateFieldBuilder
+     * @return builder
+     */
     public static DateFieldBuilder of() {
         return new DateFieldBuilder();
     }
 
+    /**
+     * create builder for DateField instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DateFieldBuilder of(final DateField template) {
         DateFieldBuilder builder = new DateFieldBuilder();
         builder.value = template.getValue();

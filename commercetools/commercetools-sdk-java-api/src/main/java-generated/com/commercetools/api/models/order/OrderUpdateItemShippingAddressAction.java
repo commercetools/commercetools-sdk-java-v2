@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderUpdateItemShippingAddressActionImpl.class)
 public interface OrderUpdateItemShippingAddressAction extends OrderUpdateAction {
 
+    /**
+     * discriminator value for OrderUpdateItemShippingAddressAction
+     */
     String UPDATE_ITEM_SHIPPING_ADDRESS = "updateItemShippingAddress";
 
     /**
@@ -42,31 +45,64 @@ public interface OrderUpdateItemShippingAddressAction extends OrderUpdateAction 
     @JsonProperty("address")
     public BaseAddress getAddress();
 
+    /**
+     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     * @param address value to be set
+     */
+
     public void setAddress(final BaseAddress address);
 
+    /**
+     * factory method
+     * @return instance of OrderUpdateItemShippingAddressAction
+     */
     public static OrderUpdateItemShippingAddressAction of() {
         return new OrderUpdateItemShippingAddressActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderUpdateItemShippingAddressAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderUpdateItemShippingAddressAction of(final OrderUpdateItemShippingAddressAction template) {
         OrderUpdateItemShippingAddressActionImpl instance = new OrderUpdateItemShippingAddressActionImpl();
         instance.setAddress(template.getAddress());
         return instance;
     }
 
+    /**
+     * builder factory method for OrderUpdateItemShippingAddressAction
+     * @return builder
+     */
     public static OrderUpdateItemShippingAddressActionBuilder builder() {
         return OrderUpdateItemShippingAddressActionBuilder.of();
     }
 
+    /**
+     * create builder for OrderUpdateItemShippingAddressAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderUpdateItemShippingAddressActionBuilder builder(
             final OrderUpdateItemShippingAddressAction template) {
         return OrderUpdateItemShippingAddressActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderUpdateItemShippingAddressAction(Function<OrderUpdateItemShippingAddressAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderUpdateItemShippingAddressAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderUpdateItemShippingAddressAction>() {
             @Override

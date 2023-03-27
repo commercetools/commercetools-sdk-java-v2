@@ -83,6 +83,10 @@ public class MyBusinessUnitUpdateActionBuilder {
         return com.commercetools.api.models.me.MyBusinessUnitSetDefaultShippingAddressActionBuilder.of();
     }
 
+    /**
+     * factory method for an instance of MyBusinessUnitUpdateActionBuilder
+     * @return builder
+     */
     public static MyBusinessUnitUpdateActionBuilder of() {
         return new MyBusinessUnitUpdateActionBuilder();
     }

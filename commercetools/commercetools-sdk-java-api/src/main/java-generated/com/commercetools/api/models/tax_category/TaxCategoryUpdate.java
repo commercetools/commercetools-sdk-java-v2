@@ -49,17 +49,41 @@ public interface TaxCategoryUpdate extends
     @JsonProperty("actions")
     public List<TaxCategoryUpdateAction> getActions();
 
+    /**
+     *  <p>Expected version of the TaxCategory on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     * @param version value to be set
+     */
+
     public void setVersion(final Long version);
+
+    /**
+     *  <p>Update actions to be performed on the TaxCategory.</p>
+     * @param actions values to be set
+     */
 
     @JsonIgnore
     public void setActions(final TaxCategoryUpdateAction... actions);
 
+    /**
+     *  <p>Update actions to be performed on the TaxCategory.</p>
+     * @param actions values to be set
+     */
+
     public void setActions(final List<TaxCategoryUpdateAction> actions);
 
+    /**
+     * factory method
+     * @return instance of TaxCategoryUpdate
+     */
     public static TaxCategoryUpdate of() {
         return new TaxCategoryUpdateImpl();
     }
 
+    /**
+     * factory method to copy an instance of TaxCategoryUpdate
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static TaxCategoryUpdate of(final TaxCategoryUpdate template) {
         TaxCategoryUpdateImpl instance = new TaxCategoryUpdateImpl();
         instance.setVersion(template.getVersion());
@@ -67,18 +91,37 @@ public interface TaxCategoryUpdate extends
         return instance;
     }
 
+    /**
+     * builder factory method for TaxCategoryUpdate
+     * @return builder
+     */
     public static TaxCategoryUpdateBuilder builder() {
         return TaxCategoryUpdateBuilder.of();
     }
 
+    /**
+     * create builder for TaxCategoryUpdate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TaxCategoryUpdateBuilder builder(final TaxCategoryUpdate template) {
         return TaxCategoryUpdateBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTaxCategoryUpdate(Function<TaxCategoryUpdate, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<TaxCategoryUpdate> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TaxCategoryUpdate>() {
             @Override

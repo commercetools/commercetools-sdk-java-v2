@@ -26,6 +26,9 @@ public class StagedOrderImportLineItemStateActionImpl implements StagedOrderImpo
 
     private java.util.List<com.commercetools.api.models.order.ItemState> state;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderImportLineItemStateActionImpl(@JsonProperty("lineItemId") final String lineItemId,
             @JsonProperty("state") final java.util.List<com.commercetools.api.models.order.ItemState> state) {
@@ -34,6 +37,9 @@ public class StagedOrderImportLineItemStateActionImpl implements StagedOrderImpo
         this.action = IMPORT_LINE_ITEM_STATE;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderImportLineItemStateActionImpl() {
         this.action = IMPORT_LINE_ITEM_STATE;
     }

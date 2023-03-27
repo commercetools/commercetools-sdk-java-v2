@@ -32,6 +32,9 @@ public class ProductPriceDiscountsSetUpdatedPriceImpl implements ProductPriceDis
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductPriceDiscountsSetUpdatedPriceImpl(@JsonProperty("variantId") final Integer variantId,
             @JsonProperty("variantKey") final String variantKey, @JsonProperty("sku") final String sku,
@@ -46,6 +49,9 @@ public class ProductPriceDiscountsSetUpdatedPriceImpl implements ProductPriceDis
         this.staged = staged;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductPriceDiscountsSetUpdatedPriceImpl() {
     }
 

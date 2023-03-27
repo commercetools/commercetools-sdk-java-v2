@@ -36,10 +36,19 @@ public class AttributeBooleanTypeBuilder implements Builder<AttributeBooleanType
         return new AttributeBooleanTypeImpl();
     }
 
+    /**
+     * factory method for an instance of AttributeBooleanTypeBuilder
+     * @return builder
+     */
     public static AttributeBooleanTypeBuilder of() {
         return new AttributeBooleanTypeBuilder();
     }
 
+    /**
+     * create builder for AttributeBooleanType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeBooleanTypeBuilder of(final AttributeBooleanType template) {
         AttributeBooleanTypeBuilder builder = new AttributeBooleanTypeBuilder();
         return builder;

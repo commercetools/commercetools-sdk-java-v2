@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ChangeTaxRoundingModeChangeImpl.class)
 public interface ChangeTaxRoundingModeChange extends Change {
 
+    /**
+     * discriminator value for ChangeTaxRoundingModeChange
+     */
     String CHANGE_TAX_ROUNDING_MODE_CHANGE = "ChangeTaxRoundingModeChange";
 
     /**
@@ -66,16 +69,40 @@ public interface ChangeTaxRoundingModeChange extends Change {
     @JsonProperty("nextValue")
     public RoundingMode getNextValue();
 
+    /**
+     *  <p>Shape of the action for <code>changeTaxRoundingMode</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
 
     public void setPreviousValue(final RoundingMode previousValue);
 
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
+
     public void setNextValue(final RoundingMode nextValue);
 
+    /**
+     * factory method
+     * @return instance of ChangeTaxRoundingModeChange
+     */
     public static ChangeTaxRoundingModeChange of() {
         return new ChangeTaxRoundingModeChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of ChangeTaxRoundingModeChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ChangeTaxRoundingModeChange of(final ChangeTaxRoundingModeChange template) {
         ChangeTaxRoundingModeChangeImpl instance = new ChangeTaxRoundingModeChangeImpl();
         instance.setChange(template.getChange());
@@ -84,18 +111,37 @@ public interface ChangeTaxRoundingModeChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for ChangeTaxRoundingModeChange
+     * @return builder
+     */
     public static ChangeTaxRoundingModeChangeBuilder builder() {
         return ChangeTaxRoundingModeChangeBuilder.of();
     }
 
+    /**
+     * create builder for ChangeTaxRoundingModeChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeTaxRoundingModeChangeBuilder builder(final ChangeTaxRoundingModeChange template) {
         return ChangeTaxRoundingModeChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withChangeTaxRoundingModeChange(Function<ChangeTaxRoundingModeChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ChangeTaxRoundingModeChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ChangeTaxRoundingModeChange>() {
             @Override

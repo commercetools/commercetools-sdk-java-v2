@@ -22,11 +22,17 @@ public class CustomerUpdateActionImpl implements CustomerUpdateAction, ModelBase
 
     private String action;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerUpdateActionImpl(@JsonProperty("action") final String action) {
         this.action = action;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerUpdateActionImpl() {
     }
 

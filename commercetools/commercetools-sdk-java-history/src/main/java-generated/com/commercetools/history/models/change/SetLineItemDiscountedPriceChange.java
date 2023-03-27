@@ -36,6 +36,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetLineItemDiscountedPriceChangeImpl.class)
 public interface SetLineItemDiscountedPriceChange extends Change {
 
+    /**
+     * discriminator value for SetLineItemDiscountedPriceChange
+     */
     String SET_LINE_ITEM_DISCOUNTED_PRICE_CHANGE = "SetLineItemDiscountedPriceChange";
 
     /**
@@ -89,20 +92,54 @@ public interface SetLineItemDiscountedPriceChange extends Change {
     @JsonProperty("previousValue")
     public DiscountedLineItemPrice getPreviousValue();
 
+    /**
+     *  <p>Update action for <code>setLineItemDiscountedPrice</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set lineItem
+     * @param lineItem value to be set
+     */
 
     public void setLineItem(final LocalizedString lineItem);
 
+    /**
+     * set variant
+     * @param variant value to be set
+     */
+
     public void setVariant(final String variant);
+
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
 
     public void setNextValue(final DiscountedLineItemPrice nextValue);
 
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
+
     public void setPreviousValue(final DiscountedLineItemPrice previousValue);
 
+    /**
+     * factory method
+     * @return instance of SetLineItemDiscountedPriceChange
+     */
     public static SetLineItemDiscountedPriceChange of() {
         return new SetLineItemDiscountedPriceChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetLineItemDiscountedPriceChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetLineItemDiscountedPriceChange of(final SetLineItemDiscountedPriceChange template) {
         SetLineItemDiscountedPriceChangeImpl instance = new SetLineItemDiscountedPriceChangeImpl();
         instance.setChange(template.getChange());
@@ -113,18 +150,37 @@ public interface SetLineItemDiscountedPriceChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetLineItemDiscountedPriceChange
+     * @return builder
+     */
     public static SetLineItemDiscountedPriceChangeBuilder builder() {
         return SetLineItemDiscountedPriceChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetLineItemDiscountedPriceChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetLineItemDiscountedPriceChangeBuilder builder(final SetLineItemDiscountedPriceChange template) {
         return SetLineItemDiscountedPriceChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetLineItemDiscountedPriceChange(Function<SetLineItemDiscountedPriceChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetLineItemDiscountedPriceChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetLineItemDiscountedPriceChange>() {
             @Override

@@ -76,9 +76,19 @@ public class DiscountedPriceDraftBuilder implements Builder<DiscountedPriceDraft
         return this;
     }
 
+    /**
+     *  <p>Sets the money value for the discounted price.</p>
+     * @return value
+     */
+
     public com.commercetools.api.models.common.Money getValue() {
         return this.value;
     }
+
+    /**
+     *  <p>Relates the referenced ProductDiscount to the discounted price.</p>
+     * @return discount
+     */
 
     public com.commercetools.api.models.product_discount.ProductDiscountReference getDiscount() {
         return this.discount;
@@ -102,10 +112,19 @@ public class DiscountedPriceDraftBuilder implements Builder<DiscountedPriceDraft
         return new DiscountedPriceDraftImpl(value, discount);
     }
 
+    /**
+     * factory method for an instance of DiscountedPriceDraftBuilder
+     * @return builder
+     */
     public static DiscountedPriceDraftBuilder of() {
         return new DiscountedPriceDraftBuilder();
     }
 
+    /**
+     * create builder for DiscountedPriceDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DiscountedPriceDraftBuilder of(final DiscountedPriceDraft template) {
         DiscountedPriceDraftBuilder builder = new DiscountedPriceDraftBuilder();
         builder.value = template.getValue();

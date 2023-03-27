@@ -28,6 +28,9 @@ public class ChangeCartDiscountsChangeImpl implements ChangeCartDiscountsChange,
 
     private java.util.List<com.commercetools.history.models.common.Reference> nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeCartDiscountsChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.common.Reference> previousValue,
@@ -38,6 +41,9 @@ public class ChangeCartDiscountsChangeImpl implements ChangeCartDiscountsChange,
         this.type = CHANGE_CART_DISCOUNTS_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeCartDiscountsChangeImpl() {
         this.type = CHANGE_CART_DISCOUNTS_CHANGE;
     }

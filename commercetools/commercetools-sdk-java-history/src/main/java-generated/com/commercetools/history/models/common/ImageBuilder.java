@@ -31,7 +31,7 @@ public class ImageBuilder implements Builder<Image> {
     private String label;
 
     /**
-     *
+     * set the value to the url
      * @param url value to be set
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class ImageBuilder implements Builder<Image> {
     }
 
     /**
-     *
+     * set the value to the dimensions using the builder function
      * @param builder function to build the dimensions value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class ImageBuilder implements Builder<Image> {
     }
 
     /**
-     *
+     * set the value to the dimensions
      * @param dimensions value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class ImageBuilder implements Builder<Image> {
     }
 
     /**
-     *
+     * set the value to the label
      * @param label value to be set
      * @return Builder
      */
@@ -75,13 +75,28 @@ public class ImageBuilder implements Builder<Image> {
         return this;
     }
 
+    /**
+     * value of url}
+     * @return url
+     */
+
     public String getUrl() {
         return this.url;
     }
 
+    /**
+     * value of dimensions}
+     * @return dimensions
+     */
+
     public com.commercetools.history.models.common.ImageDimensions getDimensions() {
         return this.dimensions;
     }
+
+    /**
+     * value of label}
+     * @return label
+     */
 
     public String getLabel() {
         return this.label;
@@ -106,10 +121,19 @@ public class ImageBuilder implements Builder<Image> {
         return new ImageImpl(url, dimensions, label);
     }
 
+    /**
+     * factory method for an instance of ImageBuilder
+     * @return builder
+     */
     public static ImageBuilder of() {
         return new ImageBuilder();
     }
 
+    /**
+     * create builder for Image instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ImageBuilder of(final Image template) {
         ImageBuilder builder = new ImageBuilder();
         builder.url = template.getUrl();

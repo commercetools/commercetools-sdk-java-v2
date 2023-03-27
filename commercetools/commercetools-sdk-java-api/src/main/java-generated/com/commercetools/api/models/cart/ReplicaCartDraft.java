@@ -49,14 +49,33 @@ public interface ReplicaCartDraft
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     *  <p>A Reference represents a loose reference to another resource in the same Project identified by its <code>id</code>. The <code>typeId</code> indicates the type of the referenced resource. Each resource type has its corresponding Reference type, like ChannelReference. A referenced resource can be embedded through Reference Expansion. The expanded reference is the value of an additional <code>obj</code> field then.</p>
+     * @param reference value to be set
+     */
+
     public void setReference(final Reference reference);
+
+    /**
+     *  <p>User-defined unique identifier for the Cart.</p>
+     * @param key value to be set
+     */
 
     public void setKey(final String key);
 
+    /**
+     * factory method
+     * @return instance of ReplicaCartDraft
+     */
     public static ReplicaCartDraft of() {
         return new ReplicaCartDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of ReplicaCartDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ReplicaCartDraft of(final ReplicaCartDraft template) {
         ReplicaCartDraftImpl instance = new ReplicaCartDraftImpl();
         instance.setReference(template.getReference());
@@ -64,14 +83,29 @@ public interface ReplicaCartDraft
         return instance;
     }
 
+    /**
+     * builder factory method for ReplicaCartDraft
+     * @return builder
+     */
     public static ReplicaCartDraftBuilder builder() {
         return ReplicaCartDraftBuilder.of();
     }
 
+    /**
+     * create builder for ReplicaCartDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReplicaCartDraftBuilder builder(final ReplicaCartDraft template) {
         return ReplicaCartDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withReplicaCartDraft(Function<ReplicaCartDraft, T> helper) {
         return helper.apply(this);
     }
@@ -82,6 +116,10 @@ public interface ReplicaCartDraft
         setReference((Reference) reference);
     };
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ReplicaCartDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ReplicaCartDraft>() {
             @Override

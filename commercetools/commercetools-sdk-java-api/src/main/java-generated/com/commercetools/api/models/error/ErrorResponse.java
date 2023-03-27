@@ -56,19 +56,50 @@ public interface ErrorResponse {
     @JsonProperty("errors")
     public List<ErrorObject> getErrors();
 
+    /**
+     *  <p>HTTP status code corresponding to the error.</p>
+     * @param statusCode value to be set
+     */
+
     public void setStatusCode(final Integer statusCode);
 
+    /**
+     *  <p>First error message in the <code>errors</code> array.</p>
+     * @param message value to be set
+     */
+
     public void setMessage(final String message);
+
+    /**
+     *  <p>Errors returned for a request.</p>
+     *  <p>A single error response can contain multiple errors if the errors are related to the same HTTP status code such as <code>400</code>.</p>
+     * @param errors values to be set
+     */
 
     @JsonIgnore
     public void setErrors(final ErrorObject... errors);
 
+    /**
+     *  <p>Errors returned for a request.</p>
+     *  <p>A single error response can contain multiple errors if the errors are related to the same HTTP status code such as <code>400</code>.</p>
+     * @param errors values to be set
+     */
+
     public void setErrors(final List<ErrorObject> errors);
 
+    /**
+     * factory method
+     * @return instance of ErrorResponse
+     */
     public static ErrorResponse of() {
         return new ErrorResponseImpl();
     }
 
+    /**
+     * factory method to copy an instance of ErrorResponse
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ErrorResponse of(final ErrorResponse template) {
         ErrorResponseImpl instance = new ErrorResponseImpl();
         instance.setStatusCode(template.getStatusCode());
@@ -77,18 +108,37 @@ public interface ErrorResponse {
         return instance;
     }
 
+    /**
+     * builder factory method for ErrorResponse
+     * @return builder
+     */
     public static ErrorResponseBuilder builder() {
         return ErrorResponseBuilder.of();
     }
 
+    /**
+     * create builder for ErrorResponse instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ErrorResponseBuilder builder(final ErrorResponse template) {
         return ErrorResponseBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withErrorResponse(Function<ErrorResponse, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ErrorResponse> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ErrorResponse>() {
             @Override

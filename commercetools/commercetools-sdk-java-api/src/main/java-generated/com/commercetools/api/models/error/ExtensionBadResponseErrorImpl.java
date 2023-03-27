@@ -40,6 +40,9 @@ public class ExtensionBadResponseErrorImpl implements ExtensionBadResponseError,
 
     private String extensionKey;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ExtensionBadResponseErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values,
@@ -62,6 +65,9 @@ public class ExtensionBadResponseErrorImpl implements ExtensionBadResponseError,
         this.code = EXTENSION_BAD_RESPONSE;
     }
 
+    /**
+     * create empty instance
+     */
     public ExtensionBadResponseErrorImpl() {
         this.code = EXTENSION_BAD_RESPONSE;
     }

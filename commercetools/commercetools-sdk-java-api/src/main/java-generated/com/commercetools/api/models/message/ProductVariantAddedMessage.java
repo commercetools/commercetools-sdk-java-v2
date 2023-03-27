@@ -39,6 +39,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductVariantAddedMessageImpl.class)
 public interface ProductVariantAddedMessage extends Message {
 
+    /**
+     * discriminator value for ProductVariantAddedMessage
+     */
     String PRODUCT_VARIANT_ADDED = "ProductVariantAdded";
 
     /**
@@ -58,14 +61,33 @@ public interface ProductVariantAddedMessage extends Message {
     @JsonProperty("staged")
     public Boolean getStaged();
 
+    /**
+     *  <p>Unique identifier of the Product Variant that was added.</p>
+     * @param variant value to be set
+     */
+
     public void setVariant(final ProductVariant variant);
+
+    /**
+     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     * @param staged value to be set
+     */
 
     public void setStaged(final Boolean staged);
 
+    /**
+     * factory method
+     * @return instance of ProductVariantAddedMessage
+     */
     public static ProductVariantAddedMessage of() {
         return new ProductVariantAddedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductVariantAddedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductVariantAddedMessage of(final ProductVariantAddedMessage template) {
         ProductVariantAddedMessageImpl instance = new ProductVariantAddedMessageImpl();
         instance.setId(template.getId());
@@ -83,18 +105,37 @@ public interface ProductVariantAddedMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductVariantAddedMessage
+     * @return builder
+     */
     public static ProductVariantAddedMessageBuilder builder() {
         return ProductVariantAddedMessageBuilder.of();
     }
 
+    /**
+     * create builder for ProductVariantAddedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductVariantAddedMessageBuilder builder(final ProductVariantAddedMessage template) {
         return ProductVariantAddedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductVariantAddedMessage(Function<ProductVariantAddedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductVariantAddedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductVariantAddedMessage>() {
             @Override

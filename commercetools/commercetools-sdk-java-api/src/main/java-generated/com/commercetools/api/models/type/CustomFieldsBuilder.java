@@ -73,9 +73,19 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
         return this;
     }
 
+    /**
+     *  <p>Reference to the Type that holds the FieldDefinitions for the Custom Fields.</p>
+     * @return type
+     */
+
     public com.commercetools.api.models.type.TypeReference getType() {
         return this.type;
     }
+
+    /**
+     *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
+     * @return fields
+     */
 
     public com.commercetools.api.models.type.FieldContainer getFields() {
         return this.fields;
@@ -99,10 +109,19 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
         return new CustomFieldsImpl(type, fields);
     }
 
+    /**
+     * factory method for an instance of CustomFieldsBuilder
+     * @return builder
+     */
     public static CustomFieldsBuilder of() {
         return new CustomFieldsBuilder();
     }
 
+    /**
+     * create builder for CustomFields instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomFieldsBuilder of(final CustomFields template) {
         CustomFieldsBuilder builder = new CustomFieldsBuilder();
         builder.type = template.getType();

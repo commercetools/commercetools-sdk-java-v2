@@ -26,6 +26,9 @@ public class QuoteRequestSetCustomFieldActionImpl implements QuoteRequestSetCust
 
     private java.lang.Object value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     QuoteRequestSetCustomFieldActionImpl(@JsonProperty("name") final String name,
             @JsonProperty("value") final java.lang.Object value) {
@@ -34,6 +37,9 @@ public class QuoteRequestSetCustomFieldActionImpl implements QuoteRequestSetCust
         this.action = SET_CUSTOM_FIELD;
     }
 
+    /**
+     * create empty instance
+     */
     public QuoteRequestSetCustomFieldActionImpl() {
         this.action = SET_CUSTOM_FIELD;
     }

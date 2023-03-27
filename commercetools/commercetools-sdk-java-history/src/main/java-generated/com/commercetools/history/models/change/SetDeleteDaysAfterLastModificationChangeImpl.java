@@ -29,6 +29,9 @@ public class SetDeleteDaysAfterLastModificationChangeImpl
 
     private Integer nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetDeleteDaysAfterLastModificationChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final Integer previousValue,
@@ -39,6 +42,9 @@ public class SetDeleteDaysAfterLastModificationChangeImpl
         this.type = SET_DELETE_DAYS_AFTER_LAST_MODIFICATION_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetDeleteDaysAfterLastModificationChangeImpl() {
         this.type = SET_DELETE_DAYS_AFTER_LAST_MODIFICATION_CHANGE;
     }

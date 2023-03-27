@@ -26,6 +26,9 @@ public class CartSetCustomLineItemTaxAmountActionImpl implements CartSetCustomLi
 
     private com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartSetCustomLineItemTaxAmountActionImpl(@JsonProperty("customLineItemId") final String customLineItemId,
             @JsonProperty("externalTaxAmount") final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount) {
@@ -34,6 +37,9 @@ public class CartSetCustomLineItemTaxAmountActionImpl implements CartSetCustomLi
         this.action = SET_CUSTOM_LINE_ITEM_TAX_AMOUNT;
     }
 
+    /**
+     * create empty instance
+     */
     public CartSetCustomLineItemTaxAmountActionImpl() {
         this.action = SET_CUSTOM_LINE_ITEM_TAX_AMOUNT;
     }

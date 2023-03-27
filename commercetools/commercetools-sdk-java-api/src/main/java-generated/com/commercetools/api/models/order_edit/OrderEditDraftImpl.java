@@ -32,6 +32,9 @@ public class OrderEditDraftImpl implements OrderEditDraft, ModelBase {
 
     private Boolean dryRun;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderEditDraftImpl(@JsonProperty("key") final String key,
             @JsonProperty("resource") final com.commercetools.api.models.order.OrderReference resource,
@@ -46,6 +49,9 @@ public class OrderEditDraftImpl implements OrderEditDraft, ModelBase {
         this.dryRun = dryRun;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderEditDraftImpl() {
     }
 

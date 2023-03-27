@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ShippingMethodChangeTaxCategoryActionImpl.class)
 public interface ShippingMethodChangeTaxCategoryAction extends ShippingMethodUpdateAction {
 
+    /**
+     * discriminator value for ShippingMethodChangeTaxCategoryAction
+     */
     String CHANGE_TAX_CATEGORY = "changeTaxCategory";
 
     /**
@@ -42,31 +45,64 @@ public interface ShippingMethodChangeTaxCategoryAction extends ShippingMethodUpd
     @JsonProperty("taxCategory")
     public TaxCategoryResourceIdentifier getTaxCategory();
 
+    /**
+     *  <p>Value to set.</p>
+     * @param taxCategory value to be set
+     */
+
     public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
 
+    /**
+     * factory method
+     * @return instance of ShippingMethodChangeTaxCategoryAction
+     */
     public static ShippingMethodChangeTaxCategoryAction of() {
         return new ShippingMethodChangeTaxCategoryActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ShippingMethodChangeTaxCategoryAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ShippingMethodChangeTaxCategoryAction of(final ShippingMethodChangeTaxCategoryAction template) {
         ShippingMethodChangeTaxCategoryActionImpl instance = new ShippingMethodChangeTaxCategoryActionImpl();
         instance.setTaxCategory(template.getTaxCategory());
         return instance;
     }
 
+    /**
+     * builder factory method for ShippingMethodChangeTaxCategoryAction
+     * @return builder
+     */
     public static ShippingMethodChangeTaxCategoryActionBuilder builder() {
         return ShippingMethodChangeTaxCategoryActionBuilder.of();
     }
 
+    /**
+     * create builder for ShippingMethodChangeTaxCategoryAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShippingMethodChangeTaxCategoryActionBuilder builder(
             final ShippingMethodChangeTaxCategoryAction template) {
         return ShippingMethodChangeTaxCategoryActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withShippingMethodChangeTaxCategoryAction(Function<ShippingMethodChangeTaxCategoryAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodChangeTaxCategoryAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodChangeTaxCategoryAction>() {
             @Override

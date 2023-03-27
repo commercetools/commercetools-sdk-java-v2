@@ -24,7 +24,7 @@ public class BooleanFieldBuilder implements Builder<BooleanField> {
     private Boolean value;
 
     /**
-     *
+     * set the value to the value
      * @param value value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class BooleanFieldBuilder implements Builder<BooleanField> {
         this.value = value;
         return this;
     }
+
+    /**
+     * value of value}
+     * @return value
+     */
 
     public Boolean getValue() {
         return this.value;
@@ -55,10 +60,19 @@ public class BooleanFieldBuilder implements Builder<BooleanField> {
         return new BooleanFieldImpl(value);
     }
 
+    /**
+     * factory method for an instance of BooleanFieldBuilder
+     * @return builder
+     */
     public static BooleanFieldBuilder of() {
         return new BooleanFieldBuilder();
     }
 
+    /**
+     * create builder for BooleanField instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BooleanFieldBuilder of(final BooleanField template) {
         BooleanFieldBuilder builder = new BooleanFieldBuilder();
         builder.value = template.getValue();

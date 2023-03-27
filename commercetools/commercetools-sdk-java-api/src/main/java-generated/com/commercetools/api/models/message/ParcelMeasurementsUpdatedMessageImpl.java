@@ -50,6 +50,9 @@ public class ParcelMeasurementsUpdatedMessageImpl implements ParcelMeasurementsU
 
     private String shippingKey;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ParcelMeasurementsUpdatedMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -81,6 +84,9 @@ public class ParcelMeasurementsUpdatedMessageImpl implements ParcelMeasurementsU
         this.type = PARCEL_MEASUREMENTS_UPDATED;
     }
 
+    /**
+     * create empty instance
+     */
     public ParcelMeasurementsUpdatedMessageImpl() {
         this.type = PARCEL_MEASUREMENTS_UPDATED;
     }

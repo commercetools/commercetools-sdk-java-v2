@@ -34,6 +34,11 @@ public class BusinessUnitChangeNameActionBuilder implements Builder<BusinessUnit
         return this;
     }
 
+    /**
+     *  <p>New name to set.</p>
+     * @return name
+     */
+
     public String getName() {
         return this.name;
     }
@@ -55,10 +60,19 @@ public class BusinessUnitChangeNameActionBuilder implements Builder<BusinessUnit
         return new BusinessUnitChangeNameActionImpl(name);
     }
 
+    /**
+     * factory method for an instance of BusinessUnitChangeNameActionBuilder
+     * @return builder
+     */
     public static BusinessUnitChangeNameActionBuilder of() {
         return new BusinessUnitChangeNameActionBuilder();
     }
 
+    /**
+     * create builder for BusinessUnitChangeNameAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitChangeNameActionBuilder of(final BusinessUnitChangeNameAction template) {
         BusinessUnitChangeNameActionBuilder builder = new BusinessUnitChangeNameActionBuilder();
         builder.name = template.getName();

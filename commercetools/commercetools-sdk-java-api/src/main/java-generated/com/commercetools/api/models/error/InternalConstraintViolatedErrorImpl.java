@@ -26,6 +26,9 @@ public class InternalConstraintViolatedErrorImpl implements InternalConstraintVi
 
     private Map<String, java.lang.Object> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     InternalConstraintViolatedErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values) {
@@ -34,6 +37,9 @@ public class InternalConstraintViolatedErrorImpl implements InternalConstraintVi
         this.code = INTERNAL_CONSTRAINT_VIOLATED;
     }
 
+    /**
+     * create empty instance
+     */
     public InternalConstraintViolatedErrorImpl() {
         this.code = INTERNAL_CONSTRAINT_VIOLATED;
     }

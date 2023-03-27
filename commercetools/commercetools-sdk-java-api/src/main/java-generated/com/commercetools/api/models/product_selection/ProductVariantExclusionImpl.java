@@ -22,11 +22,17 @@ public class ProductVariantExclusionImpl implements ProductVariantExclusion, Mod
 
     private java.util.List<String> skus;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductVariantExclusionImpl(@JsonProperty("skus") final java.util.List<String> skus) {
         this.skus = skus;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductVariantExclusionImpl() {
     }
 

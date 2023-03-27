@@ -27,6 +27,9 @@ public class StagedOrderSetShippingAddressCustomTypeActionImpl
 
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderSetShippingAddressCustomTypeActionImpl(
             @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
@@ -36,6 +39,9 @@ public class StagedOrderSetShippingAddressCustomTypeActionImpl
         this.action = SET_SHIPPING_ADDRESS_CUSTOM_TYPE;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderSetShippingAddressCustomTypeActionImpl() {
         this.action = SET_SHIPPING_ADDRESS_CUSTOM_TYPE;
     }

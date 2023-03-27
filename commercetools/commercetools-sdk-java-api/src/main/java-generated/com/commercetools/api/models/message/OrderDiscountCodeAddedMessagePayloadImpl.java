@@ -24,6 +24,9 @@ public class OrderDiscountCodeAddedMessagePayloadImpl implements OrderDiscountCo
 
     private com.commercetools.api.models.discount_code.DiscountCodeReference discountCode;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderDiscountCodeAddedMessagePayloadImpl(
             @JsonProperty("discountCode") final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode) {
@@ -31,6 +34,9 @@ public class OrderDiscountCodeAddedMessagePayloadImpl implements OrderDiscountCo
         this.type = ORDER_DISCOUNT_CODE_ADDED;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderDiscountCodeAddedMessagePayloadImpl() {
         this.type = ORDER_DISCOUNT_CODE_ADDED;
     }

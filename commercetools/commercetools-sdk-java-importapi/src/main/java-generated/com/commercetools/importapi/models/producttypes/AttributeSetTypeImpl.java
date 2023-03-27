@@ -24,6 +24,9 @@ public class AttributeSetTypeImpl implements AttributeSetType, ModelBase {
 
     private com.commercetools.importapi.models.producttypes.AttributeType elementType;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AttributeSetTypeImpl(
             @JsonProperty("elementType") final com.commercetools.importapi.models.producttypes.AttributeType elementType) {
@@ -31,6 +34,9 @@ public class AttributeSetTypeImpl implements AttributeSetType, ModelBase {
         this.name = SET;
     }
 
+    /**
+     * create empty instance
+     */
     public AttributeSetTypeImpl() {
         this.name = SET;
     }

@@ -74,23 +74,62 @@ public interface OrderPagedQueryResponse extends com.commercetools.api.models.Re
     @JsonProperty("results")
     public List<Order> getResults();
 
+    /**
+     *  <p>Number of results requested.</p>
+     * @param limit value to be set
+     */
+
     public void setLimit(final Long limit);
+
+    /**
+     * set count
+     * @param count value to be set
+     */
 
     public void setCount(final Long count);
 
+    /**
+     * set total
+     * @param total value to be set
+     */
+
     public void setTotal(final Long total);
 
+    /**
+     *  <p>Number of elements skipped.</p>
+     * @param offset value to be set
+     */
+
     public void setOffset(final Long offset);
+
+    /**
+     * set results
+     * @param results values to be set
+     */
 
     @JsonIgnore
     public void setResults(final Order... results);
 
+    /**
+     * set results
+     * @param results values to be set
+     */
+
     public void setResults(final List<Order> results);
 
+    /**
+     * factory method
+     * @return instance of OrderPagedQueryResponse
+     */
     public static OrderPagedQueryResponse of() {
         return new OrderPagedQueryResponseImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderPagedQueryResponse
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderPagedQueryResponse of(final OrderPagedQueryResponse template) {
         OrderPagedQueryResponseImpl instance = new OrderPagedQueryResponseImpl();
         instance.setLimit(template.getLimit());
@@ -101,18 +140,37 @@ public interface OrderPagedQueryResponse extends com.commercetools.api.models.Re
         return instance;
     }
 
+    /**
+     * builder factory method for OrderPagedQueryResponse
+     * @return builder
+     */
     public static OrderPagedQueryResponseBuilder builder() {
         return OrderPagedQueryResponseBuilder.of();
     }
 
+    /**
+     * create builder for OrderPagedQueryResponse instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderPagedQueryResponseBuilder builder(final OrderPagedQueryResponse template) {
         return OrderPagedQueryResponseBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderPagedQueryResponse(Function<OrderPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderPagedQueryResponse> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderPagedQueryResponse>() {
             @Override

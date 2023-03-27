@@ -24,12 +24,18 @@ public class CategoryReferenceImpl implements CategoryReference, ModelBase {
 
     private String id;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CategoryReferenceImpl(@JsonProperty("id") final String id) {
         this.id = id;
         this.typeId = ReferenceTypeId.findEnum("category");
     }
 
+    /**
+     * create empty instance
+     */
     public CategoryReferenceImpl() {
         this.typeId = ReferenceTypeId.findEnum("category");
     }

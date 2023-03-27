@@ -26,6 +26,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomerSetVatIdActionImpl.class)
 public interface CustomerSetVatIdAction extends CustomerUpdateAction {
 
+    /**
+     * discriminator value for CustomerSetVatIdAction
+     */
     String SET_VAT_ID = "setVatId";
 
     /**
@@ -36,30 +39,63 @@ public interface CustomerSetVatIdAction extends CustomerUpdateAction {
     @JsonProperty("vatId")
     public String getVatId();
 
+    /**
+     *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @param vatId value to be set
+     */
+
     public void setVatId(final String vatId);
 
+    /**
+     * factory method
+     * @return instance of CustomerSetVatIdAction
+     */
     public static CustomerSetVatIdAction of() {
         return new CustomerSetVatIdActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomerSetVatIdAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomerSetVatIdAction of(final CustomerSetVatIdAction template) {
         CustomerSetVatIdActionImpl instance = new CustomerSetVatIdActionImpl();
         instance.setVatId(template.getVatId());
         return instance;
     }
 
+    /**
+     * builder factory method for CustomerSetVatIdAction
+     * @return builder
+     */
     public static CustomerSetVatIdActionBuilder builder() {
         return CustomerSetVatIdActionBuilder.of();
     }
 
+    /**
+     * create builder for CustomerSetVatIdAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerSetVatIdActionBuilder builder(final CustomerSetVatIdAction template) {
         return CustomerSetVatIdActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomerSetVatIdAction(Function<CustomerSetVatIdAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomerSetVatIdAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomerSetVatIdAction>() {
             @Override

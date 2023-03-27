@@ -41,7 +41,7 @@ public class ReferenceSetAttributeBuilder implements Builder<ReferenceSetAttribu
     }
 
     /**
-     *
+     * set values to the value
      * @param value value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class ReferenceSetAttributeBuilder implements Builder<ReferenceSetAttribu
     }
 
     /**
-     *
+     * set value to the value
      * @param value value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class ReferenceSetAttributeBuilder implements Builder<ReferenceSetAttribu
     }
 
     /**
-     *
+     * add values to the value
      * @param value value to be set
      * @return Builder
      */
@@ -79,7 +79,7 @@ public class ReferenceSetAttributeBuilder implements Builder<ReferenceSetAttribu
     }
 
     /**
-     *
+     * add a value to the value using the builder function
      * @param builder function to build the value value
      * @return Builder
      */
@@ -94,7 +94,7 @@ public class ReferenceSetAttributeBuilder implements Builder<ReferenceSetAttribu
     }
 
     /**
-     *
+     * set the value to the value using the builder function
      * @param builder function to build the value value
      * @return Builder
      */
@@ -106,10 +106,20 @@ public class ReferenceSetAttributeBuilder implements Builder<ReferenceSetAttribu
         return this;
     }
 
+    /**
+     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     * @return name
+     */
+
     @Nullable
     public String getName() {
         return this.name;
     }
+
+    /**
+     * value of value}
+     * @return value
+     */
 
     public java.util.List<com.commercetools.importapi.models.common.KeyReference> getValue() {
         return this.value;
@@ -132,10 +142,19 @@ public class ReferenceSetAttributeBuilder implements Builder<ReferenceSetAttribu
         return new ReferenceSetAttributeImpl(name, value);
     }
 
+    /**
+     * factory method for an instance of ReferenceSetAttributeBuilder
+     * @return builder
+     */
     public static ReferenceSetAttributeBuilder of() {
         return new ReferenceSetAttributeBuilder();
     }
 
+    /**
+     * create builder for ReferenceSetAttribute instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReferenceSetAttributeBuilder of(final ReferenceSetAttribute template) {
         ReferenceSetAttributeBuilder builder = new ReferenceSetAttributeBuilder();
         builder.name = template.getName();

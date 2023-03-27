@@ -192,17 +192,37 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>Stores of the Business Unit after the Set Store Mode update action.</p>
+     * @return stores
+     */
+
     public java.util.List<com.commercetools.api.models.store.StoreKeyReference> getStores() {
         return this.stores;
     }
+
+    /**
+     *  <p>BusinessUnitStoreMode of the Business Unit after the Set Store Mode update action.</p>
+     * @return storeMode
+     */
 
     public com.commercetools.api.models.business_unit.BusinessUnitStoreMode getStoreMode() {
         return this.storeMode;
     }
 
+    /**
+     *  <p>Stores of the Business Unit before the Set Store Mode update action.</p>
+     * @return oldStores
+     */
+
     public java.util.List<com.commercetools.api.models.store.StoreKeyReference> getOldStores() {
         return this.oldStores;
     }
+
+    /**
+     *  <p>BusinessUnitStoreMode of the Business Unit before the Set Store Mode update action.</p>
+     * @return oldStoreMode
+     */
 
     public com.commercetools.api.models.business_unit.BusinessUnitStoreMode getOldStoreMode() {
         return this.oldStoreMode;
@@ -229,10 +249,19 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
         return new BusinessUnitStoreModeChangedMessagePayloadImpl(stores, storeMode, oldStores, oldStoreMode);
     }
 
+    /**
+     * factory method for an instance of BusinessUnitStoreModeChangedMessagePayloadBuilder
+     * @return builder
+     */
     public static BusinessUnitStoreModeChangedMessagePayloadBuilder of() {
         return new BusinessUnitStoreModeChangedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for BusinessUnitStoreModeChangedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitStoreModeChangedMessagePayloadBuilder of(
             final BusinessUnitStoreModeChangedMessagePayload template) {
         BusinessUnitStoreModeChangedMessagePayloadBuilder builder = new BusinessUnitStoreModeChangedMessagePayloadBuilder();

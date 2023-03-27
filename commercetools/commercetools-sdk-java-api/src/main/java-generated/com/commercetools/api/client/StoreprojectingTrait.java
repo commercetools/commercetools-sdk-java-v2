@@ -7,6 +7,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  * StoreprojectingTrait
+ * @param <T> type of extending interface
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface StoreprojectingTrait<T extends StoreprojectingTrait<T>> {

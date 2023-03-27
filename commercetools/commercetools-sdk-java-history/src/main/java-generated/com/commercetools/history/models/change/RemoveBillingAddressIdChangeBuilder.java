@@ -45,7 +45,7 @@ public class RemoveBillingAddressIdChangeBuilder implements Builder<RemoveBillin
     }
 
     /**
-     *
+     * set values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class RemoveBillingAddressIdChangeBuilder implements Builder<RemoveBillin
     }
 
     /**
-     *
+     * set value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -67,7 +67,7 @@ public class RemoveBillingAddressIdChangeBuilder implements Builder<RemoveBillin
     }
 
     /**
-     *
+     * add values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class RemoveBillingAddressIdChangeBuilder implements Builder<RemoveBillin
     }
 
     /**
-     *
+     * set values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -92,7 +92,7 @@ public class RemoveBillingAddressIdChangeBuilder implements Builder<RemoveBillin
     }
 
     /**
-     *
+     * set value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -103,7 +103,7 @@ public class RemoveBillingAddressIdChangeBuilder implements Builder<RemoveBillin
     }
 
     /**
-     *
+     * add values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -117,7 +117,7 @@ public class RemoveBillingAddressIdChangeBuilder implements Builder<RemoveBillin
     }
 
     /**
-     *
+     * set the value to the address using the builder function
      * @param builder function to build the address value
      * @return Builder
      */
@@ -129,7 +129,7 @@ public class RemoveBillingAddressIdChangeBuilder implements Builder<RemoveBillin
     }
 
     /**
-     *
+     * set the value to the address
      * @param address value to be set
      * @return Builder
      */
@@ -139,17 +139,37 @@ public class RemoveBillingAddressIdChangeBuilder implements Builder<RemoveBillin
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>removeBillingAddressId</code> action on customers.</p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public java.util.List<String> getNextValue() {
         return this.nextValue;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public java.util.List<String> getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of address}
+     * @return address
+     */
 
     public com.commercetools.history.models.common.Address getAddress() {
         return this.address;
@@ -175,10 +195,19 @@ public class RemoveBillingAddressIdChangeBuilder implements Builder<RemoveBillin
         return new RemoveBillingAddressIdChangeImpl(change, nextValue, previousValue, address);
     }
 
+    /**
+     * factory method for an instance of RemoveBillingAddressIdChangeBuilder
+     * @return builder
+     */
     public static RemoveBillingAddressIdChangeBuilder of() {
         return new RemoveBillingAddressIdChangeBuilder();
     }
 
+    /**
+     * create builder for RemoveBillingAddressIdChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static RemoveBillingAddressIdChangeBuilder of(final RemoveBillingAddressIdChange template) {
         RemoveBillingAddressIdChangeBuilder builder = new RemoveBillingAddressIdChangeBuilder();
         builder.change = template.getChange();

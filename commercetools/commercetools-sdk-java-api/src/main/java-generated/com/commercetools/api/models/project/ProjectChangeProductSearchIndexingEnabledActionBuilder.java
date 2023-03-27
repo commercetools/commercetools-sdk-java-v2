@@ -38,6 +38,14 @@ public class ProjectChangeProductSearchIndexingEnabledActionBuilder
         return this;
     }
 
+    /**
+     *  <ul>
+     *   <li>If <code>false</code>, the indexing of Product information will stop and the Product Projection Search as well as the Product Suggestions endpoint will not be available anymore for this Project. The Project's SearchIndexingConfiguration <code>status</code> for <code>products</code> will be changed to <code>"Deactivated"</code>.</li>
+     *   <li>If <code>true</code>, the indexing of Product information will start and the Product Projection Search as well as the Product Suggestions endpoint will become available soon after for this Project. Proportional to the amount of information being indexed, the Project's SearchIndexingConfiguration <code>status</code> for <code>products</code> will be shown as <code>"Indexing"</code> during this time. As soon as the indexing has finished, the configuration status will be changed to <code>"Activated"</code> making the aforementioned endpoints fully available for this Project.</li>
+     *  </ul>
+     * @return enabled
+     */
+
     public Boolean getEnabled() {
         return this.enabled;
     }
@@ -59,10 +67,19 @@ public class ProjectChangeProductSearchIndexingEnabledActionBuilder
         return new ProjectChangeProductSearchIndexingEnabledActionImpl(enabled);
     }
 
+    /**
+     * factory method for an instance of ProjectChangeProductSearchIndexingEnabledActionBuilder
+     * @return builder
+     */
     public static ProjectChangeProductSearchIndexingEnabledActionBuilder of() {
         return new ProjectChangeProductSearchIndexingEnabledActionBuilder();
     }
 
+    /**
+     * create builder for ProjectChangeProductSearchIndexingEnabledAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProjectChangeProductSearchIndexingEnabledActionBuilder of(
             final ProjectChangeProductSearchIndexingEnabledAction template) {
         ProjectChangeProductSearchIndexingEnabledActionBuilder builder = new ProjectChangeProductSearchIndexingEnabledActionBuilder();

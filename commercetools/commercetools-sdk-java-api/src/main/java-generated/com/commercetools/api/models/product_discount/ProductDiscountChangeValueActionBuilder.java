@@ -49,6 +49,11 @@ public class ProductDiscountChangeValueActionBuilder implements Builder<ProductD
         return this;
     }
 
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     * @return value
+     */
+
     public com.commercetools.api.models.product_discount.ProductDiscountValueDraft getValue() {
         return this.value;
     }
@@ -70,10 +75,19 @@ public class ProductDiscountChangeValueActionBuilder implements Builder<ProductD
         return new ProductDiscountChangeValueActionImpl(value);
     }
 
+    /**
+     * factory method for an instance of ProductDiscountChangeValueActionBuilder
+     * @return builder
+     */
     public static ProductDiscountChangeValueActionBuilder of() {
         return new ProductDiscountChangeValueActionBuilder();
     }
 
+    /**
+     * create builder for ProductDiscountChangeValueAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductDiscountChangeValueActionBuilder of(final ProductDiscountChangeValueAction template) {
         ProductDiscountChangeValueActionBuilder builder = new ProductDiscountChangeValueActionBuilder();
         builder.value = template.getValue();

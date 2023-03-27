@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CategoryCreatedMessagePayloadImpl.class)
 public interface CategoryCreatedMessagePayload extends MessagePayload {
 
+    /**
+     * discriminator value for CategoryCreatedMessagePayload
+     */
     String CATEGORY_CREATED = "CategoryCreated";
 
     /**
@@ -42,30 +45,63 @@ public interface CategoryCreatedMessagePayload extends MessagePayload {
     @JsonProperty("category")
     public Category getCategory();
 
+    /**
+     *  <p>Category that was created.</p>
+     * @param category value to be set
+     */
+
     public void setCategory(final Category category);
 
+    /**
+     * factory method
+     * @return instance of CategoryCreatedMessagePayload
+     */
     public static CategoryCreatedMessagePayload of() {
         return new CategoryCreatedMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of CategoryCreatedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CategoryCreatedMessagePayload of(final CategoryCreatedMessagePayload template) {
         CategoryCreatedMessagePayloadImpl instance = new CategoryCreatedMessagePayloadImpl();
         instance.setCategory(template.getCategory());
         return instance;
     }
 
+    /**
+     * builder factory method for CategoryCreatedMessagePayload
+     * @return builder
+     */
     public static CategoryCreatedMessagePayloadBuilder builder() {
         return CategoryCreatedMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for CategoryCreatedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategoryCreatedMessagePayloadBuilder builder(final CategoryCreatedMessagePayload template) {
         return CategoryCreatedMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCategoryCreatedMessagePayload(Function<CategoryCreatedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CategoryCreatedMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CategoryCreatedMessagePayload>() {
             @Override

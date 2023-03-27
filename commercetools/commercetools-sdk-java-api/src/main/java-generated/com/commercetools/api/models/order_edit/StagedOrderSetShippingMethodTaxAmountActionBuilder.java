@@ -62,6 +62,16 @@ public class StagedOrderSetShippingMethodTaxAmountActionBuilder
         return this;
     }
 
+    /**
+     *  <p>Cannot be used in LineItemDraft or CustomLineItemDraft.</p>
+     *  <p>Can only be set by these update actions:</p>
+     *  <ul>
+     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Carts</li>
+     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Order Edits</li>
+     *  </ul>
+     * @return externalTaxAmount
+     */
+
     @Nullable
     public com.commercetools.api.models.cart.ExternalTaxAmountDraft getExternalTaxAmount() {
         return this.externalTaxAmount;
@@ -83,10 +93,19 @@ public class StagedOrderSetShippingMethodTaxAmountActionBuilder
         return new StagedOrderSetShippingMethodTaxAmountActionImpl(externalTaxAmount);
     }
 
+    /**
+     * factory method for an instance of StagedOrderSetShippingMethodTaxAmountActionBuilder
+     * @return builder
+     */
     public static StagedOrderSetShippingMethodTaxAmountActionBuilder of() {
         return new StagedOrderSetShippingMethodTaxAmountActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderSetShippingMethodTaxAmountAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetShippingMethodTaxAmountActionBuilder of(
             final StagedOrderSetShippingMethodTaxAmountAction template) {
         StagedOrderSetShippingMethodTaxAmountActionBuilder builder = new StagedOrderSetShippingMethodTaxAmountActionBuilder();

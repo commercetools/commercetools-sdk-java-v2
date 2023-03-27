@@ -47,6 +47,11 @@ public class ShoppingListChangeNameActionBuilder implements Builder<ShoppingList
         return this;
     }
 
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     * @return name
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
@@ -68,10 +73,19 @@ public class ShoppingListChangeNameActionBuilder implements Builder<ShoppingList
         return new ShoppingListChangeNameActionImpl(name);
     }
 
+    /**
+     * factory method for an instance of ShoppingListChangeNameActionBuilder
+     * @return builder
+     */
     public static ShoppingListChangeNameActionBuilder of() {
         return new ShoppingListChangeNameActionBuilder();
     }
 
+    /**
+     * create builder for ShoppingListChangeNameAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShoppingListChangeNameActionBuilder of(final ShoppingListChangeNameAction template) {
         ShoppingListChangeNameActionBuilder builder = new ShoppingListChangeNameActionBuilder();
         builder.name = template.getName();

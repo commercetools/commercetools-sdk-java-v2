@@ -202,54 +202,168 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     *  <p>Unique identifier of the Category.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>Current version of the Category.</p>
+     * @param version value to be set
+     */
 
     public void setVersion(final Long version);
 
+    /**
+     *  <p>Date and time (UTC) the Category was initially created.</p>
+     * @param createdAt value to be set
+     */
+
     public void setCreatedAt(final ZonedDateTime createdAt);
+
+    /**
+     *  <p>Date and time (UTC) the Category was last updated.</p>
+     * @param lastModifiedAt value to be set
+     */
 
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
+    /**
+     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy value to be set
+     */
+
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy value to be set
+     */
 
     public void setCreatedBy(final CreatedBy createdBy);
 
+    /**
+     *  <p>Name of the Category.</p>
+     * @param name value to be set
+     */
+
     public void setName(final LocalizedString name);
+
+    /**
+     *  <p>User-defined identifier used as a deep-link URL to the related Category per Locale. A Category can have the same slug for different Locales, but they are unique across the Project. Valid slugs match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set in a Project.</p>
+     * @param slug value to be set
+     */
 
     public void setSlug(final LocalizedString slug);
 
+    /**
+     *  <p>Description of the Category.</p>
+     * @param description value to be set
+     */
+
     public void setDescription(final LocalizedString description);
+
+    /**
+     *  <p>Contains the parent path towards the root Category.</p>
+     * @param ancestors values to be set
+     */
 
     @JsonIgnore
     public void setAncestors(final CategoryReference... ancestors);
 
+    /**
+     *  <p>Contains the parent path towards the root Category.</p>
+     * @param ancestors values to be set
+     */
+
     public void setAncestors(final List<CategoryReference> ancestors);
+
+    /**
+     *  <p>Parent Category of this Category.</p>
+     * @param parent value to be set
+     */
 
     public void setParent(final CategoryReference parent);
 
+    /**
+     *  <p>Decimal value between 0 and 1 used to order Categories that are on the same level in the Category tree.</p>
+     * @param orderHint value to be set
+     */
+
     public void setOrderHint(final String orderHint);
+
+    /**
+     *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     * @param externalId value to be set
+     */
 
     public void setExternalId(final String externalId);
 
+    /**
+     *  <p>Name of the Category used by external search engines for improved search engine performance.</p>
+     * @param metaTitle value to be set
+     */
+
     public void setMetaTitle(final LocalizedString metaTitle);
+
+    /**
+     *  <p>Description of the Category used by external search engines for improved search engine performance.</p>
+     * @param metaDescription value to be set
+     */
 
     public void setMetaDescription(final LocalizedString metaDescription);
 
+    /**
+     *  <p>Keywords related to the Category for improved search engine performance.</p>
+     * @param metaKeywords value to be set
+     */
+
     public void setMetaKeywords(final LocalizedString metaKeywords);
 
+    /**
+     *  <p>Custom Fields for the Category.</p>
+     * @param custom value to be set
+     */
+
     public void setCustom(final CustomFields custom);
+
+    /**
+     *  <p>Media related to the Category.</p>
+     * @param assets values to be set
+     */
 
     @JsonIgnore
     public void setAssets(final Asset... assets);
 
+    /**
+     *  <p>Media related to the Category.</p>
+     * @param assets values to be set
+     */
+
     public void setAssets(final List<Asset> assets);
+
+    /**
+     *  <p>User-defined unique identifier of the Category.</p>
+     * @param key value to be set
+     */
 
     public void setKey(final String key);
 
+    /**
+     * factory method
+     * @return instance of Category
+     */
     public static Category of() {
         return new CategoryImpl();
     }
 
+    /**
+     * factory method to copy an instance of Category
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static Category of(final Category template) {
         CategoryImpl instance = new CategoryImpl();
         instance.setId(template.getId());
@@ -274,14 +388,29 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
         return instance;
     }
 
+    /**
+     * builder factory method for Category
+     * @return builder
+     */
     public static CategoryBuilder builder() {
         return CategoryBuilder.of();
     }
 
+    /**
+     * create builder for Category instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategoryBuilder builder(final Category template) {
         return CategoryBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCategory(Function<Category, T> helper) {
         return helper.apply(this);
     }
@@ -290,6 +419,10 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
         return com.commercetools.api.models.common.ReferenceTypeId.CATEGORY;
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<Category> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<Category>() {
             @Override

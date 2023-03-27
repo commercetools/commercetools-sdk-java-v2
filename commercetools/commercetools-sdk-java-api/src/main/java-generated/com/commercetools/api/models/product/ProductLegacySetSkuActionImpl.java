@@ -26,6 +26,9 @@ public class ProductLegacySetSkuActionImpl implements ProductLegacySetSkuAction,
 
     private Integer variantId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductLegacySetSkuActionImpl(@JsonProperty("sku") final String sku,
             @JsonProperty("variantId") final Integer variantId) {
@@ -34,6 +37,9 @@ public class ProductLegacySetSkuActionImpl implements ProductLegacySetSkuAction,
         this.action = LEGACY_SET_SKU;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductLegacySetSkuActionImpl() {
         this.action = LEGACY_SET_SKU;
     }

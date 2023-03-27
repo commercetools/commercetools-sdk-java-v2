@@ -26,7 +26,7 @@ public class QueryComplexityLimitExceededErrorBuilder implements Builder<QueryCo
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     *
+     * set the value to the message
      * @param message value to be set
      * @return Builder
      */
@@ -62,9 +62,19 @@ public class QueryComplexityLimitExceededErrorBuilder implements Builder<QueryCo
         return this;
     }
 
+    /**
+     * value of message}
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
@@ -87,10 +97,19 @@ public class QueryComplexityLimitExceededErrorBuilder implements Builder<QueryCo
         return new QueryComplexityLimitExceededErrorImpl(message, values);
     }
 
+    /**
+     * factory method for an instance of QueryComplexityLimitExceededErrorBuilder
+     * @return builder
+     */
     public static QueryComplexityLimitExceededErrorBuilder of() {
         return new QueryComplexityLimitExceededErrorBuilder();
     }
 
+    /**
+     * create builder for QueryComplexityLimitExceededError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static QueryComplexityLimitExceededErrorBuilder of(final QueryComplexityLimitExceededError template) {
         QueryComplexityLimitExceededErrorBuilder builder = new QueryComplexityLimitExceededErrorBuilder();
         builder.message = template.getMessage();

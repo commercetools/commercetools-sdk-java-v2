@@ -28,6 +28,9 @@ public class ChangeStateTypeChangeImpl implements ChangeStateTypeChange, ModelBa
 
     private com.commercetools.history.models.common.StateType nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeStateTypeChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.StateType previousValue,
@@ -38,6 +41,9 @@ public class ChangeStateTypeChangeImpl implements ChangeStateTypeChange, ModelBa
         this.type = CHANGE_STATE_TYPE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeStateTypeChangeImpl() {
         this.type = CHANGE_STATE_TYPE_CHANGE;
     }

@@ -27,6 +27,9 @@ public class TaxCategoryReferenceImpl implements TaxCategoryReference, ModelBase
 
     private com.commercetools.api.models.tax_category.TaxCategory obj;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TaxCategoryReferenceImpl(@JsonProperty("id") final String id,
             @JsonProperty("obj") final com.commercetools.api.models.tax_category.TaxCategory obj) {
@@ -35,6 +38,9 @@ public class TaxCategoryReferenceImpl implements TaxCategoryReference, ModelBase
         this.typeId = ReferenceTypeId.findEnum("tax-category");
     }
 
+    /**
+     * create empty instance
+     */
     public TaxCategoryReferenceImpl() {
         this.typeId = ReferenceTypeId.findEnum("tax-category");
     }

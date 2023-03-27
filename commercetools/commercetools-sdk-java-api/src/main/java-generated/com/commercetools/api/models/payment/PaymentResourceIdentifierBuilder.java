@@ -50,10 +50,20 @@ public class PaymentResourceIdentifierBuilder implements Builder<PaymentResource
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the referenced Payment. Either <code>id</code> or <code>key</code> is required.</p>
+     * @return id
+     */
+
     @Nullable
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the referenced Payment. Either <code>id</code> or <code>key</code> is required.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
@@ -76,10 +86,19 @@ public class PaymentResourceIdentifierBuilder implements Builder<PaymentResource
         return new PaymentResourceIdentifierImpl(id, key);
     }
 
+    /**
+     * factory method for an instance of PaymentResourceIdentifierBuilder
+     * @return builder
+     */
     public static PaymentResourceIdentifierBuilder of() {
         return new PaymentResourceIdentifierBuilder();
     }
 
+    /**
+     * create builder for PaymentResourceIdentifier instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentResourceIdentifierBuilder of(final PaymentResourceIdentifier template) {
         PaymentResourceIdentifierBuilder builder = new PaymentResourceIdentifierBuilder();
         builder.id = template.getId();

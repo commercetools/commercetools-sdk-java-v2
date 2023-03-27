@@ -70,6 +70,9 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
 
     private com.commercetools.importapi.models.customfields.Custom custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerAddressImpl(@JsonProperty("key") final String key, @JsonProperty("title") final String title,
             @JsonProperty("salutation") final String salutation, @JsonProperty("firstName") final String firstName,
@@ -113,6 +116,9 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
         this.custom = custom;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerAddressImpl() {
     }
 

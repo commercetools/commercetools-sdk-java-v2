@@ -34,7 +34,7 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
     private com.commercetools.history.models.common.ProductVariantChannelAvailabilityMap channels;
 
     /**
-     *
+     * set the value to the isOnStock
      * @param isOnStock value to be set
      * @return Builder
      */
@@ -45,7 +45,7 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
     }
 
     /**
-     *
+     * set the value to the restockableInDays
      * @param restockableInDays value to be set
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
     }
 
     /**
-     *
+     * set the value to the availableQuantity
      * @param availableQuantity value to be set
      * @return Builder
      */
@@ -67,7 +67,7 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
     }
 
     /**
-     *
+     * set the value to the channels using the builder function
      * @param builder function to build the channels value
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
     }
 
     /**
-     *
+     * set the value to the channels
      * @param channels value to be set
      * @return Builder
      */
@@ -92,17 +92,37 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
         return this;
     }
 
+    /**
+     * value of isOnStock}
+     * @return isOnStock
+     */
+
     public Boolean getIsOnStock() {
         return this.isOnStock;
     }
+
+    /**
+     * value of restockableInDays}
+     * @return restockableInDays
+     */
 
     public Integer getRestockableInDays() {
         return this.restockableInDays;
     }
 
+    /**
+     * value of availableQuantity}
+     * @return availableQuantity
+     */
+
     public Integer getAvailableQuantity() {
         return this.availableQuantity;
     }
+
+    /**
+     * value of channels}
+     * @return channels
+     */
 
     public com.commercetools.history.models.common.ProductVariantChannelAvailabilityMap getChannels() {
         return this.channels;
@@ -128,10 +148,19 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
         return new ProductVariantAvailabilityImpl(isOnStock, restockableInDays, availableQuantity, channels);
     }
 
+    /**
+     * factory method for an instance of ProductVariantAvailabilityBuilder
+     * @return builder
+     */
     public static ProductVariantAvailabilityBuilder of() {
         return new ProductVariantAvailabilityBuilder();
     }
 
+    /**
+     * create builder for ProductVariantAvailability instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductVariantAvailabilityBuilder of(final ProductVariantAvailability template) {
         ProductVariantAvailabilityBuilder builder = new ProductVariantAvailabilityBuilder();
         builder.isOnStock = template.getIsOnStock();

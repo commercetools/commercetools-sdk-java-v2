@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderSetParcelItemsActionImpl.class)
 public interface StagedOrderSetParcelItemsAction extends StagedOrderUpdateAction {
 
+    /**
+     * discriminator value for StagedOrderSetParcelItemsAction
+     */
     String SET_PARCEL_ITEMS = "setParcelItems";
 
     /**
@@ -52,17 +55,41 @@ public interface StagedOrderSetParcelItemsAction extends StagedOrderUpdateAction
     @JsonProperty("items")
     public List<DeliveryItem> getItems();
 
+    /**
+     * set parcelId
+     * @param parcelId value to be set
+     */
+
     public void setParcelId(final String parcelId);
+
+    /**
+     * set items
+     * @param items values to be set
+     */
 
     @JsonIgnore
     public void setItems(final DeliveryItem... items);
 
+    /**
+     * set items
+     * @param items values to be set
+     */
+
     public void setItems(final List<DeliveryItem> items);
 
+    /**
+     * factory method
+     * @return instance of StagedOrderSetParcelItemsAction
+     */
     public static StagedOrderSetParcelItemsAction of() {
         return new StagedOrderSetParcelItemsActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedOrderSetParcelItemsAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedOrderSetParcelItemsAction of(final StagedOrderSetParcelItemsAction template) {
         StagedOrderSetParcelItemsActionImpl instance = new StagedOrderSetParcelItemsActionImpl();
         instance.setParcelId(template.getParcelId());
@@ -70,18 +97,37 @@ public interface StagedOrderSetParcelItemsAction extends StagedOrderUpdateAction
         return instance;
     }
 
+    /**
+     * builder factory method for StagedOrderSetParcelItemsAction
+     * @return builder
+     */
     public static StagedOrderSetParcelItemsActionBuilder builder() {
         return StagedOrderSetParcelItemsActionBuilder.of();
     }
 
+    /**
+     * create builder for StagedOrderSetParcelItemsAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetParcelItemsActionBuilder builder(final StagedOrderSetParcelItemsAction template) {
         return StagedOrderSetParcelItemsActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedOrderSetParcelItemsAction(Function<StagedOrderSetParcelItemsAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetParcelItemsAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetParcelItemsAction>() {
             @Override

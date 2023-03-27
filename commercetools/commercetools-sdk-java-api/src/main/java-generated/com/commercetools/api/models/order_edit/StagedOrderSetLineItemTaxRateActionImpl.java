@@ -28,6 +28,9 @@ public class StagedOrderSetLineItemTaxRateActionImpl implements StagedOrderSetLi
 
     private String shippingKey;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderSetLineItemTaxRateActionImpl(@JsonProperty("lineItemId") final String lineItemId,
             @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate,
@@ -38,6 +41,9 @@ public class StagedOrderSetLineItemTaxRateActionImpl implements StagedOrderSetLi
         this.action = SET_LINE_ITEM_TAX_RATE;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderSetLineItemTaxRateActionImpl() {
         this.action = SET_LINE_ITEM_TAX_RATE;
     }

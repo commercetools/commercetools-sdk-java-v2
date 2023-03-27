@@ -24,6 +24,9 @@ public class UpdateImpl implements Update, ModelBase {
 
     private java.util.List<com.commercetools.api.models.common.UpdateAction> actions;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     UpdateImpl(@JsonProperty("version") final Long version,
             @JsonProperty("actions") final java.util.List<com.commercetools.api.models.common.UpdateAction> actions) {
@@ -31,6 +34,9 @@ public class UpdateImpl implements Update, ModelBase {
         this.actions = actions;
     }
 
+    /**
+     * create empty instance
+     */
     public UpdateImpl() {
     }
 

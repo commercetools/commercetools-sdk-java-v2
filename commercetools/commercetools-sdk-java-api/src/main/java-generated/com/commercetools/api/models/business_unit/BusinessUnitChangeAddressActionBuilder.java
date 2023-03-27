@@ -78,15 +78,30 @@ public class BusinessUnitChangeAddressActionBuilder implements Builder<BusinessU
         return this;
     }
 
+    /**
+     *  <p>ID of the address to change. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
+     * @return addressId
+     */
+
     @Nullable
     public String getAddressId() {
         return this.addressId;
     }
 
+    /**
+     *  <p>Key of the address to change. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
+     * @return addressKey
+     */
+
     @Nullable
     public String getAddressKey() {
         return this.addressKey;
     }
+
+    /**
+     *  <p>New address to set.</p>
+     * @return address
+     */
 
     public com.commercetools.api.models.common.BaseAddress getAddress() {
         return this.address;
@@ -109,10 +124,19 @@ public class BusinessUnitChangeAddressActionBuilder implements Builder<BusinessU
         return new BusinessUnitChangeAddressActionImpl(addressId, addressKey, address);
     }
 
+    /**
+     * factory method for an instance of BusinessUnitChangeAddressActionBuilder
+     * @return builder
+     */
     public static BusinessUnitChangeAddressActionBuilder of() {
         return new BusinessUnitChangeAddressActionBuilder();
     }
 
+    /**
+     * create builder for BusinessUnitChangeAddressAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitChangeAddressActionBuilder of(final BusinessUnitChangeAddressAction template) {
         BusinessUnitChangeAddressActionBuilder builder = new BusinessUnitChangeAddressActionBuilder();
         builder.addressId = template.getAddressId();

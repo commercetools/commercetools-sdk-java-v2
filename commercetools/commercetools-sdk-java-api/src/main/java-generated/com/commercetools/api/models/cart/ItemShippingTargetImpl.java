@@ -27,6 +27,9 @@ public class ItemShippingTargetImpl implements ItemShippingTarget, ModelBase {
 
     private String shippingMethodKey;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ItemShippingTargetImpl(@JsonProperty("addressKey") final String addressKey,
             @JsonProperty("quantity") final Long quantity,
@@ -36,6 +39,9 @@ public class ItemShippingTargetImpl implements ItemShippingTarget, ModelBase {
         this.shippingMethodKey = shippingMethodKey;
     }
 
+    /**
+     * create empty instance
+     */
     public ItemShippingTargetImpl() {
     }
 

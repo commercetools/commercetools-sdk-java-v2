@@ -24,7 +24,7 @@ public class AccessDeniedErrorBuilder implements Builder<AccessDeniedError> {
     private String message;
 
     /**
-     *
+     * set the value to the message
      * @param message value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class AccessDeniedErrorBuilder implements Builder<AccessDeniedError> {
         this.message = message;
         return this;
     }
+
+    /**
+     * value of message}
+     * @return message
+     */
 
     public String getMessage() {
         return this.message;
@@ -55,10 +60,19 @@ public class AccessDeniedErrorBuilder implements Builder<AccessDeniedError> {
         return new AccessDeniedErrorImpl(message);
     }
 
+    /**
+     * factory method for an instance of AccessDeniedErrorBuilder
+     * @return builder
+     */
     public static AccessDeniedErrorBuilder of() {
         return new AccessDeniedErrorBuilder();
     }
 
+    /**
+     * create builder for AccessDeniedError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AccessDeniedErrorBuilder of(final AccessDeniedError template) {
         AccessDeniedErrorBuilder builder = new AccessDeniedErrorBuilder();
         builder.message = template.getMessage();

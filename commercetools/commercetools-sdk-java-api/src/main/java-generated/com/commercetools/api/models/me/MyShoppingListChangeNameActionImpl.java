@@ -24,6 +24,9 @@ public class MyShoppingListChangeNameActionImpl implements MyShoppingListChangeN
 
     private com.commercetools.api.models.common.LocalizedString name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyShoppingListChangeNameActionImpl(
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name) {
@@ -31,6 +34,9 @@ public class MyShoppingListChangeNameActionImpl implements MyShoppingListChangeN
         this.action = CHANGE_NAME;
     }
 
+    /**
+     * create empty instance
+     */
     public MyShoppingListChangeNameActionImpl() {
         this.action = CHANGE_NAME;
     }

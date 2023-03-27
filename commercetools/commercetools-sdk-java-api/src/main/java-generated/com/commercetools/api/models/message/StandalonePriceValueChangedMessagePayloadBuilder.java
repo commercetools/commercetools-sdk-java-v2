@@ -92,13 +92,28 @@ public class StandalonePriceValueChangedMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>The new value of the updated StandalonePrice.</p>
+     * @return value
+     */
+
     public com.commercetools.api.models.common.Money getValue() {
         return this.value;
     }
 
+    /**
+     *  <p>Whether the new value was applied to the current or the staged representation of the StandalonePrice. Staged changes are stored on the StagedStandalonePrice.</p>
+     * @return staged
+     */
+
     public Boolean getStaged() {
         return this.staged;
     }
+
+    /**
+     *  <p>The old value of the updated StandalonePrice. Present on Messages created after 3 February 2023. Optional for backwards compatibility.</p>
+     * @return oldValue
+     */
 
     @Nullable
     public com.commercetools.api.models.common.Money getOldValue() {
@@ -123,10 +138,19 @@ public class StandalonePriceValueChangedMessagePayloadBuilder
         return new StandalonePriceValueChangedMessagePayloadImpl(value, staged, oldValue);
     }
 
+    /**
+     * factory method for an instance of StandalonePriceValueChangedMessagePayloadBuilder
+     * @return builder
+     */
     public static StandalonePriceValueChangedMessagePayloadBuilder of() {
         return new StandalonePriceValueChangedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for StandalonePriceValueChangedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StandalonePriceValueChangedMessagePayloadBuilder of(
             final StandalonePriceValueChangedMessagePayload template) {
         StandalonePriceValueChangedMessagePayloadBuilder builder = new StandalonePriceValueChangedMessagePayloadBuilder();

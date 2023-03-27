@@ -42,22 +42,44 @@ public interface ProductDiscountValue {
     @JsonProperty("type")
     public String getType();
 
+    /**
+     * builder for absolute subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.product_discount.ProductDiscountValueAbsoluteBuilder absoluteBuilder() {
         return com.commercetools.api.models.product_discount.ProductDiscountValueAbsoluteBuilder.of();
     }
 
+    /**
+     * builder for external subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.product_discount.ProductDiscountValueExternalBuilder externalBuilder() {
         return com.commercetools.api.models.product_discount.ProductDiscountValueExternalBuilder.of();
     }
 
+    /**
+     * builder for relative subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.product_discount.ProductDiscountValueRelativeBuilder relativeBuilder() {
         return com.commercetools.api.models.product_discount.ProductDiscountValueRelativeBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductDiscountValue(Function<ProductDiscountValue, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscountValue> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscountValue>() {
             @Override

@@ -28,6 +28,9 @@ public class SetAnonymousIdChangeImpl implements SetAnonymousIdChange, ModelBase
 
     private String nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetAnonymousIdChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final String previousValue,
@@ -38,6 +41,9 @@ public class SetAnonymousIdChangeImpl implements SetAnonymousIdChange, ModelBase
         this.type = SET_ANONYMOUS_ID_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetAnonymousIdChangeImpl() {
         this.type = SET_ANONYMOUS_ID_CHANGE;
     }

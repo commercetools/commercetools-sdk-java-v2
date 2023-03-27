@@ -27,6 +27,9 @@ public class InventoryEntryReferenceImpl implements InventoryEntryReference, Mod
 
     private com.commercetools.api.models.inventory.InventoryEntry obj;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     InventoryEntryReferenceImpl(@JsonProperty("id") final String id,
             @JsonProperty("obj") final com.commercetools.api.models.inventory.InventoryEntry obj) {
@@ -35,6 +38,9 @@ public class InventoryEntryReferenceImpl implements InventoryEntryReference, Mod
         this.typeId = ReferenceTypeId.findEnum("inventory-entry");
     }
 
+    /**
+     * create empty instance
+     */
     public InventoryEntryReferenceImpl() {
         this.typeId = ReferenceTypeId.findEnum("inventory-entry");
     }

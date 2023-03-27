@@ -50,9 +50,19 @@ public class StagedQuoteStateChangedMessagePayloadBuilder implements Builder<Sta
         return this;
     }
 
+    /**
+     *  <p>State of the Staged Quote after the Change Staged Quote State update action.</p>
+     * @return stagedQuoteState
+     */
+
     public com.commercetools.api.models.staged_quote.StagedQuoteState getStagedQuoteState() {
         return this.stagedQuoteState;
     }
+
+    /**
+     *  <p>State of the Staged Quote before the Change Staged Quote State update action.</p>
+     * @return oldStagedQuoteState
+     */
 
     public com.commercetools.api.models.staged_quote.StagedQuoteState getOldStagedQuoteState() {
         return this.oldStagedQuoteState;
@@ -78,10 +88,19 @@ public class StagedQuoteStateChangedMessagePayloadBuilder implements Builder<Sta
         return new StagedQuoteStateChangedMessagePayloadImpl(stagedQuoteState, oldStagedQuoteState);
     }
 
+    /**
+     * factory method for an instance of StagedQuoteStateChangedMessagePayloadBuilder
+     * @return builder
+     */
     public static StagedQuoteStateChangedMessagePayloadBuilder of() {
         return new StagedQuoteStateChangedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for StagedQuoteStateChangedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedQuoteStateChangedMessagePayloadBuilder of(
             final StagedQuoteStateChangedMessagePayload template) {
         StagedQuoteStateChangedMessagePayloadBuilder builder = new StagedQuoteStateChangedMessagePayloadBuilder();

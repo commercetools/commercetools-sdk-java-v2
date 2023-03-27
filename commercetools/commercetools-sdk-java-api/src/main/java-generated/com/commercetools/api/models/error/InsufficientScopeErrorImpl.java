@@ -26,6 +26,9 @@ public class InsufficientScopeErrorImpl implements InsufficientScopeError, Model
 
     private Map<String, java.lang.Object> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     InsufficientScopeErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values) {
@@ -34,6 +37,9 @@ public class InsufficientScopeErrorImpl implements InsufficientScopeError, Model
         this.code = INSUFFICIENT_SCOPE;
     }
 
+    /**
+     * create empty instance
+     */
     public InsufficientScopeErrorImpl() {
         this.code = INSUFFICIENT_SCOPE;
     }

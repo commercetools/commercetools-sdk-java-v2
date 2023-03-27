@@ -50,6 +50,11 @@ public class StoreRemoveDistributionChannelActionBuilder implements Builder<Stor
         return this;
     }
 
+    /**
+     *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     * @return distributionChannel
+     */
+
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
         return this.distributionChannel;
     }
@@ -72,10 +77,19 @@ public class StoreRemoveDistributionChannelActionBuilder implements Builder<Stor
         return new StoreRemoveDistributionChannelActionImpl(distributionChannel);
     }
 
+    /**
+     * factory method for an instance of StoreRemoveDistributionChannelActionBuilder
+     * @return builder
+     */
     public static StoreRemoveDistributionChannelActionBuilder of() {
         return new StoreRemoveDistributionChannelActionBuilder();
     }
 
+    /**
+     * create builder for StoreRemoveDistributionChannelAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreRemoveDistributionChannelActionBuilder of(final StoreRemoveDistributionChannelAction template) {
         StoreRemoveDistributionChannelActionBuilder builder = new StoreRemoveDistributionChannelActionBuilder();
         builder.distributionChannel = template.getDistributionChannel();

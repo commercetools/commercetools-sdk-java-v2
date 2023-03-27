@@ -48,9 +48,19 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
         return this;
     }
 
+    /**
+     *  <p>The key of the address in the cart's <code>itemShippingAddresses</code></p>
+     * @return addressKey
+     */
+
     public String getAddressKey() {
         return this.addressKey;
     }
+
+    /**
+     *  <p>The quantity of items that should go to the address with the specified <code>addressKey</code>. Only positive values are allowed. Using <code>0</code> as quantity is also possible in a draft object, but the element will not be present in the resulting ItemShippingDetails.</p>
+     * @return quantity
+     */
 
     public Integer getQuantity() {
         return this.quantity;
@@ -74,10 +84,19 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
         return new ItemShippingTargetImpl(addressKey, quantity);
     }
 
+    /**
+     * factory method for an instance of ItemShippingTargetBuilder
+     * @return builder
+     */
     public static ItemShippingTargetBuilder of() {
         return new ItemShippingTargetBuilder();
     }
 
+    /**
+     * create builder for ItemShippingTarget instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ItemShippingTargetBuilder of(final ItemShippingTarget template) {
         ItemShippingTargetBuilder builder = new ItemShippingTargetBuilder();
         builder.addressKey = template.getAddressKey();

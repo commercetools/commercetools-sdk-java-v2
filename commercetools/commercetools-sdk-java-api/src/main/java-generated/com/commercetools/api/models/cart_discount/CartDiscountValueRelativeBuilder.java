@@ -34,6 +34,11 @@ public class CartDiscountValueRelativeBuilder implements Builder<CartDiscountVal
         return this;
     }
 
+    /**
+     *  <p>Fraction (per ten thousand) the price is reduced by. For example, <code>1000</code> will result in a 10% price reduction.</p>
+     * @return permyriad
+     */
+
     public Long getPermyriad() {
         return this.permyriad;
     }
@@ -55,10 +60,19 @@ public class CartDiscountValueRelativeBuilder implements Builder<CartDiscountVal
         return new CartDiscountValueRelativeImpl(permyriad);
     }
 
+    /**
+     * factory method for an instance of CartDiscountValueRelativeBuilder
+     * @return builder
+     */
     public static CartDiscountValueRelativeBuilder of() {
         return new CartDiscountValueRelativeBuilder();
     }
 
+    /**
+     * create builder for CartDiscountValueRelative instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartDiscountValueRelativeBuilder of(final CartDiscountValueRelative template) {
         CartDiscountValueRelativeBuilder builder = new CartDiscountValueRelativeBuilder();
         builder.permyriad = template.getPermyriad();

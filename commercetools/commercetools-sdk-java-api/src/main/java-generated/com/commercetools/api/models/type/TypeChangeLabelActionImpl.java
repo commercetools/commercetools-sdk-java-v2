@@ -26,6 +26,9 @@ public class TypeChangeLabelActionImpl implements TypeChangeLabelAction, ModelBa
 
     private com.commercetools.api.models.common.LocalizedString label;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TypeChangeLabelActionImpl(@JsonProperty("fieldName") final String fieldName,
             @JsonProperty("label") final com.commercetools.api.models.common.LocalizedString label) {
@@ -34,6 +37,9 @@ public class TypeChangeLabelActionImpl implements TypeChangeLabelAction, ModelBa
         this.action = CHANGE_LABEL;
     }
 
+    /**
+     * create empty instance
+     */
     public TypeChangeLabelActionImpl() {
         this.action = CHANGE_LABEL;
     }

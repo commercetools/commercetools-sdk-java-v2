@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderSetShippingAddressCustomTypeActionImpl.class)
 public interface StagedOrderSetShippingAddressCustomTypeAction extends StagedOrderUpdateAction {
 
+    /**
+     * discriminator value for StagedOrderSetShippingAddressCustomTypeAction
+     */
     String SET_SHIPPING_ADDRESS_CUSTOM_TYPE = "setShippingAddressCustomType";
 
     /**
@@ -49,14 +52,33 @@ public interface StagedOrderSetShippingAddressCustomTypeAction extends StagedOrd
     @JsonProperty("fields")
     public FieldContainer getFields();
 
+    /**
+     *  <p>Defines the Type that extends the <code>shippingAddress</code> with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>shippingAddress</code>.</p>
+     * @param type value to be set
+     */
+
     public void setType(final TypeResourceIdentifier type);
+
+    /**
+     *  <p>Sets the Custom Fields fields for the <code>shippingAddress</code>.</p>
+     * @param fields value to be set
+     */
 
     public void setFields(final FieldContainer fields);
 
+    /**
+     * factory method
+     * @return instance of StagedOrderSetShippingAddressCustomTypeAction
+     */
     public static StagedOrderSetShippingAddressCustomTypeAction of() {
         return new StagedOrderSetShippingAddressCustomTypeActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedOrderSetShippingAddressCustomTypeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedOrderSetShippingAddressCustomTypeAction of(
             final StagedOrderSetShippingAddressCustomTypeAction template) {
         StagedOrderSetShippingAddressCustomTypeActionImpl instance = new StagedOrderSetShippingAddressCustomTypeActionImpl();
@@ -65,20 +87,39 @@ public interface StagedOrderSetShippingAddressCustomTypeAction extends StagedOrd
         return instance;
     }
 
+    /**
+     * builder factory method for StagedOrderSetShippingAddressCustomTypeAction
+     * @return builder
+     */
     public static StagedOrderSetShippingAddressCustomTypeActionBuilder builder() {
         return StagedOrderSetShippingAddressCustomTypeActionBuilder.of();
     }
 
+    /**
+     * create builder for StagedOrderSetShippingAddressCustomTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetShippingAddressCustomTypeActionBuilder builder(
             final StagedOrderSetShippingAddressCustomTypeAction template) {
         return StagedOrderSetShippingAddressCustomTypeActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedOrderSetShippingAddressCustomTypeAction(
             Function<StagedOrderSetShippingAddressCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetShippingAddressCustomTypeAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetShippingAddressCustomTypeAction>() {
             @Override

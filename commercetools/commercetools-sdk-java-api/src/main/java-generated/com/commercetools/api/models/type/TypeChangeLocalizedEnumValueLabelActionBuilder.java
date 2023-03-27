@@ -63,9 +63,19 @@ public class TypeChangeLocalizedEnumValueLabelActionBuilder
         return this;
     }
 
+    /**
+     *  <p><code>name</code> of the FieldDefinition to update.</p>
+     * @return fieldName
+     */
+
     public String getFieldName() {
         return this.fieldName;
     }
+
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     * @return value
+     */
 
     public com.commercetools.api.models.type.CustomFieldLocalizedEnumValue getValue() {
         return this.value;
@@ -89,10 +99,19 @@ public class TypeChangeLocalizedEnumValueLabelActionBuilder
         return new TypeChangeLocalizedEnumValueLabelActionImpl(fieldName, value);
     }
 
+    /**
+     * factory method for an instance of TypeChangeLocalizedEnumValueLabelActionBuilder
+     * @return builder
+     */
     public static TypeChangeLocalizedEnumValueLabelActionBuilder of() {
         return new TypeChangeLocalizedEnumValueLabelActionBuilder();
     }
 
+    /**
+     * create builder for TypeChangeLocalizedEnumValueLabelAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TypeChangeLocalizedEnumValueLabelActionBuilder of(
             final TypeChangeLocalizedEnumValueLabelAction template) {
         TypeChangeLocalizedEnumValueLabelActionBuilder builder = new TypeChangeLocalizedEnumValueLabelActionBuilder();

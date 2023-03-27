@@ -24,12 +24,18 @@ public class ProductTypeSetKeyActionImpl implements ProductTypeSetKeyAction, Mod
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductTypeSetKeyActionImpl(@JsonProperty("key") final String key) {
         this.key = key;
         this.action = SET_KEY;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductTypeSetKeyActionImpl() {
         this.action = SET_KEY;
     }

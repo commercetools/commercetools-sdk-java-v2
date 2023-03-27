@@ -40,7 +40,7 @@ public class DateAttributeBuilder implements Builder<DateAttribute> {
     }
 
     /**
-     *
+     * set the value to the value
      * @param value value to be set
      * @return Builder
      */
@@ -50,10 +50,20 @@ public class DateAttributeBuilder implements Builder<DateAttribute> {
         return this;
     }
 
+    /**
+     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     * @return name
+     */
+
     @Nullable
     public String getName() {
         return this.name;
     }
+
+    /**
+     * value of value}
+     * @return value
+     */
 
     public java.time.LocalDate getValue() {
         return this.value;
@@ -76,10 +86,19 @@ public class DateAttributeBuilder implements Builder<DateAttribute> {
         return new DateAttributeImpl(name, value);
     }
 
+    /**
+     * factory method for an instance of DateAttributeBuilder
+     * @return builder
+     */
     public static DateAttributeBuilder of() {
         return new DateAttributeBuilder();
     }
 
+    /**
+     * create builder for DateAttribute instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DateAttributeBuilder of(final DateAttribute template) {
         DateAttributeBuilder builder = new DateAttributeBuilder();
         builder.name = template.getName();

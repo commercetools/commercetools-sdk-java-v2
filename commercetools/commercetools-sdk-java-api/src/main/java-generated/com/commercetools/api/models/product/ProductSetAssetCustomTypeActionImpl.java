@@ -36,6 +36,9 @@ public class ProductSetAssetCustomTypeActionImpl implements ProductSetAssetCusto
 
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSetAssetCustomTypeActionImpl(@JsonProperty("variantId") final Long variantId,
             @JsonProperty("sku") final String sku, @JsonProperty("staged") final Boolean staged,
@@ -52,6 +55,9 @@ public class ProductSetAssetCustomTypeActionImpl implements ProductSetAssetCusto
         this.action = SET_ASSET_CUSTOM_TYPE;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSetAssetCustomTypeActionImpl() {
         this.action = SET_ASSET_CUSTOM_TYPE;
     }

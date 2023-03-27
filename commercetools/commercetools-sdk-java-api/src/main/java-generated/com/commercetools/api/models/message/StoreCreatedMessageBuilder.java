@@ -593,75 +593,160 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
+     * @return version
+     */
 
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *  <p>Date and time (UTC) the Message was generated.</p>
+     * @return createdAt
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+     *  <p>Value of <code>createdAt</code>.</p>
+     * @return lastModifiedAt
+     */
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
+
+    /**
+     *  <p>Value of <code>createdBy</code>.</p>
+     * @return lastModifiedBy
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
+     */
+
     @Nullable
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
 
+    /**
+     *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
+     * @return sequenceNumber
+     */
+
     public Long getSequenceNumber() {
         return this.sequenceNumber;
     }
+
+    /**
+     *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @return resource
+     */
 
     public com.commercetools.api.models.common.Reference getResource() {
         return this.resource;
     }
 
+    /**
+     *  <p>Version of the resource on which the change or action was performed.</p>
+     * @return resourceVersion
+     */
+
     public Long getResourceVersion() {
         return this.resourceVersion;
     }
+
+    /**
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @return resourceUserProvidedIdentifiers
+     */
 
     @Nullable
     public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers() {
         return this.resourceUserProvidedIdentifiers;
     }
 
+    /**
+     *  <p>The <code>name</code> of the Store that was created.</p>
+     * @return name
+     */
+
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
+
+    /**
+     *  <p>Languages of the Store that was created. Languages are represented as IETF language tags.</p>
+     * @return languages
+     */
 
     @Nullable
     public java.util.List<String> getLanguages() {
         return this.languages;
     }
 
+    /**
+     *  <p>Countries of the Store that was created.</p>
+     * @return countries
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.store_country.StoreCountry> getCountries() {
         return this.countries;
     }
 
+    /**
+     *  <p>Distribution Channels of the Store that was created.</p>
+     * @return distributionChannels
+     */
+
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getDistributionChannels() {
         return this.distributionChannels;
     }
+
+    /**
+     *  <p>Supply Channels of the Store that was created.</p>
+     * @return supplyChannels
+     */
 
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getSupplyChannels() {
         return this.supplyChannels;
     }
 
+    /**
+     *  <p>ProductSelectionSettings of the Store that was created.</p>
+     * @return productSelections
+     */
+
     public java.util.List<com.commercetools.api.models.store.ProductSelectionSetting> getProductSelections() {
         return this.productSelections;
     }
+
+    /**
+     *  <p>Custom Fields on the Store that was created.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -698,10 +783,19 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
             distributionChannels, supplyChannels, productSelections, custom);
     }
 
+    /**
+     * factory method for an instance of StoreCreatedMessageBuilder
+     * @return builder
+     */
     public static StoreCreatedMessageBuilder of() {
         return new StoreCreatedMessageBuilder();
     }
 
+    /**
+     * create builder for StoreCreatedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreCreatedMessageBuilder of(final StoreCreatedMessage template) {
         StoreCreatedMessageBuilder builder = new StoreCreatedMessageBuilder();
         builder.id = template.getId();

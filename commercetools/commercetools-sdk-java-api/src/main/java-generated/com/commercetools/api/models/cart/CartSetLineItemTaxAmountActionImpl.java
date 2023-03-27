@@ -28,6 +28,9 @@ public class CartSetLineItemTaxAmountActionImpl implements CartSetLineItemTaxAmo
 
     private String shippingKey;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartSetLineItemTaxAmountActionImpl(@JsonProperty("lineItemId") final String lineItemId,
             @JsonProperty("externalTaxAmount") final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount,
@@ -38,6 +41,9 @@ public class CartSetLineItemTaxAmountActionImpl implements CartSetLineItemTaxAmo
         this.action = SET_LINE_ITEM_TAX_AMOUNT;
     }
 
+    /**
+     * create empty instance
+     */
     public CartSetLineItemTaxAmountActionImpl() {
         this.action = SET_LINE_ITEM_TAX_AMOUNT;
     }

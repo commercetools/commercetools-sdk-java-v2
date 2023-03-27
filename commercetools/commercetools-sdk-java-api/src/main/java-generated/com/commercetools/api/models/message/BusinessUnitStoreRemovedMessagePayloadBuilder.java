@@ -48,6 +48,11 @@ public class BusinessUnitStoreRemovedMessagePayloadBuilder implements Builder<Bu
         return this;
     }
 
+    /**
+     *  <p>The Store that was removed from the Business Unit.</p>
+     * @return store
+     */
+
     public com.commercetools.api.models.store.StoreKeyReference getStore() {
         return this.store;
     }
@@ -69,10 +74,19 @@ public class BusinessUnitStoreRemovedMessagePayloadBuilder implements Builder<Bu
         return new BusinessUnitStoreRemovedMessagePayloadImpl(store);
     }
 
+    /**
+     * factory method for an instance of BusinessUnitStoreRemovedMessagePayloadBuilder
+     * @return builder
+     */
     public static BusinessUnitStoreRemovedMessagePayloadBuilder of() {
         return new BusinessUnitStoreRemovedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for BusinessUnitStoreRemovedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitStoreRemovedMessagePayloadBuilder of(
             final BusinessUnitStoreRemovedMessagePayload template) {
         BusinessUnitStoreRemovedMessagePayloadBuilder builder = new BusinessUnitStoreRemovedMessagePayloadBuilder();

@@ -24,12 +24,18 @@ public class CustomerFirstNameSetMessagePayloadImpl implements CustomerFirstName
 
     private String firstName;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerFirstNameSetMessagePayloadImpl(@JsonProperty("firstName") final String firstName) {
         this.firstName = firstName;
         this.type = CUSTOMER_FIRST_NAME_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerFirstNameSetMessagePayloadImpl() {
         this.type = CUSTOMER_FIRST_NAME_SET;
     }

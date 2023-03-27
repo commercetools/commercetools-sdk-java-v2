@@ -24,12 +24,18 @@ public class CartDiscountSetValidUntilActionImpl implements CartDiscountSetValid
 
     private java.time.ZonedDateTime validUntil;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartDiscountSetValidUntilActionImpl(@JsonProperty("validUntil") final java.time.ZonedDateTime validUntil) {
         this.validUntil = validUntil;
         this.action = SET_VALID_UNTIL;
     }
 
+    /**
+     * create empty instance
+     */
     public CartDiscountSetValidUntilActionImpl() {
         this.action = SET_VALID_UNTIL;
     }

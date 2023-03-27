@@ -24,12 +24,18 @@ public class CategorySetKeyActionImpl implements CategorySetKeyAction, ModelBase
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CategorySetKeyActionImpl(@JsonProperty("key") final String key) {
         this.key = key;
         this.action = SET_KEY;
     }
 
+    /**
+     * create empty instance
+     */
     public CategorySetKeyActionImpl() {
         this.action = SET_KEY;
     }

@@ -64,9 +64,19 @@ public class ShippingMethodReferenceBuilder implements Builder<ShippingMethodRef
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the referenced ShippingMethod.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Contains the representation of the expanded ShippingMethod. Only present in responses to requests with Reference Expansion for ShippingMethods.</p>
+     * @return obj
+     */
 
     @Nullable
     public com.commercetools.api.models.shipping_method.ShippingMethod getObj() {
@@ -90,10 +100,19 @@ public class ShippingMethodReferenceBuilder implements Builder<ShippingMethodRef
         return new ShippingMethodReferenceImpl(id, obj);
     }
 
+    /**
+     * factory method for an instance of ShippingMethodReferenceBuilder
+     * @return builder
+     */
     public static ShippingMethodReferenceBuilder of() {
         return new ShippingMethodReferenceBuilder();
     }
 
+    /**
+     * create builder for ShippingMethodReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShippingMethodReferenceBuilder of(final ShippingMethodReference template) {
         ShippingMethodReferenceBuilder builder = new ShippingMethodReferenceBuilder();
         builder.id = template.getId();

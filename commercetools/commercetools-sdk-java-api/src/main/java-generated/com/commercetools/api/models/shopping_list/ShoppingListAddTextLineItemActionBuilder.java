@@ -132,24 +132,49 @@ public class ShoppingListAddTextLineItemActionBuilder implements Builder<Shoppin
         return this;
     }
 
+    /**
+     *  <p>Name of the TextLineItem.</p>
+     * @return name
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
+
+    /**
+     *  <p>Description of the TextLineItem.</p>
+     * @return description
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
+    /**
+     *  <p>Number of entries in the TextLineItem.</p>
+     * @return quantity
+     */
+
     @Nullable
     public Long getQuantity() {
         return this.quantity;
     }
 
+    /**
+     *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     * @return addedAt
+     */
+
     @Nullable
     public java.time.ZonedDateTime getAddedAt() {
         return this.addedAt;
     }
+
+    /**
+     *  <p>Custom Fields defined for the TextLineItem.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -173,10 +198,19 @@ public class ShoppingListAddTextLineItemActionBuilder implements Builder<Shoppin
         return new ShoppingListAddTextLineItemActionImpl(name, description, quantity, addedAt, custom);
     }
 
+    /**
+     * factory method for an instance of ShoppingListAddTextLineItemActionBuilder
+     * @return builder
+     */
     public static ShoppingListAddTextLineItemActionBuilder of() {
         return new ShoppingListAddTextLineItemActionBuilder();
     }
 
+    /**
+     * create builder for ShoppingListAddTextLineItemAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShoppingListAddTextLineItemActionBuilder of(final ShoppingListAddTextLineItemAction template) {
         ShoppingListAddTextLineItemActionBuilder builder = new ShoppingListAddTextLineItemActionBuilder();
         builder.name = template.getName();

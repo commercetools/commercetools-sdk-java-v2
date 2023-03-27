@@ -25,7 +25,7 @@ public class LocalizedStringSetFieldBuilder implements Builder<LocalizedStringSe
     private java.util.List<com.commercetools.importapi.models.common.LocalizedString> value;
 
     /**
-     *
+     * set values to the value
      * @param value value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class LocalizedStringSetFieldBuilder implements Builder<LocalizedStringSe
     }
 
     /**
-     *
+     * set value to the value
      * @param value value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class LocalizedStringSetFieldBuilder implements Builder<LocalizedStringSe
     }
 
     /**
-     *
+     * add values to the value
      * @param value value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class LocalizedStringSetFieldBuilder implements Builder<LocalizedStringSe
     }
 
     /**
-     *
+     * add the value to the value using the builder function
      * @param builder function to build the value value
      * @return Builder
      */
@@ -79,7 +79,7 @@ public class LocalizedStringSetFieldBuilder implements Builder<LocalizedStringSe
     }
 
     /**
-     *
+     * set the value to the value using the builder function
      * @param builder function to build the value value
      * @return Builder
      */
@@ -90,6 +90,11 @@ public class LocalizedStringSetFieldBuilder implements Builder<LocalizedStringSe
         this.value.add(builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build());
         return this;
     }
+
+    /**
+     * value of value}
+     * @return value
+     */
 
     public java.util.List<com.commercetools.importapi.models.common.LocalizedString> getValue() {
         return this.value;
@@ -112,10 +117,19 @@ public class LocalizedStringSetFieldBuilder implements Builder<LocalizedStringSe
         return new LocalizedStringSetFieldImpl(value);
     }
 
+    /**
+     * factory method for an instance of LocalizedStringSetFieldBuilder
+     * @return builder
+     */
     public static LocalizedStringSetFieldBuilder of() {
         return new LocalizedStringSetFieldBuilder();
     }
 
+    /**
+     * create builder for LocalizedStringSetField instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static LocalizedStringSetFieldBuilder of(final LocalizedStringSetField template) {
         LocalizedStringSetFieldBuilder builder = new LocalizedStringSetFieldBuilder();
         builder.value = template.getValue();

@@ -24,6 +24,9 @@ public class OrderPaymentAddedMessagePayloadImpl implements OrderPaymentAddedMes
 
     private com.commercetools.api.models.payment.PaymentReference payment;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderPaymentAddedMessagePayloadImpl(
             @JsonProperty("payment") final com.commercetools.api.models.payment.PaymentReference payment) {
@@ -31,6 +34,9 @@ public class OrderPaymentAddedMessagePayloadImpl implements OrderPaymentAddedMes
         this.type = ORDER_PAYMENT_ADDED;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderPaymentAddedMessagePayloadImpl() {
         this.type = ORDER_PAYMENT_ADDED;
     }

@@ -36,6 +36,11 @@ public class CustomerSetExternalIdActionBuilder implements Builder<CustomerSetEx
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @return externalId
+     */
+
     @Nullable
     public String getExternalId() {
         return this.externalId;
@@ -57,10 +62,19 @@ public class CustomerSetExternalIdActionBuilder implements Builder<CustomerSetEx
         return new CustomerSetExternalIdActionImpl(externalId);
     }
 
+    /**
+     * factory method for an instance of CustomerSetExternalIdActionBuilder
+     * @return builder
+     */
     public static CustomerSetExternalIdActionBuilder of() {
         return new CustomerSetExternalIdActionBuilder();
     }
 
+    /**
+     * create builder for CustomerSetExternalIdAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerSetExternalIdActionBuilder of(final CustomerSetExternalIdAction template) {
         CustomerSetExternalIdActionBuilder builder = new CustomerSetExternalIdActionBuilder();
         builder.externalId = template.getExternalId();

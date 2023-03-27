@@ -26,6 +26,9 @@ public class SearchFacetPathNotFoundErrorImpl implements SearchFacetPathNotFound
 
     private Map<String, java.lang.Object> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SearchFacetPathNotFoundErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values) {
@@ -34,6 +37,9 @@ public class SearchFacetPathNotFoundErrorImpl implements SearchFacetPathNotFound
         this.code = SEARCH_FACET_PATH_NOT_FOUND;
     }
 
+    /**
+     * create empty instance
+     */
     public SearchFacetPathNotFoundErrorImpl() {
         this.code = SEARCH_FACET_PATH_NOT_FOUND;
     }

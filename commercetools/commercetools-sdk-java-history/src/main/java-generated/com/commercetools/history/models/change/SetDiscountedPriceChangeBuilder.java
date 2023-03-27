@@ -51,7 +51,7 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
     }
 
     /**
-     *
+     * set the value to the catalogData
      * @param catalogData value to be set
      * @return Builder
      */
@@ -62,7 +62,7 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
     }
 
     /**
-     *
+     * set the value to the variant
      * @param variant value to be set
      * @return Builder
      */
@@ -73,7 +73,7 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
     }
 
     /**
-     *
+     * set the value to the priceId
      * @param priceId value to be set
      * @return Builder
      */
@@ -84,7 +84,7 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -96,7 +96,7 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -108,7 +108,7 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -120,7 +120,7 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -130,25 +130,55 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>setDiscountedPrice</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of catalogData}
+     * @return catalogData
+     */
 
     public String getCatalogData() {
         return this.catalogData;
     }
 
+    /**
+     * value of variant}
+     * @return variant
+     */
+
     public String getVariant() {
         return this.variant;
     }
+
+    /**
+     * value of priceId}
+     * @return priceId
+     */
 
     public String getPriceId() {
         return this.priceId;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public com.commercetools.history.models.common.Price getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public com.commercetools.history.models.common.Price getNextValue() {
         return this.nextValue;
@@ -176,10 +206,19 @@ public class SetDiscountedPriceChangeBuilder implements Builder<SetDiscountedPri
         return new SetDiscountedPriceChangeImpl(change, catalogData, variant, priceId, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of SetDiscountedPriceChangeBuilder
+     * @return builder
+     */
     public static SetDiscountedPriceChangeBuilder of() {
         return new SetDiscountedPriceChangeBuilder();
     }
 
+    /**
+     * create builder for SetDiscountedPriceChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetDiscountedPriceChangeBuilder of(final SetDiscountedPriceChange template) {
         SetDiscountedPriceChangeBuilder builder = new SetDiscountedPriceChangeBuilder();
         builder.change = template.getChange();

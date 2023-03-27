@@ -26,6 +26,9 @@ public class CartSetShippingAddressActionImpl implements CartSetShippingAddressA
 
     private com.commercetools.api.models.common.BaseAddress address;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartSetShippingAddressActionImpl(
             @JsonProperty("address") final com.commercetools.api.models.common.BaseAddress address) {
@@ -33,6 +36,9 @@ public class CartSetShippingAddressActionImpl implements CartSetShippingAddressA
         this.action = SET_SHIPPING_ADDRESS;
     }
 
+    /**
+     * create empty instance
+     */
     public CartSetShippingAddressActionImpl() {
         this.action = SET_SHIPPING_ADDRESS;
     }

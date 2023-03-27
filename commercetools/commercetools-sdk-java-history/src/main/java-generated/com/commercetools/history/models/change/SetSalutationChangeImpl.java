@@ -28,6 +28,9 @@ public class SetSalutationChangeImpl implements SetSalutationChange, ModelBase {
 
     private String nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetSalutationChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final String previousValue,
@@ -38,6 +41,9 @@ public class SetSalutationChangeImpl implements SetSalutationChange, ModelBase {
         this.type = SET_SALUTATION_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetSalutationChangeImpl() {
         this.type = SET_SALUTATION_CHANGE;
     }

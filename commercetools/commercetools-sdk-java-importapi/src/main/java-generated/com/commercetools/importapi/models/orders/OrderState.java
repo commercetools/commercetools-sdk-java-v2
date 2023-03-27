@@ -23,13 +23,28 @@ public interface OrderState {
 
     OrderState CANCELLED = OrderStateEnum.CANCELLED;
 
+    /**
+     * possible values of OrderState
+     */
     enum OrderStateEnum implements OrderState {
+        /**
+         * Open
+         */
         OPEN("Open"),
 
+        /**
+         * Confirmed
+         */
         CONFIRMED("Confirmed"),
 
+        /**
+         * Complete
+         */
         COMPLETE("Complete"),
 
+        /**
+         * Cancelled
+         */
         CANCELLED("Cancelled");
         private final String jsonName;
 
@@ -46,13 +61,30 @@ public interface OrderState {
         }
     }
 
+    /**
+     * the JSON value
+     * @return json value
+     */
     @JsonValue
     String getJsonName();
 
+    /**
+     * the enum value
+     * @return name
+     */
     String name();
 
+    /**
+     * convert value to string
+     * @return string representation
+     */
     String toString();
 
+    /**
+     * factory method for a enum value of OrderState
+     * if no enum has been found an anonymous instance will be created
+     * @return enum instance
+     */
     @JsonCreator
     public static OrderState findEnum(String value) {
         return findEnumViaJsonName(value).orElse(new OrderState() {
@@ -72,10 +104,18 @@ public interface OrderState {
         });
     }
 
+    /**
+     * method to find enum using the JSON value
+     * @return optional of enum instance
+     */
     public static Optional<OrderState> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
 
+    /**
+     * possible enum values
+     * @return array of possible enum values
+     */
     public static OrderState[] values() {
         return OrderStateEnum.values();
     }

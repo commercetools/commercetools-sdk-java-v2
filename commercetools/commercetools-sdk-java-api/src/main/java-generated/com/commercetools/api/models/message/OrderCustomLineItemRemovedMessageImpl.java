@@ -46,6 +46,9 @@ public class OrderCustomLineItemRemovedMessageImpl implements OrderCustomLineIte
 
     private com.commercetools.api.models.cart.CustomLineItem customLineItem;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderCustomLineItemRemovedMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -74,6 +77,9 @@ public class OrderCustomLineItemRemovedMessageImpl implements OrderCustomLineIte
         this.type = ORDER_CUSTOM_LINE_ITEM_REMOVED;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderCustomLineItemRemovedMessageImpl() {
         this.type = ORDER_CUSTOM_LINE_ITEM_REMOVED;
     }

@@ -19,9 +19,18 @@ public interface StateRole {
 
     StateRole RETURN = StateRoleEnum.RETURN;
 
+    /**
+     * possible values of StateRole
+     */
     enum StateRoleEnum implements StateRole {
+        /**
+         * ReviewIncludedInStatistics
+         */
         REVIEW_INCLUDED_IN_STATISTICS("ReviewIncludedInStatistics"),
 
+        /**
+         * Return
+         */
         RETURN("Return");
         private final String jsonName;
 
@@ -38,13 +47,30 @@ public interface StateRole {
         }
     }
 
+    /**
+     * the JSON value
+     * @return json value
+     */
     @JsonValue
     String getJsonName();
 
+    /**
+     * the enum value
+     * @return name
+     */
     String name();
 
+    /**
+     * convert value to string
+     * @return string representation
+     */
     String toString();
 
+    /**
+     * factory method for a enum value of StateRole
+     * if no enum has been found an anonymous instance will be created
+     * @return enum instance
+     */
     @JsonCreator
     public static StateRole findEnum(String value) {
         return findEnumViaJsonName(value).orElse(new StateRole() {
@@ -64,10 +90,18 @@ public interface StateRole {
         });
     }
 
+    /**
+     * method to find enum using the JSON value
+     * @return optional of enum instance
+     */
     public static Optional<StateRole> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
 
+    /**
+     * possible enum values
+     * @return array of possible enum values
+     */
     public static StateRole[] values() {
         return StateRoleEnum.values();
     }

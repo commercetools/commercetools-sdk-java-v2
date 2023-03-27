@@ -48,6 +48,11 @@ public class ProductSelectionChangeNameActionBuilder implements Builder<ProductS
         return this;
     }
 
+    /**
+     *  <p>The new name to be set for the ProductSelection.</p>
+     * @return name
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
@@ -69,10 +74,19 @@ public class ProductSelectionChangeNameActionBuilder implements Builder<ProductS
         return new ProductSelectionChangeNameActionImpl(name);
     }
 
+    /**
+     * factory method for an instance of ProductSelectionChangeNameActionBuilder
+     * @return builder
+     */
     public static ProductSelectionChangeNameActionBuilder of() {
         return new ProductSelectionChangeNameActionBuilder();
     }
 
+    /**
+     * create builder for ProductSelectionChangeNameAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSelectionChangeNameActionBuilder of(final ProductSelectionChangeNameAction template) {
         ProductSelectionChangeNameActionBuilder builder = new ProductSelectionChangeNameActionBuilder();
         builder.name = template.getName();

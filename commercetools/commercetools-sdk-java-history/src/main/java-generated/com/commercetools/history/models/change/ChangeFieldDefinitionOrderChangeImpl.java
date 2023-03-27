@@ -28,6 +28,9 @@ public class ChangeFieldDefinitionOrderChangeImpl implements ChangeFieldDefiniti
 
     private java.util.List<com.commercetools.history.models.change_value.FieldDefinitionOrderValue> nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeFieldDefinitionOrderChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.change_value.FieldDefinitionOrderValue> previousValue,
@@ -38,6 +41,9 @@ public class ChangeFieldDefinitionOrderChangeImpl implements ChangeFieldDefiniti
         this.type = CHANGE_FIELD_DEFINITION_ORDER_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeFieldDefinitionOrderChangeImpl() {
         this.type = CHANGE_FIELD_DEFINITION_ORDER_CHANGE;
     }

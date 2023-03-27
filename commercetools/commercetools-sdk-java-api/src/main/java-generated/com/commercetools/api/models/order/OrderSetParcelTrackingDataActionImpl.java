@@ -26,6 +26,9 @@ public class OrderSetParcelTrackingDataActionImpl implements OrderSetParcelTrack
 
     private com.commercetools.api.models.order.TrackingData trackingData;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderSetParcelTrackingDataActionImpl(@JsonProperty("parcelId") final String parcelId,
             @JsonProperty("trackingData") final com.commercetools.api.models.order.TrackingData trackingData) {
@@ -34,6 +37,9 @@ public class OrderSetParcelTrackingDataActionImpl implements OrderSetParcelTrack
         this.action = SET_PARCEL_TRACKING_DATA;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderSetParcelTrackingDataActionImpl() {
         this.action = SET_PARCEL_TRACKING_DATA;
     }

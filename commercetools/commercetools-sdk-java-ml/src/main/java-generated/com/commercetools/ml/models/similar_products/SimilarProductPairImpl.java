@@ -24,6 +24,9 @@ public class SimilarProductPairImpl implements SimilarProductPair, ModelBase {
 
     private java.util.List<com.commercetools.ml.models.similar_products.SimilarProduct> products;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SimilarProductPairImpl(@JsonProperty("confidence") final Double confidence,
             @JsonProperty("products") final java.util.List<com.commercetools.ml.models.similar_products.SimilarProduct> products) {
@@ -31,6 +34,9 @@ public class SimilarProductPairImpl implements SimilarProductPair, ModelBase {
         this.products = products;
     }
 
+    /**
+     * create empty instance
+     */
     public SimilarProductPairImpl() {
     }
 

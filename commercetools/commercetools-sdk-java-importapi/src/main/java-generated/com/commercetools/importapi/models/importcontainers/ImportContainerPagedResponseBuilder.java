@@ -149,21 +149,46 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
         return this;
     }
 
+    /**
+     *  <p>Number of results requested.</p>
+     * @return limit
+     */
+
     public Integer getLimit() {
         return this.limit;
     }
+
+    /**
+     *  <p>Number of elements skipped.</p>
+     * @return offset
+     */
 
     public Long getOffset() {
         return this.offset;
     }
 
+    /**
+     *  <p>The actual number of results returned.</p>
+     * @return count
+     */
+
     public Long getCount() {
         return this.count;
     }
 
+    /**
+     *  <p>The total number of results matching the query.</p>
+     * @return total
+     */
+
     public Long getTotal() {
         return this.total;
     }
+
+    /**
+     *  <p>The array of Import Containers matching the query.</p>
+     * @return results
+     */
 
     public java.util.List<com.commercetools.importapi.models.importcontainers.ImportContainer> getResults() {
         return this.results;
@@ -190,10 +215,19 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
         return new ImportContainerPagedResponseImpl(limit, offset, count, total, results);
     }
 
+    /**
+     * factory method for an instance of ImportContainerPagedResponseBuilder
+     * @return builder
+     */
     public static ImportContainerPagedResponseBuilder of() {
         return new ImportContainerPagedResponseBuilder();
     }
 
+    /**
+     * create builder for ImportContainerPagedResponse instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ImportContainerPagedResponseBuilder of(final ImportContainerPagedResponse template) {
         ImportContainerPagedResponseBuilder builder = new ImportContainerPagedResponseBuilder();
         builder.limit = template.getLimit();

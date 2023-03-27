@@ -30,6 +30,9 @@ public class ChangeAttributeConstraintChangeImpl implements ChangeAttributeConst
 
     private com.commercetools.history.models.common.AttributeConstraintEnum nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeAttributeConstraintChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("attributeName") final String attributeName,
@@ -42,6 +45,9 @@ public class ChangeAttributeConstraintChangeImpl implements ChangeAttributeConst
         this.type = CHANGE_ATTRIBUTE_CONSTRAINT_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeAttributeConstraintChangeImpl() {
         this.type = CHANGE_ATTRIBUTE_CONSTRAINT_CHANGE;
     }

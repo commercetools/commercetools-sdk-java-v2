@@ -179,45 +179,139 @@ public interface ProductDiscount
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();
 
+    /**
+     *  <p>Unique identifier of the ProductDiscount.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>Current version of the ProductDiscount.</p>
+     * @param version value to be set
+     */
 
     public void setVersion(final Long version);
 
+    /**
+     *  <p>Date and time (UTC) the ProductDiscount was initially created.</p>
+     * @param createdAt value to be set
+     */
+
     public void setCreatedAt(final ZonedDateTime createdAt);
+
+    /**
+     *  <p>Date and time (UTC) the ProductDiscount was last updated.</p>
+     * @param lastModifiedAt value to be set
+     */
 
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param lastModifiedBy value to be set
+     */
+
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param createdBy value to be set
+     */
 
     public void setCreatedBy(final CreatedBy createdBy);
 
+    /**
+     *  <p>Name of the ProductDiscount.</p>
+     * @param name value to be set
+     */
+
     public void setName(final LocalizedString name);
+
+    /**
+     *  <p>User-defined unique identifier of the ProductDiscount.</p>
+     * @param key value to be set
+     */
 
     public void setKey(final String key);
 
+    /**
+     *  <p>Description of the ProductDiscount.</p>
+     * @param description value to be set
+     */
+
     public void setDescription(final LocalizedString description);
+
+    /**
+     *  <p>Type of Discount and its corresponding value.</p>
+     * @param value value to be set
+     */
 
     public void setValue(final ProductDiscountValue value);
 
+    /**
+     *  <p>Valid ProductDiscount predicate.</p>
+     * @param predicate value to be set
+     */
+
     public void setPredicate(final String predicate);
+
+    /**
+     *  <p>Unique decimal value between 0 and 1 (stored as String literal) defining the order of Product Discounts to apply in case more than one is applicable and active. A Product Discount with a higher value is prioritized.</p>
+     * @param sortOrder value to be set
+     */
 
     public void setSortOrder(final String sortOrder);
 
+    /**
+     *  <p>If <code>true</code> the Product Discount is applied to Products matching the <code>predicate</code>.</p>
+     * @param isActive value to be set
+     */
+
     public void setIsActive(final Boolean isActive);
+
+    /**
+     *  <p>References of all the resources that are addressed in the <code>predicate</code>.</p>
+     * @param references values to be set
+     */
 
     @JsonIgnore
     public void setReferences(final Reference... references);
 
+    /**
+     *  <p>References of all the resources that are addressed in the <code>predicate</code>.</p>
+     * @param references values to be set
+     */
+
     public void setReferences(final List<Reference> references);
+
+    /**
+     *  <p>Date and time (UTC) from which the Discount is effective. Take Eventual Consistency into account for calculated discount values.</p>
+     * @param validFrom value to be set
+     */
 
     public void setValidFrom(final ZonedDateTime validFrom);
 
+    /**
+     *  <p>Date and time (UTC) until which the Discount is effective. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     * @param validUntil value to be set
+     */
+
     public void setValidUntil(final ZonedDateTime validUntil);
 
+    /**
+     * factory method
+     * @return instance of ProductDiscount
+     */
     public static ProductDiscount of() {
         return new ProductDiscountImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductDiscount
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductDiscount of(final ProductDiscount template) {
         ProductDiscountImpl instance = new ProductDiscountImpl();
         instance.setId(template.getId());
@@ -239,14 +333,29 @@ public interface ProductDiscount
         return instance;
     }
 
+    /**
+     * builder factory method for ProductDiscount
+     * @return builder
+     */
     public static ProductDiscountBuilder builder() {
         return ProductDiscountBuilder.of();
     }
 
+    /**
+     * create builder for ProductDiscount instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductDiscountBuilder builder(final ProductDiscount template) {
         return ProductDiscountBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductDiscount(Function<ProductDiscount, T> helper) {
         return helper.apply(this);
     }
@@ -255,6 +364,10 @@ public interface ProductDiscount
         return com.commercetools.api.models.common.ReferenceTypeId.PRODUCT_DISCOUNT;
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductDiscount> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductDiscount>() {
             @Override

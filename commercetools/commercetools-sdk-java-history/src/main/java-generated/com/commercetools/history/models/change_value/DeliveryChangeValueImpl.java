@@ -26,6 +26,9 @@ public class DeliveryChangeValueImpl implements DeliveryChangeValue, ModelBase {
 
     private java.util.List<com.commercetools.history.models.common.Parcel> parcels;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DeliveryChangeValueImpl(
             @JsonProperty("items") final java.util.List<com.commercetools.history.models.common.DeliveryItem> items,
@@ -36,6 +39,9 @@ public class DeliveryChangeValueImpl implements DeliveryChangeValue, ModelBase {
         this.parcels = parcels;
     }
 
+    /**
+     * create empty instance
+     */
     public DeliveryChangeValueImpl() {
     }
 

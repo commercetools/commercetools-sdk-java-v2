@@ -49,13 +49,28 @@ public interface CartState {
     */
     CartState FROZEN = CartStateEnum.FROZEN;
 
+    /**
+     * possible values of CartState
+     */
     enum CartStateEnum implements CartState {
+        /**
+         * Active
+         */
         ACTIVE("Active"),
 
+        /**
+         * Merged
+         */
         MERGED("Merged"),
 
+        /**
+         * Ordered
+         */
         ORDERED("Ordered"),
 
+        /**
+         * Frozen
+         */
         FROZEN("Frozen");
         private final String jsonName;
 
@@ -72,13 +87,30 @@ public interface CartState {
         }
     }
 
+    /**
+     * the JSON value
+     * @return json value
+     */
     @JsonValue
     String getJsonName();
 
+    /**
+     * the enum value
+     * @return name
+     */
     String name();
 
+    /**
+     * convert value to string
+     * @return string representation
+     */
     String toString();
 
+    /**
+     * factory method for a enum value of CartState
+     * if no enum has been found an anonymous instance will be created
+     * @return enum instance
+     */
     @JsonCreator
     public static CartState findEnum(String value) {
         return findEnumViaJsonName(value).orElse(new CartState() {
@@ -98,10 +130,18 @@ public interface CartState {
         });
     }
 
+    /**
+     * method to find enum using the JSON value
+     * @return optional of enum instance
+     */
     public static Optional<CartState> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
 
+    /**
+     * possible enum values
+     * @return array of possible enum values
+     */
     public static CartState[] values() {
         return CartStateEnum.values();
     }

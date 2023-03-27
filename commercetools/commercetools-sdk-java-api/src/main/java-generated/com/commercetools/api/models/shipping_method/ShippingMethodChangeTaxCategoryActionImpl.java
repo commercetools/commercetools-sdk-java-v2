@@ -24,6 +24,9 @@ public class ShippingMethodChangeTaxCategoryActionImpl implements ShippingMethod
 
     private com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShippingMethodChangeTaxCategoryActionImpl(
             @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {
@@ -31,6 +34,9 @@ public class ShippingMethodChangeTaxCategoryActionImpl implements ShippingMethod
         this.action = CHANGE_TAX_CATEGORY;
     }
 
+    /**
+     * create empty instance
+     */
     public ShippingMethodChangeTaxCategoryActionImpl() {
         this.action = CHANGE_TAX_CATEGORY;
     }

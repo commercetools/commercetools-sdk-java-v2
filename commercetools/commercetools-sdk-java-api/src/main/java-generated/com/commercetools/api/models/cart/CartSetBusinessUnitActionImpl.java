@@ -24,6 +24,9 @@ public class CartSetBusinessUnitActionImpl implements CartSetBusinessUnitAction,
 
     private com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier businessUnit;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartSetBusinessUnitActionImpl(
             @JsonProperty("businessUnit") final com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier businessUnit) {
@@ -31,6 +34,9 @@ public class CartSetBusinessUnitActionImpl implements CartSetBusinessUnitAction,
         this.action = SET_BUSINESS_UNIT;
     }
 
+    /**
+     * create empty instance
+     */
     public CartSetBusinessUnitActionImpl() {
         this.action = SET_BUSINESS_UNIT;
     }

@@ -44,6 +44,9 @@ public class BusinessUnitAddressChangedMessageImpl implements BusinessUnitAddres
 
     private com.commercetools.api.models.common.Address address;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitAddressChangedMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -70,6 +73,9 @@ public class BusinessUnitAddressChangedMessageImpl implements BusinessUnitAddres
         this.type = BUSINESS_UNIT_ADDRESS_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitAddressChangedMessageImpl() {
         this.type = BUSINESS_UNIT_ADDRESS_CHANGED;
     }

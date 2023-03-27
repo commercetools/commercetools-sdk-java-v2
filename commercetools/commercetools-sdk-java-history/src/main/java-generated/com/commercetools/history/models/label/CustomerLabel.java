@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomerLabelImpl.class)
 public interface CustomerLabel extends Label {
 
+    /**
+     * discriminator value for CustomerLabel
+     */
     String CUSTOMER_LABEL = "CustomerLabel";
 
     /**
@@ -65,16 +68,40 @@ public interface CustomerLabel extends Label {
     @JsonProperty("customerNumber")
     public String getCustomerNumber();
 
+    /**
+     * set firstName
+     * @param firstName value to be set
+     */
+
     public void setFirstName(final String firstName);
+
+    /**
+     * set lastName
+     * @param lastName value to be set
+     */
 
     public void setLastName(final String lastName);
 
+    /**
+     * set customerNumber
+     * @param customerNumber value to be set
+     */
+
     public void setCustomerNumber(final String customerNumber);
 
+    /**
+     * factory method
+     * @return instance of CustomerLabel
+     */
     public static CustomerLabel of() {
         return new CustomerLabelImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomerLabel
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomerLabel of(final CustomerLabel template) {
         CustomerLabelImpl instance = new CustomerLabelImpl();
         instance.setFirstName(template.getFirstName());
@@ -83,18 +110,37 @@ public interface CustomerLabel extends Label {
         return instance;
     }
 
+    /**
+     * builder factory method for CustomerLabel
+     * @return builder
+     */
     public static CustomerLabelBuilder builder() {
         return CustomerLabelBuilder.of();
     }
 
+    /**
+     * create builder for CustomerLabel instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerLabelBuilder builder(final CustomerLabel template) {
         return CustomerLabelBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomerLabel(Function<CustomerLabel, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomerLabel> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomerLabel>() {
             @Override

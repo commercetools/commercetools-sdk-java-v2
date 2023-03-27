@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = InventoryEntrySetSupplyChannelActionImpl.class)
 public interface InventoryEntrySetSupplyChannelAction extends InventoryEntryUpdateAction {
 
+    /**
+     * discriminator value for InventoryEntrySetSupplyChannelAction
+     */
     String SET_SUPPLY_CHANNEL = "setSupplyChannel";
 
     /**
@@ -39,31 +42,64 @@ public interface InventoryEntrySetSupplyChannelAction extends InventoryEntryUpda
     @JsonProperty("supplyChannel")
     public ChannelResourceIdentifier getSupplyChannel();
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param supplyChannel value to be set
+     */
+
     public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
 
+    /**
+     * factory method
+     * @return instance of InventoryEntrySetSupplyChannelAction
+     */
     public static InventoryEntrySetSupplyChannelAction of() {
         return new InventoryEntrySetSupplyChannelActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of InventoryEntrySetSupplyChannelAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static InventoryEntrySetSupplyChannelAction of(final InventoryEntrySetSupplyChannelAction template) {
         InventoryEntrySetSupplyChannelActionImpl instance = new InventoryEntrySetSupplyChannelActionImpl();
         instance.setSupplyChannel(template.getSupplyChannel());
         return instance;
     }
 
+    /**
+     * builder factory method for InventoryEntrySetSupplyChannelAction
+     * @return builder
+     */
     public static InventoryEntrySetSupplyChannelActionBuilder builder() {
         return InventoryEntrySetSupplyChannelActionBuilder.of();
     }
 
+    /**
+     * create builder for InventoryEntrySetSupplyChannelAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InventoryEntrySetSupplyChannelActionBuilder builder(
             final InventoryEntrySetSupplyChannelAction template) {
         return InventoryEntrySetSupplyChannelActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withInventoryEntrySetSupplyChannelAction(Function<InventoryEntrySetSupplyChannelAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<InventoryEntrySetSupplyChannelAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<InventoryEntrySetSupplyChannelAction>() {
             @Override

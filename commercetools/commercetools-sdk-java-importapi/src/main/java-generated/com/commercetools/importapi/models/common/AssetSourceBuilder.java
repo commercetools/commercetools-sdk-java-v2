@@ -36,7 +36,7 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     private String contentType;
 
     /**
-     *
+     * set the value to the uri
      * @param uri value to be set
      * @return Builder
      */
@@ -47,7 +47,7 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     }
 
     /**
-     *
+     * set the value to the key
      * @param key value to be set
      * @return Builder
      */
@@ -82,7 +82,7 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
     }
 
     /**
-     *
+     * set the value to the contentType
      * @param contentType value to be set
      * @return Builder
      */
@@ -92,19 +92,39 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
         return this;
     }
 
+    /**
+     * value of uri}
+     * @return uri
+     */
+
     public String getUri() {
         return this.uri;
     }
+
+    /**
+     * value of key}
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>The width and height of the Asset Source.</p>
+     * @return dimensions
+     */
+
     @Nullable
     public com.commercetools.importapi.models.common.AssetDimensions getDimensions() {
         return this.dimensions;
     }
+
+    /**
+     * value of contentType}
+     * @return contentType
+     */
 
     @Nullable
     public String getContentType() {
@@ -128,10 +148,19 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
         return new AssetSourceImpl(uri, key, dimensions, contentType);
     }
 
+    /**
+     * factory method for an instance of AssetSourceBuilder
+     * @return builder
+     */
     public static AssetSourceBuilder of() {
         return new AssetSourceBuilder();
     }
 
+    /**
+     * create builder for AssetSource instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AssetSourceBuilder of(final AssetSource template) {
         AssetSourceBuilder builder = new AssetSourceBuilder();
         builder.uri = template.getUri();

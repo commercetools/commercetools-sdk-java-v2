@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductImageAddedMessagePayloadImpl.class)
 public interface ProductImageAddedMessagePayload extends MessagePayload {
 
+    /**
+     * discriminator value for ProductImageAddedMessagePayload
+     */
     String PRODUCT_IMAGE_ADDED = "ProductImageAdded";
 
     /**
@@ -60,16 +63,40 @@ public interface ProductImageAddedMessagePayload extends MessagePayload {
     @JsonProperty("staged")
     public Boolean getStaged();
 
+    /**
+     *  <p>Unique identifier of the Product Variant to which the Image was added.</p>
+     * @param variantId value to be set
+     */
+
     public void setVariantId(final Long variantId);
+
+    /**
+     *  <p>Image that was added.</p>
+     * @param image value to be set
+     */
 
     public void setImage(final Image image);
 
+    /**
+     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     * @param staged value to be set
+     */
+
     public void setStaged(final Boolean staged);
 
+    /**
+     * factory method
+     * @return instance of ProductImageAddedMessagePayload
+     */
     public static ProductImageAddedMessagePayload of() {
         return new ProductImageAddedMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductImageAddedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductImageAddedMessagePayload of(final ProductImageAddedMessagePayload template) {
         ProductImageAddedMessagePayloadImpl instance = new ProductImageAddedMessagePayloadImpl();
         instance.setVariantId(template.getVariantId());
@@ -78,18 +105,37 @@ public interface ProductImageAddedMessagePayload extends MessagePayload {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductImageAddedMessagePayload
+     * @return builder
+     */
     public static ProductImageAddedMessagePayloadBuilder builder() {
         return ProductImageAddedMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for ProductImageAddedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductImageAddedMessagePayloadBuilder builder(final ProductImageAddedMessagePayload template) {
         return ProductImageAddedMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductImageAddedMessagePayload(Function<ProductImageAddedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductImageAddedMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductImageAddedMessagePayload>() {
             @Override

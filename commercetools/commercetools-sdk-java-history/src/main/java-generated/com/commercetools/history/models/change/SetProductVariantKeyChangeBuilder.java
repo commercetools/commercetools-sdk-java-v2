@@ -44,7 +44,7 @@ public class SetProductVariantKeyChangeBuilder implements Builder<SetProductVari
     }
 
     /**
-     *
+     * set the value to the catalogData
      * @param catalogData value to be set
      * @return Builder
      */
@@ -55,7 +55,7 @@ public class SetProductVariantKeyChangeBuilder implements Builder<SetProductVari
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class SetProductVariantKeyChangeBuilder implements Builder<SetProductVari
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -76,17 +76,37 @@ public class SetProductVariantKeyChangeBuilder implements Builder<SetProductVari
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>setProductVariantKey</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of catalogData}
+     * @return catalogData
+     */
 
     public String getCatalogData() {
         return this.catalogData;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public String getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public String getNextValue() {
         return this.nextValue;
@@ -112,10 +132,19 @@ public class SetProductVariantKeyChangeBuilder implements Builder<SetProductVari
         return new SetProductVariantKeyChangeImpl(change, catalogData, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of SetProductVariantKeyChangeBuilder
+     * @return builder
+     */
     public static SetProductVariantKeyChangeBuilder of() {
         return new SetProductVariantKeyChangeBuilder();
     }
 
+    /**
+     * create builder for SetProductVariantKeyChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetProductVariantKeyChangeBuilder of(final SetProductVariantKeyChange template) {
         SetProductVariantKeyChangeBuilder builder = new SetProductVariantKeyChangeBuilder();
         builder.change = template.getChange();

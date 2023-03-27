@@ -41,7 +41,7 @@ public class ChangeInitialChangeBuilder implements Builder<ChangeInitialChange> 
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class ChangeInitialChangeBuilder implements Builder<ChangeInitialChange> 
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -62,13 +62,28 @@ public class ChangeInitialChangeBuilder implements Builder<ChangeInitialChange> 
         return this;
     }
 
+    /**
+     *  <p>Shape of the action for <code>changeInitial</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public Boolean getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public Boolean getNextValue() {
         return this.nextValue;
@@ -93,10 +108,19 @@ public class ChangeInitialChangeBuilder implements Builder<ChangeInitialChange> 
         return new ChangeInitialChangeImpl(change, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of ChangeInitialChangeBuilder
+     * @return builder
+     */
     public static ChangeInitialChangeBuilder of() {
         return new ChangeInitialChangeBuilder();
     }
 
+    /**
+     * create builder for ChangeInitialChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeInitialChangeBuilder of(final ChangeInitialChange template) {
         ChangeInitialChangeBuilder builder = new ChangeInitialChangeBuilder();
         builder.change = template.getChange();

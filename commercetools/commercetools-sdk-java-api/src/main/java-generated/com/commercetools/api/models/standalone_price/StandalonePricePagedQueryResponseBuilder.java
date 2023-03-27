@@ -151,22 +151,47 @@ public class StandalonePricePagedQueryResponseBuilder implements Builder<Standal
         return this;
     }
 
+    /**
+     *  <p>Number of requested results.</p>
+     * @return limit
+     */
+
     public Long getLimit() {
         return this.limit;
     }
+
+    /**
+     *  <p>Offset supplied by the client or server default. It is the number of elements skipped, not a page number.</p>
+     * @return offset
+     */
 
     public Long getOffset() {
         return this.offset;
     }
 
+    /**
+     *  <p>Actual number of results returned.</p>
+     * @return count
+     */
+
     public Long getCount() {
         return this.count;
     }
+
+    /**
+     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. This field is returned by default. For improved performance, calculating this field can be deactivated by using the query parameter <code>withTotal=false</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     * @return total
+     */
 
     @Nullable
     public Long getTotal() {
         return this.total;
     }
+
+    /**
+     *  <p>StandalonePrices matching the query.</p>
+     * @return results
+     */
 
     public java.util.List<com.commercetools.api.models.standalone_price.StandalonePrice> getResults() {
         return this.results;
@@ -192,10 +217,19 @@ public class StandalonePricePagedQueryResponseBuilder implements Builder<Standal
         return new StandalonePricePagedQueryResponseImpl(limit, offset, count, total, results);
     }
 
+    /**
+     * factory method for an instance of StandalonePricePagedQueryResponseBuilder
+     * @return builder
+     */
     public static StandalonePricePagedQueryResponseBuilder of() {
         return new StandalonePricePagedQueryResponseBuilder();
     }
 
+    /**
+     * create builder for StandalonePricePagedQueryResponse instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StandalonePricePagedQueryResponseBuilder of(final StandalonePricePagedQueryResponse template) {
         StandalonePricePagedQueryResponseBuilder builder = new StandalonePricePagedQueryResponseBuilder();
         builder.limit = template.getLimit();

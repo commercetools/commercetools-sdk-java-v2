@@ -38,6 +38,9 @@ public class ProductDiscountDraftImpl implements ProductDiscountDraft, ModelBase
 
     private java.time.ZonedDateTime validUntil;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductDiscountDraftImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("key") final String key,
@@ -58,6 +61,9 @@ public class ProductDiscountDraftImpl implements ProductDiscountDraft, ModelBase
         this.validUntil = validUntil;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductDiscountDraftImpl() {
     }
 

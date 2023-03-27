@@ -26,29 +26,60 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderEditNotProcessedImpl.class)
 public interface OrderEditNotProcessed extends OrderEditResult {
 
+    /**
+     * discriminator value for OrderEditNotProcessed
+     */
     String NOT_PROCESSED = "NotProcessed";
 
+    /**
+     * factory method
+     * @return instance of OrderEditNotProcessed
+     */
     public static OrderEditNotProcessed of() {
         return new OrderEditNotProcessedImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderEditNotProcessed
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderEditNotProcessed of(final OrderEditNotProcessed template) {
         OrderEditNotProcessedImpl instance = new OrderEditNotProcessedImpl();
         return instance;
     }
 
+    /**
+     * builder factory method for OrderEditNotProcessed
+     * @return builder
+     */
     public static OrderEditNotProcessedBuilder builder() {
         return OrderEditNotProcessedBuilder.of();
     }
 
+    /**
+     * create builder for OrderEditNotProcessed instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderEditNotProcessedBuilder builder(final OrderEditNotProcessed template) {
         return OrderEditNotProcessedBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderEditNotProcessed(Function<OrderEditNotProcessed, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderEditNotProcessed> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderEditNotProcessed>() {
             @Override

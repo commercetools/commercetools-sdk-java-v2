@@ -30,6 +30,9 @@ public class SetProductPriceCustomTypeChangeImpl implements SetProductPriceCusto
 
     private com.commercetools.history.models.common.CustomFields nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetProductPriceCustomTypeChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("catalogData") final String catalogData,
@@ -42,6 +45,9 @@ public class SetProductPriceCustomTypeChangeImpl implements SetProductPriceCusto
         this.type = SET_PRODUCT_PRICE_CUSTOM_TYPE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetProductPriceCustomTypeChangeImpl() {
         this.type = SET_PRODUCT_PRICE_CUSTOM_TYPE_CHANGE;
     }

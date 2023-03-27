@@ -143,36 +143,110 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
+    /**
+     *  <p>Name of the CartDiscount.</p>
+     * @param name value to be set
+     */
+
     public void setName(final LocalizedString name);
+
+    /**
+     *  <p>User-defined unique identifier for the CartDiscount.</p>
+     * @param key value to be set
+     */
 
     public void setKey(final String key);
 
+    /**
+     *  <p>Description of the CartDiscount.</p>
+     * @param description value to be set
+     */
+
     public void setDescription(final LocalizedString description);
+
+    /**
+     *  <p>Effect of the CartDiscount. For a target, relative or absolute Discount values or a fixed item Price value can be specified. If no target is specified, a Gift Line Item can be added to the Cart.</p>
+     * @param value value to be set
+     */
 
     public void setValue(final CartDiscountValueDraft value);
 
+    /**
+     *  <p>Valid Cart Predicate.</p>
+     * @param cartPredicate value to be set
+     */
+
     public void setCartPredicate(final String cartPredicate);
+
+    /**
+     *  <p>Must not be set when the <code>value</code> has type <code>giftLineItem</code>, otherwise a CartDiscountTarget must be set.</p>
+     * @param target value to be set
+     */
 
     public void setTarget(final CartDiscountTarget target);
 
+    /**
+     *  <p>Value between <code>0</code> and <code>1</code>. A Discount with a higher sortOrder is prioritized. The sort order must be unambiguous among all CartDiscounts.</p>
+     * @param sortOrder value to be set
+     */
+
     public void setSortOrder(final String sortOrder);
+
+    /**
+     *  <p>Only active Discounts can be applied to the Cart.</p>
+     * @param isActive value to be set
+     */
 
     public void setIsActive(final Boolean isActive);
 
+    /**
+     *  <p>Date and time (UTC) from which the Discount is effective.</p>
+     * @param validFrom value to be set
+     */
+
     public void setValidFrom(final ZonedDateTime validFrom);
+
+    /**
+     *  <p>Date and time (UTC) until which the Discount is effective.</p>
+     * @param validUntil value to be set
+     */
 
     public void setValidUntil(final ZonedDateTime validUntil);
 
+    /**
+     *  <p>States whether the Discount can only be used in a connection with a DiscountCode.</p>
+     * @param requiresDiscountCode value to be set
+     */
+
     public void setRequiresDiscountCode(final Boolean requiresDiscountCode);
+
+    /**
+     *  <p>Specifies whether the application of this discount causes the following discounts to be ignored.</p>
+     * @param stackingMode value to be set
+     */
 
     public void setStackingMode(final StackingMode stackingMode);
 
+    /**
+     *  <p>Custom Fields of the CartDiscount.</p>
+     * @param custom value to be set
+     */
+
     public void setCustom(final CustomFieldsDraft custom);
 
+    /**
+     * factory method
+     * @return instance of CartDiscountDraft
+     */
     public static CartDiscountDraft of() {
         return new CartDiscountDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartDiscountDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartDiscountDraft of(final CartDiscountDraft template) {
         CartDiscountDraftImpl instance = new CartDiscountDraftImpl();
         instance.setName(template.getName());
@@ -191,18 +265,37 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
         return instance;
     }
 
+    /**
+     * builder factory method for CartDiscountDraft
+     * @return builder
+     */
     public static CartDiscountDraftBuilder builder() {
         return CartDiscountDraftBuilder.of();
     }
 
+    /**
+     * create builder for CartDiscountDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartDiscountDraftBuilder builder(final CartDiscountDraft template) {
         return CartDiscountDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartDiscountDraft(Function<CartDiscountDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountDraft>() {
             @Override

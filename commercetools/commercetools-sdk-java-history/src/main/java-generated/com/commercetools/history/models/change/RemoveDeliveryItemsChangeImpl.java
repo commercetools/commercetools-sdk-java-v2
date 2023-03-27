@@ -26,6 +26,9 @@ public class RemoveDeliveryItemsChangeImpl implements RemoveDeliveryItemsChange,
 
     private com.commercetools.history.models.common.Delivery previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     RemoveDeliveryItemsChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.Delivery previousValue) {
@@ -34,6 +37,9 @@ public class RemoveDeliveryItemsChangeImpl implements RemoveDeliveryItemsChange,
         this.type = REMOVE_DELIVERY_ITEMS_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public RemoveDeliveryItemsChangeImpl() {
         this.type = REMOVE_DELIVERY_ITEMS_CHANGE;
     }

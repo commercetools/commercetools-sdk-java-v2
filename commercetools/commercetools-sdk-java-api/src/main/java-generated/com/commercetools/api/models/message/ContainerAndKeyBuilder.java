@@ -48,9 +48,19 @@ public class ContainerAndKeyBuilder implements Builder<ContainerAndKey> {
         return this;
     }
 
+    /**
+     *  <p>User-defined identifier that is unique within the given container.</p>
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     *  <p>Namespace to group Custom Objects.</p>
+     * @return container
+     */
 
     public String getContainer() {
         return this.container;
@@ -74,10 +84,19 @@ public class ContainerAndKeyBuilder implements Builder<ContainerAndKey> {
         return new ContainerAndKeyImpl(key, container);
     }
 
+    /**
+     * factory method for an instance of ContainerAndKeyBuilder
+     * @return builder
+     */
     public static ContainerAndKeyBuilder of() {
         return new ContainerAndKeyBuilder();
     }
 
+    /**
+     * create builder for ContainerAndKey instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ContainerAndKeyBuilder of(final ContainerAndKey template) {
         ContainerAndKeyBuilder builder = new ContainerAndKeyBuilder();
         builder.key = template.getKey();

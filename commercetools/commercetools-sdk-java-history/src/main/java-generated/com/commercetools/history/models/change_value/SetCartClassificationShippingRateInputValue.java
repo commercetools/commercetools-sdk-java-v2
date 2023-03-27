@@ -58,16 +58,40 @@ public interface SetCartClassificationShippingRateInputValue {
     @JsonProperty("label")
     public LocalizedString getLabel();
 
+    /**
+     * set type
+     * @param type value to be set
+     */
+
     public void setType(final String type);
+
+    /**
+     * set key
+     * @param key value to be set
+     */
 
     public void setKey(final String key);
 
+    /**
+     * set label
+     * @param label value to be set
+     */
+
     public void setLabel(final LocalizedString label);
 
+    /**
+     * factory method
+     * @return instance of SetCartClassificationShippingRateInputValue
+     */
     public static SetCartClassificationShippingRateInputValue of() {
         return new SetCartClassificationShippingRateInputValueImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetCartClassificationShippingRateInputValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetCartClassificationShippingRateInputValue of(
             final SetCartClassificationShippingRateInputValue template) {
         SetCartClassificationShippingRateInputValueImpl instance = new SetCartClassificationShippingRateInputValueImpl();
@@ -77,20 +101,39 @@ public interface SetCartClassificationShippingRateInputValue {
         return instance;
     }
 
+    /**
+     * builder factory method for SetCartClassificationShippingRateInputValue
+     * @return builder
+     */
     public static SetCartClassificationShippingRateInputValueBuilder builder() {
         return SetCartClassificationShippingRateInputValueBuilder.of();
     }
 
+    /**
+     * create builder for SetCartClassificationShippingRateInputValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetCartClassificationShippingRateInputValueBuilder builder(
             final SetCartClassificationShippingRateInputValue template) {
         return SetCartClassificationShippingRateInputValueBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetCartClassificationShippingRateInputValue(
             Function<SetCartClassificationShippingRateInputValue, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetCartClassificationShippingRateInputValue> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetCartClassificationShippingRateInputValue>() {
             @Override

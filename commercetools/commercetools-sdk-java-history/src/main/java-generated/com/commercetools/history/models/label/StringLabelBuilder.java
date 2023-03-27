@@ -24,7 +24,7 @@ public class StringLabelBuilder implements Builder<StringLabel> {
     private String value;
 
     /**
-     *
+     * set the value to the value
      * @param value value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class StringLabelBuilder implements Builder<StringLabel> {
         this.value = value;
         return this;
     }
+
+    /**
+     * value of value}
+     * @return value
+     */
 
     public String getValue() {
         return this.value;
@@ -55,10 +60,19 @@ public class StringLabelBuilder implements Builder<StringLabel> {
         return new StringLabelImpl(value);
     }
 
+    /**
+     * factory method for an instance of StringLabelBuilder
+     * @return builder
+     */
     public static StringLabelBuilder of() {
         return new StringLabelBuilder();
     }
 
+    /**
+     * create builder for StringLabel instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StringLabelBuilder of(final StringLabel template) {
         StringLabelBuilder builder = new StringLabelBuilder();
         builder.value = template.getValue();

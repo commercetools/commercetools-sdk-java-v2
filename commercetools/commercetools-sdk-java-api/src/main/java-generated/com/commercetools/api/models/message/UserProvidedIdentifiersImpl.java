@@ -34,6 +34,9 @@ public class UserProvidedIdentifiersImpl implements UserProvidedIdentifiers, Mod
 
     private com.commercetools.api.models.message.ContainerAndKey containerAndKey;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     UserProvidedIdentifiersImpl(@JsonProperty("key") final String key,
             @JsonProperty("externalId") final String externalId, @JsonProperty("orderNumber") final String orderNumber,
@@ -49,6 +52,9 @@ public class UserProvidedIdentifiersImpl implements UserProvidedIdentifiers, Mod
         this.containerAndKey = containerAndKey;
     }
 
+    /**
+     * create empty instance
+     */
     public UserProvidedIdentifiersImpl() {
     }
 

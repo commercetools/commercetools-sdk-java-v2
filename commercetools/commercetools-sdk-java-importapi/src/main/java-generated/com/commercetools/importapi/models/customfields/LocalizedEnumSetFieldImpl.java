@@ -24,12 +24,18 @@ public class LocalizedEnumSetFieldImpl implements LocalizedEnumSetField, ModelBa
 
     private java.util.List<String> value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     LocalizedEnumSetFieldImpl(@JsonProperty("value") final java.util.List<String> value) {
         this.value = value;
         this.type = LOCALIZED_ENUM_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public LocalizedEnumSetFieldImpl() {
         this.type = LOCALIZED_ENUM_SET;
     }

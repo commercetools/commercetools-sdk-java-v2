@@ -28,7 +28,7 @@ public class StagedOrderChangeCustomLineItemQuantityActionBuilder
     private Long quantity;
 
     /**
-     *
+     * set the value to the customLineItemId
      * @param customLineItemId value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class StagedOrderChangeCustomLineItemQuantityActionBuilder
     }
 
     /**
-     *
+     * set the value to the quantity
      * @param quantity value to be set
      * @return Builder
      */
@@ -49,9 +49,19 @@ public class StagedOrderChangeCustomLineItemQuantityActionBuilder
         return this;
     }
 
+    /**
+     * value of customLineItemId}
+     * @return customLineItemId
+     */
+
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
+
+    /**
+     * value of quantity}
+     * @return quantity
+     */
 
     public Long getQuantity() {
         return this.quantity;
@@ -76,10 +86,19 @@ public class StagedOrderChangeCustomLineItemQuantityActionBuilder
         return new StagedOrderChangeCustomLineItemQuantityActionImpl(customLineItemId, quantity);
     }
 
+    /**
+     * factory method for an instance of StagedOrderChangeCustomLineItemQuantityActionBuilder
+     * @return builder
+     */
     public static StagedOrderChangeCustomLineItemQuantityActionBuilder of() {
         return new StagedOrderChangeCustomLineItemQuantityActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderChangeCustomLineItemQuantityAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderChangeCustomLineItemQuantityActionBuilder of(
             final StagedOrderChangeCustomLineItemQuantityAction template) {
         StagedOrderChangeCustomLineItemQuantityActionBuilder builder = new StagedOrderChangeCustomLineItemQuantityActionBuilder();

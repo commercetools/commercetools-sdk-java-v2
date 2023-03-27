@@ -51,6 +51,11 @@ public class ReviewSetCustomerActionBuilder implements Builder<ReviewSetCustomer
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return customer
+     */
+
     @Nullable
     public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer() {
         return this.customer;
@@ -72,10 +77,19 @@ public class ReviewSetCustomerActionBuilder implements Builder<ReviewSetCustomer
         return new ReviewSetCustomerActionImpl(customer);
     }
 
+    /**
+     * factory method for an instance of ReviewSetCustomerActionBuilder
+     * @return builder
+     */
     public static ReviewSetCustomerActionBuilder of() {
         return new ReviewSetCustomerActionBuilder();
     }
 
+    /**
+     * create builder for ReviewSetCustomerAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReviewSetCustomerActionBuilder of(final ReviewSetCustomerAction template) {
         ReviewSetCustomerActionBuilder builder = new ReviewSetCustomerActionBuilder();
         builder.customer = template.getCustomer();

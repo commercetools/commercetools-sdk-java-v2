@@ -191,618 +191,1236 @@ public interface MessagePayload {
     @JsonProperty("type")
     public String getType();
 
+    /**
+     * builder for businessUnitAddressAdded subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.BusinessUnitAddressAddedMessagePayloadBuilder businessUnitAddressAddedBuilder() {
         return com.commercetools.api.models.message.BusinessUnitAddressAddedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for businessUnitAddressChanged subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.BusinessUnitAddressChangedMessagePayloadBuilder businessUnitAddressChangedBuilder() {
         return com.commercetools.api.models.message.BusinessUnitAddressChangedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for businessUnitAddressRemoved subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.BusinessUnitAddressRemovedMessagePayloadBuilder businessUnitAddressRemovedBuilder() {
         return com.commercetools.api.models.message.BusinessUnitAddressRemovedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for businessUnitAssociateAdded subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.BusinessUnitAssociateAddedMessagePayloadBuilder businessUnitAssociateAddedBuilder() {
         return com.commercetools.api.models.message.BusinessUnitAssociateAddedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for businessUnitAssociateChanged subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.BusinessUnitAssociateChangedMessagePayloadBuilder businessUnitAssociateChangedBuilder() {
         return com.commercetools.api.models.message.BusinessUnitAssociateChangedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for businessUnitAssociateRemoved subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.BusinessUnitAssociateRemovedMessagePayloadBuilder businessUnitAssociateRemovedBuilder() {
         return com.commercetools.api.models.message.BusinessUnitAssociateRemovedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for businessUnitAssociatesSet subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.BusinessUnitAssociatesSetMessagePayloadBuilder businessUnitAssociatesSetBuilder() {
         return com.commercetools.api.models.message.BusinessUnitAssociatesSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for businessUnitBillingAddressAdded subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.BusinessUnitBillingAddressAddedMessagePayloadBuilder businessUnitBillingAddressAddedBuilder() {
         return com.commercetools.api.models.message.BusinessUnitBillingAddressAddedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for businessUnitBillingAddressRemoved subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.BusinessUnitBillingAddressRemovedMessagePayloadBuilder businessUnitBillingAddressRemovedBuilder() {
         return com.commercetools.api.models.message.BusinessUnitBillingAddressRemovedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for businessUnitContactEmailSet subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.BusinessUnitContactEmailSetMessagePayloadBuilder businessUnitContactEmailSetBuilder() {
         return com.commercetools.api.models.message.BusinessUnitContactEmailSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for businessUnitCreated subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.BusinessUnitCreatedMessagePayloadBuilder businessUnitCreatedBuilder() {
         return com.commercetools.api.models.message.BusinessUnitCreatedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for businessUnitDefaultBillingAddressSet subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.BusinessUnitDefaultBillingAddressSetMessagePayloadBuilder businessUnitDefaultBillingAddressSetBuilder() {
         return com.commercetools.api.models.message.BusinessUnitDefaultBillingAddressSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for businessUnitDefaultShippingAddressSet subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.BusinessUnitDefaultShippingAddressSetMessagePayloadBuilder businessUnitDefaultShippingAddressSetBuilder() {
         return com.commercetools.api.models.message.BusinessUnitDefaultShippingAddressSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for businessUnitDeleted subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.BusinessUnitDeletedMessagePayloadBuilder businessUnitDeletedBuilder() {
         return com.commercetools.api.models.message.BusinessUnitDeletedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for businessUnitNameChanged subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.BusinessUnitNameChangedMessagePayloadBuilder businessUnitNameChangedBuilder() {
         return com.commercetools.api.models.message.BusinessUnitNameChangedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for businessUnitParentUnitChanged subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.BusinessUnitParentUnitChangedMessagePayloadBuilder businessUnitParentUnitChangedBuilder() {
         return com.commercetools.api.models.message.BusinessUnitParentUnitChangedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for businessUnitShippingAddressAdded subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.BusinessUnitShippingAddressAddedMessagePayloadBuilder businessUnitShippingAddressAddedBuilder() {
         return com.commercetools.api.models.message.BusinessUnitShippingAddressAddedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for businessUnitShippingAddressRemoved subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.BusinessUnitShippingAddressRemovedMessagePayloadBuilder businessUnitShippingAddressRemovedBuilder() {
         return com.commercetools.api.models.message.BusinessUnitShippingAddressRemovedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for businessUnitStatusChanged subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.BusinessUnitStatusChangedMessagePayloadBuilder businessUnitStatusChangedBuilder() {
         return com.commercetools.api.models.message.BusinessUnitStatusChangedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for businessUnitStoreAdded subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.BusinessUnitStoreAddedMessagePayloadBuilder businessUnitStoreAddedBuilder() {
         return com.commercetools.api.models.message.BusinessUnitStoreAddedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for businessUnitStoreModeChanged subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.BusinessUnitStoreModeChangedMessagePayloadBuilder businessUnitStoreModeChangedBuilder() {
         return com.commercetools.api.models.message.BusinessUnitStoreModeChangedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for businessUnitStoreRemoved subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.BusinessUnitStoreRemovedMessagePayloadBuilder businessUnitStoreRemovedBuilder() {
         return com.commercetools.api.models.message.BusinessUnitStoreRemovedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for businessUnitStoresSet subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.BusinessUnitStoresSetMessagePayloadBuilder businessUnitStoresSetBuilder() {
         return com.commercetools.api.models.message.BusinessUnitStoresSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for categoryCreated subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.CategoryCreatedMessagePayloadBuilder categoryCreatedBuilder() {
         return com.commercetools.api.models.message.CategoryCreatedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for categorySlugChanged subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.CategorySlugChangedMessagePayloadBuilder categorySlugChangedBuilder() {
         return com.commercetools.api.models.message.CategorySlugChangedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for customLineItemStateTransition subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.CustomLineItemStateTransitionMessagePayloadBuilder customLineItemStateTransitionBuilder() {
         return com.commercetools.api.models.message.CustomLineItemStateTransitionMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for customerAddressAdded subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.CustomerAddressAddedMessagePayloadBuilder customerAddressAddedBuilder() {
         return com.commercetools.api.models.message.CustomerAddressAddedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for customerAddressChanged subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.CustomerAddressChangedMessagePayloadBuilder customerAddressChangedBuilder() {
         return com.commercetools.api.models.message.CustomerAddressChangedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for customerAddressRemoved subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.CustomerAddressRemovedMessagePayloadBuilder customerAddressRemovedBuilder() {
         return com.commercetools.api.models.message.CustomerAddressRemovedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for customerCompanyNameSet subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.CustomerCompanyNameSetMessagePayloadBuilder customerCompanyNameSetBuilder() {
         return com.commercetools.api.models.message.CustomerCompanyNameSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for customerCreated subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.CustomerCreatedMessagePayloadBuilder customerCreatedBuilder() {
         return com.commercetools.api.models.message.CustomerCreatedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for customerDateOfBirthSet subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.CustomerDateOfBirthSetMessagePayloadBuilder customerDateOfBirthSetBuilder() {
         return com.commercetools.api.models.message.CustomerDateOfBirthSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for customerDeleted subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.CustomerDeletedMessagePayloadBuilder customerDeletedBuilder() {
         return com.commercetools.api.models.message.CustomerDeletedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for customerEmailChanged subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.CustomerEmailChangedMessagePayloadBuilder customerEmailChangedBuilder() {
         return com.commercetools.api.models.message.CustomerEmailChangedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for customerEmailVerified subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.CustomerEmailVerifiedMessagePayloadBuilder customerEmailVerifiedBuilder() {
         return com.commercetools.api.models.message.CustomerEmailVerifiedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for customerFirstNameSet subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.CustomerFirstNameSetMessagePayloadBuilder customerFirstNameSetBuilder() {
         return com.commercetools.api.models.message.CustomerFirstNameSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for customerGroupSet subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.CustomerGroupSetMessagePayloadBuilder customerGroupSetBuilder() {
         return com.commercetools.api.models.message.CustomerGroupSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for customerLastNameSet subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.CustomerLastNameSetMessagePayloadBuilder customerLastNameSetBuilder() {
         return com.commercetools.api.models.message.CustomerLastNameSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for customerPasswordUpdated subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.CustomerPasswordUpdatedMessagePayloadBuilder customerPasswordUpdatedBuilder() {
         return com.commercetools.api.models.message.CustomerPasswordUpdatedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for customerTitleSet subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.CustomerTitleSetMessagePayloadBuilder customerTitleSetBuilder() {
         return com.commercetools.api.models.message.CustomerTitleSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for deliveryAdded subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.DeliveryAddedMessagePayloadBuilder deliveryAddedBuilder() {
         return com.commercetools.api.models.message.DeliveryAddedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for deliveryAddressSet subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.DeliveryAddressSetMessagePayloadBuilder deliveryAddressSetBuilder() {
         return com.commercetools.api.models.message.DeliveryAddressSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for deliveryItemsUpdated subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.DeliveryItemsUpdatedMessagePayloadBuilder deliveryItemsUpdatedBuilder() {
         return com.commercetools.api.models.message.DeliveryItemsUpdatedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for deliveryRemoved subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.DeliveryRemovedMessagePayloadBuilder deliveryRemovedBuilder() {
         return com.commercetools.api.models.message.DeliveryRemovedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for inventoryEntryCreated subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.InventoryEntryCreatedMessagePayloadBuilder inventoryEntryCreatedBuilder() {
         return com.commercetools.api.models.message.InventoryEntryCreatedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for inventoryEntryDeleted subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.InventoryEntryDeletedMessagePayloadBuilder inventoryEntryDeletedBuilder() {
         return com.commercetools.api.models.message.InventoryEntryDeletedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for inventoryEntryQuantitySet subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.InventoryEntryQuantitySetMessagePayloadBuilder inventoryEntryQuantitySetBuilder() {
         return com.commercetools.api.models.message.InventoryEntryQuantitySetMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for lineItemStateTransition subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.LineItemStateTransitionMessagePayloadBuilder lineItemStateTransitionBuilder() {
         return com.commercetools.api.models.message.LineItemStateTransitionMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for orderBillingAddressSet subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.OrderBillingAddressSetMessagePayloadBuilder orderBillingAddressSetBuilder() {
         return com.commercetools.api.models.message.OrderBillingAddressSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for orderCreated subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.OrderCreatedMessagePayloadBuilder orderCreatedBuilder() {
         return com.commercetools.api.models.message.OrderCreatedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for orderCustomLineItemAdded subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.OrderCustomLineItemAddedMessagePayloadBuilder orderCustomLineItemAddedBuilder() {
         return com.commercetools.api.models.message.OrderCustomLineItemAddedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for orderCustomLineItemDiscountSet subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.OrderCustomLineItemDiscountSetMessagePayloadBuilder orderCustomLineItemDiscountSetBuilder() {
         return com.commercetools.api.models.message.OrderCustomLineItemDiscountSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for orderCustomLineItemQuantityChanged subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.OrderCustomLineItemQuantityChangedMessagePayloadBuilder orderCustomLineItemQuantityChangedBuilder() {
         return com.commercetools.api.models.message.OrderCustomLineItemQuantityChangedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for orderCustomLineItemRemoved subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.OrderCustomLineItemRemovedMessagePayloadBuilder orderCustomLineItemRemovedBuilder() {
         return com.commercetools.api.models.message.OrderCustomLineItemRemovedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for orderCustomerEmailSet subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.OrderCustomerEmailSetMessagePayloadBuilder orderCustomerEmailSetBuilder() {
         return com.commercetools.api.models.message.OrderCustomerEmailSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for orderCustomerGroupSet subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.OrderCustomerGroupSetMessagePayloadBuilder orderCustomerGroupSetBuilder() {
         return com.commercetools.api.models.message.OrderCustomerGroupSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for orderCustomerSet subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.OrderCustomerSetMessagePayloadBuilder orderCustomerSetBuilder() {
         return com.commercetools.api.models.message.OrderCustomerSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for orderDeleted subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.OrderDeletedMessagePayloadBuilder orderDeletedBuilder() {
         return com.commercetools.api.models.message.OrderDeletedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for orderDiscountCodeAdded subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.OrderDiscountCodeAddedMessagePayloadBuilder orderDiscountCodeAddedBuilder() {
         return com.commercetools.api.models.message.OrderDiscountCodeAddedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for orderDiscountCodeRemoved subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.OrderDiscountCodeRemovedMessagePayloadBuilder orderDiscountCodeRemovedBuilder() {
         return com.commercetools.api.models.message.OrderDiscountCodeRemovedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for orderDiscountCodeStateSet subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.OrderDiscountCodeStateSetMessagePayloadBuilder orderDiscountCodeStateSetBuilder() {
         return com.commercetools.api.models.message.OrderDiscountCodeStateSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for orderEditApplied subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.OrderEditAppliedMessagePayloadBuilder orderEditAppliedBuilder() {
         return com.commercetools.api.models.message.OrderEditAppliedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for orderImported subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.OrderImportedMessagePayloadBuilder orderImportedBuilder() {
         return com.commercetools.api.models.message.OrderImportedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for orderLineItemAdded subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.OrderLineItemAddedMessagePayloadBuilder orderLineItemAddedBuilder() {
         return com.commercetools.api.models.message.OrderLineItemAddedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for orderLineItemDiscountSet subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.OrderLineItemDiscountSetMessagePayloadBuilder orderLineItemDiscountSetBuilder() {
         return com.commercetools.api.models.message.OrderLineItemDiscountSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for orderLineItemDistributionChannelSet subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.OrderLineItemDistributionChannelSetMessagePayloadBuilder orderLineItemDistributionChannelSetBuilder() {
         return com.commercetools.api.models.message.OrderLineItemDistributionChannelSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for orderLineItemRemoved subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.OrderLineItemRemovedMessagePayloadBuilder orderLineItemRemovedBuilder() {
         return com.commercetools.api.models.message.OrderLineItemRemovedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for orderPaymentAdded subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.OrderPaymentAddedMessagePayloadBuilder orderPaymentAddedBuilder() {
         return com.commercetools.api.models.message.OrderPaymentAddedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for orderPaymentStateChanged subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.OrderPaymentStateChangedMessagePayloadBuilder orderPaymentStateChangedBuilder() {
         return com.commercetools.api.models.message.OrderPaymentStateChangedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for orderPurchaseOrderNumberSet subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.OrderPurchaseOrderNumberSetMessagePayloadBuilder orderPurchaseOrderNumberSetBuilder() {
         return com.commercetools.api.models.message.OrderPurchaseOrderNumberSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for orderReturnShipmentStateChanged subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.OrderReturnShipmentStateChangedMessagePayloadBuilder orderReturnShipmentStateChangedBuilder() {
         return com.commercetools.api.models.message.OrderReturnShipmentStateChangedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for orderShipmentStateChanged subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.OrderShipmentStateChangedMessagePayloadBuilder orderShipmentStateChangedBuilder() {
         return com.commercetools.api.models.message.OrderShipmentStateChangedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for orderShippingAddressSet subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.OrderShippingAddressSetMessagePayloadBuilder orderShippingAddressSetBuilder() {
         return com.commercetools.api.models.message.OrderShippingAddressSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for orderShippingInfoSet subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.OrderShippingInfoSetMessagePayloadBuilder orderShippingInfoSetBuilder() {
         return com.commercetools.api.models.message.OrderShippingInfoSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for orderShippingRateInputSet subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.OrderShippingRateInputSetMessagePayloadBuilder orderShippingRateInputSetBuilder() {
         return com.commercetools.api.models.message.OrderShippingRateInputSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for orderStateChanged subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.OrderStateChangedMessagePayloadBuilder orderStateChangedBuilder() {
         return com.commercetools.api.models.message.OrderStateChangedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for orderStateTransition subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.OrderStateTransitionMessagePayloadBuilder orderStateTransitionBuilder() {
         return com.commercetools.api.models.message.OrderStateTransitionMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for orderStoreSet subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.OrderStoreSetMessagePayloadBuilder orderStoreSetBuilder() {
         return com.commercetools.api.models.message.OrderStoreSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for parcelAddedToDelivery subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.ParcelAddedToDeliveryMessagePayloadBuilder parcelAddedToDeliveryBuilder() {
         return com.commercetools.api.models.message.ParcelAddedToDeliveryMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for parcelItemsUpdated subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.ParcelItemsUpdatedMessagePayloadBuilder parcelItemsUpdatedBuilder() {
         return com.commercetools.api.models.message.ParcelItemsUpdatedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for parcelMeasurementsUpdated subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.ParcelMeasurementsUpdatedMessagePayloadBuilder parcelMeasurementsUpdatedBuilder() {
         return com.commercetools.api.models.message.ParcelMeasurementsUpdatedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for parcelRemovedFromDelivery subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.ParcelRemovedFromDeliveryMessagePayloadBuilder parcelRemovedFromDeliveryBuilder() {
         return com.commercetools.api.models.message.ParcelRemovedFromDeliveryMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for parcelTrackingDataUpdated subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.ParcelTrackingDataUpdatedMessagePayloadBuilder parcelTrackingDataUpdatedBuilder() {
         return com.commercetools.api.models.message.ParcelTrackingDataUpdatedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for paymentCreated subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.PaymentCreatedMessagePayloadBuilder paymentCreatedBuilder() {
         return com.commercetools.api.models.message.PaymentCreatedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for paymentInteractionAdded subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.PaymentInteractionAddedMessagePayloadBuilder paymentInteractionAddedBuilder() {
         return com.commercetools.api.models.message.PaymentInteractionAddedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for paymentStatusInterfaceCodeSet subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.PaymentStatusInterfaceCodeSetMessagePayloadBuilder paymentStatusInterfaceCodeSetBuilder() {
         return com.commercetools.api.models.message.PaymentStatusInterfaceCodeSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for paymentStatusStateTransition subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.PaymentStatusStateTransitionMessagePayloadBuilder paymentStatusStateTransitionBuilder() {
         return com.commercetools.api.models.message.PaymentStatusStateTransitionMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for paymentTransactionAdded subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.PaymentTransactionAddedMessagePayloadBuilder paymentTransactionAddedBuilder() {
         return com.commercetools.api.models.message.PaymentTransactionAddedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for paymentTransactionStateChanged subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.PaymentTransactionStateChangedMessagePayloadBuilder paymentTransactionStateChangedBuilder() {
         return com.commercetools.api.models.message.PaymentTransactionStateChangedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for productAddedToCategory subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.ProductAddedToCategoryMessagePayloadBuilder productAddedToCategoryBuilder() {
         return com.commercetools.api.models.message.ProductAddedToCategoryMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for productCreated subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.ProductCreatedMessagePayloadBuilder productCreatedBuilder() {
         return com.commercetools.api.models.message.ProductCreatedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for productDeleted subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.ProductDeletedMessagePayloadBuilder productDeletedBuilder() {
         return com.commercetools.api.models.message.ProductDeletedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for productImageAdded subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.ProductImageAddedMessagePayloadBuilder productImageAddedBuilder() {
         return com.commercetools.api.models.message.ProductImageAddedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for productPriceAdded subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.ProductPriceAddedMessagePayloadBuilder productPriceAddedBuilder() {
         return com.commercetools.api.models.message.ProductPriceAddedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for productPriceChanged subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.ProductPriceChangedMessagePayloadBuilder productPriceChangedBuilder() {
         return com.commercetools.api.models.message.ProductPriceChangedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for productPriceDiscountsSet subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.ProductPriceDiscountsSetMessagePayloadBuilder productPriceDiscountsSetBuilder() {
         return com.commercetools.api.models.message.ProductPriceDiscountsSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for productPriceExternalDiscountSet subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.ProductPriceExternalDiscountSetMessagePayloadBuilder productPriceExternalDiscountSetBuilder() {
         return com.commercetools.api.models.message.ProductPriceExternalDiscountSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for productPriceKeySet subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.ProductPriceKeySetMessagePayloadBuilder productPriceKeySetBuilder() {
         return com.commercetools.api.models.message.ProductPriceKeySetMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for productPriceModeSet subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.ProductPriceModeSetMessagePayloadBuilder productPriceModeSetBuilder() {
         return com.commercetools.api.models.message.ProductPriceModeSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for productPriceRemoved subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.ProductPriceRemovedMessagePayloadBuilder productPriceRemovedBuilder() {
         return com.commercetools.api.models.message.ProductPriceRemovedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for productPricesSet subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.ProductPricesSetMessagePayloadBuilder productPricesSetBuilder() {
         return com.commercetools.api.models.message.ProductPricesSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for productPublished subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.ProductPublishedMessagePayloadBuilder productPublishedBuilder() {
         return com.commercetools.api.models.message.ProductPublishedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for productRemovedFromCategory subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.ProductRemovedFromCategoryMessagePayloadBuilder productRemovedFromCategoryBuilder() {
         return com.commercetools.api.models.message.ProductRemovedFromCategoryMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for productRevertedStagedChanges subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.ProductRevertedStagedChangesMessagePayloadBuilder productRevertedStagedChangesBuilder() {
         return com.commercetools.api.models.message.ProductRevertedStagedChangesMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for productSelectionCreated subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.ProductSelectionCreatedMessagePayloadBuilder productSelectionCreatedBuilder() {
         return com.commercetools.api.models.message.ProductSelectionCreatedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for productSelectionDeleted subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.ProductSelectionDeletedMessagePayloadBuilder productSelectionDeletedBuilder() {
         return com.commercetools.api.models.message.ProductSelectionDeletedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for productSelectionProductAdded subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.ProductSelectionProductAddedMessagePayloadBuilder productSelectionProductAddedBuilder() {
         return com.commercetools.api.models.message.ProductSelectionProductAddedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for productSelectionProductExcluded subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.ProductSelectionProductExcludedMessagePayloadBuilder productSelectionProductExcludedBuilder() {
         return com.commercetools.api.models.message.ProductSelectionProductExcludedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for productSelectionProductRemoved subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.ProductSelectionProductRemovedMessagePayloadBuilder productSelectionProductRemovedBuilder() {
         return com.commercetools.api.models.message.ProductSelectionProductRemovedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for productSelectionVariantExclusionChanged subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.ProductSelectionVariantExclusionChangedMessagePayloadBuilder productSelectionVariantExclusionChangedBuilder() {
         return com.commercetools.api.models.message.ProductSelectionVariantExclusionChangedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for productSelectionVariantSelectionChanged subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.ProductSelectionVariantSelectionChangedMessagePayloadBuilder productSelectionVariantSelectionChangedBuilder() {
         return com.commercetools.api.models.message.ProductSelectionVariantSelectionChangedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for productSlugChanged subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.ProductSlugChangedMessagePayloadBuilder productSlugChangedBuilder() {
         return com.commercetools.api.models.message.ProductSlugChangedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for productStateTransition subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.ProductStateTransitionMessagePayloadBuilder productStateTransitionBuilder() {
         return com.commercetools.api.models.message.ProductStateTransitionMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for productUnpublished subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.ProductUnpublishedMessagePayloadBuilder productUnpublishedBuilder() {
         return com.commercetools.api.models.message.ProductUnpublishedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for productVariantAdded subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.ProductVariantAddedMessagePayloadBuilder productVariantAddedBuilder() {
         return com.commercetools.api.models.message.ProductVariantAddedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for productVariantDeleted subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.ProductVariantDeletedMessagePayloadBuilder productVariantDeletedBuilder() {
         return com.commercetools.api.models.message.ProductVariantDeletedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for quoteCreated subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.QuoteCreatedMessagePayloadBuilder quoteCreatedBuilder() {
         return com.commercetools.api.models.message.QuoteCreatedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for quoteDeleted subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.QuoteDeletedMessagePayloadBuilder quoteDeletedBuilder() {
         return com.commercetools.api.models.message.QuoteDeletedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for quoteRequestCreated subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.QuoteRequestCreatedMessagePayloadBuilder quoteRequestCreatedBuilder() {
         return com.commercetools.api.models.message.QuoteRequestCreatedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for quoteRequestDeleted subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.QuoteRequestDeletedMessagePayloadBuilder quoteRequestDeletedBuilder() {
         return com.commercetools.api.models.message.QuoteRequestDeletedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for quoteRequestStateChanged subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.QuoteRequestStateChangedMessagePayloadBuilder quoteRequestStateChangedBuilder() {
         return com.commercetools.api.models.message.QuoteRequestStateChangedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for quoteRequestStateTransition subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.QuoteRequestStateTransitionMessagePayloadBuilder quoteRequestStateTransitionBuilder() {
         return com.commercetools.api.models.message.QuoteRequestStateTransitionMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for quoteStateChanged subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.QuoteStateChangedMessagePayloadBuilder quoteStateChangedBuilder() {
         return com.commercetools.api.models.message.QuoteStateChangedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for quoteStateTransition subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.QuoteStateTransitionMessagePayloadBuilder quoteStateTransitionBuilder() {
         return com.commercetools.api.models.message.QuoteStateTransitionMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for returnInfoAdded subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.ReturnInfoAddedMessagePayloadBuilder returnInfoAddedBuilder() {
         return com.commercetools.api.models.message.ReturnInfoAddedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for returnInfoSet subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.ReturnInfoSetMessagePayloadBuilder returnInfoSetBuilder() {
         return com.commercetools.api.models.message.ReturnInfoSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for reviewCreated subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.ReviewCreatedMessagePayloadBuilder reviewCreatedBuilder() {
         return com.commercetools.api.models.message.ReviewCreatedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for reviewRatingSet subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.ReviewRatingSetMessagePayloadBuilder reviewRatingSetBuilder() {
         return com.commercetools.api.models.message.ReviewRatingSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for reviewStateTransition subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.ReviewStateTransitionMessagePayloadBuilder reviewStateTransitionBuilder() {
         return com.commercetools.api.models.message.ReviewStateTransitionMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for shoppingListStoreSet subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.ShoppingListStoreSetMessagePayloadBuilder shoppingListStoreSetBuilder() {
         return com.commercetools.api.models.message.ShoppingListStoreSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for stagedQuoteCreated subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.StagedQuoteCreatedMessagePayloadBuilder stagedQuoteCreatedBuilder() {
         return com.commercetools.api.models.message.StagedQuoteCreatedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for stagedQuoteDeleted subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.StagedQuoteDeletedMessagePayloadBuilder stagedQuoteDeletedBuilder() {
         return com.commercetools.api.models.message.StagedQuoteDeletedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for stagedQuoteSellerCommentSet subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.StagedQuoteSellerCommentSetMessagePayloadBuilder stagedQuoteSellerCommentSetBuilder() {
         return com.commercetools.api.models.message.StagedQuoteSellerCommentSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for stagedQuoteStateChanged subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.StagedQuoteStateChangedMessagePayloadBuilder stagedQuoteStateChangedBuilder() {
         return com.commercetools.api.models.message.StagedQuoteStateChangedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for stagedQuoteStateTransition subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.StagedQuoteStateTransitionMessagePayloadBuilder stagedQuoteStateTransitionBuilder() {
         return com.commercetools.api.models.message.StagedQuoteStateTransitionMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for stagedQuoteValidToSet subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.StagedQuoteValidToSetMessagePayloadBuilder stagedQuoteValidToSetBuilder() {
         return com.commercetools.api.models.message.StagedQuoteValidToSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for standalonePriceActiveChanged subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.StandalonePriceActiveChangedMessagePayloadBuilder standalonePriceActiveChangedBuilder() {
         return com.commercetools.api.models.message.StandalonePriceActiveChangedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for standalonePriceCreated subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.StandalonePriceCreatedMessagePayloadBuilder standalonePriceCreatedBuilder() {
         return com.commercetools.api.models.message.StandalonePriceCreatedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for standalonePriceDeleted subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.StandalonePriceDeletedMessagePayloadBuilder standalonePriceDeletedBuilder() {
         return com.commercetools.api.models.message.StandalonePriceDeletedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for standalonePriceDiscountSet subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.StandalonePriceDiscountSetMessagePayloadBuilder standalonePriceDiscountSetBuilder() {
         return com.commercetools.api.models.message.StandalonePriceDiscountSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for standalonePriceExternalDiscountSet subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.StandalonePriceExternalDiscountSetMessagePayloadBuilder standalonePriceExternalDiscountSetBuilder() {
         return com.commercetools.api.models.message.StandalonePriceExternalDiscountSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for standalonePriceKeySet subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.StandalonePriceKeySetMessagePayloadBuilder standalonePriceKeySetBuilder() {
         return com.commercetools.api.models.message.StandalonePriceKeySetMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for standalonePriceStagedChangesApplied subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessagePayloadBuilder standalonePriceStagedChangesAppliedBuilder() {
         return com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for standalonePriceValueChanged subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.StandalonePriceValueChangedMessagePayloadBuilder standalonePriceValueChangedBuilder() {
         return com.commercetools.api.models.message.StandalonePriceValueChangedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for storeCountriesChanged subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.StoreCountriesChangedMessagePayloadBuilder storeCountriesChangedBuilder() {
         return com.commercetools.api.models.message.StoreCountriesChangedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for storeCreated subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.StoreCreatedMessagePayloadBuilder storeCreatedBuilder() {
         return com.commercetools.api.models.message.StoreCreatedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for storeDeleted subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.StoreDeletedMessagePayloadBuilder storeDeletedBuilder() {
         return com.commercetools.api.models.message.StoreDeletedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for storeDistributionChannelsChanged subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.StoreDistributionChannelsChangedMessagePayloadBuilder storeDistributionChannelsChangedBuilder() {
         return com.commercetools.api.models.message.StoreDistributionChannelsChangedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for storeLanguagesChanged subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.StoreLanguagesChangedMessagePayloadBuilder storeLanguagesChangedBuilder() {
         return com.commercetools.api.models.message.StoreLanguagesChangedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for storeNameSet subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.StoreNameSetMessagePayloadBuilder storeNameSetBuilder() {
         return com.commercetools.api.models.message.StoreNameSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for storeProductSelectionsChanged subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.StoreProductSelectionsChangedMessagePayloadBuilder storeProductSelectionsChangedBuilder() {
         return com.commercetools.api.models.message.StoreProductSelectionsChangedMessagePayloadBuilder.of();
     }
 
+    /**
+     * builder for storeSupplyChannelsChanged subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.message.StoreSupplyChannelsChangedMessagePayloadBuilder storeSupplyChannelsChangedBuilder() {
         return com.commercetools.api.models.message.StoreSupplyChannelsChangedMessagePayloadBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMessagePayload(Function<MessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MessagePayload>() {
             @Override

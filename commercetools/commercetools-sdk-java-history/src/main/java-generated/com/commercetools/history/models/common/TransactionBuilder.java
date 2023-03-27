@@ -62,7 +62,7 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     *
+     * set the value to the type
      * @param type value to be set
      * @return Builder
      */
@@ -73,7 +73,7 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     *
+     * set the value to the amount using the builder function
      * @param builder function to build the amount value
      * @return Builder
      */
@@ -85,7 +85,7 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     *
+     * set the value to the amount
      * @param amount value to be set
      * @return Builder
      */
@@ -107,7 +107,7 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
-     *
+     * set the value to the state
      * @param state value to be set
      * @return Builder
      */
@@ -117,25 +117,55 @@ public class TransactionBuilder implements Builder<Transaction> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Transaction.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Time at which the transaction took place.</p>
+     * @return timestamp
+     */
 
     public String getTimestamp() {
         return this.timestamp;
     }
 
+    /**
+     * value of type}
+     * @return type
+     */
+
     public com.commercetools.history.models.common.TransactionType getType() {
         return this.type;
     }
+
+    /**
+     * value of amount}
+     * @return amount
+     */
 
     public com.commercetools.history.models.common.Money getAmount() {
         return this.amount;
     }
 
+    /**
+     *  <p>Identifier used by the interface that manages the transaction (usually the PSP). If a matching interaction was logged in the <code>interfaceInteractions</code> array, the corresponding interaction should be findable with this ID.</p>
+     * @return interactionId
+     */
+
     public String getInteractionId() {
         return this.interactionId;
     }
+
+    /**
+     * value of state}
+     * @return state
+     */
 
     public com.commercetools.history.models.common.TransactionState getState() {
         return this.state;
@@ -163,10 +193,19 @@ public class TransactionBuilder implements Builder<Transaction> {
         return new TransactionImpl(id, timestamp, type, amount, interactionId, state);
     }
 
+    /**
+     * factory method for an instance of TransactionBuilder
+     * @return builder
+     */
     public static TransactionBuilder of() {
         return new TransactionBuilder();
     }
 
+    /**
+     * create builder for Transaction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TransactionBuilder of(final Transaction template) {
         TransactionBuilder builder = new TransactionBuilder();
         builder.id = template.getId();

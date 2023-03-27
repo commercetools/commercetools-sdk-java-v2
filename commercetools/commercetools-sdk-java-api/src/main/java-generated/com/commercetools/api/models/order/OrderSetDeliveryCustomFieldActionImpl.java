@@ -28,6 +28,9 @@ public class OrderSetDeliveryCustomFieldActionImpl implements OrderSetDeliveryCu
 
     private java.lang.Object value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderSetDeliveryCustomFieldActionImpl(@JsonProperty("deliveryId") final String deliveryId,
             @JsonProperty("name") final String name, @JsonProperty("value") final java.lang.Object value) {
@@ -37,6 +40,9 @@ public class OrderSetDeliveryCustomFieldActionImpl implements OrderSetDeliveryCu
         this.action = SET_DELIVERY_CUSTOM_FIELD;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderSetDeliveryCustomFieldActionImpl() {
         this.action = SET_DELIVERY_CUSTOM_FIELD;
     }

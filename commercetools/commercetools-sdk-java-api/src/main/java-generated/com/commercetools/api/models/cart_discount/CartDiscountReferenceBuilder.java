@@ -64,9 +64,19 @@ public class CartDiscountReferenceBuilder implements Builder<CartDiscountReferen
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the referenced CartDiscount.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Contains the representation of the expanded CartDiscount. Only present in responses to requests with Reference Expansion for CartDiscounts.</p>
+     * @return obj
+     */
 
     @Nullable
     public com.commercetools.api.models.cart_discount.CartDiscount getObj() {
@@ -90,10 +100,19 @@ public class CartDiscountReferenceBuilder implements Builder<CartDiscountReferen
         return new CartDiscountReferenceImpl(id, obj);
     }
 
+    /**
+     * factory method for an instance of CartDiscountReferenceBuilder
+     * @return builder
+     */
     public static CartDiscountReferenceBuilder of() {
         return new CartDiscountReferenceBuilder();
     }
 
+    /**
+     * create builder for CartDiscountReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartDiscountReferenceBuilder of(final CartDiscountReference template) {
         CartDiscountReferenceBuilder builder = new CartDiscountReferenceBuilder();
         builder.id = template.getId();

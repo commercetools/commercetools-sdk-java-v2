@@ -30,7 +30,7 @@ public class ProductVariantChannelAvailabilityBuilder implements Builder<Product
     private Integer availableQuantity;
 
     /**
-     *
+     * set the value to the isOnStock
      * @param isOnStock value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class ProductVariantChannelAvailabilityBuilder implements Builder<Product
     }
 
     /**
-     *
+     * set the value to the restockableInDays
      * @param restockableInDays value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class ProductVariantChannelAvailabilityBuilder implements Builder<Product
     }
 
     /**
-     *
+     * set the value to the availableQuantity
      * @param availableQuantity value to be set
      * @return Builder
      */
@@ -62,13 +62,28 @@ public class ProductVariantChannelAvailabilityBuilder implements Builder<Product
         return this;
     }
 
+    /**
+     * value of isOnStock}
+     * @return isOnStock
+     */
+
     public Boolean getIsOnStock() {
         return this.isOnStock;
     }
 
+    /**
+     * value of restockableInDays}
+     * @return restockableInDays
+     */
+
     public Integer getRestockableInDays() {
         return this.restockableInDays;
     }
+
+    /**
+     * value of availableQuantity}
+     * @return availableQuantity
+     */
 
     public Integer getAvailableQuantity() {
         return this.availableQuantity;
@@ -95,10 +110,19 @@ public class ProductVariantChannelAvailabilityBuilder implements Builder<Product
         return new ProductVariantChannelAvailabilityImpl(isOnStock, restockableInDays, availableQuantity);
     }
 
+    /**
+     * factory method for an instance of ProductVariantChannelAvailabilityBuilder
+     * @return builder
+     */
     public static ProductVariantChannelAvailabilityBuilder of() {
         return new ProductVariantChannelAvailabilityBuilder();
     }
 
+    /**
+     * create builder for ProductVariantChannelAvailability instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductVariantChannelAvailabilityBuilder of(final ProductVariantChannelAvailability template) {
         ProductVariantChannelAvailabilityBuilder builder = new ProductVariantChannelAvailabilityBuilder();
         builder.isOnStock = template.getIsOnStock();

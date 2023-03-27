@@ -36,10 +36,19 @@ public class WhitespaceTokenizerBuilder implements Builder<WhitespaceTokenizer> 
         return new WhitespaceTokenizerImpl();
     }
 
+    /**
+     * factory method for an instance of WhitespaceTokenizerBuilder
+     * @return builder
+     */
     public static WhitespaceTokenizerBuilder of() {
         return new WhitespaceTokenizerBuilder();
     }
 
+    /**
+     * create builder for WhitespaceTokenizer instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static WhitespaceTokenizerBuilder of(final WhitespaceTokenizer template) {
         WhitespaceTokenizerBuilder builder = new WhitespaceTokenizerBuilder();
         return builder;

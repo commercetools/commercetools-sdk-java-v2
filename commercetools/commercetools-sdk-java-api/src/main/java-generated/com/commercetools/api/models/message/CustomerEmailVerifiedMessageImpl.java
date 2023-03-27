@@ -42,6 +42,9 @@ public class CustomerEmailVerifiedMessageImpl implements CustomerEmailVerifiedMe
 
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerEmailVerifiedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -65,6 +68,9 @@ public class CustomerEmailVerifiedMessageImpl implements CustomerEmailVerifiedMe
         this.type = CUSTOMER_EMAIL_VERIFIED;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerEmailVerifiedMessageImpl() {
         this.type = CUSTOMER_EMAIL_VERIFIED;
     }

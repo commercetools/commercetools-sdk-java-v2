@@ -32,6 +32,9 @@ public class SetCustomFieldChangeImpl implements SetCustomFieldChange, ModelBase
 
     private java.lang.Object previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetCustomFieldChangeImpl(@JsonProperty("change") final String change, @JsonProperty("name") final String name,
             @JsonProperty("customTypeId") final String customTypeId,
@@ -45,6 +48,9 @@ public class SetCustomFieldChangeImpl implements SetCustomFieldChange, ModelBase
         this.type = SET_CUSTOM_FIELD_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetCustomFieldChangeImpl() {
         this.type = SET_CUSTOM_FIELD_CHANGE;
     }

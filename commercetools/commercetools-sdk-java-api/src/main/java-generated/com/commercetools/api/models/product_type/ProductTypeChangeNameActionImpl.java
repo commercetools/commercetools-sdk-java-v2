@@ -24,12 +24,18 @@ public class ProductTypeChangeNameActionImpl implements ProductTypeChangeNameAct
 
     private String name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductTypeChangeNameActionImpl(@JsonProperty("name") final String name) {
         this.name = name;
         this.action = CHANGE_NAME;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductTypeChangeNameActionImpl() {
         this.action = CHANGE_NAME;
     }

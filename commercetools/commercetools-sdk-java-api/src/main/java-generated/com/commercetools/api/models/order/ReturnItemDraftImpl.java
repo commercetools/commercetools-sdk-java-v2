@@ -32,6 +32,9 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReturnItemDraftImpl(@JsonProperty("quantity") final Long quantity,
             @JsonProperty("lineItemId") final String lineItemId,
@@ -47,6 +50,9 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
         this.custom = custom;
     }
 
+    /**
+     * create empty instance
+     */
     public ReturnItemDraftImpl() {
     }
 

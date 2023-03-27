@@ -28,6 +28,9 @@ public class ChangeShipmentStateChangeImpl implements ChangeShipmentStateChange,
 
     private com.commercetools.history.models.common.ShipmentState previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeShipmentStateChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.ShipmentState nextValue,
@@ -38,6 +41,9 @@ public class ChangeShipmentStateChangeImpl implements ChangeShipmentStateChange,
         this.type = CHANGE_SHIPMENT_STATE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeShipmentStateChangeImpl() {
         this.type = CHANGE_SHIPMENT_STATE_CHANGE;
     }

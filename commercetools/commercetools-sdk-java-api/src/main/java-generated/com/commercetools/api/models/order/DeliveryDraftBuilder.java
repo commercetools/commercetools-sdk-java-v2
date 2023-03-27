@@ -101,7 +101,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     *
+     * set values to the parcels
      * @param parcels value to be set
      * @return Builder
      */
@@ -112,7 +112,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     *
+     * set value to the parcels
      * @param parcels value to be set
      * @return Builder
      */
@@ -124,7 +124,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     *
+     * add values to the parcels
      * @param parcels value to be set
      * @return Builder
      */
@@ -138,7 +138,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     *
+     * add the value to the parcels using the builder function
      * @param builder function to build the parcels value
      * @return Builder
      */
@@ -153,7 +153,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     *
+     * set the value to the parcels using the builder function
      * @param builder function to build the parcels value
      * @return Builder
      */
@@ -166,7 +166,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     *
+     * set the value to the address using the builder function
      * @param builder function to build the address value
      * @return Builder
      */
@@ -178,7 +178,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     *
+     * set the value to the address
      * @param address value to be set
      * @return Builder
      */
@@ -211,20 +211,40 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
         return this;
     }
 
+    /**
+     *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
+     * @return items
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
         return this.items;
     }
+
+    /**
+     * value of parcels}
+     * @return parcels
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.order.ParcelDraft> getParcels() {
         return this.parcels;
     }
 
+    /**
+     * value of address}
+     * @return address
+     */
+
     @Nullable
     public com.commercetools.api.models.common.AddressDraft getAddress() {
         return this.address;
     }
+
+    /**
+     *  <p>Custom Fields for the Transaction.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -247,10 +267,19 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
         return new DeliveryDraftImpl(items, parcels, address, custom);
     }
 
+    /**
+     * factory method for an instance of DeliveryDraftBuilder
+     * @return builder
+     */
     public static DeliveryDraftBuilder of() {
         return new DeliveryDraftBuilder();
     }
 
+    /**
+     * create builder for DeliveryDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DeliveryDraftBuilder of(final DeliveryDraft template) {
         DeliveryDraftBuilder builder = new DeliveryDraftBuilder();
         builder.items = template.getItems();

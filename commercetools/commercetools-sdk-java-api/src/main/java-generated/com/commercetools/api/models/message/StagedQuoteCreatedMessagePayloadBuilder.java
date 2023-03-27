@@ -48,6 +48,11 @@ public class StagedQuoteCreatedMessagePayloadBuilder implements Builder<StagedQu
         return this;
     }
 
+    /**
+     *  <p>Staged Quote that was created.</p>
+     * @return stagedQuote
+     */
+
     public com.commercetools.api.models.staged_quote.StagedQuote getStagedQuote() {
         return this.stagedQuote;
     }
@@ -69,10 +74,19 @@ public class StagedQuoteCreatedMessagePayloadBuilder implements Builder<StagedQu
         return new StagedQuoteCreatedMessagePayloadImpl(stagedQuote);
     }
 
+    /**
+     * factory method for an instance of StagedQuoteCreatedMessagePayloadBuilder
+     * @return builder
+     */
     public static StagedQuoteCreatedMessagePayloadBuilder of() {
         return new StagedQuoteCreatedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for StagedQuoteCreatedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedQuoteCreatedMessagePayloadBuilder of(final StagedQuoteCreatedMessagePayload template) {
         StagedQuoteCreatedMessagePayloadBuilder builder = new StagedQuoteCreatedMessagePayloadBuilder();
         builder.stagedQuote = template.getStagedQuote();

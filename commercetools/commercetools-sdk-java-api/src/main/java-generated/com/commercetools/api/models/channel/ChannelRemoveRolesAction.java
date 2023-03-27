@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ChannelRemoveRolesActionImpl.class)
 public interface ChannelRemoveRolesAction extends ChannelUpdateAction {
 
+    /**
+     * discriminator value for ChannelRemoveRolesAction
+     */
     String REMOVE_ROLES = "removeRoles";
 
     /**
@@ -39,33 +42,71 @@ public interface ChannelRemoveRolesAction extends ChannelUpdateAction {
     @JsonProperty("roles")
     public List<ChannelRoleEnum> getRoles();
 
+    /**
+     *  <p>Value to remove from the array.</p>
+     * @param roles values to be set
+     */
+
     @JsonIgnore
     public void setRoles(final ChannelRoleEnum... roles);
 
+    /**
+     *  <p>Value to remove from the array.</p>
+     * @param roles values to be set
+     */
+
     public void setRoles(final List<ChannelRoleEnum> roles);
 
+    /**
+     * factory method
+     * @return instance of ChannelRemoveRolesAction
+     */
     public static ChannelRemoveRolesAction of() {
         return new ChannelRemoveRolesActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ChannelRemoveRolesAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ChannelRemoveRolesAction of(final ChannelRemoveRolesAction template) {
         ChannelRemoveRolesActionImpl instance = new ChannelRemoveRolesActionImpl();
         instance.setRoles(template.getRoles());
         return instance;
     }
 
+    /**
+     * builder factory method for ChannelRemoveRolesAction
+     * @return builder
+     */
     public static ChannelRemoveRolesActionBuilder builder() {
         return ChannelRemoveRolesActionBuilder.of();
     }
 
+    /**
+     * create builder for ChannelRemoveRolesAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChannelRemoveRolesActionBuilder builder(final ChannelRemoveRolesAction template) {
         return ChannelRemoveRolesActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withChannelRemoveRolesAction(Function<ChannelRemoveRolesAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ChannelRemoveRolesAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ChannelRemoveRolesAction>() {
             @Override

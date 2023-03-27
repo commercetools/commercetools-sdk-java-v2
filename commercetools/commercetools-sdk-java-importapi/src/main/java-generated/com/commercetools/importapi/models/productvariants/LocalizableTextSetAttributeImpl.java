@@ -26,6 +26,9 @@ public class LocalizableTextSetAttributeImpl implements LocalizableTextSetAttrib
 
     private java.util.List<com.commercetools.importapi.models.common.LocalizedString> value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     LocalizableTextSetAttributeImpl(@JsonProperty("name") final String name,
             @JsonProperty("value") final java.util.List<com.commercetools.importapi.models.common.LocalizedString> value) {
@@ -34,6 +37,9 @@ public class LocalizableTextSetAttributeImpl implements LocalizableTextSetAttrib
         this.type = LTEXT_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public LocalizableTextSetAttributeImpl() {
         this.type = LTEXT_SET;
     }

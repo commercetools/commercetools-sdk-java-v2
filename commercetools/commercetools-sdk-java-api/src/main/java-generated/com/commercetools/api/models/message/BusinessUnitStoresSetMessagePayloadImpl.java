@@ -24,6 +24,9 @@ public class BusinessUnitStoresSetMessagePayloadImpl implements BusinessUnitStor
 
     private java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitStoresSetMessagePayloadImpl(
             @JsonProperty("stores") final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores) {
@@ -31,6 +34,9 @@ public class BusinessUnitStoresSetMessagePayloadImpl implements BusinessUnitStor
         this.type = BUSINESS_UNIT_STORES_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitStoresSetMessagePayloadImpl() {
         this.type = BUSINESS_UNIT_STORES_SET;
     }

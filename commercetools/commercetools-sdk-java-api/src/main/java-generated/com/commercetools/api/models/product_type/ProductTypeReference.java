@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductTypeReferenceImpl.class)
 public interface ProductTypeReference extends Reference, com.commercetools.api.models.Identifiable<ProductType> {
 
+    /**
+     * discriminator value for ProductTypeReference
+     */
     String PRODUCT_TYPE = "product-type";
 
     /**
@@ -49,14 +52,33 @@ public interface ProductTypeReference extends Reference, com.commercetools.api.m
     @JsonProperty("id")
     public String getId();
 
+    /**
+     *  <p>Contains the representation of the expanded ProductType. Only present in responses to requests with Reference Expansion for ProductTypes.</p>
+     * @param obj value to be set
+     */
+
     public void setObj(final ProductType obj);
+
+    /**
+     *  <p>Unique identifier of the referenced ProductType.</p>
+     * @param id value to be set
+     */
 
     public void setId(final String id);
 
+    /**
+     * factory method
+     * @return instance of ProductTypeReference
+     */
     public static ProductTypeReference of() {
         return new ProductTypeReferenceImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductTypeReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductTypeReference of(final ProductTypeReference template) {
         ProductTypeReferenceImpl instance = new ProductTypeReferenceImpl();
         instance.setId(template.getId());
@@ -64,18 +86,37 @@ public interface ProductTypeReference extends Reference, com.commercetools.api.m
         return instance;
     }
 
+    /**
+     * builder factory method for ProductTypeReference
+     * @return builder
+     */
     public static ProductTypeReferenceBuilder builder() {
         return ProductTypeReferenceBuilder.of();
     }
 
+    /**
+     * create builder for ProductTypeReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductTypeReferenceBuilder builder(final ProductTypeReference template) {
         return ProductTypeReferenceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductTypeReference(Function<ProductTypeReference, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductTypeReference> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductTypeReference>() {
             @Override

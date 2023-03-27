@@ -51,14 +51,33 @@ public interface DiscountedLineItemPortion {
     @JsonProperty("discountedAmount")
     public TypedMoney getDiscountedAmount();
 
+    /**
+     *  <p>Cart Discount applicable on the Line Item.</p>
+     * @param discount value to be set
+     */
+
     public void setDiscount(final CartDiscountReference discount);
+
+    /**
+     *  <p>Money value of the discount applicable.</p>
+     * @param discountedAmount value to be set
+     */
 
     public void setDiscountedAmount(final TypedMoney discountedAmount);
 
+    /**
+     * factory method
+     * @return instance of DiscountedLineItemPortion
+     */
     public static DiscountedLineItemPortion of() {
         return new DiscountedLineItemPortionImpl();
     }
 
+    /**
+     * factory method to copy an instance of DiscountedLineItemPortion
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static DiscountedLineItemPortion of(final DiscountedLineItemPortion template) {
         DiscountedLineItemPortionImpl instance = new DiscountedLineItemPortionImpl();
         instance.setDiscount(template.getDiscount());
@@ -66,18 +85,37 @@ public interface DiscountedLineItemPortion {
         return instance;
     }
 
+    /**
+     * builder factory method for DiscountedLineItemPortion
+     * @return builder
+     */
     public static DiscountedLineItemPortionBuilder builder() {
         return DiscountedLineItemPortionBuilder.of();
     }
 
+    /**
+     * create builder for DiscountedLineItemPortion instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DiscountedLineItemPortionBuilder builder(final DiscountedLineItemPortion template) {
         return DiscountedLineItemPortionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withDiscountedLineItemPortion(Function<DiscountedLineItemPortion, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<DiscountedLineItemPortion> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<DiscountedLineItemPortion>() {
             @Override

@@ -41,7 +41,7 @@ public class SetProductCountChangeBuilder implements Builder<SetProductCountChan
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class SetProductCountChangeBuilder implements Builder<SetProductCountChan
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -62,13 +62,28 @@ public class SetProductCountChangeBuilder implements Builder<SetProductCountChan
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>setProductCount</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public Integer getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public Integer getNextValue() {
         return this.nextValue;
@@ -93,10 +108,19 @@ public class SetProductCountChangeBuilder implements Builder<SetProductCountChan
         return new SetProductCountChangeImpl(change, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of SetProductCountChangeBuilder
+     * @return builder
+     */
     public static SetProductCountChangeBuilder of() {
         return new SetProductCountChangeBuilder();
     }
 
+    /**
+     * create builder for SetProductCountChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetProductCountChangeBuilder of(final SetProductCountChange template) {
         SetProductCountChangeBuilder builder = new SetProductCountChangeBuilder();
         builder.change = template.getChange();

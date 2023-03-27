@@ -49,9 +49,19 @@ public class ProductTypeChangeInputHintActionBuilder implements Builder<ProductT
         return this;
     }
 
+    /**
+     *  <p>Name of the AttributeDefinition to update.</p>
+     * @return attributeName
+     */
+
     public String getAttributeName() {
         return this.attributeName;
     }
+
+    /**
+     *  <p><code>SingleLine</code> or <code>MultiLine</code></p>
+     * @return newValue
+     */
 
     public com.commercetools.api.models.product_type.TextInputHint getNewValue() {
         return this.newValue;
@@ -75,10 +85,19 @@ public class ProductTypeChangeInputHintActionBuilder implements Builder<ProductT
         return new ProductTypeChangeInputHintActionImpl(attributeName, newValue);
     }
 
+    /**
+     * factory method for an instance of ProductTypeChangeInputHintActionBuilder
+     * @return builder
+     */
     public static ProductTypeChangeInputHintActionBuilder of() {
         return new ProductTypeChangeInputHintActionBuilder();
     }
 
+    /**
+     * create builder for ProductTypeChangeInputHintAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductTypeChangeInputHintActionBuilder of(final ProductTypeChangeInputHintAction template) {
         ProductTypeChangeInputHintActionBuilder builder = new ProductTypeChangeInputHintActionBuilder();
         builder.attributeName = template.getAttributeName();

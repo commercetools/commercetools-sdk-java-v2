@@ -32,6 +32,9 @@ public class ProductAddAssetActionImpl implements ProductAddAssetAction, ModelBa
 
     private Integer position;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductAddAssetActionImpl(@JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku,
             @JsonProperty("staged") final Boolean staged,
@@ -45,6 +48,9 @@ public class ProductAddAssetActionImpl implements ProductAddAssetAction, ModelBa
         this.action = ADD_ASSET;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductAddAssetActionImpl() {
         this.action = ADD_ASSET;
     }

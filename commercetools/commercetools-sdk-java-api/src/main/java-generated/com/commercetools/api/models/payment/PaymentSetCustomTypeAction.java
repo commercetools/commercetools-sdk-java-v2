@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PaymentSetCustomTypeActionImpl.class)
 public interface PaymentSetCustomTypeAction extends PaymentUpdateAction {
 
+    /**
+     * discriminator value for PaymentSetCustomTypeAction
+     */
     String SET_CUSTOM_TYPE = "setCustomType";
 
     /**
@@ -48,14 +51,33 @@ public interface PaymentSetCustomTypeAction extends PaymentUpdateAction {
     @JsonProperty("fields")
     public FieldContainer getFields();
 
+    /**
+     *  <p>Defines the Type that extends the Payment with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Payment.</p>
+     * @param type value to be set
+     */
+
     public void setType(final TypeResourceIdentifier type);
+
+    /**
+     *  <p>Sets the Custom Fields fields for the Payment.</p>
+     * @param fields value to be set
+     */
 
     public void setFields(final FieldContainer fields);
 
+    /**
+     * factory method
+     * @return instance of PaymentSetCustomTypeAction
+     */
     public static PaymentSetCustomTypeAction of() {
         return new PaymentSetCustomTypeActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of PaymentSetCustomTypeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static PaymentSetCustomTypeAction of(final PaymentSetCustomTypeAction template) {
         PaymentSetCustomTypeActionImpl instance = new PaymentSetCustomTypeActionImpl();
         instance.setType(template.getType());
@@ -63,18 +85,37 @@ public interface PaymentSetCustomTypeAction extends PaymentUpdateAction {
         return instance;
     }
 
+    /**
+     * builder factory method for PaymentSetCustomTypeAction
+     * @return builder
+     */
     public static PaymentSetCustomTypeActionBuilder builder() {
         return PaymentSetCustomTypeActionBuilder.of();
     }
 
+    /**
+     * create builder for PaymentSetCustomTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentSetCustomTypeActionBuilder builder(final PaymentSetCustomTypeAction template) {
         return PaymentSetCustomTypeActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withPaymentSetCustomTypeAction(Function<PaymentSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<PaymentSetCustomTypeAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<PaymentSetCustomTypeAction>() {
             @Override

@@ -34,6 +34,11 @@ public class AuthorizationHeaderAuthenticationBuilder implements Builder<Authori
         return this;
     }
 
+    /**
+     *  <p>Partially hidden on retrieval for security reasons.</p>
+     * @return headerValue
+     */
+
     public String getHeaderValue() {
         return this.headerValue;
     }
@@ -55,10 +60,19 @@ public class AuthorizationHeaderAuthenticationBuilder implements Builder<Authori
         return new AuthorizationHeaderAuthenticationImpl(headerValue);
     }
 
+    /**
+     * factory method for an instance of AuthorizationHeaderAuthenticationBuilder
+     * @return builder
+     */
     public static AuthorizationHeaderAuthenticationBuilder of() {
         return new AuthorizationHeaderAuthenticationBuilder();
     }
 
+    /**
+     * create builder for AuthorizationHeaderAuthentication instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AuthorizationHeaderAuthenticationBuilder of(final AuthorizationHeaderAuthentication template) {
         AuthorizationHeaderAuthenticationBuilder builder = new AuthorizationHeaderAuthenticationBuilder();
         builder.headerValue = template.getHeaderValue();

@@ -370,54 +370,109 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
         return this;
     }
 
+    /**
+     *  <p>Name of the ShoppingList.</p>
+     * @return name
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
+
+    /**
+     *  <p>Human-readable identifiers usually used as deep-link URL to the related ShoppingList. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. The slug must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>.</p>
+     * @return slug
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getSlug() {
         return this.slug;
     }
 
+    /**
+     *  <p>The Customer the ShoppingList should be associated to.</p>
+     * @return customer
+     */
+
     @Nullable
     public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer() {
         return this.customer;
     }
+
+    /**
+     *  <p>User-defined unique identifier for the ShoppingList.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>Description of the ShoppingList.</p>
+     * @return description
+     */
+
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
+
+    /**
+     *  <p>Identifies ShoppingLists belonging to an anonymous session.</p>
+     * @return anonymousId
+     */
 
     @Nullable
     public String getAnonymousId() {
         return this.anonymousId;
     }
 
+    /**
+     *  <p>Number of days after which the ShoppingList will be automatically deleted if it has not been modified. If not set, the default value configured in the Project is used.</p>
+     * @return deleteDaysAfterLastModification
+     */
+
     @Nullable
     public Long getDeleteDaysAfterLastModification() {
         return this.deleteDaysAfterLastModification;
     }
+
+    /**
+     *  <p>Line Items (containing Products) to add to the ShoppingList.</p>
+     * @return lineItems
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft> getLineItems() {
         return this.lineItems;
     }
 
+    /**
+     *  <p>Line Items (containing text values) to add to the ShoppingList.</p>
+     * @return textLineItems
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.shopping_list.TextLineItemDraft> getTextLineItems() {
         return this.textLineItems;
     }
 
+    /**
+     *  <p>Assigns the new ShoppingList to the Store.</p>
+     * @return store
+     */
+
     @Nullable
     public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {
         return this.store;
     }
+
+    /**
+     *  <p>Custom Fields defined for the ShoppingList.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -443,10 +498,19 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
             deleteDaysAfterLastModification, lineItems, textLineItems, store, custom);
     }
 
+    /**
+     * factory method for an instance of ShoppingListDraftBuilder
+     * @return builder
+     */
     public static ShoppingListDraftBuilder of() {
         return new ShoppingListDraftBuilder();
     }
 
+    /**
+     * create builder for ShoppingListDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShoppingListDraftBuilder of(final ShoppingListDraft template) {
         ShoppingListDraftBuilder builder = new ShoppingListDraftBuilder();
         builder.name = template.getName();

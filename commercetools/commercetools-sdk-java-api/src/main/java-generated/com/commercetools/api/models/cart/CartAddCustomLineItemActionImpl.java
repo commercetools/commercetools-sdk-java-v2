@@ -42,6 +42,9 @@ public class CartAddCustomLineItemActionImpl implements CartAddCustomLineItemAct
 
     private com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartAddCustomLineItemActionImpl(@JsonProperty("money") final com.commercetools.api.models.common.Money money,
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
@@ -63,6 +66,9 @@ public class CartAddCustomLineItemActionImpl implements CartAddCustomLineItemAct
         this.action = ADD_CUSTOM_LINE_ITEM;
     }
 
+    /**
+     * create empty instance
+     */
     public CartAddCustomLineItemActionImpl() {
         this.action = ADD_CUSTOM_LINE_ITEM;
     }

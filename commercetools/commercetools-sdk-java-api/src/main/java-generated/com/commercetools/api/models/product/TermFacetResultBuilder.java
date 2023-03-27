@@ -37,7 +37,7 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
     private java.util.List<com.commercetools.api.models.product.FacetTerm> terms;
 
     /**
-     *
+     * set the value to the dataType
      * @param dataType value to be set
      * @return Builder
      */
@@ -48,7 +48,7 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
     }
 
     /**
-     *
+     * set the value to the missing
      * @param missing value to be set
      * @return Builder
      */
@@ -59,7 +59,7 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
     }
 
     /**
-     *
+     * set the value to the total
      * @param total value to be set
      * @return Builder
      */
@@ -70,7 +70,7 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
     }
 
     /**
-     *
+     * set the value to the other
      * @param other value to be set
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
     }
 
     /**
-     *
+     * set values to the terms
      * @param terms value to be set
      * @return Builder
      */
@@ -92,7 +92,7 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
     }
 
     /**
-     *
+     * set value to the terms
      * @param terms value to be set
      * @return Builder
      */
@@ -103,7 +103,7 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
     }
 
     /**
-     *
+     * add values to the terms
      * @param terms value to be set
      * @return Builder
      */
@@ -117,7 +117,7 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
     }
 
     /**
-     *
+     * add the value to the terms using the builder function
      * @param builder function to build the terms value
      * @return Builder
      */
@@ -132,7 +132,7 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
     }
 
     /**
-     *
+     * set the value to the terms using the builder function
      * @param builder function to build the terms value
      * @return Builder
      */
@@ -144,21 +144,46 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
         return this;
     }
 
+    /**
+     * value of dataType}
+     * @return dataType
+     */
+
     public com.commercetools.api.models.product.TermFacetResultType getDataType() {
         return this.dataType;
     }
+
+    /**
+     * value of missing}
+     * @return missing
+     */
 
     public Long getMissing() {
         return this.missing;
     }
 
+    /**
+     * value of total}
+     * @return total
+     */
+
     public Long getTotal() {
         return this.total;
     }
 
+    /**
+     * value of other}
+     * @return other
+     */
+
     public Long getOther() {
         return this.other;
     }
+
+    /**
+     * value of terms}
+     * @return terms
+     */
 
     public java.util.List<com.commercetools.api.models.product.FacetTerm> getTerms() {
         return this.terms;
@@ -185,10 +210,19 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
         return new TermFacetResultImpl(dataType, missing, total, other, terms);
     }
 
+    /**
+     * factory method for an instance of TermFacetResultBuilder
+     * @return builder
+     */
     public static TermFacetResultBuilder of() {
         return new TermFacetResultBuilder();
     }
 
+    /**
+     * create builder for TermFacetResult instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TermFacetResultBuilder of(final TermFacetResult template) {
         TermFacetResultBuilder builder = new TermFacetResultBuilder();
         builder.dataType = template.getDataType();

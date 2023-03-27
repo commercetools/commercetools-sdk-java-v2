@@ -24,6 +24,9 @@ public class AttributeLocalizedEnumTypeImpl implements AttributeLocalizedEnumTyp
 
     private java.util.List<com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AttributeLocalizedEnumTypeImpl(
             @JsonProperty("values") final java.util.List<com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> values) {
@@ -31,6 +34,9 @@ public class AttributeLocalizedEnumTypeImpl implements AttributeLocalizedEnumTyp
         this.name = LENUM;
     }
 
+    /**
+     * create empty instance
+     */
     public AttributeLocalizedEnumTypeImpl() {
         this.name = LENUM;
     }

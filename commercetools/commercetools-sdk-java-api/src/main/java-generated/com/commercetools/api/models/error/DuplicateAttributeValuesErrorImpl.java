@@ -28,6 +28,9 @@ public class DuplicateAttributeValuesErrorImpl implements DuplicateAttributeValu
 
     private java.util.List<com.commercetools.api.models.product.Attribute> attributes;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DuplicateAttributeValuesErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values,
@@ -38,6 +41,9 @@ public class DuplicateAttributeValuesErrorImpl implements DuplicateAttributeValu
         this.code = DUPLICATE_ATTRIBUTE_VALUES;
     }
 
+    /**
+     * create empty instance
+     */
     public DuplicateAttributeValuesErrorImpl() {
         this.code = DUPLICATE_ATTRIBUTE_VALUES;
     }

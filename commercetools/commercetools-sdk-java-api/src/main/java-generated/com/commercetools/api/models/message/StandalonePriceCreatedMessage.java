@@ -38,6 +38,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StandalonePriceCreatedMessageImpl.class)
 public interface StandalonePriceCreatedMessage extends Message {
 
+    /**
+     * discriminator value for StandalonePriceCreatedMessage
+     */
     String STANDALONE_PRICE_CREATED = "StandalonePriceCreated";
 
     /**
@@ -49,12 +52,26 @@ public interface StandalonePriceCreatedMessage extends Message {
     @JsonProperty("standalonePrice")
     public StandalonePrice getStandalonePrice();
 
+    /**
+     *  <p>Standalone Price that was created.</p>
+     * @param standalonePrice value to be set
+     */
+
     public void setStandalonePrice(final StandalonePrice standalonePrice);
 
+    /**
+     * factory method
+     * @return instance of StandalonePriceCreatedMessage
+     */
     public static StandalonePriceCreatedMessage of() {
         return new StandalonePriceCreatedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of StandalonePriceCreatedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StandalonePriceCreatedMessage of(final StandalonePriceCreatedMessage template) {
         StandalonePriceCreatedMessageImpl instance = new StandalonePriceCreatedMessageImpl();
         instance.setId(template.getId());
@@ -71,18 +88,37 @@ public interface StandalonePriceCreatedMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for StandalonePriceCreatedMessage
+     * @return builder
+     */
     public static StandalonePriceCreatedMessageBuilder builder() {
         return StandalonePriceCreatedMessageBuilder.of();
     }
 
+    /**
+     * create builder for StandalonePriceCreatedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StandalonePriceCreatedMessageBuilder builder(final StandalonePriceCreatedMessage template) {
         return StandalonePriceCreatedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStandalonePriceCreatedMessage(Function<StandalonePriceCreatedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceCreatedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceCreatedMessage>() {
             @Override

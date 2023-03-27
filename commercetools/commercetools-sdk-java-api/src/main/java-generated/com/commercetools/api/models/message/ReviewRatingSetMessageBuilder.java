@@ -284,62 +284,132 @@ public class ReviewRatingSetMessageBuilder implements Builder<ReviewRatingSetMes
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
+     * @return version
+     */
 
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *  <p>Date and time (UTC) the Message was generated.</p>
+     * @return createdAt
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+     *  <p>Value of <code>createdAt</code>.</p>
+     * @return lastModifiedAt
+     */
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
+
+    /**
+     *  <p>Value of <code>createdBy</code>.</p>
+     * @return lastModifiedBy
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
+     */
+
     @Nullable
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
 
+    /**
+     *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
+     * @return sequenceNumber
+     */
+
     public Long getSequenceNumber() {
         return this.sequenceNumber;
     }
+
+    /**
+     *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @return resource
+     */
 
     public com.commercetools.api.models.common.Reference getResource() {
         return this.resource;
     }
 
+    /**
+     *  <p>Version of the resource on which the change or action was performed.</p>
+     * @return resourceVersion
+     */
+
     public Long getResourceVersion() {
         return this.resourceVersion;
     }
+
+    /**
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @return resourceUserProvidedIdentifiers
+     */
 
     @Nullable
     public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers() {
         return this.resourceUserProvidedIdentifiers;
     }
 
+    /**
+     *  <p>The <code>rating</code> of the Review before the Set Rating update action.</p>
+     * @return oldRating
+     */
+
     @Nullable
     public Double getOldRating() {
         return this.oldRating;
     }
+
+    /**
+     *  <p>The <code>rating</code> of the Review after the Set Rating update action.</p>
+     * @return newRating
+     */
 
     @Nullable
     public Double getNewRating() {
         return this.newRating;
     }
 
+    /**
+     *  <p>Whether the Review was taken into account in the ratings statistics of the target.</p>
+     * @return includedInStatistics
+     */
+
     public Boolean getIncludedInStatistics() {
         return this.includedInStatistics;
     }
+
+    /**
+     *  <p>Reference to the resource that the Review belongs to.</p>
+     * @return target
+     */
 
     @Nullable
     public com.commercetools.api.models.common.Reference getTarget() {
@@ -375,10 +445,19 @@ public class ReviewRatingSetMessageBuilder implements Builder<ReviewRatingSetMes
             includedInStatistics, target);
     }
 
+    /**
+     * factory method for an instance of ReviewRatingSetMessageBuilder
+     * @return builder
+     */
     public static ReviewRatingSetMessageBuilder of() {
         return new ReviewRatingSetMessageBuilder();
     }
 
+    /**
+     * create builder for ReviewRatingSetMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReviewRatingSetMessageBuilder of(final ReviewRatingSetMessage template) {
         ReviewRatingSetMessageBuilder builder = new ReviewRatingSetMessageBuilder();
         builder.id = template.getId();

@@ -149,38 +149,78 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
         return this;
     }
 
+    /**
+     *  <p><code>"The discountCode $discountCodeId cannot be applied to the cart."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
 
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
+
     public Map<String, java.lang.Object> getValues() {
         return this.values;
     }
+
+    /**
+     *  <p>Discount Code passed to the Cart.</p>
+     * @return discountCode
+     */
 
     @Nullable
     public String getDiscountCode() {
         return this.discountCode;
     }
 
+    /**
+     *  <p><code>"DoesNotExist"</code> or <code>"TimeRangeNonApplicable"</code></p>
+     * @return reason
+     */
+
     @Nullable
     public String getReason() {
         return this.reason;
     }
+
+    /**
+     *  <p>Unique identifier of the Discount Code.</p>
+     * @return discountCodeId
+     */
 
     @Nullable
     public String getDiscountCodeId() {
         return this.discountCodeId;
     }
 
+    /**
+     *  <p>Date and time (UTC) from which the Discount Code is valid.</p>
+     * @return validFrom
+     */
+
     @Nullable
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
 
+    /**
+     *  <p>Date and time (UTC) until which the Discount Code is valid.</p>
+     * @return validUntil
+     */
+
     @Nullable
     public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;
     }
+
+    /**
+     *  <p>Date and time (UTC) the Discount Code validity check was last performed.</p>
+     * @return validityCheckTime
+     */
 
     @Nullable
     public java.time.ZonedDateTime getValidityCheckTime() {
@@ -206,10 +246,19 @@ public class DiscountCodeNonApplicableErrorBuilder implements Builder<DiscountCo
             validUntil, validityCheckTime);
     }
 
+    /**
+     * factory method for an instance of DiscountCodeNonApplicableErrorBuilder
+     * @return builder
+     */
     public static DiscountCodeNonApplicableErrorBuilder of() {
         return new DiscountCodeNonApplicableErrorBuilder();
     }
 
+    /**
+     * create builder for DiscountCodeNonApplicableError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DiscountCodeNonApplicableErrorBuilder of(final DiscountCodeNonApplicableError template) {
         DiscountCodeNonApplicableErrorBuilder builder = new DiscountCodeNonApplicableErrorBuilder();
         builder.message = template.getMessage();

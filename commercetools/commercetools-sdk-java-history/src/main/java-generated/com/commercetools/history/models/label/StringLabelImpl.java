@@ -24,12 +24,18 @@ public class StringLabelImpl implements StringLabel, ModelBase {
 
     private String value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StringLabelImpl(@JsonProperty("value") final String value) {
         this.value = value;
         this.type = STRING_LABEL;
     }
 
+    /**
+     * create empty instance
+     */
     public StringLabelImpl() {
         this.type = STRING_LABEL;
     }

@@ -50,10 +50,20 @@ public class StandalonePriceResourceIdentifierBuilder implements Builder<Standal
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the referenced resource. Required if <code>key</code> is absent.</p>
+     * @return id
+     */
+
     @Nullable
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the referenced resource. Required if <code>id</code> is absent.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
@@ -76,10 +86,19 @@ public class StandalonePriceResourceIdentifierBuilder implements Builder<Standal
         return new StandalonePriceResourceIdentifierImpl(id, key);
     }
 
+    /**
+     * factory method for an instance of StandalonePriceResourceIdentifierBuilder
+     * @return builder
+     */
     public static StandalonePriceResourceIdentifierBuilder of() {
         return new StandalonePriceResourceIdentifierBuilder();
     }
 
+    /**
+     * create builder for StandalonePriceResourceIdentifier instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StandalonePriceResourceIdentifierBuilder of(final StandalonePriceResourceIdentifier template) {
         StandalonePriceResourceIdentifierBuilder builder = new StandalonePriceResourceIdentifierBuilder();
         builder.id = template.getId();

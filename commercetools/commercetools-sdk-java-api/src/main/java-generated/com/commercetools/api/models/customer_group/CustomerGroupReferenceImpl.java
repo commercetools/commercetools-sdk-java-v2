@@ -27,6 +27,9 @@ public class CustomerGroupReferenceImpl implements CustomerGroupReference, Model
 
     private com.commercetools.api.models.customer_group.CustomerGroup obj;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerGroupReferenceImpl(@JsonProperty("id") final String id,
             @JsonProperty("obj") final com.commercetools.api.models.customer_group.CustomerGroup obj) {
@@ -35,6 +38,9 @@ public class CustomerGroupReferenceImpl implements CustomerGroupReference, Model
         this.typeId = ReferenceTypeId.findEnum("customer-group");
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerGroupReferenceImpl() {
         this.typeId = ReferenceTypeId.findEnum("customer-group");
     }

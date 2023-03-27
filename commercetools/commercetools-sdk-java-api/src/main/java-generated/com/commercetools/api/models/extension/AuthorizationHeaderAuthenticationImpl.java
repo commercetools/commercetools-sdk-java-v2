@@ -25,12 +25,18 @@ public class AuthorizationHeaderAuthenticationImpl implements AuthorizationHeade
 
     private String headerValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AuthorizationHeaderAuthenticationImpl(@JsonProperty("headerValue") final String headerValue) {
         this.headerValue = headerValue;
         this.type = AUTHORIZATION_HEADER;
     }
 
+    /**
+     * create empty instance
+     */
     public AuthorizationHeaderAuthenticationImpl() {
         this.type = AUTHORIZATION_HEADER;
     }

@@ -21,6 +21,9 @@ public class ProductUnpublishedMessagePayloadImpl implements ProductUnpublishedM
 
     private String type;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductUnpublishedMessagePayloadImpl() {
         this.type = PRODUCT_UNPUBLISHED;

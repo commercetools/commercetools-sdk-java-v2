@@ -32,6 +32,9 @@ public class OrderAddDeliveryActionImpl implements OrderAddDeliveryAction, Model
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderAddDeliveryActionImpl(
             @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items,
@@ -47,6 +50,9 @@ public class OrderAddDeliveryActionImpl implements OrderAddDeliveryAction, Model
         this.action = ADD_DELIVERY;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderAddDeliveryActionImpl() {
         this.action = ADD_DELIVERY;
     }

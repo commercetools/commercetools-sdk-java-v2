@@ -24,12 +24,18 @@ public class TaxCategoryRemoveTaxRateActionImpl implements TaxCategoryRemoveTaxR
 
     private String taxRateId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TaxCategoryRemoveTaxRateActionImpl(@JsonProperty("taxRateId") final String taxRateId) {
         this.taxRateId = taxRateId;
         this.action = REMOVE_TAX_RATE;
     }
 
+    /**
+     * create empty instance
+     */
     public TaxCategoryRemoveTaxRateActionImpl() {
         this.action = REMOVE_TAX_RATE;
     }

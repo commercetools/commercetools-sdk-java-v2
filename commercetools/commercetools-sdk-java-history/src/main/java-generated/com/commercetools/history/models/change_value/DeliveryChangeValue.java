@@ -62,22 +62,56 @@ public interface DeliveryChangeValue {
     @JsonProperty("parcels")
     public List<Parcel> getParcels();
 
+    /**
+     * set items
+     * @param items values to be set
+     */
+
     @JsonIgnore
     public void setItems(final DeliveryItem... items);
 
+    /**
+     * set items
+     * @param items values to be set
+     */
+
     public void setItems(final List<DeliveryItem> items);
 
+    /**
+     * set address
+     * @param address value to be set
+     */
+
     public void setAddress(final Address address);
+
+    /**
+     * set parcels
+     * @param parcels values to be set
+     */
 
     @JsonIgnore
     public void setParcels(final Parcel... parcels);
 
+    /**
+     * set parcels
+     * @param parcels values to be set
+     */
+
     public void setParcels(final List<Parcel> parcels);
 
+    /**
+     * factory method
+     * @return instance of DeliveryChangeValue
+     */
     public static DeliveryChangeValue of() {
         return new DeliveryChangeValueImpl();
     }
 
+    /**
+     * factory method to copy an instance of DeliveryChangeValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static DeliveryChangeValue of(final DeliveryChangeValue template) {
         DeliveryChangeValueImpl instance = new DeliveryChangeValueImpl();
         instance.setItems(template.getItems());
@@ -86,18 +120,37 @@ public interface DeliveryChangeValue {
         return instance;
     }
 
+    /**
+     * builder factory method for DeliveryChangeValue
+     * @return builder
+     */
     public static DeliveryChangeValueBuilder builder() {
         return DeliveryChangeValueBuilder.of();
     }
 
+    /**
+     * create builder for DeliveryChangeValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DeliveryChangeValueBuilder builder(final DeliveryChangeValue template) {
         return DeliveryChangeValueBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withDeliveryChangeValue(Function<DeliveryChangeValue, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<DeliveryChangeValue> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<DeliveryChangeValue>() {
             @Override

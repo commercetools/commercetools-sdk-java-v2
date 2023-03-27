@@ -26,6 +26,9 @@ public class OrderBillingAddressSetMessagePayloadImpl implements OrderBillingAdd
 
     private com.commercetools.api.models.common.Address oldAddress;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderBillingAddressSetMessagePayloadImpl(
             @JsonProperty("address") final com.commercetools.api.models.common.Address address,
@@ -35,6 +38,9 @@ public class OrderBillingAddressSetMessagePayloadImpl implements OrderBillingAdd
         this.type = ORDER_BILLING_ADDRESS_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderBillingAddressSetMessagePayloadImpl() {
         this.type = ORDER_BILLING_ADDRESS_SET;
     }

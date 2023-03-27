@@ -24,12 +24,18 @@ public class ChangeImpl implements Change, ModelBase {
 
     private String change;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeImpl(@JsonProperty("type") final String type, @JsonProperty("change") final String change) {
         this.type = type;
         this.change = change;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeImpl() {
     }
 

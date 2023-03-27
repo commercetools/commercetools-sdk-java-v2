@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartDiscountValueFixedImpl.class)
 public interface CartDiscountValueFixed extends CartDiscountValue {
 
+    /**
+     * discriminator value for CartDiscountValueFixed
+     */
     String FIXED = "fixed";
 
     /**
@@ -42,33 +45,71 @@ public interface CartDiscountValueFixed extends CartDiscountValue {
     @JsonProperty("money")
     public List<CentPrecisionMoney> getMoney();
 
+    /**
+     *  <p>Cent precision money values in different currencies.</p>
+     * @param money values to be set
+     */
+
     @JsonIgnore
     public void setMoney(final CentPrecisionMoney... money);
 
+    /**
+     *  <p>Cent precision money values in different currencies.</p>
+     * @param money values to be set
+     */
+
     public void setMoney(final List<CentPrecisionMoney> money);
 
+    /**
+     * factory method
+     * @return instance of CartDiscountValueFixed
+     */
     public static CartDiscountValueFixed of() {
         return new CartDiscountValueFixedImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartDiscountValueFixed
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartDiscountValueFixed of(final CartDiscountValueFixed template) {
         CartDiscountValueFixedImpl instance = new CartDiscountValueFixedImpl();
         instance.setMoney(template.getMoney());
         return instance;
     }
 
+    /**
+     * builder factory method for CartDiscountValueFixed
+     * @return builder
+     */
     public static CartDiscountValueFixedBuilder builder() {
         return CartDiscountValueFixedBuilder.of();
     }
 
+    /**
+     * create builder for CartDiscountValueFixed instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartDiscountValueFixedBuilder builder(final CartDiscountValueFixed template) {
         return CartDiscountValueFixedBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartDiscountValueFixed(Function<CartDiscountValueFixed, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountValueFixed> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountValueFixed>() {
             @Override

@@ -26,6 +26,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductSetKeyActionImpl.class)
 public interface ProductSetKeyAction extends ProductUpdateAction {
 
+    /**
+     * discriminator value for ProductSetKeyAction
+     */
     String SET_KEY = "setKey";
 
     /**
@@ -36,26 +39,55 @@ public interface ProductSetKeyAction extends ProductUpdateAction {
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
 
+    /**
+     * factory method
+     * @return instance of ProductSetKeyAction
+     */
     public static ProductSetKeyAction of() {
         return new ProductSetKeyActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductSetKeyAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductSetKeyAction of(final ProductSetKeyAction template) {
         ProductSetKeyActionImpl instance = new ProductSetKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;
     }
 
+    /**
+     * builder factory method for ProductSetKeyAction
+     * @return builder
+     */
     public static ProductSetKeyActionBuilder builder() {
         return ProductSetKeyActionBuilder.of();
     }
 
+    /**
+     * create builder for ProductSetKeyAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSetKeyActionBuilder builder(final ProductSetKeyAction template) {
         return ProductSetKeyActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductSetKeyAction(Function<ProductSetKeyAction, T> helper) {
         return helper.apply(this);
     }
@@ -64,6 +96,10 @@ public interface ProductSetKeyAction extends ProductUpdateAction {
         return ProductSetKeyAction.of();
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSetKeyAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductSetKeyAction>() {
             @Override

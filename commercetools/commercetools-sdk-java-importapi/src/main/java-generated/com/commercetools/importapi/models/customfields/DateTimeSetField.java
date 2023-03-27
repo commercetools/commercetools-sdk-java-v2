@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = DateTimeSetFieldImpl.class)
 public interface DateTimeSetField extends CustomField {
 
+    /**
+     * discriminator value for DateTimeSetField
+     */
     String DATE_TIME_SET = "DateTimeSet";
 
     /**
@@ -40,33 +43,71 @@ public interface DateTimeSetField extends CustomField {
     @JsonProperty("value")
     public List<ZonedDateTime> getValue();
 
+    /**
+     * set value
+     * @param value values to be set
+     */
+
     @JsonIgnore
     public void setValue(final ZonedDateTime... value);
 
+    /**
+     * set value
+     * @param value values to be set
+     */
+
     public void setValue(final List<ZonedDateTime> value);
 
+    /**
+     * factory method
+     * @return instance of DateTimeSetField
+     */
     public static DateTimeSetField of() {
         return new DateTimeSetFieldImpl();
     }
 
+    /**
+     * factory method to copy an instance of DateTimeSetField
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static DateTimeSetField of(final DateTimeSetField template) {
         DateTimeSetFieldImpl instance = new DateTimeSetFieldImpl();
         instance.setValue(template.getValue());
         return instance;
     }
 
+    /**
+     * builder factory method for DateTimeSetField
+     * @return builder
+     */
     public static DateTimeSetFieldBuilder builder() {
         return DateTimeSetFieldBuilder.of();
     }
 
+    /**
+     * create builder for DateTimeSetField instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DateTimeSetFieldBuilder builder(final DateTimeSetField template) {
         return DateTimeSetFieldBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withDateTimeSetField(Function<DateTimeSetField, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<DateTimeSetField> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<DateTimeSetField>() {
             @Override

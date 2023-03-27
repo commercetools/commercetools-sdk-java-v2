@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AttributeLocalizedEnumTypeImpl.class)
 public interface AttributeLocalizedEnumType extends AttributeType {
 
+    /**
+     * discriminator value for AttributeLocalizedEnumType
+     */
     String LENUM = "lenum";
 
     /**
@@ -41,33 +44,71 @@ public interface AttributeLocalizedEnumType extends AttributeType {
     @JsonProperty("values")
     public List<AttributeLocalizedEnumValue> getValues();
 
+    /**
+     * set values
+     * @param values values to be set
+     */
+
     @JsonIgnore
     public void setValues(final AttributeLocalizedEnumValue... values);
 
+    /**
+     * set values
+     * @param values values to be set
+     */
+
     public void setValues(final List<AttributeLocalizedEnumValue> values);
 
+    /**
+     * factory method
+     * @return instance of AttributeLocalizedEnumType
+     */
     public static AttributeLocalizedEnumType of() {
         return new AttributeLocalizedEnumTypeImpl();
     }
 
+    /**
+     * factory method to copy an instance of AttributeLocalizedEnumType
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static AttributeLocalizedEnumType of(final AttributeLocalizedEnumType template) {
         AttributeLocalizedEnumTypeImpl instance = new AttributeLocalizedEnumTypeImpl();
         instance.setValues(template.getValues());
         return instance;
     }
 
+    /**
+     * builder factory method for AttributeLocalizedEnumType
+     * @return builder
+     */
     public static AttributeLocalizedEnumTypeBuilder builder() {
         return AttributeLocalizedEnumTypeBuilder.of();
     }
 
+    /**
+     * create builder for AttributeLocalizedEnumType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeLocalizedEnumTypeBuilder builder(final AttributeLocalizedEnumType template) {
         return AttributeLocalizedEnumTypeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAttributeLocalizedEnumType(Function<AttributeLocalizedEnumType, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AttributeLocalizedEnumType> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AttributeLocalizedEnumType>() {
             @Override

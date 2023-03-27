@@ -35,6 +35,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetTextLineItemDescriptionChangeImpl.class)
 public interface SetTextLineItemDescriptionChange extends Change {
 
+    /**
+     * discriminator value for SetTextLineItemDescriptionChange
+     */
     String SET_TEXT_LINE_ITEM_DESCRIPTION_CHANGE = "SetTextLineItemDescriptionChange";
 
     /**
@@ -80,18 +83,47 @@ public interface SetTextLineItemDescriptionChange extends Change {
     @JsonProperty("nextValue")
     public LocalizedString getNextValue();
 
+    /**
+     * set change
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set textLineItem
+     * @param textLineItem value to be set
+     */
 
     public void setTextLineItem(final TextLineItemValue textLineItem);
 
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
+
     public void setPreviousValue(final LocalizedString previousValue);
+
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
 
     public void setNextValue(final LocalizedString nextValue);
 
+    /**
+     * factory method
+     * @return instance of SetTextLineItemDescriptionChange
+     */
     public static SetTextLineItemDescriptionChange of() {
         return new SetTextLineItemDescriptionChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetTextLineItemDescriptionChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetTextLineItemDescriptionChange of(final SetTextLineItemDescriptionChange template) {
         SetTextLineItemDescriptionChangeImpl instance = new SetTextLineItemDescriptionChangeImpl();
         instance.setChange(template.getChange());
@@ -101,18 +133,37 @@ public interface SetTextLineItemDescriptionChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetTextLineItemDescriptionChange
+     * @return builder
+     */
     public static SetTextLineItemDescriptionChangeBuilder builder() {
         return SetTextLineItemDescriptionChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetTextLineItemDescriptionChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetTextLineItemDescriptionChangeBuilder builder(final SetTextLineItemDescriptionChange template) {
         return SetTextLineItemDescriptionChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetTextLineItemDescriptionChange(Function<SetTextLineItemDescriptionChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetTextLineItemDescriptionChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetTextLineItemDescriptionChange>() {
             @Override

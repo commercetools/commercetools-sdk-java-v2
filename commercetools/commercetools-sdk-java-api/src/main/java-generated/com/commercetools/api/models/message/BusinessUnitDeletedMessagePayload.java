@@ -26,29 +26,60 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = BusinessUnitDeletedMessagePayloadImpl.class)
 public interface BusinessUnitDeletedMessagePayload extends MessagePayload {
 
+    /**
+     * discriminator value for BusinessUnitDeletedMessagePayload
+     */
     String BUSINESS_UNIT_DELETED = "BusinessUnitDeleted";
 
+    /**
+     * factory method
+     * @return instance of BusinessUnitDeletedMessagePayload
+     */
     public static BusinessUnitDeletedMessagePayload of() {
         return new BusinessUnitDeletedMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of BusinessUnitDeletedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static BusinessUnitDeletedMessagePayload of(final BusinessUnitDeletedMessagePayload template) {
         BusinessUnitDeletedMessagePayloadImpl instance = new BusinessUnitDeletedMessagePayloadImpl();
         return instance;
     }
 
+    /**
+     * builder factory method for BusinessUnitDeletedMessagePayload
+     * @return builder
+     */
     public static BusinessUnitDeletedMessagePayloadBuilder builder() {
         return BusinessUnitDeletedMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for BusinessUnitDeletedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitDeletedMessagePayloadBuilder builder(final BusinessUnitDeletedMessagePayload template) {
         return BusinessUnitDeletedMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withBusinessUnitDeletedMessagePayload(Function<BusinessUnitDeletedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitDeletedMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitDeletedMessagePayload>() {
             @Override

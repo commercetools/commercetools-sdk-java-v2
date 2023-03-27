@@ -62,9 +62,19 @@ public class ResourceSizeLimitExceededErrorBuilder implements Builder<ResourceSi
         return this;
     }
 
+    /**
+     *  <p><code>"The resource size exceeds the maximal allowed size of 16 MB."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
@@ -87,10 +97,19 @@ public class ResourceSizeLimitExceededErrorBuilder implements Builder<ResourceSi
         return new ResourceSizeLimitExceededErrorImpl(message, values);
     }
 
+    /**
+     * factory method for an instance of ResourceSizeLimitExceededErrorBuilder
+     * @return builder
+     */
     public static ResourceSizeLimitExceededErrorBuilder of() {
         return new ResourceSizeLimitExceededErrorBuilder();
     }
 
+    /**
+     * create builder for ResourceSizeLimitExceededError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ResourceSizeLimitExceededErrorBuilder of(final ResourceSizeLimitExceededError template) {
         ResourceSizeLimitExceededErrorBuilder builder = new ResourceSizeLimitExceededErrorBuilder();
         builder.message = template.getMessage();

@@ -38,7 +38,7 @@ public class MyOrderFromCartDraftBuilder implements Builder<MyOrderFromCartDraft
     }
 
     /**
-     *
+     * set the value to the version
      * @param version value to be set
      * @return Builder
      */
@@ -48,9 +48,19 @@ public class MyOrderFromCartDraftBuilder implements Builder<MyOrderFromCartDraft
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Cart that initiates an Order creation.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     * value of version}
+     * @return version
+     */
 
     public Long getVersion() {
         return this.version;
@@ -74,10 +84,19 @@ public class MyOrderFromCartDraftBuilder implements Builder<MyOrderFromCartDraft
         return new MyOrderFromCartDraftImpl(id, version);
     }
 
+    /**
+     * factory method for an instance of MyOrderFromCartDraftBuilder
+     * @return builder
+     */
     public static MyOrderFromCartDraftBuilder of() {
         return new MyOrderFromCartDraftBuilder();
     }
 
+    /**
+     * create builder for MyOrderFromCartDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyOrderFromCartDraftBuilder of(final MyOrderFromCartDraft template) {
         MyOrderFromCartDraftBuilder builder = new MyOrderFromCartDraftBuilder();
         builder.id = template.getId();

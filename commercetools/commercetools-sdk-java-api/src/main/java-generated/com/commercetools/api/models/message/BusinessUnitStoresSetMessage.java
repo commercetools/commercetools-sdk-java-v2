@@ -38,6 +38,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = BusinessUnitStoresSetMessageImpl.class)
 public interface BusinessUnitStoresSetMessage extends Message {
 
+    /**
+     * discriminator value for BusinessUnitStoresSetMessage
+     */
     String BUSINESS_UNIT_STORES_SET = "BusinessUnitStoresSet";
 
     /**
@@ -49,15 +52,34 @@ public interface BusinessUnitStoresSetMessage extends Message {
     @JsonProperty("stores")
     public List<StoreKeyReference> getStores();
 
+    /**
+     *  <p>Stores of the Business Unit after the Set Stores update action.</p>
+     * @param stores values to be set
+     */
+
     @JsonIgnore
     public void setStores(final StoreKeyReference... stores);
 
+    /**
+     *  <p>Stores of the Business Unit after the Set Stores update action.</p>
+     * @param stores values to be set
+     */
+
     public void setStores(final List<StoreKeyReference> stores);
 
+    /**
+     * factory method
+     * @return instance of BusinessUnitStoresSetMessage
+     */
     public static BusinessUnitStoresSetMessage of() {
         return new BusinessUnitStoresSetMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of BusinessUnitStoresSetMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static BusinessUnitStoresSetMessage of(final BusinessUnitStoresSetMessage template) {
         BusinessUnitStoresSetMessageImpl instance = new BusinessUnitStoresSetMessageImpl();
         instance.setId(template.getId());
@@ -74,18 +96,37 @@ public interface BusinessUnitStoresSetMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for BusinessUnitStoresSetMessage
+     * @return builder
+     */
     public static BusinessUnitStoresSetMessageBuilder builder() {
         return BusinessUnitStoresSetMessageBuilder.of();
     }
 
+    /**
+     * create builder for BusinessUnitStoresSetMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitStoresSetMessageBuilder builder(final BusinessUnitStoresSetMessage template) {
         return BusinessUnitStoresSetMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withBusinessUnitStoresSetMessage(Function<BusinessUnitStoresSetMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitStoresSetMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitStoresSetMessage>() {
             @Override

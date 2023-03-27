@@ -52,17 +52,42 @@ public interface DiscountedLineItemPriceDraft extends io.vrap.rmf.base.client.Dr
     @JsonProperty("includedDiscounts")
     public List<DiscountedLineItemPortion> getIncludedDiscounts();
 
+    /**
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @param value value to be set
+     */
+
     public void setValue(final Money value);
+
+    /**
+     * set includedDiscounts
+     * @param includedDiscounts values to be set
+     */
 
     @JsonIgnore
     public void setIncludedDiscounts(final DiscountedLineItemPortion... includedDiscounts);
 
+    /**
+     * set includedDiscounts
+     * @param includedDiscounts values to be set
+     */
+
     public void setIncludedDiscounts(final List<DiscountedLineItemPortion> includedDiscounts);
 
+    /**
+     * factory method
+     * @return instance of DiscountedLineItemPriceDraft
+     */
     public static DiscountedLineItemPriceDraft of() {
         return new DiscountedLineItemPriceDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of DiscountedLineItemPriceDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static DiscountedLineItemPriceDraft of(final DiscountedLineItemPriceDraft template) {
         DiscountedLineItemPriceDraftImpl instance = new DiscountedLineItemPriceDraftImpl();
         instance.setValue(template.getValue());
@@ -70,18 +95,37 @@ public interface DiscountedLineItemPriceDraft extends io.vrap.rmf.base.client.Dr
         return instance;
     }
 
+    /**
+     * builder factory method for DiscountedLineItemPriceDraft
+     * @return builder
+     */
     public static DiscountedLineItemPriceDraftBuilder builder() {
         return DiscountedLineItemPriceDraftBuilder.of();
     }
 
+    /**
+     * create builder for DiscountedLineItemPriceDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DiscountedLineItemPriceDraftBuilder builder(final DiscountedLineItemPriceDraft template) {
         return DiscountedLineItemPriceDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withDiscountedLineItemPriceDraft(Function<DiscountedLineItemPriceDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<DiscountedLineItemPriceDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<DiscountedLineItemPriceDraft>() {
             @Override

@@ -43,26 +43,52 @@ public interface ProductVariantSelection {
     @JsonProperty("type")
     public ProductVariantSelectionTypeEnum getType();
 
+    /**
+     * builder for exclusion subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.product_selection.ProductVariantSelectionExclusionBuilder exclusionBuilder() {
         return com.commercetools.api.models.product_selection.ProductVariantSelectionExclusionBuilder.of();
     }
 
+    /**
+     * builder for includeAllExcept subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeAllExceptBuilder includeAllExceptBuilder() {
         return com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeAllExceptBuilder.of();
     }
 
+    /**
+     * builder for includeOnly subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeOnlyBuilder includeOnlyBuilder() {
         return com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeOnlyBuilder.of();
     }
 
+    /**
+     * builder for inclusion subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.product_selection.ProductVariantSelectionInclusionBuilder inclusionBuilder() {
         return com.commercetools.api.models.product_selection.ProductVariantSelectionInclusionBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductVariantSelection(Function<ProductVariantSelection, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductVariantSelection> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductVariantSelection>() {
             @Override

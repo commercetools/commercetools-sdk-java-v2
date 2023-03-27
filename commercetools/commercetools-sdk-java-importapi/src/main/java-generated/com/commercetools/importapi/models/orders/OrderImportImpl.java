@@ -70,6 +70,9 @@ public class OrderImportImpl implements OrderImport, ModelBase {
 
     private com.commercetools.importapi.models.common.StateKeyReference state;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderImportImpl(@JsonProperty("orderNumber") final String orderNumber,
             @JsonProperty("customer") final com.commercetools.importapi.models.common.CustomerKeyReference customer,
@@ -121,6 +124,9 @@ public class OrderImportImpl implements OrderImport, ModelBase {
         this.state = state;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderImportImpl() {
     }
 

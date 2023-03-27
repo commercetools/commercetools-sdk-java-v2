@@ -24,6 +24,9 @@ public class TypeSetDescriptionActionImpl implements TypeSetDescriptionAction, M
 
     private com.commercetools.api.models.common.LocalizedString description;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TypeSetDescriptionActionImpl(
             @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description) {
@@ -31,6 +34,9 @@ public class TypeSetDescriptionActionImpl implements TypeSetDescriptionAction, M
         this.action = SET_DESCRIPTION;
     }
 
+    /**
+     * create empty instance
+     */
     public TypeSetDescriptionActionImpl() {
         this.action = SET_DESCRIPTION;
     }

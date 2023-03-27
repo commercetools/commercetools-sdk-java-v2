@@ -24,6 +24,9 @@ public class CustomerGroupUpdateImpl implements CustomerGroupUpdate, ModelBase {
 
     private java.util.List<com.commercetools.api.models.customer_group.CustomerGroupUpdateAction> actions;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerGroupUpdateImpl(@JsonProperty("version") final Long version,
             @JsonProperty("actions") final java.util.List<com.commercetools.api.models.customer_group.CustomerGroupUpdateAction> actions) {
@@ -31,6 +34,9 @@ public class CustomerGroupUpdateImpl implements CustomerGroupUpdate, ModelBase {
         this.actions = actions;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerGroupUpdateImpl() {
     }
 

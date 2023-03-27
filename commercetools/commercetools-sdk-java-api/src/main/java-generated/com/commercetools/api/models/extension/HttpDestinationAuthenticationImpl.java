@@ -22,11 +22,17 @@ public class HttpDestinationAuthenticationImpl implements HttpDestinationAuthent
 
     private String type;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     HttpDestinationAuthenticationImpl(@JsonProperty("type") final String type) {
         this.type = type;
     }
 
+    /**
+     * create empty instance
+     */
     public HttpDestinationAuthenticationImpl() {
     }
 

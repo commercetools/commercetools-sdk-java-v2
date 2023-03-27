@@ -30,6 +30,9 @@ public class ProductTypeChangeEnumKeyActionImpl implements ProductTypeChangeEnum
 
     private String newKey;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductTypeChangeEnumKeyActionImpl(@JsonProperty("attributeName") final String attributeName,
             @JsonProperty("key") final String key, @JsonProperty("newKey") final String newKey) {
@@ -39,6 +42,9 @@ public class ProductTypeChangeEnumKeyActionImpl implements ProductTypeChangeEnum
         this.action = CHANGE_ENUM_KEY;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductTypeChangeEnumKeyActionImpl() {
         this.action = CHANGE_ENUM_KEY;
     }

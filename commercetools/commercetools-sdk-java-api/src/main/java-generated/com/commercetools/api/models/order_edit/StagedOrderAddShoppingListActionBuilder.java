@@ -109,14 +109,29 @@ public class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOr
         return this;
     }
 
+    /**
+     *  <p>ResourceIdentifier to a ShoppingList.</p>
+     * @return shoppingList
+     */
+
     public com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier getShoppingList() {
         return this.shoppingList;
     }
+
+    /**
+     *  <p>ResourceIdentifier to a Channel.</p>
+     * @return supplyChannel
+     */
 
     @Nullable
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
         return this.supplyChannel;
     }
+
+    /**
+     *  <p>ResourceIdentifier to a Channel.</p>
+     * @return distributionChannel
+     */
 
     @Nullable
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
@@ -140,10 +155,19 @@ public class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOr
         return new StagedOrderAddShoppingListActionImpl(shoppingList, supplyChannel, distributionChannel);
     }
 
+    /**
+     * factory method for an instance of StagedOrderAddShoppingListActionBuilder
+     * @return builder
+     */
     public static StagedOrderAddShoppingListActionBuilder of() {
         return new StagedOrderAddShoppingListActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderAddShoppingListAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderAddShoppingListActionBuilder of(final StagedOrderAddShoppingListAction template) {
         StagedOrderAddShoppingListActionBuilder builder = new StagedOrderAddShoppingListActionBuilder();
         builder.shoppingList = template.getShoppingList();

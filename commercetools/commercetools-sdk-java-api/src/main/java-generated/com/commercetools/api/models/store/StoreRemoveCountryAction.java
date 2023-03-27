@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StoreRemoveCountryActionImpl.class)
 public interface StoreRemoveCountryAction extends StoreUpdateAction {
 
+    /**
+     * discriminator value for StoreRemoveCountryAction
+     */
     String REMOVE_COUNTRY = "removeCountry";
 
     /**
@@ -42,30 +45,63 @@ public interface StoreRemoveCountryAction extends StoreUpdateAction {
     @JsonProperty("country")
     public StoreCountry getCountry();
 
+    /**
+     *  <p>Value to remove from <code>countries</code>.</p>
+     * @param country value to be set
+     */
+
     public void setCountry(final StoreCountry country);
 
+    /**
+     * factory method
+     * @return instance of StoreRemoveCountryAction
+     */
     public static StoreRemoveCountryAction of() {
         return new StoreRemoveCountryActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StoreRemoveCountryAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StoreRemoveCountryAction of(final StoreRemoveCountryAction template) {
         StoreRemoveCountryActionImpl instance = new StoreRemoveCountryActionImpl();
         instance.setCountry(template.getCountry());
         return instance;
     }
 
+    /**
+     * builder factory method for StoreRemoveCountryAction
+     * @return builder
+     */
     public static StoreRemoveCountryActionBuilder builder() {
         return StoreRemoveCountryActionBuilder.of();
     }
 
+    /**
+     * create builder for StoreRemoveCountryAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreRemoveCountryActionBuilder builder(final StoreRemoveCountryAction template) {
         return StoreRemoveCountryActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStoreRemoveCountryAction(Function<StoreRemoveCountryAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StoreRemoveCountryAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StoreRemoveCountryAction>() {
             @Override

@@ -22,12 +22,18 @@ public class ItemShippingDetailsDraftImpl implements ItemShippingDetailsDraft, M
 
     private java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targets;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ItemShippingDetailsDraftImpl(
             @JsonProperty("targets") final java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targets) {
         this.targets = targets;
     }
 
+    /**
+     * create empty instance
+     */
     public ItemShippingDetailsDraftImpl() {
     }
 

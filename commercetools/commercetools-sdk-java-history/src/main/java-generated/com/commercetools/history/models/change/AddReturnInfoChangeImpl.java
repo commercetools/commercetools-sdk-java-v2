@@ -26,6 +26,9 @@ public class AddReturnInfoChangeImpl implements AddReturnInfoChange, ModelBase {
 
     private com.commercetools.history.models.common.ReturnInfo nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AddReturnInfoChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.ReturnInfo nextValue) {
@@ -34,6 +37,9 @@ public class AddReturnInfoChangeImpl implements AddReturnInfoChange, ModelBase {
         this.type = ADD_RETURN_INFO_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public AddReturnInfoChangeImpl() {
         this.type = ADD_RETURN_INFO_CHANGE;
     }

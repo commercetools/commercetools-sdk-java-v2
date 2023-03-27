@@ -41,6 +41,9 @@ public class CountryNotConfiguredInStoreErrorImpl implements CountryNotConfigure
 
     private String country;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CountryNotConfiguredInStoreErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values,
@@ -53,6 +56,9 @@ public class CountryNotConfiguredInStoreErrorImpl implements CountryNotConfigure
         this.code = COUNTRY_NOT_CONFIGURED_IN_STORE;
     }
 
+    /**
+     * create empty instance
+     */
     public CountryNotConfiguredInStoreErrorImpl() {
         this.code = COUNTRY_NOT_CONFIGURED_IN_STORE;
     }

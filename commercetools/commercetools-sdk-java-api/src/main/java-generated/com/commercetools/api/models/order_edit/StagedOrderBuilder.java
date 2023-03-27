@@ -188,7 +188,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * set the value to the createdAt
      * @param createdAt value to be set
      * @return Builder
      */
@@ -199,7 +199,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * set the value to the lastModifiedAt
      * @param lastModifiedAt value to be set
      * @return Builder
      */
@@ -279,7 +279,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * set the value to the customerId
      * @param customerId value to be set
      * @return Builder
      */
@@ -290,7 +290,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * set the value to the customerEmail
      * @param customerEmail value to be set
      * @return Builder
      */
@@ -338,7 +338,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * set the value to the store using the builder function
      * @param builder function to build the store value
      * @return Builder
      */
@@ -350,7 +350,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * set the value to the store
      * @param store value to be set
      * @return Builder
      */
@@ -361,7 +361,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * set values to the lineItems
      * @param lineItems value to be set
      * @return Builder
      */
@@ -372,7 +372,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * set value to the lineItems
      * @param lineItems value to be set
      * @return Builder
      */
@@ -383,7 +383,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * add values to the lineItems
      * @param lineItems value to be set
      * @return Builder
      */
@@ -397,7 +397,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * add the value to the lineItems using the builder function
      * @param builder function to build the lineItems value
      * @return Builder
      */
@@ -412,7 +412,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * set the value to the lineItems using the builder function
      * @param builder function to build the lineItems value
      * @return Builder
      */
@@ -425,7 +425,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * set values to the customLineItems
      * @param customLineItems value to be set
      * @return Builder
      */
@@ -437,7 +437,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * set value to the customLineItems
      * @param customLineItems value to be set
      * @return Builder
      */
@@ -449,7 +449,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * add values to the customLineItems
      * @param customLineItems value to be set
      * @return Builder
      */
@@ -464,7 +464,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * add the value to the customLineItems using the builder function
      * @param builder function to build the customLineItems value
      * @return Builder
      */
@@ -479,7 +479,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * set the value to the customLineItems using the builder function
      * @param builder function to build the customLineItems value
      * @return Builder
      */
@@ -492,7 +492,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * set the value to the totalPrice
      * @param totalPrice value to be set
      * @return Builder
      */
@@ -503,7 +503,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * set the value to the totalPrice using the builder function
      * @param builder function to build the totalPrice value
      * @return Builder
      */
@@ -588,7 +588,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * set the value to the billingAddress using the builder function
      * @param builder function to build the billingAddress value
      * @return Builder
      */
@@ -600,7 +600,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * set the value to the billingAddress
      * @param billingAddress value to be set
      * @return Builder
      */
@@ -692,7 +692,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * set the value to the taxMode
      * @param taxMode value to be set
      * @return Builder
      */
@@ -786,7 +786,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * set the value to the shipmentState
      * @param shipmentState value to be set
      * @return Builder
      */
@@ -798,7 +798,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * set the value to the paymentState
      * @param paymentState value to be set
      * @return Builder
      */
@@ -834,7 +834,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * set values to the syncInfo
      * @param syncInfo value to be set
      * @return Builder
      */
@@ -845,7 +845,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * set value to the syncInfo
      * @param syncInfo value to be set
      * @return Builder
      */
@@ -856,7 +856,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * add values to the syncInfo
      * @param syncInfo value to be set
      * @return Builder
      */
@@ -870,7 +870,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * add the value to the syncInfo using the builder function
      * @param builder function to build the syncInfo value
      * @return Builder
      */
@@ -885,7 +885,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * set the value to the syncInfo using the builder function
      * @param builder function to build the syncInfo value
      * @return Builder
      */
@@ -898,7 +898,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * set values to the returnInfo
      * @param returnInfo value to be set
      * @return Builder
      */
@@ -909,7 +909,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * set value to the returnInfo
      * @param returnInfo value to be set
      * @return Builder
      */
@@ -921,7 +921,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * add values to the returnInfo
      * @param returnInfo value to be set
      * @return Builder
      */
@@ -936,7 +936,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * add the value to the returnInfo using the builder function
      * @param builder function to build the returnInfo value
      * @return Builder
      */
@@ -951,7 +951,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * set the value to the returnInfo using the builder function
      * @param builder function to build the returnInfo value
      * @return Builder
      */
@@ -975,7 +975,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * set values to the discountCodes
      * @param discountCodes value to be set
      * @return Builder
      */
@@ -987,7 +987,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * set value to the discountCodes
      * @param discountCodes value to be set
      * @return Builder
      */
@@ -999,7 +999,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * add values to the discountCodes
      * @param discountCodes value to be set
      * @return Builder
      */
@@ -1014,7 +1014,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * add the value to the discountCodes using the builder function
      * @param builder function to build the discountCodes value
      * @return Builder
      */
@@ -1029,7 +1029,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * set the value to the discountCodes using the builder function
      * @param builder function to build the discountCodes value
      * @return Builder
      */
@@ -1099,7 +1099,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * set the value to the custom using the builder function
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -1111,7 +1111,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * set the value to the custom
      * @param custom value to be set
      * @return Builder
      */
@@ -1122,7 +1122,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * set the value to the paymentInfo using the builder function
      * @param builder function to build the paymentInfo value
      * @return Builder
      */
@@ -1134,7 +1134,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * set the value to the paymentInfo
      * @param paymentInfo value to be set
      * @return Builder
      */
@@ -1145,7 +1145,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * set the value to the locale
      * @param locale value to be set
      * @return Builder
      */
@@ -1156,7 +1156,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * set the value to the inventoryMode
      * @param inventoryMode value to be set
      * @return Builder
      */
@@ -1168,7 +1168,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *
+     * set the value to the origin
      * @param origin value to be set
      * @return Builder
      */
@@ -1360,224 +1360,465 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Order.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>The current version of the order.</p>
+     * @return version
+     */
 
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     * value of createdAt}
+     * @return createdAt
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+     * value of lastModifiedAt}
+     * @return lastModifiedAt
+     */
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
+     */
+
     @Nullable
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
+
+    /**
+     *  <p>This field will only be present if it was set for Order Import</p>
+     * @return completedAt
+     */
 
     @Nullable
     public java.time.ZonedDateTime getCompletedAt() {
         return this.completedAt;
     }
 
+    /**
+     *  <p>String that uniquely identifies an order. It can be used to create more human-readable (in contrast to ID) identifier for the order. It should be unique across a project. Once it's set it cannot be changed.</p>
+     * @return orderNumber
+     */
+
     @Nullable
     public String getOrderNumber() {
         return this.orderNumber;
     }
+
+    /**
+     * value of customerId}
+     * @return customerId
+     */
 
     @Nullable
     public String getCustomerId() {
         return this.customerId;
     }
 
+    /**
+     * value of customerEmail}
+     * @return customerEmail
+     */
+
     @Nullable
     public String getCustomerEmail() {
         return this.customerEmail;
     }
+
+    /**
+     *  <p>Identifies carts and orders belonging to an anonymous session (the customer has not signed up/in yet).</p>
+     * @return anonymousId
+     */
 
     @Nullable
     public String getAnonymousId() {
         return this.anonymousId;
     }
 
+    /**
+     *  <p>The Business Unit the Order belongs to.</p>
+     * @return businessUnit
+     */
+
     @Nullable
     public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit() {
         return this.businessUnit;
     }
+
+    /**
+     * value of store}
+     * @return store
+     */
 
     @Nullable
     public com.commercetools.api.models.store.StoreKeyReference getStore() {
         return this.store;
     }
 
+    /**
+     * value of lineItems}
+     * @return lineItems
+     */
+
     public java.util.List<com.commercetools.api.models.cart.LineItem> getLineItems() {
         return this.lineItems;
     }
+
+    /**
+     * value of customLineItems}
+     * @return customLineItems
+     */
 
     public java.util.List<com.commercetools.api.models.cart.CustomLineItem> getCustomLineItems() {
         return this.customLineItems;
     }
 
+    /**
+     * value of totalPrice}
+     * @return totalPrice
+     */
+
     public com.commercetools.api.models.common.TypedMoney getTotalPrice() {
         return this.totalPrice;
     }
+
+    /**
+     *  <p>The taxes are calculated based on the shipping address.</p>
+     * @return taxedPrice
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.TaxedPrice getTaxedPrice() {
         return this.taxedPrice;
     }
 
+    /**
+     *  <p>Sum of <code>taxedPrice</code> of ShippingInfo across all Shipping Methods. For <code>Platform</code> TaxMode, it is set automatically only if shipping address is set or Shipping Method is added to the Cart.</p>
+     * @return taxedShippingPrice
+     */
+
     @Nullable
     public com.commercetools.api.models.cart.TaxedPrice getTaxedShippingPrice() {
         return this.taxedShippingPrice;
     }
+
+    /**
+     *  <p>Holds all shipping-related information per Shipping Method.</p>
+     *  <p>For <code>Multi</code> ShippingMode, it is updated automatically after the Shipping Methods are added.</p>
+     * @return shippingAddress
+     */
 
     @Nullable
     public com.commercetools.api.models.common.Address getShippingAddress() {
         return this.shippingAddress;
     }
 
+    /**
+     * value of billingAddress}
+     * @return billingAddress
+     */
+
     @Nullable
     public com.commercetools.api.models.common.Address getBillingAddress() {
         return this.billingAddress;
     }
 
+    /**
+     *  <p>Indicates whether one or multiple Shipping Methods are added to the Cart.</p>
+     * @return shippingMode
+     */
+
     public com.commercetools.api.models.cart.ShippingMode getShippingMode() {
         return this.shippingMode;
     }
 
+    /**
+     *  <p>Holds all shipping-related information per Shipping Method for <code>Multi</code> ShippingMode.</p>
+     *  <p>It is updated automatically after the Shipping Method is added.</p>
+     * @return shipping
+     */
+
     public java.util.List<com.commercetools.api.models.cart.Shipping> getShipping() {
         return this.shipping;
     }
+
+    /**
+     * value of taxMode}
+     * @return taxMode
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.TaxMode getTaxMode() {
         return this.taxMode;
     }
 
+    /**
+     *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for rouding.</p>
+     * @return taxRoundingMode
+     */
+
     @Nullable
     public com.commercetools.api.models.cart.RoundingMode getTaxRoundingMode() {
         return this.taxRoundingMode;
     }
+
+    /**
+     *  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>
+     * @return customerGroup
+     */
 
     @Nullable
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
         return this.customerGroup;
     }
 
+    /**
+     *  <p>A two-digit country code as per ISO 3166-1 alpha-2. Used for product variant price selection.</p>
+     * @return country
+     */
+
     @Nullable
     public String getCountry() {
         return this.country;
     }
 
+    /**
+     *  <p>One of the four predefined OrderStates.</p>
+     * @return orderState
+     */
+
     public com.commercetools.api.models.order.OrderState getOrderState() {
         return this.orderState;
     }
+
+    /**
+     *  <p>This reference can point to a state in a custom workflow.</p>
+     * @return state
+     */
 
     @Nullable
     public com.commercetools.api.models.state.StateReference getState() {
         return this.state;
     }
 
+    /**
+     * value of shipmentState}
+     * @return shipmentState
+     */
+
     @Nullable
     public com.commercetools.api.models.order.ShipmentState getShipmentState() {
         return this.shipmentState;
     }
+
+    /**
+     * value of paymentState}
+     * @return paymentState
+     */
 
     @Nullable
     public com.commercetools.api.models.order.PaymentState getPaymentState() {
         return this.paymentState;
     }
 
+    /**
+     *  <p>Set if the ShippingMethod is set.</p>
+     * @return shippingInfo
+     */
+
     @Nullable
     public com.commercetools.api.models.cart.ShippingInfo getShippingInfo() {
         return this.shippingInfo;
     }
 
+    /**
+     * value of syncInfo}
+     * @return syncInfo
+     */
+
     public java.util.List<com.commercetools.api.models.order.SyncInfo> getSyncInfo() {
         return this.syncInfo;
     }
+
+    /**
+     * value of returnInfo}
+     * @return returnInfo
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.order.ReturnInfo> getReturnInfo() {
         return this.returnInfo;
     }
 
+    /**
+     *  <p>The Purchase Order Number is typically set by the Buyer on a QuoteRequest to track the purchase order during the quote and order flow.</p>
+     * @return purchaseOrderNumber
+     */
+
     @Nullable
     public String getPurchaseOrderNumber() {
         return this.purchaseOrderNumber;
     }
+
+    /**
+     * value of discountCodes}
+     * @return discountCodes
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> getDiscountCodes() {
         return this.discountCodes;
     }
 
+    /**
+     *  <p>Internal-only field.</p>
+     * @return lastMessageSequenceNumber
+     */
     @Deprecated
     @Nullable
     public Long getLastMessageSequenceNumber() {
         return this.lastMessageSequenceNumber;
     }
 
+    /**
+     *  <p>Set when this order was created from a cart. The cart will have the state <code>Ordered</code>.</p>
+     * @return cart
+     */
+
     @Nullable
     public com.commercetools.api.models.cart.CartReference getCart() {
         return this.cart;
     }
+
+    /**
+     *  <p>Set when this order was created from a quote.</p>
+     * @return quote
+     */
 
     @Nullable
     public com.commercetools.api.models.quote.QuoteReference getQuote() {
         return this.quote;
     }
 
+    /**
+     * value of custom}
+     * @return custom
+     */
+
     @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
+
+    /**
+     * value of paymentInfo}
+     * @return paymentInfo
+     */
 
     @Nullable
     public com.commercetools.api.models.order.PaymentInfo getPaymentInfo() {
         return this.paymentInfo;
     }
 
+    /**
+     * value of locale}
+     * @return locale
+     */
+
     @Nullable
     public String getLocale() {
         return this.locale;
     }
+
+    /**
+     * value of inventoryMode}
+     * @return inventoryMode
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.InventoryMode getInventoryMode() {
         return this.inventoryMode;
     }
 
+    /**
+     * value of origin}
+     * @return origin
+     */
+
     public com.commercetools.api.models.cart.CartOrigin getOrigin() {
         return this.origin;
     }
+
+    /**
+     *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for calculating the price with LineItemLevel (horizontally) or UnitPriceLevel (vertically) calculation mode.</p>
+     * @return taxCalculationMode
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.TaxCalculationMode getTaxCalculationMode() {
         return this.taxCalculationMode;
     }
 
+    /**
+     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <ul>
+     *   <li>If <code>CartClassification</code>, it is ClassificationShippingRateInput.</li>
+     *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
+     *   <li>If <code>CartValue</code>, it cannot be used.</li>
+     *  </ul>
+     * @return shippingRateInput
+     */
+
     @Nullable
     public com.commercetools.api.models.cart.ShippingRateInput getShippingRateInput() {
         return this.shippingRateInput;
     }
 
+    /**
+     *  <p>Contains addresses for orders with multiple shipping addresses.</p>
+     * @return itemShippingAddresses
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.common.Address> getItemShippingAddresses() {
         return this.itemShippingAddresses;
     }
+
+    /**
+     *  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>
+     * @return refusedGifts
+     */
 
     public java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> getRefusedGifts() {
         return this.refusedGifts;
@@ -1624,10 +1865,19 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
             itemShippingAddresses, refusedGifts);
     }
 
+    /**
+     * factory method for an instance of StagedOrderBuilder
+     * @return builder
+     */
     public static StagedOrderBuilder of() {
         return new StagedOrderBuilder();
     }
 
+    /**
+     * create builder for StagedOrder instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderBuilder of(final StagedOrder template) {
         StagedOrderBuilder builder = new StagedOrderBuilder();
         builder.id = template.getId();

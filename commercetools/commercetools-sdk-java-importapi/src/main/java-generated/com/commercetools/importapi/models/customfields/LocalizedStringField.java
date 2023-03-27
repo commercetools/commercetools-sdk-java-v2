@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = LocalizedStringFieldImpl.class)
 public interface LocalizedStringField extends CustomField {
 
+    /**
+     * discriminator value for LocalizedStringField
+     */
     String LOCALIZED_STRING = "LocalizedString";
 
     /**
@@ -47,30 +50,68 @@ public interface LocalizedStringField extends CustomField {
     @JsonProperty("value")
     public LocalizedString getValue();
 
+    /**
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     * @param value value to be set
+     */
+
     public void setValue(final LocalizedString value);
 
+    /**
+     * factory method
+     * @return instance of LocalizedStringField
+     */
     public static LocalizedStringField of() {
         return new LocalizedStringFieldImpl();
     }
 
+    /**
+     * factory method to copy an instance of LocalizedStringField
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static LocalizedStringField of(final LocalizedStringField template) {
         LocalizedStringFieldImpl instance = new LocalizedStringFieldImpl();
         instance.setValue(template.getValue());
         return instance;
     }
 
+    /**
+     * builder factory method for LocalizedStringField
+     * @return builder
+     */
     public static LocalizedStringFieldBuilder builder() {
         return LocalizedStringFieldBuilder.of();
     }
 
+    /**
+     * create builder for LocalizedStringField instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static LocalizedStringFieldBuilder builder(final LocalizedStringField template) {
         return LocalizedStringFieldBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withLocalizedStringField(Function<LocalizedStringField, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<LocalizedStringField> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<LocalizedStringField>() {
             @Override

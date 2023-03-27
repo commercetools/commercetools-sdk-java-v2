@@ -24,12 +24,18 @@ public class PaymentSetStatusInterfaceTextActionImpl implements PaymentSetStatus
 
     private String interfaceText;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PaymentSetStatusInterfaceTextActionImpl(@JsonProperty("interfaceText") final String interfaceText) {
         this.interfaceText = interfaceText;
         this.action = SET_STATUS_INTERFACE_TEXT;
     }
 
+    /**
+     * create empty instance
+     */
     public PaymentSetStatusInterfaceTextActionImpl() {
         this.action = SET_STATUS_INTERFACE_TEXT;
     }

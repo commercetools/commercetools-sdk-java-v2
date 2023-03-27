@@ -30,7 +30,7 @@ public class ChangeStagedQuoteStateChangeBuilder implements Builder<ChangeStaged
     private com.commercetools.history.models.common.StagedQuoteState previousValue;
 
     /**
-     *
+     * set the value to the change
      * @param change value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class ChangeStagedQuoteStateChangeBuilder implements Builder<ChangeStaged
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class ChangeStagedQuoteStateChangeBuilder implements Builder<ChangeStaged
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -64,13 +64,28 @@ public class ChangeStagedQuoteStateChangeBuilder implements Builder<ChangeStaged
         return this;
     }
 
+    /**
+     * value of change}
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
+
     public com.commercetools.history.models.common.StagedQuoteState getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public com.commercetools.history.models.common.StagedQuoteState getPreviousValue() {
         return this.previousValue;
@@ -95,10 +110,19 @@ public class ChangeStagedQuoteStateChangeBuilder implements Builder<ChangeStaged
         return new ChangeStagedQuoteStateChangeImpl(change, nextValue, previousValue);
     }
 
+    /**
+     * factory method for an instance of ChangeStagedQuoteStateChangeBuilder
+     * @return builder
+     */
     public static ChangeStagedQuoteStateChangeBuilder of() {
         return new ChangeStagedQuoteStateChangeBuilder();
     }
 
+    /**
+     * create builder for ChangeStagedQuoteStateChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeStagedQuoteStateChangeBuilder of(final ChangeStagedQuoteStateChange template) {
         ChangeStagedQuoteStateChangeBuilder builder = new ChangeStagedQuoteStateChangeBuilder();
         builder.change = template.getChange();

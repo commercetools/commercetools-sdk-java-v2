@@ -28,6 +28,9 @@ public class TaxCategoryDraftImpl implements TaxCategoryDraft, ModelBase {
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TaxCategoryDraftImpl(@JsonProperty("name") final String name, @JsonProperty("description") final String description,
             @JsonProperty("rates") final java.util.List<com.commercetools.api.models.tax_category.TaxRateDraft> rates,
@@ -38,6 +41,9 @@ public class TaxCategoryDraftImpl implements TaxCategoryDraft, ModelBase {
         this.key = key;
     }
 
+    /**
+     * create empty instance
+     */
     public TaxCategoryDraftImpl() {
     }
 

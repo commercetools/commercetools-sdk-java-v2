@@ -28,6 +28,9 @@ public class SetLastNameChangeImpl implements SetLastNameChange, ModelBase {
 
     private String nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetLastNameChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final String previousValue,
@@ -38,6 +41,9 @@ public class SetLastNameChangeImpl implements SetLastNameChange, ModelBase {
         this.type = SET_LAST_NAME_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetLastNameChangeImpl() {
         this.type = SET_LAST_NAME_CHANGE;
     }

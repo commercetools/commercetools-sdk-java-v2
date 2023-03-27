@@ -24,6 +24,9 @@ public class MyCartUpdateImpl implements MyCartUpdate, ModelBase {
 
     private java.util.List<com.commercetools.api.models.me.MyCartUpdateAction> actions;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyCartUpdateImpl(@JsonProperty("version") final Long version,
             @JsonProperty("actions") final java.util.List<com.commercetools.api.models.me.MyCartUpdateAction> actions) {
@@ -31,6 +34,9 @@ public class MyCartUpdateImpl implements MyCartUpdate, ModelBase {
         this.actions = actions;
     }
 
+    /**
+     * create empty instance
+     */
     public MyCartUpdateImpl() {
     }
 

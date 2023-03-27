@@ -59,6 +59,11 @@ public class ProjectChangeLanguagesActionBuilder implements Builder<ProjectChang
         return this;
     }
 
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     * @return languages
+     */
+
     public java.util.List<String> getLanguages() {
         return this.languages;
     }
@@ -80,10 +85,19 @@ public class ProjectChangeLanguagesActionBuilder implements Builder<ProjectChang
         return new ProjectChangeLanguagesActionImpl(languages);
     }
 
+    /**
+     * factory method for an instance of ProjectChangeLanguagesActionBuilder
+     * @return builder
+     */
     public static ProjectChangeLanguagesActionBuilder of() {
         return new ProjectChangeLanguagesActionBuilder();
     }
 
+    /**
+     * create builder for ProjectChangeLanguagesAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProjectChangeLanguagesActionBuilder of(final ProjectChangeLanguagesAction template) {
         ProjectChangeLanguagesActionBuilder builder = new ProjectChangeLanguagesActionBuilder();
         builder.languages = template.getLanguages();

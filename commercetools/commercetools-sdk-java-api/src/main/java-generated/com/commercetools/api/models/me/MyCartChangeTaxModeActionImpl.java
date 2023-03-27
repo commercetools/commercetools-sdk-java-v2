@@ -27,12 +27,18 @@ public class MyCartChangeTaxModeActionImpl implements MyCartChangeTaxModeAction,
 
     private com.commercetools.api.models.cart.TaxMode taxMode;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyCartChangeTaxModeActionImpl(@JsonProperty("taxMode") final com.commercetools.api.models.cart.TaxMode taxMode) {
         this.taxMode = taxMode;
         this.action = CHANGE_TAX_MODE;
     }
 
+    /**
+     * create empty instance
+     */
     public MyCartChangeTaxModeActionImpl() {
         this.action = CHANGE_TAX_MODE;
     }

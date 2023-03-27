@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartChangeTaxRoundingModeActionImpl.class)
 public interface CartChangeTaxRoundingModeAction extends CartUpdateAction {
 
+    /**
+     * discriminator value for CartChangeTaxRoundingModeAction
+     */
     String CHANGE_TAX_ROUNDING_MODE = "changeTaxRoundingMode";
 
     /**
@@ -39,30 +42,63 @@ public interface CartChangeTaxRoundingModeAction extends CartUpdateAction {
     @JsonProperty("taxRoundingMode")
     public RoundingMode getTaxRoundingMode();
 
+    /**
+     *  <p>New value to set.</p>
+     * @param taxRoundingMode value to be set
+     */
+
     public void setTaxRoundingMode(final RoundingMode taxRoundingMode);
 
+    /**
+     * factory method
+     * @return instance of CartChangeTaxRoundingModeAction
+     */
     public static CartChangeTaxRoundingModeAction of() {
         return new CartChangeTaxRoundingModeActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartChangeTaxRoundingModeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartChangeTaxRoundingModeAction of(final CartChangeTaxRoundingModeAction template) {
         CartChangeTaxRoundingModeActionImpl instance = new CartChangeTaxRoundingModeActionImpl();
         instance.setTaxRoundingMode(template.getTaxRoundingMode());
         return instance;
     }
 
+    /**
+     * builder factory method for CartChangeTaxRoundingModeAction
+     * @return builder
+     */
     public static CartChangeTaxRoundingModeActionBuilder builder() {
         return CartChangeTaxRoundingModeActionBuilder.of();
     }
 
+    /**
+     * create builder for CartChangeTaxRoundingModeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartChangeTaxRoundingModeActionBuilder builder(final CartChangeTaxRoundingModeAction template) {
         return CartChangeTaxRoundingModeActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartChangeTaxRoundingModeAction(Function<CartChangeTaxRoundingModeAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartChangeTaxRoundingModeAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartChangeTaxRoundingModeAction>() {
             @Override

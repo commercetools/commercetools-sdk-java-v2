@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderSetLineItemPriceActionImpl.class)
 public interface StagedOrderSetLineItemPriceAction extends StagedOrderUpdateAction {
 
+    /**
+     * discriminator value for StagedOrderSetLineItemPriceAction
+     */
     String SET_LINE_ITEM_PRICE = "setLineItemPrice";
 
     /**
@@ -51,14 +54,34 @@ public interface StagedOrderSetLineItemPriceAction extends StagedOrderUpdateActi
     @JsonProperty("externalPrice")
     public Money getExternalPrice();
 
+    /**
+     * set lineItemId
+     * @param lineItemId value to be set
+     */
+
     public void setLineItemId(final String lineItemId);
+
+    /**
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @param externalPrice value to be set
+     */
 
     public void setExternalPrice(final Money externalPrice);
 
+    /**
+     * factory method
+     * @return instance of StagedOrderSetLineItemPriceAction
+     */
     public static StagedOrderSetLineItemPriceAction of() {
         return new StagedOrderSetLineItemPriceActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedOrderSetLineItemPriceAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedOrderSetLineItemPriceAction of(final StagedOrderSetLineItemPriceAction template) {
         StagedOrderSetLineItemPriceActionImpl instance = new StagedOrderSetLineItemPriceActionImpl();
         instance.setLineItemId(template.getLineItemId());
@@ -66,18 +89,37 @@ public interface StagedOrderSetLineItemPriceAction extends StagedOrderUpdateActi
         return instance;
     }
 
+    /**
+     * builder factory method for StagedOrderSetLineItemPriceAction
+     * @return builder
+     */
     public static StagedOrderSetLineItemPriceActionBuilder builder() {
         return StagedOrderSetLineItemPriceActionBuilder.of();
     }
 
+    /**
+     * create builder for StagedOrderSetLineItemPriceAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetLineItemPriceActionBuilder builder(final StagedOrderSetLineItemPriceAction template) {
         return StagedOrderSetLineItemPriceActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedOrderSetLineItemPriceAction(Function<StagedOrderSetLineItemPriceAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetLineItemPriceAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderSetLineItemPriceAction>() {
             @Override

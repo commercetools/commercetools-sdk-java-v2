@@ -27,30 +27,61 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartDiscountKeyReferenceImpl.class)
 public interface CartDiscountKeyReference extends KeyReference {
 
+    /**
+     * discriminator value for CartDiscountKeyReference
+     */
     String CART_DISCOUNT = "cart-discount";
 
+    /**
+     * factory method
+     * @return instance of CartDiscountKeyReference
+     */
     public static CartDiscountKeyReference of() {
         return new CartDiscountKeyReferenceImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartDiscountKeyReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartDiscountKeyReference of(final CartDiscountKeyReference template) {
         CartDiscountKeyReferenceImpl instance = new CartDiscountKeyReferenceImpl();
         instance.setKey(template.getKey());
         return instance;
     }
 
+    /**
+     * builder factory method for CartDiscountKeyReference
+     * @return builder
+     */
     public static CartDiscountKeyReferenceBuilder builder() {
         return CartDiscountKeyReferenceBuilder.of();
     }
 
+    /**
+     * create builder for CartDiscountKeyReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartDiscountKeyReferenceBuilder builder(final CartDiscountKeyReference template) {
         return CartDiscountKeyReferenceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartDiscountKeyReference(Function<CartDiscountKeyReference, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountKeyReference> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountKeyReference>() {
             @Override

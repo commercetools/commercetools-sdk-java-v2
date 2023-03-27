@@ -26,7 +26,7 @@ public class OrderSetOrderNumberActionBuilder implements Builder<OrderSetOrderNu
     private String orderNumber;
 
     /**
-     *
+     * set the value to the orderNumber
      * @param orderNumber value to be set
      * @return Builder
      */
@@ -35,6 +35,11 @@ public class OrderSetOrderNumberActionBuilder implements Builder<OrderSetOrderNu
         this.orderNumber = orderNumber;
         return this;
     }
+
+    /**
+     * value of orderNumber}
+     * @return orderNumber
+     */
 
     @Nullable
     public String getOrderNumber() {
@@ -57,10 +62,19 @@ public class OrderSetOrderNumberActionBuilder implements Builder<OrderSetOrderNu
         return new OrderSetOrderNumberActionImpl(orderNumber);
     }
 
+    /**
+     * factory method for an instance of OrderSetOrderNumberActionBuilder
+     * @return builder
+     */
     public static OrderSetOrderNumberActionBuilder of() {
         return new OrderSetOrderNumberActionBuilder();
     }
 
+    /**
+     * create builder for OrderSetOrderNumberAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderSetOrderNumberActionBuilder of(final OrderSetOrderNumberAction template) {
         OrderSetOrderNumberActionBuilder builder = new OrderSetOrderNumberActionBuilder();
         builder.orderNumber = template.getOrderNumber();

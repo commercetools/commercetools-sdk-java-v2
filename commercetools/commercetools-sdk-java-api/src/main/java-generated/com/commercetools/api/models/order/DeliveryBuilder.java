@@ -53,7 +53,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
     }
 
     /**
-     *
+     * set the value to the createdAt
      * @param createdAt value to be set
      * @return Builder
      */
@@ -128,7 +128,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
     }
 
     /**
-     *
+     * set values to the parcels
      * @param parcels value to be set
      * @return Builder
      */
@@ -139,7 +139,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
     }
 
     /**
-     *
+     * set value to the parcels
      * @param parcels value to be set
      * @return Builder
      */
@@ -150,7 +150,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
     }
 
     /**
-     *
+     * add values to the parcels
      * @param parcels value to be set
      * @return Builder
      */
@@ -164,7 +164,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
     }
 
     /**
-     *
+     * add the value to the parcels using the builder function
      * @param builder function to build the parcels value
      * @return Builder
      */
@@ -179,7 +179,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
     }
 
     /**
-     *
+     * set the value to the parcels using the builder function
      * @param builder function to build the parcels value
      * @return Builder
      */
@@ -192,7 +192,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
     }
 
     /**
-     *
+     * set the value to the address using the builder function
      * @param builder function to build the address value
      * @return Builder
      */
@@ -204,7 +204,7 @@ public class DeliveryBuilder implements Builder<Delivery> {
     }
 
     /**
-     *
+     * set the value to the address
      * @param address value to be set
      * @return Builder
      */
@@ -237,26 +237,56 @@ public class DeliveryBuilder implements Builder<Delivery> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Delivery.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     * value of createdAt}
+     * @return createdAt
+     */
 
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+     *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
+     * @return items
+     */
+
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
         return this.items;
     }
+
+    /**
+     * value of parcels}
+     * @return parcels
+     */
 
     public java.util.List<com.commercetools.api.models.order.Parcel> getParcels() {
         return this.parcels;
     }
 
+    /**
+     * value of address}
+     * @return address
+     */
+
     @Nullable
     public com.commercetools.api.models.common.Address getAddress() {
         return this.address;
     }
+
+    /**
+     *  <p>Custom Fields for the Transaction.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -283,10 +313,19 @@ public class DeliveryBuilder implements Builder<Delivery> {
         return new DeliveryImpl(id, createdAt, items, parcels, address, custom);
     }
 
+    /**
+     * factory method for an instance of DeliveryBuilder
+     * @return builder
+     */
     public static DeliveryBuilder of() {
         return new DeliveryBuilder();
     }
 
+    /**
+     * create builder for Delivery instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DeliveryBuilder of(final Delivery template) {
         DeliveryBuilder builder = new DeliveryBuilder();
         builder.id = template.getId();

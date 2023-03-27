@@ -26,6 +26,9 @@ public class OrderEditUpdateImpl implements OrderEditUpdate, ModelBase {
 
     private Boolean dryRun;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderEditUpdateImpl(@JsonProperty("version") final Long version,
             @JsonProperty("actions") final java.util.List<com.commercetools.api.models.order_edit.OrderEditUpdateAction> actions,
@@ -35,6 +38,9 @@ public class OrderEditUpdateImpl implements OrderEditUpdate, ModelBase {
         this.dryRun = dryRun;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderEditUpdateImpl() {
     }
 

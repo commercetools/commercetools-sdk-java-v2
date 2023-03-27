@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = BusinessUnitChangeAssociateActionImpl.class)
 public interface BusinessUnitChangeAssociateAction extends BusinessUnitUpdateAction {
 
+    /**
+     * discriminator value for BusinessUnitChangeAssociateAction
+     */
     String CHANGE_ASSOCIATE = "changeAssociate";
 
     /**
@@ -41,30 +44,63 @@ public interface BusinessUnitChangeAssociateAction extends BusinessUnitUpdateAct
     @JsonProperty("associate")
     public AssociateDraft getAssociate();
 
+    /**
+     *  <p>New version of an existing Associate.</p>
+     * @param associate value to be set
+     */
+
     public void setAssociate(final AssociateDraft associate);
 
+    /**
+     * factory method
+     * @return instance of BusinessUnitChangeAssociateAction
+     */
     public static BusinessUnitChangeAssociateAction of() {
         return new BusinessUnitChangeAssociateActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of BusinessUnitChangeAssociateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static BusinessUnitChangeAssociateAction of(final BusinessUnitChangeAssociateAction template) {
         BusinessUnitChangeAssociateActionImpl instance = new BusinessUnitChangeAssociateActionImpl();
         instance.setAssociate(template.getAssociate());
         return instance;
     }
 
+    /**
+     * builder factory method for BusinessUnitChangeAssociateAction
+     * @return builder
+     */
     public static BusinessUnitChangeAssociateActionBuilder builder() {
         return BusinessUnitChangeAssociateActionBuilder.of();
     }
 
+    /**
+     * create builder for BusinessUnitChangeAssociateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitChangeAssociateActionBuilder builder(final BusinessUnitChangeAssociateAction template) {
         return BusinessUnitChangeAssociateActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withBusinessUnitChangeAssociateAction(Function<BusinessUnitChangeAssociateAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<BusinessUnitChangeAssociateAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<BusinessUnitChangeAssociateAction>() {
             @Override

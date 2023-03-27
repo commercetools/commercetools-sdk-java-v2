@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TypeAddFieldDefinitionActionImpl.class)
 public interface TypeAddFieldDefinitionAction extends TypeUpdateAction {
 
+    /**
+     * discriminator value for TypeAddFieldDefinitionAction
+     */
     String ADD_FIELD_DEFINITION = "addFieldDefinition";
 
     /**
@@ -42,30 +45,63 @@ public interface TypeAddFieldDefinitionAction extends TypeUpdateAction {
     @JsonProperty("fieldDefinition")
     public FieldDefinition getFieldDefinition();
 
+    /**
+     *  <p>Value to append to the array.</p>
+     * @param fieldDefinition value to be set
+     */
+
     public void setFieldDefinition(final FieldDefinition fieldDefinition);
 
+    /**
+     * factory method
+     * @return instance of TypeAddFieldDefinitionAction
+     */
     public static TypeAddFieldDefinitionAction of() {
         return new TypeAddFieldDefinitionActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of TypeAddFieldDefinitionAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static TypeAddFieldDefinitionAction of(final TypeAddFieldDefinitionAction template) {
         TypeAddFieldDefinitionActionImpl instance = new TypeAddFieldDefinitionActionImpl();
         instance.setFieldDefinition(template.getFieldDefinition());
         return instance;
     }
 
+    /**
+     * builder factory method for TypeAddFieldDefinitionAction
+     * @return builder
+     */
     public static TypeAddFieldDefinitionActionBuilder builder() {
         return TypeAddFieldDefinitionActionBuilder.of();
     }
 
+    /**
+     * create builder for TypeAddFieldDefinitionAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TypeAddFieldDefinitionActionBuilder builder(final TypeAddFieldDefinitionAction template) {
         return TypeAddFieldDefinitionActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTypeAddFieldDefinitionAction(Function<TypeAddFieldDefinitionAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<TypeAddFieldDefinitionAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TypeAddFieldDefinitionAction>() {
             @Override

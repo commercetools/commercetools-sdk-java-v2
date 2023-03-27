@@ -24,6 +24,9 @@ public class ChannelUpdateImpl implements ChannelUpdate, ModelBase {
 
     private java.util.List<com.commercetools.api.models.channel.ChannelUpdateAction> actions;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChannelUpdateImpl(@JsonProperty("version") final Long version,
             @JsonProperty("actions") final java.util.List<com.commercetools.api.models.channel.ChannelUpdateAction> actions) {
@@ -31,6 +34,9 @@ public class ChannelUpdateImpl implements ChannelUpdate, ModelBase {
         this.actions = actions;
     }
 
+    /**
+     * create empty instance
+     */
     public ChannelUpdateImpl() {
     }
 

@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartSetBillingAddressActionImpl.class)
 public interface CartSetBillingAddressAction extends CartUpdateAction {
 
+    /**
+     * discriminator value for CartSetBillingAddressAction
+     */
     String SET_BILLING_ADDRESS = "setBillingAddress";
 
     /**
@@ -39,30 +42,63 @@ public interface CartSetBillingAddressAction extends CartUpdateAction {
     @JsonProperty("address")
     public BaseAddress getAddress();
 
+    /**
+     *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @param address value to be set
+     */
+
     public void setAddress(final BaseAddress address);
 
+    /**
+     * factory method
+     * @return instance of CartSetBillingAddressAction
+     */
     public static CartSetBillingAddressAction of() {
         return new CartSetBillingAddressActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartSetBillingAddressAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartSetBillingAddressAction of(final CartSetBillingAddressAction template) {
         CartSetBillingAddressActionImpl instance = new CartSetBillingAddressActionImpl();
         instance.setAddress(template.getAddress());
         return instance;
     }
 
+    /**
+     * builder factory method for CartSetBillingAddressAction
+     * @return builder
+     */
     public static CartSetBillingAddressActionBuilder builder() {
         return CartSetBillingAddressActionBuilder.of();
     }
 
+    /**
+     * create builder for CartSetBillingAddressAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartSetBillingAddressActionBuilder builder(final CartSetBillingAddressAction template) {
         return CartSetBillingAddressActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartSetBillingAddressAction(Function<CartSetBillingAddressAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartSetBillingAddressAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartSetBillingAddressAction>() {
             @Override

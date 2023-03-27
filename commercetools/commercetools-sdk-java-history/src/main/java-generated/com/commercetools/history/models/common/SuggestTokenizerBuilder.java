@@ -24,7 +24,7 @@ public class SuggestTokenizerBuilder implements Builder<SuggestTokenizer> {
     private String type;
 
     /**
-     *
+     * set the value to the type
      * @param type value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class SuggestTokenizerBuilder implements Builder<SuggestTokenizer> {
         this.type = type;
         return this;
     }
+
+    /**
+     * value of type}
+     * @return type
+     */
 
     public String getType() {
         return this.type;
@@ -55,10 +60,19 @@ public class SuggestTokenizerBuilder implements Builder<SuggestTokenizer> {
         return new SuggestTokenizerImpl(type);
     }
 
+    /**
+     * factory method for an instance of SuggestTokenizerBuilder
+     * @return builder
+     */
     public static SuggestTokenizerBuilder of() {
         return new SuggestTokenizerBuilder();
     }
 
+    /**
+     * create builder for SuggestTokenizer instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SuggestTokenizerBuilder of(final SuggestTokenizer template) {
         SuggestTokenizerBuilder builder = new SuggestTokenizerBuilder();
         builder.type = template.getType();

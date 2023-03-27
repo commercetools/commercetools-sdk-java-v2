@@ -48,6 +48,11 @@ public class CategoryCreatedMessagePayloadBuilder implements Builder<CategoryCre
         return this;
     }
 
+    /**
+     *  <p>Category that was created.</p>
+     * @return category
+     */
+
     public com.commercetools.api.models.category.Category getCategory() {
         return this.category;
     }
@@ -69,10 +74,19 @@ public class CategoryCreatedMessagePayloadBuilder implements Builder<CategoryCre
         return new CategoryCreatedMessagePayloadImpl(category);
     }
 
+    /**
+     * factory method for an instance of CategoryCreatedMessagePayloadBuilder
+     * @return builder
+     */
     public static CategoryCreatedMessagePayloadBuilder of() {
         return new CategoryCreatedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for CategoryCreatedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategoryCreatedMessagePayloadBuilder of(final CategoryCreatedMessagePayload template) {
         CategoryCreatedMessagePayloadBuilder builder = new CategoryCreatedMessagePayloadBuilder();
         builder.category = template.getCategory();

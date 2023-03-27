@@ -35,6 +35,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetLineItemProductSlugChangeImpl.class)
 public interface SetLineItemProductSlugChange extends Change {
 
+    /**
+     * discriminator value for SetLineItemProductSlugChange
+     */
     String SET_LINE_ITEM_PRODUCT_SLUG_CHANGE = "SetLineItemProductSlugChange";
 
     /**
@@ -88,20 +91,54 @@ public interface SetLineItemProductSlugChange extends Change {
     @JsonProperty("previousValue")
     public LocalizedString getPreviousValue();
 
+    /**
+     *  <p>Update action for <code>setLineItemProductSlug</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set lineItem
+     * @param lineItem value to be set
+     */
 
     public void setLineItem(final LocalizedString lineItem);
 
+    /**
+     * set variant
+     * @param variant value to be set
+     */
+
     public void setVariant(final String variant);
+
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
 
     public void setNextValue(final LocalizedString nextValue);
 
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
+
     public void setPreviousValue(final LocalizedString previousValue);
 
+    /**
+     * factory method
+     * @return instance of SetLineItemProductSlugChange
+     */
     public static SetLineItemProductSlugChange of() {
         return new SetLineItemProductSlugChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetLineItemProductSlugChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetLineItemProductSlugChange of(final SetLineItemProductSlugChange template) {
         SetLineItemProductSlugChangeImpl instance = new SetLineItemProductSlugChangeImpl();
         instance.setChange(template.getChange());
@@ -112,18 +149,37 @@ public interface SetLineItemProductSlugChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetLineItemProductSlugChange
+     * @return builder
+     */
     public static SetLineItemProductSlugChangeBuilder builder() {
         return SetLineItemProductSlugChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetLineItemProductSlugChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetLineItemProductSlugChangeBuilder builder(final SetLineItemProductSlugChange template) {
         return SetLineItemProductSlugChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetLineItemProductSlugChange(Function<SetLineItemProductSlugChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetLineItemProductSlugChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetLineItemProductSlugChange>() {
             @Override

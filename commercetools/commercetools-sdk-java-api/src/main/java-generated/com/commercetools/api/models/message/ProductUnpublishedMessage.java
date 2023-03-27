@@ -33,12 +33,24 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductUnpublishedMessageImpl.class)
 public interface ProductUnpublishedMessage extends Message {
 
+    /**
+     * discriminator value for ProductUnpublishedMessage
+     */
     String PRODUCT_UNPUBLISHED = "ProductUnpublished";
 
+    /**
+     * factory method
+     * @return instance of ProductUnpublishedMessage
+     */
     public static ProductUnpublishedMessage of() {
         return new ProductUnpublishedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductUnpublishedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductUnpublishedMessage of(final ProductUnpublishedMessage template) {
         ProductUnpublishedMessageImpl instance = new ProductUnpublishedMessageImpl();
         instance.setId(template.getId());
@@ -54,18 +66,37 @@ public interface ProductUnpublishedMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductUnpublishedMessage
+     * @return builder
+     */
     public static ProductUnpublishedMessageBuilder builder() {
         return ProductUnpublishedMessageBuilder.of();
     }
 
+    /**
+     * create builder for ProductUnpublishedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductUnpublishedMessageBuilder builder(final ProductUnpublishedMessage template) {
         return ProductUnpublishedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductUnpublishedMessage(Function<ProductUnpublishedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductUnpublishedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductUnpublishedMessage>() {
             @Override

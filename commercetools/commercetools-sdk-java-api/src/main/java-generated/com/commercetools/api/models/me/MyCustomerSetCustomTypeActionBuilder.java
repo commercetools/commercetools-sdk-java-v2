@@ -77,10 +77,20 @@ public class MyCustomerSetCustomTypeActionBuilder implements Builder<MyCustomerS
         return this;
     }
 
+    /**
+     *  <p>Defines the Type that extends the MyCustomer with Custom Fields. If absent, any existing Type and Custom Fields are removed from the MyCustomer.</p>
+     * @return type
+     */
+
     @Nullable
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }
+
+    /**
+     *  <p>Sets the Custom Fields fields for the MyCustomer.</p>
+     * @return fields
+     */
 
     @Nullable
     public com.commercetools.api.models.type.FieldContainer getFields() {
@@ -103,10 +113,19 @@ public class MyCustomerSetCustomTypeActionBuilder implements Builder<MyCustomerS
         return new MyCustomerSetCustomTypeActionImpl(type, fields);
     }
 
+    /**
+     * factory method for an instance of MyCustomerSetCustomTypeActionBuilder
+     * @return builder
+     */
     public static MyCustomerSetCustomTypeActionBuilder of() {
         return new MyCustomerSetCustomTypeActionBuilder();
     }
 
+    /**
+     * create builder for MyCustomerSetCustomTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCustomerSetCustomTypeActionBuilder of(final MyCustomerSetCustomTypeAction template) {
         MyCustomerSetCustomTypeActionBuilder builder = new MyCustomerSetCustomTypeActionBuilder();
         builder.type = template.getType();

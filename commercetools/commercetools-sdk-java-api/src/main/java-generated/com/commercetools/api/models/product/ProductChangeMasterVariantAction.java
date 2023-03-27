@@ -26,6 +26,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductChangeMasterVariantActionImpl.class)
 public interface ProductChangeMasterVariantAction extends ProductUpdateAction {
 
+    /**
+     * discriminator value for ProductChangeMasterVariantAction
+     */
     String CHANGE_MASTER_VARIANT = "changeMasterVariant";
 
     /**
@@ -52,16 +55,40 @@ public interface ProductChangeMasterVariantAction extends ProductUpdateAction {
     @JsonProperty("staged")
     public Boolean getStaged();
 
+    /**
+     *  <p>The <code>id</code> of the ProductVariant to become the Master Variant.</p>
+     * @param variantId value to be set
+     */
+
     public void setVariantId(final Long variantId);
+
+    /**
+     *  <p>The <code>sku</code> of the ProductVariant to become the Master Variant.</p>
+     * @param sku value to be set
+     */
 
     public void setSku(final String sku);
 
+    /**
+     *  <p>If <code>true</code>, only the staged Master Variant is changed. If <code>false</code>, both the current and staged Master Variant are changed.</p>
+     * @param staged value to be set
+     */
+
     public void setStaged(final Boolean staged);
 
+    /**
+     * factory method
+     * @return instance of ProductChangeMasterVariantAction
+     */
     public static ProductChangeMasterVariantAction of() {
         return new ProductChangeMasterVariantActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductChangeMasterVariantAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductChangeMasterVariantAction of(final ProductChangeMasterVariantAction template) {
         ProductChangeMasterVariantActionImpl instance = new ProductChangeMasterVariantActionImpl();
         instance.setVariantId(template.getVariantId());
@@ -70,18 +97,37 @@ public interface ProductChangeMasterVariantAction extends ProductUpdateAction {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductChangeMasterVariantAction
+     * @return builder
+     */
     public static ProductChangeMasterVariantActionBuilder builder() {
         return ProductChangeMasterVariantActionBuilder.of();
     }
 
+    /**
+     * create builder for ProductChangeMasterVariantAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductChangeMasterVariantActionBuilder builder(final ProductChangeMasterVariantAction template) {
         return ProductChangeMasterVariantActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductChangeMasterVariantAction(Function<ProductChangeMasterVariantAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductChangeMasterVariantAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductChangeMasterVariantAction>() {
             @Override

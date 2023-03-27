@@ -24,12 +24,18 @@ public class PaymentSetAnonymousIdActionImpl implements PaymentSetAnonymousIdAct
 
     private String anonymousId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PaymentSetAnonymousIdActionImpl(@JsonProperty("anonymousId") final String anonymousId) {
         this.anonymousId = anonymousId;
         this.action = SET_ANONYMOUS_ID;
     }
 
+    /**
+     * create empty instance
+     */
     public PaymentSetAnonymousIdActionImpl() {
         this.action = SET_ANONYMOUS_ID;
     }

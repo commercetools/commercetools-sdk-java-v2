@@ -24,6 +24,9 @@ public class CustomFieldsImpl implements CustomFields, ModelBase {
 
     private java.lang.Object fields;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomFieldsImpl(@JsonProperty("type") final com.commercetools.history.models.common.Reference type,
             @JsonProperty("fields") final java.lang.Object fields) {
@@ -31,6 +34,9 @@ public class CustomFieldsImpl implements CustomFields, ModelBase {
         this.fields = fields;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomFieldsImpl() {
     }
 

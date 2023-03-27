@@ -28,6 +28,9 @@ public class ChangeStagedQuoteStateChangeImpl implements ChangeStagedQuoteStateC
 
     private com.commercetools.history.models.common.StagedQuoteState previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeStagedQuoteStateChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.StagedQuoteState nextValue,
@@ -38,6 +41,9 @@ public class ChangeStagedQuoteStateChangeImpl implements ChangeStagedQuoteStateC
         this.type = CHANGE_STAGED_QUOTE_STATE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeStagedQuoteStateChangeImpl() {
         this.type = CHANGE_STAGED_QUOTE_STATE_CHANGE;
     }

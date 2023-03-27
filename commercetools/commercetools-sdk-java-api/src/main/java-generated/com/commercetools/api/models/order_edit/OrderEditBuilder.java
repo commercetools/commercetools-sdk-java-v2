@@ -82,7 +82,7 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
     }
 
     /**
-     *
+     * set the value to the createdAt
      * @param createdAt value to be set
      * @return Builder
      */
@@ -93,7 +93,7 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
     }
 
     /**
-     *
+     * set the value to the lastModifiedAt
      * @param lastModifiedAt value to be set
      * @return Builder
      */
@@ -254,7 +254,7 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
     }
 
     /**
-     *
+     * set the value to the custom using the builder function
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -266,7 +266,7 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
     }
 
     /**
-     *
+     * set the value to the custom
      * @param custom value to be set
      * @return Builder
      */
@@ -310,53 +310,113 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the OrderEdit.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>The current version of the OrderEdit.</p>
+     * @return version
+     */
 
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     * value of createdAt}
+     * @return createdAt
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+     * value of lastModifiedAt}
+     * @return lastModifiedAt
+     */
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
+     */
+
     @Nullable
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the OrderEdit.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>The order to be updated with this edit.</p>
+     * @return resource
+     */
+
     public com.commercetools.api.models.order.OrderReference getResource() {
         return this.resource;
     }
 
+    /**
+     *  <p>The actions to apply to the Order. Cannot be updated after the edit has been applied.</p>
+     * @return stagedActions
+     */
+
     public java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> getStagedActions() {
         return this.stagedActions;
     }
+
+    /**
+     * value of custom}
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
 
+    /**
+     *  <p>Contains a preview of the changes in case of unapplied edit. For applied edits, it contains the summary of the changes.</p>
+     * @return result
+     */
+
     public com.commercetools.api.models.order_edit.OrderEditResult getResult() {
         return this.result;
     }
+
+    /**
+     *  <p>This field can be used to add textual information regarding the edit.</p>
+     * @return comment
+     */
 
     @Nullable
     public String getComment() {
@@ -388,10 +448,19 @@ public class OrderEditBuilder implements Builder<OrderEdit> {
             stagedActions, custom, result, comment);
     }
 
+    /**
+     * factory method for an instance of OrderEditBuilder
+     * @return builder
+     */
     public static OrderEditBuilder of() {
         return new OrderEditBuilder();
     }
 
+    /**
+     * create builder for OrderEdit instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderEditBuilder of(final OrderEdit template) {
         OrderEditBuilder builder = new OrderEditBuilder();
         builder.id = template.getId();

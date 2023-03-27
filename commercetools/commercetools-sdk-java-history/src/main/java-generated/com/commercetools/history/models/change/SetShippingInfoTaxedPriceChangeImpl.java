@@ -28,6 +28,9 @@ public class SetShippingInfoTaxedPriceChangeImpl implements SetShippingInfoTaxed
 
     private com.commercetools.history.models.common.TaxedPrice previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetShippingInfoTaxedPriceChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.TaxedPrice nextValue,
@@ -38,6 +41,9 @@ public class SetShippingInfoTaxedPriceChangeImpl implements SetShippingInfoTaxed
         this.type = SET_SHIPPING_INFO_TAXED_PRICE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetShippingInfoTaxedPriceChangeImpl() {
         this.type = SET_SHIPPING_INFO_TAXED_PRICE_CHANGE;
     }

@@ -26,6 +26,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = InventoryEntrySetKeyActionImpl.class)
 public interface InventoryEntrySetKeyAction extends InventoryEntryUpdateAction {
 
+    /**
+     * discriminator value for InventoryEntrySetKeyAction
+     */
     String SET_KEY = "setKey";
 
     /**
@@ -36,26 +39,55 @@ public interface InventoryEntrySetKeyAction extends InventoryEntryUpdateAction {
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
 
+    /**
+     * factory method
+     * @return instance of InventoryEntrySetKeyAction
+     */
     public static InventoryEntrySetKeyAction of() {
         return new InventoryEntrySetKeyActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of InventoryEntrySetKeyAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static InventoryEntrySetKeyAction of(final InventoryEntrySetKeyAction template) {
         InventoryEntrySetKeyActionImpl instance = new InventoryEntrySetKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;
     }
 
+    /**
+     * builder factory method for InventoryEntrySetKeyAction
+     * @return builder
+     */
     public static InventoryEntrySetKeyActionBuilder builder() {
         return InventoryEntrySetKeyActionBuilder.of();
     }
 
+    /**
+     * create builder for InventoryEntrySetKeyAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InventoryEntrySetKeyActionBuilder builder(final InventoryEntrySetKeyAction template) {
         return InventoryEntrySetKeyActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withInventoryEntrySetKeyAction(Function<InventoryEntrySetKeyAction, T> helper) {
         return helper.apply(this);
     }
@@ -64,6 +96,10 @@ public interface InventoryEntrySetKeyAction extends InventoryEntryUpdateAction {
         return InventoryEntrySetKeyAction.of();
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<InventoryEntrySetKeyAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<InventoryEntrySetKeyAction>() {
             @Override

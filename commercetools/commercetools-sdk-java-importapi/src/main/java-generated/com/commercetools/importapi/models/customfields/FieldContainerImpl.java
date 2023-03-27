@@ -22,12 +22,18 @@ public class FieldContainerImpl implements FieldContainer, ModelBase {
 
     private Map<String, com.commercetools.importapi.models.customfields.CustomField> values;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     FieldContainerImpl(
             @JsonProperty("values") final Map<String, com.commercetools.importapi.models.customfields.CustomField> values) {
         this.values = values;
     }
 
+    /**
+     * create empty instance
+     */
     public FieldContainerImpl() {
     }
 

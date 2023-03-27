@@ -24,6 +24,9 @@ public class ChannelSetRolesActionImpl implements ChannelSetRolesAction, ModelBa
 
     private java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> roles;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChannelSetRolesActionImpl(
             @JsonProperty("roles") final java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> roles) {
@@ -31,6 +34,9 @@ public class ChannelSetRolesActionImpl implements ChannelSetRolesAction, ModelBa
         this.action = SET_ROLES;
     }
 
+    /**
+     * create empty instance
+     */
     public ChannelSetRolesActionImpl() {
         this.action = SET_ROLES;
     }

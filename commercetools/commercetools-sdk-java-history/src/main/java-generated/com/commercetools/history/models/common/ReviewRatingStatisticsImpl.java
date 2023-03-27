@@ -30,6 +30,9 @@ public class ReviewRatingStatisticsImpl implements ReviewRatingStatistics, Model
 
     private java.lang.Object ratingsDistribution;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReviewRatingStatisticsImpl(@JsonProperty("averageRating") final Integer averageRating,
             @JsonProperty("highestRating") final Integer highestRating,
@@ -42,6 +45,9 @@ public class ReviewRatingStatisticsImpl implements ReviewRatingStatistics, Model
         this.ratingsDistribution = ratingsDistribution;
     }
 
+    /**
+     * create empty instance
+     */
     public ReviewRatingStatisticsImpl() {
     }
 

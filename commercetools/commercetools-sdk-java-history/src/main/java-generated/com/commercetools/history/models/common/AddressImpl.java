@@ -70,6 +70,9 @@ public class AddressImpl implements Address, ModelBase {
 
     private String externalId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AddressImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key,
             @JsonProperty("title") final String title, @JsonProperty("salutation") final String salutation,
@@ -113,6 +116,9 @@ public class AddressImpl implements Address, ModelBase {
         this.externalId = externalId;
     }
 
+    /**
+     * create empty instance
+     */
     public AddressImpl() {
     }
 

@@ -24,12 +24,18 @@ public class BusinessUnitNameChangedMessagePayloadImpl implements BusinessUnitNa
 
     private String name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitNameChangedMessagePayloadImpl(@JsonProperty("name") final String name) {
         this.name = name;
         this.type = BUSINESS_UNIT_NAME_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitNameChangedMessagePayloadImpl() {
         this.type = BUSINESS_UNIT_NAME_CHANGED;
     }

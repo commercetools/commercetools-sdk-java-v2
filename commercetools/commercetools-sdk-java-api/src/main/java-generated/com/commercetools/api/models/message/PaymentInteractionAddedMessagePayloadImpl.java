@@ -24,6 +24,9 @@ public class PaymentInteractionAddedMessagePayloadImpl implements PaymentInterac
 
     private com.commercetools.api.models.type.CustomFields interaction;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PaymentInteractionAddedMessagePayloadImpl(
             @JsonProperty("interaction") final com.commercetools.api.models.type.CustomFields interaction) {
@@ -31,6 +34,9 @@ public class PaymentInteractionAddedMessagePayloadImpl implements PaymentInterac
         this.type = PAYMENT_INTERACTION_ADDED;
     }
 
+    /**
+     * create empty instance
+     */
     public PaymentInteractionAddedMessagePayloadImpl() {
         this.type = PAYMENT_INTERACTION_ADDED;
     }

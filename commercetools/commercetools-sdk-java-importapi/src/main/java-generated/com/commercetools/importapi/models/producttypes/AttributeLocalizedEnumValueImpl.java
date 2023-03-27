@@ -24,6 +24,9 @@ public class AttributeLocalizedEnumValueImpl implements AttributeLocalizedEnumVa
 
     private com.commercetools.importapi.models.common.LocalizedString label;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AttributeLocalizedEnumValueImpl(@JsonProperty("key") final String key,
             @JsonProperty("label") final com.commercetools.importapi.models.common.LocalizedString label) {
@@ -31,6 +34,9 @@ public class AttributeLocalizedEnumValueImpl implements AttributeLocalizedEnumVa
         this.label = label;
     }
 
+    /**
+     * create empty instance
+     */
     public AttributeLocalizedEnumValueImpl() {
     }
 

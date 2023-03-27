@@ -30,6 +30,9 @@ public class CartDiscountValueGiftLineItemImpl implements CartDiscountValueGiftL
 
     private com.commercetools.api.models.channel.ChannelReference distributionChannel;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartDiscountValueGiftLineItemImpl(
             @JsonProperty("product") final com.commercetools.api.models.product.ProductReference product,
@@ -43,6 +46,9 @@ public class CartDiscountValueGiftLineItemImpl implements CartDiscountValueGiftL
         this.type = GIFT_LINE_ITEM;
     }
 
+    /**
+     * create empty instance
+     */
     public CartDiscountValueGiftLineItemImpl() {
         this.type = GIFT_LINE_ITEM;
     }

@@ -77,13 +77,28 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
         return this;
     }
 
+    /**
+     *  <p><code>key</code> selected from the <code>values</code> of the CartClassificationType configured in the Project.</p>
+     * @return value
+     */
+
     public String getValue() {
         return this.value;
     }
 
+    /**
+     *  <p>Fixed shipping rate for the selected classification.</p>
+     * @return price
+     */
+
     public com.commercetools.api.models.common.Money getPrice() {
         return this.price;
     }
+
+    /**
+     *  <p>Appears in response to Get ShippingMethods for a Cart if the shipping rate matches the search query.</p>
+     * @return isMatching
+     */
 
     @Nullable
     public Boolean getIsMatching() {
@@ -108,10 +123,19 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
         return new CartClassificationTierImpl(value, price, isMatching);
     }
 
+    /**
+     * factory method for an instance of CartClassificationTierBuilder
+     * @return builder
+     */
     public static CartClassificationTierBuilder of() {
         return new CartClassificationTierBuilder();
     }
 
+    /**
+     * create builder for CartClassificationTier instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartClassificationTierBuilder of(final CartClassificationTier template) {
         CartClassificationTierBuilder builder = new CartClassificationTierBuilder();
         builder.value = template.getValue();

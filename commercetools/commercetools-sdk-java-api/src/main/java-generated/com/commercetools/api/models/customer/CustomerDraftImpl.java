@@ -75,6 +75,9 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
 
     private com.commercetools.api.models.customer.AuthenticationMode authenticationMode;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerDraftImpl(@JsonProperty("key") final String key,
             @JsonProperty("customerNumber") final String customerNumber,
@@ -126,6 +129,9 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
         this.authenticationMode = authenticationMode;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerDraftImpl() {
     }
 

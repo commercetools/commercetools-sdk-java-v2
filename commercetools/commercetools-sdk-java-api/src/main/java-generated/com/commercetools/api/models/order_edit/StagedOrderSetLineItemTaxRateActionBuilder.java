@@ -33,7 +33,7 @@ public class StagedOrderSetLineItemTaxRateActionBuilder implements Builder<Stage
     private String shippingKey;
 
     /**
-     *
+     * set the value to the lineItemId
      * @param lineItemId value to be set
      * @return Builder
      */
@@ -79,14 +79,29 @@ public class StagedOrderSetLineItemTaxRateActionBuilder implements Builder<Stage
         return this;
     }
 
+    /**
+     * value of lineItemId}
+     * @return lineItemId
+     */
+
     public String getLineItemId() {
         return this.lineItemId;
     }
+
+    /**
+     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @return externalTaxRate
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
         return this.externalTaxRate;
     }
+
+    /**
+     *  <p><code>key</code> of the ShippingMethod used for this Line Item. This is required for Carts with <code>Multiple</code> ShippingMode.</p>
+     * @return shippingKey
+     */
 
     @Nullable
     public String getShippingKey() {
@@ -110,10 +125,19 @@ public class StagedOrderSetLineItemTaxRateActionBuilder implements Builder<Stage
         return new StagedOrderSetLineItemTaxRateActionImpl(lineItemId, externalTaxRate, shippingKey);
     }
 
+    /**
+     * factory method for an instance of StagedOrderSetLineItemTaxRateActionBuilder
+     * @return builder
+     */
     public static StagedOrderSetLineItemTaxRateActionBuilder of() {
         return new StagedOrderSetLineItemTaxRateActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderSetLineItemTaxRateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetLineItemTaxRateActionBuilder of(final StagedOrderSetLineItemTaxRateAction template) {
         StagedOrderSetLineItemTaxRateActionBuilder builder = new StagedOrderSetLineItemTaxRateActionBuilder();
         builder.lineItemId = template.getLineItemId();

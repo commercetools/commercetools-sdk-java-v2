@@ -35,6 +35,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = RemovePriceChangeImpl.class)
 public interface RemovePriceChange extends Change {
 
+    /**
+     * discriminator value for RemovePriceChange
+     */
     String REMOVE_PRICE_CHANGE = "RemovePriceChange";
 
     /**
@@ -87,20 +90,54 @@ public interface RemovePriceChange extends Change {
     @JsonProperty("nextValue")
     public Price getNextValue();
 
+    /**
+     *  <p>Update action for removing prices</p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set catalogData
+     * @param catalogData value to be set
+     */
 
     public void setCatalogData(final String catalogData);
 
+    /**
+     * set priceId
+     * @param priceId value to be set
+     */
+
     public void setPriceId(final String priceId);
+
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
 
     public void setPreviousValue(final Price previousValue);
 
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
+
     public void setNextValue(final Price nextValue);
 
+    /**
+     * factory method
+     * @return instance of RemovePriceChange
+     */
     public static RemovePriceChange of() {
         return new RemovePriceChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of RemovePriceChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static RemovePriceChange of(final RemovePriceChange template) {
         RemovePriceChangeImpl instance = new RemovePriceChangeImpl();
         instance.setChange(template.getChange());
@@ -111,18 +148,37 @@ public interface RemovePriceChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for RemovePriceChange
+     * @return builder
+     */
     public static RemovePriceChangeBuilder builder() {
         return RemovePriceChangeBuilder.of();
     }
 
+    /**
+     * create builder for RemovePriceChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static RemovePriceChangeBuilder builder(final RemovePriceChange template) {
         return RemovePriceChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withRemovePriceChange(Function<RemovePriceChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<RemovePriceChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<RemovePriceChange>() {
             @Override

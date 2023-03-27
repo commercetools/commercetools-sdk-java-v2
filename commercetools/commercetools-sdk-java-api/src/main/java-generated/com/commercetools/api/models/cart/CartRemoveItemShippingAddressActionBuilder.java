@@ -34,6 +34,11 @@ public class CartRemoveItemShippingAddressActionBuilder implements Builder<CartR
         return this;
     }
 
+    /**
+     *  <p><code>key</code> of the Address to remove from <code>itemShippingAddresses</code>.</p>
+     * @return addressKey
+     */
+
     public String getAddressKey() {
         return this.addressKey;
     }
@@ -55,10 +60,19 @@ public class CartRemoveItemShippingAddressActionBuilder implements Builder<CartR
         return new CartRemoveItemShippingAddressActionImpl(addressKey);
     }
 
+    /**
+     * factory method for an instance of CartRemoveItemShippingAddressActionBuilder
+     * @return builder
+     */
     public static CartRemoveItemShippingAddressActionBuilder of() {
         return new CartRemoveItemShippingAddressActionBuilder();
     }
 
+    /**
+     * create builder for CartRemoveItemShippingAddressAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartRemoveItemShippingAddressActionBuilder of(final CartRemoveItemShippingAddressAction template) {
         CartRemoveItemShippingAddressActionBuilder builder = new CartRemoveItemShippingAddressActionBuilder();
         builder.addressKey = template.getAddressKey();

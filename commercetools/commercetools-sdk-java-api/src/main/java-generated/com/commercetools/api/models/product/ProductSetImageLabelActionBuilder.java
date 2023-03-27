@@ -92,24 +92,49 @@ public class ProductSetImageLabelActionBuilder implements Builder<ProductSetImag
         return this;
     }
 
+    /**
+     *  <p>The <code>sku</code> of the ProductVariant to update.</p>
+     * @return sku
+     */
+
     @Nullable
     public String getSku() {
         return this.sku;
     }
+
+    /**
+     *  <p>The <code>id</code> of the ProductVariant to update.</p>
+     * @return variantId
+     */
 
     @Nullable
     public Long getVariantId() {
         return this.variantId;
     }
 
+    /**
+     *  <p>The URL of the image to set the label.</p>
+     * @return imageUrl
+     */
+
     public String getImageUrl() {
         return this.imageUrl;
     }
+
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return label
+     */
 
     @Nullable
     public String getLabel() {
         return this.label;
     }
+
+    /**
+     *  <p>If <code>true</code>, only the staged image is updated. If <code>false</code>, both the current and staged image is updated.</p>
+     * @return staged
+     */
 
     @Nullable
     public Boolean getStaged() {
@@ -133,10 +158,19 @@ public class ProductSetImageLabelActionBuilder implements Builder<ProductSetImag
         return new ProductSetImageLabelActionImpl(sku, variantId, imageUrl, label, staged);
     }
 
+    /**
+     * factory method for an instance of ProductSetImageLabelActionBuilder
+     * @return builder
+     */
     public static ProductSetImageLabelActionBuilder of() {
         return new ProductSetImageLabelActionBuilder();
     }
 
+    /**
+     * create builder for ProductSetImageLabelAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSetImageLabelActionBuilder of(final ProductSetImageLabelAction template) {
         ProductSetImageLabelActionBuilder builder = new ProductSetImageLabelActionBuilder();
         builder.sku = template.getSku();

@@ -26,6 +26,9 @@ public class AzureEventGridDestinationImpl implements AzureEventGridDestination,
 
     private String accessKey;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AzureEventGridDestinationImpl(@JsonProperty("uri") final String uri,
             @JsonProperty("accessKey") final String accessKey) {
@@ -34,6 +37,9 @@ public class AzureEventGridDestinationImpl implements AzureEventGridDestination,
         this.type = EVENT_GRID;
     }
 
+    /**
+     * create empty instance
+     */
     public AzureEventGridDestinationImpl() {
         this.type = EVENT_GRID;
     }

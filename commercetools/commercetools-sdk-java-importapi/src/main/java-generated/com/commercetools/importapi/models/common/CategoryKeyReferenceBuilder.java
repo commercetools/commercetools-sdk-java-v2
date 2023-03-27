@@ -24,7 +24,7 @@ public class CategoryKeyReferenceBuilder implements Builder<CategoryKeyReference
     private String key;
 
     /**
-     *
+     * set the value to the key
      * @param key value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class CategoryKeyReferenceBuilder implements Builder<CategoryKeyReference
         this.key = key;
         return this;
     }
+
+    /**
+     * value of key}
+     * @return key
+     */
 
     public String getKey() {
         return this.key;
@@ -55,10 +60,19 @@ public class CategoryKeyReferenceBuilder implements Builder<CategoryKeyReference
         return new CategoryKeyReferenceImpl(key);
     }
 
+    /**
+     * factory method for an instance of CategoryKeyReferenceBuilder
+     * @return builder
+     */
     public static CategoryKeyReferenceBuilder of() {
         return new CategoryKeyReferenceBuilder();
     }
 
+    /**
+     * create builder for CategoryKeyReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategoryKeyReferenceBuilder of(final CategoryKeyReference template) {
         CategoryKeyReferenceBuilder builder = new CategoryKeyReferenceBuilder();
         builder.key = template.getKey();

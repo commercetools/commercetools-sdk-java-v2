@@ -31,6 +31,10 @@ public class CartDiscountTargetBuilder {
         return com.commercetools.api.models.cart_discount.MultiBuyLineItemsTargetBuilder.of();
     }
 
+    /**
+     * factory method for an instance of CartDiscountTargetBuilder
+     * @return builder
+     */
     public static CartDiscountTargetBuilder of() {
         return new CartDiscountTargetBuilder();
     }

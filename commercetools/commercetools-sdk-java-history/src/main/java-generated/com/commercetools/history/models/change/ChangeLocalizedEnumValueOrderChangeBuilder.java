@@ -70,7 +70,7 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
     }
 
     /**
-     *
+     * set values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -82,7 +82,7 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
     }
 
     /**
-     *
+     * set value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -94,7 +94,7 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
     }
 
     /**
-     *
+     * add values to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -109,7 +109,7 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
     }
 
     /**
-     *
+     * add the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -125,7 +125,7 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -139,7 +139,7 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
     }
 
     /**
-     *
+     * set values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -151,7 +151,7 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
     }
 
     /**
-     *
+     * set value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -163,7 +163,7 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
     }
 
     /**
-     *
+     * add values to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -178,7 +178,7 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
     }
 
     /**
-     *
+     * add the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -194,7 +194,7 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -207,21 +207,46 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>changeLocalizedEnumValueOrder</code> on types and product types</p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     *  <p>The name of the field definition updated.</p>
+     * @return fieldName
+     */
 
     public String getFieldName() {
         return this.fieldName;
     }
 
+    /**
+     *  <p>The name of the attribute updated.</p>
+     * @return attributeName
+     */
+
     public String getAttributeName() {
         return this.attributeName;
     }
 
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
+
     public java.util.List<com.commercetools.history.models.change_value.LocalizedEnumValue> getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public java.util.List<com.commercetools.history.models.change_value.LocalizedEnumValue> getPreviousValue() {
         return this.previousValue;
@@ -248,10 +273,19 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
         return new ChangeLocalizedEnumValueOrderChangeImpl(change, fieldName, attributeName, nextValue, previousValue);
     }
 
+    /**
+     * factory method for an instance of ChangeLocalizedEnumValueOrderChangeBuilder
+     * @return builder
+     */
     public static ChangeLocalizedEnumValueOrderChangeBuilder of() {
         return new ChangeLocalizedEnumValueOrderChangeBuilder();
     }
 
+    /**
+     * create builder for ChangeLocalizedEnumValueOrderChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeLocalizedEnumValueOrderChangeBuilder of(final ChangeLocalizedEnumValueOrderChange template) {
         ChangeLocalizedEnumValueOrderChangeBuilder builder = new ChangeLocalizedEnumValueOrderChangeBuilder();
         builder.change = template.getChange();

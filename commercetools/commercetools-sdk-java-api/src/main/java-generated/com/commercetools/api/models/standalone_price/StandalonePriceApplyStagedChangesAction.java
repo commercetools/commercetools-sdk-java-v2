@@ -26,31 +26,62 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StandalonePriceApplyStagedChangesActionImpl.class)
 public interface StandalonePriceApplyStagedChangesAction extends StandalonePriceUpdateAction {
 
+    /**
+     * discriminator value for StandalonePriceApplyStagedChangesAction
+     */
     String APPLY_STAGED_CHANGES = "applyStagedChanges";
 
+    /**
+     * factory method
+     * @return instance of StandalonePriceApplyStagedChangesAction
+     */
     public static StandalonePriceApplyStagedChangesAction of() {
         return new StandalonePriceApplyStagedChangesActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StandalonePriceApplyStagedChangesAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StandalonePriceApplyStagedChangesAction of(final StandalonePriceApplyStagedChangesAction template) {
         StandalonePriceApplyStagedChangesActionImpl instance = new StandalonePriceApplyStagedChangesActionImpl();
         return instance;
     }
 
+    /**
+     * builder factory method for StandalonePriceApplyStagedChangesAction
+     * @return builder
+     */
     public static StandalonePriceApplyStagedChangesActionBuilder builder() {
         return StandalonePriceApplyStagedChangesActionBuilder.of();
     }
 
+    /**
+     * create builder for StandalonePriceApplyStagedChangesAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StandalonePriceApplyStagedChangesActionBuilder builder(
             final StandalonePriceApplyStagedChangesAction template) {
         return StandalonePriceApplyStagedChangesActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStandalonePriceApplyStagedChangesAction(
             Function<StandalonePriceApplyStagedChangesAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceApplyStagedChangesAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceApplyStagedChangesAction>() {
             @Override

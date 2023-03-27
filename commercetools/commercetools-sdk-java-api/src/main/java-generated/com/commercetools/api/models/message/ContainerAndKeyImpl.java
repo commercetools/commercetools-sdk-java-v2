@@ -24,12 +24,18 @@ public class ContainerAndKeyImpl implements ContainerAndKey, ModelBase {
 
     private String container;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ContainerAndKeyImpl(@JsonProperty("key") final String key, @JsonProperty("container") final String container) {
         this.key = key;
         this.container = container;
     }
 
+    /**
+     * create empty instance
+     */
     public ContainerAndKeyImpl() {
     }
 

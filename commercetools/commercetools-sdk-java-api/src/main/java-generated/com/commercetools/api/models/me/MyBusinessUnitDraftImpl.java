@@ -40,6 +40,9 @@ public class MyBusinessUnitDraftImpl implements MyBusinessUnitDraft, ModelBase {
 
     private Integer defaultBillingAddress;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyBusinessUnitDraftImpl(@JsonProperty("key") final String key,
             @JsonProperty("unitType") final com.commercetools.api.models.business_unit.BusinessUnitType unitType,
@@ -62,6 +65,9 @@ public class MyBusinessUnitDraftImpl implements MyBusinessUnitDraft, ModelBase {
         this.defaultBillingAddress = defaultBillingAddress;
     }
 
+    /**
+     * create empty instance
+     */
     public MyBusinessUnitDraftImpl() {
     }
 

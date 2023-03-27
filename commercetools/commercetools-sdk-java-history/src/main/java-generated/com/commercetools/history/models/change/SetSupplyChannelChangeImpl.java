@@ -28,6 +28,9 @@ public class SetSupplyChannelChangeImpl implements SetSupplyChannelChange, Model
 
     private com.commercetools.history.models.common.Reference nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetSupplyChannelChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.Reference previousValue,
@@ -38,6 +41,9 @@ public class SetSupplyChannelChangeImpl implements SetSupplyChannelChange, Model
         this.type = SET_SUPPLY_CHANNEL_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetSupplyChannelChangeImpl() {
         this.type = SET_SUPPLY_CHANNEL_CHANGE;
     }

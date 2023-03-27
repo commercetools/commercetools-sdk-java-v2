@@ -30,6 +30,9 @@ public class CustomerPagedQueryResponseImpl implements CustomerPagedQueryRespons
 
     private java.util.List<com.commercetools.api.models.customer.Customer> results;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerPagedQueryResponseImpl(@JsonProperty("limit") final Long limit, @JsonProperty("offset") final Long offset,
             @JsonProperty("count") final Long count, @JsonProperty("total") final Long total,
@@ -41,6 +44,9 @@ public class CustomerPagedQueryResponseImpl implements CustomerPagedQueryRespons
         this.results = results;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerPagedQueryResponseImpl() {
     }
 

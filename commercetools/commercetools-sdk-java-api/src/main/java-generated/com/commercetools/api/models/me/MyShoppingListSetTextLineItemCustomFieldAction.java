@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MyShoppingListSetTextLineItemCustomFieldActionImpl.class)
 public interface MyShoppingListSetTextLineItemCustomFieldAction extends MyShoppingListUpdateAction {
 
+    /**
+     * discriminator value for MyShoppingListSetTextLineItemCustomFieldAction
+     */
     String SET_TEXT_LINE_ITEM_CUSTOM_FIELD = "setTextLineItemCustomField";
 
     /**
@@ -56,16 +59,40 @@ public interface MyShoppingListSetTextLineItemCustomFieldAction extends MyShoppi
     @JsonProperty("value")
     public Object getValue();
 
+    /**
+     *  <p>The <code>id</code> of the TextLineItem to update.</p>
+     * @param textLineItemId value to be set
+     */
+
     public void setTextLineItemId(final String textLineItemId);
+
+    /**
+     *  <p>Name of the Custom Field.</p>
+     * @param name value to be set
+     */
 
     public void setName(final String name);
 
+    /**
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Removing a field that does not exist returns an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     * @param value value to be set
+     */
+
     public void setValue(final Object value);
 
+    /**
+     * factory method
+     * @return instance of MyShoppingListSetTextLineItemCustomFieldAction
+     */
     public static MyShoppingListSetTextLineItemCustomFieldAction of() {
         return new MyShoppingListSetTextLineItemCustomFieldActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of MyShoppingListSetTextLineItemCustomFieldAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static MyShoppingListSetTextLineItemCustomFieldAction of(
             final MyShoppingListSetTextLineItemCustomFieldAction template) {
         MyShoppingListSetTextLineItemCustomFieldActionImpl instance = new MyShoppingListSetTextLineItemCustomFieldActionImpl();
@@ -75,20 +102,39 @@ public interface MyShoppingListSetTextLineItemCustomFieldAction extends MyShoppi
         return instance;
     }
 
+    /**
+     * builder factory method for MyShoppingListSetTextLineItemCustomFieldAction
+     * @return builder
+     */
     public static MyShoppingListSetTextLineItemCustomFieldActionBuilder builder() {
         return MyShoppingListSetTextLineItemCustomFieldActionBuilder.of();
     }
 
+    /**
+     * create builder for MyShoppingListSetTextLineItemCustomFieldAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyShoppingListSetTextLineItemCustomFieldActionBuilder builder(
             final MyShoppingListSetTextLineItemCustomFieldAction template) {
         return MyShoppingListSetTextLineItemCustomFieldActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMyShoppingListSetTextLineItemCustomFieldAction(
             Function<MyShoppingListSetTextLineItemCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MyShoppingListSetTextLineItemCustomFieldAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MyShoppingListSetTextLineItemCustomFieldAction>() {
             @Override

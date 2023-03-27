@@ -30,6 +30,9 @@ public class CustomObjectPagedQueryResponseImpl implements CustomObjectPagedQuer
 
     private java.util.List<com.commercetools.api.models.custom_object.CustomObject> results;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomObjectPagedQueryResponseImpl(@JsonProperty("limit") final Long limit,
             @JsonProperty("offset") final Long offset, @JsonProperty("count") final Long count,
@@ -42,6 +45,9 @@ public class CustomObjectPagedQueryResponseImpl implements CustomObjectPagedQuer
         this.results = results;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomObjectPagedQueryResponseImpl() {
     }
 

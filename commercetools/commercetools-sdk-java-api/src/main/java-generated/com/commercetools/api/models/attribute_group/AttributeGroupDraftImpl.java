@@ -28,6 +28,9 @@ public class AttributeGroupDraftImpl implements AttributeGroupDraft, ModelBase {
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AttributeGroupDraftImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description,
@@ -39,6 +42,9 @@ public class AttributeGroupDraftImpl implements AttributeGroupDraft, ModelBase {
         this.key = key;
     }
 
+    /**
+     * create empty instance
+     */
     public AttributeGroupDraftImpl() {
     }
 

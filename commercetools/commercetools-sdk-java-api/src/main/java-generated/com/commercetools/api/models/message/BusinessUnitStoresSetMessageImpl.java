@@ -44,6 +44,9 @@ public class BusinessUnitStoresSetMessageImpl implements BusinessUnitStoresSetMe
 
     private java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitStoresSetMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -69,6 +72,9 @@ public class BusinessUnitStoresSetMessageImpl implements BusinessUnitStoresSetMe
         this.type = BUSINESS_UNIT_STORES_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitStoresSetMessageImpl() {
         this.type = BUSINESS_UNIT_STORES_SET;
     }

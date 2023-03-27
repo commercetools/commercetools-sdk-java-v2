@@ -44,6 +44,9 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
 
     private com.commercetools.importapi.models.orders.ItemShippingDetailsDraft shippingDetails;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomLineItemDraftImpl(@JsonProperty("name") final com.commercetools.importapi.models.common.LocalizedString name,
             @JsonProperty("money") final com.commercetools.importapi.models.common.TypedMoney money,
@@ -70,6 +73,9 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
         this.shippingDetails = shippingDetails;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomLineItemDraftImpl() {
     }
 

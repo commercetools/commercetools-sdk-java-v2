@@ -30,6 +30,9 @@ public class ChannelPagedQueryResponseImpl implements ChannelPagedQueryResponse,
 
     private java.util.List<com.commercetools.api.models.channel.Channel> results;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChannelPagedQueryResponseImpl(@JsonProperty("limit") final Long limit, @JsonProperty("offset") final Long offset,
             @JsonProperty("count") final Long count, @JsonProperty("total") final Long total,
@@ -41,6 +44,9 @@ public class ChannelPagedQueryResponseImpl implements ChannelPagedQueryResponse,
         this.results = results;
     }
 
+    /**
+     * create empty instance
+     */
     public ChannelPagedQueryResponseImpl() {
     }
 

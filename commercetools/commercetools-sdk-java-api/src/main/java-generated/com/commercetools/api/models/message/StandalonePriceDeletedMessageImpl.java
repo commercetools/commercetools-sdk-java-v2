@@ -42,6 +42,9 @@ public class StandalonePriceDeletedMessageImpl implements StandalonePriceDeleted
 
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StandalonePriceDeletedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -65,6 +68,9 @@ public class StandalonePriceDeletedMessageImpl implements StandalonePriceDeleted
         this.type = STANDALONE_PRICE_DELETED;
     }
 
+    /**
+     * create empty instance
+     */
     public StandalonePriceDeletedMessageImpl() {
         this.type = STANDALONE_PRICE_DELETED;
     }

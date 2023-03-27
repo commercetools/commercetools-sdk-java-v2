@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MyCartAddPaymentActionImpl.class)
 public interface MyCartAddPaymentAction extends MyCartUpdateAction {
 
+    /**
+     * discriminator value for MyCartAddPaymentAction
+     */
     String ADD_PAYMENT = "addPayment";
 
     /**
@@ -42,30 +45,63 @@ public interface MyCartAddPaymentAction extends MyCartUpdateAction {
     @JsonProperty("payment")
     public PaymentResourceIdentifier getPayment();
 
+    /**
+     *  <p>Payment to add to the Cart. Must not be assigned to another Order or active Cart already.</p>
+     * @param payment value to be set
+     */
+
     public void setPayment(final PaymentResourceIdentifier payment);
 
+    /**
+     * factory method
+     * @return instance of MyCartAddPaymentAction
+     */
     public static MyCartAddPaymentAction of() {
         return new MyCartAddPaymentActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of MyCartAddPaymentAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static MyCartAddPaymentAction of(final MyCartAddPaymentAction template) {
         MyCartAddPaymentActionImpl instance = new MyCartAddPaymentActionImpl();
         instance.setPayment(template.getPayment());
         return instance;
     }
 
+    /**
+     * builder factory method for MyCartAddPaymentAction
+     * @return builder
+     */
     public static MyCartAddPaymentActionBuilder builder() {
         return MyCartAddPaymentActionBuilder.of();
     }
 
+    /**
+     * create builder for MyCartAddPaymentAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCartAddPaymentActionBuilder builder(final MyCartAddPaymentAction template) {
         return MyCartAddPaymentActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMyCartAddPaymentAction(Function<MyCartAddPaymentAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MyCartAddPaymentAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MyCartAddPaymentAction>() {
             @Override

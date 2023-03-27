@@ -24,6 +24,9 @@ public class IndividualExclusionProductSelectionTypeImpl implements IndividualEx
 
     private com.commercetools.api.models.common.LocalizedString name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     IndividualExclusionProductSelectionTypeImpl(
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name) {
@@ -31,6 +34,9 @@ public class IndividualExclusionProductSelectionTypeImpl implements IndividualEx
         this.type = ProductSelectionTypeEnum.findEnum("individualExclusion");
     }
 
+    /**
+     * create empty instance
+     */
     public IndividualExclusionProductSelectionTypeImpl() {
         this.type = ProductSelectionTypeEnum.findEnum("individualExclusion");
     }

@@ -49,17 +49,41 @@ public interface StoreUpdate
     @JsonProperty("actions")
     public List<StoreUpdateAction> getActions();
 
+    /**
+     *  <p>Expected version of the Store on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     * @param version value to be set
+     */
+
     public void setVersion(final Long version);
+
+    /**
+     *  <p>Update actions to be performed on the Store.</p>
+     * @param actions values to be set
+     */
 
     @JsonIgnore
     public void setActions(final StoreUpdateAction... actions);
 
+    /**
+     *  <p>Update actions to be performed on the Store.</p>
+     * @param actions values to be set
+     */
+
     public void setActions(final List<StoreUpdateAction> actions);
 
+    /**
+     * factory method
+     * @return instance of StoreUpdate
+     */
     public static StoreUpdate of() {
         return new StoreUpdateImpl();
     }
 
+    /**
+     * factory method to copy an instance of StoreUpdate
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StoreUpdate of(final StoreUpdate template) {
         StoreUpdateImpl instance = new StoreUpdateImpl();
         instance.setVersion(template.getVersion());
@@ -67,18 +91,37 @@ public interface StoreUpdate
         return instance;
     }
 
+    /**
+     * builder factory method for StoreUpdate
+     * @return builder
+     */
     public static StoreUpdateBuilder builder() {
         return StoreUpdateBuilder.of();
     }
 
+    /**
+     * create builder for StoreUpdate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreUpdateBuilder builder(final StoreUpdate template) {
         return StoreUpdateBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStoreUpdate(Function<StoreUpdate, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StoreUpdate> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StoreUpdate>() {
             @Override

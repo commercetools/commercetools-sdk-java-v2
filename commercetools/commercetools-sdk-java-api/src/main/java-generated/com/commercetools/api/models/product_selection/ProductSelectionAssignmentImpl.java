@@ -32,6 +32,9 @@ public class ProductSelectionAssignmentImpl implements ProductSelectionAssignmen
 
     private com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSelectionAssignmentImpl(
             @JsonProperty("product") final com.commercetools.api.models.product.ProductReference product,
@@ -44,6 +47,9 @@ public class ProductSelectionAssignmentImpl implements ProductSelectionAssignmen
         this.variantExclusion = variantExclusion;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSelectionAssignmentImpl() {
     }
 

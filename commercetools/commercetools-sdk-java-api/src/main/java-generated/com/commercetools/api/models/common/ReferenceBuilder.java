@@ -131,6 +131,10 @@ public class ReferenceBuilder {
         return com.commercetools.api.models.zone.ZoneReferenceBuilder.of();
     }
 
+    /**
+     * factory method for an instance of ReferenceBuilder
+     * @return builder
+     */
     public static ReferenceBuilder of() {
         return new ReferenceBuilder();
     }

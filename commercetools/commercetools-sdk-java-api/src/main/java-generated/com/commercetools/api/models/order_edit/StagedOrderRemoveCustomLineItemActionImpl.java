@@ -24,12 +24,18 @@ public class StagedOrderRemoveCustomLineItemActionImpl implements StagedOrderRem
 
     private String customLineItemId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderRemoveCustomLineItemActionImpl(@JsonProperty("customLineItemId") final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         this.action = REMOVE_CUSTOM_LINE_ITEM;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderRemoveCustomLineItemActionImpl() {
         this.action = REMOVE_CUSTOM_LINE_ITEM;
     }

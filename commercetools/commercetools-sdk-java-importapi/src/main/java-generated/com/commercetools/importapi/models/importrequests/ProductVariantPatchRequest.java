@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductVariantPatchRequestImpl.class)
 public interface ProductVariantPatchRequest extends ImportRequest {
 
+    /**
+     * discriminator value for ProductVariantPatchRequest
+     */
     String PRODUCT_VARIANT_PATCH = "product-variant-patch";
 
     /**
@@ -42,33 +45,71 @@ public interface ProductVariantPatchRequest extends ImportRequest {
     @JsonProperty("patches")
     public List<ProductVariantPatch> getPatches();
 
+    /**
+     *  <p>The product variant patches of this request.</p>
+     * @param patches values to be set
+     */
+
     @JsonIgnore
     public void setPatches(final ProductVariantPatch... patches);
 
+    /**
+     *  <p>The product variant patches of this request.</p>
+     * @param patches values to be set
+     */
+
     public void setPatches(final List<ProductVariantPatch> patches);
 
+    /**
+     * factory method
+     * @return instance of ProductVariantPatchRequest
+     */
     public static ProductVariantPatchRequest of() {
         return new ProductVariantPatchRequestImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductVariantPatchRequest
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductVariantPatchRequest of(final ProductVariantPatchRequest template) {
         ProductVariantPatchRequestImpl instance = new ProductVariantPatchRequestImpl();
         instance.setPatches(template.getPatches());
         return instance;
     }
 
+    /**
+     * builder factory method for ProductVariantPatchRequest
+     * @return builder
+     */
     public static ProductVariantPatchRequestBuilder builder() {
         return ProductVariantPatchRequestBuilder.of();
     }
 
+    /**
+     * create builder for ProductVariantPatchRequest instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductVariantPatchRequestBuilder builder(final ProductVariantPatchRequest template) {
         return ProductVariantPatchRequestBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductVariantPatchRequest(Function<ProductVariantPatchRequest, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductVariantPatchRequest> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductVariantPatchRequest>() {
             @Override

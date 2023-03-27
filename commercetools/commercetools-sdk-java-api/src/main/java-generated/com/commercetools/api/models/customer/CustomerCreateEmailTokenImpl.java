@@ -26,6 +26,9 @@ public class CustomerCreateEmailTokenImpl implements CustomerCreateEmailToken, M
 
     private Long ttlMinutes;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerCreateEmailTokenImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("ttlMinutes") final Long ttlMinutes) {
@@ -34,6 +37,9 @@ public class CustomerCreateEmailTokenImpl implements CustomerCreateEmailToken, M
         this.ttlMinutes = ttlMinutes;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerCreateEmailTokenImpl() {
     }
 

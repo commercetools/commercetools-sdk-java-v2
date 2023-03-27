@@ -24,12 +24,18 @@ public class ChangeValueRelativeChangeValueImpl implements ChangeValueRelativeCh
 
     private Integer permyriad;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeValueRelativeChangeValueImpl(@JsonProperty("permyriad") final Integer permyriad) {
         this.permyriad = permyriad;
         this.type = RELATIVE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeValueRelativeChangeValueImpl() {
         this.type = RELATIVE;
     }

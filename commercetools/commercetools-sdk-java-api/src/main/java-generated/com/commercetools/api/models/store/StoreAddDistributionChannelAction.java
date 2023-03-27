@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StoreAddDistributionChannelActionImpl.class)
 public interface StoreAddDistributionChannelAction extends StoreUpdateAction {
 
+    /**
+     * discriminator value for StoreAddDistributionChannelAction
+     */
     String ADD_DISTRIBUTION_CHANNEL = "addDistributionChannel";
 
     /**
@@ -43,30 +46,63 @@ public interface StoreAddDistributionChannelAction extends StoreUpdateAction {
     @JsonProperty("distributionChannel")
     public ChannelResourceIdentifier getDistributionChannel();
 
+    /**
+     *  <p>Value to append.</p>
+     * @param distributionChannel value to be set
+     */
+
     public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);
 
+    /**
+     * factory method
+     * @return instance of StoreAddDistributionChannelAction
+     */
     public static StoreAddDistributionChannelAction of() {
         return new StoreAddDistributionChannelActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StoreAddDistributionChannelAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StoreAddDistributionChannelAction of(final StoreAddDistributionChannelAction template) {
         StoreAddDistributionChannelActionImpl instance = new StoreAddDistributionChannelActionImpl();
         instance.setDistributionChannel(template.getDistributionChannel());
         return instance;
     }
 
+    /**
+     * builder factory method for StoreAddDistributionChannelAction
+     * @return builder
+     */
     public static StoreAddDistributionChannelActionBuilder builder() {
         return StoreAddDistributionChannelActionBuilder.of();
     }
 
+    /**
+     * create builder for StoreAddDistributionChannelAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreAddDistributionChannelActionBuilder builder(final StoreAddDistributionChannelAction template) {
         return StoreAddDistributionChannelActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStoreAddDistributionChannelAction(Function<StoreAddDistributionChannelAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StoreAddDistributionChannelAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StoreAddDistributionChannelAction>() {
             @Override

@@ -40,6 +40,9 @@ public class ProductTypeImpl implements ProductType, ModelBase {
 
     private java.util.List<com.commercetools.api.models.product_type.AttributeDefinition> attributes;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductTypeImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -61,6 +64,9 @@ public class ProductTypeImpl implements ProductType, ModelBase {
         this.attributes = attributes;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductTypeImpl() {
     }
 

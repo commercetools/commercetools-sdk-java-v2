@@ -133,37 +133,111 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     *  <p>Name of the Category.</p>
+     * @param name value to be set
+     */
+
     public void setName(final LocalizedString name);
+
+    /**
+     *  <p>User-defined identifier used as a deep-link URL to the related Category. A Category can have the same slug for different Locales, but it must be unique across the Project. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
+     * @param slug value to be set
+     */
 
     public void setSlug(final LocalizedString slug);
 
+    /**
+     *  <p>Description of the Category.</p>
+     * @param description value to be set
+     */
+
     public void setDescription(final LocalizedString description);
+
+    /**
+     *  <p>Parent Category of the Category. The parent can be set by its <code>id</code> or <code>key</code>.</p>
+     * @param parent value to be set
+     */
 
     public void setParent(final CategoryResourceIdentifier parent);
 
+    /**
+     *  <p>Decimal value between 0 and 1 used to order Categories that are on the same level in the Category tree. If not set, a random value will be assigned.</p>
+     * @param orderHint value to be set
+     */
+
     public void setOrderHint(final String orderHint);
+
+    /**
+     *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     * @param externalId value to be set
+     */
 
     public void setExternalId(final String externalId);
 
+    /**
+     *  <p>Name of the Category used by external search engines for improved search engine performance.</p>
+     * @param metaTitle value to be set
+     */
+
     public void setMetaTitle(final LocalizedString metaTitle);
+
+    /**
+     *  <p>Description of the Category used by external search engines for improved search engine performance.</p>
+     * @param metaDescription value to be set
+     */
 
     public void setMetaDescription(final LocalizedString metaDescription);
 
+    /**
+     *  <p>Keywords related to the Category for improved search engine performance.</p>
+     * @param metaKeywords value to be set
+     */
+
     public void setMetaKeywords(final LocalizedString metaKeywords);
 
+    /**
+     *  <p>Custom Fields for the Category.</p>
+     * @param custom value to be set
+     */
+
     public void setCustom(final CustomFieldsDraft custom);
+
+    /**
+     *  <p>Media related to the Category.</p>
+     * @param assets values to be set
+     */
 
     @JsonIgnore
     public void setAssets(final AssetDraft... assets);
 
+    /**
+     *  <p>Media related to the Category.</p>
+     * @param assets values to be set
+     */
+
     public void setAssets(final List<AssetDraft> assets);
+
+    /**
+     *  <p>User-defined unique identifier for the Category.</p>
+     * @param key value to be set
+     */
 
     public void setKey(final String key);
 
+    /**
+     * factory method
+     * @return instance of CategoryDraft
+     */
     public static CategoryDraft of() {
         return new CategoryDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of CategoryDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CategoryDraft of(final CategoryDraft template) {
         CategoryDraftImpl instance = new CategoryDraftImpl();
         instance.setName(template.getName());
@@ -181,18 +255,37 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
         return instance;
     }
 
+    /**
+     * builder factory method for CategoryDraft
+     * @return builder
+     */
     public static CategoryDraftBuilder builder() {
         return CategoryDraftBuilder.of();
     }
 
+    /**
+     * create builder for CategoryDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategoryDraftBuilder builder(final CategoryDraft template) {
         return CategoryDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCategoryDraft(Function<CategoryDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CategoryDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CategoryDraft>() {
             @Override

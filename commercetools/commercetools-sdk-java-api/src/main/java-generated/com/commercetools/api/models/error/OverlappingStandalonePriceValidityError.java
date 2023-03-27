@@ -38,6 +38,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OverlappingStandalonePriceValidityErrorImpl.class)
 public interface OverlappingStandalonePriceValidityError extends ErrorObject {
 
+    /**
+     * discriminator value for OverlappingStandalonePriceValidityError
+     */
     String OVERLAPPING_STANDALONE_PRICE_VALIDITY = "OverlappingStandalonePriceValidity";
 
     /**
@@ -137,32 +140,96 @@ public interface OverlappingStandalonePriceValidityError extends ErrorObject {
     @JsonProperty("conflictingValidUntil")
     public ZonedDateTime getConflictingValidUntil();
 
+    /**
+     *  <p><code>Two standalone prices have overlapping validity periods."</code></p>
+     * @param message value to be set
+     */
+
     public void setMessage(final String message);
+
+    /**
+     *  <p>Reference to the conflicting Standalone Price.</p>
+     * @param conflictingStandalonePrice value to be set
+     */
 
     public void setConflictingStandalonePrice(final StandalonePriceReference conflictingStandalonePrice);
 
+    /**
+     *  <p>SKU of the ProductVariant to which the conflicting Standalone Price is associated.</p>
+     * @param sku value to be set
+     */
+
     public void setSku(final String sku);
+
+    /**
+     *  <p>Currency code of the country.</p>
+     * @param currency value to be set
+     */
 
     public void setCurrency(final String currency);
 
+    /**
+     *  <p>Country code of the geographic location.</p>
+     * @param country value to be set
+     */
+
     public void setCountry(final String country);
+
+    /**
+     *  <p>CustomerGroup for which the Standalone Price is valid.</p>
+     * @param customerGroup value to be set
+     */
 
     public void setCustomerGroup(final CustomerGroupResourceIdentifier customerGroup);
 
+    /**
+     *  <p>Channel for which the Standalone Price is valid.</p>
+     * @param channel value to be set
+     */
+
     public void setChannel(final ChannelResourceIdentifier channel);
+
+    /**
+     *  <p>Date and time (UTC) from which the Standalone Price is valid.</p>
+     * @param validFrom value to be set
+     */
 
     public void setValidFrom(final ZonedDateTime validFrom);
 
+    /**
+     *  <p>Date and time (UTC) until which the Standalone Price is valid.</p>
+     * @param validUntil value to be set
+     */
+
     public void setValidUntil(final ZonedDateTime validUntil);
+
+    /**
+     *  <p>Date and time (UTC) from which the conflicting Standalone Price is valid.</p>
+     * @param conflictingValidFrom value to be set
+     */
 
     public void setConflictingValidFrom(final ZonedDateTime conflictingValidFrom);
 
+    /**
+     *  <p>Date and time (UTC) until which the conflicting Standalone Price is valid.</p>
+     * @param conflictingValidUntil value to be set
+     */
+
     public void setConflictingValidUntil(final ZonedDateTime conflictingValidUntil);
 
+    /**
+     * factory method
+     * @return instance of OverlappingStandalonePriceValidityError
+     */
     public static OverlappingStandalonePriceValidityError of() {
         return new OverlappingStandalonePriceValidityErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of OverlappingStandalonePriceValidityError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OverlappingStandalonePriceValidityError of(final OverlappingStandalonePriceValidityError template) {
         OverlappingStandalonePriceValidityErrorImpl instance = new OverlappingStandalonePriceValidityErrorImpl();
         instance.setMessage(template.getMessage());
@@ -180,20 +247,39 @@ public interface OverlappingStandalonePriceValidityError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for OverlappingStandalonePriceValidityError
+     * @return builder
+     */
     public static OverlappingStandalonePriceValidityErrorBuilder builder() {
         return OverlappingStandalonePriceValidityErrorBuilder.of();
     }
 
+    /**
+     * create builder for OverlappingStandalonePriceValidityError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OverlappingStandalonePriceValidityErrorBuilder builder(
             final OverlappingStandalonePriceValidityError template) {
         return OverlappingStandalonePriceValidityErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOverlappingStandalonePriceValidityError(
             Function<OverlappingStandalonePriceValidityError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OverlappingStandalonePriceValidityError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OverlappingStandalonePriceValidityError>() {
             @Override

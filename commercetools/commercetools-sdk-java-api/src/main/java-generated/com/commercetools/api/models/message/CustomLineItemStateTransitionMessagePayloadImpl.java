@@ -33,6 +33,9 @@ public class CustomLineItemStateTransitionMessagePayloadImpl
 
     private com.commercetools.api.models.state.StateReference toState;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomLineItemStateTransitionMessagePayloadImpl(@JsonProperty("customLineItemId") final String customLineItemId,
             @JsonProperty("transitionDate") final java.time.ZonedDateTime transitionDate,
@@ -47,6 +50,9 @@ public class CustomLineItemStateTransitionMessagePayloadImpl
         this.type = CUSTOM_LINE_ITEM_STATE_TRANSITION;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomLineItemStateTransitionMessagePayloadImpl() {
         this.type = CUSTOM_LINE_ITEM_STATE_TRANSITION;
     }

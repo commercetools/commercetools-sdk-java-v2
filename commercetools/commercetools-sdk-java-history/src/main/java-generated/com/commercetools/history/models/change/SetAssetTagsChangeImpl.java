@@ -30,6 +30,9 @@ public class SetAssetTagsChangeImpl implements SetAssetTagsChange, ModelBase {
 
     private java.util.List<String> previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetAssetTagsChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("asset") final com.commercetools.history.models.change_value.AssetChangeValue asset,
@@ -42,6 +45,9 @@ public class SetAssetTagsChangeImpl implements SetAssetTagsChange, ModelBase {
         this.type = SET_ASSET_TAGS_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetAssetTagsChangeImpl() {
         this.type = SET_ASSET_TAGS_CHANGE;
     }

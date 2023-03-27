@@ -24,6 +24,9 @@ public class PayloadNotIncludedImpl implements PayloadNotIncluded, ModelBase {
 
     private String payloadType;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PayloadNotIncludedImpl(@JsonProperty("reason") final String reason,
             @JsonProperty("payloadType") final String payloadType) {
@@ -31,6 +34,9 @@ public class PayloadNotIncludedImpl implements PayloadNotIncluded, ModelBase {
         this.payloadType = payloadType;
     }
 
+    /**
+     * create empty instance
+     */
     public PayloadNotIncludedImpl() {
     }
 

@@ -34,6 +34,11 @@ public class CartDiscountChangeSortOrderActionBuilder implements Builder<CartDis
         return this;
     }
 
+    /**
+     *  <p>New value to set (between <code>0</code> and <code>1</code>). A Discount with a higher sortOrder is prioritized.</p>
+     * @return sortOrder
+     */
+
     public String getSortOrder() {
         return this.sortOrder;
     }
@@ -55,10 +60,19 @@ public class CartDiscountChangeSortOrderActionBuilder implements Builder<CartDis
         return new CartDiscountChangeSortOrderActionImpl(sortOrder);
     }
 
+    /**
+     * factory method for an instance of CartDiscountChangeSortOrderActionBuilder
+     * @return builder
+     */
     public static CartDiscountChangeSortOrderActionBuilder of() {
         return new CartDiscountChangeSortOrderActionBuilder();
     }
 
+    /**
+     * create builder for CartDiscountChangeSortOrderAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartDiscountChangeSortOrderActionBuilder of(final CartDiscountChangeSortOrderAction template) {
         CartDiscountChangeSortOrderActionBuilder builder = new CartDiscountChangeSortOrderActionBuilder();
         builder.sortOrder = template.getSortOrder();

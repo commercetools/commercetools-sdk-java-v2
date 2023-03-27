@@ -48,6 +48,11 @@ public class BusinessUnitStoreAddedMessagePayloadBuilder implements Builder<Busi
         return this;
     }
 
+    /**
+     *  <p>The Store that was added to the Business Unit.</p>
+     * @return store
+     */
+
     public com.commercetools.api.models.store.StoreKeyReference getStore() {
         return this.store;
     }
@@ -69,10 +74,19 @@ public class BusinessUnitStoreAddedMessagePayloadBuilder implements Builder<Busi
         return new BusinessUnitStoreAddedMessagePayloadImpl(store);
     }
 
+    /**
+     * factory method for an instance of BusinessUnitStoreAddedMessagePayloadBuilder
+     * @return builder
+     */
     public static BusinessUnitStoreAddedMessagePayloadBuilder of() {
         return new BusinessUnitStoreAddedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for BusinessUnitStoreAddedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitStoreAddedMessagePayloadBuilder of(final BusinessUnitStoreAddedMessagePayload template) {
         BusinessUnitStoreAddedMessagePayloadBuilder builder = new BusinessUnitStoreAddedMessagePayloadBuilder();
         builder.store = template.getStore();

@@ -26,6 +26,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StoreLanguagesChangedMessagePayloadImpl.class)
 public interface StoreLanguagesChangedMessagePayload extends MessagePayload {
 
+    /**
+     * discriminator value for StoreLanguagesChangedMessagePayload
+     */
     String STORE_LANGUAGES_CHANGED = "StoreLanguagesChanged";
 
     /**
@@ -44,20 +47,49 @@ public interface StoreLanguagesChangedMessagePayload extends MessagePayload {
     @JsonProperty("removedLanguages")
     public List<String> getRemovedLanguages();
 
+    /**
+     *  <p>Locales added to the Store after the Set Languages update action.</p>
+     * @param addedLanguages values to be set
+     */
+
     @JsonIgnore
     public void setAddedLanguages(final String... addedLanguages);
 
+    /**
+     *  <p>Locales added to the Store after the Set Languages update action.</p>
+     * @param addedLanguages values to be set
+     */
+
     public void setAddedLanguages(final List<String> addedLanguages);
+
+    /**
+     *  <p>Locales removed from the Store during the Set Languages update action.</p>
+     * @param removedLanguages values to be set
+     */
 
     @JsonIgnore
     public void setRemovedLanguages(final String... removedLanguages);
 
+    /**
+     *  <p>Locales removed from the Store during the Set Languages update action.</p>
+     * @param removedLanguages values to be set
+     */
+
     public void setRemovedLanguages(final List<String> removedLanguages);
 
+    /**
+     * factory method
+     * @return instance of StoreLanguagesChangedMessagePayload
+     */
     public static StoreLanguagesChangedMessagePayload of() {
         return new StoreLanguagesChangedMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of StoreLanguagesChangedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StoreLanguagesChangedMessagePayload of(final StoreLanguagesChangedMessagePayload template) {
         StoreLanguagesChangedMessagePayloadImpl instance = new StoreLanguagesChangedMessagePayloadImpl();
         instance.setAddedLanguages(template.getAddedLanguages());
@@ -65,19 +97,38 @@ public interface StoreLanguagesChangedMessagePayload extends MessagePayload {
         return instance;
     }
 
+    /**
+     * builder factory method for StoreLanguagesChangedMessagePayload
+     * @return builder
+     */
     public static StoreLanguagesChangedMessagePayloadBuilder builder() {
         return StoreLanguagesChangedMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for StoreLanguagesChangedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreLanguagesChangedMessagePayloadBuilder builder(
             final StoreLanguagesChangedMessagePayload template) {
         return StoreLanguagesChangedMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStoreLanguagesChangedMessagePayload(Function<StoreLanguagesChangedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StoreLanguagesChangedMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StoreLanguagesChangedMessagePayload>() {
             @Override

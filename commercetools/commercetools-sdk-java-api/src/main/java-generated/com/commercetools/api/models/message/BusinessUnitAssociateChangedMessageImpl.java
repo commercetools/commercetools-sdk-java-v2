@@ -44,6 +44,9 @@ public class BusinessUnitAssociateChangedMessageImpl implements BusinessUnitAsso
 
     private com.commercetools.api.models.business_unit.Associate associate;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitAssociateChangedMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -70,6 +73,9 @@ public class BusinessUnitAssociateChangedMessageImpl implements BusinessUnitAsso
         this.type = BUSINESS_UNIT_ASSOCIATE_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitAssociateChangedMessageImpl() {
         this.type = BUSINESS_UNIT_ASSOCIATE_CHANGED;
     }

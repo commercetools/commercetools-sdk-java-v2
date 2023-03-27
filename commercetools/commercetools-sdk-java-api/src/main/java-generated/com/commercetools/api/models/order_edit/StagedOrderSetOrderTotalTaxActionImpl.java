@@ -26,6 +26,9 @@ public class StagedOrderSetOrderTotalTaxActionImpl implements StagedOrderSetOrde
 
     private java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> externalTaxPortions;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderSetOrderTotalTaxActionImpl(
             @JsonProperty("externalTotalGross") final com.commercetools.api.models.common.Money externalTotalGross,
@@ -35,6 +38,9 @@ public class StagedOrderSetOrderTotalTaxActionImpl implements StagedOrderSetOrde
         this.action = SET_ORDER_TOTAL_TAX;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderSetOrderTotalTaxActionImpl() {
         this.action = SET_ORDER_TOTAL_TAX;
     }

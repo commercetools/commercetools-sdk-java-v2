@@ -27,6 +27,10 @@ public class CartDiscountValueDraftBuilder {
         return com.commercetools.api.models.cart_discount.CartDiscountValueRelativeDraftBuilder.of();
     }
 
+    /**
+     * factory method for an instance of CartDiscountValueDraftBuilder
+     * @return builder
+     */
     public static CartDiscountValueDraftBuilder of() {
         return new CartDiscountValueDraftBuilder();
     }

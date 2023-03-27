@@ -44,30 +44,60 @@ public interface CartDiscountTarget {
     @JsonProperty("type")
     public String getType();
 
+    /**
+     * builder for customLineItems subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.cart_discount.CartDiscountCustomLineItemsTargetBuilder customLineItemsBuilder() {
         return com.commercetools.api.models.cart_discount.CartDiscountCustomLineItemsTargetBuilder.of();
     }
 
+    /**
+     * builder for lineItems subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.cart_discount.CartDiscountLineItemsTargetBuilder lineItemsBuilder() {
         return com.commercetools.api.models.cart_discount.CartDiscountLineItemsTargetBuilder.of();
     }
 
+    /**
+     * builder for shipping subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.cart_discount.CartDiscountShippingCostTargetBuilder shippingBuilder() {
         return com.commercetools.api.models.cart_discount.CartDiscountShippingCostTargetBuilder.of();
     }
 
+    /**
+     * builder for multiBuyCustomLineItems subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.cart_discount.MultiBuyCustomLineItemsTargetBuilder multiBuyCustomLineItemsBuilder() {
         return com.commercetools.api.models.cart_discount.MultiBuyCustomLineItemsTargetBuilder.of();
     }
 
+    /**
+     * builder for multiBuyLineItems subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.cart_discount.MultiBuyLineItemsTargetBuilder multiBuyLineItemsBuilder() {
         return com.commercetools.api.models.cart_discount.MultiBuyLineItemsTargetBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartDiscountTarget(Function<CartDiscountTarget, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartDiscountTarget> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartDiscountTarget>() {
             @Override

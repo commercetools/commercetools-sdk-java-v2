@@ -28,6 +28,9 @@ public class SetDefaultBillingAddressChangeImpl implements SetDefaultBillingAddr
 
     private com.commercetools.history.models.common.Address previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetDefaultBillingAddressChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.Address nextValue,
@@ -38,6 +41,9 @@ public class SetDefaultBillingAddressChangeImpl implements SetDefaultBillingAddr
         this.type = SET_DEFAULT_BILLING_ADDRESS_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetDefaultBillingAddressChangeImpl() {
         this.type = SET_DEFAULT_BILLING_ADDRESS_CHANGE;
     }

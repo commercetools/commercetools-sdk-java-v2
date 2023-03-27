@@ -24,6 +24,9 @@ public class StandalonePriceUpdateImpl implements StandalonePriceUpdate, ModelBa
 
     private java.util.List<com.commercetools.api.models.standalone_price.StandalonePriceUpdateAction> actions;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StandalonePriceUpdateImpl(@JsonProperty("version") final Long version,
             @JsonProperty("actions") final java.util.List<com.commercetools.api.models.standalone_price.StandalonePriceUpdateAction> actions) {
@@ -31,6 +34,9 @@ public class StandalonePriceUpdateImpl implements StandalonePriceUpdate, ModelBa
         this.actions = actions;
     }
 
+    /**
+     * create empty instance
+     */
     public StandalonePriceUpdateImpl() {
     }
 

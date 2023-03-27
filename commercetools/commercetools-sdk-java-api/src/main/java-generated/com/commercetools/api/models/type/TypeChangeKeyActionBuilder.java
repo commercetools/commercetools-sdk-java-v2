@@ -34,6 +34,11 @@ public class TypeChangeKeyActionBuilder implements Builder<TypeChangeKeyAction> 
         return this;
     }
 
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
@@ -55,10 +60,19 @@ public class TypeChangeKeyActionBuilder implements Builder<TypeChangeKeyAction> 
         return new TypeChangeKeyActionImpl(key);
     }
 
+    /**
+     * factory method for an instance of TypeChangeKeyActionBuilder
+     * @return builder
+     */
     public static TypeChangeKeyActionBuilder of() {
         return new TypeChangeKeyActionBuilder();
     }
 
+    /**
+     * create builder for TypeChangeKeyAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TypeChangeKeyActionBuilder of(final TypeChangeKeyAction template) {
         TypeChangeKeyActionBuilder builder = new TypeChangeKeyActionBuilder();
         builder.key = template.getKey();

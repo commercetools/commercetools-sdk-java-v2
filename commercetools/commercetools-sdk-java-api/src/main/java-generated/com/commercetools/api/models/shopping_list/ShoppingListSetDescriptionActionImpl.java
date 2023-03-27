@@ -24,6 +24,9 @@ public class ShoppingListSetDescriptionActionImpl implements ShoppingListSetDesc
 
     private com.commercetools.api.models.common.LocalizedString description;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShoppingListSetDescriptionActionImpl(
             @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description) {
@@ -31,6 +34,9 @@ public class ShoppingListSetDescriptionActionImpl implements ShoppingListSetDesc
         this.action = SET_DESCRIPTION;
     }
 
+    /**
+     * create empty instance
+     */
     public ShoppingListSetDescriptionActionImpl() {
         this.action = SET_DESCRIPTION;
     }

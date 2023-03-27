@@ -40,6 +40,9 @@ public class PriceDraftImpl implements PriceDraft, ModelBase {
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PriceDraftImpl(@JsonProperty("key") final String key,
             @JsonProperty("value") final com.commercetools.api.models.common.Money value,
@@ -63,6 +66,9 @@ public class PriceDraftImpl implements PriceDraft, ModelBase {
         this.custom = custom;
     }
 
+    /**
+     * create empty instance
+     */
     public PriceDraftImpl() {
     }
 

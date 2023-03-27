@@ -28,6 +28,9 @@ public class ChangeShoppingListLineItemsOrderChangeImpl implements ChangeShoppin
 
     private java.util.List<com.commercetools.history.models.change_value.ShoppingListLineItemValue> nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeShoppingListLineItemsOrderChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final java.util.List<com.commercetools.history.models.change_value.ShoppingListLineItemValue> previousValue,
@@ -38,6 +41,9 @@ public class ChangeShoppingListLineItemsOrderChangeImpl implements ChangeShoppin
         this.type = CHANGE_SHOPPING_LIST_LINE_ITEMS_ORDER_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeShoppingListLineItemsOrderChangeImpl() {
         this.type = CHANGE_SHOPPING_LIST_LINE_ITEMS_ORDER_CHANGE;
     }

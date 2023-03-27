@@ -61,9 +61,19 @@ public class TypeAddEnumValueActionBuilder implements Builder<TypeAddEnumValueAc
         return this;
     }
 
+    /**
+     *  <p><code>name</code> of the Field Definition to update.</p>
+     * @return fieldName
+     */
+
     public String getFieldName() {
         return this.fieldName;
     }
+
+    /**
+     *  <p>Value to append to the array.</p>
+     * @return value
+     */
 
     public com.commercetools.api.models.type.CustomFieldEnumValue getValue() {
         return this.value;
@@ -87,10 +97,19 @@ public class TypeAddEnumValueActionBuilder implements Builder<TypeAddEnumValueAc
         return new TypeAddEnumValueActionImpl(fieldName, value);
     }
 
+    /**
+     * factory method for an instance of TypeAddEnumValueActionBuilder
+     * @return builder
+     */
     public static TypeAddEnumValueActionBuilder of() {
         return new TypeAddEnumValueActionBuilder();
     }
 
+    /**
+     * create builder for TypeAddEnumValueAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TypeAddEnumValueActionBuilder of(final TypeAddEnumValueAction template) {
         TypeAddEnumValueActionBuilder builder = new TypeAddEnumValueActionBuilder();
         builder.fieldName = template.getFieldName();

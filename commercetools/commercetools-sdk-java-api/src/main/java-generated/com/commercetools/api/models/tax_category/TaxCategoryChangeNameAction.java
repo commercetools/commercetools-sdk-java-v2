@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TaxCategoryChangeNameActionImpl.class)
 public interface TaxCategoryChangeNameAction extends TaxCategoryUpdateAction {
 
+    /**
+     * discriminator value for TaxCategoryChangeNameAction
+     */
     String CHANGE_NAME = "changeName";
 
     /**
@@ -39,30 +42,63 @@ public interface TaxCategoryChangeNameAction extends TaxCategoryUpdateAction {
     @JsonProperty("name")
     public String getName();
 
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     * @param name value to be set
+     */
+
     public void setName(final String name);
 
+    /**
+     * factory method
+     * @return instance of TaxCategoryChangeNameAction
+     */
     public static TaxCategoryChangeNameAction of() {
         return new TaxCategoryChangeNameActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of TaxCategoryChangeNameAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static TaxCategoryChangeNameAction of(final TaxCategoryChangeNameAction template) {
         TaxCategoryChangeNameActionImpl instance = new TaxCategoryChangeNameActionImpl();
         instance.setName(template.getName());
         return instance;
     }
 
+    /**
+     * builder factory method for TaxCategoryChangeNameAction
+     * @return builder
+     */
     public static TaxCategoryChangeNameActionBuilder builder() {
         return TaxCategoryChangeNameActionBuilder.of();
     }
 
+    /**
+     * create builder for TaxCategoryChangeNameAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TaxCategoryChangeNameActionBuilder builder(final TaxCategoryChangeNameAction template) {
         return TaxCategoryChangeNameActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTaxCategoryChangeNameAction(Function<TaxCategoryChangeNameAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<TaxCategoryChangeNameAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TaxCategoryChangeNameAction>() {
             @Override

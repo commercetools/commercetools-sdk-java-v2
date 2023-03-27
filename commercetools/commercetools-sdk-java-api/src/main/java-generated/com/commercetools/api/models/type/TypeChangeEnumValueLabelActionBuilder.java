@@ -62,9 +62,19 @@ public class TypeChangeEnumValueLabelActionBuilder implements Builder<TypeChange
         return this;
     }
 
+    /**
+     *  <p><code>name</code> of the FieldDefinition to update.</p>
+     * @return fieldName
+     */
+
     public String getFieldName() {
         return this.fieldName;
     }
+
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     * @return value
+     */
 
     public com.commercetools.api.models.type.CustomFieldEnumValue getValue() {
         return this.value;
@@ -88,10 +98,19 @@ public class TypeChangeEnumValueLabelActionBuilder implements Builder<TypeChange
         return new TypeChangeEnumValueLabelActionImpl(fieldName, value);
     }
 
+    /**
+     * factory method for an instance of TypeChangeEnumValueLabelActionBuilder
+     * @return builder
+     */
     public static TypeChangeEnumValueLabelActionBuilder of() {
         return new TypeChangeEnumValueLabelActionBuilder();
     }
 
+    /**
+     * create builder for TypeChangeEnumValueLabelAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TypeChangeEnumValueLabelActionBuilder of(final TypeChangeEnumValueLabelAction template) {
         TypeChangeEnumValueLabelActionBuilder builder = new TypeChangeEnumValueLabelActionBuilder();
         builder.fieldName = template.getFieldName();

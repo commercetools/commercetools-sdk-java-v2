@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ShippingMethodSetLocalizedDescriptionActionImpl.class)
 public interface ShippingMethodSetLocalizedDescriptionAction extends ShippingMethodUpdateAction {
 
+    /**
+     * discriminator value for ShippingMethodSetLocalizedDescriptionAction
+     */
     String SET_LOCALIZED_DESCRIPTION = "setLocalizedDescription";
 
     /**
@@ -39,12 +42,26 @@ public interface ShippingMethodSetLocalizedDescriptionAction extends ShippingMet
     @JsonProperty("localizedDescription")
     public LocalizedString getLocalizedDescription();
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param localizedDescription value to be set
+     */
+
     public void setLocalizedDescription(final LocalizedString localizedDescription);
 
+    /**
+     * factory method
+     * @return instance of ShippingMethodSetLocalizedDescriptionAction
+     */
     public static ShippingMethodSetLocalizedDescriptionAction of() {
         return new ShippingMethodSetLocalizedDescriptionActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ShippingMethodSetLocalizedDescriptionAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ShippingMethodSetLocalizedDescriptionAction of(
             final ShippingMethodSetLocalizedDescriptionAction template) {
         ShippingMethodSetLocalizedDescriptionActionImpl instance = new ShippingMethodSetLocalizedDescriptionActionImpl();
@@ -52,20 +69,39 @@ public interface ShippingMethodSetLocalizedDescriptionAction extends ShippingMet
         return instance;
     }
 
+    /**
+     * builder factory method for ShippingMethodSetLocalizedDescriptionAction
+     * @return builder
+     */
     public static ShippingMethodSetLocalizedDescriptionActionBuilder builder() {
         return ShippingMethodSetLocalizedDescriptionActionBuilder.of();
     }
 
+    /**
+     * create builder for ShippingMethodSetLocalizedDescriptionAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShippingMethodSetLocalizedDescriptionActionBuilder builder(
             final ShippingMethodSetLocalizedDescriptionAction template) {
         return ShippingMethodSetLocalizedDescriptionActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withShippingMethodSetLocalizedDescriptionAction(
             Function<ShippingMethodSetLocalizedDescriptionAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ShippingMethodSetLocalizedDescriptionAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ShippingMethodSetLocalizedDescriptionAction>() {
             @Override

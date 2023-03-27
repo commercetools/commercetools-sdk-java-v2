@@ -42,6 +42,9 @@ public class ReviewDraftImpl implements ReviewDraft, ModelBase {
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReviewDraftImpl(@JsonProperty("key") final String key,
             @JsonProperty("uniquenessValue") final String uniquenessValue, @JsonProperty("locale") final String locale,
@@ -65,6 +68,9 @@ public class ReviewDraftImpl implements ReviewDraft, ModelBase {
         this.custom = custom;
     }
 
+    /**
+     * create empty instance
+     */
     public ReviewDraftImpl() {
     }
 

@@ -24,6 +24,9 @@ public class InventoryEntryUpdateImpl implements InventoryEntryUpdate, ModelBase
 
     private java.util.List<com.commercetools.api.models.inventory.InventoryEntryUpdateAction> actions;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     InventoryEntryUpdateImpl(@JsonProperty("version") final Long version,
             @JsonProperty("actions") final java.util.List<com.commercetools.api.models.inventory.InventoryEntryUpdateAction> actions) {
@@ -31,6 +34,9 @@ public class InventoryEntryUpdateImpl implements InventoryEntryUpdate, ModelBase
         this.actions = actions;
     }
 
+    /**
+     * create empty instance
+     */
     public InventoryEntryUpdateImpl() {
     }
 

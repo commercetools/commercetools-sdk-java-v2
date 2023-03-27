@@ -26,6 +26,9 @@ public class DateAttributeImpl implements DateAttribute, ModelBase {
 
     private java.time.LocalDate value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DateAttributeImpl(@JsonProperty("name") final String name, @JsonProperty("value") final java.time.LocalDate value) {
         this.name = name;
@@ -33,6 +36,9 @@ public class DateAttributeImpl implements DateAttribute, ModelBase {
         this.type = DATE;
     }
 
+    /**
+     * create empty instance
+     */
     public DateAttributeImpl() {
         this.type = DATE;
     }

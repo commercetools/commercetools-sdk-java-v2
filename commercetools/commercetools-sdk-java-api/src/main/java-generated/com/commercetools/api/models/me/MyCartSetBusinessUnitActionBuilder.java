@@ -50,6 +50,11 @@ public class MyCartSetBusinessUnitActionBuilder implements Builder<MyCartSetBusi
         return this;
     }
 
+    /**
+     *  <p>New Business Unit to assign to the Cart, which must have access to the Store that is set on the Cart. Additionally, the authenticated user must have Buyer access to the Business Unit.</p>
+     * @return businessUnit
+     */
+
     public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier getBusinessUnit() {
         return this.businessUnit;
     }
@@ -71,10 +76,19 @@ public class MyCartSetBusinessUnitActionBuilder implements Builder<MyCartSetBusi
         return new MyCartSetBusinessUnitActionImpl(businessUnit);
     }
 
+    /**
+     * factory method for an instance of MyCartSetBusinessUnitActionBuilder
+     * @return builder
+     */
     public static MyCartSetBusinessUnitActionBuilder of() {
         return new MyCartSetBusinessUnitActionBuilder();
     }
 
+    /**
+     * create builder for MyCartSetBusinessUnitAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyCartSetBusinessUnitActionBuilder of(final MyCartSetBusinessUnitAction template) {
         MyCartSetBusinessUnitActionBuilder builder = new MyCartSetBusinessUnitActionBuilder();
         builder.businessUnit = template.getBusinessUnit();

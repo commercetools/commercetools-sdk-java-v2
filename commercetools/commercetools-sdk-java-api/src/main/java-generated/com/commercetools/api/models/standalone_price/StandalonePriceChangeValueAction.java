@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StandalonePriceChangeValueActionImpl.class)
 public interface StandalonePriceChangeValueAction extends StandalonePriceUpdateAction {
 
+    /**
+     * discriminator value for StandalonePriceChangeValueAction
+     */
     String CHANGE_VALUE = "changeValue";
 
     /**
@@ -50,14 +53,33 @@ public interface StandalonePriceChangeValueAction extends StandalonePriceUpdateA
     @JsonProperty("staged")
     public Boolean getStaged();
 
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     * @param value value to be set
+     */
+
     public void setValue(final Money value);
+
+    /**
+     *  <p>If set to <code>true</code> the update action applies to the StagedStandalonePrice. If set to <code>false</code>, the update action applies to the current StandalonePrice.</p>
+     * @param staged value to be set
+     */
 
     public void setStaged(final Boolean staged);
 
+    /**
+     * factory method
+     * @return instance of StandalonePriceChangeValueAction
+     */
     public static StandalonePriceChangeValueAction of() {
         return new StandalonePriceChangeValueActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StandalonePriceChangeValueAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StandalonePriceChangeValueAction of(final StandalonePriceChangeValueAction template) {
         StandalonePriceChangeValueActionImpl instance = new StandalonePriceChangeValueActionImpl();
         instance.setValue(template.getValue());
@@ -65,18 +87,37 @@ public interface StandalonePriceChangeValueAction extends StandalonePriceUpdateA
         return instance;
     }
 
+    /**
+     * builder factory method for StandalonePriceChangeValueAction
+     * @return builder
+     */
     public static StandalonePriceChangeValueActionBuilder builder() {
         return StandalonePriceChangeValueActionBuilder.of();
     }
 
+    /**
+     * create builder for StandalonePriceChangeValueAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StandalonePriceChangeValueActionBuilder builder(final StandalonePriceChangeValueAction template) {
         return StandalonePriceChangeValueActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStandalonePriceChangeValueAction(Function<StandalonePriceChangeValueAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StandalonePriceChangeValueAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StandalonePriceChangeValueAction>() {
             @Override

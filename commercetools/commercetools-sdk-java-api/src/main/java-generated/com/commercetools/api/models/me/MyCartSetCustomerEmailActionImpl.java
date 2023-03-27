@@ -24,12 +24,18 @@ public class MyCartSetCustomerEmailActionImpl implements MyCartSetCustomerEmailA
 
     private String email;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyCartSetCustomerEmailActionImpl(@JsonProperty("email") final String email) {
         this.email = email;
         this.action = SET_CUSTOMER_EMAIL;
     }
 
+    /**
+     * create empty instance
+     */
     public MyCartSetCustomerEmailActionImpl() {
         this.action = SET_CUSTOMER_EMAIL;
     }

@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ParcelRemovedFromDeliveryMessagePayloadImpl.class)
 public interface ParcelRemovedFromDeliveryMessagePayload extends OrderMessagePayload {
 
+    /**
+     * discriminator value for ParcelRemovedFromDeliveryMessagePayload
+     */
     String PARCEL_REMOVED_FROM_DELIVERY = "ParcelRemovedFromDelivery";
 
     /**
@@ -59,16 +62,40 @@ public interface ParcelRemovedFromDeliveryMessagePayload extends OrderMessagePay
     @JsonProperty("shippingKey")
     public String getShippingKey();
 
+    /**
+     *  <p>Unique identifier of the Delivery.</p>
+     * @param deliveryId value to be set
+     */
+
     public void setDeliveryId(final String deliveryId);
+
+    /**
+     *  <p>Parcel that was removed from the Delivery.</p>
+     * @param parcel value to be set
+     */
 
     public void setParcel(final Parcel parcel);
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     * @param shippingKey value to be set
+     */
+
     public void setShippingKey(final String shippingKey);
 
+    /**
+     * factory method
+     * @return instance of ParcelRemovedFromDeliveryMessagePayload
+     */
     public static ParcelRemovedFromDeliveryMessagePayload of() {
         return new ParcelRemovedFromDeliveryMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of ParcelRemovedFromDeliveryMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ParcelRemovedFromDeliveryMessagePayload of(final ParcelRemovedFromDeliveryMessagePayload template) {
         ParcelRemovedFromDeliveryMessagePayloadImpl instance = new ParcelRemovedFromDeliveryMessagePayloadImpl();
         instance.setDeliveryId(template.getDeliveryId());
@@ -77,20 +104,39 @@ public interface ParcelRemovedFromDeliveryMessagePayload extends OrderMessagePay
         return instance;
     }
 
+    /**
+     * builder factory method for ParcelRemovedFromDeliveryMessagePayload
+     * @return builder
+     */
     public static ParcelRemovedFromDeliveryMessagePayloadBuilder builder() {
         return ParcelRemovedFromDeliveryMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for ParcelRemovedFromDeliveryMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ParcelRemovedFromDeliveryMessagePayloadBuilder builder(
             final ParcelRemovedFromDeliveryMessagePayload template) {
         return ParcelRemovedFromDeliveryMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withParcelRemovedFromDeliveryMessagePayload(
             Function<ParcelRemovedFromDeliveryMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ParcelRemovedFromDeliveryMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ParcelRemovedFromDeliveryMessagePayload>() {
             @Override

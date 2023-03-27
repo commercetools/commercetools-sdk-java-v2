@@ -89,10 +89,20 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Product Variant that was added.</p>
+     * @return variant
+     */
+
     @Nullable
     public com.commercetools.api.models.product.ProductVariant getVariant() {
         return this.variant;
     }
+
+    /**
+     *  <p>List of image URLs that were removed with the Remove Product Variant update action.</p>
+     * @return removedImageUrls
+     */
 
     public java.util.List<String> getRemovedImageUrls() {
         return this.removedImageUrls;
@@ -116,10 +126,19 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
         return new ProductVariantDeletedMessagePayloadImpl(variant, removedImageUrls);
     }
 
+    /**
+     * factory method for an instance of ProductVariantDeletedMessagePayloadBuilder
+     * @return builder
+     */
     public static ProductVariantDeletedMessagePayloadBuilder of() {
         return new ProductVariantDeletedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for ProductVariantDeletedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductVariantDeletedMessagePayloadBuilder of(final ProductVariantDeletedMessagePayload template) {
         ProductVariantDeletedMessagePayloadBuilder builder = new ProductVariantDeletedMessagePayloadBuilder();
         builder.variant = template.getVariant();

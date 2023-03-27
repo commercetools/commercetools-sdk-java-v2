@@ -28,6 +28,9 @@ public class CustomObjectDraftImpl implements CustomObjectDraft, ModelBase {
 
     private Long version;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomObjectDraftImpl(@JsonProperty("container") final String container, @JsonProperty("key") final String key,
             @JsonProperty("value") final java.lang.Object value, @JsonProperty("version") final Long version) {
@@ -37,6 +40,9 @@ public class CustomObjectDraftImpl implements CustomObjectDraft, ModelBase {
         this.version = version;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomObjectDraftImpl() {
     }
 

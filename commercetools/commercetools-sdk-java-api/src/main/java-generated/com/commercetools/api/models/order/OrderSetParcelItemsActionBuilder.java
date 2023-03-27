@@ -28,7 +28,7 @@ public class OrderSetParcelItemsActionBuilder implements Builder<OrderSetParcelI
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
     /**
-     *
+     * set the value to the parcelId
      * @param parcelId value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class OrderSetParcelItemsActionBuilder implements Builder<OrderSetParcelI
     }
 
     /**
-     *
+     * set values to the items
      * @param items value to be set
      * @return Builder
      */
@@ -50,7 +50,7 @@ public class OrderSetParcelItemsActionBuilder implements Builder<OrderSetParcelI
     }
 
     /**
-     *
+     * set value to the items
      * @param items value to be set
      * @return Builder
      */
@@ -62,7 +62,7 @@ public class OrderSetParcelItemsActionBuilder implements Builder<OrderSetParcelI
     }
 
     /**
-     *
+     * add values to the items
      * @param items value to be set
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class OrderSetParcelItemsActionBuilder implements Builder<OrderSetParcelI
     }
 
     /**
-     *
+     * add the value to the items using the builder function
      * @param builder function to build the items value
      * @return Builder
      */
@@ -91,7 +91,7 @@ public class OrderSetParcelItemsActionBuilder implements Builder<OrderSetParcelI
     }
 
     /**
-     *
+     * set the value to the items using the builder function
      * @param builder function to build the items value
      * @return Builder
      */
@@ -103,9 +103,19 @@ public class OrderSetParcelItemsActionBuilder implements Builder<OrderSetParcelI
         return this;
     }
 
+    /**
+     * value of parcelId}
+     * @return parcelId
+     */
+
     public String getParcelId() {
         return this.parcelId;
     }
+
+    /**
+     * value of items}
+     * @return items
+     */
 
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
         return this.items;
@@ -129,10 +139,19 @@ public class OrderSetParcelItemsActionBuilder implements Builder<OrderSetParcelI
         return new OrderSetParcelItemsActionImpl(parcelId, items);
     }
 
+    /**
+     * factory method for an instance of OrderSetParcelItemsActionBuilder
+     * @return builder
+     */
     public static OrderSetParcelItemsActionBuilder of() {
         return new OrderSetParcelItemsActionBuilder();
     }
 
+    /**
+     * create builder for OrderSetParcelItemsAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderSetParcelItemsActionBuilder of(final OrderSetParcelItemsAction template) {
         OrderSetParcelItemsActionBuilder builder = new OrderSetParcelItemsActionBuilder();
         builder.parcelId = template.getParcelId();

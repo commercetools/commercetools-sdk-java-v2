@@ -24,6 +24,9 @@ public class MyBusinessUnitRemoveAssociateActionImpl implements MyBusinessUnitRe
 
     private com.commercetools.api.models.customer.CustomerResourceIdentifier customer;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyBusinessUnitRemoveAssociateActionImpl(
             @JsonProperty("customer") final com.commercetools.api.models.customer.CustomerResourceIdentifier customer) {
@@ -31,6 +34,9 @@ public class MyBusinessUnitRemoveAssociateActionImpl implements MyBusinessUnitRe
         this.action = REMOVE_ASSOCIATE;
     }
 
+    /**
+     * create empty instance
+     */
     public MyBusinessUnitRemoveAssociateActionImpl() {
         this.action = REMOVE_ASSOCIATE;
     }

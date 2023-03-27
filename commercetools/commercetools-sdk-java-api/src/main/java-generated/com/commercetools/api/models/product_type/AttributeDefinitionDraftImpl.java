@@ -36,6 +36,9 @@ public class AttributeDefinitionDraftImpl implements AttributeDefinitionDraft, M
 
     private Boolean isSearchable;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AttributeDefinitionDraftImpl(
             @JsonProperty("type") final com.commercetools.api.models.product_type.AttributeType type,
@@ -56,6 +59,9 @@ public class AttributeDefinitionDraftImpl implements AttributeDefinitionDraft, M
         this.isSearchable = isSearchable;
     }
 
+    /**
+     * create empty instance
+     */
     public AttributeDefinitionDraftImpl() {
     }
 

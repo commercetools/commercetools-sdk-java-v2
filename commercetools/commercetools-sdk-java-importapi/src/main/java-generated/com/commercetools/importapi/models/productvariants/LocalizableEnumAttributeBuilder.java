@@ -40,7 +40,7 @@ public class LocalizableEnumAttributeBuilder implements Builder<LocalizableEnumA
     }
 
     /**
-     *
+     * set the value to the value
      * @param value value to be set
      * @return Builder
      */
@@ -50,10 +50,20 @@ public class LocalizableEnumAttributeBuilder implements Builder<LocalizableEnumA
         return this;
     }
 
+    /**
+     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     * @return name
+     */
+
     @Nullable
     public String getName() {
         return this.name;
     }
+
+    /**
+     * value of value}
+     * @return value
+     */
 
     public String getValue() {
         return this.value;
@@ -76,10 +86,19 @@ public class LocalizableEnumAttributeBuilder implements Builder<LocalizableEnumA
         return new LocalizableEnumAttributeImpl(name, value);
     }
 
+    /**
+     * factory method for an instance of LocalizableEnumAttributeBuilder
+     * @return builder
+     */
     public static LocalizableEnumAttributeBuilder of() {
         return new LocalizableEnumAttributeBuilder();
     }
 
+    /**
+     * create builder for LocalizableEnumAttribute instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static LocalizableEnumAttributeBuilder of(final LocalizableEnumAttribute template) {
         LocalizableEnumAttributeBuilder builder = new LocalizableEnumAttributeBuilder();
         builder.name = template.getName();

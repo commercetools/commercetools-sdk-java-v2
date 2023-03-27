@@ -24,6 +24,9 @@ public class StoreRemoveDistributionChannelActionImpl implements StoreRemoveDist
 
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StoreRemoveDistributionChannelActionImpl(
             @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
@@ -31,6 +34,9 @@ public class StoreRemoveDistributionChannelActionImpl implements StoreRemoveDist
         this.action = REMOVE_DISTRIBUTION_CHANNEL;
     }
 
+    /**
+     * create empty instance
+     */
     public StoreRemoveDistributionChannelActionImpl() {
         this.action = REMOVE_DISTRIBUTION_CHANNEL;
     }

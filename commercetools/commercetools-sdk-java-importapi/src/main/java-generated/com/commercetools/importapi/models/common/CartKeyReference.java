@@ -27,30 +27,61 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartKeyReferenceImpl.class)
 public interface CartKeyReference extends KeyReference {
 
+    /**
+     * discriminator value for CartKeyReference
+     */
     String CART = "cart";
 
+    /**
+     * factory method
+     * @return instance of CartKeyReference
+     */
     public static CartKeyReference of() {
         return new CartKeyReferenceImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartKeyReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartKeyReference of(final CartKeyReference template) {
         CartKeyReferenceImpl instance = new CartKeyReferenceImpl();
         instance.setKey(template.getKey());
         return instance;
     }
 
+    /**
+     * builder factory method for CartKeyReference
+     * @return builder
+     */
     public static CartKeyReferenceBuilder builder() {
         return CartKeyReferenceBuilder.of();
     }
 
+    /**
+     * create builder for CartKeyReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartKeyReferenceBuilder builder(final CartKeyReference template) {
         return CartKeyReferenceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartKeyReference(Function<CartKeyReference, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartKeyReference> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartKeyReference>() {
             @Override

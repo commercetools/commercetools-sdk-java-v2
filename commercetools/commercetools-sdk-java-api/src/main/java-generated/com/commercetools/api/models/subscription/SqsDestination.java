@@ -32,6 +32,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SqsDestinationImpl.class)
 public interface SqsDestination extends Destination {
 
+    /**
+     * discriminator value for SqsDestination
+     */
     String SQS = "SQS";
 
     /**
@@ -74,20 +77,54 @@ public interface SqsDestination extends Destination {
     @JsonProperty("authenticationMode")
     public AwsAuthenticationMode getAuthenticationMode();
 
+    /**
+     *  <p>Only present if <code>authenticationMode</code> is set to <code>Credentials</code>.</p>
+     * @param accessKey value to be set
+     */
+
     public void setAccessKey(final String accessKey);
+
+    /**
+     *  <p>Only present if <code>authenticationMode</code> is set to <code>Credentials</code>.</p>
+     * @param accessSecret value to be set
+     */
 
     public void setAccessSecret(final String accessSecret);
 
+    /**
+     *  <p>URL of the Amazon SQS queue.</p>
+     * @param queueUrl value to be set
+     */
+
     public void setQueueUrl(final String queueUrl);
+
+    /**
+     *  <p>AWS Region the message queue is located in.</p>
+     * @param region value to be set
+     */
 
     public void setRegion(final String region);
 
+    /**
+     *  <p>Defines the method of authentication for the SQS queue.</p>
+     * @param authenticationMode value to be set
+     */
+
     public void setAuthenticationMode(final AwsAuthenticationMode authenticationMode);
 
+    /**
+     * factory method
+     * @return instance of SqsDestination
+     */
     public static SqsDestination of() {
         return new SqsDestinationImpl();
     }
 
+    /**
+     * factory method to copy an instance of SqsDestination
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SqsDestination of(final SqsDestination template) {
         SqsDestinationImpl instance = new SqsDestinationImpl();
         instance.setAccessKey(template.getAccessKey());
@@ -98,18 +135,37 @@ public interface SqsDestination extends Destination {
         return instance;
     }
 
+    /**
+     * builder factory method for SqsDestination
+     * @return builder
+     */
     public static SqsDestinationBuilder builder() {
         return SqsDestinationBuilder.of();
     }
 
+    /**
+     * create builder for SqsDestination instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SqsDestinationBuilder builder(final SqsDestination template) {
         return SqsDestinationBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSqsDestination(Function<SqsDestination, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SqsDestination> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SqsDestination>() {
             @Override

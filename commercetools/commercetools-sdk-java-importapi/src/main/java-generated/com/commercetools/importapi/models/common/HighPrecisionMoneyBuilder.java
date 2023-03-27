@@ -35,7 +35,7 @@ public class HighPrecisionMoneyBuilder implements Builder<HighPrecisionMoney> {
     private Long preciseAmount;
 
     /**
-     *
+     * set the value to the fractionDigits
      * @param fractionDigits value to be set
      * @return Builder
      */
@@ -46,7 +46,7 @@ public class HighPrecisionMoneyBuilder implements Builder<HighPrecisionMoney> {
     }
 
     /**
-     *
+     * set the value to the centAmount
      * @param centAmount value to be set
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class HighPrecisionMoneyBuilder implements Builder<HighPrecisionMoney> {
     }
 
     /**
-     *
+     * set the value to the preciseAmount
      * @param preciseAmount value to be set
      * @return Builder
      */
@@ -78,18 +78,38 @@ public class HighPrecisionMoneyBuilder implements Builder<HighPrecisionMoney> {
         return this;
     }
 
+    /**
+     * value of fractionDigits}
+     * @return fractionDigits
+     */
+
     @Nullable
     public Integer getFractionDigits() {
         return this.fractionDigits;
     }
 
+    /**
+     * value of centAmount}
+     * @return centAmount
+     */
+
     public Long getCentAmount() {
         return this.centAmount;
     }
 
+    /**
+     *  <p>The currency code compliant to ISO 4217.</p>
+     * @return currencyCode
+     */
+
     public String getCurrencyCode() {
         return this.currencyCode;
     }
+
+    /**
+     * value of preciseAmount}
+     * @return preciseAmount
+     */
 
     public Long getPreciseAmount() {
         return this.preciseAmount;
@@ -114,10 +134,19 @@ public class HighPrecisionMoneyBuilder implements Builder<HighPrecisionMoney> {
         return new HighPrecisionMoneyImpl(fractionDigits, centAmount, currencyCode, preciseAmount);
     }
 
+    /**
+     * factory method for an instance of HighPrecisionMoneyBuilder
+     * @return builder
+     */
     public static HighPrecisionMoneyBuilder of() {
         return new HighPrecisionMoneyBuilder();
     }
 
+    /**
+     * create builder for HighPrecisionMoney instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static HighPrecisionMoneyBuilder of(final HighPrecisionMoney template) {
         HighPrecisionMoneyBuilder builder = new HighPrecisionMoneyBuilder();
         builder.fractionDigits = template.getFractionDigits();

@@ -23,6 +23,10 @@ public class ExtensionDestinationBuilder {
         return com.commercetools.api.models.extension.HttpDestinationBuilder.of();
     }
 
+    /**
+     * factory method for an instance of ExtensionDestinationBuilder
+     * @return builder
+     */
     public static ExtensionDestinationBuilder of() {
         return new ExtensionDestinationBuilder();
     }

@@ -64,18 +64,48 @@ public interface BaseResource {
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
+    /**
+     * set id
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     * set version
+     * @param version value to be set
+     */
 
     public void setVersion(final Long version);
 
+    /**
+     * set createdAt
+     * @param createdAt value to be set
+     */
+
     public void setCreatedAt(final ZonedDateTime createdAt);
+
+    /**
+     * set lastModifiedAt
+     * @param lastModifiedAt value to be set
+     */
 
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withBaseResource(Function<BaseResource, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<BaseResource> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<BaseResource>() {
             @Override

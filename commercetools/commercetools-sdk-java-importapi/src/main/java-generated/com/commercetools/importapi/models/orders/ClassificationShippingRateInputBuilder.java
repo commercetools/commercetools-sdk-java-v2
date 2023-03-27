@@ -28,7 +28,7 @@ public class ClassificationShippingRateInputBuilder implements Builder<Classific
     private com.commercetools.importapi.models.common.LocalizedString label;
 
     /**
-     *
+     * set the value to the key
      * @param key value to be set
      * @return Builder
      */
@@ -72,9 +72,24 @@ public class ClassificationShippingRateInputBuilder implements Builder<Classific
         return this;
     }
 
+    /**
+     * value of key}
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     * @return label
+     */
 
     public com.commercetools.importapi.models.common.LocalizedString getLabel() {
         return this.label;
@@ -98,10 +113,19 @@ public class ClassificationShippingRateInputBuilder implements Builder<Classific
         return new ClassificationShippingRateInputImpl(key, label);
     }
 
+    /**
+     * factory method for an instance of ClassificationShippingRateInputBuilder
+     * @return builder
+     */
     public static ClassificationShippingRateInputBuilder of() {
         return new ClassificationShippingRateInputBuilder();
     }
 
+    /**
+     * create builder for ClassificationShippingRateInput instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ClassificationShippingRateInputBuilder of(final ClassificationShippingRateInput template) {
         ClassificationShippingRateInputBuilder builder = new ClassificationShippingRateInputBuilder();
         builder.key = template.getKey();

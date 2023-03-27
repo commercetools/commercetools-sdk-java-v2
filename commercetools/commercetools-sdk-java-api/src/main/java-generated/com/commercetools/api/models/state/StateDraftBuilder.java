@@ -255,33 +255,73 @@ public class StateDraftBuilder implements Builder<StateDraft> {
         return this;
     }
 
+    /**
+     *  <p>User-defined unique identifier for the State.</p>
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>Specify to which resource or object type the State is assigned to.</p>
+     * @return type
+     */
+
     public com.commercetools.api.models.state.StateTypeEnum getType() {
         return this.type;
     }
+
+    /**
+     *  <p>Name of the State.</p>
+     * @return name
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
 
+    /**
+     *  <p>Description of the State.</p>
+     * @return description
+     */
+
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
+
+    /**
+     *  <p>Set to <code>false</code> if the State is not the first step in a workflow.</p>
+     * @return initial
+     */
 
     @Nullable
     public Boolean getInitial() {
         return this.initial;
     }
 
+    /**
+     *  <p>If suitable, assign predifined roles the State can fulfill in case the State's <code>type</code> is <code>LineItemState</code> or <code>ReviewState</code>.</p>
+     * @return roles
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.state.StateRoleEnum> getRoles() {
         return this.roles;
     }
+
+    /**
+     *  <p>Define the list of States of the same <code>type</code> to which the current State can be transitioned to.</p>
+     *  <ul>
+     *   <li>If, for example, the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the StateResourceIdentifier to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
+     *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
+     *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
+     *  </ul>
+     * @return transitions
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.state.StateResourceIdentifier> getTransitions() {
@@ -306,10 +346,19 @@ public class StateDraftBuilder implements Builder<StateDraft> {
         return new StateDraftImpl(key, type, name, description, initial, roles, transitions);
     }
 
+    /**
+     * factory method for an instance of StateDraftBuilder
+     * @return builder
+     */
     public static StateDraftBuilder of() {
         return new StateDraftBuilder();
     }
 
+    /**
+     * create builder for StateDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StateDraftBuilder of(final StateDraft template) {
         StateDraftBuilder builder = new StateDraftBuilder();
         builder.key = template.getKey();

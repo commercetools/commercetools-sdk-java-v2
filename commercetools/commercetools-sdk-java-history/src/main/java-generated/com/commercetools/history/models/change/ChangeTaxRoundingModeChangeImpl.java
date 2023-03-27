@@ -28,6 +28,9 @@ public class ChangeTaxRoundingModeChangeImpl implements ChangeTaxRoundingModeCha
 
     private com.commercetools.history.models.common.RoundingMode nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeTaxRoundingModeChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.RoundingMode previousValue,
@@ -38,6 +41,9 @@ public class ChangeTaxRoundingModeChangeImpl implements ChangeTaxRoundingModeCha
         this.type = CHANGE_TAX_ROUNDING_MODE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeTaxRoundingModeChangeImpl() {
         this.type = CHANGE_TAX_ROUNDING_MODE_CHANGE;
     }

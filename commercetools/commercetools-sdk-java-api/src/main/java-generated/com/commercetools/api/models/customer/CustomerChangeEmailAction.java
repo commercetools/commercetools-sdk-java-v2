@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomerChangeEmailActionImpl.class)
 public interface CustomerChangeEmailAction extends CustomerUpdateAction {
 
+    /**
+     * discriminator value for CustomerChangeEmailAction
+     */
     String CHANGE_EMAIL = "changeEmail";
 
     /**
@@ -39,30 +42,63 @@ public interface CustomerChangeEmailAction extends CustomerUpdateAction {
     @JsonProperty("email")
     public String getEmail();
 
+    /**
+     *  <p>Value to set.</p>
+     * @param email value to be set
+     */
+
     public void setEmail(final String email);
 
+    /**
+     * factory method
+     * @return instance of CustomerChangeEmailAction
+     */
     public static CustomerChangeEmailAction of() {
         return new CustomerChangeEmailActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomerChangeEmailAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomerChangeEmailAction of(final CustomerChangeEmailAction template) {
         CustomerChangeEmailActionImpl instance = new CustomerChangeEmailActionImpl();
         instance.setEmail(template.getEmail());
         return instance;
     }
 
+    /**
+     * builder factory method for CustomerChangeEmailAction
+     * @return builder
+     */
     public static CustomerChangeEmailActionBuilder builder() {
         return CustomerChangeEmailActionBuilder.of();
     }
 
+    /**
+     * create builder for CustomerChangeEmailAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerChangeEmailActionBuilder builder(final CustomerChangeEmailAction template) {
         return CustomerChangeEmailActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomerChangeEmailAction(Function<CustomerChangeEmailAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomerChangeEmailAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomerChangeEmailAction>() {
             @Override

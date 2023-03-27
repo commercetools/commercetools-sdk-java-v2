@@ -27,6 +27,9 @@ public class ProductSelectionProductAddedMessagePayloadImpl
 
     private com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSelectionProductAddedMessagePayloadImpl(
             @JsonProperty("product") final com.commercetools.api.models.product.ProductReference product,
@@ -36,6 +39,9 @@ public class ProductSelectionProductAddedMessagePayloadImpl
         this.type = PRODUCT_SELECTION_PRODUCT_ADDED;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSelectionProductAddedMessagePayloadImpl() {
         this.type = PRODUCT_SELECTION_PRODUCT_ADDED;
     }

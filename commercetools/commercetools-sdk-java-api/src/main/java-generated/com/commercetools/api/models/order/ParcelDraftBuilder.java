@@ -36,7 +36,7 @@ public class ParcelDraftBuilder implements Builder<ParcelDraft> {
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     *
+     * set the value to the measurements using the builder function
      * @param builder function to build the measurements value
      * @return Builder
      */
@@ -48,7 +48,7 @@ public class ParcelDraftBuilder implements Builder<ParcelDraft> {
     }
 
     /**
-     *
+     * set the value to the measurements
      * @param measurements value to be set
      * @return Builder
      */
@@ -60,7 +60,7 @@ public class ParcelDraftBuilder implements Builder<ParcelDraft> {
     }
 
     /**
-     *
+     * set the value to the trackingData using the builder function
      * @param builder function to build the trackingData value
      * @return Builder
      */
@@ -72,7 +72,7 @@ public class ParcelDraftBuilder implements Builder<ParcelDraft> {
     }
 
     /**
-     *
+     * set the value to the trackingData
      * @param trackingData value to be set
      * @return Builder
      */
@@ -171,20 +171,40 @@ public class ParcelDraftBuilder implements Builder<ParcelDraft> {
         return this;
     }
 
+    /**
+     * value of measurements}
+     * @return measurements
+     */
+
     @Nullable
     public com.commercetools.api.models.order.ParcelMeasurements getMeasurements() {
         return this.measurements;
     }
+
+    /**
+     * value of trackingData}
+     * @return trackingData
+     */
 
     @Nullable
     public com.commercetools.api.models.order.TrackingData getTrackingData() {
         return this.trackingData;
     }
 
+    /**
+     *  <p>The delivery items contained in this parcel.</p>
+     * @return items
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
         return this.items;
     }
+
+    /**
+     *  <p>Custom Fields of this parcel.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
@@ -207,10 +227,19 @@ public class ParcelDraftBuilder implements Builder<ParcelDraft> {
         return new ParcelDraftImpl(measurements, trackingData, items, custom);
     }
 
+    /**
+     * factory method for an instance of ParcelDraftBuilder
+     * @return builder
+     */
     public static ParcelDraftBuilder of() {
         return new ParcelDraftBuilder();
     }
 
+    /**
+     * create builder for ParcelDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ParcelDraftBuilder of(final ParcelDraft template) {
         ParcelDraftBuilder builder = new ParcelDraftBuilder();
         builder.measurements = template.getMeasurements();

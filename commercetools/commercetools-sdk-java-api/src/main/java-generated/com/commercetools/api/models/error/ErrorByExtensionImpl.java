@@ -24,12 +24,18 @@ public class ErrorByExtensionImpl implements ErrorByExtension, ModelBase {
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ErrorByExtensionImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
         this.key = key;
     }
 
+    /**
+     * create empty instance
+     */
     public ErrorByExtensionImpl() {
     }
 

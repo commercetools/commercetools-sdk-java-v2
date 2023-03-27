@@ -177,36 +177,76 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
         return this;
     }
 
+    /**
+     *  <p><code>"The variant $variantId of product $productId does not contain a price for currency $currencyCode, $country, $customerGroup, $channel."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
     }
 
+    /**
+     *  <p>Unique identifier of a Product.</p>
+     * @return productId
+     */
+
     public String getProductId() {
         return this.productId;
     }
 
+    /**
+     *  <p>Unique identifier of a ProductVariant in the Product.</p>
+     * @return variantId
+     */
+
     public Integer getVariantId() {
         return this.variantId;
     }
+
+    /**
+     *  <p>Currency code of the country.</p>
+     * @return currency
+     */
 
     @Nullable
     public String getCurrency() {
         return this.currency;
     }
 
+    /**
+     *  <p>Country code of the geographic location.</p>
+     * @return country
+     */
+
     @Nullable
     public String getCountry() {
         return this.country;
     }
 
+    /**
+     *  <p>Customer Group associated with the Price.</p>
+     * @return customerGroup
+     */
+
     @Nullable
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
         return this.customerGroup;
     }
+
+    /**
+     *  <p>Channel associated with the Price.</p>
+     * @return channel
+     */
 
     @Nullable
     public com.commercetools.api.models.channel.ChannelReference getChannel() {
@@ -234,10 +274,19 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
             customerGroup, channel);
     }
 
+    /**
+     * factory method for an instance of MatchingPriceNotFoundErrorBuilder
+     * @return builder
+     */
     public static MatchingPriceNotFoundErrorBuilder of() {
         return new MatchingPriceNotFoundErrorBuilder();
     }
 
+    /**
+     * create builder for MatchingPriceNotFoundError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MatchingPriceNotFoundErrorBuilder of(final MatchingPriceNotFoundError template) {
         MatchingPriceNotFoundErrorBuilder builder = new MatchingPriceNotFoundErrorBuilder();
         builder.message = template.getMessage();

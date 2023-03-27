@@ -24,7 +24,7 @@ public class StagedOrderRemoveDeliveryActionBuilder implements Builder<StagedOrd
     private String deliveryId;
 
     /**
-     *
+     * set the value to the deliveryId
      * @param deliveryId value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class StagedOrderRemoveDeliveryActionBuilder implements Builder<StagedOrd
         this.deliveryId = deliveryId;
         return this;
     }
+
+    /**
+     * value of deliveryId}
+     * @return deliveryId
+     */
 
     public String getDeliveryId() {
         return this.deliveryId;
@@ -55,10 +60,19 @@ public class StagedOrderRemoveDeliveryActionBuilder implements Builder<StagedOrd
         return new StagedOrderRemoveDeliveryActionImpl(deliveryId);
     }
 
+    /**
+     * factory method for an instance of StagedOrderRemoveDeliveryActionBuilder
+     * @return builder
+     */
     public static StagedOrderRemoveDeliveryActionBuilder of() {
         return new StagedOrderRemoveDeliveryActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderRemoveDeliveryAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderRemoveDeliveryActionBuilder of(final StagedOrderRemoveDeliveryAction template) {
         StagedOrderRemoveDeliveryActionBuilder builder = new StagedOrderRemoveDeliveryActionBuilder();
         builder.deliveryId = template.getDeliveryId();

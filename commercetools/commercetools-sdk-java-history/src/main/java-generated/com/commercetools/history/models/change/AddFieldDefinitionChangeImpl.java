@@ -26,6 +26,9 @@ public class AddFieldDefinitionChangeImpl implements AddFieldDefinitionChange, M
 
     private com.commercetools.history.models.common.FieldDefinition nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AddFieldDefinitionChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.FieldDefinition nextValue) {
@@ -34,6 +37,9 @@ public class AddFieldDefinitionChangeImpl implements AddFieldDefinitionChange, M
         this.type = ADD_FIELD_DEFINITION_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public AddFieldDefinitionChangeImpl() {
         this.type = ADD_FIELD_DEFINITION_CHANGE;
     }

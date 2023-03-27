@@ -30,6 +30,9 @@ public class StandalonePricePagedQueryResponseImpl implements StandalonePricePag
 
     private java.util.List<com.commercetools.api.models.standalone_price.StandalonePrice> results;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StandalonePricePagedQueryResponseImpl(@JsonProperty("limit") final Long limit,
             @JsonProperty("offset") final Long offset, @JsonProperty("count") final Long count,
@@ -42,6 +45,9 @@ public class StandalonePricePagedQueryResponseImpl implements StandalonePricePag
         this.results = results;
     }
 
+    /**
+     * create empty instance
+     */
     public StandalonePricePagedQueryResponseImpl() {
     }
 

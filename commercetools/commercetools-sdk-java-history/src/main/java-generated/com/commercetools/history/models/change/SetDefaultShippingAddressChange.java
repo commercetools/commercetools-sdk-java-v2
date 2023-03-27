@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetDefaultShippingAddressChangeImpl.class)
 public interface SetDefaultShippingAddressChange extends Change {
 
+    /**
+     * discriminator value for SetDefaultShippingAddressChange
+     */
     String SET_DEFAULT_SHIPPING_ADDRESS_CHANGE = "SetDefaultShippingAddressChange";
 
     /**
@@ -69,16 +72,40 @@ public interface SetDefaultShippingAddressChange extends Change {
     @JsonProperty("previousValue")
     public Address getPreviousValue();
 
+    /**
+     *  <p>Update action for <code>setDefaultShippingAddress</code> action.</p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
 
     public void setNextValue(final Address nextValue);
 
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
+
     public void setPreviousValue(final Address previousValue);
 
+    /**
+     * factory method
+     * @return instance of SetDefaultShippingAddressChange
+     */
     public static SetDefaultShippingAddressChange of() {
         return new SetDefaultShippingAddressChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetDefaultShippingAddressChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetDefaultShippingAddressChange of(final SetDefaultShippingAddressChange template) {
         SetDefaultShippingAddressChangeImpl instance = new SetDefaultShippingAddressChangeImpl();
         instance.setChange(template.getChange());
@@ -87,18 +114,37 @@ public interface SetDefaultShippingAddressChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetDefaultShippingAddressChange
+     * @return builder
+     */
     public static SetDefaultShippingAddressChangeBuilder builder() {
         return SetDefaultShippingAddressChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetDefaultShippingAddressChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetDefaultShippingAddressChangeBuilder builder(final SetDefaultShippingAddressChange template) {
         return SetDefaultShippingAddressChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetDefaultShippingAddressChange(Function<SetDefaultShippingAddressChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetDefaultShippingAddressChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetDefaultShippingAddressChange>() {
             @Override

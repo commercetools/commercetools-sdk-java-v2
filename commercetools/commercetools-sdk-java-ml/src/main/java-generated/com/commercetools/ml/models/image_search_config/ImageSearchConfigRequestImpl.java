@@ -22,12 +22,18 @@ public class ImageSearchConfigRequestImpl implements ImageSearchConfigRequest, M
 
     private java.util.List<com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateAction> actions;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ImageSearchConfigRequestImpl(
             @JsonProperty("actions") final java.util.List<com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateAction> actions) {
         this.actions = actions;
     }
 
+    /**
+     * create empty instance
+     */
     public ImageSearchConfigRequestImpl() {
     }
 

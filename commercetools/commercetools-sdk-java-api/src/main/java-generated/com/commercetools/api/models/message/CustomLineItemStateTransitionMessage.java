@@ -43,6 +43,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomLineItemStateTransitionMessageImpl.class)
 public interface CustomLineItemStateTransitionMessage extends OrderMessage {
 
+    /**
+     * discriminator value for CustomLineItemStateTransitionMessage
+     */
     String CUSTOM_LINE_ITEM_STATE_TRANSITION = "CustomLineItemStateTransition";
 
     /**
@@ -87,20 +90,54 @@ public interface CustomLineItemStateTransitionMessage extends OrderMessage {
     @JsonProperty("toState")
     public StateReference getToState();
 
+    /**
+     *  <p>Unique identifier of the Custom Line Item.</p>
+     * @param customLineItemId value to be set
+     */
+
     public void setCustomLineItemId(final String customLineItemId);
+
+    /**
+     *  <p>Date and time (UTC) when the transition of the Custom Line Item State was performed.</p>
+     * @param transitionDate value to be set
+     */
 
     public void setTransitionDate(final ZonedDateTime transitionDate);
 
+    /**
+     *  <p>Number of Custom Line Items for which the State was transitioned.</p>
+     * @param quantity value to be set
+     */
+
     public void setQuantity(final Long quantity);
+
+    /**
+     *  <p>State the Custom Line Item was transitioned from.</p>
+     * @param fromState value to be set
+     */
 
     public void setFromState(final StateReference fromState);
 
+    /**
+     *  <p>State the Custom Line Item was transitioned to.</p>
+     * @param toState value to be set
+     */
+
     public void setToState(final StateReference toState);
 
+    /**
+     * factory method
+     * @return instance of CustomLineItemStateTransitionMessage
+     */
     public static CustomLineItemStateTransitionMessage of() {
         return new CustomLineItemStateTransitionMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomLineItemStateTransitionMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomLineItemStateTransitionMessage of(final CustomLineItemStateTransitionMessage template) {
         CustomLineItemStateTransitionMessageImpl instance = new CustomLineItemStateTransitionMessageImpl();
         instance.setId(template.getId());
@@ -121,19 +158,38 @@ public interface CustomLineItemStateTransitionMessage extends OrderMessage {
         return instance;
     }
 
+    /**
+     * builder factory method for CustomLineItemStateTransitionMessage
+     * @return builder
+     */
     public static CustomLineItemStateTransitionMessageBuilder builder() {
         return CustomLineItemStateTransitionMessageBuilder.of();
     }
 
+    /**
+     * create builder for CustomLineItemStateTransitionMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomLineItemStateTransitionMessageBuilder builder(
             final CustomLineItemStateTransitionMessage template) {
         return CustomLineItemStateTransitionMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomLineItemStateTransitionMessage(Function<CustomLineItemStateTransitionMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomLineItemStateTransitionMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomLineItemStateTransitionMessage>() {
             @Override

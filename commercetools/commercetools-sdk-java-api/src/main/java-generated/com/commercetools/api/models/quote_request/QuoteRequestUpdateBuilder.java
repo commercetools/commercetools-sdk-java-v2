@@ -107,9 +107,19 @@ public class QuoteRequestUpdateBuilder implements Builder<QuoteRequestUpdate> {
         return this;
     }
 
+    /**
+     *  <p>Expected version of the QuoteRequest to which the changes should be applied. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
+     * @return version
+     */
+
     public Long getVersion() {
         return this.version;
     }
+
+    /**
+     *  <p>Update actions to be performed on the QuoteRequest.</p>
+     * @return actions
+     */
 
     public java.util.List<com.commercetools.api.models.quote_request.QuoteRequestUpdateAction> getActions() {
         return this.actions;
@@ -133,10 +143,19 @@ public class QuoteRequestUpdateBuilder implements Builder<QuoteRequestUpdate> {
         return new QuoteRequestUpdateImpl(version, actions);
     }
 
+    /**
+     * factory method for an instance of QuoteRequestUpdateBuilder
+     * @return builder
+     */
     public static QuoteRequestUpdateBuilder of() {
         return new QuoteRequestUpdateBuilder();
     }
 
+    /**
+     * create builder for QuoteRequestUpdate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static QuoteRequestUpdateBuilder of(final QuoteRequestUpdate template) {
         QuoteRequestUpdateBuilder builder = new QuoteRequestUpdateBuilder();
         builder.version = template.getVersion();

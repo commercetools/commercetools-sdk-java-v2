@@ -36,6 +36,11 @@ public class ReviewSetAuthorNameActionBuilder implements Builder<ReviewSetAuthor
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return authorName
+     */
+
     @Nullable
     public String getAuthorName() {
         return this.authorName;
@@ -57,10 +62,19 @@ public class ReviewSetAuthorNameActionBuilder implements Builder<ReviewSetAuthor
         return new ReviewSetAuthorNameActionImpl(authorName);
     }
 
+    /**
+     * factory method for an instance of ReviewSetAuthorNameActionBuilder
+     * @return builder
+     */
     public static ReviewSetAuthorNameActionBuilder of() {
         return new ReviewSetAuthorNameActionBuilder();
     }
 
+    /**
+     * create builder for ReviewSetAuthorNameAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReviewSetAuthorNameActionBuilder of(final ReviewSetAuthorNameAction template) {
         ReviewSetAuthorNameActionBuilder builder = new ReviewSetAuthorNameActionBuilder();
         builder.authorName = template.getAuthorName();

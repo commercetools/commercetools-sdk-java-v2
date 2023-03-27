@@ -66,9 +66,19 @@ public class ProductSelectionSettingDraftBuilder implements Builder<ProductSelec
         return this;
     }
 
+    /**
+     *  <p>Resource Identifier of a ProductSelection.</p>
+     * @return productSelection
+     */
+
     public com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier getProductSelection() {
         return this.productSelection;
     }
+
+    /**
+     *  <p>Set to <code>true</code> if all Products assigned to the Product Selection should become part of the Store's assortment.</p>
+     * @return active
+     */
 
     @Nullable
     public Boolean getActive() {
@@ -92,10 +102,19 @@ public class ProductSelectionSettingDraftBuilder implements Builder<ProductSelec
         return new ProductSelectionSettingDraftImpl(productSelection, active);
     }
 
+    /**
+     * factory method for an instance of ProductSelectionSettingDraftBuilder
+     * @return builder
+     */
     public static ProductSelectionSettingDraftBuilder of() {
         return new ProductSelectionSettingDraftBuilder();
     }
 
+    /**
+     * create builder for ProductSelectionSettingDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSelectionSettingDraftBuilder of(final ProductSelectionSettingDraft template) {
         ProductSelectionSettingDraftBuilder builder = new ProductSelectionSettingDraftBuilder();
         builder.productSelection = template.getProductSelection();

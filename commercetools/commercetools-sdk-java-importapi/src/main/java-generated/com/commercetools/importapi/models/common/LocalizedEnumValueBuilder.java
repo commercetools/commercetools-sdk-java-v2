@@ -28,7 +28,7 @@ public class LocalizedEnumValueBuilder implements Builder<LocalizedEnumValue> {
     private com.commercetools.importapi.models.common.LocalizedString label;
 
     /**
-     *
+     * set the value to the key
      * @param key value to be set
      * @return Builder
      */
@@ -71,9 +71,24 @@ public class LocalizedEnumValueBuilder implements Builder<LocalizedEnumValue> {
         return this;
     }
 
+    /**
+     * value of key}
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     * @return label
+     */
 
     public com.commercetools.importapi.models.common.LocalizedString getLabel() {
         return this.label;
@@ -97,10 +112,19 @@ public class LocalizedEnumValueBuilder implements Builder<LocalizedEnumValue> {
         return new LocalizedEnumValueImpl(key, label);
     }
 
+    /**
+     * factory method for an instance of LocalizedEnumValueBuilder
+     * @return builder
+     */
     public static LocalizedEnumValueBuilder of() {
         return new LocalizedEnumValueBuilder();
     }
 
+    /**
+     * create builder for LocalizedEnumValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static LocalizedEnumValueBuilder of(final LocalizedEnumValue template) {
         LocalizedEnumValueBuilder builder = new LocalizedEnumValueBuilder();
         builder.key = template.getKey();

@@ -22,11 +22,17 @@ public class OrderUpdateActionImpl implements OrderUpdateAction, ModelBase {
 
     private String action;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderUpdateActionImpl(@JsonProperty("action") final String action) {
         this.action = action;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderUpdateActionImpl() {
     }
 

@@ -46,14 +46,33 @@ public interface MethodTaxedPrice {
     @JsonProperty("taxedPrice")
     public TaxedItemPrice getTaxedPrice();
 
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
+     * @param shippingMethodKey value to be set
+     */
+
     public void setShippingMethodKey(final String shippingMethodKey);
+
+    /**
+     *  <p>Taxed price for the Shipping Method.</p>
+     * @param taxedPrice value to be set
+     */
 
     public void setTaxedPrice(final TaxedItemPrice taxedPrice);
 
+    /**
+     * factory method
+     * @return instance of MethodTaxedPrice
+     */
     public static MethodTaxedPrice of() {
         return new MethodTaxedPriceImpl();
     }
 
+    /**
+     * factory method to copy an instance of MethodTaxedPrice
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static MethodTaxedPrice of(final MethodTaxedPrice template) {
         MethodTaxedPriceImpl instance = new MethodTaxedPriceImpl();
         instance.setShippingMethodKey(template.getShippingMethodKey());
@@ -61,18 +80,37 @@ public interface MethodTaxedPrice {
         return instance;
     }
 
+    /**
+     * builder factory method for MethodTaxedPrice
+     * @return builder
+     */
     public static MethodTaxedPriceBuilder builder() {
         return MethodTaxedPriceBuilder.of();
     }
 
+    /**
+     * create builder for MethodTaxedPrice instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MethodTaxedPriceBuilder builder(final MethodTaxedPrice template) {
         return MethodTaxedPriceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMethodTaxedPrice(Function<MethodTaxedPrice, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MethodTaxedPrice> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MethodTaxedPrice>() {
             @Override

@@ -38,6 +38,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PaymentTransactionStateChangedMessageImpl.class)
 public interface PaymentTransactionStateChangedMessage extends Message {
 
+    /**
+     * discriminator value for PaymentTransactionStateChangedMessage
+     */
     String PAYMENT_TRANSACTION_STATE_CHANGED = "PaymentTransactionStateChanged";
 
     /**
@@ -56,14 +59,33 @@ public interface PaymentTransactionStateChangedMessage extends Message {
     @JsonProperty("state")
     public TransactionState getState();
 
+    /**
+     *  <p>Unique identifier for the Transaction for which the Transaction State changed.</p>
+     * @param transactionId value to be set
+     */
+
     public void setTransactionId(final String transactionId);
+
+    /**
+     *  <p>Transaction State after the Change Transaction State update action.</p>
+     * @param state value to be set
+     */
 
     public void setState(final TransactionState state);
 
+    /**
+     * factory method
+     * @return instance of PaymentTransactionStateChangedMessage
+     */
     public static PaymentTransactionStateChangedMessage of() {
         return new PaymentTransactionStateChangedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of PaymentTransactionStateChangedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static PaymentTransactionStateChangedMessage of(final PaymentTransactionStateChangedMessage template) {
         PaymentTransactionStateChangedMessageImpl instance = new PaymentTransactionStateChangedMessageImpl();
         instance.setId(template.getId());
@@ -81,19 +103,38 @@ public interface PaymentTransactionStateChangedMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for PaymentTransactionStateChangedMessage
+     * @return builder
+     */
     public static PaymentTransactionStateChangedMessageBuilder builder() {
         return PaymentTransactionStateChangedMessageBuilder.of();
     }
 
+    /**
+     * create builder for PaymentTransactionStateChangedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentTransactionStateChangedMessageBuilder builder(
             final PaymentTransactionStateChangedMessage template) {
         return PaymentTransactionStateChangedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withPaymentTransactionStateChangedMessage(Function<PaymentTransactionStateChangedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<PaymentTransactionStateChangedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<PaymentTransactionStateChangedMessage>() {
             @Override

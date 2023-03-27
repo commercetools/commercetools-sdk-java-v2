@@ -24,6 +24,9 @@ public class ShoppingListSetSlugActionImpl implements ShoppingListSetSlugAction,
 
     private com.commercetools.api.models.common.LocalizedString slug;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShoppingListSetSlugActionImpl(
             @JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug) {
@@ -31,6 +34,9 @@ public class ShoppingListSetSlugActionImpl implements ShoppingListSetSlugAction,
         this.action = SET_SLUG;
     }
 
+    /**
+     * create empty instance
+     */
     public ShoppingListSetSlugActionImpl() {
         this.action = SET_SLUG;
     }

@@ -26,6 +26,9 @@ public class StagedOrderSetReturnShipmentStateActionImpl implements StagedOrderS
 
     private com.commercetools.api.models.order.ReturnShipmentState shipmentState;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderSetReturnShipmentStateActionImpl(@JsonProperty("returnItemId") final String returnItemId,
             @JsonProperty("shipmentState") final com.commercetools.api.models.order.ReturnShipmentState shipmentState) {
@@ -34,6 +37,9 @@ public class StagedOrderSetReturnShipmentStateActionImpl implements StagedOrderS
         this.action = SET_RETURN_SHIPMENT_STATE;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderSetReturnShipmentStateActionImpl() {
         this.action = SET_RETURN_SHIPMENT_STATE;
     }

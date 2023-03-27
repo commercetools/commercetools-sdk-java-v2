@@ -26,6 +26,9 @@ public class TaxedPriceDraftImpl implements TaxedPriceDraft, ModelBase {
 
     private java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> taxPortions;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TaxedPriceDraftImpl(@JsonProperty("totalNet") final com.commercetools.api.models.common.Money totalNet,
             @JsonProperty("totalGross") final com.commercetools.api.models.common.Money totalGross,
@@ -35,6 +38,9 @@ public class TaxedPriceDraftImpl implements TaxedPriceDraft, ModelBase {
         this.taxPortions = taxPortions;
     }
 
+    /**
+     * create empty instance
+     */
     public TaxedPriceDraftImpl() {
     }
 

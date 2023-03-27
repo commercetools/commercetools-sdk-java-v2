@@ -26,6 +26,9 @@ public class ProductChangeSlugActionImpl implements ProductChangeSlugAction, Mod
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductChangeSlugActionImpl(@JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug,
             @JsonProperty("staged") final Boolean staged) {
@@ -34,6 +37,9 @@ public class ProductChangeSlugActionImpl implements ProductChangeSlugAction, Mod
         this.action = CHANGE_SLUG;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductChangeSlugActionImpl() {
         this.action = CHANGE_SLUG;
     }

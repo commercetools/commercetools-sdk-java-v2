@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = InternalConstraintViolatedErrorImpl.class)
 public interface InternalConstraintViolatedError extends ErrorObject {
 
+    /**
+     * discriminator value for InternalConstraintViolatedError
+     */
     String INTERNAL_CONSTRAINT_VIOLATED = "InternalConstraintViolated";
 
     /**
@@ -47,12 +50,26 @@ public interface InternalConstraintViolatedError extends ErrorObject {
     @JsonProperty("message")
     public String getMessage();
 
+    /**
+     *  <p>Plain text description of the constraints that were violated.</p>
+     * @param message value to be set
+     */
+
     public void setMessage(final String message);
 
+    /**
+     * factory method
+     * @return instance of InternalConstraintViolatedError
+     */
     public static InternalConstraintViolatedError of() {
         return new InternalConstraintViolatedErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of InternalConstraintViolatedError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static InternalConstraintViolatedError of(final InternalConstraintViolatedError template) {
         InternalConstraintViolatedErrorImpl instance = new InternalConstraintViolatedErrorImpl();
         instance.setMessage(template.getMessage());
@@ -60,18 +77,37 @@ public interface InternalConstraintViolatedError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for InternalConstraintViolatedError
+     * @return builder
+     */
     public static InternalConstraintViolatedErrorBuilder builder() {
         return InternalConstraintViolatedErrorBuilder.of();
     }
 
+    /**
+     * create builder for InternalConstraintViolatedError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InternalConstraintViolatedErrorBuilder builder(final InternalConstraintViolatedError template) {
         return InternalConstraintViolatedErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withInternalConstraintViolatedError(Function<InternalConstraintViolatedError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<InternalConstraintViolatedError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<InternalConstraintViolatedError>() {
             @Override

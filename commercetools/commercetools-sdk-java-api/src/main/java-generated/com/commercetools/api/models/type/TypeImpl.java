@@ -42,6 +42,9 @@ public class TypeImpl implements Type, ModelBase {
 
     private java.util.List<com.commercetools.api.models.type.FieldDefinition> fieldDefinitions;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TypeImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -66,6 +69,9 @@ public class TypeImpl implements Type, ModelBase {
         this.fieldDefinitions = fieldDefinitions;
     }
 
+    /**
+     * create empty instance
+     */
     public TypeImpl() {
     }
 

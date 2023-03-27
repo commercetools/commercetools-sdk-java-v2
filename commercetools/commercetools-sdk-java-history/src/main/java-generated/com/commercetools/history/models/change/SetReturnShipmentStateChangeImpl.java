@@ -28,6 +28,9 @@ public class SetReturnShipmentStateChangeImpl implements SetReturnShipmentStateC
 
     private com.commercetools.history.models.common.ReturnShipmentState previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetReturnShipmentStateChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.ReturnShipmentState nextValue,
@@ -38,6 +41,9 @@ public class SetReturnShipmentStateChangeImpl implements SetReturnShipmentStateC
         this.type = SET_RETURN_SHIPMENT_STATE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetReturnShipmentStateChangeImpl() {
         this.type = SET_RETURN_SHIPMENT_STATE_CHANGE;
     }

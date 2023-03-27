@@ -48,6 +48,9 @@ public class ProductPublishedMessageImpl implements ProductPublishedMessage, Mod
 
     private com.commercetools.api.models.cart.ProductPublishScope scope;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductPublishedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -77,6 +80,9 @@ public class ProductPublishedMessageImpl implements ProductPublishedMessage, Mod
         this.type = PRODUCT_PUBLISHED;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductPublishedMessageImpl() {
         this.type = PRODUCT_PUBLISHED;
     }

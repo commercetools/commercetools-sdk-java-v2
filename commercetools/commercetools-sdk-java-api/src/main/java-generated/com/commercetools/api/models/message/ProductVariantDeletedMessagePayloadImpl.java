@@ -26,6 +26,9 @@ public class ProductVariantDeletedMessagePayloadImpl implements ProductVariantDe
 
     private java.util.List<String> removedImageUrls;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductVariantDeletedMessagePayloadImpl(
             @JsonProperty("variant") final com.commercetools.api.models.product.ProductVariant variant,
@@ -35,6 +38,9 @@ public class ProductVariantDeletedMessagePayloadImpl implements ProductVariantDe
         this.type = PRODUCT_VARIANT_DELETED;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductVariantDeletedMessagePayloadImpl() {
         this.type = PRODUCT_VARIANT_DELETED;
     }

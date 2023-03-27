@@ -24,12 +24,18 @@ public class QuoteCreatedMessagePayloadImpl implements QuoteCreatedMessagePayloa
 
     private com.commercetools.api.models.quote.Quote quote;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     QuoteCreatedMessagePayloadImpl(@JsonProperty("quote") final com.commercetools.api.models.quote.Quote quote) {
         this.quote = quote;
         this.type = QUOTE_CREATED;
     }
 
+    /**
+     * create empty instance
+     */
     public QuoteCreatedMessagePayloadImpl() {
         this.type = QUOTE_CREATED;
     }

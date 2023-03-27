@@ -47,14 +47,33 @@ public interface ImageSearchConfigResponse {
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
+    /**
+     *  <p>The image search activation status.</p>
+     * @param status value to be set
+     */
+
     public void setStatus(final ImageSearchConfigStatus status);
+
+    /**
+     * set lastModifiedAt
+     * @param lastModifiedAt value to be set
+     */
 
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
+    /**
+     * factory method
+     * @return instance of ImageSearchConfigResponse
+     */
     public static ImageSearchConfigResponse of() {
         return new ImageSearchConfigResponseImpl();
     }
 
+    /**
+     * factory method to copy an instance of ImageSearchConfigResponse
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ImageSearchConfigResponse of(final ImageSearchConfigResponse template) {
         ImageSearchConfigResponseImpl instance = new ImageSearchConfigResponseImpl();
         instance.setStatus(template.getStatus());
@@ -62,18 +81,37 @@ public interface ImageSearchConfigResponse {
         return instance;
     }
 
+    /**
+     * builder factory method for ImageSearchConfigResponse
+     * @return builder
+     */
     public static ImageSearchConfigResponseBuilder builder() {
         return ImageSearchConfigResponseBuilder.of();
     }
 
+    /**
+     * create builder for ImageSearchConfigResponse instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ImageSearchConfigResponseBuilder builder(final ImageSearchConfigResponse template) {
         return ImageSearchConfigResponseBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withImageSearchConfigResponse(Function<ImageSearchConfigResponse, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ImageSearchConfigResponse> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ImageSearchConfigResponse>() {
             @Override

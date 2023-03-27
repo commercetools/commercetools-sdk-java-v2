@@ -28,6 +28,9 @@ public class ProductAddToCategoryActionImpl implements ProductAddToCategoryActio
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductAddToCategoryActionImpl(
             @JsonProperty("category") final com.commercetools.api.models.category.CategoryResourceIdentifier category,
@@ -38,6 +41,9 @@ public class ProductAddToCategoryActionImpl implements ProductAddToCategoryActio
         this.action = ADD_TO_CATEGORY;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductAddToCategoryActionImpl() {
         this.action = ADD_TO_CATEGORY;
     }

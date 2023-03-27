@@ -33,12 +33,24 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomerDeletedMessageImpl.class)
 public interface CustomerDeletedMessage extends Message {
 
+    /**
+     * discriminator value for CustomerDeletedMessage
+     */
     String CUSTOMER_DELETED = "CustomerDeleted";
 
+    /**
+     * factory method
+     * @return instance of CustomerDeletedMessage
+     */
     public static CustomerDeletedMessage of() {
         return new CustomerDeletedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomerDeletedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomerDeletedMessage of(final CustomerDeletedMessage template) {
         CustomerDeletedMessageImpl instance = new CustomerDeletedMessageImpl();
         instance.setId(template.getId());
@@ -54,18 +66,37 @@ public interface CustomerDeletedMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for CustomerDeletedMessage
+     * @return builder
+     */
     public static CustomerDeletedMessageBuilder builder() {
         return CustomerDeletedMessageBuilder.of();
     }
 
+    /**
+     * create builder for CustomerDeletedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerDeletedMessageBuilder builder(final CustomerDeletedMessage template) {
         return CustomerDeletedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomerDeletedMessage(Function<CustomerDeletedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomerDeletedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomerDeletedMessage>() {
             @Override

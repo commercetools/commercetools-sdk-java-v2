@@ -53,7 +53,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
     }
 
     /**
-     *
+     * set values to the includedDiscounts
      * @param includedDiscounts value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
     }
 
     /**
-     *
+     * set value to the includedDiscounts
      * @param includedDiscounts value to be set
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
     }
 
     /**
-     *
+     * add values to the includedDiscounts
      * @param includedDiscounts value to be set
      * @return Builder
      */
@@ -92,7 +92,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
     }
 
     /**
-     *
+     * add the value to the includedDiscounts using the builder function
      * @param builder function to build the includedDiscounts value
      * @return Builder
      */
@@ -108,7 +108,7 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
     }
 
     /**
-     *
+     * set the value to the includedDiscounts using the builder function
      * @param builder function to build the includedDiscounts value
      * @return Builder
      */
@@ -121,9 +121,20 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
         return this;
     }
 
+    /**
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @return value
+     */
+
     public com.commercetools.api.models.common.Money getValue() {
         return this.value;
     }
+
+    /**
+     * value of includedDiscounts}
+     * @return includedDiscounts
+     */
 
     public java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPortion> getIncludedDiscounts() {
         return this.includedDiscounts;
@@ -148,10 +159,19 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
         return new DiscountedLineItemPriceDraftImpl(value, includedDiscounts);
     }
 
+    /**
+     * factory method for an instance of DiscountedLineItemPriceDraftBuilder
+     * @return builder
+     */
     public static DiscountedLineItemPriceDraftBuilder of() {
         return new DiscountedLineItemPriceDraftBuilder();
     }
 
+    /**
+     * create builder for DiscountedLineItemPriceDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DiscountedLineItemPriceDraftBuilder of(final DiscountedLineItemPriceDraft template) {
         DiscountedLineItemPriceDraftBuilder builder = new DiscountedLineItemPriceDraftBuilder();
         builder.value = template.getValue();

@@ -34,6 +34,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderChangeLineItemQuantityActionImpl.class)
 public interface StagedOrderChangeLineItemQuantityAction extends StagedOrderUpdateAction {
 
+    /**
+     * discriminator value for StagedOrderChangeLineItemQuantityAction
+     */
     String CHANGE_LINE_ITEM_QUANTITY = "changeLineItemQuantity";
 
     /**
@@ -69,18 +72,48 @@ public interface StagedOrderChangeLineItemQuantityAction extends StagedOrderUpda
     @JsonProperty("externalTotalPrice")
     public ExternalLineItemTotalPrice getExternalTotalPrice();
 
+    /**
+     * set lineItemId
+     * @param lineItemId value to be set
+     */
+
     public void setLineItemId(final String lineItemId);
+
+    /**
+     * set quantity
+     * @param quantity value to be set
+     */
 
     public void setQuantity(final Long quantity);
 
+    /**
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @param externalPrice value to be set
+     */
+
     public void setExternalPrice(final Money externalPrice);
+
+    /**
+     * set externalTotalPrice
+     * @param externalTotalPrice value to be set
+     */
 
     public void setExternalTotalPrice(final ExternalLineItemTotalPrice externalTotalPrice);
 
+    /**
+     * factory method
+     * @return instance of StagedOrderChangeLineItemQuantityAction
+     */
     public static StagedOrderChangeLineItemQuantityAction of() {
         return new StagedOrderChangeLineItemQuantityActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of StagedOrderChangeLineItemQuantityAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static StagedOrderChangeLineItemQuantityAction of(final StagedOrderChangeLineItemQuantityAction template) {
         StagedOrderChangeLineItemQuantityActionImpl instance = new StagedOrderChangeLineItemQuantityActionImpl();
         instance.setLineItemId(template.getLineItemId());
@@ -90,20 +123,39 @@ public interface StagedOrderChangeLineItemQuantityAction extends StagedOrderUpda
         return instance;
     }
 
+    /**
+     * builder factory method for StagedOrderChangeLineItemQuantityAction
+     * @return builder
+     */
     public static StagedOrderChangeLineItemQuantityActionBuilder builder() {
         return StagedOrderChangeLineItemQuantityActionBuilder.of();
     }
 
+    /**
+     * create builder for StagedOrderChangeLineItemQuantityAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderChangeLineItemQuantityActionBuilder builder(
             final StagedOrderChangeLineItemQuantityAction template) {
         return StagedOrderChangeLineItemQuantityActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withStagedOrderChangeLineItemQuantityAction(
             Function<StagedOrderChangeLineItemQuantityAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<StagedOrderChangeLineItemQuantityAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<StagedOrderChangeLineItemQuantityAction>() {
             @Override

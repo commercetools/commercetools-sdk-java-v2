@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductDraftImportRequestImpl.class)
 public interface ProductDraftImportRequest extends ImportRequest {
 
+    /**
+     * discriminator value for ProductDraftImportRequest
+     */
     String PRODUCT_DRAFT = "product-draft";
 
     /**
@@ -42,33 +45,71 @@ public interface ProductDraftImportRequest extends ImportRequest {
     @JsonProperty("resources")
     public List<ProductDraftImport> getResources();
 
+    /**
+     *  <p>The product draft import resources of this request.</p>
+     * @param resources values to be set
+     */
+
     @JsonIgnore
     public void setResources(final ProductDraftImport... resources);
 
+    /**
+     *  <p>The product draft import resources of this request.</p>
+     * @param resources values to be set
+     */
+
     public void setResources(final List<ProductDraftImport> resources);
 
+    /**
+     * factory method
+     * @return instance of ProductDraftImportRequest
+     */
     public static ProductDraftImportRequest of() {
         return new ProductDraftImportRequestImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductDraftImportRequest
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductDraftImportRequest of(final ProductDraftImportRequest template) {
         ProductDraftImportRequestImpl instance = new ProductDraftImportRequestImpl();
         instance.setResources(template.getResources());
         return instance;
     }
 
+    /**
+     * builder factory method for ProductDraftImportRequest
+     * @return builder
+     */
     public static ProductDraftImportRequestBuilder builder() {
         return ProductDraftImportRequestBuilder.of();
     }
 
+    /**
+     * create builder for ProductDraftImportRequest instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductDraftImportRequestBuilder builder(final ProductDraftImportRequest template) {
         return ProductDraftImportRequestBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductDraftImportRequest(Function<ProductDraftImportRequest, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductDraftImportRequest> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductDraftImportRequest>() {
             @Override

@@ -34,6 +34,11 @@ public class PaymentSetStatusInterfaceTextActionBuilder implements Builder<Payme
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return interfaceText
+     */
+
     public String getInterfaceText() {
         return this.interfaceText;
     }
@@ -55,10 +60,19 @@ public class PaymentSetStatusInterfaceTextActionBuilder implements Builder<Payme
         return new PaymentSetStatusInterfaceTextActionImpl(interfaceText);
     }
 
+    /**
+     * factory method for an instance of PaymentSetStatusInterfaceTextActionBuilder
+     * @return builder
+     */
     public static PaymentSetStatusInterfaceTextActionBuilder of() {
         return new PaymentSetStatusInterfaceTextActionBuilder();
     }
 
+    /**
+     * create builder for PaymentSetStatusInterfaceTextAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentSetStatusInterfaceTextActionBuilder of(final PaymentSetStatusInterfaceTextAction template) {
         PaymentSetStatusInterfaceTextActionBuilder builder = new PaymentSetStatusInterfaceTextActionBuilder();
         builder.interfaceText = template.getInterfaceText();

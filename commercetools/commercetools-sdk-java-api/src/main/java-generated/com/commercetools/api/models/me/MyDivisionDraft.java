@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MyDivisionDraftImpl.class)
 public interface MyDivisionDraft extends MyBusinessUnitDraft, io.vrap.rmf.base.client.Draft<MyDivisionDraft> {
 
+    /**
+     * discriminator value for MyDivisionDraft
+     */
     String DIVISION = "Division";
 
     /**
@@ -44,12 +47,26 @@ public interface MyDivisionDraft extends MyBusinessUnitDraft, io.vrap.rmf.base.c
     @JsonProperty("parentUnit")
     public BusinessUnitResourceIdentifier getParentUnit();
 
+    /**
+     *  <p>The parent unit of this Division. Can be a Company or a Division.</p>
+     * @param parentUnit value to be set
+     */
+
     public void setParentUnit(final BusinessUnitResourceIdentifier parentUnit);
 
+    /**
+     * factory method
+     * @return instance of MyDivisionDraft
+     */
     public static MyDivisionDraft of() {
         return new MyDivisionDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of MyDivisionDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static MyDivisionDraft of(final MyDivisionDraft template) {
         MyDivisionDraftImpl instance = new MyDivisionDraftImpl();
         instance.setKey(template.getKey());
@@ -65,18 +82,37 @@ public interface MyDivisionDraft extends MyBusinessUnitDraft, io.vrap.rmf.base.c
         return instance;
     }
 
+    /**
+     * builder factory method for MyDivisionDraft
+     * @return builder
+     */
     public static MyDivisionDraftBuilder builder() {
         return MyDivisionDraftBuilder.of();
     }
 
+    /**
+     * create builder for MyDivisionDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyDivisionDraftBuilder builder(final MyDivisionDraft template) {
         return MyDivisionDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withMyDivisionDraft(Function<MyDivisionDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<MyDivisionDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<MyDivisionDraft>() {
             @Override

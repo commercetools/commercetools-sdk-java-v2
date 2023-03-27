@@ -24,12 +24,18 @@ public class CartRemoveShippingMethodActionImpl implements CartRemoveShippingMet
 
     private String shippingKey;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartRemoveShippingMethodActionImpl(@JsonProperty("shippingKey") final String shippingKey) {
         this.shippingKey = shippingKey;
         this.action = REMOVE_SHIPPING_METHOD;
     }
 
+    /**
+     * create empty instance
+     */
     public CartRemoveShippingMethodActionImpl() {
         this.action = REMOVE_SHIPPING_METHOD;
     }

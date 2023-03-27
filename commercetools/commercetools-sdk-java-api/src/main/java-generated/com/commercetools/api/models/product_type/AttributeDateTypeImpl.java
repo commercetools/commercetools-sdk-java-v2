@@ -21,6 +21,9 @@ public class AttributeDateTypeImpl implements AttributeDateType, ModelBase {
 
     private String name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AttributeDateTypeImpl() {
         this.name = DATE;

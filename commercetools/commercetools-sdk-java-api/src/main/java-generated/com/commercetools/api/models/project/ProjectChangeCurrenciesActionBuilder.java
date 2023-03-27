@@ -59,6 +59,11 @@ public class ProjectChangeCurrenciesActionBuilder implements Builder<ProjectChan
         return this;
     }
 
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     * @return currencies
+     */
+
     public java.util.List<String> getCurrencies() {
         return this.currencies;
     }
@@ -80,10 +85,19 @@ public class ProjectChangeCurrenciesActionBuilder implements Builder<ProjectChan
         return new ProjectChangeCurrenciesActionImpl(currencies);
     }
 
+    /**
+     * factory method for an instance of ProjectChangeCurrenciesActionBuilder
+     * @return builder
+     */
     public static ProjectChangeCurrenciesActionBuilder of() {
         return new ProjectChangeCurrenciesActionBuilder();
     }
 
+    /**
+     * create builder for ProjectChangeCurrenciesAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProjectChangeCurrenciesActionBuilder of(final ProjectChangeCurrenciesAction template) {
         ProjectChangeCurrenciesActionBuilder builder = new ProjectChangeCurrenciesActionBuilder();
         builder.currencies = template.getCurrencies();

@@ -30,7 +30,7 @@ public class StagedOrderSetLineItemPriceActionBuilder implements Builder<StagedO
     private com.commercetools.api.models.common.Money externalPrice;
 
     /**
-     *
+     * set the value to the lineItemId
      * @param lineItemId value to be set
      * @return Builder
      */
@@ -66,9 +66,20 @@ public class StagedOrderSetLineItemPriceActionBuilder implements Builder<StagedO
         return this;
     }
 
+    /**
+     * value of lineItemId}
+     * @return lineItemId
+     */
+
     public String getLineItemId() {
         return this.lineItemId;
     }
+
+    /**
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @return externalPrice
+     */
 
     @Nullable
     public com.commercetools.api.models.common.Money getExternalPrice() {
@@ -92,10 +103,19 @@ public class StagedOrderSetLineItemPriceActionBuilder implements Builder<StagedO
         return new StagedOrderSetLineItemPriceActionImpl(lineItemId, externalPrice);
     }
 
+    /**
+     * factory method for an instance of StagedOrderSetLineItemPriceActionBuilder
+     * @return builder
+     */
     public static StagedOrderSetLineItemPriceActionBuilder of() {
         return new StagedOrderSetLineItemPriceActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderSetLineItemPriceAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetLineItemPriceActionBuilder of(final StagedOrderSetLineItemPriceAction template) {
         StagedOrderSetLineItemPriceActionBuilder builder = new StagedOrderSetLineItemPriceActionBuilder();
         builder.lineItemId = template.getLineItemId();

@@ -46,6 +46,9 @@ public class OrderLineItemAddedMessageImpl implements OrderLineItemAddedMessage,
 
     private Long addedQuantity;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderLineItemAddedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -73,6 +76,9 @@ public class OrderLineItemAddedMessageImpl implements OrderLineItemAddedMessage,
         this.type = ORDER_LINE_ITEM_ADDED;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderLineItemAddedMessageImpl() {
         this.type = ORDER_LINE_ITEM_ADDED;
     }

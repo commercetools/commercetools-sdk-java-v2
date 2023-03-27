@@ -28,6 +28,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TaxCategoryResourceIdentifier
         extends ResourceIdentifier, com.commercetools.api.models.Identifiable<TaxCategory> {
 
+    /**
+     * discriminator value for TaxCategoryResourceIdentifier
+     */
     String TAX_CATEGORY = "tax-category";
 
     /**
@@ -46,14 +49,33 @@ public interface TaxCategoryResourceIdentifier
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     *  <p>Unique identifier of the referenced TaxCategory. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>User-defined unique identifier of the referenced TaxCategory. Either <code>id</code> or <code>key</code> is required.</p>
+     * @param key value to be set
+     */
 
     public void setKey(final String key);
 
+    /**
+     * factory method
+     * @return instance of TaxCategoryResourceIdentifier
+     */
     public static TaxCategoryResourceIdentifier of() {
         return new TaxCategoryResourceIdentifierImpl();
     }
 
+    /**
+     * factory method to copy an instance of TaxCategoryResourceIdentifier
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static TaxCategoryResourceIdentifier of(final TaxCategoryResourceIdentifier template) {
         TaxCategoryResourceIdentifierImpl instance = new TaxCategoryResourceIdentifierImpl();
         instance.setId(template.getId());
@@ -61,18 +83,37 @@ public interface TaxCategoryResourceIdentifier
         return instance;
     }
 
+    /**
+     * builder factory method for TaxCategoryResourceIdentifier
+     * @return builder
+     */
     public static TaxCategoryResourceIdentifierBuilder builder() {
         return TaxCategoryResourceIdentifierBuilder.of();
     }
 
+    /**
+     * create builder for TaxCategoryResourceIdentifier instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TaxCategoryResourceIdentifierBuilder builder(final TaxCategoryResourceIdentifier template) {
         return TaxCategoryResourceIdentifierBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTaxCategoryResourceIdentifier(Function<TaxCategoryResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<TaxCategoryResourceIdentifier> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TaxCategoryResourceIdentifier>() {
             @Override

@@ -26,6 +26,9 @@ public class ProductTypeAddLocalizedEnumValueActionImpl implements ProductTypeAd
 
     private com.commercetools.api.models.product_type.AttributeLocalizedEnumValue value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductTypeAddLocalizedEnumValueActionImpl(@JsonProperty("attributeName") final String attributeName,
             @JsonProperty("value") final com.commercetools.api.models.product_type.AttributeLocalizedEnumValue value) {
@@ -34,6 +37,9 @@ public class ProductTypeAddLocalizedEnumValueActionImpl implements ProductTypeAd
         this.action = ADD_LOCALIZED_ENUM_VALUE;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductTypeAddLocalizedEnumValueActionImpl() {
         this.action = ADD_LOCALIZED_ENUM_VALUE;
     }

@@ -46,14 +46,33 @@ public interface OrderEditApply {
     @JsonProperty("resourceVersion")
     public Long getResourceVersion();
 
+    /**
+     * set editVersion
+     * @param editVersion value to be set
+     */
+
     public void setEditVersion(final Long editVersion);
+
+    /**
+     * set resourceVersion
+     * @param resourceVersion value to be set
+     */
 
     public void setResourceVersion(final Long resourceVersion);
 
+    /**
+     * factory method
+     * @return instance of OrderEditApply
+     */
     public static OrderEditApply of() {
         return new OrderEditApplyImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderEditApply
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderEditApply of(final OrderEditApply template) {
         OrderEditApplyImpl instance = new OrderEditApplyImpl();
         instance.setEditVersion(template.getEditVersion());
@@ -61,18 +80,37 @@ public interface OrderEditApply {
         return instance;
     }
 
+    /**
+     * builder factory method for OrderEditApply
+     * @return builder
+     */
     public static OrderEditApplyBuilder builder() {
         return OrderEditApplyBuilder.of();
     }
 
+    /**
+     * create builder for OrderEditApply instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderEditApplyBuilder builder(final OrderEditApply template) {
         return OrderEditApplyBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderEditApply(Function<OrderEditApply, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderEditApply> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderEditApply>() {
             @Override

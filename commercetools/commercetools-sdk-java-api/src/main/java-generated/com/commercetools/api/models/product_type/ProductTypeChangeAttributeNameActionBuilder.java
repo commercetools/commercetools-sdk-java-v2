@@ -49,9 +49,20 @@ public class ProductTypeChangeAttributeNameActionBuilder implements Builder<Prod
         return this;
     }
 
+    /**
+     *  <p>Name of the AttributeDefinition to update.</p>
+     * @return attributeName
+     */
+
     public String getAttributeName() {
         return this.attributeName;
     }
+
+    /**
+     *  <p>New user-defined name of the Attribute that is unique with the Project.</p>
+     *  <p>When using the same <code>name</code> for an Attribute in two or more ProductTypes, all fields of the AttributeDefinition of this Attribute must be the same across the ProductTypes. If not, an AttributeDefinitionAlreadyExists error is returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> type and sets thereof.</p>
+     * @return newAttributeName
+     */
 
     public String getNewAttributeName() {
         return this.newAttributeName;
@@ -77,10 +88,19 @@ public class ProductTypeChangeAttributeNameActionBuilder implements Builder<Prod
         return new ProductTypeChangeAttributeNameActionImpl(attributeName, newAttributeName);
     }
 
+    /**
+     * factory method for an instance of ProductTypeChangeAttributeNameActionBuilder
+     * @return builder
+     */
     public static ProductTypeChangeAttributeNameActionBuilder of() {
         return new ProductTypeChangeAttributeNameActionBuilder();
     }
 
+    /**
+     * create builder for ProductTypeChangeAttributeNameAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductTypeChangeAttributeNameActionBuilder of(final ProductTypeChangeAttributeNameAction template) {
         ProductTypeChangeAttributeNameActionBuilder builder = new ProductTypeChangeAttributeNameActionBuilder();
         builder.attributeName = template.getAttributeName();

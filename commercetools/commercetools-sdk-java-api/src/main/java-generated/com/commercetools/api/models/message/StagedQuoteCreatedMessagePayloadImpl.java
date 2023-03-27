@@ -24,6 +24,9 @@ public class StagedQuoteCreatedMessagePayloadImpl implements StagedQuoteCreatedM
 
     private com.commercetools.api.models.staged_quote.StagedQuote stagedQuote;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedQuoteCreatedMessagePayloadImpl(
             @JsonProperty("stagedQuote") final com.commercetools.api.models.staged_quote.StagedQuote stagedQuote) {
@@ -31,6 +34,9 @@ public class StagedQuoteCreatedMessagePayloadImpl implements StagedQuoteCreatedM
         this.type = STAGED_QUOTE_CREATED;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedQuoteCreatedMessagePayloadImpl() {
         this.type = STAGED_QUOTE_CREATED;
     }

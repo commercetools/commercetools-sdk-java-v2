@@ -28,7 +28,7 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
     private java.util.List<com.commercetools.api.models.message.MessagePayload> messagePayloads;
 
     /**
-     *
+     * set the value to the preview using the builder function
      * @param builder function to build the preview value
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
     }
 
     /**
-     *
+     * set the value to the preview
      * @param preview value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
     }
 
     /**
-     *
+     * set values to the messagePayloads
      * @param messagePayloads value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
     }
 
     /**
-     *
+     * set value to the messagePayloads
      * @param messagePayloads value to be set
      * @return Builder
      */
@@ -75,7 +75,7 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
     }
 
     /**
-     *
+     * add values to the messagePayloads
      * @param messagePayloads value to be set
      * @return Builder
      */
@@ -90,7 +90,7 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
     }
 
     /**
-     *
+     * add a value to the messagePayloads using the builder function
      * @param builder function to build the messagePayloads value
      * @return Builder
      */
@@ -106,7 +106,7 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
     }
 
     /**
-     *
+     * set the value to the messagePayloads using the builder function
      * @param builder function to build the messagePayloads value
      * @return Builder
      */
@@ -119,9 +119,19 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
         return this;
     }
 
+    /**
+     * value of preview}
+     * @return preview
+     */
+
     public com.commercetools.api.models.order_edit.StagedOrder getPreview() {
         return this.preview;
     }
+
+    /**
+     * value of messagePayloads}
+     * @return messagePayloads
+     */
 
     public java.util.List<com.commercetools.api.models.message.MessagePayload> getMessagePayloads() {
         return this.messagePayloads;
@@ -145,10 +155,19 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
         return new OrderEditPreviewSuccessImpl(preview, messagePayloads);
     }
 
+    /**
+     * factory method for an instance of OrderEditPreviewSuccessBuilder
+     * @return builder
+     */
     public static OrderEditPreviewSuccessBuilder of() {
         return new OrderEditPreviewSuccessBuilder();
     }
 
+    /**
+     * create builder for OrderEditPreviewSuccess instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderEditPreviewSuccessBuilder of(final OrderEditPreviewSuccess template) {
         OrderEditPreviewSuccessBuilder builder = new OrderEditPreviewSuccessBuilder();
         builder.preview = template.getPreview();

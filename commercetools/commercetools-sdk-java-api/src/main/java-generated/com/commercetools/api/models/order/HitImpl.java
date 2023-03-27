@@ -26,6 +26,9 @@ public class HitImpl implements Hit, ModelBase {
 
     private Double relevance;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     HitImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("relevance") final Double relevance) {
@@ -34,6 +37,9 @@ public class HitImpl implements Hit, ModelBase {
         this.relevance = relevance;
     }
 
+    /**
+     * create empty instance
+     */
     public HitImpl() {
     }
 

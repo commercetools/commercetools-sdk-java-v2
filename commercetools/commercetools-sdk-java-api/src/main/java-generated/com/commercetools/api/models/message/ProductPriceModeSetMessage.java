@@ -37,6 +37,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductPriceModeSetMessageImpl.class)
 public interface ProductPriceModeSetMessage extends Message {
 
+    /**
+     * discriminator value for ProductPriceModeSetMessage
+     */
     String PRODUCT_PRICE_MODE_SET = "ProductPriceModeSet";
 
     /**
@@ -47,12 +50,26 @@ public interface ProductPriceModeSetMessage extends Message {
     @JsonProperty("to")
     public ProductPriceModeEnum getTo();
 
+    /**
+     *  <p>The PriceMode that was set.</p>
+     * @param to value to be set
+     */
+
     public void setTo(final ProductPriceModeEnum to);
 
+    /**
+     * factory method
+     * @return instance of ProductPriceModeSetMessage
+     */
     public static ProductPriceModeSetMessage of() {
         return new ProductPriceModeSetMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductPriceModeSetMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductPriceModeSetMessage of(final ProductPriceModeSetMessage template) {
         ProductPriceModeSetMessageImpl instance = new ProductPriceModeSetMessageImpl();
         instance.setId(template.getId());
@@ -69,18 +86,37 @@ public interface ProductPriceModeSetMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductPriceModeSetMessage
+     * @return builder
+     */
     public static ProductPriceModeSetMessageBuilder builder() {
         return ProductPriceModeSetMessageBuilder.of();
     }
 
+    /**
+     * create builder for ProductPriceModeSetMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductPriceModeSetMessageBuilder builder(final ProductPriceModeSetMessage template) {
         return ProductPriceModeSetMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductPriceModeSetMessage(Function<ProductPriceModeSetMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductPriceModeSetMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductPriceModeSetMessage>() {
             @Override

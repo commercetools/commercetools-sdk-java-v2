@@ -24,7 +24,7 @@ public class OrderChangeOrderStateActionBuilder implements Builder<OrderChangeOr
     private com.commercetools.api.models.order.OrderState orderState;
 
     /**
-     *
+     * set the value to the orderState
      * @param orderState value to be set
      * @return Builder
      */
@@ -34,6 +34,11 @@ public class OrderChangeOrderStateActionBuilder implements Builder<OrderChangeOr
         this.orderState = orderState;
         return this;
     }
+
+    /**
+     * value of orderState}
+     * @return orderState
+     */
 
     public com.commercetools.api.models.order.OrderState getOrderState() {
         return this.orderState;
@@ -56,10 +61,19 @@ public class OrderChangeOrderStateActionBuilder implements Builder<OrderChangeOr
         return new OrderChangeOrderStateActionImpl(orderState);
     }
 
+    /**
+     * factory method for an instance of OrderChangeOrderStateActionBuilder
+     * @return builder
+     */
     public static OrderChangeOrderStateActionBuilder of() {
         return new OrderChangeOrderStateActionBuilder();
     }
 
+    /**
+     * create builder for OrderChangeOrderStateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderChangeOrderStateActionBuilder of(final OrderChangeOrderStateAction template) {
         OrderChangeOrderStateActionBuilder builder = new OrderChangeOrderStateActionBuilder();
         builder.orderState = template.getOrderState();

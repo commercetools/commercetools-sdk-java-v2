@@ -24,6 +24,9 @@ public class StoreRemoveCountryActionImpl implements StoreRemoveCountryAction, M
 
     private com.commercetools.api.models.store_country.StoreCountry country;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StoreRemoveCountryActionImpl(
             @JsonProperty("country") final com.commercetools.api.models.store_country.StoreCountry country) {
@@ -31,6 +34,9 @@ public class StoreRemoveCountryActionImpl implements StoreRemoveCountryAction, M
         this.action = REMOVE_COUNTRY;
     }
 
+    /**
+     * create empty instance
+     */
     public StoreRemoveCountryActionImpl() {
         this.action = REMOVE_COUNTRY;
     }

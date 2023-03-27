@@ -28,6 +28,9 @@ public class ProductPublishedMessagePayloadImpl implements ProductPublishedMessa
 
     private com.commercetools.api.models.cart.ProductPublishScope scope;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductPublishedMessagePayloadImpl(@JsonProperty("removedImageUrls") final java.util.List<String> removedImageUrls,
             @JsonProperty("productProjection") final com.commercetools.api.models.product.ProductProjection productProjection,
@@ -38,6 +41,9 @@ public class ProductPublishedMessagePayloadImpl implements ProductPublishedMessa
         this.type = PRODUCT_PUBLISHED;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductPublishedMessagePayloadImpl() {
         this.type = PRODUCT_PUBLISHED;
     }

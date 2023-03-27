@@ -34,6 +34,9 @@ public class ReviewStateTransitionMessagePayloadImpl implements ReviewStateTrans
 
     private Boolean force;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReviewStateTransitionMessagePayloadImpl(
             @JsonProperty("oldState") final com.commercetools.api.models.state.StateReference oldState,
@@ -51,6 +54,9 @@ public class ReviewStateTransitionMessagePayloadImpl implements ReviewStateTrans
         this.type = REVIEW_STATE_TRANSITION;
     }
 
+    /**
+     * create empty instance
+     */
     public ReviewStateTransitionMessagePayloadImpl() {
         this.type = REVIEW_STATE_TRANSITION;
     }

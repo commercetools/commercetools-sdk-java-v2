@@ -37,7 +37,7 @@ public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarPr
     private com.commercetools.ml.models.similar_products.SimilarProductSearchRequestMeta meta;
 
     /**
-     *
+     * set the value to the count
      * @param count value to be set
      * @return Builder
      */
@@ -48,7 +48,7 @@ public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarPr
     }
 
     /**
-     *
+     * set the value to the total
      * @param total value to be set
      * @return Builder
      */
@@ -70,7 +70,7 @@ public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarPr
     }
 
     /**
-     *
+     * set values to the results
      * @param results value to be set
      * @return Builder
      */
@@ -82,7 +82,7 @@ public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarPr
     }
 
     /**
-     *
+     * set value to the results
      * @param results value to be set
      * @return Builder
      */
@@ -94,7 +94,7 @@ public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarPr
     }
 
     /**
-     *
+     * add values to the results
      * @param results value to be set
      * @return Builder
      */
@@ -109,7 +109,7 @@ public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarPr
     }
 
     /**
-     *
+     * add the value to the results using the builder function
      * @param builder function to build the results value
      * @return Builder
      */
@@ -125,7 +125,7 @@ public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarPr
     }
 
     /**
-     *
+     * set the value to the results using the builder function
      * @param builder function to build the results value
      * @return Builder
      */
@@ -139,7 +139,7 @@ public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarPr
     }
 
     /**
-     *
+     * set the value to the meta using the builder function
      * @param builder function to build the meta value
      * @return Builder
      */
@@ -153,7 +153,7 @@ public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarPr
     }
 
     /**
-     *
+     * set the value to the meta
      * @param meta value to be set
      * @return Builder
      */
@@ -164,21 +164,46 @@ public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarPr
         return this;
     }
 
+    /**
+     * value of count}
+     * @return count
+     */
+
     public Long getCount() {
         return this.count;
     }
+
+    /**
+     * value of total}
+     * @return total
+     */
 
     public Long getTotal() {
         return this.total;
     }
 
+    /**
+     *  <p>Number of elements skipped.</p>
+     * @return offset
+     */
+
     public Long getOffset() {
         return this.offset;
     }
 
+    /**
+     * value of results}
+     * @return results
+     */
+
     public java.util.List<com.commercetools.ml.models.similar_products.SimilarProductPair> getResults() {
         return this.results;
     }
+
+    /**
+     * value of meta}
+     * @return meta
+     */
 
     public com.commercetools.ml.models.similar_products.SimilarProductSearchRequestMeta getMeta() {
         return this.meta;
@@ -205,10 +230,19 @@ public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarPr
         return new SimilarProductsPagedQueryResultImpl(count, total, offset, results, meta);
     }
 
+    /**
+     * factory method for an instance of SimilarProductsPagedQueryResultBuilder
+     * @return builder
+     */
     public static SimilarProductsPagedQueryResultBuilder of() {
         return new SimilarProductsPagedQueryResultBuilder();
     }
 
+    /**
+     * create builder for SimilarProductsPagedQueryResult instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SimilarProductsPagedQueryResultBuilder of(final SimilarProductsPagedQueryResult template) {
         SimilarProductsPagedQueryResultBuilder builder = new SimilarProductsPagedQueryResultBuilder();
         builder.count = template.getCount();

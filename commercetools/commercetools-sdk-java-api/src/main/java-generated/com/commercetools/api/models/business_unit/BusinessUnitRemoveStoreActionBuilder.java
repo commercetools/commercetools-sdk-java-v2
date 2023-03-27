@@ -48,6 +48,11 @@ public class BusinessUnitRemoveStoreActionBuilder implements Builder<BusinessUni
         return this;
     }
 
+    /**
+     *  <p>Store to remove.</p>
+     * @return store
+     */
+
     public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {
         return this.store;
     }
@@ -69,10 +74,19 @@ public class BusinessUnitRemoveStoreActionBuilder implements Builder<BusinessUni
         return new BusinessUnitRemoveStoreActionImpl(store);
     }
 
+    /**
+     * factory method for an instance of BusinessUnitRemoveStoreActionBuilder
+     * @return builder
+     */
     public static BusinessUnitRemoveStoreActionBuilder of() {
         return new BusinessUnitRemoveStoreActionBuilder();
     }
 
+    /**
+     * create builder for BusinessUnitRemoveStoreAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitRemoveStoreActionBuilder of(final BusinessUnitRemoveStoreAction template) {
         BusinessUnitRemoveStoreActionBuilder builder = new BusinessUnitRemoveStoreActionBuilder();
         builder.store = template.getStore();

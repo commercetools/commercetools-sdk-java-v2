@@ -127,6 +127,10 @@ public class ResourceIdentifierBuilder {
         return com.commercetools.api.models.zone.ZoneResourceIdentifierBuilder.of();
     }
 
+    /**
+     * factory method for an instance of ResourceIdentifierBuilder
+     * @return builder
+     */
     public static ResourceIdentifierBuilder of() {
         return new ResourceIdentifierBuilder();
     }

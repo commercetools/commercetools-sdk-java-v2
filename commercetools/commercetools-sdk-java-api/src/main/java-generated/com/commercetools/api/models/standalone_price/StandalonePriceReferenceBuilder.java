@@ -64,9 +64,19 @@ public class StandalonePriceReferenceBuilder implements Builder<StandalonePriceR
         return this;
     }
 
+    /**
+     *  <p>Unique ID of the referenced resource.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Contains the representation of the expanded StandalonePrice. Only present in responses to requests with Reference Expansion for StandalonePrice.</p>
+     * @return obj
+     */
 
     @Nullable
     public com.commercetools.api.models.standalone_price.StandalonePrice getObj() {
@@ -90,10 +100,19 @@ public class StandalonePriceReferenceBuilder implements Builder<StandalonePriceR
         return new StandalonePriceReferenceImpl(id, obj);
     }
 
+    /**
+     * factory method for an instance of StandalonePriceReferenceBuilder
+     * @return builder
+     */
     public static StandalonePriceReferenceBuilder of() {
         return new StandalonePriceReferenceBuilder();
     }
 
+    /**
+     * create builder for StandalonePriceReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StandalonePriceReferenceBuilder of(final StandalonePriceReference template) {
         StandalonePriceReferenceBuilder builder = new StandalonePriceReferenceBuilder();
         builder.id = template.getId();

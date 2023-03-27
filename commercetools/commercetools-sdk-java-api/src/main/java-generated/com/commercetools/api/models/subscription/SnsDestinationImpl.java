@@ -33,6 +33,9 @@ public class SnsDestinationImpl implements SnsDestination, ModelBase {
 
     private com.commercetools.api.models.subscription.AwsAuthenticationMode authenticationMode;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SnsDestinationImpl(@JsonProperty("accessKey") final String accessKey,
             @JsonProperty("accessSecret") final String accessSecret, @JsonProperty("topicArn") final String topicArn,
@@ -44,6 +47,9 @@ public class SnsDestinationImpl implements SnsDestination, ModelBase {
         this.type = SNS;
     }
 
+    /**
+     * create empty instance
+     */
     public SnsDestinationImpl() {
         this.type = SNS;
     }

@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetLastNameChangeImpl.class)
 public interface SetLastNameChange extends Change {
 
+    /**
+     * discriminator value for SetLastNameChange
+     */
     String SET_LAST_NAME_CHANGE = "SetLastNameChange";
 
     /**
@@ -65,16 +68,40 @@ public interface SetLastNameChange extends Change {
     @JsonProperty("nextValue")
     public String getNextValue();
 
+    /**
+     *  <p>Shape of the action for <code>setLastName</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
 
     public void setPreviousValue(final String previousValue);
 
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
+
     public void setNextValue(final String nextValue);
 
+    /**
+     * factory method
+     * @return instance of SetLastNameChange
+     */
     public static SetLastNameChange of() {
         return new SetLastNameChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetLastNameChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetLastNameChange of(final SetLastNameChange template) {
         SetLastNameChangeImpl instance = new SetLastNameChangeImpl();
         instance.setChange(template.getChange());
@@ -83,18 +110,37 @@ public interface SetLastNameChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetLastNameChange
+     * @return builder
+     */
     public static SetLastNameChangeBuilder builder() {
         return SetLastNameChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetLastNameChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetLastNameChangeBuilder builder(final SetLastNameChange template) {
         return SetLastNameChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetLastNameChange(Function<SetLastNameChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetLastNameChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetLastNameChange>() {
             @Override

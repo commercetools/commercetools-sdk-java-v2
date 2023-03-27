@@ -75,20 +75,54 @@ public interface TextLineItemDraft extends com.commercetools.api.models.Customiz
     @JsonProperty("quantity")
     public Long getQuantity();
 
+    /**
+     *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     * @param addedAt value to be set
+     */
+
     public void setAddedAt(final ZonedDateTime addedAt);
+
+    /**
+     *  <p>Custom Fields for the TextLineItem.</p>
+     * @param custom value to be set
+     */
 
     public void setCustom(final CustomFieldsDraft custom);
 
+    /**
+     *  <p>Description of the TextLineItem.</p>
+     * @param description value to be set
+     */
+
     public void setDescription(final LocalizedString description);
+
+    /**
+     *  <p>Name of the TextLineItem.</p>
+     * @param name value to be set
+     */
 
     public void setName(final LocalizedString name);
 
+    /**
+     *  <p>Number of entries in the TextLineItem.</p>
+     * @param quantity value to be set
+     */
+
     public void setQuantity(final Long quantity);
 
+    /**
+     * factory method
+     * @return instance of TextLineItemDraft
+     */
     public static TextLineItemDraft of() {
         return new TextLineItemDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of TextLineItemDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static TextLineItemDraft of(final TextLineItemDraft template) {
         TextLineItemDraftImpl instance = new TextLineItemDraftImpl();
         instance.setAddedAt(template.getAddedAt());
@@ -99,18 +133,37 @@ public interface TextLineItemDraft extends com.commercetools.api.models.Customiz
         return instance;
     }
 
+    /**
+     * builder factory method for TextLineItemDraft
+     * @return builder
+     */
     public static TextLineItemDraftBuilder builder() {
         return TextLineItemDraftBuilder.of();
     }
 
+    /**
+     * create builder for TextLineItemDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TextLineItemDraftBuilder builder(final TextLineItemDraft template) {
         return TextLineItemDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTextLineItemDraft(Function<TextLineItemDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<TextLineItemDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TextLineItemDraft>() {
             @Override

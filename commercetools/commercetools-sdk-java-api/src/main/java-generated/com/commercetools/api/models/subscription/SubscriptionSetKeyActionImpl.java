@@ -24,12 +24,18 @@ public class SubscriptionSetKeyActionImpl implements SubscriptionSetKeyAction, M
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SubscriptionSetKeyActionImpl(@JsonProperty("key") final String key) {
         this.key = key;
         this.action = SET_KEY;
     }
 
+    /**
+     * create empty instance
+     */
     public SubscriptionSetKeyActionImpl() {
         this.action = SET_KEY;
     }

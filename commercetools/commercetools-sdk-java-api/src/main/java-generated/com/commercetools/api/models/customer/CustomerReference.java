@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomerReferenceImpl.class)
 public interface CustomerReference extends Reference, com.commercetools.api.models.Identifiable<Customer> {
 
+    /**
+     * discriminator value for CustomerReference
+     */
     String CUSTOMER = "customer";
 
     /**
@@ -49,14 +52,33 @@ public interface CustomerReference extends Reference, com.commercetools.api.mode
     @JsonProperty("id")
     public String getId();
 
+    /**
+     *  <p>Contains the representation of the expanded Customer. Only present in responses to requests with Reference Expansion for Customers.</p>
+     * @param obj value to be set
+     */
+
     public void setObj(final Customer obj);
+
+    /**
+     *  <p>Unique identifier of the referenced Customer.</p>
+     * @param id value to be set
+     */
 
     public void setId(final String id);
 
+    /**
+     * factory method
+     * @return instance of CustomerReference
+     */
     public static CustomerReference of() {
         return new CustomerReferenceImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomerReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomerReference of(final CustomerReference template) {
         CustomerReferenceImpl instance = new CustomerReferenceImpl();
         instance.setId(template.getId());
@@ -64,18 +86,37 @@ public interface CustomerReference extends Reference, com.commercetools.api.mode
         return instance;
     }
 
+    /**
+     * builder factory method for CustomerReference
+     * @return builder
+     */
     public static CustomerReferenceBuilder builder() {
         return CustomerReferenceBuilder.of();
     }
 
+    /**
+     * create builder for CustomerReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerReferenceBuilder builder(final CustomerReference template) {
         return CustomerReferenceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomerReference(Function<CustomerReference, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomerReference> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomerReference>() {
             @Override

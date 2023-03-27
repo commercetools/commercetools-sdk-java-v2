@@ -24,12 +24,18 @@ public class DateSetFieldImpl implements DateSetField, ModelBase {
 
     private java.util.List<java.time.LocalDate> value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DateSetFieldImpl(@JsonProperty("value") final java.util.List<java.time.LocalDate> value) {
         this.value = value;
         this.type = DATE_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public DateSetFieldImpl() {
         this.type = DATE_SET;
     }

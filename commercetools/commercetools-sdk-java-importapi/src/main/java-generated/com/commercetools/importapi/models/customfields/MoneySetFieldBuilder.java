@@ -25,7 +25,7 @@ public class MoneySetFieldBuilder implements Builder<MoneySetField> {
     private java.util.List<com.commercetools.importapi.models.common.Money> value;
 
     /**
-     *
+     * set values to the value
      * @param value value to be set
      * @return Builder
      */
@@ -36,7 +36,7 @@ public class MoneySetFieldBuilder implements Builder<MoneySetField> {
     }
 
     /**
-     *
+     * set value to the value
      * @param value value to be set
      * @return Builder
      */
@@ -47,7 +47,7 @@ public class MoneySetFieldBuilder implements Builder<MoneySetField> {
     }
 
     /**
-     *
+     * add values to the value
      * @param value value to be set
      * @return Builder
      */
@@ -61,7 +61,7 @@ public class MoneySetFieldBuilder implements Builder<MoneySetField> {
     }
 
     /**
-     *
+     * add the value to the value using the builder function
      * @param builder function to build the value value
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class MoneySetFieldBuilder implements Builder<MoneySetField> {
     }
 
     /**
-     *
+     * set the value to the value using the builder function
      * @param builder function to build the value value
      * @return Builder
      */
@@ -87,6 +87,11 @@ public class MoneySetFieldBuilder implements Builder<MoneySetField> {
         this.value.add(builder.apply(com.commercetools.importapi.models.common.MoneyBuilder.of()).build());
         return this;
     }
+
+    /**
+     * value of value}
+     * @return value
+     */
 
     public java.util.List<com.commercetools.importapi.models.common.Money> getValue() {
         return this.value;
@@ -109,10 +114,19 @@ public class MoneySetFieldBuilder implements Builder<MoneySetField> {
         return new MoneySetFieldImpl(value);
     }
 
+    /**
+     * factory method for an instance of MoneySetFieldBuilder
+     * @return builder
+     */
     public static MoneySetFieldBuilder of() {
         return new MoneySetFieldBuilder();
     }
 
+    /**
+     * create builder for MoneySetField instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MoneySetFieldBuilder of(final MoneySetField template) {
         MoneySetFieldBuilder builder = new MoneySetFieldBuilder();
         builder.value = template.getValue();

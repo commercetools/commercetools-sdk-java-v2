@@ -62,9 +62,19 @@ public class InvalidCurrentPasswordErrorBuilder implements Builder<InvalidCurren
         return this;
     }
 
+    /**
+     *  <p><code>"The given current password does not match."</code></p>
+     * @return message
+     */
+
     public String getMessage() {
         return this.message;
     }
+
+    /**
+     *  <p>Error-specific additional fields.</p>
+     * @return pattern properties
+     */
 
     public Map<String, java.lang.Object> getValues() {
         return this.values;
@@ -87,10 +97,19 @@ public class InvalidCurrentPasswordErrorBuilder implements Builder<InvalidCurren
         return new InvalidCurrentPasswordErrorImpl(message, values);
     }
 
+    /**
+     * factory method for an instance of InvalidCurrentPasswordErrorBuilder
+     * @return builder
+     */
     public static InvalidCurrentPasswordErrorBuilder of() {
         return new InvalidCurrentPasswordErrorBuilder();
     }
 
+    /**
+     * create builder for InvalidCurrentPasswordError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InvalidCurrentPasswordErrorBuilder of(final InvalidCurrentPasswordError template) {
         InvalidCurrentPasswordErrorBuilder builder = new InvalidCurrentPasswordErrorBuilder();
         builder.message = template.getMessage();

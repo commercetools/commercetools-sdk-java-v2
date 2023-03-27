@@ -80,10 +80,20 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
         return this;
     }
 
+    /**
+     *  <p>Configuration for the Product Projection Search and Product Suggestions endpoints.</p>
+     * @return products
+     */
+
     @Nullable
     public com.commercetools.api.models.project.SearchIndexingConfigurationValues getProducts() {
         return this.products;
     }
+
+    /**
+     *  <p>Configuration for the Order Search feature.</p>
+     * @return orders
+     */
 
     @Nullable
     public com.commercetools.api.models.project.SearchIndexingConfigurationValues getOrders() {
@@ -106,10 +116,19 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
         return new SearchIndexingConfigurationImpl(products, orders);
     }
 
+    /**
+     * factory method for an instance of SearchIndexingConfigurationBuilder
+     * @return builder
+     */
     public static SearchIndexingConfigurationBuilder of() {
         return new SearchIndexingConfigurationBuilder();
     }
 
+    /**
+     * create builder for SearchIndexingConfiguration instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SearchIndexingConfigurationBuilder of(final SearchIndexingConfiguration template) {
         SearchIndexingConfigurationBuilder builder = new SearchIndexingConfigurationBuilder();
         builder.products = template.getProducts();

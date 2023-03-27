@@ -46,14 +46,33 @@ public interface GraphQLErrorLocation {
     @JsonProperty("column")
     public Integer getColumn();
 
+    /**
+     * set line
+     * @param line value to be set
+     */
+
     public void setLine(final Integer line);
+
+    /**
+     * set column
+     * @param column value to be set
+     */
 
     public void setColumn(final Integer column);
 
+    /**
+     * factory method
+     * @return instance of GraphQLErrorLocation
+     */
     public static GraphQLErrorLocation of() {
         return new GraphQLErrorLocationImpl();
     }
 
+    /**
+     * factory method to copy an instance of GraphQLErrorLocation
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static GraphQLErrorLocation of(final GraphQLErrorLocation template) {
         GraphQLErrorLocationImpl instance = new GraphQLErrorLocationImpl();
         instance.setLine(template.getLine());
@@ -61,18 +80,37 @@ public interface GraphQLErrorLocation {
         return instance;
     }
 
+    /**
+     * builder factory method for GraphQLErrorLocation
+     * @return builder
+     */
     public static GraphQLErrorLocationBuilder builder() {
         return GraphQLErrorLocationBuilder.of();
     }
 
+    /**
+     * create builder for GraphQLErrorLocation instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static GraphQLErrorLocationBuilder builder(final GraphQLErrorLocation template) {
         return GraphQLErrorLocationBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withGraphQLErrorLocation(Function<GraphQLErrorLocation, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<GraphQLErrorLocation> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<GraphQLErrorLocation>() {
             @Override

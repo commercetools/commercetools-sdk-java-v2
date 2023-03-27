@@ -142,13 +142,28 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
         return this;
     }
 
+    /**
+     *  <p>Maps to <code>TaxedPrice.totalNet</code>.</p>
+     * @return totalNet
+     */
+
     public com.commercetools.importapi.models.common.Money getTotalNet() {
         return this.totalNet;
     }
 
+    /**
+     *  <p>Maps to <code>TaxedPrice.totalGross</code>.</p>
+     * @return totalGross
+     */
+
     public com.commercetools.importapi.models.common.Money getTotalGross() {
         return this.totalGross;
     }
+
+    /**
+     *  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>
+     * @return taxPortions
+     */
 
     public java.util.List<com.commercetools.importapi.models.orders.TaxPortion> getTaxPortions() {
         return this.taxPortions;
@@ -173,10 +188,19 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
         return new TaxedPriceImpl(totalNet, totalGross, taxPortions);
     }
 
+    /**
+     * factory method for an instance of TaxedPriceBuilder
+     * @return builder
+     */
     public static TaxedPriceBuilder of() {
         return new TaxedPriceBuilder();
     }
 
+    /**
+     * create builder for TaxedPrice instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TaxedPriceBuilder of(final TaxedPrice template) {
         TaxedPriceBuilder builder = new TaxedPriceBuilder();
         builder.totalNet = template.getTotalNet();

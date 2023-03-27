@@ -24,6 +24,9 @@ public class AttributeGroupRemoveAttributeActionImpl implements AttributeGroupRe
 
     private com.commercetools.api.models.attribute_group.AttributeReference attribute;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AttributeGroupRemoveAttributeActionImpl(
             @JsonProperty("attribute") final com.commercetools.api.models.attribute_group.AttributeReference attribute) {
@@ -31,6 +34,9 @@ public class AttributeGroupRemoveAttributeActionImpl implements AttributeGroupRe
         this.action = REMOVE_ATTRIBUTE;
     }
 
+    /**
+     * create empty instance
+     */
     public AttributeGroupRemoveAttributeActionImpl() {
         this.action = REMOVE_ATTRIBUTE;
     }

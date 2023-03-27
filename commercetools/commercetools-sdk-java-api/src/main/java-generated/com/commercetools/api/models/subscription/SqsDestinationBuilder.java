@@ -93,23 +93,48 @@ public class SqsDestinationBuilder implements Builder<SqsDestination> {
         return this;
     }
 
+    /**
+     *  <p>Only present if <code>authenticationMode</code> is set to <code>Credentials</code>.</p>
+     * @return accessKey
+     */
+
     @Nullable
     public String getAccessKey() {
         return this.accessKey;
     }
+
+    /**
+     *  <p>Only present if <code>authenticationMode</code> is set to <code>Credentials</code>.</p>
+     * @return accessSecret
+     */
 
     @Nullable
     public String getAccessSecret() {
         return this.accessSecret;
     }
 
+    /**
+     *  <p>URL of the Amazon SQS queue.</p>
+     * @return queueUrl
+     */
+
     public String getQueueUrl() {
         return this.queueUrl;
     }
 
+    /**
+     *  <p>AWS Region the message queue is located in.</p>
+     * @return region
+     */
+
     public String getRegion() {
         return this.region;
     }
+
+    /**
+     *  <p>Defines the method of authentication for the SQS queue.</p>
+     * @return authenticationMode
+     */
 
     @Nullable
     public com.commercetools.api.models.subscription.AwsAuthenticationMode getAuthenticationMode() {
@@ -134,10 +159,19 @@ public class SqsDestinationBuilder implements Builder<SqsDestination> {
         return new SqsDestinationImpl(accessKey, accessSecret, queueUrl, region, authenticationMode);
     }
 
+    /**
+     * factory method for an instance of SqsDestinationBuilder
+     * @return builder
+     */
     public static SqsDestinationBuilder of() {
         return new SqsDestinationBuilder();
     }
 
+    /**
+     * create builder for SqsDestination instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SqsDestinationBuilder of(final SqsDestination template) {
         SqsDestinationBuilder builder = new SqsDestinationBuilder();
         builder.accessKey = template.getAccessKey();

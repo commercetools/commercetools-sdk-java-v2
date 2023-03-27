@@ -31,7 +31,7 @@ public class StagedOrderSetLineItemDistributionChannelActionBuilder
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
     /**
-     *
+     * set the value to the lineItemId
      * @param lineItemId value to be set
      * @return Builder
      */
@@ -67,9 +67,19 @@ public class StagedOrderSetLineItemDistributionChannelActionBuilder
         return this;
     }
 
+    /**
+     * value of lineItemId}
+     * @return lineItemId
+     */
+
     public String getLineItemId() {
         return this.lineItemId;
     }
+
+    /**
+     *  <p>ResourceIdentifier to a Channel.</p>
+     * @return distributionChannel
+     */
 
     @Nullable
     public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
@@ -94,10 +104,19 @@ public class StagedOrderSetLineItemDistributionChannelActionBuilder
         return new StagedOrderSetLineItemDistributionChannelActionImpl(lineItemId, distributionChannel);
     }
 
+    /**
+     * factory method for an instance of StagedOrderSetLineItemDistributionChannelActionBuilder
+     * @return builder
+     */
     public static StagedOrderSetLineItemDistributionChannelActionBuilder of() {
         return new StagedOrderSetLineItemDistributionChannelActionBuilder();
     }
 
+    /**
+     * create builder for StagedOrderSetLineItemDistributionChannelAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedOrderSetLineItemDistributionChannelActionBuilder of(
             final StagedOrderSetLineItemDistributionChannelAction template) {
         StagedOrderSetLineItemDistributionChannelActionBuilder builder = new StagedOrderSetLineItemDistributionChannelActionBuilder();

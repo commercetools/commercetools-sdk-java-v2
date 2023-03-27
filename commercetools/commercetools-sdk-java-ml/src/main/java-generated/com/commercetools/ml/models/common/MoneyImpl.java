@@ -24,6 +24,9 @@ public class MoneyImpl implements Money, ModelBase {
 
     private String currencyCode;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MoneyImpl(@JsonProperty("centAmount") final Long centAmount,
             @JsonProperty("currencyCode") final String currencyCode) {
@@ -31,6 +34,9 @@ public class MoneyImpl implements Money, ModelBase {
         this.currencyCode = currencyCode;
     }
 
+    /**
+     * create empty instance
+     */
     public MoneyImpl() {
     }
 

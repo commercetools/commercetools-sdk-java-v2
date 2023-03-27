@@ -27,6 +27,9 @@ public class ShoppingListChangeTextLineItemNameActionImpl
 
     private com.commercetools.api.models.common.LocalizedString name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShoppingListChangeTextLineItemNameActionImpl(@JsonProperty("textLineItemId") final String textLineItemId,
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name) {
@@ -35,6 +38,9 @@ public class ShoppingListChangeTextLineItemNameActionImpl
         this.action = CHANGE_TEXT_LINE_ITEM_NAME;
     }
 
+    /**
+     * create empty instance
+     */
     public ShoppingListChangeTextLineItemNameActionImpl() {
         this.action = CHANGE_TEXT_LINE_ITEM_NAME;
     }

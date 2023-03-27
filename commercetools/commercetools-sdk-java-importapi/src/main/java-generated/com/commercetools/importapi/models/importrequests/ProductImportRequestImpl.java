@@ -25,6 +25,9 @@ public class ProductImportRequestImpl implements ProductImportRequest, ModelBase
 
     private java.util.List<com.commercetools.importapi.models.products.ProductImport> resources;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductImportRequestImpl(
             @JsonProperty("resources") final java.util.List<com.commercetools.importapi.models.products.ProductImport> resources) {
@@ -32,6 +35,9 @@ public class ProductImportRequestImpl implements ProductImportRequest, ModelBase
         this.type = ImportResourceType.findEnum("product");
     }
 
+    /**
+     * create empty instance
+     */
     public ProductImportRequestImpl() {
         this.type = ImportResourceType.findEnum("product");
     }

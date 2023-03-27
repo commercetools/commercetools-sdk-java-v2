@@ -24,12 +24,18 @@ public class PriceKeyReferenceImpl implements PriceKeyReference, ModelBase {
 
     private com.commercetools.importapi.models.common.ReferenceType typeId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PriceKeyReferenceImpl(@JsonProperty("key") final String key) {
         this.key = key;
         this.typeId = ReferenceType.findEnum("price");
     }
 
+    /**
+     * create empty instance
+     */
     public PriceKeyReferenceImpl() {
         this.typeId = ReferenceType.findEnum("price");
     }

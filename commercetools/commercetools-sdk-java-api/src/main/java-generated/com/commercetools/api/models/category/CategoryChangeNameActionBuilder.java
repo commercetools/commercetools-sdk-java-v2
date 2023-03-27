@@ -47,6 +47,11 @@ public class CategoryChangeNameActionBuilder implements Builder<CategoryChangeNa
         return this;
     }
 
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     * @return name
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
@@ -68,10 +73,19 @@ public class CategoryChangeNameActionBuilder implements Builder<CategoryChangeNa
         return new CategoryChangeNameActionImpl(name);
     }
 
+    /**
+     * factory method for an instance of CategoryChangeNameActionBuilder
+     * @return builder
+     */
     public static CategoryChangeNameActionBuilder of() {
         return new CategoryChangeNameActionBuilder();
     }
 
+    /**
+     * create builder for CategoryChangeNameAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategoryChangeNameActionBuilder of(final CategoryChangeNameAction template) {
         CategoryChangeNameActionBuilder builder = new CategoryChangeNameActionBuilder();
         builder.name = template.getName();

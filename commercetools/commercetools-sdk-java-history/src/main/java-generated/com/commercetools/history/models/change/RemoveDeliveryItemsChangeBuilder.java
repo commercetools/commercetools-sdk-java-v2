@@ -39,7 +39,7 @@ public class RemoveDeliveryItemsChangeBuilder implements Builder<RemoveDeliveryI
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class RemoveDeliveryItemsChangeBuilder implements Builder<RemoveDeliveryI
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -62,9 +62,19 @@ public class RemoveDeliveryItemsChangeBuilder implements Builder<RemoveDeliveryI
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>removeDelivery</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public com.commercetools.history.models.common.Delivery getPreviousValue() {
         return this.previousValue;
@@ -88,10 +98,19 @@ public class RemoveDeliveryItemsChangeBuilder implements Builder<RemoveDeliveryI
         return new RemoveDeliveryItemsChangeImpl(change, previousValue);
     }
 
+    /**
+     * factory method for an instance of RemoveDeliveryItemsChangeBuilder
+     * @return builder
+     */
     public static RemoveDeliveryItemsChangeBuilder of() {
         return new RemoveDeliveryItemsChangeBuilder();
     }
 
+    /**
+     * create builder for RemoveDeliveryItemsChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static RemoveDeliveryItemsChangeBuilder of(final RemoveDeliveryItemsChange template) {
         RemoveDeliveryItemsChangeBuilder builder = new RemoveDeliveryItemsChangeBuilder();
         builder.change = template.getChange();

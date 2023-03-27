@@ -27,7 +27,7 @@ public class ReviewLabelBuilder implements Builder<ReviewLabel> {
     private String title;
 
     /**
-     *
+     * set the value to the key
      * @param key value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class ReviewLabelBuilder implements Builder<ReviewLabel> {
     }
 
     /**
-     *
+     * set the value to the title
      * @param title value to be set
      * @return Builder
      */
@@ -48,9 +48,19 @@ public class ReviewLabelBuilder implements Builder<ReviewLabel> {
         return this;
     }
 
+    /**
+     * value of key}
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     * value of title}
+     * @return title
+     */
 
     public String getTitle() {
         return this.title;
@@ -74,10 +84,19 @@ public class ReviewLabelBuilder implements Builder<ReviewLabel> {
         return new ReviewLabelImpl(key, title);
     }
 
+    /**
+     * factory method for an instance of ReviewLabelBuilder
+     * @return builder
+     */
     public static ReviewLabelBuilder of() {
         return new ReviewLabelBuilder();
     }
 
+    /**
+     * create builder for ReviewLabel instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReviewLabelBuilder of(final ReviewLabel template) {
         ReviewLabelBuilder builder = new ReviewLabelBuilder();
         builder.key = template.getKey();

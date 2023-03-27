@@ -26,6 +26,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AttributeGroupSetKeyActionImpl.class)
 public interface AttributeGroupSetKeyAction extends AttributeGroupUpdateAction {
 
+    /**
+     * discriminator value for AttributeGroupSetKeyAction
+     */
     String SET_KEY = "setKey";
 
     /**
@@ -36,26 +39,55 @@ public interface AttributeGroupSetKeyAction extends AttributeGroupUpdateAction {
     @JsonProperty("key")
     public String getKey();
 
+    /**
+     *  <p>If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
 
+    /**
+     * factory method
+     * @return instance of AttributeGroupSetKeyAction
+     */
     public static AttributeGroupSetKeyAction of() {
         return new AttributeGroupSetKeyActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of AttributeGroupSetKeyAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static AttributeGroupSetKeyAction of(final AttributeGroupSetKeyAction template) {
         AttributeGroupSetKeyActionImpl instance = new AttributeGroupSetKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;
     }
 
+    /**
+     * builder factory method for AttributeGroupSetKeyAction
+     * @return builder
+     */
     public static AttributeGroupSetKeyActionBuilder builder() {
         return AttributeGroupSetKeyActionBuilder.of();
     }
 
+    /**
+     * create builder for AttributeGroupSetKeyAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeGroupSetKeyActionBuilder builder(final AttributeGroupSetKeyAction template) {
         return AttributeGroupSetKeyActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withAttributeGroupSetKeyAction(Function<AttributeGroupSetKeyAction, T> helper) {
         return helper.apply(this);
     }
@@ -64,6 +96,10 @@ public interface AttributeGroupSetKeyAction extends AttributeGroupUpdateAction {
         return AttributeGroupSetKeyAction.of();
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<AttributeGroupSetKeyAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<AttributeGroupSetKeyAction>() {
             @Override

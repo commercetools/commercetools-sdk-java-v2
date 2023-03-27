@@ -26,6 +26,9 @@ public class RequiredFieldErrorImpl implements RequiredFieldError, ModelBase {
 
     private String field;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     RequiredFieldErrorImpl(@JsonProperty("message") final String message, @JsonProperty("field") final String field) {
         this.message = message;
@@ -33,6 +36,9 @@ public class RequiredFieldErrorImpl implements RequiredFieldError, ModelBase {
         this.code = REQUIRED_FIELD;
     }
 
+    /**
+     * create empty instance
+     */
     public RequiredFieldErrorImpl() {
         this.code = REQUIRED_FIELD;
     }

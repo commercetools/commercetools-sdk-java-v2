@@ -52,6 +52,9 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
 
     private java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> taxedPricePortions;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderLineItemDiscountSetMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -86,6 +89,9 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
         this.type = ORDER_LINE_ITEM_DISCOUNT_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderLineItemDiscountSetMessageImpl() {
         this.type = ORDER_LINE_ITEM_DISCOUNT_SET;
     }

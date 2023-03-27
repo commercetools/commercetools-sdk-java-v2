@@ -24,12 +24,18 @@ public class CustomerEmailChangedMessagePayloadImpl implements CustomerEmailChan
 
     private String email;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerEmailChangedMessagePayloadImpl(@JsonProperty("email") final String email) {
         this.email = email;
         this.type = CUSTOMER_EMAIL_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerEmailChangedMessagePayloadImpl() {
         this.type = CUSTOMER_EMAIL_CHANGED;
     }

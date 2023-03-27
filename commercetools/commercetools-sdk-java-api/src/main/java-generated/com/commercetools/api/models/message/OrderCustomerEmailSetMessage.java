@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderCustomerEmailSetMessageImpl.class)
 public interface OrderCustomerEmailSetMessage extends OrderMessage {
 
+    /**
+     * discriminator value for OrderCustomerEmailSetMessage
+     */
     String ORDER_CUSTOMER_EMAIL_SET = "OrderCustomerEmailSet";
 
     /**
@@ -51,14 +54,33 @@ public interface OrderCustomerEmailSetMessage extends OrderMessage {
     @JsonProperty("oldEmail")
     public String getOldEmail();
 
+    /**
+     *  <p>Email address on the Order after the Set Customer Email update action.</p>
+     * @param email value to be set
+     */
+
     public void setEmail(final String email);
+
+    /**
+     *  <p>Email address on the Order before the Set Customer Email update action.</p>
+     * @param oldEmail value to be set
+     */
 
     public void setOldEmail(final String oldEmail);
 
+    /**
+     * factory method
+     * @return instance of OrderCustomerEmailSetMessage
+     */
     public static OrderCustomerEmailSetMessage of() {
         return new OrderCustomerEmailSetMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderCustomerEmailSetMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderCustomerEmailSetMessage of(final OrderCustomerEmailSetMessage template) {
         OrderCustomerEmailSetMessageImpl instance = new OrderCustomerEmailSetMessageImpl();
         instance.setId(template.getId());
@@ -76,18 +98,37 @@ public interface OrderCustomerEmailSetMessage extends OrderMessage {
         return instance;
     }
 
+    /**
+     * builder factory method for OrderCustomerEmailSetMessage
+     * @return builder
+     */
     public static OrderCustomerEmailSetMessageBuilder builder() {
         return OrderCustomerEmailSetMessageBuilder.of();
     }
 
+    /**
+     * create builder for OrderCustomerEmailSetMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderCustomerEmailSetMessageBuilder builder(final OrderCustomerEmailSetMessage template) {
         return OrderCustomerEmailSetMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderCustomerEmailSetMessage(Function<OrderCustomerEmailSetMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderCustomerEmailSetMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderCustomerEmailSetMessage>() {
             @Override

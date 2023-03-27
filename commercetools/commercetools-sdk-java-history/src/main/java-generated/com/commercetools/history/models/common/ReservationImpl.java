@@ -28,6 +28,9 @@ public class ReservationImpl implements Reservation, ModelBase {
 
     private String checkoutStartedAt;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReservationImpl(@JsonProperty("quantity") final Integer quantity,
             @JsonProperty("owner") final com.commercetools.history.models.common.Reference owner,
@@ -39,6 +42,9 @@ public class ReservationImpl implements Reservation, ModelBase {
         this.checkoutStartedAt = checkoutStartedAt;
     }
 
+    /**
+     * create empty instance
+     */
     public ReservationImpl() {
     }
 

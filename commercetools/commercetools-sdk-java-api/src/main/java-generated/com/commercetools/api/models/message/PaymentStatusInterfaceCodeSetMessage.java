@@ -36,6 +36,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PaymentStatusInterfaceCodeSetMessageImpl.class)
 public interface PaymentStatusInterfaceCodeSetMessage extends Message {
 
+    /**
+     * discriminator value for PaymentStatusInterfaceCodeSetMessage
+     */
     String PAYMENT_STATUS_INTERFACE_CODE_SET = "PaymentStatusInterfaceCodeSet";
 
     /**
@@ -54,14 +57,33 @@ public interface PaymentStatusInterfaceCodeSetMessage extends Message {
     @JsonProperty("interfaceCode")
     public String getInterfaceCode();
 
+    /**
+     *  <p>Unique identifier for the Payment for which the Set StatusInterfaceCode update action was applied.</p>
+     * @param paymentId value to be set
+     */
+
     public void setPaymentId(final String paymentId);
+
+    /**
+     *  <p>The <code>interfaceCode</code> that was set during the Set StatusInterfaceCode update action.</p>
+     * @param interfaceCode value to be set
+     */
 
     public void setInterfaceCode(final String interfaceCode);
 
+    /**
+     * factory method
+     * @return instance of PaymentStatusInterfaceCodeSetMessage
+     */
     public static PaymentStatusInterfaceCodeSetMessage of() {
         return new PaymentStatusInterfaceCodeSetMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of PaymentStatusInterfaceCodeSetMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static PaymentStatusInterfaceCodeSetMessage of(final PaymentStatusInterfaceCodeSetMessage template) {
         PaymentStatusInterfaceCodeSetMessageImpl instance = new PaymentStatusInterfaceCodeSetMessageImpl();
         instance.setId(template.getId());
@@ -79,19 +101,38 @@ public interface PaymentStatusInterfaceCodeSetMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for PaymentStatusInterfaceCodeSetMessage
+     * @return builder
+     */
     public static PaymentStatusInterfaceCodeSetMessageBuilder builder() {
         return PaymentStatusInterfaceCodeSetMessageBuilder.of();
     }
 
+    /**
+     * create builder for PaymentStatusInterfaceCodeSetMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentStatusInterfaceCodeSetMessageBuilder builder(
             final PaymentStatusInterfaceCodeSetMessage template) {
         return PaymentStatusInterfaceCodeSetMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withPaymentStatusInterfaceCodeSetMessage(Function<PaymentStatusInterfaceCodeSetMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<PaymentStatusInterfaceCodeSetMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<PaymentStatusInterfaceCodeSetMessage>() {
             @Override

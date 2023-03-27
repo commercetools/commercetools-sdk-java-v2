@@ -28,6 +28,9 @@ public class ChangeTargetChangeImpl implements ChangeTargetChange, ModelBase {
 
     private com.commercetools.history.models.change_value.ChangeTargetChangeValue previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeTargetChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final com.commercetools.history.models.change_value.ChangeTargetChangeValue nextValue,
@@ -38,6 +41,9 @@ public class ChangeTargetChangeImpl implements ChangeTargetChange, ModelBase {
         this.type = CHANGE_TARGET_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeTargetChangeImpl() {
         this.type = CHANGE_TARGET_CHANGE;
     }

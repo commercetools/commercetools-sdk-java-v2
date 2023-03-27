@@ -24,6 +24,9 @@ public class CategorySetMetaDescriptionActionImpl implements CategorySetMetaDesc
 
     private com.commercetools.api.models.common.LocalizedString metaDescription;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CategorySetMetaDescriptionActionImpl(
             @JsonProperty("metaDescription") final com.commercetools.api.models.common.LocalizedString metaDescription) {
@@ -31,6 +34,9 @@ public class CategorySetMetaDescriptionActionImpl implements CategorySetMetaDesc
         this.action = SET_META_DESCRIPTION;
     }
 
+    /**
+     * create empty instance
+     */
     public CategorySetMetaDescriptionActionImpl() {
         this.action = SET_META_DESCRIPTION;
     }

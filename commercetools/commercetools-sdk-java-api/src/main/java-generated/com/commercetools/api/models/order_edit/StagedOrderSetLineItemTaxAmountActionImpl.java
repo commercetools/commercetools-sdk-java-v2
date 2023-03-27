@@ -28,6 +28,9 @@ public class StagedOrderSetLineItemTaxAmountActionImpl implements StagedOrderSet
 
     private String shippingKey;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderSetLineItemTaxAmountActionImpl(@JsonProperty("lineItemId") final String lineItemId,
             @JsonProperty("externalTaxAmount") final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount,
@@ -38,6 +41,9 @@ public class StagedOrderSetLineItemTaxAmountActionImpl implements StagedOrderSet
         this.action = SET_LINE_ITEM_TAX_AMOUNT;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderSetLineItemTaxAmountActionImpl() {
         this.action = SET_LINE_ITEM_TAX_AMOUNT;
     }

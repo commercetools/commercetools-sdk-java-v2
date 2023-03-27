@@ -44,6 +44,9 @@ public class QuoteRequestCreatedMessageImpl implements QuoteRequestCreatedMessag
 
     private com.commercetools.api.models.quote_request.QuoteRequest quoteRequest;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     QuoteRequestCreatedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -69,6 +72,9 @@ public class QuoteRequestCreatedMessageImpl implements QuoteRequestCreatedMessag
         this.type = QUOTE_REQUEST_CREATED;
     }
 
+    /**
+     * create empty instance
+     */
     public QuoteRequestCreatedMessageImpl() {
         this.type = QUOTE_REQUEST_CREATED;
     }

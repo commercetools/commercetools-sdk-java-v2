@@ -35,6 +35,10 @@ public class TaxCategoryUpdateActionBuilder {
         return com.commercetools.api.models.tax_category.TaxCategorySetKeyActionBuilder.of();
     }
 
+    /**
+     * factory method for an instance of TaxCategoryUpdateActionBuilder
+     * @return builder
+     */
     public static TaxCategoryUpdateActionBuilder of() {
         return new TaxCategoryUpdateActionBuilder();
     }

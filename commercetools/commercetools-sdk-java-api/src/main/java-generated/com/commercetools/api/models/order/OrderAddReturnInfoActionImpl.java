@@ -28,6 +28,9 @@ public class OrderAddReturnInfoActionImpl implements OrderAddReturnInfoAction, M
 
     private java.time.ZonedDateTime returnDate;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderAddReturnInfoActionImpl(@JsonProperty("returnTrackingId") final String returnTrackingId,
             @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.ReturnItemDraft> items,
@@ -38,6 +41,9 @@ public class OrderAddReturnInfoActionImpl implements OrderAddReturnInfoAction, M
         this.action = ADD_RETURN_INFO;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderAddReturnInfoActionImpl() {
         this.action = ADD_RETURN_INFO;
     }

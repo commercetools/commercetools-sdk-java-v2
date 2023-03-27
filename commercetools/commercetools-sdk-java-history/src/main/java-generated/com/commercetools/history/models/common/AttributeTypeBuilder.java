@@ -24,7 +24,7 @@ public class AttributeTypeBuilder implements Builder<AttributeType> {
     private String name;
 
     /**
-     *
+     * set the value to the name
      * @param name value to be set
      * @return Builder
      */
@@ -33,6 +33,11 @@ public class AttributeTypeBuilder implements Builder<AttributeType> {
         this.name = name;
         return this;
     }
+
+    /**
+     * value of name}
+     * @return name
+     */
 
     public String getName() {
         return this.name;
@@ -55,10 +60,19 @@ public class AttributeTypeBuilder implements Builder<AttributeType> {
         return new AttributeTypeImpl(name);
     }
 
+    /**
+     * factory method for an instance of AttributeTypeBuilder
+     * @return builder
+     */
     public static AttributeTypeBuilder of() {
         return new AttributeTypeBuilder();
     }
 
+    /**
+     * create builder for AttributeType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeTypeBuilder of(final AttributeType template) {
         AttributeTypeBuilder builder = new AttributeTypeBuilder();
         builder.name = template.getName();

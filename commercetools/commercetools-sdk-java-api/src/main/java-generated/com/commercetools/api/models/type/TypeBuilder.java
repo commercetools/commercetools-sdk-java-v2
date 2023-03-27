@@ -307,48 +307,103 @@ public class TypeBuilder implements Builder<Type> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Type.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Current version of the Type.</p>
+     * @return version
+     */
 
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *  <p>Date and time (UTC) the Type was initially created.</p>
+     * @return createdAt
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+     *  <p>Date and time (UTC) the Type was last updated.</p>
+     * @return lastModifiedAt
+     */
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return lastModifiedBy
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
+     */
+
     @Nullable
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the Type.</p>
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>Name of the Type.</p>
+     * @return name
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
+
+    /**
+     *  <p>Description of the Type.</p>
+     * @return description
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
+    /**
+     *  <p>Resources and/or data types for which the Type is defined.</p>
+     * @return resourceTypeIds
+     */
+
     public java.util.List<com.commercetools.api.models.type.ResourceTypeId> getResourceTypeIds() {
         return this.resourceTypeIds;
     }
+
+    /**
+     *  <p>Defines Custom Fields.</p>
+     * @return fieldDefinitions
+     */
 
     public java.util.List<com.commercetools.api.models.type.FieldDefinition> getFieldDefinitions() {
         return this.fieldDefinitions;
@@ -380,10 +435,19 @@ public class TypeBuilder implements Builder<Type> {
             resourceTypeIds, fieldDefinitions);
     }
 
+    /**
+     * factory method for an instance of TypeBuilder
+     * @return builder
+     */
     public static TypeBuilder of() {
         return new TypeBuilder();
     }
 
+    /**
+     * create builder for Type instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TypeBuilder of(final Type template) {
         TypeBuilder builder = new TypeBuilder();
         builder.id = template.getId();

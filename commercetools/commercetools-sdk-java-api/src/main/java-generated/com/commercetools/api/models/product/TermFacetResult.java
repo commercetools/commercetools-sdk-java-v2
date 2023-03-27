@@ -34,6 +34,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TermFacetResultImpl.class)
 public interface TermFacetResult extends FacetResult {
 
+    /**
+     * discriminator value for TermFacetResult
+     */
     String TERMS = "terms";
 
     /**
@@ -77,23 +80,62 @@ public interface TermFacetResult extends FacetResult {
     @JsonProperty("terms")
     public List<FacetTerm> getTerms();
 
+    /**
+     * set dataType
+     * @param dataType value to be set
+     */
+
     public void setDataType(final TermFacetResultType dataType);
+
+    /**
+     * set missing
+     * @param missing value to be set
+     */
 
     public void setMissing(final Long missing);
 
+    /**
+     * set total
+     * @param total value to be set
+     */
+
     public void setTotal(final Long total);
 
+    /**
+     * set other
+     * @param other value to be set
+     */
+
     public void setOther(final Long other);
+
+    /**
+     * set terms
+     * @param terms values to be set
+     */
 
     @JsonIgnore
     public void setTerms(final FacetTerm... terms);
 
+    /**
+     * set terms
+     * @param terms values to be set
+     */
+
     public void setTerms(final List<FacetTerm> terms);
 
+    /**
+     * factory method
+     * @return instance of TermFacetResult
+     */
     public static TermFacetResult of() {
         return new TermFacetResultImpl();
     }
 
+    /**
+     * factory method to copy an instance of TermFacetResult
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static TermFacetResult of(final TermFacetResult template) {
         TermFacetResultImpl instance = new TermFacetResultImpl();
         instance.setDataType(template.getDataType());
@@ -104,18 +146,37 @@ public interface TermFacetResult extends FacetResult {
         return instance;
     }
 
+    /**
+     * builder factory method for TermFacetResult
+     * @return builder
+     */
     public static TermFacetResultBuilder builder() {
         return TermFacetResultBuilder.of();
     }
 
+    /**
+     * create builder for TermFacetResult instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TermFacetResultBuilder builder(final TermFacetResult template) {
         return TermFacetResultBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTermFacetResult(Function<TermFacetResult, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<TermFacetResult> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TermFacetResult>() {
             @Override

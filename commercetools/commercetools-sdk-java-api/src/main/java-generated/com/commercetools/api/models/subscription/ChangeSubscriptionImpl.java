@@ -22,12 +22,18 @@ public class ChangeSubscriptionImpl implements ChangeSubscription, ModelBase {
 
     private com.commercetools.api.models.subscription.ChangeSubscriptionResourceTypeId resourceTypeId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeSubscriptionImpl(
             @JsonProperty("resourceTypeId") final com.commercetools.api.models.subscription.ChangeSubscriptionResourceTypeId resourceTypeId) {
         this.resourceTypeId = resourceTypeId;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeSubscriptionImpl() {
     }
 

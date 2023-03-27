@@ -41,7 +41,7 @@ public class SetAuthenticationModeChangeBuilder implements Builder<SetAuthentica
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class SetAuthenticationModeChangeBuilder implements Builder<SetAuthentica
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -64,13 +64,28 @@ public class SetAuthenticationModeChangeBuilder implements Builder<SetAuthentica
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>setAuthenticationMode</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public com.commercetools.history.models.common.AuthenticationMode getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public com.commercetools.history.models.common.AuthenticationMode getNextValue() {
         return this.nextValue;
@@ -95,10 +110,19 @@ public class SetAuthenticationModeChangeBuilder implements Builder<SetAuthentica
         return new SetAuthenticationModeChangeImpl(change, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of SetAuthenticationModeChangeBuilder
+     * @return builder
+     */
     public static SetAuthenticationModeChangeBuilder of() {
         return new SetAuthenticationModeChangeBuilder();
     }
 
+    /**
+     * create builder for SetAuthenticationModeChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetAuthenticationModeChangeBuilder of(final SetAuthenticationModeChange template) {
         SetAuthenticationModeChangeBuilder builder = new SetAuthenticationModeChangeBuilder();
         builder.change = template.getChange();

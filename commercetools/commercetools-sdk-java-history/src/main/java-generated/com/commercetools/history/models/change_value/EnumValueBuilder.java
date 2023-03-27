@@ -27,7 +27,7 @@ public class EnumValueBuilder implements Builder<EnumValue> {
     private String label;
 
     /**
-     *
+     * set the value to the key
      * @param key value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class EnumValueBuilder implements Builder<EnumValue> {
     }
 
     /**
-     *
+     * set the value to the label
      * @param label value to be set
      * @return Builder
      */
@@ -48,9 +48,19 @@ public class EnumValueBuilder implements Builder<EnumValue> {
         return this;
     }
 
+    /**
+     * value of key}
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     * value of label}
+     * @return label
+     */
 
     public String getLabel() {
         return this.label;
@@ -74,10 +84,19 @@ public class EnumValueBuilder implements Builder<EnumValue> {
         return new EnumValueImpl(key, label);
     }
 
+    /**
+     * factory method for an instance of EnumValueBuilder
+     * @return builder
+     */
     public static EnumValueBuilder of() {
         return new EnumValueBuilder();
     }
 
+    /**
+     * create builder for EnumValue instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static EnumValueBuilder of(final EnumValue template) {
         EnumValueBuilder builder = new EnumValueBuilder();
         builder.key = template.getKey();

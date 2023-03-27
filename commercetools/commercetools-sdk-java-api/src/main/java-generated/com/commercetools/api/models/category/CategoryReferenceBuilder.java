@@ -63,9 +63,19 @@ public class CategoryReferenceBuilder implements Builder<CategoryReference> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the referenced Category.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Contains the representation of the expanded Category. Only present in responses to requests with Reference Expansion for Categories.</p>
+     * @return obj
+     */
 
     @Nullable
     public com.commercetools.api.models.category.Category getObj() {
@@ -89,10 +99,19 @@ public class CategoryReferenceBuilder implements Builder<CategoryReference> {
         return new CategoryReferenceImpl(id, obj);
     }
 
+    /**
+     * factory method for an instance of CategoryReferenceBuilder
+     * @return builder
+     */
     public static CategoryReferenceBuilder of() {
         return new CategoryReferenceBuilder();
     }
 
+    /**
+     * create builder for CategoryReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategoryReferenceBuilder of(final CategoryReference template) {
         CategoryReferenceBuilder builder = new CategoryReferenceBuilder();
         builder.id = template.getId();

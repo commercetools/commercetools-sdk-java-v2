@@ -24,6 +24,9 @@ public class TaxCategoryUpdateImpl implements TaxCategoryUpdate, ModelBase {
 
     private java.util.List<com.commercetools.api.models.tax_category.TaxCategoryUpdateAction> actions;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TaxCategoryUpdateImpl(@JsonProperty("version") final Long version,
             @JsonProperty("actions") final java.util.List<com.commercetools.api.models.tax_category.TaxCategoryUpdateAction> actions) {
@@ -31,6 +34,9 @@ public class TaxCategoryUpdateImpl implements TaxCategoryUpdate, ModelBase {
         this.actions = actions;
     }
 
+    /**
+     * create empty instance
+     */
     public TaxCategoryUpdateImpl() {
     }
 

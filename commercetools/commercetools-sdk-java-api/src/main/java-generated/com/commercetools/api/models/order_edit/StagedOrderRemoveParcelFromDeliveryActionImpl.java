@@ -25,12 +25,18 @@ public class StagedOrderRemoveParcelFromDeliveryActionImpl
 
     private String parcelId;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderRemoveParcelFromDeliveryActionImpl(@JsonProperty("parcelId") final String parcelId) {
         this.parcelId = parcelId;
         this.action = REMOVE_PARCEL_FROM_DELIVERY;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderRemoveParcelFromDeliveryActionImpl() {
         this.action = REMOVE_PARCEL_FROM_DELIVERY;
     }

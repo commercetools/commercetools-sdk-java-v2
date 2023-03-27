@@ -24,12 +24,18 @@ public class OrderEditSetKeyActionImpl implements OrderEditSetKeyAction, ModelBa
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderEditSetKeyActionImpl(@JsonProperty("key") final String key) {
         this.key = key;
         this.action = SET_KEY;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderEditSetKeyActionImpl() {
         this.action = SET_KEY;
     }

@@ -47,6 +47,9 @@ public class OrderLineItemDistributionChannelSetMessageImpl
 
     private com.commercetools.api.models.channel.ChannelReference distributionChannel;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderLineItemDistributionChannelSetMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -75,6 +78,9 @@ public class OrderLineItemDistributionChannelSetMessageImpl
         this.type = ORDER_LINE_ITEM_DISTRIBUTION_CHANNEL_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderLineItemDistributionChannelSetMessageImpl() {
         this.type = ORDER_LINE_ITEM_DISTRIBUTION_CHANNEL_SET;
     }

@@ -57,19 +57,48 @@ public interface ProductTypeImport extends ImportResource {
     @JsonProperty("attributes")
     public List<AttributeDefinition> getAttributes();
 
+    /**
+     *  <p>Maps to <code>ProductType.name</code>.</p>
+     * @param name value to be set
+     */
+
     public void setName(final String name);
 
+    /**
+     *  <p>Maps to <code>ProductType.description</code>.</p>
+     * @param description value to be set
+     */
+
     public void setDescription(final String description);
+
+    /**
+     *  <p>The <code>attributes</code> of ProductType.</p>
+     * @param attributes values to be set
+     */
 
     @JsonIgnore
     public void setAttributes(final AttributeDefinition... attributes);
 
+    /**
+     *  <p>The <code>attributes</code> of ProductType.</p>
+     * @param attributes values to be set
+     */
+
     public void setAttributes(final List<AttributeDefinition> attributes);
 
+    /**
+     * factory method
+     * @return instance of ProductTypeImport
+     */
     public static ProductTypeImport of() {
         return new ProductTypeImportImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductTypeImport
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductTypeImport of(final ProductTypeImport template) {
         ProductTypeImportImpl instance = new ProductTypeImportImpl();
         instance.setKey(template.getKey());
@@ -79,18 +108,37 @@ public interface ProductTypeImport extends ImportResource {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductTypeImport
+     * @return builder
+     */
     public static ProductTypeImportBuilder builder() {
         return ProductTypeImportBuilder.of();
     }
 
+    /**
+     * create builder for ProductTypeImport instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductTypeImportBuilder builder(final ProductTypeImport template) {
         return ProductTypeImportBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductTypeImport(Function<ProductTypeImport, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductTypeImport> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductTypeImport>() {
             @Override

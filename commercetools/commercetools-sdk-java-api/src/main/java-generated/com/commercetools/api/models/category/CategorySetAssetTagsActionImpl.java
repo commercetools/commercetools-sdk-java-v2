@@ -28,6 +28,9 @@ public class CategorySetAssetTagsActionImpl implements CategorySetAssetTagsActio
 
     private java.util.List<String> tags;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CategorySetAssetTagsActionImpl(@JsonProperty("assetId") final String assetId,
             @JsonProperty("assetKey") final String assetKey, @JsonProperty("tags") final java.util.List<String> tags) {
@@ -37,6 +40,9 @@ public class CategorySetAssetTagsActionImpl implements CategorySetAssetTagsActio
         this.action = SET_ASSET_TAGS;
     }
 
+    /**
+     * create empty instance
+     */
     public CategorySetAssetTagsActionImpl() {
         this.action = SET_ASSET_TAGS;
     }

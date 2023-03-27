@@ -35,6 +35,11 @@ public class AttributeReferenceTypeBuilder implements Builder<AttributeReference
         return this;
     }
 
+    /**
+     *  <p>The type of the referenced resource.</p>
+     * @return referenceTypeId
+     */
+
     public com.commercetools.importapi.models.common.ReferenceType getReferenceTypeId() {
         return this.referenceTypeId;
     }
@@ -56,10 +61,19 @@ public class AttributeReferenceTypeBuilder implements Builder<AttributeReference
         return new AttributeReferenceTypeImpl(referenceTypeId);
     }
 
+    /**
+     * factory method for an instance of AttributeReferenceTypeBuilder
+     * @return builder
+     */
     public static AttributeReferenceTypeBuilder of() {
         return new AttributeReferenceTypeBuilder();
     }
 
+    /**
+     * create builder for AttributeReferenceType instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static AttributeReferenceTypeBuilder of(final AttributeReferenceType template) {
         AttributeReferenceTypeBuilder builder = new AttributeReferenceTypeBuilder();
         builder.referenceTypeId = template.getReferenceTypeId();

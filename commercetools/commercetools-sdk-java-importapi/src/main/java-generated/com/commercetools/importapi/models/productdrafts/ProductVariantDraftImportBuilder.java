@@ -42,7 +42,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     private java.util.List<com.commercetools.importapi.models.common.Asset> assets;
 
     /**
-     *
+     * set the value to the sku
      * @param sku value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     *
+     * set the value to the key
      * @param key value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     *
+     * set values to the prices
      * @param prices value to be set
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     *
+     * set value to the prices
      * @param prices value to be set
      * @return Builder
      */
@@ -88,7 +88,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     *
+     * add values to the prices
      * @param prices value to be set
      * @return Builder
      */
@@ -103,7 +103,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     *
+     * add the value to the prices using the builder function
      * @param builder function to build the prices value
      * @return Builder
      */
@@ -119,7 +119,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     *
+     * set the value to the prices using the builder function
      * @param builder function to build the prices value
      * @return Builder
      */
@@ -133,7 +133,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     *
+     * set values to the attributes
      * @param attributes value to be set
      * @return Builder
      */
@@ -145,7 +145,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     *
+     * set value to the attributes
      * @param attributes value to be set
      * @return Builder
      */
@@ -157,7 +157,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     *
+     * add values to the attributes
      * @param attributes value to be set
      * @return Builder
      */
@@ -172,7 +172,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     *
+     * add a value to the attributes using the builder function
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -188,7 +188,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     *
+     * set the value to the attributes using the builder function
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -202,7 +202,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     *
+     * set values to the images
      * @param images value to be set
      * @return Builder
      */
@@ -214,7 +214,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     *
+     * set value to the images
      * @param images value to be set
      * @return Builder
      */
@@ -226,7 +226,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     *
+     * add values to the images
      * @param images value to be set
      * @return Builder
      */
@@ -241,7 +241,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     *
+     * add the value to the images using the builder function
      * @param builder function to build the images value
      * @return Builder
      */
@@ -256,7 +256,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     *
+     * set the value to the images using the builder function
      * @param builder function to build the images value
      * @return Builder
      */
@@ -269,7 +269,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     *
+     * set values to the assets
      * @param assets value to be set
      * @return Builder
      */
@@ -281,7 +281,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     *
+     * set value to the assets
      * @param assets value to be set
      * @return Builder
      */
@@ -293,7 +293,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     *
+     * add values to the assets
      * @param assets value to be set
      * @return Builder
      */
@@ -308,7 +308,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     *
+     * add the value to the assets using the builder function
      * @param builder function to build the assets value
      * @return Builder
      */
@@ -323,7 +323,7 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
-     *
+     * set the value to the assets using the builder function
      * @param builder function to build the assets value
      * @return Builder
      */
@@ -335,29 +335,59 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
         return this;
     }
 
+    /**
+     * value of sku}
+     * @return sku
+     */
+
     @Nullable
     public String getSku() {
         return this.sku;
     }
 
+    /**
+     * value of key}
+     * @return key
+     */
+
     public String getKey() {
         return this.key;
     }
+
+    /**
+     * value of prices}
+     * @return prices
+     */
 
     @Nullable
     public java.util.List<com.commercetools.importapi.models.productdrafts.PriceDraftImport> getPrices() {
         return this.prices;
     }
 
+    /**
+     * value of attributes}
+     * @return attributes
+     */
+
     @Nullable
     public java.util.List<com.commercetools.importapi.models.productvariants.Attribute> getAttributes() {
         return this.attributes;
     }
 
+    /**
+     * value of images}
+     * @return images
+     */
+
     @Nullable
     public java.util.List<com.commercetools.importapi.models.common.Image> getImages() {
         return this.images;
     }
+
+    /**
+     * value of assets}
+     * @return assets
+     */
 
     @Nullable
     public java.util.List<com.commercetools.importapi.models.common.Asset> getAssets() {
@@ -381,10 +411,19 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
         return new ProductVariantDraftImportImpl(sku, key, prices, attributes, images, assets);
     }
 
+    /**
+     * factory method for an instance of ProductVariantDraftImportBuilder
+     * @return builder
+     */
     public static ProductVariantDraftImportBuilder of() {
         return new ProductVariantDraftImportBuilder();
     }
 
+    /**
+     * create builder for ProductVariantDraftImport instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductVariantDraftImportBuilder of(final ProductVariantDraftImport template) {
         ProductVariantDraftImportBuilder builder = new ProductVariantDraftImportBuilder();
         builder.sku = template.getSku();

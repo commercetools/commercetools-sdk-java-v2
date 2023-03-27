@@ -63,6 +63,10 @@ public class ProjectUpdateActionBuilder {
         return com.commercetools.api.models.project.ProjectSetShippingRateInputTypeActionBuilder.of();
     }
 
+    /**
+     * factory method for an instance of ProjectUpdateActionBuilder
+     * @return builder
+     */
     public static ProjectUpdateActionBuilder of() {
         return new ProjectUpdateActionBuilder();
     }

@@ -27,30 +27,61 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PaymentKeyReferenceImpl.class)
 public interface PaymentKeyReference extends KeyReference {
 
+    /**
+     * discriminator value for PaymentKeyReference
+     */
     String PAYMENT = "payment";
 
+    /**
+     * factory method
+     * @return instance of PaymentKeyReference
+     */
     public static PaymentKeyReference of() {
         return new PaymentKeyReferenceImpl();
     }
 
+    /**
+     * factory method to copy an instance of PaymentKeyReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static PaymentKeyReference of(final PaymentKeyReference template) {
         PaymentKeyReferenceImpl instance = new PaymentKeyReferenceImpl();
         instance.setKey(template.getKey());
         return instance;
     }
 
+    /**
+     * builder factory method for PaymentKeyReference
+     * @return builder
+     */
     public static PaymentKeyReferenceBuilder builder() {
         return PaymentKeyReferenceBuilder.of();
     }
 
+    /**
+     * create builder for PaymentKeyReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentKeyReferenceBuilder builder(final PaymentKeyReference template) {
         return PaymentKeyReferenceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withPaymentKeyReference(Function<PaymentKeyReference, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<PaymentKeyReference> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<PaymentKeyReference>() {
             @Override

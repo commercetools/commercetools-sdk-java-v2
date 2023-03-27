@@ -54,6 +54,9 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
 
     private com.commercetools.api.models.product.ProductPriceModeEnum priceMode;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductDraftImpl(
             @JsonProperty("productType") final com.commercetools.api.models.product_type.ProductTypeResourceIdentifier productType,
@@ -92,6 +95,9 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
         this.priceMode = priceMode;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductDraftImpl() {
     }
 

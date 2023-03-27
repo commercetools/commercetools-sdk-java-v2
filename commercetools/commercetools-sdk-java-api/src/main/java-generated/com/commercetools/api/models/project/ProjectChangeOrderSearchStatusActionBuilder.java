@@ -35,6 +35,11 @@ public class ProjectChangeOrderSearchStatusActionBuilder implements Builder<Proj
         return this;
     }
 
+    /**
+     *  <p>Activates or deactivates the Order Search feature. Activation will trigger building a search index for the Orders in the Project.</p>
+     * @return status
+     */
+
     public com.commercetools.api.models.project.OrderSearchStatus getStatus() {
         return this.status;
     }
@@ -56,10 +61,19 @@ public class ProjectChangeOrderSearchStatusActionBuilder implements Builder<Proj
         return new ProjectChangeOrderSearchStatusActionImpl(status);
     }
 
+    /**
+     * factory method for an instance of ProjectChangeOrderSearchStatusActionBuilder
+     * @return builder
+     */
     public static ProjectChangeOrderSearchStatusActionBuilder of() {
         return new ProjectChangeOrderSearchStatusActionBuilder();
     }
 
+    /**
+     * create builder for ProjectChangeOrderSearchStatusAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProjectChangeOrderSearchStatusActionBuilder of(final ProjectChangeOrderSearchStatusAction template) {
         ProjectChangeOrderSearchStatusActionBuilder builder = new ProjectChangeOrderSearchStatusActionBuilder();
         builder.status = template.getStatus();

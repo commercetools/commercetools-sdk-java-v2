@@ -26,6 +26,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ReviewSetTextActionImpl.class)
 public interface ReviewSetTextAction extends ReviewUpdateAction {
 
+    /**
+     * discriminator value for ReviewSetTextAction
+     */
     String SET_TEXT = "setText";
 
     /**
@@ -36,30 +39,63 @@ public interface ReviewSetTextAction extends ReviewUpdateAction {
     @JsonProperty("text")
     public String getText();
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param text value to be set
+     */
+
     public void setText(final String text);
 
+    /**
+     * factory method
+     * @return instance of ReviewSetTextAction
+     */
     public static ReviewSetTextAction of() {
         return new ReviewSetTextActionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ReviewSetTextAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ReviewSetTextAction of(final ReviewSetTextAction template) {
         ReviewSetTextActionImpl instance = new ReviewSetTextActionImpl();
         instance.setText(template.getText());
         return instance;
     }
 
+    /**
+     * builder factory method for ReviewSetTextAction
+     * @return builder
+     */
     public static ReviewSetTextActionBuilder builder() {
         return ReviewSetTextActionBuilder.of();
     }
 
+    /**
+     * create builder for ReviewSetTextAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReviewSetTextActionBuilder builder(final ReviewSetTextAction template) {
         return ReviewSetTextActionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withReviewSetTextAction(Function<ReviewSetTextAction, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ReviewSetTextAction> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ReviewSetTextAction>() {
             @Override

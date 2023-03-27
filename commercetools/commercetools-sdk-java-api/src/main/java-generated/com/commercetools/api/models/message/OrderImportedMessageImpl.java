@@ -44,6 +44,9 @@ public class OrderImportedMessageImpl implements OrderImportedMessage, ModelBase
 
     private com.commercetools.api.models.order.Order order;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderImportedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -69,6 +72,9 @@ public class OrderImportedMessageImpl implements OrderImportedMessage, ModelBase
         this.type = ORDER_IMPORTED;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderImportedMessageImpl() {
         this.type = ORDER_IMPORTED;
     }

@@ -47,6 +47,11 @@ public class OrderCreatedMessagePayloadBuilder implements Builder<OrderCreatedMe
         return this;
     }
 
+    /**
+     *  <p>Order that was created.</p>
+     * @return order
+     */
+
     public com.commercetools.api.models.order.Order getOrder() {
         return this.order;
     }
@@ -68,10 +73,19 @@ public class OrderCreatedMessagePayloadBuilder implements Builder<OrderCreatedMe
         return new OrderCreatedMessagePayloadImpl(order);
     }
 
+    /**
+     * factory method for an instance of OrderCreatedMessagePayloadBuilder
+     * @return builder
+     */
     public static OrderCreatedMessagePayloadBuilder of() {
         return new OrderCreatedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for OrderCreatedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderCreatedMessagePayloadBuilder of(final OrderCreatedMessagePayload template) {
         OrderCreatedMessagePayloadBuilder builder = new OrderCreatedMessagePayloadBuilder();
         builder.order = template.getOrder();

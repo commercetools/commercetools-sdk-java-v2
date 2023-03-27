@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ShoppingListStoreSetMessagePayloadImpl.class)
 public interface ShoppingListStoreSetMessagePayload extends MessagePayload {
 
+    /**
+     * discriminator value for ShoppingListStoreSetMessagePayload
+     */
     String SHOPPING_LIST_STORE_SET = "ShoppingListStoreSet";
 
     /**
@@ -42,30 +45,63 @@ public interface ShoppingListStoreSetMessagePayload extends MessagePayload {
     @JsonProperty("store")
     public StoreKeyReference getStore();
 
+    /**
+     *  <p>Reference to a Store by its key.</p>
+     * @param store value to be set
+     */
+
     public void setStore(final StoreKeyReference store);
 
+    /**
+     * factory method
+     * @return instance of ShoppingListStoreSetMessagePayload
+     */
     public static ShoppingListStoreSetMessagePayload of() {
         return new ShoppingListStoreSetMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of ShoppingListStoreSetMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ShoppingListStoreSetMessagePayload of(final ShoppingListStoreSetMessagePayload template) {
         ShoppingListStoreSetMessagePayloadImpl instance = new ShoppingListStoreSetMessagePayloadImpl();
         instance.setStore(template.getStore());
         return instance;
     }
 
+    /**
+     * builder factory method for ShoppingListStoreSetMessagePayload
+     * @return builder
+     */
     public static ShoppingListStoreSetMessagePayloadBuilder builder() {
         return ShoppingListStoreSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for ShoppingListStoreSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShoppingListStoreSetMessagePayloadBuilder builder(final ShoppingListStoreSetMessagePayload template) {
         return ShoppingListStoreSetMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withShoppingListStoreSetMessagePayload(Function<ShoppingListStoreSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ShoppingListStoreSetMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ShoppingListStoreSetMessagePayload>() {
             @Override

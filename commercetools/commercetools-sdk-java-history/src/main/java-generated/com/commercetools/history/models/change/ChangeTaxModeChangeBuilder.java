@@ -41,7 +41,7 @@ public class ChangeTaxModeChangeBuilder implements Builder<ChangeTaxModeChange> 
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class ChangeTaxModeChangeBuilder implements Builder<ChangeTaxModeChange> 
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -63,13 +63,28 @@ public class ChangeTaxModeChangeBuilder implements Builder<ChangeTaxModeChange> 
         return this;
     }
 
+    /**
+     *  <p>Shape of the action for <code>changeTaxMode</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public com.commercetools.history.models.common.TaxMode getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public com.commercetools.history.models.common.TaxMode getNextValue() {
         return this.nextValue;
@@ -94,10 +109,19 @@ public class ChangeTaxModeChangeBuilder implements Builder<ChangeTaxModeChange> 
         return new ChangeTaxModeChangeImpl(change, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of ChangeTaxModeChangeBuilder
+     * @return builder
+     */
     public static ChangeTaxModeChangeBuilder of() {
         return new ChangeTaxModeChangeBuilder();
     }
 
+    /**
+     * create builder for ChangeTaxModeChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeTaxModeChangeBuilder of(final ChangeTaxModeChange template) {
         ChangeTaxModeChangeBuilder builder = new ChangeTaxModeChangeBuilder();
         builder.change = template.getChange();

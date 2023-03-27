@@ -93,24 +93,68 @@ public interface QuoteRequestDraft
     @JsonProperty("purchaseOrderNumber")
     public String getPurchaseOrderNumber();
 
+    /**
+     *  <p>Cart for which a Quote is requested. Anonymous Carts, Carts with Discount Codes, or Carts with a <code>Multiple</code> ShippingMode are not supported.</p>
+     * @param cart value to be set
+     */
+
     public void setCart(final CartResourceIdentifier cart);
+
+    /**
+     *  <p>Current version of the referenced Cart.</p>
+     * @param cartVersion value to be set
+     */
 
     public void setCartVersion(final Long cartVersion);
 
+    /**
+     *  <p>User-defined unique identifier for the QuoteRequest.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
+
+    /**
+     *  <p>Message from the Buyer included in the Quote Request.</p>
+     * @param comment value to be set
+     */
 
     public void setComment(final String comment);
 
+    /**
+     *  <p>Custom Fields to be added to the Quote Request.</p>
+     * @param custom value to be set
+     */
+
     public void setCustom(final CustomFieldsDraft custom);
+
+    /**
+     *  <p>State of this Quote Request. This reference can point to a State in a custom workflow.</p>
+     * @param state value to be set
+     */
 
     public void setState(final StateReference state);
 
+    /**
+     *  <p>Identifier for a purchase order, usually in a B2B context. The Purchase Order Number is typically entered by the Buyer.</p>
+     * @param purchaseOrderNumber value to be set
+     */
+
     public void setPurchaseOrderNumber(final String purchaseOrderNumber);
 
+    /**
+     * factory method
+     * @return instance of QuoteRequestDraft
+     */
     public static QuoteRequestDraft of() {
         return new QuoteRequestDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of QuoteRequestDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static QuoteRequestDraft of(final QuoteRequestDraft template) {
         QuoteRequestDraftImpl instance = new QuoteRequestDraftImpl();
         instance.setCart(template.getCart());
@@ -123,18 +167,37 @@ public interface QuoteRequestDraft
         return instance;
     }
 
+    /**
+     * builder factory method for QuoteRequestDraft
+     * @return builder
+     */
     public static QuoteRequestDraftBuilder builder() {
         return QuoteRequestDraftBuilder.of();
     }
 
+    /**
+     * create builder for QuoteRequestDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static QuoteRequestDraftBuilder builder(final QuoteRequestDraft template) {
         return QuoteRequestDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withQuoteRequestDraft(Function<QuoteRequestDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<QuoteRequestDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<QuoteRequestDraft>() {
             @Override

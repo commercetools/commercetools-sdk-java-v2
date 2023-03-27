@@ -67,6 +67,10 @@ public class ShippingMethodUpdateActionBuilder {
         return com.commercetools.api.models.shipping_method.ShippingMethodSetPredicateActionBuilder.of();
     }
 
+    /**
+     * factory method for an instance of ShippingMethodUpdateActionBuilder
+     * @return builder
+     */
     public static ShippingMethodUpdateActionBuilder of() {
         return new ShippingMethodUpdateActionBuilder();
     }

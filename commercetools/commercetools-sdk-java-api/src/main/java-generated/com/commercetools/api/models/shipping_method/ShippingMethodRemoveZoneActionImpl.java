@@ -24,6 +24,9 @@ public class ShippingMethodRemoveZoneActionImpl implements ShippingMethodRemoveZ
 
     private com.commercetools.api.models.zone.ZoneResourceIdentifier zone;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShippingMethodRemoveZoneActionImpl(
             @JsonProperty("zone") final com.commercetools.api.models.zone.ZoneResourceIdentifier zone) {
@@ -31,6 +34,9 @@ public class ShippingMethodRemoveZoneActionImpl implements ShippingMethodRemoveZ
         this.action = REMOVE_ZONE;
     }
 
+    /**
+     * create empty instance
+     */
     public ShippingMethodRemoveZoneActionImpl() {
         this.action = REMOVE_ZONE;
     }

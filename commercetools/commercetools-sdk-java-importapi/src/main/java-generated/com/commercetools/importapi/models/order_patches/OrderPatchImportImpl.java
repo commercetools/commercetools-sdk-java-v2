@@ -24,6 +24,9 @@ public class OrderPatchImportImpl implements OrderPatchImport, ModelBase {
 
     private com.commercetools.importapi.models.order_patches.OrderField fields;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     OrderPatchImportImpl(@JsonProperty("orderNumber") final String orderNumber,
             @JsonProperty("fields") final com.commercetools.importapi.models.order_patches.OrderField fields) {
@@ -31,6 +34,9 @@ public class OrderPatchImportImpl implements OrderPatchImport, ModelBase {
         this.fields = fields;
     }
 
+    /**
+     * create empty instance
+     */
     public OrderPatchImportImpl() {
     }
 

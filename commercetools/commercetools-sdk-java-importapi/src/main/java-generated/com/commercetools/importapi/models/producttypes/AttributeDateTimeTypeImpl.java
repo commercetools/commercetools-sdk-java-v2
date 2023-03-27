@@ -21,6 +21,9 @@ public class AttributeDateTimeTypeImpl implements AttributeDateTimeType, ModelBa
 
     private String name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AttributeDateTimeTypeImpl() {
         this.name = DATETIME;

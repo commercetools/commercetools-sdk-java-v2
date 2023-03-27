@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderLabelImpl.class)
 public interface OrderLabel extends Label {
 
+    /**
+     * discriminator value for OrderLabel
+     */
     String ORDER_LABEL = "OrderLabel";
 
     /**
@@ -56,14 +59,33 @@ public interface OrderLabel extends Label {
     @JsonProperty("orderNumber")
     public String getOrderNumber();
 
+    /**
+     * set customerEmail
+     * @param customerEmail value to be set
+     */
+
     public void setCustomerEmail(final String customerEmail);
+
+    /**
+     * set orderNumber
+     * @param orderNumber value to be set
+     */
 
     public void setOrderNumber(final String orderNumber);
 
+    /**
+     * factory method
+     * @return instance of OrderLabel
+     */
     public static OrderLabel of() {
         return new OrderLabelImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderLabel
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderLabel of(final OrderLabel template) {
         OrderLabelImpl instance = new OrderLabelImpl();
         instance.setCustomerEmail(template.getCustomerEmail());
@@ -71,18 +93,37 @@ public interface OrderLabel extends Label {
         return instance;
     }
 
+    /**
+     * builder factory method for OrderLabel
+     * @return builder
+     */
     public static OrderLabelBuilder builder() {
         return OrderLabelBuilder.of();
     }
 
+    /**
+     * create builder for OrderLabel instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderLabelBuilder builder(final OrderLabel template) {
         return OrderLabelBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderLabel(Function<OrderLabel, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderLabel> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderLabel>() {
             @Override

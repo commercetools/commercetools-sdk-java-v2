@@ -51,7 +51,7 @@ public class SetCustomLineItemTaxRateChangeBuilder implements Builder<SetCustomL
     }
 
     /**
-     *
+     * set the value to the customLineItem using the builder function
      * @param builder function to build the customLineItem value
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class SetCustomLineItemTaxRateChangeBuilder implements Builder<SetCustomL
     }
 
     /**
-     *
+     * set the value to the customLineItem
      * @param customLineItem value to be set
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class SetCustomLineItemTaxRateChangeBuilder implements Builder<SetCustomL
     }
 
     /**
-     *
+     * set the value to the customLineItemId
      * @param customLineItemId value to be set
      * @return Builder
      */
@@ -87,7 +87,7 @@ public class SetCustomLineItemTaxRateChangeBuilder implements Builder<SetCustomL
     }
 
     /**
-     *
+     * set the value to the taxMode
      * @param taxMode value to be set
      * @return Builder
      */
@@ -146,25 +146,55 @@ public class SetCustomLineItemTaxRateChangeBuilder implements Builder<SetCustomL
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>setCustomLineItemTaxRate</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of customLineItem}
+     * @return customLineItem
+     */
 
     public com.commercetools.history.models.common.LocalizedString getCustomLineItem() {
         return this.customLineItem;
     }
 
+    /**
+     * value of customLineItemId}
+     * @return customLineItemId
+     */
+
     public String getCustomLineItemId() {
         return this.customLineItemId;
     }
+
+    /**
+     * value of taxMode}
+     * @return taxMode
+     */
 
     public com.commercetools.history.models.common.TaxMode getTaxMode() {
         return this.taxMode;
     }
 
+    /**
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @return nextValue
+     */
+
     public com.commercetools.history.models.common.TaxRate getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @return previousValue
+     */
 
     public com.commercetools.history.models.common.TaxRate getPreviousValue() {
         return this.previousValue;
@@ -195,10 +225,19 @@ public class SetCustomLineItemTaxRateChangeBuilder implements Builder<SetCustomL
             previousValue);
     }
 
+    /**
+     * factory method for an instance of SetCustomLineItemTaxRateChangeBuilder
+     * @return builder
+     */
     public static SetCustomLineItemTaxRateChangeBuilder of() {
         return new SetCustomLineItemTaxRateChangeBuilder();
     }
 
+    /**
+     * create builder for SetCustomLineItemTaxRateChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetCustomLineItemTaxRateChangeBuilder of(final SetCustomLineItemTaxRateChange template) {
         SetCustomLineItemTaxRateChangeBuilder builder = new SetCustomLineItemTaxRateChangeBuilder();
         builder.change = template.getChange();

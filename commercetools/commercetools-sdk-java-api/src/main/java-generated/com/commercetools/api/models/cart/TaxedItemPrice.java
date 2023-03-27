@@ -58,16 +58,40 @@ public interface TaxedItemPrice {
     @JsonProperty("totalTax")
     public CentPrecisionMoney getTotalTax();
 
+    /**
+     *  <p>Total net amount of the Line Item or Custom Line Item.</p>
+     * @param totalNet value to be set
+     */
+
     public void setTotalNet(final CentPrecisionMoney totalNet);
+
+    /**
+     *  <p>Total gross amount of the Line Item or Custom Line Item.</p>
+     * @param totalGross value to be set
+     */
 
     public void setTotalGross(final CentPrecisionMoney totalGross);
 
+    /**
+     *  <p>Total tax applicable for the Line Item or Custom Line Item. Automatically calculated as the difference between the <code>totalGross</code> and <code>totalNet</code> values.</p>
+     * @param totalTax value to be set
+     */
+
     public void setTotalTax(final CentPrecisionMoney totalTax);
 
+    /**
+     * factory method
+     * @return instance of TaxedItemPrice
+     */
     public static TaxedItemPrice of() {
         return new TaxedItemPriceImpl();
     }
 
+    /**
+     * factory method to copy an instance of TaxedItemPrice
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static TaxedItemPrice of(final TaxedItemPrice template) {
         TaxedItemPriceImpl instance = new TaxedItemPriceImpl();
         instance.setTotalNet(template.getTotalNet());
@@ -76,18 +100,37 @@ public interface TaxedItemPrice {
         return instance;
     }
 
+    /**
+     * builder factory method for TaxedItemPrice
+     * @return builder
+     */
     public static TaxedItemPriceBuilder builder() {
         return TaxedItemPriceBuilder.of();
     }
 
+    /**
+     * create builder for TaxedItemPrice instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TaxedItemPriceBuilder builder(final TaxedItemPrice template) {
         return TaxedItemPriceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTaxedItemPrice(Function<TaxedItemPrice, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<TaxedItemPrice> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TaxedItemPrice>() {
             @Override

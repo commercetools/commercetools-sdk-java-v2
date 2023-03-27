@@ -106,26 +106,56 @@ public class CustomerTokenBuilder implements Builder<CustomerToken> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the token.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
 
+    /**
+     *  <p>Date and time (UTC) the token was initially created.</p>
+     * @return createdAt
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
+
+    /**
+     *  <p>When the token is created, <code>lastModifiedAt</code> is set to <code>createdAt</code>.</p>
+     * @return lastModifiedAt
+     */
 
     @Nullable
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
 
+    /**
+     *  <p>The <code>id</code> of the Customer.</p>
+     * @return customerId
+     */
+
     public String getCustomerId() {
         return this.customerId;
     }
 
+    /**
+     *  <p>Date and time (UTC) the token expires.</p>
+     * @return expiresAt
+     */
+
     public java.time.ZonedDateTime getExpiresAt() {
         return this.expiresAt;
     }
+
+    /**
+     *  <p>Value of the token.</p>
+     * @return value
+     */
 
     public String getValue() {
         return this.value;
@@ -152,10 +182,19 @@ public class CustomerTokenBuilder implements Builder<CustomerToken> {
         return new CustomerTokenImpl(id, createdAt, lastModifiedAt, customerId, expiresAt, value);
     }
 
+    /**
+     * factory method for an instance of CustomerTokenBuilder
+     * @return builder
+     */
     public static CustomerTokenBuilder of() {
         return new CustomerTokenBuilder();
     }
 
+    /**
+     * create builder for CustomerToken instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerTokenBuilder of(final CustomerToken template) {
         CustomerTokenBuilder builder = new CustomerTokenBuilder();
         builder.id = template.getId();

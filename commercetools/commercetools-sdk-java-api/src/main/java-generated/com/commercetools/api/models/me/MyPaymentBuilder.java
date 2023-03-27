@@ -239,35 +239,75 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Payment.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
 
+    /**
+     *  <p>Current version of the Payment.</p>
+     * @return version
+     */
+
     public Long getVersion() {
         return this.version;
     }
+
+    /**
+     *  <p>Reference to a Customer associated with the Payment. Set automatically with a password flow token. Either <code>customer</code> or <code>anonymousId</code> is present.</p>
+     * @return customer
+     */
 
     @Nullable
     public com.commercetools.api.models.customer.CustomerReference getCustomer() {
         return this.customer;
     }
 
+    /**
+     *  <p>Anonymous session associated with the Payment. Set automatically with a token for an anonymous session. Either <code>customer</code> or <code>anonymousId</code> is present.</p>
+     * @return anonymousId
+     */
+
     @Nullable
     public String getAnonymousId() {
         return this.anonymousId;
     }
 
+    /**
+     *  <p>Money value the Payment intends to receive from the customer. The value typically matches the Cart or Order gross total.</p>
+     * @return amountPlanned
+     */
+
     public com.commercetools.api.models.common.CentPrecisionMoney getAmountPlanned() {
         return this.amountPlanned;
     }
+
+    /**
+     *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
+     * @return paymentMethodInfo
+     */
 
     public com.commercetools.api.models.payment.PaymentMethodInfo getPaymentMethodInfo() {
         return this.paymentMethodInfo;
     }
 
+    /**
+     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     * @return transactions
+     */
+
     public java.util.List<com.commercetools.api.models.payment.Transaction> getTransactions() {
         return this.transactions;
     }
+
+    /**
+     *  <p>Custom Fields defined for the Payment.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -297,10 +337,19 @@ public class MyPaymentBuilder implements Builder<MyPayment> {
             custom);
     }
 
+    /**
+     * factory method for an instance of MyPaymentBuilder
+     * @return builder
+     */
     public static MyPaymentBuilder of() {
         return new MyPaymentBuilder();
     }
 
+    /**
+     * create builder for MyPayment instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyPaymentBuilder of(final MyPayment template) {
         MyPaymentBuilder builder = new MyPaymentBuilder();
         builder.id = template.getId();

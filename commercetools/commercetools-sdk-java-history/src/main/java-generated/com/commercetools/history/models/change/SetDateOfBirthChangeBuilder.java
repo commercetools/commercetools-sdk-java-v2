@@ -41,7 +41,7 @@ public class SetDateOfBirthChangeBuilder implements Builder<SetDateOfBirthChange
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class SetDateOfBirthChangeBuilder implements Builder<SetDateOfBirthChange
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -62,13 +62,28 @@ public class SetDateOfBirthChangeBuilder implements Builder<SetDateOfBirthChange
         return this;
     }
 
+    /**
+     *  <p>Shape of the action for <code>setDateOfBirth</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public String getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public String getNextValue() {
         return this.nextValue;
@@ -93,10 +108,19 @@ public class SetDateOfBirthChangeBuilder implements Builder<SetDateOfBirthChange
         return new SetDateOfBirthChangeImpl(change, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of SetDateOfBirthChangeBuilder
+     * @return builder
+     */
     public static SetDateOfBirthChangeBuilder of() {
         return new SetDateOfBirthChangeBuilder();
     }
 
+    /**
+     * create builder for SetDateOfBirthChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetDateOfBirthChangeBuilder of(final SetDateOfBirthChange template) {
         SetDateOfBirthChangeBuilder builder = new SetDateOfBirthChangeBuilder();
         builder.change = template.getChange();

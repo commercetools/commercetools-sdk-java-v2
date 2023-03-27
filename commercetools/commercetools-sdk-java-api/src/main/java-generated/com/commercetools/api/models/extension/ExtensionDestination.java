@@ -44,22 +44,44 @@ public interface ExtensionDestination {
     @JsonProperty("type")
     public String getType();
 
+    /**
+     * builder for awsLambda subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.extension.AWSLambdaDestinationBuilder awsLambdaBuilder() {
         return com.commercetools.api.models.extension.AWSLambdaDestinationBuilder.of();
     }
 
+    /**
+     * builder for googleCloudFunction subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.extension.GoogleCloudFunctionDestinationBuilder googleCloudFunctionBuilder() {
         return com.commercetools.api.models.extension.GoogleCloudFunctionDestinationBuilder.of();
     }
 
+    /**
+     * builder for http subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.extension.HttpDestinationBuilder httpBuilder() {
         return com.commercetools.api.models.extension.HttpDestinationBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withExtensionDestination(Function<ExtensionDestination, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ExtensionDestination> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ExtensionDestination>() {
             @Override

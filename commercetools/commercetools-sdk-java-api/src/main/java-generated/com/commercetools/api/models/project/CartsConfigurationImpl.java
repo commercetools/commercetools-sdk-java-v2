@@ -24,6 +24,9 @@ public class CartsConfigurationImpl implements CartsConfiguration, ModelBase {
 
     private Boolean countryTaxRateFallbackEnabled;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartsConfigurationImpl(@JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification,
             @JsonProperty("countryTaxRateFallbackEnabled") final Boolean countryTaxRateFallbackEnabled) {
@@ -31,6 +34,9 @@ public class CartsConfigurationImpl implements CartsConfiguration, ModelBase {
         this.countryTaxRateFallbackEnabled = countryTaxRateFallbackEnabled;
     }
 
+    /**
+     * create empty instance
+     */
     public CartsConfigurationImpl() {
     }
 

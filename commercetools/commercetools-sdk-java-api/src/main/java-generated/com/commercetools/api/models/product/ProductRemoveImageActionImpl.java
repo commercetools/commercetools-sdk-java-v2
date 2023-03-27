@@ -30,6 +30,9 @@ public class ProductRemoveImageActionImpl implements ProductRemoveImageAction, M
 
     private Boolean staged;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductRemoveImageActionImpl(@JsonProperty("variantId") final Long variantId, @JsonProperty("sku") final String sku,
             @JsonProperty("imageUrl") final String imageUrl, @JsonProperty("staged") final Boolean staged) {
@@ -40,6 +43,9 @@ public class ProductRemoveImageActionImpl implements ProductRemoveImageAction, M
         this.action = REMOVE_IMAGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductRemoveImageActionImpl() {
         this.action = REMOVE_IMAGE;
     }

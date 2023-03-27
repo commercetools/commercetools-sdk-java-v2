@@ -63,9 +63,19 @@ public class StateReferenceBuilder implements Builder<StateReference> {
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the referenced State.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Contains the representation of the expanded State. Only present in responses to requests with Reference Expansion for States.</p>
+     * @return obj
+     */
 
     @Nullable
     public com.commercetools.api.models.state.State getObj() {
@@ -89,10 +99,19 @@ public class StateReferenceBuilder implements Builder<StateReference> {
         return new StateReferenceImpl(id, obj);
     }
 
+    /**
+     * factory method for an instance of StateReferenceBuilder
+     * @return builder
+     */
     public static StateReferenceBuilder of() {
         return new StateReferenceBuilder();
     }
 
+    /**
+     * create builder for StateReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StateReferenceBuilder of(final StateReference template) {
         StateReferenceBuilder builder = new StateReferenceBuilder();
         builder.id = template.getId();

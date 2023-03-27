@@ -135,32 +135,96 @@ public interface ProductSelection
     @JsonProperty("custom")
     public CustomFields getCustom();
 
+    /**
+     *  <p>Unique identifier of the ProductSelection.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>Current version of the ProductSelection.</p>
+     * @param version value to be set
+     */
 
     public void setVersion(final Long version);
 
+    /**
+     *  <p>Date and time (UTC) the ProductSelection was initially created.</p>
+     * @param createdAt value to be set
+     */
+
     public void setCreatedAt(final ZonedDateTime createdAt);
+
+    /**
+     *  <p>Date and time (UTC) the ProductSelection was last updated.</p>
+     * @param lastModifiedAt value to be set
+     */
 
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
+    /**
+     *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+     * @param lastModifiedBy value to be set
+     */
+
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
+
+    /**
+     *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+     * @param createdBy value to be set
+     */
 
     public void setCreatedBy(final CreatedBy createdBy);
 
+    /**
+     *  <p>User-defined unique identifier of the ProductSelection.</p>
+     * @param key value to be set
+     */
+
     public void setKey(final String key);
+
+    /**
+     *  <p>Name of the ProductSelection.</p>
+     * @param name value to be set
+     */
 
     public void setName(final LocalizedString name);
 
+    /**
+     *  <p>Number of Products that are currently assigned to this ProductSelection.</p>
+     * @param productCount value to be set
+     */
+
     public void setProductCount(final Integer productCount);
+
+    /**
+     *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually, either by including or excluding them explicitly.</p>
+     * @param type value to be set
+     */
 
     public void setType(final ProductSelectionTypeEnum type);
 
+    /**
+     *  <p>Custom Fields of the ProductSelection.</p>
+     * @param custom value to be set
+     */
+
     public void setCustom(final CustomFields custom);
 
+    /**
+     * factory method
+     * @return instance of ProductSelection
+     */
     public static ProductSelection of() {
         return new ProductSelectionImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductSelection
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductSelection of(final ProductSelection template) {
         ProductSelectionImpl instance = new ProductSelectionImpl();
         instance.setId(template.getId());
@@ -177,14 +241,29 @@ public interface ProductSelection
         return instance;
     }
 
+    /**
+     * builder factory method for ProductSelection
+     * @return builder
+     */
     public static ProductSelectionBuilder builder() {
         return ProductSelectionBuilder.of();
     }
 
+    /**
+     * create builder for ProductSelection instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSelectionBuilder builder(final ProductSelection template) {
         return ProductSelectionBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductSelection(Function<ProductSelection, T> helper) {
         return helper.apply(this);
     }
@@ -193,6 +272,10 @@ public interface ProductSelection
         return com.commercetools.api.models.common.ReferenceTypeId.PRODUCT_SELECTION;
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductSelection> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductSelection>() {
             @Override

@@ -40,6 +40,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderEditAppliedMessageImpl.class)
 public interface OrderEditAppliedMessage extends OrderMessage {
 
+    /**
+     * discriminator value for OrderEditAppliedMessage
+     */
     String ORDER_EDIT_APPLIED = "OrderEditApplied";
 
     /**
@@ -60,14 +63,33 @@ public interface OrderEditAppliedMessage extends OrderMessage {
     @JsonProperty("result")
     public OrderEditApplied getResult();
 
+    /**
+     *  <p>OrderEdit that was applied.</p>
+     * @param edit value to be set
+     */
+
     public void setEdit(final OrderEdit edit);
+
+    /**
+     *  <p>Information about a successfully applied OrderEdit.</p>
+     * @param result value to be set
+     */
 
     public void setResult(final OrderEditApplied result);
 
+    /**
+     * factory method
+     * @return instance of OrderEditAppliedMessage
+     */
     public static OrderEditAppliedMessage of() {
         return new OrderEditAppliedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderEditAppliedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderEditAppliedMessage of(final OrderEditAppliedMessage template) {
         OrderEditAppliedMessageImpl instance = new OrderEditAppliedMessageImpl();
         instance.setId(template.getId());
@@ -85,18 +107,37 @@ public interface OrderEditAppliedMessage extends OrderMessage {
         return instance;
     }
 
+    /**
+     * builder factory method for OrderEditAppliedMessage
+     * @return builder
+     */
     public static OrderEditAppliedMessageBuilder builder() {
         return OrderEditAppliedMessageBuilder.of();
     }
 
+    /**
+     * create builder for OrderEditAppliedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderEditAppliedMessageBuilder builder(final OrderEditAppliedMessage template) {
         return OrderEditAppliedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderEditAppliedMessage(Function<OrderEditAppliedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderEditAppliedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderEditAppliedMessage>() {
             @Override

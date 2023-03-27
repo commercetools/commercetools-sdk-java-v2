@@ -232,7 +232,7 @@ public class ProductPriceKeySetMessageBuilder implements Builder<ProductPriceKey
     }
 
     /**
-     *
+     * set the value to the variantId
      * @param variantId value to be set
      * @return Builder
      */
@@ -286,67 +286,142 @@ public class ProductPriceKeySetMessageBuilder implements Builder<ProductPriceKey
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Version of a resource. In case of Messages, this is always <code>1</code>.</p>
+     * @return version
+     */
 
     public Long getVersion() {
         return this.version;
     }
 
+    /**
+     *  <p>Date and time (UTC) the Message was generated.</p>
+     * @return createdAt
+     */
+
     public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
 
+    /**
+     *  <p>Value of <code>createdAt</code>.</p>
+     * @return lastModifiedAt
+     */
+
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
+
+    /**
+     *  <p>Value of <code>createdBy</code>.</p>
+     * @return lastModifiedBy
+     */
 
     @Nullable
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
 
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @return createdBy
+     */
+
     @Nullable
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
 
+    /**
+     *  <p>Message number in relation to other Messages for a given resource. The <code>sequenceNumber</code> of the next Message for the resource is the successor of the <code>sequenceNumber</code> of the current Message. Meaning, the <code>sequenceNumber</code> of the next Message equals the <code>sequenceNumber</code> of the current Message + 1. <code>sequenceNumber</code> can be used to ensure that Messages are processed in the correct order for a particular resource.</p>
+     * @return sequenceNumber
+     */
+
     public Long getSequenceNumber() {
         return this.sequenceNumber;
     }
+
+    /**
+     *  <p>Reference to the resource on which the change or action was performed.</p>
+     * @return resource
+     */
 
     public com.commercetools.api.models.common.Reference getResource() {
         return this.resource;
     }
 
+    /**
+     *  <p>Version of the resource on which the change or action was performed.</p>
+     * @return resourceVersion
+     */
+
     public Long getResourceVersion() {
         return this.resourceVersion;
     }
+
+    /**
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @return resourceUserProvidedIdentifiers
+     */
 
     @Nullable
     public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers() {
         return this.resourceUserProvidedIdentifiers;
     }
 
+    /**
+     * value of variantId}
+     * @return variantId
+     */
+
     public Long getVariantId() {
         return this.variantId;
     }
+
+    /**
+     *  <p>Unique identifier of the Price.</p>
+     * @return priceId
+     */
 
     @Nullable
     public String getPriceId() {
         return this.priceId;
     }
 
+    /**
+     *  <p><code>key</code> value of the Price before the Set Price Key update action.</p>
+     * @return oldKey
+     */
+
     @Nullable
     public String getOldKey() {
         return this.oldKey;
     }
 
+    /**
+     *  <p><code>key</code> value of the Price after the Set Price Key update action.</p>
+     * @return key
+     */
+
     @Nullable
     public String getKey() {
         return this.key;
     }
+
+    /**
+     *  <p>Whether the update was only applied to the staged Product Projection.</p>
+     * @return staged
+     */
 
     public Boolean getStaged() {
         return this.staged;
@@ -381,10 +456,19 @@ public class ProductPriceKeySetMessageBuilder implements Builder<ProductPriceKey
             staged);
     }
 
+    /**
+     * factory method for an instance of ProductPriceKeySetMessageBuilder
+     * @return builder
+     */
     public static ProductPriceKeySetMessageBuilder of() {
         return new ProductPriceKeySetMessageBuilder();
     }
 
+    /**
+     * create builder for ProductPriceKeySetMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductPriceKeySetMessageBuilder of(final ProductPriceKeySetMessage template) {
         ProductPriceKeySetMessageBuilder builder = new ProductPriceKeySetMessageBuilder();
         builder.id = template.getId();

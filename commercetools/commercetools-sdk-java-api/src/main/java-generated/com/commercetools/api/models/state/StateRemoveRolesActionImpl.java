@@ -24,6 +24,9 @@ public class StateRemoveRolesActionImpl implements StateRemoveRolesAction, Model
 
     private java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StateRemoveRolesActionImpl(
             @JsonProperty("roles") final java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles) {
@@ -31,6 +34,9 @@ public class StateRemoveRolesActionImpl implements StateRemoveRolesAction, Model
         this.action = REMOVE_ROLES;
     }
 
+    /**
+     * create empty instance
+     */
     public StateRemoveRolesActionImpl() {
         this.action = REMOVE_ROLES;
     }

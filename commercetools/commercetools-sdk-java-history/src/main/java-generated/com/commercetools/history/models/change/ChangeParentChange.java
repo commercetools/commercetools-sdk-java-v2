@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ChangeParentChangeImpl.class)
 public interface ChangeParentChange extends Change {
 
+    /**
+     * discriminator value for ChangeParentChange
+     */
     String CHANGE_PARENT_CHANGE = "ChangeParentChange";
 
     /**
@@ -69,16 +72,40 @@ public interface ChangeParentChange extends Change {
     @JsonProperty("nextValue")
     public Reference getNextValue();
 
+    /**
+     *  <p>Shape of the action for <code>changeParent</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
 
     public void setPreviousValue(final Reference previousValue);
 
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
+
     public void setNextValue(final Reference nextValue);
 
+    /**
+     * factory method
+     * @return instance of ChangeParentChange
+     */
     public static ChangeParentChange of() {
         return new ChangeParentChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of ChangeParentChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ChangeParentChange of(final ChangeParentChange template) {
         ChangeParentChangeImpl instance = new ChangeParentChangeImpl();
         instance.setChange(template.getChange());
@@ -87,18 +114,37 @@ public interface ChangeParentChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for ChangeParentChange
+     * @return builder
+     */
     public static ChangeParentChangeBuilder builder() {
         return ChangeParentChangeBuilder.of();
     }
 
+    /**
+     * create builder for ChangeParentChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeParentChangeBuilder builder(final ChangeParentChange template) {
         return ChangeParentChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withChangeParentChange(Function<ChangeParentChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ChangeParentChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ChangeParentChange>() {
             @Override

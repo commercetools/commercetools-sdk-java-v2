@@ -74,10 +74,25 @@ public class LocalizableTextAttributeBuilder implements Builder<LocalizableTextA
         return this;
     }
 
+    /**
+     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     * @return name
+     */
+
     @Nullable
     public String getName() {
         return this.name;
     }
+
+    /**
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     * @return value
+     */
 
     public com.commercetools.importapi.models.common.LocalizedString getValue() {
         return this.value;
@@ -100,10 +115,19 @@ public class LocalizableTextAttributeBuilder implements Builder<LocalizableTextA
         return new LocalizableTextAttributeImpl(name, value);
     }
 
+    /**
+     * factory method for an instance of LocalizableTextAttributeBuilder
+     * @return builder
+     */
     public static LocalizableTextAttributeBuilder of() {
         return new LocalizableTextAttributeBuilder();
     }
 
+    /**
+     * create builder for LocalizableTextAttribute instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static LocalizableTextAttributeBuilder of(final LocalizableTextAttribute template) {
         LocalizableTextAttributeBuilder builder = new LocalizableTextAttributeBuilder();
         builder.name = template.getName();

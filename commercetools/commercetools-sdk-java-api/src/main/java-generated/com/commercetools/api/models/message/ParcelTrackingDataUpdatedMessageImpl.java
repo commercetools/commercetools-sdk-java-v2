@@ -50,6 +50,9 @@ public class ParcelTrackingDataUpdatedMessageImpl implements ParcelTrackingDataU
 
     private String shippingKey;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ParcelTrackingDataUpdatedMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -81,6 +84,9 @@ public class ParcelTrackingDataUpdatedMessageImpl implements ParcelTrackingDataU
         this.type = PARCEL_TRACKING_DATA_UPDATED;
     }
 
+    /**
+     * create empty instance
+     */
     public ParcelTrackingDataUpdatedMessageImpl() {
         this.type = PARCEL_TRACKING_DATA_UPDATED;
     }

@@ -27,6 +27,9 @@ public class StoreResourceIdentifierImpl implements StoreResourceIdentifier, Mod
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StoreResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
@@ -34,6 +37,9 @@ public class StoreResourceIdentifierImpl implements StoreResourceIdentifier, Mod
         this.typeId = ReferenceTypeId.findEnum("store");
     }
 
+    /**
+     * create empty instance
+     */
     public StoreResourceIdentifierImpl() {
         this.typeId = ReferenceTypeId.findEnum("store");
     }

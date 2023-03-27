@@ -24,6 +24,9 @@ public class MyPaymentChangeAmountPlannedActionImpl implements MyPaymentChangeAm
 
     private com.commercetools.api.models.common.Money amount;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyPaymentChangeAmountPlannedActionImpl(
             @JsonProperty("amount") final com.commercetools.api.models.common.Money amount) {
@@ -31,6 +34,9 @@ public class MyPaymentChangeAmountPlannedActionImpl implements MyPaymentChangeAm
         this.action = CHANGE_AMOUNT_PLANNED;
     }
 
+    /**
+     * create empty instance
+     */
     public MyPaymentChangeAmountPlannedActionImpl() {
         this.action = CHANGE_AMOUNT_PLANNED;
     }

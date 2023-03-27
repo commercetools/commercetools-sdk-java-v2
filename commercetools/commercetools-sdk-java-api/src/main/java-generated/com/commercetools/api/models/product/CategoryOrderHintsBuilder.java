@@ -49,6 +49,11 @@ public class CategoryOrderHintsBuilder implements Builder<CategoryOrderHints> {
         return this;
     }
 
+    /**
+     *  <p>A string representing a number between 0 and 1 that must start with <code>0.</code> and cannot end with <code>0</code>.</p>
+     * @return pattern properties
+     */
+
     public Map<String, String> getValues() {
         return this.values;
     }
@@ -69,10 +74,19 @@ public class CategoryOrderHintsBuilder implements Builder<CategoryOrderHints> {
         return new CategoryOrderHintsImpl(values);
     }
 
+    /**
+     * factory method for an instance of CategoryOrderHintsBuilder
+     * @return builder
+     */
     public static CategoryOrderHintsBuilder of() {
         return new CategoryOrderHintsBuilder();
     }
 
+    /**
+     * create builder for CategoryOrderHints instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategoryOrderHintsBuilder of(final CategoryOrderHints template) {
         CategoryOrderHintsBuilder builder = new CategoryOrderHintsBuilder();
         builder.values = template.values();

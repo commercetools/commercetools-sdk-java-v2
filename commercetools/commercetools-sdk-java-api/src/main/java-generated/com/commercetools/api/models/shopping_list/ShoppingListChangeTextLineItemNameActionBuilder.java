@@ -63,9 +63,19 @@ public class ShoppingListChangeTextLineItemNameActionBuilder
         return this;
     }
 
+    /**
+     *  <p>The <code>id</code> of the TextLineItem to update.</p>
+     * @return textLineItemId
+     */
+
     public String getTextLineItemId() {
         return this.textLineItemId;
     }
+
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     * @return name
+     */
 
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
@@ -90,10 +100,19 @@ public class ShoppingListChangeTextLineItemNameActionBuilder
         return new ShoppingListChangeTextLineItemNameActionImpl(textLineItemId, name);
     }
 
+    /**
+     * factory method for an instance of ShoppingListChangeTextLineItemNameActionBuilder
+     * @return builder
+     */
     public static ShoppingListChangeTextLineItemNameActionBuilder of() {
         return new ShoppingListChangeTextLineItemNameActionBuilder();
     }
 
+    /**
+     * create builder for ShoppingListChangeTextLineItemNameAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShoppingListChangeTextLineItemNameActionBuilder of(
             final ShoppingListChangeTextLineItemNameAction template) {
         ShoppingListChangeTextLineItemNameActionBuilder builder = new ShoppingListChangeTextLineItemNameActionBuilder();

@@ -89,6 +89,11 @@ public class CartDiscountValueFixedDraftBuilder implements Builder<CartDiscountV
         return this;
     }
 
+    /**
+     *  <p>Money values in different currencies. A fixed Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
+     * @return money
+     */
+
     public java.util.List<com.commercetools.api.models.common.Money> getMoney() {
         return this.money;
     }
@@ -110,10 +115,19 @@ public class CartDiscountValueFixedDraftBuilder implements Builder<CartDiscountV
         return new CartDiscountValueFixedDraftImpl(money);
     }
 
+    /**
+     * factory method for an instance of CartDiscountValueFixedDraftBuilder
+     * @return builder
+     */
     public static CartDiscountValueFixedDraftBuilder of() {
         return new CartDiscountValueFixedDraftBuilder();
     }
 
+    /**
+     * create builder for CartDiscountValueFixedDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartDiscountValueFixedDraftBuilder of(final CartDiscountValueFixedDraft template) {
         CartDiscountValueFixedDraftBuilder builder = new CartDiscountValueFixedDraftBuilder();
         builder.money = template.getMoney();

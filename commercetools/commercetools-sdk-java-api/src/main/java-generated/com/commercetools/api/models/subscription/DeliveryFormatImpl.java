@@ -22,11 +22,17 @@ public class DeliveryFormatImpl implements DeliveryFormat, ModelBase {
 
     private String type;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DeliveryFormatImpl(@JsonProperty("type") final String type) {
         this.type = type;
     }
 
+    /**
+     * create empty instance
+     */
     public DeliveryFormatImpl() {
     }
 

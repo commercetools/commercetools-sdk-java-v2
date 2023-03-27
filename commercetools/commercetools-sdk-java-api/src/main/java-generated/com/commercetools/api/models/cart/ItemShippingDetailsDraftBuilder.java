@@ -96,6 +96,12 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
         return this;
     }
 
+    /**
+     *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
+     *  <p>If multiple shipping addresses are present for a Line Item or Custom Line Item, sub-quantities must be specified.</p>
+     * @return targets
+     */
+
     public java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> getTargets() {
         return this.targets;
     }
@@ -117,10 +123,19 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
         return new ItemShippingDetailsDraftImpl(targets);
     }
 
+    /**
+     * factory method for an instance of ItemShippingDetailsDraftBuilder
+     * @return builder
+     */
     public static ItemShippingDetailsDraftBuilder of() {
         return new ItemShippingDetailsDraftBuilder();
     }
 
+    /**
+     * create builder for ItemShippingDetailsDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ItemShippingDetailsDraftBuilder of(final ItemShippingDetailsDraft template) {
         ItemShippingDetailsDraftBuilder builder = new ItemShippingDetailsDraftBuilder();
         builder.targets = template.getTargets();

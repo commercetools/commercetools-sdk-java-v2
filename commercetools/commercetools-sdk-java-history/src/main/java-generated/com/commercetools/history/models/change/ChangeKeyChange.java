@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ChangeKeyChangeImpl.class)
 public interface ChangeKeyChange extends Change {
 
+    /**
+     * discriminator value for ChangeKeyChange
+     */
     String CHANGE_KEY_CHANGE = "ChangeKeyChange";
 
     /**
@@ -65,16 +68,40 @@ public interface ChangeKeyChange extends Change {
     @JsonProperty("nextValue")
     public String getNextValue();
 
+    /**
+     *  <p>Shape of the action for <code>changeKey</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
 
     public void setPreviousValue(final String previousValue);
 
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
+
     public void setNextValue(final String nextValue);
 
+    /**
+     * factory method
+     * @return instance of ChangeKeyChange
+     */
     public static ChangeKeyChange of() {
         return new ChangeKeyChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of ChangeKeyChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ChangeKeyChange of(final ChangeKeyChange template) {
         ChangeKeyChangeImpl instance = new ChangeKeyChangeImpl();
         instance.setChange(template.getChange());
@@ -83,18 +110,37 @@ public interface ChangeKeyChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for ChangeKeyChange
+     * @return builder
+     */
     public static ChangeKeyChangeBuilder builder() {
         return ChangeKeyChangeBuilder.of();
     }
 
+    /**
+     * create builder for ChangeKeyChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ChangeKeyChangeBuilder builder(final ChangeKeyChange template) {
         return ChangeKeyChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withChangeKeyChange(Function<ChangeKeyChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ChangeKeyChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ChangeKeyChange>() {
             @Override

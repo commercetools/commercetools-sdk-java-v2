@@ -30,6 +30,9 @@ public class TrackingDataImpl implements TrackingData, ModelBase {
 
     private Boolean isReturn;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TrackingDataImpl(@JsonProperty("trackingId") final String trackingId, @JsonProperty("carrier") final String carrier,
             @JsonProperty("provider") final String provider,
@@ -42,6 +45,9 @@ public class TrackingDataImpl implements TrackingData, ModelBase {
         this.isReturn = isReturn;
     }
 
+    /**
+     * create empty instance
+     */
     public TrackingDataImpl() {
     }
 

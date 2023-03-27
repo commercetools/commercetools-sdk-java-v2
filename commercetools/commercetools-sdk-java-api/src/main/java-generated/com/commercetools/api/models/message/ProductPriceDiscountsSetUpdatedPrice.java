@@ -81,22 +81,61 @@ public interface ProductPriceDiscountsSetUpdatedPrice {
     @JsonProperty("staged")
     public Boolean getStaged();
 
+    /**
+     *  <p>Unique identifier of the ProductVariant for which the Discount was set.</p>
+     * @param variantId value to be set
+     */
+
     public void setVariantId(final Integer variantId);
+
+    /**
+     *  <p>Key of the ProductVariant for which Discount was set.</p>
+     * @param variantKey value to be set
+     */
 
     public void setVariantKey(final String variantKey);
 
+    /**
+     *  <p>SKU of the ProductVariant for which Discount was set.</p>
+     * @param sku value to be set
+     */
+
     public void setSku(final String sku);
+
+    /**
+     *  <p>Unique identifier of the Price.</p>
+     * @param priceId value to be set
+     */
 
     public void setPriceId(final String priceId);
 
+    /**
+     *  <p>Discounted Price for the ProductVariant for which Discount was set.</p>
+     * @param discounted value to be set
+     */
+
     public void setDiscounted(final DiscountedPrice discounted);
+
+    /**
+     *  <p>Whether the update was only applied to the staged ProductProjection.</p>
+     * @param staged value to be set
+     */
 
     public void setStaged(final Boolean staged);
 
+    /**
+     * factory method
+     * @return instance of ProductPriceDiscountsSetUpdatedPrice
+     */
     public static ProductPriceDiscountsSetUpdatedPrice of() {
         return new ProductPriceDiscountsSetUpdatedPriceImpl();
     }
 
+    /**
+     * factory method to copy an instance of ProductPriceDiscountsSetUpdatedPrice
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ProductPriceDiscountsSetUpdatedPrice of(final ProductPriceDiscountsSetUpdatedPrice template) {
         ProductPriceDiscountsSetUpdatedPriceImpl instance = new ProductPriceDiscountsSetUpdatedPriceImpl();
         instance.setVariantId(template.getVariantId());
@@ -108,19 +147,38 @@ public interface ProductPriceDiscountsSetUpdatedPrice {
         return instance;
     }
 
+    /**
+     * builder factory method for ProductPriceDiscountsSetUpdatedPrice
+     * @return builder
+     */
     public static ProductPriceDiscountsSetUpdatedPriceBuilder builder() {
         return ProductPriceDiscountsSetUpdatedPriceBuilder.of();
     }
 
+    /**
+     * create builder for ProductPriceDiscountsSetUpdatedPrice instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductPriceDiscountsSetUpdatedPriceBuilder builder(
             final ProductPriceDiscountsSetUpdatedPrice template) {
         return ProductPriceDiscountsSetUpdatedPriceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withProductPriceDiscountsSetUpdatedPrice(Function<ProductPriceDiscountsSetUpdatedPrice, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ProductPriceDiscountsSetUpdatedPrice> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ProductPriceDiscountsSetUpdatedPrice>() {
             @Override

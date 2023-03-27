@@ -120,30 +120,60 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of a Product.</p>
+     * @return productId
+     */
+
     @Nullable
     public String getProductId() {
         return this.productId;
     }
+
+    /**
+     *  <p><code>id</code> of the ProductVariant. If not set, the ShoppingListLineItem refers to the Master Variant.</p>
+     * @return variantId
+     */
 
     @Nullable
     public Long getVariantId() {
         return this.variantId;
     }
 
+    /**
+     *  <p><code>sku</code> of the ProductVariant.</p>
+     * @return sku
+     */
+
     @Nullable
     public String getSku() {
         return this.sku;
     }
+
+    /**
+     *  <p>Date and time the ShoppingListLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     * @return addedAt
+     */
 
     @Nullable
     public java.time.ZonedDateTime getAddedAt() {
         return this.addedAt;
     }
 
+    /**
+     *  <p>Custom Fields of the ShoppingListLineItem.</p>
+     * @return custom
+     */
+
     @Nullable
     public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
+
+    /**
+     *  <p>Number of Products in the ShoppingListLineItem.</p>
+     * @return quantity
+     */
 
     @Nullable
     public Long getQuantity() {
@@ -166,10 +196,19 @@ public class ShoppingListLineItemDraftBuilder implements Builder<ShoppingListLin
         return new ShoppingListLineItemDraftImpl(productId, variantId, sku, addedAt, custom, quantity);
     }
 
+    /**
+     * factory method for an instance of ShoppingListLineItemDraftBuilder
+     * @return builder
+     */
     public static ShoppingListLineItemDraftBuilder of() {
         return new ShoppingListLineItemDraftBuilder();
     }
 
+    /**
+     * create builder for ShoppingListLineItemDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ShoppingListLineItemDraftBuilder of(final ShoppingListLineItemDraft template) {
         ShoppingListLineItemDraftBuilder builder = new ShoppingListLineItemDraftBuilder();
         builder.productId = template.getProductId();

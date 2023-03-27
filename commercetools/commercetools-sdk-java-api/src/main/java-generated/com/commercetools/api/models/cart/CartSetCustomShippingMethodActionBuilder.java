@@ -122,18 +122,38 @@ public class CartSetCustomShippingMethodActionBuilder implements Builder<CartSet
         return this;
     }
 
+    /**
+     *  <p>Name of the custom Shipping Method.</p>
+     * @return shippingMethodName
+     */
+
     public String getShippingMethodName() {
         return this.shippingMethodName;
     }
+
+    /**
+     *  <p>Determines the shipping price.</p>
+     * @return shippingRate
+     */
 
     public com.commercetools.api.models.shipping_method.ShippingRateDraft getShippingRate() {
         return this.shippingRate;
     }
 
+    /**
+     *  <p>Tax Category used to determine the Tax Rate when the Cart has the <code>Platform</code> TaxMode.</p>
+     * @return taxCategory
+     */
+
     @Nullable
     public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {
         return this.taxCategory;
     }
+
+    /**
+     *  <p>External Tax Rate for the <code>shippingRate</code> to be set if the Cart has the <code>External</code> TaxMode.</p>
+     * @return externalTaxRate
+     */
 
     @Nullable
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
@@ -161,10 +181,19 @@ public class CartSetCustomShippingMethodActionBuilder implements Builder<CartSet
             externalTaxRate);
     }
 
+    /**
+     * factory method for an instance of CartSetCustomShippingMethodActionBuilder
+     * @return builder
+     */
     public static CartSetCustomShippingMethodActionBuilder of() {
         return new CartSetCustomShippingMethodActionBuilder();
     }
 
+    /**
+     * create builder for CartSetCustomShippingMethodAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartSetCustomShippingMethodActionBuilder of(final CartSetCustomShippingMethodAction template) {
         CartSetCustomShippingMethodActionBuilder builder = new CartSetCustomShippingMethodActionBuilder();
         builder.shippingMethodName = template.getShippingMethodName();

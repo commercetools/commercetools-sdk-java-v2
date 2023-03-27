@@ -37,6 +37,9 @@ public class MissingTaxRateForCountryErrorImpl implements MissingTaxRateForCount
 
     private String state;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MissingTaxRateForCountryErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values,
@@ -50,6 +53,9 @@ public class MissingTaxRateForCountryErrorImpl implements MissingTaxRateForCount
         this.code = MISSING_TAX_RATE_FOR_COUNTRY;
     }
 
+    /**
+     * create empty instance
+     */
     public MissingTaxRateForCountryErrorImpl() {
         this.code = MISSING_TAX_RATE_FOR_COUNTRY;
     }

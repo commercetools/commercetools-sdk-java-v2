@@ -24,12 +24,18 @@ public class AttributePlainEnumValueImpl implements AttributePlainEnumValue, Mod
 
     private String label;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AttributePlainEnumValueImpl(@JsonProperty("key") final String key, @JsonProperty("label") final String label) {
         this.key = key;
         this.label = label;
     }
 
+    /**
+     * create empty instance
+     */
     public AttributePlainEnumValueImpl() {
     }
 

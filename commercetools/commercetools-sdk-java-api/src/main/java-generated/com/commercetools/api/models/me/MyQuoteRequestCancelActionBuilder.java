@@ -36,10 +36,19 @@ public class MyQuoteRequestCancelActionBuilder implements Builder<MyQuoteRequest
         return new MyQuoteRequestCancelActionImpl();
     }
 
+    /**
+     * factory method for an instance of MyQuoteRequestCancelActionBuilder
+     * @return builder
+     */
     public static MyQuoteRequestCancelActionBuilder of() {
         return new MyQuoteRequestCancelActionBuilder();
     }
 
+    /**
+     * create builder for MyQuoteRequestCancelAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static MyQuoteRequestCancelActionBuilder of(final MyQuoteRequestCancelAction template) {
         MyQuoteRequestCancelActionBuilder builder = new MyQuoteRequestCancelActionBuilder();
         return builder;

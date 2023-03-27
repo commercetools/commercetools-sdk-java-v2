@@ -65,13 +65,28 @@ public class BusinessUnitSetAddressCustomFieldActionBuilder
         return this;
     }
 
+    /**
+     *  <p>ID of the address to be extended.</p>
+     * @return addressId
+     */
+
     public String getAddressId() {
         return this.addressId;
     }
 
+    /**
+     *  <p>Name of the Custom Field.</p>
+     * @return name
+     */
+
     public String getName() {
         return this.name;
     }
+
+    /**
+     *  <p>If <code>value</code> is absent or <code>null</code>, this field will be removed if it exists. Trying to remove a field that does not exist will fail with an InvalidOperation error. If <code>value</code> is provided, it is set for the field defined by <code>name</code>.</p>
+     * @return value
+     */
 
     @Nullable
     public java.lang.Object getValue() {
@@ -96,10 +111,19 @@ public class BusinessUnitSetAddressCustomFieldActionBuilder
         return new BusinessUnitSetAddressCustomFieldActionImpl(addressId, name, value);
     }
 
+    /**
+     * factory method for an instance of BusinessUnitSetAddressCustomFieldActionBuilder
+     * @return builder
+     */
     public static BusinessUnitSetAddressCustomFieldActionBuilder of() {
         return new BusinessUnitSetAddressCustomFieldActionBuilder();
     }
 
+    /**
+     * create builder for BusinessUnitSetAddressCustomFieldAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static BusinessUnitSetAddressCustomFieldActionBuilder of(
             final BusinessUnitSetAddressCustomFieldAction template) {
         BusinessUnitSetAddressCustomFieldActionBuilder builder = new BusinessUnitSetAddressCustomFieldActionBuilder();

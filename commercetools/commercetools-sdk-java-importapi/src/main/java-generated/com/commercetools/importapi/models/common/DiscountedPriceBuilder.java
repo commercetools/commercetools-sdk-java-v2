@@ -28,7 +28,7 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
     private com.commercetools.importapi.models.common.ProductDiscountKeyReference discount;
 
     /**
-     *
+     * set the value to the value
      * @param value value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
     }
 
     /**
-     *
+     * set the value to the value using the builder function
      * @param builder function to build the value value
      * @return Builder
      */
@@ -75,9 +75,19 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
         return this;
     }
 
+    /**
+     * value of value}
+     * @return value
+     */
+
     public com.commercetools.importapi.models.common.TypedMoney getValue() {
         return this.value;
     }
+
+    /**
+     *  <p>Reference to a ProductDiscount.</p>
+     * @return discount
+     */
 
     public com.commercetools.importapi.models.common.ProductDiscountKeyReference getDiscount() {
         return this.discount;
@@ -101,10 +111,19 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
         return new DiscountedPriceImpl(value, discount);
     }
 
+    /**
+     * factory method for an instance of DiscountedPriceBuilder
+     * @return builder
+     */
     public static DiscountedPriceBuilder of() {
         return new DiscountedPriceBuilder();
     }
 
+    /**
+     * create builder for DiscountedPrice instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DiscountedPriceBuilder of(final DiscountedPrice template) {
         DiscountedPriceBuilder builder = new DiscountedPriceBuilder();
         builder.value = template.getValue();

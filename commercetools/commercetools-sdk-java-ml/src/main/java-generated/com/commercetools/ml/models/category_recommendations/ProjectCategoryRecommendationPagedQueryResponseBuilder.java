@@ -38,7 +38,7 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
     private com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMeta meta;
 
     /**
-     *
+     * set the value to the count
      * @param count value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
     }
 
     /**
-     *
+     * set the value to the total
      * @param total value to be set
      * @return Builder
      */
@@ -71,7 +71,7 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
     }
 
     /**
-     *
+     * set values to the results
      * @param results value to be set
      * @return Builder
      */
@@ -83,7 +83,7 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
     }
 
     /**
-     *
+     * set value to the results
      * @param results value to be set
      * @return Builder
      */
@@ -95,7 +95,7 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
     }
 
     /**
-     *
+     * add values to the results
      * @param results value to be set
      * @return Builder
      */
@@ -110,7 +110,7 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
     }
 
     /**
-     *
+     * add the value to the results using the builder function
      * @param builder function to build the results value
      * @return Builder
      */
@@ -127,7 +127,7 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
     }
 
     /**
-     *
+     * set the value to the results using the builder function
      * @param builder function to build the results value
      * @return Builder
      */
@@ -142,7 +142,7 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
     }
 
     /**
-     *
+     * set the value to the meta using the builder function
      * @param builder function to build the meta value
      * @return Builder
      */
@@ -157,7 +157,7 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
     }
 
     /**
-     *
+     * set the value to the meta
      * @param meta value to be set
      * @return Builder
      */
@@ -168,21 +168,46 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
         return this;
     }
 
+    /**
+     * value of count}
+     * @return count
+     */
+
     public Long getCount() {
         return this.count;
     }
+
+    /**
+     * value of total}
+     * @return total
+     */
 
     public Long getTotal() {
         return this.total;
     }
 
+    /**
+     *  <p>Number of elements skipped.</p>
+     * @return offset
+     */
+
     public Long getOffset() {
         return this.offset;
     }
 
+    /**
+     * value of results}
+     * @return results
+     */
+
     public java.util.List<com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendation> getResults() {
         return this.results;
     }
+
+    /**
+     * value of meta}
+     * @return meta
+     */
 
     public com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMeta getMeta() {
         return this.meta;
@@ -209,10 +234,19 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
         return new ProjectCategoryRecommendationPagedQueryResponseImpl(count, total, offset, results, meta);
     }
 
+    /**
+     * factory method for an instance of ProjectCategoryRecommendationPagedQueryResponseBuilder
+     * @return builder
+     */
     public static ProjectCategoryRecommendationPagedQueryResponseBuilder of() {
         return new ProjectCategoryRecommendationPagedQueryResponseBuilder();
     }
 
+    /**
+     * create builder for ProjectCategoryRecommendationPagedQueryResponse instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProjectCategoryRecommendationPagedQueryResponseBuilder of(
             final ProjectCategoryRecommendationPagedQueryResponse template) {
         ProjectCategoryRecommendationPagedQueryResponseBuilder builder = new ProjectCategoryRecommendationPagedQueryResponseBuilder();

@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderPurchaseOrderNumberSetMessageImpl.class)
 public interface OrderPurchaseOrderNumberSetMessage extends OrderMessage {
 
+    /**
+     * discriminator value for OrderPurchaseOrderNumberSetMessage
+     */
     String ORDER_PURCHASE_ORDER_NUMBER_SET = "OrderPurchaseOrderNumberSet";
 
     /**
@@ -51,14 +54,33 @@ public interface OrderPurchaseOrderNumberSetMessage extends OrderMessage {
     @JsonProperty("oldPurchaseOrderNumber")
     public String getOldPurchaseOrderNumber();
 
+    /**
+     *  <p>Purchase order number on the Order after the Set PurchaseOrderNumber update action.</p>
+     * @param purchaseOrderNumber value to be set
+     */
+
     public void setPurchaseOrderNumber(final String purchaseOrderNumber);
+
+    /**
+     *  <p>Purchase order number on the Order before the Set PurchaseOrderNumber update action.</p>
+     * @param oldPurchaseOrderNumber value to be set
+     */
 
     public void setOldPurchaseOrderNumber(final String oldPurchaseOrderNumber);
 
+    /**
+     * factory method
+     * @return instance of OrderPurchaseOrderNumberSetMessage
+     */
     public static OrderPurchaseOrderNumberSetMessage of() {
         return new OrderPurchaseOrderNumberSetMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderPurchaseOrderNumberSetMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderPurchaseOrderNumberSetMessage of(final OrderPurchaseOrderNumberSetMessage template) {
         OrderPurchaseOrderNumberSetMessageImpl instance = new OrderPurchaseOrderNumberSetMessageImpl();
         instance.setId(template.getId());
@@ -76,18 +98,37 @@ public interface OrderPurchaseOrderNumberSetMessage extends OrderMessage {
         return instance;
     }
 
+    /**
+     * builder factory method for OrderPurchaseOrderNumberSetMessage
+     * @return builder
+     */
     public static OrderPurchaseOrderNumberSetMessageBuilder builder() {
         return OrderPurchaseOrderNumberSetMessageBuilder.of();
     }
 
+    /**
+     * create builder for OrderPurchaseOrderNumberSetMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderPurchaseOrderNumberSetMessageBuilder builder(final OrderPurchaseOrderNumberSetMessage template) {
         return OrderPurchaseOrderNumberSetMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderPurchaseOrderNumberSetMessage(Function<OrderPurchaseOrderNumberSetMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderPurchaseOrderNumberSetMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderPurchaseOrderNumberSetMessage>() {
             @Override

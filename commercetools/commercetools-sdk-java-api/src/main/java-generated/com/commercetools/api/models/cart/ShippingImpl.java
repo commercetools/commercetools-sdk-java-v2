@@ -30,6 +30,9 @@ public class ShippingImpl implements Shipping, ModelBase {
 
     private com.commercetools.api.models.type.CustomFields shippingCustomFields;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShippingImpl(@JsonProperty("shippingKey") final String shippingKey,
             @JsonProperty("shippingInfo") final com.commercetools.api.models.cart.ShippingInfo shippingInfo,
@@ -43,6 +46,9 @@ public class ShippingImpl implements Shipping, ModelBase {
         this.shippingCustomFields = shippingCustomFields;
     }
 
+    /**
+     * create empty instance
+     */
     public ShippingImpl() {
     }
 

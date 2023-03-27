@@ -26,9 +26,18 @@ public interface MyQuoteState {
     */
     MyQuoteState ACCEPTED = MyQuoteStateEnum.ACCEPTED;
 
+    /**
+     * possible values of MyQuoteState
+     */
     enum MyQuoteStateEnum implements MyQuoteState {
+        /**
+         * Declined
+         */
         DECLINED("Declined"),
 
+        /**
+         * Accepted
+         */
         ACCEPTED("Accepted");
         private final String jsonName;
 
@@ -45,13 +54,30 @@ public interface MyQuoteState {
         }
     }
 
+    /**
+     * the JSON value
+     * @return json value
+     */
     @JsonValue
     String getJsonName();
 
+    /**
+     * the enum value
+     * @return name
+     */
     String name();
 
+    /**
+     * convert value to string
+     * @return string representation
+     */
     String toString();
 
+    /**
+     * factory method for a enum value of MyQuoteState
+     * if no enum has been found an anonymous instance will be created
+     * @return enum instance
+     */
     @JsonCreator
     public static MyQuoteState findEnum(String value) {
         return findEnumViaJsonName(value).orElse(new MyQuoteState() {
@@ -71,10 +97,18 @@ public interface MyQuoteState {
         });
     }
 
+    /**
+     * method to find enum using the JSON value
+     * @return optional of enum instance
+     */
     public static Optional<MyQuoteState> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
 
+    /**
+     * possible enum values
+     * @return array of possible enum values
+     */
     public static MyQuoteState[] values() {
         return MyQuoteStateEnum.values();
     }

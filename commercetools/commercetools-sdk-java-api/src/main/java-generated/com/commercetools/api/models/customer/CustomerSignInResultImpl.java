@@ -24,6 +24,9 @@ public class CustomerSignInResultImpl implements CustomerSignInResult, ModelBase
 
     private com.commercetools.api.models.cart.Cart cart;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerSignInResultImpl(@JsonProperty("customer") final com.commercetools.api.models.customer.Customer customer,
             @JsonProperty("cart") final com.commercetools.api.models.cart.Cart cart) {
@@ -31,6 +34,9 @@ public class CustomerSignInResultImpl implements CustomerSignInResult, ModelBase
         this.cart = cart;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerSignInResultImpl() {
     }
 

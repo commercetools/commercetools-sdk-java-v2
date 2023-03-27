@@ -28,6 +28,9 @@ public class MyCustomerSigninImpl implements MyCustomerSignin, ModelBase {
 
     private Boolean updateProductData;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyCustomerSigninImpl(@JsonProperty("email") final String email, @JsonProperty("password") final String password,
             @JsonProperty("activeCartSignInMode") final com.commercetools.api.models.customer.AnonymousCartSignInMode activeCartSignInMode,
@@ -38,6 +41,9 @@ public class MyCustomerSigninImpl implements MyCustomerSignin, ModelBase {
         this.updateProductData = updateProductData;
     }
 
+    /**
+     * create empty instance
+     */
     public MyCustomerSigninImpl() {
     }
 

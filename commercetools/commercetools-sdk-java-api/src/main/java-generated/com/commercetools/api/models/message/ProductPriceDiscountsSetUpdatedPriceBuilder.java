@@ -120,28 +120,58 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the ProductVariant for which the Discount was set.</p>
+     * @return variantId
+     */
+
     public Integer getVariantId() {
         return this.variantId;
     }
+
+    /**
+     *  <p>Key of the ProductVariant for which Discount was set.</p>
+     * @return variantKey
+     */
 
     @Nullable
     public String getVariantKey() {
         return this.variantKey;
     }
 
+    /**
+     *  <p>SKU of the ProductVariant for which Discount was set.</p>
+     * @return sku
+     */
+
     @Nullable
     public String getSku() {
         return this.sku;
     }
 
+    /**
+     *  <p>Unique identifier of the Price.</p>
+     * @return priceId
+     */
+
     public String getPriceId() {
         return this.priceId;
     }
+
+    /**
+     *  <p>Discounted Price for the ProductVariant for which Discount was set.</p>
+     * @return discounted
+     */
 
     @Nullable
     public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {
         return this.discounted;
     }
+
+    /**
+     *  <p>Whether the update was only applied to the staged ProductProjection.</p>
+     * @return staged
+     */
 
     public Boolean getStaged() {
         return this.staged;
@@ -166,10 +196,19 @@ public class ProductPriceDiscountsSetUpdatedPriceBuilder implements Builder<Prod
         return new ProductPriceDiscountsSetUpdatedPriceImpl(variantId, variantKey, sku, priceId, discounted, staged);
     }
 
+    /**
+     * factory method for an instance of ProductPriceDiscountsSetUpdatedPriceBuilder
+     * @return builder
+     */
     public static ProductPriceDiscountsSetUpdatedPriceBuilder of() {
         return new ProductPriceDiscountsSetUpdatedPriceBuilder();
     }
 
+    /**
+     * create builder for ProductPriceDiscountsSetUpdatedPrice instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductPriceDiscountsSetUpdatedPriceBuilder of(final ProductPriceDiscountsSetUpdatedPrice template) {
         ProductPriceDiscountsSetUpdatedPriceBuilder builder = new ProductPriceDiscountsSetUpdatedPriceBuilder();
         builder.variantId = template.getVariantId();

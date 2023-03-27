@@ -24,12 +24,18 @@ public class ProductDiscountChangeSortOrderActionImpl implements ProductDiscount
 
     private String sortOrder;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductDiscountChangeSortOrderActionImpl(@JsonProperty("sortOrder") final String sortOrder) {
         this.sortOrder = sortOrder;
         this.action = CHANGE_SORT_ORDER;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductDiscountChangeSortOrderActionImpl() {
         this.action = CHANGE_SORT_ORDER;
     }

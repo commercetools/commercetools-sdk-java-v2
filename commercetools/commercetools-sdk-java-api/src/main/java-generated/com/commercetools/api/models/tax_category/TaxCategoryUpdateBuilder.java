@@ -107,9 +107,19 @@ public class TaxCategoryUpdateBuilder implements Builder<TaxCategoryUpdate> {
         return this;
     }
 
+    /**
+     *  <p>Expected version of the TaxCategory on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     * @return version
+     */
+
     public Long getVersion() {
         return this.version;
     }
+
+    /**
+     *  <p>Update actions to be performed on the TaxCategory.</p>
+     * @return actions
+     */
 
     public java.util.List<com.commercetools.api.models.tax_category.TaxCategoryUpdateAction> getActions() {
         return this.actions;
@@ -133,10 +143,19 @@ public class TaxCategoryUpdateBuilder implements Builder<TaxCategoryUpdate> {
         return new TaxCategoryUpdateImpl(version, actions);
     }
 
+    /**
+     * factory method for an instance of TaxCategoryUpdateBuilder
+     * @return builder
+     */
     public static TaxCategoryUpdateBuilder of() {
         return new TaxCategoryUpdateBuilder();
     }
 
+    /**
+     * create builder for TaxCategoryUpdate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TaxCategoryUpdateBuilder of(final TaxCategoryUpdate template) {
         TaxCategoryUpdateBuilder builder = new TaxCategoryUpdateBuilder();
         builder.version = template.getVersion();

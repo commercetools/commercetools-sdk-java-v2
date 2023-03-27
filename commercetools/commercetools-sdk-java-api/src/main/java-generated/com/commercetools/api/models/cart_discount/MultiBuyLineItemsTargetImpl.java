@@ -32,6 +32,9 @@ public class MultiBuyLineItemsTargetImpl implements MultiBuyLineItemsTarget, Mod
 
     private com.commercetools.api.models.cart_discount.SelectionMode selectionMode;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MultiBuyLineItemsTargetImpl(@JsonProperty("predicate") final String predicate,
             @JsonProperty("triggerQuantity") final Integer triggerQuantity,
@@ -46,6 +49,9 @@ public class MultiBuyLineItemsTargetImpl implements MultiBuyLineItemsTarget, Mod
         this.type = MULTI_BUY_LINE_ITEMS;
     }
 
+    /**
+     * create empty instance
+     */
     public MultiBuyLineItemsTargetImpl() {
         this.type = MULTI_BUY_LINE_ITEMS;
     }

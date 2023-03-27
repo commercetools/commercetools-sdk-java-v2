@@ -24,6 +24,9 @@ public class AttributeGroupSetAttributesActionImpl implements AttributeGroupSetA
 
     private java.util.List<com.commercetools.api.models.attribute_group.AttributeReference> attributes;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AttributeGroupSetAttributesActionImpl(
             @JsonProperty("attributes") final java.util.List<com.commercetools.api.models.attribute_group.AttributeReference> attributes) {
@@ -31,6 +34,9 @@ public class AttributeGroupSetAttributesActionImpl implements AttributeGroupSetA
         this.action = SET_ATTRIBUTES;
     }
 
+    /**
+     * create empty instance
+     */
     public AttributeGroupSetAttributesActionImpl() {
         this.action = SET_ATTRIBUTES;
     }

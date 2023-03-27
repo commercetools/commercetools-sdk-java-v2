@@ -34,6 +34,11 @@ public class InventoryEntryRemoveQuantityActionBuilder implements Builder<Invent
         return this;
     }
 
+    /**
+     *  <p>Value to remove from <code>quantityOnStock</code>.</p>
+     * @return quantity
+     */
+
     public Long getQuantity() {
         return this.quantity;
     }
@@ -55,10 +60,19 @@ public class InventoryEntryRemoveQuantityActionBuilder implements Builder<Invent
         return new InventoryEntryRemoveQuantityActionImpl(quantity);
     }
 
+    /**
+     * factory method for an instance of InventoryEntryRemoveQuantityActionBuilder
+     * @return builder
+     */
     public static InventoryEntryRemoveQuantityActionBuilder of() {
         return new InventoryEntryRemoveQuantityActionBuilder();
     }
 
+    /**
+     * create builder for InventoryEntryRemoveQuantityAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InventoryEntryRemoveQuantityActionBuilder of(final InventoryEntryRemoveQuantityAction template) {
         InventoryEntryRemoveQuantityActionBuilder builder = new InventoryEntryRemoveQuantityActionBuilder();
         builder.quantity = template.getQuantity();

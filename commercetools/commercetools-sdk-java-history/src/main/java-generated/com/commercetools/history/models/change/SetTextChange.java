@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetTextChangeImpl.class)
 public interface SetTextChange extends Change {
 
+    /**
+     * discriminator value for SetTextChange
+     */
     String SET_TEXT_CHANGE = "SetTextChange";
 
     /**
@@ -65,16 +68,40 @@ public interface SetTextChange extends Change {
     @JsonProperty("nextValue")
     public String getNextValue();
 
+    /**
+     *  <p>Shape of the action for <code>setText</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
 
     public void setPreviousValue(final String previousValue);
 
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
+
     public void setNextValue(final String nextValue);
 
+    /**
+     * factory method
+     * @return instance of SetTextChange
+     */
     public static SetTextChange of() {
         return new SetTextChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetTextChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetTextChange of(final SetTextChange template) {
         SetTextChangeImpl instance = new SetTextChangeImpl();
         instance.setChange(template.getChange());
@@ -83,18 +110,37 @@ public interface SetTextChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetTextChange
+     * @return builder
+     */
     public static SetTextChangeBuilder builder() {
         return SetTextChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetTextChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetTextChangeBuilder builder(final SetTextChange template) {
         return SetTextChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetTextChange(Function<SetTextChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetTextChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetTextChange>() {
             @Override

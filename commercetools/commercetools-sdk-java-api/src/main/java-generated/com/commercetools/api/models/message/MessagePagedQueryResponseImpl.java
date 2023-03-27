@@ -30,6 +30,9 @@ public class MessagePagedQueryResponseImpl implements MessagePagedQueryResponse,
 
     private java.util.List<com.commercetools.api.models.message.Message> results;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MessagePagedQueryResponseImpl(@JsonProperty("limit") final Long limit, @JsonProperty("count") final Long count,
             @JsonProperty("total") final Long total, @JsonProperty("offset") final Long offset,
@@ -41,6 +44,9 @@ public class MessagePagedQueryResponseImpl implements MessagePagedQueryResponse,
         this.results = results;
     }
 
+    /**
+     * create empty instance
+     */
     public MessagePagedQueryResponseImpl() {
     }
 

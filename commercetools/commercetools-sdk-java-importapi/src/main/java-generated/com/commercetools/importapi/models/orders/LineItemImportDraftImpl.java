@@ -43,6 +43,9 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
 
     private com.commercetools.importapi.models.customfields.Custom custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     LineItemImportDraftImpl(
             @JsonProperty("product") final com.commercetools.importapi.models.common.ProductKeyReference product,
@@ -69,6 +72,9 @@ public class LineItemImportDraftImpl implements LineItemImportDraft, ModelBase {
         this.custom = custom;
     }
 
+    /**
+     * create empty instance
+     */
     public LineItemImportDraftImpl() {
     }
 

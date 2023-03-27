@@ -25,6 +25,9 @@ public class DiscountCodeSetMaxApplicationsPerCustomerActionImpl
 
     private Long maxApplicationsPerCustomer;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DiscountCodeSetMaxApplicationsPerCustomerActionImpl(
             @JsonProperty("maxApplicationsPerCustomer") final Long maxApplicationsPerCustomer) {
@@ -32,6 +35,9 @@ public class DiscountCodeSetMaxApplicationsPerCustomerActionImpl
         this.action = SET_MAX_APPLICATIONS_PER_CUSTOMER;
     }
 
+    /**
+     * create empty instance
+     */
     public DiscountCodeSetMaxApplicationsPerCustomerActionImpl() {
         this.action = SET_MAX_APPLICATIONS_PER_CUSTOMER;
     }

@@ -24,6 +24,9 @@ public class ProjectSetShippingRateInputTypeActionImpl implements ProjectSetShip
 
     private com.commercetools.api.models.project.ShippingRateInputType shippingRateInputType;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProjectSetShippingRateInputTypeActionImpl(
             @JsonProperty("shippingRateInputType") final com.commercetools.api.models.project.ShippingRateInputType shippingRateInputType) {
@@ -31,6 +34,9 @@ public class ProjectSetShippingRateInputTypeActionImpl implements ProjectSetShip
         this.action = SET_SHIPPING_RATE_INPUT_TYPE;
     }
 
+    /**
+     * create empty instance
+     */
     public ProjectSetShippingRateInputTypeActionImpl() {
         this.action = SET_SHIPPING_RATE_INPUT_TYPE;
     }

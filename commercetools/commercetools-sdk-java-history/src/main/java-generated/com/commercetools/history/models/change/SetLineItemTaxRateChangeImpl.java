@@ -34,6 +34,9 @@ public class SetLineItemTaxRateChangeImpl implements SetLineItemTaxRateChange, M
 
     private com.commercetools.history.models.common.TaxRate previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetLineItemTaxRateChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("lineItem") final com.commercetools.history.models.common.LocalizedString lineItem,
@@ -50,6 +53,9 @@ public class SetLineItemTaxRateChangeImpl implements SetLineItemTaxRateChange, M
         this.type = SET_LINE_ITEM_TAX_RATE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetLineItemTaxRateChangeImpl() {
         this.type = SET_LINE_ITEM_TAX_RATE_CHANGE;
     }

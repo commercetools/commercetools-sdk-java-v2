@@ -32,6 +32,9 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
 
     private Integer quantity;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TextLineItemImpl(@JsonProperty("addedAt") final String addedAt,
             @JsonProperty("custom") final com.commercetools.history.models.common.CustomFields custom,
@@ -47,6 +50,9 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
         this.quantity = quantity;
     }
 
+    /**
+     * create empty instance
+     */
     public TextLineItemImpl() {
     }
 

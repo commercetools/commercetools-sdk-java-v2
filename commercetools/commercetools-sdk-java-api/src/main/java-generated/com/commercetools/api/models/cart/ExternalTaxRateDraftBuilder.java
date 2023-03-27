@@ -170,28 +170,65 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
         return this;
     }
 
+    /**
+     *  <p>Name of the Tax Rate.</p>
+     * @return name
+     */
+
     public String getName() {
         return this.name;
     }
+
+    /**
+     *  <p>Percentage in the range of 0-1.</p>
+     *  <ul>
+     *   <li>If no <code>subRates</code> are specified, a value must be defined.</li>
+     *   <li>If <code>subRates</code> are specified, this can be omitted or its value must be the sum of all <code>subRates</code> amounts.</li>
+     *  </ul>
+     * @return amount
+     */
 
     @Nullable
     public Double getAmount() {
         return this.amount;
     }
 
+    /**
+     *  <ul>
+     *   <li>If set to <code>false</code>, the related price is considered the net price and the provided <code>amount</code> is applied to calculate the gross price.</li>
+     *   <li>If set to <code>true</code>, the related price is considered the gross price, and the provided <code>amount</code> is applied to calculate the net price.</li>
+     *  </ul>
+     * @return includedInPrice
+     */
+
     @Nullable
     public Boolean getIncludedInPrice() {
         return this.includedInPrice;
     }
 
+    /**
+     *  <p>Country for which the tax applies.</p>
+     * @return country
+     */
+
     public String getCountry() {
         return this.country;
     }
+
+    /**
+     *  <p>State within the specified country.</p>
+     * @return state
+     */
 
     @Nullable
     public String getState() {
         return this.state;
     }
+
+    /**
+     *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes).</p>
+     * @return subRates
+     */
 
     @Nullable
     public java.util.List<com.commercetools.api.models.tax_category.SubRate> getSubRates() {
@@ -216,10 +253,19 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
         return new ExternalTaxRateDraftImpl(name, amount, includedInPrice, country, state, subRates);
     }
 
+    /**
+     * factory method for an instance of ExternalTaxRateDraftBuilder
+     * @return builder
+     */
     public static ExternalTaxRateDraftBuilder of() {
         return new ExternalTaxRateDraftBuilder();
     }
 
+    /**
+     * create builder for ExternalTaxRateDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ExternalTaxRateDraftBuilder of(final ExternalTaxRateDraft template) {
         ExternalTaxRateDraftBuilder builder = new ExternalTaxRateDraftBuilder();
         builder.name = template.getName();

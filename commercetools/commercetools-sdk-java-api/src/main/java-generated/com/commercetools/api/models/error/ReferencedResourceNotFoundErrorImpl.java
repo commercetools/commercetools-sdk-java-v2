@@ -32,6 +32,9 @@ public class ReferencedResourceNotFoundErrorImpl implements ReferencedResourceNo
 
     private String key;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReferencedResourceNotFoundErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values,
@@ -45,6 +48,9 @@ public class ReferencedResourceNotFoundErrorImpl implements ReferencedResourceNo
         this.code = REFERENCED_RESOURCE_NOT_FOUND;
     }
 
+    /**
+     * create empty instance
+     */
     public ReferencedResourceNotFoundErrorImpl() {
         this.code = REFERENCED_RESOURCE_NOT_FOUND;
     }

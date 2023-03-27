@@ -176,17 +176,39 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
         return this;
     }
 
+    /**
+     *  <p>Total net price of the Cart or Order.</p>
+     * @return totalNet
+     */
+
     public com.commercetools.api.models.common.CentPrecisionMoney getTotalNet() {
         return this.totalNet;
     }
+
+    /**
+     *  <p>Total gross price of the Cart or Order.</p>
+     * @return totalGross
+     */
 
     public com.commercetools.api.models.common.CentPrecisionMoney getTotalGross() {
         return this.totalGross;
     }
 
+    /**
+     *  <p>Taxable portions added to the total net price.</p>
+     *  <p>Calculated from the TaxRates.</p>
+     * @return taxPortions
+     */
+
     public java.util.List<com.commercetools.api.models.cart.TaxPortion> getTaxPortions() {
         return this.taxPortions;
     }
+
+    /**
+     *  <p>Total tax applicable for the Cart or Order.</p>
+     *  <p>Automatically calculated as the difference between the <code>totalGross</code> and <code>totalNet</code> values.</p>
+     * @return totalTax
+     */
 
     @Nullable
     public com.commercetools.api.models.common.CentPrecisionMoney getTotalTax() {
@@ -212,10 +234,19 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
         return new TaxedPriceImpl(totalNet, totalGross, taxPortions, totalTax);
     }
 
+    /**
+     * factory method for an instance of TaxedPriceBuilder
+     * @return builder
+     */
     public static TaxedPriceBuilder of() {
         return new TaxedPriceBuilder();
     }
 
+    /**
+     * create builder for TaxedPrice instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TaxedPriceBuilder of(final TaxedPrice template) {
         TaxedPriceBuilder builder = new TaxedPriceBuilder();
         builder.totalNet = template.getTotalNet();

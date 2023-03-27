@@ -64,10 +64,20 @@ public class ProductSetMetaKeywordsActionBuilder implements Builder<ProductSetMe
         return this;
     }
 
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @return metaKeywords
+     */
+
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getMetaKeywords() {
         return this.metaKeywords;
     }
+
+    /**
+     *  <p>If <code>true</code>, only the staged <code>metaKeywords</code> is updated. If <code>false</code>, both the current and staged <code>metaKeywords</code> are updated.</p>
+     * @return staged
+     */
 
     @Nullable
     public Boolean getStaged() {
@@ -90,10 +100,19 @@ public class ProductSetMetaKeywordsActionBuilder implements Builder<ProductSetMe
         return new ProductSetMetaKeywordsActionImpl(metaKeywords, staged);
     }
 
+    /**
+     * factory method for an instance of ProductSetMetaKeywordsActionBuilder
+     * @return builder
+     */
     public static ProductSetMetaKeywordsActionBuilder of() {
         return new ProductSetMetaKeywordsActionBuilder();
     }
 
+    /**
+     * create builder for ProductSetMetaKeywordsAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSetMetaKeywordsActionBuilder of(final ProductSetMetaKeywordsAction template) {
         ProductSetMetaKeywordsActionBuilder builder = new ProductSetMetaKeywordsActionBuilder();
         builder.metaKeywords = template.getMetaKeywords();

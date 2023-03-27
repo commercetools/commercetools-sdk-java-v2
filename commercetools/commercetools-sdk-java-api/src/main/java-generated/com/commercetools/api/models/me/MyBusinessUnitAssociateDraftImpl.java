@@ -24,6 +24,9 @@ public class MyBusinessUnitAssociateDraftImpl implements MyBusinessUnitAssociate
 
     private com.commercetools.api.models.me.MyCustomerDraft customer;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyBusinessUnitAssociateDraftImpl(@JsonProperty("version") final Long version,
             @JsonProperty("customer") final com.commercetools.api.models.me.MyCustomerDraft customer) {
@@ -31,6 +34,9 @@ public class MyBusinessUnitAssociateDraftImpl implements MyBusinessUnitAssociate
         this.customer = customer;
     }
 
+    /**
+     * create empty instance
+     */
     public MyBusinessUnitAssociateDraftImpl() {
     }
 

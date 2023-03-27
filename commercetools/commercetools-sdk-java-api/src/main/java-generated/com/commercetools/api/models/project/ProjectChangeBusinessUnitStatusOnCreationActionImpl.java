@@ -25,6 +25,9 @@ public class ProjectChangeBusinessUnitStatusOnCreationActionImpl
 
     private com.commercetools.api.models.project.BusinessUnitConfigurationStatus status;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProjectChangeBusinessUnitStatusOnCreationActionImpl(
             @JsonProperty("status") final com.commercetools.api.models.project.BusinessUnitConfigurationStatus status) {
@@ -32,6 +35,9 @@ public class ProjectChangeBusinessUnitStatusOnCreationActionImpl
         this.action = CHANGE_MY_BUSINESS_UNIT_STATUS_ON_CREATION;
     }
 
+    /**
+     * create empty instance
+     */
     public ProjectChangeBusinessUnitStatusOnCreationActionImpl() {
         this.action = CHANGE_MY_BUSINESS_UNIT_STATUS_ON_CREATION;
     }

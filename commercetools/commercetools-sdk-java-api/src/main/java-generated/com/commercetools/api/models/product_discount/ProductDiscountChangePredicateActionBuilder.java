@@ -34,6 +34,11 @@ public class ProductDiscountChangePredicateActionBuilder implements Builder<Prod
         return this;
     }
 
+    /**
+     *  <p>New value to set. Must be a valid ProductDiscount predicate.</p>
+     * @return predicate
+     */
+
     public String getPredicate() {
         return this.predicate;
     }
@@ -55,10 +60,19 @@ public class ProductDiscountChangePredicateActionBuilder implements Builder<Prod
         return new ProductDiscountChangePredicateActionImpl(predicate);
     }
 
+    /**
+     * factory method for an instance of ProductDiscountChangePredicateActionBuilder
+     * @return builder
+     */
     public static ProductDiscountChangePredicateActionBuilder of() {
         return new ProductDiscountChangePredicateActionBuilder();
     }
 
+    /**
+     * create builder for ProductDiscountChangePredicateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductDiscountChangePredicateActionBuilder of(final ProductDiscountChangePredicateAction template) {
         ProductDiscountChangePredicateActionBuilder builder = new ProductDiscountChangePredicateActionBuilder();
         builder.predicate = template.getPredicate();

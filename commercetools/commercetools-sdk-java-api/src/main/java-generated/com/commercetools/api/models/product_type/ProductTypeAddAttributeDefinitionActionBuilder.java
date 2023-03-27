@@ -50,6 +50,11 @@ public class ProductTypeAddAttributeDefinitionActionBuilder
         return this;
     }
 
+    /**
+     *  <p>Value to append to <code>attributes</code>.</p>
+     * @return attribute
+     */
+
     public com.commercetools.api.models.product_type.AttributeDefinitionDraft getAttribute() {
         return this.attribute;
     }
@@ -71,10 +76,19 @@ public class ProductTypeAddAttributeDefinitionActionBuilder
         return new ProductTypeAddAttributeDefinitionActionImpl(attribute);
     }
 
+    /**
+     * factory method for an instance of ProductTypeAddAttributeDefinitionActionBuilder
+     * @return builder
+     */
     public static ProductTypeAddAttributeDefinitionActionBuilder of() {
         return new ProductTypeAddAttributeDefinitionActionBuilder();
     }
 
+    /**
+     * create builder for ProductTypeAddAttributeDefinitionAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductTypeAddAttributeDefinitionActionBuilder of(
             final ProductTypeAddAttributeDefinitionAction template) {
         ProductTypeAddAttributeDefinitionActionBuilder builder = new ProductTypeAddAttributeDefinitionActionBuilder();

@@ -52,7 +52,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
     }
 
     /**
-     *
+     * set the value to the customTypeId
      * @param customTypeId value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
     }
 
     /**
-     *
+     * set the value to the name
      * @param name value to be set
      * @return Builder
      */
@@ -74,7 +74,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
     }
 
     /**
-     *
+     * set the value to the variant
      * @param variant value to be set
      * @return Builder
      */
@@ -85,7 +85,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
     }
 
     /**
-     *
+     * set the value to the lineItem using the builder function
      * @param builder function to build the lineItem value
      * @return Builder
      */
@@ -97,7 +97,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
     }
 
     /**
-     *
+     * set the value to the lineItem
      * @param lineItem value to be set
      * @return Builder
      */
@@ -109,7 +109,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -120,7 +120,7 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -130,29 +130,64 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>setLineItemCustomField</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of customTypeId}
+     * @return customTypeId
+     */
 
     public String getCustomTypeId() {
         return this.customTypeId;
     }
 
+    /**
+     * value of name}
+     * @return name
+     */
+
     public String getName() {
         return this.name;
     }
+
+    /**
+     * value of variant}
+     * @return variant
+     */
 
     public String getVariant() {
         return this.variant;
     }
 
+    /**
+     * value of lineItem}
+     * @return lineItem
+     */
+
     public com.commercetools.history.models.common.LocalizedString getLineItem() {
         return this.lineItem;
     }
 
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
+
     public java.lang.Object getNextValue() {
         return this.nextValue;
     }
+
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
 
     public java.lang.Object getPreviousValue() {
         return this.previousValue;
@@ -183,10 +218,19 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
             previousValue);
     }
 
+    /**
+     * factory method for an instance of SetOrderLineItemCustomFieldChangeBuilder
+     * @return builder
+     */
     public static SetOrderLineItemCustomFieldChangeBuilder of() {
         return new SetOrderLineItemCustomFieldChangeBuilder();
     }
 
+    /**
+     * create builder for SetOrderLineItemCustomFieldChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetOrderLineItemCustomFieldChangeBuilder of(final SetOrderLineItemCustomFieldChange template) {
         SetOrderLineItemCustomFieldChangeBuilder builder = new SetOrderLineItemCustomFieldChangeBuilder();
         builder.change = template.getChange();

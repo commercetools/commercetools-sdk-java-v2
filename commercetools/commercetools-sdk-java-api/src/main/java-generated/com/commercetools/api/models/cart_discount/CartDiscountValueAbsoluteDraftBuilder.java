@@ -89,6 +89,11 @@ public class CartDiscountValueAbsoluteDraftBuilder implements Builder<CartDiscou
         return this;
     }
 
+    /**
+     *  <p>Money values in different currencies. An absolute Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
+     * @return money
+     */
+
     public java.util.List<com.commercetools.api.models.common.Money> getMoney() {
         return this.money;
     }
@@ -110,10 +115,19 @@ public class CartDiscountValueAbsoluteDraftBuilder implements Builder<CartDiscou
         return new CartDiscountValueAbsoluteDraftImpl(money);
     }
 
+    /**
+     * factory method for an instance of CartDiscountValueAbsoluteDraftBuilder
+     * @return builder
+     */
     public static CartDiscountValueAbsoluteDraftBuilder of() {
         return new CartDiscountValueAbsoluteDraftBuilder();
     }
 
+    /**
+     * create builder for CartDiscountValueAbsoluteDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartDiscountValueAbsoluteDraftBuilder of(final CartDiscountValueAbsoluteDraft template) {
         CartDiscountValueAbsoluteDraftBuilder builder = new CartDiscountValueAbsoluteDraftBuilder();
         builder.money = template.getMoney();

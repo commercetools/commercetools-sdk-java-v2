@@ -44,6 +44,9 @@ public class ReviewCreatedMessageImpl implements ReviewCreatedMessage, ModelBase
 
     private com.commercetools.api.models.review.Review review;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ReviewCreatedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -69,6 +72,9 @@ public class ReviewCreatedMessageImpl implements ReviewCreatedMessage, ModelBase
         this.type = REVIEW_CREATED;
     }
 
+    /**
+     * create empty instance
+     */
     public ReviewCreatedMessageImpl() {
         this.type = REVIEW_CREATED;
     }

@@ -15,6 +15,10 @@ public class ImageSearchConfigUpdateActionBuilder {
         return com.commercetools.ml.models.image_search_config.ChangeStatusUpdateActionBuilder.of();
     }
 
+    /**
+     * factory method for an instance of ImageSearchConfigUpdateActionBuilder
+     * @return builder
+     */
     public static ImageSearchConfigUpdateActionBuilder of() {
         return new ImageSearchConfigUpdateActionBuilder();
     }

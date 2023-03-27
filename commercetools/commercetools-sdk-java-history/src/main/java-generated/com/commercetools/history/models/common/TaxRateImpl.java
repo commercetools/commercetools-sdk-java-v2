@@ -34,6 +34,9 @@ public class TaxRateImpl implements TaxRate, ModelBase {
 
     private java.util.List<com.commercetools.history.models.common.SubRate> subRates;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TaxRateImpl(@JsonProperty("id") final String id, @JsonProperty("name") final String name,
             @JsonProperty("amount") final Integer amount,
@@ -49,6 +52,9 @@ public class TaxRateImpl implements TaxRate, ModelBase {
         this.subRates = subRates;
     }
 
+    /**
+     * create empty instance
+     */
     public TaxRateImpl() {
     }
 

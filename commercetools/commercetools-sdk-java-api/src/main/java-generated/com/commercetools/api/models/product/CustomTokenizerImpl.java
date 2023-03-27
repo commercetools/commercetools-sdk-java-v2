@@ -24,12 +24,18 @@ public class CustomTokenizerImpl implements CustomTokenizer, ModelBase {
 
     private java.util.List<String> inputs;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomTokenizerImpl(@JsonProperty("inputs") final java.util.List<String> inputs) {
         this.inputs = inputs;
         this.type = CUSTOM;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomTokenizerImpl() {
         this.type = CUSTOM;
     }

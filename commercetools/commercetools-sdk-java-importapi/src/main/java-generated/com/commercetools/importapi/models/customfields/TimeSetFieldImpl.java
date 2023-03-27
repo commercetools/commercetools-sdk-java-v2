@@ -24,12 +24,18 @@ public class TimeSetFieldImpl implements TimeSetField, ModelBase {
 
     private java.util.List<java.time.LocalTime> value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TimeSetFieldImpl(@JsonProperty("value") final java.util.List<java.time.LocalTime> value) {
         this.value = value;
         this.type = TIME_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public TimeSetFieldImpl() {
         this.type = TIME_SET;
     }

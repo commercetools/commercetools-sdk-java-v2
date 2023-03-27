@@ -24,12 +24,18 @@ public class ContentionErrorImpl implements ContentionError, ModelBase {
 
     private String message;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ContentionErrorImpl(@JsonProperty("message") final String message) {
         this.message = message;
         this.code = CONTENTION;
     }
 
+    /**
+     * create empty instance
+     */
     public ContentionErrorImpl() {
         this.code = CONTENTION;
     }

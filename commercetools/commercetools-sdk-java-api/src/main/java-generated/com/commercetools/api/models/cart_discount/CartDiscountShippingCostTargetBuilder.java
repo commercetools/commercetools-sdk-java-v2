@@ -36,10 +36,19 @@ public class CartDiscountShippingCostTargetBuilder implements Builder<CartDiscou
         return new CartDiscountShippingCostTargetImpl();
     }
 
+    /**
+     * factory method for an instance of CartDiscountShippingCostTargetBuilder
+     * @return builder
+     */
     public static CartDiscountShippingCostTargetBuilder of() {
         return new CartDiscountShippingCostTargetBuilder();
     }
 
+    /**
+     * create builder for CartDiscountShippingCostTarget instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartDiscountShippingCostTargetBuilder of(final CartDiscountShippingCostTarget template) {
         CartDiscountShippingCostTargetBuilder builder = new CartDiscountShippingCostTargetBuilder();
         return builder;

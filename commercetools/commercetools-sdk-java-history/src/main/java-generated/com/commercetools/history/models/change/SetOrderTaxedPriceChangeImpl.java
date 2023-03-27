@@ -30,6 +30,9 @@ public class SetOrderTaxedPriceChangeImpl implements SetOrderTaxedPriceChange, M
 
     private com.commercetools.history.models.common.TaxedItemPrice previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetOrderTaxedPriceChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("taxMode") final com.commercetools.history.models.common.TaxMode taxMode,
@@ -42,6 +45,9 @@ public class SetOrderTaxedPriceChangeImpl implements SetOrderTaxedPriceChange, M
         this.type = SET_ORDER_TAXED_PRICE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetOrderTaxedPriceChangeImpl() {
         this.type = SET_ORDER_TAXED_PRICE_CHANGE;
     }

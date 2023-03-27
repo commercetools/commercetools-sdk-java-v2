@@ -32,6 +32,9 @@ public class ProductSetSelectorImpl implements ProductSetSelector, ModelBase {
 
     private Long productSetLimit;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProductSetSelectorImpl(@JsonProperty("projectKey") final String projectKey,
             @JsonProperty("productIds") final java.util.List<String> productIds,
@@ -47,6 +50,9 @@ public class ProductSetSelectorImpl implements ProductSetSelector, ModelBase {
         this.productSetLimit = productSetLimit;
     }
 
+    /**
+     * create empty instance
+     */
     public ProductSetSelectorImpl() {
     }
 

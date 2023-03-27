@@ -32,6 +32,9 @@ public class ParcelItemsUpdatedMessagePayloadImpl implements ParcelItemsUpdatedM
 
     private String shippingKey;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ParcelItemsUpdatedMessagePayloadImpl(@JsonProperty("parcelId") final String parcelId,
             @JsonProperty("deliveryId") final String deliveryId,
@@ -46,6 +49,9 @@ public class ParcelItemsUpdatedMessagePayloadImpl implements ParcelItemsUpdatedM
         this.type = PARCEL_ITEMS_UPDATED;
     }
 
+    /**
+     * create empty instance
+     */
     public ParcelItemsUpdatedMessagePayloadImpl() {
         this.type = PARCEL_ITEMS_UPDATED;
     }

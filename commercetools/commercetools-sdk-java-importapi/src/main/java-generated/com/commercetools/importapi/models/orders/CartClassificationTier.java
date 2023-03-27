@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartClassificationTierImpl.class)
 public interface CartClassificationTier extends ShippingRatePriceTier {
 
+    /**
+     * discriminator value for CartClassificationTier
+     */
     String CART_CLASSIFICATION = "CartClassification";
 
     /**
@@ -69,21 +72,55 @@ public interface CartClassificationTier extends ShippingRatePriceTier {
     @JsonProperty("isMatching")
     public Boolean getIsMatching();
 
+    /**
+     * set value
+     * @param value value to be set
+     */
+
     public void setValue(final String value);
 
+    /**
+     * set price
+     * @param price value to be set
+     */
+
     public void setPrice(final Money price);
+
+    /**
+     * set tiers
+     * @param tiers values to be set
+     */
 
     @JsonIgnore
     public void setTiers(final ShippingRatePriceTier... tiers);
 
+    /**
+     * set tiers
+     * @param tiers values to be set
+     */
+
     public void setTiers(final List<ShippingRatePriceTier> tiers);
+
+    /**
+     * set isMatching
+     * @param isMatching value to be set
+     */
 
     public void setIsMatching(final Boolean isMatching);
 
+    /**
+     * factory method
+     * @return instance of CartClassificationTier
+     */
     public static CartClassificationTier of() {
         return new CartClassificationTierImpl();
     }
 
+    /**
+     * factory method to copy an instance of CartClassificationTier
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CartClassificationTier of(final CartClassificationTier template) {
         CartClassificationTierImpl instance = new CartClassificationTierImpl();
         instance.setValue(template.getValue());
@@ -93,18 +130,37 @@ public interface CartClassificationTier extends ShippingRatePriceTier {
         return instance;
     }
 
+    /**
+     * builder factory method for CartClassificationTier
+     * @return builder
+     */
     public static CartClassificationTierBuilder builder() {
         return CartClassificationTierBuilder.of();
     }
 
+    /**
+     * create builder for CartClassificationTier instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartClassificationTierBuilder builder(final CartClassificationTier template) {
         return CartClassificationTierBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCartClassificationTier(Function<CartClassificationTier, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CartClassificationTier> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CartClassificationTier>() {
             @Override

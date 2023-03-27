@@ -28,7 +28,7 @@ public class ItemStateBuilder implements Builder<ItemState> {
     private com.commercetools.api.models.state.StateReference state;
 
     /**
-     *
+     * set the value to the quantity
      * @param quantity value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class ItemStateBuilder implements Builder<ItemState> {
     }
 
     /**
-     *
+     * set the value to the state using the builder function
      * @param builder function to build the state value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class ItemStateBuilder implements Builder<ItemState> {
     }
 
     /**
-     *
+     * set the value to the state
      * @param state value to be set
      * @return Builder
      */
@@ -61,9 +61,19 @@ public class ItemStateBuilder implements Builder<ItemState> {
         return this;
     }
 
+    /**
+     * value of quantity}
+     * @return quantity
+     */
+
     public Long getQuantity() {
         return this.quantity;
     }
+
+    /**
+     * value of state}
+     * @return state
+     */
 
     public com.commercetools.api.models.state.StateReference getState() {
         return this.state;
@@ -87,10 +97,19 @@ public class ItemStateBuilder implements Builder<ItemState> {
         return new ItemStateImpl(quantity, state);
     }
 
+    /**
+     * factory method for an instance of ItemStateBuilder
+     * @return builder
+     */
     public static ItemStateBuilder of() {
         return new ItemStateBuilder();
     }
 
+    /**
+     * create builder for ItemState instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ItemStateBuilder of(final ItemState template) {
         ItemStateBuilder builder = new ItemStateBuilder();
         builder.quantity = template.getQuantity();

@@ -75,13 +75,28 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
         return this;
     }
 
+    /**
+     *  <p>The product that contains this variant.</p>
+     * @return product
+     */
+
     public com.commercetools.ml.models.common.ProductReference getProduct() {
         return this.product;
     }
 
+    /**
+     *  <p>The state of the product variant.</p>
+     * @return staged
+     */
+
     public Boolean getStaged() {
         return this.staged;
     }
+
+    /**
+     *  <p>The id of the product variant.</p>
+     * @return variantId
+     */
 
     public Integer getVariantId() {
         return this.variantId;
@@ -106,10 +121,19 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
         return new ProductVariantImpl(product, staged, variantId);
     }
 
+    /**
+     * factory method for an instance of ProductVariantBuilder
+     * @return builder
+     */
     public static ProductVariantBuilder of() {
         return new ProductVariantBuilder();
     }
 
+    /**
+     * create builder for ProductVariant instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductVariantBuilder of(final ProductVariant template) {
         ProductVariantBuilder builder = new ProductVariantBuilder();
         builder.product = template.getProduct();

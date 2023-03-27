@@ -50,10 +50,20 @@ public class CartResourceIdentifierBuilder implements Builder<CartResourceIdenti
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the referenced Cart. Either <code>id</code> or <code>key</code> is required.</p>
+     * @return id
+     */
+
     @Nullable
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the referenced Cart. Either <code>id</code> or <code>key</code> is required.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
@@ -76,10 +86,19 @@ public class CartResourceIdentifierBuilder implements Builder<CartResourceIdenti
         return new CartResourceIdentifierImpl(id, key);
     }
 
+    /**
+     * factory method for an instance of CartResourceIdentifierBuilder
+     * @return builder
+     */
     public static CartResourceIdentifierBuilder of() {
         return new CartResourceIdentifierBuilder();
     }
 
+    /**
+     * create builder for CartResourceIdentifier instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartResourceIdentifierBuilder of(final CartResourceIdentifier template) {
         CartResourceIdentifierBuilder builder = new CartResourceIdentifierBuilder();
         builder.id = template.getId();

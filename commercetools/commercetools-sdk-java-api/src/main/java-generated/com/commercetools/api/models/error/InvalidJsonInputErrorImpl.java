@@ -29,6 +29,9 @@ public class InvalidJsonInputErrorImpl implements InvalidJsonInputError, ModelBa
 
     private String detailedErrorMessage;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     InvalidJsonInputErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values,
@@ -39,6 +42,9 @@ public class InvalidJsonInputErrorImpl implements InvalidJsonInputError, ModelBa
         this.code = INVALID_JSON_INPUT;
     }
 
+    /**
+     * create empty instance
+     */
     public InvalidJsonInputErrorImpl() {
         this.code = INVALID_JSON_INPUT;
     }

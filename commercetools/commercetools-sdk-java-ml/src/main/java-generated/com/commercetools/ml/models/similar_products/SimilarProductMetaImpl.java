@@ -28,6 +28,9 @@ public class SimilarProductMetaImpl implements SimilarProductMeta, ModelBase {
 
     private Long variantCount;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SimilarProductMetaImpl(@JsonProperty("name") final com.commercetools.ml.models.common.LocalizedString name,
             @JsonProperty("description") final com.commercetools.ml.models.common.LocalizedString description,
@@ -39,6 +42,9 @@ public class SimilarProductMetaImpl implements SimilarProductMeta, ModelBase {
         this.variantCount = variantCount;
     }
 
+    /**
+     * create empty instance
+     */
     public SimilarProductMetaImpl() {
     }
 

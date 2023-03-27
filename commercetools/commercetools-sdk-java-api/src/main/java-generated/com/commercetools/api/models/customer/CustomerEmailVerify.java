@@ -45,14 +45,33 @@ public interface CustomerEmailVerify {
     @JsonProperty("tokenValue")
     public String getTokenValue();
 
+    /**
+     *  <p>Expected version of the Customer.</p>
+     * @param version value to be set
+     */
+
     public void setVersion(final Long version);
+
+    /**
+     *  <p>Value of the token to verify Customer email.</p>
+     * @param tokenValue value to be set
+     */
 
     public void setTokenValue(final String tokenValue);
 
+    /**
+     * factory method
+     * @return instance of CustomerEmailVerify
+     */
     public static CustomerEmailVerify of() {
         return new CustomerEmailVerifyImpl();
     }
 
+    /**
+     * factory method to copy an instance of CustomerEmailVerify
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CustomerEmailVerify of(final CustomerEmailVerify template) {
         CustomerEmailVerifyImpl instance = new CustomerEmailVerifyImpl();
         instance.setVersion(template.getVersion());
@@ -60,18 +79,37 @@ public interface CustomerEmailVerify {
         return instance;
     }
 
+    /**
+     * builder factory method for CustomerEmailVerify
+     * @return builder
+     */
     public static CustomerEmailVerifyBuilder builder() {
         return CustomerEmailVerifyBuilder.of();
     }
 
+    /**
+     * create builder for CustomerEmailVerify instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerEmailVerifyBuilder builder(final CustomerEmailVerify template) {
         return CustomerEmailVerifyBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCustomerEmailVerify(Function<CustomerEmailVerify, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CustomerEmailVerify> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CustomerEmailVerify>() {
             @Override

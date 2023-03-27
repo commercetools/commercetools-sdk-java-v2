@@ -81,22 +81,61 @@ public interface ModifiedBy {
     @JsonProperty("isPlatformClient")
     public Boolean getIsPlatformClient();
 
+    /**
+     *  <p>ID of the Merchant Center user who made the change. Present only if the change was made in the Merchant Center.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     *  <p>Indicates whether the change was made by a user or the API client with or without an External user ID.</p>
+     * @param type value to be set
+     */
 
     public void setType(final String type);
 
+    /**
+     *  <p>Reference to the Customer who made the change. Present only if the change was made using a token from the Password Flow.</p>
+     * @param customer value to be set
+     */
+
     public void setCustomer(final Reference customer);
+
+    /**
+     *  <p>Present only if the change was made using a token from an Anonymous Session.</p>
+     * @param anonymousId value to be set
+     */
 
     public void setAnonymousId(final String anonymousId);
 
+    /**
+     *  <p>ID of the API Client that made the change. Present only if the change was made using an API Client.</p>
+     * @param clientId value to be set
+     */
+
     public void setClientId(final String clientId);
+
+    /**
+     *  <p><code>true</code> if the change was made via Merchant Center or ImpEx.</p>
+     * @param isPlatformClient value to be set
+     */
 
     public void setIsPlatformClient(final Boolean isPlatformClient);
 
+    /**
+     * factory method
+     * @return instance of ModifiedBy
+     */
     public static ModifiedBy of() {
         return new ModifiedByImpl();
     }
 
+    /**
+     * factory method to copy an instance of ModifiedBy
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static ModifiedBy of(final ModifiedBy template) {
         ModifiedByImpl instance = new ModifiedByImpl();
         instance.setId(template.getId());
@@ -108,18 +147,37 @@ public interface ModifiedBy {
         return instance;
     }
 
+    /**
+     * builder factory method for ModifiedBy
+     * @return builder
+     */
     public static ModifiedByBuilder builder() {
         return ModifiedByBuilder.of();
     }
 
+    /**
+     * create builder for ModifiedBy instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ModifiedByBuilder builder(final ModifiedBy template) {
         return ModifiedByBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withModifiedBy(Function<ModifiedBy, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ModifiedBy> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ModifiedBy>() {
             @Override

@@ -30,6 +30,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OverCapacityErrorImpl.class)
 public interface OverCapacityError extends ErrorObject {
 
+    /**
+     * discriminator value for OverCapacityError
+     */
     String OVER_CAPACITY = "OverCapacity";
 
     /**
@@ -48,12 +51,26 @@ public interface OverCapacityError extends ErrorObject {
     @JsonProperty("message")
     public String getMessage();
 
+    /**
+     *  <p>Plain text description of the error.</p>
+     * @param message value to be set
+     */
+
     public void setMessage(final String message);
 
+    /**
+     * factory method
+     * @return instance of OverCapacityError
+     */
     public static OverCapacityError of() {
         return new OverCapacityErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of OverCapacityError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OverCapacityError of(final OverCapacityError template) {
         OverCapacityErrorImpl instance = new OverCapacityErrorImpl();
         instance.setMessage(template.getMessage());
@@ -61,18 +78,37 @@ public interface OverCapacityError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for OverCapacityError
+     * @return builder
+     */
     public static OverCapacityErrorBuilder builder() {
         return OverCapacityErrorBuilder.of();
     }
 
+    /**
+     * create builder for OverCapacityError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OverCapacityErrorBuilder builder(final OverCapacityError template) {
         return OverCapacityErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOverCapacityError(Function<OverCapacityError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OverCapacityError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OverCapacityError>() {
             @Override

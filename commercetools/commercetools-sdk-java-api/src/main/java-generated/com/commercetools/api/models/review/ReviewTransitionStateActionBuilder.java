@@ -64,9 +64,19 @@ public class ReviewTransitionStateActionBuilder implements Builder<ReviewTransit
         return this;
     }
 
+    /**
+     *  <p>Value to set. If there is no State yet, the new State must be an initial State. If the existing State has <code>transitions</code> set, there must be a direct transition to the new State. If <code>transitions</code> is not set, no validation is performed. If the new State does not have the role <code>ReviewIncludedInStatistics</code>, the Review is not taken into account in the ratings statistics of the target.</p>
+     * @return state
+     */
+
     public com.commercetools.api.models.state.StateResourceIdentifier getState() {
         return this.state;
     }
+
+    /**
+     *  <p>Switch validations on or off.</p>
+     * @return force
+     */
 
     @Nullable
     public Boolean getForce() {
@@ -90,10 +100,19 @@ public class ReviewTransitionStateActionBuilder implements Builder<ReviewTransit
         return new ReviewTransitionStateActionImpl(state, force);
     }
 
+    /**
+     * factory method for an instance of ReviewTransitionStateActionBuilder
+     * @return builder
+     */
     public static ReviewTransitionStateActionBuilder of() {
         return new ReviewTransitionStateActionBuilder();
     }
 
+    /**
+     * create builder for ReviewTransitionStateAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReviewTransitionStateActionBuilder of(final ReviewTransitionStateAction template) {
         ReviewTransitionStateActionBuilder builder = new ReviewTransitionStateActionBuilder();
         builder.state = template.getState();

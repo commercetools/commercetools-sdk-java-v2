@@ -24,6 +24,9 @@ public class DiscountCodeSetNameActionImpl implements DiscountCodeSetNameAction,
 
     private com.commercetools.api.models.common.LocalizedString name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DiscountCodeSetNameActionImpl(
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name) {
@@ -31,6 +34,9 @@ public class DiscountCodeSetNameActionImpl implements DiscountCodeSetNameAction,
         this.action = SET_NAME;
     }
 
+    /**
+     * create empty instance
+     */
     public DiscountCodeSetNameActionImpl() {
         this.action = SET_NAME;
     }

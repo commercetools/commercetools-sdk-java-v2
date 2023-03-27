@@ -30,6 +30,9 @@ public class SetAttributeChangeImpl implements SetAttributeChange, ModelBase {
 
     private com.commercetools.history.models.change_value.AttributeValue nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetAttributeChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("catalogData") final String catalogData,
@@ -42,6 +45,9 @@ public class SetAttributeChangeImpl implements SetAttributeChange, ModelBase {
         this.type = SET_ATTRIBUTE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetAttributeChangeImpl() {
         this.type = SET_ATTRIBUTE_CHANGE;
     }

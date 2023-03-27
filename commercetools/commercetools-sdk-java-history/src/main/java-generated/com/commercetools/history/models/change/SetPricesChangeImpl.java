@@ -32,6 +32,9 @@ public class SetPricesChangeImpl implements SetPricesChange, ModelBase {
 
     private java.util.List<com.commercetools.history.models.common.Price> nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     SetPricesChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("catalogData") final String catalogData, @JsonProperty("variant") final String variant,
@@ -45,6 +48,9 @@ public class SetPricesChangeImpl implements SetPricesChange, ModelBase {
         this.type = SET_PRICES_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public SetPricesChangeImpl() {
         this.type = SET_PRICES_CHANGE;
     }

@@ -114,34 +114,92 @@ public interface ReturnItem extends com.commercetools.api.models.Customizable<Re
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
 
+    /**
+     *  <p>Unique identifier of the ReturnItem.</p>
+     * @param id value to be set
+     */
+
     public void setId(final String id);
+
+    /**
+     * set quantity
+     * @param quantity value to be set
+     */
 
     public void setQuantity(final Long quantity);
 
+    /**
+     * set comment
+     * @param comment value to be set
+     */
+
     public void setComment(final String comment);
+
+    /**
+     * set shipmentState
+     * @param shipmentState value to be set
+     */
 
     public void setShipmentState(final ReturnShipmentState shipmentState);
 
+    /**
+     * set paymentState
+     * @param paymentState value to be set
+     */
+
     public void setPaymentState(final ReturnPaymentState paymentState);
+
+    /**
+     *  <p>Custom Fields of this return item.</p>
+     * @param custom value to be set
+     */
 
     public void setCustom(final CustomFields custom);
 
+    /**
+     * set lastModifiedAt
+     * @param lastModifiedAt value to be set
+     */
+
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
+
+    /**
+     * set createdAt
+     * @param createdAt value to be set
+     */
 
     public void setCreatedAt(final ZonedDateTime createdAt);
 
+    /**
+     * builder for customLineItemReturnItem subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.order.CustomLineItemReturnItemBuilder customLineItemReturnItemBuilder() {
         return com.commercetools.api.models.order.CustomLineItemReturnItemBuilder.of();
     }
 
+    /**
+     * builder for lineItemReturnItem subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.order.LineItemReturnItemBuilder lineItemReturnItemBuilder() {
         return com.commercetools.api.models.order.LineItemReturnItemBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withReturnItem(Function<ReturnItem, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ReturnItem> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ReturnItem>() {
             @Override

@@ -24,6 +24,9 @@ public class InventoryEntrySetExpectedDeliveryActionImpl implements InventoryEnt
 
     private java.time.ZonedDateTime expectedDelivery;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     InventoryEntrySetExpectedDeliveryActionImpl(
             @JsonProperty("expectedDelivery") final java.time.ZonedDateTime expectedDelivery) {
@@ -31,6 +34,9 @@ public class InventoryEntrySetExpectedDeliveryActionImpl implements InventoryEnt
         this.action = SET_EXPECTED_DELIVERY;
     }
 
+    /**
+     * create empty instance
+     */
     public InventoryEntrySetExpectedDeliveryActionImpl() {
         this.action = SET_EXPECTED_DELIVERY;
     }

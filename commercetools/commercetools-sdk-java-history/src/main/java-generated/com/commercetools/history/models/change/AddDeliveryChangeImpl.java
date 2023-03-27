@@ -28,6 +28,9 @@ public class AddDeliveryChangeImpl implements AddDeliveryChange, ModelBase {
 
     private com.commercetools.history.models.change_value.DeliveryChangeValue previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AddDeliveryChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final com.commercetools.history.models.change_value.DeliveryChangeValue nextValue,
@@ -38,6 +41,9 @@ public class AddDeliveryChangeImpl implements AddDeliveryChange, ModelBase {
         this.type = ADD_DELIVERY_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public AddDeliveryChangeImpl() {
         this.type = ADD_DELIVERY_CHANGE;
     }

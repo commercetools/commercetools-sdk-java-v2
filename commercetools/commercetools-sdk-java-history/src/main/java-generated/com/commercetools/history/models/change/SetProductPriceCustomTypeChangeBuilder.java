@@ -45,7 +45,7 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
     }
 
     /**
-     *
+     * set the value to the catalogData
      * @param catalogData value to be set
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
     }
 
     /**
-     *
+     * set the value to the previousValue using the builder function
      * @param builder function to build the previousValue value
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -92,7 +92,7 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -103,17 +103,37 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>setProductPriceCustomType</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
+
+    /**
+     * value of catalogData}
+     * @return catalogData
+     */
 
     public String getCatalogData() {
         return this.catalogData;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public com.commercetools.history.models.common.CustomFields getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public com.commercetools.history.models.common.CustomFields getNextValue() {
         return this.nextValue;
@@ -139,10 +159,19 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
         return new SetProductPriceCustomTypeChangeImpl(change, catalogData, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of SetProductPriceCustomTypeChangeBuilder
+     * @return builder
+     */
     public static SetProductPriceCustomTypeChangeBuilder of() {
         return new SetProductPriceCustomTypeChangeBuilder();
     }
 
+    /**
+     * create builder for SetProductPriceCustomTypeChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetProductPriceCustomTypeChangeBuilder of(final SetProductPriceCustomTypeChange template) {
         SetProductPriceCustomTypeChangeBuilder builder = new SetProductPriceCustomTypeChangeBuilder();
         builder.change = template.getChange();

@@ -26,6 +26,9 @@ public class StagedOrderSetParcelTrackingDataActionImpl implements StagedOrderSe
 
     private com.commercetools.api.models.order.TrackingData trackingData;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StagedOrderSetParcelTrackingDataActionImpl(@JsonProperty("parcelId") final String parcelId,
             @JsonProperty("trackingData") final com.commercetools.api.models.order.TrackingData trackingData) {
@@ -34,6 +37,9 @@ public class StagedOrderSetParcelTrackingDataActionImpl implements StagedOrderSe
         this.action = SET_PARCEL_TRACKING_DATA;
     }
 
+    /**
+     * create empty instance
+     */
     public StagedOrderSetParcelTrackingDataActionImpl() {
         this.action = SET_PARCEL_TRACKING_DATA;
     }

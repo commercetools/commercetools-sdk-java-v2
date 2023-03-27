@@ -188,40 +188,85 @@ public class ProductDiscountDraftBuilder implements Builder<ProductDiscountDraft
         return this;
     }
 
+    /**
+     *  <p>Name of the ProductDiscount.</p>
+     * @return name
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
+
+    /**
+     *  <p>User-defined unique identifier for the ProductDiscount.</p>
+     * @return key
+     */
 
     @Nullable
     public String getKey() {
         return this.key;
     }
 
+    /**
+     *  <p>Description of the ProductDiscount.</p>
+     * @return description
+     */
+
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
+    /**
+     *  <p>Type of Discount and its corresponding value.</p>
+     * @return value
+     */
+
     public com.commercetools.api.models.product_discount.ProductDiscountValueDraft getValue() {
         return this.value;
     }
+
+    /**
+     *  <p>Valid ProductDiscount predicate.</p>
+     * @return predicate
+     */
 
     public String getPredicate() {
         return this.predicate;
     }
 
+    /**
+     *  <p>Decimal value between 0 and 1 (passed as String literal) that defines the order of ProductDiscounts to apply in case more than one is applicable and active. A ProductDiscount with a higher <code>sortOrder</code> is prioritized. The value must be <strong>unique</strong> among all ProductDiscounts in the Project.</p>
+     * @return sortOrder
+     */
+
     public String getSortOrder() {
         return this.sortOrder;
     }
+
+    /**
+     *  <p>Set to <code>true</code> to activate the ProductDiscount, set to <code>false</code> to deactivate it (even though the <code>predicate</code> matches).</p>
+     * @return isActive
+     */
 
     public Boolean getIsActive() {
         return this.isActive;
     }
 
+    /**
+     *  <p>Date and time (UTC) from which the Discount is effective. Take Eventual Consistency into account for calculated discount values.</p>
+     * @return validFrom
+     */
+
     @Nullable
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
+
+    /**
+     *  <p>Date and time (UTC) until which the Discount is effective. Take Eventual Consistency into account for calculated undiscounted values.</p>
+     * @return validUntil
+     */
 
     @Nullable
     public java.time.ZonedDateTime getValidUntil() {
@@ -251,10 +296,19 @@ public class ProductDiscountDraftBuilder implements Builder<ProductDiscountDraft
             validUntil);
     }
 
+    /**
+     * factory method for an instance of ProductDiscountDraftBuilder
+     * @return builder
+     */
     public static ProductDiscountDraftBuilder of() {
         return new ProductDiscountDraftBuilder();
     }
 
+    /**
+     * create builder for ProductDiscountDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductDiscountDraftBuilder of(final ProductDiscountDraft template) {
         ProductDiscountDraftBuilder builder = new ProductDiscountDraftBuilder();
         builder.name = template.getName();

@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderShippingInfoSetMessagePayloadImpl.class)
 public interface OrderShippingInfoSetMessagePayload extends OrderMessagePayload {
 
+    /**
+     * discriminator value for OrderShippingInfoSetMessagePayload
+     */
     String ORDER_SHIPPING_INFO_SET = "OrderShippingInfoSet";
 
     /**
@@ -47,14 +50,33 @@ public interface OrderShippingInfoSetMessagePayload extends OrderMessagePayload 
     @JsonProperty("oldShippingInfo")
     public ShippingInfo getOldShippingInfo();
 
+    /**
+     *  <p>ShippingInfo after the Set Shipping Method or Set Custom Shipping Method update action.</p>
+     * @param shippingInfo value to be set
+     */
+
     public void setShippingInfo(final ShippingInfo shippingInfo);
+
+    /**
+     *  <p>ShippingInfo before the Set Shipping Method or Set Custom Shipping Method update action.</p>
+     * @param oldShippingInfo value to be set
+     */
 
     public void setOldShippingInfo(final ShippingInfo oldShippingInfo);
 
+    /**
+     * factory method
+     * @return instance of OrderShippingInfoSetMessagePayload
+     */
     public static OrderShippingInfoSetMessagePayload of() {
         return new OrderShippingInfoSetMessagePayloadImpl();
     }
 
+    /**
+     * factory method to copy an instance of OrderShippingInfoSetMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static OrderShippingInfoSetMessagePayload of(final OrderShippingInfoSetMessagePayload template) {
         OrderShippingInfoSetMessagePayloadImpl instance = new OrderShippingInfoSetMessagePayloadImpl();
         instance.setShippingInfo(template.getShippingInfo());
@@ -62,18 +84,37 @@ public interface OrderShippingInfoSetMessagePayload extends OrderMessagePayload 
         return instance;
     }
 
+    /**
+     * builder factory method for OrderShippingInfoSetMessagePayload
+     * @return builder
+     */
     public static OrderShippingInfoSetMessagePayloadBuilder builder() {
         return OrderShippingInfoSetMessagePayloadBuilder.of();
     }
 
+    /**
+     * create builder for OrderShippingInfoSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderShippingInfoSetMessagePayloadBuilder builder(final OrderShippingInfoSetMessagePayload template) {
         return OrderShippingInfoSetMessagePayloadBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withOrderShippingInfoSetMessagePayload(Function<OrderShippingInfoSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<OrderShippingInfoSetMessagePayload> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<OrderShippingInfoSetMessagePayload>() {
             @Override

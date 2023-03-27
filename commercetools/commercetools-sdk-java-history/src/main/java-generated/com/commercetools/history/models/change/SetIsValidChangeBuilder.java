@@ -41,7 +41,7 @@ public class SetIsValidChangeBuilder implements Builder<SetIsValidChange> {
     }
 
     /**
-     *
+     * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class SetIsValidChangeBuilder implements Builder<SetIsValidChange> {
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -62,13 +62,28 @@ public class SetIsValidChangeBuilder implements Builder<SetIsValidChange> {
         return this;
     }
 
+    /**
+     *  <p>Shape of the action for <code>setIsValid</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of previousValue}
+     * @return previousValue
+     */
+
     public Boolean getPreviousValue() {
         return this.previousValue;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public Boolean getNextValue() {
         return this.nextValue;
@@ -93,10 +108,19 @@ public class SetIsValidChangeBuilder implements Builder<SetIsValidChange> {
         return new SetIsValidChangeImpl(change, previousValue, nextValue);
     }
 
+    /**
+     * factory method for an instance of SetIsValidChangeBuilder
+     * @return builder
+     */
     public static SetIsValidChangeBuilder of() {
         return new SetIsValidChangeBuilder();
     }
 
+    /**
+     * create builder for SetIsValidChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetIsValidChangeBuilder of(final SetIsValidChange template) {
         SetIsValidChangeBuilder builder = new SetIsValidChangeBuilder();
         builder.change = template.getChange();

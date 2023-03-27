@@ -28,6 +28,9 @@ public class CartSetDeliveryAddressCustomFieldActionImpl implements CartSetDeliv
 
     private java.lang.Object value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CartSetDeliveryAddressCustomFieldActionImpl(@JsonProperty("deliveryId") final String deliveryId,
             @JsonProperty("name") final String name, @JsonProperty("value") final java.lang.Object value) {
@@ -37,6 +40,9 @@ public class CartSetDeliveryAddressCustomFieldActionImpl implements CartSetDeliv
         this.action = SET_DELIVERY_ADDRESS_CUSTOM_FIELD;
     }
 
+    /**
+     * create empty instance
+     */
     public CartSetDeliveryAddressCustomFieldActionImpl() {
         this.action = SET_DELIVERY_ADDRESS_CUSTOM_FIELD;
     }

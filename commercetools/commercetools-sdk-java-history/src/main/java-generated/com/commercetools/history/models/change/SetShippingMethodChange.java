@@ -33,6 +33,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SetShippingMethodChangeImpl.class)
 public interface SetShippingMethodChange extends Change {
 
+    /**
+     * discriminator value for SetShippingMethodChange
+     */
     String SET_SHIPPING_METHOD_CHANGE = "SetShippingMethodChange";
 
     /**
@@ -69,16 +72,40 @@ public interface SetShippingMethodChange extends Change {
     @JsonProperty("previousValue")
     public ShippingMethodChangeValue getPreviousValue();
 
+    /**
+     *  <p>Update action for <code>setShippingMethod</code></p>
+     * @param change value to be set
+     */
+
     public void setChange(final String change);
+
+    /**
+     * set nextValue
+     * @param nextValue value to be set
+     */
 
     public void setNextValue(final ShippingMethodChangeValue nextValue);
 
+    /**
+     * set previousValue
+     * @param previousValue value to be set
+     */
+
     public void setPreviousValue(final ShippingMethodChangeValue previousValue);
 
+    /**
+     * factory method
+     * @return instance of SetShippingMethodChange
+     */
     public static SetShippingMethodChange of() {
         return new SetShippingMethodChangeImpl();
     }
 
+    /**
+     * factory method to copy an instance of SetShippingMethodChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SetShippingMethodChange of(final SetShippingMethodChange template) {
         SetShippingMethodChangeImpl instance = new SetShippingMethodChangeImpl();
         instance.setChange(template.getChange());
@@ -87,18 +114,37 @@ public interface SetShippingMethodChange extends Change {
         return instance;
     }
 
+    /**
+     * builder factory method for SetShippingMethodChange
+     * @return builder
+     */
     public static SetShippingMethodChangeBuilder builder() {
         return SetShippingMethodChangeBuilder.of();
     }
 
+    /**
+     * create builder for SetShippingMethodChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SetShippingMethodChangeBuilder builder(final SetShippingMethodChange template) {
         return SetShippingMethodChangeBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSetShippingMethodChange(Function<SetShippingMethodChange, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SetShippingMethodChange> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SetShippingMethodChange>() {
             @Override

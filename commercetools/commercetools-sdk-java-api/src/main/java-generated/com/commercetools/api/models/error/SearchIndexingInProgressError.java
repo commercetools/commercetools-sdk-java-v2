@@ -29,6 +29,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SearchIndexingInProgressErrorImpl.class)
 public interface SearchIndexingInProgressError extends ErrorObject {
 
+    /**
+     * discriminator value for SearchIndexingInProgressError
+     */
     String SEARCH_INDEXING_IN_PROGRESS = "SearchIndexingInProgress";
 
     /**
@@ -47,12 +50,26 @@ public interface SearchIndexingInProgressError extends ErrorObject {
     @JsonProperty("message")
     public String getMessage();
 
+    /**
+     *  <p><code>"The indexing is currently in progress. Please wait until the status is "Activated" to execute search requests."</code></p>
+     * @param message value to be set
+     */
+
     public void setMessage(final String message);
 
+    /**
+     * factory method
+     * @return instance of SearchIndexingInProgressError
+     */
     public static SearchIndexingInProgressError of() {
         return new SearchIndexingInProgressErrorImpl();
     }
 
+    /**
+     * factory method to copy an instance of SearchIndexingInProgressError
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static SearchIndexingInProgressError of(final SearchIndexingInProgressError template) {
         SearchIndexingInProgressErrorImpl instance = new SearchIndexingInProgressErrorImpl();
         instance.setMessage(template.getMessage());
@@ -60,18 +77,37 @@ public interface SearchIndexingInProgressError extends ErrorObject {
         return instance;
     }
 
+    /**
+     * builder factory method for SearchIndexingInProgressError
+     * @return builder
+     */
     public static SearchIndexingInProgressErrorBuilder builder() {
         return SearchIndexingInProgressErrorBuilder.of();
     }
 
+    /**
+     * create builder for SearchIndexingInProgressError instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static SearchIndexingInProgressErrorBuilder builder(final SearchIndexingInProgressError template) {
         return SearchIndexingInProgressErrorBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withSearchIndexingInProgressError(Function<SearchIndexingInProgressError, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<SearchIndexingInProgressError> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<SearchIndexingInProgressError>() {
             @Override

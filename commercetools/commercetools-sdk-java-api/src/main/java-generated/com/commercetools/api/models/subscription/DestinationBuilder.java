@@ -35,6 +35,10 @@ public class DestinationBuilder {
         return com.commercetools.api.models.subscription.SqsDestinationBuilder.of();
     }
 
+    /**
+     * factory method for an instance of DestinationBuilder
+     * @return builder
+     */
     public static DestinationBuilder of() {
         return new DestinationBuilder();
     }

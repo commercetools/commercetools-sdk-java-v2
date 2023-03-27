@@ -44,6 +44,9 @@ public class BusinessUnitContactEmailSetMessageImpl implements BusinessUnitConta
 
     private String contactEmail;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     BusinessUnitContactEmailSetMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -70,6 +73,9 @@ public class BusinessUnitContactEmailSetMessageImpl implements BusinessUnitConta
         this.type = BUSINESS_UNIT_CONTACT_EMAIL_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public BusinessUnitContactEmailSetMessageImpl() {
         this.type = BUSINESS_UNIT_CONTACT_EMAIL_SET;
     }

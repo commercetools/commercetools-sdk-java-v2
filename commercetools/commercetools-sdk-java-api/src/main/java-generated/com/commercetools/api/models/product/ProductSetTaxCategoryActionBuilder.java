@@ -52,6 +52,11 @@ public class ProductSetTaxCategoryActionBuilder implements Builder<ProductSetTax
         return this;
     }
 
+    /**
+     *  <p>The Tax Category to set. If empty, any existing value will be removed.</p>
+     * @return taxCategory
+     */
+
     @Nullable
     public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {
         return this.taxCategory;
@@ -73,10 +78,19 @@ public class ProductSetTaxCategoryActionBuilder implements Builder<ProductSetTax
         return new ProductSetTaxCategoryActionImpl(taxCategory);
     }
 
+    /**
+     * factory method for an instance of ProductSetTaxCategoryActionBuilder
+     * @return builder
+     */
     public static ProductSetTaxCategoryActionBuilder of() {
         return new ProductSetTaxCategoryActionBuilder();
     }
 
+    /**
+     * create builder for ProductSetTaxCategoryAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductSetTaxCategoryActionBuilder of(final ProductSetTaxCategoryAction template) {
         ProductSetTaxCategoryActionBuilder builder = new ProductSetTaxCategoryActionBuilder();
         builder.taxCategory = template.getTaxCategory();

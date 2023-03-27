@@ -42,6 +42,9 @@ public class RecordImpl implements Record, ModelBase {
 
     private Boolean withoutChanges;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     RecordImpl(@JsonProperty("version") final Integer version,
             @JsonProperty("previousVersion") final Integer previousVersion, @JsonProperty("type") final String type,
@@ -66,6 +69,9 @@ public class RecordImpl implements Record, ModelBase {
         this.withoutChanges = withoutChanges;
     }
 
+    /**
+     * create empty instance
+     */
     public RecordImpl() {
     }
 

@@ -24,12 +24,18 @@ public class ProjectChangeCountriesActionImpl implements ProjectChangeCountriesA
 
     private java.util.List<String> countries;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ProjectChangeCountriesActionImpl(@JsonProperty("countries") final java.util.List<String> countries) {
         this.countries = countries;
         this.action = CHANGE_COUNTRIES;
     }
 
+    /**
+     * create empty instance
+     */
     public ProjectChangeCountriesActionImpl() {
         this.action = CHANGE_COUNTRIES;
     }

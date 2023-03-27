@@ -28,6 +28,9 @@ public class PaymentSetTransactionCustomTypeActionImpl implements PaymentSetTran
 
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     PaymentSetTransactionCustomTypeActionImpl(@JsonProperty("transactionId") final String transactionId,
             @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
@@ -38,6 +41,9 @@ public class PaymentSetTransactionCustomTypeActionImpl implements PaymentSetTran
         this.action = SET_TRANSACTION_CUSTOM_TYPE;
     }
 
+    /**
+     * create empty instance
+     */
     public PaymentSetTransactionCustomTypeActionImpl() {
         this.action = SET_TRANSACTION_CUSTOM_TYPE;
     }

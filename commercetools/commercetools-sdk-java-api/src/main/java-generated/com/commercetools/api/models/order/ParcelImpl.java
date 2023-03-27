@@ -32,6 +32,9 @@ public class ParcelImpl implements Parcel, ModelBase {
 
     private com.commercetools.api.models.type.CustomFields custom;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ParcelImpl(@JsonProperty("id") final String id, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
             @JsonProperty("measurements") final com.commercetools.api.models.order.ParcelMeasurements measurements,
@@ -46,6 +49,9 @@ public class ParcelImpl implements Parcel, ModelBase {
         this.custom = custom;
     }
 
+    /**
+     * create empty instance
+     */
     public ParcelImpl() {
     }
 

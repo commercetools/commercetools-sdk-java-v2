@@ -61,6 +61,11 @@ public class ProductRevertedStagedChangesMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>List of image URLs that were removed during the Revert Staged Changes update action.</p>
+     * @return removedImageUrls
+     */
+
     public java.util.List<String> getRemovedImageUrls() {
         return this.removedImageUrls;
     }
@@ -83,10 +88,19 @@ public class ProductRevertedStagedChangesMessagePayloadBuilder
         return new ProductRevertedStagedChangesMessagePayloadImpl(removedImageUrls);
     }
 
+    /**
+     * factory method for an instance of ProductRevertedStagedChangesMessagePayloadBuilder
+     * @return builder
+     */
     public static ProductRevertedStagedChangesMessagePayloadBuilder of() {
         return new ProductRevertedStagedChangesMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for ProductRevertedStagedChangesMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ProductRevertedStagedChangesMessagePayloadBuilder of(
             final ProductRevertedStagedChangesMessagePayload template) {
         ProductRevertedStagedChangesMessagePayloadBuilder builder = new ProductRevertedStagedChangesMessagePayloadBuilder();

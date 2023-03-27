@@ -103,9 +103,19 @@ public class StateUpdateBuilder implements Builder<StateUpdate> {
         return this;
     }
 
+    /**
+     *  <p>Expected version of the State on which the changes should be applied. If the expected version does not match the actual version, a ConcurrentModification error is returned.</p>
+     * @return version
+     */
+
     public Long getVersion() {
         return this.version;
     }
+
+    /**
+     *  <p>Update actions to be performed on the State.</p>
+     * @return actions
+     */
 
     public java.util.List<com.commercetools.api.models.state.StateUpdateAction> getActions() {
         return this.actions;
@@ -129,10 +139,19 @@ public class StateUpdateBuilder implements Builder<StateUpdate> {
         return new StateUpdateImpl(version, actions);
     }
 
+    /**
+     * factory method for an instance of StateUpdateBuilder
+     * @return builder
+     */
     public static StateUpdateBuilder of() {
         return new StateUpdateBuilder();
     }
 
+    /**
+     * create builder for StateUpdate instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StateUpdateBuilder of(final StateUpdate template) {
         StateUpdateBuilder builder = new StateUpdateBuilder();
         builder.version = template.getVersion();

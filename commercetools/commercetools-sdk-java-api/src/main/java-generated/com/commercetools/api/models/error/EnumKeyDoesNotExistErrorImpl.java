@@ -31,6 +31,9 @@ public class EnumKeyDoesNotExistErrorImpl implements EnumKeyDoesNotExistError, M
 
     private String conflictingAttributeName;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     EnumKeyDoesNotExistErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values,
@@ -43,6 +46,9 @@ public class EnumKeyDoesNotExistErrorImpl implements EnumKeyDoesNotExistError, M
         this.code = ENUM_KEY_DOES_NOT_EXIST;
     }
 
+    /**
+     * create empty instance
+     */
     public EnumKeyDoesNotExistErrorImpl() {
         this.code = ENUM_KEY_DOES_NOT_EXIST;
     }

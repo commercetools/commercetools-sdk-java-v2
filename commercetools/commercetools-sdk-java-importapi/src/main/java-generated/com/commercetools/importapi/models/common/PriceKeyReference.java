@@ -27,30 +27,61 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PriceKeyReferenceImpl.class)
 public interface PriceKeyReference extends KeyReference {
 
+    /**
+     * discriminator value for PriceKeyReference
+     */
     String PRICE = "price";
 
+    /**
+     * factory method
+     * @return instance of PriceKeyReference
+     */
     public static PriceKeyReference of() {
         return new PriceKeyReferenceImpl();
     }
 
+    /**
+     * factory method to copy an instance of PriceKeyReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static PriceKeyReference of(final PriceKeyReference template) {
         PriceKeyReferenceImpl instance = new PriceKeyReferenceImpl();
         instance.setKey(template.getKey());
         return instance;
     }
 
+    /**
+     * builder factory method for PriceKeyReference
+     * @return builder
+     */
     public static PriceKeyReferenceBuilder builder() {
         return PriceKeyReferenceBuilder.of();
     }
 
+    /**
+     * create builder for PriceKeyReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PriceKeyReferenceBuilder builder(final PriceKeyReference template) {
         return PriceKeyReferenceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withPriceKeyReference(Function<PriceKeyReference, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<PriceKeyReference> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<PriceKeyReference>() {
             @Override

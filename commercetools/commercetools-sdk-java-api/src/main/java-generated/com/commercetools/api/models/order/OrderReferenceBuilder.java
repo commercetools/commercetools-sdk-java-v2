@@ -41,7 +41,7 @@ public class OrderReferenceBuilder implements Builder<OrderReference> {
     }
 
     /**
-     *
+     * set the value to the obj using the builder function
      * @param builder function to build the obj value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class OrderReferenceBuilder implements Builder<OrderReference> {
     }
 
     /**
-     *
+     * set the value to the obj
      * @param obj value to be set
      * @return Builder
      */
@@ -63,9 +63,19 @@ public class OrderReferenceBuilder implements Builder<OrderReference> {
         return this;
     }
 
+    /**
+     *  <p>Unique ID of the referenced resource.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     * value of obj}
+     * @return obj
+     */
 
     @Nullable
     public com.commercetools.api.models.order.Order getObj() {
@@ -89,10 +99,19 @@ public class OrderReferenceBuilder implements Builder<OrderReference> {
         return new OrderReferenceImpl(id, obj);
     }
 
+    /**
+     * factory method for an instance of OrderReferenceBuilder
+     * @return builder
+     */
     public static OrderReferenceBuilder of() {
         return new OrderReferenceBuilder();
     }
 
+    /**
+     * create builder for OrderReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderReferenceBuilder of(final OrderReference template) {
         OrderReferenceBuilder builder = new OrderReferenceBuilder();
         builder.id = template.getId();

@@ -95,6 +95,11 @@ public class StoreSetSupplyChannelsActionBuilder implements Builder<StoreSetSupp
         return this;
     }
 
+    /**
+     *  <p>Value to set. If not defined, the Store's <code>supplyChannels</code> are unset.</p>
+     * @return supplyChannels
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> getSupplyChannels() {
         return this.supplyChannels;
@@ -116,10 +121,19 @@ public class StoreSetSupplyChannelsActionBuilder implements Builder<StoreSetSupp
         return new StoreSetSupplyChannelsActionImpl(supplyChannels);
     }
 
+    /**
+     * factory method for an instance of StoreSetSupplyChannelsActionBuilder
+     * @return builder
+     */
     public static StoreSetSupplyChannelsActionBuilder of() {
         return new StoreSetSupplyChannelsActionBuilder();
     }
 
+    /**
+     * create builder for StoreSetSupplyChannelsAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreSetSupplyChannelsActionBuilder of(final StoreSetSupplyChannelsAction template) {
         StoreSetSupplyChannelsActionBuilder builder = new StoreSetSupplyChannelsActionBuilder();
         builder.supplyChannels = template.getSupplyChannels();

@@ -25,6 +25,9 @@ public class ShippingMethodSetLocalizedDescriptionActionImpl
 
     private com.commercetools.api.models.common.LocalizedString localizedDescription;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ShippingMethodSetLocalizedDescriptionActionImpl(
             @JsonProperty("localizedDescription") final com.commercetools.api.models.common.LocalizedString localizedDescription) {
@@ -32,6 +35,9 @@ public class ShippingMethodSetLocalizedDescriptionActionImpl
         this.action = SET_LOCALIZED_DESCRIPTION;
     }
 
+    /**
+     * create empty instance
+     */
     public ShippingMethodSetLocalizedDescriptionActionImpl() {
         this.action = SET_LOCALIZED_DESCRIPTION;
     }

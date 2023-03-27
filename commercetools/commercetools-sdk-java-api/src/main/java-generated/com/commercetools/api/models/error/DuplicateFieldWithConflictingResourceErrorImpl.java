@@ -33,6 +33,9 @@ public class DuplicateFieldWithConflictingResourceErrorImpl
 
     private com.commercetools.api.models.common.Reference conflictingResource;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     DuplicateFieldWithConflictingResourceErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("values") final Map<String, java.lang.Object> values,
@@ -47,6 +50,9 @@ public class DuplicateFieldWithConflictingResourceErrorImpl
         this.code = DUPLICATE_FIELD_WITH_CONFLICTING_RESOURCE;
     }
 
+    /**
+     * create empty instance
+     */
     public DuplicateFieldWithConflictingResourceErrorImpl() {
         this.code = DUPLICATE_FIELD_WITH_CONFLICTING_RESOURCE;
     }

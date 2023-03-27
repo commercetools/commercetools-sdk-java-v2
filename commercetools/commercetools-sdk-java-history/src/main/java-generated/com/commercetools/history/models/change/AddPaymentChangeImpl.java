@@ -28,6 +28,9 @@ public class AddPaymentChangeImpl implements AddPaymentChange, ModelBase {
 
     private com.commercetools.history.models.common.PaymentInfo previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AddPaymentChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.PaymentInfo nextValue,
@@ -38,6 +41,9 @@ public class AddPaymentChangeImpl implements AddPaymentChange, ModelBase {
         this.type = ADD_PAYMENT_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public AddPaymentChangeImpl() {
         this.type = ADD_PAYMENT_CHANGE;
     }

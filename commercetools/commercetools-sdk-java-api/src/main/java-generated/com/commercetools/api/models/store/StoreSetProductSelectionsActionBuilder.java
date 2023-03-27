@@ -115,6 +115,15 @@ public class StoreSetProductSelectionsActionBuilder implements Builder<StoreSetP
         return this;
     }
 
+    /**
+     *  <p>Value to set.</p>
+     *  <ul>
+     *   <li>If provided, Product Selections for which <code>active</code> is set to <code>true</code> are available in the Store.</li>
+     *   <li>If not provided or provided as empty array, the action removes all Product Selections from this Store, meaning all Products in the Project are available in this Store.</li>
+     *  </ul>
+     * @return productSelections
+     */
+
     @Nullable
     public java.util.List<com.commercetools.api.models.store.ProductSelectionSettingDraft> getProductSelections() {
         return this.productSelections;
@@ -136,10 +145,19 @@ public class StoreSetProductSelectionsActionBuilder implements Builder<StoreSetP
         return new StoreSetProductSelectionsActionImpl(productSelections);
     }
 
+    /**
+     * factory method for an instance of StoreSetProductSelectionsActionBuilder
+     * @return builder
+     */
     public static StoreSetProductSelectionsActionBuilder of() {
         return new StoreSetProductSelectionsActionBuilder();
     }
 
+    /**
+     * create builder for StoreSetProductSelectionsAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StoreSetProductSelectionsActionBuilder of(final StoreSetProductSelectionsAction template) {
         StoreSetProductSelectionsActionBuilder builder = new StoreSetProductSelectionsActionBuilder();
         builder.productSelections = template.getProductSelections();

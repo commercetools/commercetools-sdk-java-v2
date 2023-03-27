@@ -40,7 +40,7 @@ public class NumberAttributeBuilder implements Builder<NumberAttribute> {
     }
 
     /**
-     *
+     * set the value to the value
      * @param value value to be set
      * @return Builder
      */
@@ -50,10 +50,20 @@ public class NumberAttributeBuilder implements Builder<NumberAttribute> {
         return this;
     }
 
+    /**
+     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     * @return name
+     */
+
     @Nullable
     public String getName() {
         return this.name;
     }
+
+    /**
+     * value of value}
+     * @return value
+     */
 
     public Double getValue() {
         return this.value;
@@ -76,10 +86,19 @@ public class NumberAttributeBuilder implements Builder<NumberAttribute> {
         return new NumberAttributeImpl(name, value);
     }
 
+    /**
+     * factory method for an instance of NumberAttributeBuilder
+     * @return builder
+     */
     public static NumberAttributeBuilder of() {
         return new NumberAttributeBuilder();
     }
 
+    /**
+     * create builder for NumberAttribute instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static NumberAttributeBuilder of(final NumberAttribute template) {
         NumberAttributeBuilder builder = new NumberAttributeBuilder();
         builder.name = template.getName();

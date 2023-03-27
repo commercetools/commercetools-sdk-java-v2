@@ -144,27 +144,57 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
         return this;
     }
 
+    /**
+     *  <p>Date and time (UTC) the TextLineItem was added to the ShoppingList.</p>
+     * @return addedAt
+     */
+
     public java.time.ZonedDateTime getAddedAt() {
         return this.addedAt;
     }
+
+    /**
+     *  <p>Custom Fields of the TextLineItem.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
 
+    /**
+     *  <p>Description of the TextLineItem.</p>
+     * @return description
+     */
+
     @Nullable
     public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
 
+    /**
+     *  <p>Unique identifier of the TextLineItem.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
 
+    /**
+     *  <p>Name of the TextLineItem.</p>
+     * @return name
+     */
+
     public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
+
+    /**
+     *  <p>Number of entries in the TextLineItem.</p>
+     * @return quantity
+     */
 
     public Long getQuantity() {
         return this.quantity;
@@ -190,10 +220,19 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
         return new TextLineItemImpl(addedAt, custom, description, id, name, quantity);
     }
 
+    /**
+     * factory method for an instance of TextLineItemBuilder
+     * @return builder
+     */
     public static TextLineItemBuilder of() {
         return new TextLineItemBuilder();
     }
 
+    /**
+     * create builder for TextLineItem instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TextLineItemBuilder of(final TextLineItem template) {
         TextLineItemBuilder builder = new TextLineItemBuilder();
         builder.addedAt = template.getAddedAt();

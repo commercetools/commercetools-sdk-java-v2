@@ -36,7 +36,7 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
     private Boolean isMatching;
 
     /**
-     *
+     * set the value to the value
      * @param value value to be set
      * @return Builder
      */
@@ -47,7 +47,7 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
     }
 
     /**
-     *
+     * set the value to the price using the builder function
      * @param builder function to build the price value
      * @return Builder
      */
@@ -59,7 +59,7 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
     }
 
     /**
-     *
+     * set the value to the price
      * @param price value to be set
      * @return Builder
      */
@@ -70,7 +70,7 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
     }
 
     /**
-     *
+     * set values to the tiers
      * @param tiers value to be set
      * @return Builder
      */
@@ -82,7 +82,7 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
     }
 
     /**
-     *
+     * set value to the tiers
      * @param tiers value to be set
      * @return Builder
      */
@@ -94,7 +94,7 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
     }
 
     /**
-     *
+     * add values to the tiers
      * @param tiers value to be set
      * @return Builder
      */
@@ -109,7 +109,7 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
     }
 
     /**
-     *
+     * add a value to the tiers using the builder function
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -125,7 +125,7 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
     }
 
     /**
-     *
+     * set the value to the tiers using the builder function
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -139,7 +139,7 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
     }
 
     /**
-     *
+     * set the value to the isMatching
      * @param isMatching value to be set
      * @return Builder
      */
@@ -149,17 +149,37 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
         return this;
     }
 
+    /**
+     * value of value}
+     * @return value
+     */
+
     public String getValue() {
         return this.value;
     }
+
+    /**
+     * value of price}
+     * @return price
+     */
 
     public com.commercetools.importapi.models.common.Money getPrice() {
         return this.price;
     }
 
+    /**
+     * value of tiers}
+     * @return tiers
+     */
+
     public java.util.List<com.commercetools.importapi.models.orders.ShippingRatePriceTier> getTiers() {
         return this.tiers;
     }
+
+    /**
+     * value of isMatching}
+     * @return isMatching
+     */
 
     @Nullable
     public Boolean getIsMatching() {
@@ -185,10 +205,19 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
         return new CartClassificationTierImpl(value, price, tiers, isMatching);
     }
 
+    /**
+     * factory method for an instance of CartClassificationTierBuilder
+     * @return builder
+     */
     public static CartClassificationTierBuilder of() {
         return new CartClassificationTierBuilder();
     }
 
+    /**
+     * create builder for CartClassificationTier instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CartClassificationTierBuilder of(final CartClassificationTier template) {
         CartClassificationTierBuilder builder = new CartClassificationTierBuilder();
         builder.value = template.getValue();

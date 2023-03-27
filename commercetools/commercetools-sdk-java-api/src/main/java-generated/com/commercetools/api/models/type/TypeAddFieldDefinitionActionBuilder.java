@@ -48,6 +48,11 @@ public class TypeAddFieldDefinitionActionBuilder implements Builder<TypeAddField
         return this;
     }
 
+    /**
+     *  <p>Value to append to the array.</p>
+     * @return fieldDefinition
+     */
+
     public com.commercetools.api.models.type.FieldDefinition getFieldDefinition() {
         return this.fieldDefinition;
     }
@@ -69,10 +74,19 @@ public class TypeAddFieldDefinitionActionBuilder implements Builder<TypeAddField
         return new TypeAddFieldDefinitionActionImpl(fieldDefinition);
     }
 
+    /**
+     * factory method for an instance of TypeAddFieldDefinitionActionBuilder
+     * @return builder
+     */
     public static TypeAddFieldDefinitionActionBuilder of() {
         return new TypeAddFieldDefinitionActionBuilder();
     }
 
+    /**
+     * create builder for TypeAddFieldDefinitionAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TypeAddFieldDefinitionActionBuilder of(final TypeAddFieldDefinitionAction template) {
         TypeAddFieldDefinitionActionBuilder builder = new TypeAddFieldDefinitionActionBuilder();
         builder.fieldDefinition = template.getFieldDefinition();

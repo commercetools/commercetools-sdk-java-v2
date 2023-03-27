@@ -241,47 +241,98 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
         return this;
     }
 
+    /**
+     *  <p>Platform-generated unique identifier of the Price.</p>
+     * @return id
+     */
+
     public String getId() {
         return this.id;
     }
+
+    /**
+     *  <p>Original value of the Price.</p>
+     * @return value
+     */
 
     public com.commercetools.api.models.common.TypedMoney getValue() {
         return this.value;
     }
 
+    /**
+     *  <p>If available, either the original price <code>value</code> or <code>discounted</code> value.</p>
+     * @return currentValue
+     */
+
     public com.commercetools.api.models.common.TypedMoney getCurrentValue() {
         return this.currentValue;
     }
+
+    /**
+     *  <p>Country code of the geographic location.</p>
+     * @return country
+     */
 
     @Nullable
     public String getCountry() {
         return this.country;
     }
 
+    /**
+     *  <p>Reference to a CustomerGroup.</p>
+     * @return customerGroup
+     */
+
     @Nullable
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
         return this.customerGroup;
     }
+
+    /**
+     *  <p>Reference to a Channel.</p>
+     * @return channel
+     */
 
     @Nullable
     public com.commercetools.api.models.channel.ChannelReference getChannel() {
         return this.channel;
     }
 
+    /**
+     *  <p>Date and time from which the Price is valid.</p>
+     * @return validFrom
+     */
+
     @Nullable
     public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
+
+    /**
+     *  <p>Date and time until which the Price is valid.</p>
+     * @return validUntil
+     */
 
     @Nullable
     public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;
     }
 
+    /**
+     *  <p>Is set when a matching ProductDiscount exists. If set, the Cart uses the discounted value for the Cart Price calculation.</p>
+     *  <p>When a relative Product Discount is applied and the fractional part of the discounted Price is 0.5, the discounted Price is rounded half down in favor of the Customer.</p>
+     * @return discounted
+     */
+
     @Nullable
     public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {
         return this.discounted;
     }
+
+    /**
+     *  <p>Custom Fields for the Price.</p>
+     * @return custom
+     */
 
     @Nullable
     public com.commercetools.api.models.type.CustomFields getCustom() {
@@ -309,10 +360,19 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
             discounted, custom);
     }
 
+    /**
+     * factory method for an instance of ScopedPriceBuilder
+     * @return builder
+     */
     public static ScopedPriceBuilder of() {
         return new ScopedPriceBuilder();
     }
 
+    /**
+     * create builder for ScopedPrice instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ScopedPriceBuilder of(final ScopedPrice template) {
         ScopedPriceBuilder builder = new ScopedPriceBuilder();
         builder.id = template.getId();

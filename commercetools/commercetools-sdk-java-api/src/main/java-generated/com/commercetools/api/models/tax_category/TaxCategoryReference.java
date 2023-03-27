@@ -31,6 +31,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TaxCategoryReferenceImpl.class)
 public interface TaxCategoryReference extends Reference, com.commercetools.api.models.Identifiable<TaxCategory> {
 
+    /**
+     * discriminator value for TaxCategoryReference
+     */
     String TAX_CATEGORY = "tax-category";
 
     /**
@@ -49,14 +52,33 @@ public interface TaxCategoryReference extends Reference, com.commercetools.api.m
     @JsonProperty("id")
     public String getId();
 
+    /**
+     *  <p>Contains the representation of the expanded TaxCategory. Only present in responses to requests with Reference Expansion for TaxCategories.</p>
+     * @param obj value to be set
+     */
+
     public void setObj(final TaxCategory obj);
+
+    /**
+     *  <p>Unique identifier of the referenced TaxCategory.</p>
+     * @param id value to be set
+     */
 
     public void setId(final String id);
 
+    /**
+     * factory method
+     * @return instance of TaxCategoryReference
+     */
     public static TaxCategoryReference of() {
         return new TaxCategoryReferenceImpl();
     }
 
+    /**
+     * factory method to copy an instance of TaxCategoryReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static TaxCategoryReference of(final TaxCategoryReference template) {
         TaxCategoryReferenceImpl instance = new TaxCategoryReferenceImpl();
         instance.setId(template.getId());
@@ -64,18 +86,37 @@ public interface TaxCategoryReference extends Reference, com.commercetools.api.m
         return instance;
     }
 
+    /**
+     * builder factory method for TaxCategoryReference
+     * @return builder
+     */
     public static TaxCategoryReferenceBuilder builder() {
         return TaxCategoryReferenceBuilder.of();
     }
 
+    /**
+     * create builder for TaxCategoryReference instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TaxCategoryReferenceBuilder builder(final TaxCategoryReference template) {
         return TaxCategoryReferenceBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withTaxCategoryReference(Function<TaxCategoryReference, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<TaxCategoryReference> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<TaxCategoryReference>() {
             @Override

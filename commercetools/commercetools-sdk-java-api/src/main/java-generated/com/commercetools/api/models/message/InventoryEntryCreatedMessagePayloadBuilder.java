@@ -48,6 +48,11 @@ public class InventoryEntryCreatedMessagePayloadBuilder implements Builder<Inven
         return this;
     }
 
+    /**
+     *  <p>InventoryEntry that was created.</p>
+     * @return inventoryEntry
+     */
+
     public com.commercetools.api.models.inventory.InventoryEntry getInventoryEntry() {
         return this.inventoryEntry;
     }
@@ -70,10 +75,19 @@ public class InventoryEntryCreatedMessagePayloadBuilder implements Builder<Inven
         return new InventoryEntryCreatedMessagePayloadImpl(inventoryEntry);
     }
 
+    /**
+     * factory method for an instance of InventoryEntryCreatedMessagePayloadBuilder
+     * @return builder
+     */
     public static InventoryEntryCreatedMessagePayloadBuilder of() {
         return new InventoryEntryCreatedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for InventoryEntryCreatedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static InventoryEntryCreatedMessagePayloadBuilder of(final InventoryEntryCreatedMessagePayload template) {
         InventoryEntryCreatedMessagePayloadBuilder builder = new InventoryEntryCreatedMessagePayloadBuilder();
         builder.inventoryEntry = template.getInventoryEntry();

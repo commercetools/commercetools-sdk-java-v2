@@ -28,6 +28,9 @@ public class ChangeTaxModeChangeImpl implements ChangeTaxModeChange, ModelBase {
 
     private com.commercetools.history.models.common.TaxMode nextValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     ChangeTaxModeChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("previousValue") final com.commercetools.history.models.common.TaxMode previousValue,
@@ -38,6 +41,9 @@ public class ChangeTaxModeChangeImpl implements ChangeTaxModeChange, ModelBase {
         this.type = CHANGE_TAX_MODE_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public ChangeTaxModeChangeImpl() {
         this.type = CHANGE_TAX_MODE_CHANGE;
     }

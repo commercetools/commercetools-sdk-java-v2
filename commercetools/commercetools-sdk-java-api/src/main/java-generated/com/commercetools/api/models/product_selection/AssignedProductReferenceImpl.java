@@ -26,6 +26,9 @@ public class AssignedProductReferenceImpl implements AssignedProductReference, M
 
     private com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AssignedProductReferenceImpl(
             @JsonProperty("product") final com.commercetools.api.models.product.ProductReference product,
@@ -36,6 +39,9 @@ public class AssignedProductReferenceImpl implements AssignedProductReference, M
         this.variantExclusion = variantExclusion;
     }
 
+    /**
+     * create empty instance
+     */
     public AssignedProductReferenceImpl() {
     }
 

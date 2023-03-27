@@ -42,7 +42,7 @@ public class UpdateSyncInfoChangeBuilder implements Builder<UpdateSyncInfoChange
     }
 
     /**
-     *
+     * set the value to the channelId
      * @param channelId value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class UpdateSyncInfoChangeBuilder implements Builder<UpdateSyncInfoChange
     }
 
     /**
-     *
+     * set the value to the nextValue using the builder function
      * @param builder function to build the nextValue value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class UpdateSyncInfoChangeBuilder implements Builder<UpdateSyncInfoChange
     }
 
     /**
-     *
+     * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
      */
@@ -75,13 +75,28 @@ public class UpdateSyncInfoChangeBuilder implements Builder<UpdateSyncInfoChange
         return this;
     }
 
+    /**
+     *  <p>Update action for <code>updateSyncInfo</code></p>
+     * @return change
+     */
+
     public String getChange() {
         return this.change;
     }
 
+    /**
+     * value of channelId}
+     * @return channelId
+     */
+
     public String getChannelId() {
         return this.channelId;
     }
+
+    /**
+     * value of nextValue}
+     * @return nextValue
+     */
 
     public com.commercetools.history.models.common.SyncInfo getNextValue() {
         return this.nextValue;
@@ -106,10 +121,19 @@ public class UpdateSyncInfoChangeBuilder implements Builder<UpdateSyncInfoChange
         return new UpdateSyncInfoChangeImpl(change, channelId, nextValue);
     }
 
+    /**
+     * factory method for an instance of UpdateSyncInfoChangeBuilder
+     * @return builder
+     */
     public static UpdateSyncInfoChangeBuilder of() {
         return new UpdateSyncInfoChangeBuilder();
     }
 
+    /**
+     * create builder for UpdateSyncInfoChange instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static UpdateSyncInfoChangeBuilder of(final UpdateSyncInfoChange template) {
         UpdateSyncInfoChangeBuilder builder = new UpdateSyncInfoChangeBuilder();
         builder.change = template.getChange();

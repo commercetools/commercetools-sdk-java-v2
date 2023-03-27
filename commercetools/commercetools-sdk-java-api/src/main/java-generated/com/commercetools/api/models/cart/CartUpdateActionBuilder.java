@@ -295,6 +295,10 @@ public class CartUpdateActionBuilder {
         return com.commercetools.api.models.cart.CartUpdateItemShippingAddressActionBuilder.of();
     }
 
+    /**
+     * factory method for an instance of CartUpdateActionBuilder
+     * @return builder
+     */
     public static CartUpdateActionBuilder of() {
         return new CartUpdateActionBuilder();
     }

@@ -32,6 +32,9 @@ public class TransactionImpl implements Transaction, ModelBase {
 
     private com.commercetools.history.models.common.TransactionState state;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TransactionImpl(@JsonProperty("id") final String id, @JsonProperty("timestamp") final String timestamp,
             @JsonProperty("type") final com.commercetools.history.models.common.TransactionType type,
@@ -46,6 +49,9 @@ public class TransactionImpl implements Transaction, ModelBase {
         this.state = state;
     }
 
+    /**
+     * create empty instance
+     */
     public TransactionImpl() {
     }
 

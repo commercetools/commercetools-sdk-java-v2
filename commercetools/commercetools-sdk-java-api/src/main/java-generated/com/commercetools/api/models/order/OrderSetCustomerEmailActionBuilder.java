@@ -26,7 +26,7 @@ public class OrderSetCustomerEmailActionBuilder implements Builder<OrderSetCusto
     private String email;
 
     /**
-     *
+     * set the value to the email
      * @param email value to be set
      * @return Builder
      */
@@ -35,6 +35,11 @@ public class OrderSetCustomerEmailActionBuilder implements Builder<OrderSetCusto
         this.email = email;
         return this;
     }
+
+    /**
+     * value of email}
+     * @return email
+     */
 
     @Nullable
     public String getEmail() {
@@ -57,10 +62,19 @@ public class OrderSetCustomerEmailActionBuilder implements Builder<OrderSetCusto
         return new OrderSetCustomerEmailActionImpl(email);
     }
 
+    /**
+     * factory method for an instance of OrderSetCustomerEmailActionBuilder
+     * @return builder
+     */
     public static OrderSetCustomerEmailActionBuilder of() {
         return new OrderSetCustomerEmailActionBuilder();
     }
 
+    /**
+     * create builder for OrderSetCustomerEmailAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static OrderSetCustomerEmailActionBuilder of(final OrderSetCustomerEmailAction template) {
         OrderSetCustomerEmailActionBuilder builder = new OrderSetCustomerEmailActionBuilder();
         builder.email = template.getEmail();

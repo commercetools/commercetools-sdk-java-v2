@@ -77,10 +77,20 @@ public class StagedQuoteSetCustomTypeActionBuilder implements Builder<StagedQuot
         return this;
     }
 
+    /**
+     *  <p>Defines the Type that extends the StagedQuote with Custom Fields. If absent, any existing Type and Custom Fields are removed from the StagedQuote.</p>
+     * @return type
+     */
+
     @Nullable
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }
+
+    /**
+     *  <p>Sets the Custom Fields fields for the StagedQuote.</p>
+     * @return fields
+     */
 
     @Nullable
     public com.commercetools.api.models.type.FieldContainer getFields() {
@@ -103,10 +113,19 @@ public class StagedQuoteSetCustomTypeActionBuilder implements Builder<StagedQuot
         return new StagedQuoteSetCustomTypeActionImpl(type, fields);
     }
 
+    /**
+     * factory method for an instance of StagedQuoteSetCustomTypeActionBuilder
+     * @return builder
+     */
     public static StagedQuoteSetCustomTypeActionBuilder of() {
         return new StagedQuoteSetCustomTypeActionBuilder();
     }
 
+    /**
+     * create builder for StagedQuoteSetCustomTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static StagedQuoteSetCustomTypeActionBuilder of(final StagedQuoteSetCustomTypeAction template) {
         StagedQuoteSetCustomTypeActionBuilder builder = new StagedQuoteSetCustomTypeActionBuilder();
         builder.type = template.getType();

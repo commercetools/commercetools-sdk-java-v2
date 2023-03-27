@@ -24,6 +24,9 @@ public class CustomFieldLocalizedEnumValueImpl implements CustomFieldLocalizedEn
 
     private com.commercetools.api.models.common.LocalizedString label;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomFieldLocalizedEnumValueImpl(@JsonProperty("key") final String key,
             @JsonProperty("label") final com.commercetools.api.models.common.LocalizedString label) {
@@ -31,6 +34,9 @@ public class CustomFieldLocalizedEnumValueImpl implements CustomFieldLocalizedEn
         this.label = label;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomFieldLocalizedEnumValueImpl() {
     }
 

@@ -79,13 +79,28 @@ public class ParcelRemovedFromDeliveryMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>Unique identifier of the Delivery.</p>
+     * @return deliveryId
+     */
+
     public String getDeliveryId() {
         return this.deliveryId;
     }
 
+    /**
+     *  <p>Parcel that was removed from the Delivery.</p>
+     * @return parcel
+     */
+
     public com.commercetools.api.models.order.Parcel getParcel() {
         return this.parcel;
     }
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
+     * @return shippingKey
+     */
 
     @Nullable
     public String getShippingKey() {
@@ -110,10 +125,19 @@ public class ParcelRemovedFromDeliveryMessagePayloadBuilder
         return new ParcelRemovedFromDeliveryMessagePayloadImpl(deliveryId, parcel, shippingKey);
     }
 
+    /**
+     * factory method for an instance of ParcelRemovedFromDeliveryMessagePayloadBuilder
+     * @return builder
+     */
     public static ParcelRemovedFromDeliveryMessagePayloadBuilder of() {
         return new ParcelRemovedFromDeliveryMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for ParcelRemovedFromDeliveryMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ParcelRemovedFromDeliveryMessagePayloadBuilder of(
             final ParcelRemovedFromDeliveryMessagePayload template) {
         ParcelRemovedFromDeliveryMessagePayloadBuilder builder = new ParcelRemovedFromDeliveryMessagePayloadBuilder();

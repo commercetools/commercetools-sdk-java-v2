@@ -39,6 +39,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PaymentStatusStateTransitionMessageImpl.class)
 public interface PaymentStatusStateTransitionMessage extends Message {
 
+    /**
+     * discriminator value for PaymentStatusStateTransitionMessage
+     */
     String PAYMENT_STATUS_STATE_TRANSITION = "PaymentStatusStateTransition";
 
     /**
@@ -58,14 +61,33 @@ public interface PaymentStatusStateTransitionMessage extends Message {
     @JsonProperty("force")
     public Boolean getForce();
 
+    /**
+     *  <p>State of the Payment after the Transition State update action.</p>
+     * @param state value to be set
+     */
+
     public void setState(final StateReference state);
+
+    /**
+     *  <p>Whether State transition validations were turned off during the Change Transaction State update action.</p>
+     * @param force value to be set
+     */
 
     public void setForce(final Boolean force);
 
+    /**
+     * factory method
+     * @return instance of PaymentStatusStateTransitionMessage
+     */
     public static PaymentStatusStateTransitionMessage of() {
         return new PaymentStatusStateTransitionMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of PaymentStatusStateTransitionMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static PaymentStatusStateTransitionMessage of(final PaymentStatusStateTransitionMessage template) {
         PaymentStatusStateTransitionMessageImpl instance = new PaymentStatusStateTransitionMessageImpl();
         instance.setId(template.getId());
@@ -83,19 +105,38 @@ public interface PaymentStatusStateTransitionMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for PaymentStatusStateTransitionMessage
+     * @return builder
+     */
     public static PaymentStatusStateTransitionMessageBuilder builder() {
         return PaymentStatusStateTransitionMessageBuilder.of();
     }
 
+    /**
+     * create builder for PaymentStatusStateTransitionMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentStatusStateTransitionMessageBuilder builder(
             final PaymentStatusStateTransitionMessage template) {
         return PaymentStatusStateTransitionMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withPaymentStatusStateTransitionMessage(Function<PaymentStatusStateTransitionMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<PaymentStatusStateTransitionMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<PaymentStatusStateTransitionMessage>() {
             @Override

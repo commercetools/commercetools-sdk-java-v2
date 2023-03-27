@@ -61,9 +61,19 @@ public class TypeChangeLabelActionBuilder implements Builder<TypeChangeLabelActi
         return this;
     }
 
+    /**
+     *  <p>Name of the Field Definition to update.</p>
+     * @return fieldName
+     */
+
     public String getFieldName() {
         return this.fieldName;
     }
+
+    /**
+     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     * @return label
+     */
 
     public com.commercetools.api.models.common.LocalizedString getLabel() {
         return this.label;
@@ -87,10 +97,19 @@ public class TypeChangeLabelActionBuilder implements Builder<TypeChangeLabelActi
         return new TypeChangeLabelActionImpl(fieldName, label);
     }
 
+    /**
+     * factory method for an instance of TypeChangeLabelActionBuilder
+     * @return builder
+     */
     public static TypeChangeLabelActionBuilder of() {
         return new TypeChangeLabelActionBuilder();
     }
 
+    /**
+     * create builder for TypeChangeLabelAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static TypeChangeLabelActionBuilder of(final TypeChangeLabelAction template) {
         TypeChangeLabelActionBuilder builder = new TypeChangeLabelActionBuilder();
         builder.fieldName = template.getFieldName();

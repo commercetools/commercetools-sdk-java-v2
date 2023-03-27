@@ -28,6 +28,9 @@ public class MyPaymentDraftImpl implements MyPaymentDraft, ModelBase {
 
     private com.commercetools.api.models.me.MyTransactionDraft transaction;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     MyPaymentDraftImpl(@JsonProperty("amountPlanned") final com.commercetools.api.models.common.Money amountPlanned,
             @JsonProperty("paymentMethodInfo") final com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo,
@@ -39,6 +42,9 @@ public class MyPaymentDraftImpl implements MyPaymentDraft, ModelBase {
         this.transaction = transaction;
     }
 
+    /**
+     * create empty instance
+     */
     public MyPaymentDraftImpl() {
     }
 

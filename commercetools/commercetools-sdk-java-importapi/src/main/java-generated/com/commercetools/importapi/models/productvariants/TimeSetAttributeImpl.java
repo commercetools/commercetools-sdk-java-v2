@@ -26,6 +26,9 @@ public class TimeSetAttributeImpl implements TimeSetAttribute, ModelBase {
 
     private java.util.List<java.time.LocalTime> value;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     TimeSetAttributeImpl(@JsonProperty("name") final String name,
             @JsonProperty("value") final java.util.List<java.time.LocalTime> value) {
@@ -34,6 +37,9 @@ public class TimeSetAttributeImpl implements TimeSetAttribute, ModelBase {
         this.type = TIME_SET;
     }
 
+    /**
+     * create empty instance
+     */
     public TimeSetAttributeImpl() {
         this.type = TIME_SET;
     }

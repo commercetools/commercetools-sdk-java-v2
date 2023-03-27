@@ -36,6 +36,11 @@ public class CustomerGroupSetKeyActionBuilder implements Builder<CustomerGroupSe
         return this;
     }
 
+    /**
+     *  <p>If <code>key</code> is absent or <code>null</code>, the existing key, if any, will be removed.</p>
+     * @return key
+     */
+
     @Nullable
     public String getKey() {
         return this.key;
@@ -57,10 +62,19 @@ public class CustomerGroupSetKeyActionBuilder implements Builder<CustomerGroupSe
         return new CustomerGroupSetKeyActionImpl(key);
     }
 
+    /**
+     * factory method for an instance of CustomerGroupSetKeyActionBuilder
+     * @return builder
+     */
     public static CustomerGroupSetKeyActionBuilder of() {
         return new CustomerGroupSetKeyActionBuilder();
     }
 
+    /**
+     * create builder for CustomerGroupSetKeyAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CustomerGroupSetKeyActionBuilder of(final CustomerGroupSetKeyAction template) {
         CustomerGroupSetKeyActionBuilder builder = new CustomerGroupSetKeyActionBuilder();
         builder.key = template.getKey();

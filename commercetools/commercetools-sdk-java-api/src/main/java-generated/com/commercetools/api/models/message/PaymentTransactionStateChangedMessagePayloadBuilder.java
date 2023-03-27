@@ -50,9 +50,19 @@ public class PaymentTransactionStateChangedMessagePayloadBuilder
         return this;
     }
 
+    /**
+     *  <p>Unique identifier for the Transaction for which the Transaction State changed.</p>
+     * @return transactionId
+     */
+
     public String getTransactionId() {
         return this.transactionId;
     }
+
+    /**
+     *  <p>Transaction State after the Change Transaction State update action.</p>
+     * @return state
+     */
 
     public com.commercetools.api.models.payment.TransactionState getState() {
         return this.state;
@@ -77,10 +87,19 @@ public class PaymentTransactionStateChangedMessagePayloadBuilder
         return new PaymentTransactionStateChangedMessagePayloadImpl(transactionId, state);
     }
 
+    /**
+     * factory method for an instance of PaymentTransactionStateChangedMessagePayloadBuilder
+     * @return builder
+     */
     public static PaymentTransactionStateChangedMessagePayloadBuilder of() {
         return new PaymentTransactionStateChangedMessagePayloadBuilder();
     }
 
+    /**
+     * create builder for PaymentTransactionStateChangedMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PaymentTransactionStateChangedMessagePayloadBuilder of(
             final PaymentTransactionStateChangedMessagePayload template) {
         PaymentTransactionStateChangedMessagePayloadBuilder builder = new PaymentTransactionStateChangedMessagePayloadBuilder();

@@ -38,6 +38,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CategoryCreatedMessageImpl.class)
 public interface CategoryCreatedMessage extends Message {
 
+    /**
+     * discriminator value for CategoryCreatedMessage
+     */
     String CATEGORY_CREATED = "CategoryCreated";
 
     /**
@@ -49,12 +52,26 @@ public interface CategoryCreatedMessage extends Message {
     @JsonProperty("category")
     public Category getCategory();
 
+    /**
+     *  <p>Category that was created.</p>
+     * @param category value to be set
+     */
+
     public void setCategory(final Category category);
 
+    /**
+     * factory method
+     * @return instance of CategoryCreatedMessage
+     */
     public static CategoryCreatedMessage of() {
         return new CategoryCreatedMessageImpl();
     }
 
+    /**
+     * factory method to copy an instance of CategoryCreatedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static CategoryCreatedMessage of(final CategoryCreatedMessage template) {
         CategoryCreatedMessageImpl instance = new CategoryCreatedMessageImpl();
         instance.setId(template.getId());
@@ -71,18 +88,37 @@ public interface CategoryCreatedMessage extends Message {
         return instance;
     }
 
+    /**
+     * builder factory method for CategoryCreatedMessage
+     * @return builder
+     */
     public static CategoryCreatedMessageBuilder builder() {
         return CategoryCreatedMessageBuilder.of();
     }
 
+    /**
+     * create builder for CategoryCreatedMessage instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static CategoryCreatedMessageBuilder builder(final CategoryCreatedMessage template) {
         return CategoryCreatedMessageBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withCategoryCreatedMessage(Function<CategoryCreatedMessage, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<CategoryCreatedMessage> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<CategoryCreatedMessage>() {
             @Override

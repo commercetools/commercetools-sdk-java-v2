@@ -48,6 +48,9 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
 
     private com.commercetools.api.models.common.Money oldValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     StandalonePriceValueChangedMessageImpl(@JsonProperty("id") final String id,
             @JsonProperty("version") final Long version,
@@ -78,6 +81,9 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
         this.type = STANDALONE_PRICE_VALUE_CHANGED;
     }
 
+    /**
+     * create empty instance
+     */
     public StandalonePriceValueChangedMessageImpl() {
         this.type = STANDALONE_PRICE_VALUE_CHANGED;
     }

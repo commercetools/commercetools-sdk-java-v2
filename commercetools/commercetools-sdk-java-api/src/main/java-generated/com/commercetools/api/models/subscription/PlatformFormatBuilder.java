@@ -36,10 +36,19 @@ public class PlatformFormatBuilder implements Builder<PlatformFormat> {
         return new PlatformFormatImpl();
     }
 
+    /**
+     * factory method for an instance of PlatformFormatBuilder
+     * @return builder
+     */
     public static PlatformFormatBuilder of() {
         return new PlatformFormatBuilder();
     }
 
+    /**
+     * create builder for PlatformFormat instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static PlatformFormatBuilder of(final PlatformFormat template) {
         PlatformFormatBuilder builder = new PlatformFormatBuilder();
         return builder;

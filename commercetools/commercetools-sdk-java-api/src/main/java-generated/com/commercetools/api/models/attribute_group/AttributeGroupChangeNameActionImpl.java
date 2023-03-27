@@ -24,6 +24,9 @@ public class AttributeGroupChangeNameActionImpl implements AttributeGroupChangeN
 
     private com.commercetools.api.models.common.LocalizedString name;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     AttributeGroupChangeNameActionImpl(
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name) {
@@ -31,6 +34,9 @@ public class AttributeGroupChangeNameActionImpl implements AttributeGroupChangeN
         this.action = CHANGE_NAME;
     }
 
+    /**
+     * create empty instance
+     */
     public AttributeGroupChangeNameActionImpl() {
         this.action = CHANGE_NAME;
     }

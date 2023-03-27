@@ -28,6 +28,9 @@ public class RemoveItemShippingAddressesChangeImpl implements RemoveItemShipping
 
     private com.commercetools.history.models.common.Address previousValue;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     RemoveItemShippingAddressesChangeImpl(@JsonProperty("change") final String change,
             @JsonProperty("nextValue") final com.commercetools.history.models.common.Address nextValue,
@@ -38,6 +41,9 @@ public class RemoveItemShippingAddressesChangeImpl implements RemoveItemShipping
         this.type = REMOVE_ITEM_SHIPPING_ADDRESSES_CHANGE;
     }
 
+    /**
+     * create empty instance
+     */
     public RemoveItemShippingAddressesChangeImpl() {
         this.type = REMOVE_ITEM_SHIPPING_ADDRESSES_CHANGE;
     }

@@ -133,40 +133,119 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
     @JsonProperty("validUntil")
     public ZonedDateTime getValidUntil();
 
+    /**
+     *  <p>Name of the DiscountCode.</p>
+     * @param name value to be set
+     */
+
     public void setName(final LocalizedString name);
+
+    /**
+     *  <p>Description of the DiscountCode.</p>
+     * @param description value to be set
+     */
 
     public void setDescription(final LocalizedString description);
 
+    /**
+     *  <p>User-defined unique identifier for the DiscountCode that can be added to the Cart to apply the related CartDiscounts. It cannot be modified after the DiscountCode is created.</p>
+     * @param code value to be set
+     */
+
     public void setCode(final String code);
+
+    /**
+     *  <p>Specify what CartDiscounts the API applies when you add the DiscountCode to the Cart.</p>
+     * @param cartDiscounts values to be set
+     */
 
     @JsonIgnore
     public void setCartDiscounts(final CartDiscountResourceIdentifier... cartDiscounts);
 
+    /**
+     *  <p>Specify what CartDiscounts the API applies when you add the DiscountCode to the Cart.</p>
+     * @param cartDiscounts values to be set
+     */
+
     public void setCartDiscounts(final List<CartDiscountResourceIdentifier> cartDiscounts);
+
+    /**
+     *  <p>DiscountCode can only be applied to Carts that match this predicate.</p>
+     * @param cartPredicate value to be set
+     */
 
     public void setCartPredicate(final String cartPredicate);
 
+    /**
+     *  <p>Only active DiscountCodes can be applied to the Cart.</p>
+     * @param isActive value to be set
+     */
+
     public void setIsActive(final Boolean isActive);
+
+    /**
+     *  <p>Number of times the DiscountCode can be applied.</p>
+     * @param maxApplications value to be set
+     */
 
     public void setMaxApplications(final Long maxApplications);
 
+    /**
+     *  <p>Number of times the DiscountCode can be applied per Customer.</p>
+     * @param maxApplicationsPerCustomer value to be set
+     */
+
     public void setMaxApplicationsPerCustomer(final Long maxApplicationsPerCustomer);
 
+    /**
+     *  <p>Custom Fields for the DiscountCode.</p>
+     * @param custom value to be set
+     */
+
     public void setCustom(final CustomFieldsDraft custom);
+
+    /**
+     *  <p>Groups to which the DiscountCode will belong to.</p>
+     * @param groups values to be set
+     */
 
     @JsonIgnore
     public void setGroups(final String... groups);
 
+    /**
+     *  <p>Groups to which the DiscountCode will belong to.</p>
+     * @param groups values to be set
+     */
+
     public void setGroups(final List<String> groups);
+
+    /**
+     *  <p>Date and time (UTC) from which the DiscountCode is effective. Must be earlier than <code>validUntil</code>.</p>
+     * @param validFrom value to be set
+     */
 
     public void setValidFrom(final ZonedDateTime validFrom);
 
+    /**
+     *  <p>Date and time (UTC) until which the DiscountCode is effective. Must be later than <code>validFrom</code>.</p>
+     * @param validUntil value to be set
+     */
+
     public void setValidUntil(final ZonedDateTime validUntil);
 
+    /**
+     * factory method
+     * @return instance of DiscountCodeDraft
+     */
     public static DiscountCodeDraft of() {
         return new DiscountCodeDraftImpl();
     }
 
+    /**
+     * factory method to copy an instance of DiscountCodeDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
     public static DiscountCodeDraft of(final DiscountCodeDraft template) {
         DiscountCodeDraftImpl instance = new DiscountCodeDraftImpl();
         instance.setName(template.getName());
@@ -184,18 +263,37 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
         return instance;
     }
 
+    /**
+     * builder factory method for DiscountCodeDraft
+     * @return builder
+     */
     public static DiscountCodeDraftBuilder builder() {
         return DiscountCodeDraftBuilder.of();
     }
 
+    /**
+     * create builder for DiscountCodeDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static DiscountCodeDraftBuilder builder(final DiscountCodeDraft template) {
         return DiscountCodeDraftBuilder.of(template);
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withDiscountCodeDraft(Function<DiscountCodeDraft, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<DiscountCodeDraft> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<DiscountCodeDraft>() {
             @Override

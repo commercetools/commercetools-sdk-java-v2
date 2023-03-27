@@ -77,10 +77,20 @@ public class ReviewSetCustomTypeActionBuilder implements Builder<ReviewSetCustom
         return this;
     }
 
+    /**
+     *  <p>Defines the Type that extends the Review with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Review.</p>
+     * @return type
+     */
+
     @Nullable
     public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }
+
+    /**
+     *  <p>Sets the Custom Fields fields for the Review.</p>
+     * @return fields
+     */
 
     @Nullable
     public com.commercetools.api.models.type.FieldContainer getFields() {
@@ -103,10 +113,19 @@ public class ReviewSetCustomTypeActionBuilder implements Builder<ReviewSetCustom
         return new ReviewSetCustomTypeActionImpl(type, fields);
     }
 
+    /**
+     * factory method for an instance of ReviewSetCustomTypeActionBuilder
+     * @return builder
+     */
     public static ReviewSetCustomTypeActionBuilder of() {
         return new ReviewSetCustomTypeActionBuilder();
     }
 
+    /**
+     * create builder for ReviewSetCustomTypeAction instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
     public static ReviewSetCustomTypeActionBuilder of(final ReviewSetCustomTypeAction template) {
         ReviewSetCustomTypeActionBuilder builder = new ReviewSetCustomTypeActionBuilder();
         builder.type = template.getType();

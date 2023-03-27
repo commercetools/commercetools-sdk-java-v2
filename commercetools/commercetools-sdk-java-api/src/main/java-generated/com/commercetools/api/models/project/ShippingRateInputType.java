@@ -43,22 +43,44 @@ public interface ShippingRateInputType {
     @JsonProperty("type")
     public ShippingRateTierType getType();
 
+    /**
+     * builder for cartClassification subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.project.CartClassificationTypeBuilder cartClassificationBuilder() {
         return com.commercetools.api.models.project.CartClassificationTypeBuilder.of();
     }
 
+    /**
+     * builder for cartScore subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.project.CartScoreTypeBuilder cartScoreBuilder() {
         return com.commercetools.api.models.project.CartScoreTypeBuilder.of();
     }
 
+    /**
+     * builder for cartValue subtype
+     * @return builder
+     */
     public static com.commercetools.api.models.project.CartValueTypeBuilder cartValueBuilder() {
         return com.commercetools.api.models.project.CartValueTypeBuilder.of();
     }
 
+    /**
+     * accessor map function
+     * @param <T> mapped type
+     * @param helper function to map the object
+     * @return mapped value
+     */
     default <T> T withShippingRateInputType(Function<ShippingRateInputType, T> helper) {
         return helper.apply(this);
     }
 
+    /**
+     * gives a TypeReference for usage with Jackson DataBind
+     * @return TypeReference
+     */
     public static com.fasterxml.jackson.core.type.TypeReference<ShippingRateInputType> typeReference() {
         return new com.fasterxml.jackson.core.type.TypeReference<ShippingRateInputType>() {
             @Override

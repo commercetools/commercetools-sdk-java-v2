@@ -26,6 +26,9 @@ public class CustomerGroupSetCustomTypeActionImpl implements CustomerGroupSetCus
 
     private com.commercetools.api.models.type.FieldContainer fields;
 
+    /**
+     * create instance with all properties
+     */
     @JsonCreator
     CustomerGroupSetCustomTypeActionImpl(
             @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
@@ -35,6 +38,9 @@ public class CustomerGroupSetCustomTypeActionImpl implements CustomerGroupSetCus
         this.action = SET_CUSTOM_TYPE;
     }
 
+    /**
+     * create empty instance
+     */
     public CustomerGroupSetCustomTypeActionImpl() {
         this.action = SET_CUSTOM_TYPE;
     }

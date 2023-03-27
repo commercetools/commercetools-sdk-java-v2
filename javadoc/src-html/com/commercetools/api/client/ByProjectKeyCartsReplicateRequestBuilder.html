@@ -34,12 +34,16 @@
 <span class="source-line-no">021</span><span id="line.21">        return new ByProjectKeyCartsReplicatePost(apiHttpClient, projectKey, replicaCartDraft);</span>
 <span class="source-line-no">022</span><span id="line.22">    }</span>
 <span class="source-line-no">023</span><span id="line.23"></span>
-<span class="source-line-no">024</span><span id="line.24">    public ByProjectKeyCartsReplicatePost post(</span>
-<span class="source-line-no">025</span><span id="line.25">            UnaryOperator&lt;com.commercetools.api.models.cart.ReplicaCartDraftBuilder&gt; op) {</span>
-<span class="source-line-no">026</span><span id="line.26">        return post(op.apply(com.commercetools.api.models.cart.ReplicaCartDraftBuilder.of()).build());</span>
-<span class="source-line-no">027</span><span id="line.27">    }</span>
-<span class="source-line-no">028</span><span id="line.28"></span>
-<span class="source-line-no">029</span><span id="line.29">}</span>
+<span class="source-line-no">024</span><span id="line.24">    public ByProjectKeyCartsReplicatePostString post(final String replicaCartDraft) {</span>
+<span class="source-line-no">025</span><span id="line.25">        return new ByProjectKeyCartsReplicatePostString(apiHttpClient, projectKey, replicaCartDraft);</span>
+<span class="source-line-no">026</span><span id="line.26">    }</span>
+<span class="source-line-no">027</span><span id="line.27"></span>
+<span class="source-line-no">028</span><span id="line.28">    public ByProjectKeyCartsReplicatePost post(</span>
+<span class="source-line-no">029</span><span id="line.29">            UnaryOperator&lt;com.commercetools.api.models.cart.ReplicaCartDraftBuilder&gt; op) {</span>
+<span class="source-line-no">030</span><span id="line.30">        return post(op.apply(com.commercetools.api.models.cart.ReplicaCartDraftBuilder.of()).build());</span>
+<span class="source-line-no">031</span><span id="line.31">    }</span>
+<span class="source-line-no">032</span><span id="line.32"></span>
+<span class="source-line-no">033</span><span id="line.33">}</span>
 
 
 

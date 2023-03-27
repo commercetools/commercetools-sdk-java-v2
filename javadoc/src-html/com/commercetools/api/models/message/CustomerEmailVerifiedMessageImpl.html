@@ -55,203 +55,209 @@
 <span class="source-line-no">042</span><span id="line.42"></span>
 <span class="source-line-no">043</span><span id="line.43">    private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;</span>
 <span class="source-line-no">044</span><span id="line.44"></span>
-<span class="source-line-no">045</span><span id="line.45">    @JsonCreator</span>
-<span class="source-line-no">046</span><span id="line.46">    CustomerEmailVerifiedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,</span>
-<span class="source-line-no">047</span><span id="line.47">            @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,</span>
-<span class="source-line-no">048</span><span id="line.48">            @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt,</span>
-<span class="source-line-no">049</span><span id="line.49">            @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy,</span>
-<span class="source-line-no">050</span><span id="line.50">            @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy,</span>
-<span class="source-line-no">051</span><span id="line.51">            @JsonProperty("sequenceNumber") final Long sequenceNumber,</span>
-<span class="source-line-no">052</span><span id="line.52">            @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,</span>
-<span class="source-line-no">053</span><span id="line.53">            @JsonProperty("resourceVersion") final Long resourceVersion,</span>
-<span class="source-line-no">054</span><span id="line.54">            @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {</span>
-<span class="source-line-no">055</span><span id="line.55">        this.id = id;</span>
-<span class="source-line-no">056</span><span id="line.56">        this.version = version;</span>
-<span class="source-line-no">057</span><span id="line.57">        this.createdAt = createdAt;</span>
-<span class="source-line-no">058</span><span id="line.58">        this.lastModifiedAt = lastModifiedAt;</span>
-<span class="source-line-no">059</span><span id="line.59">        this.lastModifiedBy = lastModifiedBy;</span>
-<span class="source-line-no">060</span><span id="line.60">        this.createdBy = createdBy;</span>
-<span class="source-line-no">061</span><span id="line.61">        this.sequenceNumber = sequenceNumber;</span>
-<span class="source-line-no">062</span><span id="line.62">        this.resource = resource;</span>
-<span class="source-line-no">063</span><span id="line.63">        this.resourceVersion = resourceVersion;</span>
-<span class="source-line-no">064</span><span id="line.64">        this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;</span>
-<span class="source-line-no">065</span><span id="line.65">        this.type = CUSTOMER_EMAIL_VERIFIED;</span>
-<span class="source-line-no">066</span><span id="line.66">    }</span>
-<span class="source-line-no">067</span><span id="line.67"></span>
-<span class="source-line-no">068</span><span id="line.68">    public CustomerEmailVerifiedMessageImpl() {</span>
-<span class="source-line-no">069</span><span id="line.69">        this.type = CUSTOMER_EMAIL_VERIFIED;</span>
-<span class="source-line-no">070</span><span id="line.70">    }</span>
-<span class="source-line-no">071</span><span id="line.71"></span>
-<span class="source-line-no">072</span><span id="line.72">    /**</span>
-<span class="source-line-no">073</span><span id="line.73">     *  &lt;p&gt;Unique identifier of the Message. Can be used to track which Messages have been processed.&lt;/p&gt;</span>
-<span class="source-line-no">074</span><span id="line.74">     */</span>
-<span class="source-line-no">075</span><span id="line.75"></span>
-<span class="source-line-no">076</span><span id="line.76">    public String getId() {</span>
-<span class="source-line-no">077</span><span id="line.77">        return this.id;</span>
-<span class="source-line-no">078</span><span id="line.78">    }</span>
-<span class="source-line-no">079</span><span id="line.79"></span>
-<span class="source-line-no">080</span><span id="line.80">    /**</span>
-<span class="source-line-no">081</span><span id="line.81">     *  &lt;p&gt;Version of a resource. In case of Messages, this is always &lt;code&gt;1&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">082</span><span id="line.82">     */</span>
-<span class="source-line-no">083</span><span id="line.83"></span>
-<span class="source-line-no">084</span><span id="line.84">    public Long getVersion() {</span>
-<span class="source-line-no">085</span><span id="line.85">        return this.version;</span>
-<span class="source-line-no">086</span><span id="line.86">    }</span>
-<span class="source-line-no">087</span><span id="line.87"></span>
-<span class="source-line-no">088</span><span id="line.88">    /**</span>
-<span class="source-line-no">089</span><span id="line.89">     *  &lt;p&gt;Date and time (UTC) the Message was generated.&lt;/p&gt;</span>
-<span class="source-line-no">090</span><span id="line.90">     */</span>
-<span class="source-line-no">091</span><span id="line.91"></span>
-<span class="source-line-no">092</span><span id="line.92">    public java.time.ZonedDateTime getCreatedAt() {</span>
-<span class="source-line-no">093</span><span id="line.93">        return this.createdAt;</span>
-<span class="source-line-no">094</span><span id="line.94">    }</span>
-<span class="source-line-no">095</span><span id="line.95"></span>
-<span class="source-line-no">096</span><span id="line.96">    /**</span>
-<span class="source-line-no">097</span><span id="line.97">     *  &lt;p&gt;Value of &lt;code&gt;createdAt&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">098</span><span id="line.98">     */</span>
-<span class="source-line-no">099</span><span id="line.99"></span>
-<span class="source-line-no">100</span><span id="line.100">    public java.time.ZonedDateTime getLastModifiedAt() {</span>
-<span class="source-line-no">101</span><span id="line.101">        return this.lastModifiedAt;</span>
-<span class="source-line-no">102</span><span id="line.102">    }</span>
-<span class="source-line-no">103</span><span id="line.103"></span>
-<span class="source-line-no">104</span><span id="line.104">    /**</span>
-<span class="source-line-no">105</span><span id="line.105">     *  &lt;p&gt;Value of &lt;code&gt;createdBy&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">106</span><span id="line.106">     */</span>
-<span class="source-line-no">107</span><span id="line.107"></span>
-<span class="source-line-no">108</span><span id="line.108">    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {</span>
-<span class="source-line-no">109</span><span id="line.109">        return this.lastModifiedBy;</span>
-<span class="source-line-no">110</span><span id="line.110">    }</span>
-<span class="source-line-no">111</span><span id="line.111"></span>
-<span class="source-line-no">112</span><span id="line.112">    /**</span>
-<span class="source-line-no">113</span><span id="line.113">     *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
-<span class="source-line-no">114</span><span id="line.114">     */</span>
-<span class="source-line-no">115</span><span id="line.115"></span>
-<span class="source-line-no">116</span><span id="line.116">    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {</span>
-<span class="source-line-no">117</span><span id="line.117">        return this.createdBy;</span>
-<span class="source-line-no">118</span><span id="line.118">    }</span>
-<span class="source-line-no">119</span><span id="line.119"></span>
-<span class="source-line-no">120</span><span id="line.120">    /**</span>
-<span class="source-line-no">121</span><span id="line.121">     *  &lt;p&gt;Message number in relation to other Messages for a given resource. The &lt;code&gt;sequenceNumber&lt;/code&gt; of the next Message for the resource is the successor of the &lt;code&gt;sequenceNumber&lt;/code&gt; of the current Message. Meaning, the &lt;code&gt;sequenceNumber&lt;/code&gt; of the next Message equals the &lt;code&gt;sequenceNumber&lt;/code&gt; of the current Message + 1. &lt;code&gt;sequenceNumber&lt;/code&gt; can be used to ensure that Messages are processed in the correct order for a particular resource.&lt;/p&gt;</span>
-<span class="source-line-no">122</span><span id="line.122">     */</span>
-<span class="source-line-no">123</span><span id="line.123"></span>
-<span class="source-line-no">124</span><span id="line.124">    public Long getSequenceNumber() {</span>
-<span class="source-line-no">125</span><span id="line.125">        return this.sequenceNumber;</span>
-<span class="source-line-no">126</span><span id="line.126">    }</span>
-<span class="source-line-no">127</span><span id="line.127"></span>
-<span class="source-line-no">128</span><span id="line.128">    /**</span>
-<span class="source-line-no">129</span><span id="line.129">     *  &lt;p&gt;Reference to the resource on which the change or action was performed.&lt;/p&gt;</span>
-<span class="source-line-no">130</span><span id="line.130">     */</span>
-<span class="source-line-no">131</span><span id="line.131"></span>
-<span class="source-line-no">132</span><span id="line.132">    public com.commercetools.api.models.common.Reference getResource() {</span>
-<span class="source-line-no">133</span><span id="line.133">        return this.resource;</span>
-<span class="source-line-no">134</span><span id="line.134">    }</span>
-<span class="source-line-no">135</span><span id="line.135"></span>
-<span class="source-line-no">136</span><span id="line.136">    /**</span>
-<span class="source-line-no">137</span><span id="line.137">     *  &lt;p&gt;Version of the resource on which the change or action was performed.&lt;/p&gt;</span>
-<span class="source-line-no">138</span><span id="line.138">     */</span>
-<span class="source-line-no">139</span><span id="line.139"></span>
-<span class="source-line-no">140</span><span id="line.140">    public Long getResourceVersion() {</span>
-<span class="source-line-no">141</span><span id="line.141">        return this.resourceVersion;</span>
-<span class="source-line-no">142</span><span id="line.142">    }</span>
-<span class="source-line-no">143</span><span id="line.143"></span>
-<span class="source-line-no">144</span><span id="line.144">    /**</span>
-<span class="source-line-no">145</span><span id="line.145">     *  &lt;p&gt;Message Type of the Message.&lt;/p&gt;</span>
-<span class="source-line-no">146</span><span id="line.146">     */</span>
-<span class="source-line-no">147</span><span id="line.147"></span>
-<span class="source-line-no">148</span><span id="line.148">    public String getType() {</span>
-<span class="source-line-no">149</span><span id="line.149">        return this.type;</span>
-<span class="source-line-no">150</span><span id="line.150">    }</span>
-<span class="source-line-no">151</span><span id="line.151"></span>
-<span class="source-line-no">152</span><span id="line.152">    /**</span>
-<span class="source-line-no">153</span><span id="line.153">     *  &lt;p&gt;User-provided identifiers of the resource, such as &lt;code&gt;key&lt;/code&gt; or &lt;code&gt;externalId&lt;/code&gt;. Only present if the resource has such identifiers.&lt;/p&gt;</span>
-<span class="source-line-no">154</span><span id="line.154">     */</span>
-<span class="source-line-no">155</span><span id="line.155"></span>
-<span class="source-line-no">156</span><span id="line.156">    public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers() {</span>
-<span class="source-line-no">157</span><span id="line.157">        return this.resourceUserProvidedIdentifiers;</span>
-<span class="source-line-no">158</span><span id="line.158">    }</span>
-<span class="source-line-no">159</span><span id="line.159"></span>
-<span class="source-line-no">160</span><span id="line.160">    public void setId(final String id) {</span>
-<span class="source-line-no">161</span><span id="line.161">        this.id = id;</span>
-<span class="source-line-no">162</span><span id="line.162">    }</span>
-<span class="source-line-no">163</span><span id="line.163"></span>
-<span class="source-line-no">164</span><span id="line.164">    public void setVersion(final Long version) {</span>
-<span class="source-line-no">165</span><span id="line.165">        this.version = version;</span>
-<span class="source-line-no">166</span><span id="line.166">    }</span>
-<span class="source-line-no">167</span><span id="line.167"></span>
-<span class="source-line-no">168</span><span id="line.168">    public void setCreatedAt(final java.time.ZonedDateTime createdAt) {</span>
-<span class="source-line-no">169</span><span id="line.169">        this.createdAt = createdAt;</span>
-<span class="source-line-no">170</span><span id="line.170">    }</span>
-<span class="source-line-no">171</span><span id="line.171"></span>
-<span class="source-line-no">172</span><span id="line.172">    public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {</span>
-<span class="source-line-no">173</span><span id="line.173">        this.lastModifiedAt = lastModifiedAt;</span>
-<span class="source-line-no">174</span><span id="line.174">    }</span>
-<span class="source-line-no">175</span><span id="line.175"></span>
-<span class="source-line-no">176</span><span id="line.176">    public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {</span>
-<span class="source-line-no">177</span><span id="line.177">        this.lastModifiedBy = lastModifiedBy;</span>
-<span class="source-line-no">178</span><span id="line.178">    }</span>
-<span class="source-line-no">179</span><span id="line.179"></span>
-<span class="source-line-no">180</span><span id="line.180">    public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy) {</span>
-<span class="source-line-no">181</span><span id="line.181">        this.createdBy = createdBy;</span>
-<span class="source-line-no">182</span><span id="line.182">    }</span>
-<span class="source-line-no">183</span><span id="line.183"></span>
-<span class="source-line-no">184</span><span id="line.184">    public void setSequenceNumber(final Long sequenceNumber) {</span>
-<span class="source-line-no">185</span><span id="line.185">        this.sequenceNumber = sequenceNumber;</span>
-<span class="source-line-no">186</span><span id="line.186">    }</span>
-<span class="source-line-no">187</span><span id="line.187"></span>
-<span class="source-line-no">188</span><span id="line.188">    public void setResource(final com.commercetools.api.models.common.Reference resource) {</span>
-<span class="source-line-no">189</span><span id="line.189">        this.resource = resource;</span>
-<span class="source-line-no">190</span><span id="line.190">    }</span>
-<span class="source-line-no">191</span><span id="line.191"></span>
-<span class="source-line-no">192</span><span id="line.192">    public void setResourceVersion(final Long resourceVersion) {</span>
-<span class="source-line-no">193</span><span id="line.193">        this.resourceVersion = resourceVersion;</span>
-<span class="source-line-no">194</span><span id="line.194">    }</span>
-<span class="source-line-no">195</span><span id="line.195"></span>
-<span class="source-line-no">196</span><span id="line.196">    public void setResourceUserProvidedIdentifiers(</span>
-<span class="source-line-no">197</span><span id="line.197">            final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {</span>
-<span class="source-line-no">198</span><span id="line.198">        this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;</span>
-<span class="source-line-no">199</span><span id="line.199">    }</span>
-<span class="source-line-no">200</span><span id="line.200"></span>
-<span class="source-line-no">201</span><span id="line.201">    @Override</span>
-<span class="source-line-no">202</span><span id="line.202">    public boolean equals(Object o) {</span>
-<span class="source-line-no">203</span><span id="line.203">        if (this == o)</span>
-<span class="source-line-no">204</span><span id="line.204">            return true;</span>
-<span class="source-line-no">205</span><span id="line.205"></span>
-<span class="source-line-no">206</span><span id="line.206">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">207</span><span id="line.207">            return false;</span>
-<span class="source-line-no">208</span><span id="line.208"></span>
-<span class="source-line-no">209</span><span id="line.209">        CustomerEmailVerifiedMessageImpl that = (CustomerEmailVerifiedMessageImpl) o;</span>
-<span class="source-line-no">210</span><span id="line.210"></span>
-<span class="source-line-no">211</span><span id="line.211">        return new EqualsBuilder().append(id, that.id)</span>
-<span class="source-line-no">212</span><span id="line.212">                .append(version, that.version)</span>
-<span class="source-line-no">213</span><span id="line.213">                .append(createdAt, that.createdAt)</span>
-<span class="source-line-no">214</span><span id="line.214">                .append(lastModifiedAt, that.lastModifiedAt)</span>
-<span class="source-line-no">215</span><span id="line.215">                .append(lastModifiedBy, that.lastModifiedBy)</span>
-<span class="source-line-no">216</span><span id="line.216">                .append(createdBy, that.createdBy)</span>
-<span class="source-line-no">217</span><span id="line.217">                .append(sequenceNumber, that.sequenceNumber)</span>
-<span class="source-line-no">218</span><span id="line.218">                .append(resource, that.resource)</span>
-<span class="source-line-no">219</span><span id="line.219">                .append(resourceVersion, that.resourceVersion)</span>
-<span class="source-line-no">220</span><span id="line.220">                .append(type, that.type)</span>
-<span class="source-line-no">221</span><span id="line.221">                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)</span>
-<span class="source-line-no">222</span><span id="line.222">                .isEquals();</span>
-<span class="source-line-no">223</span><span id="line.223">    }</span>
-<span class="source-line-no">224</span><span id="line.224"></span>
-<span class="source-line-no">225</span><span id="line.225">    @Override</span>
-<span class="source-line-no">226</span><span id="line.226">    public int hashCode() {</span>
-<span class="source-line-no">227</span><span id="line.227">        return new HashCodeBuilder(17, 37).append(id)</span>
-<span class="source-line-no">228</span><span id="line.228">                .append(version)</span>
-<span class="source-line-no">229</span><span id="line.229">                .append(createdAt)</span>
-<span class="source-line-no">230</span><span id="line.230">                .append(lastModifiedAt)</span>
-<span class="source-line-no">231</span><span id="line.231">                .append(lastModifiedBy)</span>
-<span class="source-line-no">232</span><span id="line.232">                .append(createdBy)</span>
-<span class="source-line-no">233</span><span id="line.233">                .append(sequenceNumber)</span>
-<span class="source-line-no">234</span><span id="line.234">                .append(resource)</span>
-<span class="source-line-no">235</span><span id="line.235">                .append(resourceVersion)</span>
-<span class="source-line-no">236</span><span id="line.236">                .append(type)</span>
-<span class="source-line-no">237</span><span id="line.237">                .append(resourceUserProvidedIdentifiers)</span>
-<span class="source-line-no">238</span><span id="line.238">                .toHashCode();</span>
-<span class="source-line-no">239</span><span id="line.239">    }</span>
-<span class="source-line-no">240</span><span id="line.240"></span>
-<span class="source-line-no">241</span><span id="line.241">}</span>
+<span class="source-line-no">045</span><span id="line.45">    /**</span>
+<span class="source-line-no">046</span><span id="line.46">     * create instance with all properties</span>
+<span class="source-line-no">047</span><span id="line.47">     */</span>
+<span class="source-line-no">048</span><span id="line.48">    @JsonCreator</span>
+<span class="source-line-no">049</span><span id="line.49">    CustomerEmailVerifiedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,</span>
+<span class="source-line-no">050</span><span id="line.50">            @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,</span>
+<span class="source-line-no">051</span><span id="line.51">            @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt,</span>
+<span class="source-line-no">052</span><span id="line.52">            @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy,</span>
+<span class="source-line-no">053</span><span id="line.53">            @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy,</span>
+<span class="source-line-no">054</span><span id="line.54">            @JsonProperty("sequenceNumber") final Long sequenceNumber,</span>
+<span class="source-line-no">055</span><span id="line.55">            @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,</span>
+<span class="source-line-no">056</span><span id="line.56">            @JsonProperty("resourceVersion") final Long resourceVersion,</span>
+<span class="source-line-no">057</span><span id="line.57">            @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {</span>
+<span class="source-line-no">058</span><span id="line.58">        this.id = id;</span>
+<span class="source-line-no">059</span><span id="line.59">        this.version = version;</span>
+<span class="source-line-no">060</span><span id="line.60">        this.createdAt = createdAt;</span>
+<span class="source-line-no">061</span><span id="line.61">        this.lastModifiedAt = lastModifiedAt;</span>
+<span class="source-line-no">062</span><span id="line.62">        this.lastModifiedBy = lastModifiedBy;</span>
+<span class="source-line-no">063</span><span id="line.63">        this.createdBy = createdBy;</span>
+<span class="source-line-no">064</span><span id="line.64">        this.sequenceNumber = sequenceNumber;</span>
+<span class="source-line-no">065</span><span id="line.65">        this.resource = resource;</span>
+<span class="source-line-no">066</span><span id="line.66">        this.resourceVersion = resourceVersion;</span>
+<span class="source-line-no">067</span><span id="line.67">        this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;</span>
+<span class="source-line-no">068</span><span id="line.68">        this.type = CUSTOMER_EMAIL_VERIFIED;</span>
+<span class="source-line-no">069</span><span id="line.69">    }</span>
+<span class="source-line-no">070</span><span id="line.70"></span>
+<span class="source-line-no">071</span><span id="line.71">    /**</span>
+<span class="source-line-no">072</span><span id="line.72">     * create empty instance</span>
+<span class="source-line-no">073</span><span id="line.73">     */</span>
+<span class="source-line-no">074</span><span id="line.74">    public CustomerEmailVerifiedMessageImpl() {</span>
+<span class="source-line-no">075</span><span id="line.75">        this.type = CUSTOMER_EMAIL_VERIFIED;</span>
+<span class="source-line-no">076</span><span id="line.76">    }</span>
+<span class="source-line-no">077</span><span id="line.77"></span>
+<span class="source-line-no">078</span><span id="line.78">    /**</span>
+<span class="source-line-no">079</span><span id="line.79">     *  &lt;p&gt;Unique identifier of the Message. Can be used to track which Messages have been processed.&lt;/p&gt;</span>
+<span class="source-line-no">080</span><span id="line.80">     */</span>
+<span class="source-line-no">081</span><span id="line.81"></span>
+<span class="source-line-no">082</span><span id="line.82">    public String getId() {</span>
+<span class="source-line-no">083</span><span id="line.83">        return this.id;</span>
+<span class="source-line-no">084</span><span id="line.84">    }</span>
+<span class="source-line-no">085</span><span id="line.85"></span>
+<span class="source-line-no">086</span><span id="line.86">    /**</span>
+<span class="source-line-no">087</span><span id="line.87">     *  &lt;p&gt;Version of a resource. In case of Messages, this is always &lt;code&gt;1&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">088</span><span id="line.88">     */</span>
+<span class="source-line-no">089</span><span id="line.89"></span>
+<span class="source-line-no">090</span><span id="line.90">    public Long getVersion() {</span>
+<span class="source-line-no">091</span><span id="line.91">        return this.version;</span>
+<span class="source-line-no">092</span><span id="line.92">    }</span>
+<span class="source-line-no">093</span><span id="line.93"></span>
+<span class="source-line-no">094</span><span id="line.94">    /**</span>
+<span class="source-line-no">095</span><span id="line.95">     *  &lt;p&gt;Date and time (UTC) the Message was generated.&lt;/p&gt;</span>
+<span class="source-line-no">096</span><span id="line.96">     */</span>
+<span class="source-line-no">097</span><span id="line.97"></span>
+<span class="source-line-no">098</span><span id="line.98">    public java.time.ZonedDateTime getCreatedAt() {</span>
+<span class="source-line-no">099</span><span id="line.99">        return this.createdAt;</span>
+<span class="source-line-no">100</span><span id="line.100">    }</span>
+<span class="source-line-no">101</span><span id="line.101"></span>
+<span class="source-line-no">102</span><span id="line.102">    /**</span>
+<span class="source-line-no">103</span><span id="line.103">     *  &lt;p&gt;Value of &lt;code&gt;createdAt&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">104</span><span id="line.104">     */</span>
+<span class="source-line-no">105</span><span id="line.105"></span>
+<span class="source-line-no">106</span><span id="line.106">    public java.time.ZonedDateTime getLastModifiedAt() {</span>
+<span class="source-line-no">107</span><span id="line.107">        return this.lastModifiedAt;</span>
+<span class="source-line-no">108</span><span id="line.108">    }</span>
+<span class="source-line-no">109</span><span id="line.109"></span>
+<span class="source-line-no">110</span><span id="line.110">    /**</span>
+<span class="source-line-no">111</span><span id="line.111">     *  &lt;p&gt;Value of &lt;code&gt;createdBy&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">112</span><span id="line.112">     */</span>
+<span class="source-line-no">113</span><span id="line.113"></span>
+<span class="source-line-no">114</span><span id="line.114">    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {</span>
+<span class="source-line-no">115</span><span id="line.115">        return this.lastModifiedBy;</span>
+<span class="source-line-no">116</span><span id="line.116">    }</span>
+<span class="source-line-no">117</span><span id="line.117"></span>
+<span class="source-line-no">118</span><span id="line.118">    /**</span>
+<span class="source-line-no">119</span><span id="line.119">     *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
+<span class="source-line-no">120</span><span id="line.120">     */</span>
+<span class="source-line-no">121</span><span id="line.121"></span>
+<span class="source-line-no">122</span><span id="line.122">    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {</span>
+<span class="source-line-no">123</span><span id="line.123">        return this.createdBy;</span>
+<span class="source-line-no">124</span><span id="line.124">    }</span>
+<span class="source-line-no">125</span><span id="line.125"></span>
+<span class="source-line-no">126</span><span id="line.126">    /**</span>
+<span class="source-line-no">127</span><span id="line.127">     *  &lt;p&gt;Message number in relation to other Messages for a given resource. The &lt;code&gt;sequenceNumber&lt;/code&gt; of the next Message for the resource is the successor of the &lt;code&gt;sequenceNumber&lt;/code&gt; of the current Message. Meaning, the &lt;code&gt;sequenceNumber&lt;/code&gt; of the next Message equals the &lt;code&gt;sequenceNumber&lt;/code&gt; of the current Message + 1. &lt;code&gt;sequenceNumber&lt;/code&gt; can be used to ensure that Messages are processed in the correct order for a particular resource.&lt;/p&gt;</span>
+<span class="source-line-no">128</span><span id="line.128">     */</span>
+<span class="source-line-no">129</span><span id="line.129"></span>
+<span class="source-line-no">130</span><span id="line.130">    public Long getSequenceNumber() {</span>
+<span class="source-line-no">131</span><span id="line.131">        return this.sequenceNumber;</span>
+<span class="source-line-no">132</span><span id="line.132">    }</span>
+<span class="source-line-no">133</span><span id="line.133"></span>
+<span class="source-line-no">134</span><span id="line.134">    /**</span>
+<span class="source-line-no">135</span><span id="line.135">     *  &lt;p&gt;Reference to the resource on which the change or action was performed.&lt;/p&gt;</span>
+<span class="source-line-no">136</span><span id="line.136">     */</span>
+<span class="source-line-no">137</span><span id="line.137"></span>
+<span class="source-line-no">138</span><span id="line.138">    public com.commercetools.api.models.common.Reference getResource() {</span>
+<span class="source-line-no">139</span><span id="line.139">        return this.resource;</span>
+<span class="source-line-no">140</span><span id="line.140">    }</span>
+<span class="source-line-no">141</span><span id="line.141"></span>
+<span class="source-line-no">142</span><span id="line.142">    /**</span>
+<span class="source-line-no">143</span><span id="line.143">     *  &lt;p&gt;Version of the resource on which the change or action was performed.&lt;/p&gt;</span>
+<span class="source-line-no">144</span><span id="line.144">     */</span>
+<span class="source-line-no">145</span><span id="line.145"></span>
+<span class="source-line-no">146</span><span id="line.146">    public Long getResourceVersion() {</span>
+<span class="source-line-no">147</span><span id="line.147">        return this.resourceVersion;</span>
+<span class="source-line-no">148</span><span id="line.148">    }</span>
+<span class="source-line-no">149</span><span id="line.149"></span>
+<span class="source-line-no">150</span><span id="line.150">    /**</span>
+<span class="source-line-no">151</span><span id="line.151">     *  &lt;p&gt;Message Type of the Message.&lt;/p&gt;</span>
+<span class="source-line-no">152</span><span id="line.152">     */</span>
+<span class="source-line-no">153</span><span id="line.153"></span>
+<span class="source-line-no">154</span><span id="line.154">    public String getType() {</span>
+<span class="source-line-no">155</span><span id="line.155">        return this.type;</span>
+<span class="source-line-no">156</span><span id="line.156">    }</span>
+<span class="source-line-no">157</span><span id="line.157"></span>
+<span class="source-line-no">158</span><span id="line.158">    /**</span>
+<span class="source-line-no">159</span><span id="line.159">     *  &lt;p&gt;User-provided identifiers of the resource, such as &lt;code&gt;key&lt;/code&gt; or &lt;code&gt;externalId&lt;/code&gt;. Only present if the resource has such identifiers.&lt;/p&gt;</span>
+<span class="source-line-no">160</span><span id="line.160">     */</span>
+<span class="source-line-no">161</span><span id="line.161"></span>
+<span class="source-line-no">162</span><span id="line.162">    public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers() {</span>
+<span class="source-line-no">163</span><span id="line.163">        return this.resourceUserProvidedIdentifiers;</span>
+<span class="source-line-no">164</span><span id="line.164">    }</span>
+<span class="source-line-no">165</span><span id="line.165"></span>
+<span class="source-line-no">166</span><span id="line.166">    public void setId(final String id) {</span>
+<span class="source-line-no">167</span><span id="line.167">        this.id = id;</span>
+<span class="source-line-no">168</span><span id="line.168">    }</span>
+<span class="source-line-no">169</span><span id="line.169"></span>
+<span class="source-line-no">170</span><span id="line.170">    public void setVersion(final Long version) {</span>
+<span class="source-line-no">171</span><span id="line.171">        this.version = version;</span>
+<span class="source-line-no">172</span><span id="line.172">    }</span>
+<span class="source-line-no">173</span><span id="line.173"></span>
+<span class="source-line-no">174</span><span id="line.174">    public void setCreatedAt(final java.time.ZonedDateTime createdAt) {</span>
+<span class="source-line-no">175</span><span id="line.175">        this.createdAt = createdAt;</span>
+<span class="source-line-no">176</span><span id="line.176">    }</span>
+<span class="source-line-no">177</span><span id="line.177"></span>
+<span class="source-line-no">178</span><span id="line.178">    public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {</span>
+<span class="source-line-no">179</span><span id="line.179">        this.lastModifiedAt = lastModifiedAt;</span>
+<span class="source-line-no">180</span><span id="line.180">    }</span>
+<span class="source-line-no">181</span><span id="line.181"></span>
+<span class="source-line-no">182</span><span id="line.182">    public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {</span>
+<span class="source-line-no">183</span><span id="line.183">        this.lastModifiedBy = lastModifiedBy;</span>
+<span class="source-line-no">184</span><span id="line.184">    }</span>
+<span class="source-line-no">185</span><span id="line.185"></span>
+<span class="source-line-no">186</span><span id="line.186">    public void setCreatedBy(final com.commercetools.api.models.common.CreatedBy createdBy) {</span>
+<span class="source-line-no">187</span><span id="line.187">        this.createdBy = createdBy;</span>
+<span class="source-line-no">188</span><span id="line.188">    }</span>
+<span class="source-line-no">189</span><span id="line.189"></span>
+<span class="source-line-no">190</span><span id="line.190">    public void setSequenceNumber(final Long sequenceNumber) {</span>
+<span class="source-line-no">191</span><span id="line.191">        this.sequenceNumber = sequenceNumber;</span>
+<span class="source-line-no">192</span><span id="line.192">    }</span>
+<span class="source-line-no">193</span><span id="line.193"></span>
+<span class="source-line-no">194</span><span id="line.194">    public void setResource(final com.commercetools.api.models.common.Reference resource) {</span>
+<span class="source-line-no">195</span><span id="line.195">        this.resource = resource;</span>
+<span class="source-line-no">196</span><span id="line.196">    }</span>
+<span class="source-line-no">197</span><span id="line.197"></span>
+<span class="source-line-no">198</span><span id="line.198">    public void setResourceVersion(final Long resourceVersion) {</span>
+<span class="source-line-no">199</span><span id="line.199">        this.resourceVersion = resourceVersion;</span>
+<span class="source-line-no">200</span><span id="line.200">    }</span>
+<span class="source-line-no">201</span><span id="line.201"></span>
+<span class="source-line-no">202</span><span id="line.202">    public void setResourceUserProvidedIdentifiers(</span>
+<span class="source-line-no">203</span><span id="line.203">            final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {</span>
+<span class="source-line-no">204</span><span id="line.204">        this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;</span>
+<span class="source-line-no">205</span><span id="line.205">    }</span>
+<span class="source-line-no">206</span><span id="line.206"></span>
+<span class="source-line-no">207</span><span id="line.207">    @Override</span>
+<span class="source-line-no">208</span><span id="line.208">    public boolean equals(Object o) {</span>
+<span class="source-line-no">209</span><span id="line.209">        if (this == o)</span>
+<span class="source-line-no">210</span><span id="line.210">            return true;</span>
+<span class="source-line-no">211</span><span id="line.211"></span>
+<span class="source-line-no">212</span><span id="line.212">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">213</span><span id="line.213">            return false;</span>
+<span class="source-line-no">214</span><span id="line.214"></span>
+<span class="source-line-no">215</span><span id="line.215">        CustomerEmailVerifiedMessageImpl that = (CustomerEmailVerifiedMessageImpl) o;</span>
+<span class="source-line-no">216</span><span id="line.216"></span>
+<span class="source-line-no">217</span><span id="line.217">        return new EqualsBuilder().append(id, that.id)</span>
+<span class="source-line-no">218</span><span id="line.218">                .append(version, that.version)</span>
+<span class="source-line-no">219</span><span id="line.219">                .append(createdAt, that.createdAt)</span>
+<span class="source-line-no">220</span><span id="line.220">                .append(lastModifiedAt, that.lastModifiedAt)</span>
+<span class="source-line-no">221</span><span id="line.221">                .append(lastModifiedBy, that.lastModifiedBy)</span>
+<span class="source-line-no">222</span><span id="line.222">                .append(createdBy, that.createdBy)</span>
+<span class="source-line-no">223</span><span id="line.223">                .append(sequenceNumber, that.sequenceNumber)</span>
+<span class="source-line-no">224</span><span id="line.224">                .append(resource, that.resource)</span>
+<span class="source-line-no">225</span><span id="line.225">                .append(resourceVersion, that.resourceVersion)</span>
+<span class="source-line-no">226</span><span id="line.226">                .append(type, that.type)</span>
+<span class="source-line-no">227</span><span id="line.227">                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)</span>
+<span class="source-line-no">228</span><span id="line.228">                .isEquals();</span>
+<span class="source-line-no">229</span><span id="line.229">    }</span>
+<span class="source-line-no">230</span><span id="line.230"></span>
+<span class="source-line-no">231</span><span id="line.231">    @Override</span>
+<span class="source-line-no">232</span><span id="line.232">    public int hashCode() {</span>
+<span class="source-line-no">233</span><span id="line.233">        return new HashCodeBuilder(17, 37).append(id)</span>
+<span class="source-line-no">234</span><span id="line.234">                .append(version)</span>
+<span class="source-line-no">235</span><span id="line.235">                .append(createdAt)</span>
+<span class="source-line-no">236</span><span id="line.236">                .append(lastModifiedAt)</span>
+<span class="source-line-no">237</span><span id="line.237">                .append(lastModifiedBy)</span>
+<span class="source-line-no">238</span><span id="line.238">                .append(createdBy)</span>
+<span class="source-line-no">239</span><span id="line.239">                .append(sequenceNumber)</span>
+<span class="source-line-no">240</span><span id="line.240">                .append(resource)</span>
+<span class="source-line-no">241</span><span id="line.241">                .append(resourceVersion)</span>
+<span class="source-line-no">242</span><span id="line.242">                .append(type)</span>
+<span class="source-line-no">243</span><span id="line.243">                .append(resourceUserProvidedIdentifiers)</span>
+<span class="source-line-no">244</span><span id="line.244">                .toHashCode();</span>
+<span class="source-line-no">245</span><span id="line.245">    }</span>
+<span class="source-line-no">246</span><span id="line.246"></span>
+<span class="source-line-no">247</span><span id="line.247">}</span>
 
 
 

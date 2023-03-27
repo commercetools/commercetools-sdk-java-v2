@@ -41,86 +41,92 @@
 <span class="source-line-no">028</span><span id="line.28"></span>
 <span class="source-line-no">029</span><span id="line.29">    private String accessSecret;</span>
 <span class="source-line-no">030</span><span id="line.30"></span>
-<span class="source-line-no">031</span><span id="line.31">    @JsonCreator</span>
-<span class="source-line-no">032</span><span id="line.32">    AWSLambdaDestinationImpl(@JsonProperty("arn") final String arn, @JsonProperty("accessKey") final String accessKey,</span>
-<span class="source-line-no">033</span><span id="line.33">            @JsonProperty("accessSecret") final String accessSecret) {</span>
-<span class="source-line-no">034</span><span id="line.34">        this.arn = arn;</span>
-<span class="source-line-no">035</span><span id="line.35">        this.accessKey = accessKey;</span>
-<span class="source-line-no">036</span><span id="line.36">        this.accessSecret = accessSecret;</span>
-<span class="source-line-no">037</span><span id="line.37">        this.type = AWS_LAMBDA;</span>
-<span class="source-line-no">038</span><span id="line.38">    }</span>
-<span class="source-line-no">039</span><span id="line.39"></span>
-<span class="source-line-no">040</span><span id="line.40">    public AWSLambdaDestinationImpl() {</span>
-<span class="source-line-no">041</span><span id="line.41">        this.type = AWS_LAMBDA;</span>
-<span class="source-line-no">042</span><span id="line.42">    }</span>
-<span class="source-line-no">043</span><span id="line.43"></span>
-<span class="source-line-no">044</span><span id="line.44">    /**</span>
-<span class="source-line-no">045</span><span id="line.45">     *</span>
-<span class="source-line-no">046</span><span id="line.46">     */</span>
-<span class="source-line-no">047</span><span id="line.47"></span>
-<span class="source-line-no">048</span><span id="line.48">    public String getType() {</span>
-<span class="source-line-no">049</span><span id="line.49">        return this.type;</span>
-<span class="source-line-no">050</span><span id="line.50">    }</span>
-<span class="source-line-no">051</span><span id="line.51"></span>
-<span class="source-line-no">052</span><span id="line.52">    /**</span>
-<span class="source-line-no">053</span><span id="line.53">     *  &lt;p&gt;Amazon Resource Name (ARN) of the Lambda function in the format &lt;code&gt;arn:aws:lambda:&amp;lt;region&amp;gt;:&amp;lt;accountid&amp;gt;:function:&amp;lt;functionName&amp;gt;&lt;/code&gt;. Use the format &lt;code&gt;arn:aws:lambda:&amp;lt;region&amp;gt;:&amp;lt;accountid&amp;gt;:function:&amp;lt;functionName&amp;gt;:&amp;lt;functionAlias/version&amp;gt;&lt;/code&gt; to point to a specific version of the function.&lt;/p&gt;</span>
-<span class="source-line-no">054</span><span id="line.54">     */</span>
-<span class="source-line-no">055</span><span id="line.55"></span>
-<span class="source-line-no">056</span><span id="line.56">    public String getArn() {</span>
-<span class="source-line-no">057</span><span id="line.57">        return this.arn;</span>
-<span class="source-line-no">058</span><span id="line.58">    }</span>
-<span class="source-line-no">059</span><span id="line.59"></span>
-<span class="source-line-no">060</span><span id="line.60">    /**</span>
-<span class="source-line-no">061</span><span id="line.61">     *  &lt;p&gt;Partially hidden on retrieval for security reasons.&lt;/p&gt;</span>
-<span class="source-line-no">062</span><span id="line.62">     */</span>
-<span class="source-line-no">063</span><span id="line.63"></span>
-<span class="source-line-no">064</span><span id="line.64">    public String getAccessKey() {</span>
-<span class="source-line-no">065</span><span id="line.65">        return this.accessKey;</span>
-<span class="source-line-no">066</span><span id="line.66">    }</span>
-<span class="source-line-no">067</span><span id="line.67"></span>
-<span class="source-line-no">068</span><span id="line.68">    /**</span>
-<span class="source-line-no">069</span><span id="line.69">     *  &lt;p&gt;Partially hidden on retrieval for security reasons.&lt;/p&gt;</span>
-<span class="source-line-no">070</span><span id="line.70">     */</span>
-<span class="source-line-no">071</span><span id="line.71"></span>
-<span class="source-line-no">072</span><span id="line.72">    public String getAccessSecret() {</span>
-<span class="source-line-no">073</span><span id="line.73">        return this.accessSecret;</span>
-<span class="source-line-no">074</span><span id="line.74">    }</span>
-<span class="source-line-no">075</span><span id="line.75"></span>
-<span class="source-line-no">076</span><span id="line.76">    public void setArn(final String arn) {</span>
-<span class="source-line-no">077</span><span id="line.77">        this.arn = arn;</span>
-<span class="source-line-no">078</span><span id="line.78">    }</span>
-<span class="source-line-no">079</span><span id="line.79"></span>
-<span class="source-line-no">080</span><span id="line.80">    public void setAccessKey(final String accessKey) {</span>
-<span class="source-line-no">081</span><span id="line.81">        this.accessKey = accessKey;</span>
-<span class="source-line-no">082</span><span id="line.82">    }</span>
-<span class="source-line-no">083</span><span id="line.83"></span>
-<span class="source-line-no">084</span><span id="line.84">    public void setAccessSecret(final String accessSecret) {</span>
-<span class="source-line-no">085</span><span id="line.85">        this.accessSecret = accessSecret;</span>
-<span class="source-line-no">086</span><span id="line.86">    }</span>
-<span class="source-line-no">087</span><span id="line.87"></span>
-<span class="source-line-no">088</span><span id="line.88">    @Override</span>
-<span class="source-line-no">089</span><span id="line.89">    public boolean equals(Object o) {</span>
-<span class="source-line-no">090</span><span id="line.90">        if (this == o)</span>
-<span class="source-line-no">091</span><span id="line.91">            return true;</span>
-<span class="source-line-no">092</span><span id="line.92"></span>
-<span class="source-line-no">093</span><span id="line.93">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">094</span><span id="line.94">            return false;</span>
-<span class="source-line-no">095</span><span id="line.95"></span>
-<span class="source-line-no">096</span><span id="line.96">        AWSLambdaDestinationImpl that = (AWSLambdaDestinationImpl) o;</span>
-<span class="source-line-no">097</span><span id="line.97"></span>
-<span class="source-line-no">098</span><span id="line.98">        return new EqualsBuilder().append(type, that.type)</span>
-<span class="source-line-no">099</span><span id="line.99">                .append(arn, that.arn)</span>
-<span class="source-line-no">100</span><span id="line.100">                .append(accessKey, that.accessKey)</span>
-<span class="source-line-no">101</span><span id="line.101">                .append(accessSecret, that.accessSecret)</span>
-<span class="source-line-no">102</span><span id="line.102">                .isEquals();</span>
-<span class="source-line-no">103</span><span id="line.103">    }</span>
-<span class="source-line-no">104</span><span id="line.104"></span>
-<span class="source-line-no">105</span><span id="line.105">    @Override</span>
-<span class="source-line-no">106</span><span id="line.106">    public int hashCode() {</span>
-<span class="source-line-no">107</span><span id="line.107">        return new HashCodeBuilder(17, 37).append(type).append(arn).append(accessKey).append(accessSecret).toHashCode();</span>
-<span class="source-line-no">108</span><span id="line.108">    }</span>
-<span class="source-line-no">109</span><span id="line.109"></span>
-<span class="source-line-no">110</span><span id="line.110">}</span>
+<span class="source-line-no">031</span><span id="line.31">    /**</span>
+<span class="source-line-no">032</span><span id="line.32">     * create instance with all properties</span>
+<span class="source-line-no">033</span><span id="line.33">     */</span>
+<span class="source-line-no">034</span><span id="line.34">    @JsonCreator</span>
+<span class="source-line-no">035</span><span id="line.35">    AWSLambdaDestinationImpl(@JsonProperty("arn") final String arn, @JsonProperty("accessKey") final String accessKey,</span>
+<span class="source-line-no">036</span><span id="line.36">            @JsonProperty("accessSecret") final String accessSecret) {</span>
+<span class="source-line-no">037</span><span id="line.37">        this.arn = arn;</span>
+<span class="source-line-no">038</span><span id="line.38">        this.accessKey = accessKey;</span>
+<span class="source-line-no">039</span><span id="line.39">        this.accessSecret = accessSecret;</span>
+<span class="source-line-no">040</span><span id="line.40">        this.type = AWS_LAMBDA;</span>
+<span class="source-line-no">041</span><span id="line.41">    }</span>
+<span class="source-line-no">042</span><span id="line.42"></span>
+<span class="source-line-no">043</span><span id="line.43">    /**</span>
+<span class="source-line-no">044</span><span id="line.44">     * create empty instance</span>
+<span class="source-line-no">045</span><span id="line.45">     */</span>
+<span class="source-line-no">046</span><span id="line.46">    public AWSLambdaDestinationImpl() {</span>
+<span class="source-line-no">047</span><span id="line.47">        this.type = AWS_LAMBDA;</span>
+<span class="source-line-no">048</span><span id="line.48">    }</span>
+<span class="source-line-no">049</span><span id="line.49"></span>
+<span class="source-line-no">050</span><span id="line.50">    /**</span>
+<span class="source-line-no">051</span><span id="line.51">     *</span>
+<span class="source-line-no">052</span><span id="line.52">     */</span>
+<span class="source-line-no">053</span><span id="line.53"></span>
+<span class="source-line-no">054</span><span id="line.54">    public String getType() {</span>
+<span class="source-line-no">055</span><span id="line.55">        return this.type;</span>
+<span class="source-line-no">056</span><span id="line.56">    }</span>
+<span class="source-line-no">057</span><span id="line.57"></span>
+<span class="source-line-no">058</span><span id="line.58">    /**</span>
+<span class="source-line-no">059</span><span id="line.59">     *  &lt;p&gt;Amazon Resource Name (ARN) of the Lambda function in the format &lt;code&gt;arn:aws:lambda:&amp;lt;region&amp;gt;:&amp;lt;accountid&amp;gt;:function:&amp;lt;functionName&amp;gt;&lt;/code&gt;. Use the format &lt;code&gt;arn:aws:lambda:&amp;lt;region&amp;gt;:&amp;lt;accountid&amp;gt;:function:&amp;lt;functionName&amp;gt;:&amp;lt;functionAlias/version&amp;gt;&lt;/code&gt; to point to a specific version of the function.&lt;/p&gt;</span>
+<span class="source-line-no">060</span><span id="line.60">     */</span>
+<span class="source-line-no">061</span><span id="line.61"></span>
+<span class="source-line-no">062</span><span id="line.62">    public String getArn() {</span>
+<span class="source-line-no">063</span><span id="line.63">        return this.arn;</span>
+<span class="source-line-no">064</span><span id="line.64">    }</span>
+<span class="source-line-no">065</span><span id="line.65"></span>
+<span class="source-line-no">066</span><span id="line.66">    /**</span>
+<span class="source-line-no">067</span><span id="line.67">     *  &lt;p&gt;Partially hidden on retrieval for security reasons.&lt;/p&gt;</span>
+<span class="source-line-no">068</span><span id="line.68">     */</span>
+<span class="source-line-no">069</span><span id="line.69"></span>
+<span class="source-line-no">070</span><span id="line.70">    public String getAccessKey() {</span>
+<span class="source-line-no">071</span><span id="line.71">        return this.accessKey;</span>
+<span class="source-line-no">072</span><span id="line.72">    }</span>
+<span class="source-line-no">073</span><span id="line.73"></span>
+<span class="source-line-no">074</span><span id="line.74">    /**</span>
+<span class="source-line-no">075</span><span id="line.75">     *  &lt;p&gt;Partially hidden on retrieval for security reasons.&lt;/p&gt;</span>
+<span class="source-line-no">076</span><span id="line.76">     */</span>
+<span class="source-line-no">077</span><span id="line.77"></span>
+<span class="source-line-no">078</span><span id="line.78">    public String getAccessSecret() {</span>
+<span class="source-line-no">079</span><span id="line.79">        return this.accessSecret;</span>
+<span class="source-line-no">080</span><span id="line.80">    }</span>
+<span class="source-line-no">081</span><span id="line.81"></span>
+<span class="source-line-no">082</span><span id="line.82">    public void setArn(final String arn) {</span>
+<span class="source-line-no">083</span><span id="line.83">        this.arn = arn;</span>
+<span class="source-line-no">084</span><span id="line.84">    }</span>
+<span class="source-line-no">085</span><span id="line.85"></span>
+<span class="source-line-no">086</span><span id="line.86">    public void setAccessKey(final String accessKey) {</span>
+<span class="source-line-no">087</span><span id="line.87">        this.accessKey = accessKey;</span>
+<span class="source-line-no">088</span><span id="line.88">    }</span>
+<span class="source-line-no">089</span><span id="line.89"></span>
+<span class="source-line-no">090</span><span id="line.90">    public void setAccessSecret(final String accessSecret) {</span>
+<span class="source-line-no">091</span><span id="line.91">        this.accessSecret = accessSecret;</span>
+<span class="source-line-no">092</span><span id="line.92">    }</span>
+<span class="source-line-no">093</span><span id="line.93"></span>
+<span class="source-line-no">094</span><span id="line.94">    @Override</span>
+<span class="source-line-no">095</span><span id="line.95">    public boolean equals(Object o) {</span>
+<span class="source-line-no">096</span><span id="line.96">        if (this == o)</span>
+<span class="source-line-no">097</span><span id="line.97">            return true;</span>
+<span class="source-line-no">098</span><span id="line.98"></span>
+<span class="source-line-no">099</span><span id="line.99">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">100</span><span id="line.100">            return false;</span>
+<span class="source-line-no">101</span><span id="line.101"></span>
+<span class="source-line-no">102</span><span id="line.102">        AWSLambdaDestinationImpl that = (AWSLambdaDestinationImpl) o;</span>
+<span class="source-line-no">103</span><span id="line.103"></span>
+<span class="source-line-no">104</span><span id="line.104">        return new EqualsBuilder().append(type, that.type)</span>
+<span class="source-line-no">105</span><span id="line.105">                .append(arn, that.arn)</span>
+<span class="source-line-no">106</span><span id="line.106">                .append(accessKey, that.accessKey)</span>
+<span class="source-line-no">107</span><span id="line.107">                .append(accessSecret, that.accessSecret)</span>
+<span class="source-line-no">108</span><span id="line.108">                .isEquals();</span>
+<span class="source-line-no">109</span><span id="line.109">    }</span>
+<span class="source-line-no">110</span><span id="line.110"></span>
+<span class="source-line-no">111</span><span id="line.111">    @Override</span>
+<span class="source-line-no">112</span><span id="line.112">    public int hashCode() {</span>
+<span class="source-line-no">113</span><span id="line.113">        return new HashCodeBuilder(17, 37).append(type).append(arn).append(accessKey).append(accessSecret).toHashCode();</span>
+<span class="source-line-no">114</span><span id="line.114">    }</span>
+<span class="source-line-no">115</span><span id="line.115"></span>
+<span class="source-line-no">116</span><span id="line.116">}</span>
 
 
 

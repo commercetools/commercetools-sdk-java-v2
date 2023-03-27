@@ -199,123 +199,254 @@
 <span class="source-line-no">186</span><span id="line.186">    */</span>
 <span class="source-line-no">187</span><span id="line.187">    ChangeSubscriptionResourceTypeId ZONE = ChangeSubscriptionResourceTypeIdEnum.ZONE;</span>
 <span class="source-line-no">188</span><span id="line.188"></span>
-<span class="source-line-no">189</span><span id="line.189">    enum ChangeSubscriptionResourceTypeIdEnum implements ChangeSubscriptionResourceTypeId {</span>
-<span class="source-line-no">190</span><span id="line.190">        BUSINESS_UNIT("business-unit"),</span>
-<span class="source-line-no">191</span><span id="line.191"></span>
-<span class="source-line-no">192</span><span id="line.192">        CART("cart"),</span>
-<span class="source-line-no">193</span><span id="line.193"></span>
-<span class="source-line-no">194</span><span id="line.194">        CART_DISCOUNT("cart-discount"),</span>
-<span class="source-line-no">195</span><span id="line.195"></span>
-<span class="source-line-no">196</span><span id="line.196">        CATEGORY("category"),</span>
+<span class="source-line-no">189</span><span id="line.189">    /**</span>
+<span class="source-line-no">190</span><span id="line.190">     * possible values of ChangeSubscriptionResourceTypeId</span>
+<span class="source-line-no">191</span><span id="line.191">     */</span>
+<span class="source-line-no">192</span><span id="line.192">    enum ChangeSubscriptionResourceTypeIdEnum implements ChangeSubscriptionResourceTypeId {</span>
+<span class="source-line-no">193</span><span id="line.193">        /**</span>
+<span class="source-line-no">194</span><span id="line.194">         * business-unit</span>
+<span class="source-line-no">195</span><span id="line.195">         */</span>
+<span class="source-line-no">196</span><span id="line.196">        BUSINESS_UNIT("business-unit"),</span>
 <span class="source-line-no">197</span><span id="line.197"></span>
-<span class="source-line-no">198</span><span id="line.198">        CHANNEL("channel"),</span>
-<span class="source-line-no">199</span><span id="line.199"></span>
-<span class="source-line-no">200</span><span id="line.200">        CUSTOMER("customer"),</span>
-<span class="source-line-no">201</span><span id="line.201"></span>
-<span class="source-line-no">202</span><span id="line.202">        CUSTOMER_EMAIL_TOKEN("customer-email-token"),</span>
-<span class="source-line-no">203</span><span id="line.203"></span>
-<span class="source-line-no">204</span><span id="line.204">        CUSTOMER_GROUP("customer-group"),</span>
-<span class="source-line-no">205</span><span id="line.205"></span>
-<span class="source-line-no">206</span><span id="line.206">        CUSTOMER_PASSWORD_TOKEN("customer-password-token"),</span>
+<span class="source-line-no">198</span><span id="line.198">        /**</span>
+<span class="source-line-no">199</span><span id="line.199">         * cart</span>
+<span class="source-line-no">200</span><span id="line.200">         */</span>
+<span class="source-line-no">201</span><span id="line.201">        CART("cart"),</span>
+<span class="source-line-no">202</span><span id="line.202"></span>
+<span class="source-line-no">203</span><span id="line.203">        /**</span>
+<span class="source-line-no">204</span><span id="line.204">         * cart-discount</span>
+<span class="source-line-no">205</span><span id="line.205">         */</span>
+<span class="source-line-no">206</span><span id="line.206">        CART_DISCOUNT("cart-discount"),</span>
 <span class="source-line-no">207</span><span id="line.207"></span>
-<span class="source-line-no">208</span><span id="line.208">        DISCOUNT_CODE("discount-code"),</span>
-<span class="source-line-no">209</span><span id="line.209"></span>
-<span class="source-line-no">210</span><span id="line.210">        EXTENSION("extension"),</span>
-<span class="source-line-no">211</span><span id="line.211"></span>
-<span class="source-line-no">212</span><span id="line.212">        INVENTORY_ENTRY("inventory-entry"),</span>
-<span class="source-line-no">213</span><span id="line.213"></span>
-<span class="source-line-no">214</span><span id="line.214">        KEY_VALUE_DOCUMENT("key-value-document"),</span>
-<span class="source-line-no">215</span><span id="line.215"></span>
-<span class="source-line-no">216</span><span id="line.216">        ORDER("order"),</span>
+<span class="source-line-no">208</span><span id="line.208">        /**</span>
+<span class="source-line-no">209</span><span id="line.209">         * category</span>
+<span class="source-line-no">210</span><span id="line.210">         */</span>
+<span class="source-line-no">211</span><span id="line.211">        CATEGORY("category"),</span>
+<span class="source-line-no">212</span><span id="line.212"></span>
+<span class="source-line-no">213</span><span id="line.213">        /**</span>
+<span class="source-line-no">214</span><span id="line.214">         * channel</span>
+<span class="source-line-no">215</span><span id="line.215">         */</span>
+<span class="source-line-no">216</span><span id="line.216">        CHANNEL("channel"),</span>
 <span class="source-line-no">217</span><span id="line.217"></span>
-<span class="source-line-no">218</span><span id="line.218">        ORDER_EDIT("order-edit"),</span>
-<span class="source-line-no">219</span><span id="line.219"></span>
-<span class="source-line-no">220</span><span id="line.220">        PAYMENT("payment"),</span>
-<span class="source-line-no">221</span><span id="line.221"></span>
-<span class="source-line-no">222</span><span id="line.222">        PRODUCT("product"),</span>
-<span class="source-line-no">223</span><span id="line.223"></span>
-<span class="source-line-no">224</span><span id="line.224">        PRODUCT_DISCOUNT("product-discount"),</span>
-<span class="source-line-no">225</span><span id="line.225"></span>
-<span class="source-line-no">226</span><span id="line.226">        PRODUCT_PRICE("product-price"),</span>
+<span class="source-line-no">218</span><span id="line.218">        /**</span>
+<span class="source-line-no">219</span><span id="line.219">         * customer</span>
+<span class="source-line-no">220</span><span id="line.220">         */</span>
+<span class="source-line-no">221</span><span id="line.221">        CUSTOMER("customer"),</span>
+<span class="source-line-no">222</span><span id="line.222"></span>
+<span class="source-line-no">223</span><span id="line.223">        /**</span>
+<span class="source-line-no">224</span><span id="line.224">         * customer-email-token</span>
+<span class="source-line-no">225</span><span id="line.225">         */</span>
+<span class="source-line-no">226</span><span id="line.226">        CUSTOMER_EMAIL_TOKEN("customer-email-token"),</span>
 <span class="source-line-no">227</span><span id="line.227"></span>
-<span class="source-line-no">228</span><span id="line.228">        PRODUCT_SELECTION("product-selection"),</span>
-<span class="source-line-no">229</span><span id="line.229"></span>
-<span class="source-line-no">230</span><span id="line.230">        PRODUCT_TYPE("product-type"),</span>
-<span class="source-line-no">231</span><span id="line.231"></span>
-<span class="source-line-no">232</span><span id="line.232">        QUOTE("quote"),</span>
-<span class="source-line-no">233</span><span id="line.233"></span>
-<span class="source-line-no">234</span><span id="line.234">        QUOTE_REQUEST("quote-request"),</span>
-<span class="source-line-no">235</span><span id="line.235"></span>
-<span class="source-line-no">236</span><span id="line.236">        REVIEW("review"),</span>
+<span class="source-line-no">228</span><span id="line.228">        /**</span>
+<span class="source-line-no">229</span><span id="line.229">         * customer-group</span>
+<span class="source-line-no">230</span><span id="line.230">         */</span>
+<span class="source-line-no">231</span><span id="line.231">        CUSTOMER_GROUP("customer-group"),</span>
+<span class="source-line-no">232</span><span id="line.232"></span>
+<span class="source-line-no">233</span><span id="line.233">        /**</span>
+<span class="source-line-no">234</span><span id="line.234">         * customer-password-token</span>
+<span class="source-line-no">235</span><span id="line.235">         */</span>
+<span class="source-line-no">236</span><span id="line.236">        CUSTOMER_PASSWORD_TOKEN("customer-password-token"),</span>
 <span class="source-line-no">237</span><span id="line.237"></span>
-<span class="source-line-no">238</span><span id="line.238">        SHIPPING_METHOD("shipping-method"),</span>
-<span class="source-line-no">239</span><span id="line.239"></span>
-<span class="source-line-no">240</span><span id="line.240">        SHOPPING_LIST("shopping-list"),</span>
-<span class="source-line-no">241</span><span id="line.241"></span>
-<span class="source-line-no">242</span><span id="line.242">        STAGED_QUOTE("staged-quote"),</span>
-<span class="source-line-no">243</span><span id="line.243"></span>
-<span class="source-line-no">244</span><span id="line.244">        STANDALONE_PRICE("standalone-price"),</span>
-<span class="source-line-no">245</span><span id="line.245"></span>
-<span class="source-line-no">246</span><span id="line.246">        STATE("state"),</span>
+<span class="source-line-no">238</span><span id="line.238">        /**</span>
+<span class="source-line-no">239</span><span id="line.239">         * discount-code</span>
+<span class="source-line-no">240</span><span id="line.240">         */</span>
+<span class="source-line-no">241</span><span id="line.241">        DISCOUNT_CODE("discount-code"),</span>
+<span class="source-line-no">242</span><span id="line.242"></span>
+<span class="source-line-no">243</span><span id="line.243">        /**</span>
+<span class="source-line-no">244</span><span id="line.244">         * extension</span>
+<span class="source-line-no">245</span><span id="line.245">         */</span>
+<span class="source-line-no">246</span><span id="line.246">        EXTENSION("extension"),</span>
 <span class="source-line-no">247</span><span id="line.247"></span>
-<span class="source-line-no">248</span><span id="line.248">        STORE("store"),</span>
-<span class="source-line-no">249</span><span id="line.249"></span>
-<span class="source-line-no">250</span><span id="line.250">        SUBSCRIPTION("subscription"),</span>
-<span class="source-line-no">251</span><span id="line.251"></span>
-<span class="source-line-no">252</span><span id="line.252">        TAX_CATEGORY("tax-category"),</span>
-<span class="source-line-no">253</span><span id="line.253"></span>
-<span class="source-line-no">254</span><span id="line.254">        TYPE("type"),</span>
-<span class="source-line-no">255</span><span id="line.255"></span>
-<span class="source-line-no">256</span><span id="line.256">        ZONE("zone");</span>
-<span class="source-line-no">257</span><span id="line.257">        private final String jsonName;</span>
-<span class="source-line-no">258</span><span id="line.258"></span>
-<span class="source-line-no">259</span><span id="line.259">        private ChangeSubscriptionResourceTypeIdEnum(final String jsonName) {</span>
-<span class="source-line-no">260</span><span id="line.260">            this.jsonName = jsonName;</span>
-<span class="source-line-no">261</span><span id="line.261">        }</span>
+<span class="source-line-no">248</span><span id="line.248">        /**</span>
+<span class="source-line-no">249</span><span id="line.249">         * inventory-entry</span>
+<span class="source-line-no">250</span><span id="line.250">         */</span>
+<span class="source-line-no">251</span><span id="line.251">        INVENTORY_ENTRY("inventory-entry"),</span>
+<span class="source-line-no">252</span><span id="line.252"></span>
+<span class="source-line-no">253</span><span id="line.253">        /**</span>
+<span class="source-line-no">254</span><span id="line.254">         * key-value-document</span>
+<span class="source-line-no">255</span><span id="line.255">         */</span>
+<span class="source-line-no">256</span><span id="line.256">        KEY_VALUE_DOCUMENT("key-value-document"),</span>
+<span class="source-line-no">257</span><span id="line.257"></span>
+<span class="source-line-no">258</span><span id="line.258">        /**</span>
+<span class="source-line-no">259</span><span id="line.259">         * order</span>
+<span class="source-line-no">260</span><span id="line.260">         */</span>
+<span class="source-line-no">261</span><span id="line.261">        ORDER("order"),</span>
 <span class="source-line-no">262</span><span id="line.262"></span>
-<span class="source-line-no">263</span><span id="line.263">        public String getJsonName() {</span>
-<span class="source-line-no">264</span><span id="line.264">            return jsonName;</span>
-<span class="source-line-no">265</span><span id="line.265">        }</span>
-<span class="source-line-no">266</span><span id="line.266"></span>
-<span class="source-line-no">267</span><span id="line.267">        public String toString() {</span>
-<span class="source-line-no">268</span><span id="line.268">            return jsonName;</span>
-<span class="source-line-no">269</span><span id="line.269">        }</span>
-<span class="source-line-no">270</span><span id="line.270">    }</span>
-<span class="source-line-no">271</span><span id="line.271"></span>
-<span class="source-line-no">272</span><span id="line.272">    @JsonValue</span>
-<span class="source-line-no">273</span><span id="line.273">    String getJsonName();</span>
-<span class="source-line-no">274</span><span id="line.274"></span>
-<span class="source-line-no">275</span><span id="line.275">    String name();</span>
-<span class="source-line-no">276</span><span id="line.276"></span>
-<span class="source-line-no">277</span><span id="line.277">    String toString();</span>
-<span class="source-line-no">278</span><span id="line.278"></span>
-<span class="source-line-no">279</span><span id="line.279">    @JsonCreator</span>
-<span class="source-line-no">280</span><span id="line.280">    public static ChangeSubscriptionResourceTypeId findEnum(String value) {</span>
-<span class="source-line-no">281</span><span id="line.281">        return findEnumViaJsonName(value).orElse(new ChangeSubscriptionResourceTypeId() {</span>
-<span class="source-line-no">282</span><span id="line.282">            @Override</span>
-<span class="source-line-no">283</span><span id="line.283">            public String getJsonName() {</span>
-<span class="source-line-no">284</span><span id="line.284">                return value;</span>
-<span class="source-line-no">285</span><span id="line.285">            }</span>
-<span class="source-line-no">286</span><span id="line.286"></span>
-<span class="source-line-no">287</span><span id="line.287">            @Override</span>
-<span class="source-line-no">288</span><span id="line.288">            public String name() {</span>
-<span class="source-line-no">289</span><span id="line.289">                return value.toUpperCase();</span>
-<span class="source-line-no">290</span><span id="line.290">            }</span>
-<span class="source-line-no">291</span><span id="line.291"></span>
-<span class="source-line-no">292</span><span id="line.292">            public String toString() {</span>
-<span class="source-line-no">293</span><span id="line.293">                return value;</span>
-<span class="source-line-no">294</span><span id="line.294">            }</span>
-<span class="source-line-no">295</span><span id="line.295">        });</span>
-<span class="source-line-no">296</span><span id="line.296">    }</span>
+<span class="source-line-no">263</span><span id="line.263">        /**</span>
+<span class="source-line-no">264</span><span id="line.264">         * order-edit</span>
+<span class="source-line-no">265</span><span id="line.265">         */</span>
+<span class="source-line-no">266</span><span id="line.266">        ORDER_EDIT("order-edit"),</span>
+<span class="source-line-no">267</span><span id="line.267"></span>
+<span class="source-line-no">268</span><span id="line.268">        /**</span>
+<span class="source-line-no">269</span><span id="line.269">         * payment</span>
+<span class="source-line-no">270</span><span id="line.270">         */</span>
+<span class="source-line-no">271</span><span id="line.271">        PAYMENT("payment"),</span>
+<span class="source-line-no">272</span><span id="line.272"></span>
+<span class="source-line-no">273</span><span id="line.273">        /**</span>
+<span class="source-line-no">274</span><span id="line.274">         * product</span>
+<span class="source-line-no">275</span><span id="line.275">         */</span>
+<span class="source-line-no">276</span><span id="line.276">        PRODUCT("product"),</span>
+<span class="source-line-no">277</span><span id="line.277"></span>
+<span class="source-line-no">278</span><span id="line.278">        /**</span>
+<span class="source-line-no">279</span><span id="line.279">         * product-discount</span>
+<span class="source-line-no">280</span><span id="line.280">         */</span>
+<span class="source-line-no">281</span><span id="line.281">        PRODUCT_DISCOUNT("product-discount"),</span>
+<span class="source-line-no">282</span><span id="line.282"></span>
+<span class="source-line-no">283</span><span id="line.283">        /**</span>
+<span class="source-line-no">284</span><span id="line.284">         * product-price</span>
+<span class="source-line-no">285</span><span id="line.285">         */</span>
+<span class="source-line-no">286</span><span id="line.286">        PRODUCT_PRICE("product-price"),</span>
+<span class="source-line-no">287</span><span id="line.287"></span>
+<span class="source-line-no">288</span><span id="line.288">        /**</span>
+<span class="source-line-no">289</span><span id="line.289">         * product-selection</span>
+<span class="source-line-no">290</span><span id="line.290">         */</span>
+<span class="source-line-no">291</span><span id="line.291">        PRODUCT_SELECTION("product-selection"),</span>
+<span class="source-line-no">292</span><span id="line.292"></span>
+<span class="source-line-no">293</span><span id="line.293">        /**</span>
+<span class="source-line-no">294</span><span id="line.294">         * product-type</span>
+<span class="source-line-no">295</span><span id="line.295">         */</span>
+<span class="source-line-no">296</span><span id="line.296">        PRODUCT_TYPE("product-type"),</span>
 <span class="source-line-no">297</span><span id="line.297"></span>
-<span class="source-line-no">298</span><span id="line.298">    public static Optional&lt;ChangeSubscriptionResourceTypeId&gt; findEnumViaJsonName(String jsonName) {</span>
-<span class="source-line-no">299</span><span id="line.299">        return Arrays.stream(values()).filter(t -&gt; t.getJsonName().equals(jsonName)).findFirst();</span>
-<span class="source-line-no">300</span><span id="line.300">    }</span>
-<span class="source-line-no">301</span><span id="line.301"></span>
-<span class="source-line-no">302</span><span id="line.302">    public static ChangeSubscriptionResourceTypeId[] values() {</span>
-<span class="source-line-no">303</span><span id="line.303">        return ChangeSubscriptionResourceTypeIdEnum.values();</span>
-<span class="source-line-no">304</span><span id="line.304">    }</span>
-<span class="source-line-no">305</span><span id="line.305">}</span>
+<span class="source-line-no">298</span><span id="line.298">        /**</span>
+<span class="source-line-no">299</span><span id="line.299">         * quote</span>
+<span class="source-line-no">300</span><span id="line.300">         */</span>
+<span class="source-line-no">301</span><span id="line.301">        QUOTE("quote"),</span>
+<span class="source-line-no">302</span><span id="line.302"></span>
+<span class="source-line-no">303</span><span id="line.303">        /**</span>
+<span class="source-line-no">304</span><span id="line.304">         * quote-request</span>
+<span class="source-line-no">305</span><span id="line.305">         */</span>
+<span class="source-line-no">306</span><span id="line.306">        QUOTE_REQUEST("quote-request"),</span>
+<span class="source-line-no">307</span><span id="line.307"></span>
+<span class="source-line-no">308</span><span id="line.308">        /**</span>
+<span class="source-line-no">309</span><span id="line.309">         * review</span>
+<span class="source-line-no">310</span><span id="line.310">         */</span>
+<span class="source-line-no">311</span><span id="line.311">        REVIEW("review"),</span>
+<span class="source-line-no">312</span><span id="line.312"></span>
+<span class="source-line-no">313</span><span id="line.313">        /**</span>
+<span class="source-line-no">314</span><span id="line.314">         * shipping-method</span>
+<span class="source-line-no">315</span><span id="line.315">         */</span>
+<span class="source-line-no">316</span><span id="line.316">        SHIPPING_METHOD("shipping-method"),</span>
+<span class="source-line-no">317</span><span id="line.317"></span>
+<span class="source-line-no">318</span><span id="line.318">        /**</span>
+<span class="source-line-no">319</span><span id="line.319">         * shopping-list</span>
+<span class="source-line-no">320</span><span id="line.320">         */</span>
+<span class="source-line-no">321</span><span id="line.321">        SHOPPING_LIST("shopping-list"),</span>
+<span class="source-line-no">322</span><span id="line.322"></span>
+<span class="source-line-no">323</span><span id="line.323">        /**</span>
+<span class="source-line-no">324</span><span id="line.324">         * staged-quote</span>
+<span class="source-line-no">325</span><span id="line.325">         */</span>
+<span class="source-line-no">326</span><span id="line.326">        STAGED_QUOTE("staged-quote"),</span>
+<span class="source-line-no">327</span><span id="line.327"></span>
+<span class="source-line-no">328</span><span id="line.328">        /**</span>
+<span class="source-line-no">329</span><span id="line.329">         * standalone-price</span>
+<span class="source-line-no">330</span><span id="line.330">         */</span>
+<span class="source-line-no">331</span><span id="line.331">        STANDALONE_PRICE("standalone-price"),</span>
+<span class="source-line-no">332</span><span id="line.332"></span>
+<span class="source-line-no">333</span><span id="line.333">        /**</span>
+<span class="source-line-no">334</span><span id="line.334">         * state</span>
+<span class="source-line-no">335</span><span id="line.335">         */</span>
+<span class="source-line-no">336</span><span id="line.336">        STATE("state"),</span>
+<span class="source-line-no">337</span><span id="line.337"></span>
+<span class="source-line-no">338</span><span id="line.338">        /**</span>
+<span class="source-line-no">339</span><span id="line.339">         * store</span>
+<span class="source-line-no">340</span><span id="line.340">         */</span>
+<span class="source-line-no">341</span><span id="line.341">        STORE("store"),</span>
+<span class="source-line-no">342</span><span id="line.342"></span>
+<span class="source-line-no">343</span><span id="line.343">        /**</span>
+<span class="source-line-no">344</span><span id="line.344">         * subscription</span>
+<span class="source-line-no">345</span><span id="line.345">         */</span>
+<span class="source-line-no">346</span><span id="line.346">        SUBSCRIPTION("subscription"),</span>
+<span class="source-line-no">347</span><span id="line.347"></span>
+<span class="source-line-no">348</span><span id="line.348">        /**</span>
+<span class="source-line-no">349</span><span id="line.349">         * tax-category</span>
+<span class="source-line-no">350</span><span id="line.350">         */</span>
+<span class="source-line-no">351</span><span id="line.351">        TAX_CATEGORY("tax-category"),</span>
+<span class="source-line-no">352</span><span id="line.352"></span>
+<span class="source-line-no">353</span><span id="line.353">        /**</span>
+<span class="source-line-no">354</span><span id="line.354">         * type</span>
+<span class="source-line-no">355</span><span id="line.355">         */</span>
+<span class="source-line-no">356</span><span id="line.356">        TYPE("type"),</span>
+<span class="source-line-no">357</span><span id="line.357"></span>
+<span class="source-line-no">358</span><span id="line.358">        /**</span>
+<span class="source-line-no">359</span><span id="line.359">         * zone</span>
+<span class="source-line-no">360</span><span id="line.360">         */</span>
+<span class="source-line-no">361</span><span id="line.361">        ZONE("zone");</span>
+<span class="source-line-no">362</span><span id="line.362">        private final String jsonName;</span>
+<span class="source-line-no">363</span><span id="line.363"></span>
+<span class="source-line-no">364</span><span id="line.364">        private ChangeSubscriptionResourceTypeIdEnum(final String jsonName) {</span>
+<span class="source-line-no">365</span><span id="line.365">            this.jsonName = jsonName;</span>
+<span class="source-line-no">366</span><span id="line.366">        }</span>
+<span class="source-line-no">367</span><span id="line.367"></span>
+<span class="source-line-no">368</span><span id="line.368">        public String getJsonName() {</span>
+<span class="source-line-no">369</span><span id="line.369">            return jsonName;</span>
+<span class="source-line-no">370</span><span id="line.370">        }</span>
+<span class="source-line-no">371</span><span id="line.371"></span>
+<span class="source-line-no">372</span><span id="line.372">        public String toString() {</span>
+<span class="source-line-no">373</span><span id="line.373">            return jsonName;</span>
+<span class="source-line-no">374</span><span id="line.374">        }</span>
+<span class="source-line-no">375</span><span id="line.375">    }</span>
+<span class="source-line-no">376</span><span id="line.376"></span>
+<span class="source-line-no">377</span><span id="line.377">    /**</span>
+<span class="source-line-no">378</span><span id="line.378">     * the JSON value</span>
+<span class="source-line-no">379</span><span id="line.379">     * @return json value</span>
+<span class="source-line-no">380</span><span id="line.380">     */</span>
+<span class="source-line-no">381</span><span id="line.381">    @JsonValue</span>
+<span class="source-line-no">382</span><span id="line.382">    String getJsonName();</span>
+<span class="source-line-no">383</span><span id="line.383"></span>
+<span class="source-line-no">384</span><span id="line.384">    /**</span>
+<span class="source-line-no">385</span><span id="line.385">     * the enum value</span>
+<span class="source-line-no">386</span><span id="line.386">     * @return name</span>
+<span class="source-line-no">387</span><span id="line.387">     */</span>
+<span class="source-line-no">388</span><span id="line.388">    String name();</span>
+<span class="source-line-no">389</span><span id="line.389"></span>
+<span class="source-line-no">390</span><span id="line.390">    /**</span>
+<span class="source-line-no">391</span><span id="line.391">     * convert value to string</span>
+<span class="source-line-no">392</span><span id="line.392">     * @return string representation</span>
+<span class="source-line-no">393</span><span id="line.393">     */</span>
+<span class="source-line-no">394</span><span id="line.394">    String toString();</span>
+<span class="source-line-no">395</span><span id="line.395"></span>
+<span class="source-line-no">396</span><span id="line.396">    /**</span>
+<span class="source-line-no">397</span><span id="line.397">     * factory method for a enum value of ChangeSubscriptionResourceTypeId</span>
+<span class="source-line-no">398</span><span id="line.398">     * if no enum has been found an anonymous instance will be created</span>
+<span class="source-line-no">399</span><span id="line.399">     * @return enum instance</span>
+<span class="source-line-no">400</span><span id="line.400">     */</span>
+<span class="source-line-no">401</span><span id="line.401">    @JsonCreator</span>
+<span class="source-line-no">402</span><span id="line.402">    public static ChangeSubscriptionResourceTypeId findEnum(String value) {</span>
+<span class="source-line-no">403</span><span id="line.403">        return findEnumViaJsonName(value).orElse(new ChangeSubscriptionResourceTypeId() {</span>
+<span class="source-line-no">404</span><span id="line.404">            @Override</span>
+<span class="source-line-no">405</span><span id="line.405">            public String getJsonName() {</span>
+<span class="source-line-no">406</span><span id="line.406">                return value;</span>
+<span class="source-line-no">407</span><span id="line.407">            }</span>
+<span class="source-line-no">408</span><span id="line.408"></span>
+<span class="source-line-no">409</span><span id="line.409">            @Override</span>
+<span class="source-line-no">410</span><span id="line.410">            public String name() {</span>
+<span class="source-line-no">411</span><span id="line.411">                return value.toUpperCase();</span>
+<span class="source-line-no">412</span><span id="line.412">            }</span>
+<span class="source-line-no">413</span><span id="line.413"></span>
+<span class="source-line-no">414</span><span id="line.414">            public String toString() {</span>
+<span class="source-line-no">415</span><span id="line.415">                return value;</span>
+<span class="source-line-no">416</span><span id="line.416">            }</span>
+<span class="source-line-no">417</span><span id="line.417">        });</span>
+<span class="source-line-no">418</span><span id="line.418">    }</span>
+<span class="source-line-no">419</span><span id="line.419"></span>
+<span class="source-line-no">420</span><span id="line.420">    /**</span>
+<span class="source-line-no">421</span><span id="line.421">     * method to find enum using the JSON value</span>
+<span class="source-line-no">422</span><span id="line.422">     * @return optional of enum instance</span>
+<span class="source-line-no">423</span><span id="line.423">     */</span>
+<span class="source-line-no">424</span><span id="line.424">    public static Optional&lt;ChangeSubscriptionResourceTypeId&gt; findEnumViaJsonName(String jsonName) {</span>
+<span class="source-line-no">425</span><span id="line.425">        return Arrays.stream(values()).filter(t -&gt; t.getJsonName().equals(jsonName)).findFirst();</span>
+<span class="source-line-no">426</span><span id="line.426">    }</span>
+<span class="source-line-no">427</span><span id="line.427"></span>
+<span class="source-line-no">428</span><span id="line.428">    /**</span>
+<span class="source-line-no">429</span><span id="line.429">     * possible enum values</span>
+<span class="source-line-no">430</span><span id="line.430">     * @return array of possible enum values</span>
+<span class="source-line-no">431</span><span id="line.431">     */</span>
+<span class="source-line-no">432</span><span id="line.432">    public static ChangeSubscriptionResourceTypeId[] values() {</span>
+<span class="source-line-no">433</span><span id="line.433">        return ChangeSubscriptionResourceTypeIdEnum.values();</span>
+<span class="source-line-no">434</span><span id="line.434">    }</span>
+<span class="source-line-no">435</span><span id="line.435"></span>
+<span class="source-line-no">436</span><span id="line.436">}</span>
 
 
 

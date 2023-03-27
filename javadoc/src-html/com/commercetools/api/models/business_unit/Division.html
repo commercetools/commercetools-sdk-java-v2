@@ -54,78 +54,121 @@
 <span class="source-line-no">041</span><span id="line.41">@JsonDeserialize(as = DivisionImpl.class)</span>
 <span class="source-line-no">042</span><span id="line.42">public interface Division extends BusinessUnit {</span>
 <span class="source-line-no">043</span><span id="line.43"></span>
-<span class="source-line-no">044</span><span id="line.44">    String DIVISION = "Division";</span>
-<span class="source-line-no">045</span><span id="line.45"></span>
-<span class="source-line-no">046</span><span id="line.46">    /**</span>
-<span class="source-line-no">047</span><span id="line.47">     *  &lt;p&gt;Parent unit of the Division.&lt;/p&gt;</span>
-<span class="source-line-no">048</span><span id="line.48">     */</span>
-<span class="source-line-no">049</span><span id="line.49">    @NotNull</span>
-<span class="source-line-no">050</span><span id="line.50">    @Valid</span>
-<span class="source-line-no">051</span><span id="line.51">    @JsonProperty("parentUnit")</span>
-<span class="source-line-no">052</span><span id="line.52">    public BusinessUnitKeyReference getParentUnit();</span>
-<span class="source-line-no">053</span><span id="line.53"></span>
-<span class="source-line-no">054</span><span id="line.54">    /**</span>
-<span class="source-line-no">055</span><span id="line.55">     *  &lt;p&gt;Defines whether the Stores of the Division are set explicitly or inherited from a parent Business Unit.&lt;/p&gt;</span>
-<span class="source-line-no">056</span><span id="line.56">     */</span>
-<span class="source-line-no">057</span><span id="line.57">    @NotNull</span>
-<span class="source-line-no">058</span><span id="line.58">    @JsonProperty("storeMode")</span>
-<span class="source-line-no">059</span><span id="line.59">    public BusinessUnitStoreMode getStoreMode();</span>
-<span class="source-line-no">060</span><span id="line.60"></span>
-<span class="source-line-no">061</span><span id="line.61">    public void setParentUnit(final BusinessUnitKeyReference parentUnit);</span>
-<span class="source-line-no">062</span><span id="line.62"></span>
-<span class="source-line-no">063</span><span id="line.63">    public void setStoreMode(final BusinessUnitStoreMode storeMode);</span>
-<span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">    public static Division of() {</span>
-<span class="source-line-no">066</span><span id="line.66">        return new DivisionImpl();</span>
-<span class="source-line-no">067</span><span id="line.67">    }</span>
-<span class="source-line-no">068</span><span id="line.68"></span>
-<span class="source-line-no">069</span><span id="line.69">    public static Division of(final Division template) {</span>
-<span class="source-line-no">070</span><span id="line.70">        DivisionImpl instance = new DivisionImpl();</span>
-<span class="source-line-no">071</span><span id="line.71">        instance.setId(template.getId());</span>
-<span class="source-line-no">072</span><span id="line.72">        instance.setVersion(template.getVersion());</span>
-<span class="source-line-no">073</span><span id="line.73">        instance.setCreatedAt(template.getCreatedAt());</span>
-<span class="source-line-no">074</span><span id="line.74">        instance.setLastModifiedAt(template.getLastModifiedAt());</span>
-<span class="source-line-no">075</span><span id="line.75">        instance.setLastModifiedBy(template.getLastModifiedBy());</span>
-<span class="source-line-no">076</span><span id="line.76">        instance.setCreatedBy(template.getCreatedBy());</span>
-<span class="source-line-no">077</span><span id="line.77">        instance.setKey(template.getKey());</span>
-<span class="source-line-no">078</span><span id="line.78">        instance.setStatus(template.getStatus());</span>
-<span class="source-line-no">079</span><span id="line.79">        instance.setStores(template.getStores());</span>
-<span class="source-line-no">080</span><span id="line.80">        instance.setStoreMode(template.getStoreMode());</span>
-<span class="source-line-no">081</span><span id="line.81">        instance.setName(template.getName());</span>
-<span class="source-line-no">082</span><span id="line.82">        instance.setContactEmail(template.getContactEmail());</span>
-<span class="source-line-no">083</span><span id="line.83">        instance.setCustom(template.getCustom());</span>
-<span class="source-line-no">084</span><span id="line.84">        instance.setAddresses(template.getAddresses());</span>
-<span class="source-line-no">085</span><span id="line.85">        instance.setShippingAddressIds(template.getShippingAddressIds());</span>
-<span class="source-line-no">086</span><span id="line.86">        instance.setDefaultShippingAddressId(template.getDefaultShippingAddressId());</span>
-<span class="source-line-no">087</span><span id="line.87">        instance.setBillingAddressIds(template.getBillingAddressIds());</span>
-<span class="source-line-no">088</span><span id="line.88">        instance.setDefaultBillingAddressId(template.getDefaultBillingAddressId());</span>
-<span class="source-line-no">089</span><span id="line.89">        instance.setAssociates(template.getAssociates());</span>
-<span class="source-line-no">090</span><span id="line.90">        instance.setParentUnit(template.getParentUnit());</span>
-<span class="source-line-no">091</span><span id="line.91">        instance.setTopLevelUnit(template.getTopLevelUnit());</span>
-<span class="source-line-no">092</span><span id="line.92">        return instance;</span>
-<span class="source-line-no">093</span><span id="line.93">    }</span>
-<span class="source-line-no">094</span><span id="line.94"></span>
-<span class="source-line-no">095</span><span id="line.95">    public static DivisionBuilder builder() {</span>
-<span class="source-line-no">096</span><span id="line.96">        return DivisionBuilder.of();</span>
-<span class="source-line-no">097</span><span id="line.97">    }</span>
-<span class="source-line-no">098</span><span id="line.98"></span>
-<span class="source-line-no">099</span><span id="line.99">    public static DivisionBuilder builder(final Division template) {</span>
-<span class="source-line-no">100</span><span id="line.100">        return DivisionBuilder.of(template);</span>
-<span class="source-line-no">101</span><span id="line.101">    }</span>
-<span class="source-line-no">102</span><span id="line.102"></span>
-<span class="source-line-no">103</span><span id="line.103">    default &lt;T&gt; T withDivision(Function&lt;Division, T&gt; helper) {</span>
-<span class="source-line-no">104</span><span id="line.104">        return helper.apply(this);</span>
-<span class="source-line-no">105</span><span id="line.105">    }</span>
-<span class="source-line-no">106</span><span id="line.106"></span>
-<span class="source-line-no">107</span><span id="line.107">    public static com.fasterxml.jackson.core.type.TypeReference&lt;Division&gt; typeReference() {</span>
-<span class="source-line-no">108</span><span id="line.108">        return new com.fasterxml.jackson.core.type.TypeReference&lt;Division&gt;() {</span>
-<span class="source-line-no">109</span><span id="line.109">            @Override</span>
-<span class="source-line-no">110</span><span id="line.110">            public String toString() {</span>
-<span class="source-line-no">111</span><span id="line.111">                return "TypeReference&lt;Division&gt;";</span>
-<span class="source-line-no">112</span><span id="line.112">            }</span>
-<span class="source-line-no">113</span><span id="line.113">        };</span>
-<span class="source-line-no">114</span><span id="line.114">    }</span>
-<span class="source-line-no">115</span><span id="line.115">}</span>
+<span class="source-line-no">044</span><span id="line.44">    /**</span>
+<span class="source-line-no">045</span><span id="line.45">     * discriminator value for Division</span>
+<span class="source-line-no">046</span><span id="line.46">     */</span>
+<span class="source-line-no">047</span><span id="line.47">    String DIVISION = "Division";</span>
+<span class="source-line-no">048</span><span id="line.48"></span>
+<span class="source-line-no">049</span><span id="line.49">    /**</span>
+<span class="source-line-no">050</span><span id="line.50">     *  &lt;p&gt;Parent unit of the Division.&lt;/p&gt;</span>
+<span class="source-line-no">051</span><span id="line.51">     * @return parentUnit</span>
+<span class="source-line-no">052</span><span id="line.52">     */</span>
+<span class="source-line-no">053</span><span id="line.53">    @NotNull</span>
+<span class="source-line-no">054</span><span id="line.54">    @Valid</span>
+<span class="source-line-no">055</span><span id="line.55">    @JsonProperty("parentUnit")</span>
+<span class="source-line-no">056</span><span id="line.56">    public BusinessUnitKeyReference getParentUnit();</span>
+<span class="source-line-no">057</span><span id="line.57"></span>
+<span class="source-line-no">058</span><span id="line.58">    /**</span>
+<span class="source-line-no">059</span><span id="line.59">     *  &lt;p&gt;Defines whether the Stores of the Division are set explicitly or inherited from a parent Business Unit.&lt;/p&gt;</span>
+<span class="source-line-no">060</span><span id="line.60">     * @return storeMode</span>
+<span class="source-line-no">061</span><span id="line.61">     */</span>
+<span class="source-line-no">062</span><span id="line.62">    @NotNull</span>
+<span class="source-line-no">063</span><span id="line.63">    @JsonProperty("storeMode")</span>
+<span class="source-line-no">064</span><span id="line.64">    public BusinessUnitStoreMode getStoreMode();</span>
+<span class="source-line-no">065</span><span id="line.65"></span>
+<span class="source-line-no">066</span><span id="line.66">    /**</span>
+<span class="source-line-no">067</span><span id="line.67">     *  &lt;p&gt;Parent unit of the Division.&lt;/p&gt;</span>
+<span class="source-line-no">068</span><span id="line.68">     * @param parentUnit value to be set</span>
+<span class="source-line-no">069</span><span id="line.69">     */</span>
+<span class="source-line-no">070</span><span id="line.70"></span>
+<span class="source-line-no">071</span><span id="line.71">    public void setParentUnit(final BusinessUnitKeyReference parentUnit);</span>
+<span class="source-line-no">072</span><span id="line.72"></span>
+<span class="source-line-no">073</span><span id="line.73">    /**</span>
+<span class="source-line-no">074</span><span id="line.74">     *  &lt;p&gt;Defines whether the Stores of the Division are set explicitly or inherited from a parent Business Unit.&lt;/p&gt;</span>
+<span class="source-line-no">075</span><span id="line.75">     * @param storeMode value to be set</span>
+<span class="source-line-no">076</span><span id="line.76">     */</span>
+<span class="source-line-no">077</span><span id="line.77"></span>
+<span class="source-line-no">078</span><span id="line.78">    public void setStoreMode(final BusinessUnitStoreMode storeMode);</span>
+<span class="source-line-no">079</span><span id="line.79"></span>
+<span class="source-line-no">080</span><span id="line.80">    /**</span>
+<span class="source-line-no">081</span><span id="line.81">     * factory method</span>
+<span class="source-line-no">082</span><span id="line.82">     * @return instance of Division</span>
+<span class="source-line-no">083</span><span id="line.83">     */</span>
+<span class="source-line-no">084</span><span id="line.84">    public static Division of() {</span>
+<span class="source-line-no">085</span><span id="line.85">        return new DivisionImpl();</span>
+<span class="source-line-no">086</span><span id="line.86">    }</span>
+<span class="source-line-no">087</span><span id="line.87"></span>
+<span class="source-line-no">088</span><span id="line.88">    /**</span>
+<span class="source-line-no">089</span><span id="line.89">     * factory method to copy an instance of Division</span>
+<span class="source-line-no">090</span><span id="line.90">     * @param template instance to be copied</span>
+<span class="source-line-no">091</span><span id="line.91">     * @return copy instance</span>
+<span class="source-line-no">092</span><span id="line.92">     */</span>
+<span class="source-line-no">093</span><span id="line.93">    public static Division of(final Division template) {</span>
+<span class="source-line-no">094</span><span id="line.94">        DivisionImpl instance = new DivisionImpl();</span>
+<span class="source-line-no">095</span><span id="line.95">        instance.setId(template.getId());</span>
+<span class="source-line-no">096</span><span id="line.96">        instance.setVersion(template.getVersion());</span>
+<span class="source-line-no">097</span><span id="line.97">        instance.setCreatedAt(template.getCreatedAt());</span>
+<span class="source-line-no">098</span><span id="line.98">        instance.setLastModifiedAt(template.getLastModifiedAt());</span>
+<span class="source-line-no">099</span><span id="line.99">        instance.setLastModifiedBy(template.getLastModifiedBy());</span>
+<span class="source-line-no">100</span><span id="line.100">        instance.setCreatedBy(template.getCreatedBy());</span>
+<span class="source-line-no">101</span><span id="line.101">        instance.setKey(template.getKey());</span>
+<span class="source-line-no">102</span><span id="line.102">        instance.setStatus(template.getStatus());</span>
+<span class="source-line-no">103</span><span id="line.103">        instance.setStores(template.getStores());</span>
+<span class="source-line-no">104</span><span id="line.104">        instance.setStoreMode(template.getStoreMode());</span>
+<span class="source-line-no">105</span><span id="line.105">        instance.setName(template.getName());</span>
+<span class="source-line-no">106</span><span id="line.106">        instance.setContactEmail(template.getContactEmail());</span>
+<span class="source-line-no">107</span><span id="line.107">        instance.setCustom(template.getCustom());</span>
+<span class="source-line-no">108</span><span id="line.108">        instance.setAddresses(template.getAddresses());</span>
+<span class="source-line-no">109</span><span id="line.109">        instance.setShippingAddressIds(template.getShippingAddressIds());</span>
+<span class="source-line-no">110</span><span id="line.110">        instance.setDefaultShippingAddressId(template.getDefaultShippingAddressId());</span>
+<span class="source-line-no">111</span><span id="line.111">        instance.setBillingAddressIds(template.getBillingAddressIds());</span>
+<span class="source-line-no">112</span><span id="line.112">        instance.setDefaultBillingAddressId(template.getDefaultBillingAddressId());</span>
+<span class="source-line-no">113</span><span id="line.113">        instance.setAssociates(template.getAssociates());</span>
+<span class="source-line-no">114</span><span id="line.114">        instance.setParentUnit(template.getParentUnit());</span>
+<span class="source-line-no">115</span><span id="line.115">        instance.setTopLevelUnit(template.getTopLevelUnit());</span>
+<span class="source-line-no">116</span><span id="line.116">        return instance;</span>
+<span class="source-line-no">117</span><span id="line.117">    }</span>
+<span class="source-line-no">118</span><span id="line.118"></span>
+<span class="source-line-no">119</span><span id="line.119">    /**</span>
+<span class="source-line-no">120</span><span id="line.120">     * builder factory method for Division</span>
+<span class="source-line-no">121</span><span id="line.121">     * @return builder</span>
+<span class="source-line-no">122</span><span id="line.122">     */</span>
+<span class="source-line-no">123</span><span id="line.123">    public static DivisionBuilder builder() {</span>
+<span class="source-line-no">124</span><span id="line.124">        return DivisionBuilder.of();</span>
+<span class="source-line-no">125</span><span id="line.125">    }</span>
+<span class="source-line-no">126</span><span id="line.126"></span>
+<span class="source-line-no">127</span><span id="line.127">    /**</span>
+<span class="source-line-no">128</span><span id="line.128">     * create builder for Division instance</span>
+<span class="source-line-no">129</span><span id="line.129">     * @param template instance with prefilled values for the builder</span>
+<span class="source-line-no">130</span><span id="line.130">     * @return builder</span>
+<span class="source-line-no">131</span><span id="line.131">     */</span>
+<span class="source-line-no">132</span><span id="line.132">    public static DivisionBuilder builder(final Division template) {</span>
+<span class="source-line-no">133</span><span id="line.133">        return DivisionBuilder.of(template);</span>
+<span class="source-line-no">134</span><span id="line.134">    }</span>
+<span class="source-line-no">135</span><span id="line.135"></span>
+<span class="source-line-no">136</span><span id="line.136">    /**</span>
+<span class="source-line-no">137</span><span id="line.137">     * accessor map function</span>
+<span class="source-line-no">138</span><span id="line.138">     * @param &lt;T&gt; mapped type</span>
+<span class="source-line-no">139</span><span id="line.139">     * @param helper function to map the object</span>
+<span class="source-line-no">140</span><span id="line.140">     * @return mapped value</span>
+<span class="source-line-no">141</span><span id="line.141">     */</span>
+<span class="source-line-no">142</span><span id="line.142">    default &lt;T&gt; T withDivision(Function&lt;Division, T&gt; helper) {</span>
+<span class="source-line-no">143</span><span id="line.143">        return helper.apply(this);</span>
+<span class="source-line-no">144</span><span id="line.144">    }</span>
+<span class="source-line-no">145</span><span id="line.145"></span>
+<span class="source-line-no">146</span><span id="line.146">    /**</span>
+<span class="source-line-no">147</span><span id="line.147">     * gives a TypeReference for usage with Jackson DataBind</span>
+<span class="source-line-no">148</span><span id="line.148">     * @return TypeReference</span>
+<span class="source-line-no">149</span><span id="line.149">     */</span>
+<span class="source-line-no">150</span><span id="line.150">    public static com.fasterxml.jackson.core.type.TypeReference&lt;Division&gt; typeReference() {</span>
+<span class="source-line-no">151</span><span id="line.151">        return new com.fasterxml.jackson.core.type.TypeReference&lt;Division&gt;() {</span>
+<span class="source-line-no">152</span><span id="line.152">            @Override</span>
+<span class="source-line-no">153</span><span id="line.153">            public String toString() {</span>
+<span class="source-line-no">154</span><span id="line.154">                return "TypeReference&lt;Division&gt;";</span>
+<span class="source-line-no">155</span><span id="line.155">            }</span>
+<span class="source-line-no">156</span><span id="line.156">        };</span>
+<span class="source-line-no">157</span><span id="line.157">    }</span>
+<span class="source-line-no">158</span><span id="line.158">}</span>
 
 
 

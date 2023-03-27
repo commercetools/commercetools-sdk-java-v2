@@ -87,6 +87,7 @@ com.commercetools.ml.models.image_search
 com.commercetools.ml.models.image_search_config
 com.commercetools.ml.models.similar_products
 com.commercetools.money
+com.commercetools.monitoring.newrelic
 io.sphere.sdk.client
 io.vrap.rmf.base.client
 io.vrap.rmf.base.client.error

@@ -37,84 +37,111 @@
 <span class="source-line-no">024</span><span id="line.24"></span>
 <span class="source-line-no">025</span><span id="line.25">    private com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection;</span>
 <span class="source-line-no">026</span><span id="line.26"></span>
-<span class="source-line-no">027</span><span id="line.27">    private java.time.ZonedDateTime createdAt;</span>
+<span class="source-line-no">027</span><span id="line.27">    private com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion;</span>
 <span class="source-line-no">028</span><span id="line.28"></span>
-<span class="source-line-no">029</span><span id="line.29">    @JsonCreator</span>
-<span class="source-line-no">030</span><span id="line.30">    AssignedProductSelectionImpl(</span>
-<span class="source-line-no">031</span><span id="line.31">            @JsonProperty("productSelection") final com.commercetools.api.models.product_selection.ProductSelectionReference productSelection,</span>
-<span class="source-line-no">032</span><span id="line.32">            @JsonProperty("variantSelection") final com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection,</span>
-<span class="source-line-no">033</span><span id="line.33">            @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt) {</span>
-<span class="source-line-no">034</span><span id="line.34">        this.productSelection = productSelection;</span>
-<span class="source-line-no">035</span><span id="line.35">        this.variantSelection = variantSelection;</span>
-<span class="source-line-no">036</span><span id="line.36">        this.createdAt = createdAt;</span>
-<span class="source-line-no">037</span><span id="line.37">    }</span>
-<span class="source-line-no">038</span><span id="line.38"></span>
-<span class="source-line-no">039</span><span id="line.39">    public AssignedProductSelectionImpl() {</span>
-<span class="source-line-no">040</span><span id="line.40">    }</span>
-<span class="source-line-no">041</span><span id="line.41"></span>
-<span class="source-line-no">042</span><span id="line.42">    /**</span>
-<span class="source-line-no">043</span><span id="line.43">     *  &lt;p&gt;Reference to the Product Selection that this assignment is part of.&lt;/p&gt;</span>
-<span class="source-line-no">044</span><span id="line.44">     */</span>
+<span class="source-line-no">029</span><span id="line.29">    private java.time.ZonedDateTime createdAt;</span>
+<span class="source-line-no">030</span><span id="line.30"></span>
+<span class="source-line-no">031</span><span id="line.31">    /**</span>
+<span class="source-line-no">032</span><span id="line.32">     * create instance with all properties</span>
+<span class="source-line-no">033</span><span id="line.33">     */</span>
+<span class="source-line-no">034</span><span id="line.34">    @JsonCreator</span>
+<span class="source-line-no">035</span><span id="line.35">    AssignedProductSelectionImpl(</span>
+<span class="source-line-no">036</span><span id="line.36">            @JsonProperty("productSelection") final com.commercetools.api.models.product_selection.ProductSelectionReference productSelection,</span>
+<span class="source-line-no">037</span><span id="line.37">            @JsonProperty("variantSelection") final com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection,</span>
+<span class="source-line-no">038</span><span id="line.38">            @JsonProperty("variantExclusion") final com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion,</span>
+<span class="source-line-no">039</span><span id="line.39">            @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt) {</span>
+<span class="source-line-no">040</span><span id="line.40">        this.productSelection = productSelection;</span>
+<span class="source-line-no">041</span><span id="line.41">        this.variantSelection = variantSelection;</span>
+<span class="source-line-no">042</span><span id="line.42">        this.variantExclusion = variantExclusion;</span>
+<span class="source-line-no">043</span><span id="line.43">        this.createdAt = createdAt;</span>
+<span class="source-line-no">044</span><span id="line.44">    }</span>
 <span class="source-line-no">045</span><span id="line.45"></span>
-<span class="source-line-no">046</span><span id="line.46">    public com.commercetools.api.models.product_selection.ProductSelectionReference getProductSelection() {</span>
-<span class="source-line-no">047</span><span id="line.47">        return this.productSelection;</span>
-<span class="source-line-no">048</span><span id="line.48">    }</span>
-<span class="source-line-no">049</span><span id="line.49"></span>
-<span class="source-line-no">050</span><span id="line.50">    /**</span>
-<span class="source-line-no">051</span><span id="line.51">     *  &lt;p&gt;Selects which Variants of the newly added Product will be included, or excluded, from the Product Selection.&lt;/p&gt;</span>
-<span class="source-line-no">052</span><span id="line.52">     */</span>
-<span class="source-line-no">053</span><span id="line.53"></span>
-<span class="source-line-no">054</span><span id="line.54">    public com.commercetools.api.models.product_selection.ProductVariantSelection getVariantSelection() {</span>
-<span class="source-line-no">055</span><span id="line.55">        return this.variantSelection;</span>
-<span class="source-line-no">056</span><span id="line.56">    }</span>
-<span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    /**</span>
-<span class="source-line-no">059</span><span id="line.59">     *  &lt;p&gt;Date and time (UTC) this assignment was initially created.&lt;/p&gt;</span>
-<span class="source-line-no">060</span><span id="line.60">     */</span>
-<span class="source-line-no">061</span><span id="line.61"></span>
-<span class="source-line-no">062</span><span id="line.62">    public java.time.ZonedDateTime getCreatedAt() {</span>
-<span class="source-line-no">063</span><span id="line.63">        return this.createdAt;</span>
-<span class="source-line-no">064</span><span id="line.64">    }</span>
-<span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    public void setProductSelection(</span>
-<span class="source-line-no">067</span><span id="line.67">            final com.commercetools.api.models.product_selection.ProductSelectionReference productSelection) {</span>
-<span class="source-line-no">068</span><span id="line.68">        this.productSelection = productSelection;</span>
-<span class="source-line-no">069</span><span id="line.69">    }</span>
-<span class="source-line-no">070</span><span id="line.70"></span>
-<span class="source-line-no">071</span><span id="line.71">    public void setVariantSelection(</span>
-<span class="source-line-no">072</span><span id="line.72">            final com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection) {</span>
-<span class="source-line-no">073</span><span id="line.73">        this.variantSelection = variantSelection;</span>
-<span class="source-line-no">074</span><span id="line.74">    }</span>
-<span class="source-line-no">075</span><span id="line.75"></span>
-<span class="source-line-no">076</span><span id="line.76">    public void setCreatedAt(final java.time.ZonedDateTime createdAt) {</span>
-<span class="source-line-no">077</span><span id="line.77">        this.createdAt = createdAt;</span>
-<span class="source-line-no">078</span><span id="line.78">    }</span>
-<span class="source-line-no">079</span><span id="line.79"></span>
-<span class="source-line-no">080</span><span id="line.80">    @Override</span>
-<span class="source-line-no">081</span><span id="line.81">    public boolean equals(Object o) {</span>
-<span class="source-line-no">082</span><span id="line.82">        if (this == o)</span>
-<span class="source-line-no">083</span><span id="line.83">            return true;</span>
-<span class="source-line-no">084</span><span id="line.84"></span>
-<span class="source-line-no">085</span><span id="line.85">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">086</span><span id="line.86">            return false;</span>
-<span class="source-line-no">087</span><span id="line.87"></span>
-<span class="source-line-no">088</span><span id="line.88">        AssignedProductSelectionImpl that = (AssignedProductSelectionImpl) o;</span>
-<span class="source-line-no">089</span><span id="line.89"></span>
-<span class="source-line-no">090</span><span id="line.90">        return new EqualsBuilder().append(productSelection, that.productSelection)</span>
-<span class="source-line-no">091</span><span id="line.91">                .append(variantSelection, that.variantSelection)</span>
-<span class="source-line-no">092</span><span id="line.92">                .append(createdAt, that.createdAt)</span>
-<span class="source-line-no">093</span><span id="line.93">                .isEquals();</span>
+<span class="source-line-no">046</span><span id="line.46">    /**</span>
+<span class="source-line-no">047</span><span id="line.47">     * create empty instance</span>
+<span class="source-line-no">048</span><span id="line.48">     */</span>
+<span class="source-line-no">049</span><span id="line.49">    public AssignedProductSelectionImpl() {</span>
+<span class="source-line-no">050</span><span id="line.50">    }</span>
+<span class="source-line-no">051</span><span id="line.51"></span>
+<span class="source-line-no">052</span><span id="line.52">    /**</span>
+<span class="source-line-no">053</span><span id="line.53">     *  &lt;p&gt;Reference to the Product Selection that this assignment is part of.&lt;/p&gt;</span>
+<span class="source-line-no">054</span><span id="line.54">     */</span>
+<span class="source-line-no">055</span><span id="line.55"></span>
+<span class="source-line-no">056</span><span id="line.56">    public com.commercetools.api.models.product_selection.ProductSelectionReference getProductSelection() {</span>
+<span class="source-line-no">057</span><span id="line.57">        return this.productSelection;</span>
+<span class="source-line-no">058</span><span id="line.58">    }</span>
+<span class="source-line-no">059</span><span id="line.59"></span>
+<span class="source-line-no">060</span><span id="line.60">    /**</span>
+<span class="source-line-no">061</span><span id="line.61">     *  &lt;p&gt;Defines which Variants of the Product will be included from the Product Selection.&lt;/p&gt;</span>
+<span class="source-line-no">062</span><span id="line.62">     *  &lt;p&gt;This field is only available for Assignments to a Product Selection of type Individual.&lt;/p&gt;</span>
+<span class="source-line-no">063</span><span id="line.63">     */</span>
+<span class="source-line-no">064</span><span id="line.64"></span>
+<span class="source-line-no">065</span><span id="line.65">    public com.commercetools.api.models.product_selection.ProductVariantSelection getVariantSelection() {</span>
+<span class="source-line-no">066</span><span id="line.66">        return this.variantSelection;</span>
+<span class="source-line-no">067</span><span id="line.67">    }</span>
+<span class="source-line-no">068</span><span id="line.68"></span>
+<span class="source-line-no">069</span><span id="line.69">    /**</span>
+<span class="source-line-no">070</span><span id="line.70">     *  &lt;p&gt;Defines which Variants of the Product will be excluded from the Product Selection.&lt;/p&gt;</span>
+<span class="source-line-no">071</span><span id="line.71">     *  &lt;p&gt;This field is only available for Assignments to a Product Selection of type Individual Exclusion.&lt;/p&gt;</span>
+<span class="source-line-no">072</span><span id="line.72">     */</span>
+<span class="source-line-no">073</span><span id="line.73"></span>
+<span class="source-line-no">074</span><span id="line.74">    public com.commercetools.api.models.product_selection.ProductVariantExclusion getVariantExclusion() {</span>
+<span class="source-line-no">075</span><span id="line.75">        return this.variantExclusion;</span>
+<span class="source-line-no">076</span><span id="line.76">    }</span>
+<span class="source-line-no">077</span><span id="line.77"></span>
+<span class="source-line-no">078</span><span id="line.78">    /**</span>
+<span class="source-line-no">079</span><span id="line.79">     *  &lt;p&gt;Date and time (UTC) this assignment was initially created.&lt;/p&gt;</span>
+<span class="source-line-no">080</span><span id="line.80">     */</span>
+<span class="source-line-no">081</span><span id="line.81"></span>
+<span class="source-line-no">082</span><span id="line.82">    public java.time.ZonedDateTime getCreatedAt() {</span>
+<span class="source-line-no">083</span><span id="line.83">        return this.createdAt;</span>
+<span class="source-line-no">084</span><span id="line.84">    }</span>
+<span class="source-line-no">085</span><span id="line.85"></span>
+<span class="source-line-no">086</span><span id="line.86">    public void setProductSelection(</span>
+<span class="source-line-no">087</span><span id="line.87">            final com.commercetools.api.models.product_selection.ProductSelectionReference productSelection) {</span>
+<span class="source-line-no">088</span><span id="line.88">        this.productSelection = productSelection;</span>
+<span class="source-line-no">089</span><span id="line.89">    }</span>
+<span class="source-line-no">090</span><span id="line.90"></span>
+<span class="source-line-no">091</span><span id="line.91">    public void setVariantSelection(</span>
+<span class="source-line-no">092</span><span id="line.92">            final com.commercetools.api.models.product_selection.ProductVariantSelection variantSelection) {</span>
+<span class="source-line-no">093</span><span id="line.93">        this.variantSelection = variantSelection;</span>
 <span class="source-line-no">094</span><span id="line.94">    }</span>
 <span class="source-line-no">095</span><span id="line.95"></span>
-<span class="source-line-no">096</span><span id="line.96">    @Override</span>
-<span class="source-line-no">097</span><span id="line.97">    public int hashCode() {</span>
-<span class="source-line-no">098</span><span id="line.98">        return new HashCodeBuilder(17, 37).append(productSelection)</span>
-<span class="source-line-no">099</span><span id="line.99">                .append(variantSelection)</span>
-<span class="source-line-no">100</span><span id="line.100">                .append(createdAt)</span>
-<span class="source-line-no">101</span><span id="line.101">                .toHashCode();</span>
-<span class="source-line-no">102</span><span id="line.102">    }</span>
-<span class="source-line-no">103</span><span id="line.103"></span>
-<span class="source-line-no">104</span><span id="line.104">}</span>
+<span class="source-line-no">096</span><span id="line.96">    public void setVariantExclusion(</span>
+<span class="source-line-no">097</span><span id="line.97">            final com.commercetools.api.models.product_selection.ProductVariantExclusion variantExclusion) {</span>
+<span class="source-line-no">098</span><span id="line.98">        this.variantExclusion = variantExclusion;</span>
+<span class="source-line-no">099</span><span id="line.99">    }</span>
+<span class="source-line-no">100</span><span id="line.100"></span>
+<span class="source-line-no">101</span><span id="line.101">    public void setCreatedAt(final java.time.ZonedDateTime createdAt) {</span>
+<span class="source-line-no">102</span><span id="line.102">        this.createdAt = createdAt;</span>
+<span class="source-line-no">103</span><span id="line.103">    }</span>
+<span class="source-line-no">104</span><span id="line.104"></span>
+<span class="source-line-no">105</span><span id="line.105">    @Override</span>
+<span class="source-line-no">106</span><span id="line.106">    public boolean equals(Object o) {</span>
+<span class="source-line-no">107</span><span id="line.107">        if (this == o)</span>
+<span class="source-line-no">108</span><span id="line.108">            return true;</span>
+<span class="source-line-no">109</span><span id="line.109"></span>
+<span class="source-line-no">110</span><span id="line.110">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">111</span><span id="line.111">            return false;</span>
+<span class="source-line-no">112</span><span id="line.112"></span>
+<span class="source-line-no">113</span><span id="line.113">        AssignedProductSelectionImpl that = (AssignedProductSelectionImpl) o;</span>
+<span class="source-line-no">114</span><span id="line.114"></span>
+<span class="source-line-no">115</span><span id="line.115">        return new EqualsBuilder().append(productSelection, that.productSelection)</span>
+<span class="source-line-no">116</span><span id="line.116">                .append(variantSelection, that.variantSelection)</span>
+<span class="source-line-no">117</span><span id="line.117">                .append(variantExclusion, that.variantExclusion)</span>
+<span class="source-line-no">118</span><span id="line.118">                .append(createdAt, that.createdAt)</span>
+<span class="source-line-no">119</span><span id="line.119">                .isEquals();</span>
+<span class="source-line-no">120</span><span id="line.120">    }</span>
+<span class="source-line-no">121</span><span id="line.121"></span>
+<span class="source-line-no">122</span><span id="line.122">    @Override</span>
+<span class="source-line-no">123</span><span id="line.123">    public int hashCode() {</span>
+<span class="source-line-no">124</span><span id="line.124">        return new HashCodeBuilder(17, 37).append(productSelection)</span>
+<span class="source-line-no">125</span><span id="line.125">                .append(variantSelection)</span>
+<span class="source-line-no">126</span><span id="line.126">                .append(variantExclusion)</span>
+<span class="source-line-no">127</span><span id="line.127">                .append(createdAt)</span>
+<span class="source-line-no">128</span><span id="line.128">                .toHashCode();</span>
+<span class="source-line-no">129</span><span id="line.129">    }</span>
+<span class="source-line-no">130</span><span id="line.130"></span>
+<span class="source-line-no">131</span><span id="line.131">}</span>
 
 
 

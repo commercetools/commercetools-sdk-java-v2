@@ -48,106 +48,152 @@
 <span class="source-line-no">035</span><span id="line.35"></span>
 <span class="source-line-no">036</span><span id="line.36">    /**</span>
 <span class="source-line-no">037</span><span id="line.37">     *  &lt;p&gt;Update action for &lt;code&gt;setInputTip&lt;/code&gt; on product types&lt;/p&gt;</span>
-<span class="source-line-no">038</span><span id="line.38">     */</span>
-<span class="source-line-no">039</span><span id="line.39"></span>
-<span class="source-line-no">040</span><span id="line.40">    public SetInputTipChangeBuilder change(final String change) {</span>
-<span class="source-line-no">041</span><span id="line.41">        this.change = change;</span>
-<span class="source-line-no">042</span><span id="line.42">        return this;</span>
-<span class="source-line-no">043</span><span id="line.43">    }</span>
-<span class="source-line-no">044</span><span id="line.44"></span>
-<span class="source-line-no">045</span><span id="line.45">    /**</span>
-<span class="source-line-no">046</span><span id="line.46">     *  &lt;p&gt;The name of the updated attribute.&lt;/p&gt;</span>
-<span class="source-line-no">047</span><span id="line.47">     */</span>
-<span class="source-line-no">048</span><span id="line.48"></span>
-<span class="source-line-no">049</span><span id="line.49">    public SetInputTipChangeBuilder attributeName(final String attributeName) {</span>
-<span class="source-line-no">050</span><span id="line.50">        this.attributeName = attributeName;</span>
-<span class="source-line-no">051</span><span id="line.51">        return this;</span>
-<span class="source-line-no">052</span><span id="line.52">    }</span>
-<span class="source-line-no">053</span><span id="line.53"></span>
-<span class="source-line-no">054</span><span id="line.54">    /**</span>
-<span class="source-line-no">055</span><span id="line.55">     *</span>
-<span class="source-line-no">056</span><span id="line.56">     */</span>
+<span class="source-line-no">038</span><span id="line.38">     * @param change value to be set</span>
+<span class="source-line-no">039</span><span id="line.39">     * @return Builder</span>
+<span class="source-line-no">040</span><span id="line.40">     */</span>
+<span class="source-line-no">041</span><span id="line.41"></span>
+<span class="source-line-no">042</span><span id="line.42">    public SetInputTipChangeBuilder change(final String change) {</span>
+<span class="source-line-no">043</span><span id="line.43">        this.change = change;</span>
+<span class="source-line-no">044</span><span id="line.44">        return this;</span>
+<span class="source-line-no">045</span><span id="line.45">    }</span>
+<span class="source-line-no">046</span><span id="line.46"></span>
+<span class="source-line-no">047</span><span id="line.47">    /**</span>
+<span class="source-line-no">048</span><span id="line.48">     *  &lt;p&gt;The name of the updated attribute.&lt;/p&gt;</span>
+<span class="source-line-no">049</span><span id="line.49">     * @param attributeName value to be set</span>
+<span class="source-line-no">050</span><span id="line.50">     * @return Builder</span>
+<span class="source-line-no">051</span><span id="line.51">     */</span>
+<span class="source-line-no">052</span><span id="line.52"></span>
+<span class="source-line-no">053</span><span id="line.53">    public SetInputTipChangeBuilder attributeName(final String attributeName) {</span>
+<span class="source-line-no">054</span><span id="line.54">        this.attributeName = attributeName;</span>
+<span class="source-line-no">055</span><span id="line.55">        return this;</span>
+<span class="source-line-no">056</span><span id="line.56">    }</span>
 <span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    public SetInputTipChangeBuilder nextValue(</span>
-<span class="source-line-no">059</span><span id="line.59">            Function&lt;com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder&gt; builder) {</span>
-<span class="source-line-no">060</span><span id="line.60">        this.nextValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();</span>
-<span class="source-line-no">061</span><span id="line.61">        return this;</span>
-<span class="source-line-no">062</span><span id="line.62">    }</span>
+<span class="source-line-no">058</span><span id="line.58">    /**</span>
+<span class="source-line-no">059</span><span id="line.59">     * set the value to the nextValue using the builder function</span>
+<span class="source-line-no">060</span><span id="line.60">     * @param builder function to build the nextValue value</span>
+<span class="source-line-no">061</span><span id="line.61">     * @return Builder</span>
+<span class="source-line-no">062</span><span id="line.62">     */</span>
 <span class="source-line-no">063</span><span id="line.63"></span>
-<span class="source-line-no">064</span><span id="line.64">    /**</span>
-<span class="source-line-no">065</span><span id="line.65">     *</span>
-<span class="source-line-no">066</span><span id="line.66">     */</span>
-<span class="source-line-no">067</span><span id="line.67"></span>
-<span class="source-line-no">068</span><span id="line.68">    public SetInputTipChangeBuilder nextValue(final com.commercetools.history.models.common.LocalizedString nextValue) {</span>
-<span class="source-line-no">069</span><span id="line.69">        this.nextValue = nextValue;</span>
-<span class="source-line-no">070</span><span id="line.70">        return this;</span>
-<span class="source-line-no">071</span><span id="line.71">    }</span>
-<span class="source-line-no">072</span><span id="line.72"></span>
-<span class="source-line-no">073</span><span id="line.73">    /**</span>
-<span class="source-line-no">074</span><span id="line.74">     *</span>
-<span class="source-line-no">075</span><span id="line.75">     */</span>
-<span class="source-line-no">076</span><span id="line.76"></span>
-<span class="source-line-no">077</span><span id="line.77">    public SetInputTipChangeBuilder previousValue(</span>
-<span class="source-line-no">078</span><span id="line.78">            Function&lt;com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder&gt; builder) {</span>
-<span class="source-line-no">079</span><span id="line.79">        this.previousValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();</span>
-<span class="source-line-no">080</span><span id="line.80">        return this;</span>
-<span class="source-line-no">081</span><span id="line.81">    }</span>
-<span class="source-line-no">082</span><span id="line.82"></span>
-<span class="source-line-no">083</span><span id="line.83">    /**</span>
-<span class="source-line-no">084</span><span id="line.84">     *</span>
+<span class="source-line-no">064</span><span id="line.64">    public SetInputTipChangeBuilder nextValue(</span>
+<span class="source-line-no">065</span><span id="line.65">            Function&lt;com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder&gt; builder) {</span>
+<span class="source-line-no">066</span><span id="line.66">        this.nextValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();</span>
+<span class="source-line-no">067</span><span id="line.67">        return this;</span>
+<span class="source-line-no">068</span><span id="line.68">    }</span>
+<span class="source-line-no">069</span><span id="line.69"></span>
+<span class="source-line-no">070</span><span id="line.70">    /**</span>
+<span class="source-line-no">071</span><span id="line.71">     * set the value to the nextValue</span>
+<span class="source-line-no">072</span><span id="line.72">     * @param nextValue value to be set</span>
+<span class="source-line-no">073</span><span id="line.73">     * @return Builder</span>
+<span class="source-line-no">074</span><span id="line.74">     */</span>
+<span class="source-line-no">075</span><span id="line.75"></span>
+<span class="source-line-no">076</span><span id="line.76">    public SetInputTipChangeBuilder nextValue(final com.commercetools.history.models.common.LocalizedString nextValue) {</span>
+<span class="source-line-no">077</span><span id="line.77">        this.nextValue = nextValue;</span>
+<span class="source-line-no">078</span><span id="line.78">        return this;</span>
+<span class="source-line-no">079</span><span id="line.79">    }</span>
+<span class="source-line-no">080</span><span id="line.80"></span>
+<span class="source-line-no">081</span><span id="line.81">    /**</span>
+<span class="source-line-no">082</span><span id="line.82">     * set the value to the previousValue using the builder function</span>
+<span class="source-line-no">083</span><span id="line.83">     * @param builder function to build the previousValue value</span>
+<span class="source-line-no">084</span><span id="line.84">     * @return Builder</span>
 <span class="source-line-no">085</span><span id="line.85">     */</span>
 <span class="source-line-no">086</span><span id="line.86"></span>
 <span class="source-line-no">087</span><span id="line.87">    public SetInputTipChangeBuilder previousValue(</span>
-<span class="source-line-no">088</span><span id="line.88">            final com.commercetools.history.models.common.LocalizedString previousValue) {</span>
-<span class="source-line-no">089</span><span id="line.89">        this.previousValue = previousValue;</span>
+<span class="source-line-no">088</span><span id="line.88">            Function&lt;com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder&gt; builder) {</span>
+<span class="source-line-no">089</span><span id="line.89">        this.previousValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();</span>
 <span class="source-line-no">090</span><span id="line.90">        return this;</span>
 <span class="source-line-no">091</span><span id="line.91">    }</span>
 <span class="source-line-no">092</span><span id="line.92"></span>
-<span class="source-line-no">093</span><span id="line.93">    public String getChange() {</span>
-<span class="source-line-no">094</span><span id="line.94">        return this.change;</span>
-<span class="source-line-no">095</span><span id="line.95">    }</span>
-<span class="source-line-no">096</span><span id="line.96"></span>
-<span class="source-line-no">097</span><span id="line.97">    public String getAttributeName() {</span>
-<span class="source-line-no">098</span><span id="line.98">        return this.attributeName;</span>
-<span class="source-line-no">099</span><span id="line.99">    }</span>
-<span class="source-line-no">100</span><span id="line.100"></span>
-<span class="source-line-no">101</span><span id="line.101">    public com.commercetools.history.models.common.LocalizedString getNextValue() {</span>
-<span class="source-line-no">102</span><span id="line.102">        return this.nextValue;</span>
+<span class="source-line-no">093</span><span id="line.93">    /**</span>
+<span class="source-line-no">094</span><span id="line.94">     * set the value to the previousValue</span>
+<span class="source-line-no">095</span><span id="line.95">     * @param previousValue value to be set</span>
+<span class="source-line-no">096</span><span id="line.96">     * @return Builder</span>
+<span class="source-line-no">097</span><span id="line.97">     */</span>
+<span class="source-line-no">098</span><span id="line.98"></span>
+<span class="source-line-no">099</span><span id="line.99">    public SetInputTipChangeBuilder previousValue(</span>
+<span class="source-line-no">100</span><span id="line.100">            final com.commercetools.history.models.common.LocalizedString previousValue) {</span>
+<span class="source-line-no">101</span><span id="line.101">        this.previousValue = previousValue;</span>
+<span class="source-line-no">102</span><span id="line.102">        return this;</span>
 <span class="source-line-no">103</span><span id="line.103">    }</span>
 <span class="source-line-no">104</span><span id="line.104"></span>
-<span class="source-line-no">105</span><span id="line.105">    public com.commercetools.history.models.common.LocalizedString getPreviousValue() {</span>
-<span class="source-line-no">106</span><span id="line.106">        return this.previousValue;</span>
-<span class="source-line-no">107</span><span id="line.107">    }</span>
-<span class="source-line-no">108</span><span id="line.108"></span>
-<span class="source-line-no">109</span><span id="line.109">    public SetInputTipChange build() {</span>
-<span class="source-line-no">110</span><span id="line.110">        Objects.requireNonNull(change, SetInputTipChange.class + ": change is missing");</span>
-<span class="source-line-no">111</span><span id="line.111">        Objects.requireNonNull(attributeName, SetInputTipChange.class + ": attributeName is missing");</span>
-<span class="source-line-no">112</span><span id="line.112">        Objects.requireNonNull(nextValue, SetInputTipChange.class + ": nextValue is missing");</span>
-<span class="source-line-no">113</span><span id="line.113">        Objects.requireNonNull(previousValue, SetInputTipChange.class + ": previousValue is missing");</span>
-<span class="source-line-no">114</span><span id="line.114">        return new SetInputTipChangeImpl(change, attributeName, nextValue, previousValue);</span>
-<span class="source-line-no">115</span><span id="line.115">    }</span>
-<span class="source-line-no">116</span><span id="line.116"></span>
-<span class="source-line-no">117</span><span id="line.117">    /**</span>
-<span class="source-line-no">118</span><span id="line.118">     * builds SetInputTipChange without checking for non null required values</span>
-<span class="source-line-no">119</span><span id="line.119">     */</span>
-<span class="source-line-no">120</span><span id="line.120">    public SetInputTipChange buildUnchecked() {</span>
-<span class="source-line-no">121</span><span id="line.121">        return new SetInputTipChangeImpl(change, attributeName, nextValue, previousValue);</span>
-<span class="source-line-no">122</span><span id="line.122">    }</span>
-<span class="source-line-no">123</span><span id="line.123"></span>
-<span class="source-line-no">124</span><span id="line.124">    public static SetInputTipChangeBuilder of() {</span>
-<span class="source-line-no">125</span><span id="line.125">        return new SetInputTipChangeBuilder();</span>
-<span class="source-line-no">126</span><span id="line.126">    }</span>
+<span class="source-line-no">105</span><span id="line.105">    /**</span>
+<span class="source-line-no">106</span><span id="line.106">     *  &lt;p&gt;Update action for &lt;code&gt;setInputTip&lt;/code&gt; on product types&lt;/p&gt;</span>
+<span class="source-line-no">107</span><span id="line.107">     * @return change</span>
+<span class="source-line-no">108</span><span id="line.108">     */</span>
+<span class="source-line-no">109</span><span id="line.109"></span>
+<span class="source-line-no">110</span><span id="line.110">    public String getChange() {</span>
+<span class="source-line-no">111</span><span id="line.111">        return this.change;</span>
+<span class="source-line-no">112</span><span id="line.112">    }</span>
+<span class="source-line-no">113</span><span id="line.113"></span>
+<span class="source-line-no">114</span><span id="line.114">    /**</span>
+<span class="source-line-no">115</span><span id="line.115">     *  &lt;p&gt;The name of the updated attribute.&lt;/p&gt;</span>
+<span class="source-line-no">116</span><span id="line.116">     * @return attributeName</span>
+<span class="source-line-no">117</span><span id="line.117">     */</span>
+<span class="source-line-no">118</span><span id="line.118"></span>
+<span class="source-line-no">119</span><span id="line.119">    public String getAttributeName() {</span>
+<span class="source-line-no">120</span><span id="line.120">        return this.attributeName;</span>
+<span class="source-line-no">121</span><span id="line.121">    }</span>
+<span class="source-line-no">122</span><span id="line.122"></span>
+<span class="source-line-no">123</span><span id="line.123">    /**</span>
+<span class="source-line-no">124</span><span id="line.124">     * value of nextValue}</span>
+<span class="source-line-no">125</span><span id="line.125">     * @return nextValue</span>
+<span class="source-line-no">126</span><span id="line.126">     */</span>
 <span class="source-line-no">127</span><span id="line.127"></span>
-<span class="source-line-no">128</span><span id="line.128">    public static SetInputTipChangeBuilder of(final SetInputTipChange template) {</span>
-<span class="source-line-no">129</span><span id="line.129">        SetInputTipChangeBuilder builder = new SetInputTipChangeBuilder();</span>
-<span class="source-line-no">130</span><span id="line.130">        builder.change = template.getChange();</span>
-<span class="source-line-no">131</span><span id="line.131">        builder.attributeName = template.getAttributeName();</span>
-<span class="source-line-no">132</span><span id="line.132">        builder.nextValue = template.getNextValue();</span>
-<span class="source-line-no">133</span><span id="line.133">        builder.previousValue = template.getPreviousValue();</span>
-<span class="source-line-no">134</span><span id="line.134">        return builder;</span>
-<span class="source-line-no">135</span><span id="line.135">    }</span>
+<span class="source-line-no">128</span><span id="line.128">    public com.commercetools.history.models.common.LocalizedString getNextValue() {</span>
+<span class="source-line-no">129</span><span id="line.129">        return this.nextValue;</span>
+<span class="source-line-no">130</span><span id="line.130">    }</span>
+<span class="source-line-no">131</span><span id="line.131"></span>
+<span class="source-line-no">132</span><span id="line.132">    /**</span>
+<span class="source-line-no">133</span><span id="line.133">     * value of previousValue}</span>
+<span class="source-line-no">134</span><span id="line.134">     * @return previousValue</span>
+<span class="source-line-no">135</span><span id="line.135">     */</span>
 <span class="source-line-no">136</span><span id="line.136"></span>
-<span class="source-line-no">137</span><span id="line.137">}</span>
+<span class="source-line-no">137</span><span id="line.137">    public com.commercetools.history.models.common.LocalizedString getPreviousValue() {</span>
+<span class="source-line-no">138</span><span id="line.138">        return this.previousValue;</span>
+<span class="source-line-no">139</span><span id="line.139">    }</span>
+<span class="source-line-no">140</span><span id="line.140"></span>
+<span class="source-line-no">141</span><span id="line.141">    /**</span>
+<span class="source-line-no">142</span><span id="line.142">     * builds SetInputTipChange with checking for non-null required values</span>
+<span class="source-line-no">143</span><span id="line.143">     * @return SetInputTipChange</span>
+<span class="source-line-no">144</span><span id="line.144">     */</span>
+<span class="source-line-no">145</span><span id="line.145">    public SetInputTipChange build() {</span>
+<span class="source-line-no">146</span><span id="line.146">        Objects.requireNonNull(change, SetInputTipChange.class + ": change is missing");</span>
+<span class="source-line-no">147</span><span id="line.147">        Objects.requireNonNull(attributeName, SetInputTipChange.class + ": attributeName is missing");</span>
+<span class="source-line-no">148</span><span id="line.148">        Objects.requireNonNull(nextValue, SetInputTipChange.class + ": nextValue is missing");</span>
+<span class="source-line-no">149</span><span id="line.149">        Objects.requireNonNull(previousValue, SetInputTipChange.class + ": previousValue is missing");</span>
+<span class="source-line-no">150</span><span id="line.150">        return new SetInputTipChangeImpl(change, attributeName, nextValue, previousValue);</span>
+<span class="source-line-no">151</span><span id="line.151">    }</span>
+<span class="source-line-no">152</span><span id="line.152"></span>
+<span class="source-line-no">153</span><span id="line.153">    /**</span>
+<span class="source-line-no">154</span><span id="line.154">     * builds SetInputTipChange without checking for non-null required values</span>
+<span class="source-line-no">155</span><span id="line.155">     * @return SetInputTipChange</span>
+<span class="source-line-no">156</span><span id="line.156">     */</span>
+<span class="source-line-no">157</span><span id="line.157">    public SetInputTipChange buildUnchecked() {</span>
+<span class="source-line-no">158</span><span id="line.158">        return new SetInputTipChangeImpl(change, attributeName, nextValue, previousValue);</span>
+<span class="source-line-no">159</span><span id="line.159">    }</span>
+<span class="source-line-no">160</span><span id="line.160"></span>
+<span class="source-line-no">161</span><span id="line.161">    /**</span>
+<span class="source-line-no">162</span><span id="line.162">     * factory method for an instance of SetInputTipChangeBuilder</span>
+<span class="source-line-no">163</span><span id="line.163">     * @return builder</span>
+<span class="source-line-no">164</span><span id="line.164">     */</span>
+<span class="source-line-no">165</span><span id="line.165">    public static SetInputTipChangeBuilder of() {</span>
+<span class="source-line-no">166</span><span id="line.166">        return new SetInputTipChangeBuilder();</span>
+<span class="source-line-no">167</span><span id="line.167">    }</span>
+<span class="source-line-no">168</span><span id="line.168"></span>
+<span class="source-line-no">169</span><span id="line.169">    /**</span>
+<span class="source-line-no">170</span><span id="line.170">     * create builder for SetInputTipChange instance</span>
+<span class="source-line-no">171</span><span id="line.171">     * @param template instance with prefilled values for the builder</span>
+<span class="source-line-no">172</span><span id="line.172">     * @return builder</span>
+<span class="source-line-no">173</span><span id="line.173">     */</span>
+<span class="source-line-no">174</span><span id="line.174">    public static SetInputTipChangeBuilder of(final SetInputTipChange template) {</span>
+<span class="source-line-no">175</span><span id="line.175">        SetInputTipChangeBuilder builder = new SetInputTipChangeBuilder();</span>
+<span class="source-line-no">176</span><span id="line.176">        builder.change = template.getChange();</span>
+<span class="source-line-no">177</span><span id="line.177">        builder.attributeName = template.getAttributeName();</span>
+<span class="source-line-no">178</span><span id="line.178">        builder.nextValue = template.getNextValue();</span>
+<span class="source-line-no">179</span><span id="line.179">        builder.previousValue = template.getPreviousValue();</span>
+<span class="source-line-no">180</span><span id="line.180">        return builder;</span>
+<span class="source-line-no">181</span><span id="line.181">    }</span>
+<span class="source-line-no">182</span><span id="line.182"></span>
+<span class="source-line-no">183</span><span id="line.183">}</span>
 
 
 

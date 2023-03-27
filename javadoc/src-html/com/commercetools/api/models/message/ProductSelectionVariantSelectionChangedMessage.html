@@ -54,84 +54,133 @@
 <span class="source-line-no">041</span><span id="line.41">@JsonDeserialize(as = ProductSelectionVariantSelectionChangedMessageImpl.class)</span>
 <span class="source-line-no">042</span><span id="line.42">public interface ProductSelectionVariantSelectionChangedMessage extends Message {</span>
 <span class="source-line-no">043</span><span id="line.43"></span>
-<span class="source-line-no">044</span><span id="line.44">    String PRODUCT_SELECTION_VARIANT_SELECTION_CHANGED = "ProductSelectionVariantSelectionChanged";</span>
-<span class="source-line-no">045</span><span id="line.45"></span>
-<span class="source-line-no">046</span><span id="line.46">    /**</span>
-<span class="source-line-no">047</span><span id="line.47">     *  &lt;p&gt;Product for which the Product Variant Selection changed.&lt;/p&gt;</span>
-<span class="source-line-no">048</span><span id="line.48">     */</span>
-<span class="source-line-no">049</span><span id="line.49">    @NotNull</span>
-<span class="source-line-no">050</span><span id="line.50">    @Valid</span>
-<span class="source-line-no">051</span><span id="line.51">    @JsonProperty("product")</span>
-<span class="source-line-no">052</span><span id="line.52">    public ProductReference getProduct();</span>
-<span class="source-line-no">053</span><span id="line.53"></span>
-<span class="source-line-no">054</span><span id="line.54">    /**</span>
-<span class="source-line-no">055</span><span id="line.55">     *  &lt;p&gt;Product Variant Selection before the Set Variant Selection update action.&lt;/p&gt;</span>
-<span class="source-line-no">056</span><span id="line.56">     */</span>
-<span class="source-line-no">057</span><span id="line.57">    @NotNull</span>
-<span class="source-line-no">058</span><span id="line.58">    @Valid</span>
-<span class="source-line-no">059</span><span id="line.59">    @JsonProperty("oldVariantSelection")</span>
-<span class="source-line-no">060</span><span id="line.60">    public ProductVariantSelection getOldVariantSelection();</span>
-<span class="source-line-no">061</span><span id="line.61"></span>
-<span class="source-line-no">062</span><span id="line.62">    /**</span>
-<span class="source-line-no">063</span><span id="line.63">     *  &lt;p&gt;Product Variant Selection after the Set Variant Selection update action.&lt;/p&gt;</span>
-<span class="source-line-no">064</span><span id="line.64">     */</span>
-<span class="source-line-no">065</span><span id="line.65">    @NotNull</span>
-<span class="source-line-no">066</span><span id="line.66">    @Valid</span>
-<span class="source-line-no">067</span><span id="line.67">    @JsonProperty("newVariantSelection")</span>
-<span class="source-line-no">068</span><span id="line.68">    public ProductVariantSelection getNewVariantSelection();</span>
-<span class="source-line-no">069</span><span id="line.69"></span>
-<span class="source-line-no">070</span><span id="line.70">    public void setProduct(final ProductReference product);</span>
-<span class="source-line-no">071</span><span id="line.71"></span>
-<span class="source-line-no">072</span><span id="line.72">    public void setOldVariantSelection(final ProductVariantSelection oldVariantSelection);</span>
-<span class="source-line-no">073</span><span id="line.73"></span>
-<span class="source-line-no">074</span><span id="line.74">    public void setNewVariantSelection(final ProductVariantSelection newVariantSelection);</span>
+<span class="source-line-no">044</span><span id="line.44">    /**</span>
+<span class="source-line-no">045</span><span id="line.45">     * discriminator value for ProductSelectionVariantSelectionChangedMessage</span>
+<span class="source-line-no">046</span><span id="line.46">     */</span>
+<span class="source-line-no">047</span><span id="line.47">    String PRODUCT_SELECTION_VARIANT_SELECTION_CHANGED = "ProductSelectionVariantSelectionChanged";</span>
+<span class="source-line-no">048</span><span id="line.48"></span>
+<span class="source-line-no">049</span><span id="line.49">    /**</span>
+<span class="source-line-no">050</span><span id="line.50">     *  &lt;p&gt;Product for which the Product Variant Selection changed.&lt;/p&gt;</span>
+<span class="source-line-no">051</span><span id="line.51">     * @return product</span>
+<span class="source-line-no">052</span><span id="line.52">     */</span>
+<span class="source-line-no">053</span><span id="line.53">    @NotNull</span>
+<span class="source-line-no">054</span><span id="line.54">    @Valid</span>
+<span class="source-line-no">055</span><span id="line.55">    @JsonProperty("product")</span>
+<span class="source-line-no">056</span><span id="line.56">    public ProductReference getProduct();</span>
+<span class="source-line-no">057</span><span id="line.57"></span>
+<span class="source-line-no">058</span><span id="line.58">    /**</span>
+<span class="source-line-no">059</span><span id="line.59">     *  &lt;p&gt;Product Variant Selection before the Set Variant Selection update action.&lt;/p&gt;</span>
+<span class="source-line-no">060</span><span id="line.60">     * @return oldVariantSelection</span>
+<span class="source-line-no">061</span><span id="line.61">     */</span>
+<span class="source-line-no">062</span><span id="line.62">    @NotNull</span>
+<span class="source-line-no">063</span><span id="line.63">    @Valid</span>
+<span class="source-line-no">064</span><span id="line.64">    @JsonProperty("oldVariantSelection")</span>
+<span class="source-line-no">065</span><span id="line.65">    public ProductVariantSelection getOldVariantSelection();</span>
+<span class="source-line-no">066</span><span id="line.66"></span>
+<span class="source-line-no">067</span><span id="line.67">    /**</span>
+<span class="source-line-no">068</span><span id="line.68">     *  &lt;p&gt;Product Variant Selection after the Set Variant Selection update action.&lt;/p&gt;</span>
+<span class="source-line-no">069</span><span id="line.69">     * @return newVariantSelection</span>
+<span class="source-line-no">070</span><span id="line.70">     */</span>
+<span class="source-line-no">071</span><span id="line.71">    @NotNull</span>
+<span class="source-line-no">072</span><span id="line.72">    @Valid</span>
+<span class="source-line-no">073</span><span id="line.73">    @JsonProperty("newVariantSelection")</span>
+<span class="source-line-no">074</span><span id="line.74">    public ProductVariantSelection getNewVariantSelection();</span>
 <span class="source-line-no">075</span><span id="line.75"></span>
-<span class="source-line-no">076</span><span id="line.76">    public static ProductSelectionVariantSelectionChangedMessage of() {</span>
-<span class="source-line-no">077</span><span id="line.77">        return new ProductSelectionVariantSelectionChangedMessageImpl();</span>
-<span class="source-line-no">078</span><span id="line.78">    }</span>
-<span class="source-line-no">079</span><span id="line.79"></span>
-<span class="source-line-no">080</span><span id="line.80">    public static ProductSelectionVariantSelectionChangedMessage of(</span>
-<span class="source-line-no">081</span><span id="line.81">            final ProductSelectionVariantSelectionChangedMessage template) {</span>
-<span class="source-line-no">082</span><span id="line.82">        ProductSelectionVariantSelectionChangedMessageImpl instance = new ProductSelectionVariantSelectionChangedMessageImpl();</span>
-<span class="source-line-no">083</span><span id="line.83">        instance.setId(template.getId());</span>
-<span class="source-line-no">084</span><span id="line.84">        instance.setVersion(template.getVersion());</span>
-<span class="source-line-no">085</span><span id="line.85">        instance.setCreatedAt(template.getCreatedAt());</span>
-<span class="source-line-no">086</span><span id="line.86">        instance.setLastModifiedAt(template.getLastModifiedAt());</span>
-<span class="source-line-no">087</span><span id="line.87">        instance.setLastModifiedBy(template.getLastModifiedBy());</span>
-<span class="source-line-no">088</span><span id="line.88">        instance.setCreatedBy(template.getCreatedBy());</span>
-<span class="source-line-no">089</span><span id="line.89">        instance.setSequenceNumber(template.getSequenceNumber());</span>
-<span class="source-line-no">090</span><span id="line.90">        instance.setResource(template.getResource());</span>
-<span class="source-line-no">091</span><span id="line.91">        instance.setResourceVersion(template.getResourceVersion());</span>
-<span class="source-line-no">092</span><span id="line.92">        instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());</span>
-<span class="source-line-no">093</span><span id="line.93">        instance.setProduct(template.getProduct());</span>
-<span class="source-line-no">094</span><span id="line.94">        instance.setOldVariantSelection(template.getOldVariantSelection());</span>
-<span class="source-line-no">095</span><span id="line.95">        instance.setNewVariantSelection(template.getNewVariantSelection());</span>
-<span class="source-line-no">096</span><span id="line.96">        return instance;</span>
-<span class="source-line-no">097</span><span id="line.97">    }</span>
-<span class="source-line-no">098</span><span id="line.98"></span>
-<span class="source-line-no">099</span><span id="line.99">    public static ProductSelectionVariantSelectionChangedMessageBuilder builder() {</span>
-<span class="source-line-no">100</span><span id="line.100">        return ProductSelectionVariantSelectionChangedMessageBuilder.of();</span>
-<span class="source-line-no">101</span><span id="line.101">    }</span>
-<span class="source-line-no">102</span><span id="line.102"></span>
-<span class="source-line-no">103</span><span id="line.103">    public static ProductSelectionVariantSelectionChangedMessageBuilder builder(</span>
-<span class="source-line-no">104</span><span id="line.104">            final ProductSelectionVariantSelectionChangedMessage template) {</span>
-<span class="source-line-no">105</span><span id="line.105">        return ProductSelectionVariantSelectionChangedMessageBuilder.of(template);</span>
-<span class="source-line-no">106</span><span id="line.106">    }</span>
-<span class="source-line-no">107</span><span id="line.107"></span>
-<span class="source-line-no">108</span><span id="line.108">    default &lt;T&gt; T withProductSelectionVariantSelectionChangedMessage(</span>
-<span class="source-line-no">109</span><span id="line.109">            Function&lt;ProductSelectionVariantSelectionChangedMessage, T&gt; helper) {</span>
-<span class="source-line-no">110</span><span id="line.110">        return helper.apply(this);</span>
-<span class="source-line-no">111</span><span id="line.111">    }</span>
-<span class="source-line-no">112</span><span id="line.112"></span>
-<span class="source-line-no">113</span><span id="line.113">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ProductSelectionVariantSelectionChangedMessage&gt; typeReference() {</span>
-<span class="source-line-no">114</span><span id="line.114">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ProductSelectionVariantSelectionChangedMessage&gt;() {</span>
-<span class="source-line-no">115</span><span id="line.115">            @Override</span>
-<span class="source-line-no">116</span><span id="line.116">            public String toString() {</span>
-<span class="source-line-no">117</span><span id="line.117">                return "TypeReference&lt;ProductSelectionVariantSelectionChangedMessage&gt;";</span>
-<span class="source-line-no">118</span><span id="line.118">            }</span>
-<span class="source-line-no">119</span><span id="line.119">        };</span>
-<span class="source-line-no">120</span><span id="line.120">    }</span>
-<span class="source-line-no">121</span><span id="line.121">}</span>
+<span class="source-line-no">076</span><span id="line.76">    /**</span>
+<span class="source-line-no">077</span><span id="line.77">     *  &lt;p&gt;Product for which the Product Variant Selection changed.&lt;/p&gt;</span>
+<span class="source-line-no">078</span><span id="line.78">     * @param product value to be set</span>
+<span class="source-line-no">079</span><span id="line.79">     */</span>
+<span class="source-line-no">080</span><span id="line.80"></span>
+<span class="source-line-no">081</span><span id="line.81">    public void setProduct(final ProductReference product);</span>
+<span class="source-line-no">082</span><span id="line.82"></span>
+<span class="source-line-no">083</span><span id="line.83">    /**</span>
+<span class="source-line-no">084</span><span id="line.84">     *  &lt;p&gt;Product Variant Selection before the Set Variant Selection update action.&lt;/p&gt;</span>
+<span class="source-line-no">085</span><span id="line.85">     * @param oldVariantSelection value to be set</span>
+<span class="source-line-no">086</span><span id="line.86">     */</span>
+<span class="source-line-no">087</span><span id="line.87"></span>
+<span class="source-line-no">088</span><span id="line.88">    public void setOldVariantSelection(final ProductVariantSelection oldVariantSelection);</span>
+<span class="source-line-no">089</span><span id="line.89"></span>
+<span class="source-line-no">090</span><span id="line.90">    /**</span>
+<span class="source-line-no">091</span><span id="line.91">     *  &lt;p&gt;Product Variant Selection after the Set Variant Selection update action.&lt;/p&gt;</span>
+<span class="source-line-no">092</span><span id="line.92">     * @param newVariantSelection value to be set</span>
+<span class="source-line-no">093</span><span id="line.93">     */</span>
+<span class="source-line-no">094</span><span id="line.94"></span>
+<span class="source-line-no">095</span><span id="line.95">    public void setNewVariantSelection(final ProductVariantSelection newVariantSelection);</span>
+<span class="source-line-no">096</span><span id="line.96"></span>
+<span class="source-line-no">097</span><span id="line.97">    /**</span>
+<span class="source-line-no">098</span><span id="line.98">     * factory method</span>
+<span class="source-line-no">099</span><span id="line.99">     * @return instance of ProductSelectionVariantSelectionChangedMessage</span>
+<span class="source-line-no">100</span><span id="line.100">     */</span>
+<span class="source-line-no">101</span><span id="line.101">    public static ProductSelectionVariantSelectionChangedMessage of() {</span>
+<span class="source-line-no">102</span><span id="line.102">        return new ProductSelectionVariantSelectionChangedMessageImpl();</span>
+<span class="source-line-no">103</span><span id="line.103">    }</span>
+<span class="source-line-no">104</span><span id="line.104"></span>
+<span class="source-line-no">105</span><span id="line.105">    /**</span>
+<span class="source-line-no">106</span><span id="line.106">     * factory method to copy an instance of ProductSelectionVariantSelectionChangedMessage</span>
+<span class="source-line-no">107</span><span id="line.107">     * @param template instance to be copied</span>
+<span class="source-line-no">108</span><span id="line.108">     * @return copy instance</span>
+<span class="source-line-no">109</span><span id="line.109">     */</span>
+<span class="source-line-no">110</span><span id="line.110">    public static ProductSelectionVariantSelectionChangedMessage of(</span>
+<span class="source-line-no">111</span><span id="line.111">            final ProductSelectionVariantSelectionChangedMessage template) {</span>
+<span class="source-line-no">112</span><span id="line.112">        ProductSelectionVariantSelectionChangedMessageImpl instance = new ProductSelectionVariantSelectionChangedMessageImpl();</span>
+<span class="source-line-no">113</span><span id="line.113">        instance.setId(template.getId());</span>
+<span class="source-line-no">114</span><span id="line.114">        instance.setVersion(template.getVersion());</span>
+<span class="source-line-no">115</span><span id="line.115">        instance.setCreatedAt(template.getCreatedAt());</span>
+<span class="source-line-no">116</span><span id="line.116">        instance.setLastModifiedAt(template.getLastModifiedAt());</span>
+<span class="source-line-no">117</span><span id="line.117">        instance.setLastModifiedBy(template.getLastModifiedBy());</span>
+<span class="source-line-no">118</span><span id="line.118">        instance.setCreatedBy(template.getCreatedBy());</span>
+<span class="source-line-no">119</span><span id="line.119">        instance.setSequenceNumber(template.getSequenceNumber());</span>
+<span class="source-line-no">120</span><span id="line.120">        instance.setResource(template.getResource());</span>
+<span class="source-line-no">121</span><span id="line.121">        instance.setResourceVersion(template.getResourceVersion());</span>
+<span class="source-line-no">122</span><span id="line.122">        instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());</span>
+<span class="source-line-no">123</span><span id="line.123">        instance.setProduct(template.getProduct());</span>
+<span class="source-line-no">124</span><span id="line.124">        instance.setOldVariantSelection(template.getOldVariantSelection());</span>
+<span class="source-line-no">125</span><span id="line.125">        instance.setNewVariantSelection(template.getNewVariantSelection());</span>
+<span class="source-line-no">126</span><span id="line.126">        return instance;</span>
+<span class="source-line-no">127</span><span id="line.127">    }</span>
+<span class="source-line-no">128</span><span id="line.128"></span>
+<span class="source-line-no">129</span><span id="line.129">    /**</span>
+<span class="source-line-no">130</span><span id="line.130">     * builder factory method for ProductSelectionVariantSelectionChangedMessage</span>
+<span class="source-line-no">131</span><span id="line.131">     * @return builder</span>
+<span class="source-line-no">132</span><span id="line.132">     */</span>
+<span class="source-line-no">133</span><span id="line.133">    public static ProductSelectionVariantSelectionChangedMessageBuilder builder() {</span>
+<span class="source-line-no">134</span><span id="line.134">        return ProductSelectionVariantSelectionChangedMessageBuilder.of();</span>
+<span class="source-line-no">135</span><span id="line.135">    }</span>
+<span class="source-line-no">136</span><span id="line.136"></span>
+<span class="source-line-no">137</span><span id="line.137">    /**</span>
+<span class="source-line-no">138</span><span id="line.138">     * create builder for ProductSelectionVariantSelectionChangedMessage instance</span>
+<span class="source-line-no">139</span><span id="line.139">     * @param template instance with prefilled values for the builder</span>
+<span class="source-line-no">140</span><span id="line.140">     * @return builder</span>
+<span class="source-line-no">141</span><span id="line.141">     */</span>
+<span class="source-line-no">142</span><span id="line.142">    public static ProductSelectionVariantSelectionChangedMessageBuilder builder(</span>
+<span class="source-line-no">143</span><span id="line.143">            final ProductSelectionVariantSelectionChangedMessage template) {</span>
+<span class="source-line-no">144</span><span id="line.144">        return ProductSelectionVariantSelectionChangedMessageBuilder.of(template);</span>
+<span class="source-line-no">145</span><span id="line.145">    }</span>
+<span class="source-line-no">146</span><span id="line.146"></span>
+<span class="source-line-no">147</span><span id="line.147">    /**</span>
+<span class="source-line-no">148</span><span id="line.148">     * accessor map function</span>
+<span class="source-line-no">149</span><span id="line.149">     * @param &lt;T&gt; mapped type</span>
+<span class="source-line-no">150</span><span id="line.150">     * @param helper function to map the object</span>
+<span class="source-line-no">151</span><span id="line.151">     * @return mapped value</span>
+<span class="source-line-no">152</span><span id="line.152">     */</span>
+<span class="source-line-no">153</span><span id="line.153">    default &lt;T&gt; T withProductSelectionVariantSelectionChangedMessage(</span>
+<span class="source-line-no">154</span><span id="line.154">            Function&lt;ProductSelectionVariantSelectionChangedMessage, T&gt; helper) {</span>
+<span class="source-line-no">155</span><span id="line.155">        return helper.apply(this);</span>
+<span class="source-line-no">156</span><span id="line.156">    }</span>
+<span class="source-line-no">157</span><span id="line.157"></span>
+<span class="source-line-no">158</span><span id="line.158">    /**</span>
+<span class="source-line-no">159</span><span id="line.159">     * gives a TypeReference for usage with Jackson DataBind</span>
+<span class="source-line-no">160</span><span id="line.160">     * @return TypeReference</span>
+<span class="source-line-no">161</span><span id="line.161">     */</span>
+<span class="source-line-no">162</span><span id="line.162">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ProductSelectionVariantSelectionChangedMessage&gt; typeReference() {</span>
+<span class="source-line-no">163</span><span id="line.163">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ProductSelectionVariantSelectionChangedMessage&gt;() {</span>
+<span class="source-line-no">164</span><span id="line.164">            @Override</span>
+<span class="source-line-no">165</span><span id="line.165">            public String toString() {</span>
+<span class="source-line-no">166</span><span id="line.166">                return "TypeReference&lt;ProductSelectionVariantSelectionChangedMessage&gt;";</span>
+<span class="source-line-no">167</span><span id="line.167">            }</span>
+<span class="source-line-no">168</span><span id="line.168">        };</span>
+<span class="source-line-no">169</span><span id="line.169">    }</span>
+<span class="source-line-no">170</span><span id="line.170">}</span>
 
 
 

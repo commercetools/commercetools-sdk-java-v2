@@ -50,41 +50,66 @@
 <span class="source-line-no">037</span><span id="line.37"></span>
 <span class="source-line-no">038</span><span id="line.38">    /**</span>
 <span class="source-line-no">039</span><span id="line.39">     *  &lt;p&gt;Type of referenced resource.&lt;/p&gt;</span>
-<span class="source-line-no">040</span><span id="line.40">     */</span>
-<span class="source-line-no">041</span><span id="line.41">    @NotNull</span>
-<span class="source-line-no">042</span><span id="line.42">    @JsonProperty("typeId")</span>
-<span class="source-line-no">043</span><span id="line.43">    public ReferenceTypeId getTypeId();</span>
-<span class="source-line-no">044</span><span id="line.44"></span>
-<span class="source-line-no">045</span><span id="line.45">    /**</span>
-<span class="source-line-no">046</span><span id="line.46">     *  &lt;p&gt;User-defined unique and immutable key of the referenced resource.&lt;/p&gt;</span>
-<span class="source-line-no">047</span><span id="line.47">     */</span>
-<span class="source-line-no">048</span><span id="line.48">    @NotNull</span>
-<span class="source-line-no">049</span><span id="line.49">    @JsonProperty("key")</span>
-<span class="source-line-no">050</span><span id="line.50">    public String getKey();</span>
-<span class="source-line-no">051</span><span id="line.51"></span>
-<span class="source-line-no">052</span><span id="line.52">    public void setKey(final String key);</span>
+<span class="source-line-no">040</span><span id="line.40">     * @return typeId</span>
+<span class="source-line-no">041</span><span id="line.41">     */</span>
+<span class="source-line-no">042</span><span id="line.42">    @NotNull</span>
+<span class="source-line-no">043</span><span id="line.43">    @JsonProperty("typeId")</span>
+<span class="source-line-no">044</span><span id="line.44">    public ReferenceTypeId getTypeId();</span>
+<span class="source-line-no">045</span><span id="line.45"></span>
+<span class="source-line-no">046</span><span id="line.46">    /**</span>
+<span class="source-line-no">047</span><span id="line.47">     *  &lt;p&gt;User-defined unique and immutable key of the referenced resource.&lt;/p&gt;</span>
+<span class="source-line-no">048</span><span id="line.48">     * @return key</span>
+<span class="source-line-no">049</span><span id="line.49">     */</span>
+<span class="source-line-no">050</span><span id="line.50">    @NotNull</span>
+<span class="source-line-no">051</span><span id="line.51">    @JsonProperty("key")</span>
+<span class="source-line-no">052</span><span id="line.52">    public String getKey();</span>
 <span class="source-line-no">053</span><span id="line.53"></span>
-<span class="source-line-no">054</span><span id="line.54">    public static com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder businessUnitBuilder() {</span>
-<span class="source-line-no">055</span><span id="line.55">        return com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder.of();</span>
-<span class="source-line-no">056</span><span id="line.56">    }</span>
-<span class="source-line-no">057</span><span id="line.57"></span>
-<span class="source-line-no">058</span><span id="line.58">    public static com.commercetools.api.models.store.StoreKeyReferenceBuilder storeBuilder() {</span>
-<span class="source-line-no">059</span><span id="line.59">        return com.commercetools.api.models.store.StoreKeyReferenceBuilder.of();</span>
-<span class="source-line-no">060</span><span id="line.60">    }</span>
-<span class="source-line-no">061</span><span id="line.61"></span>
-<span class="source-line-no">062</span><span id="line.62">    default &lt;T&gt; T withKeyReference(Function&lt;KeyReference, T&gt; helper) {</span>
-<span class="source-line-no">063</span><span id="line.63">        return helper.apply(this);</span>
-<span class="source-line-no">064</span><span id="line.64">    }</span>
-<span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    public static com.fasterxml.jackson.core.type.TypeReference&lt;KeyReference&gt; typeReference() {</span>
-<span class="source-line-no">067</span><span id="line.67">        return new com.fasterxml.jackson.core.type.TypeReference&lt;KeyReference&gt;() {</span>
-<span class="source-line-no">068</span><span id="line.68">            @Override</span>
-<span class="source-line-no">069</span><span id="line.69">            public String toString() {</span>
-<span class="source-line-no">070</span><span id="line.70">                return "TypeReference&lt;KeyReference&gt;";</span>
-<span class="source-line-no">071</span><span id="line.71">            }</span>
-<span class="source-line-no">072</span><span id="line.72">        };</span>
-<span class="source-line-no">073</span><span id="line.73">    }</span>
-<span class="source-line-no">074</span><span id="line.74">}</span>
+<span class="source-line-no">054</span><span id="line.54">    /**</span>
+<span class="source-line-no">055</span><span id="line.55">     *  &lt;p&gt;User-defined unique and immutable key of the referenced resource.&lt;/p&gt;</span>
+<span class="source-line-no">056</span><span id="line.56">     * @param key value to be set</span>
+<span class="source-line-no">057</span><span id="line.57">     */</span>
+<span class="source-line-no">058</span><span id="line.58"></span>
+<span class="source-line-no">059</span><span id="line.59">    public void setKey(final String key);</span>
+<span class="source-line-no">060</span><span id="line.60"></span>
+<span class="source-line-no">061</span><span id="line.61">    /**</span>
+<span class="source-line-no">062</span><span id="line.62">     * builder for businessUnit subtype</span>
+<span class="source-line-no">063</span><span id="line.63">     * @return builder</span>
+<span class="source-line-no">064</span><span id="line.64">     */</span>
+<span class="source-line-no">065</span><span id="line.65">    public static com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder businessUnitBuilder() {</span>
+<span class="source-line-no">066</span><span id="line.66">        return com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder.of();</span>
+<span class="source-line-no">067</span><span id="line.67">    }</span>
+<span class="source-line-no">068</span><span id="line.68"></span>
+<span class="source-line-no">069</span><span id="line.69">    /**</span>
+<span class="source-line-no">070</span><span id="line.70">     * builder for store subtype</span>
+<span class="source-line-no">071</span><span id="line.71">     * @return builder</span>
+<span class="source-line-no">072</span><span id="line.72">     */</span>
+<span class="source-line-no">073</span><span id="line.73">    public static com.commercetools.api.models.store.StoreKeyReferenceBuilder storeBuilder() {</span>
+<span class="source-line-no">074</span><span id="line.74">        return com.commercetools.api.models.store.StoreKeyReferenceBuilder.of();</span>
+<span class="source-line-no">075</span><span id="line.75">    }</span>
+<span class="source-line-no">076</span><span id="line.76"></span>
+<span class="source-line-no">077</span><span id="line.77">    /**</span>
+<span class="source-line-no">078</span><span id="line.78">     * accessor map function</span>
+<span class="source-line-no">079</span><span id="line.79">     * @param &lt;T&gt; mapped type</span>
+<span class="source-line-no">080</span><span id="line.80">     * @param helper function to map the object</span>
+<span class="source-line-no">081</span><span id="line.81">     * @return mapped value</span>
+<span class="source-line-no">082</span><span id="line.82">     */</span>
+<span class="source-line-no">083</span><span id="line.83">    default &lt;T&gt; T withKeyReference(Function&lt;KeyReference, T&gt; helper) {</span>
+<span class="source-line-no">084</span><span id="line.84">        return helper.apply(this);</span>
+<span class="source-line-no">085</span><span id="line.85">    }</span>
+<span class="source-line-no">086</span><span id="line.86"></span>
+<span class="source-line-no">087</span><span id="line.87">    /**</span>
+<span class="source-line-no">088</span><span id="line.88">     * gives a TypeReference for usage with Jackson DataBind</span>
+<span class="source-line-no">089</span><span id="line.89">     * @return TypeReference</span>
+<span class="source-line-no">090</span><span id="line.90">     */</span>
+<span class="source-line-no">091</span><span id="line.91">    public static com.fasterxml.jackson.core.type.TypeReference&lt;KeyReference&gt; typeReference() {</span>
+<span class="source-line-no">092</span><span id="line.92">        return new com.fasterxml.jackson.core.type.TypeReference&lt;KeyReference&gt;() {</span>
+<span class="source-line-no">093</span><span id="line.93">            @Override</span>
+<span class="source-line-no">094</span><span id="line.94">            public String toString() {</span>
+<span class="source-line-no">095</span><span id="line.95">                return "TypeReference&lt;KeyReference&gt;";</span>
+<span class="source-line-no">096</span><span id="line.96">            }</span>
+<span class="source-line-no">097</span><span id="line.97">        };</span>
+<span class="source-line-no">098</span><span id="line.98">    }</span>
+<span class="source-line-no">099</span><span id="line.99">}</span>
 
 
 

@@ -34,11 +34,15 @@
 <span class="source-line-no">021</span><span id="line.21">        return new ByProjectKeyGraphqlPost(apiHttpClient, projectKey, graphQLRequest);</span>
 <span class="source-line-no">022</span><span id="line.22">    }</span>
 <span class="source-line-no">023</span><span id="line.23"></span>
-<span class="source-line-no">024</span><span id="line.24">    public ByProjectKeyGraphqlPost post(UnaryOperator&lt;com.commercetools.api.models.graph_ql.GraphQLRequestBuilder&gt; op) {</span>
-<span class="source-line-no">025</span><span id="line.25">        return post(op.apply(com.commercetools.api.models.graph_ql.GraphQLRequestBuilder.of()).build());</span>
+<span class="source-line-no">024</span><span id="line.24">    public ByProjectKeyGraphqlPostString post(final String graphQLRequest) {</span>
+<span class="source-line-no">025</span><span id="line.25">        return new ByProjectKeyGraphqlPostString(apiHttpClient, projectKey, graphQLRequest);</span>
 <span class="source-line-no">026</span><span id="line.26">    }</span>
 <span class="source-line-no">027</span><span id="line.27"></span>
-<span class="source-line-no">028</span><span id="line.28">}</span>
+<span class="source-line-no">028</span><span id="line.28">    public ByProjectKeyGraphqlPost post(UnaryOperator&lt;com.commercetools.api.models.graph_ql.GraphQLRequestBuilder&gt; op) {</span>
+<span class="source-line-no">029</span><span id="line.29">        return post(op.apply(com.commercetools.api.models.graph_ql.GraphQLRequestBuilder.of()).build());</span>
+<span class="source-line-no">030</span><span id="line.30">    }</span>
+<span class="source-line-no">031</span><span id="line.31"></span>
+<span class="source-line-no">032</span><span id="line.32">}</span>
 
 
 

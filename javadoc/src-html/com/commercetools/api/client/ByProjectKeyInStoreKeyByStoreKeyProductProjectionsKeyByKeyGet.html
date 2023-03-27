@@ -155,501 +155,641 @@
 <span class="source-line-no">142</span><span id="line.142"></span>
 <span class="source-line-no">143</span><span id="line.143">    /**</span>
 <span class="source-line-no">144</span><span id="line.144">     * set staged with the specified value</span>
-<span class="source-line-no">145</span><span id="line.145">     */</span>
-<span class="source-line-no">146</span><span id="line.146">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withStaged(final TValue staged) {</span>
-<span class="source-line-no">147</span><span id="line.147">        return copy().withQueryParam("staged", staged);</span>
-<span class="source-line-no">148</span><span id="line.148">    }</span>
-<span class="source-line-no">149</span><span id="line.149"></span>
-<span class="source-line-no">150</span><span id="line.150">    /**</span>
-<span class="source-line-no">151</span><span id="line.151">     * add additional staged query parameter</span>
-<span class="source-line-no">152</span><span id="line.152">     */</span>
-<span class="source-line-no">153</span><span id="line.153">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addStaged(final TValue staged) {</span>
-<span class="source-line-no">154</span><span id="line.154">        return copy().addQueryParam("staged", staged);</span>
-<span class="source-line-no">155</span><span id="line.155">    }</span>
-<span class="source-line-no">156</span><span id="line.156"></span>
-<span class="source-line-no">157</span><span id="line.157">    /**</span>
-<span class="source-line-no">158</span><span id="line.158">     * set staged with the specified value</span>
-<span class="source-line-no">159</span><span id="line.159">     */</span>
-<span class="source-line-no">160</span><span id="line.160">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withStaged(final Supplier&lt;Boolean&gt; supplier) {</span>
-<span class="source-line-no">161</span><span id="line.161">        return copy().withQueryParam("staged", supplier.get());</span>
-<span class="source-line-no">162</span><span id="line.162">    }</span>
-<span class="source-line-no">163</span><span id="line.163"></span>
-<span class="source-line-no">164</span><span id="line.164">    /**</span>
-<span class="source-line-no">165</span><span id="line.165">     * add additional staged query parameter</span>
-<span class="source-line-no">166</span><span id="line.166">     */</span>
-<span class="source-line-no">167</span><span id="line.167">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addStaged(final Supplier&lt;Boolean&gt; supplier) {</span>
-<span class="source-line-no">168</span><span id="line.168">        return copy().addQueryParam("staged", supplier.get());</span>
-<span class="source-line-no">169</span><span id="line.169">    }</span>
-<span class="source-line-no">170</span><span id="line.170"></span>
-<span class="source-line-no">171</span><span id="line.171">    /**</span>
-<span class="source-line-no">172</span><span id="line.172">     * set staged with the specified value</span>
-<span class="source-line-no">173</span><span id="line.173">     */</span>
-<span class="source-line-no">174</span><span id="line.174">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withStaged(</span>
-<span class="source-line-no">175</span><span id="line.175">            final Function&lt;StringBuilder, StringBuilder&gt; op) {</span>
-<span class="source-line-no">176</span><span id="line.176">        return copy().withQueryParam("staged", op.apply(new StringBuilder()));</span>
-<span class="source-line-no">177</span><span id="line.177">    }</span>
-<span class="source-line-no">178</span><span id="line.178"></span>
-<span class="source-line-no">179</span><span id="line.179">    /**</span>
-<span class="source-line-no">180</span><span id="line.180">     * add additional staged query parameter</span>
-<span class="source-line-no">181</span><span id="line.181">     */</span>
-<span class="source-line-no">182</span><span id="line.182">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addStaged(</span>
-<span class="source-line-no">183</span><span id="line.183">            final Function&lt;StringBuilder, StringBuilder&gt; op) {</span>
-<span class="source-line-no">184</span><span id="line.184">        return copy().addQueryParam("staged", op.apply(new StringBuilder()));</span>
-<span class="source-line-no">185</span><span id="line.185">    }</span>
-<span class="source-line-no">186</span><span id="line.186"></span>
-<span class="source-line-no">187</span><span id="line.187">    /**</span>
-<span class="source-line-no">188</span><span id="line.188">     * set staged with the specified values</span>
-<span class="source-line-no">189</span><span id="line.189">     */</span>
-<span class="source-line-no">190</span><span id="line.190">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withStaged(</span>
-<span class="source-line-no">191</span><span id="line.191">            final Collection&lt;TValue&gt; staged) {</span>
-<span class="source-line-no">192</span><span id="line.192">        return copy().withoutQueryParam("staged")</span>
-<span class="source-line-no">193</span><span id="line.193">                .addQueryParams(</span>
-<span class="source-line-no">194</span><span id="line.194">                    staged.stream().map(s -&gt; new ParamEntry&lt;&gt;("staged", s.toString())).collect(Collectors.toList()));</span>
-<span class="source-line-no">195</span><span id="line.195">    }</span>
-<span class="source-line-no">196</span><span id="line.196"></span>
-<span class="source-line-no">197</span><span id="line.197">    /**</span>
-<span class="source-line-no">198</span><span id="line.198">     * add additional staged query parameters</span>
-<span class="source-line-no">199</span><span id="line.199">     */</span>
-<span class="source-line-no">200</span><span id="line.200">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addStaged(</span>
-<span class="source-line-no">201</span><span id="line.201">            final Collection&lt;TValue&gt; staged) {</span>
-<span class="source-line-no">202</span><span id="line.202">        return copy().addQueryParams(</span>
-<span class="source-line-no">203</span><span id="line.203">            staged.stream().map(s -&gt; new ParamEntry&lt;&gt;("staged", s.toString())).collect(Collectors.toList()));</span>
-<span class="source-line-no">204</span><span id="line.204">    }</span>
-<span class="source-line-no">205</span><span id="line.205"></span>
-<span class="source-line-no">206</span><span id="line.206">    /**</span>
-<span class="source-line-no">207</span><span id="line.207">     * set priceCurrency with the specified value</span>
-<span class="source-line-no">208</span><span id="line.208">     */</span>
-<span class="source-line-no">209</span><span id="line.209">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withPriceCurrency(</span>
-<span class="source-line-no">210</span><span id="line.210">            final TValue priceCurrency) {</span>
-<span class="source-line-no">211</span><span id="line.211">        return copy().withQueryParam("priceCurrency", priceCurrency);</span>
+<span class="source-line-no">145</span><span id="line.145">     * @param staged value to be set</span>
+<span class="source-line-no">146</span><span id="line.146">     * @param &lt;TValue&gt; value type</span>
+<span class="source-line-no">147</span><span id="line.147">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">148</span><span id="line.148">     */</span>
+<span class="source-line-no">149</span><span id="line.149">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withStaged(final TValue staged) {</span>
+<span class="source-line-no">150</span><span id="line.150">        return copy().withQueryParam("staged", staged);</span>
+<span class="source-line-no">151</span><span id="line.151">    }</span>
+<span class="source-line-no">152</span><span id="line.152"></span>
+<span class="source-line-no">153</span><span id="line.153">    /**</span>
+<span class="source-line-no">154</span><span id="line.154">     * add additional staged query parameter</span>
+<span class="source-line-no">155</span><span id="line.155">     * @param staged value to be added</span>
+<span class="source-line-no">156</span><span id="line.156">     * @param &lt;TValue&gt; value type</span>
+<span class="source-line-no">157</span><span id="line.157">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">158</span><span id="line.158">     */</span>
+<span class="source-line-no">159</span><span id="line.159">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addStaged(final TValue staged) {</span>
+<span class="source-line-no">160</span><span id="line.160">        return copy().addQueryParam("staged", staged);</span>
+<span class="source-line-no">161</span><span id="line.161">    }</span>
+<span class="source-line-no">162</span><span id="line.162"></span>
+<span class="source-line-no">163</span><span id="line.163">    /**</span>
+<span class="source-line-no">164</span><span id="line.164">     * set staged with the specified value</span>
+<span class="source-line-no">165</span><span id="line.165">     * @param supplier supplier for the value to be set</span>
+<span class="source-line-no">166</span><span id="line.166">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">167</span><span id="line.167">     */</span>
+<span class="source-line-no">168</span><span id="line.168">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withStaged(final Supplier&lt;Boolean&gt; supplier) {</span>
+<span class="source-line-no">169</span><span id="line.169">        return copy().withQueryParam("staged", supplier.get());</span>
+<span class="source-line-no">170</span><span id="line.170">    }</span>
+<span class="source-line-no">171</span><span id="line.171"></span>
+<span class="source-line-no">172</span><span id="line.172">    /**</span>
+<span class="source-line-no">173</span><span id="line.173">     * add additional staged query parameter</span>
+<span class="source-line-no">174</span><span id="line.174">     * @param supplier supplier for the value to be added</span>
+<span class="source-line-no">175</span><span id="line.175">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">176</span><span id="line.176">     */</span>
+<span class="source-line-no">177</span><span id="line.177">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addStaged(final Supplier&lt;Boolean&gt; supplier) {</span>
+<span class="source-line-no">178</span><span id="line.178">        return copy().addQueryParam("staged", supplier.get());</span>
+<span class="source-line-no">179</span><span id="line.179">    }</span>
+<span class="source-line-no">180</span><span id="line.180"></span>
+<span class="source-line-no">181</span><span id="line.181">    /**</span>
+<span class="source-line-no">182</span><span id="line.182">     * set staged with the specified value</span>
+<span class="source-line-no">183</span><span id="line.183">     * @param op builder for the value to be set</span>
+<span class="source-line-no">184</span><span id="line.184">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">185</span><span id="line.185">     */</span>
+<span class="source-line-no">186</span><span id="line.186">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withStaged(</span>
+<span class="source-line-no">187</span><span id="line.187">            final Function&lt;StringBuilder, StringBuilder&gt; op) {</span>
+<span class="source-line-no">188</span><span id="line.188">        return copy().withQueryParam("staged", op.apply(new StringBuilder()));</span>
+<span class="source-line-no">189</span><span id="line.189">    }</span>
+<span class="source-line-no">190</span><span id="line.190"></span>
+<span class="source-line-no">191</span><span id="line.191">    /**</span>
+<span class="source-line-no">192</span><span id="line.192">     * add additional staged query parameter</span>
+<span class="source-line-no">193</span><span id="line.193">     * @param op builder for the value to be added</span>
+<span class="source-line-no">194</span><span id="line.194">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">195</span><span id="line.195">     */</span>
+<span class="source-line-no">196</span><span id="line.196">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addStaged(</span>
+<span class="source-line-no">197</span><span id="line.197">            final Function&lt;StringBuilder, StringBuilder&gt; op) {</span>
+<span class="source-line-no">198</span><span id="line.198">        return copy().addQueryParam("staged", op.apply(new StringBuilder()));</span>
+<span class="source-line-no">199</span><span id="line.199">    }</span>
+<span class="source-line-no">200</span><span id="line.200"></span>
+<span class="source-line-no">201</span><span id="line.201">    /**</span>
+<span class="source-line-no">202</span><span id="line.202">     * set staged with the specified values</span>
+<span class="source-line-no">203</span><span id="line.203">     * @param staged values to be set</span>
+<span class="source-line-no">204</span><span id="line.204">     * @param &lt;TValue&gt; value type</span>
+<span class="source-line-no">205</span><span id="line.205">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">206</span><span id="line.206">     */</span>
+<span class="source-line-no">207</span><span id="line.207">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withStaged(</span>
+<span class="source-line-no">208</span><span id="line.208">            final Collection&lt;TValue&gt; staged) {</span>
+<span class="source-line-no">209</span><span id="line.209">        return copy().withoutQueryParam("staged")</span>
+<span class="source-line-no">210</span><span id="line.210">                .addQueryParams(</span>
+<span class="source-line-no">211</span><span id="line.211">                    staged.stream().map(s -&gt; new ParamEntry&lt;&gt;("staged", s.toString())).collect(Collectors.toList()));</span>
 <span class="source-line-no">212</span><span id="line.212">    }</span>
 <span class="source-line-no">213</span><span id="line.213"></span>
 <span class="source-line-no">214</span><span id="line.214">    /**</span>
-<span class="source-line-no">215</span><span id="line.215">     * add additional priceCurrency query parameter</span>
-<span class="source-line-no">216</span><span id="line.216">     */</span>
-<span class="source-line-no">217</span><span id="line.217">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addPriceCurrency(</span>
-<span class="source-line-no">218</span><span id="line.218">            final TValue priceCurrency) {</span>
-<span class="source-line-no">219</span><span id="line.219">        return copy().addQueryParam("priceCurrency", priceCurrency);</span>
-<span class="source-line-no">220</span><span id="line.220">    }</span>
-<span class="source-line-no">221</span><span id="line.221"></span>
-<span class="source-line-no">222</span><span id="line.222">    /**</span>
-<span class="source-line-no">223</span><span id="line.223">     * set priceCurrency with the specified value</span>
-<span class="source-line-no">224</span><span id="line.224">     */</span>
-<span class="source-line-no">225</span><span id="line.225">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withPriceCurrency(</span>
-<span class="source-line-no">226</span><span id="line.226">            final Supplier&lt;String&gt; supplier) {</span>
-<span class="source-line-no">227</span><span id="line.227">        return copy().withQueryParam("priceCurrency", supplier.get());</span>
-<span class="source-line-no">228</span><span id="line.228">    }</span>
-<span class="source-line-no">229</span><span id="line.229"></span>
-<span class="source-line-no">230</span><span id="line.230">    /**</span>
-<span class="source-line-no">231</span><span id="line.231">     * add additional priceCurrency query parameter</span>
-<span class="source-line-no">232</span><span id="line.232">     */</span>
-<span class="source-line-no">233</span><span id="line.233">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addPriceCurrency(</span>
-<span class="source-line-no">234</span><span id="line.234">            final Supplier&lt;String&gt; supplier) {</span>
-<span class="source-line-no">235</span><span id="line.235">        return copy().addQueryParam("priceCurrency", supplier.get());</span>
-<span class="source-line-no">236</span><span id="line.236">    }</span>
-<span class="source-line-no">237</span><span id="line.237"></span>
-<span class="source-line-no">238</span><span id="line.238">    /**</span>
-<span class="source-line-no">239</span><span id="line.239">     * set priceCurrency with the specified value</span>
-<span class="source-line-no">240</span><span id="line.240">     */</span>
-<span class="source-line-no">241</span><span id="line.241">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withPriceCurrency(</span>
-<span class="source-line-no">242</span><span id="line.242">            final Function&lt;StringBuilder, StringBuilder&gt; op) {</span>
-<span class="source-line-no">243</span><span id="line.243">        return copy().withQueryParam("priceCurrency", op.apply(new StringBuilder()));</span>
-<span class="source-line-no">244</span><span id="line.244">    }</span>
-<span class="source-line-no">245</span><span id="line.245"></span>
-<span class="source-line-no">246</span><span id="line.246">    /**</span>
-<span class="source-line-no">247</span><span id="line.247">     * add additional priceCurrency query parameter</span>
-<span class="source-line-no">248</span><span id="line.248">     */</span>
-<span class="source-line-no">249</span><span id="line.249">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addPriceCurrency(</span>
-<span class="source-line-no">250</span><span id="line.250">            final Function&lt;StringBuilder, StringBuilder&gt; op) {</span>
-<span class="source-line-no">251</span><span id="line.251">        return copy().addQueryParam("priceCurrency", op.apply(new StringBuilder()));</span>
-<span class="source-line-no">252</span><span id="line.252">    }</span>
-<span class="source-line-no">253</span><span id="line.253"></span>
-<span class="source-line-no">254</span><span id="line.254">    /**</span>
-<span class="source-line-no">255</span><span id="line.255">     * set priceCurrency with the specified values</span>
-<span class="source-line-no">256</span><span id="line.256">     */</span>
-<span class="source-line-no">257</span><span id="line.257">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withPriceCurrency(</span>
-<span class="source-line-no">258</span><span id="line.258">            final Collection&lt;TValue&gt; priceCurrency) {</span>
-<span class="source-line-no">259</span><span id="line.259">        return copy().withoutQueryParam("priceCurrency")</span>
-<span class="source-line-no">260</span><span id="line.260">                .addQueryParams(priceCurrency.stream()</span>
-<span class="source-line-no">261</span><span id="line.261">                        .map(s -&gt; new ParamEntry&lt;&gt;("priceCurrency", s.toString()))</span>
-<span class="source-line-no">262</span><span id="line.262">                        .collect(Collectors.toList()));</span>
-<span class="source-line-no">263</span><span id="line.263">    }</span>
-<span class="source-line-no">264</span><span id="line.264"></span>
-<span class="source-line-no">265</span><span id="line.265">    /**</span>
-<span class="source-line-no">266</span><span id="line.266">     * add additional priceCurrency query parameters</span>
-<span class="source-line-no">267</span><span id="line.267">     */</span>
-<span class="source-line-no">268</span><span id="line.268">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addPriceCurrency(</span>
-<span class="source-line-no">269</span><span id="line.269">            final Collection&lt;TValue&gt; priceCurrency) {</span>
-<span class="source-line-no">270</span><span id="line.270">        return copy().addQueryParams(priceCurrency.stream()</span>
-<span class="source-line-no">271</span><span id="line.271">                .map(s -&gt; new ParamEntry&lt;&gt;("priceCurrency", s.toString()))</span>
-<span class="source-line-no">272</span><span id="line.272">                .collect(Collectors.toList()));</span>
-<span class="source-line-no">273</span><span id="line.273">    }</span>
-<span class="source-line-no">274</span><span id="line.274"></span>
-<span class="source-line-no">275</span><span id="line.275">    /**</span>
-<span class="source-line-no">276</span><span id="line.276">     * set priceCountry with the specified value</span>
-<span class="source-line-no">277</span><span id="line.277">     */</span>
-<span class="source-line-no">278</span><span id="line.278">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withPriceCountry(</span>
-<span class="source-line-no">279</span><span id="line.279">            final TValue priceCountry) {</span>
-<span class="source-line-no">280</span><span id="line.280">        return copy().withQueryParam("priceCountry", priceCountry);</span>
-<span class="source-line-no">281</span><span id="line.281">    }</span>
-<span class="source-line-no">282</span><span id="line.282"></span>
-<span class="source-line-no">283</span><span id="line.283">    /**</span>
-<span class="source-line-no">284</span><span id="line.284">     * add additional priceCountry query parameter</span>
-<span class="source-line-no">285</span><span id="line.285">     */</span>
-<span class="source-line-no">286</span><span id="line.286">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addPriceCountry(</span>
-<span class="source-line-no">287</span><span id="line.287">            final TValue priceCountry) {</span>
-<span class="source-line-no">288</span><span id="line.288">        return copy().addQueryParam("priceCountry", priceCountry);</span>
-<span class="source-line-no">289</span><span id="line.289">    }</span>
-<span class="source-line-no">290</span><span id="line.290"></span>
-<span class="source-line-no">291</span><span id="line.291">    /**</span>
-<span class="source-line-no">292</span><span id="line.292">     * set priceCountry with the specified value</span>
+<span class="source-line-no">215</span><span id="line.215">     * add additional staged query parameters</span>
+<span class="source-line-no">216</span><span id="line.216">     * @param staged values to be added</span>
+<span class="source-line-no">217</span><span id="line.217">     * @param &lt;TValue&gt; value type</span>
+<span class="source-line-no">218</span><span id="line.218">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">219</span><span id="line.219">     */</span>
+<span class="source-line-no">220</span><span id="line.220">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addStaged(</span>
+<span class="source-line-no">221</span><span id="line.221">            final Collection&lt;TValue&gt; staged) {</span>
+<span class="source-line-no">222</span><span id="line.222">        return copy().addQueryParams(</span>
+<span class="source-line-no">223</span><span id="line.223">            staged.stream().map(s -&gt; new ParamEntry&lt;&gt;("staged", s.toString())).collect(Collectors.toList()));</span>
+<span class="source-line-no">224</span><span id="line.224">    }</span>
+<span class="source-line-no">225</span><span id="line.225"></span>
+<span class="source-line-no">226</span><span id="line.226">    /**</span>
+<span class="source-line-no">227</span><span id="line.227">     * set priceCurrency with the specified value</span>
+<span class="source-line-no">228</span><span id="line.228">     * @param priceCurrency value to be set</span>
+<span class="source-line-no">229</span><span id="line.229">     * @param &lt;TValue&gt; value type</span>
+<span class="source-line-no">230</span><span id="line.230">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">231</span><span id="line.231">     */</span>
+<span class="source-line-no">232</span><span id="line.232">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withPriceCurrency(</span>
+<span class="source-line-no">233</span><span id="line.233">            final TValue priceCurrency) {</span>
+<span class="source-line-no">234</span><span id="line.234">        return copy().withQueryParam("priceCurrency", priceCurrency);</span>
+<span class="source-line-no">235</span><span id="line.235">    }</span>
+<span class="source-line-no">236</span><span id="line.236"></span>
+<span class="source-line-no">237</span><span id="line.237">    /**</span>
+<span class="source-line-no">238</span><span id="line.238">     * add additional priceCurrency query parameter</span>
+<span class="source-line-no">239</span><span id="line.239">     * @param priceCurrency value to be added</span>
+<span class="source-line-no">240</span><span id="line.240">     * @param &lt;TValue&gt; value type</span>
+<span class="source-line-no">241</span><span id="line.241">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">242</span><span id="line.242">     */</span>
+<span class="source-line-no">243</span><span id="line.243">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addPriceCurrency(</span>
+<span class="source-line-no">244</span><span id="line.244">            final TValue priceCurrency) {</span>
+<span class="source-line-no">245</span><span id="line.245">        return copy().addQueryParam("priceCurrency", priceCurrency);</span>
+<span class="source-line-no">246</span><span id="line.246">    }</span>
+<span class="source-line-no">247</span><span id="line.247"></span>
+<span class="source-line-no">248</span><span id="line.248">    /**</span>
+<span class="source-line-no">249</span><span id="line.249">     * set priceCurrency with the specified value</span>
+<span class="source-line-no">250</span><span id="line.250">     * @param supplier supplier for the value to be set</span>
+<span class="source-line-no">251</span><span id="line.251">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">252</span><span id="line.252">     */</span>
+<span class="source-line-no">253</span><span id="line.253">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withPriceCurrency(</span>
+<span class="source-line-no">254</span><span id="line.254">            final Supplier&lt;String&gt; supplier) {</span>
+<span class="source-line-no">255</span><span id="line.255">        return copy().withQueryParam("priceCurrency", supplier.get());</span>
+<span class="source-line-no">256</span><span id="line.256">    }</span>
+<span class="source-line-no">257</span><span id="line.257"></span>
+<span class="source-line-no">258</span><span id="line.258">    /**</span>
+<span class="source-line-no">259</span><span id="line.259">     * add additional priceCurrency query parameter</span>
+<span class="source-line-no">260</span><span id="line.260">     * @param supplier supplier for the value to be added</span>
+<span class="source-line-no">261</span><span id="line.261">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">262</span><span id="line.262">     */</span>
+<span class="source-line-no">263</span><span id="line.263">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addPriceCurrency(</span>
+<span class="source-line-no">264</span><span id="line.264">            final Supplier&lt;String&gt; supplier) {</span>
+<span class="source-line-no">265</span><span id="line.265">        return copy().addQueryParam("priceCurrency", supplier.get());</span>
+<span class="source-line-no">266</span><span id="line.266">    }</span>
+<span class="source-line-no">267</span><span id="line.267"></span>
+<span class="source-line-no">268</span><span id="line.268">    /**</span>
+<span class="source-line-no">269</span><span id="line.269">     * set priceCurrency with the specified value</span>
+<span class="source-line-no">270</span><span id="line.270">     * @param op builder for the value to be set</span>
+<span class="source-line-no">271</span><span id="line.271">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">272</span><span id="line.272">     */</span>
+<span class="source-line-no">273</span><span id="line.273">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withPriceCurrency(</span>
+<span class="source-line-no">274</span><span id="line.274">            final Function&lt;StringBuilder, StringBuilder&gt; op) {</span>
+<span class="source-line-no">275</span><span id="line.275">        return copy().withQueryParam("priceCurrency", op.apply(new StringBuilder()));</span>
+<span class="source-line-no">276</span><span id="line.276">    }</span>
+<span class="source-line-no">277</span><span id="line.277"></span>
+<span class="source-line-no">278</span><span id="line.278">    /**</span>
+<span class="source-line-no">279</span><span id="line.279">     * add additional priceCurrency query parameter</span>
+<span class="source-line-no">280</span><span id="line.280">     * @param op builder for the value to be added</span>
+<span class="source-line-no">281</span><span id="line.281">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">282</span><span id="line.282">     */</span>
+<span class="source-line-no">283</span><span id="line.283">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addPriceCurrency(</span>
+<span class="source-line-no">284</span><span id="line.284">            final Function&lt;StringBuilder, StringBuilder&gt; op) {</span>
+<span class="source-line-no">285</span><span id="line.285">        return copy().addQueryParam("priceCurrency", op.apply(new StringBuilder()));</span>
+<span class="source-line-no">286</span><span id="line.286">    }</span>
+<span class="source-line-no">287</span><span id="line.287"></span>
+<span class="source-line-no">288</span><span id="line.288">    /**</span>
+<span class="source-line-no">289</span><span id="line.289">     * set priceCurrency with the specified values</span>
+<span class="source-line-no">290</span><span id="line.290">     * @param priceCurrency values to be set</span>
+<span class="source-line-no">291</span><span id="line.291">     * @param &lt;TValue&gt; value type</span>
+<span class="source-line-no">292</span><span id="line.292">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
 <span class="source-line-no">293</span><span id="line.293">     */</span>
-<span class="source-line-no">294</span><span id="line.294">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withPriceCountry(</span>
-<span class="source-line-no">295</span><span id="line.295">            final Supplier&lt;String&gt; supplier) {</span>
-<span class="source-line-no">296</span><span id="line.296">        return copy().withQueryParam("priceCountry", supplier.get());</span>
-<span class="source-line-no">297</span><span id="line.297">    }</span>
-<span class="source-line-no">298</span><span id="line.298"></span>
-<span class="source-line-no">299</span><span id="line.299">    /**</span>
-<span class="source-line-no">300</span><span id="line.300">     * add additional priceCountry query parameter</span>
-<span class="source-line-no">301</span><span id="line.301">     */</span>
-<span class="source-line-no">302</span><span id="line.302">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addPriceCountry(</span>
-<span class="source-line-no">303</span><span id="line.303">            final Supplier&lt;String&gt; supplier) {</span>
-<span class="source-line-no">304</span><span id="line.304">        return copy().addQueryParam("priceCountry", supplier.get());</span>
-<span class="source-line-no">305</span><span id="line.305">    }</span>
-<span class="source-line-no">306</span><span id="line.306"></span>
-<span class="source-line-no">307</span><span id="line.307">    /**</span>
-<span class="source-line-no">308</span><span id="line.308">     * set priceCountry with the specified value</span>
-<span class="source-line-no">309</span><span id="line.309">     */</span>
-<span class="source-line-no">310</span><span id="line.310">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withPriceCountry(</span>
-<span class="source-line-no">311</span><span id="line.311">            final Function&lt;StringBuilder, StringBuilder&gt; op) {</span>
-<span class="source-line-no">312</span><span id="line.312">        return copy().withQueryParam("priceCountry", op.apply(new StringBuilder()));</span>
+<span class="source-line-no">294</span><span id="line.294">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withPriceCurrency(</span>
+<span class="source-line-no">295</span><span id="line.295">            final Collection&lt;TValue&gt; priceCurrency) {</span>
+<span class="source-line-no">296</span><span id="line.296">        return copy().withoutQueryParam("priceCurrency")</span>
+<span class="source-line-no">297</span><span id="line.297">                .addQueryParams(priceCurrency.stream()</span>
+<span class="source-line-no">298</span><span id="line.298">                        .map(s -&gt; new ParamEntry&lt;&gt;("priceCurrency", s.toString()))</span>
+<span class="source-line-no">299</span><span id="line.299">                        .collect(Collectors.toList()));</span>
+<span class="source-line-no">300</span><span id="line.300">    }</span>
+<span class="source-line-no">301</span><span id="line.301"></span>
+<span class="source-line-no">302</span><span id="line.302">    /**</span>
+<span class="source-line-no">303</span><span id="line.303">     * add additional priceCurrency query parameters</span>
+<span class="source-line-no">304</span><span id="line.304">     * @param priceCurrency values to be added</span>
+<span class="source-line-no">305</span><span id="line.305">     * @param &lt;TValue&gt; value type</span>
+<span class="source-line-no">306</span><span id="line.306">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">307</span><span id="line.307">     */</span>
+<span class="source-line-no">308</span><span id="line.308">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addPriceCurrency(</span>
+<span class="source-line-no">309</span><span id="line.309">            final Collection&lt;TValue&gt; priceCurrency) {</span>
+<span class="source-line-no">310</span><span id="line.310">        return copy().addQueryParams(priceCurrency.stream()</span>
+<span class="source-line-no">311</span><span id="line.311">                .map(s -&gt; new ParamEntry&lt;&gt;("priceCurrency", s.toString()))</span>
+<span class="source-line-no">312</span><span id="line.312">                .collect(Collectors.toList()));</span>
 <span class="source-line-no">313</span><span id="line.313">    }</span>
 <span class="source-line-no">314</span><span id="line.314"></span>
 <span class="source-line-no">315</span><span id="line.315">    /**</span>
-<span class="source-line-no">316</span><span id="line.316">     * add additional priceCountry query parameter</span>
-<span class="source-line-no">317</span><span id="line.317">     */</span>
-<span class="source-line-no">318</span><span id="line.318">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addPriceCountry(</span>
-<span class="source-line-no">319</span><span id="line.319">            final Function&lt;StringBuilder, StringBuilder&gt; op) {</span>
-<span class="source-line-no">320</span><span id="line.320">        return copy().addQueryParam("priceCountry", op.apply(new StringBuilder()));</span>
-<span class="source-line-no">321</span><span id="line.321">    }</span>
-<span class="source-line-no">322</span><span id="line.322"></span>
-<span class="source-line-no">323</span><span id="line.323">    /**</span>
-<span class="source-line-no">324</span><span id="line.324">     * set priceCountry with the specified values</span>
-<span class="source-line-no">325</span><span id="line.325">     */</span>
-<span class="source-line-no">326</span><span id="line.326">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withPriceCountry(</span>
-<span class="source-line-no">327</span><span id="line.327">            final Collection&lt;TValue&gt; priceCountry) {</span>
-<span class="source-line-no">328</span><span id="line.328">        return copy().withoutQueryParam("priceCountry")</span>
-<span class="source-line-no">329</span><span id="line.329">                .addQueryParams(priceCountry.stream()</span>
-<span class="source-line-no">330</span><span id="line.330">                        .map(s -&gt; new ParamEntry&lt;&gt;("priceCountry", s.toString()))</span>
-<span class="source-line-no">331</span><span id="line.331">                        .collect(Collectors.toList()));</span>
-<span class="source-line-no">332</span><span id="line.332">    }</span>
-<span class="source-line-no">333</span><span id="line.333"></span>
-<span class="source-line-no">334</span><span id="line.334">    /**</span>
-<span class="source-line-no">335</span><span id="line.335">     * add additional priceCountry query parameters</span>
-<span class="source-line-no">336</span><span id="line.336">     */</span>
-<span class="source-line-no">337</span><span id="line.337">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addPriceCountry(</span>
-<span class="source-line-no">338</span><span id="line.338">            final Collection&lt;TValue&gt; priceCountry) {</span>
-<span class="source-line-no">339</span><span id="line.339">        return copy().addQueryParams(priceCountry.stream()</span>
-<span class="source-line-no">340</span><span id="line.340">                .map(s -&gt; new ParamEntry&lt;&gt;("priceCountry", s.toString()))</span>
-<span class="source-line-no">341</span><span id="line.341">                .collect(Collectors.toList()));</span>
-<span class="source-line-no">342</span><span id="line.342">    }</span>
-<span class="source-line-no">343</span><span id="line.343"></span>
-<span class="source-line-no">344</span><span id="line.344">    /**</span>
-<span class="source-line-no">345</span><span id="line.345">     * set priceCustomerGroup with the specified value</span>
-<span class="source-line-no">346</span><span id="line.346">     */</span>
-<span class="source-line-no">347</span><span id="line.347">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withPriceCustomerGroup(</span>
-<span class="source-line-no">348</span><span id="line.348">            final TValue priceCustomerGroup) {</span>
-<span class="source-line-no">349</span><span id="line.349">        return copy().withQueryParam("priceCustomerGroup", priceCustomerGroup);</span>
-<span class="source-line-no">350</span><span id="line.350">    }</span>
-<span class="source-line-no">351</span><span id="line.351"></span>
-<span class="source-line-no">352</span><span id="line.352">    /**</span>
-<span class="source-line-no">353</span><span id="line.353">     * add additional priceCustomerGroup query parameter</span>
-<span class="source-line-no">354</span><span id="line.354">     */</span>
-<span class="source-line-no">355</span><span id="line.355">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addPriceCustomerGroup(</span>
-<span class="source-line-no">356</span><span id="line.356">            final TValue priceCustomerGroup) {</span>
-<span class="source-line-no">357</span><span id="line.357">        return copy().addQueryParam("priceCustomerGroup", priceCustomerGroup);</span>
-<span class="source-line-no">358</span><span id="line.358">    }</span>
-<span class="source-line-no">359</span><span id="line.359"></span>
-<span class="source-line-no">360</span><span id="line.360">    /**</span>
-<span class="source-line-no">361</span><span id="line.361">     * set priceCustomerGroup with the specified value</span>
-<span class="source-line-no">362</span><span id="line.362">     */</span>
-<span class="source-line-no">363</span><span id="line.363">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withPriceCustomerGroup(</span>
-<span class="source-line-no">364</span><span id="line.364">            final Supplier&lt;String&gt; supplier) {</span>
-<span class="source-line-no">365</span><span id="line.365">        return copy().withQueryParam("priceCustomerGroup", supplier.get());</span>
-<span class="source-line-no">366</span><span id="line.366">    }</span>
-<span class="source-line-no">367</span><span id="line.367"></span>
-<span class="source-line-no">368</span><span id="line.368">    /**</span>
-<span class="source-line-no">369</span><span id="line.369">     * add additional priceCustomerGroup query parameter</span>
-<span class="source-line-no">370</span><span id="line.370">     */</span>
-<span class="source-line-no">371</span><span id="line.371">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addPriceCustomerGroup(</span>
-<span class="source-line-no">372</span><span id="line.372">            final Supplier&lt;String&gt; supplier) {</span>
-<span class="source-line-no">373</span><span id="line.373">        return copy().addQueryParam("priceCustomerGroup", supplier.get());</span>
-<span class="source-line-no">374</span><span id="line.374">    }</span>
-<span class="source-line-no">375</span><span id="line.375"></span>
-<span class="source-line-no">376</span><span id="line.376">    /**</span>
-<span class="source-line-no">377</span><span id="line.377">     * set priceCustomerGroup with the specified value</span>
-<span class="source-line-no">378</span><span id="line.378">     */</span>
-<span class="source-line-no">379</span><span id="line.379">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withPriceCustomerGroup(</span>
-<span class="source-line-no">380</span><span id="line.380">            final Function&lt;StringBuilder, StringBuilder&gt; op) {</span>
-<span class="source-line-no">381</span><span id="line.381">        return copy().withQueryParam("priceCustomerGroup", op.apply(new StringBuilder()));</span>
-<span class="source-line-no">382</span><span id="line.382">    }</span>
-<span class="source-line-no">383</span><span id="line.383"></span>
-<span class="source-line-no">384</span><span id="line.384">    /**</span>
-<span class="source-line-no">385</span><span id="line.385">     * add additional priceCustomerGroup query parameter</span>
-<span class="source-line-no">386</span><span id="line.386">     */</span>
-<span class="source-line-no">387</span><span id="line.387">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addPriceCustomerGroup(</span>
-<span class="source-line-no">388</span><span id="line.388">            final Function&lt;StringBuilder, StringBuilder&gt; op) {</span>
-<span class="source-line-no">389</span><span id="line.389">        return copy().addQueryParam("priceCustomerGroup", op.apply(new StringBuilder()));</span>
-<span class="source-line-no">390</span><span id="line.390">    }</span>
-<span class="source-line-no">391</span><span id="line.391"></span>
-<span class="source-line-no">392</span><span id="line.392">    /**</span>
-<span class="source-line-no">393</span><span id="line.393">     * set priceCustomerGroup with the specified values</span>
-<span class="source-line-no">394</span><span id="line.394">     */</span>
-<span class="source-line-no">395</span><span id="line.395">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withPriceCustomerGroup(</span>
-<span class="source-line-no">396</span><span id="line.396">            final Collection&lt;TValue&gt; priceCustomerGroup) {</span>
-<span class="source-line-no">397</span><span id="line.397">        return copy().withoutQueryParam("priceCustomerGroup")</span>
-<span class="source-line-no">398</span><span id="line.398">                .addQueryParams(priceCustomerGroup.stream()</span>
-<span class="source-line-no">399</span><span id="line.399">                        .map(s -&gt; new ParamEntry&lt;&gt;("priceCustomerGroup", s.toString()))</span>
-<span class="source-line-no">400</span><span id="line.400">                        .collect(Collectors.toList()));</span>
-<span class="source-line-no">401</span><span id="line.401">    }</span>
-<span class="source-line-no">402</span><span id="line.402"></span>
-<span class="source-line-no">403</span><span id="line.403">    /**</span>
-<span class="source-line-no">404</span><span id="line.404">     * add additional priceCustomerGroup query parameters</span>
-<span class="source-line-no">405</span><span id="line.405">     */</span>
-<span class="source-line-no">406</span><span id="line.406">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addPriceCustomerGroup(</span>
-<span class="source-line-no">407</span><span id="line.407">            final Collection&lt;TValue&gt; priceCustomerGroup) {</span>
-<span class="source-line-no">408</span><span id="line.408">        return copy().addQueryParams(priceCustomerGroup.stream()</span>
-<span class="source-line-no">409</span><span id="line.409">                .map(s -&gt; new ParamEntry&lt;&gt;("priceCustomerGroup", s.toString()))</span>
-<span class="source-line-no">410</span><span id="line.410">                .collect(Collectors.toList()));</span>
-<span class="source-line-no">411</span><span id="line.411">    }</span>
-<span class="source-line-no">412</span><span id="line.412"></span>
-<span class="source-line-no">413</span><span id="line.413">    /**</span>
-<span class="source-line-no">414</span><span id="line.414">     * set priceChannel with the specified value</span>
-<span class="source-line-no">415</span><span id="line.415">     */</span>
-<span class="source-line-no">416</span><span id="line.416">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withPriceChannel(</span>
-<span class="source-line-no">417</span><span id="line.417">            final TValue priceChannel) {</span>
-<span class="source-line-no">418</span><span id="line.418">        return copy().withQueryParam("priceChannel", priceChannel);</span>
-<span class="source-line-no">419</span><span id="line.419">    }</span>
-<span class="source-line-no">420</span><span id="line.420"></span>
-<span class="source-line-no">421</span><span id="line.421">    /**</span>
-<span class="source-line-no">422</span><span id="line.422">     * add additional priceChannel query parameter</span>
-<span class="source-line-no">423</span><span id="line.423">     */</span>
-<span class="source-line-no">424</span><span id="line.424">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addPriceChannel(</span>
-<span class="source-line-no">425</span><span id="line.425">            final TValue priceChannel) {</span>
-<span class="source-line-no">426</span><span id="line.426">        return copy().addQueryParam("priceChannel", priceChannel);</span>
-<span class="source-line-no">427</span><span id="line.427">    }</span>
-<span class="source-line-no">428</span><span id="line.428"></span>
-<span class="source-line-no">429</span><span id="line.429">    /**</span>
-<span class="source-line-no">430</span><span id="line.430">     * set priceChannel with the specified value</span>
-<span class="source-line-no">431</span><span id="line.431">     */</span>
-<span class="source-line-no">432</span><span id="line.432">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withPriceChannel(</span>
-<span class="source-line-no">433</span><span id="line.433">            final Supplier&lt;String&gt; supplier) {</span>
-<span class="source-line-no">434</span><span id="line.434">        return copy().withQueryParam("priceChannel", supplier.get());</span>
-<span class="source-line-no">435</span><span id="line.435">    }</span>
-<span class="source-line-no">436</span><span id="line.436"></span>
-<span class="source-line-no">437</span><span id="line.437">    /**</span>
-<span class="source-line-no">438</span><span id="line.438">     * add additional priceChannel query parameter</span>
-<span class="source-line-no">439</span><span id="line.439">     */</span>
-<span class="source-line-no">440</span><span id="line.440">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addPriceChannel(</span>
-<span class="source-line-no">441</span><span id="line.441">            final Supplier&lt;String&gt; supplier) {</span>
-<span class="source-line-no">442</span><span id="line.442">        return copy().addQueryParam("priceChannel", supplier.get());</span>
-<span class="source-line-no">443</span><span id="line.443">    }</span>
-<span class="source-line-no">444</span><span id="line.444"></span>
-<span class="source-line-no">445</span><span id="line.445">    /**</span>
-<span class="source-line-no">446</span><span id="line.446">     * set priceChannel with the specified value</span>
-<span class="source-line-no">447</span><span id="line.447">     */</span>
-<span class="source-line-no">448</span><span id="line.448">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withPriceChannel(</span>
-<span class="source-line-no">449</span><span id="line.449">            final Function&lt;StringBuilder, StringBuilder&gt; op) {</span>
-<span class="source-line-no">450</span><span id="line.450">        return copy().withQueryParam("priceChannel", op.apply(new StringBuilder()));</span>
-<span class="source-line-no">451</span><span id="line.451">    }</span>
-<span class="source-line-no">452</span><span id="line.452"></span>
-<span class="source-line-no">453</span><span id="line.453">    /**</span>
-<span class="source-line-no">454</span><span id="line.454">     * add additional priceChannel query parameter</span>
-<span class="source-line-no">455</span><span id="line.455">     */</span>
-<span class="source-line-no">456</span><span id="line.456">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addPriceChannel(</span>
-<span class="source-line-no">457</span><span id="line.457">            final Function&lt;StringBuilder, StringBuilder&gt; op) {</span>
-<span class="source-line-no">458</span><span id="line.458">        return copy().addQueryParam("priceChannel", op.apply(new StringBuilder()));</span>
-<span class="source-line-no">459</span><span id="line.459">    }</span>
-<span class="source-line-no">460</span><span id="line.460"></span>
-<span class="source-line-no">461</span><span id="line.461">    /**</span>
-<span class="source-line-no">462</span><span id="line.462">     * set priceChannel with the specified values</span>
-<span class="source-line-no">463</span><span id="line.463">     */</span>
-<span class="source-line-no">464</span><span id="line.464">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withPriceChannel(</span>
-<span class="source-line-no">465</span><span id="line.465">            final Collection&lt;TValue&gt; priceChannel) {</span>
-<span class="source-line-no">466</span><span id="line.466">        return copy().withoutQueryParam("priceChannel")</span>
-<span class="source-line-no">467</span><span id="line.467">                .addQueryParams(priceChannel.stream()</span>
-<span class="source-line-no">468</span><span id="line.468">                        .map(s -&gt; new ParamEntry&lt;&gt;("priceChannel", s.toString()))</span>
-<span class="source-line-no">469</span><span id="line.469">                        .collect(Collectors.toList()));</span>
-<span class="source-line-no">470</span><span id="line.470">    }</span>
-<span class="source-line-no">471</span><span id="line.471"></span>
-<span class="source-line-no">472</span><span id="line.472">    /**</span>
-<span class="source-line-no">473</span><span id="line.473">     * add additional priceChannel query parameters</span>
-<span class="source-line-no">474</span><span id="line.474">     */</span>
-<span class="source-line-no">475</span><span id="line.475">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addPriceChannel(</span>
-<span class="source-line-no">476</span><span id="line.476">            final Collection&lt;TValue&gt; priceChannel) {</span>
-<span class="source-line-no">477</span><span id="line.477">        return copy().addQueryParams(priceChannel.stream()</span>
-<span class="source-line-no">478</span><span id="line.478">                .map(s -&gt; new ParamEntry&lt;&gt;("priceChannel", s.toString()))</span>
-<span class="source-line-no">479</span><span id="line.479">                .collect(Collectors.toList()));</span>
-<span class="source-line-no">480</span><span id="line.480">    }</span>
-<span class="source-line-no">481</span><span id="line.481"></span>
-<span class="source-line-no">482</span><span id="line.482">    /**</span>
-<span class="source-line-no">483</span><span id="line.483">     * set localeProjection with the specified value</span>
-<span class="source-line-no">484</span><span id="line.484">     */</span>
-<span class="source-line-no">485</span><span id="line.485">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withLocaleProjection(</span>
-<span class="source-line-no">486</span><span id="line.486">            final TValue localeProjection) {</span>
-<span class="source-line-no">487</span><span id="line.487">        return copy().withQueryParam("localeProjection", localeProjection);</span>
-<span class="source-line-no">488</span><span id="line.488">    }</span>
-<span class="source-line-no">489</span><span id="line.489"></span>
-<span class="source-line-no">490</span><span id="line.490">    /**</span>
-<span class="source-line-no">491</span><span id="line.491">     * add additional localeProjection query parameter</span>
-<span class="source-line-no">492</span><span id="line.492">     */</span>
-<span class="source-line-no">493</span><span id="line.493">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addLocaleProjection(</span>
-<span class="source-line-no">494</span><span id="line.494">            final TValue localeProjection) {</span>
-<span class="source-line-no">495</span><span id="line.495">        return copy().addQueryParam("localeProjection", localeProjection);</span>
-<span class="source-line-no">496</span><span id="line.496">    }</span>
-<span class="source-line-no">497</span><span id="line.497"></span>
-<span class="source-line-no">498</span><span id="line.498">    /**</span>
-<span class="source-line-no">499</span><span id="line.499">     * set localeProjection with the specified value</span>
-<span class="source-line-no">500</span><span id="line.500">     */</span>
-<span class="source-line-no">501</span><span id="line.501">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withLocaleProjection(</span>
-<span class="source-line-no">502</span><span id="line.502">            final Supplier&lt;String&gt; supplier) {</span>
-<span class="source-line-no">503</span><span id="line.503">        return copy().withQueryParam("localeProjection", supplier.get());</span>
-<span class="source-line-no">504</span><span id="line.504">    }</span>
-<span class="source-line-no">505</span><span id="line.505"></span>
-<span class="source-line-no">506</span><span id="line.506">    /**</span>
-<span class="source-line-no">507</span><span id="line.507">     * add additional localeProjection query parameter</span>
-<span class="source-line-no">508</span><span id="line.508">     */</span>
-<span class="source-line-no">509</span><span id="line.509">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addLocaleProjection(</span>
-<span class="source-line-no">510</span><span id="line.510">            final Supplier&lt;String&gt; supplier) {</span>
-<span class="source-line-no">511</span><span id="line.511">        return copy().addQueryParam("localeProjection", supplier.get());</span>
-<span class="source-line-no">512</span><span id="line.512">    }</span>
-<span class="source-line-no">513</span><span id="line.513"></span>
-<span class="source-line-no">514</span><span id="line.514">    /**</span>
-<span class="source-line-no">515</span><span id="line.515">     * set localeProjection with the specified value</span>
-<span class="source-line-no">516</span><span id="line.516">     */</span>
-<span class="source-line-no">517</span><span id="line.517">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withLocaleProjection(</span>
-<span class="source-line-no">518</span><span id="line.518">            final Function&lt;StringBuilder, StringBuilder&gt; op) {</span>
-<span class="source-line-no">519</span><span id="line.519">        return copy().withQueryParam("localeProjection", op.apply(new StringBuilder()));</span>
-<span class="source-line-no">520</span><span id="line.520">    }</span>
-<span class="source-line-no">521</span><span id="line.521"></span>
-<span class="source-line-no">522</span><span id="line.522">    /**</span>
-<span class="source-line-no">523</span><span id="line.523">     * add additional localeProjection query parameter</span>
-<span class="source-line-no">524</span><span id="line.524">     */</span>
-<span class="source-line-no">525</span><span id="line.525">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addLocaleProjection(</span>
-<span class="source-line-no">526</span><span id="line.526">            final Function&lt;StringBuilder, StringBuilder&gt; op) {</span>
-<span class="source-line-no">527</span><span id="line.527">        return copy().addQueryParam("localeProjection", op.apply(new StringBuilder()));</span>
-<span class="source-line-no">528</span><span id="line.528">    }</span>
-<span class="source-line-no">529</span><span id="line.529"></span>
-<span class="source-line-no">530</span><span id="line.530">    /**</span>
-<span class="source-line-no">531</span><span id="line.531">     * set localeProjection with the specified values</span>
-<span class="source-line-no">532</span><span id="line.532">     */</span>
-<span class="source-line-no">533</span><span id="line.533">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withLocaleProjection(</span>
-<span class="source-line-no">534</span><span id="line.534">            final Collection&lt;TValue&gt; localeProjection) {</span>
-<span class="source-line-no">535</span><span id="line.535">        return copy().withoutQueryParam("localeProjection")</span>
-<span class="source-line-no">536</span><span id="line.536">                .addQueryParams(localeProjection.stream()</span>
-<span class="source-line-no">537</span><span id="line.537">                        .map(s -&gt; new ParamEntry&lt;&gt;("localeProjection", s.toString()))</span>
-<span class="source-line-no">538</span><span id="line.538">                        .collect(Collectors.toList()));</span>
-<span class="source-line-no">539</span><span id="line.539">    }</span>
-<span class="source-line-no">540</span><span id="line.540"></span>
-<span class="source-line-no">541</span><span id="line.541">    /**</span>
-<span class="source-line-no">542</span><span id="line.542">     * add additional localeProjection query parameters</span>
-<span class="source-line-no">543</span><span id="line.543">     */</span>
-<span class="source-line-no">544</span><span id="line.544">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addLocaleProjection(</span>
-<span class="source-line-no">545</span><span id="line.545">            final Collection&lt;TValue&gt; localeProjection) {</span>
-<span class="source-line-no">546</span><span id="line.546">        return copy().addQueryParams(localeProjection.stream()</span>
-<span class="source-line-no">547</span><span id="line.547">                .map(s -&gt; new ParamEntry&lt;&gt;("localeProjection", s.toString()))</span>
-<span class="source-line-no">548</span><span id="line.548">                .collect(Collectors.toList()));</span>
-<span class="source-line-no">549</span><span id="line.549">    }</span>
-<span class="source-line-no">550</span><span id="line.550"></span>
-<span class="source-line-no">551</span><span id="line.551">    /**</span>
-<span class="source-line-no">552</span><span id="line.552">     * set expand with the specified value</span>
-<span class="source-line-no">553</span><span id="line.553">     */</span>
-<span class="source-line-no">554</span><span id="line.554">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withExpand(final TValue expand) {</span>
-<span class="source-line-no">555</span><span id="line.555">        return copy().withQueryParam("expand", expand);</span>
-<span class="source-line-no">556</span><span id="line.556">    }</span>
-<span class="source-line-no">557</span><span id="line.557"></span>
-<span class="source-line-no">558</span><span id="line.558">    /**</span>
-<span class="source-line-no">559</span><span id="line.559">     * add additional expand query parameter</span>
+<span class="source-line-no">316</span><span id="line.316">     * set priceCountry with the specified value</span>
+<span class="source-line-no">317</span><span id="line.317">     * @param priceCountry value to be set</span>
+<span class="source-line-no">318</span><span id="line.318">     * @param &lt;TValue&gt; value type</span>
+<span class="source-line-no">319</span><span id="line.319">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">320</span><span id="line.320">     */</span>
+<span class="source-line-no">321</span><span id="line.321">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withPriceCountry(</span>
+<span class="source-line-no">322</span><span id="line.322">            final TValue priceCountry) {</span>
+<span class="source-line-no">323</span><span id="line.323">        return copy().withQueryParam("priceCountry", priceCountry);</span>
+<span class="source-line-no">324</span><span id="line.324">    }</span>
+<span class="source-line-no">325</span><span id="line.325"></span>
+<span class="source-line-no">326</span><span id="line.326">    /**</span>
+<span class="source-line-no">327</span><span id="line.327">     * add additional priceCountry query parameter</span>
+<span class="source-line-no">328</span><span id="line.328">     * @param priceCountry value to be added</span>
+<span class="source-line-no">329</span><span id="line.329">     * @param &lt;TValue&gt; value type</span>
+<span class="source-line-no">330</span><span id="line.330">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">331</span><span id="line.331">     */</span>
+<span class="source-line-no">332</span><span id="line.332">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addPriceCountry(</span>
+<span class="source-line-no">333</span><span id="line.333">            final TValue priceCountry) {</span>
+<span class="source-line-no">334</span><span id="line.334">        return copy().addQueryParam("priceCountry", priceCountry);</span>
+<span class="source-line-no">335</span><span id="line.335">    }</span>
+<span class="source-line-no">336</span><span id="line.336"></span>
+<span class="source-line-no">337</span><span id="line.337">    /**</span>
+<span class="source-line-no">338</span><span id="line.338">     * set priceCountry with the specified value</span>
+<span class="source-line-no">339</span><span id="line.339">     * @param supplier supplier for the value to be set</span>
+<span class="source-line-no">340</span><span id="line.340">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">341</span><span id="line.341">     */</span>
+<span class="source-line-no">342</span><span id="line.342">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withPriceCountry(</span>
+<span class="source-line-no">343</span><span id="line.343">            final Supplier&lt;String&gt; supplier) {</span>
+<span class="source-line-no">344</span><span id="line.344">        return copy().withQueryParam("priceCountry", supplier.get());</span>
+<span class="source-line-no">345</span><span id="line.345">    }</span>
+<span class="source-line-no">346</span><span id="line.346"></span>
+<span class="source-line-no">347</span><span id="line.347">    /**</span>
+<span class="source-line-no">348</span><span id="line.348">     * add additional priceCountry query parameter</span>
+<span class="source-line-no">349</span><span id="line.349">     * @param supplier supplier for the value to be added</span>
+<span class="source-line-no">350</span><span id="line.350">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">351</span><span id="line.351">     */</span>
+<span class="source-line-no">352</span><span id="line.352">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addPriceCountry(</span>
+<span class="source-line-no">353</span><span id="line.353">            final Supplier&lt;String&gt; supplier) {</span>
+<span class="source-line-no">354</span><span id="line.354">        return copy().addQueryParam("priceCountry", supplier.get());</span>
+<span class="source-line-no">355</span><span id="line.355">    }</span>
+<span class="source-line-no">356</span><span id="line.356"></span>
+<span class="source-line-no">357</span><span id="line.357">    /**</span>
+<span class="source-line-no">358</span><span id="line.358">     * set priceCountry with the specified value</span>
+<span class="source-line-no">359</span><span id="line.359">     * @param op builder for the value to be set</span>
+<span class="source-line-no">360</span><span id="line.360">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">361</span><span id="line.361">     */</span>
+<span class="source-line-no">362</span><span id="line.362">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withPriceCountry(</span>
+<span class="source-line-no">363</span><span id="line.363">            final Function&lt;StringBuilder, StringBuilder&gt; op) {</span>
+<span class="source-line-no">364</span><span id="line.364">        return copy().withQueryParam("priceCountry", op.apply(new StringBuilder()));</span>
+<span class="source-line-no">365</span><span id="line.365">    }</span>
+<span class="source-line-no">366</span><span id="line.366"></span>
+<span class="source-line-no">367</span><span id="line.367">    /**</span>
+<span class="source-line-no">368</span><span id="line.368">     * add additional priceCountry query parameter</span>
+<span class="source-line-no">369</span><span id="line.369">     * @param op builder for the value to be added</span>
+<span class="source-line-no">370</span><span id="line.370">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">371</span><span id="line.371">     */</span>
+<span class="source-line-no">372</span><span id="line.372">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addPriceCountry(</span>
+<span class="source-line-no">373</span><span id="line.373">            final Function&lt;StringBuilder, StringBuilder&gt; op) {</span>
+<span class="source-line-no">374</span><span id="line.374">        return copy().addQueryParam("priceCountry", op.apply(new StringBuilder()));</span>
+<span class="source-line-no">375</span><span id="line.375">    }</span>
+<span class="source-line-no">376</span><span id="line.376"></span>
+<span class="source-line-no">377</span><span id="line.377">    /**</span>
+<span class="source-line-no">378</span><span id="line.378">     * set priceCountry with the specified values</span>
+<span class="source-line-no">379</span><span id="line.379">     * @param priceCountry values to be set</span>
+<span class="source-line-no">380</span><span id="line.380">     * @param &lt;TValue&gt; value type</span>
+<span class="source-line-no">381</span><span id="line.381">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">382</span><span id="line.382">     */</span>
+<span class="source-line-no">383</span><span id="line.383">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withPriceCountry(</span>
+<span class="source-line-no">384</span><span id="line.384">            final Collection&lt;TValue&gt; priceCountry) {</span>
+<span class="source-line-no">385</span><span id="line.385">        return copy().withoutQueryParam("priceCountry")</span>
+<span class="source-line-no">386</span><span id="line.386">                .addQueryParams(priceCountry.stream()</span>
+<span class="source-line-no">387</span><span id="line.387">                        .map(s -&gt; new ParamEntry&lt;&gt;("priceCountry", s.toString()))</span>
+<span class="source-line-no">388</span><span id="line.388">                        .collect(Collectors.toList()));</span>
+<span class="source-line-no">389</span><span id="line.389">    }</span>
+<span class="source-line-no">390</span><span id="line.390"></span>
+<span class="source-line-no">391</span><span id="line.391">    /**</span>
+<span class="source-line-no">392</span><span id="line.392">     * add additional priceCountry query parameters</span>
+<span class="source-line-no">393</span><span id="line.393">     * @param priceCountry values to be added</span>
+<span class="source-line-no">394</span><span id="line.394">     * @param &lt;TValue&gt; value type</span>
+<span class="source-line-no">395</span><span id="line.395">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">396</span><span id="line.396">     */</span>
+<span class="source-line-no">397</span><span id="line.397">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addPriceCountry(</span>
+<span class="source-line-no">398</span><span id="line.398">            final Collection&lt;TValue&gt; priceCountry) {</span>
+<span class="source-line-no">399</span><span id="line.399">        return copy().addQueryParams(priceCountry.stream()</span>
+<span class="source-line-no">400</span><span id="line.400">                .map(s -&gt; new ParamEntry&lt;&gt;("priceCountry", s.toString()))</span>
+<span class="source-line-no">401</span><span id="line.401">                .collect(Collectors.toList()));</span>
+<span class="source-line-no">402</span><span id="line.402">    }</span>
+<span class="source-line-no">403</span><span id="line.403"></span>
+<span class="source-line-no">404</span><span id="line.404">    /**</span>
+<span class="source-line-no">405</span><span id="line.405">     * set priceCustomerGroup with the specified value</span>
+<span class="source-line-no">406</span><span id="line.406">     * @param priceCustomerGroup value to be set</span>
+<span class="source-line-no">407</span><span id="line.407">     * @param &lt;TValue&gt; value type</span>
+<span class="source-line-no">408</span><span id="line.408">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">409</span><span id="line.409">     */</span>
+<span class="source-line-no">410</span><span id="line.410">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withPriceCustomerGroup(</span>
+<span class="source-line-no">411</span><span id="line.411">            final TValue priceCustomerGroup) {</span>
+<span class="source-line-no">412</span><span id="line.412">        return copy().withQueryParam("priceCustomerGroup", priceCustomerGroup);</span>
+<span class="source-line-no">413</span><span id="line.413">    }</span>
+<span class="source-line-no">414</span><span id="line.414"></span>
+<span class="source-line-no">415</span><span id="line.415">    /**</span>
+<span class="source-line-no">416</span><span id="line.416">     * add additional priceCustomerGroup query parameter</span>
+<span class="source-line-no">417</span><span id="line.417">     * @param priceCustomerGroup value to be added</span>
+<span class="source-line-no">418</span><span id="line.418">     * @param &lt;TValue&gt; value type</span>
+<span class="source-line-no">419</span><span id="line.419">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">420</span><span id="line.420">     */</span>
+<span class="source-line-no">421</span><span id="line.421">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addPriceCustomerGroup(</span>
+<span class="source-line-no">422</span><span id="line.422">            final TValue priceCustomerGroup) {</span>
+<span class="source-line-no">423</span><span id="line.423">        return copy().addQueryParam("priceCustomerGroup", priceCustomerGroup);</span>
+<span class="source-line-no">424</span><span id="line.424">    }</span>
+<span class="source-line-no">425</span><span id="line.425"></span>
+<span class="source-line-no">426</span><span id="line.426">    /**</span>
+<span class="source-line-no">427</span><span id="line.427">     * set priceCustomerGroup with the specified value</span>
+<span class="source-line-no">428</span><span id="line.428">     * @param supplier supplier for the value to be set</span>
+<span class="source-line-no">429</span><span id="line.429">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">430</span><span id="line.430">     */</span>
+<span class="source-line-no">431</span><span id="line.431">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withPriceCustomerGroup(</span>
+<span class="source-line-no">432</span><span id="line.432">            final Supplier&lt;String&gt; supplier) {</span>
+<span class="source-line-no">433</span><span id="line.433">        return copy().withQueryParam("priceCustomerGroup", supplier.get());</span>
+<span class="source-line-no">434</span><span id="line.434">    }</span>
+<span class="source-line-no">435</span><span id="line.435"></span>
+<span class="source-line-no">436</span><span id="line.436">    /**</span>
+<span class="source-line-no">437</span><span id="line.437">     * add additional priceCustomerGroup query parameter</span>
+<span class="source-line-no">438</span><span id="line.438">     * @param supplier supplier for the value to be added</span>
+<span class="source-line-no">439</span><span id="line.439">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">440</span><span id="line.440">     */</span>
+<span class="source-line-no">441</span><span id="line.441">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addPriceCustomerGroup(</span>
+<span class="source-line-no">442</span><span id="line.442">            final Supplier&lt;String&gt; supplier) {</span>
+<span class="source-line-no">443</span><span id="line.443">        return copy().addQueryParam("priceCustomerGroup", supplier.get());</span>
+<span class="source-line-no">444</span><span id="line.444">    }</span>
+<span class="source-line-no">445</span><span id="line.445"></span>
+<span class="source-line-no">446</span><span id="line.446">    /**</span>
+<span class="source-line-no">447</span><span id="line.447">     * set priceCustomerGroup with the specified value</span>
+<span class="source-line-no">448</span><span id="line.448">     * @param op builder for the value to be set</span>
+<span class="source-line-no">449</span><span id="line.449">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">450</span><span id="line.450">     */</span>
+<span class="source-line-no">451</span><span id="line.451">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withPriceCustomerGroup(</span>
+<span class="source-line-no">452</span><span id="line.452">            final Function&lt;StringBuilder, StringBuilder&gt; op) {</span>
+<span class="source-line-no">453</span><span id="line.453">        return copy().withQueryParam("priceCustomerGroup", op.apply(new StringBuilder()));</span>
+<span class="source-line-no">454</span><span id="line.454">    }</span>
+<span class="source-line-no">455</span><span id="line.455"></span>
+<span class="source-line-no">456</span><span id="line.456">    /**</span>
+<span class="source-line-no">457</span><span id="line.457">     * add additional priceCustomerGroup query parameter</span>
+<span class="source-line-no">458</span><span id="line.458">     * @param op builder for the value to be added</span>
+<span class="source-line-no">459</span><span id="line.459">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">460</span><span id="line.460">     */</span>
+<span class="source-line-no">461</span><span id="line.461">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addPriceCustomerGroup(</span>
+<span class="source-line-no">462</span><span id="line.462">            final Function&lt;StringBuilder, StringBuilder&gt; op) {</span>
+<span class="source-line-no">463</span><span id="line.463">        return copy().addQueryParam("priceCustomerGroup", op.apply(new StringBuilder()));</span>
+<span class="source-line-no">464</span><span id="line.464">    }</span>
+<span class="source-line-no">465</span><span id="line.465"></span>
+<span class="source-line-no">466</span><span id="line.466">    /**</span>
+<span class="source-line-no">467</span><span id="line.467">     * set priceCustomerGroup with the specified values</span>
+<span class="source-line-no">468</span><span id="line.468">     * @param priceCustomerGroup values to be set</span>
+<span class="source-line-no">469</span><span id="line.469">     * @param &lt;TValue&gt; value type</span>
+<span class="source-line-no">470</span><span id="line.470">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">471</span><span id="line.471">     */</span>
+<span class="source-line-no">472</span><span id="line.472">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withPriceCustomerGroup(</span>
+<span class="source-line-no">473</span><span id="line.473">            final Collection&lt;TValue&gt; priceCustomerGroup) {</span>
+<span class="source-line-no">474</span><span id="line.474">        return copy().withoutQueryParam("priceCustomerGroup")</span>
+<span class="source-line-no">475</span><span id="line.475">                .addQueryParams(priceCustomerGroup.stream()</span>
+<span class="source-line-no">476</span><span id="line.476">                        .map(s -&gt; new ParamEntry&lt;&gt;("priceCustomerGroup", s.toString()))</span>
+<span class="source-line-no">477</span><span id="line.477">                        .collect(Collectors.toList()));</span>
+<span class="source-line-no">478</span><span id="line.478">    }</span>
+<span class="source-line-no">479</span><span id="line.479"></span>
+<span class="source-line-no">480</span><span id="line.480">    /**</span>
+<span class="source-line-no">481</span><span id="line.481">     * add additional priceCustomerGroup query parameters</span>
+<span class="source-line-no">482</span><span id="line.482">     * @param priceCustomerGroup values to be added</span>
+<span class="source-line-no">483</span><span id="line.483">     * @param &lt;TValue&gt; value type</span>
+<span class="source-line-no">484</span><span id="line.484">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">485</span><span id="line.485">     */</span>
+<span class="source-line-no">486</span><span id="line.486">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addPriceCustomerGroup(</span>
+<span class="source-line-no">487</span><span id="line.487">            final Collection&lt;TValue&gt; priceCustomerGroup) {</span>
+<span class="source-line-no">488</span><span id="line.488">        return copy().addQueryParams(priceCustomerGroup.stream()</span>
+<span class="source-line-no">489</span><span id="line.489">                .map(s -&gt; new ParamEntry&lt;&gt;("priceCustomerGroup", s.toString()))</span>
+<span class="source-line-no">490</span><span id="line.490">                .collect(Collectors.toList()));</span>
+<span class="source-line-no">491</span><span id="line.491">    }</span>
+<span class="source-line-no">492</span><span id="line.492"></span>
+<span class="source-line-no">493</span><span id="line.493">    /**</span>
+<span class="source-line-no">494</span><span id="line.494">     * set priceChannel with the specified value</span>
+<span class="source-line-no">495</span><span id="line.495">     * @param priceChannel value to be set</span>
+<span class="source-line-no">496</span><span id="line.496">     * @param &lt;TValue&gt; value type</span>
+<span class="source-line-no">497</span><span id="line.497">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">498</span><span id="line.498">     */</span>
+<span class="source-line-no">499</span><span id="line.499">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withPriceChannel(</span>
+<span class="source-line-no">500</span><span id="line.500">            final TValue priceChannel) {</span>
+<span class="source-line-no">501</span><span id="line.501">        return copy().withQueryParam("priceChannel", priceChannel);</span>
+<span class="source-line-no">502</span><span id="line.502">    }</span>
+<span class="source-line-no">503</span><span id="line.503"></span>
+<span class="source-line-no">504</span><span id="line.504">    /**</span>
+<span class="source-line-no">505</span><span id="line.505">     * add additional priceChannel query parameter</span>
+<span class="source-line-no">506</span><span id="line.506">     * @param priceChannel value to be added</span>
+<span class="source-line-no">507</span><span id="line.507">     * @param &lt;TValue&gt; value type</span>
+<span class="source-line-no">508</span><span id="line.508">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">509</span><span id="line.509">     */</span>
+<span class="source-line-no">510</span><span id="line.510">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addPriceChannel(</span>
+<span class="source-line-no">511</span><span id="line.511">            final TValue priceChannel) {</span>
+<span class="source-line-no">512</span><span id="line.512">        return copy().addQueryParam("priceChannel", priceChannel);</span>
+<span class="source-line-no">513</span><span id="line.513">    }</span>
+<span class="source-line-no">514</span><span id="line.514"></span>
+<span class="source-line-no">515</span><span id="line.515">    /**</span>
+<span class="source-line-no">516</span><span id="line.516">     * set priceChannel with the specified value</span>
+<span class="source-line-no">517</span><span id="line.517">     * @param supplier supplier for the value to be set</span>
+<span class="source-line-no">518</span><span id="line.518">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">519</span><span id="line.519">     */</span>
+<span class="source-line-no">520</span><span id="line.520">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withPriceChannel(</span>
+<span class="source-line-no">521</span><span id="line.521">            final Supplier&lt;String&gt; supplier) {</span>
+<span class="source-line-no">522</span><span id="line.522">        return copy().withQueryParam("priceChannel", supplier.get());</span>
+<span class="source-line-no">523</span><span id="line.523">    }</span>
+<span class="source-line-no">524</span><span id="line.524"></span>
+<span class="source-line-no">525</span><span id="line.525">    /**</span>
+<span class="source-line-no">526</span><span id="line.526">     * add additional priceChannel query parameter</span>
+<span class="source-line-no">527</span><span id="line.527">     * @param supplier supplier for the value to be added</span>
+<span class="source-line-no">528</span><span id="line.528">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">529</span><span id="line.529">     */</span>
+<span class="source-line-no">530</span><span id="line.530">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addPriceChannel(</span>
+<span class="source-line-no">531</span><span id="line.531">            final Supplier&lt;String&gt; supplier) {</span>
+<span class="source-line-no">532</span><span id="line.532">        return copy().addQueryParam("priceChannel", supplier.get());</span>
+<span class="source-line-no">533</span><span id="line.533">    }</span>
+<span class="source-line-no">534</span><span id="line.534"></span>
+<span class="source-line-no">535</span><span id="line.535">    /**</span>
+<span class="source-line-no">536</span><span id="line.536">     * set priceChannel with the specified value</span>
+<span class="source-line-no">537</span><span id="line.537">     * @param op builder for the value to be set</span>
+<span class="source-line-no">538</span><span id="line.538">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">539</span><span id="line.539">     */</span>
+<span class="source-line-no">540</span><span id="line.540">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withPriceChannel(</span>
+<span class="source-line-no">541</span><span id="line.541">            final Function&lt;StringBuilder, StringBuilder&gt; op) {</span>
+<span class="source-line-no">542</span><span id="line.542">        return copy().withQueryParam("priceChannel", op.apply(new StringBuilder()));</span>
+<span class="source-line-no">543</span><span id="line.543">    }</span>
+<span class="source-line-no">544</span><span id="line.544"></span>
+<span class="source-line-no">545</span><span id="line.545">    /**</span>
+<span class="source-line-no">546</span><span id="line.546">     * add additional priceChannel query parameter</span>
+<span class="source-line-no">547</span><span id="line.547">     * @param op builder for the value to be added</span>
+<span class="source-line-no">548</span><span id="line.548">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">549</span><span id="line.549">     */</span>
+<span class="source-line-no">550</span><span id="line.550">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addPriceChannel(</span>
+<span class="source-line-no">551</span><span id="line.551">            final Function&lt;StringBuilder, StringBuilder&gt; op) {</span>
+<span class="source-line-no">552</span><span id="line.552">        return copy().addQueryParam("priceChannel", op.apply(new StringBuilder()));</span>
+<span class="source-line-no">553</span><span id="line.553">    }</span>
+<span class="source-line-no">554</span><span id="line.554"></span>
+<span class="source-line-no">555</span><span id="line.555">    /**</span>
+<span class="source-line-no">556</span><span id="line.556">     * set priceChannel with the specified values</span>
+<span class="source-line-no">557</span><span id="line.557">     * @param priceChannel values to be set</span>
+<span class="source-line-no">558</span><span id="line.558">     * @param &lt;TValue&gt; value type</span>
+<span class="source-line-no">559</span><span id="line.559">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
 <span class="source-line-no">560</span><span id="line.560">     */</span>
-<span class="source-line-no">561</span><span id="line.561">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addExpand(final TValue expand) {</span>
-<span class="source-line-no">562</span><span id="line.562">        return copy().addQueryParam("expand", expand);</span>
-<span class="source-line-no">563</span><span id="line.563">    }</span>
-<span class="source-line-no">564</span><span id="line.564"></span>
-<span class="source-line-no">565</span><span id="line.565">    /**</span>
-<span class="source-line-no">566</span><span id="line.566">     * set expand with the specified value</span>
-<span class="source-line-no">567</span><span id="line.567">     */</span>
-<span class="source-line-no">568</span><span id="line.568">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withExpand(final Supplier&lt;String&gt; supplier) {</span>
-<span class="source-line-no">569</span><span id="line.569">        return copy().withQueryParam("expand", supplier.get());</span>
-<span class="source-line-no">570</span><span id="line.570">    }</span>
-<span class="source-line-no">571</span><span id="line.571"></span>
-<span class="source-line-no">572</span><span id="line.572">    /**</span>
-<span class="source-line-no">573</span><span id="line.573">     * add additional expand query parameter</span>
+<span class="source-line-no">561</span><span id="line.561">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withPriceChannel(</span>
+<span class="source-line-no">562</span><span id="line.562">            final Collection&lt;TValue&gt; priceChannel) {</span>
+<span class="source-line-no">563</span><span id="line.563">        return copy().withoutQueryParam("priceChannel")</span>
+<span class="source-line-no">564</span><span id="line.564">                .addQueryParams(priceChannel.stream()</span>
+<span class="source-line-no">565</span><span id="line.565">                        .map(s -&gt; new ParamEntry&lt;&gt;("priceChannel", s.toString()))</span>
+<span class="source-line-no">566</span><span id="line.566">                        .collect(Collectors.toList()));</span>
+<span class="source-line-no">567</span><span id="line.567">    }</span>
+<span class="source-line-no">568</span><span id="line.568"></span>
+<span class="source-line-no">569</span><span id="line.569">    /**</span>
+<span class="source-line-no">570</span><span id="line.570">     * add additional priceChannel query parameters</span>
+<span class="source-line-no">571</span><span id="line.571">     * @param priceChannel values to be added</span>
+<span class="source-line-no">572</span><span id="line.572">     * @param &lt;TValue&gt; value type</span>
+<span class="source-line-no">573</span><span id="line.573">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
 <span class="source-line-no">574</span><span id="line.574">     */</span>
-<span class="source-line-no">575</span><span id="line.575">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addExpand(final Supplier&lt;String&gt; supplier) {</span>
-<span class="source-line-no">576</span><span id="line.576">        return copy().addQueryParam("expand", supplier.get());</span>
-<span class="source-line-no">577</span><span id="line.577">    }</span>
-<span class="source-line-no">578</span><span id="line.578"></span>
-<span class="source-line-no">579</span><span id="line.579">    /**</span>
-<span class="source-line-no">580</span><span id="line.580">     * set expand with the specified value</span>
-<span class="source-line-no">581</span><span id="line.581">     */</span>
-<span class="source-line-no">582</span><span id="line.582">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withExpand(</span>
-<span class="source-line-no">583</span><span id="line.583">            final Function&lt;StringBuilder, StringBuilder&gt; op) {</span>
-<span class="source-line-no">584</span><span id="line.584">        return copy().withQueryParam("expand", op.apply(new StringBuilder()));</span>
-<span class="source-line-no">585</span><span id="line.585">    }</span>
-<span class="source-line-no">586</span><span id="line.586"></span>
-<span class="source-line-no">587</span><span id="line.587">    /**</span>
-<span class="source-line-no">588</span><span id="line.588">     * add additional expand query parameter</span>
-<span class="source-line-no">589</span><span id="line.589">     */</span>
-<span class="source-line-no">590</span><span id="line.590">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addExpand(</span>
-<span class="source-line-no">591</span><span id="line.591">            final Function&lt;StringBuilder, StringBuilder&gt; op) {</span>
-<span class="source-line-no">592</span><span id="line.592">        return copy().addQueryParam("expand", op.apply(new StringBuilder()));</span>
-<span class="source-line-no">593</span><span id="line.593">    }</span>
-<span class="source-line-no">594</span><span id="line.594"></span>
-<span class="source-line-no">595</span><span id="line.595">    /**</span>
-<span class="source-line-no">596</span><span id="line.596">     * set expand with the specified values</span>
-<span class="source-line-no">597</span><span id="line.597">     */</span>
-<span class="source-line-no">598</span><span id="line.598">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withExpand(</span>
-<span class="source-line-no">599</span><span id="line.599">            final Collection&lt;TValue&gt; expand) {</span>
-<span class="source-line-no">600</span><span id="line.600">        return copy().withoutQueryParam("expand")</span>
-<span class="source-line-no">601</span><span id="line.601">                .addQueryParams(</span>
-<span class="source-line-no">602</span><span id="line.602">                    expand.stream().map(s -&gt; new ParamEntry&lt;&gt;("expand", s.toString())).collect(Collectors.toList()));</span>
-<span class="source-line-no">603</span><span id="line.603">    }</span>
-<span class="source-line-no">604</span><span id="line.604"></span>
-<span class="source-line-no">605</span><span id="line.605">    /**</span>
-<span class="source-line-no">606</span><span id="line.606">     * add additional expand query parameters</span>
-<span class="source-line-no">607</span><span id="line.607">     */</span>
-<span class="source-line-no">608</span><span id="line.608">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addExpand(</span>
-<span class="source-line-no">609</span><span id="line.609">            final Collection&lt;TValue&gt; expand) {</span>
-<span class="source-line-no">610</span><span id="line.610">        return copy().addQueryParams(</span>
-<span class="source-line-no">611</span><span id="line.611">            expand.stream().map(s -&gt; new ParamEntry&lt;&gt;("expand", s.toString())).collect(Collectors.toList()));</span>
+<span class="source-line-no">575</span><span id="line.575">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addPriceChannel(</span>
+<span class="source-line-no">576</span><span id="line.576">            final Collection&lt;TValue&gt; priceChannel) {</span>
+<span class="source-line-no">577</span><span id="line.577">        return copy().addQueryParams(priceChannel.stream()</span>
+<span class="source-line-no">578</span><span id="line.578">                .map(s -&gt; new ParamEntry&lt;&gt;("priceChannel", s.toString()))</span>
+<span class="source-line-no">579</span><span id="line.579">                .collect(Collectors.toList()));</span>
+<span class="source-line-no">580</span><span id="line.580">    }</span>
+<span class="source-line-no">581</span><span id="line.581"></span>
+<span class="source-line-no">582</span><span id="line.582">    /**</span>
+<span class="source-line-no">583</span><span id="line.583">     * set localeProjection with the specified value</span>
+<span class="source-line-no">584</span><span id="line.584">     * @param localeProjection value to be set</span>
+<span class="source-line-no">585</span><span id="line.585">     * @param &lt;TValue&gt; value type</span>
+<span class="source-line-no">586</span><span id="line.586">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">587</span><span id="line.587">     */</span>
+<span class="source-line-no">588</span><span id="line.588">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withLocaleProjection(</span>
+<span class="source-line-no">589</span><span id="line.589">            final TValue localeProjection) {</span>
+<span class="source-line-no">590</span><span id="line.590">        return copy().withQueryParam("localeProjection", localeProjection);</span>
+<span class="source-line-no">591</span><span id="line.591">    }</span>
+<span class="source-line-no">592</span><span id="line.592"></span>
+<span class="source-line-no">593</span><span id="line.593">    /**</span>
+<span class="source-line-no">594</span><span id="line.594">     * add additional localeProjection query parameter</span>
+<span class="source-line-no">595</span><span id="line.595">     * @param localeProjection value to be added</span>
+<span class="source-line-no">596</span><span id="line.596">     * @param &lt;TValue&gt; value type</span>
+<span class="source-line-no">597</span><span id="line.597">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">598</span><span id="line.598">     */</span>
+<span class="source-line-no">599</span><span id="line.599">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addLocaleProjection(</span>
+<span class="source-line-no">600</span><span id="line.600">            final TValue localeProjection) {</span>
+<span class="source-line-no">601</span><span id="line.601">        return copy().addQueryParam("localeProjection", localeProjection);</span>
+<span class="source-line-no">602</span><span id="line.602">    }</span>
+<span class="source-line-no">603</span><span id="line.603"></span>
+<span class="source-line-no">604</span><span id="line.604">    /**</span>
+<span class="source-line-no">605</span><span id="line.605">     * set localeProjection with the specified value</span>
+<span class="source-line-no">606</span><span id="line.606">     * @param supplier supplier for the value to be set</span>
+<span class="source-line-no">607</span><span id="line.607">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">608</span><span id="line.608">     */</span>
+<span class="source-line-no">609</span><span id="line.609">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withLocaleProjection(</span>
+<span class="source-line-no">610</span><span id="line.610">            final Supplier&lt;String&gt; supplier) {</span>
+<span class="source-line-no">611</span><span id="line.611">        return copy().withQueryParam("localeProjection", supplier.get());</span>
 <span class="source-line-no">612</span><span id="line.612">    }</span>
 <span class="source-line-no">613</span><span id="line.613"></span>
-<span class="source-line-no">614</span><span id="line.614">    @Override</span>
-<span class="source-line-no">615</span><span id="line.615">    public boolean equals(Object o) {</span>
-<span class="source-line-no">616</span><span id="line.616">        if (this == o)</span>
-<span class="source-line-no">617</span><span id="line.617">            return true;</span>
-<span class="source-line-no">618</span><span id="line.618"></span>
-<span class="source-line-no">619</span><span id="line.619">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">620</span><span id="line.620">            return false;</span>
-<span class="source-line-no">621</span><span id="line.621"></span>
-<span class="source-line-no">622</span><span id="line.622">        ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet that = (ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet) o;</span>
+<span class="source-line-no">614</span><span id="line.614">    /**</span>
+<span class="source-line-no">615</span><span id="line.615">     * add additional localeProjection query parameter</span>
+<span class="source-line-no">616</span><span id="line.616">     * @param supplier supplier for the value to be added</span>
+<span class="source-line-no">617</span><span id="line.617">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">618</span><span id="line.618">     */</span>
+<span class="source-line-no">619</span><span id="line.619">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addLocaleProjection(</span>
+<span class="source-line-no">620</span><span id="line.620">            final Supplier&lt;String&gt; supplier) {</span>
+<span class="source-line-no">621</span><span id="line.621">        return copy().addQueryParam("localeProjection", supplier.get());</span>
+<span class="source-line-no">622</span><span id="line.622">    }</span>
 <span class="source-line-no">623</span><span id="line.623"></span>
-<span class="source-line-no">624</span><span id="line.624">        return new EqualsBuilder().append(projectKey, that.projectKey)</span>
-<span class="source-line-no">625</span><span id="line.625">                .append(storeKey, that.storeKey)</span>
-<span class="source-line-no">626</span><span id="line.626">                .append(key, that.key)</span>
-<span class="source-line-no">627</span><span id="line.627">                .isEquals();</span>
-<span class="source-line-no">628</span><span id="line.628">    }</span>
-<span class="source-line-no">629</span><span id="line.629"></span>
-<span class="source-line-no">630</span><span id="line.630">    @Override</span>
-<span class="source-line-no">631</span><span id="line.631">    public int hashCode() {</span>
-<span class="source-line-no">632</span><span id="line.632">        return new HashCodeBuilder(17, 37).append(projectKey).append(storeKey).append(key).toHashCode();</span>
-<span class="source-line-no">633</span><span id="line.633">    }</span>
-<span class="source-line-no">634</span><span id="line.634"></span>
-<span class="source-line-no">635</span><span id="line.635">    @Override</span>
-<span class="source-line-no">636</span><span id="line.636">    protected ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet copy() {</span>
-<span class="source-line-no">637</span><span id="line.637">        return new ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet(this);</span>
-<span class="source-line-no">638</span><span id="line.638">    }</span>
-<span class="source-line-no">639</span><span id="line.639">}</span>
+<span class="source-line-no">624</span><span id="line.624">    /**</span>
+<span class="source-line-no">625</span><span id="line.625">     * set localeProjection with the specified value</span>
+<span class="source-line-no">626</span><span id="line.626">     * @param op builder for the value to be set</span>
+<span class="source-line-no">627</span><span id="line.627">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">628</span><span id="line.628">     */</span>
+<span class="source-line-no">629</span><span id="line.629">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withLocaleProjection(</span>
+<span class="source-line-no">630</span><span id="line.630">            final Function&lt;StringBuilder, StringBuilder&gt; op) {</span>
+<span class="source-line-no">631</span><span id="line.631">        return copy().withQueryParam("localeProjection", op.apply(new StringBuilder()));</span>
+<span class="source-line-no">632</span><span id="line.632">    }</span>
+<span class="source-line-no">633</span><span id="line.633"></span>
+<span class="source-line-no">634</span><span id="line.634">    /**</span>
+<span class="source-line-no">635</span><span id="line.635">     * add additional localeProjection query parameter</span>
+<span class="source-line-no">636</span><span id="line.636">     * @param op builder for the value to be added</span>
+<span class="source-line-no">637</span><span id="line.637">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">638</span><span id="line.638">     */</span>
+<span class="source-line-no">639</span><span id="line.639">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addLocaleProjection(</span>
+<span class="source-line-no">640</span><span id="line.640">            final Function&lt;StringBuilder, StringBuilder&gt; op) {</span>
+<span class="source-line-no">641</span><span id="line.641">        return copy().addQueryParam("localeProjection", op.apply(new StringBuilder()));</span>
+<span class="source-line-no">642</span><span id="line.642">    }</span>
+<span class="source-line-no">643</span><span id="line.643"></span>
+<span class="source-line-no">644</span><span id="line.644">    /**</span>
+<span class="source-line-no">645</span><span id="line.645">     * set localeProjection with the specified values</span>
+<span class="source-line-no">646</span><span id="line.646">     * @param localeProjection values to be set</span>
+<span class="source-line-no">647</span><span id="line.647">     * @param &lt;TValue&gt; value type</span>
+<span class="source-line-no">648</span><span id="line.648">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">649</span><span id="line.649">     */</span>
+<span class="source-line-no">650</span><span id="line.650">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withLocaleProjection(</span>
+<span class="source-line-no">651</span><span id="line.651">            final Collection&lt;TValue&gt; localeProjection) {</span>
+<span class="source-line-no">652</span><span id="line.652">        return copy().withoutQueryParam("localeProjection")</span>
+<span class="source-line-no">653</span><span id="line.653">                .addQueryParams(localeProjection.stream()</span>
+<span class="source-line-no">654</span><span id="line.654">                        .map(s -&gt; new ParamEntry&lt;&gt;("localeProjection", s.toString()))</span>
+<span class="source-line-no">655</span><span id="line.655">                        .collect(Collectors.toList()));</span>
+<span class="source-line-no">656</span><span id="line.656">    }</span>
+<span class="source-line-no">657</span><span id="line.657"></span>
+<span class="source-line-no">658</span><span id="line.658">    /**</span>
+<span class="source-line-no">659</span><span id="line.659">     * add additional localeProjection query parameters</span>
+<span class="source-line-no">660</span><span id="line.660">     * @param localeProjection values to be added</span>
+<span class="source-line-no">661</span><span id="line.661">     * @param &lt;TValue&gt; value type</span>
+<span class="source-line-no">662</span><span id="line.662">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">663</span><span id="line.663">     */</span>
+<span class="source-line-no">664</span><span id="line.664">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addLocaleProjection(</span>
+<span class="source-line-no">665</span><span id="line.665">            final Collection&lt;TValue&gt; localeProjection) {</span>
+<span class="source-line-no">666</span><span id="line.666">        return copy().addQueryParams(localeProjection.stream()</span>
+<span class="source-line-no">667</span><span id="line.667">                .map(s -&gt; new ParamEntry&lt;&gt;("localeProjection", s.toString()))</span>
+<span class="source-line-no">668</span><span id="line.668">                .collect(Collectors.toList()));</span>
+<span class="source-line-no">669</span><span id="line.669">    }</span>
+<span class="source-line-no">670</span><span id="line.670"></span>
+<span class="source-line-no">671</span><span id="line.671">    /**</span>
+<span class="source-line-no">672</span><span id="line.672">     * set expand with the specified value</span>
+<span class="source-line-no">673</span><span id="line.673">     * @param expand value to be set</span>
+<span class="source-line-no">674</span><span id="line.674">     * @param &lt;TValue&gt; value type</span>
+<span class="source-line-no">675</span><span id="line.675">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">676</span><span id="line.676">     */</span>
+<span class="source-line-no">677</span><span id="line.677">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withExpand(final TValue expand) {</span>
+<span class="source-line-no">678</span><span id="line.678">        return copy().withQueryParam("expand", expand);</span>
+<span class="source-line-no">679</span><span id="line.679">    }</span>
+<span class="source-line-no">680</span><span id="line.680"></span>
+<span class="source-line-no">681</span><span id="line.681">    /**</span>
+<span class="source-line-no">682</span><span id="line.682">     * add additional expand query parameter</span>
+<span class="source-line-no">683</span><span id="line.683">     * @param expand value to be added</span>
+<span class="source-line-no">684</span><span id="line.684">     * @param &lt;TValue&gt; value type</span>
+<span class="source-line-no">685</span><span id="line.685">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">686</span><span id="line.686">     */</span>
+<span class="source-line-no">687</span><span id="line.687">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addExpand(final TValue expand) {</span>
+<span class="source-line-no">688</span><span id="line.688">        return copy().addQueryParam("expand", expand);</span>
+<span class="source-line-no">689</span><span id="line.689">    }</span>
+<span class="source-line-no">690</span><span id="line.690"></span>
+<span class="source-line-no">691</span><span id="line.691">    /**</span>
+<span class="source-line-no">692</span><span id="line.692">     * set expand with the specified value</span>
+<span class="source-line-no">693</span><span id="line.693">     * @param supplier supplier for the value to be set</span>
+<span class="source-line-no">694</span><span id="line.694">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">695</span><span id="line.695">     */</span>
+<span class="source-line-no">696</span><span id="line.696">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withExpand(final Supplier&lt;String&gt; supplier) {</span>
+<span class="source-line-no">697</span><span id="line.697">        return copy().withQueryParam("expand", supplier.get());</span>
+<span class="source-line-no">698</span><span id="line.698">    }</span>
+<span class="source-line-no">699</span><span id="line.699"></span>
+<span class="source-line-no">700</span><span id="line.700">    /**</span>
+<span class="source-line-no">701</span><span id="line.701">     * add additional expand query parameter</span>
+<span class="source-line-no">702</span><span id="line.702">     * @param supplier supplier for the value to be added</span>
+<span class="source-line-no">703</span><span id="line.703">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">704</span><span id="line.704">     */</span>
+<span class="source-line-no">705</span><span id="line.705">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addExpand(final Supplier&lt;String&gt; supplier) {</span>
+<span class="source-line-no">706</span><span id="line.706">        return copy().addQueryParam("expand", supplier.get());</span>
+<span class="source-line-no">707</span><span id="line.707">    }</span>
+<span class="source-line-no">708</span><span id="line.708"></span>
+<span class="source-line-no">709</span><span id="line.709">    /**</span>
+<span class="source-line-no">710</span><span id="line.710">     * set expand with the specified value</span>
+<span class="source-line-no">711</span><span id="line.711">     * @param op builder for the value to be set</span>
+<span class="source-line-no">712</span><span id="line.712">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">713</span><span id="line.713">     */</span>
+<span class="source-line-no">714</span><span id="line.714">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withExpand(</span>
+<span class="source-line-no">715</span><span id="line.715">            final Function&lt;StringBuilder, StringBuilder&gt; op) {</span>
+<span class="source-line-no">716</span><span id="line.716">        return copy().withQueryParam("expand", op.apply(new StringBuilder()));</span>
+<span class="source-line-no">717</span><span id="line.717">    }</span>
+<span class="source-line-no">718</span><span id="line.718"></span>
+<span class="source-line-no">719</span><span id="line.719">    /**</span>
+<span class="source-line-no">720</span><span id="line.720">     * add additional expand query parameter</span>
+<span class="source-line-no">721</span><span id="line.721">     * @param op builder for the value to be added</span>
+<span class="source-line-no">722</span><span id="line.722">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">723</span><span id="line.723">     */</span>
+<span class="source-line-no">724</span><span id="line.724">    public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addExpand(</span>
+<span class="source-line-no">725</span><span id="line.725">            final Function&lt;StringBuilder, StringBuilder&gt; op) {</span>
+<span class="source-line-no">726</span><span id="line.726">        return copy().addQueryParam("expand", op.apply(new StringBuilder()));</span>
+<span class="source-line-no">727</span><span id="line.727">    }</span>
+<span class="source-line-no">728</span><span id="line.728"></span>
+<span class="source-line-no">729</span><span id="line.729">    /**</span>
+<span class="source-line-no">730</span><span id="line.730">     * set expand with the specified values</span>
+<span class="source-line-no">731</span><span id="line.731">     * @param expand values to be set</span>
+<span class="source-line-no">732</span><span id="line.732">     * @param &lt;TValue&gt; value type</span>
+<span class="source-line-no">733</span><span id="line.733">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">734</span><span id="line.734">     */</span>
+<span class="source-line-no">735</span><span id="line.735">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet withExpand(</span>
+<span class="source-line-no">736</span><span id="line.736">            final Collection&lt;TValue&gt; expand) {</span>
+<span class="source-line-no">737</span><span id="line.737">        return copy().withoutQueryParam("expand")</span>
+<span class="source-line-no">738</span><span id="line.738">                .addQueryParams(</span>
+<span class="source-line-no">739</span><span id="line.739">                    expand.stream().map(s -&gt; new ParamEntry&lt;&gt;("expand", s.toString())).collect(Collectors.toList()));</span>
+<span class="source-line-no">740</span><span id="line.740">    }</span>
+<span class="source-line-no">741</span><span id="line.741"></span>
+<span class="source-line-no">742</span><span id="line.742">    /**</span>
+<span class="source-line-no">743</span><span id="line.743">     * add additional expand query parameters</span>
+<span class="source-line-no">744</span><span id="line.744">     * @param expand values to be added</span>
+<span class="source-line-no">745</span><span id="line.745">     * @param &lt;TValue&gt; value type</span>
+<span class="source-line-no">746</span><span id="line.746">     * @return ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</span>
+<span class="source-line-no">747</span><span id="line.747">     */</span>
+<span class="source-line-no">748</span><span id="line.748">    public &lt;TValue&gt; ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet addExpand(</span>
+<span class="source-line-no">749</span><span id="line.749">            final Collection&lt;TValue&gt; expand) {</span>
+<span class="source-line-no">750</span><span id="line.750">        return copy().addQueryParams(</span>
+<span class="source-line-no">751</span><span id="line.751">            expand.stream().map(s -&gt; new ParamEntry&lt;&gt;("expand", s.toString())).collect(Collectors.toList()));</span>
+<span class="source-line-no">752</span><span id="line.752">    }</span>
+<span class="source-line-no">753</span><span id="line.753"></span>
+<span class="source-line-no">754</span><span id="line.754">    @Override</span>
+<span class="source-line-no">755</span><span id="line.755">    public boolean equals(Object o) {</span>
+<span class="source-line-no">756</span><span id="line.756">        if (this == o)</span>
+<span class="source-line-no">757</span><span id="line.757">            return true;</span>
+<span class="source-line-no">758</span><span id="line.758"></span>
+<span class="source-line-no">759</span><span id="line.759">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">760</span><span id="line.760">            return false;</span>
+<span class="source-line-no">761</span><span id="line.761"></span>
+<span class="source-line-no">762</span><span id="line.762">        ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet that = (ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet) o;</span>
+<span class="source-line-no">763</span><span id="line.763"></span>
+<span class="source-line-no">764</span><span id="line.764">        return new EqualsBuilder().append(projectKey, that.projectKey)</span>
+<span class="source-line-no">765</span><span id="line.765">                .append(storeKey, that.storeKey)</span>
+<span class="source-line-no">766</span><span id="line.766">                .append(key, that.key)</span>
+<span class="source-line-no">767</span><span id="line.767">                .isEquals();</span>
+<span class="source-line-no">768</span><span id="line.768">    }</span>
+<span class="source-line-no">769</span><span id="line.769"></span>
+<span class="source-line-no">770</span><span id="line.770">    @Override</span>
+<span class="source-line-no">771</span><span id="line.771">    public int hashCode() {</span>
+<span class="source-line-no">772</span><span id="line.772">        return new HashCodeBuilder(17, 37).append(projectKey).append(storeKey).append(key).toHashCode();</span>
+<span class="source-line-no">773</span><span id="line.773">    }</span>
+<span class="source-line-no">774</span><span id="line.774"></span>
+<span class="source-line-no">775</span><span id="line.775">    @Override</span>
+<span class="source-line-no">776</span><span id="line.776">    protected ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet copy() {</span>
+<span class="source-line-no">777</span><span id="line.777">        return new ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet(this);</span>
+<span class="source-line-no">778</span><span id="line.778">    }</span>
+<span class="source-line-no">779</span><span id="line.779">}</span>
 
 
 

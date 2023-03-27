@@ -22,7 +22,7 @@
 <span class="source-line-no">009</span><span id="line.9">import io.vrap.rmf.base.client.Builder;</span>
 <span class="source-line-no">010</span><span id="line.10"></span>
 <span class="source-line-no">011</span><span id="line.11">/**</span>
-<span class="source-line-no">012</span><span id="line.12"> *</span>
+<span class="source-line-no">012</span><span id="line.12"> * builder for a generic custom object</span>
 <span class="source-line-no">013</span><span id="line.13"> * @param &lt;TValue&gt; The type of the value of this custom object.</span>
 <span class="source-line-no">014</span><span id="line.14"> */</span>
 <span class="source-line-no">015</span><span id="line.15">public class GenericCustomObjectBuilder&lt;TValue&gt; implements Builder&lt;GenericCustomObject&lt;TValue&gt;&gt; {</span>
@@ -157,34 +157,35 @@
 <span class="source-line-no">144</span><span id="line.144">    }</span>
 <span class="source-line-no">145</span><span id="line.145"></span>
 <span class="source-line-no">146</span><span id="line.146">    /**</span>
-<span class="source-line-no">147</span><span id="line.147">     * builds CustomObject without checking for non null required values</span>
-<span class="source-line-no">148</span><span id="line.148">     */</span>
-<span class="source-line-no">149</span><span id="line.149">    public GenericCustomObject&lt;TValue&gt; buildUnchecked() {</span>
-<span class="source-line-no">150</span><span id="line.150">        return new GenericCustomObjectImpl&lt;&gt;(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,</span>
-<span class="source-line-no">151</span><span id="line.151">            container, key, value);</span>
-<span class="source-line-no">152</span><span id="line.152">    }</span>
-<span class="source-line-no">153</span><span id="line.153"></span>
-<span class="source-line-no">154</span><span id="line.154">    public static &lt;T&gt; GenericCustomObjectBuilder&lt;T&gt; of(T value) {</span>
-<span class="source-line-no">155</span><span id="line.155">        GenericCustomObjectBuilder&lt;T&gt; builder = new GenericCustomObjectBuilder&lt;&gt;();</span>
-<span class="source-line-no">156</span><span id="line.156">        builder.value = value;</span>
-<span class="source-line-no">157</span><span id="line.157">        return builder;</span>
-<span class="source-line-no">158</span><span id="line.158">    }</span>
-<span class="source-line-no">159</span><span id="line.159"></span>
-<span class="source-line-no">160</span><span id="line.160">    public static &lt;T&gt; GenericCustomObjectBuilder&lt;T&gt; of(final GenericCustomObject&lt;T&gt; template) {</span>
-<span class="source-line-no">161</span><span id="line.161">        GenericCustomObjectBuilder&lt;T&gt; builder = new GenericCustomObjectBuilder&lt;&gt;();</span>
-<span class="source-line-no">162</span><span id="line.162">        builder.id = template.getId();</span>
-<span class="source-line-no">163</span><span id="line.163">        builder.version = template.getVersion();</span>
-<span class="source-line-no">164</span><span id="line.164">        builder.createdAt = template.getCreatedAt();</span>
-<span class="source-line-no">165</span><span id="line.165">        builder.lastModifiedAt = template.getLastModifiedAt();</span>
-<span class="source-line-no">166</span><span id="line.166">        builder.lastModifiedBy = template.getLastModifiedBy();</span>
-<span class="source-line-no">167</span><span id="line.167">        builder.createdBy = template.getCreatedBy();</span>
-<span class="source-line-no">168</span><span id="line.168">        builder.container = template.getContainer();</span>
-<span class="source-line-no">169</span><span id="line.169">        builder.key = template.getKey();</span>
-<span class="source-line-no">170</span><span id="line.170">        builder.value = template.getValue();</span>
-<span class="source-line-no">171</span><span id="line.171">        return builder;</span>
-<span class="source-line-no">172</span><span id="line.172">    }</span>
-<span class="source-line-no">173</span><span id="line.173"></span>
-<span class="source-line-no">174</span><span id="line.174">}</span>
+<span class="source-line-no">147</span><span id="line.147">     * builds CustomObject without checking for non-null required values</span>
+<span class="source-line-no">148</span><span id="line.148">     * @return Custom object</span>
+<span class="source-line-no">149</span><span id="line.149">     */</span>
+<span class="source-line-no">150</span><span id="line.150">    public GenericCustomObject&lt;TValue&gt; buildUnchecked() {</span>
+<span class="source-line-no">151</span><span id="line.151">        return new GenericCustomObjectImpl&lt;&gt;(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,</span>
+<span class="source-line-no">152</span><span id="line.152">            container, key, value);</span>
+<span class="source-line-no">153</span><span id="line.153">    }</span>
+<span class="source-line-no">154</span><span id="line.154"></span>
+<span class="source-line-no">155</span><span id="line.155">    public static &lt;T&gt; GenericCustomObjectBuilder&lt;T&gt; of(T value) {</span>
+<span class="source-line-no">156</span><span id="line.156">        GenericCustomObjectBuilder&lt;T&gt; builder = new GenericCustomObjectBuilder&lt;&gt;();</span>
+<span class="source-line-no">157</span><span id="line.157">        builder.value = value;</span>
+<span class="source-line-no">158</span><span id="line.158">        return builder;</span>
+<span class="source-line-no">159</span><span id="line.159">    }</span>
+<span class="source-line-no">160</span><span id="line.160"></span>
+<span class="source-line-no">161</span><span id="line.161">    public static &lt;T&gt; GenericCustomObjectBuilder&lt;T&gt; of(final GenericCustomObject&lt;T&gt; template) {</span>
+<span class="source-line-no">162</span><span id="line.162">        GenericCustomObjectBuilder&lt;T&gt; builder = new GenericCustomObjectBuilder&lt;&gt;();</span>
+<span class="source-line-no">163</span><span id="line.163">        builder.id = template.getId();</span>
+<span class="source-line-no">164</span><span id="line.164">        builder.version = template.getVersion();</span>
+<span class="source-line-no">165</span><span id="line.165">        builder.createdAt = template.getCreatedAt();</span>
+<span class="source-line-no">166</span><span id="line.166">        builder.lastModifiedAt = template.getLastModifiedAt();</span>
+<span class="source-line-no">167</span><span id="line.167">        builder.lastModifiedBy = template.getLastModifiedBy();</span>
+<span class="source-line-no">168</span><span id="line.168">        builder.createdBy = template.getCreatedBy();</span>
+<span class="source-line-no">169</span><span id="line.169">        builder.container = template.getContainer();</span>
+<span class="source-line-no">170</span><span id="line.170">        builder.key = template.getKey();</span>
+<span class="source-line-no">171</span><span id="line.171">        builder.value = template.getValue();</span>
+<span class="source-line-no">172</span><span id="line.172">        return builder;</span>
+<span class="source-line-no">173</span><span id="line.173">    }</span>
+<span class="source-line-no">174</span><span id="line.174"></span>
+<span class="source-line-no">175</span><span id="line.175">}</span>
 
 
 

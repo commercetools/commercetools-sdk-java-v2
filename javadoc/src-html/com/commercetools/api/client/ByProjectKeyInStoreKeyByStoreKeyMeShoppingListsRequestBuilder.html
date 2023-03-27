@@ -43,22 +43,27 @@
 <span class="source-line-no">030</span><span id="line.30">            myShoppingListDraft);</span>
 <span class="source-line-no">031</span><span id="line.31">    }</span>
 <span class="source-line-no">032</span><span id="line.32"></span>
-<span class="source-line-no">033</span><span id="line.33">    public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsPost post(</span>
-<span class="source-line-no">034</span><span id="line.34">            UnaryOperator&lt;com.commercetools.api.models.me.MyShoppingListDraftBuilder&gt; op) {</span>
-<span class="source-line-no">035</span><span id="line.35">        return post(op.apply(com.commercetools.api.models.me.MyShoppingListDraftBuilder.of()).build());</span>
+<span class="source-line-no">033</span><span id="line.33">    public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsPostString post(final String myShoppingListDraft) {</span>
+<span class="source-line-no">034</span><span id="line.34">        return new ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsPostString(apiHttpClient, projectKey, storeKey,</span>
+<span class="source-line-no">035</span><span id="line.35">            myShoppingListDraft);</span>
 <span class="source-line-no">036</span><span id="line.36">    }</span>
 <span class="source-line-no">037</span><span id="line.37"></span>
-<span class="source-line-no">038</span><span id="line.38">    public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyRequestBuilder withKey(String key) {</span>
-<span class="source-line-no">039</span><span id="line.39">        return new ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyRequestBuilder(apiHttpClient, projectKey,</span>
-<span class="source-line-no">040</span><span id="line.40">            storeKey, key);</span>
+<span class="source-line-no">038</span><span id="line.38">    public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsPost post(</span>
+<span class="source-line-no">039</span><span id="line.39">            UnaryOperator&lt;com.commercetools.api.models.me.MyShoppingListDraftBuilder&gt; op) {</span>
+<span class="source-line-no">040</span><span id="line.40">        return post(op.apply(com.commercetools.api.models.me.MyShoppingListDraftBuilder.of()).build());</span>
 <span class="source-line-no">041</span><span id="line.41">    }</span>
 <span class="source-line-no">042</span><span id="line.42"></span>
-<span class="source-line-no">043</span><span id="line.43">    public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDRequestBuilder withId(String ID) {</span>
-<span class="source-line-no">044</span><span id="line.44">        return new ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDRequestBuilder(apiHttpClient, projectKey,</span>
-<span class="source-line-no">045</span><span id="line.45">            storeKey, ID);</span>
+<span class="source-line-no">043</span><span id="line.43">    public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyRequestBuilder withKey(String key) {</span>
+<span class="source-line-no">044</span><span id="line.44">        return new ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyRequestBuilder(apiHttpClient, projectKey,</span>
+<span class="source-line-no">045</span><span id="line.45">            storeKey, key);</span>
 <span class="source-line-no">046</span><span id="line.46">    }</span>
 <span class="source-line-no">047</span><span id="line.47"></span>
-<span class="source-line-no">048</span><span id="line.48">}</span>
+<span class="source-line-no">048</span><span id="line.48">    public ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDRequestBuilder withId(String ID) {</span>
+<span class="source-line-no">049</span><span id="line.49">        return new ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDRequestBuilder(apiHttpClient, projectKey,</span>
+<span class="source-line-no">050</span><span id="line.50">            storeKey, ID);</span>
+<span class="source-line-no">051</span><span id="line.51">    }</span>
+<span class="source-line-no">052</span><span id="line.52"></span>
+<span class="source-line-no">053</span><span id="line.53">}</span>
 
 
 

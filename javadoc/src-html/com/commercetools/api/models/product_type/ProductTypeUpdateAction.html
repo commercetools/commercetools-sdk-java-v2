@@ -67,104 +67,195 @@
 <span class="source-line-no">054</span><span id="line.54"></span>
 <span class="source-line-no">055</span><span id="line.55">    /**</span>
 <span class="source-line-no">056</span><span id="line.56">     *</span>
-<span class="source-line-no">057</span><span id="line.57">     */</span>
-<span class="source-line-no">058</span><span id="line.58">    @NotNull</span>
-<span class="source-line-no">059</span><span id="line.59">    @JsonProperty("action")</span>
-<span class="source-line-no">060</span><span id="line.60">    public String getAction();</span>
-<span class="source-line-no">061</span><span id="line.61"></span>
-<span class="source-line-no">062</span><span id="line.62">    public static com.commercetools.api.models.product_type.ProductTypeAddAttributeDefinitionActionBuilder addAttributeDefinitionBuilder() {</span>
-<span class="source-line-no">063</span><span id="line.63">        return com.commercetools.api.models.product_type.ProductTypeAddAttributeDefinitionActionBuilder.of();</span>
-<span class="source-line-no">064</span><span id="line.64">    }</span>
-<span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    public static com.commercetools.api.models.product_type.ProductTypeAddLocalizedEnumValueActionBuilder addLocalizedEnumValueBuilder() {</span>
-<span class="source-line-no">067</span><span id="line.67">        return com.commercetools.api.models.product_type.ProductTypeAddLocalizedEnumValueActionBuilder.of();</span>
-<span class="source-line-no">068</span><span id="line.68">    }</span>
-<span class="source-line-no">069</span><span id="line.69"></span>
-<span class="source-line-no">070</span><span id="line.70">    public static com.commercetools.api.models.product_type.ProductTypeAddPlainEnumValueActionBuilder addPlainEnumValueBuilder() {</span>
-<span class="source-line-no">071</span><span id="line.71">        return com.commercetools.api.models.product_type.ProductTypeAddPlainEnumValueActionBuilder.of();</span>
-<span class="source-line-no">072</span><span id="line.72">    }</span>
-<span class="source-line-no">073</span><span id="line.73"></span>
-<span class="source-line-no">074</span><span id="line.74">    public static com.commercetools.api.models.product_type.ProductTypeChangeAttributeConstraintActionBuilder changeAttributeConstraintBuilder() {</span>
-<span class="source-line-no">075</span><span id="line.75">        return com.commercetools.api.models.product_type.ProductTypeChangeAttributeConstraintActionBuilder.of();</span>
-<span class="source-line-no">076</span><span id="line.76">    }</span>
-<span class="source-line-no">077</span><span id="line.77"></span>
-<span class="source-line-no">078</span><span id="line.78">    public static com.commercetools.api.models.product_type.ProductTypeChangeAttributeNameActionBuilder changeAttributeNameBuilder() {</span>
-<span class="source-line-no">079</span><span id="line.79">        return com.commercetools.api.models.product_type.ProductTypeChangeAttributeNameActionBuilder.of();</span>
-<span class="source-line-no">080</span><span id="line.80">    }</span>
-<span class="source-line-no">081</span><span id="line.81"></span>
-<span class="source-line-no">082</span><span id="line.82">    public static com.commercetools.api.models.product_type.ProductTypeChangeAttributeOrderByNameActionBuilder changeAttributeOrderByNameBuilder() {</span>
-<span class="source-line-no">083</span><span id="line.83">        return com.commercetools.api.models.product_type.ProductTypeChangeAttributeOrderByNameActionBuilder.of();</span>
-<span class="source-line-no">084</span><span id="line.84">    }</span>
-<span class="source-line-no">085</span><span id="line.85"></span>
-<span class="source-line-no">086</span><span id="line.86">    public static com.commercetools.api.models.product_type.ProductTypeChangeDescriptionActionBuilder changeDescriptionBuilder() {</span>
-<span class="source-line-no">087</span><span id="line.87">        return com.commercetools.api.models.product_type.ProductTypeChangeDescriptionActionBuilder.of();</span>
-<span class="source-line-no">088</span><span id="line.88">    }</span>
-<span class="source-line-no">089</span><span id="line.89"></span>
-<span class="source-line-no">090</span><span id="line.90">    public static com.commercetools.api.models.product_type.ProductTypeChangeEnumKeyActionBuilder changeEnumKeyBuilder() {</span>
-<span class="source-line-no">091</span><span id="line.91">        return com.commercetools.api.models.product_type.ProductTypeChangeEnumKeyActionBuilder.of();</span>
-<span class="source-line-no">092</span><span id="line.92">    }</span>
-<span class="source-line-no">093</span><span id="line.93"></span>
-<span class="source-line-no">094</span><span id="line.94">    public static com.commercetools.api.models.product_type.ProductTypeChangeInputHintActionBuilder changeInputHintBuilder() {</span>
-<span class="source-line-no">095</span><span id="line.95">        return com.commercetools.api.models.product_type.ProductTypeChangeInputHintActionBuilder.of();</span>
-<span class="source-line-no">096</span><span id="line.96">    }</span>
-<span class="source-line-no">097</span><span id="line.97"></span>
-<span class="source-line-no">098</span><span id="line.98">    public static com.commercetools.api.models.product_type.ProductTypeChangeIsSearchableActionBuilder changeIsSearchableBuilder() {</span>
-<span class="source-line-no">099</span><span id="line.99">        return com.commercetools.api.models.product_type.ProductTypeChangeIsSearchableActionBuilder.of();</span>
-<span class="source-line-no">100</span><span id="line.100">    }</span>
-<span class="source-line-no">101</span><span id="line.101"></span>
-<span class="source-line-no">102</span><span id="line.102">    public static com.commercetools.api.models.product_type.ProductTypeChangeLabelActionBuilder changeLabelBuilder() {</span>
-<span class="source-line-no">103</span><span id="line.103">        return com.commercetools.api.models.product_type.ProductTypeChangeLabelActionBuilder.of();</span>
-<span class="source-line-no">104</span><span id="line.104">    }</span>
-<span class="source-line-no">105</span><span id="line.105"></span>
-<span class="source-line-no">106</span><span id="line.106">    public static com.commercetools.api.models.product_type.ProductTypeChangeLocalizedEnumValueLabelActionBuilder changeLocalizedEnumValueLabelBuilder() {</span>
-<span class="source-line-no">107</span><span id="line.107">        return com.commercetools.api.models.product_type.ProductTypeChangeLocalizedEnumValueLabelActionBuilder.of();</span>
-<span class="source-line-no">108</span><span id="line.108">    }</span>
-<span class="source-line-no">109</span><span id="line.109"></span>
-<span class="source-line-no">110</span><span id="line.110">    public static com.commercetools.api.models.product_type.ProductTypeChangeLocalizedEnumValueOrderActionBuilder changeLocalizedEnumValueOrderBuilder() {</span>
-<span class="source-line-no">111</span><span id="line.111">        return com.commercetools.api.models.product_type.ProductTypeChangeLocalizedEnumValueOrderActionBuilder.of();</span>
-<span class="source-line-no">112</span><span id="line.112">    }</span>
-<span class="source-line-no">113</span><span id="line.113"></span>
-<span class="source-line-no">114</span><span id="line.114">    public static com.commercetools.api.models.product_type.ProductTypeChangeNameActionBuilder changeNameBuilder() {</span>
-<span class="source-line-no">115</span><span id="line.115">        return com.commercetools.api.models.product_type.ProductTypeChangeNameActionBuilder.of();</span>
-<span class="source-line-no">116</span><span id="line.116">    }</span>
-<span class="source-line-no">117</span><span id="line.117"></span>
-<span class="source-line-no">118</span><span id="line.118">    public static com.commercetools.api.models.product_type.ProductTypeChangePlainEnumValueLabelActionBuilder changePlainEnumValueLabelBuilder() {</span>
-<span class="source-line-no">119</span><span id="line.119">        return com.commercetools.api.models.product_type.ProductTypeChangePlainEnumValueLabelActionBuilder.of();</span>
-<span class="source-line-no">120</span><span id="line.120">    }</span>
-<span class="source-line-no">121</span><span id="line.121"></span>
-<span class="source-line-no">122</span><span id="line.122">    public static com.commercetools.api.models.product_type.ProductTypeChangePlainEnumValueOrderActionBuilder changePlainEnumValueOrderBuilder() {</span>
-<span class="source-line-no">123</span><span id="line.123">        return com.commercetools.api.models.product_type.ProductTypeChangePlainEnumValueOrderActionBuilder.of();</span>
-<span class="source-line-no">124</span><span id="line.124">    }</span>
-<span class="source-line-no">125</span><span id="line.125"></span>
-<span class="source-line-no">126</span><span id="line.126">    public static com.commercetools.api.models.product_type.ProductTypeRemoveAttributeDefinitionActionBuilder removeAttributeDefinitionBuilder() {</span>
-<span class="source-line-no">127</span><span id="line.127">        return com.commercetools.api.models.product_type.ProductTypeRemoveAttributeDefinitionActionBuilder.of();</span>
-<span class="source-line-no">128</span><span id="line.128">    }</span>
-<span class="source-line-no">129</span><span id="line.129"></span>
-<span class="source-line-no">130</span><span id="line.130">    public static com.commercetools.api.models.product_type.ProductTypeRemoveEnumValuesActionBuilder removeEnumValuesBuilder() {</span>
-<span class="source-line-no">131</span><span id="line.131">        return com.commercetools.api.models.product_type.ProductTypeRemoveEnumValuesActionBuilder.of();</span>
-<span class="source-line-no">132</span><span id="line.132">    }</span>
-<span class="source-line-no">133</span><span id="line.133"></span>
-<span class="source-line-no">134</span><span id="line.134">    public static com.commercetools.api.models.product_type.ProductTypeSetInputTipActionBuilder setInputTipBuilder() {</span>
-<span class="source-line-no">135</span><span id="line.135">        return com.commercetools.api.models.product_type.ProductTypeSetInputTipActionBuilder.of();</span>
-<span class="source-line-no">136</span><span id="line.136">    }</span>
-<span class="source-line-no">137</span><span id="line.137"></span>
-<span class="source-line-no">138</span><span id="line.138">    public static com.commercetools.api.models.product_type.ProductTypeSetKeyActionBuilder setKeyBuilder() {</span>
-<span class="source-line-no">139</span><span id="line.139">        return com.commercetools.api.models.product_type.ProductTypeSetKeyActionBuilder.of();</span>
-<span class="source-line-no">140</span><span id="line.140">    }</span>
-<span class="source-line-no">141</span><span id="line.141"></span>
-<span class="source-line-no">142</span><span id="line.142">    default &lt;T&gt; T withProductTypeUpdateAction(Function&lt;ProductTypeUpdateAction, T&gt; helper) {</span>
-<span class="source-line-no">143</span><span id="line.143">        return helper.apply(this);</span>
-<span class="source-line-no">144</span><span id="line.144">    }</span>
-<span class="source-line-no">145</span><span id="line.145"></span>
-<span class="source-line-no">146</span><span id="line.146">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ProductTypeUpdateAction&gt; typeReference() {</span>
-<span class="source-line-no">147</span><span id="line.147">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ProductTypeUpdateAction&gt;() {</span>
-<span class="source-line-no">148</span><span id="line.148">            @Override</span>
-<span class="source-line-no">149</span><span id="line.149">            public String toString() {</span>
-<span class="source-line-no">150</span><span id="line.150">                return "TypeReference&lt;ProductTypeUpdateAction&gt;";</span>
-<span class="source-line-no">151</span><span id="line.151">            }</span>
-<span class="source-line-no">152</span><span id="line.152">        };</span>
-<span class="source-line-no">153</span><span id="line.153">    }</span>
-<span class="source-line-no">154</span><span id="line.154">}</span>
+<span class="source-line-no">057</span><span id="line.57">     * @return action</span>
+<span class="source-line-no">058</span><span id="line.58">     */</span>
+<span class="source-line-no">059</span><span id="line.59">    @NotNull</span>
+<span class="source-line-no">060</span><span id="line.60">    @JsonProperty("action")</span>
+<span class="source-line-no">061</span><span id="line.61">    public String getAction();</span>
+<span class="source-line-no">062</span><span id="line.62"></span>
+<span class="source-line-no">063</span><span id="line.63">    /**</span>
+<span class="source-line-no">064</span><span id="line.64">     * builder for addAttributeDefinition subtype</span>
+<span class="source-line-no">065</span><span id="line.65">     * @return builder</span>
+<span class="source-line-no">066</span><span id="line.66">     */</span>
+<span class="source-line-no">067</span><span id="line.67">    public static com.commercetools.api.models.product_type.ProductTypeAddAttributeDefinitionActionBuilder addAttributeDefinitionBuilder() {</span>
+<span class="source-line-no">068</span><span id="line.68">        return com.commercetools.api.models.product_type.ProductTypeAddAttributeDefinitionActionBuilder.of();</span>
+<span class="source-line-no">069</span><span id="line.69">    }</span>
+<span class="source-line-no">070</span><span id="line.70"></span>
+<span class="source-line-no">071</span><span id="line.71">    /**</span>
+<span class="source-line-no">072</span><span id="line.72">     * builder for addLocalizedEnumValue subtype</span>
+<span class="source-line-no">073</span><span id="line.73">     * @return builder</span>
+<span class="source-line-no">074</span><span id="line.74">     */</span>
+<span class="source-line-no">075</span><span id="line.75">    public static com.commercetools.api.models.product_type.ProductTypeAddLocalizedEnumValueActionBuilder addLocalizedEnumValueBuilder() {</span>
+<span class="source-line-no">076</span><span id="line.76">        return com.commercetools.api.models.product_type.ProductTypeAddLocalizedEnumValueActionBuilder.of();</span>
+<span class="source-line-no">077</span><span id="line.77">    }</span>
+<span class="source-line-no">078</span><span id="line.78"></span>
+<span class="source-line-no">079</span><span id="line.79">    /**</span>
+<span class="source-line-no">080</span><span id="line.80">     * builder for addPlainEnumValue subtype</span>
+<span class="source-line-no">081</span><span id="line.81">     * @return builder</span>
+<span class="source-line-no">082</span><span id="line.82">     */</span>
+<span class="source-line-no">083</span><span id="line.83">    public static com.commercetools.api.models.product_type.ProductTypeAddPlainEnumValueActionBuilder addPlainEnumValueBuilder() {</span>
+<span class="source-line-no">084</span><span id="line.84">        return com.commercetools.api.models.product_type.ProductTypeAddPlainEnumValueActionBuilder.of();</span>
+<span class="source-line-no">085</span><span id="line.85">    }</span>
+<span class="source-line-no">086</span><span id="line.86"></span>
+<span class="source-line-no">087</span><span id="line.87">    /**</span>
+<span class="source-line-no">088</span><span id="line.88">     * builder for changeAttributeConstraint subtype</span>
+<span class="source-line-no">089</span><span id="line.89">     * @return builder</span>
+<span class="source-line-no">090</span><span id="line.90">     */</span>
+<span class="source-line-no">091</span><span id="line.91">    public static com.commercetools.api.models.product_type.ProductTypeChangeAttributeConstraintActionBuilder changeAttributeConstraintBuilder() {</span>
+<span class="source-line-no">092</span><span id="line.92">        return com.commercetools.api.models.product_type.ProductTypeChangeAttributeConstraintActionBuilder.of();</span>
+<span class="source-line-no">093</span><span id="line.93">    }</span>
+<span class="source-line-no">094</span><span id="line.94"></span>
+<span class="source-line-no">095</span><span id="line.95">    /**</span>
+<span class="source-line-no">096</span><span id="line.96">     * builder for changeAttributeName subtype</span>
+<span class="source-line-no">097</span><span id="line.97">     * @return builder</span>
+<span class="source-line-no">098</span><span id="line.98">     */</span>
+<span class="source-line-no">099</span><span id="line.99">    public static com.commercetools.api.models.product_type.ProductTypeChangeAttributeNameActionBuilder changeAttributeNameBuilder() {</span>
+<span class="source-line-no">100</span><span id="line.100">        return com.commercetools.api.models.product_type.ProductTypeChangeAttributeNameActionBuilder.of();</span>
+<span class="source-line-no">101</span><span id="line.101">    }</span>
+<span class="source-line-no">102</span><span id="line.102"></span>
+<span class="source-line-no">103</span><span id="line.103">    /**</span>
+<span class="source-line-no">104</span><span id="line.104">     * builder for changeAttributeOrderByName subtype</span>
+<span class="source-line-no">105</span><span id="line.105">     * @return builder</span>
+<span class="source-line-no">106</span><span id="line.106">     */</span>
+<span class="source-line-no">107</span><span id="line.107">    public static com.commercetools.api.models.product_type.ProductTypeChangeAttributeOrderByNameActionBuilder changeAttributeOrderByNameBuilder() {</span>
+<span class="source-line-no">108</span><span id="line.108">        return com.commercetools.api.models.product_type.ProductTypeChangeAttributeOrderByNameActionBuilder.of();</span>
+<span class="source-line-no">109</span><span id="line.109">    }</span>
+<span class="source-line-no">110</span><span id="line.110"></span>
+<span class="source-line-no">111</span><span id="line.111">    /**</span>
+<span class="source-line-no">112</span><span id="line.112">     * builder for changeDescription subtype</span>
+<span class="source-line-no">113</span><span id="line.113">     * @return builder</span>
+<span class="source-line-no">114</span><span id="line.114">     */</span>
+<span class="source-line-no">115</span><span id="line.115">    public static com.commercetools.api.models.product_type.ProductTypeChangeDescriptionActionBuilder changeDescriptionBuilder() {</span>
+<span class="source-line-no">116</span><span id="line.116">        return com.commercetools.api.models.product_type.ProductTypeChangeDescriptionActionBuilder.of();</span>
+<span class="source-line-no">117</span><span id="line.117">    }</span>
+<span class="source-line-no">118</span><span id="line.118"></span>
+<span class="source-line-no">119</span><span id="line.119">    /**</span>
+<span class="source-line-no">120</span><span id="line.120">     * builder for changeEnumKey subtype</span>
+<span class="source-line-no">121</span><span id="line.121">     * @return builder</span>
+<span class="source-line-no">122</span><span id="line.122">     */</span>
+<span class="source-line-no">123</span><span id="line.123">    public static com.commercetools.api.models.product_type.ProductTypeChangeEnumKeyActionBuilder changeEnumKeyBuilder() {</span>
+<span class="source-line-no">124</span><span id="line.124">        return com.commercetools.api.models.product_type.ProductTypeChangeEnumKeyActionBuilder.of();</span>
+<span class="source-line-no">125</span><span id="line.125">    }</span>
+<span class="source-line-no">126</span><span id="line.126"></span>
+<span class="source-line-no">127</span><span id="line.127">    /**</span>
+<span class="source-line-no">128</span><span id="line.128">     * builder for changeInputHint subtype</span>
+<span class="source-line-no">129</span><span id="line.129">     * @return builder</span>
+<span class="source-line-no">130</span><span id="line.130">     */</span>
+<span class="source-line-no">131</span><span id="line.131">    public static com.commercetools.api.models.product_type.ProductTypeChangeInputHintActionBuilder changeInputHintBuilder() {</span>
+<span class="source-line-no">132</span><span id="line.132">        return com.commercetools.api.models.product_type.ProductTypeChangeInputHintActionBuilder.of();</span>
+<span class="source-line-no">133</span><span id="line.133">    }</span>
+<span class="source-line-no">134</span><span id="line.134"></span>
+<span class="source-line-no">135</span><span id="line.135">    /**</span>
+<span class="source-line-no">136</span><span id="line.136">     * builder for changeIsSearchable subtype</span>
+<span class="source-line-no">137</span><span id="line.137">     * @return builder</span>
+<span class="source-line-no">138</span><span id="line.138">     */</span>
+<span class="source-line-no">139</span><span id="line.139">    public static com.commercetools.api.models.product_type.ProductTypeChangeIsSearchableActionBuilder changeIsSearchableBuilder() {</span>
+<span class="source-line-no">140</span><span id="line.140">        return com.commercetools.api.models.product_type.ProductTypeChangeIsSearchableActionBuilder.of();</span>
+<span class="source-line-no">141</span><span id="line.141">    }</span>
+<span class="source-line-no">142</span><span id="line.142"></span>
+<span class="source-line-no">143</span><span id="line.143">    /**</span>
+<span class="source-line-no">144</span><span id="line.144">     * builder for changeLabel subtype</span>
+<span class="source-line-no">145</span><span id="line.145">     * @return builder</span>
+<span class="source-line-no">146</span><span id="line.146">     */</span>
+<span class="source-line-no">147</span><span id="line.147">    public static com.commercetools.api.models.product_type.ProductTypeChangeLabelActionBuilder changeLabelBuilder() {</span>
+<span class="source-line-no">148</span><span id="line.148">        return com.commercetools.api.models.product_type.ProductTypeChangeLabelActionBuilder.of();</span>
+<span class="source-line-no">149</span><span id="line.149">    }</span>
+<span class="source-line-no">150</span><span id="line.150"></span>
+<span class="source-line-no">151</span><span id="line.151">    /**</span>
+<span class="source-line-no">152</span><span id="line.152">     * builder for changeLocalizedEnumValueLabel subtype</span>
+<span class="source-line-no">153</span><span id="line.153">     * @return builder</span>
+<span class="source-line-no">154</span><span id="line.154">     */</span>
+<span class="source-line-no">155</span><span id="line.155">    public static com.commercetools.api.models.product_type.ProductTypeChangeLocalizedEnumValueLabelActionBuilder changeLocalizedEnumValueLabelBuilder() {</span>
+<span class="source-line-no">156</span><span id="line.156">        return com.commercetools.api.models.product_type.ProductTypeChangeLocalizedEnumValueLabelActionBuilder.of();</span>
+<span class="source-line-no">157</span><span id="line.157">    }</span>
+<span class="source-line-no">158</span><span id="line.158"></span>
+<span class="source-line-no">159</span><span id="line.159">    /**</span>
+<span class="source-line-no">160</span><span id="line.160">     * builder for changeLocalizedEnumValueOrder subtype</span>
+<span class="source-line-no">161</span><span id="line.161">     * @return builder</span>
+<span class="source-line-no">162</span><span id="line.162">     */</span>
+<span class="source-line-no">163</span><span id="line.163">    public static com.commercetools.api.models.product_type.ProductTypeChangeLocalizedEnumValueOrderActionBuilder changeLocalizedEnumValueOrderBuilder() {</span>
+<span class="source-line-no">164</span><span id="line.164">        return com.commercetools.api.models.product_type.ProductTypeChangeLocalizedEnumValueOrderActionBuilder.of();</span>
+<span class="source-line-no">165</span><span id="line.165">    }</span>
+<span class="source-line-no">166</span><span id="line.166"></span>
+<span class="source-line-no">167</span><span id="line.167">    /**</span>
+<span class="source-line-no">168</span><span id="line.168">     * builder for changeName subtype</span>
+<span class="source-line-no">169</span><span id="line.169">     * @return builder</span>
+<span class="source-line-no">170</span><span id="line.170">     */</span>
+<span class="source-line-no">171</span><span id="line.171">    public static com.commercetools.api.models.product_type.ProductTypeChangeNameActionBuilder changeNameBuilder() {</span>
+<span class="source-line-no">172</span><span id="line.172">        return com.commercetools.api.models.product_type.ProductTypeChangeNameActionBuilder.of();</span>
+<span class="source-line-no">173</span><span id="line.173">    }</span>
+<span class="source-line-no">174</span><span id="line.174"></span>
+<span class="source-line-no">175</span><span id="line.175">    /**</span>
+<span class="source-line-no">176</span><span id="line.176">     * builder for changePlainEnumValueLabel subtype</span>
+<span class="source-line-no">177</span><span id="line.177">     * @return builder</span>
+<span class="source-line-no">178</span><span id="line.178">     */</span>
+<span class="source-line-no">179</span><span id="line.179">    public static com.commercetools.api.models.product_type.ProductTypeChangePlainEnumValueLabelActionBuilder changePlainEnumValueLabelBuilder() {</span>
+<span class="source-line-no">180</span><span id="line.180">        return com.commercetools.api.models.product_type.ProductTypeChangePlainEnumValueLabelActionBuilder.of();</span>
+<span class="source-line-no">181</span><span id="line.181">    }</span>
+<span class="source-line-no">182</span><span id="line.182"></span>
+<span class="source-line-no">183</span><span id="line.183">    /**</span>
+<span class="source-line-no">184</span><span id="line.184">     * builder for changePlainEnumValueOrder subtype</span>
+<span class="source-line-no">185</span><span id="line.185">     * @return builder</span>
+<span class="source-line-no">186</span><span id="line.186">     */</span>
+<span class="source-line-no">187</span><span id="line.187">    public static com.commercetools.api.models.product_type.ProductTypeChangePlainEnumValueOrderActionBuilder changePlainEnumValueOrderBuilder() {</span>
+<span class="source-line-no">188</span><span id="line.188">        return com.commercetools.api.models.product_type.ProductTypeChangePlainEnumValueOrderActionBuilder.of();</span>
+<span class="source-line-no">189</span><span id="line.189">    }</span>
+<span class="source-line-no">190</span><span id="line.190"></span>
+<span class="source-line-no">191</span><span id="line.191">    /**</span>
+<span class="source-line-no">192</span><span id="line.192">     * builder for removeAttributeDefinition subtype</span>
+<span class="source-line-no">193</span><span id="line.193">     * @return builder</span>
+<span class="source-line-no">194</span><span id="line.194">     */</span>
+<span class="source-line-no">195</span><span id="line.195">    public static com.commercetools.api.models.product_type.ProductTypeRemoveAttributeDefinitionActionBuilder removeAttributeDefinitionBuilder() {</span>
+<span class="source-line-no">196</span><span id="line.196">        return com.commercetools.api.models.product_type.ProductTypeRemoveAttributeDefinitionActionBuilder.of();</span>
+<span class="source-line-no">197</span><span id="line.197">    }</span>
+<span class="source-line-no">198</span><span id="line.198"></span>
+<span class="source-line-no">199</span><span id="line.199">    /**</span>
+<span class="source-line-no">200</span><span id="line.200">     * builder for removeEnumValues subtype</span>
+<span class="source-line-no">201</span><span id="line.201">     * @return builder</span>
+<span class="source-line-no">202</span><span id="line.202">     */</span>
+<span class="source-line-no">203</span><span id="line.203">    public static com.commercetools.api.models.product_type.ProductTypeRemoveEnumValuesActionBuilder removeEnumValuesBuilder() {</span>
+<span class="source-line-no">204</span><span id="line.204">        return com.commercetools.api.models.product_type.ProductTypeRemoveEnumValuesActionBuilder.of();</span>
+<span class="source-line-no">205</span><span id="line.205">    }</span>
+<span class="source-line-no">206</span><span id="line.206"></span>
+<span class="source-line-no">207</span><span id="line.207">    /**</span>
+<span class="source-line-no">208</span><span id="line.208">     * builder for setInputTip subtype</span>
+<span class="source-line-no">209</span><span id="line.209">     * @return builder</span>
+<span class="source-line-no">210</span><span id="line.210">     */</span>
+<span class="source-line-no">211</span><span id="line.211">    public static com.commercetools.api.models.product_type.ProductTypeSetInputTipActionBuilder setInputTipBuilder() {</span>
+<span class="source-line-no">212</span><span id="line.212">        return com.commercetools.api.models.product_type.ProductTypeSetInputTipActionBuilder.of();</span>
+<span class="source-line-no">213</span><span id="line.213">    }</span>
+<span class="source-line-no">214</span><span id="line.214"></span>
+<span class="source-line-no">215</span><span id="line.215">    /**</span>
+<span class="source-line-no">216</span><span id="line.216">     * builder for setKey subtype</span>
+<span class="source-line-no">217</span><span id="line.217">     * @return builder</span>
+<span class="source-line-no">218</span><span id="line.218">     */</span>
+<span class="source-line-no">219</span><span id="line.219">    public static com.commercetools.api.models.product_type.ProductTypeSetKeyActionBuilder setKeyBuilder() {</span>
+<span class="source-line-no">220</span><span id="line.220">        return com.commercetools.api.models.product_type.ProductTypeSetKeyActionBuilder.of();</span>
+<span class="source-line-no">221</span><span id="line.221">    }</span>
+<span class="source-line-no">222</span><span id="line.222"></span>
+<span class="source-line-no">223</span><span id="line.223">    /**</span>
+<span class="source-line-no">224</span><span id="line.224">     * accessor map function</span>
+<span class="source-line-no">225</span><span id="line.225">     * @param &lt;T&gt; mapped type</span>
+<span class="source-line-no">226</span><span id="line.226">     * @param helper function to map the object</span>
+<span class="source-line-no">227</span><span id="line.227">     * @return mapped value</span>
+<span class="source-line-no">228</span><span id="line.228">     */</span>
+<span class="source-line-no">229</span><span id="line.229">    default &lt;T&gt; T withProductTypeUpdateAction(Function&lt;ProductTypeUpdateAction, T&gt; helper) {</span>
+<span class="source-line-no">230</span><span id="line.230">        return helper.apply(this);</span>
+<span class="source-line-no">231</span><span id="line.231">    }</span>
+<span class="source-line-no">232</span><span id="line.232"></span>
+<span class="source-line-no">233</span><span id="line.233">    /**</span>
+<span class="source-line-no">234</span><span id="line.234">     * gives a TypeReference for usage with Jackson DataBind</span>
+<span class="source-line-no">235</span><span id="line.235">     * @return TypeReference</span>
+<span class="source-line-no">236</span><span id="line.236">     */</span>
+<span class="source-line-no">237</span><span id="line.237">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ProductTypeUpdateAction&gt; typeReference() {</span>
+<span class="source-line-no">238</span><span id="line.238">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ProductTypeUpdateAction&gt;() {</span>
+<span class="source-line-no">239</span><span id="line.239">            @Override</span>
+<span class="source-line-no">240</span><span id="line.240">            public String toString() {</span>
+<span class="source-line-no">241</span><span id="line.241">                return "TypeReference&lt;ProductTypeUpdateAction&gt;";</span>
+<span class="source-line-no">242</span><span id="line.242">            }</span>
+<span class="source-line-no">243</span><span id="line.243">        };</span>
+<span class="source-line-no">244</span><span id="line.244">    }</span>
+<span class="source-line-no">245</span><span id="line.245">}</span>
 
 
 

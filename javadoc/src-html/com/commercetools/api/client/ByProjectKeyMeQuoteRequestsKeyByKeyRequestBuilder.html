@@ -38,24 +38,28 @@
 <span class="source-line-no">025</span><span id="line.25">        return new ByProjectKeyMeQuoteRequestsKeyByKeyPost(apiHttpClient, projectKey, key, myQuoteRequestUpdate);</span>
 <span class="source-line-no">026</span><span id="line.26">    }</span>
 <span class="source-line-no">027</span><span id="line.27"></span>
-<span class="source-line-no">028</span><span id="line.28">    public ByProjectKeyMeQuoteRequestsKeyByKeyPost post(</span>
-<span class="source-line-no">029</span><span id="line.29">            UnaryOperator&lt;com.commercetools.api.models.me.MyQuoteRequestUpdateBuilder&gt; op) {</span>
-<span class="source-line-no">030</span><span id="line.30">        return post(op.apply(com.commercetools.api.models.me.MyQuoteRequestUpdateBuilder.of()).build());</span>
-<span class="source-line-no">031</span><span id="line.31">    }</span>
-<span class="source-line-no">032</span><span id="line.32"></span>
-<span class="source-line-no">033</span><span id="line.33">    public ByProjectKeyMeQuoteRequestsKeyByKeyDelete delete() {</span>
-<span class="source-line-no">034</span><span id="line.34">        return new ByProjectKeyMeQuoteRequestsKeyByKeyDelete(apiHttpClient, projectKey, key);</span>
+<span class="source-line-no">028</span><span id="line.28">    public ByProjectKeyMeQuoteRequestsKeyByKeyPostString post(final String myQuoteRequestUpdate) {</span>
+<span class="source-line-no">029</span><span id="line.29">        return new ByProjectKeyMeQuoteRequestsKeyByKeyPostString(apiHttpClient, projectKey, key, myQuoteRequestUpdate);</span>
+<span class="source-line-no">030</span><span id="line.30">    }</span>
+<span class="source-line-no">031</span><span id="line.31"></span>
+<span class="source-line-no">032</span><span id="line.32">    public ByProjectKeyMeQuoteRequestsKeyByKeyPost post(</span>
+<span class="source-line-no">033</span><span id="line.33">            UnaryOperator&lt;com.commercetools.api.models.me.MyQuoteRequestUpdateBuilder&gt; op) {</span>
+<span class="source-line-no">034</span><span id="line.34">        return post(op.apply(com.commercetools.api.models.me.MyQuoteRequestUpdateBuilder.of()).build());</span>
 <span class="source-line-no">035</span><span id="line.35">    }</span>
 <span class="source-line-no">036</span><span id="line.36"></span>
-<span class="source-line-no">037</span><span id="line.37">    public &lt;TValue&gt; ByProjectKeyMeQuoteRequestsKeyByKeyDelete delete(TValue version) {</span>
-<span class="source-line-no">038</span><span id="line.38">        return delete().withVersion(version);</span>
+<span class="source-line-no">037</span><span id="line.37">    public ByProjectKeyMeQuoteRequestsKeyByKeyDelete delete() {</span>
+<span class="source-line-no">038</span><span id="line.38">        return new ByProjectKeyMeQuoteRequestsKeyByKeyDelete(apiHttpClient, projectKey, key);</span>
 <span class="source-line-no">039</span><span id="line.39">    }</span>
 <span class="source-line-no">040</span><span id="line.40"></span>
-<span class="source-line-no">041</span><span id="line.41">    public ByProjectKeyMeQuoteRequestsKeyByKeyGet get() {</span>
-<span class="source-line-no">042</span><span id="line.42">        return new ByProjectKeyMeQuoteRequestsKeyByKeyGet(apiHttpClient, projectKey, key);</span>
+<span class="source-line-no">041</span><span id="line.41">    public &lt;TValue&gt; ByProjectKeyMeQuoteRequestsKeyByKeyDelete delete(TValue version) {</span>
+<span class="source-line-no">042</span><span id="line.42">        return delete().withVersion(version);</span>
 <span class="source-line-no">043</span><span id="line.43">    }</span>
 <span class="source-line-no">044</span><span id="line.44"></span>
-<span class="source-line-no">045</span><span id="line.45">}</span>
+<span class="source-line-no">045</span><span id="line.45">    public ByProjectKeyMeQuoteRequestsKeyByKeyGet get() {</span>
+<span class="source-line-no">046</span><span id="line.46">        return new ByProjectKeyMeQuoteRequestsKeyByKeyGet(apiHttpClient, projectKey, key);</span>
+<span class="source-line-no">047</span><span id="line.47">    }</span>
+<span class="source-line-no">048</span><span id="line.48"></span>
+<span class="source-line-no">049</span><span id="line.49">}</span>
 
 
 

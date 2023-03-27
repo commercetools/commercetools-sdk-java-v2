@@ -44,76 +44,108 @@
 <span class="source-line-no">031</span><span id="line.31"></span>
 <span class="source-line-no">032</span><span id="line.32">    /**</span>
 <span class="source-line-no">033</span><span id="line.33">     *  &lt;p&gt;Money value of the StagedStandalonePrice.&lt;/p&gt;</span>
-<span class="source-line-no">034</span><span id="line.34">     */</span>
-<span class="source-line-no">035</span><span id="line.35"></span>
-<span class="source-line-no">036</span><span id="line.36">    public StagedStandalonePriceBuilder value(final com.commercetools.api.models.common.TypedMoney value) {</span>
-<span class="source-line-no">037</span><span id="line.37">        this.value = value;</span>
-<span class="source-line-no">038</span><span id="line.38">        return this;</span>
-<span class="source-line-no">039</span><span id="line.39">    }</span>
-<span class="source-line-no">040</span><span id="line.40"></span>
-<span class="source-line-no">041</span><span id="line.41">    /**</span>
-<span class="source-line-no">042</span><span id="line.42">     *  &lt;p&gt;Money value of the StagedStandalonePrice.&lt;/p&gt;</span>
-<span class="source-line-no">043</span><span id="line.43">     */</span>
-<span class="source-line-no">044</span><span id="line.44"></span>
-<span class="source-line-no">045</span><span id="line.45">    public StagedStandalonePriceBuilder value(</span>
-<span class="source-line-no">046</span><span id="line.46">            Function&lt;com.commercetools.api.models.common.TypedMoneyBuilder, Builder&lt;? extends com.commercetools.api.models.common.TypedMoney&gt;&gt; builder) {</span>
-<span class="source-line-no">047</span><span id="line.47">        this.value = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();</span>
-<span class="source-line-no">048</span><span id="line.48">        return this;</span>
-<span class="source-line-no">049</span><span id="line.49">    }</span>
-<span class="source-line-no">050</span><span id="line.50"></span>
-<span class="source-line-no">051</span><span id="line.51">    /**</span>
-<span class="source-line-no">052</span><span id="line.52">     *  &lt;p&gt;Discounted price for the StagedStandalonePrice.&lt;/p&gt;</span>
-<span class="source-line-no">053</span><span id="line.53">     */</span>
+<span class="source-line-no">034</span><span id="line.34">     * @param value value to be set</span>
+<span class="source-line-no">035</span><span id="line.35">     * @return Builder</span>
+<span class="source-line-no">036</span><span id="line.36">     */</span>
+<span class="source-line-no">037</span><span id="line.37"></span>
+<span class="source-line-no">038</span><span id="line.38">    public StagedStandalonePriceBuilder value(final com.commercetools.api.models.common.TypedMoney value) {</span>
+<span class="source-line-no">039</span><span id="line.39">        this.value = value;</span>
+<span class="source-line-no">040</span><span id="line.40">        return this;</span>
+<span class="source-line-no">041</span><span id="line.41">    }</span>
+<span class="source-line-no">042</span><span id="line.42"></span>
+<span class="source-line-no">043</span><span id="line.43">    /**</span>
+<span class="source-line-no">044</span><span id="line.44">     *  &lt;p&gt;Money value of the StagedStandalonePrice.&lt;/p&gt;</span>
+<span class="source-line-no">045</span><span id="line.45">     * @param builder function to build the value value</span>
+<span class="source-line-no">046</span><span id="line.46">     * @return Builder</span>
+<span class="source-line-no">047</span><span id="line.47">     */</span>
+<span class="source-line-no">048</span><span id="line.48"></span>
+<span class="source-line-no">049</span><span id="line.49">    public StagedStandalonePriceBuilder value(</span>
+<span class="source-line-no">050</span><span id="line.50">            Function&lt;com.commercetools.api.models.common.TypedMoneyBuilder, Builder&lt;? extends com.commercetools.api.models.common.TypedMoney&gt;&gt; builder) {</span>
+<span class="source-line-no">051</span><span id="line.51">        this.value = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();</span>
+<span class="source-line-no">052</span><span id="line.52">        return this;</span>
+<span class="source-line-no">053</span><span id="line.53">    }</span>
 <span class="source-line-no">054</span><span id="line.54"></span>
-<span class="source-line-no">055</span><span id="line.55">    public StagedStandalonePriceBuilder discounted(</span>
-<span class="source-line-no">056</span><span id="line.56">            Function&lt;com.commercetools.api.models.common.DiscountedPriceBuilder, com.commercetools.api.models.common.DiscountedPriceBuilder&gt; builder) {</span>
-<span class="source-line-no">057</span><span id="line.57">        this.discounted = builder.apply(com.commercetools.api.models.common.DiscountedPriceBuilder.of()).build();</span>
-<span class="source-line-no">058</span><span id="line.58">        return this;</span>
-<span class="source-line-no">059</span><span id="line.59">    }</span>
+<span class="source-line-no">055</span><span id="line.55">    /**</span>
+<span class="source-line-no">056</span><span id="line.56">     *  &lt;p&gt;Discounted price for the StagedStandalonePrice.&lt;/p&gt;</span>
+<span class="source-line-no">057</span><span id="line.57">     * @param builder function to build the discounted value</span>
+<span class="source-line-no">058</span><span id="line.58">     * @return Builder</span>
+<span class="source-line-no">059</span><span id="line.59">     */</span>
 <span class="source-line-no">060</span><span id="line.60"></span>
-<span class="source-line-no">061</span><span id="line.61">    /**</span>
-<span class="source-line-no">062</span><span id="line.62">     *  &lt;p&gt;Discounted price for the StagedStandalonePrice.&lt;/p&gt;</span>
-<span class="source-line-no">063</span><span id="line.63">     */</span>
-<span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">    public StagedStandalonePriceBuilder discounted(</span>
-<span class="source-line-no">066</span><span id="line.66">            @Nullable final com.commercetools.api.models.common.DiscountedPrice discounted) {</span>
-<span class="source-line-no">067</span><span id="line.67">        this.discounted = discounted;</span>
-<span class="source-line-no">068</span><span id="line.68">        return this;</span>
-<span class="source-line-no">069</span><span id="line.69">    }</span>
-<span class="source-line-no">070</span><span id="line.70"></span>
-<span class="source-line-no">071</span><span id="line.71">    public com.commercetools.api.models.common.TypedMoney getValue() {</span>
-<span class="source-line-no">072</span><span id="line.72">        return this.value;</span>
-<span class="source-line-no">073</span><span id="line.73">    }</span>
-<span class="source-line-no">074</span><span id="line.74"></span>
-<span class="source-line-no">075</span><span id="line.75">    @Nullable</span>
-<span class="source-line-no">076</span><span id="line.76">    public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {</span>
-<span class="source-line-no">077</span><span id="line.77">        return this.discounted;</span>
-<span class="source-line-no">078</span><span id="line.78">    }</span>
-<span class="source-line-no">079</span><span id="line.79"></span>
-<span class="source-line-no">080</span><span id="line.80">    public StagedStandalonePrice build() {</span>
-<span class="source-line-no">081</span><span id="line.81">        Objects.requireNonNull(value, StagedStandalonePrice.class + ": value is missing");</span>
-<span class="source-line-no">082</span><span id="line.82">        return new StagedStandalonePriceImpl(value, discounted);</span>
-<span class="source-line-no">083</span><span id="line.83">    }</span>
-<span class="source-line-no">084</span><span id="line.84"></span>
-<span class="source-line-no">085</span><span id="line.85">    /**</span>
-<span class="source-line-no">086</span><span id="line.86">     * builds StagedStandalonePrice without checking for non null required values</span>
-<span class="source-line-no">087</span><span id="line.87">     */</span>
-<span class="source-line-no">088</span><span id="line.88">    public StagedStandalonePrice buildUnchecked() {</span>
-<span class="source-line-no">089</span><span id="line.89">        return new StagedStandalonePriceImpl(value, discounted);</span>
-<span class="source-line-no">090</span><span id="line.90">    }</span>
-<span class="source-line-no">091</span><span id="line.91"></span>
-<span class="source-line-no">092</span><span id="line.92">    public static StagedStandalonePriceBuilder of() {</span>
-<span class="source-line-no">093</span><span id="line.93">        return new StagedStandalonePriceBuilder();</span>
-<span class="source-line-no">094</span><span id="line.94">    }</span>
-<span class="source-line-no">095</span><span id="line.95"></span>
-<span class="source-line-no">096</span><span id="line.96">    public static StagedStandalonePriceBuilder of(final StagedStandalonePrice template) {</span>
-<span class="source-line-no">097</span><span id="line.97">        StagedStandalonePriceBuilder builder = new StagedStandalonePriceBuilder();</span>
-<span class="source-line-no">098</span><span id="line.98">        builder.value = template.getValue();</span>
-<span class="source-line-no">099</span><span id="line.99">        builder.discounted = template.getDiscounted();</span>
-<span class="source-line-no">100</span><span id="line.100">        return builder;</span>
-<span class="source-line-no">101</span><span id="line.101">    }</span>
-<span class="source-line-no">102</span><span id="line.102"></span>
-<span class="source-line-no">103</span><span id="line.103">}</span>
+<span class="source-line-no">061</span><span id="line.61">    public StagedStandalonePriceBuilder discounted(</span>
+<span class="source-line-no">062</span><span id="line.62">            Function&lt;com.commercetools.api.models.common.DiscountedPriceBuilder, com.commercetools.api.models.common.DiscountedPriceBuilder&gt; builder) {</span>
+<span class="source-line-no">063</span><span id="line.63">        this.discounted = builder.apply(com.commercetools.api.models.common.DiscountedPriceBuilder.of()).build();</span>
+<span class="source-line-no">064</span><span id="line.64">        return this;</span>
+<span class="source-line-no">065</span><span id="line.65">    }</span>
+<span class="source-line-no">066</span><span id="line.66"></span>
+<span class="source-line-no">067</span><span id="line.67">    /**</span>
+<span class="source-line-no">068</span><span id="line.68">     *  &lt;p&gt;Discounted price for the StagedStandalonePrice.&lt;/p&gt;</span>
+<span class="source-line-no">069</span><span id="line.69">     * @param discounted value to be set</span>
+<span class="source-line-no">070</span><span id="line.70">     * @return Builder</span>
+<span class="source-line-no">071</span><span id="line.71">     */</span>
+<span class="source-line-no">072</span><span id="line.72"></span>
+<span class="source-line-no">073</span><span id="line.73">    public StagedStandalonePriceBuilder discounted(</span>
+<span class="source-line-no">074</span><span id="line.74">            @Nullable final com.commercetools.api.models.common.DiscountedPrice discounted) {</span>
+<span class="source-line-no">075</span><span id="line.75">        this.discounted = discounted;</span>
+<span class="source-line-no">076</span><span id="line.76">        return this;</span>
+<span class="source-line-no">077</span><span id="line.77">    }</span>
+<span class="source-line-no">078</span><span id="line.78"></span>
+<span class="source-line-no">079</span><span id="line.79">    /**</span>
+<span class="source-line-no">080</span><span id="line.80">     *  &lt;p&gt;Money value of the StagedStandalonePrice.&lt;/p&gt;</span>
+<span class="source-line-no">081</span><span id="line.81">     * @return value</span>
+<span class="source-line-no">082</span><span id="line.82">     */</span>
+<span class="source-line-no">083</span><span id="line.83"></span>
+<span class="source-line-no">084</span><span id="line.84">    public com.commercetools.api.models.common.TypedMoney getValue() {</span>
+<span class="source-line-no">085</span><span id="line.85">        return this.value;</span>
+<span class="source-line-no">086</span><span id="line.86">    }</span>
+<span class="source-line-no">087</span><span id="line.87"></span>
+<span class="source-line-no">088</span><span id="line.88">    /**</span>
+<span class="source-line-no">089</span><span id="line.89">     *  &lt;p&gt;Discounted price for the StagedStandalonePrice.&lt;/p&gt;</span>
+<span class="source-line-no">090</span><span id="line.90">     * @return discounted</span>
+<span class="source-line-no">091</span><span id="line.91">     */</span>
+<span class="source-line-no">092</span><span id="line.92"></span>
+<span class="source-line-no">093</span><span id="line.93">    @Nullable</span>
+<span class="source-line-no">094</span><span id="line.94">    public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {</span>
+<span class="source-line-no">095</span><span id="line.95">        return this.discounted;</span>
+<span class="source-line-no">096</span><span id="line.96">    }</span>
+<span class="source-line-no">097</span><span id="line.97"></span>
+<span class="source-line-no">098</span><span id="line.98">    /**</span>
+<span class="source-line-no">099</span><span id="line.99">     * builds StagedStandalonePrice with checking for non-null required values</span>
+<span class="source-line-no">100</span><span id="line.100">     * @return StagedStandalonePrice</span>
+<span class="source-line-no">101</span><span id="line.101">     */</span>
+<span class="source-line-no">102</span><span id="line.102">    public StagedStandalonePrice build() {</span>
+<span class="source-line-no">103</span><span id="line.103">        Objects.requireNonNull(value, StagedStandalonePrice.class + ": value is missing");</span>
+<span class="source-line-no">104</span><span id="line.104">        return new StagedStandalonePriceImpl(value, discounted);</span>
+<span class="source-line-no">105</span><span id="line.105">    }</span>
+<span class="source-line-no">106</span><span id="line.106"></span>
+<span class="source-line-no">107</span><span id="line.107">    /**</span>
+<span class="source-line-no">108</span><span id="line.108">     * builds StagedStandalonePrice without checking for non-null required values</span>
+<span class="source-line-no">109</span><span id="line.109">     * @return StagedStandalonePrice</span>
+<span class="source-line-no">110</span><span id="line.110">     */</span>
+<span class="source-line-no">111</span><span id="line.111">    public StagedStandalonePrice buildUnchecked() {</span>
+<span class="source-line-no">112</span><span id="line.112">        return new StagedStandalonePriceImpl(value, discounted);</span>
+<span class="source-line-no">113</span><span id="line.113">    }</span>
+<span class="source-line-no">114</span><span id="line.114"></span>
+<span class="source-line-no">115</span><span id="line.115">    /**</span>
+<span class="source-line-no">116</span><span id="line.116">     * factory method for an instance of StagedStandalonePriceBuilder</span>
+<span class="source-line-no">117</span><span id="line.117">     * @return builder</span>
+<span class="source-line-no">118</span><span id="line.118">     */</span>
+<span class="source-line-no">119</span><span id="line.119">    public static StagedStandalonePriceBuilder of() {</span>
+<span class="source-line-no">120</span><span id="line.120">        return new StagedStandalonePriceBuilder();</span>
+<span class="source-line-no">121</span><span id="line.121">    }</span>
+<span class="source-line-no">122</span><span id="line.122"></span>
+<span class="source-line-no">123</span><span id="line.123">    /**</span>
+<span class="source-line-no">124</span><span id="line.124">     * create builder for StagedStandalonePrice instance</span>
+<span class="source-line-no">125</span><span id="line.125">     * @param template instance with prefilled values for the builder</span>
+<span class="source-line-no">126</span><span id="line.126">     * @return builder</span>
+<span class="source-line-no">127</span><span id="line.127">     */</span>
+<span class="source-line-no">128</span><span id="line.128">    public static StagedStandalonePriceBuilder of(final StagedStandalonePrice template) {</span>
+<span class="source-line-no">129</span><span id="line.129">        StagedStandalonePriceBuilder builder = new StagedStandalonePriceBuilder();</span>
+<span class="source-line-no">130</span><span id="line.130">        builder.value = template.getValue();</span>
+<span class="source-line-no">131</span><span id="line.131">        builder.discounted = template.getDiscounted();</span>
+<span class="source-line-no">132</span><span id="line.132">        return builder;</span>
+<span class="source-line-no">133</span><span id="line.133">    }</span>
+<span class="source-line-no">134</span><span id="line.134"></span>
+<span class="source-line-no">135</span><span id="line.135">}</span>
 
 
 

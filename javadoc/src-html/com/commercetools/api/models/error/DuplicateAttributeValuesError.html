@@ -45,70 +45,119 @@
 <span class="source-line-no">032</span><span id="line.32">@JsonDeserialize(as = DuplicateAttributeValuesErrorImpl.class)</span>
 <span class="source-line-no">033</span><span id="line.33">public interface DuplicateAttributeValuesError extends ErrorObject {</span>
 <span class="source-line-no">034</span><span id="line.34"></span>
-<span class="source-line-no">035</span><span id="line.35">    String DUPLICATE_ATTRIBUTE_VALUES = "DuplicateAttributeValues";</span>
-<span class="source-line-no">036</span><span id="line.36"></span>
-<span class="source-line-no">037</span><span id="line.37">    /**</span>
-<span class="source-line-no">038</span><span id="line.38">     *</span>
-<span class="source-line-no">039</span><span id="line.39">     */</span>
-<span class="source-line-no">040</span><span id="line.40">    @NotNull</span>
-<span class="source-line-no">041</span><span id="line.41">    @JsonProperty("code")</span>
-<span class="source-line-no">042</span><span id="line.42">    public String getCode();</span>
-<span class="source-line-no">043</span><span id="line.43"></span>
-<span class="source-line-no">044</span><span id="line.44">    /**</span>
-<span class="source-line-no">045</span><span id="line.45">     *  &lt;p&gt;&lt;code&gt;"The set of attributes must be unique across all variants."&lt;/code&gt;&lt;/p&gt;</span>
-<span class="source-line-no">046</span><span id="line.46">     */</span>
-<span class="source-line-no">047</span><span id="line.47">    @NotNull</span>
-<span class="source-line-no">048</span><span id="line.48">    @JsonProperty("message")</span>
-<span class="source-line-no">049</span><span id="line.49">    public String getMessage();</span>
-<span class="source-line-no">050</span><span id="line.50"></span>
-<span class="source-line-no">051</span><span id="line.51">    /**</span>
-<span class="source-line-no">052</span><span id="line.52">     *  &lt;p&gt;Conflicting Attributes.&lt;/p&gt;</span>
-<span class="source-line-no">053</span><span id="line.53">     */</span>
-<span class="source-line-no">054</span><span id="line.54">    @NotNull</span>
-<span class="source-line-no">055</span><span id="line.55">    @Valid</span>
-<span class="source-line-no">056</span><span id="line.56">    @JsonProperty("attributes")</span>
-<span class="source-line-no">057</span><span id="line.57">    public List&lt;Attribute&gt; getAttributes();</span>
-<span class="source-line-no">058</span><span id="line.58"></span>
-<span class="source-line-no">059</span><span id="line.59">    public void setMessage(final String message);</span>
-<span class="source-line-no">060</span><span id="line.60"></span>
-<span class="source-line-no">061</span><span id="line.61">    @JsonIgnore</span>
-<span class="source-line-no">062</span><span id="line.62">    public void setAttributes(final Attribute... attributes);</span>
-<span class="source-line-no">063</span><span id="line.63"></span>
-<span class="source-line-no">064</span><span id="line.64">    public void setAttributes(final List&lt;Attribute&gt; attributes);</span>
-<span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    public static DuplicateAttributeValuesError of() {</span>
-<span class="source-line-no">067</span><span id="line.67">        return new DuplicateAttributeValuesErrorImpl();</span>
-<span class="source-line-no">068</span><span id="line.68">    }</span>
+<span class="source-line-no">035</span><span id="line.35">    /**</span>
+<span class="source-line-no">036</span><span id="line.36">     * discriminator value for DuplicateAttributeValuesError</span>
+<span class="source-line-no">037</span><span id="line.37">     */</span>
+<span class="source-line-no">038</span><span id="line.38">    String DUPLICATE_ATTRIBUTE_VALUES = "DuplicateAttributeValues";</span>
+<span class="source-line-no">039</span><span id="line.39"></span>
+<span class="source-line-no">040</span><span id="line.40">    /**</span>
+<span class="source-line-no">041</span><span id="line.41">     *</span>
+<span class="source-line-no">042</span><span id="line.42">     * @return code</span>
+<span class="source-line-no">043</span><span id="line.43">     */</span>
+<span class="source-line-no">044</span><span id="line.44">    @NotNull</span>
+<span class="source-line-no">045</span><span id="line.45">    @JsonProperty("code")</span>
+<span class="source-line-no">046</span><span id="line.46">    public String getCode();</span>
+<span class="source-line-no">047</span><span id="line.47"></span>
+<span class="source-line-no">048</span><span id="line.48">    /**</span>
+<span class="source-line-no">049</span><span id="line.49">     *  &lt;p&gt;&lt;code&gt;"The set of attributes must be unique across all variants."&lt;/code&gt;&lt;/p&gt;</span>
+<span class="source-line-no">050</span><span id="line.50">     * @return message</span>
+<span class="source-line-no">051</span><span id="line.51">     */</span>
+<span class="source-line-no">052</span><span id="line.52">    @NotNull</span>
+<span class="source-line-no">053</span><span id="line.53">    @JsonProperty("message")</span>
+<span class="source-line-no">054</span><span id="line.54">    public String getMessage();</span>
+<span class="source-line-no">055</span><span id="line.55"></span>
+<span class="source-line-no">056</span><span id="line.56">    /**</span>
+<span class="source-line-no">057</span><span id="line.57">     *  &lt;p&gt;Conflicting Attributes.&lt;/p&gt;</span>
+<span class="source-line-no">058</span><span id="line.58">     * @return attributes</span>
+<span class="source-line-no">059</span><span id="line.59">     */</span>
+<span class="source-line-no">060</span><span id="line.60">    @NotNull</span>
+<span class="source-line-no">061</span><span id="line.61">    @Valid</span>
+<span class="source-line-no">062</span><span id="line.62">    @JsonProperty("attributes")</span>
+<span class="source-line-no">063</span><span id="line.63">    public List&lt;Attribute&gt; getAttributes();</span>
+<span class="source-line-no">064</span><span id="line.64"></span>
+<span class="source-line-no">065</span><span id="line.65">    /**</span>
+<span class="source-line-no">066</span><span id="line.66">     *  &lt;p&gt;&lt;code&gt;"The set of attributes must be unique across all variants."&lt;/code&gt;&lt;/p&gt;</span>
+<span class="source-line-no">067</span><span id="line.67">     * @param message value to be set</span>
+<span class="source-line-no">068</span><span id="line.68">     */</span>
 <span class="source-line-no">069</span><span id="line.69"></span>
-<span class="source-line-no">070</span><span id="line.70">    public static DuplicateAttributeValuesError of(final DuplicateAttributeValuesError template) {</span>
-<span class="source-line-no">071</span><span id="line.71">        DuplicateAttributeValuesErrorImpl instance = new DuplicateAttributeValuesErrorImpl();</span>
-<span class="source-line-no">072</span><span id="line.72">        instance.setMessage(template.getMessage());</span>
-<span class="source-line-no">073</span><span id="line.73"></span>
-<span class="source-line-no">074</span><span id="line.74">        instance.setAttributes(template.getAttributes());</span>
-<span class="source-line-no">075</span><span id="line.75">        return instance;</span>
-<span class="source-line-no">076</span><span id="line.76">    }</span>
-<span class="source-line-no">077</span><span id="line.77"></span>
-<span class="source-line-no">078</span><span id="line.78">    public static DuplicateAttributeValuesErrorBuilder builder() {</span>
-<span class="source-line-no">079</span><span id="line.79">        return DuplicateAttributeValuesErrorBuilder.of();</span>
-<span class="source-line-no">080</span><span id="line.80">    }</span>
-<span class="source-line-no">081</span><span id="line.81"></span>
-<span class="source-line-no">082</span><span id="line.82">    public static DuplicateAttributeValuesErrorBuilder builder(final DuplicateAttributeValuesError template) {</span>
-<span class="source-line-no">083</span><span id="line.83">        return DuplicateAttributeValuesErrorBuilder.of(template);</span>
-<span class="source-line-no">084</span><span id="line.84">    }</span>
-<span class="source-line-no">085</span><span id="line.85"></span>
-<span class="source-line-no">086</span><span id="line.86">    default &lt;T&gt; T withDuplicateAttributeValuesError(Function&lt;DuplicateAttributeValuesError, T&gt; helper) {</span>
-<span class="source-line-no">087</span><span id="line.87">        return helper.apply(this);</span>
-<span class="source-line-no">088</span><span id="line.88">    }</span>
-<span class="source-line-no">089</span><span id="line.89"></span>
-<span class="source-line-no">090</span><span id="line.90">    public static com.fasterxml.jackson.core.type.TypeReference&lt;DuplicateAttributeValuesError&gt; typeReference() {</span>
-<span class="source-line-no">091</span><span id="line.91">        return new com.fasterxml.jackson.core.type.TypeReference&lt;DuplicateAttributeValuesError&gt;() {</span>
-<span class="source-line-no">092</span><span id="line.92">            @Override</span>
-<span class="source-line-no">093</span><span id="line.93">            public String toString() {</span>
-<span class="source-line-no">094</span><span id="line.94">                return "TypeReference&lt;DuplicateAttributeValuesError&gt;";</span>
-<span class="source-line-no">095</span><span id="line.95">            }</span>
-<span class="source-line-no">096</span><span id="line.96">        };</span>
-<span class="source-line-no">097</span><span id="line.97">    }</span>
-<span class="source-line-no">098</span><span id="line.98">}</span>
+<span class="source-line-no">070</span><span id="line.70">    public void setMessage(final String message);</span>
+<span class="source-line-no">071</span><span id="line.71"></span>
+<span class="source-line-no">072</span><span id="line.72">    /**</span>
+<span class="source-line-no">073</span><span id="line.73">     *  &lt;p&gt;Conflicting Attributes.&lt;/p&gt;</span>
+<span class="source-line-no">074</span><span id="line.74">     * @param attributes values to be set</span>
+<span class="source-line-no">075</span><span id="line.75">     */</span>
+<span class="source-line-no">076</span><span id="line.76"></span>
+<span class="source-line-no">077</span><span id="line.77">    @JsonIgnore</span>
+<span class="source-line-no">078</span><span id="line.78">    public void setAttributes(final Attribute... attributes);</span>
+<span class="source-line-no">079</span><span id="line.79"></span>
+<span class="source-line-no">080</span><span id="line.80">    /**</span>
+<span class="source-line-no">081</span><span id="line.81">     *  &lt;p&gt;Conflicting Attributes.&lt;/p&gt;</span>
+<span class="source-line-no">082</span><span id="line.82">     * @param attributes values to be set</span>
+<span class="source-line-no">083</span><span id="line.83">     */</span>
+<span class="source-line-no">084</span><span id="line.84"></span>
+<span class="source-line-no">085</span><span id="line.85">    public void setAttributes(final List&lt;Attribute&gt; attributes);</span>
+<span class="source-line-no">086</span><span id="line.86"></span>
+<span class="source-line-no">087</span><span id="line.87">    /**</span>
+<span class="source-line-no">088</span><span id="line.88">     * factory method</span>
+<span class="source-line-no">089</span><span id="line.89">     * @return instance of DuplicateAttributeValuesError</span>
+<span class="source-line-no">090</span><span id="line.90">     */</span>
+<span class="source-line-no">091</span><span id="line.91">    public static DuplicateAttributeValuesError of() {</span>
+<span class="source-line-no">092</span><span id="line.92">        return new DuplicateAttributeValuesErrorImpl();</span>
+<span class="source-line-no">093</span><span id="line.93">    }</span>
+<span class="source-line-no">094</span><span id="line.94"></span>
+<span class="source-line-no">095</span><span id="line.95">    /**</span>
+<span class="source-line-no">096</span><span id="line.96">     * factory method to copy an instance of DuplicateAttributeValuesError</span>
+<span class="source-line-no">097</span><span id="line.97">     * @param template instance to be copied</span>
+<span class="source-line-no">098</span><span id="line.98">     * @return copy instance</span>
+<span class="source-line-no">099</span><span id="line.99">     */</span>
+<span class="source-line-no">100</span><span id="line.100">    public static DuplicateAttributeValuesError of(final DuplicateAttributeValuesError template) {</span>
+<span class="source-line-no">101</span><span id="line.101">        DuplicateAttributeValuesErrorImpl instance = new DuplicateAttributeValuesErrorImpl();</span>
+<span class="source-line-no">102</span><span id="line.102">        instance.setMessage(template.getMessage());</span>
+<span class="source-line-no">103</span><span id="line.103"></span>
+<span class="source-line-no">104</span><span id="line.104">        instance.setAttributes(template.getAttributes());</span>
+<span class="source-line-no">105</span><span id="line.105">        return instance;</span>
+<span class="source-line-no">106</span><span id="line.106">    }</span>
+<span class="source-line-no">107</span><span id="line.107"></span>
+<span class="source-line-no">108</span><span id="line.108">    /**</span>
+<span class="source-line-no">109</span><span id="line.109">     * builder factory method for DuplicateAttributeValuesError</span>
+<span class="source-line-no">110</span><span id="line.110">     * @return builder</span>
+<span class="source-line-no">111</span><span id="line.111">     */</span>
+<span class="source-line-no">112</span><span id="line.112">    public static DuplicateAttributeValuesErrorBuilder builder() {</span>
+<span class="source-line-no">113</span><span id="line.113">        return DuplicateAttributeValuesErrorBuilder.of();</span>
+<span class="source-line-no">114</span><span id="line.114">    }</span>
+<span class="source-line-no">115</span><span id="line.115"></span>
+<span class="source-line-no">116</span><span id="line.116">    /**</span>
+<span class="source-line-no">117</span><span id="line.117">     * create builder for DuplicateAttributeValuesError instance</span>
+<span class="source-line-no">118</span><span id="line.118">     * @param template instance with prefilled values for the builder</span>
+<span class="source-line-no">119</span><span id="line.119">     * @return builder</span>
+<span class="source-line-no">120</span><span id="line.120">     */</span>
+<span class="source-line-no">121</span><span id="line.121">    public static DuplicateAttributeValuesErrorBuilder builder(final DuplicateAttributeValuesError template) {</span>
+<span class="source-line-no">122</span><span id="line.122">        return DuplicateAttributeValuesErrorBuilder.of(template);</span>
+<span class="source-line-no">123</span><span id="line.123">    }</span>
+<span class="source-line-no">124</span><span id="line.124"></span>
+<span class="source-line-no">125</span><span id="line.125">    /**</span>
+<span class="source-line-no">126</span><span id="line.126">     * accessor map function</span>
+<span class="source-line-no">127</span><span id="line.127">     * @param &lt;T&gt; mapped type</span>
+<span class="source-line-no">128</span><span id="line.128">     * @param helper function to map the object</span>
+<span class="source-line-no">129</span><span id="line.129">     * @return mapped value</span>
+<span class="source-line-no">130</span><span id="line.130">     */</span>
+<span class="source-line-no">131</span><span id="line.131">    default &lt;T&gt; T withDuplicateAttributeValuesError(Function&lt;DuplicateAttributeValuesError, T&gt; helper) {</span>
+<span class="source-line-no">132</span><span id="line.132">        return helper.apply(this);</span>
+<span class="source-line-no">133</span><span id="line.133">    }</span>
+<span class="source-line-no">134</span><span id="line.134"></span>
+<span class="source-line-no">135</span><span id="line.135">    /**</span>
+<span class="source-line-no">136</span><span id="line.136">     * gives a TypeReference for usage with Jackson DataBind</span>
+<span class="source-line-no">137</span><span id="line.137">     * @return TypeReference</span>
+<span class="source-line-no">138</span><span id="line.138">     */</span>
+<span class="source-line-no">139</span><span id="line.139">    public static com.fasterxml.jackson.core.type.TypeReference&lt;DuplicateAttributeValuesError&gt; typeReference() {</span>
+<span class="source-line-no">140</span><span id="line.140">        return new com.fasterxml.jackson.core.type.TypeReference&lt;DuplicateAttributeValuesError&gt;() {</span>
+<span class="source-line-no">141</span><span id="line.141">            @Override</span>
+<span class="source-line-no">142</span><span id="line.142">            public String toString() {</span>
+<span class="source-line-no">143</span><span id="line.143">                return "TypeReference&lt;DuplicateAttributeValuesError&gt;";</span>
+<span class="source-line-no">144</span><span id="line.144">            }</span>
+<span class="source-line-no">145</span><span id="line.145">        };</span>
+<span class="source-line-no">146</span><span id="line.146">    }</span>
+<span class="source-line-no">147</span><span id="line.147">}</span>
 
 
 

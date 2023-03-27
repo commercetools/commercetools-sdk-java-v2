@@ -44,72 +44,107 @@
 <span class="source-line-no">031</span><span id="line.31"></span>
 <span class="source-line-no">032</span><span id="line.32">    /**</span>
 <span class="source-line-no">033</span><span id="line.33">     *  &lt;p&gt;Shape of the action for &lt;code&gt;changeTaxCalculationMode&lt;/code&gt;&lt;/p&gt;</span>
-<span class="source-line-no">034</span><span id="line.34">     */</span>
-<span class="source-line-no">035</span><span id="line.35"></span>
-<span class="source-line-no">036</span><span id="line.36">    public ChangeTaxCalculationModeChangeBuilder change(final String change) {</span>
-<span class="source-line-no">037</span><span id="line.37">        this.change = change;</span>
-<span class="source-line-no">038</span><span id="line.38">        return this;</span>
-<span class="source-line-no">039</span><span id="line.39">    }</span>
-<span class="source-line-no">040</span><span id="line.40"></span>
-<span class="source-line-no">041</span><span id="line.41">    /**</span>
-<span class="source-line-no">042</span><span id="line.42">     *</span>
-<span class="source-line-no">043</span><span id="line.43">     */</span>
-<span class="source-line-no">044</span><span id="line.44"></span>
-<span class="source-line-no">045</span><span id="line.45">    public ChangeTaxCalculationModeChangeBuilder previousValue(</span>
-<span class="source-line-no">046</span><span id="line.46">            final com.commercetools.history.models.common.TaxCalculationMode previousValue) {</span>
-<span class="source-line-no">047</span><span id="line.47">        this.previousValue = previousValue;</span>
-<span class="source-line-no">048</span><span id="line.48">        return this;</span>
-<span class="source-line-no">049</span><span id="line.49">    }</span>
-<span class="source-line-no">050</span><span id="line.50"></span>
-<span class="source-line-no">051</span><span id="line.51">    /**</span>
-<span class="source-line-no">052</span><span id="line.52">     *</span>
-<span class="source-line-no">053</span><span id="line.53">     */</span>
+<span class="source-line-no">034</span><span id="line.34">     * @param change value to be set</span>
+<span class="source-line-no">035</span><span id="line.35">     * @return Builder</span>
+<span class="source-line-no">036</span><span id="line.36">     */</span>
+<span class="source-line-no">037</span><span id="line.37"></span>
+<span class="source-line-no">038</span><span id="line.38">    public ChangeTaxCalculationModeChangeBuilder change(final String change) {</span>
+<span class="source-line-no">039</span><span id="line.39">        this.change = change;</span>
+<span class="source-line-no">040</span><span id="line.40">        return this;</span>
+<span class="source-line-no">041</span><span id="line.41">    }</span>
+<span class="source-line-no">042</span><span id="line.42"></span>
+<span class="source-line-no">043</span><span id="line.43">    /**</span>
+<span class="source-line-no">044</span><span id="line.44">     * set the value to the previousValue</span>
+<span class="source-line-no">045</span><span id="line.45">     * @param previousValue value to be set</span>
+<span class="source-line-no">046</span><span id="line.46">     * @return Builder</span>
+<span class="source-line-no">047</span><span id="line.47">     */</span>
+<span class="source-line-no">048</span><span id="line.48"></span>
+<span class="source-line-no">049</span><span id="line.49">    public ChangeTaxCalculationModeChangeBuilder previousValue(</span>
+<span class="source-line-no">050</span><span id="line.50">            final com.commercetools.history.models.common.TaxCalculationMode previousValue) {</span>
+<span class="source-line-no">051</span><span id="line.51">        this.previousValue = previousValue;</span>
+<span class="source-line-no">052</span><span id="line.52">        return this;</span>
+<span class="source-line-no">053</span><span id="line.53">    }</span>
 <span class="source-line-no">054</span><span id="line.54"></span>
-<span class="source-line-no">055</span><span id="line.55">    public ChangeTaxCalculationModeChangeBuilder nextValue(</span>
-<span class="source-line-no">056</span><span id="line.56">            final com.commercetools.history.models.common.TaxCalculationMode nextValue) {</span>
-<span class="source-line-no">057</span><span id="line.57">        this.nextValue = nextValue;</span>
-<span class="source-line-no">058</span><span id="line.58">        return this;</span>
-<span class="source-line-no">059</span><span id="line.59">    }</span>
+<span class="source-line-no">055</span><span id="line.55">    /**</span>
+<span class="source-line-no">056</span><span id="line.56">     * set the value to the nextValue</span>
+<span class="source-line-no">057</span><span id="line.57">     * @param nextValue value to be set</span>
+<span class="source-line-no">058</span><span id="line.58">     * @return Builder</span>
+<span class="source-line-no">059</span><span id="line.59">     */</span>
 <span class="source-line-no">060</span><span id="line.60"></span>
-<span class="source-line-no">061</span><span id="line.61">    public String getChange() {</span>
-<span class="source-line-no">062</span><span id="line.62">        return this.change;</span>
-<span class="source-line-no">063</span><span id="line.63">    }</span>
-<span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">    public com.commercetools.history.models.common.TaxCalculationMode getPreviousValue() {</span>
-<span class="source-line-no">066</span><span id="line.66">        return this.previousValue;</span>
-<span class="source-line-no">067</span><span id="line.67">    }</span>
-<span class="source-line-no">068</span><span id="line.68"></span>
-<span class="source-line-no">069</span><span id="line.69">    public com.commercetools.history.models.common.TaxCalculationMode getNextValue() {</span>
-<span class="source-line-no">070</span><span id="line.70">        return this.nextValue;</span>
-<span class="source-line-no">071</span><span id="line.71">    }</span>
-<span class="source-line-no">072</span><span id="line.72"></span>
-<span class="source-line-no">073</span><span id="line.73">    public ChangeTaxCalculationModeChange build() {</span>
-<span class="source-line-no">074</span><span id="line.74">        Objects.requireNonNull(change, ChangeTaxCalculationModeChange.class + ": change is missing");</span>
-<span class="source-line-no">075</span><span id="line.75">        Objects.requireNonNull(previousValue, ChangeTaxCalculationModeChange.class + ": previousValue is missing");</span>
-<span class="source-line-no">076</span><span id="line.76">        Objects.requireNonNull(nextValue, ChangeTaxCalculationModeChange.class + ": nextValue is missing");</span>
-<span class="source-line-no">077</span><span id="line.77">        return new ChangeTaxCalculationModeChangeImpl(change, previousValue, nextValue);</span>
-<span class="source-line-no">078</span><span id="line.78">    }</span>
-<span class="source-line-no">079</span><span id="line.79"></span>
-<span class="source-line-no">080</span><span id="line.80">    /**</span>
-<span class="source-line-no">081</span><span id="line.81">     * builds ChangeTaxCalculationModeChange without checking for non null required values</span>
-<span class="source-line-no">082</span><span id="line.82">     */</span>
-<span class="source-line-no">083</span><span id="line.83">    public ChangeTaxCalculationModeChange buildUnchecked() {</span>
-<span class="source-line-no">084</span><span id="line.84">        return new ChangeTaxCalculationModeChangeImpl(change, previousValue, nextValue);</span>
-<span class="source-line-no">085</span><span id="line.85">    }</span>
-<span class="source-line-no">086</span><span id="line.86"></span>
-<span class="source-line-no">087</span><span id="line.87">    public static ChangeTaxCalculationModeChangeBuilder of() {</span>
-<span class="source-line-no">088</span><span id="line.88">        return new ChangeTaxCalculationModeChangeBuilder();</span>
-<span class="source-line-no">089</span><span id="line.89">    }</span>
-<span class="source-line-no">090</span><span id="line.90"></span>
-<span class="source-line-no">091</span><span id="line.91">    public static ChangeTaxCalculationModeChangeBuilder of(final ChangeTaxCalculationModeChange template) {</span>
-<span class="source-line-no">092</span><span id="line.92">        ChangeTaxCalculationModeChangeBuilder builder = new ChangeTaxCalculationModeChangeBuilder();</span>
-<span class="source-line-no">093</span><span id="line.93">        builder.change = template.getChange();</span>
-<span class="source-line-no">094</span><span id="line.94">        builder.previousValue = template.getPreviousValue();</span>
-<span class="source-line-no">095</span><span id="line.95">        builder.nextValue = template.getNextValue();</span>
-<span class="source-line-no">096</span><span id="line.96">        return builder;</span>
-<span class="source-line-no">097</span><span id="line.97">    }</span>
-<span class="source-line-no">098</span><span id="line.98"></span>
-<span class="source-line-no">099</span><span id="line.99">}</span>
+<span class="source-line-no">061</span><span id="line.61">    public ChangeTaxCalculationModeChangeBuilder nextValue(</span>
+<span class="source-line-no">062</span><span id="line.62">            final com.commercetools.history.models.common.TaxCalculationMode nextValue) {</span>
+<span class="source-line-no">063</span><span id="line.63">        this.nextValue = nextValue;</span>
+<span class="source-line-no">064</span><span id="line.64">        return this;</span>
+<span class="source-line-no">065</span><span id="line.65">    }</span>
+<span class="source-line-no">066</span><span id="line.66"></span>
+<span class="source-line-no">067</span><span id="line.67">    /**</span>
+<span class="source-line-no">068</span><span id="line.68">     *  &lt;p&gt;Shape of the action for &lt;code&gt;changeTaxCalculationMode&lt;/code&gt;&lt;/p&gt;</span>
+<span class="source-line-no">069</span><span id="line.69">     * @return change</span>
+<span class="source-line-no">070</span><span id="line.70">     */</span>
+<span class="source-line-no">071</span><span id="line.71"></span>
+<span class="source-line-no">072</span><span id="line.72">    public String getChange() {</span>
+<span class="source-line-no">073</span><span id="line.73">        return this.change;</span>
+<span class="source-line-no">074</span><span id="line.74">    }</span>
+<span class="source-line-no">075</span><span id="line.75"></span>
+<span class="source-line-no">076</span><span id="line.76">    /**</span>
+<span class="source-line-no">077</span><span id="line.77">     * value of previousValue}</span>
+<span class="source-line-no">078</span><span id="line.78">     * @return previousValue</span>
+<span class="source-line-no">079</span><span id="line.79">     */</span>
+<span class="source-line-no">080</span><span id="line.80"></span>
+<span class="source-line-no">081</span><span id="line.81">    public com.commercetools.history.models.common.TaxCalculationMode getPreviousValue() {</span>
+<span class="source-line-no">082</span><span id="line.82">        return this.previousValue;</span>
+<span class="source-line-no">083</span><span id="line.83">    }</span>
+<span class="source-line-no">084</span><span id="line.84"></span>
+<span class="source-line-no">085</span><span id="line.85">    /**</span>
+<span class="source-line-no">086</span><span id="line.86">     * value of nextValue}</span>
+<span class="source-line-no">087</span><span id="line.87">     * @return nextValue</span>
+<span class="source-line-no">088</span><span id="line.88">     */</span>
+<span class="source-line-no">089</span><span id="line.89"></span>
+<span class="source-line-no">090</span><span id="line.90">    public com.commercetools.history.models.common.TaxCalculationMode getNextValue() {</span>
+<span class="source-line-no">091</span><span id="line.91">        return this.nextValue;</span>
+<span class="source-line-no">092</span><span id="line.92">    }</span>
+<span class="source-line-no">093</span><span id="line.93"></span>
+<span class="source-line-no">094</span><span id="line.94">    /**</span>
+<span class="source-line-no">095</span><span id="line.95">     * builds ChangeTaxCalculationModeChange with checking for non-null required values</span>
+<span class="source-line-no">096</span><span id="line.96">     * @return ChangeTaxCalculationModeChange</span>
+<span class="source-line-no">097</span><span id="line.97">     */</span>
+<span class="source-line-no">098</span><span id="line.98">    public ChangeTaxCalculationModeChange build() {</span>
+<span class="source-line-no">099</span><span id="line.99">        Objects.requireNonNull(change, ChangeTaxCalculationModeChange.class + ": change is missing");</span>
+<span class="source-line-no">100</span><span id="line.100">        Objects.requireNonNull(previousValue, ChangeTaxCalculationModeChange.class + ": previousValue is missing");</span>
+<span class="source-line-no">101</span><span id="line.101">        Objects.requireNonNull(nextValue, ChangeTaxCalculationModeChange.class + ": nextValue is missing");</span>
+<span class="source-line-no">102</span><span id="line.102">        return new ChangeTaxCalculationModeChangeImpl(change, previousValue, nextValue);</span>
+<span class="source-line-no">103</span><span id="line.103">    }</span>
+<span class="source-line-no">104</span><span id="line.104"></span>
+<span class="source-line-no">105</span><span id="line.105">    /**</span>
+<span class="source-line-no">106</span><span id="line.106">     * builds ChangeTaxCalculationModeChange without checking for non-null required values</span>
+<span class="source-line-no">107</span><span id="line.107">     * @return ChangeTaxCalculationModeChange</span>
+<span class="source-line-no">108</span><span id="line.108">     */</span>
+<span class="source-line-no">109</span><span id="line.109">    public ChangeTaxCalculationModeChange buildUnchecked() {</span>
+<span class="source-line-no">110</span><span id="line.110">        return new ChangeTaxCalculationModeChangeImpl(change, previousValue, nextValue);</span>
+<span class="source-line-no">111</span><span id="line.111">    }</span>
+<span class="source-line-no">112</span><span id="line.112"></span>
+<span class="source-line-no">113</span><span id="line.113">    /**</span>
+<span class="source-line-no">114</span><span id="line.114">     * factory method for an instance of ChangeTaxCalculationModeChangeBuilder</span>
+<span class="source-line-no">115</span><span id="line.115">     * @return builder</span>
+<span class="source-line-no">116</span><span id="line.116">     */</span>
+<span class="source-line-no">117</span><span id="line.117">    public static ChangeTaxCalculationModeChangeBuilder of() {</span>
+<span class="source-line-no">118</span><span id="line.118">        return new ChangeTaxCalculationModeChangeBuilder();</span>
+<span class="source-line-no">119</span><span id="line.119">    }</span>
+<span class="source-line-no">120</span><span id="line.120"></span>
+<span class="source-line-no">121</span><span id="line.121">    /**</span>
+<span class="source-line-no">122</span><span id="line.122">     * create builder for ChangeTaxCalculationModeChange instance</span>
+<span class="source-line-no">123</span><span id="line.123">     * @param template instance with prefilled values for the builder</span>
+<span class="source-line-no">124</span><span id="line.124">     * @return builder</span>
+<span class="source-line-no">125</span><span id="line.125">     */</span>
+<span class="source-line-no">126</span><span id="line.126">    public static ChangeTaxCalculationModeChangeBuilder of(final ChangeTaxCalculationModeChange template) {</span>
+<span class="source-line-no">127</span><span id="line.127">        ChangeTaxCalculationModeChangeBuilder builder = new ChangeTaxCalculationModeChangeBuilder();</span>
+<span class="source-line-no">128</span><span id="line.128">        builder.change = template.getChange();</span>
+<span class="source-line-no">129</span><span id="line.129">        builder.previousValue = template.getPreviousValue();</span>
+<span class="source-line-no">130</span><span id="line.130">        builder.nextValue = template.getNextValue();</span>
+<span class="source-line-no">131</span><span id="line.131">        return builder;</span>
+<span class="source-line-no">132</span><span id="line.132">    }</span>
+<span class="source-line-no">133</span><span id="line.133"></span>
+<span class="source-line-no">134</span><span id="line.134">}</span>
 
 
 

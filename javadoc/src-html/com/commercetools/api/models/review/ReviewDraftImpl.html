@@ -55,206 +55,212 @@
 <span class="source-line-no">042</span><span id="line.42"></span>
 <span class="source-line-no">043</span><span id="line.43">    private com.commercetools.api.models.type.CustomFieldsDraft custom;</span>
 <span class="source-line-no">044</span><span id="line.44"></span>
-<span class="source-line-no">045</span><span id="line.45">    @JsonCreator</span>
-<span class="source-line-no">046</span><span id="line.46">    ReviewDraftImpl(@JsonProperty("key") final String key,</span>
-<span class="source-line-no">047</span><span id="line.47">            @JsonProperty("uniquenessValue") final String uniquenessValue, @JsonProperty("locale") final String locale,</span>
-<span class="source-line-no">048</span><span id="line.48">            @JsonProperty("authorName") final String authorName, @JsonProperty("title") final String title,</span>
-<span class="source-line-no">049</span><span id="line.49">            @JsonProperty("text") final String text,</span>
-<span class="source-line-no">050</span><span id="line.50">            @JsonProperty("target") final com.commercetools.api.models.common.ResourceIdentifier target,</span>
-<span class="source-line-no">051</span><span id="line.51">            @JsonProperty("state") final com.commercetools.api.models.state.StateResourceIdentifier state,</span>
-<span class="source-line-no">052</span><span id="line.52">            @JsonProperty("rating") final Integer rating,</span>
-<span class="source-line-no">053</span><span id="line.53">            @JsonProperty("customer") final com.commercetools.api.models.customer.CustomerResourceIdentifier customer,</span>
-<span class="source-line-no">054</span><span id="line.54">            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {</span>
-<span class="source-line-no">055</span><span id="line.55">        this.key = key;</span>
-<span class="source-line-no">056</span><span id="line.56">        this.uniquenessValue = uniquenessValue;</span>
-<span class="source-line-no">057</span><span id="line.57">        this.locale = locale;</span>
-<span class="source-line-no">058</span><span id="line.58">        this.authorName = authorName;</span>
-<span class="source-line-no">059</span><span id="line.59">        this.title = title;</span>
-<span class="source-line-no">060</span><span id="line.60">        this.text = text;</span>
-<span class="source-line-no">061</span><span id="line.61">        this.target = target;</span>
-<span class="source-line-no">062</span><span id="line.62">        this.state = state;</span>
-<span class="source-line-no">063</span><span id="line.63">        this.rating = rating;</span>
-<span class="source-line-no">064</span><span id="line.64">        this.customer = customer;</span>
-<span class="source-line-no">065</span><span id="line.65">        this.custom = custom;</span>
-<span class="source-line-no">066</span><span id="line.66">    }</span>
-<span class="source-line-no">067</span><span id="line.67"></span>
-<span class="source-line-no">068</span><span id="line.68">    public ReviewDraftImpl() {</span>
+<span class="source-line-no">045</span><span id="line.45">    /**</span>
+<span class="source-line-no">046</span><span id="line.46">     * create instance with all properties</span>
+<span class="source-line-no">047</span><span id="line.47">     */</span>
+<span class="source-line-no">048</span><span id="line.48">    @JsonCreator</span>
+<span class="source-line-no">049</span><span id="line.49">    ReviewDraftImpl(@JsonProperty("key") final String key,</span>
+<span class="source-line-no">050</span><span id="line.50">            @JsonProperty("uniquenessValue") final String uniquenessValue, @JsonProperty("locale") final String locale,</span>
+<span class="source-line-no">051</span><span id="line.51">            @JsonProperty("authorName") final String authorName, @JsonProperty("title") final String title,</span>
+<span class="source-line-no">052</span><span id="line.52">            @JsonProperty("text") final String text,</span>
+<span class="source-line-no">053</span><span id="line.53">            @JsonProperty("target") final com.commercetools.api.models.common.ResourceIdentifier target,</span>
+<span class="source-line-no">054</span><span id="line.54">            @JsonProperty("state") final com.commercetools.api.models.state.StateResourceIdentifier state,</span>
+<span class="source-line-no">055</span><span id="line.55">            @JsonProperty("rating") final Integer rating,</span>
+<span class="source-line-no">056</span><span id="line.56">            @JsonProperty("customer") final com.commercetools.api.models.customer.CustomerResourceIdentifier customer,</span>
+<span class="source-line-no">057</span><span id="line.57">            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {</span>
+<span class="source-line-no">058</span><span id="line.58">        this.key = key;</span>
+<span class="source-line-no">059</span><span id="line.59">        this.uniquenessValue = uniquenessValue;</span>
+<span class="source-line-no">060</span><span id="line.60">        this.locale = locale;</span>
+<span class="source-line-no">061</span><span id="line.61">        this.authorName = authorName;</span>
+<span class="source-line-no">062</span><span id="line.62">        this.title = title;</span>
+<span class="source-line-no">063</span><span id="line.63">        this.text = text;</span>
+<span class="source-line-no">064</span><span id="line.64">        this.target = target;</span>
+<span class="source-line-no">065</span><span id="line.65">        this.state = state;</span>
+<span class="source-line-no">066</span><span id="line.66">        this.rating = rating;</span>
+<span class="source-line-no">067</span><span id="line.67">        this.customer = customer;</span>
+<span class="source-line-no">068</span><span id="line.68">        this.custom = custom;</span>
 <span class="source-line-no">069</span><span id="line.69">    }</span>
 <span class="source-line-no">070</span><span id="line.70"></span>
 <span class="source-line-no">071</span><span id="line.71">    /**</span>
-<span class="source-line-no">072</span><span id="line.72">     *  &lt;p&gt;User-defined unique identifier for the Review.&lt;/p&gt;</span>
+<span class="source-line-no">072</span><span id="line.72">     * create empty instance</span>
 <span class="source-line-no">073</span><span id="line.73">     */</span>
-<span class="source-line-no">074</span><span id="line.74"></span>
-<span class="source-line-no">075</span><span id="line.75">    public String getKey() {</span>
-<span class="source-line-no">076</span><span id="line.76">        return this.key;</span>
-<span class="source-line-no">077</span><span id="line.77">    }</span>
-<span class="source-line-no">078</span><span id="line.78"></span>
-<span class="source-line-no">079</span><span id="line.79">    /**</span>
-<span class="source-line-no">080</span><span id="line.80">     *  &lt;p&gt;If set, this value must be unique among Reviews. For example, if you want to have only one Review per Customer and per Product, you can set the value to Customer &lt;code&gt;id&lt;/code&gt;&amp;nbsp;+ Product &lt;code&gt;id&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">081</span><span id="line.81">     */</span>
-<span class="source-line-no">082</span><span id="line.82"></span>
-<span class="source-line-no">083</span><span id="line.83">    public String getUniquenessValue() {</span>
-<span class="source-line-no">084</span><span id="line.84">        return this.uniquenessValue;</span>
-<span class="source-line-no">085</span><span id="line.85">    }</span>
-<span class="source-line-no">086</span><span id="line.86"></span>
-<span class="source-line-no">087</span><span id="line.87">    /**</span>
-<span class="source-line-no">088</span><span id="line.88">     *  &lt;p&gt;Language in which the content of the Review is written.&lt;/p&gt;</span>
-<span class="source-line-no">089</span><span id="line.89">     */</span>
-<span class="source-line-no">090</span><span id="line.90"></span>
-<span class="source-line-no">091</span><span id="line.91">    public String getLocale() {</span>
-<span class="source-line-no">092</span><span id="line.92">        return this.locale;</span>
-<span class="source-line-no">093</span><span id="line.93">    }</span>
-<span class="source-line-no">094</span><span id="line.94"></span>
-<span class="source-line-no">095</span><span id="line.95">    /**</span>
-<span class="source-line-no">096</span><span id="line.96">     *  &lt;p&gt;Name of the author.&lt;/p&gt;</span>
-<span class="source-line-no">097</span><span id="line.97">     */</span>
-<span class="source-line-no">098</span><span id="line.98"></span>
-<span class="source-line-no">099</span><span id="line.99">    public String getAuthorName() {</span>
-<span class="source-line-no">100</span><span id="line.100">        return this.authorName;</span>
-<span class="source-line-no">101</span><span id="line.101">    }</span>
-<span class="source-line-no">102</span><span id="line.102"></span>
-<span class="source-line-no">103</span><span id="line.103">    /**</span>
-<span class="source-line-no">104</span><span id="line.104">     *  &lt;p&gt;Title of the Review.&lt;/p&gt;</span>
-<span class="source-line-no">105</span><span id="line.105">     */</span>
-<span class="source-line-no">106</span><span id="line.106"></span>
-<span class="source-line-no">107</span><span id="line.107">    public String getTitle() {</span>
-<span class="source-line-no">108</span><span id="line.108">        return this.title;</span>
-<span class="source-line-no">109</span><span id="line.109">    }</span>
-<span class="source-line-no">110</span><span id="line.110"></span>
-<span class="source-line-no">111</span><span id="line.111">    /**</span>
-<span class="source-line-no">112</span><span id="line.112">     *  &lt;p&gt;Content of the Review.&lt;/p&gt;</span>
-<span class="source-line-no">113</span><span id="line.113">     */</span>
-<span class="source-line-no">114</span><span id="line.114"></span>
-<span class="source-line-no">115</span><span id="line.115">    public String getText() {</span>
-<span class="source-line-no">116</span><span id="line.116">        return this.text;</span>
-<span class="source-line-no">117</span><span id="line.117">    }</span>
-<span class="source-line-no">118</span><span id="line.118"></span>
-<span class="source-line-no">119</span><span id="line.119">    /**</span>
-<span class="source-line-no">120</span><span id="line.120">     *  &lt;p&gt;Draft type to create a Reference or a KeyReference to a resource. Provide either the &lt;code&gt;id&lt;/code&gt; or (wherever supported) the &lt;code&gt;key&lt;/code&gt; of the resource to reference, but depending on the API endpoint the response returns either a Reference or a KeyReference. For example, the field &lt;code&gt;parent&lt;/code&gt; of a CategoryDraft takes a ResourceIdentifier for its value while the value of the corresponding field of a Category is a Reference.&lt;/p&gt;</span>
-<span class="source-line-no">121</span><span id="line.121">     *  &lt;p&gt;Each resource type has its corresponding ResourceIdentifier, like ChannelResourceIdentifier.&lt;/p&gt;</span>
-<span class="source-line-no">122</span><span id="line.122">     */</span>
-<span class="source-line-no">123</span><span id="line.123"></span>
-<span class="source-line-no">124</span><span id="line.124">    public com.commercetools.api.models.common.ResourceIdentifier getTarget() {</span>
-<span class="source-line-no">125</span><span id="line.125">        return this.target;</span>
-<span class="source-line-no">126</span><span id="line.126">    }</span>
-<span class="source-line-no">127</span><span id="line.127"></span>
-<span class="source-line-no">128</span><span id="line.128">    /**</span>
-<span class="source-line-no">129</span><span id="line.129">     *  &lt;p&gt;State of the Review. Used for approval processes, see Review approval process for details.&lt;/p&gt;</span>
-<span class="source-line-no">130</span><span id="line.130">     */</span>
-<span class="source-line-no">131</span><span id="line.131"></span>
-<span class="source-line-no">132</span><span id="line.132">    public com.commercetools.api.models.state.StateResourceIdentifier getState() {</span>
-<span class="source-line-no">133</span><span id="line.133">        return this.state;</span>
-<span class="source-line-no">134</span><span id="line.134">    }</span>
-<span class="source-line-no">135</span><span id="line.135"></span>
-<span class="source-line-no">136</span><span id="line.136">    /**</span>
-<span class="source-line-no">137</span><span id="line.137">     *  &lt;p&gt;Rating of the targeted Product or Channel. This rating can represent the number of stars, a percentage, or a like (+1)/dislike (-1). A rating is used in the ratings statistics of the targeted object, unless the Review is in a State that does not have the role &lt;code&gt;ReviewIncludedInStatistics&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">138</span><span id="line.138">     */</span>
-<span class="source-line-no">139</span><span id="line.139"></span>
-<span class="source-line-no">140</span><span id="line.140">    public Integer getRating() {</span>
-<span class="source-line-no">141</span><span id="line.141">        return this.rating;</span>
-<span class="source-line-no">142</span><span id="line.142">    }</span>
-<span class="source-line-no">143</span><span id="line.143"></span>
-<span class="source-line-no">144</span><span id="line.144">    /**</span>
-<span class="source-line-no">145</span><span id="line.145">     *  &lt;p&gt;Customer who created the Review.&lt;/p&gt;</span>
-<span class="source-line-no">146</span><span id="line.146">     */</span>
-<span class="source-line-no">147</span><span id="line.147"></span>
-<span class="source-line-no">148</span><span id="line.148">    public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer() {</span>
-<span class="source-line-no">149</span><span id="line.149">        return this.customer;</span>
-<span class="source-line-no">150</span><span id="line.150">    }</span>
-<span class="source-line-no">151</span><span id="line.151"></span>
-<span class="source-line-no">152</span><span id="line.152">    /**</span>
-<span class="source-line-no">153</span><span id="line.153">     *  &lt;p&gt;Custom Fields for the Review.&lt;/p&gt;</span>
-<span class="source-line-no">154</span><span id="line.154">     */</span>
-<span class="source-line-no">155</span><span id="line.155"></span>
-<span class="source-line-no">156</span><span id="line.156">    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {</span>
-<span class="source-line-no">157</span><span id="line.157">        return this.custom;</span>
-<span class="source-line-no">158</span><span id="line.158">    }</span>
-<span class="source-line-no">159</span><span id="line.159"></span>
-<span class="source-line-no">160</span><span id="line.160">    public void setKey(final String key) {</span>
-<span class="source-line-no">161</span><span id="line.161">        this.key = key;</span>
-<span class="source-line-no">162</span><span id="line.162">    }</span>
-<span class="source-line-no">163</span><span id="line.163"></span>
-<span class="source-line-no">164</span><span id="line.164">    public void setUniquenessValue(final String uniquenessValue) {</span>
-<span class="source-line-no">165</span><span id="line.165">        this.uniquenessValue = uniquenessValue;</span>
-<span class="source-line-no">166</span><span id="line.166">    }</span>
-<span class="source-line-no">167</span><span id="line.167"></span>
-<span class="source-line-no">168</span><span id="line.168">    public void setLocale(final String locale) {</span>
-<span class="source-line-no">169</span><span id="line.169">        this.locale = locale;</span>
-<span class="source-line-no">170</span><span id="line.170">    }</span>
-<span class="source-line-no">171</span><span id="line.171"></span>
-<span class="source-line-no">172</span><span id="line.172">    public void setAuthorName(final String authorName) {</span>
-<span class="source-line-no">173</span><span id="line.173">        this.authorName = authorName;</span>
-<span class="source-line-no">174</span><span id="line.174">    }</span>
-<span class="source-line-no">175</span><span id="line.175"></span>
-<span class="source-line-no">176</span><span id="line.176">    public void setTitle(final String title) {</span>
-<span class="source-line-no">177</span><span id="line.177">        this.title = title;</span>
-<span class="source-line-no">178</span><span id="line.178">    }</span>
-<span class="source-line-no">179</span><span id="line.179"></span>
-<span class="source-line-no">180</span><span id="line.180">    public void setText(final String text) {</span>
-<span class="source-line-no">181</span><span id="line.181">        this.text = text;</span>
-<span class="source-line-no">182</span><span id="line.182">    }</span>
-<span class="source-line-no">183</span><span id="line.183"></span>
-<span class="source-line-no">184</span><span id="line.184">    public void setTarget(final com.commercetools.api.models.common.ResourceIdentifier target) {</span>
-<span class="source-line-no">185</span><span id="line.185">        this.target = target;</span>
-<span class="source-line-no">186</span><span id="line.186">    }</span>
-<span class="source-line-no">187</span><span id="line.187"></span>
-<span class="source-line-no">188</span><span id="line.188">    public void setState(final com.commercetools.api.models.state.StateResourceIdentifier state) {</span>
-<span class="source-line-no">189</span><span id="line.189">        this.state = state;</span>
-<span class="source-line-no">190</span><span id="line.190">    }</span>
-<span class="source-line-no">191</span><span id="line.191"></span>
-<span class="source-line-no">192</span><span id="line.192">    public void setRating(final Integer rating) {</span>
-<span class="source-line-no">193</span><span id="line.193">        this.rating = rating;</span>
-<span class="source-line-no">194</span><span id="line.194">    }</span>
-<span class="source-line-no">195</span><span id="line.195"></span>
-<span class="source-line-no">196</span><span id="line.196">    public void setCustomer(final com.commercetools.api.models.customer.CustomerResourceIdentifier customer) {</span>
-<span class="source-line-no">197</span><span id="line.197">        this.customer = customer;</span>
-<span class="source-line-no">198</span><span id="line.198">    }</span>
-<span class="source-line-no">199</span><span id="line.199"></span>
-<span class="source-line-no">200</span><span id="line.200">    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {</span>
-<span class="source-line-no">201</span><span id="line.201">        this.custom = custom;</span>
-<span class="source-line-no">202</span><span id="line.202">    }</span>
-<span class="source-line-no">203</span><span id="line.203"></span>
-<span class="source-line-no">204</span><span id="line.204">    @Override</span>
-<span class="source-line-no">205</span><span id="line.205">    public boolean equals(Object o) {</span>
-<span class="source-line-no">206</span><span id="line.206">        if (this == o)</span>
-<span class="source-line-no">207</span><span id="line.207">            return true;</span>
-<span class="source-line-no">208</span><span id="line.208"></span>
-<span class="source-line-no">209</span><span id="line.209">        if (o == null || getClass() != o.getClass())</span>
-<span class="source-line-no">210</span><span id="line.210">            return false;</span>
-<span class="source-line-no">211</span><span id="line.211"></span>
-<span class="source-line-no">212</span><span id="line.212">        ReviewDraftImpl that = (ReviewDraftImpl) o;</span>
-<span class="source-line-no">213</span><span id="line.213"></span>
-<span class="source-line-no">214</span><span id="line.214">        return new EqualsBuilder().append(key, that.key)</span>
-<span class="source-line-no">215</span><span id="line.215">                .append(uniquenessValue, that.uniquenessValue)</span>
-<span class="source-line-no">216</span><span id="line.216">                .append(locale, that.locale)</span>
-<span class="source-line-no">217</span><span id="line.217">                .append(authorName, that.authorName)</span>
-<span class="source-line-no">218</span><span id="line.218">                .append(title, that.title)</span>
-<span class="source-line-no">219</span><span id="line.219">                .append(text, that.text)</span>
-<span class="source-line-no">220</span><span id="line.220">                .append(target, that.target)</span>
-<span class="source-line-no">221</span><span id="line.221">                .append(state, that.state)</span>
-<span class="source-line-no">222</span><span id="line.222">                .append(rating, that.rating)</span>
-<span class="source-line-no">223</span><span id="line.223">                .append(customer, that.customer)</span>
-<span class="source-line-no">224</span><span id="line.224">                .append(custom, that.custom)</span>
-<span class="source-line-no">225</span><span id="line.225">                .isEquals();</span>
-<span class="source-line-no">226</span><span id="line.226">    }</span>
-<span class="source-line-no">227</span><span id="line.227"></span>
-<span class="source-line-no">228</span><span id="line.228">    @Override</span>
-<span class="source-line-no">229</span><span id="line.229">    public int hashCode() {</span>
-<span class="source-line-no">230</span><span id="line.230">        return new HashCodeBuilder(17, 37).append(key)</span>
-<span class="source-line-no">231</span><span id="line.231">                .append(uniquenessValue)</span>
-<span class="source-line-no">232</span><span id="line.232">                .append(locale)</span>
-<span class="source-line-no">233</span><span id="line.233">                .append(authorName)</span>
-<span class="source-line-no">234</span><span id="line.234">                .append(title)</span>
-<span class="source-line-no">235</span><span id="line.235">                .append(text)</span>
-<span class="source-line-no">236</span><span id="line.236">                .append(target)</span>
-<span class="source-line-no">237</span><span id="line.237">                .append(state)</span>
-<span class="source-line-no">238</span><span id="line.238">                .append(rating)</span>
-<span class="source-line-no">239</span><span id="line.239">                .append(customer)</span>
-<span class="source-line-no">240</span><span id="line.240">                .append(custom)</span>
-<span class="source-line-no">241</span><span id="line.241">                .toHashCode();</span>
-<span class="source-line-no">242</span><span id="line.242">    }</span>
-<span class="source-line-no">243</span><span id="line.243"></span>
-<span class="source-line-no">244</span><span id="line.244">}</span>
+<span class="source-line-no">074</span><span id="line.74">    public ReviewDraftImpl() {</span>
+<span class="source-line-no">075</span><span id="line.75">    }</span>
+<span class="source-line-no">076</span><span id="line.76"></span>
+<span class="source-line-no">077</span><span id="line.77">    /**</span>
+<span class="source-line-no">078</span><span id="line.78">     *  &lt;p&gt;User-defined unique identifier for the Review.&lt;/p&gt;</span>
+<span class="source-line-no">079</span><span id="line.79">     */</span>
+<span class="source-line-no">080</span><span id="line.80"></span>
+<span class="source-line-no">081</span><span id="line.81">    public String getKey() {</span>
+<span class="source-line-no">082</span><span id="line.82">        return this.key;</span>
+<span class="source-line-no">083</span><span id="line.83">    }</span>
+<span class="source-line-no">084</span><span id="line.84"></span>
+<span class="source-line-no">085</span><span id="line.85">    /**</span>
+<span class="source-line-no">086</span><span id="line.86">     *  &lt;p&gt;If set, this value must be unique among Reviews. For example, if you want to have only one Review per Customer and per Product, you can set the value to Customer &lt;code&gt;id&lt;/code&gt;&amp;nbsp;+ Product &lt;code&gt;id&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">087</span><span id="line.87">     */</span>
+<span class="source-line-no">088</span><span id="line.88"></span>
+<span class="source-line-no">089</span><span id="line.89">    public String getUniquenessValue() {</span>
+<span class="source-line-no">090</span><span id="line.90">        return this.uniquenessValue;</span>
+<span class="source-line-no">091</span><span id="line.91">    }</span>
+<span class="source-line-no">092</span><span id="line.92"></span>
+<span class="source-line-no">093</span><span id="line.93">    /**</span>
+<span class="source-line-no">094</span><span id="line.94">     *  &lt;p&gt;Language in which the content of the Review is written.&lt;/p&gt;</span>
+<span class="source-line-no">095</span><span id="line.95">     */</span>
+<span class="source-line-no">096</span><span id="line.96"></span>
+<span class="source-line-no">097</span><span id="line.97">    public String getLocale() {</span>
+<span class="source-line-no">098</span><span id="line.98">        return this.locale;</span>
+<span class="source-line-no">099</span><span id="line.99">    }</span>
+<span class="source-line-no">100</span><span id="line.100"></span>
+<span class="source-line-no">101</span><span id="line.101">    /**</span>
+<span class="source-line-no">102</span><span id="line.102">     *  &lt;p&gt;Name of the author.&lt;/p&gt;</span>
+<span class="source-line-no">103</span><span id="line.103">     */</span>
+<span class="source-line-no">104</span><span id="line.104"></span>
+<span class="source-line-no">105</span><span id="line.105">    public String getAuthorName() {</span>
+<span class="source-line-no">106</span><span id="line.106">        return this.authorName;</span>
+<span class="source-line-no">107</span><span id="line.107">    }</span>
+<span class="source-line-no">108</span><span id="line.108"></span>
+<span class="source-line-no">109</span><span id="line.109">    /**</span>
+<span class="source-line-no">110</span><span id="line.110">     *  &lt;p&gt;Title of the Review.&lt;/p&gt;</span>
+<span class="source-line-no">111</span><span id="line.111">     */</span>
+<span class="source-line-no">112</span><span id="line.112"></span>
+<span class="source-line-no">113</span><span id="line.113">    public String getTitle() {</span>
+<span class="source-line-no">114</span><span id="line.114">        return this.title;</span>
+<span class="source-line-no">115</span><span id="line.115">    }</span>
+<span class="source-line-no">116</span><span id="line.116"></span>
+<span class="source-line-no">117</span><span id="line.117">    /**</span>
+<span class="source-line-no">118</span><span id="line.118">     *  &lt;p&gt;Content of the Review.&lt;/p&gt;</span>
+<span class="source-line-no">119</span><span id="line.119">     */</span>
+<span class="source-line-no">120</span><span id="line.120"></span>
+<span class="source-line-no">121</span><span id="line.121">    public String getText() {</span>
+<span class="source-line-no">122</span><span id="line.122">        return this.text;</span>
+<span class="source-line-no">123</span><span id="line.123">    }</span>
+<span class="source-line-no">124</span><span id="line.124"></span>
+<span class="source-line-no">125</span><span id="line.125">    /**</span>
+<span class="source-line-no">126</span><span id="line.126">     *  &lt;p&gt;Draft type to create a Reference or a KeyReference to a resource. Provide either the &lt;code&gt;id&lt;/code&gt; or (wherever supported) the &lt;code&gt;key&lt;/code&gt; of the resource to reference, but depending on the API endpoint the response returns either a Reference or a KeyReference. For example, the field &lt;code&gt;parent&lt;/code&gt; of a CategoryDraft takes a ResourceIdentifier for its value while the value of the corresponding field of a Category is a Reference.&lt;/p&gt;</span>
+<span class="source-line-no">127</span><span id="line.127">     *  &lt;p&gt;Each resource type has its corresponding ResourceIdentifier, like ChannelResourceIdentifier.&lt;/p&gt;</span>
+<span class="source-line-no">128</span><span id="line.128">     */</span>
+<span class="source-line-no">129</span><span id="line.129"></span>
+<span class="source-line-no">130</span><span id="line.130">    public com.commercetools.api.models.common.ResourceIdentifier getTarget() {</span>
+<span class="source-line-no">131</span><span id="line.131">        return this.target;</span>
+<span class="source-line-no">132</span><span id="line.132">    }</span>
+<span class="source-line-no">133</span><span id="line.133"></span>
+<span class="source-line-no">134</span><span id="line.134">    /**</span>
+<span class="source-line-no">135</span><span id="line.135">     *  &lt;p&gt;State of the Review. Used for approval processes, see Review approval process for details.&lt;/p&gt;</span>
+<span class="source-line-no">136</span><span id="line.136">     */</span>
+<span class="source-line-no">137</span><span id="line.137"></span>
+<span class="source-line-no">138</span><span id="line.138">    public com.commercetools.api.models.state.StateResourceIdentifier getState() {</span>
+<span class="source-line-no">139</span><span id="line.139">        return this.state;</span>
+<span class="source-line-no">140</span><span id="line.140">    }</span>
+<span class="source-line-no">141</span><span id="line.141"></span>
+<span class="source-line-no">142</span><span id="line.142">    /**</span>
+<span class="source-line-no">143</span><span id="line.143">     *  &lt;p&gt;Rating of the targeted Product or Channel. This rating can represent the number of stars, a percentage, or a like (+1)/dislike (-1). A rating is used in the ratings statistics of the targeted object, unless the Review is in a State that does not have the role &lt;code&gt;ReviewIncludedInStatistics&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">144</span><span id="line.144">     */</span>
+<span class="source-line-no">145</span><span id="line.145"></span>
+<span class="source-line-no">146</span><span id="line.146">    public Integer getRating() {</span>
+<span class="source-line-no">147</span><span id="line.147">        return this.rating;</span>
+<span class="source-line-no">148</span><span id="line.148">    }</span>
+<span class="source-line-no">149</span><span id="line.149"></span>
+<span class="source-line-no">150</span><span id="line.150">    /**</span>
+<span class="source-line-no">151</span><span id="line.151">     *  &lt;p&gt;Customer who created the Review.&lt;/p&gt;</span>
+<span class="source-line-no">152</span><span id="line.152">     */</span>
+<span class="source-line-no">153</span><span id="line.153"></span>
+<span class="source-line-no">154</span><span id="line.154">    public com.commercetools.api.models.customer.CustomerResourceIdentifier getCustomer() {</span>
+<span class="source-line-no">155</span><span id="line.155">        return this.customer;</span>
+<span class="source-line-no">156</span><span id="line.156">    }</span>
+<span class="source-line-no">157</span><span id="line.157"></span>
+<span class="source-line-no">158</span><span id="line.158">    /**</span>
+<span class="source-line-no">159</span><span id="line.159">     *  &lt;p&gt;Custom Fields for the Review.&lt;/p&gt;</span>
+<span class="source-line-no">160</span><span id="line.160">     */</span>
+<span class="source-line-no">161</span><span id="line.161"></span>
+<span class="source-line-no">162</span><span id="line.162">    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {</span>
+<span class="source-line-no">163</span><span id="line.163">        return this.custom;</span>
+<span class="source-line-no">164</span><span id="line.164">    }</span>
+<span class="source-line-no">165</span><span id="line.165"></span>
+<span class="source-line-no">166</span><span id="line.166">    public void setKey(final String key) {</span>
+<span class="source-line-no">167</span><span id="line.167">        this.key = key;</span>
+<span class="source-line-no">168</span><span id="line.168">    }</span>
+<span class="source-line-no">169</span><span id="line.169"></span>
+<span class="source-line-no">170</span><span id="line.170">    public void setUniquenessValue(final String uniquenessValue) {</span>
+<span class="source-line-no">171</span><span id="line.171">        this.uniquenessValue = uniquenessValue;</span>
+<span class="source-line-no">172</span><span id="line.172">    }</span>
+<span class="source-line-no">173</span><span id="line.173"></span>
+<span class="source-line-no">174</span><span id="line.174">    public void setLocale(final String locale) {</span>
+<span class="source-line-no">175</span><span id="line.175">        this.locale = locale;</span>
+<span class="source-line-no">176</span><span id="line.176">    }</span>
+<span class="source-line-no">177</span><span id="line.177"></span>
+<span class="source-line-no">178</span><span id="line.178">    public void setAuthorName(final String authorName) {</span>
+<span class="source-line-no">179</span><span id="line.179">        this.authorName = authorName;</span>
+<span class="source-line-no">180</span><span id="line.180">    }</span>
+<span class="source-line-no">181</span><span id="line.181"></span>
+<span class="source-line-no">182</span><span id="line.182">    public void setTitle(final String title) {</span>
+<span class="source-line-no">183</span><span id="line.183">        this.title = title;</span>
+<span class="source-line-no">184</span><span id="line.184">    }</span>
+<span class="source-line-no">185</span><span id="line.185"></span>
+<span class="source-line-no">186</span><span id="line.186">    public void setText(final String text) {</span>
+<span class="source-line-no">187</span><span id="line.187">        this.text = text;</span>
+<span class="source-line-no">188</span><span id="line.188">    }</span>
+<span class="source-line-no">189</span><span id="line.189"></span>
+<span class="source-line-no">190</span><span id="line.190">    public void setTarget(final com.commercetools.api.models.common.ResourceIdentifier target) {</span>
+<span class="source-line-no">191</span><span id="line.191">        this.target = target;</span>
+<span class="source-line-no">192</span><span id="line.192">    }</span>
+<span class="source-line-no">193</span><span id="line.193"></span>
+<span class="source-line-no">194</span><span id="line.194">    public void setState(final com.commercetools.api.models.state.StateResourceIdentifier state) {</span>
+<span class="source-line-no">195</span><span id="line.195">        this.state = state;</span>
+<span class="source-line-no">196</span><span id="line.196">    }</span>
+<span class="source-line-no">197</span><span id="line.197"></span>
+<span class="source-line-no">198</span><span id="line.198">    public void setRating(final Integer rating) {</span>
+<span class="source-line-no">199</span><span id="line.199">        this.rating = rating;</span>
+<span class="source-line-no">200</span><span id="line.200">    }</span>
+<span class="source-line-no">201</span><span id="line.201"></span>
+<span class="source-line-no">202</span><span id="line.202">    public void setCustomer(final com.commercetools.api.models.customer.CustomerResourceIdentifier customer) {</span>
+<span class="source-line-no">203</span><span id="line.203">        this.customer = customer;</span>
+<span class="source-line-no">204</span><span id="line.204">    }</span>
+<span class="source-line-no">205</span><span id="line.205"></span>
+<span class="source-line-no">206</span><span id="line.206">    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {</span>
+<span class="source-line-no">207</span><span id="line.207">        this.custom = custom;</span>
+<span class="source-line-no">208</span><span id="line.208">    }</span>
+<span class="source-line-no">209</span><span id="line.209"></span>
+<span class="source-line-no">210</span><span id="line.210">    @Override</span>
+<span class="source-line-no">211</span><span id="line.211">    public boolean equals(Object o) {</span>
+<span class="source-line-no">212</span><span id="line.212">        if (this == o)</span>
+<span class="source-line-no">213</span><span id="line.213">            return true;</span>
+<span class="source-line-no">214</span><span id="line.214"></span>
+<span class="source-line-no">215</span><span id="line.215">        if (o == null || getClass() != o.getClass())</span>
+<span class="source-line-no">216</span><span id="line.216">            return false;</span>
+<span class="source-line-no">217</span><span id="line.217"></span>
+<span class="source-line-no">218</span><span id="line.218">        ReviewDraftImpl that = (ReviewDraftImpl) o;</span>
+<span class="source-line-no">219</span><span id="line.219"></span>
+<span class="source-line-no">220</span><span id="line.220">        return new EqualsBuilder().append(key, that.key)</span>
+<span class="source-line-no">221</span><span id="line.221">                .append(uniquenessValue, that.uniquenessValue)</span>
+<span class="source-line-no">222</span><span id="line.222">                .append(locale, that.locale)</span>
+<span class="source-line-no">223</span><span id="line.223">                .append(authorName, that.authorName)</span>
+<span class="source-line-no">224</span><span id="line.224">                .append(title, that.title)</span>
+<span class="source-line-no">225</span><span id="line.225">                .append(text, that.text)</span>
+<span class="source-line-no">226</span><span id="line.226">                .append(target, that.target)</span>
+<span class="source-line-no">227</span><span id="line.227">                .append(state, that.state)</span>
+<span class="source-line-no">228</span><span id="line.228">                .append(rating, that.rating)</span>
+<span class="source-line-no">229</span><span id="line.229">                .append(customer, that.customer)</span>
+<span class="source-line-no">230</span><span id="line.230">                .append(custom, that.custom)</span>
+<span class="source-line-no">231</span><span id="line.231">                .isEquals();</span>
+<span class="source-line-no">232</span><span id="line.232">    }</span>
+<span class="source-line-no">233</span><span id="line.233"></span>
+<span class="source-line-no">234</span><span id="line.234">    @Override</span>
+<span class="source-line-no">235</span><span id="line.235">    public int hashCode() {</span>
+<span class="source-line-no">236</span><span id="line.236">        return new HashCodeBuilder(17, 37).append(key)</span>
+<span class="source-line-no">237</span><span id="line.237">                .append(uniquenessValue)</span>
+<span class="source-line-no">238</span><span id="line.238">                .append(locale)</span>
+<span class="source-line-no">239</span><span id="line.239">                .append(authorName)</span>
+<span class="source-line-no">240</span><span id="line.240">                .append(title)</span>
+<span class="source-line-no">241</span><span id="line.241">                .append(text)</span>
+<span class="source-line-no">242</span><span id="line.242">                .append(target)</span>
+<span class="source-line-no">243</span><span id="line.243">                .append(state)</span>
+<span class="source-line-no">244</span><span id="line.244">                .append(rating)</span>
+<span class="source-line-no">245</span><span id="line.245">                .append(customer)</span>
+<span class="source-line-no">246</span><span id="line.246">                .append(custom)</span>
+<span class="source-line-no">247</span><span id="line.247">                .toHashCode();</span>
+<span class="source-line-no">248</span><span id="line.248">    }</span>
+<span class="source-line-no">249</span><span id="line.249"></span>
+<span class="source-line-no">250</span><span id="line.250">}</span>
 
 
 

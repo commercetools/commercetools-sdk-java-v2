@@ -43,70 +43,100 @@
 <span class="source-line-no">030</span><span id="line.30"></span>
 <span class="source-line-no">031</span><span id="line.31">    /**</span>
 <span class="source-line-no">032</span><span id="line.32">     *  &lt;p&gt;Name of the AttributeDefinition to update.&lt;/p&gt;</span>
-<span class="source-line-no">033</span><span id="line.33">     */</span>
-<span class="source-line-no">034</span><span id="line.34"></span>
-<span class="source-line-no">035</span><span id="line.35">    public ProductTypeChangeLocalizedEnumValueLabelActionBuilder attributeName(final String attributeName) {</span>
-<span class="source-line-no">036</span><span id="line.36">        this.attributeName = attributeName;</span>
-<span class="source-line-no">037</span><span id="line.37">        return this;</span>
-<span class="source-line-no">038</span><span id="line.38">    }</span>
-<span class="source-line-no">039</span><span id="line.39"></span>
-<span class="source-line-no">040</span><span id="line.40">    /**</span>
-<span class="source-line-no">041</span><span id="line.41">     *  &lt;p&gt;New value to set. Must be different from the existing value.&lt;/p&gt;</span>
-<span class="source-line-no">042</span><span id="line.42">     */</span>
-<span class="source-line-no">043</span><span id="line.43"></span>
-<span class="source-line-no">044</span><span id="line.44">    public ProductTypeChangeLocalizedEnumValueLabelActionBuilder newValue(</span>
-<span class="source-line-no">045</span><span id="line.45">            Function&lt;com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder, com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder&gt; builder) {</span>
-<span class="source-line-no">046</span><span id="line.46">        this.newValue = builder.apply(com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder.of())</span>
-<span class="source-line-no">047</span><span id="line.47">                .build();</span>
-<span class="source-line-no">048</span><span id="line.48">        return this;</span>
-<span class="source-line-no">049</span><span id="line.49">    }</span>
-<span class="source-line-no">050</span><span id="line.50"></span>
-<span class="source-line-no">051</span><span id="line.51">    /**</span>
-<span class="source-line-no">052</span><span id="line.52">     *  &lt;p&gt;New value to set. Must be different from the existing value.&lt;/p&gt;</span>
-<span class="source-line-no">053</span><span id="line.53">     */</span>
+<span class="source-line-no">033</span><span id="line.33">     * @param attributeName value to be set</span>
+<span class="source-line-no">034</span><span id="line.34">     * @return Builder</span>
+<span class="source-line-no">035</span><span id="line.35">     */</span>
+<span class="source-line-no">036</span><span id="line.36"></span>
+<span class="source-line-no">037</span><span id="line.37">    public ProductTypeChangeLocalizedEnumValueLabelActionBuilder attributeName(final String attributeName) {</span>
+<span class="source-line-no">038</span><span id="line.38">        this.attributeName = attributeName;</span>
+<span class="source-line-no">039</span><span id="line.39">        return this;</span>
+<span class="source-line-no">040</span><span id="line.40">    }</span>
+<span class="source-line-no">041</span><span id="line.41"></span>
+<span class="source-line-no">042</span><span id="line.42">    /**</span>
+<span class="source-line-no">043</span><span id="line.43">     *  &lt;p&gt;New value to set. Must be different from the existing value.&lt;/p&gt;</span>
+<span class="source-line-no">044</span><span id="line.44">     * @param builder function to build the newValue value</span>
+<span class="source-line-no">045</span><span id="line.45">     * @return Builder</span>
+<span class="source-line-no">046</span><span id="line.46">     */</span>
+<span class="source-line-no">047</span><span id="line.47"></span>
+<span class="source-line-no">048</span><span id="line.48">    public ProductTypeChangeLocalizedEnumValueLabelActionBuilder newValue(</span>
+<span class="source-line-no">049</span><span id="line.49">            Function&lt;com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder, com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder&gt; builder) {</span>
+<span class="source-line-no">050</span><span id="line.50">        this.newValue = builder.apply(com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder.of())</span>
+<span class="source-line-no">051</span><span id="line.51">                .build();</span>
+<span class="source-line-no">052</span><span id="line.52">        return this;</span>
+<span class="source-line-no">053</span><span id="line.53">    }</span>
 <span class="source-line-no">054</span><span id="line.54"></span>
-<span class="source-line-no">055</span><span id="line.55">    public ProductTypeChangeLocalizedEnumValueLabelActionBuilder newValue(</span>
-<span class="source-line-no">056</span><span id="line.56">            final com.commercetools.api.models.product_type.AttributeLocalizedEnumValue newValue) {</span>
-<span class="source-line-no">057</span><span id="line.57">        this.newValue = newValue;</span>
-<span class="source-line-no">058</span><span id="line.58">        return this;</span>
-<span class="source-line-no">059</span><span id="line.59">    }</span>
+<span class="source-line-no">055</span><span id="line.55">    /**</span>
+<span class="source-line-no">056</span><span id="line.56">     *  &lt;p&gt;New value to set. Must be different from the existing value.&lt;/p&gt;</span>
+<span class="source-line-no">057</span><span id="line.57">     * @param newValue value to be set</span>
+<span class="source-line-no">058</span><span id="line.58">     * @return Builder</span>
+<span class="source-line-no">059</span><span id="line.59">     */</span>
 <span class="source-line-no">060</span><span id="line.60"></span>
-<span class="source-line-no">061</span><span id="line.61">    public String getAttributeName() {</span>
-<span class="source-line-no">062</span><span id="line.62">        return this.attributeName;</span>
-<span class="source-line-no">063</span><span id="line.63">    }</span>
-<span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">    public com.commercetools.api.models.product_type.AttributeLocalizedEnumValue getNewValue() {</span>
-<span class="source-line-no">066</span><span id="line.66">        return this.newValue;</span>
-<span class="source-line-no">067</span><span id="line.67">    }</span>
-<span class="source-line-no">068</span><span id="line.68"></span>
-<span class="source-line-no">069</span><span id="line.69">    public ProductTypeChangeLocalizedEnumValueLabelAction build() {</span>
-<span class="source-line-no">070</span><span id="line.70">        Objects.requireNonNull(attributeName,</span>
-<span class="source-line-no">071</span><span id="line.71">            ProductTypeChangeLocalizedEnumValueLabelAction.class + ": attributeName is missing");</span>
-<span class="source-line-no">072</span><span id="line.72">        Objects.requireNonNull(newValue,</span>
-<span class="source-line-no">073</span><span id="line.73">            ProductTypeChangeLocalizedEnumValueLabelAction.class + ": newValue is missing");</span>
-<span class="source-line-no">074</span><span id="line.74">        return new ProductTypeChangeLocalizedEnumValueLabelActionImpl(attributeName, newValue);</span>
-<span class="source-line-no">075</span><span id="line.75">    }</span>
-<span class="source-line-no">076</span><span id="line.76"></span>
-<span class="source-line-no">077</span><span id="line.77">    /**</span>
-<span class="source-line-no">078</span><span id="line.78">     * builds ProductTypeChangeLocalizedEnumValueLabelAction without checking for non null required values</span>
+<span class="source-line-no">061</span><span id="line.61">    public ProductTypeChangeLocalizedEnumValueLabelActionBuilder newValue(</span>
+<span class="source-line-no">062</span><span id="line.62">            final com.commercetools.api.models.product_type.AttributeLocalizedEnumValue newValue) {</span>
+<span class="source-line-no">063</span><span id="line.63">        this.newValue = newValue;</span>
+<span class="source-line-no">064</span><span id="line.64">        return this;</span>
+<span class="source-line-no">065</span><span id="line.65">    }</span>
+<span class="source-line-no">066</span><span id="line.66"></span>
+<span class="source-line-no">067</span><span id="line.67">    /**</span>
+<span class="source-line-no">068</span><span id="line.68">     *  &lt;p&gt;Name of the AttributeDefinition to update.&lt;/p&gt;</span>
+<span class="source-line-no">069</span><span id="line.69">     * @return attributeName</span>
+<span class="source-line-no">070</span><span id="line.70">     */</span>
+<span class="source-line-no">071</span><span id="line.71"></span>
+<span class="source-line-no">072</span><span id="line.72">    public String getAttributeName() {</span>
+<span class="source-line-no">073</span><span id="line.73">        return this.attributeName;</span>
+<span class="source-line-no">074</span><span id="line.74">    }</span>
+<span class="source-line-no">075</span><span id="line.75"></span>
+<span class="source-line-no">076</span><span id="line.76">    /**</span>
+<span class="source-line-no">077</span><span id="line.77">     *  &lt;p&gt;New value to set. Must be different from the existing value.&lt;/p&gt;</span>
+<span class="source-line-no">078</span><span id="line.78">     * @return newValue</span>
 <span class="source-line-no">079</span><span id="line.79">     */</span>
-<span class="source-line-no">080</span><span id="line.80">    public ProductTypeChangeLocalizedEnumValueLabelAction buildUnchecked() {</span>
-<span class="source-line-no">081</span><span id="line.81">        return new ProductTypeChangeLocalizedEnumValueLabelActionImpl(attributeName, newValue);</span>
-<span class="source-line-no">082</span><span id="line.82">    }</span>
-<span class="source-line-no">083</span><span id="line.83"></span>
-<span class="source-line-no">084</span><span id="line.84">    public static ProductTypeChangeLocalizedEnumValueLabelActionBuilder of() {</span>
-<span class="source-line-no">085</span><span id="line.85">        return new ProductTypeChangeLocalizedEnumValueLabelActionBuilder();</span>
-<span class="source-line-no">086</span><span id="line.86">    }</span>
-<span class="source-line-no">087</span><span id="line.87"></span>
-<span class="source-line-no">088</span><span id="line.88">    public static ProductTypeChangeLocalizedEnumValueLabelActionBuilder of(</span>
-<span class="source-line-no">089</span><span id="line.89">            final ProductTypeChangeLocalizedEnumValueLabelAction template) {</span>
-<span class="source-line-no">090</span><span id="line.90">        ProductTypeChangeLocalizedEnumValueLabelActionBuilder builder = new ProductTypeChangeLocalizedEnumValueLabelActionBuilder();</span>
-<span class="source-line-no">091</span><span id="line.91">        builder.attributeName = template.getAttributeName();</span>
-<span class="source-line-no">092</span><span id="line.92">        builder.newValue = template.getNewValue();</span>
-<span class="source-line-no">093</span><span id="line.93">        return builder;</span>
-<span class="source-line-no">094</span><span id="line.94">    }</span>
-<span class="source-line-no">095</span><span id="line.95"></span>
-<span class="source-line-no">096</span><span id="line.96">}</span>
+<span class="source-line-no">080</span><span id="line.80"></span>
+<span class="source-line-no">081</span><span id="line.81">    public com.commercetools.api.models.product_type.AttributeLocalizedEnumValue getNewValue() {</span>
+<span class="source-line-no">082</span><span id="line.82">        return this.newValue;</span>
+<span class="source-line-no">083</span><span id="line.83">    }</span>
+<span class="source-line-no">084</span><span id="line.84"></span>
+<span class="source-line-no">085</span><span id="line.85">    /**</span>
+<span class="source-line-no">086</span><span id="line.86">     * builds ProductTypeChangeLocalizedEnumValueLabelAction with checking for non-null required values</span>
+<span class="source-line-no">087</span><span id="line.87">     * @return ProductTypeChangeLocalizedEnumValueLabelAction</span>
+<span class="source-line-no">088</span><span id="line.88">     */</span>
+<span class="source-line-no">089</span><span id="line.89">    public ProductTypeChangeLocalizedEnumValueLabelAction build() {</span>
+<span class="source-line-no">090</span><span id="line.90">        Objects.requireNonNull(attributeName,</span>
+<span class="source-line-no">091</span><span id="line.91">            ProductTypeChangeLocalizedEnumValueLabelAction.class + ": attributeName is missing");</span>
+<span class="source-line-no">092</span><span id="line.92">        Objects.requireNonNull(newValue,</span>
+<span class="source-line-no">093</span><span id="line.93">            ProductTypeChangeLocalizedEnumValueLabelAction.class + ": newValue is missing");</span>
+<span class="source-line-no">094</span><span id="line.94">        return new ProductTypeChangeLocalizedEnumValueLabelActionImpl(attributeName, newValue);</span>
+<span class="source-line-no">095</span><span id="line.95">    }</span>
+<span class="source-line-no">096</span><span id="line.96"></span>
+<span class="source-line-no">097</span><span id="line.97">    /**</span>
+<span class="source-line-no">098</span><span id="line.98">     * builds ProductTypeChangeLocalizedEnumValueLabelAction without checking for non-null required values</span>
+<span class="source-line-no">099</span><span id="line.99">     * @return ProductTypeChangeLocalizedEnumValueLabelAction</span>
+<span class="source-line-no">100</span><span id="line.100">     */</span>
+<span class="source-line-no">101</span><span id="line.101">    public ProductTypeChangeLocalizedEnumValueLabelAction buildUnchecked() {</span>
+<span class="source-line-no">102</span><span id="line.102">        return new ProductTypeChangeLocalizedEnumValueLabelActionImpl(attributeName, newValue);</span>
+<span class="source-line-no">103</span><span id="line.103">    }</span>
+<span class="source-line-no">104</span><span id="line.104"></span>
+<span class="source-line-no">105</span><span id="line.105">    /**</span>
+<span class="source-line-no">106</span><span id="line.106">     * factory method for an instance of ProductTypeChangeLocalizedEnumValueLabelActionBuilder</span>
+<span class="source-line-no">107</span><span id="line.107">     * @return builder</span>
+<span class="source-line-no">108</span><span id="line.108">     */</span>
+<span class="source-line-no">109</span><span id="line.109">    public static ProductTypeChangeLocalizedEnumValueLabelActionBuilder of() {</span>
+<span class="source-line-no">110</span><span id="line.110">        return new ProductTypeChangeLocalizedEnumValueLabelActionBuilder();</span>
+<span class="source-line-no">111</span><span id="line.111">    }</span>
+<span class="source-line-no">112</span><span id="line.112"></span>
+<span class="source-line-no">113</span><span id="line.113">    /**</span>
+<span class="source-line-no">114</span><span id="line.114">     * create builder for ProductTypeChangeLocalizedEnumValueLabelAction instance</span>
+<span class="source-line-no">115</span><span id="line.115">     * @param template instance with prefilled values for the builder</span>
+<span class="source-line-no">116</span><span id="line.116">     * @return builder</span>
+<span class="source-line-no">117</span><span id="line.117">     */</span>
+<span class="source-line-no">118</span><span id="line.118">    public static ProductTypeChangeLocalizedEnumValueLabelActionBuilder of(</span>
+<span class="source-line-no">119</span><span id="line.119">            final ProductTypeChangeLocalizedEnumValueLabelAction template) {</span>
+<span class="source-line-no">120</span><span id="line.120">        ProductTypeChangeLocalizedEnumValueLabelActionBuilder builder = new ProductTypeChangeLocalizedEnumValueLabelActionBuilder();</span>
+<span class="source-line-no">121</span><span id="line.121">        builder.attributeName = template.getAttributeName();</span>
+<span class="source-line-no">122</span><span id="line.122">        builder.newValue = template.getNewValue();</span>
+<span class="source-line-no">123</span><span id="line.123">        return builder;</span>
+<span class="source-line-no">124</span><span id="line.124">    }</span>
+<span class="source-line-no">125</span><span id="line.125"></span>
+<span class="source-line-no">126</span><span id="line.126">}</span>
 
 
 

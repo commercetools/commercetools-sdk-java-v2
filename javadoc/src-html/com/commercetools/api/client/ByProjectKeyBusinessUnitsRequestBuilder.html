@@ -40,20 +40,24 @@
 <span class="source-line-no">027</span><span id="line.27">        return new ByProjectKeyBusinessUnitsPost(apiHttpClient, projectKey, businessUnitDraft);</span>
 <span class="source-line-no">028</span><span id="line.28">    }</span>
 <span class="source-line-no">029</span><span id="line.29"></span>
-<span class="source-line-no">030</span><span id="line.30">    public ByProjectKeyBusinessUnitsPost post(</span>
-<span class="source-line-no">031</span><span id="line.31">            Function&lt;com.commercetools.api.models.business_unit.BusinessUnitDraftBuilder, Builder&lt;? extends com.commercetools.api.models.business_unit.BusinessUnitDraft&gt;&gt; op) {</span>
-<span class="source-line-no">032</span><span id="line.32">        return post(op.apply(com.commercetools.api.models.business_unit.BusinessUnitDraftBuilder.of()).build());</span>
-<span class="source-line-no">033</span><span id="line.33">    }</span>
-<span class="source-line-no">034</span><span id="line.34"></span>
-<span class="source-line-no">035</span><span id="line.35">    public ByProjectKeyBusinessUnitsKeyByKeyRequestBuilder withKey(String key) {</span>
-<span class="source-line-no">036</span><span id="line.36">        return new ByProjectKeyBusinessUnitsKeyByKeyRequestBuilder(apiHttpClient, projectKey, key);</span>
+<span class="source-line-no">030</span><span id="line.30">    public ByProjectKeyBusinessUnitsPostString post(final String businessUnitDraft) {</span>
+<span class="source-line-no">031</span><span id="line.31">        return new ByProjectKeyBusinessUnitsPostString(apiHttpClient, projectKey, businessUnitDraft);</span>
+<span class="source-line-no">032</span><span id="line.32">    }</span>
+<span class="source-line-no">033</span><span id="line.33"></span>
+<span class="source-line-no">034</span><span id="line.34">    public ByProjectKeyBusinessUnitsPost post(</span>
+<span class="source-line-no">035</span><span id="line.35">            Function&lt;com.commercetools.api.models.business_unit.BusinessUnitDraftBuilder, Builder&lt;? extends com.commercetools.api.models.business_unit.BusinessUnitDraft&gt;&gt; op) {</span>
+<span class="source-line-no">036</span><span id="line.36">        return post(op.apply(com.commercetools.api.models.business_unit.BusinessUnitDraftBuilder.of()).build());</span>
 <span class="source-line-no">037</span><span id="line.37">    }</span>
 <span class="source-line-no">038</span><span id="line.38"></span>
-<span class="source-line-no">039</span><span id="line.39">    public ByProjectKeyBusinessUnitsByIDRequestBuilder withId(String ID) {</span>
-<span class="source-line-no">040</span><span id="line.40">        return new ByProjectKeyBusinessUnitsByIDRequestBuilder(apiHttpClient, projectKey, ID);</span>
+<span class="source-line-no">039</span><span id="line.39">    public ByProjectKeyBusinessUnitsKeyByKeyRequestBuilder withKey(String key) {</span>
+<span class="source-line-no">040</span><span id="line.40">        return new ByProjectKeyBusinessUnitsKeyByKeyRequestBuilder(apiHttpClient, projectKey, key);</span>
 <span class="source-line-no">041</span><span id="line.41">    }</span>
 <span class="source-line-no">042</span><span id="line.42"></span>
-<span class="source-line-no">043</span><span id="line.43">}</span>
+<span class="source-line-no">043</span><span id="line.43">    public ByProjectKeyBusinessUnitsByIDRequestBuilder withId(String ID) {</span>
+<span class="source-line-no">044</span><span id="line.44">        return new ByProjectKeyBusinessUnitsByIDRequestBuilder(apiHttpClient, projectKey, ID);</span>
+<span class="source-line-no">045</span><span id="line.45">    }</span>
+<span class="source-line-no">046</span><span id="line.46"></span>
+<span class="source-line-no">047</span><span id="line.47">}</span>
 
 
 

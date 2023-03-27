@@ -45,54 +45,94 @@
 <span class="source-line-no">032</span><span id="line.32"></span>
 <span class="source-line-no">033</span><span id="line.33">    /**</span>
 <span class="source-line-no">034</span><span id="line.34">     *</span>
-<span class="source-line-no">035</span><span id="line.35">     */</span>
-<span class="source-line-no">036</span><span id="line.36">    @NotNull</span>
-<span class="source-line-no">037</span><span id="line.37">    @JsonProperty("id")</span>
-<span class="source-line-no">038</span><span id="line.38">    public String getId();</span>
-<span class="source-line-no">039</span><span id="line.39"></span>
-<span class="source-line-no">040</span><span id="line.40">    /**</span>
-<span class="source-line-no">041</span><span id="line.41">     *</span>
-<span class="source-line-no">042</span><span id="line.42">     */</span>
-<span class="source-line-no">043</span><span id="line.43">    @NotNull</span>
-<span class="source-line-no">044</span><span id="line.44">    @JsonProperty("createdAt")</span>
-<span class="source-line-no">045</span><span id="line.45">    public String getCreatedAt();</span>
-<span class="source-line-no">046</span><span id="line.46"></span>
-<span class="source-line-no">047</span><span id="line.47">    public void setId(final String id);</span>
+<span class="source-line-no">035</span><span id="line.35">     * @return id</span>
+<span class="source-line-no">036</span><span id="line.36">     */</span>
+<span class="source-line-no">037</span><span id="line.37">    @NotNull</span>
+<span class="source-line-no">038</span><span id="line.38">    @JsonProperty("id")</span>
+<span class="source-line-no">039</span><span id="line.39">    public String getId();</span>
+<span class="source-line-no">040</span><span id="line.40"></span>
+<span class="source-line-no">041</span><span id="line.41">    /**</span>
+<span class="source-line-no">042</span><span id="line.42">     *</span>
+<span class="source-line-no">043</span><span id="line.43">     * @return createdAt</span>
+<span class="source-line-no">044</span><span id="line.44">     */</span>
+<span class="source-line-no">045</span><span id="line.45">    @NotNull</span>
+<span class="source-line-no">046</span><span id="line.46">    @JsonProperty("createdAt")</span>
+<span class="source-line-no">047</span><span id="line.47">    public String getCreatedAt();</span>
 <span class="source-line-no">048</span><span id="line.48"></span>
-<span class="source-line-no">049</span><span id="line.49">    public void setCreatedAt(final String createdAt);</span>
-<span class="source-line-no">050</span><span id="line.50"></span>
-<span class="source-line-no">051</span><span id="line.51">    public static ParcelChangeValue of() {</span>
-<span class="source-line-no">052</span><span id="line.52">        return new ParcelChangeValueImpl();</span>
-<span class="source-line-no">053</span><span id="line.53">    }</span>
-<span class="source-line-no">054</span><span id="line.54"></span>
-<span class="source-line-no">055</span><span id="line.55">    public static ParcelChangeValue of(final ParcelChangeValue template) {</span>
-<span class="source-line-no">056</span><span id="line.56">        ParcelChangeValueImpl instance = new ParcelChangeValueImpl();</span>
-<span class="source-line-no">057</span><span id="line.57">        instance.setId(template.getId());</span>
-<span class="source-line-no">058</span><span id="line.58">        instance.setCreatedAt(template.getCreatedAt());</span>
-<span class="source-line-no">059</span><span id="line.59">        return instance;</span>
-<span class="source-line-no">060</span><span id="line.60">    }</span>
-<span class="source-line-no">061</span><span id="line.61"></span>
-<span class="source-line-no">062</span><span id="line.62">    public static ParcelChangeValueBuilder builder() {</span>
-<span class="source-line-no">063</span><span id="line.63">        return ParcelChangeValueBuilder.of();</span>
-<span class="source-line-no">064</span><span id="line.64">    }</span>
-<span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    public static ParcelChangeValueBuilder builder(final ParcelChangeValue template) {</span>
-<span class="source-line-no">067</span><span id="line.67">        return ParcelChangeValueBuilder.of(template);</span>
-<span class="source-line-no">068</span><span id="line.68">    }</span>
-<span class="source-line-no">069</span><span id="line.69"></span>
-<span class="source-line-no">070</span><span id="line.70">    default &lt;T&gt; T withParcelChangeValue(Function&lt;ParcelChangeValue, T&gt; helper) {</span>
-<span class="source-line-no">071</span><span id="line.71">        return helper.apply(this);</span>
-<span class="source-line-no">072</span><span id="line.72">    }</span>
-<span class="source-line-no">073</span><span id="line.73"></span>
-<span class="source-line-no">074</span><span id="line.74">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ParcelChangeValue&gt; typeReference() {</span>
-<span class="source-line-no">075</span><span id="line.75">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ParcelChangeValue&gt;() {</span>
-<span class="source-line-no">076</span><span id="line.76">            @Override</span>
-<span class="source-line-no">077</span><span id="line.77">            public String toString() {</span>
-<span class="source-line-no">078</span><span id="line.78">                return "TypeReference&lt;ParcelChangeValue&gt;";</span>
-<span class="source-line-no">079</span><span id="line.79">            }</span>
-<span class="source-line-no">080</span><span id="line.80">        };</span>
+<span class="source-line-no">049</span><span id="line.49">    /**</span>
+<span class="source-line-no">050</span><span id="line.50">     * set id</span>
+<span class="source-line-no">051</span><span id="line.51">     * @param id value to be set</span>
+<span class="source-line-no">052</span><span id="line.52">     */</span>
+<span class="source-line-no">053</span><span id="line.53"></span>
+<span class="source-line-no">054</span><span id="line.54">    public void setId(final String id);</span>
+<span class="source-line-no">055</span><span id="line.55"></span>
+<span class="source-line-no">056</span><span id="line.56">    /**</span>
+<span class="source-line-no">057</span><span id="line.57">     * set createdAt</span>
+<span class="source-line-no">058</span><span id="line.58">     * @param createdAt value to be set</span>
+<span class="source-line-no">059</span><span id="line.59">     */</span>
+<span class="source-line-no">060</span><span id="line.60"></span>
+<span class="source-line-no">061</span><span id="line.61">    public void setCreatedAt(final String createdAt);</span>
+<span class="source-line-no">062</span><span id="line.62"></span>
+<span class="source-line-no">063</span><span id="line.63">    /**</span>
+<span class="source-line-no">064</span><span id="line.64">     * factory method</span>
+<span class="source-line-no">065</span><span id="line.65">     * @return instance of ParcelChangeValue</span>
+<span class="source-line-no">066</span><span id="line.66">     */</span>
+<span class="source-line-no">067</span><span id="line.67">    public static ParcelChangeValue of() {</span>
+<span class="source-line-no">068</span><span id="line.68">        return new ParcelChangeValueImpl();</span>
+<span class="source-line-no">069</span><span id="line.69">    }</span>
+<span class="source-line-no">070</span><span id="line.70"></span>
+<span class="source-line-no">071</span><span id="line.71">    /**</span>
+<span class="source-line-no">072</span><span id="line.72">     * factory method to copy an instance of ParcelChangeValue</span>
+<span class="source-line-no">073</span><span id="line.73">     * @param template instance to be copied</span>
+<span class="source-line-no">074</span><span id="line.74">     * @return copy instance</span>
+<span class="source-line-no">075</span><span id="line.75">     */</span>
+<span class="source-line-no">076</span><span id="line.76">    public static ParcelChangeValue of(final ParcelChangeValue template) {</span>
+<span class="source-line-no">077</span><span id="line.77">        ParcelChangeValueImpl instance = new ParcelChangeValueImpl();</span>
+<span class="source-line-no">078</span><span id="line.78">        instance.setId(template.getId());</span>
+<span class="source-line-no">079</span><span id="line.79">        instance.setCreatedAt(template.getCreatedAt());</span>
+<span class="source-line-no">080</span><span id="line.80">        return instance;</span>
 <span class="source-line-no">081</span><span id="line.81">    }</span>
-<span class="source-line-no">082</span><span id="line.82">}</span>
+<span class="source-line-no">082</span><span id="line.82"></span>
+<span class="source-line-no">083</span><span id="line.83">    /**</span>
+<span class="source-line-no">084</span><span id="line.84">     * builder factory method for ParcelChangeValue</span>
+<span class="source-line-no">085</span><span id="line.85">     * @return builder</span>
+<span class="source-line-no">086</span><span id="line.86">     */</span>
+<span class="source-line-no">087</span><span id="line.87">    public static ParcelChangeValueBuilder builder() {</span>
+<span class="source-line-no">088</span><span id="line.88">        return ParcelChangeValueBuilder.of();</span>
+<span class="source-line-no">089</span><span id="line.89">    }</span>
+<span class="source-line-no">090</span><span id="line.90"></span>
+<span class="source-line-no">091</span><span id="line.91">    /**</span>
+<span class="source-line-no">092</span><span id="line.92">     * create builder for ParcelChangeValue instance</span>
+<span class="source-line-no">093</span><span id="line.93">     * @param template instance with prefilled values for the builder</span>
+<span class="source-line-no">094</span><span id="line.94">     * @return builder</span>
+<span class="source-line-no">095</span><span id="line.95">     */</span>
+<span class="source-line-no">096</span><span id="line.96">    public static ParcelChangeValueBuilder builder(final ParcelChangeValue template) {</span>
+<span class="source-line-no">097</span><span id="line.97">        return ParcelChangeValueBuilder.of(template);</span>
+<span class="source-line-no">098</span><span id="line.98">    }</span>
+<span class="source-line-no">099</span><span id="line.99"></span>
+<span class="source-line-no">100</span><span id="line.100">    /**</span>
+<span class="source-line-no">101</span><span id="line.101">     * accessor map function</span>
+<span class="source-line-no">102</span><span id="line.102">     * @param &lt;T&gt; mapped type</span>
+<span class="source-line-no">103</span><span id="line.103">     * @param helper function to map the object</span>
+<span class="source-line-no">104</span><span id="line.104">     * @return mapped value</span>
+<span class="source-line-no">105</span><span id="line.105">     */</span>
+<span class="source-line-no">106</span><span id="line.106">    default &lt;T&gt; T withParcelChangeValue(Function&lt;ParcelChangeValue, T&gt; helper) {</span>
+<span class="source-line-no">107</span><span id="line.107">        return helper.apply(this);</span>
+<span class="source-line-no">108</span><span id="line.108">    }</span>
+<span class="source-line-no">109</span><span id="line.109"></span>
+<span class="source-line-no">110</span><span id="line.110">    /**</span>
+<span class="source-line-no">111</span><span id="line.111">     * gives a TypeReference for usage with Jackson DataBind</span>
+<span class="source-line-no">112</span><span id="line.112">     * @return TypeReference</span>
+<span class="source-line-no">113</span><span id="line.113">     */</span>
+<span class="source-line-no">114</span><span id="line.114">    public static com.fasterxml.jackson.core.type.TypeReference&lt;ParcelChangeValue&gt; typeReference() {</span>
+<span class="source-line-no">115</span><span id="line.115">        return new com.fasterxml.jackson.core.type.TypeReference&lt;ParcelChangeValue&gt;() {</span>
+<span class="source-line-no">116</span><span id="line.116">            @Override</span>
+<span class="source-line-no">117</span><span id="line.117">            public String toString() {</span>
+<span class="source-line-no">118</span><span id="line.118">                return "TypeReference&lt;ParcelChangeValue&gt;";</span>
+<span class="source-line-no">119</span><span id="line.119">            }</span>
+<span class="source-line-no">120</span><span id="line.120">        };</span>
+<span class="source-line-no">121</span><span id="line.121">    }</span>
+<span class="source-line-no">122</span><span id="line.122">}</span>
 
 
 

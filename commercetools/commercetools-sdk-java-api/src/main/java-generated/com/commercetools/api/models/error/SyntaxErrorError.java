@@ -73,7 +73,7 @@ public interface SyntaxErrorError extends ErrorObject {
     public static SyntaxErrorError of(final SyntaxErrorError template) {
         SyntaxErrorErrorImpl instance = new SyntaxErrorErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         return instance;
     }
 

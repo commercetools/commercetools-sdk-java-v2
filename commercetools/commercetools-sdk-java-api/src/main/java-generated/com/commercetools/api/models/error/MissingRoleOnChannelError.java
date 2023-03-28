@@ -122,7 +122,7 @@ public interface MissingRoleOnChannelError extends ErrorObject {
     public static MissingRoleOnChannelError of(final MissingRoleOnChannelError template) {
         MissingRoleOnChannelErrorImpl instance = new MissingRoleOnChannelErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         instance.setChannel(template.getChannel());
         instance.setMissingRole(template.getMissingRole());
         return instance;

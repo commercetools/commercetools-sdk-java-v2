@@ -74,7 +74,7 @@ public interface LanguageUsedInStoresError extends ErrorObject {
     public static LanguageUsedInStoresError of(final LanguageUsedInStoresError template) {
         LanguageUsedInStoresErrorImpl instance = new LanguageUsedInStoresErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         return instance;
     }
 

@@ -74,7 +74,7 @@ public interface QueryTimedOutError extends ErrorObject {
     public static QueryTimedOutError of(final QueryTimedOutError template) {
         QueryTimedOutErrorImpl instance = new QueryTimedOutErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         return instance;
     }
 

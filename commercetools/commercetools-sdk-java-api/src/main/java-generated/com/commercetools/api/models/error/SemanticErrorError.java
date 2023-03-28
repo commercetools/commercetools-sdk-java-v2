@@ -73,7 +73,7 @@ public interface SemanticErrorError extends ErrorObject {
     public static SemanticErrorError of(final SemanticErrorError template) {
         SemanticErrorErrorImpl instance = new SemanticErrorErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         return instance;
     }
 

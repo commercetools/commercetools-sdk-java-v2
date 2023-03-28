@@ -122,7 +122,7 @@ public interface AttributeDefinitionTypeConflictError extends ErrorObject {
     public static AttributeDefinitionTypeConflictError of(final AttributeDefinitionTypeConflictError template) {
         AttributeDefinitionTypeConflictErrorImpl instance = new AttributeDefinitionTypeConflictErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         instance.setConflictingProductTypeId(template.getConflictingProductTypeId());
         instance.setConflictingProductTypeName(template.getConflictingProductTypeName());
         instance.setConflictingAttributeName(template.getConflictingAttributeName());

@@ -92,7 +92,7 @@ public interface DuplicateAttributeValueError extends ErrorObject {
     public static DuplicateAttributeValueError of(final DuplicateAttributeValueError template) {
         DuplicateAttributeValueErrorImpl instance = new DuplicateAttributeValueErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         instance.setAttribute(template.getAttribute());
         return instance;
     }

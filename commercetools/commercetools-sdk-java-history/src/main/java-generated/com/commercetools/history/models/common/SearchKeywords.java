@@ -63,6 +63,7 @@ public interface SearchKeywords {
      */
     public static SearchKeywords of(final SearchKeywords template) {
         SearchKeywordsImpl instance = new SearchKeywordsImpl();
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         return instance;
     }
 

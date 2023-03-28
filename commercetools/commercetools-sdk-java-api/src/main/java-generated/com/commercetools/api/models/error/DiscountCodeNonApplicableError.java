@@ -169,7 +169,7 @@ public interface DiscountCodeNonApplicableError extends ErrorObject {
     public static DiscountCodeNonApplicableError of(final DiscountCodeNonApplicableError template) {
         DiscountCodeNonApplicableErrorImpl instance = new DiscountCodeNonApplicableErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         instance.setDiscountCode(template.getDiscountCode());
         instance.setReason(template.getReason());
         instance.setDiscountCodeId(template.getDiscountCodeId());

@@ -74,7 +74,7 @@ public interface NoMatchingProductDiscountFoundError extends ErrorObject {
     public static NoMatchingProductDiscountFoundError of(final NoMatchingProductDiscountFoundError template) {
         NoMatchingProductDiscountFoundErrorImpl instance = new NoMatchingProductDiscountFoundErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         return instance;
     }
 

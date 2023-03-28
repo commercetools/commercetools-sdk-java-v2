@@ -73,7 +73,7 @@ public interface ExternalOAuthFailedError extends ErrorObject {
     public static ExternalOAuthFailedError of(final ExternalOAuthFailedError template) {
         ExternalOAuthFailedErrorImpl instance = new ExternalOAuthFailedErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         return instance;
     }
 

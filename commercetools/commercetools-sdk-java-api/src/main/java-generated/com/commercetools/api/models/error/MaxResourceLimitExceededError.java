@@ -91,7 +91,7 @@ public interface MaxResourceLimitExceededError extends ErrorObject {
     public static MaxResourceLimitExceededError of(final MaxResourceLimitExceededError template) {
         MaxResourceLimitExceededErrorImpl instance = new MaxResourceLimitExceededErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         instance.setExceededResource(template.getExceededResource());
         return instance;
     }

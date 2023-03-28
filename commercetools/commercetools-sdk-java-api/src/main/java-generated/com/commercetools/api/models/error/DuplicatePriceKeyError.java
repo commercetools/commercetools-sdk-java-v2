@@ -93,7 +93,7 @@ public interface DuplicatePriceKeyError extends ErrorObject {
     public static DuplicatePriceKeyError of(final DuplicatePriceKeyError template) {
         DuplicatePriceKeyErrorImpl instance = new DuplicatePriceKeyErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         instance.setConflictingPrice(template.getConflictingPrice());
         return instance;
     }

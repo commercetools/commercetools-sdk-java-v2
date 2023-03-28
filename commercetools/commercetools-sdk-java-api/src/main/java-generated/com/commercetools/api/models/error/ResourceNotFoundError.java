@@ -73,7 +73,7 @@ public interface ResourceNotFoundError extends ErrorObject {
     public static ResourceNotFoundError of(final ResourceNotFoundError template) {
         ResourceNotFoundErrorImpl instance = new ResourceNotFoundErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         return instance;
     }
 

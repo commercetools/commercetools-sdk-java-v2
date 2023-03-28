@@ -104,7 +104,7 @@ public interface DuplicateFieldError extends ErrorObject {
     public static DuplicateFieldError of(final DuplicateFieldError template) {
         DuplicateFieldErrorImpl instance = new DuplicateFieldErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         instance.setField(template.getField());
         instance.setDuplicateValue(template.getDuplicateValue());
         return instance;

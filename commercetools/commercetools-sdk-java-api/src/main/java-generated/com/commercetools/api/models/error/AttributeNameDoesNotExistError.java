@@ -90,7 +90,7 @@ public interface AttributeNameDoesNotExistError extends ErrorObject {
     public static AttributeNameDoesNotExistError of(final AttributeNameDoesNotExistError template) {
         AttributeNameDoesNotExistErrorImpl instance = new AttributeNameDoesNotExistErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         instance.setInvalidAttributeName(template.getInvalidAttributeName());
         return instance;
     }

@@ -63,6 +63,7 @@ public interface FacetResults {
      */
     public static FacetResults of(final FacetResults template) {
         FacetResultsImpl instance = new FacetResultsImpl();
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         return instance;
     }
 

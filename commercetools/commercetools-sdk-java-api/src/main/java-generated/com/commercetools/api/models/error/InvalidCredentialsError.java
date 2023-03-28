@@ -78,7 +78,7 @@ public interface InvalidCredentialsError extends ErrorObject {
     public static InvalidCredentialsError of(final InvalidCredentialsError template) {
         InvalidCredentialsErrorImpl instance = new InvalidCredentialsErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         return instance;
     }
 

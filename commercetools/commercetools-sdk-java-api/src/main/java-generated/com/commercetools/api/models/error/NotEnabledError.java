@@ -73,7 +73,7 @@ public interface NotEnabledError extends ErrorObject {
     public static NotEnabledError of(final NotEnabledError template) {
         NotEnabledErrorImpl instance = new NotEnabledErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         return instance;
     }
 

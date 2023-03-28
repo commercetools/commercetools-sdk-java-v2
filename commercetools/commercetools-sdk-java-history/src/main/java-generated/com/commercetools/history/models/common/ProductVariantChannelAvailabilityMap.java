@@ -63,6 +63,7 @@ public interface ProductVariantChannelAvailabilityMap {
      */
     public static ProductVariantChannelAvailabilityMap of(final ProductVariantChannelAvailabilityMap template) {
         ProductVariantChannelAvailabilityMapImpl instance = new ProductVariantChannelAvailabilityMapImpl();
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         return instance;
     }
 

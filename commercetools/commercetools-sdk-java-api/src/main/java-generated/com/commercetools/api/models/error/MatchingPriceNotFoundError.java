@@ -175,7 +175,7 @@ public interface MatchingPriceNotFoundError extends ErrorObject {
     public static MatchingPriceNotFoundError of(final MatchingPriceNotFoundError template) {
         MatchingPriceNotFoundErrorImpl instance = new MatchingPriceNotFoundErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         instance.setProductId(template.getProductId());
         instance.setVariantId(template.getVariantId());
         instance.setCurrency(template.getCurrency());

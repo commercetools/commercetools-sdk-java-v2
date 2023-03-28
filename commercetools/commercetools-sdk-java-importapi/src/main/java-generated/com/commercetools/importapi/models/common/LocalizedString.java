@@ -66,6 +66,7 @@ public interface LocalizedString {
      */
     public static LocalizedString of(final LocalizedString template) {
         LocalizedStringImpl instance = new LocalizedStringImpl();
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         return instance;
     }
 

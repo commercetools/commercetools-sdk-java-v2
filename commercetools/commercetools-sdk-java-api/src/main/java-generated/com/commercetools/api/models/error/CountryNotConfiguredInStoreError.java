@@ -124,7 +124,7 @@ public interface CountryNotConfiguredInStoreError extends ErrorObject {
     public static CountryNotConfiguredInStoreError of(final CountryNotConfiguredInStoreError template) {
         CountryNotConfiguredInStoreErrorImpl instance = new CountryNotConfiguredInStoreErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         instance.setStoreCountries(template.getStoreCountries());
         instance.setCountry(template.getCountry());
         return instance;

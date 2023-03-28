@@ -124,7 +124,7 @@ public interface MissingTaxRateForCountryError extends ErrorObject {
     public static MissingTaxRateForCountryError of(final MissingTaxRateForCountryError template) {
         MissingTaxRateForCountryErrorImpl instance = new MissingTaxRateForCountryErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         instance.setTaxCategoryId(template.getTaxCategoryId());
         instance.setCountry(template.getCountry());
         instance.setState(template.getState());

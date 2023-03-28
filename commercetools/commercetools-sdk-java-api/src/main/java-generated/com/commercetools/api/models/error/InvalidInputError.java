@@ -73,7 +73,7 @@ public interface InvalidInputError extends ErrorObject {
     public static InvalidInputError of(final InvalidInputError template) {
         InvalidInputErrorImpl instance = new InvalidInputErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         return instance;
     }
 

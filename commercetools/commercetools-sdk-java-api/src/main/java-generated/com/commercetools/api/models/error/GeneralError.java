@@ -74,7 +74,7 @@ public interface GeneralError extends ErrorObject {
     public static GeneralError of(final GeneralError template) {
         GeneralErrorImpl instance = new GeneralErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         return instance;
     }
 

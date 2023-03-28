@@ -90,7 +90,7 @@ public interface InvalidJsonInputError extends ErrorObject {
     public static InvalidJsonInputError of(final InvalidJsonInputError template) {
         InvalidJsonInputErrorImpl instance = new InvalidJsonInputErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         instance.setDetailedErrorMessage(template.getDetailedErrorMessage());
         return instance;
     }

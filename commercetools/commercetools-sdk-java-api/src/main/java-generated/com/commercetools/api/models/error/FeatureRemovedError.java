@@ -73,7 +73,7 @@ public interface FeatureRemovedError extends ErrorObject {
     public static FeatureRemovedError of(final FeatureRemovedError template) {
         FeatureRemovedErrorImpl instance = new FeatureRemovedErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         return instance;
     }
 

@@ -100,7 +100,7 @@ public interface DuplicateAttributeValuesError extends ErrorObject {
     public static DuplicateAttributeValuesError of(final DuplicateAttributeValuesError template) {
         DuplicateAttributeValuesErrorImpl instance = new DuplicateAttributeValuesErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         instance.setAttributes(template.getAttributes());
         return instance;
     }

@@ -97,7 +97,7 @@ public interface DuplicateEnumValuesError extends ErrorObject {
     public static DuplicateEnumValuesError of(final DuplicateEnumValuesError template) {
         DuplicateEnumValuesErrorImpl instance = new DuplicateEnumValuesErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         instance.setDuplicates(template.getDuplicates());
         return instance;
     }

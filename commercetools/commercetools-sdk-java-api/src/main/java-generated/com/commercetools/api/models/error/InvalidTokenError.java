@@ -48,7 +48,7 @@ public interface InvalidTokenError extends ErrorObject {
     public static InvalidTokenError of(final InvalidTokenError template) {
         InvalidTokenErrorImpl instance = new InvalidTokenErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         return instance;
     }
 

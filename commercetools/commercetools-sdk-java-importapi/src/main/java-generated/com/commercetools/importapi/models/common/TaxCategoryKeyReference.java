@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -41,11 +43,26 @@ public interface TaxCategoryKeyReference extends KeyReference {
     }
 
     /**
-     * factory method to copy an instance of TaxCategoryKeyReference
+     * factory method to create a shallow copy TaxCategoryKeyReference
      * @param template instance to be copied
      * @return copy instance
      */
     public static TaxCategoryKeyReference of(final TaxCategoryKeyReference template) {
+        TaxCategoryKeyReferenceImpl instance = new TaxCategoryKeyReferenceImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of TaxCategoryKeyReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static TaxCategoryKeyReference deepCopy(@Nullable final TaxCategoryKeyReference template) {
+        if (template == null) {
+            return null;
+        }
         TaxCategoryKeyReferenceImpl instance = new TaxCategoryKeyReferenceImpl();
         instance.setKey(template.getKey());
         return instance;

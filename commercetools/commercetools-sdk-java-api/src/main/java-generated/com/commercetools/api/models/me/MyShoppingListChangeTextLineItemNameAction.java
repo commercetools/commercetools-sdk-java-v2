@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -77,7 +78,7 @@ public interface MyShoppingListChangeTextLineItemNameAction extends MyShoppingLi
     }
 
     /**
-     * factory method to copy an instance of MyShoppingListChangeTextLineItemNameAction
+     * factory method to create a shallow copy MyShoppingListChangeTextLineItemNameAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -86,6 +87,25 @@ public interface MyShoppingListChangeTextLineItemNameAction extends MyShoppingLi
         MyShoppingListChangeTextLineItemNameActionImpl instance = new MyShoppingListChangeTextLineItemNameActionImpl();
         instance.setTextLineItemId(template.getTextLineItemId());
         instance.setName(template.getName());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MyShoppingListChangeTextLineItemNameAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MyShoppingListChangeTextLineItemNameAction deepCopy(
+            @Nullable final MyShoppingListChangeTextLineItemNameAction template) {
+        if (template == null) {
+            return null;
+        }
+        MyShoppingListChangeTextLineItemNameActionImpl instance = new MyShoppingListChangeTextLineItemNameActionImpl();
+        instance.setTextLineItemId(template.getTextLineItemId());
+        instance.setName(Optional.ofNullable(template.getName())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
         return instance;
     }
 

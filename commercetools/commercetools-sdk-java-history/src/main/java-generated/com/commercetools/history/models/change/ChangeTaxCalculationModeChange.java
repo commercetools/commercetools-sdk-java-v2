@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.common.TaxCalculationMode;
@@ -99,11 +100,28 @@ public interface ChangeTaxCalculationModeChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of ChangeTaxCalculationModeChange
+     * factory method to create a shallow copy ChangeTaxCalculationModeChange
      * @param template instance to be copied
      * @return copy instance
      */
     public static ChangeTaxCalculationModeChange of(final ChangeTaxCalculationModeChange template) {
+        ChangeTaxCalculationModeChangeImpl instance = new ChangeTaxCalculationModeChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChangeTaxCalculationModeChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChangeTaxCalculationModeChange deepCopy(@Nullable final ChangeTaxCalculationModeChange template) {
+        if (template == null) {
+            return null;
+        }
         ChangeTaxCalculationModeChangeImpl instance = new ChangeTaxCalculationModeChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());

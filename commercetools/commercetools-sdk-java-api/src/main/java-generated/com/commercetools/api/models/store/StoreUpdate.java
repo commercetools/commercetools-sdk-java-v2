@@ -4,7 +4,9 @@ package com.commercetools.api.models.store;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -80,7 +82,7 @@ public interface StoreUpdate
     }
 
     /**
-     * factory method to copy an instance of StoreUpdate
+     * factory method to create a shallow copy StoreUpdate
      * @param template instance to be copied
      * @return copy instance
      */
@@ -88,6 +90,26 @@ public interface StoreUpdate
         StoreUpdateImpl instance = new StoreUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(template.getActions());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StoreUpdate
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StoreUpdate deepCopy(@Nullable final StoreUpdate template) {
+        if (template == null) {
+            return null;
+        }
+        StoreUpdateImpl instance = new StoreUpdateImpl();
+        instance.setVersion(template.getVersion());
+        instance.setActions(Optional.ofNullable(template.getActions())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.store.StoreUpdateAction::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

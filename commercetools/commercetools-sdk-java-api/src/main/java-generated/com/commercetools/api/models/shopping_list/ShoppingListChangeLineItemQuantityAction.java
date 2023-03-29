@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -74,11 +75,28 @@ public interface ShoppingListChangeLineItemQuantityAction extends ShoppingListUp
     }
 
     /**
-     * factory method to copy an instance of ShoppingListChangeLineItemQuantityAction
+     * factory method to create a shallow copy ShoppingListChangeLineItemQuantityAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ShoppingListChangeLineItemQuantityAction of(final ShoppingListChangeLineItemQuantityAction template) {
+        ShoppingListChangeLineItemQuantityActionImpl instance = new ShoppingListChangeLineItemQuantityActionImpl();
+        instance.setLineItemId(template.getLineItemId());
+        instance.setQuantity(template.getQuantity());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ShoppingListChangeLineItemQuantityAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ShoppingListChangeLineItemQuantityAction deepCopy(
+            @Nullable final ShoppingListChangeLineItemQuantityAction template) {
+        if (template == null) {
+            return null;
+        }
         ShoppingListChangeLineItemQuantityActionImpl instance = new ShoppingListChangeLineItemQuantityActionImpl();
         instance.setLineItemId(template.getLineItemId());
         instance.setQuantity(template.getQuantity());

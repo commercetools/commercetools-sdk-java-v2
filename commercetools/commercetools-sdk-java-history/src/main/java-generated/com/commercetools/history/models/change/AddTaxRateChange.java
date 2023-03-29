@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -85,7 +86,7 @@ public interface AddTaxRateChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of AddTaxRateChange
+     * factory method to create a shallow copy AddTaxRateChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -93,6 +94,24 @@ public interface AddTaxRateChange extends Change {
         AddTaxRateChangeImpl instance = new AddTaxRateChangeImpl();
         instance.setChange(template.getChange());
         instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of AddTaxRateChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AddTaxRateChange deepCopy(@Nullable final AddTaxRateChange template) {
+        if (template == null) {
+            return null;
+        }
+        AddTaxRateChangeImpl instance = new AddTaxRateChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setNextValue(Optional.ofNullable(template.getNextValue())
+                .map(com.commercetools.history.models.common.TaxRate::deepCopy)
+                .orElse(null));
         return instance;
     }
 

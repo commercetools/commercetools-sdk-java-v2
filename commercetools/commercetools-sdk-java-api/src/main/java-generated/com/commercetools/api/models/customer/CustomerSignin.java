@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -158,7 +159,7 @@ public interface CustomerSignin {
     }
 
     /**
-     * factory method to copy an instance of CustomerSignin
+     * factory method to create a shallow copy CustomerSignin
      * @param template instance to be copied
      * @return copy instance
      */
@@ -168,6 +169,29 @@ public interface CustomerSignin {
         instance.setPassword(template.getPassword());
         instance.setAnonymousCartId(template.getAnonymousCartId());
         instance.setAnonymousCart(template.getAnonymousCart());
+        instance.setAnonymousCartSignInMode(template.getAnonymousCartSignInMode());
+        instance.setAnonymousId(template.getAnonymousId());
+        instance.setUpdateProductData(template.getUpdateProductData());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomerSignin
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomerSignin deepCopy(@Nullable final CustomerSignin template) {
+        if (template == null) {
+            return null;
+        }
+        CustomerSigninImpl instance = new CustomerSigninImpl();
+        instance.setEmail(template.getEmail());
+        instance.setPassword(template.getPassword());
+        instance.setAnonymousCartId(template.getAnonymousCartId());
+        instance.setAnonymousCart(Optional.ofNullable(template.getAnonymousCart())
+                .map(com.commercetools.api.models.cart.CartResourceIdentifier::deepCopy)
+                .orElse(null));
         instance.setAnonymousCartSignInMode(template.getAnonymousCartSignInMode());
         instance.setAnonymousId(template.getAnonymousId());
         instance.setUpdateProductData(template.getUpdateProductData());

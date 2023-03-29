@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -61,13 +62,31 @@ public interface ProductSelectionCreatedMessagePayload extends MessagePayload {
     }
 
     /**
-     * factory method to copy an instance of ProductSelectionCreatedMessagePayload
+     * factory method to create a shallow copy ProductSelectionCreatedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductSelectionCreatedMessagePayload of(final ProductSelectionCreatedMessagePayload template) {
         ProductSelectionCreatedMessagePayloadImpl instance = new ProductSelectionCreatedMessagePayloadImpl();
         instance.setProductSelection(template.getProductSelection());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductSelectionCreatedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductSelectionCreatedMessagePayload deepCopy(
+            @Nullable final ProductSelectionCreatedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        ProductSelectionCreatedMessagePayloadImpl instance = new ProductSelectionCreatedMessagePayloadImpl();
+        instance.setProductSelection(Optional.ofNullable(template.getProductSelection())
+                .map(com.commercetools.api.models.product_selection.ProductSelectionType::deepCopy)
+                .orElse(null));
         return instance;
     }
 

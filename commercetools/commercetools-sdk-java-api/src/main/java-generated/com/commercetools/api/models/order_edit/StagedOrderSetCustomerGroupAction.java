@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier;
@@ -59,13 +60,31 @@ public interface StagedOrderSetCustomerGroupAction extends StagedOrderUpdateActi
     }
 
     /**
-     * factory method to copy an instance of StagedOrderSetCustomerGroupAction
+     * factory method to create a shallow copy StagedOrderSetCustomerGroupAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static StagedOrderSetCustomerGroupAction of(final StagedOrderSetCustomerGroupAction template) {
         StagedOrderSetCustomerGroupActionImpl instance = new StagedOrderSetCustomerGroupActionImpl();
         instance.setCustomerGroup(template.getCustomerGroup());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedOrderSetCustomerGroupAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedOrderSetCustomerGroupAction deepCopy(
+            @Nullable final StagedOrderSetCustomerGroupAction template) {
+        if (template == null) {
+            return null;
+        }
+        StagedOrderSetCustomerGroupActionImpl instance = new StagedOrderSetCustomerGroupActionImpl();
+        instance.setCustomerGroup(Optional.ofNullable(template.getCustomerGroup())
+                .map(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier::deepCopy)
+                .orElse(null));
         return instance;
     }
 

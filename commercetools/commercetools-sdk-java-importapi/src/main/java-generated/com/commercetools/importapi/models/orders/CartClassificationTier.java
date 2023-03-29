@@ -4,7 +4,9 @@ package com.commercetools.importapi.models.orders;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -117,7 +119,7 @@ public interface CartClassificationTier extends ShippingRatePriceTier {
     }
 
     /**
-     * factory method to copy an instance of CartClassificationTier
+     * factory method to create a shallow copy CartClassificationTier
      * @param template instance to be copied
      * @return copy instance
      */
@@ -126,6 +128,30 @@ public interface CartClassificationTier extends ShippingRatePriceTier {
         instance.setValue(template.getValue());
         instance.setPrice(template.getPrice());
         instance.setTiers(template.getTiers());
+        instance.setIsMatching(template.getIsMatching());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartClassificationTier
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartClassificationTier deepCopy(@Nullable final CartClassificationTier template) {
+        if (template == null) {
+            return null;
+        }
+        CartClassificationTierImpl instance = new CartClassificationTierImpl();
+        instance.setValue(template.getValue());
+        instance.setPrice(Optional.ofNullable(template.getPrice())
+                .map(com.commercetools.importapi.models.common.Money::deepCopy)
+                .orElse(null));
+        instance.setTiers(Optional.ofNullable(template.getTiers())
+                .map(t -> t.stream()
+                        .map(com.commercetools.importapi.models.orders.ShippingRatePriceTier::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setIsMatching(template.getIsMatching());
         return instance;
     }

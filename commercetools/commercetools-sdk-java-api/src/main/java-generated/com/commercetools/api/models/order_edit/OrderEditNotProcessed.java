@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -40,11 +42,25 @@ public interface OrderEditNotProcessed extends OrderEditResult {
     }
 
     /**
-     * factory method to copy an instance of OrderEditNotProcessed
+     * factory method to create a shallow copy OrderEditNotProcessed
      * @param template instance to be copied
      * @return copy instance
      */
     public static OrderEditNotProcessed of(final OrderEditNotProcessed template) {
+        OrderEditNotProcessedImpl instance = new OrderEditNotProcessedImpl();
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderEditNotProcessed
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderEditNotProcessed deepCopy(@Nullable final OrderEditNotProcessed template) {
+        if (template == null) {
+            return null;
+        }
         OrderEditNotProcessedImpl instance = new OrderEditNotProcessedImpl();
         return instance;
     }

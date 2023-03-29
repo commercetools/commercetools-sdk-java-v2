@@ -5,7 +5,9 @@ import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -291,7 +293,7 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
     }
 
     /**
-     * factory method to copy an instance of State
+     * factory method to create a shallow copy State
      * @param template instance to be copied
      * @return copy instance
      */
@@ -311,6 +313,46 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
         instance.setBuiltIn(template.getBuiltIn());
         instance.setRoles(template.getRoles());
         instance.setTransitions(template.getTransitions());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of State
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static State deepCopy(@Nullable final State template) {
+        if (template == null) {
+            return null;
+        }
+        StateImpl instance = new StateImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(Optional.ofNullable(template.getLastModifiedBy())
+                .map(com.commercetools.api.models.common.LastModifiedBy::deepCopy)
+                .orElse(null));
+        instance.setCreatedBy(Optional.ofNullable(template.getCreatedBy())
+                .map(com.commercetools.api.models.common.CreatedBy::deepCopy)
+                .orElse(null));
+        instance.setKey(template.getKey());
+        instance.setType(template.getType());
+        instance.setName(Optional.ofNullable(template.getName())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setDescription(Optional.ofNullable(template.getDescription())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setInitial(template.getInitial());
+        instance.setBuiltIn(template.getBuiltIn());
+        instance.setRoles(Optional.ofNullable(template.getRoles()).map(ArrayList::new).orElse(null));
+        instance.setTransitions(Optional.ofNullable(template.getTransitions())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.state.StateReference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

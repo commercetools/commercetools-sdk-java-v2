@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -153,7 +154,7 @@ public interface SetCustomLineItemTaxRateChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetCustomLineItemTaxRateChange
+     * factory method to create a shallow copy SetCustomLineItemTaxRateChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -165,6 +166,32 @@ public interface SetCustomLineItemTaxRateChange extends Change {
         instance.setTaxMode(template.getTaxMode());
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetCustomLineItemTaxRateChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetCustomLineItemTaxRateChange deepCopy(@Nullable final SetCustomLineItemTaxRateChange template) {
+        if (template == null) {
+            return null;
+        }
+        SetCustomLineItemTaxRateChangeImpl instance = new SetCustomLineItemTaxRateChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setCustomLineItem(Optional.ofNullable(template.getCustomLineItem())
+                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setTaxMode(template.getTaxMode());
+        instance.setNextValue(Optional.ofNullable(template.getNextValue())
+                .map(com.commercetools.history.models.common.TaxRate::deepCopy)
+                .orElse(null));
+        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
+                .map(com.commercetools.history.models.common.TaxRate::deepCopy)
+                .orElse(null));
         return instance;
     }
 

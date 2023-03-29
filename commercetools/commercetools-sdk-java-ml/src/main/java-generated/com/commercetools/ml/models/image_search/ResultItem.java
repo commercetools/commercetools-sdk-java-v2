@@ -4,7 +4,9 @@ package com.commercetools.ml.models.image_search;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -80,7 +82,7 @@ public interface ResultItem {
     }
 
     /**
-     * factory method to copy an instance of ResultItem
+     * factory method to create a shallow copy ResultItem
      * @param template instance to be copied
      * @return copy instance
      */
@@ -88,6 +90,26 @@ public interface ResultItem {
         ResultItemImpl instance = new ResultItemImpl();
         instance.setImageUrl(template.getImageUrl());
         instance.setProductVariants(template.getProductVariants());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ResultItem
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ResultItem deepCopy(@Nullable final ResultItem template) {
+        if (template == null) {
+            return null;
+        }
+        ResultItemImpl instance = new ResultItemImpl();
+        instance.setImageUrl(template.getImageUrl());
+        instance.setProductVariants(Optional.ofNullable(template.getProductVariants())
+                .map(t -> t.stream()
+                        .map(com.commercetools.ml.models.common.ProductVariant::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

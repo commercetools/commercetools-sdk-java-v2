@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -74,7 +75,7 @@ public interface ShippingMethodTaxAmountChangeValue {
     }
 
     /**
-     * factory method to copy an instance of ShippingMethodTaxAmountChangeValue
+     * factory method to create a shallow copy ShippingMethodTaxAmountChangeValue
      * @param template instance to be copied
      * @return copy instance
      */
@@ -82,6 +83,27 @@ public interface ShippingMethodTaxAmountChangeValue {
         ShippingMethodTaxAmountChangeValueImpl instance = new ShippingMethodTaxAmountChangeValueImpl();
         instance.setTaxedPrice(template.getTaxedPrice());
         instance.setTaxRate(template.getTaxRate());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ShippingMethodTaxAmountChangeValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ShippingMethodTaxAmountChangeValue deepCopy(
+            @Nullable final ShippingMethodTaxAmountChangeValue template) {
+        if (template == null) {
+            return null;
+        }
+        ShippingMethodTaxAmountChangeValueImpl instance = new ShippingMethodTaxAmountChangeValueImpl();
+        instance.setTaxedPrice(Optional.ofNullable(template.getTaxedPrice())
+                .map(com.commercetools.history.models.common.TaxedPrice::deepCopy)
+                .orElse(null));
+        instance.setTaxRate(Optional.ofNullable(template.getTaxRate())
+                .map(com.commercetools.history.models.common.TaxRate::deepCopy)
+                .orElse(null));
         return instance;
     }
 

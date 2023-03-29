@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -136,7 +137,7 @@ public interface SetCustomLineItemTaxCategoryChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetCustomLineItemTaxCategoryChange
+     * factory method to create a shallow copy SetCustomLineItemTaxCategoryChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -147,6 +148,32 @@ public interface SetCustomLineItemTaxCategoryChange extends Change {
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetCustomLineItemTaxCategoryChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetCustomLineItemTaxCategoryChange deepCopy(
+            @Nullable final SetCustomLineItemTaxCategoryChange template) {
+        if (template == null) {
+            return null;
+        }
+        SetCustomLineItemTaxCategoryChangeImpl instance = new SetCustomLineItemTaxCategoryChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setCustomLineItem(Optional.ofNullable(template.getCustomLineItem())
+                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setNextValue(Optional.ofNullable(template.getNextValue())
+                .map(com.commercetools.history.models.common.Reference::deepCopy)
+                .orElse(null));
+        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
+                .map(com.commercetools.history.models.common.Reference::deepCopy)
+                .orElse(null));
         return instance;
     }
 

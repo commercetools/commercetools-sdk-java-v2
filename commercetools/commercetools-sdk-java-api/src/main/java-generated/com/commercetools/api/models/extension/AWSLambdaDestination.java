@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -90,11 +91,28 @@ public interface AWSLambdaDestination extends ExtensionDestination {
     }
 
     /**
-     * factory method to copy an instance of AWSLambdaDestination
+     * factory method to create a shallow copy AWSLambdaDestination
      * @param template instance to be copied
      * @return copy instance
      */
     public static AWSLambdaDestination of(final AWSLambdaDestination template) {
+        AWSLambdaDestinationImpl instance = new AWSLambdaDestinationImpl();
+        instance.setArn(template.getArn());
+        instance.setAccessKey(template.getAccessKey());
+        instance.setAccessSecret(template.getAccessSecret());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of AWSLambdaDestination
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AWSLambdaDestination deepCopy(@Nullable final AWSLambdaDestination template) {
+        if (template == null) {
+            return null;
+        }
         AWSLambdaDestinationImpl instance = new AWSLambdaDestinationImpl();
         instance.setArn(template.getArn());
         instance.setAccessKey(template.getAccessKey());

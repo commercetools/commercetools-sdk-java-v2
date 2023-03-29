@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -61,13 +62,31 @@ public interface ProjectChangeMessagesConfigurationAction extends ProjectUpdateA
     }
 
     /**
-     * factory method to copy an instance of ProjectChangeMessagesConfigurationAction
+     * factory method to create a shallow copy ProjectChangeMessagesConfigurationAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProjectChangeMessagesConfigurationAction of(final ProjectChangeMessagesConfigurationAction template) {
         ProjectChangeMessagesConfigurationActionImpl instance = new ProjectChangeMessagesConfigurationActionImpl();
         instance.setMessagesConfiguration(template.getMessagesConfiguration());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProjectChangeMessagesConfigurationAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProjectChangeMessagesConfigurationAction deepCopy(
+            @Nullable final ProjectChangeMessagesConfigurationAction template) {
+        if (template == null) {
+            return null;
+        }
+        ProjectChangeMessagesConfigurationActionImpl instance = new ProjectChangeMessagesConfigurationActionImpl();
+        instance.setMessagesConfiguration(Optional.ofNullable(template.getMessagesConfiguration())
+                .map(com.commercetools.api.models.message.MessagesConfigurationDraft::deepCopy)
+                .orElse(null));
         return instance;
     }
 

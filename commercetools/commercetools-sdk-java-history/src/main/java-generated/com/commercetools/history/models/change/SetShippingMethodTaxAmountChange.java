@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -119,7 +120,7 @@ public interface SetShippingMethodTaxAmountChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetShippingMethodTaxAmountChange
+     * factory method to create a shallow copy SetShippingMethodTaxAmountChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -129,6 +130,28 @@ public interface SetShippingMethodTaxAmountChange extends Change {
         instance.setTaxMode(template.getTaxMode());
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetShippingMethodTaxAmountChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetShippingMethodTaxAmountChange deepCopy(@Nullable final SetShippingMethodTaxAmountChange template) {
+        if (template == null) {
+            return null;
+        }
+        SetShippingMethodTaxAmountChangeImpl instance = new SetShippingMethodTaxAmountChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setTaxMode(template.getTaxMode());
+        instance.setNextValue(Optional.ofNullable(template.getNextValue())
+                .map(com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValue::deepCopy)
+                .orElse(null));
+        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
+                .map(com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValue::deepCopy)
+                .orElse(null));
         return instance;
     }
 

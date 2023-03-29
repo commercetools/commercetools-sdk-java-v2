@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -112,7 +113,7 @@ public interface CartChangeLineItemQuantityAction extends CartUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of CartChangeLineItemQuantityAction
+     * factory method to create a shallow copy CartChangeLineItemQuantityAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -122,6 +123,28 @@ public interface CartChangeLineItemQuantityAction extends CartUpdateAction {
         instance.setQuantity(template.getQuantity());
         instance.setExternalPrice(template.getExternalPrice());
         instance.setExternalTotalPrice(template.getExternalTotalPrice());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartChangeLineItemQuantityAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartChangeLineItemQuantityAction deepCopy(@Nullable final CartChangeLineItemQuantityAction template) {
+        if (template == null) {
+            return null;
+        }
+        CartChangeLineItemQuantityActionImpl instance = new CartChangeLineItemQuantityActionImpl();
+        instance.setLineItemId(template.getLineItemId());
+        instance.setQuantity(template.getQuantity());
+        instance.setExternalPrice(Optional.ofNullable(template.getExternalPrice())
+                .map(com.commercetools.api.models.common.Money::deepCopy)
+                .orElse(null));
+        instance.setExternalTotalPrice(Optional.ofNullable(template.getExternalTotalPrice())
+                .map(com.commercetools.api.models.cart.ExternalLineItemTotalPrice::deepCopy)
+                .orElse(null));
         return instance;
     }
 

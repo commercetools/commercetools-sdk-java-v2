@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.common.LocalizedString;
@@ -58,13 +59,30 @@ public interface DiscountCodeSetNameAction extends DiscountCodeUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of DiscountCodeSetNameAction
+     * factory method to create a shallow copy DiscountCodeSetNameAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static DiscountCodeSetNameAction of(final DiscountCodeSetNameAction template) {
         DiscountCodeSetNameActionImpl instance = new DiscountCodeSetNameActionImpl();
         instance.setName(template.getName());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of DiscountCodeSetNameAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static DiscountCodeSetNameAction deepCopy(@Nullable final DiscountCodeSetNameAction template) {
+        if (template == null) {
+            return null;
+        }
+        DiscountCodeSetNameActionImpl instance = new DiscountCodeSetNameActionImpl();
+        instance.setName(Optional.ofNullable(template.getName())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
         return instance;
     }
 

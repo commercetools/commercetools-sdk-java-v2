@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.ReferenceTypeId;
@@ -84,14 +85,31 @@ public interface MaxResourceLimitExceededError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of MaxResourceLimitExceededError
+     * factory method to create a shallow copy MaxResourceLimitExceededError
      * @param template instance to be copied
      * @return copy instance
      */
     public static MaxResourceLimitExceededError of(final MaxResourceLimitExceededError template) {
         MaxResourceLimitExceededErrorImpl instance = new MaxResourceLimitExceededErrorImpl();
         instance.setMessage(template.getMessage());
-        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        instance.setExceededResource(template.getExceededResource());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MaxResourceLimitExceededError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MaxResourceLimitExceededError deepCopy(@Nullable final MaxResourceLimitExceededError template) {
+        if (template == null) {
+            return null;
+        }
+        MaxResourceLimitExceededErrorImpl instance = new MaxResourceLimitExceededErrorImpl();
+        instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         instance.setExceededResource(template.getExceededResource());
         return instance;
     }

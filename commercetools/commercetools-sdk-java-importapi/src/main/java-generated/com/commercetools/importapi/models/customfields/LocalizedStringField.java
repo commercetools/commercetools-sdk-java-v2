@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -71,13 +72,30 @@ public interface LocalizedStringField extends CustomField {
     }
 
     /**
-     * factory method to copy an instance of LocalizedStringField
+     * factory method to create a shallow copy LocalizedStringField
      * @param template instance to be copied
      * @return copy instance
      */
     public static LocalizedStringField of(final LocalizedStringField template) {
         LocalizedStringFieldImpl instance = new LocalizedStringFieldImpl();
         instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of LocalizedStringField
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static LocalizedStringField deepCopy(@Nullable final LocalizedStringField template) {
+        if (template == null) {
+            return null;
+        }
+        LocalizedStringFieldImpl instance = new LocalizedStringFieldImpl();
+        instance.setValue(Optional.ofNullable(template.getValue())
+                .map(com.commercetools.importapi.models.common.LocalizedString::deepCopy)
+                .orElse(null));
         return instance;
     }
 

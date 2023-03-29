@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -147,7 +148,7 @@ public interface ReviewStateTransitionMessage extends Message {
     }
 
     /**
-     * factory method to copy an instance of ReviewStateTransitionMessage
+     * factory method to create a shallow copy ReviewStateTransitionMessage
      * @param template instance to be copied
      * @return copy instance
      */
@@ -168,6 +169,50 @@ public interface ReviewStateTransitionMessage extends Message {
         instance.setOldIncludedInStatistics(template.getOldIncludedInStatistics());
         instance.setNewIncludedInStatistics(template.getNewIncludedInStatistics());
         instance.setTarget(template.getTarget());
+        instance.setForce(template.getForce());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ReviewStateTransitionMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ReviewStateTransitionMessage deepCopy(@Nullable final ReviewStateTransitionMessage template) {
+        if (template == null) {
+            return null;
+        }
+        ReviewStateTransitionMessageImpl instance = new ReviewStateTransitionMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(Optional.ofNullable(template.getLastModifiedBy())
+                .map(com.commercetools.api.models.common.LastModifiedBy::deepCopy)
+                .orElse(null));
+        instance.setCreatedBy(Optional.ofNullable(template.getCreatedBy())
+                .map(com.commercetools.api.models.common.CreatedBy::deepCopy)
+                .orElse(null));
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(Optional.ofNullable(template.getResource())
+                .map(com.commercetools.api.models.common.Reference::deepCopy)
+                .orElse(null));
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(Optional.ofNullable(template.getResourceUserProvidedIdentifiers())
+                .map(com.commercetools.api.models.message.UserProvidedIdentifiers::deepCopy)
+                .orElse(null));
+        instance.setOldState(Optional.ofNullable(template.getOldState())
+                .map(com.commercetools.api.models.state.StateReference::deepCopy)
+                .orElse(null));
+        instance.setNewState(Optional.ofNullable(template.getNewState())
+                .map(com.commercetools.api.models.state.StateReference::deepCopy)
+                .orElse(null));
+        instance.setOldIncludedInStatistics(template.getOldIncludedInStatistics());
+        instance.setNewIncludedInStatistics(template.getNewIncludedInStatistics());
+        instance.setTarget(Optional.ofNullable(template.getTarget())
+                .map(com.commercetools.api.models.common.Reference::deepCopy)
+                .orElse(null));
         instance.setForce(template.getForce());
         return instance;
     }

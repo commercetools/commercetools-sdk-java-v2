@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -56,6 +57,33 @@ public interface Reference {
      */
 
     public void setId(final String id);
+
+    /**
+     * factory method to create a deep copy of Reference
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static Reference deepCopy(@Nullable final Reference template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.ml.models.common.CategoryReference) {
+            return com.commercetools.ml.models.common.CategoryReference
+                    .deepCopy((com.commercetools.ml.models.common.CategoryReference) template);
+        }
+        if (template instanceof com.commercetools.ml.models.common.ProductReference) {
+            return com.commercetools.ml.models.common.ProductReference
+                    .deepCopy((com.commercetools.ml.models.common.ProductReference) template);
+        }
+        if (template instanceof com.commercetools.ml.models.common.ProductTypeReference) {
+            return com.commercetools.ml.models.common.ProductTypeReference
+                    .deepCopy((com.commercetools.ml.models.common.ProductTypeReference) template);
+        }
+        ReferenceImpl instance = new ReferenceImpl();
+        instance.setId(template.getId());
+        return instance;
+    }
 
     /**
      * builder for category subtype

@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.commercetools.api.models.common.ResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -41,11 +43,27 @@ public interface QuoteResourceIdentifier extends ResourceIdentifier, com.commerc
     }
 
     /**
-     * factory method to copy an instance of QuoteResourceIdentifier
+     * factory method to create a shallow copy QuoteResourceIdentifier
      * @param template instance to be copied
      * @return copy instance
      */
     public static QuoteResourceIdentifier of(final QuoteResourceIdentifier template) {
+        QuoteResourceIdentifierImpl instance = new QuoteResourceIdentifierImpl();
+        instance.setId(template.getId());
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of QuoteResourceIdentifier
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static QuoteResourceIdentifier deepCopy(@Nullable final QuoteResourceIdentifier template) {
+        if (template == null) {
+            return null;
+        }
         QuoteResourceIdentifierImpl instance = new QuoteResourceIdentifierImpl();
         instance.setId(template.getId());
         instance.setKey(template.getKey());

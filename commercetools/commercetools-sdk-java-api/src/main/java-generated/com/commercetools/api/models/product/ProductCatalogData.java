@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -104,7 +105,7 @@ public interface ProductCatalogData {
     }
 
     /**
-     * factory method to copy an instance of ProductCatalogData
+     * factory method to create a shallow copy ProductCatalogData
      * @param template instance to be copied
      * @return copy instance
      */
@@ -113,6 +114,28 @@ public interface ProductCatalogData {
         instance.setPublished(template.getPublished());
         instance.setCurrent(template.getCurrent());
         instance.setStaged(template.getStaged());
+        instance.setHasStagedChanges(template.getHasStagedChanges());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductCatalogData
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductCatalogData deepCopy(@Nullable final ProductCatalogData template) {
+        if (template == null) {
+            return null;
+        }
+        ProductCatalogDataImpl instance = new ProductCatalogDataImpl();
+        instance.setPublished(template.getPublished());
+        instance.setCurrent(Optional.ofNullable(template.getCurrent())
+                .map(com.commercetools.api.models.product.ProductData::deepCopy)
+                .orElse(null));
+        instance.setStaged(Optional.ofNullable(template.getStaged())
+                .map(com.commercetools.api.models.product.ProductData::deepCopy)
+                .orElse(null));
         instance.setHasStagedChanges(template.getHasStagedChanges());
         return instance;
     }

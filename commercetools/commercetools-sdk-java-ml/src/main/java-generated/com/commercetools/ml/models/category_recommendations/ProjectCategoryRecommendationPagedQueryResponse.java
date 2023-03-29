@@ -4,7 +4,9 @@ package com.commercetools.ml.models.category_recommendations;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -128,7 +130,7 @@ public interface ProjectCategoryRecommendationPagedQueryResponse {
     }
 
     /**
-     * factory method to copy an instance of ProjectCategoryRecommendationPagedQueryResponse
+     * factory method to create a shallow copy ProjectCategoryRecommendationPagedQueryResponse
      * @param template instance to be copied
      * @return copy instance
      */
@@ -140,6 +142,33 @@ public interface ProjectCategoryRecommendationPagedQueryResponse {
         instance.setOffset(template.getOffset());
         instance.setResults(template.getResults());
         instance.setMeta(template.getMeta());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProjectCategoryRecommendationPagedQueryResponse
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProjectCategoryRecommendationPagedQueryResponse deepCopy(
+            @Nullable final ProjectCategoryRecommendationPagedQueryResponse template) {
+        if (template == null) {
+            return null;
+        }
+        ProjectCategoryRecommendationPagedQueryResponseImpl instance = new ProjectCategoryRecommendationPagedQueryResponseImpl();
+        instance.setCount(template.getCount());
+        instance.setTotal(template.getTotal());
+        instance.setOffset(template.getOffset());
+        instance.setResults(Optional.ofNullable(template.getResults())
+                .map(t -> t.stream()
+                        .map(
+                            com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendation::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setMeta(Optional.ofNullable(template.getMeta())
+                .map(com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMeta::deepCopy)
+                .orElse(null));
         return instance;
     }
 

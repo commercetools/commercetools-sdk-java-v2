@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -103,7 +104,7 @@ public interface Reservation {
     }
 
     /**
-     * factory method to copy an instance of Reservation
+     * factory method to create a shallow copy Reservation
      * @param template instance to be copied
      * @return copy instance
      */
@@ -111,6 +112,26 @@ public interface Reservation {
         ReservationImpl instance = new ReservationImpl();
         instance.setQuantity(template.getQuantity());
         instance.setOwner(template.getOwner());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setCheckoutStartedAt(template.getCheckoutStartedAt());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of Reservation
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static Reservation deepCopy(@Nullable final Reservation template) {
+        if (template == null) {
+            return null;
+        }
+        ReservationImpl instance = new ReservationImpl();
+        instance.setQuantity(template.getQuantity());
+        instance.setOwner(Optional.ofNullable(template.getOwner())
+                .map(com.commercetools.history.models.common.Reference::deepCopy)
+                .orElse(null));
         instance.setCreatedAt(template.getCreatedAt());
         instance.setCheckoutStartedAt(template.getCheckoutStartedAt());
         return instance;

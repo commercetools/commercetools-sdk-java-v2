@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -148,11 +149,32 @@ public interface ProductSetAssetCustomFieldAction extends ProductUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ProductSetAssetCustomFieldAction
+     * factory method to create a shallow copy ProductSetAssetCustomFieldAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductSetAssetCustomFieldAction of(final ProductSetAssetCustomFieldAction template) {
+        ProductSetAssetCustomFieldActionImpl instance = new ProductSetAssetCustomFieldActionImpl();
+        instance.setVariantId(template.getVariantId());
+        instance.setSku(template.getSku());
+        instance.setStaged(template.getStaged());
+        instance.setAssetId(template.getAssetId());
+        instance.setAssetKey(template.getAssetKey());
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductSetAssetCustomFieldAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductSetAssetCustomFieldAction deepCopy(@Nullable final ProductSetAssetCustomFieldAction template) {
+        if (template == null) {
+            return null;
+        }
         ProductSetAssetCustomFieldActionImpl instance = new ProductSetAssetCustomFieldActionImpl();
         instance.setVariantId(template.getVariantId());
         instance.setSku(template.getSku());

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -43,6 +44,36 @@ public interface ExtensionUpdateAction
     @NotNull
     @JsonProperty("action")
     public String getAction();
+
+    /**
+     * factory method to create a deep copy of ExtensionUpdateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ExtensionUpdateAction deepCopy(@Nullable final ExtensionUpdateAction template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.extension.ExtensionChangeDestinationAction) {
+            return com.commercetools.api.models.extension.ExtensionChangeDestinationAction
+                    .deepCopy((com.commercetools.api.models.extension.ExtensionChangeDestinationAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.extension.ExtensionChangeTriggersAction) {
+            return com.commercetools.api.models.extension.ExtensionChangeTriggersAction
+                    .deepCopy((com.commercetools.api.models.extension.ExtensionChangeTriggersAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.extension.ExtensionSetKeyAction) {
+            return com.commercetools.api.models.extension.ExtensionSetKeyAction
+                    .deepCopy((com.commercetools.api.models.extension.ExtensionSetKeyAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.extension.ExtensionSetTimeoutInMsAction) {
+            return com.commercetools.api.models.extension.ExtensionSetTimeoutInMsAction
+                    .deepCopy((com.commercetools.api.models.extension.ExtensionSetTimeoutInMsAction) template);
+        }
+        ExtensionUpdateActionImpl instance = new ExtensionUpdateActionImpl();
+        return instance;
+    }
 
     /**
      * builder for changeDestination subtype

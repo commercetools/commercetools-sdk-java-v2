@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -144,7 +145,7 @@ public interface ProductSetSelector {
     }
 
     /**
-     * factory method to copy an instance of ProductSetSelector
+     * factory method to create a shallow copy ProductSetSelector
      * @param template instance to be copied
      * @return copy instance
      */
@@ -153,6 +154,26 @@ public interface ProductSetSelector {
         instance.setProjectKey(template.getProjectKey());
         instance.setProductIds(template.getProductIds());
         instance.setProductTypeIds(template.getProductTypeIds());
+        instance.setStaged(template.getStaged());
+        instance.setIncludeVariants(template.getIncludeVariants());
+        instance.setProductSetLimit(template.getProductSetLimit());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductSetSelector
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductSetSelector deepCopy(@Nullable final ProductSetSelector template) {
+        if (template == null) {
+            return null;
+        }
+        ProductSetSelectorImpl instance = new ProductSetSelectorImpl();
+        instance.setProjectKey(template.getProjectKey());
+        instance.setProductIds(Optional.ofNullable(template.getProductIds()).map(ArrayList::new).orElse(null));
+        instance.setProductTypeIds(Optional.ofNullable(template.getProductTypeIds()).map(ArrayList::new).orElse(null));
         instance.setStaged(template.getStaged());
         instance.setIncludeVariants(template.getIncludeVariants());
         instance.setProductSetLimit(template.getProductSetLimit());

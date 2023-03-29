@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -69,11 +70,27 @@ public interface ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of ErrorObject
+     * factory method to create a shallow copy ErrorObject
      * @param template instance to be copied
      * @return copy instance
      */
     public static ErrorObject of(final ErrorObject template) {
+        ErrorObjectImpl instance = new ErrorObjectImpl();
+        instance.setCode(template.getCode());
+        instance.setMessage(template.getMessage());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ErrorObject
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ErrorObject deepCopy(@Nullable final ErrorObject template) {
+        if (template == null) {
+            return null;
+        }
         ErrorObjectImpl instance = new ErrorObjectImpl();
         instance.setCode(template.getCode());
         instance.setMessage(template.getMessage());

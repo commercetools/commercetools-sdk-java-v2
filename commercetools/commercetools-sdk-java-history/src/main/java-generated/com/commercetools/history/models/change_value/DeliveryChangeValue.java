@@ -4,7 +4,9 @@ package com.commercetools.history.models.change_value;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -108,7 +110,7 @@ public interface DeliveryChangeValue {
     }
 
     /**
-     * factory method to copy an instance of DeliveryChangeValue
+     * factory method to create a shallow copy DeliveryChangeValue
      * @param template instance to be copied
      * @return copy instance
      */
@@ -117,6 +119,33 @@ public interface DeliveryChangeValue {
         instance.setItems(template.getItems());
         instance.setAddress(template.getAddress());
         instance.setParcels(template.getParcels());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of DeliveryChangeValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static DeliveryChangeValue deepCopy(@Nullable final DeliveryChangeValue template) {
+        if (template == null) {
+            return null;
+        }
+        DeliveryChangeValueImpl instance = new DeliveryChangeValueImpl();
+        instance.setItems(Optional.ofNullable(template.getItems())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.DeliveryItem::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setAddress(Optional.ofNullable(template.getAddress())
+                .map(com.commercetools.history.models.common.Address::deepCopy)
+                .orElse(null));
+        instance.setParcels(Optional.ofNullable(template.getParcels())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.Parcel::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

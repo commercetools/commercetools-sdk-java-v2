@@ -4,7 +4,9 @@ package com.commercetools.api.models.message;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.channel.ChannelReference;
@@ -89,7 +91,7 @@ public interface StoreDistributionChannelsChangedMessagePayload extends MessageP
     }
 
     /**
-     * factory method to copy an instance of StoreDistributionChannelsChangedMessagePayload
+     * factory method to create a shallow copy StoreDistributionChannelsChangedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -98,6 +100,31 @@ public interface StoreDistributionChannelsChangedMessagePayload extends MessageP
         StoreDistributionChannelsChangedMessagePayloadImpl instance = new StoreDistributionChannelsChangedMessagePayloadImpl();
         instance.setAddedDistributionChannels(template.getAddedDistributionChannels());
         instance.setRemovedDistributionChannels(template.getRemovedDistributionChannels());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StoreDistributionChannelsChangedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StoreDistributionChannelsChangedMessagePayload deepCopy(
+            @Nullable final StoreDistributionChannelsChangedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        StoreDistributionChannelsChangedMessagePayloadImpl instance = new StoreDistributionChannelsChangedMessagePayloadImpl();
+        instance.setAddedDistributionChannels(Optional.ofNullable(template.getAddedDistributionChannels())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.channel.ChannelReference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setRemovedDistributionChannels(Optional.ofNullable(template.getRemovedDistributionChannels())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.channel.ChannelReference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

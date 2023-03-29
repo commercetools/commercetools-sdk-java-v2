@@ -4,6 +4,9 @@ package com.commercetools.api.models.me;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
+
+import javax.annotation.Nullable;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -42,7 +45,7 @@ public interface MyCompanyDraft extends MyBusinessUnitDraft, io.vrap.rmf.base.cl
     }
 
     /**
-     * factory method to copy an instance of MyCompanyDraft
+     * factory method to create a shallow copy MyCompanyDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -56,6 +59,37 @@ public interface MyCompanyDraft extends MyBusinessUnitDraft, io.vrap.rmf.base.cl
         instance.setShippingAddresses(template.getShippingAddresses());
         instance.setDefaultShippingAddress(template.getDefaultShippingAddress());
         instance.setBillingAddresses(template.getBillingAddresses());
+        instance.setDefaultBillingAddress(template.getDefaultBillingAddress());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MyCompanyDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MyCompanyDraft deepCopy(@Nullable final MyCompanyDraft template) {
+        if (template == null) {
+            return null;
+        }
+        MyCompanyDraftImpl instance = new MyCompanyDraftImpl();
+        instance.setKey(template.getKey());
+        instance.setName(template.getName());
+        instance.setContactEmail(template.getContactEmail());
+        instance.setCustom(Optional.ofNullable(template.getCustom())
+                .map(com.commercetools.api.models.type.CustomFields::deepCopy)
+                .orElse(null));
+        instance.setAddresses(Optional.ofNullable(template.getAddresses())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.common.BaseAddress::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setShippingAddresses(
+            Optional.ofNullable(template.getShippingAddresses()).map(ArrayList::new).orElse(null));
+        instance.setDefaultShippingAddress(template.getDefaultShippingAddress());
+        instance.setBillingAddresses(
+            Optional.ofNullable(template.getBillingAddresses()).map(ArrayList::new).orElse(null));
         instance.setDefaultBillingAddress(template.getDefaultBillingAddress());
         return instance;
     }

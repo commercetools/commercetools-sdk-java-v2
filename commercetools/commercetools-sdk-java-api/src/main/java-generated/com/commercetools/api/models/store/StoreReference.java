@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -75,7 +76,7 @@ public interface StoreReference extends Reference, com.commercetools.api.models.
     }
 
     /**
-     * factory method to copy an instance of StoreReference
+     * factory method to create a shallow copy StoreReference
      * @param template instance to be copied
      * @return copy instance
      */
@@ -83,6 +84,24 @@ public interface StoreReference extends Reference, com.commercetools.api.models.
         StoreReferenceImpl instance = new StoreReferenceImpl();
         instance.setId(template.getId());
         instance.setObj(template.getObj());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StoreReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StoreReference deepCopy(@Nullable final StoreReference template) {
+        if (template == null) {
+            return null;
+        }
+        StoreReferenceImpl instance = new StoreReferenceImpl();
+        instance.setId(template.getId());
+        instance.setObj(Optional.ofNullable(template.getObj())
+                .map(com.commercetools.api.models.store.Store::deepCopy)
+                .orElse(null));
         return instance;
     }
 

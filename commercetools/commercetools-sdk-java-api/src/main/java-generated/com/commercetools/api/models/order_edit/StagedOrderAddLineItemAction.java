@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.cart.ExternalLineItemTotalPrice;
@@ -233,7 +234,7 @@ public interface StagedOrderAddLineItemAction
     }
 
     /**
-     * factory method to copy an instance of StagedOrderAddLineItemAction
+     * factory method to create a shallow copy StagedOrderAddLineItemAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -251,6 +252,46 @@ public interface StagedOrderAddLineItemAction
         instance.setExternalPrice(template.getExternalPrice());
         instance.setExternalTotalPrice(template.getExternalTotalPrice());
         instance.setShippingDetails(template.getShippingDetails());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedOrderAddLineItemAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedOrderAddLineItemAction deepCopy(@Nullable final StagedOrderAddLineItemAction template) {
+        if (template == null) {
+            return null;
+        }
+        StagedOrderAddLineItemActionImpl instance = new StagedOrderAddLineItemActionImpl();
+        instance.setCustom(Optional.ofNullable(template.getCustom())
+                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
+                .orElse(null));
+        instance.setDistributionChannel(Optional.ofNullable(template.getDistributionChannel())
+                .map(com.commercetools.api.models.channel.ChannelResourceIdentifier::deepCopy)
+                .orElse(null));
+        instance.setExternalTaxRate(Optional.ofNullable(template.getExternalTaxRate())
+                .map(com.commercetools.api.models.cart.ExternalTaxRateDraft::deepCopy)
+                .orElse(null));
+        instance.setProductId(template.getProductId());
+        instance.setVariantId(template.getVariantId());
+        instance.setSku(template.getSku());
+        instance.setQuantity(template.getQuantity());
+        instance.setAddedAt(template.getAddedAt());
+        instance.setSupplyChannel(Optional.ofNullable(template.getSupplyChannel())
+                .map(com.commercetools.api.models.channel.ChannelResourceIdentifier::deepCopy)
+                .orElse(null));
+        instance.setExternalPrice(Optional.ofNullable(template.getExternalPrice())
+                .map(com.commercetools.api.models.common.Money::deepCopy)
+                .orElse(null));
+        instance.setExternalTotalPrice(Optional.ofNullable(template.getExternalTotalPrice())
+                .map(com.commercetools.api.models.cart.ExternalLineItemTotalPrice::deepCopy)
+                .orElse(null));
+        instance.setShippingDetails(Optional.ofNullable(template.getShippingDetails())
+                .map(com.commercetools.api.models.cart.ItemShippingDetailsDraft::deepCopy)
+                .orElse(null));
         return instance;
     }
 

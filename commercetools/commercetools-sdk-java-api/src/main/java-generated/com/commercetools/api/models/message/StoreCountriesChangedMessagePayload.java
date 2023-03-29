@@ -4,7 +4,9 @@ package com.commercetools.api.models.message;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.store_country.StoreCountry;
@@ -89,7 +91,7 @@ public interface StoreCountriesChangedMessagePayload extends MessagePayload {
     }
 
     /**
-     * factory method to copy an instance of StoreCountriesChangedMessagePayload
+     * factory method to create a shallow copy StoreCountriesChangedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -97,6 +99,31 @@ public interface StoreCountriesChangedMessagePayload extends MessagePayload {
         StoreCountriesChangedMessagePayloadImpl instance = new StoreCountriesChangedMessagePayloadImpl();
         instance.setAddedCountries(template.getAddedCountries());
         instance.setRemovedCountries(template.getRemovedCountries());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StoreCountriesChangedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StoreCountriesChangedMessagePayload deepCopy(
+            @Nullable final StoreCountriesChangedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        StoreCountriesChangedMessagePayloadImpl instance = new StoreCountriesChangedMessagePayloadImpl();
+        instance.setAddedCountries(Optional.ofNullable(template.getAddedCountries())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.store_country.StoreCountry::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setRemovedCountries(Optional.ofNullable(template.getRemovedCountries())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.store_country.StoreCountry::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

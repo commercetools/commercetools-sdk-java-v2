@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -102,7 +103,7 @@ public interface ChangeTargetChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of ChangeTargetChange
+     * factory method to create a shallow copy ChangeTargetChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -111,6 +112,27 @@ public interface ChangeTargetChange extends Change {
         instance.setChange(template.getChange());
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChangeTargetChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChangeTargetChange deepCopy(@Nullable final ChangeTargetChange template) {
+        if (template == null) {
+            return null;
+        }
+        ChangeTargetChangeImpl instance = new ChangeTargetChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setNextValue(Optional.ofNullable(template.getNextValue())
+                .map(com.commercetools.history.models.change_value.ChangeTargetChangeValue::deepCopy)
+                .orElse(null));
+        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
+                .map(com.commercetools.history.models.change_value.ChangeTargetChangeValue::deepCopy)
+                .orElse(null));
         return instance;
     }
 

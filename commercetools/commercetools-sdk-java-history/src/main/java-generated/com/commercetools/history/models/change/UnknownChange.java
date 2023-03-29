@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -96,11 +97,28 @@ public interface UnknownChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of UnknownChange
+     * factory method to create a shallow copy UnknownChange
      * @param template instance to be copied
      * @return copy instance
      */
     public static UnknownChange of(final UnknownChange template) {
+        UnknownChangeImpl instance = new UnknownChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of UnknownChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static UnknownChange deepCopy(@Nullable final UnknownChange template) {
+        if (template == null) {
+            return null;
+        }
         UnknownChangeImpl instance = new UnknownChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());

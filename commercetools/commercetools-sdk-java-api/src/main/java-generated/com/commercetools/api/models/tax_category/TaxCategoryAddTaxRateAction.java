@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -60,13 +61,30 @@ public interface TaxCategoryAddTaxRateAction extends TaxCategoryUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of TaxCategoryAddTaxRateAction
+     * factory method to create a shallow copy TaxCategoryAddTaxRateAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static TaxCategoryAddTaxRateAction of(final TaxCategoryAddTaxRateAction template) {
         TaxCategoryAddTaxRateActionImpl instance = new TaxCategoryAddTaxRateActionImpl();
         instance.setTaxRate(template.getTaxRate());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of TaxCategoryAddTaxRateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static TaxCategoryAddTaxRateAction deepCopy(@Nullable final TaxCategoryAddTaxRateAction template) {
+        if (template == null) {
+            return null;
+        }
+        TaxCategoryAddTaxRateActionImpl instance = new TaxCategoryAddTaxRateActionImpl();
+        instance.setTaxRate(Optional.ofNullable(template.getTaxRate())
+                .map(com.commercetools.api.models.tax_category.TaxRateDraft::deepCopy)
+                .orElse(null));
         return instance;
     }
 

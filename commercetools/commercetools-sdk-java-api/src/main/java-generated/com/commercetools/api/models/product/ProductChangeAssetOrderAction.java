@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -111,7 +112,7 @@ public interface ProductChangeAssetOrderAction extends ProductUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ProductChangeAssetOrderAction
+     * factory method to create a shallow copy ProductChangeAssetOrderAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -121,6 +122,24 @@ public interface ProductChangeAssetOrderAction extends ProductUpdateAction {
         instance.setSku(template.getSku());
         instance.setStaged(template.getStaged());
         instance.setAssetOrder(template.getAssetOrder());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductChangeAssetOrderAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductChangeAssetOrderAction deepCopy(@Nullable final ProductChangeAssetOrderAction template) {
+        if (template == null) {
+            return null;
+        }
+        ProductChangeAssetOrderActionImpl instance = new ProductChangeAssetOrderActionImpl();
+        instance.setVariantId(template.getVariantId());
+        instance.setSku(template.getSku());
+        instance.setStaged(template.getStaged());
+        instance.setAssetOrder(Optional.ofNullable(template.getAssetOrder()).map(ArrayList::new).orElse(null));
         return instance;
     }
 

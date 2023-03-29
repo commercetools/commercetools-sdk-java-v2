@@ -4,7 +4,9 @@ package com.commercetools.history.models.common;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -150,7 +152,7 @@ public interface Delivery {
     }
 
     /**
-     * factory method to copy an instance of Delivery
+     * factory method to create a shallow copy Delivery
      * @param template instance to be copied
      * @return copy instance
      */
@@ -162,6 +164,38 @@ public interface Delivery {
         instance.setParcels(template.getParcels());
         instance.setAddress(template.getAddress());
         instance.setCustom(template.getCustom());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of Delivery
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static Delivery deepCopy(@Nullable final Delivery template) {
+        if (template == null) {
+            return null;
+        }
+        DeliveryImpl instance = new DeliveryImpl();
+        instance.setId(template.getId());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setItems(Optional.ofNullable(template.getItems())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.DeliveryItem::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setParcels(Optional.ofNullable(template.getParcels())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.Parcel::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setAddress(Optional.ofNullable(template.getAddress())
+                .map(com.commercetools.history.models.common.Address::deepCopy)
+                .orElse(null));
+        instance.setCustom(Optional.ofNullable(template.getCustom())
+                .map(com.commercetools.history.models.common.CustomFields::deepCopy)
+                .orElse(null));
         return instance;
     }
 

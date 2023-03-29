@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.fasterxml.jackson.annotation.*;
@@ -57,13 +58,31 @@ public interface ProjectSetShippingRateInputTypeAction extends ProjectUpdateActi
     }
 
     /**
-     * factory method to copy an instance of ProjectSetShippingRateInputTypeAction
+     * factory method to create a shallow copy ProjectSetShippingRateInputTypeAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProjectSetShippingRateInputTypeAction of(final ProjectSetShippingRateInputTypeAction template) {
         ProjectSetShippingRateInputTypeActionImpl instance = new ProjectSetShippingRateInputTypeActionImpl();
         instance.setShippingRateInputType(template.getShippingRateInputType());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProjectSetShippingRateInputTypeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProjectSetShippingRateInputTypeAction deepCopy(
+            @Nullable final ProjectSetShippingRateInputTypeAction template) {
+        if (template == null) {
+            return null;
+        }
+        ProjectSetShippingRateInputTypeActionImpl instance = new ProjectSetShippingRateInputTypeActionImpl();
+        instance.setShippingRateInputType(Optional.ofNullable(template.getShippingRateInputType())
+                .map(com.commercetools.api.models.project.ShippingRateInputType::deepCopy)
+                .orElse(null));
         return instance;
     }
 

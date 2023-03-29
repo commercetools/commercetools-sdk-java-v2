@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.common.Reference;
@@ -59,7 +60,7 @@ public interface StandalonePriceReference extends Reference {
     }
 
     /**
-     * factory method to copy an instance of StandalonePriceReference
+     * factory method to create a shallow copy StandalonePriceReference
      * @param template instance to be copied
      * @return copy instance
      */
@@ -67,6 +68,24 @@ public interface StandalonePriceReference extends Reference {
         StandalonePriceReferenceImpl instance = new StandalonePriceReferenceImpl();
         instance.setId(template.getId());
         instance.setObj(template.getObj());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StandalonePriceReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StandalonePriceReference deepCopy(@Nullable final StandalonePriceReference template) {
+        if (template == null) {
+            return null;
+        }
+        StandalonePriceReferenceImpl instance = new StandalonePriceReferenceImpl();
+        instance.setId(template.getId());
+        instance.setObj(Optional.ofNullable(template.getObj())
+                .map(com.commercetools.api.models.standalone_price.StandalonePrice::deepCopy)
+                .orElse(null));
         return instance;
     }
 

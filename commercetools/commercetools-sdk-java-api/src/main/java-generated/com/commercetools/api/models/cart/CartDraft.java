@@ -4,7 +4,9 @@ package com.commercetools.api.models.cart;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -552,7 +554,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     }
 
     /**
-     * factory method to copy an instance of CartDraft
+     * factory method to create a shallow copy CartDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -587,6 +589,87 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
         instance.setOrigin(template.getOrigin());
         instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
         instance.setCustom(template.getCustom());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartDraft deepCopy(@Nullable final CartDraft template) {
+        if (template == null) {
+            return null;
+        }
+        CartDraftImpl instance = new CartDraftImpl();
+        instance.setCurrency(template.getCurrency());
+        instance.setKey(template.getKey());
+        instance.setCustomerId(template.getCustomerId());
+        instance.setCustomerEmail(template.getCustomerEmail());
+        instance.setCustomerGroup(Optional.ofNullable(template.getCustomerGroup())
+                .map(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier::deepCopy)
+                .orElse(null));
+        instance.setAnonymousId(template.getAnonymousId());
+        instance.setBusinessUnit(Optional.ofNullable(template.getBusinessUnit())
+                .map(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier::deepCopy)
+                .orElse(null));
+        instance.setStore(Optional.ofNullable(template.getStore())
+                .map(com.commercetools.api.models.store.StoreResourceIdentifier::deepCopy)
+                .orElse(null));
+        instance.setLineItems(Optional.ofNullable(template.getLineItems())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.cart.LineItemDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setCustomLineItems(Optional.ofNullable(template.getCustomLineItems())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.cart.CustomLineItemDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setTaxMode(template.getTaxMode());
+        instance.setExternalTaxRateForShippingMethod(Optional.ofNullable(template.getExternalTaxRateForShippingMethod())
+                .map(com.commercetools.api.models.cart.ExternalTaxRateDraft::deepCopy)
+                .orElse(null));
+        instance.setTaxRoundingMode(template.getTaxRoundingMode());
+        instance.setTaxCalculationMode(template.getTaxCalculationMode());
+        instance.setInventoryMode(template.getInventoryMode());
+        instance.setBillingAddress(Optional.ofNullable(template.getBillingAddress())
+                .map(com.commercetools.api.models.common.BaseAddress::deepCopy)
+                .orElse(null));
+        instance.setShippingAddress(Optional.ofNullable(template.getShippingAddress())
+                .map(com.commercetools.api.models.common.BaseAddress::deepCopy)
+                .orElse(null));
+        instance.setShippingMethod(Optional.ofNullable(template.getShippingMethod())
+                .map(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier::deepCopy)
+                .orElse(null));
+        instance.setShippingRateInput(Optional.ofNullable(template.getShippingRateInput())
+                .map(com.commercetools.api.models.cart.ShippingRateInputDraft::deepCopy)
+                .orElse(null));
+        instance.setShippingMode(template.getShippingMode());
+        instance.setCustomShipping(Optional.ofNullable(template.getCustomShipping())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.cart.CustomShippingDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setShipping(Optional.ofNullable(template.getShipping())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.cart.ShippingDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setItemShippingAddresses(Optional.ofNullable(template.getItemShippingAddresses())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.common.BaseAddress::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setDiscountCodes(Optional.ofNullable(template.getDiscountCodes()).map(ArrayList::new).orElse(null));
+        instance.setCountry(template.getCountry());
+        instance.setLocale(template.getLocale());
+        instance.setOrigin(template.getOrigin());
+        instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
+        instance.setCustom(Optional.ofNullable(template.getCustom())
+                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
+                .orElse(null));
         return instance;
     }
 

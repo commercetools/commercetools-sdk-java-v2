@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.common.LastModifiedBy;
@@ -84,7 +85,7 @@ public interface SearchIndexingConfigurationValues {
     }
 
     /**
-     * factory method to copy an instance of SearchIndexingConfigurationValues
+     * factory method to create a shallow copy SearchIndexingConfigurationValues
      * @param template instance to be copied
      * @return copy instance
      */
@@ -93,6 +94,26 @@ public interface SearchIndexingConfigurationValues {
         instance.setStatus(template.getStatus());
         instance.setLastModifiedAt(template.getLastModifiedAt());
         instance.setLastModifiedBy(template.getLastModifiedBy());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SearchIndexingConfigurationValues
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SearchIndexingConfigurationValues deepCopy(
+            @Nullable final SearchIndexingConfigurationValues template) {
+        if (template == null) {
+            return null;
+        }
+        SearchIndexingConfigurationValuesImpl instance = new SearchIndexingConfigurationValuesImpl();
+        instance.setStatus(template.getStatus());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(Optional.ofNullable(template.getLastModifiedBy())
+                .map(com.commercetools.api.models.common.LastModifiedBy::deepCopy)
+                .orElse(null));
         return instance;
     }
 

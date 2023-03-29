@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -76,7 +77,7 @@ public interface CategorySlugChangedMessagePayload extends MessagePayload {
     }
 
     /**
-     * factory method to copy an instance of CategorySlugChangedMessagePayload
+     * factory method to create a shallow copy CategorySlugChangedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -84,6 +85,27 @@ public interface CategorySlugChangedMessagePayload extends MessagePayload {
         CategorySlugChangedMessagePayloadImpl instance = new CategorySlugChangedMessagePayloadImpl();
         instance.setSlug(template.getSlug());
         instance.setOldSlug(template.getOldSlug());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CategorySlugChangedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CategorySlugChangedMessagePayload deepCopy(
+            @Nullable final CategorySlugChangedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        CategorySlugChangedMessagePayloadImpl instance = new CategorySlugChangedMessagePayloadImpl();
+        instance.setSlug(Optional.ofNullable(template.getSlug())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setOldSlug(Optional.ofNullable(template.getOldSlug())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
         return instance;
     }
 

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -81,7 +82,7 @@ public interface MyCartSetLineItemDistributionChannelAction extends MyCartUpdate
     }
 
     /**
-     * factory method to copy an instance of MyCartSetLineItemDistributionChannelAction
+     * factory method to create a shallow copy MyCartSetLineItemDistributionChannelAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -90,6 +91,25 @@ public interface MyCartSetLineItemDistributionChannelAction extends MyCartUpdate
         MyCartSetLineItemDistributionChannelActionImpl instance = new MyCartSetLineItemDistributionChannelActionImpl();
         instance.setLineItemId(template.getLineItemId());
         instance.setDistributionChannel(template.getDistributionChannel());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MyCartSetLineItemDistributionChannelAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MyCartSetLineItemDistributionChannelAction deepCopy(
+            @Nullable final MyCartSetLineItemDistributionChannelAction template) {
+        if (template == null) {
+            return null;
+        }
+        MyCartSetLineItemDistributionChannelActionImpl instance = new MyCartSetLineItemDistributionChannelActionImpl();
+        instance.setLineItemId(template.getLineItemId());
+        instance.setDistributionChannel(Optional.ofNullable(template.getDistributionChannel())
+                .map(com.commercetools.api.models.channel.ChannelResourceIdentifier::deepCopy)
+                .orElse(null));
         return instance;
     }
 

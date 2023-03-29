@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -93,7 +94,7 @@ public interface ProductPriceRemovedMessagePayload extends MessagePayload {
     }
 
     /**
-     * factory method to copy an instance of ProductPriceRemovedMessagePayload
+     * factory method to create a shallow copy ProductPriceRemovedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -101,6 +102,26 @@ public interface ProductPriceRemovedMessagePayload extends MessagePayload {
         ProductPriceRemovedMessagePayloadImpl instance = new ProductPriceRemovedMessagePayloadImpl();
         instance.setVariantId(template.getVariantId());
         instance.setPrice(template.getPrice());
+        instance.setStaged(template.getStaged());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductPriceRemovedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductPriceRemovedMessagePayload deepCopy(
+            @Nullable final ProductPriceRemovedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        ProductPriceRemovedMessagePayloadImpl instance = new ProductPriceRemovedMessagePayloadImpl();
+        instance.setVariantId(template.getVariantId());
+        instance.setPrice(Optional.ofNullable(template.getPrice())
+                .map(com.commercetools.api.models.common.Price::deepCopy)
+                .orElse(null));
         instance.setStaged(template.getStaged());
         return instance;
     }

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -82,11 +83,27 @@ public interface ReviewLabel extends Label {
     }
 
     /**
-     * factory method to copy an instance of ReviewLabel
+     * factory method to create a shallow copy ReviewLabel
      * @param template instance to be copied
      * @return copy instance
      */
     public static ReviewLabel of(final ReviewLabel template) {
+        ReviewLabelImpl instance = new ReviewLabelImpl();
+        instance.setKey(template.getKey());
+        instance.setTitle(template.getTitle());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ReviewLabel
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ReviewLabel deepCopy(@Nullable final ReviewLabel template) {
+        if (template == null) {
+            return null;
+        }
         ReviewLabelImpl instance = new ReviewLabelImpl();
         instance.setKey(template.getKey());
         instance.setTitle(template.getTitle());

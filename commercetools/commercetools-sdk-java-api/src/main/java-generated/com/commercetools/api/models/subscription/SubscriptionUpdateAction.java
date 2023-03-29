@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -43,6 +44,36 @@ public interface SubscriptionUpdateAction
     @NotNull
     @JsonProperty("action")
     public String getAction();
+
+    /**
+     * factory method to create a deep copy of SubscriptionUpdateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SubscriptionUpdateAction deepCopy(@Nullable final SubscriptionUpdateAction template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.subscription.SubscriptionChangeDestinationAction) {
+            return com.commercetools.api.models.subscription.SubscriptionChangeDestinationAction
+                    .deepCopy((com.commercetools.api.models.subscription.SubscriptionChangeDestinationAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.subscription.SubscriptionSetChangesAction) {
+            return com.commercetools.api.models.subscription.SubscriptionSetChangesAction
+                    .deepCopy((com.commercetools.api.models.subscription.SubscriptionSetChangesAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.subscription.SubscriptionSetKeyAction) {
+            return com.commercetools.api.models.subscription.SubscriptionSetKeyAction
+                    .deepCopy((com.commercetools.api.models.subscription.SubscriptionSetKeyAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.subscription.SubscriptionSetMessagesAction) {
+            return com.commercetools.api.models.subscription.SubscriptionSetMessagesAction
+                    .deepCopy((com.commercetools.api.models.subscription.SubscriptionSetMessagesAction) template);
+        }
+        SubscriptionUpdateActionImpl instance = new SubscriptionUpdateActionImpl();
+        return instance;
+    }
 
     /**
      * builder for changeDestination subtype

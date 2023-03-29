@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -163,7 +164,7 @@ public interface OrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<Order
     }
 
     /**
-     * factory method to copy an instance of OrderFromQuoteDraft
+     * factory method to create a shallow copy OrderFromQuoteDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -177,6 +178,32 @@ public interface OrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<Order
         instance.setShipmentState(template.getShipmentState());
         instance.setOrderState(template.getOrderState());
         instance.setState(template.getState());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderFromQuoteDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderFromQuoteDraft deepCopy(@Nullable final OrderFromQuoteDraft template) {
+        if (template == null) {
+            return null;
+        }
+        OrderFromQuoteDraftImpl instance = new OrderFromQuoteDraftImpl();
+        instance.setQuote(Optional.ofNullable(template.getQuote())
+                .map(com.commercetools.api.models.quote.QuoteResourceIdentifier::deepCopy)
+                .orElse(null));
+        instance.setVersion(template.getVersion());
+        instance.setQuoteStateToAccepted(template.getQuoteStateToAccepted());
+        instance.setOrderNumber(template.getOrderNumber());
+        instance.setPaymentState(template.getPaymentState());
+        instance.setShipmentState(template.getShipmentState());
+        instance.setOrderState(template.getOrderState());
+        instance.setState(Optional.ofNullable(template.getState())
+                .map(com.commercetools.api.models.state.StateResourceIdentifier::deepCopy)
+                .orElse(null));
         return instance;
     }
 

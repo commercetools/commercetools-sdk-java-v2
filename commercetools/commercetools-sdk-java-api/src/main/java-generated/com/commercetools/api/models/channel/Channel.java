@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -273,7 +274,7 @@ public interface Channel extends BaseResource, ChannelMixin, com.commercetools.a
     }
 
     /**
-     * factory method to copy an instance of Channel
+     * factory method to create a shallow copy Channel
      * @param template instance to be copied
      * @return copy instance
      */
@@ -293,6 +294,50 @@ public interface Channel extends BaseResource, ChannelMixin, com.commercetools.a
         instance.setReviewRatingStatistics(template.getReviewRatingStatistics());
         instance.setCustom(template.getCustom());
         instance.setGeoLocation(template.getGeoLocation());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of Channel
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static Channel deepCopy(@Nullable final Channel template) {
+        if (template == null) {
+            return null;
+        }
+        ChannelImpl instance = new ChannelImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(Optional.ofNullable(template.getLastModifiedBy())
+                .map(com.commercetools.api.models.common.LastModifiedBy::deepCopy)
+                .orElse(null));
+        instance.setCreatedBy(Optional.ofNullable(template.getCreatedBy())
+                .map(com.commercetools.api.models.common.CreatedBy::deepCopy)
+                .orElse(null));
+        instance.setKey(template.getKey());
+        instance.setRoles(Optional.ofNullable(template.getRoles()).map(ArrayList::new).orElse(null));
+        instance.setName(Optional.ofNullable(template.getName())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setDescription(Optional.ofNullable(template.getDescription())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setAddress(Optional.ofNullable(template.getAddress())
+                .map(com.commercetools.api.models.common.Address::deepCopy)
+                .orElse(null));
+        instance.setReviewRatingStatistics(Optional.ofNullable(template.getReviewRatingStatistics())
+                .map(com.commercetools.api.models.review.ReviewRatingStatistics::deepCopy)
+                .orElse(null));
+        instance.setCustom(Optional.ofNullable(template.getCustom())
+                .map(com.commercetools.api.models.type.CustomFields::deepCopy)
+                .orElse(null));
+        instance.setGeoLocation(Optional.ofNullable(template.getGeoLocation())
+                .map(com.commercetools.api.models.common.GeoJson::deepCopy)
+                .orElse(null));
         return instance;
     }
 

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -77,7 +78,7 @@ public interface PaymentStatusStateTransitionMessagePayload extends MessagePaylo
     }
 
     /**
-     * factory method to copy an instance of PaymentStatusStateTransitionMessagePayload
+     * factory method to create a shallow copy PaymentStatusStateTransitionMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -85,6 +86,25 @@ public interface PaymentStatusStateTransitionMessagePayload extends MessagePaylo
             final PaymentStatusStateTransitionMessagePayload template) {
         PaymentStatusStateTransitionMessagePayloadImpl instance = new PaymentStatusStateTransitionMessagePayloadImpl();
         instance.setState(template.getState());
+        instance.setForce(template.getForce());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of PaymentStatusStateTransitionMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static PaymentStatusStateTransitionMessagePayload deepCopy(
+            @Nullable final PaymentStatusStateTransitionMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        PaymentStatusStateTransitionMessagePayloadImpl instance = new PaymentStatusStateTransitionMessagePayloadImpl();
+        instance.setState(Optional.ofNullable(template.getState())
+                .map(com.commercetools.api.models.state.StateReference::deepCopy)
+                .orElse(null));
         instance.setForce(template.getForce());
         return instance;
     }

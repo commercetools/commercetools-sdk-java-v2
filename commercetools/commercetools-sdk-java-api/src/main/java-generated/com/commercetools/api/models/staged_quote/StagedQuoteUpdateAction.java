@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -45,6 +46,44 @@ public interface StagedQuoteUpdateAction
     @NotNull
     @JsonProperty("action")
     public String getAction();
+
+    /**
+     * factory method to create a deep copy of StagedQuoteUpdateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedQuoteUpdateAction deepCopy(@Nullable final StagedQuoteUpdateAction template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.staged_quote.StagedQuoteChangeStagedQuoteStateAction) {
+            return com.commercetools.api.models.staged_quote.StagedQuoteChangeStagedQuoteStateAction.deepCopy(
+                (com.commercetools.api.models.staged_quote.StagedQuoteChangeStagedQuoteStateAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.staged_quote.StagedQuoteSetCustomFieldAction) {
+            return com.commercetools.api.models.staged_quote.StagedQuoteSetCustomFieldAction
+                    .deepCopy((com.commercetools.api.models.staged_quote.StagedQuoteSetCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.staged_quote.StagedQuoteSetCustomTypeAction) {
+            return com.commercetools.api.models.staged_quote.StagedQuoteSetCustomTypeAction
+                    .deepCopy((com.commercetools.api.models.staged_quote.StagedQuoteSetCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.staged_quote.StagedQuoteSetSellerCommentAction) {
+            return com.commercetools.api.models.staged_quote.StagedQuoteSetSellerCommentAction
+                    .deepCopy((com.commercetools.api.models.staged_quote.StagedQuoteSetSellerCommentAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.staged_quote.StagedQuoteSetValidToAction) {
+            return com.commercetools.api.models.staged_quote.StagedQuoteSetValidToAction
+                    .deepCopy((com.commercetools.api.models.staged_quote.StagedQuoteSetValidToAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.staged_quote.StagedQuoteTransitionStateAction) {
+            return com.commercetools.api.models.staged_quote.StagedQuoteTransitionStateAction
+                    .deepCopy((com.commercetools.api.models.staged_quote.StagedQuoteTransitionStateAction) template);
+        }
+        StagedQuoteUpdateActionImpl instance = new StagedQuoteUpdateActionImpl();
+        return instance;
+    }
 
     /**
      * builder for changeStagedQuoteState subtype

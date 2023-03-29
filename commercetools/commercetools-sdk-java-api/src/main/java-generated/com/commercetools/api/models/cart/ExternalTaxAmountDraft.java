@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -78,7 +79,7 @@ public interface ExternalTaxAmountDraft extends io.vrap.rmf.base.client.Draft<Ex
     }
 
     /**
-     * factory method to copy an instance of ExternalTaxAmountDraft
+     * factory method to create a shallow copy ExternalTaxAmountDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -86,6 +87,26 @@ public interface ExternalTaxAmountDraft extends io.vrap.rmf.base.client.Draft<Ex
         ExternalTaxAmountDraftImpl instance = new ExternalTaxAmountDraftImpl();
         instance.setTotalGross(template.getTotalGross());
         instance.setTaxRate(template.getTaxRate());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ExternalTaxAmountDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ExternalTaxAmountDraft deepCopy(@Nullable final ExternalTaxAmountDraft template) {
+        if (template == null) {
+            return null;
+        }
+        ExternalTaxAmountDraftImpl instance = new ExternalTaxAmountDraftImpl();
+        instance.setTotalGross(Optional.ofNullable(template.getTotalGross())
+                .map(com.commercetools.api.models.common.Money::deepCopy)
+                .orElse(null));
+        instance.setTaxRate(Optional.ofNullable(template.getTaxRate())
+                .map(com.commercetools.api.models.cart.ExternalTaxRateDraft::deepCopy)
+                .orElse(null));
         return instance;
     }
 

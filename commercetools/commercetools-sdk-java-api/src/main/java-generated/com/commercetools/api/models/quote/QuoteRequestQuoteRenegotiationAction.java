@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -55,11 +57,27 @@ public interface QuoteRequestQuoteRenegotiationAction extends QuoteUpdateAction 
     }
 
     /**
-     * factory method to copy an instance of QuoteRequestQuoteRenegotiationAction
+     * factory method to create a shallow copy QuoteRequestQuoteRenegotiationAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static QuoteRequestQuoteRenegotiationAction of(final QuoteRequestQuoteRenegotiationAction template) {
+        QuoteRequestQuoteRenegotiationActionImpl instance = new QuoteRequestQuoteRenegotiationActionImpl();
+        instance.setBuyerComment(template.getBuyerComment());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of QuoteRequestQuoteRenegotiationAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static QuoteRequestQuoteRenegotiationAction deepCopy(
+            @Nullable final QuoteRequestQuoteRenegotiationAction template) {
+        if (template == null) {
+            return null;
+        }
         QuoteRequestQuoteRenegotiationActionImpl instance = new QuoteRequestQuoteRenegotiationActionImpl();
         instance.setBuyerComment(template.getBuyerComment());
         return instance;

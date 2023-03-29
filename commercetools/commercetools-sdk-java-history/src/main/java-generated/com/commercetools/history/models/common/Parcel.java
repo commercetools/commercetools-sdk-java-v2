@@ -4,7 +4,9 @@ package com.commercetools.history.models.common;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -129,7 +131,7 @@ public interface Parcel {
     }
 
     /**
-     * factory method to copy an instance of Parcel
+     * factory method to create a shallow copy Parcel
      * @param template instance to be copied
      * @return copy instance
      */
@@ -140,6 +142,33 @@ public interface Parcel {
         instance.setMeasurements(template.getMeasurements());
         instance.setTrackingData(template.getTrackingData());
         instance.setItems(template.getItems());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of Parcel
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static Parcel deepCopy(@Nullable final Parcel template) {
+        if (template == null) {
+            return null;
+        }
+        ParcelImpl instance = new ParcelImpl();
+        instance.setId(template.getId());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setMeasurements(Optional.ofNullable(template.getMeasurements())
+                .map(com.commercetools.history.models.common.ParcelMeasurements::deepCopy)
+                .orElse(null));
+        instance.setTrackingData(Optional.ofNullable(template.getTrackingData())
+                .map(com.commercetools.history.models.common.TrackingData::deepCopy)
+                .orElse(null));
+        instance.setItems(Optional.ofNullable(template.getItems())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.DeliveryItem::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

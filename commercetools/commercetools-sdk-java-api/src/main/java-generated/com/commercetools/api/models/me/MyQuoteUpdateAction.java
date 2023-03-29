@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -39,6 +40,24 @@ public interface MyQuoteUpdateAction extends com.commercetools.api.models.Resour
     @NotNull
     @JsonProperty("action")
     public String getAction();
+
+    /**
+     * factory method to create a deep copy of MyQuoteUpdateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MyQuoteUpdateAction deepCopy(@Nullable final MyQuoteUpdateAction template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.me.MyQuoteChangeMyQuoteStateAction) {
+            return com.commercetools.api.models.me.MyQuoteChangeMyQuoteStateAction
+                    .deepCopy((com.commercetools.api.models.me.MyQuoteChangeMyQuoteStateAction) template);
+        }
+        MyQuoteUpdateActionImpl instance = new MyQuoteUpdateActionImpl();
+        return instance;
+    }
 
     /**
      * builder for changeMyQuoteState subtype

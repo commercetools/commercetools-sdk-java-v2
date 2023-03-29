@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -114,11 +115,29 @@ public interface ChangeIsSearchableChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of ChangeIsSearchableChange
+     * factory method to create a shallow copy ChangeIsSearchableChange
      * @param template instance to be copied
      * @return copy instance
      */
     public static ChangeIsSearchableChange of(final ChangeIsSearchableChange template) {
+        ChangeIsSearchableChangeImpl instance = new ChangeIsSearchableChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setAttributeName(template.getAttributeName());
+        instance.setNextValue(template.getNextValue());
+        instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChangeIsSearchableChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChangeIsSearchableChange deepCopy(@Nullable final ChangeIsSearchableChange template) {
+        if (template == null) {
+            return null;
+        }
         ChangeIsSearchableChangeImpl instance = new ChangeIsSearchableChangeImpl();
         instance.setChange(template.getChange());
         instance.setAttributeName(template.getAttributeName());

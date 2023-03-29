@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -91,7 +92,7 @@ public interface CategoryChangeAssetNameAction extends CategoryUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of CategoryChangeAssetNameAction
+     * factory method to create a shallow copy CategoryChangeAssetNameAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -100,6 +101,25 @@ public interface CategoryChangeAssetNameAction extends CategoryUpdateAction {
         instance.setAssetId(template.getAssetId());
         instance.setAssetKey(template.getAssetKey());
         instance.setName(template.getName());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CategoryChangeAssetNameAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CategoryChangeAssetNameAction deepCopy(@Nullable final CategoryChangeAssetNameAction template) {
+        if (template == null) {
+            return null;
+        }
+        CategoryChangeAssetNameActionImpl instance = new CategoryChangeAssetNameActionImpl();
+        instance.setAssetId(template.getAssetId());
+        instance.setAssetKey(template.getAssetKey());
+        instance.setName(Optional.ofNullable(template.getName())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
         return instance;
     }
 

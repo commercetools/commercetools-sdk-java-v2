@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -74,11 +75,27 @@ public interface ProductTypeChangeInputHintAction extends ProductTypeUpdateActio
     }
 
     /**
-     * factory method to copy an instance of ProductTypeChangeInputHintAction
+     * factory method to create a shallow copy ProductTypeChangeInputHintAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductTypeChangeInputHintAction of(final ProductTypeChangeInputHintAction template) {
+        ProductTypeChangeInputHintActionImpl instance = new ProductTypeChangeInputHintActionImpl();
+        instance.setAttributeName(template.getAttributeName());
+        instance.setNewValue(template.getNewValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductTypeChangeInputHintAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductTypeChangeInputHintAction deepCopy(@Nullable final ProductTypeChangeInputHintAction template) {
+        if (template == null) {
+            return null;
+        }
         ProductTypeChangeInputHintActionImpl instance = new ProductTypeChangeInputHintActionImpl();
         instance.setAttributeName(template.getAttributeName());
         instance.setNewValue(template.getNewValue());

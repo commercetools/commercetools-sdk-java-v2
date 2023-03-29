@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -126,7 +127,7 @@ public interface OrderTransitionCustomLineItemStateAction extends OrderUpdateAct
     }
 
     /**
-     * factory method to copy an instance of OrderTransitionCustomLineItemStateAction
+     * factory method to create a shallow copy OrderTransitionCustomLineItemStateAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -136,6 +137,30 @@ public interface OrderTransitionCustomLineItemStateAction extends OrderUpdateAct
         instance.setQuantity(template.getQuantity());
         instance.setFromState(template.getFromState());
         instance.setToState(template.getToState());
+        instance.setActualTransitionDate(template.getActualTransitionDate());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderTransitionCustomLineItemStateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderTransitionCustomLineItemStateAction deepCopy(
+            @Nullable final OrderTransitionCustomLineItemStateAction template) {
+        if (template == null) {
+            return null;
+        }
+        OrderTransitionCustomLineItemStateActionImpl instance = new OrderTransitionCustomLineItemStateActionImpl();
+        instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setQuantity(template.getQuantity());
+        instance.setFromState(Optional.ofNullable(template.getFromState())
+                .map(com.commercetools.api.models.state.StateResourceIdentifier::deepCopy)
+                .orElse(null));
+        instance.setToState(Optional.ofNullable(template.getToState())
+                .map(com.commercetools.api.models.state.StateResourceIdentifier::deepCopy)
+                .orElse(null));
         instance.setActualTransitionDate(template.getActualTransitionDate());
         return instance;
     }

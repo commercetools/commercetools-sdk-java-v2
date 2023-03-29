@@ -5,7 +5,9 @@ import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -231,7 +233,7 @@ public interface ImportOperation {
     }
 
     /**
-     * factory method to copy an instance of ImportOperation
+     * factory method to create a shallow copy ImportOperation
      * @param template instance to be copied
      * @return copy instance
      */
@@ -245,6 +247,39 @@ public interface ImportOperation {
         instance.setResourceVersion(template.getResourceVersion());
         instance.setErrors(template.getErrors());
         instance.setUnresolvedReferences(template.getUnresolvedReferences());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setExpiresAt(template.getExpiresAt());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ImportOperation
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ImportOperation deepCopy(@Nullable final ImportOperation template) {
+        if (template == null) {
+            return null;
+        }
+        ImportOperationImpl instance = new ImportOperationImpl();
+        instance.setVersion(template.getVersion());
+        instance.setImportContainerKey(template.getImportContainerKey());
+        instance.setResourceKey(template.getResourceKey());
+        instance.setId(template.getId());
+        instance.setState(template.getState());
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setErrors(Optional.ofNullable(template.getErrors())
+                .map(t -> t.stream()
+                        .map(com.commercetools.importapi.models.errors.ErrorObject::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setUnresolvedReferences(Optional.ofNullable(template.getUnresolvedReferences())
+                .map(t -> t.stream()
+                        .map(com.commercetools.importapi.models.common.UnresolvedReferences::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
         instance.setExpiresAt(template.getExpiresAt());

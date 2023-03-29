@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -127,7 +128,7 @@ public interface CustomLineItemStateTransitionMessagePayload extends OrderMessag
     }
 
     /**
-     * factory method to copy an instance of CustomLineItemStateTransitionMessagePayload
+     * factory method to create a shallow copy CustomLineItemStateTransitionMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -139,6 +140,30 @@ public interface CustomLineItemStateTransitionMessagePayload extends OrderMessag
         instance.setQuantity(template.getQuantity());
         instance.setFromState(template.getFromState());
         instance.setToState(template.getToState());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomLineItemStateTransitionMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomLineItemStateTransitionMessagePayload deepCopy(
+            @Nullable final CustomLineItemStateTransitionMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        CustomLineItemStateTransitionMessagePayloadImpl instance = new CustomLineItemStateTransitionMessagePayloadImpl();
+        instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setTransitionDate(template.getTransitionDate());
+        instance.setQuantity(template.getQuantity());
+        instance.setFromState(Optional.ofNullable(template.getFromState())
+                .map(com.commercetools.api.models.state.StateReference::deepCopy)
+                .orElse(null));
+        instance.setToState(Optional.ofNullable(template.getToState())
+                .map(com.commercetools.api.models.state.StateReference::deepCopy)
+                .orElse(null));
         return instance;
     }
 

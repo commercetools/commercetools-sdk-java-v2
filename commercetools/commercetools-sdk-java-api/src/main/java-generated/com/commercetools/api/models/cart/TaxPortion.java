@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -87,7 +88,7 @@ public interface TaxPortion {
     }
 
     /**
-     * factory method to copy an instance of TaxPortion
+     * factory method to create a shallow copy TaxPortion
      * @param template instance to be copied
      * @return copy instance
      */
@@ -96,6 +97,25 @@ public interface TaxPortion {
         instance.setName(template.getName());
         instance.setRate(template.getRate());
         instance.setAmount(template.getAmount());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of TaxPortion
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static TaxPortion deepCopy(@Nullable final TaxPortion template) {
+        if (template == null) {
+            return null;
+        }
+        TaxPortionImpl instance = new TaxPortionImpl();
+        instance.setName(template.getName());
+        instance.setRate(template.getRate());
+        instance.setAmount(Optional.ofNullable(template.getAmount())
+                .map(com.commercetools.api.models.common.CentPrecisionMoney::deepCopy)
+                .orElse(null));
         return instance;
     }
 

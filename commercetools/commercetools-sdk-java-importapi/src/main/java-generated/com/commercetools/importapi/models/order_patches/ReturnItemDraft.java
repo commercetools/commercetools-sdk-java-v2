@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -114,11 +115,30 @@ public interface ReturnItemDraft extends io.vrap.rmf.base.client.Draft<ReturnIte
     }
 
     /**
-     * factory method to copy an instance of ReturnItemDraft
+     * factory method to create a shallow copy ReturnItemDraft
      * @param template instance to be copied
      * @return copy instance
      */
     public static ReturnItemDraft of(final ReturnItemDraft template) {
+        ReturnItemDraftImpl instance = new ReturnItemDraftImpl();
+        instance.setQuantity(template.getQuantity());
+        instance.setLineItemId(template.getLineItemId());
+        instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setComment(template.getComment());
+        instance.setShipmentState(template.getShipmentState());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ReturnItemDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ReturnItemDraft deepCopy(@Nullable final ReturnItemDraft template) {
+        if (template == null) {
+            return null;
+        }
         ReturnItemDraftImpl instance = new ReturnItemDraftImpl();
         instance.setQuantity(template.getQuantity());
         instance.setLineItemId(template.getLineItemId());

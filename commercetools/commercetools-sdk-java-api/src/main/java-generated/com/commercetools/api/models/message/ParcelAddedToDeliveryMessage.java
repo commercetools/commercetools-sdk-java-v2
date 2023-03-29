@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -101,7 +102,7 @@ public interface ParcelAddedToDeliveryMessage extends OrderMessage {
     }
 
     /**
-     * factory method to copy an instance of ParcelAddedToDeliveryMessage
+     * factory method to create a shallow copy ParcelAddedToDeliveryMessage
      * @param template instance to be copied
      * @return copy instance
      */
@@ -119,6 +120,45 @@ public interface ParcelAddedToDeliveryMessage extends OrderMessage {
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setDelivery(template.getDelivery());
         instance.setParcel(template.getParcel());
+        instance.setShippingKey(template.getShippingKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ParcelAddedToDeliveryMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ParcelAddedToDeliveryMessage deepCopy(@Nullable final ParcelAddedToDeliveryMessage template) {
+        if (template == null) {
+            return null;
+        }
+        ParcelAddedToDeliveryMessageImpl instance = new ParcelAddedToDeliveryMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(Optional.ofNullable(template.getLastModifiedBy())
+                .map(com.commercetools.api.models.common.LastModifiedBy::deepCopy)
+                .orElse(null));
+        instance.setCreatedBy(Optional.ofNullable(template.getCreatedBy())
+                .map(com.commercetools.api.models.common.CreatedBy::deepCopy)
+                .orElse(null));
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(Optional.ofNullable(template.getResource())
+                .map(com.commercetools.api.models.common.Reference::deepCopy)
+                .orElse(null));
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(Optional.ofNullable(template.getResourceUserProvidedIdentifiers())
+                .map(com.commercetools.api.models.message.UserProvidedIdentifiers::deepCopy)
+                .orElse(null));
+        instance.setDelivery(Optional.ofNullable(template.getDelivery())
+                .map(com.commercetools.api.models.order.Delivery::deepCopy)
+                .orElse(null));
+        instance.setParcel(Optional.ofNullable(template.getParcel())
+                .map(com.commercetools.api.models.order.Parcel::deepCopy)
+                .orElse(null));
         instance.setShippingKey(template.getShippingKey());
         return instance;
     }

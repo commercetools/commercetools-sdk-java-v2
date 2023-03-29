@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -66,11 +67,26 @@ public interface ChangeValueRelativeChangeValue extends ChangeValueChangeValue {
     }
 
     /**
-     * factory method to copy an instance of ChangeValueRelativeChangeValue
+     * factory method to create a shallow copy ChangeValueRelativeChangeValue
      * @param template instance to be copied
      * @return copy instance
      */
     public static ChangeValueRelativeChangeValue of(final ChangeValueRelativeChangeValue template) {
+        ChangeValueRelativeChangeValueImpl instance = new ChangeValueRelativeChangeValueImpl();
+        instance.setPermyriad(template.getPermyriad());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChangeValueRelativeChangeValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChangeValueRelativeChangeValue deepCopy(@Nullable final ChangeValueRelativeChangeValue template) {
+        if (template == null) {
+            return null;
+        }
         ChangeValueRelativeChangeValueImpl instance = new ChangeValueRelativeChangeValueImpl();
         instance.setPermyriad(template.getPermyriad());
         return instance;

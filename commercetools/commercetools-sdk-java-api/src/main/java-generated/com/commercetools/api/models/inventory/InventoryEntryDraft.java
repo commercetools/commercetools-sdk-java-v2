@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -149,7 +150,7 @@ public interface InventoryEntryDraft extends com.commercetools.api.models.Custom
     }
 
     /**
-     * factory method to copy an instance of InventoryEntryDraft
+     * factory method to create a shallow copy InventoryEntryDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -162,6 +163,31 @@ public interface InventoryEntryDraft extends com.commercetools.api.models.Custom
         instance.setRestockableInDays(template.getRestockableInDays());
         instance.setExpectedDelivery(template.getExpectedDelivery());
         instance.setCustom(template.getCustom());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of InventoryEntryDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static InventoryEntryDraft deepCopy(@Nullable final InventoryEntryDraft template) {
+        if (template == null) {
+            return null;
+        }
+        InventoryEntryDraftImpl instance = new InventoryEntryDraftImpl();
+        instance.setSku(template.getSku());
+        instance.setKey(template.getKey());
+        instance.setSupplyChannel(Optional.ofNullable(template.getSupplyChannel())
+                .map(com.commercetools.api.models.channel.ChannelResourceIdentifier::deepCopy)
+                .orElse(null));
+        instance.setQuantityOnStock(template.getQuantityOnStock());
+        instance.setRestockableInDays(template.getRestockableInDays());
+        instance.setExpectedDelivery(template.getExpectedDelivery());
+        instance.setCustom(Optional.ofNullable(template.getCustom())
+                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
+                .orElse(null));
         return instance;
     }
 

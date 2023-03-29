@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -57,13 +58,28 @@ public interface FacetResults {
     }
 
     /**
-     * factory method to copy an instance of FacetResults
+     * factory method to create a shallow copy FacetResults
      * @param template instance to be copied
      * @return copy instance
      */
     public static FacetResults of(final FacetResults template) {
         FacetResultsImpl instance = new FacetResultsImpl();
-        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of FacetResults
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static FacetResults deepCopy(@Nullable final FacetResults template) {
+        if (template == null) {
+            return null;
+        }
+        FacetResultsImpl instance = new FacetResultsImpl();
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
 

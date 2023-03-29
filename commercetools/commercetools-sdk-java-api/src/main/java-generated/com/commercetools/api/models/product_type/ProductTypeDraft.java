@@ -4,7 +4,9 @@ package com.commercetools.api.models.product_type;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -109,7 +111,7 @@ public interface ProductTypeDraft
     }
 
     /**
-     * factory method to copy an instance of ProductTypeDraft
+     * factory method to create a shallow copy ProductTypeDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -119,6 +121,28 @@ public interface ProductTypeDraft
         instance.setName(template.getName());
         instance.setDescription(template.getDescription());
         instance.setAttributes(template.getAttributes());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductTypeDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductTypeDraft deepCopy(@Nullable final ProductTypeDraft template) {
+        if (template == null) {
+            return null;
+        }
+        ProductTypeDraftImpl instance = new ProductTypeDraftImpl();
+        instance.setKey(template.getKey());
+        instance.setName(template.getName());
+        instance.setDescription(template.getDescription());
+        instance.setAttributes(Optional.ofNullable(template.getAttributes())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.product_type.AttributeDefinitionDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

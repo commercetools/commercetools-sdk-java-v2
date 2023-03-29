@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.ProcessingState;
@@ -76,11 +77,28 @@ public interface InvalidStateTransitionError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of InvalidStateTransitionError
+     * factory method to create a shallow copy InvalidStateTransitionError
      * @param template instance to be copied
      * @return copy instance
      */
     public static InvalidStateTransitionError of(final InvalidStateTransitionError template) {
+        InvalidStateTransitionErrorImpl instance = new InvalidStateTransitionErrorImpl();
+        instance.setMessage(template.getMessage());
+        instance.setCurrentState(template.getCurrentState());
+        instance.setNewState(template.getNewState());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of InvalidStateTransitionError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static InvalidStateTransitionError deepCopy(@Nullable final InvalidStateTransitionError template) {
+        if (template == null) {
+            return null;
+        }
         InvalidStateTransitionErrorImpl instance = new InvalidStateTransitionErrorImpl();
         instance.setMessage(template.getMessage());
         instance.setCurrentState(template.getCurrentState());

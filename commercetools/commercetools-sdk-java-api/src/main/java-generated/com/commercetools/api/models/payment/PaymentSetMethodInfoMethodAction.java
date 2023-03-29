@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -55,11 +57,26 @@ public interface PaymentSetMethodInfoMethodAction extends PaymentUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of PaymentSetMethodInfoMethodAction
+     * factory method to create a shallow copy PaymentSetMethodInfoMethodAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static PaymentSetMethodInfoMethodAction of(final PaymentSetMethodInfoMethodAction template) {
+        PaymentSetMethodInfoMethodActionImpl instance = new PaymentSetMethodInfoMethodActionImpl();
+        instance.setMethod(template.getMethod());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of PaymentSetMethodInfoMethodAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static PaymentSetMethodInfoMethodAction deepCopy(@Nullable final PaymentSetMethodInfoMethodAction template) {
+        if (template == null) {
+            return null;
+        }
         PaymentSetMethodInfoMethodActionImpl instance = new PaymentSetMethodInfoMethodActionImpl();
         instance.setMethod(template.getMethod());
         return instance;

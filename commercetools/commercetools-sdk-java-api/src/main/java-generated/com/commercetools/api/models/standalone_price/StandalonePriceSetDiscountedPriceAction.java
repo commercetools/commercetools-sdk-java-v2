@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.common.DiscountedPriceDraft;
@@ -58,13 +59,31 @@ public interface StandalonePriceSetDiscountedPriceAction extends StandalonePrice
     }
 
     /**
-     * factory method to copy an instance of StandalonePriceSetDiscountedPriceAction
+     * factory method to create a shallow copy StandalonePriceSetDiscountedPriceAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static StandalonePriceSetDiscountedPriceAction of(final StandalonePriceSetDiscountedPriceAction template) {
         StandalonePriceSetDiscountedPriceActionImpl instance = new StandalonePriceSetDiscountedPriceActionImpl();
         instance.setDiscounted(template.getDiscounted());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StandalonePriceSetDiscountedPriceAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StandalonePriceSetDiscountedPriceAction deepCopy(
+            @Nullable final StandalonePriceSetDiscountedPriceAction template) {
+        if (template == null) {
+            return null;
+        }
+        StandalonePriceSetDiscountedPriceActionImpl instance = new StandalonePriceSetDiscountedPriceActionImpl();
+        instance.setDiscounted(Optional.ofNullable(template.getDiscounted())
+                .map(com.commercetools.api.models.common.DiscountedPriceDraft::deepCopy)
+                .orElse(null));
         return instance;
     }
 

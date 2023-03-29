@@ -4,7 +4,9 @@ package com.commercetools.api.models.order_edit;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -95,7 +97,7 @@ public interface OrderEditUpdate extends
     }
 
     /**
-     * factory method to copy an instance of OrderEditUpdate
+     * factory method to create a shallow copy OrderEditUpdate
      * @param template instance to be copied
      * @return copy instance
      */
@@ -103,6 +105,27 @@ public interface OrderEditUpdate extends
         OrderEditUpdateImpl instance = new OrderEditUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(template.getActions());
+        instance.setDryRun(template.getDryRun());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderEditUpdate
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderEditUpdate deepCopy(@Nullable final OrderEditUpdate template) {
+        if (template == null) {
+            return null;
+        }
+        OrderEditUpdateImpl instance = new OrderEditUpdateImpl();
+        instance.setVersion(template.getVersion());
+        instance.setActions(Optional.ofNullable(template.getActions())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.order_edit.OrderEditUpdateAction::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setDryRun(template.getDryRun());
         return instance;
     }

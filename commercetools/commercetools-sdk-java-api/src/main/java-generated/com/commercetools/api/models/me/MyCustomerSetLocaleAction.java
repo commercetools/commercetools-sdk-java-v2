@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -55,11 +57,26 @@ public interface MyCustomerSetLocaleAction extends MyCustomerUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of MyCustomerSetLocaleAction
+     * factory method to create a shallow copy MyCustomerSetLocaleAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static MyCustomerSetLocaleAction of(final MyCustomerSetLocaleAction template) {
+        MyCustomerSetLocaleActionImpl instance = new MyCustomerSetLocaleActionImpl();
+        instance.setLocale(template.getLocale());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MyCustomerSetLocaleAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MyCustomerSetLocaleAction deepCopy(@Nullable final MyCustomerSetLocaleAction template) {
+        if (template == null) {
+            return null;
+        }
         MyCustomerSetLocaleActionImpl instance = new MyCustomerSetLocaleActionImpl();
         instance.setLocale(template.getLocale());
         return instance;

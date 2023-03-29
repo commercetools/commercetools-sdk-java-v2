@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -75,7 +76,7 @@ public interface ShoppingListReference extends Reference, com.commercetools.api.
     }
 
     /**
-     * factory method to copy an instance of ShoppingListReference
+     * factory method to create a shallow copy ShoppingListReference
      * @param template instance to be copied
      * @return copy instance
      */
@@ -83,6 +84,24 @@ public interface ShoppingListReference extends Reference, com.commercetools.api.
         ShoppingListReferenceImpl instance = new ShoppingListReferenceImpl();
         instance.setId(template.getId());
         instance.setObj(template.getObj());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ShoppingListReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ShoppingListReference deepCopy(@Nullable final ShoppingListReference template) {
+        if (template == null) {
+            return null;
+        }
+        ShoppingListReferenceImpl instance = new ShoppingListReferenceImpl();
+        instance.setId(template.getId());
+        instance.setObj(Optional.ofNullable(template.getObj())
+                .map(com.commercetools.api.models.shopping_list.ShoppingList::deepCopy)
+                .orElse(null));
         return instance;
     }
 

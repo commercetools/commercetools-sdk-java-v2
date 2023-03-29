@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -98,11 +99,28 @@ public interface SetOrderNumberChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetOrderNumberChange
+     * factory method to create a shallow copy SetOrderNumberChange
      * @param template instance to be copied
      * @return copy instance
      */
     public static SetOrderNumberChange of(final SetOrderNumberChange template) {
+        SetOrderNumberChangeImpl instance = new SetOrderNumberChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetOrderNumberChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetOrderNumberChange deepCopy(@Nullable final SetOrderNumberChange template) {
+        if (template == null) {
+            return null;
+        }
         SetOrderNumberChangeImpl instance = new SetOrderNumberChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());

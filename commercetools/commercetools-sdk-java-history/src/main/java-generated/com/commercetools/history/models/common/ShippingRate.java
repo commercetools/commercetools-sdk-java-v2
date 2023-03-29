@@ -4,7 +4,9 @@ package com.commercetools.history.models.common;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -113,7 +115,7 @@ public interface ShippingRate {
     }
 
     /**
-     * factory method to copy an instance of ShippingRate
+     * factory method to create a shallow copy ShippingRate
      * @param template instance to be copied
      * @return copy instance
      */
@@ -123,6 +125,32 @@ public interface ShippingRate {
         instance.setFreeAbove(template.getFreeAbove());
         instance.setIsMatching(template.getIsMatching());
         instance.setTiers(template.getTiers());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ShippingRate
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ShippingRate deepCopy(@Nullable final ShippingRate template) {
+        if (template == null) {
+            return null;
+        }
+        ShippingRateImpl instance = new ShippingRateImpl();
+        instance.setPrice(Optional.ofNullable(template.getPrice())
+                .map(com.commercetools.history.models.common.Money::deepCopy)
+                .orElse(null));
+        instance.setFreeAbove(Optional.ofNullable(template.getFreeAbove())
+                .map(com.commercetools.history.models.common.Money::deepCopy)
+                .orElse(null));
+        instance.setIsMatching(template.getIsMatching());
+        instance.setTiers(Optional.ofNullable(template.getTiers())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.ShippingRatePriceTier::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

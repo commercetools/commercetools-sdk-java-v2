@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -55,11 +57,26 @@ public interface ProductSelectionSetKeyAction extends ProductSelectionUpdateActi
     }
 
     /**
-     * factory method to copy an instance of ProductSelectionSetKeyAction
+     * factory method to create a shallow copy ProductSelectionSetKeyAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductSelectionSetKeyAction of(final ProductSelectionSetKeyAction template) {
+        ProductSelectionSetKeyActionImpl instance = new ProductSelectionSetKeyActionImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductSelectionSetKeyAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductSelectionSetKeyAction deepCopy(@Nullable final ProductSelectionSetKeyAction template) {
+        if (template == null) {
+            return null;
+        }
         ProductSelectionSetKeyActionImpl instance = new ProductSelectionSetKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;

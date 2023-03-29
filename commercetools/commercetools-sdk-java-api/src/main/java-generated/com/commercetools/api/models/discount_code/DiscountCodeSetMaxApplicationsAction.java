@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -55,11 +57,27 @@ public interface DiscountCodeSetMaxApplicationsAction extends DiscountCodeUpdate
     }
 
     /**
-     * factory method to copy an instance of DiscountCodeSetMaxApplicationsAction
+     * factory method to create a shallow copy DiscountCodeSetMaxApplicationsAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static DiscountCodeSetMaxApplicationsAction of(final DiscountCodeSetMaxApplicationsAction template) {
+        DiscountCodeSetMaxApplicationsActionImpl instance = new DiscountCodeSetMaxApplicationsActionImpl();
+        instance.setMaxApplications(template.getMaxApplications());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of DiscountCodeSetMaxApplicationsAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static DiscountCodeSetMaxApplicationsAction deepCopy(
+            @Nullable final DiscountCodeSetMaxApplicationsAction template) {
+        if (template == null) {
+            return null;
+        }
         DiscountCodeSetMaxApplicationsActionImpl instance = new DiscountCodeSetMaxApplicationsActionImpl();
         instance.setMaxApplications(template.getMaxApplications());
         return instance;

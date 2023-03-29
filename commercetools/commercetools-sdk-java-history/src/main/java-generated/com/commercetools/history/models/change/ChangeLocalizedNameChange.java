@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -102,7 +103,7 @@ public interface ChangeLocalizedNameChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of ChangeLocalizedNameChange
+     * factory method to create a shallow copy ChangeLocalizedNameChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -111,6 +112,27 @@ public interface ChangeLocalizedNameChange extends Change {
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChangeLocalizedNameChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChangeLocalizedNameChange deepCopy(@Nullable final ChangeLocalizedNameChange template) {
+        if (template == null) {
+            return null;
+        }
+        ChangeLocalizedNameChangeImpl instance = new ChangeLocalizedNameChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
+                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setNextValue(Optional.ofNullable(template.getNextValue())
+                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
+                .orElse(null));
         return instance;
     }
 

@@ -4,7 +4,9 @@ package com.commercetools.api.models.cart;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -84,7 +86,7 @@ public interface CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction exte
     }
 
     /**
-     * factory method to copy an instance of CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction
+     * factory method to create a shallow copy CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -93,6 +95,27 @@ public interface CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction exte
         CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl instance = new CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setTargetsDelta(template.getTargetsDelta());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction deepCopy(
+            @Nullable final CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction template) {
+        if (template == null) {
+            return null;
+        }
+        CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl instance = new CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl();
+        instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setTargetsDelta(Optional.ofNullable(template.getTargetsDelta())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.cart.ItemShippingTarget::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

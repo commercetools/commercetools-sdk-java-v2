@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.fasterxml.jackson.annotation.*;
@@ -57,13 +58,31 @@ public interface CartSetShippingMethodTaxAmountAction extends CartUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of CartSetShippingMethodTaxAmountAction
+     * factory method to create a shallow copy CartSetShippingMethodTaxAmountAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static CartSetShippingMethodTaxAmountAction of(final CartSetShippingMethodTaxAmountAction template) {
         CartSetShippingMethodTaxAmountActionImpl instance = new CartSetShippingMethodTaxAmountActionImpl();
         instance.setExternalTaxAmount(template.getExternalTaxAmount());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartSetShippingMethodTaxAmountAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartSetShippingMethodTaxAmountAction deepCopy(
+            @Nullable final CartSetShippingMethodTaxAmountAction template) {
+        if (template == null) {
+            return null;
+        }
+        CartSetShippingMethodTaxAmountActionImpl instance = new CartSetShippingMethodTaxAmountActionImpl();
+        instance.setExternalTaxAmount(Optional.ofNullable(template.getExternalTaxAmount())
+                .map(com.commercetools.api.models.cart.ExternalTaxAmountDraft::deepCopy)
+                .orElse(null));
         return instance;
     }
 

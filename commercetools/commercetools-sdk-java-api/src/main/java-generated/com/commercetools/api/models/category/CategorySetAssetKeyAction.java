@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -73,11 +74,27 @@ public interface CategorySetAssetKeyAction extends CategoryUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of CategorySetAssetKeyAction
+     * factory method to create a shallow copy CategorySetAssetKeyAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static CategorySetAssetKeyAction of(final CategorySetAssetKeyAction template) {
+        CategorySetAssetKeyActionImpl instance = new CategorySetAssetKeyActionImpl();
+        instance.setAssetId(template.getAssetId());
+        instance.setAssetKey(template.getAssetKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CategorySetAssetKeyAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CategorySetAssetKeyAction deepCopy(@Nullable final CategorySetAssetKeyAction template) {
+        if (template == null) {
+            return null;
+        }
         CategorySetAssetKeyActionImpl instance = new CategorySetAssetKeyActionImpl();
         instance.setAssetId(template.getAssetId());
         instance.setAssetKey(template.getAssetKey());

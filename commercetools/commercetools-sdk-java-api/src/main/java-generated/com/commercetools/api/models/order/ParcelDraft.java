@@ -4,7 +4,9 @@ package com.commercetools.api.models.order;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.type.CustomFieldsDraft;
@@ -107,7 +109,7 @@ public interface ParcelDraft extends com.commercetools.api.models.CustomizableDr
     }
 
     /**
-     * factory method to copy an instance of ParcelDraft
+     * factory method to create a shallow copy ParcelDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -117,6 +119,34 @@ public interface ParcelDraft extends com.commercetools.api.models.CustomizableDr
         instance.setTrackingData(template.getTrackingData());
         instance.setItems(template.getItems());
         instance.setCustom(template.getCustom());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ParcelDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ParcelDraft deepCopy(@Nullable final ParcelDraft template) {
+        if (template == null) {
+            return null;
+        }
+        ParcelDraftImpl instance = new ParcelDraftImpl();
+        instance.setMeasurements(Optional.ofNullable(template.getMeasurements())
+                .map(com.commercetools.api.models.order.ParcelMeasurements::deepCopy)
+                .orElse(null));
+        instance.setTrackingData(Optional.ofNullable(template.getTrackingData())
+                .map(com.commercetools.api.models.order.TrackingData::deepCopy)
+                .orElse(null));
+        instance.setItems(Optional.ofNullable(template.getItems())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.order.DeliveryItem::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setCustom(Optional.ofNullable(template.getCustom())
+                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
+                .orElse(null));
         return instance;
     }
 

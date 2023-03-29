@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -117,15 +118,33 @@ public interface CountryNotConfiguredInStoreError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of CountryNotConfiguredInStoreError
+     * factory method to create a shallow copy CountryNotConfiguredInStoreError
      * @param template instance to be copied
      * @return copy instance
      */
     public static CountryNotConfiguredInStoreError of(final CountryNotConfiguredInStoreError template) {
         CountryNotConfiguredInStoreErrorImpl instance = new CountryNotConfiguredInStoreErrorImpl();
         instance.setMessage(template.getMessage());
-        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         instance.setStoreCountries(template.getStoreCountries());
+        instance.setCountry(template.getCountry());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CountryNotConfiguredInStoreError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CountryNotConfiguredInStoreError deepCopy(@Nullable final CountryNotConfiguredInStoreError template) {
+        if (template == null) {
+            return null;
+        }
+        CountryNotConfiguredInStoreErrorImpl instance = new CountryNotConfiguredInStoreErrorImpl();
+        instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        instance.setStoreCountries(Optional.ofNullable(template.getStoreCountries()).map(ArrayList::new).orElse(null));
         instance.setCountry(template.getCountry());
         return instance;
     }

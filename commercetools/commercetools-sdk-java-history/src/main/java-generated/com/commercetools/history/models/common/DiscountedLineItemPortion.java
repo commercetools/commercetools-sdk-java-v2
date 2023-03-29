@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -72,7 +73,7 @@ public interface DiscountedLineItemPortion {
     }
 
     /**
-     * factory method to copy an instance of DiscountedLineItemPortion
+     * factory method to create a shallow copy DiscountedLineItemPortion
      * @param template instance to be copied
      * @return copy instance
      */
@@ -80,6 +81,26 @@ public interface DiscountedLineItemPortion {
         DiscountedLineItemPortionImpl instance = new DiscountedLineItemPortionImpl();
         instance.setDiscount(template.getDiscount());
         instance.setDiscountedAmount(template.getDiscountedAmount());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of DiscountedLineItemPortion
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static DiscountedLineItemPortion deepCopy(@Nullable final DiscountedLineItemPortion template) {
+        if (template == null) {
+            return null;
+        }
+        DiscountedLineItemPortionImpl instance = new DiscountedLineItemPortionImpl();
+        instance.setDiscount(Optional.ofNullable(template.getDiscount())
+                .map(com.commercetools.history.models.common.Reference::deepCopy)
+                .orElse(null));
+        instance.setDiscountedAmount(Optional.ofNullable(template.getDiscountedAmount())
+                .map(com.commercetools.history.models.common.Money::deepCopy)
+                .orElse(null));
         return instance;
     }
 

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.common.LocalizedString;
@@ -73,13 +74,31 @@ public interface ProductSetMetaKeywordsAction extends ProductUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ProductSetMetaKeywordsAction
+     * factory method to create a shallow copy ProductSetMetaKeywordsAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductSetMetaKeywordsAction of(final ProductSetMetaKeywordsAction template) {
         ProductSetMetaKeywordsActionImpl instance = new ProductSetMetaKeywordsActionImpl();
         instance.setMetaKeywords(template.getMetaKeywords());
+        instance.setStaged(template.getStaged());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductSetMetaKeywordsAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductSetMetaKeywordsAction deepCopy(@Nullable final ProductSetMetaKeywordsAction template) {
+        if (template == null) {
+            return null;
+        }
+        ProductSetMetaKeywordsActionImpl instance = new ProductSetMetaKeywordsActionImpl();
+        instance.setMetaKeywords(Optional.ofNullable(template.getMetaKeywords())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
         instance.setStaged(template.getStaged());
         return instance;
     }

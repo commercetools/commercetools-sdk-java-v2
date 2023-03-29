@@ -4,7 +4,9 @@ package com.commercetools.api.models.product_type;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -84,7 +86,7 @@ public interface ProductTypeChangePlainEnumValueOrderAction extends ProductTypeU
     }
 
     /**
-     * factory method to copy an instance of ProductTypeChangePlainEnumValueOrderAction
+     * factory method to create a shallow copy ProductTypeChangePlainEnumValueOrderAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -93,6 +95,27 @@ public interface ProductTypeChangePlainEnumValueOrderAction extends ProductTypeU
         ProductTypeChangePlainEnumValueOrderActionImpl instance = new ProductTypeChangePlainEnumValueOrderActionImpl();
         instance.setAttributeName(template.getAttributeName());
         instance.setValues(template.getValues());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductTypeChangePlainEnumValueOrderAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductTypeChangePlainEnumValueOrderAction deepCopy(
+            @Nullable final ProductTypeChangePlainEnumValueOrderAction template) {
+        if (template == null) {
+            return null;
+        }
+        ProductTypeChangePlainEnumValueOrderActionImpl instance = new ProductTypeChangePlainEnumValueOrderActionImpl();
+        instance.setAttributeName(template.getAttributeName());
+        instance.setValues(Optional.ofNullable(template.getValues())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.product_type.AttributePlainEnumValue::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.common.LocalizedString;
@@ -133,7 +134,7 @@ public interface ProductSetAssetDescriptionAction extends ProductUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ProductSetAssetDescriptionAction
+     * factory method to create a shallow copy ProductSetAssetDescriptionAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -145,6 +146,28 @@ public interface ProductSetAssetDescriptionAction extends ProductUpdateAction {
         instance.setAssetId(template.getAssetId());
         instance.setAssetKey(template.getAssetKey());
         instance.setDescription(template.getDescription());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductSetAssetDescriptionAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductSetAssetDescriptionAction deepCopy(@Nullable final ProductSetAssetDescriptionAction template) {
+        if (template == null) {
+            return null;
+        }
+        ProductSetAssetDescriptionActionImpl instance = new ProductSetAssetDescriptionActionImpl();
+        instance.setVariantId(template.getVariantId());
+        instance.setSku(template.getSku());
+        instance.setStaged(template.getStaged());
+        instance.setAssetId(template.getAssetId());
+        instance.setAssetKey(template.getAssetKey());
+        instance.setDescription(Optional.ofNullable(template.getDescription())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
         return instance;
     }
 

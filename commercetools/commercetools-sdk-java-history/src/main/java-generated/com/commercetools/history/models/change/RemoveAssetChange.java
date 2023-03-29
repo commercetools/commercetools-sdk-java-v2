@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -85,7 +86,7 @@ public interface RemoveAssetChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of RemoveAssetChange
+     * factory method to create a shallow copy RemoveAssetChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -93,6 +94,24 @@ public interface RemoveAssetChange extends Change {
         RemoveAssetChangeImpl instance = new RemoveAssetChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of RemoveAssetChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static RemoveAssetChange deepCopy(@Nullable final RemoveAssetChange template) {
+        if (template == null) {
+            return null;
+        }
+        RemoveAssetChangeImpl instance = new RemoveAssetChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
+                .map(com.commercetools.history.models.common.Asset::deepCopy)
+                .orElse(null));
         return instance;
     }
 

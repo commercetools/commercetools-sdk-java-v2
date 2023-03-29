@@ -5,7 +5,9 @@ import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -393,7 +395,7 @@ public interface Payment extends BaseResource, PaymentMixin, com.commercetools.a
     }
 
     /**
-     * factory method to copy an instance of Payment
+     * factory method to create a shallow copy Payment
      * @param template instance to be copied
      * @return copy instance
      */
@@ -419,6 +421,69 @@ public interface Payment extends BaseResource, PaymentMixin, com.commercetools.a
         instance.setTransactions(template.getTransactions());
         instance.setInterfaceInteractions(template.getInterfaceInteractions());
         instance.setCustom(template.getCustom());
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of Payment
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static Payment deepCopy(@Nullable final Payment template) {
+        if (template == null) {
+            return null;
+        }
+        PaymentImpl instance = new PaymentImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(Optional.ofNullable(template.getLastModifiedBy())
+                .map(com.commercetools.api.models.common.LastModifiedBy::deepCopy)
+                .orElse(null));
+        instance.setCreatedBy(Optional.ofNullable(template.getCreatedBy())
+                .map(com.commercetools.api.models.common.CreatedBy::deepCopy)
+                .orElse(null));
+        instance.setCustomer(Optional.ofNullable(template.getCustomer())
+                .map(com.commercetools.api.models.customer.CustomerReference::deepCopy)
+                .orElse(null));
+        instance.setAnonymousId(template.getAnonymousId());
+        instance.setExternalId(template.getExternalId());
+        instance.setInterfaceId(template.getInterfaceId());
+        instance.setAmountPlanned(Optional.ofNullable(template.getAmountPlanned())
+                .map(com.commercetools.api.models.common.CentPrecisionMoney::deepCopy)
+                .orElse(null));
+        instance.setAmountAuthorized(Optional.ofNullable(template.getAmountAuthorized())
+                .map(com.commercetools.api.models.common.TypedMoney::deepCopy)
+                .orElse(null));
+        instance.setAuthorizedUntil(template.getAuthorizedUntil());
+        instance.setAmountPaid(Optional.ofNullable(template.getAmountPaid())
+                .map(com.commercetools.api.models.common.TypedMoney::deepCopy)
+                .orElse(null));
+        instance.setAmountRefunded(Optional.ofNullable(template.getAmountRefunded())
+                .map(com.commercetools.api.models.common.TypedMoney::deepCopy)
+                .orElse(null));
+        instance.setPaymentMethodInfo(Optional.ofNullable(template.getPaymentMethodInfo())
+                .map(com.commercetools.api.models.payment.PaymentMethodInfo::deepCopy)
+                .orElse(null));
+        instance.setPaymentStatus(Optional.ofNullable(template.getPaymentStatus())
+                .map(com.commercetools.api.models.payment.PaymentStatus::deepCopy)
+                .orElse(null));
+        instance.setTransactions(Optional.ofNullable(template.getTransactions())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.payment.Transaction::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setInterfaceInteractions(Optional.ofNullable(template.getInterfaceInteractions())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.type.CustomFields::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setCustom(Optional.ofNullable(template.getCustom())
+                .map(com.commercetools.api.models.type.CustomFields::deepCopy)
+                .orElse(null));
         instance.setKey(template.getKey());
         return instance;
     }

@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.cart.ItemShippingDetailsDraft;
@@ -194,7 +195,7 @@ public interface MyCartAddLineItemAction
     }
 
     /**
-     * factory method to copy an instance of MyCartAddLineItemAction
+     * factory method to create a shallow copy MyCartAddLineItemAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -209,6 +210,37 @@ public interface MyCartAddLineItemAction
         instance.setSupplyChannel(template.getSupplyChannel());
         instance.setShippingDetails(template.getShippingDetails());
         instance.setCustom(template.getCustom());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MyCartAddLineItemAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MyCartAddLineItemAction deepCopy(@Nullable final MyCartAddLineItemAction template) {
+        if (template == null) {
+            return null;
+        }
+        MyCartAddLineItemActionImpl instance = new MyCartAddLineItemActionImpl();
+        instance.setProductId(template.getProductId());
+        instance.setVariantId(template.getVariantId());
+        instance.setSku(template.getSku());
+        instance.setQuantity(template.getQuantity());
+        instance.setAddedAt(template.getAddedAt());
+        instance.setDistributionChannel(Optional.ofNullable(template.getDistributionChannel())
+                .map(com.commercetools.api.models.channel.ChannelResourceIdentifier::deepCopy)
+                .orElse(null));
+        instance.setSupplyChannel(Optional.ofNullable(template.getSupplyChannel())
+                .map(com.commercetools.api.models.channel.ChannelResourceIdentifier::deepCopy)
+                .orElse(null));
+        instance.setShippingDetails(Optional.ofNullable(template.getShippingDetails())
+                .map(com.commercetools.api.models.cart.ItemShippingDetailsDraft::deepCopy)
+                .orElse(null));
+        instance.setCustom(Optional.ofNullable(template.getCustom())
+                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
+                .orElse(null));
         return instance;
     }
 

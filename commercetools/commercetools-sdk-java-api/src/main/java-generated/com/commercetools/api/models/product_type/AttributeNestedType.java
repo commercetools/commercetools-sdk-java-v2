@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -60,13 +61,30 @@ public interface AttributeNestedType extends AttributeType {
     }
 
     /**
-     * factory method to copy an instance of AttributeNestedType
+     * factory method to create a shallow copy AttributeNestedType
      * @param template instance to be copied
      * @return copy instance
      */
     public static AttributeNestedType of(final AttributeNestedType template) {
         AttributeNestedTypeImpl instance = new AttributeNestedTypeImpl();
         instance.setTypeReference(template.getTypeReference());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of AttributeNestedType
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AttributeNestedType deepCopy(@Nullable final AttributeNestedType template) {
+        if (template == null) {
+            return null;
+        }
+        AttributeNestedTypeImpl instance = new AttributeNestedTypeImpl();
+        instance.setTypeReference(Optional.ofNullable(template.getTypeReference())
+                .map(com.commercetools.api.models.product_type.ProductTypeReference::deepCopy)
+                .orElse(null));
         return instance;
     }
 

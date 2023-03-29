@@ -4,7 +4,9 @@ package com.commercetools.history.models.change_value;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -77,13 +79,32 @@ public interface ChangeValueAbsoluteChangeValue extends ChangeValueChangeValue {
     }
 
     /**
-     * factory method to copy an instance of ChangeValueAbsoluteChangeValue
+     * factory method to create a shallow copy ChangeValueAbsoluteChangeValue
      * @param template instance to be copied
      * @return copy instance
      */
     public static ChangeValueAbsoluteChangeValue of(final ChangeValueAbsoluteChangeValue template) {
         ChangeValueAbsoluteChangeValueImpl instance = new ChangeValueAbsoluteChangeValueImpl();
         instance.setMoney(template.getMoney());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChangeValueAbsoluteChangeValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChangeValueAbsoluteChangeValue deepCopy(@Nullable final ChangeValueAbsoluteChangeValue template) {
+        if (template == null) {
+            return null;
+        }
+        ChangeValueAbsoluteChangeValueImpl instance = new ChangeValueAbsoluteChangeValueImpl();
+        instance.setMoney(Optional.ofNullable(template.getMoney())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.Money::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -50,6 +51,68 @@ public interface ChannelUpdateAction extends com.commercetools.api.models.Resour
     @NotNull
     @JsonProperty("action")
     public String getAction();
+
+    /**
+     * factory method to create a deep copy of ChannelUpdateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChannelUpdateAction deepCopy(@Nullable final ChannelUpdateAction template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.channel.ChannelAddRolesAction) {
+            return com.commercetools.api.models.channel.ChannelAddRolesAction
+                    .deepCopy((com.commercetools.api.models.channel.ChannelAddRolesAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.channel.ChannelChangeDescriptionAction) {
+            return com.commercetools.api.models.channel.ChannelChangeDescriptionAction
+                    .deepCopy((com.commercetools.api.models.channel.ChannelChangeDescriptionAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.channel.ChannelChangeKeyAction) {
+            return com.commercetools.api.models.channel.ChannelChangeKeyAction
+                    .deepCopy((com.commercetools.api.models.channel.ChannelChangeKeyAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.channel.ChannelChangeNameAction) {
+            return com.commercetools.api.models.channel.ChannelChangeNameAction
+                    .deepCopy((com.commercetools.api.models.channel.ChannelChangeNameAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.channel.ChannelRemoveRolesAction) {
+            return com.commercetools.api.models.channel.ChannelRemoveRolesAction
+                    .deepCopy((com.commercetools.api.models.channel.ChannelRemoveRolesAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.channel.ChannelSetAddressAction) {
+            return com.commercetools.api.models.channel.ChannelSetAddressAction
+                    .deepCopy((com.commercetools.api.models.channel.ChannelSetAddressAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.channel.ChannelSetAddressCustomFieldAction) {
+            return com.commercetools.api.models.channel.ChannelSetAddressCustomFieldAction
+                    .deepCopy((com.commercetools.api.models.channel.ChannelSetAddressCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.channel.ChannelSetAddressCustomTypeAction) {
+            return com.commercetools.api.models.channel.ChannelSetAddressCustomTypeAction
+                    .deepCopy((com.commercetools.api.models.channel.ChannelSetAddressCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.channel.ChannelSetCustomFieldAction) {
+            return com.commercetools.api.models.channel.ChannelSetCustomFieldAction
+                    .deepCopy((com.commercetools.api.models.channel.ChannelSetCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.channel.ChannelSetCustomTypeAction) {
+            return com.commercetools.api.models.channel.ChannelSetCustomTypeAction
+                    .deepCopy((com.commercetools.api.models.channel.ChannelSetCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.channel.ChannelSetGeoLocationAction) {
+            return com.commercetools.api.models.channel.ChannelSetGeoLocationAction
+                    .deepCopy((com.commercetools.api.models.channel.ChannelSetGeoLocationAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.channel.ChannelSetRolesAction) {
+            return com.commercetools.api.models.channel.ChannelSetRolesAction
+                    .deepCopy((com.commercetools.api.models.channel.ChannelSetRolesAction) template);
+        }
+        ChannelUpdateActionImpl instance = new ChannelUpdateActionImpl();
+        return instance;
+    }
 
     /**
      * builder for addRoles subtype

@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -183,7 +184,7 @@ public interface ProductDiscountDraft
     }
 
     /**
-     * factory method to copy an instance of ProductDiscountDraft
+     * factory method to create a shallow copy ProductDiscountDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -193,6 +194,35 @@ public interface ProductDiscountDraft
         instance.setKey(template.getKey());
         instance.setDescription(template.getDescription());
         instance.setValue(template.getValue());
+        instance.setPredicate(template.getPredicate());
+        instance.setSortOrder(template.getSortOrder());
+        instance.setIsActive(template.getIsActive());
+        instance.setValidFrom(template.getValidFrom());
+        instance.setValidUntil(template.getValidUntil());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductDiscountDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductDiscountDraft deepCopy(@Nullable final ProductDiscountDraft template) {
+        if (template == null) {
+            return null;
+        }
+        ProductDiscountDraftImpl instance = new ProductDiscountDraftImpl();
+        instance.setName(Optional.ofNullable(template.getName())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setKey(template.getKey());
+        instance.setDescription(Optional.ofNullable(template.getDescription())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setValue(Optional.ofNullable(template.getValue())
+                .map(com.commercetools.api.models.product_discount.ProductDiscountValueDraft::deepCopy)
+                .orElse(null));
         instance.setPredicate(template.getPredicate());
         instance.setSortOrder(template.getSortOrder());
         instance.setIsActive(template.getIsActive());

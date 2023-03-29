@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -62,13 +63,31 @@ public interface StoreAddDistributionChannelAction extends StoreUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of StoreAddDistributionChannelAction
+     * factory method to create a shallow copy StoreAddDistributionChannelAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static StoreAddDistributionChannelAction of(final StoreAddDistributionChannelAction template) {
         StoreAddDistributionChannelActionImpl instance = new StoreAddDistributionChannelActionImpl();
         instance.setDistributionChannel(template.getDistributionChannel());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StoreAddDistributionChannelAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StoreAddDistributionChannelAction deepCopy(
+            @Nullable final StoreAddDistributionChannelAction template) {
+        if (template == null) {
+            return null;
+        }
+        StoreAddDistributionChannelActionImpl instance = new StoreAddDistributionChannelActionImpl();
+        instance.setDistributionChannel(Optional.ofNullable(template.getDistributionChannel())
+                .map(com.commercetools.api.models.channel.ChannelResourceIdentifier::deepCopy)
+                .orElse(null));
         return instance;
     }
 

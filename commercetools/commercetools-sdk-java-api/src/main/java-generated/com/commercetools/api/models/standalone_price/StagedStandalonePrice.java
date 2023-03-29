@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -72,7 +73,7 @@ public interface StagedStandalonePrice {
     }
 
     /**
-     * factory method to copy an instance of StagedStandalonePrice
+     * factory method to create a shallow copy StagedStandalonePrice
      * @param template instance to be copied
      * @return copy instance
      */
@@ -80,6 +81,26 @@ public interface StagedStandalonePrice {
         StagedStandalonePriceImpl instance = new StagedStandalonePriceImpl();
         instance.setValue(template.getValue());
         instance.setDiscounted(template.getDiscounted());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedStandalonePrice
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedStandalonePrice deepCopy(@Nullable final StagedStandalonePrice template) {
+        if (template == null) {
+            return null;
+        }
+        StagedStandalonePriceImpl instance = new StagedStandalonePriceImpl();
+        instance.setValue(Optional.ofNullable(template.getValue())
+                .map(com.commercetools.api.models.common.TypedMoney::deepCopy)
+                .orElse(null));
+        instance.setDiscounted(Optional.ofNullable(template.getDiscounted())
+                .map(com.commercetools.api.models.common.DiscountedPrice::deepCopy)
+                .orElse(null));
         return instance;
     }
 

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -97,11 +98,28 @@ public interface AddPropertyChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of AddPropertyChange
+     * factory method to create a shallow copy AddPropertyChange
      * @param template instance to be copied
      * @return copy instance
      */
     public static AddPropertyChange of(final AddPropertyChange template) {
+        AddPropertyChangeImpl instance = new AddPropertyChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setPath(template.getPath());
+        instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of AddPropertyChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AddPropertyChange deepCopy(@Nullable final AddPropertyChange template) {
+        if (template == null) {
+            return null;
+        }
         AddPropertyChangeImpl instance = new AddPropertyChangeImpl();
         instance.setChange(template.getChange());
         instance.setPath(template.getPath());

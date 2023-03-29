@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,27 @@ public interface TextAttribute extends Attribute {
     }
 
     /**
-     * factory method to copy an instance of TextAttribute
+     * factory method to create a shallow copy TextAttribute
      * @param template instance to be copied
      * @return copy instance
      */
     public static TextAttribute of(final TextAttribute template) {
+        TextAttributeImpl instance = new TextAttributeImpl();
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of TextAttribute
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static TextAttribute deepCopy(@Nullable final TextAttribute template) {
+        if (template == null) {
+            return null;
+        }
         TextAttributeImpl instance = new TextAttributeImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());

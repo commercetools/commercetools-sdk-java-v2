@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -55,11 +57,26 @@ public interface ReviewSetAuthorNameAction extends ReviewUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ReviewSetAuthorNameAction
+     * factory method to create a shallow copy ReviewSetAuthorNameAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ReviewSetAuthorNameAction of(final ReviewSetAuthorNameAction template) {
+        ReviewSetAuthorNameActionImpl instance = new ReviewSetAuthorNameActionImpl();
+        instance.setAuthorName(template.getAuthorName());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ReviewSetAuthorNameAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ReviewSetAuthorNameAction deepCopy(@Nullable final ReviewSetAuthorNameAction template) {
+        if (template == null) {
+            return null;
+        }
         ReviewSetAuthorNameActionImpl instance = new ReviewSetAuthorNameActionImpl();
         instance.setAuthorName(template.getAuthorName());
         return instance;

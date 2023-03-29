@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -59,11 +60,27 @@ public interface AuthorizationHeaderAuthentication extends HttpDestinationAuthen
     }
 
     /**
-     * factory method to copy an instance of AuthorizationHeaderAuthentication
+     * factory method to create a shallow copy AuthorizationHeaderAuthentication
      * @param template instance to be copied
      * @return copy instance
      */
     public static AuthorizationHeaderAuthentication of(final AuthorizationHeaderAuthentication template) {
+        AuthorizationHeaderAuthenticationImpl instance = new AuthorizationHeaderAuthenticationImpl();
+        instance.setHeaderValue(template.getHeaderValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of AuthorizationHeaderAuthentication
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AuthorizationHeaderAuthentication deepCopy(
+            @Nullable final AuthorizationHeaderAuthentication template) {
+        if (template == null) {
+            return null;
+        }
         AuthorizationHeaderAuthenticationImpl instance = new AuthorizationHeaderAuthenticationImpl();
         instance.setHeaderValue(template.getHeaderValue());
         return instance;

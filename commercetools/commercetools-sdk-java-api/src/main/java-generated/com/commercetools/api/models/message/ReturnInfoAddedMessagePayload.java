@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -61,13 +62,30 @@ public interface ReturnInfoAddedMessagePayload extends OrderMessagePayload {
     }
 
     /**
-     * factory method to copy an instance of ReturnInfoAddedMessagePayload
+     * factory method to create a shallow copy ReturnInfoAddedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
     public static ReturnInfoAddedMessagePayload of(final ReturnInfoAddedMessagePayload template) {
         ReturnInfoAddedMessagePayloadImpl instance = new ReturnInfoAddedMessagePayloadImpl();
         instance.setReturnInfo(template.getReturnInfo());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ReturnInfoAddedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ReturnInfoAddedMessagePayload deepCopy(@Nullable final ReturnInfoAddedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        ReturnInfoAddedMessagePayloadImpl instance = new ReturnInfoAddedMessagePayloadImpl();
+        instance.setReturnInfo(Optional.ofNullable(template.getReturnInfo())
+                .map(com.commercetools.api.models.order.ReturnInfo::deepCopy)
+                .orElse(null));
         return instance;
     }
 

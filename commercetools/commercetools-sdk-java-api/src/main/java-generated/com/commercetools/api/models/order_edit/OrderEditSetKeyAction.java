@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -55,11 +57,26 @@ public interface OrderEditSetKeyAction extends OrderEditUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of OrderEditSetKeyAction
+     * factory method to create a shallow copy OrderEditSetKeyAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static OrderEditSetKeyAction of(final OrderEditSetKeyAction template) {
+        OrderEditSetKeyActionImpl instance = new OrderEditSetKeyActionImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderEditSetKeyAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderEditSetKeyAction deepCopy(@Nullable final OrderEditSetKeyAction template) {
+        if (template == null) {
+            return null;
+        }
         OrderEditSetKeyActionImpl instance = new OrderEditSetKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;

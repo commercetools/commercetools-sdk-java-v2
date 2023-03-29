@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -69,11 +70,27 @@ public interface MessagesConfigurationDraft extends io.vrap.rmf.base.client.Draf
     }
 
     /**
-     * factory method to copy an instance of MessagesConfigurationDraft
+     * factory method to create a shallow copy MessagesConfigurationDraft
      * @param template instance to be copied
      * @return copy instance
      */
     public static MessagesConfigurationDraft of(final MessagesConfigurationDraft template) {
+        MessagesConfigurationDraftImpl instance = new MessagesConfigurationDraftImpl();
+        instance.setEnabled(template.getEnabled());
+        instance.setDeleteDaysAfterCreation(template.getDeleteDaysAfterCreation());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MessagesConfigurationDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MessagesConfigurationDraft deepCopy(@Nullable final MessagesConfigurationDraft template) {
+        if (template == null) {
+            return null;
+        }
         MessagesConfigurationDraftImpl instance = new MessagesConfigurationDraftImpl();
         instance.setEnabled(template.getEnabled());
         instance.setDeleteDaysAfterCreation(template.getDeleteDaysAfterCreation());

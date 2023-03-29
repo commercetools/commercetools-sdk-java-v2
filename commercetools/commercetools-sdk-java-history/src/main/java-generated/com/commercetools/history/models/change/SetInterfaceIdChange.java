@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -98,11 +99,28 @@ public interface SetInterfaceIdChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetInterfaceIdChange
+     * factory method to create a shallow copy SetInterfaceIdChange
      * @param template instance to be copied
      * @return copy instance
      */
     public static SetInterfaceIdChange of(final SetInterfaceIdChange template) {
+        SetInterfaceIdChangeImpl instance = new SetInterfaceIdChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetInterfaceIdChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetInterfaceIdChange deepCopy(@Nullable final SetInterfaceIdChange template) {
+        if (template == null) {
+            return null;
+        }
         SetInterfaceIdChangeImpl instance = new SetInterfaceIdChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());

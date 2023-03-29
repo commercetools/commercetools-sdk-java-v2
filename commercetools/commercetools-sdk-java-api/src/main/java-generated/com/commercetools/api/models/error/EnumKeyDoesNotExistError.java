@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -99,14 +100,32 @@ public interface EnumKeyDoesNotExistError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of EnumKeyDoesNotExistError
+     * factory method to create a shallow copy EnumKeyDoesNotExistError
      * @param template instance to be copied
      * @return copy instance
      */
     public static EnumKeyDoesNotExistError of(final EnumKeyDoesNotExistError template) {
         EnumKeyDoesNotExistErrorImpl instance = new EnumKeyDoesNotExistErrorImpl();
         instance.setMessage(template.getMessage());
-        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        instance.setConflictingEnumKey(template.getConflictingEnumKey());
+        instance.setConflictingAttributeName(template.getConflictingAttributeName());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of EnumKeyDoesNotExistError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static EnumKeyDoesNotExistError deepCopy(@Nullable final EnumKeyDoesNotExistError template) {
+        if (template == null) {
+            return null;
+        }
+        EnumKeyDoesNotExistErrorImpl instance = new EnumKeyDoesNotExistErrorImpl();
+        instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         instance.setConflictingEnumKey(template.getConflictingEnumKey());
         instance.setConflictingAttributeName(template.getConflictingAttributeName());
         return instance;

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -102,7 +103,7 @@ public interface ProductPublishedMessagePayload extends MessagePayload {
     }
 
     /**
-     * factory method to copy an instance of ProductPublishedMessagePayload
+     * factory method to create a shallow copy ProductPublishedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -110,6 +111,26 @@ public interface ProductPublishedMessagePayload extends MessagePayload {
         ProductPublishedMessagePayloadImpl instance = new ProductPublishedMessagePayloadImpl();
         instance.setRemovedImageUrls(template.getRemovedImageUrls());
         instance.setProductProjection(template.getProductProjection());
+        instance.setScope(template.getScope());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductPublishedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductPublishedMessagePayload deepCopy(@Nullable final ProductPublishedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        ProductPublishedMessagePayloadImpl instance = new ProductPublishedMessagePayloadImpl();
+        instance.setRemovedImageUrls(
+            Optional.ofNullable(template.getRemovedImageUrls()).map(ArrayList::new).orElse(null));
+        instance.setProductProjection(Optional.ofNullable(template.getProductProjection())
+                .map(com.commercetools.api.models.product.ProductProjection::deepCopy)
+                .orElse(null));
         instance.setScope(template.getScope());
         return instance;
     }

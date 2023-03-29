@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.common.Address;
@@ -58,7 +59,7 @@ public interface BusinessUnitDefaultBillingAddressSetMessagePayload extends Mess
     }
 
     /**
-     * factory method to copy an instance of BusinessUnitDefaultBillingAddressSetMessagePayload
+     * factory method to create a shallow copy BusinessUnitDefaultBillingAddressSetMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -66,6 +67,24 @@ public interface BusinessUnitDefaultBillingAddressSetMessagePayload extends Mess
             final BusinessUnitDefaultBillingAddressSetMessagePayload template) {
         BusinessUnitDefaultBillingAddressSetMessagePayloadImpl instance = new BusinessUnitDefaultBillingAddressSetMessagePayloadImpl();
         instance.setAddress(template.getAddress());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of BusinessUnitDefaultBillingAddressSetMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static BusinessUnitDefaultBillingAddressSetMessagePayload deepCopy(
+            @Nullable final BusinessUnitDefaultBillingAddressSetMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        BusinessUnitDefaultBillingAddressSetMessagePayloadImpl instance = new BusinessUnitDefaultBillingAddressSetMessagePayloadImpl();
+        instance.setAddress(Optional.ofNullable(template.getAddress())
+                .map(com.commercetools.api.models.common.Address::deepCopy)
+                .orElse(null));
         return instance;
     }
 

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -61,13 +62,30 @@ public interface StateSetNameAction extends StateUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of StateSetNameAction
+     * factory method to create a shallow copy StateSetNameAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static StateSetNameAction of(final StateSetNameAction template) {
         StateSetNameActionImpl instance = new StateSetNameActionImpl();
         instance.setName(template.getName());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StateSetNameAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StateSetNameAction deepCopy(@Nullable final StateSetNameAction template) {
+        if (template == null) {
+            return null;
+        }
+        StateSetNameActionImpl instance = new StateSetNameActionImpl();
+        instance.setName(Optional.ofNullable(template.getName())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
         return instance;
     }
 

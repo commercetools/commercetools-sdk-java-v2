@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -430,7 +431,7 @@ public interface Address {
     }
 
     /**
-     * factory method to copy an instance of Address
+     * factory method to create a shallow copy Address
      * @param template instance to be copied
      * @return copy instance
      */
@@ -462,6 +463,48 @@ public interface Address {
         instance.setAdditionalAddressInfo(template.getAdditionalAddressInfo());
         instance.setExternalId(template.getExternalId());
         instance.setCustom(template.getCustom());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of Address
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static Address deepCopy(@Nullable final Address template) {
+        if (template == null) {
+            return null;
+        }
+        AddressImpl instance = new AddressImpl();
+        instance.setId(template.getId());
+        instance.setKey(template.getKey());
+        instance.setTitle(template.getTitle());
+        instance.setSalutation(template.getSalutation());
+        instance.setFirstName(template.getFirstName());
+        instance.setLastName(template.getLastName());
+        instance.setStreetName(template.getStreetName());
+        instance.setStreetNumber(template.getStreetNumber());
+        instance.setAdditionalStreetInfo(template.getAdditionalStreetInfo());
+        instance.setPostalCode(template.getPostalCode());
+        instance.setCity(template.getCity());
+        instance.setRegion(template.getRegion());
+        instance.setState(template.getState());
+        instance.setCountry(template.getCountry());
+        instance.setCompany(template.getCompany());
+        instance.setDepartment(template.getDepartment());
+        instance.setBuilding(template.getBuilding());
+        instance.setApartment(template.getApartment());
+        instance.setPOBox(template.getPOBox());
+        instance.setPhone(template.getPhone());
+        instance.setMobile(template.getMobile());
+        instance.setEmail(template.getEmail());
+        instance.setFax(template.getFax());
+        instance.setAdditionalAddressInfo(template.getAdditionalAddressInfo());
+        instance.setExternalId(template.getExternalId());
+        instance.setCustom(Optional.ofNullable(template.getCustom())
+                .map(com.commercetools.importapi.models.customfields.Custom::deepCopy)
+                .orElse(null));
         return instance;
     }
 

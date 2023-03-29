@@ -4,7 +4,9 @@ package com.commercetools.api.models.cart;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -84,7 +86,7 @@ public interface CartSetCartTotalTaxAction extends CartUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of CartSetCartTotalTaxAction
+     * factory method to create a shallow copy CartSetCartTotalTaxAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -92,6 +94,28 @@ public interface CartSetCartTotalTaxAction extends CartUpdateAction {
         CartSetCartTotalTaxActionImpl instance = new CartSetCartTotalTaxActionImpl();
         instance.setExternalTotalGross(template.getExternalTotalGross());
         instance.setExternalTaxPortions(template.getExternalTaxPortions());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartSetCartTotalTaxAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartSetCartTotalTaxAction deepCopy(@Nullable final CartSetCartTotalTaxAction template) {
+        if (template == null) {
+            return null;
+        }
+        CartSetCartTotalTaxActionImpl instance = new CartSetCartTotalTaxActionImpl();
+        instance.setExternalTotalGross(Optional.ofNullable(template.getExternalTotalGross())
+                .map(com.commercetools.api.models.common.Money::deepCopy)
+                .orElse(null));
+        instance.setExternalTaxPortions(Optional.ofNullable(template.getExternalTaxPortions())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.cart.TaxPortionDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

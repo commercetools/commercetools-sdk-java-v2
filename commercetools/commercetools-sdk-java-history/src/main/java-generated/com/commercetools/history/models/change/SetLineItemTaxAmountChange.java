@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -153,7 +154,7 @@ public interface SetLineItemTaxAmountChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetLineItemTaxAmountChange
+     * factory method to create a shallow copy SetLineItemTaxAmountChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -165,6 +166,32 @@ public interface SetLineItemTaxAmountChange extends Change {
         instance.setTaxMode(template.getTaxMode());
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetLineItemTaxAmountChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetLineItemTaxAmountChange deepCopy(@Nullable final SetLineItemTaxAmountChange template) {
+        if (template == null) {
+            return null;
+        }
+        SetLineItemTaxAmountChangeImpl instance = new SetLineItemTaxAmountChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setLineItem(Optional.ofNullable(template.getLineItem())
+                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setVariant(template.getVariant());
+        instance.setTaxMode(template.getTaxMode());
+        instance.setNextValue(Optional.ofNullable(template.getNextValue())
+                .map(com.commercetools.history.models.common.TaxRate::deepCopy)
+                .orElse(null));
+        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
+                .map(com.commercetools.history.models.common.TaxRate::deepCopy)
+                .orElse(null));
         return instance;
     }
 

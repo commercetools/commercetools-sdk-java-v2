@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -75,7 +76,7 @@ public interface CategoryReference extends Reference, com.commercetools.api.mode
     }
 
     /**
-     * factory method to copy an instance of CategoryReference
+     * factory method to create a shallow copy CategoryReference
      * @param template instance to be copied
      * @return copy instance
      */
@@ -83,6 +84,24 @@ public interface CategoryReference extends Reference, com.commercetools.api.mode
         CategoryReferenceImpl instance = new CategoryReferenceImpl();
         instance.setId(template.getId());
         instance.setObj(template.getObj());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CategoryReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CategoryReference deepCopy(@Nullable final CategoryReference template) {
+        if (template == null) {
+            return null;
+        }
+        CategoryReferenceImpl instance = new CategoryReferenceImpl();
+        instance.setId(template.getId());
+        instance.setObj(Optional.ofNullable(template.getObj())
+                .map(com.commercetools.api.models.category.Category::deepCopy)
+                .orElse(null));
         return instance;
     }
 

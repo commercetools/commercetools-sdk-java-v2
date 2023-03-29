@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -137,7 +138,7 @@ public interface ProductPriceExternalDiscountSetMessagePayload extends MessagePa
     }
 
     /**
-     * factory method to copy an instance of ProductPriceExternalDiscountSetMessagePayload
+     * factory method to create a shallow copy ProductPriceExternalDiscountSetMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -149,6 +150,29 @@ public interface ProductPriceExternalDiscountSetMessagePayload extends MessagePa
         instance.setSku(template.getSku());
         instance.setPriceId(template.getPriceId());
         instance.setDiscounted(template.getDiscounted());
+        instance.setStaged(template.getStaged());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductPriceExternalDiscountSetMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductPriceExternalDiscountSetMessagePayload deepCopy(
+            @Nullable final ProductPriceExternalDiscountSetMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        ProductPriceExternalDiscountSetMessagePayloadImpl instance = new ProductPriceExternalDiscountSetMessagePayloadImpl();
+        instance.setVariantId(template.getVariantId());
+        instance.setVariantKey(template.getVariantKey());
+        instance.setSku(template.getSku());
+        instance.setPriceId(template.getPriceId());
+        instance.setDiscounted(Optional.ofNullable(template.getDiscounted())
+                .map(com.commercetools.api.models.common.DiscountedPrice::deepCopy)
+                .orElse(null));
         instance.setStaged(template.getStaged());
         return instance;
     }

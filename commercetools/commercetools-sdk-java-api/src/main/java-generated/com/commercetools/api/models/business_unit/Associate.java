@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -80,7 +81,7 @@ public interface Associate {
     }
 
     /**
-     * factory method to copy an instance of Associate
+     * factory method to create a shallow copy Associate
      * @param template instance to be copied
      * @return copy instance
      */
@@ -88,6 +89,24 @@ public interface Associate {
         AssociateImpl instance = new AssociateImpl();
         instance.setRoles(template.getRoles());
         instance.setCustomer(template.getCustomer());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of Associate
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static Associate deepCopy(@Nullable final Associate template) {
+        if (template == null) {
+            return null;
+        }
+        AssociateImpl instance = new AssociateImpl();
+        instance.setRoles(Optional.ofNullable(template.getRoles()).map(ArrayList::new).orElse(null));
+        instance.setCustomer(Optional.ofNullable(template.getCustomer())
+                .map(com.commercetools.api.models.customer.CustomerReference::deepCopy)
+                .orElse(null));
         return instance;
     }
 

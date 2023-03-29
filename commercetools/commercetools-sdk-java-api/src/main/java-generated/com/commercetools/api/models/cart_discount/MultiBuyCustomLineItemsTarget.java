@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -121,11 +122,30 @@ public interface MultiBuyCustomLineItemsTarget extends CartDiscountTarget {
     }
 
     /**
-     * factory method to copy an instance of MultiBuyCustomLineItemsTarget
+     * factory method to create a shallow copy MultiBuyCustomLineItemsTarget
      * @param template instance to be copied
      * @return copy instance
      */
     public static MultiBuyCustomLineItemsTarget of(final MultiBuyCustomLineItemsTarget template) {
+        MultiBuyCustomLineItemsTargetImpl instance = new MultiBuyCustomLineItemsTargetImpl();
+        instance.setPredicate(template.getPredicate());
+        instance.setTriggerQuantity(template.getTriggerQuantity());
+        instance.setDiscountedQuantity(template.getDiscountedQuantity());
+        instance.setMaxOccurrence(template.getMaxOccurrence());
+        instance.setSelectionMode(template.getSelectionMode());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MultiBuyCustomLineItemsTarget
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MultiBuyCustomLineItemsTarget deepCopy(@Nullable final MultiBuyCustomLineItemsTarget template) {
+        if (template == null) {
+            return null;
+        }
         MultiBuyCustomLineItemsTargetImpl instance = new MultiBuyCustomLineItemsTargetImpl();
         instance.setPredicate(template.getPredicate());
         instance.setTriggerQuantity(template.getTriggerQuantity());

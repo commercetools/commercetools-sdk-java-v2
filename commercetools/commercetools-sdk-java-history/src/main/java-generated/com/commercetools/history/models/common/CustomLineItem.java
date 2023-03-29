@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -154,7 +155,7 @@ public interface CustomLineItem {
     }
 
     /**
-     * factory method to copy an instance of CustomLineItem
+     * factory method to create a shallow copy CustomLineItem
      * @param template instance to be copied
      * @return copy instance
      */
@@ -165,6 +166,35 @@ public interface CustomLineItem {
         instance.setMoney(template.getMoney());
         instance.setTaxedPrice(template.getTaxedPrice());
         instance.setTotalPrice(template.getTotalPrice());
+        instance.setSlug(template.getSlug());
+        instance.setQuantity(template.getQuantity());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomLineItem
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomLineItem deepCopy(@Nullable final CustomLineItem template) {
+        if (template == null) {
+            return null;
+        }
+        CustomLineItemImpl instance = new CustomLineItemImpl();
+        instance.setId(template.getId());
+        instance.setName(Optional.ofNullable(template.getName())
+                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setMoney(Optional.ofNullable(template.getMoney())
+                .map(com.commercetools.history.models.common.Money::deepCopy)
+                .orElse(null));
+        instance.setTaxedPrice(Optional.ofNullable(template.getTaxedPrice())
+                .map(com.commercetools.history.models.common.TaxedItemPrice::deepCopy)
+                .orElse(null));
+        instance.setTotalPrice(Optional.ofNullable(template.getTotalPrice())
+                .map(com.commercetools.history.models.common.Money::deepCopy)
+                .orElse(null));
         instance.setSlug(template.getSlug());
         instance.setQuantity(template.getQuantity());
         return instance;

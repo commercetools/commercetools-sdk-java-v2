@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -75,6 +76,109 @@ public interface ErrorObject {
      */
 
     public void setMessage(final String message);
+
+    /**
+     * factory method to create a deep copy of ErrorObject
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ErrorObject deepCopy(@Nullable final ErrorObject template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.importapi.models.errors.AccessDeniedError) {
+            return com.commercetools.importapi.models.errors.AccessDeniedError
+                    .deepCopy((com.commercetools.importapi.models.errors.AccessDeniedError) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.errors.InvalidScopeError) {
+            return com.commercetools.importapi.models.errors.InvalidScopeError
+                    .deepCopy((com.commercetools.importapi.models.errors.InvalidScopeError) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.errors.InvalidOperation) {
+            return com.commercetools.importapi.models.errors.InvalidOperation
+                    .deepCopy((com.commercetools.importapi.models.errors.InvalidOperation) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.errors.DuplicateAttributeValueError) {
+            return com.commercetools.importapi.models.errors.DuplicateAttributeValueError
+                    .deepCopy((com.commercetools.importapi.models.errors.DuplicateAttributeValueError) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.errors.DuplicateAttributeValuesError) {
+            return com.commercetools.importapi.models.errors.DuplicateAttributeValuesError
+                    .deepCopy((com.commercetools.importapi.models.errors.DuplicateAttributeValuesError) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.errors.DuplicateFieldError) {
+            return com.commercetools.importapi.models.errors.DuplicateFieldError
+                    .deepCopy((com.commercetools.importapi.models.errors.DuplicateFieldError) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.errors.DuplicateVariantValuesError) {
+            return com.commercetools.importapi.models.errors.DuplicateVariantValuesError
+                    .deepCopy((com.commercetools.importapi.models.errors.DuplicateVariantValuesError) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.errors.InsufficientScopeError) {
+            return com.commercetools.importapi.models.errors.InsufficientScopeError
+                    .deepCopy((com.commercetools.importapi.models.errors.InsufficientScopeError) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.errors.InvalidCredentialsError) {
+            return com.commercetools.importapi.models.errors.InvalidCredentialsError
+                    .deepCopy((com.commercetools.importapi.models.errors.InvalidCredentialsError) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.errors.InvalidTokenError) {
+            return com.commercetools.importapi.models.errors.InvalidTokenError
+                    .deepCopy((com.commercetools.importapi.models.errors.InvalidTokenError) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.errors.InvalidFieldError) {
+            return com.commercetools.importapi.models.errors.InvalidFieldError
+                    .deepCopy((com.commercetools.importapi.models.errors.InvalidFieldError) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.errors.InvalidJsonInput) {
+            return com.commercetools.importapi.models.errors.InvalidJsonInput
+                    .deepCopy((com.commercetools.importapi.models.errors.InvalidJsonInput) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.errors.InvalidInput) {
+            return com.commercetools.importapi.models.errors.InvalidInput
+                    .deepCopy((com.commercetools.importapi.models.errors.InvalidInput) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.errors.ResourceNotFoundError) {
+            return com.commercetools.importapi.models.errors.ResourceNotFoundError
+                    .deepCopy((com.commercetools.importapi.models.errors.ResourceNotFoundError) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.errors.ResourceCreationError) {
+            return com.commercetools.importapi.models.errors.ResourceCreationError
+                    .deepCopy((com.commercetools.importapi.models.errors.ResourceCreationError) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.errors.ResourceUpdateError) {
+            return com.commercetools.importapi.models.errors.ResourceUpdateError
+                    .deepCopy((com.commercetools.importapi.models.errors.ResourceUpdateError) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.errors.ResourceDeletionError) {
+            return com.commercetools.importapi.models.errors.ResourceDeletionError
+                    .deepCopy((com.commercetools.importapi.models.errors.ResourceDeletionError) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.errors.RequiredFieldError) {
+            return com.commercetools.importapi.models.errors.RequiredFieldError
+                    .deepCopy((com.commercetools.importapi.models.errors.RequiredFieldError) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.errors.InvalidStateTransitionError) {
+            return com.commercetools.importapi.models.errors.InvalidStateTransitionError
+                    .deepCopy((com.commercetools.importapi.models.errors.InvalidStateTransitionError) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.errors.ConcurrentModificationError) {
+            return com.commercetools.importapi.models.errors.ConcurrentModificationError
+                    .deepCopy((com.commercetools.importapi.models.errors.ConcurrentModificationError) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.errors.ContentionError) {
+            return com.commercetools.importapi.models.errors.ContentionError
+                    .deepCopy((com.commercetools.importapi.models.errors.ContentionError) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.errors.GenericError) {
+            return com.commercetools.importapi.models.errors.GenericError
+                    .deepCopy((com.commercetools.importapi.models.errors.GenericError) template);
+        }
+        ErrorObjectImpl instance = new ErrorObjectImpl();
+        instance.setMessage(template.getMessage());
+        return instance;
+    }
 
     /**
      * builder for accessDenied subtype

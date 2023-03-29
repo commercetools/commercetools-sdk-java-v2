@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -61,13 +62,30 @@ public interface BusinessUnitAddStoreAction extends BusinessUnitUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of BusinessUnitAddStoreAction
+     * factory method to create a shallow copy BusinessUnitAddStoreAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static BusinessUnitAddStoreAction of(final BusinessUnitAddStoreAction template) {
         BusinessUnitAddStoreActionImpl instance = new BusinessUnitAddStoreActionImpl();
         instance.setStore(template.getStore());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of BusinessUnitAddStoreAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static BusinessUnitAddStoreAction deepCopy(@Nullable final BusinessUnitAddStoreAction template) {
+        if (template == null) {
+            return null;
+        }
+        BusinessUnitAddStoreActionImpl instance = new BusinessUnitAddStoreActionImpl();
+        instance.setStore(Optional.ofNullable(template.getStore())
+                .map(com.commercetools.api.models.store.StoreResourceIdentifier::deepCopy)
+                .orElse(null));
         return instance;
     }
 

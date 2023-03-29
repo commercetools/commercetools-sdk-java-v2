@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -53,6 +54,76 @@ public interface TypeUpdateAction extends com.commercetools.api.models.ResourceU
     @NotNull
     @JsonProperty("action")
     public String getAction();
+
+    /**
+     * factory method to create a deep copy of TypeUpdateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static TypeUpdateAction deepCopy(@Nullable final TypeUpdateAction template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.type.TypeAddEnumValueAction) {
+            return com.commercetools.api.models.type.TypeAddEnumValueAction
+                    .deepCopy((com.commercetools.api.models.type.TypeAddEnumValueAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.type.TypeAddFieldDefinitionAction) {
+            return com.commercetools.api.models.type.TypeAddFieldDefinitionAction
+                    .deepCopy((com.commercetools.api.models.type.TypeAddFieldDefinitionAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.type.TypeAddLocalizedEnumValueAction) {
+            return com.commercetools.api.models.type.TypeAddLocalizedEnumValueAction
+                    .deepCopy((com.commercetools.api.models.type.TypeAddLocalizedEnumValueAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.type.TypeChangeEnumValueLabelAction) {
+            return com.commercetools.api.models.type.TypeChangeEnumValueLabelAction
+                    .deepCopy((com.commercetools.api.models.type.TypeChangeEnumValueLabelAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.type.TypeChangeEnumValueOrderAction) {
+            return com.commercetools.api.models.type.TypeChangeEnumValueOrderAction
+                    .deepCopy((com.commercetools.api.models.type.TypeChangeEnumValueOrderAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.type.TypeChangeFieldDefinitionOrderAction) {
+            return com.commercetools.api.models.type.TypeChangeFieldDefinitionOrderAction
+                    .deepCopy((com.commercetools.api.models.type.TypeChangeFieldDefinitionOrderAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.type.TypeChangeInputHintAction) {
+            return com.commercetools.api.models.type.TypeChangeInputHintAction
+                    .deepCopy((com.commercetools.api.models.type.TypeChangeInputHintAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.type.TypeChangeKeyAction) {
+            return com.commercetools.api.models.type.TypeChangeKeyAction
+                    .deepCopy((com.commercetools.api.models.type.TypeChangeKeyAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.type.TypeChangeLabelAction) {
+            return com.commercetools.api.models.type.TypeChangeLabelAction
+                    .deepCopy((com.commercetools.api.models.type.TypeChangeLabelAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.type.TypeChangeLocalizedEnumValueLabelAction) {
+            return com.commercetools.api.models.type.TypeChangeLocalizedEnumValueLabelAction
+                    .deepCopy((com.commercetools.api.models.type.TypeChangeLocalizedEnumValueLabelAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.type.TypeChangeLocalizedEnumValueOrderAction) {
+            return com.commercetools.api.models.type.TypeChangeLocalizedEnumValueOrderAction
+                    .deepCopy((com.commercetools.api.models.type.TypeChangeLocalizedEnumValueOrderAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.type.TypeChangeNameAction) {
+            return com.commercetools.api.models.type.TypeChangeNameAction
+                    .deepCopy((com.commercetools.api.models.type.TypeChangeNameAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.type.TypeRemoveFieldDefinitionAction) {
+            return com.commercetools.api.models.type.TypeRemoveFieldDefinitionAction
+                    .deepCopy((com.commercetools.api.models.type.TypeRemoveFieldDefinitionAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.type.TypeSetDescriptionAction) {
+            return com.commercetools.api.models.type.TypeSetDescriptionAction
+                    .deepCopy((com.commercetools.api.models.type.TypeSetDescriptionAction) template);
+        }
+        TypeUpdateActionImpl instance = new TypeUpdateActionImpl();
+        return instance;
+    }
 
     /**
      * builder for addEnumValue subtype

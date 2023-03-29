@@ -4,7 +4,9 @@ package com.commercetools.history.models.common;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -80,7 +82,7 @@ public interface DiscountedLineItemPrice {
     }
 
     /**
-     * factory method to copy an instance of DiscountedLineItemPrice
+     * factory method to create a shallow copy DiscountedLineItemPrice
      * @param template instance to be copied
      * @return copy instance
      */
@@ -88,6 +90,28 @@ public interface DiscountedLineItemPrice {
         DiscountedLineItemPriceImpl instance = new DiscountedLineItemPriceImpl();
         instance.setValue(template.getValue());
         instance.setIncludedDiscounts(template.getIncludedDiscounts());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of DiscountedLineItemPrice
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static DiscountedLineItemPrice deepCopy(@Nullable final DiscountedLineItemPrice template) {
+        if (template == null) {
+            return null;
+        }
+        DiscountedLineItemPriceImpl instance = new DiscountedLineItemPriceImpl();
+        instance.setValue(Optional.ofNullable(template.getValue())
+                .map(com.commercetools.history.models.common.Money::deepCopy)
+                .orElse(null));
+        instance.setIncludedDiscounts(Optional.ofNullable(template.getIncludedDiscounts())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.DiscountedLineItemPortion::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

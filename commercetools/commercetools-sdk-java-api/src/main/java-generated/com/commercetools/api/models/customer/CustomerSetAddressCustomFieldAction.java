@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -89,11 +90,29 @@ public interface CustomerSetAddressCustomFieldAction extends CustomerUpdateActio
     }
 
     /**
-     * factory method to copy an instance of CustomerSetAddressCustomFieldAction
+     * factory method to create a shallow copy CustomerSetAddressCustomFieldAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static CustomerSetAddressCustomFieldAction of(final CustomerSetAddressCustomFieldAction template) {
+        CustomerSetAddressCustomFieldActionImpl instance = new CustomerSetAddressCustomFieldActionImpl();
+        instance.setAddressId(template.getAddressId());
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomerSetAddressCustomFieldAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomerSetAddressCustomFieldAction deepCopy(
+            @Nullable final CustomerSetAddressCustomFieldAction template) {
+        if (template == null) {
+            return null;
+        }
         CustomerSetAddressCustomFieldActionImpl instance = new CustomerSetAddressCustomFieldActionImpl();
         instance.setAddressId(template.getAddressId());
         instance.setName(template.getName());

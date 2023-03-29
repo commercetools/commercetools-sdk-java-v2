@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.common.Reference;
@@ -59,7 +60,7 @@ public interface OrderReference extends Reference, com.commercetools.api.models.
     }
 
     /**
-     * factory method to copy an instance of OrderReference
+     * factory method to create a shallow copy OrderReference
      * @param template instance to be copied
      * @return copy instance
      */
@@ -67,6 +68,24 @@ public interface OrderReference extends Reference, com.commercetools.api.models.
         OrderReferenceImpl instance = new OrderReferenceImpl();
         instance.setId(template.getId());
         instance.setObj(template.getObj());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderReference deepCopy(@Nullable final OrderReference template) {
+        if (template == null) {
+            return null;
+        }
+        OrderReferenceImpl instance = new OrderReferenceImpl();
+        instance.setId(template.getId());
+        instance.setObj(Optional.ofNullable(template.getObj())
+                .map(com.commercetools.api.models.order.Order::deepCopy)
+                .orElse(null));
         return instance;
     }
 

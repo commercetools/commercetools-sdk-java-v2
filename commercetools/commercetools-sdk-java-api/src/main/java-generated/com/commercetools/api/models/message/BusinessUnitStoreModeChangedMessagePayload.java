@@ -4,7 +4,9 @@ package com.commercetools.api.models.message;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -127,7 +129,7 @@ public interface BusinessUnitStoreModeChangedMessagePayload extends MessagePaylo
     }
 
     /**
-     * factory method to copy an instance of BusinessUnitStoreModeChangedMessagePayload
+     * factory method to create a shallow copy BusinessUnitStoreModeChangedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -137,6 +139,33 @@ public interface BusinessUnitStoreModeChangedMessagePayload extends MessagePaylo
         instance.setStores(template.getStores());
         instance.setStoreMode(template.getStoreMode());
         instance.setOldStores(template.getOldStores());
+        instance.setOldStoreMode(template.getOldStoreMode());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of BusinessUnitStoreModeChangedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static BusinessUnitStoreModeChangedMessagePayload deepCopy(
+            @Nullable final BusinessUnitStoreModeChangedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        BusinessUnitStoreModeChangedMessagePayloadImpl instance = new BusinessUnitStoreModeChangedMessagePayloadImpl();
+        instance.setStores(Optional.ofNullable(template.getStores())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.store.StoreKeyReference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setStoreMode(template.getStoreMode());
+        instance.setOldStores(Optional.ofNullable(template.getOldStores())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.store.StoreKeyReference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setOldStoreMode(template.getOldStoreMode());
         return instance;
     }

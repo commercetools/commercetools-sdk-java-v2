@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -92,7 +93,7 @@ public interface StagedOrderSetParcelCustomTypeAction extends StagedOrderUpdateA
     }
 
     /**
-     * factory method to copy an instance of StagedOrderSetParcelCustomTypeAction
+     * factory method to create a shallow copy StagedOrderSetParcelCustomTypeAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -101,6 +102,28 @@ public interface StagedOrderSetParcelCustomTypeAction extends StagedOrderUpdateA
         instance.setParcelId(template.getParcelId());
         instance.setType(template.getType());
         instance.setFields(template.getFields());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedOrderSetParcelCustomTypeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedOrderSetParcelCustomTypeAction deepCopy(
+            @Nullable final StagedOrderSetParcelCustomTypeAction template) {
+        if (template == null) {
+            return null;
+        }
+        StagedOrderSetParcelCustomTypeActionImpl instance = new StagedOrderSetParcelCustomTypeActionImpl();
+        instance.setParcelId(template.getParcelId());
+        instance.setType(Optional.ofNullable(template.getType())
+                .map(com.commercetools.api.models.type.TypeResourceIdentifier::deepCopy)
+                .orElse(null));
+        instance.setFields(Optional.ofNullable(template.getFields())
+                .map(com.commercetools.api.models.type.FieldContainer::deepCopy)
+                .orElse(null));
         return instance;
     }
 

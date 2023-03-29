@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -73,11 +74,28 @@ public interface ShippingMethodSetCustomFieldAction extends ShippingMethodUpdate
     }
 
     /**
-     * factory method to copy an instance of ShippingMethodSetCustomFieldAction
+     * factory method to create a shallow copy ShippingMethodSetCustomFieldAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ShippingMethodSetCustomFieldAction of(final ShippingMethodSetCustomFieldAction template) {
+        ShippingMethodSetCustomFieldActionImpl instance = new ShippingMethodSetCustomFieldActionImpl();
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ShippingMethodSetCustomFieldAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ShippingMethodSetCustomFieldAction deepCopy(
+            @Nullable final ShippingMethodSetCustomFieldAction template) {
+        if (template == null) {
+            return null;
+        }
         ShippingMethodSetCustomFieldActionImpl instance = new ShippingMethodSetCustomFieldActionImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -69,11 +70,27 @@ public interface ContainerAndKey {
     }
 
     /**
-     * factory method to copy an instance of ContainerAndKey
+     * factory method to create a shallow copy ContainerAndKey
      * @param template instance to be copied
      * @return copy instance
      */
     public static ContainerAndKey of(final ContainerAndKey template) {
+        ContainerAndKeyImpl instance = new ContainerAndKeyImpl();
+        instance.setKey(template.getKey());
+        instance.setContainer(template.getContainer());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ContainerAndKey
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ContainerAndKey deepCopy(@Nullable final ContainerAndKey template) {
+        if (template == null) {
+            return null;
+        }
         ContainerAndKeyImpl instance = new ContainerAndKeyImpl();
         instance.setKey(template.getKey());
         instance.setContainer(template.getContainer());

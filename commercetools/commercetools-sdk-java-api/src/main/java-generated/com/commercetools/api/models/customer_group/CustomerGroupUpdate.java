@@ -4,7 +4,9 @@ package com.commercetools.api.models.customer_group;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -80,7 +82,7 @@ public interface CustomerGroupUpdate extends
     }
 
     /**
-     * factory method to copy an instance of CustomerGroupUpdate
+     * factory method to create a shallow copy CustomerGroupUpdate
      * @param template instance to be copied
      * @return copy instance
      */
@@ -88,6 +90,26 @@ public interface CustomerGroupUpdate extends
         CustomerGroupUpdateImpl instance = new CustomerGroupUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(template.getActions());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomerGroupUpdate
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomerGroupUpdate deepCopy(@Nullable final CustomerGroupUpdate template) {
+        if (template == null) {
+            return null;
+        }
+        CustomerGroupUpdateImpl instance = new CustomerGroupUpdateImpl();
+        instance.setVersion(template.getVersion());
+        instance.setActions(Optional.ofNullable(template.getActions())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.customer_group.CustomerGroupUpdateAction::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

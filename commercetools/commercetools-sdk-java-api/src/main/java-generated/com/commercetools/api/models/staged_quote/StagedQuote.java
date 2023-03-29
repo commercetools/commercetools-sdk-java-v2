@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -312,7 +313,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
     }
 
     /**
-     * factory method to copy an instance of StagedQuote
+     * factory method to create a shallow copy StagedQuote
      * @param template instance to be copied
      * @return copy instance
      */
@@ -335,6 +336,53 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
         instance.setState(template.getState());
         instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
         instance.setBusinessUnit(template.getBusinessUnit());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedQuote
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedQuote deepCopy(@Nullable final StagedQuote template) {
+        if (template == null) {
+            return null;
+        }
+        StagedQuoteImpl instance = new StagedQuoteImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setKey(template.getKey());
+        instance.setLastModifiedBy(Optional.ofNullable(template.getLastModifiedBy())
+                .map(com.commercetools.api.models.common.LastModifiedBy::deepCopy)
+                .orElse(null));
+        instance.setCreatedBy(Optional.ofNullable(template.getCreatedBy())
+                .map(com.commercetools.api.models.common.CreatedBy::deepCopy)
+                .orElse(null));
+        instance.setStagedQuoteState(template.getStagedQuoteState());
+        instance.setCustomer(Optional.ofNullable(template.getCustomer())
+                .map(com.commercetools.api.models.customer.CustomerReference::deepCopy)
+                .orElse(null));
+        instance.setQuoteRequest(Optional.ofNullable(template.getQuoteRequest())
+                .map(com.commercetools.api.models.quote_request.QuoteRequestReference::deepCopy)
+                .orElse(null));
+        instance.setQuotationCart(Optional.ofNullable(template.getQuotationCart())
+                .map(com.commercetools.api.models.cart.CartReference::deepCopy)
+                .orElse(null));
+        instance.setValidTo(template.getValidTo());
+        instance.setSellerComment(template.getSellerComment());
+        instance.setCustom(Optional.ofNullable(template.getCustom())
+                .map(com.commercetools.api.models.type.CustomFields::deepCopy)
+                .orElse(null));
+        instance.setState(Optional.ofNullable(template.getState())
+                .map(com.commercetools.api.models.state.StateReference::deepCopy)
+                .orElse(null));
+        instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
+        instance.setBusinessUnit(Optional.ofNullable(template.getBusinessUnit())
+                .map(com.commercetools.api.models.business_unit.BusinessUnitKeyReference::deepCopy)
+                .orElse(null));
         return instance;
     }
 

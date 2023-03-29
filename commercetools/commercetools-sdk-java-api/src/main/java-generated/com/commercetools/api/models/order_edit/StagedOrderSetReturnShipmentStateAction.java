@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order.ReturnShipmentState;
@@ -76,11 +77,28 @@ public interface StagedOrderSetReturnShipmentStateAction extends StagedOrderUpda
     }
 
     /**
-     * factory method to copy an instance of StagedOrderSetReturnShipmentStateAction
+     * factory method to create a shallow copy StagedOrderSetReturnShipmentStateAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static StagedOrderSetReturnShipmentStateAction of(final StagedOrderSetReturnShipmentStateAction template) {
+        StagedOrderSetReturnShipmentStateActionImpl instance = new StagedOrderSetReturnShipmentStateActionImpl();
+        instance.setReturnItemId(template.getReturnItemId());
+        instance.setShipmentState(template.getShipmentState());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedOrderSetReturnShipmentStateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedOrderSetReturnShipmentStateAction deepCopy(
+            @Nullable final StagedOrderSetReturnShipmentStateAction template) {
+        if (template == null) {
+            return null;
+        }
         StagedOrderSetReturnShipmentStateActionImpl instance = new StagedOrderSetReturnShipmentStateActionImpl();
         instance.setReturnItemId(template.getReturnItemId());
         instance.setShipmentState(template.getShipmentState());

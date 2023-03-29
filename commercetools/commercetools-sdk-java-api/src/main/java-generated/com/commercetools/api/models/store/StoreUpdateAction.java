@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -55,6 +56,88 @@ public interface StoreUpdateAction extends com.commercetools.api.models.Resource
     @NotNull
     @JsonProperty("action")
     public String getAction();
+
+    /**
+     * factory method to create a deep copy of StoreUpdateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StoreUpdateAction deepCopy(@Nullable final StoreUpdateAction template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.store.StoreAddCountryAction) {
+            return com.commercetools.api.models.store.StoreAddCountryAction
+                    .deepCopy((com.commercetools.api.models.store.StoreAddCountryAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.store.StoreAddDistributionChannelAction) {
+            return com.commercetools.api.models.store.StoreAddDistributionChannelAction
+                    .deepCopy((com.commercetools.api.models.store.StoreAddDistributionChannelAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.store.StoreAddProductSelectionAction) {
+            return com.commercetools.api.models.store.StoreAddProductSelectionAction
+                    .deepCopy((com.commercetools.api.models.store.StoreAddProductSelectionAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.store.StoreAddSupplyChannelAction) {
+            return com.commercetools.api.models.store.StoreAddSupplyChannelAction
+                    .deepCopy((com.commercetools.api.models.store.StoreAddSupplyChannelAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.store.StoreChangeProductSelectionAction) {
+            return com.commercetools.api.models.store.StoreChangeProductSelectionAction
+                    .deepCopy((com.commercetools.api.models.store.StoreChangeProductSelectionAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.store.StoreRemoveCountryAction) {
+            return com.commercetools.api.models.store.StoreRemoveCountryAction
+                    .deepCopy((com.commercetools.api.models.store.StoreRemoveCountryAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.store.StoreRemoveDistributionChannelAction) {
+            return com.commercetools.api.models.store.StoreRemoveDistributionChannelAction
+                    .deepCopy((com.commercetools.api.models.store.StoreRemoveDistributionChannelAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.store.StoreRemoveProductSelectionAction) {
+            return com.commercetools.api.models.store.StoreRemoveProductSelectionAction
+                    .deepCopy((com.commercetools.api.models.store.StoreRemoveProductSelectionAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.store.StoreRemoveSupplyChannelAction) {
+            return com.commercetools.api.models.store.StoreRemoveSupplyChannelAction
+                    .deepCopy((com.commercetools.api.models.store.StoreRemoveSupplyChannelAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.store.StoreSetCountriesAction) {
+            return com.commercetools.api.models.store.StoreSetCountriesAction
+                    .deepCopy((com.commercetools.api.models.store.StoreSetCountriesAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.store.StoreSetCustomFieldAction) {
+            return com.commercetools.api.models.store.StoreSetCustomFieldAction
+                    .deepCopy((com.commercetools.api.models.store.StoreSetCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.store.StoreSetCustomTypeAction) {
+            return com.commercetools.api.models.store.StoreSetCustomTypeAction
+                    .deepCopy((com.commercetools.api.models.store.StoreSetCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.store.StoreSetDistributionChannelsAction) {
+            return com.commercetools.api.models.store.StoreSetDistributionChannelsAction
+                    .deepCopy((com.commercetools.api.models.store.StoreSetDistributionChannelsAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.store.StoreSetLanguagesAction) {
+            return com.commercetools.api.models.store.StoreSetLanguagesAction
+                    .deepCopy((com.commercetools.api.models.store.StoreSetLanguagesAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.store.StoreSetNameAction) {
+            return com.commercetools.api.models.store.StoreSetNameAction
+                    .deepCopy((com.commercetools.api.models.store.StoreSetNameAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.store.StoreSetProductSelectionsAction) {
+            return com.commercetools.api.models.store.StoreSetProductSelectionsAction
+                    .deepCopy((com.commercetools.api.models.store.StoreSetProductSelectionsAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.store.StoreSetSupplyChannelsAction) {
+            return com.commercetools.api.models.store.StoreSetSupplyChannelsAction
+                    .deepCopy((com.commercetools.api.models.store.StoreSetSupplyChannelsAction) template);
+        }
+        StoreUpdateActionImpl instance = new StoreUpdateActionImpl();
+        return instance;
+    }
 
     /**
      * builder for addCountry subtype

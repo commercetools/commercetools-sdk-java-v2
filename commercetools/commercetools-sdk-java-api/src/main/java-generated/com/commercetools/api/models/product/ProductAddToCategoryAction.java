@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -91,13 +92,32 @@ public interface ProductAddToCategoryAction extends ProductUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ProductAddToCategoryAction
+     * factory method to create a shallow copy ProductAddToCategoryAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductAddToCategoryAction of(final ProductAddToCategoryAction template) {
         ProductAddToCategoryActionImpl instance = new ProductAddToCategoryActionImpl();
         instance.setCategory(template.getCategory());
+        instance.setOrderHint(template.getOrderHint());
+        instance.setStaged(template.getStaged());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductAddToCategoryAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductAddToCategoryAction deepCopy(@Nullable final ProductAddToCategoryAction template) {
+        if (template == null) {
+            return null;
+        }
+        ProductAddToCategoryActionImpl instance = new ProductAddToCategoryActionImpl();
+        instance.setCategory(Optional.ofNullable(template.getCategory())
+                .map(com.commercetools.api.models.category.CategoryResourceIdentifier::deepCopy)
+                .orElse(null));
         instance.setOrderHint(template.getOrderHint());
         instance.setStaged(template.getStaged());
         return instance;

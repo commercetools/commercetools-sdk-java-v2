@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -73,11 +74,27 @@ public interface BusinessUnitSetCustomFieldAction extends BusinessUnitUpdateActi
     }
 
     /**
-     * factory method to copy an instance of BusinessUnitSetCustomFieldAction
+     * factory method to create a shallow copy BusinessUnitSetCustomFieldAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static BusinessUnitSetCustomFieldAction of(final BusinessUnitSetCustomFieldAction template) {
+        BusinessUnitSetCustomFieldActionImpl instance = new BusinessUnitSetCustomFieldActionImpl();
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of BusinessUnitSetCustomFieldAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static BusinessUnitSetCustomFieldAction deepCopy(@Nullable final BusinessUnitSetCustomFieldAction template) {
+        if (template == null) {
+            return null;
+        }
         BusinessUnitSetCustomFieldActionImpl instance = new BusinessUnitSetCustomFieldActionImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());

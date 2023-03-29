@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -98,11 +99,28 @@ public interface CustomerLabel extends Label {
     }
 
     /**
-     * factory method to copy an instance of CustomerLabel
+     * factory method to create a shallow copy CustomerLabel
      * @param template instance to be copied
      * @return copy instance
      */
     public static CustomerLabel of(final CustomerLabel template) {
+        CustomerLabelImpl instance = new CustomerLabelImpl();
+        instance.setFirstName(template.getFirstName());
+        instance.setLastName(template.getLastName());
+        instance.setCustomerNumber(template.getCustomerNumber());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomerLabel
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomerLabel deepCopy(@Nullable final CustomerLabel template) {
+        if (template == null) {
+            return null;
+        }
         CustomerLabelImpl instance = new CustomerLabelImpl();
         instance.setFirstName(template.getFirstName());
         instance.setLastName(template.getLastName());

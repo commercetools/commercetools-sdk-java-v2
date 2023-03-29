@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -102,7 +103,7 @@ public interface ChangeAmountAuthorizedChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of ChangeAmountAuthorizedChange
+     * factory method to create a shallow copy ChangeAmountAuthorizedChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -111,6 +112,27 @@ public interface ChangeAmountAuthorizedChange extends Change {
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChangeAmountAuthorizedChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChangeAmountAuthorizedChange deepCopy(@Nullable final ChangeAmountAuthorizedChange template) {
+        if (template == null) {
+            return null;
+        }
+        ChangeAmountAuthorizedChangeImpl instance = new ChangeAmountAuthorizedChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
+                .map(com.commercetools.history.models.common.Money::deepCopy)
+                .orElse(null));
+        instance.setNextValue(Optional.ofNullable(template.getNextValue())
+                .map(com.commercetools.history.models.common.Money::deepCopy)
+                .orElse(null));
         return instance;
     }
 

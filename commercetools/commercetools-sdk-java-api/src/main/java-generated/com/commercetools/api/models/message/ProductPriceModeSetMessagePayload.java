@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.product.ProductPriceModeEnum;
@@ -59,11 +60,27 @@ public interface ProductPriceModeSetMessagePayload extends MessagePayload {
     }
 
     /**
-     * factory method to copy an instance of ProductPriceModeSetMessagePayload
+     * factory method to create a shallow copy ProductPriceModeSetMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductPriceModeSetMessagePayload of(final ProductPriceModeSetMessagePayload template) {
+        ProductPriceModeSetMessagePayloadImpl instance = new ProductPriceModeSetMessagePayloadImpl();
+        instance.setTo(template.getTo());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductPriceModeSetMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductPriceModeSetMessagePayload deepCopy(
+            @Nullable final ProductPriceModeSetMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
         ProductPriceModeSetMessagePayloadImpl instance = new ProductPriceModeSetMessagePayloadImpl();
         instance.setTo(template.getTo());
         return instance;

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -130,7 +131,7 @@ public interface Shipping {
     }
 
     /**
-     * factory method to copy an instance of Shipping
+     * factory method to create a shallow copy Shipping
      * @param template instance to be copied
      * @return copy instance
      */
@@ -141,6 +142,33 @@ public interface Shipping {
         instance.setShippingAddress(template.getShippingAddress());
         instance.setShippingRateInput(template.getShippingRateInput());
         instance.setShippingCustomFields(template.getShippingCustomFields());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of Shipping
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static Shipping deepCopy(@Nullable final Shipping template) {
+        if (template == null) {
+            return null;
+        }
+        ShippingImpl instance = new ShippingImpl();
+        instance.setShippingKey(template.getShippingKey());
+        instance.setShippingInfo(Optional.ofNullable(template.getShippingInfo())
+                .map(com.commercetools.api.models.cart.ShippingInfo::deepCopy)
+                .orElse(null));
+        instance.setShippingAddress(Optional.ofNullable(template.getShippingAddress())
+                .map(com.commercetools.api.models.common.Address::deepCopy)
+                .orElse(null));
+        instance.setShippingRateInput(Optional.ofNullable(template.getShippingRateInput())
+                .map(com.commercetools.api.models.cart.ShippingRateInput::deepCopy)
+                .orElse(null));
+        instance.setShippingCustomFields(Optional.ofNullable(template.getShippingCustomFields())
+                .map(com.commercetools.api.models.type.CustomFields::deepCopy)
+                .orElse(null));
         return instance;
     }
 

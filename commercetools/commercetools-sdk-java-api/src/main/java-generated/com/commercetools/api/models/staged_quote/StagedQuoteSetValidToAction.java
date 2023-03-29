@@ -6,6 +6,8 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -56,11 +58,26 @@ public interface StagedQuoteSetValidToAction extends StagedQuoteUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of StagedQuoteSetValidToAction
+     * factory method to create a shallow copy StagedQuoteSetValidToAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static StagedQuoteSetValidToAction of(final StagedQuoteSetValidToAction template) {
+        StagedQuoteSetValidToActionImpl instance = new StagedQuoteSetValidToActionImpl();
+        instance.setValidTo(template.getValidTo());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedQuoteSetValidToAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedQuoteSetValidToAction deepCopy(@Nullable final StagedQuoteSetValidToAction template) {
+        if (template == null) {
+            return null;
+        }
         StagedQuoteSetValidToActionImpl instance = new StagedQuoteSetValidToActionImpl();
         instance.setValidTo(template.getValidTo());
         return instance;

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -92,7 +93,7 @@ public interface StagedOrderSetDeliveryCustomTypeAction extends StagedOrderUpdat
     }
 
     /**
-     * factory method to copy an instance of StagedOrderSetDeliveryCustomTypeAction
+     * factory method to create a shallow copy StagedOrderSetDeliveryCustomTypeAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -101,6 +102,28 @@ public interface StagedOrderSetDeliveryCustomTypeAction extends StagedOrderUpdat
         instance.setDeliveryId(template.getDeliveryId());
         instance.setType(template.getType());
         instance.setFields(template.getFields());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedOrderSetDeliveryCustomTypeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedOrderSetDeliveryCustomTypeAction deepCopy(
+            @Nullable final StagedOrderSetDeliveryCustomTypeAction template) {
+        if (template == null) {
+            return null;
+        }
+        StagedOrderSetDeliveryCustomTypeActionImpl instance = new StagedOrderSetDeliveryCustomTypeActionImpl();
+        instance.setDeliveryId(template.getDeliveryId());
+        instance.setType(Optional.ofNullable(template.getType())
+                .map(com.commercetools.api.models.type.TypeResourceIdentifier::deepCopy)
+                .orElse(null));
+        instance.setFields(Optional.ofNullable(template.getFields())
+                .map(com.commercetools.api.models.type.FieldContainer::deepCopy)
+                .orElse(null));
         return instance;
     }
 

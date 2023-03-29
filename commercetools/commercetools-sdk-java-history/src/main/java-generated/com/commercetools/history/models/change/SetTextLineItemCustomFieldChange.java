@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -147,7 +148,7 @@ public interface SetTextLineItemCustomFieldChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetTextLineItemCustomFieldChange
+     * factory method to create a shallow copy SetTextLineItemCustomFieldChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -157,6 +158,28 @@ public interface SetTextLineItemCustomFieldChange extends Change {
         instance.setName(template.getName());
         instance.setCustomTypeId(template.getCustomTypeId());
         instance.setTextLineItem(template.getTextLineItem());
+        instance.setNextValue(template.getNextValue());
+        instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetTextLineItemCustomFieldChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetTextLineItemCustomFieldChange deepCopy(@Nullable final SetTextLineItemCustomFieldChange template) {
+        if (template == null) {
+            return null;
+        }
+        SetTextLineItemCustomFieldChangeImpl instance = new SetTextLineItemCustomFieldChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setName(template.getName());
+        instance.setCustomTypeId(template.getCustomTypeId());
+        instance.setTextLineItem(Optional.ofNullable(template.getTextLineItem())
+                .map(com.commercetools.history.models.change_value.TextLineItemValue::deepCopy)
+                .orElse(null));
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
         return instance;

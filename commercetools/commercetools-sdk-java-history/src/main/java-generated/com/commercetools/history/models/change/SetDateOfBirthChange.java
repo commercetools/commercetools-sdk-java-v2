@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -98,11 +99,28 @@ public interface SetDateOfBirthChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetDateOfBirthChange
+     * factory method to create a shallow copy SetDateOfBirthChange
      * @param template instance to be copied
      * @return copy instance
      */
     public static SetDateOfBirthChange of(final SetDateOfBirthChange template) {
+        SetDateOfBirthChangeImpl instance = new SetDateOfBirthChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetDateOfBirthChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetDateOfBirthChange deepCopy(@Nullable final SetDateOfBirthChange template) {
+        if (template == null) {
+            return null;
+        }
         SetDateOfBirthChangeImpl instance = new SetDateOfBirthChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());

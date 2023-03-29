@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -169,7 +170,7 @@ public interface AttributeDefinition {
     }
 
     /**
-     * factory method to copy an instance of AttributeDefinition
+     * factory method to create a shallow copy AttributeDefinition
      * @param template instance to be copied
      * @return copy instance
      */
@@ -181,6 +182,34 @@ public interface AttributeDefinition {
         instance.setIsRequired(template.getIsRequired());
         instance.setAttributeConstraint(template.getAttributeConstraint());
         instance.setInputTip(template.getInputTip());
+        instance.setInputHint(template.getInputHint());
+        instance.setIsSearchable(template.getIsSearchable());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of AttributeDefinition
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AttributeDefinition deepCopy(@Nullable final AttributeDefinition template) {
+        if (template == null) {
+            return null;
+        }
+        AttributeDefinitionImpl instance = new AttributeDefinitionImpl();
+        instance.setType(Optional.ofNullable(template.getType())
+                .map(com.commercetools.history.models.common.AttributeType::deepCopy)
+                .orElse(null));
+        instance.setName(template.getName());
+        instance.setLabel(Optional.ofNullable(template.getLabel())
+                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setIsRequired(template.getIsRequired());
+        instance.setAttributeConstraint(template.getAttributeConstraint());
+        instance.setInputTip(Optional.ofNullable(template.getInputTip())
+                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
+                .orElse(null));
         instance.setInputHint(template.getInputHint());
         instance.setIsSearchable(template.getIsSearchable());
         return instance;

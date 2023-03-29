@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -55,11 +57,26 @@ public interface StandalonePriceSetKeyAction extends StandalonePriceUpdateAction
     }
 
     /**
-     * factory method to copy an instance of StandalonePriceSetKeyAction
+     * factory method to create a shallow copy StandalonePriceSetKeyAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static StandalonePriceSetKeyAction of(final StandalonePriceSetKeyAction template) {
+        StandalonePriceSetKeyActionImpl instance = new StandalonePriceSetKeyActionImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StandalonePriceSetKeyAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StandalonePriceSetKeyAction deepCopy(@Nullable final StandalonePriceSetKeyAction template) {
+        if (template == null) {
+            return null;
+        }
         StandalonePriceSetKeyActionImpl instance = new StandalonePriceSetKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;

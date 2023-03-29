@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.common.LocalizedString;
@@ -58,7 +59,7 @@ public interface ShippingMethodSetLocalizedDescriptionAction extends ShippingMet
     }
 
     /**
-     * factory method to copy an instance of ShippingMethodSetLocalizedDescriptionAction
+     * factory method to create a shallow copy ShippingMethodSetLocalizedDescriptionAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -66,6 +67,24 @@ public interface ShippingMethodSetLocalizedDescriptionAction extends ShippingMet
             final ShippingMethodSetLocalizedDescriptionAction template) {
         ShippingMethodSetLocalizedDescriptionActionImpl instance = new ShippingMethodSetLocalizedDescriptionActionImpl();
         instance.setLocalizedDescription(template.getLocalizedDescription());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ShippingMethodSetLocalizedDescriptionAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ShippingMethodSetLocalizedDescriptionAction deepCopy(
+            @Nullable final ShippingMethodSetLocalizedDescriptionAction template) {
+        if (template == null) {
+            return null;
+        }
+        ShippingMethodSetLocalizedDescriptionActionImpl instance = new ShippingMethodSetLocalizedDescriptionActionImpl();
+        instance.setLocalizedDescription(Optional.ofNullable(template.getLocalizedDescription())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
         return instance;
     }
 

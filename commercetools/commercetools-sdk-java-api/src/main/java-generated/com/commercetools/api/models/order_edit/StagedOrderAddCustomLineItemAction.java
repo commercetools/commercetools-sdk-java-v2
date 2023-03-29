@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -184,7 +185,7 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
     }
 
     /**
-     * factory method to copy an instance of StagedOrderAddCustomLineItemAction
+     * factory method to create a shallow copy StagedOrderAddCustomLineItemAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -197,6 +198,39 @@ public interface StagedOrderAddCustomLineItemAction extends StagedOrderUpdateAct
         instance.setTaxCategory(template.getTaxCategory());
         instance.setCustom(template.getCustom());
         instance.setExternalTaxRate(template.getExternalTaxRate());
+        instance.setPriceMode(template.getPriceMode());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedOrderAddCustomLineItemAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedOrderAddCustomLineItemAction deepCopy(
+            @Nullable final StagedOrderAddCustomLineItemAction template) {
+        if (template == null) {
+            return null;
+        }
+        StagedOrderAddCustomLineItemActionImpl instance = new StagedOrderAddCustomLineItemActionImpl();
+        instance.setMoney(Optional.ofNullable(template.getMoney())
+                .map(com.commercetools.api.models.common.Money::deepCopy)
+                .orElse(null));
+        instance.setName(Optional.ofNullable(template.getName())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setQuantity(template.getQuantity());
+        instance.setSlug(template.getSlug());
+        instance.setTaxCategory(Optional.ofNullable(template.getTaxCategory())
+                .map(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier::deepCopy)
+                .orElse(null));
+        instance.setCustom(Optional.ofNullable(template.getCustom())
+                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
+                .orElse(null));
+        instance.setExternalTaxRate(Optional.ofNullable(template.getExternalTaxRate())
+                .map(com.commercetools.api.models.cart.ExternalTaxRateDraft::deepCopy)
+                .orElse(null));
         instance.setPriceMode(template.getPriceMode());
         return instance;
     }

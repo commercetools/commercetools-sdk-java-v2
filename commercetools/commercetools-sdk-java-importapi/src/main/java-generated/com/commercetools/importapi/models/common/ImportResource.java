@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -53,11 +54,62 @@ public interface ImportResource {
     }
 
     /**
-     * factory method to copy an instance of ImportResource
+     * factory method to create a shallow copy ImportResource
      * @param template instance to be copied
      * @return copy instance
      */
     public static ImportResource of(final ImportResource template) {
+        ImportResourceImpl instance = new ImportResourceImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ImportResource
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ImportResource deepCopy(@Nullable final ImportResource template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.importapi.models.productvariants.ProductVariantImport) {
+            return com.commercetools.importapi.models.productvariants.ProductVariantImport
+                    .deepCopy((com.commercetools.importapi.models.productvariants.ProductVariantImport) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.prices.PriceImport) {
+            return com.commercetools.importapi.models.prices.PriceImport
+                    .deepCopy((com.commercetools.importapi.models.prices.PriceImport) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.categories.CategoryImport) {
+            return com.commercetools.importapi.models.categories.CategoryImport
+                    .deepCopy((com.commercetools.importapi.models.categories.CategoryImport) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.standalone_prices.StandalonePriceImport) {
+            return com.commercetools.importapi.models.standalone_prices.StandalonePriceImport
+                    .deepCopy((com.commercetools.importapi.models.standalone_prices.StandalonePriceImport) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.products.ProductImport) {
+            return com.commercetools.importapi.models.products.ProductImport
+                    .deepCopy((com.commercetools.importapi.models.products.ProductImport) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.productdrafts.ProductDraftImport) {
+            return com.commercetools.importapi.models.productdrafts.ProductDraftImport
+                    .deepCopy((com.commercetools.importapi.models.productdrafts.ProductDraftImport) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.producttypes.ProductTypeImport) {
+            return com.commercetools.importapi.models.producttypes.ProductTypeImport
+                    .deepCopy((com.commercetools.importapi.models.producttypes.ProductTypeImport) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.customers.CustomerImport) {
+            return com.commercetools.importapi.models.customers.CustomerImport
+                    .deepCopy((com.commercetools.importapi.models.customers.CustomerImport) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.inventories.InventoryImport) {
+            return com.commercetools.importapi.models.inventories.InventoryImport
+                    .deepCopy((com.commercetools.importapi.models.inventories.InventoryImport) template);
+        }
         ImportResourceImpl instance = new ImportResourceImpl();
         instance.setKey(template.getKey());
         return instance;

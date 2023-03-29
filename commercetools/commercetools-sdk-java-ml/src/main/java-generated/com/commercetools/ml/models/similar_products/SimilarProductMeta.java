@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.ml.models.common.LocalizedString;
@@ -99,7 +100,7 @@ public interface SimilarProductMeta {
     }
 
     /**
-     * factory method to copy an instance of SimilarProductMeta
+     * factory method to create a shallow copy SimilarProductMeta
      * @param template instance to be copied
      * @return copy instance
      */
@@ -108,6 +109,30 @@ public interface SimilarProductMeta {
         instance.setName(template.getName());
         instance.setDescription(template.getDescription());
         instance.setPrice(template.getPrice());
+        instance.setVariantCount(template.getVariantCount());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SimilarProductMeta
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SimilarProductMeta deepCopy(@Nullable final SimilarProductMeta template) {
+        if (template == null) {
+            return null;
+        }
+        SimilarProductMetaImpl instance = new SimilarProductMetaImpl();
+        instance.setName(Optional.ofNullable(template.getName())
+                .map(com.commercetools.ml.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setDescription(Optional.ofNullable(template.getDescription())
+                .map(com.commercetools.ml.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setPrice(Optional.ofNullable(template.getPrice())
+                .map(com.commercetools.ml.models.common.Money::deepCopy)
+                .orElse(null));
         instance.setVariantCount(template.getVariantCount());
         return instance;
     }

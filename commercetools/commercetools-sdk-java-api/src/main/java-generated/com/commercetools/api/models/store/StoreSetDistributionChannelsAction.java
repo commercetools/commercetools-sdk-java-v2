@@ -4,7 +4,9 @@ package com.commercetools.api.models.store;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
@@ -67,13 +69,33 @@ public interface StoreSetDistributionChannelsAction extends StoreUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of StoreSetDistributionChannelsAction
+     * factory method to create a shallow copy StoreSetDistributionChannelsAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static StoreSetDistributionChannelsAction of(final StoreSetDistributionChannelsAction template) {
         StoreSetDistributionChannelsActionImpl instance = new StoreSetDistributionChannelsActionImpl();
         instance.setDistributionChannels(template.getDistributionChannels());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StoreSetDistributionChannelsAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StoreSetDistributionChannelsAction deepCopy(
+            @Nullable final StoreSetDistributionChannelsAction template) {
+        if (template == null) {
+            return null;
+        }
+        StoreSetDistributionChannelsActionImpl instance = new StoreSetDistributionChannelsActionImpl();
+        instance.setDistributionChannels(Optional.ofNullable(template.getDistributionChannels())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.channel.ChannelResourceIdentifier::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

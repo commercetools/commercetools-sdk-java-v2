@@ -4,7 +4,9 @@ package com.commercetools.api.models.message;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -69,13 +71,33 @@ public interface BusinessUnitStoresSetMessagePayload extends MessagePayload {
     }
 
     /**
-     * factory method to copy an instance of BusinessUnitStoresSetMessagePayload
+     * factory method to create a shallow copy BusinessUnitStoresSetMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
     public static BusinessUnitStoresSetMessagePayload of(final BusinessUnitStoresSetMessagePayload template) {
         BusinessUnitStoresSetMessagePayloadImpl instance = new BusinessUnitStoresSetMessagePayloadImpl();
         instance.setStores(template.getStores());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of BusinessUnitStoresSetMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static BusinessUnitStoresSetMessagePayload deepCopy(
+            @Nullable final BusinessUnitStoresSetMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        BusinessUnitStoresSetMessagePayloadImpl instance = new BusinessUnitStoresSetMessagePayloadImpl();
+        instance.setStores(Optional.ofNullable(template.getStores())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.store.StoreKeyReference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

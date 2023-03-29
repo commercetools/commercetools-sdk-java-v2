@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -64,7 +65,7 @@ public interface LineItemReturnItem extends ReturnItem {
     }
 
     /**
-     * factory method to copy an instance of LineItemReturnItem
+     * factory method to create a shallow copy LineItemReturnItem
      * @param template instance to be copied
      * @return copy instance
      */
@@ -76,6 +77,31 @@ public interface LineItemReturnItem extends ReturnItem {
         instance.setShipmentState(template.getShipmentState());
         instance.setPaymentState(template.getPaymentState());
         instance.setCustom(template.getCustom());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLineItemId(template.getLineItemId());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of LineItemReturnItem
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static LineItemReturnItem deepCopy(@Nullable final LineItemReturnItem template) {
+        if (template == null) {
+            return null;
+        }
+        LineItemReturnItemImpl instance = new LineItemReturnItemImpl();
+        instance.setId(template.getId());
+        instance.setQuantity(template.getQuantity());
+        instance.setComment(template.getComment());
+        instance.setShipmentState(template.getShipmentState());
+        instance.setPaymentState(template.getPaymentState());
+        instance.setCustom(Optional.ofNullable(template.getCustom())
+                .map(com.commercetools.api.models.type.CustomFields::deepCopy)
+                .orElse(null));
         instance.setLastModifiedAt(template.getLastModifiedAt());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLineItemId(template.getLineItemId());

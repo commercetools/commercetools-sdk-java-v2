@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.fasterxml.jackson.annotation.*;
@@ -67,13 +68,30 @@ public interface CartSetShippingRateInputAction extends CartUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of CartSetShippingRateInputAction
+     * factory method to create a shallow copy CartSetShippingRateInputAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static CartSetShippingRateInputAction of(final CartSetShippingRateInputAction template) {
         CartSetShippingRateInputActionImpl instance = new CartSetShippingRateInputActionImpl();
         instance.setShippingRateInput(template.getShippingRateInput());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartSetShippingRateInputAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartSetShippingRateInputAction deepCopy(@Nullable final CartSetShippingRateInputAction template) {
+        if (template == null) {
+            return null;
+        }
+        CartSetShippingRateInputActionImpl instance = new CartSetShippingRateInputActionImpl();
+        instance.setShippingRateInput(Optional.ofNullable(template.getShippingRateInput())
+                .map(com.commercetools.api.models.cart.ShippingRateInputDraft::deepCopy)
+                .orElse(null));
         return instance;
     }
 

@@ -4,7 +4,9 @@ package com.commercetools.api.models.product;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -257,7 +259,7 @@ public interface ProductVariant extends com.commercetools.api.models.WithKey {
     }
 
     /**
-     * factory method to copy an instance of ProductVariant
+     * factory method to create a shallow copy ProductVariant
      * @param template instance to be copied
      * @return copy instance
      */
@@ -274,6 +276,54 @@ public interface ProductVariant extends com.commercetools.api.models.WithKey {
         instance.setAvailability(template.getAvailability());
         instance.setIsMatchingVariant(template.getIsMatchingVariant());
         instance.setScopedPrice(template.getScopedPrice());
+        instance.setScopedPriceDiscounted(template.getScopedPriceDiscounted());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductVariant
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductVariant deepCopy(@Nullable final ProductVariant template) {
+        if (template == null) {
+            return null;
+        }
+        ProductVariantImpl instance = new ProductVariantImpl();
+        instance.setId(template.getId());
+        instance.setSku(template.getSku());
+        instance.setKey(template.getKey());
+        instance.setPrices(Optional.ofNullable(template.getPrices())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.common.Price::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setAttributes(Optional.ofNullable(template.getAttributes())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.product.Attribute::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setPrice(Optional.ofNullable(template.getPrice())
+                .map(com.commercetools.api.models.common.Price::deepCopy)
+                .orElse(null));
+        instance.setImages(Optional.ofNullable(template.getImages())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.common.Image::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setAssets(Optional.ofNullable(template.getAssets())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.common.Asset::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setAvailability(Optional.ofNullable(template.getAvailability())
+                .map(com.commercetools.api.models.product.ProductVariantAvailability::deepCopy)
+                .orElse(null));
+        instance.setIsMatchingVariant(template.getIsMatchingVariant());
+        instance.setScopedPrice(Optional.ofNullable(template.getScopedPrice())
+                .map(com.commercetools.api.models.common.ScopedPrice::deepCopy)
+                .orElse(null));
         instance.setScopedPriceDiscounted(template.getScopedPriceDiscounted());
         return instance;
     }

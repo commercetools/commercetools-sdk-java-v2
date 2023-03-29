@@ -5,7 +5,9 @@ import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -360,7 +362,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     }
 
     /**
-     * factory method to copy an instance of Category
+     * factory method to create a shallow copy Category
      * @param template instance to be copied
      * @return copy instance
      */
@@ -384,6 +386,67 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
         instance.setMetaKeywords(template.getMetaKeywords());
         instance.setCustom(template.getCustom());
         instance.setAssets(template.getAssets());
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of Category
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static Category deepCopy(@Nullable final Category template) {
+        if (template == null) {
+            return null;
+        }
+        CategoryImpl instance = new CategoryImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(Optional.ofNullable(template.getLastModifiedBy())
+                .map(com.commercetools.api.models.common.LastModifiedBy::deepCopy)
+                .orElse(null));
+        instance.setCreatedBy(Optional.ofNullable(template.getCreatedBy())
+                .map(com.commercetools.api.models.common.CreatedBy::deepCopy)
+                .orElse(null));
+        instance.setName(Optional.ofNullable(template.getName())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setSlug(Optional.ofNullable(template.getSlug())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setDescription(Optional.ofNullable(template.getDescription())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setAncestors(Optional.ofNullable(template.getAncestors())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.category.CategoryReference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setParent(Optional.ofNullable(template.getParent())
+                .map(com.commercetools.api.models.category.CategoryReference::deepCopy)
+                .orElse(null));
+        instance.setOrderHint(template.getOrderHint());
+        instance.setExternalId(template.getExternalId());
+        instance.setMetaTitle(Optional.ofNullable(template.getMetaTitle())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setMetaDescription(Optional.ofNullable(template.getMetaDescription())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setMetaKeywords(Optional.ofNullable(template.getMetaKeywords())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setCustom(Optional.ofNullable(template.getCustom())
+                .map(com.commercetools.api.models.type.CustomFields::deepCopy)
+                .orElse(null));
+        instance.setAssets(Optional.ofNullable(template.getAssets())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.common.Asset::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setKey(template.getKey());
         return instance;
     }

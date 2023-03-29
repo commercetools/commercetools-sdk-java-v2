@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -136,7 +137,7 @@ public interface SetLineItemTaxedPriceChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetLineItemTaxedPriceChange
+     * factory method to create a shallow copy SetLineItemTaxedPriceChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -147,6 +148,31 @@ public interface SetLineItemTaxedPriceChange extends Change {
         instance.setLineItemId(template.getLineItemId());
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetLineItemTaxedPriceChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetLineItemTaxedPriceChange deepCopy(@Nullable final SetLineItemTaxedPriceChange template) {
+        if (template == null) {
+            return null;
+        }
+        SetLineItemTaxedPriceChangeImpl instance = new SetLineItemTaxedPriceChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setLineItem(Optional.ofNullable(template.getLineItem())
+                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setLineItemId(template.getLineItemId());
+        instance.setNextValue(Optional.ofNullable(template.getNextValue())
+                .map(com.commercetools.history.models.common.TaxedItemPrice::deepCopy)
+                .orElse(null));
+        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
+                .map(com.commercetools.history.models.common.TaxedItemPrice::deepCopy)
+                .orElse(null));
         return instance;
     }
 

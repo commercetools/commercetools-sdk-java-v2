@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.payment.TransactionState;
@@ -75,12 +76,29 @@ public interface PaymentTransactionStateChangedMessagePayload extends MessagePay
     }
 
     /**
-     * factory method to copy an instance of PaymentTransactionStateChangedMessagePayload
+     * factory method to create a shallow copy PaymentTransactionStateChangedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
     public static PaymentTransactionStateChangedMessagePayload of(
             final PaymentTransactionStateChangedMessagePayload template) {
+        PaymentTransactionStateChangedMessagePayloadImpl instance = new PaymentTransactionStateChangedMessagePayloadImpl();
+        instance.setTransactionId(template.getTransactionId());
+        instance.setState(template.getState());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of PaymentTransactionStateChangedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static PaymentTransactionStateChangedMessagePayload deepCopy(
+            @Nullable final PaymentTransactionStateChangedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
         PaymentTransactionStateChangedMessagePayloadImpl instance = new PaymentTransactionStateChangedMessagePayloadImpl();
         instance.setTransactionId(template.getTransactionId());
         instance.setState(template.getState());

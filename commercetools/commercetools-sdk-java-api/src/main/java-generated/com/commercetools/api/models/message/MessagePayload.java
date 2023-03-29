@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -190,6 +191,464 @@ public interface MessagePayload {
     @NotNull
     @JsonProperty("type")
     public String getType();
+
+    /**
+     * factory method to create a deep copy of MessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MessagePayload deepCopy(@Nullable final MessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.message.OrderMessagePayload) {
+            return com.commercetools.api.models.message.OrderMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.OrderMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.OrderPaymentAddedMessagePayload) {
+            return com.commercetools.api.models.message.OrderPaymentAddedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.OrderPaymentAddedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.PaymentCreatedMessagePayload) {
+            return com.commercetools.api.models.message.PaymentCreatedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.PaymentCreatedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.PaymentInteractionAddedMessagePayload) {
+            return com.commercetools.api.models.message.PaymentInteractionAddedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.PaymentInteractionAddedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.PaymentStatusInterfaceCodeSetMessagePayload) {
+            return com.commercetools.api.models.message.PaymentStatusInterfaceCodeSetMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.PaymentStatusInterfaceCodeSetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.PaymentStatusStateTransitionMessagePayload) {
+            return com.commercetools.api.models.message.PaymentStatusStateTransitionMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.PaymentStatusStateTransitionMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.PaymentTransactionAddedMessagePayload) {
+            return com.commercetools.api.models.message.PaymentTransactionAddedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.PaymentTransactionAddedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.PaymentTransactionStateChangedMessagePayload) {
+            return com.commercetools.api.models.message.PaymentTransactionStateChangedMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.PaymentTransactionStateChangedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductAddedToCategoryMessagePayload) {
+            return com.commercetools.api.models.message.ProductAddedToCategoryMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.ProductAddedToCategoryMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductCreatedMessagePayload) {
+            return com.commercetools.api.models.message.ProductCreatedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.ProductCreatedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductDeletedMessagePayload) {
+            return com.commercetools.api.models.message.ProductDeletedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.ProductDeletedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductImageAddedMessagePayload) {
+            return com.commercetools.api.models.message.ProductImageAddedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.ProductImageAddedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductPriceAddedMessagePayload) {
+            return com.commercetools.api.models.message.ProductPriceAddedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.ProductPriceAddedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductPriceChangedMessagePayload) {
+            return com.commercetools.api.models.message.ProductPriceChangedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.ProductPriceChangedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductPriceDiscountsSetMessagePayload) {
+            return com.commercetools.api.models.message.ProductPriceDiscountsSetMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.ProductPriceDiscountsSetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductPriceExternalDiscountSetMessagePayload) {
+            return com.commercetools.api.models.message.ProductPriceExternalDiscountSetMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.ProductPriceExternalDiscountSetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductPriceKeySetMessagePayload) {
+            return com.commercetools.api.models.message.ProductPriceKeySetMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.ProductPriceKeySetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductPriceModeSetMessagePayload) {
+            return com.commercetools.api.models.message.ProductPriceModeSetMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.ProductPriceModeSetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductPriceRemovedMessagePayload) {
+            return com.commercetools.api.models.message.ProductPriceRemovedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.ProductPriceRemovedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductPricesSetMessagePayload) {
+            return com.commercetools.api.models.message.ProductPricesSetMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.ProductPricesSetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductPublishedMessagePayload) {
+            return com.commercetools.api.models.message.ProductPublishedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.ProductPublishedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductRemovedFromCategoryMessagePayload) {
+            return com.commercetools.api.models.message.ProductRemovedFromCategoryMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.ProductRemovedFromCategoryMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductRevertedStagedChangesMessagePayload) {
+            return com.commercetools.api.models.message.ProductRevertedStagedChangesMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.ProductRevertedStagedChangesMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductSelectionCreatedMessagePayload) {
+            return com.commercetools.api.models.message.ProductSelectionCreatedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.ProductSelectionCreatedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductSelectionDeletedMessagePayload) {
+            return com.commercetools.api.models.message.ProductSelectionDeletedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.ProductSelectionDeletedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductSelectionProductAddedMessagePayload) {
+            return com.commercetools.api.models.message.ProductSelectionProductAddedMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.ProductSelectionProductAddedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductSelectionProductExcludedMessagePayload) {
+            return com.commercetools.api.models.message.ProductSelectionProductExcludedMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.ProductSelectionProductExcludedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductSelectionProductRemovedMessagePayload) {
+            return com.commercetools.api.models.message.ProductSelectionProductRemovedMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.ProductSelectionProductRemovedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductSelectionVariantExclusionChangedMessagePayload) {
+            return com.commercetools.api.models.message.ProductSelectionVariantExclusionChangedMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.ProductSelectionVariantExclusionChangedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductSelectionVariantSelectionChangedMessagePayload) {
+            return com.commercetools.api.models.message.ProductSelectionVariantSelectionChangedMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.ProductSelectionVariantSelectionChangedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductSlugChangedMessagePayload) {
+            return com.commercetools.api.models.message.ProductSlugChangedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.ProductSlugChangedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductStateTransitionMessagePayload) {
+            return com.commercetools.api.models.message.ProductStateTransitionMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.ProductStateTransitionMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductUnpublishedMessagePayload) {
+            return com.commercetools.api.models.message.ProductUnpublishedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.ProductUnpublishedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductVariantAddedMessagePayload) {
+            return com.commercetools.api.models.message.ProductVariantAddedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.ProductVariantAddedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductVariantDeletedMessagePayload) {
+            return com.commercetools.api.models.message.ProductVariantDeletedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.ProductVariantDeletedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.QuoteCreatedMessagePayload) {
+            return com.commercetools.api.models.message.QuoteCreatedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.QuoteCreatedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.QuoteDeletedMessagePayload) {
+            return com.commercetools.api.models.message.QuoteDeletedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.QuoteDeletedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.QuoteRequestCreatedMessagePayload) {
+            return com.commercetools.api.models.message.QuoteRequestCreatedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.QuoteRequestCreatedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.QuoteRequestDeletedMessagePayload) {
+            return com.commercetools.api.models.message.QuoteRequestDeletedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.QuoteRequestDeletedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.QuoteRequestStateChangedMessagePayload) {
+            return com.commercetools.api.models.message.QuoteRequestStateChangedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.QuoteRequestStateChangedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.QuoteRequestStateTransitionMessagePayload) {
+            return com.commercetools.api.models.message.QuoteRequestStateTransitionMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.QuoteRequestStateTransitionMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.QuoteStateChangedMessagePayload) {
+            return com.commercetools.api.models.message.QuoteStateChangedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.QuoteStateChangedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.QuoteStateTransitionMessagePayload) {
+            return com.commercetools.api.models.message.QuoteStateTransitionMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.QuoteStateTransitionMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ReviewCreatedMessagePayload) {
+            return com.commercetools.api.models.message.ReviewCreatedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.ReviewCreatedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ReviewRatingSetMessagePayload) {
+            return com.commercetools.api.models.message.ReviewRatingSetMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.ReviewRatingSetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ReviewStateTransitionMessagePayload) {
+            return com.commercetools.api.models.message.ReviewStateTransitionMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.ReviewStateTransitionMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ShoppingListStoreSetMessagePayload) {
+            return com.commercetools.api.models.message.ShoppingListStoreSetMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.ShoppingListStoreSetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.StagedQuoteCreatedMessagePayload) {
+            return com.commercetools.api.models.message.StagedQuoteCreatedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.StagedQuoteCreatedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.StagedQuoteDeletedMessagePayload) {
+            return com.commercetools.api.models.message.StagedQuoteDeletedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.StagedQuoteDeletedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.StagedQuoteSellerCommentSetMessagePayload) {
+            return com.commercetools.api.models.message.StagedQuoteSellerCommentSetMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.StagedQuoteSellerCommentSetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.StagedQuoteStateChangedMessagePayload) {
+            return com.commercetools.api.models.message.StagedQuoteStateChangedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.StagedQuoteStateChangedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.StagedQuoteStateTransitionMessagePayload) {
+            return com.commercetools.api.models.message.StagedQuoteStateTransitionMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.StagedQuoteStateTransitionMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.StagedQuoteValidToSetMessagePayload) {
+            return com.commercetools.api.models.message.StagedQuoteValidToSetMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.StagedQuoteValidToSetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.StandalonePriceActiveChangedMessagePayload) {
+            return com.commercetools.api.models.message.StandalonePriceActiveChangedMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.StandalonePriceActiveChangedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.StandalonePriceCreatedMessagePayload) {
+            return com.commercetools.api.models.message.StandalonePriceCreatedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.StandalonePriceCreatedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.StandalonePriceDeletedMessagePayload) {
+            return com.commercetools.api.models.message.StandalonePriceDeletedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.StandalonePriceDeletedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.StandalonePriceDiscountSetMessagePayload) {
+            return com.commercetools.api.models.message.StandalonePriceDiscountSetMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.StandalonePriceDiscountSetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.StandalonePriceExternalDiscountSetMessagePayload) {
+            return com.commercetools.api.models.message.StandalonePriceExternalDiscountSetMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.StandalonePriceExternalDiscountSetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.StandalonePriceKeySetMessagePayload) {
+            return com.commercetools.api.models.message.StandalonePriceKeySetMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.StandalonePriceKeySetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessagePayload) {
+            return com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.StandalonePriceStagedChangesAppliedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.StandalonePriceValueChangedMessagePayload) {
+            return com.commercetools.api.models.message.StandalonePriceValueChangedMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.StandalonePriceValueChangedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.StoreCountriesChangedMessagePayload) {
+            return com.commercetools.api.models.message.StoreCountriesChangedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.StoreCountriesChangedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.StoreCreatedMessagePayload) {
+            return com.commercetools.api.models.message.StoreCreatedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.StoreCreatedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.StoreDeletedMessagePayload) {
+            return com.commercetools.api.models.message.StoreDeletedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.StoreDeletedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.StoreDistributionChannelsChangedMessagePayload) {
+            return com.commercetools.api.models.message.StoreDistributionChannelsChangedMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.StoreDistributionChannelsChangedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.StoreLanguagesChangedMessagePayload) {
+            return com.commercetools.api.models.message.StoreLanguagesChangedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.StoreLanguagesChangedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.StoreNameSetMessagePayload) {
+            return com.commercetools.api.models.message.StoreNameSetMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.StoreNameSetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.StoreProductSelectionsChangedMessagePayload) {
+            return com.commercetools.api.models.message.StoreProductSelectionsChangedMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.StoreProductSelectionsChangedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.StoreSupplyChannelsChangedMessagePayload) {
+            return com.commercetools.api.models.message.StoreSupplyChannelsChangedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.StoreSupplyChannelsChangedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.BusinessUnitBillingAddressAddedMessagePayload) {
+            return com.commercetools.api.models.message.BusinessUnitBillingAddressAddedMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.BusinessUnitBillingAddressAddedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.BusinessUnitAssociateRemovedMessagePayload) {
+            return com.commercetools.api.models.message.BusinessUnitAssociateRemovedMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.BusinessUnitAssociateRemovedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CustomerAddressRemovedMessagePayload) {
+            return com.commercetools.api.models.message.CustomerAddressRemovedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.CustomerAddressRemovedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.BusinessUnitShippingAddressRemovedMessagePayload) {
+            return com.commercetools.api.models.message.BusinessUnitShippingAddressRemovedMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.BusinessUnitShippingAddressRemovedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CategoryCreatedMessagePayload) {
+            return com.commercetools.api.models.message.CategoryCreatedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.CategoryCreatedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CustomerGroupSetMessagePayload) {
+            return com.commercetools.api.models.message.CustomerGroupSetMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.CustomerGroupSetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.BusinessUnitStoreRemovedMessagePayload) {
+            return com.commercetools.api.models.message.BusinessUnitStoreRemovedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.BusinessUnitStoreRemovedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CustomerAddressAddedMessagePayload) {
+            return com.commercetools.api.models.message.CustomerAddressAddedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.CustomerAddressAddedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.BusinessUnitBillingAddressRemovedMessagePayload) {
+            return com.commercetools.api.models.message.BusinessUnitBillingAddressRemovedMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.BusinessUnitBillingAddressRemovedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.BusinessUnitContactEmailSetMessagePayload) {
+            return com.commercetools.api.models.message.BusinessUnitContactEmailSetMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.BusinessUnitContactEmailSetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CustomerTitleSetMessagePayload) {
+            return com.commercetools.api.models.message.CustomerTitleSetMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.CustomerTitleSetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.BusinessUnitAddressAddedMessagePayload) {
+            return com.commercetools.api.models.message.BusinessUnitAddressAddedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.BusinessUnitAddressAddedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.BusinessUnitStoresSetMessagePayload) {
+            return com.commercetools.api.models.message.BusinessUnitStoresSetMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.BusinessUnitStoresSetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.InventoryEntryQuantitySetMessagePayload) {
+            return com.commercetools.api.models.message.InventoryEntryQuantitySetMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.InventoryEntryQuantitySetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.BusinessUnitDefaultBillingAddressSetMessagePayload) {
+            return com.commercetools.api.models.message.BusinessUnitDefaultBillingAddressSetMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.BusinessUnitDefaultBillingAddressSetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.InventoryEntryCreatedMessagePayload) {
+            return com.commercetools.api.models.message.InventoryEntryCreatedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.InventoryEntryCreatedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.BusinessUnitParentUnitChangedMessagePayload) {
+            return com.commercetools.api.models.message.BusinessUnitParentUnitChangedMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.BusinessUnitParentUnitChangedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CustomerDeletedMessagePayload) {
+            return com.commercetools.api.models.message.CustomerDeletedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.CustomerDeletedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.InventoryEntryDeletedMessagePayload) {
+            return com.commercetools.api.models.message.InventoryEntryDeletedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.InventoryEntryDeletedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.BusinessUnitAddressRemovedMessagePayload) {
+            return com.commercetools.api.models.message.BusinessUnitAddressRemovedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.BusinessUnitAddressRemovedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CustomerFirstNameSetMessagePayload) {
+            return com.commercetools.api.models.message.CustomerFirstNameSetMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.CustomerFirstNameSetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.BusinessUnitStoreModeChangedMessagePayload) {
+            return com.commercetools.api.models.message.BusinessUnitStoreModeChangedMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.BusinessUnitStoreModeChangedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.BusinessUnitAddressChangedMessagePayload) {
+            return com.commercetools.api.models.message.BusinessUnitAddressChangedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.BusinessUnitAddressChangedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CustomerEmailVerifiedMessagePayload) {
+            return com.commercetools.api.models.message.CustomerEmailVerifiedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.CustomerEmailVerifiedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.BusinessUnitShippingAddressAddedMessagePayload) {
+            return com.commercetools.api.models.message.BusinessUnitShippingAddressAddedMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.BusinessUnitShippingAddressAddedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CustomerAddressChangedMessagePayload) {
+            return com.commercetools.api.models.message.CustomerAddressChangedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.CustomerAddressChangedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CustomerCreatedMessagePayload) {
+            return com.commercetools.api.models.message.CustomerCreatedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.CustomerCreatedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.BusinessUnitAssociatesSetMessagePayload) {
+            return com.commercetools.api.models.message.BusinessUnitAssociatesSetMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.BusinessUnitAssociatesSetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.BusinessUnitAssociateAddedMessagePayload) {
+            return com.commercetools.api.models.message.BusinessUnitAssociateAddedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.BusinessUnitAssociateAddedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CustomerLastNameSetMessagePayload) {
+            return com.commercetools.api.models.message.CustomerLastNameSetMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.CustomerLastNameSetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.BusinessUnitStatusChangedMessagePayload) {
+            return com.commercetools.api.models.message.BusinessUnitStatusChangedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.BusinessUnitStatusChangedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.BusinessUnitDeletedMessagePayload) {
+            return com.commercetools.api.models.message.BusinessUnitDeletedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.BusinessUnitDeletedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CustomerDateOfBirthSetMessagePayload) {
+            return com.commercetools.api.models.message.CustomerDateOfBirthSetMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.CustomerDateOfBirthSetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CategorySlugChangedMessagePayload) {
+            return com.commercetools.api.models.message.CategorySlugChangedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.CategorySlugChangedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.BusinessUnitAssociateChangedMessagePayload) {
+            return com.commercetools.api.models.message.BusinessUnitAssociateChangedMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.BusinessUnitAssociateChangedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CustomerCompanyNameSetMessagePayload) {
+            return com.commercetools.api.models.message.CustomerCompanyNameSetMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.CustomerCompanyNameSetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CustomerPasswordUpdatedMessagePayload) {
+            return com.commercetools.api.models.message.CustomerPasswordUpdatedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.CustomerPasswordUpdatedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.BusinessUnitStoreAddedMessagePayload) {
+            return com.commercetools.api.models.message.BusinessUnitStoreAddedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.BusinessUnitStoreAddedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.BusinessUnitDefaultShippingAddressSetMessagePayload) {
+            return com.commercetools.api.models.message.BusinessUnitDefaultShippingAddressSetMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.BusinessUnitDefaultShippingAddressSetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CustomerEmailChangedMessagePayload) {
+            return com.commercetools.api.models.message.CustomerEmailChangedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.CustomerEmailChangedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.BusinessUnitNameChangedMessagePayload) {
+            return com.commercetools.api.models.message.BusinessUnitNameChangedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.BusinessUnitNameChangedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.BusinessUnitCreatedMessagePayload) {
+            return com.commercetools.api.models.message.BusinessUnitCreatedMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.BusinessUnitCreatedMessagePayload) template);
+        }
+        MessagePayloadImpl instance = new MessagePayloadImpl();
+        return instance;
+    }
 
     /**
      * builder for businessUnitAddressAdded subtype

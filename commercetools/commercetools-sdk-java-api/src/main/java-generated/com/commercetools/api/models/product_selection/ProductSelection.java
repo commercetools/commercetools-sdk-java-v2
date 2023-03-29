@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -221,7 +222,7 @@ public interface ProductSelection
     }
 
     /**
-     * factory method to copy an instance of ProductSelection
+     * factory method to create a shallow copy ProductSelection
      * @param template instance to be copied
      * @return copy instance
      */
@@ -238,6 +239,39 @@ public interface ProductSelection
         instance.setProductCount(template.getProductCount());
         instance.setType(template.getType());
         instance.setCustom(template.getCustom());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductSelection
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductSelection deepCopy(@Nullable final ProductSelection template) {
+        if (template == null) {
+            return null;
+        }
+        ProductSelectionImpl instance = new ProductSelectionImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(Optional.ofNullable(template.getLastModifiedBy())
+                .map(com.commercetools.api.models.common.LastModifiedBy::deepCopy)
+                .orElse(null));
+        instance.setCreatedBy(Optional.ofNullable(template.getCreatedBy())
+                .map(com.commercetools.api.models.common.CreatedBy::deepCopy)
+                .orElse(null));
+        instance.setKey(template.getKey());
+        instance.setName(Optional.ofNullable(template.getName())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setProductCount(template.getProductCount());
+        instance.setType(template.getType());
+        instance.setCustom(Optional.ofNullable(template.getCustom())
+                .map(com.commercetools.api.models.type.CustomFields::deepCopy)
+                .orElse(null));
         return instance;
     }
 

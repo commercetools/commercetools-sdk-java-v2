@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -415,11 +416,58 @@ public interface BaseAddress extends com.commercetools.api.models.WithKey, BaseA
     }
 
     /**
-     * factory method to copy an instance of BaseAddress
+     * factory method to create a shallow copy BaseAddress
      * @param template instance to be copied
      * @return copy instance
      */
     public static BaseAddress of(final BaseAddress template) {
+        BaseAddressImpl instance = new BaseAddressImpl();
+        instance.setId(template.getId());
+        instance.setKey(template.getKey());
+        instance.setCountry(template.getCountry());
+        instance.setTitle(template.getTitle());
+        instance.setSalutation(template.getSalutation());
+        instance.setFirstName(template.getFirstName());
+        instance.setLastName(template.getLastName());
+        instance.setStreetName(template.getStreetName());
+        instance.setStreetNumber(template.getStreetNumber());
+        instance.setAdditionalStreetInfo(template.getAdditionalStreetInfo());
+        instance.setPostalCode(template.getPostalCode());
+        instance.setCity(template.getCity());
+        instance.setRegion(template.getRegion());
+        instance.setState(template.getState());
+        instance.setCompany(template.getCompany());
+        instance.setDepartment(template.getDepartment());
+        instance.setBuilding(template.getBuilding());
+        instance.setApartment(template.getApartment());
+        instance.setPOBox(template.getPOBox());
+        instance.setPhone(template.getPhone());
+        instance.setMobile(template.getMobile());
+        instance.setEmail(template.getEmail());
+        instance.setFax(template.getFax());
+        instance.setAdditionalAddressInfo(template.getAdditionalAddressInfo());
+        instance.setExternalId(template.getExternalId());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of BaseAddress
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static BaseAddress deepCopy(@Nullable final BaseAddress template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.common.AddressDraft) {
+            return com.commercetools.api.models.common.AddressDraft
+                    .deepCopy((com.commercetools.api.models.common.AddressDraft) template);
+        }
+        if (template instanceof com.commercetools.api.models.common.Address) {
+            return com.commercetools.api.models.common.Address
+                    .deepCopy((com.commercetools.api.models.common.Address) template);
+        }
         BaseAddressImpl instance = new BaseAddressImpl();
         instance.setId(template.getId());
         instance.setKey(template.getKey());

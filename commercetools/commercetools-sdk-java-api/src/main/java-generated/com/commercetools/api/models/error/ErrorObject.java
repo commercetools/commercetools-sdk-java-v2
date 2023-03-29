@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -141,6 +142,302 @@ public interface ErrorObject {
 
     @JsonAnySetter
     public void setValue(String key, Object value);
+
+    /**
+     * factory method to create a deep copy of ErrorObject
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ErrorObject deepCopy(@Nullable final ErrorObject template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.error.ExtensionBadResponseError) {
+            return com.commercetools.api.models.error.ExtensionBadResponseError
+                    .deepCopy((com.commercetools.api.models.error.ExtensionBadResponseError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.ExtensionNoResponseError) {
+            return com.commercetools.api.models.error.ExtensionNoResponseError
+                    .deepCopy((com.commercetools.api.models.error.ExtensionNoResponseError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.ExtensionPredicateEvaluationFailedError) {
+            return com.commercetools.api.models.error.ExtensionPredicateEvaluationFailedError
+                    .deepCopy((com.commercetools.api.models.error.ExtensionPredicateEvaluationFailedError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.ExtensionUpdateActionsFailedError) {
+            return com.commercetools.api.models.error.ExtensionUpdateActionsFailedError
+                    .deepCopy((com.commercetools.api.models.error.ExtensionUpdateActionsFailedError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.ExternalOAuthFailedError) {
+            return com.commercetools.api.models.error.ExternalOAuthFailedError
+                    .deepCopy((com.commercetools.api.models.error.ExternalOAuthFailedError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.FeatureRemovedError) {
+            return com.commercetools.api.models.error.FeatureRemovedError
+                    .deepCopy((com.commercetools.api.models.error.FeatureRemovedError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.GeneralError) {
+            return com.commercetools.api.models.error.GeneralError
+                    .deepCopy((com.commercetools.api.models.error.GeneralError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.InsufficientScopeError) {
+            return com.commercetools.api.models.error.InsufficientScopeError
+                    .deepCopy((com.commercetools.api.models.error.InsufficientScopeError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.InternalConstraintViolatedError) {
+            return com.commercetools.api.models.error.InternalConstraintViolatedError
+                    .deepCopy((com.commercetools.api.models.error.InternalConstraintViolatedError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.InvalidCredentialsError) {
+            return com.commercetools.api.models.error.InvalidCredentialsError
+                    .deepCopy((com.commercetools.api.models.error.InvalidCredentialsError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.InvalidCurrentPasswordError) {
+            return com.commercetools.api.models.error.InvalidCurrentPasswordError
+                    .deepCopy((com.commercetools.api.models.error.InvalidCurrentPasswordError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.InvalidFieldError) {
+            return com.commercetools.api.models.error.InvalidFieldError
+                    .deepCopy((com.commercetools.api.models.error.InvalidFieldError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.InvalidInputError) {
+            return com.commercetools.api.models.error.InvalidInputError
+                    .deepCopy((com.commercetools.api.models.error.InvalidInputError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.InvalidItemShippingDetailsError) {
+            return com.commercetools.api.models.error.InvalidItemShippingDetailsError
+                    .deepCopy((com.commercetools.api.models.error.InvalidItemShippingDetailsError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.InvalidJsonInputError) {
+            return com.commercetools.api.models.error.InvalidJsonInputError
+                    .deepCopy((com.commercetools.api.models.error.InvalidJsonInputError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.InvalidOperationError) {
+            return com.commercetools.api.models.error.InvalidOperationError
+                    .deepCopy((com.commercetools.api.models.error.InvalidOperationError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.InvalidSubjectError) {
+            return com.commercetools.api.models.error.InvalidSubjectError
+                    .deepCopy((com.commercetools.api.models.error.InvalidSubjectError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.InvalidTokenError) {
+            return com.commercetools.api.models.error.InvalidTokenError
+                    .deepCopy((com.commercetools.api.models.error.InvalidTokenError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.LanguageUsedInStoresError) {
+            return com.commercetools.api.models.error.LanguageUsedInStoresError
+                    .deepCopy((com.commercetools.api.models.error.LanguageUsedInStoresError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.MatchingPriceNotFoundError) {
+            return com.commercetools.api.models.error.MatchingPriceNotFoundError
+                    .deepCopy((com.commercetools.api.models.error.MatchingPriceNotFoundError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.MaxResourceLimitExceededError) {
+            return com.commercetools.api.models.error.MaxResourceLimitExceededError
+                    .deepCopy((com.commercetools.api.models.error.MaxResourceLimitExceededError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.MissingRoleOnChannelError) {
+            return com.commercetools.api.models.error.MissingRoleOnChannelError
+                    .deepCopy((com.commercetools.api.models.error.MissingRoleOnChannelError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.MissingTaxRateForCountryError) {
+            return com.commercetools.api.models.error.MissingTaxRateForCountryError
+                    .deepCopy((com.commercetools.api.models.error.MissingTaxRateForCountryError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.NoMatchingProductDiscountFoundError) {
+            return com.commercetools.api.models.error.NoMatchingProductDiscountFoundError
+                    .deepCopy((com.commercetools.api.models.error.NoMatchingProductDiscountFoundError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.NotEnabledError) {
+            return com.commercetools.api.models.error.NotEnabledError
+                    .deepCopy((com.commercetools.api.models.error.NotEnabledError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.ObjectNotFoundError) {
+            return com.commercetools.api.models.error.ObjectNotFoundError
+                    .deepCopy((com.commercetools.api.models.error.ObjectNotFoundError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.OutOfStockError) {
+            return com.commercetools.api.models.error.OutOfStockError
+                    .deepCopy((com.commercetools.api.models.error.OutOfStockError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.OverCapacityError) {
+            return com.commercetools.api.models.error.OverCapacityError
+                    .deepCopy((com.commercetools.api.models.error.OverCapacityError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.OverlappingStandalonePriceValidityError) {
+            return com.commercetools.api.models.error.OverlappingStandalonePriceValidityError
+                    .deepCopy((com.commercetools.api.models.error.OverlappingStandalonePriceValidityError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.PendingOperationError) {
+            return com.commercetools.api.models.error.PendingOperationError
+                    .deepCopy((com.commercetools.api.models.error.PendingOperationError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.PriceChangedError) {
+            return com.commercetools.api.models.error.PriceChangedError
+                    .deepCopy((com.commercetools.api.models.error.PriceChangedError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.ProductAssignmentMissingError) {
+            return com.commercetools.api.models.error.ProductAssignmentMissingError
+                    .deepCopy((com.commercetools.api.models.error.ProductAssignmentMissingError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.ProductPresentWithDifferentVariantSelectionError) {
+            return com.commercetools.api.models.error.ProductPresentWithDifferentVariantSelectionError.deepCopy(
+                (com.commercetools.api.models.error.ProductPresentWithDifferentVariantSelectionError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.ProjectNotConfiguredForLanguagesError) {
+            return com.commercetools.api.models.error.ProjectNotConfiguredForLanguagesError
+                    .deepCopy((com.commercetools.api.models.error.ProjectNotConfiguredForLanguagesError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.QueryComplexityLimitExceededError) {
+            return com.commercetools.api.models.error.QueryComplexityLimitExceededError
+                    .deepCopy((com.commercetools.api.models.error.QueryComplexityLimitExceededError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.QueryTimedOutError) {
+            return com.commercetools.api.models.error.QueryTimedOutError
+                    .deepCopy((com.commercetools.api.models.error.QueryTimedOutError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.ReferenceExistsError) {
+            return com.commercetools.api.models.error.ReferenceExistsError
+                    .deepCopy((com.commercetools.api.models.error.ReferenceExistsError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.ReferencedResourceNotFoundError) {
+            return com.commercetools.api.models.error.ReferencedResourceNotFoundError
+                    .deepCopy((com.commercetools.api.models.error.ReferencedResourceNotFoundError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.RequiredFieldError) {
+            return com.commercetools.api.models.error.RequiredFieldError
+                    .deepCopy((com.commercetools.api.models.error.RequiredFieldError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.ResourceNotFoundError) {
+            return com.commercetools.api.models.error.ResourceNotFoundError
+                    .deepCopy((com.commercetools.api.models.error.ResourceNotFoundError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.ResourceSizeLimitExceededError) {
+            return com.commercetools.api.models.error.ResourceSizeLimitExceededError
+                    .deepCopy((com.commercetools.api.models.error.ResourceSizeLimitExceededError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.SearchDeactivatedError) {
+            return com.commercetools.api.models.error.SearchDeactivatedError
+                    .deepCopy((com.commercetools.api.models.error.SearchDeactivatedError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.SearchExecutionFailureError) {
+            return com.commercetools.api.models.error.SearchExecutionFailureError
+                    .deepCopy((com.commercetools.api.models.error.SearchExecutionFailureError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.SearchFacetPathNotFoundError) {
+            return com.commercetools.api.models.error.SearchFacetPathNotFoundError
+                    .deepCopy((com.commercetools.api.models.error.SearchFacetPathNotFoundError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.SearchIndexingInProgressError) {
+            return com.commercetools.api.models.error.SearchIndexingInProgressError
+                    .deepCopy((com.commercetools.api.models.error.SearchIndexingInProgressError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.SemanticErrorError) {
+            return com.commercetools.api.models.error.SemanticErrorError
+                    .deepCopy((com.commercetools.api.models.error.SemanticErrorError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.ShippingMethodDoesNotMatchCartError) {
+            return com.commercetools.api.models.error.ShippingMethodDoesNotMatchCartError
+                    .deepCopy((com.commercetools.api.models.error.ShippingMethodDoesNotMatchCartError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.SyntaxErrorError) {
+            return com.commercetools.api.models.error.SyntaxErrorError
+                    .deepCopy((com.commercetools.api.models.error.SyntaxErrorError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.AttributeNameDoesNotExistError) {
+            return com.commercetools.api.models.error.AttributeNameDoesNotExistError
+                    .deepCopy((com.commercetools.api.models.error.AttributeNameDoesNotExistError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.DuplicateAttributeValueError) {
+            return com.commercetools.api.models.error.DuplicateAttributeValueError
+                    .deepCopy((com.commercetools.api.models.error.DuplicateAttributeValueError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.DuplicateFieldError) {
+            return com.commercetools.api.models.error.DuplicateFieldError
+                    .deepCopy((com.commercetools.api.models.error.DuplicateFieldError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.DuplicateVariantValuesError) {
+            return com.commercetools.api.models.error.DuplicateVariantValuesError
+                    .deepCopy((com.commercetools.api.models.error.DuplicateVariantValuesError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.EnumValuesMustMatchError) {
+            return com.commercetools.api.models.error.EnumValuesMustMatchError
+                    .deepCopy((com.commercetools.api.models.error.EnumValuesMustMatchError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.BadGatewayError) {
+            return com.commercetools.api.models.error.BadGatewayError
+                    .deepCopy((com.commercetools.api.models.error.BadGatewayError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.EnumKeyAlreadyExistsError) {
+            return com.commercetools.api.models.error.EnumKeyAlreadyExistsError
+                    .deepCopy((com.commercetools.api.models.error.EnumKeyAlreadyExistsError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.AnonymousIdAlreadyInUseError) {
+            return com.commercetools.api.models.error.AnonymousIdAlreadyInUseError
+                    .deepCopy((com.commercetools.api.models.error.AnonymousIdAlreadyInUseError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.CountryNotConfiguredInStoreError) {
+            return com.commercetools.api.models.error.CountryNotConfiguredInStoreError
+                    .deepCopy((com.commercetools.api.models.error.CountryNotConfiguredInStoreError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.EnumKeyDoesNotExistError) {
+            return com.commercetools.api.models.error.EnumKeyDoesNotExistError
+                    .deepCopy((com.commercetools.api.models.error.EnumKeyDoesNotExistError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.DuplicateStandalonePriceScopeError) {
+            return com.commercetools.api.models.error.DuplicateStandalonePriceScopeError
+                    .deepCopy((com.commercetools.api.models.error.DuplicateStandalonePriceScopeError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.DuplicateEnumValuesError) {
+            return com.commercetools.api.models.error.DuplicateEnumValuesError
+                    .deepCopy((com.commercetools.api.models.error.DuplicateEnumValuesError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.AttributeDefinitionTypeConflictError) {
+            return com.commercetools.api.models.error.AttributeDefinitionTypeConflictError
+                    .deepCopy((com.commercetools.api.models.error.AttributeDefinitionTypeConflictError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.EnumValueIsUsedError) {
+            return com.commercetools.api.models.error.EnumValueIsUsedError
+                    .deepCopy((com.commercetools.api.models.error.EnumValueIsUsedError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.AttributeDefinitionAlreadyExistsError) {
+            return com.commercetools.api.models.error.AttributeDefinitionAlreadyExistsError
+                    .deepCopy((com.commercetools.api.models.error.AttributeDefinitionAlreadyExistsError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.ConcurrentModificationError) {
+            return com.commercetools.api.models.error.ConcurrentModificationError
+                    .deepCopy((com.commercetools.api.models.error.ConcurrentModificationError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.DuplicatePriceScopeError) {
+            return com.commercetools.api.models.error.DuplicatePriceScopeError
+                    .deepCopy((com.commercetools.api.models.error.DuplicatePriceScopeError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.DuplicateFieldWithConflictingResourceError) {
+            return com.commercetools.api.models.error.DuplicateFieldWithConflictingResourceError
+                    .deepCopy((com.commercetools.api.models.error.DuplicateFieldWithConflictingResourceError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.EditPreviewFailedError) {
+            return com.commercetools.api.models.error.EditPreviewFailedError
+                    .deepCopy((com.commercetools.api.models.error.EditPreviewFailedError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.DuplicatePriceKeyError) {
+            return com.commercetools.api.models.error.DuplicatePriceKeyError
+                    .deepCopy((com.commercetools.api.models.error.DuplicatePriceKeyError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.DuplicateAttributeValuesError) {
+            return com.commercetools.api.models.error.DuplicateAttributeValuesError
+                    .deepCopy((com.commercetools.api.models.error.DuplicateAttributeValuesError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.DiscountCodeNonApplicableError) {
+            return com.commercetools.api.models.error.DiscountCodeNonApplicableError
+                    .deepCopy((com.commercetools.api.models.error.DiscountCodeNonApplicableError) template);
+        }
+        ErrorObjectImpl instance = new ErrorObjectImpl();
+        instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        return instance;
+    }
 
     /**
      * builder for anonymousIdAlreadyInUse subtype

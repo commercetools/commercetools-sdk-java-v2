@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -59,11 +60,26 @@ public interface ScoreShippingRateInputDraft
     }
 
     /**
-     * factory method to copy an instance of ScoreShippingRateInputDraft
+     * factory method to create a shallow copy ScoreShippingRateInputDraft
      * @param template instance to be copied
      * @return copy instance
      */
     public static ScoreShippingRateInputDraft of(final ScoreShippingRateInputDraft template) {
+        ScoreShippingRateInputDraftImpl instance = new ScoreShippingRateInputDraftImpl();
+        instance.setScore(template.getScore());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ScoreShippingRateInputDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ScoreShippingRateInputDraft deepCopy(@Nullable final ScoreShippingRateInputDraft template) {
+        if (template == null) {
+            return null;
+        }
         ScoreShippingRateInputDraftImpl instance = new ScoreShippingRateInputDraftImpl();
         instance.setScore(template.getScore());
         return instance;

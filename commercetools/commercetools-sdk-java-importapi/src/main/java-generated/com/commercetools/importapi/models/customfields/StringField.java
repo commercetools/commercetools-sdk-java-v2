@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,26 @@ public interface StringField extends CustomField {
     }
 
     /**
-     * factory method to copy an instance of StringField
+     * factory method to create a shallow copy StringField
      * @param template instance to be copied
      * @return copy instance
      */
     public static StringField of(final StringField template) {
+        StringFieldImpl instance = new StringFieldImpl();
+        instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StringField
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StringField deepCopy(@Nullable final StringField template) {
+        if (template == null) {
+            return null;
+        }
         StringFieldImpl instance = new StringFieldImpl();
         instance.setValue(template.getValue());
         return instance;

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -61,13 +62,31 @@ public interface QuoteRequestCreatedMessagePayload extends MessagePayload {
     }
 
     /**
-     * factory method to copy an instance of QuoteRequestCreatedMessagePayload
+     * factory method to create a shallow copy QuoteRequestCreatedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
     public static QuoteRequestCreatedMessagePayload of(final QuoteRequestCreatedMessagePayload template) {
         QuoteRequestCreatedMessagePayloadImpl instance = new QuoteRequestCreatedMessagePayloadImpl();
         instance.setQuoteRequest(template.getQuoteRequest());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of QuoteRequestCreatedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static QuoteRequestCreatedMessagePayload deepCopy(
+            @Nullable final QuoteRequestCreatedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        QuoteRequestCreatedMessagePayloadImpl instance = new QuoteRequestCreatedMessagePayloadImpl();
+        instance.setQuoteRequest(Optional.ofNullable(template.getQuoteRequest())
+                .map(com.commercetools.api.models.quote_request.QuoteRequest::deepCopy)
+                .orElse(null));
         return instance;
     }
 

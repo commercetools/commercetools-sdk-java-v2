@@ -4,7 +4,9 @@ package com.commercetools.api.models.extension;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -80,7 +82,7 @@ public interface ExtensionUpdate extends
     }
 
     /**
-     * factory method to copy an instance of ExtensionUpdate
+     * factory method to create a shallow copy ExtensionUpdate
      * @param template instance to be copied
      * @return copy instance
      */
@@ -88,6 +90,26 @@ public interface ExtensionUpdate extends
         ExtensionUpdateImpl instance = new ExtensionUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(template.getActions());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ExtensionUpdate
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ExtensionUpdate deepCopy(@Nullable final ExtensionUpdate template) {
+        if (template == null) {
+            return null;
+        }
+        ExtensionUpdateImpl instance = new ExtensionUpdateImpl();
+        instance.setVersion(template.getVersion());
+        instance.setActions(Optional.ofNullable(template.getActions())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.extension.ExtensionUpdateAction::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

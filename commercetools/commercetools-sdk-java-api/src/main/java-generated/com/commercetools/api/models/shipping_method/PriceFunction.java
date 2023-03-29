@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -71,11 +72,27 @@ public interface PriceFunction {
     }
 
     /**
-     * factory method to copy an instance of PriceFunction
+     * factory method to create a shallow copy PriceFunction
      * @param template instance to be copied
      * @return copy instance
      */
     public static PriceFunction of(final PriceFunction template) {
+        PriceFunctionImpl instance = new PriceFunctionImpl();
+        instance.setCurrencyCode(template.getCurrencyCode());
+        instance.setFunction(template.getFunction());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of PriceFunction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static PriceFunction deepCopy(@Nullable final PriceFunction template) {
+        if (template == null) {
+            return null;
+        }
         PriceFunctionImpl instance = new PriceFunctionImpl();
         instance.setCurrencyCode(template.getCurrencyCode());
         instance.setFunction(template.getFunction());

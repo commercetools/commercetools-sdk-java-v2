@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,26 @@ public interface CartDiscountChangeIsActiveAction extends CartDiscountUpdateActi
     }
 
     /**
-     * factory method to copy an instance of CartDiscountChangeIsActiveAction
+     * factory method to create a shallow copy CartDiscountChangeIsActiveAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static CartDiscountChangeIsActiveAction of(final CartDiscountChangeIsActiveAction template) {
+        CartDiscountChangeIsActiveActionImpl instance = new CartDiscountChangeIsActiveActionImpl();
+        instance.setIsActive(template.getIsActive());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartDiscountChangeIsActiveAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartDiscountChangeIsActiveAction deepCopy(@Nullable final CartDiscountChangeIsActiveAction template) {
+        if (template == null) {
+            return null;
+        }
         CartDiscountChangeIsActiveActionImpl instance = new CartDiscountChangeIsActiveActionImpl();
         instance.setIsActive(template.getIsActive());
         return instance;

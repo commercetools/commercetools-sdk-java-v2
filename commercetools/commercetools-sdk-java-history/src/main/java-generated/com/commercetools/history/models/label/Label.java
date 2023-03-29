@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -50,6 +51,64 @@ public interface Label {
     @NotNull
     @JsonProperty("type")
     public String getType();
+
+    /**
+     * factory method to create a deep copy of Label
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static Label deepCopy(@Nullable final Label template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.history.models.label.CustomObjectLabel) {
+            return com.commercetools.history.models.label.CustomObjectLabel
+                    .deepCopy((com.commercetools.history.models.label.CustomObjectLabel) template);
+        }
+        if (template instanceof com.commercetools.history.models.label.CustomerLabel) {
+            return com.commercetools.history.models.label.CustomerLabel
+                    .deepCopy((com.commercetools.history.models.label.CustomerLabel) template);
+        }
+        if (template instanceof com.commercetools.history.models.label.LocalizedLabel) {
+            return com.commercetools.history.models.label.LocalizedLabel
+                    .deepCopy((com.commercetools.history.models.label.LocalizedLabel) template);
+        }
+        if (template instanceof com.commercetools.history.models.label.OrderLabel) {
+            return com.commercetools.history.models.label.OrderLabel
+                    .deepCopy((com.commercetools.history.models.label.OrderLabel) template);
+        }
+        if (template instanceof com.commercetools.history.models.label.PaymentLabel) {
+            return com.commercetools.history.models.label.PaymentLabel
+                    .deepCopy((com.commercetools.history.models.label.PaymentLabel) template);
+        }
+        if (template instanceof com.commercetools.history.models.label.ProductLabel) {
+            return com.commercetools.history.models.label.ProductLabel
+                    .deepCopy((com.commercetools.history.models.label.ProductLabel) template);
+        }
+        if (template instanceof com.commercetools.history.models.label.QuoteLabel) {
+            return com.commercetools.history.models.label.QuoteLabel
+                    .deepCopy((com.commercetools.history.models.label.QuoteLabel) template);
+        }
+        if (template instanceof com.commercetools.history.models.label.QuoteRequestLabel) {
+            return com.commercetools.history.models.label.QuoteRequestLabel
+                    .deepCopy((com.commercetools.history.models.label.QuoteRequestLabel) template);
+        }
+        if (template instanceof com.commercetools.history.models.label.ReviewLabel) {
+            return com.commercetools.history.models.label.ReviewLabel
+                    .deepCopy((com.commercetools.history.models.label.ReviewLabel) template);
+        }
+        if (template instanceof com.commercetools.history.models.label.StagedQuoteLabel) {
+            return com.commercetools.history.models.label.StagedQuoteLabel
+                    .deepCopy((com.commercetools.history.models.label.StagedQuoteLabel) template);
+        }
+        if (template instanceof com.commercetools.history.models.label.StringLabel) {
+            return com.commercetools.history.models.label.StringLabel
+                    .deepCopy((com.commercetools.history.models.label.StringLabel) template);
+        }
+        LabelImpl instance = new LabelImpl();
+        return instance;
+    }
 
     /**
      * builder for customObjectLabel subtype

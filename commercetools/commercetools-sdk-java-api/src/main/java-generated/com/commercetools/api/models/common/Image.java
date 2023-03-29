@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -86,7 +87,7 @@ public interface Image {
     }
 
     /**
-     * factory method to copy an instance of Image
+     * factory method to create a shallow copy Image
      * @param template instance to be copied
      * @return copy instance
      */
@@ -94,6 +95,25 @@ public interface Image {
         ImageImpl instance = new ImageImpl();
         instance.setUrl(template.getUrl());
         instance.setDimensions(template.getDimensions());
+        instance.setLabel(template.getLabel());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of Image
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static Image deepCopy(@Nullable final Image template) {
+        if (template == null) {
+            return null;
+        }
+        ImageImpl instance = new ImageImpl();
+        instance.setUrl(template.getUrl());
+        instance.setDimensions(Optional.ofNullable(template.getDimensions())
+                .map(com.commercetools.api.models.common.ImageDimensions::deepCopy)
+                .orElse(null));
         instance.setLabel(template.getLabel());
         return instance;
     }

@@ -5,7 +5,9 @@ import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -424,7 +426,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
     }
 
     /**
-     * factory method to copy an instance of ProductProjection
+     * factory method to create a shallow copy ProductProjection
      * @param template instance to be copied
      * @return copy instance
      */
@@ -452,6 +454,77 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
         instance.setTaxCategory(template.getTaxCategory());
         instance.setState(template.getState());
         instance.setReviewRatingStatistics(template.getReviewRatingStatistics());
+        instance.setPriceMode(template.getPriceMode());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductProjection
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductProjection deepCopy(@Nullable final ProductProjection template) {
+        if (template == null) {
+            return null;
+        }
+        ProductProjectionImpl instance = new ProductProjectionImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setKey(template.getKey());
+        instance.setProductType(Optional.ofNullable(template.getProductType())
+                .map(com.commercetools.api.models.product_type.ProductTypeReference::deepCopy)
+                .orElse(null));
+        instance.setName(Optional.ofNullable(template.getName())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setDescription(Optional.ofNullable(template.getDescription())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setSlug(Optional.ofNullable(template.getSlug())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setCategories(Optional.ofNullable(template.getCategories())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.category.CategoryReference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setCategoryOrderHints(Optional.ofNullable(template.getCategoryOrderHints())
+                .map(com.commercetools.api.models.product.CategoryOrderHints::deepCopy)
+                .orElse(null));
+        instance.setMetaTitle(Optional.ofNullable(template.getMetaTitle())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setMetaDescription(Optional.ofNullable(template.getMetaDescription())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setMetaKeywords(Optional.ofNullable(template.getMetaKeywords())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setSearchKeywords(Optional.ofNullable(template.getSearchKeywords())
+                .map(com.commercetools.api.models.product.SearchKeywords::deepCopy)
+                .orElse(null));
+        instance.setHasStagedChanges(template.getHasStagedChanges());
+        instance.setPublished(template.getPublished());
+        instance.setMasterVariant(Optional.ofNullable(template.getMasterVariant())
+                .map(com.commercetools.api.models.product.ProductVariant::deepCopy)
+                .orElse(null));
+        instance.setVariants(Optional.ofNullable(template.getVariants())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.product.ProductVariant::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setTaxCategory(Optional.ofNullable(template.getTaxCategory())
+                .map(com.commercetools.api.models.tax_category.TaxCategoryReference::deepCopy)
+                .orElse(null));
+        instance.setState(Optional.ofNullable(template.getState())
+                .map(com.commercetools.api.models.state.StateReference::deepCopy)
+                .orElse(null));
+        instance.setReviewRatingStatistics(Optional.ofNullable(template.getReviewRatingStatistics())
+                .map(com.commercetools.api.models.review.ReviewRatingStatistics::deepCopy)
+                .orElse(null));
         instance.setPriceMode(template.getPriceMode());
         return instance;
     }

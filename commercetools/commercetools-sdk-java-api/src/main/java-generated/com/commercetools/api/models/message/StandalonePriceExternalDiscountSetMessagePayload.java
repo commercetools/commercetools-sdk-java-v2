@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.common.DiscountedPrice;
@@ -58,7 +59,7 @@ public interface StandalonePriceExternalDiscountSetMessagePayload extends Messag
     }
 
     /**
-     * factory method to copy an instance of StandalonePriceExternalDiscountSetMessagePayload
+     * factory method to create a shallow copy StandalonePriceExternalDiscountSetMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -66,6 +67,24 @@ public interface StandalonePriceExternalDiscountSetMessagePayload extends Messag
             final StandalonePriceExternalDiscountSetMessagePayload template) {
         StandalonePriceExternalDiscountSetMessagePayloadImpl instance = new StandalonePriceExternalDiscountSetMessagePayloadImpl();
         instance.setDiscounted(template.getDiscounted());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StandalonePriceExternalDiscountSetMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StandalonePriceExternalDiscountSetMessagePayload deepCopy(
+            @Nullable final StandalonePriceExternalDiscountSetMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        StandalonePriceExternalDiscountSetMessagePayloadImpl instance = new StandalonePriceExternalDiscountSetMessagePayloadImpl();
+        instance.setDiscounted(Optional.ofNullable(template.getDiscounted())
+                .map(com.commercetools.api.models.common.DiscountedPrice::deepCopy)
+                .orElse(null));
         return instance;
     }
 

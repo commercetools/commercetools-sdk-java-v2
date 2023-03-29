@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -98,11 +99,28 @@ public interface SetApplicationVersionChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetApplicationVersionChange
+     * factory method to create a shallow copy SetApplicationVersionChange
      * @param template instance to be copied
      * @return copy instance
      */
     public static SetApplicationVersionChange of(final SetApplicationVersionChange template) {
+        SetApplicationVersionChangeImpl instance = new SetApplicationVersionChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetApplicationVersionChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetApplicationVersionChange deepCopy(@Nullable final SetApplicationVersionChange template) {
+        if (template == null) {
+            return null;
+        }
         SetApplicationVersionChangeImpl instance = new SetApplicationVersionChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());

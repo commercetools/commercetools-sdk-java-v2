@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -61,13 +62,31 @@ public interface OrderCustomLineItemAddedMessagePayload extends OrderMessagePayl
     }
 
     /**
-     * factory method to copy an instance of OrderCustomLineItemAddedMessagePayload
+     * factory method to create a shallow copy OrderCustomLineItemAddedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
     public static OrderCustomLineItemAddedMessagePayload of(final OrderCustomLineItemAddedMessagePayload template) {
         OrderCustomLineItemAddedMessagePayloadImpl instance = new OrderCustomLineItemAddedMessagePayloadImpl();
         instance.setCustomLineItem(template.getCustomLineItem());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderCustomLineItemAddedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderCustomLineItemAddedMessagePayload deepCopy(
+            @Nullable final OrderCustomLineItemAddedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        OrderCustomLineItemAddedMessagePayloadImpl instance = new OrderCustomLineItemAddedMessagePayloadImpl();
+        instance.setCustomLineItem(Optional.ofNullable(template.getCustomLineItem())
+                .map(com.commercetools.api.models.cart.CustomLineItem::deepCopy)
+                .orElse(null));
         return instance;
     }
 

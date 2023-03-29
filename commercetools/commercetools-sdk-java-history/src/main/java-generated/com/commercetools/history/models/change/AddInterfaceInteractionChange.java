@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -85,7 +86,7 @@ public interface AddInterfaceInteractionChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of AddInterfaceInteractionChange
+     * factory method to create a shallow copy AddInterfaceInteractionChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -93,6 +94,24 @@ public interface AddInterfaceInteractionChange extends Change {
         AddInterfaceInteractionChangeImpl instance = new AddInterfaceInteractionChangeImpl();
         instance.setChange(template.getChange());
         instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of AddInterfaceInteractionChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AddInterfaceInteractionChange deepCopy(@Nullable final AddInterfaceInteractionChange template) {
+        if (template == null) {
+            return null;
+        }
+        AddInterfaceInteractionChangeImpl instance = new AddInterfaceInteractionChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setNextValue(Optional.ofNullable(template.getNextValue())
+                .map(com.commercetools.history.models.change_value.CustomFieldExpandedValue::deepCopy)
+                .orElse(null));
         return instance;
     }
 

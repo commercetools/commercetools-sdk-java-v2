@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -97,14 +98,32 @@ public interface DuplicateFieldError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of DuplicateFieldError
+     * factory method to create a shallow copy DuplicateFieldError
      * @param template instance to be copied
      * @return copy instance
      */
     public static DuplicateFieldError of(final DuplicateFieldError template) {
         DuplicateFieldErrorImpl instance = new DuplicateFieldErrorImpl();
         instance.setMessage(template.getMessage());
-        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        instance.setField(template.getField());
+        instance.setDuplicateValue(template.getDuplicateValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of DuplicateFieldError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static DuplicateFieldError deepCopy(@Nullable final DuplicateFieldError template) {
+        if (template == null) {
+            return null;
+        }
+        DuplicateFieldErrorImpl instance = new DuplicateFieldErrorImpl();
+        instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         instance.setField(template.getField());
         instance.setDuplicateValue(template.getDuplicateValue());
         return instance;

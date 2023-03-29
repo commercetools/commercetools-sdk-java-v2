@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -83,7 +84,7 @@ public interface ProductVariantDeletedMessagePayload extends MessagePayload {
     }
 
     /**
-     * factory method to copy an instance of ProductVariantDeletedMessagePayload
+     * factory method to create a shallow copy ProductVariantDeletedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -91,6 +92,26 @@ public interface ProductVariantDeletedMessagePayload extends MessagePayload {
         ProductVariantDeletedMessagePayloadImpl instance = new ProductVariantDeletedMessagePayloadImpl();
         instance.setVariant(template.getVariant());
         instance.setRemovedImageUrls(template.getRemovedImageUrls());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductVariantDeletedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductVariantDeletedMessagePayload deepCopy(
+            @Nullable final ProductVariantDeletedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        ProductVariantDeletedMessagePayloadImpl instance = new ProductVariantDeletedMessagePayloadImpl();
+        instance.setVariant(Optional.ofNullable(template.getVariant())
+                .map(com.commercetools.api.models.product.ProductVariant::deepCopy)
+                .orElse(null));
+        instance.setRemovedImageUrls(
+            Optional.ofNullable(template.getRemovedImageUrls()).map(ArrayList::new).orElse(null));
         return instance;
     }
 

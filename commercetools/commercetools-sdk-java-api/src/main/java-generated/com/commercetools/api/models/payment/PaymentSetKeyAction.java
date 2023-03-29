@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -55,11 +57,26 @@ public interface PaymentSetKeyAction extends PaymentUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of PaymentSetKeyAction
+     * factory method to create a shallow copy PaymentSetKeyAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static PaymentSetKeyAction of(final PaymentSetKeyAction template) {
+        PaymentSetKeyActionImpl instance = new PaymentSetKeyActionImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of PaymentSetKeyAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static PaymentSetKeyAction deepCopy(@Nullable final PaymentSetKeyAction template) {
+        if (template == null) {
+            return null;
+        }
         PaymentSetKeyActionImpl instance = new PaymentSetKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.common.ChannelRole;
@@ -115,7 +116,7 @@ public interface AddChannelRolesChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of AddChannelRolesChange
+     * factory method to create a shallow copy AddChannelRolesChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -124,6 +125,23 @@ public interface AddChannelRolesChange extends Change {
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of AddChannelRolesChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AddChannelRolesChange deepCopy(@Nullable final AddChannelRolesChange template) {
+        if (template == null) {
+            return null;
+        }
+        AddChannelRolesChangeImpl instance = new AddChannelRolesChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue()).map(ArrayList::new).orElse(null));
+        instance.setNextValue(Optional.ofNullable(template.getNextValue()).map(ArrayList::new).orElse(null));
         return instance;
     }
 

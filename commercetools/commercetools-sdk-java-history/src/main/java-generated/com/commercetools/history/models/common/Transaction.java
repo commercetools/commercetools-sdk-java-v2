@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -135,7 +136,7 @@ public interface Transaction {
     }
 
     /**
-     * factory method to copy an instance of Transaction
+     * factory method to create a shallow copy Transaction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -145,6 +146,28 @@ public interface Transaction {
         instance.setTimestamp(template.getTimestamp());
         instance.setType(template.getType());
         instance.setAmount(template.getAmount());
+        instance.setInteractionId(template.getInteractionId());
+        instance.setState(template.getState());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of Transaction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static Transaction deepCopy(@Nullable final Transaction template) {
+        if (template == null) {
+            return null;
+        }
+        TransactionImpl instance = new TransactionImpl();
+        instance.setId(template.getId());
+        instance.setTimestamp(template.getTimestamp());
+        instance.setType(template.getType());
+        instance.setAmount(Optional.ofNullable(template.getAmount())
+                .map(com.commercetools.history.models.common.Money::deepCopy)
+                .orElse(null));
         instance.setInteractionId(template.getInteractionId());
         instance.setState(template.getState());
         return instance;

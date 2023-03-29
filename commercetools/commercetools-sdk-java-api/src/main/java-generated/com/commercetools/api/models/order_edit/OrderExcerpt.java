@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -88,7 +89,7 @@ public interface OrderExcerpt {
     }
 
     /**
-     * factory method to copy an instance of OrderExcerpt
+     * factory method to create a shallow copy OrderExcerpt
      * @param template instance to be copied
      * @return copy instance
      */
@@ -96,6 +97,27 @@ public interface OrderExcerpt {
         OrderExcerptImpl instance = new OrderExcerptImpl();
         instance.setTotalPrice(template.getTotalPrice());
         instance.setTaxedPrice(template.getTaxedPrice());
+        instance.setVersion(template.getVersion());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderExcerpt
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderExcerpt deepCopy(@Nullable final OrderExcerpt template) {
+        if (template == null) {
+            return null;
+        }
+        OrderExcerptImpl instance = new OrderExcerptImpl();
+        instance.setTotalPrice(Optional.ofNullable(template.getTotalPrice())
+                .map(com.commercetools.api.models.common.TypedMoney::deepCopy)
+                .orElse(null));
+        instance.setTaxedPrice(Optional.ofNullable(template.getTaxedPrice())
+                .map(com.commercetools.api.models.cart.TaxedPrice::deepCopy)
+                .orElse(null));
         instance.setVersion(template.getVersion());
         return instance;
     }

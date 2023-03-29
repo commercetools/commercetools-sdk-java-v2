@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -77,7 +78,7 @@ public interface ClassificationShippingRateInput extends ShippingRateInput {
     }
 
     /**
-     * factory method to copy an instance of ClassificationShippingRateInput
+     * factory method to create a shallow copy ClassificationShippingRateInput
      * @param template instance to be copied
      * @return copy instance
      */
@@ -85,6 +86,24 @@ public interface ClassificationShippingRateInput extends ShippingRateInput {
         ClassificationShippingRateInputImpl instance = new ClassificationShippingRateInputImpl();
         instance.setKey(template.getKey());
         instance.setLabel(template.getLabel());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ClassificationShippingRateInput
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ClassificationShippingRateInput deepCopy(@Nullable final ClassificationShippingRateInput template) {
+        if (template == null) {
+            return null;
+        }
+        ClassificationShippingRateInputImpl instance = new ClassificationShippingRateInputImpl();
+        instance.setKey(template.getKey());
+        instance.setLabel(Optional.ofNullable(template.getLabel())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
         return instance;
     }
 

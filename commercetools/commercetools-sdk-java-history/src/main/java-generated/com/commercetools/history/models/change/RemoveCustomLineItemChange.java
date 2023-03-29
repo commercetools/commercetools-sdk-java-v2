@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -102,7 +103,7 @@ public interface RemoveCustomLineItemChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of RemoveCustomLineItemChange
+     * factory method to create a shallow copy RemoveCustomLineItemChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -111,6 +112,27 @@ public interface RemoveCustomLineItemChange extends Change {
         instance.setChange(template.getChange());
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of RemoveCustomLineItemChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static RemoveCustomLineItemChange deepCopy(@Nullable final RemoveCustomLineItemChange template) {
+        if (template == null) {
+            return null;
+        }
+        RemoveCustomLineItemChangeImpl instance = new RemoveCustomLineItemChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setNextValue(Optional.ofNullable(template.getNextValue())
+                .map(com.commercetools.history.models.common.CustomLineItem::deepCopy)
+                .orElse(null));
+        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
+                .map(com.commercetools.history.models.common.CustomLineItem::deepCopy)
+                .orElse(null));
         return instance;
     }
 

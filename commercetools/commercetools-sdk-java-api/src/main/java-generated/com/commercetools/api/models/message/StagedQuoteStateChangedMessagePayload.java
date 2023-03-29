@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.staged_quote.StagedQuoteState;
@@ -75,11 +76,28 @@ public interface StagedQuoteStateChangedMessagePayload extends MessagePayload {
     }
 
     /**
-     * factory method to copy an instance of StagedQuoteStateChangedMessagePayload
+     * factory method to create a shallow copy StagedQuoteStateChangedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
     public static StagedQuoteStateChangedMessagePayload of(final StagedQuoteStateChangedMessagePayload template) {
+        StagedQuoteStateChangedMessagePayloadImpl instance = new StagedQuoteStateChangedMessagePayloadImpl();
+        instance.setStagedQuoteState(template.getStagedQuoteState());
+        instance.setOldStagedQuoteState(template.getOldStagedQuoteState());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedQuoteStateChangedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedQuoteStateChangedMessagePayload deepCopy(
+            @Nullable final StagedQuoteStateChangedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
         StagedQuoteStateChangedMessagePayloadImpl instance = new StagedQuoteStateChangedMessagePayloadImpl();
         instance.setStagedQuoteState(template.getStagedQuoteState());
         instance.setOldStagedQuoteState(template.getOldStagedQuoteState());

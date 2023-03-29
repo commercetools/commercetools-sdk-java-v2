@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -61,13 +62,31 @@ public interface InventoryEntryCreatedMessagePayload extends MessagePayload {
     }
 
     /**
-     * factory method to copy an instance of InventoryEntryCreatedMessagePayload
+     * factory method to create a shallow copy InventoryEntryCreatedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
     public static InventoryEntryCreatedMessagePayload of(final InventoryEntryCreatedMessagePayload template) {
         InventoryEntryCreatedMessagePayloadImpl instance = new InventoryEntryCreatedMessagePayloadImpl();
         instance.setInventoryEntry(template.getInventoryEntry());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of InventoryEntryCreatedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static InventoryEntryCreatedMessagePayload deepCopy(
+            @Nullable final InventoryEntryCreatedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        InventoryEntryCreatedMessagePayloadImpl instance = new InventoryEntryCreatedMessagePayloadImpl();
+        instance.setInventoryEntry(Optional.ofNullable(template.getInventoryEntry())
+                .map(com.commercetools.api.models.inventory.InventoryEntry::deepCopy)
+                .orElse(null));
         return instance;
     }
 

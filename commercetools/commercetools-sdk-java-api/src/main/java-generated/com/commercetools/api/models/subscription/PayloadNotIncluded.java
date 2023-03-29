@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -69,11 +70,27 @@ public interface PayloadNotIncluded {
     }
 
     /**
-     * factory method to copy an instance of PayloadNotIncluded
+     * factory method to create a shallow copy PayloadNotIncluded
      * @param template instance to be copied
      * @return copy instance
      */
     public static PayloadNotIncluded of(final PayloadNotIncluded template) {
+        PayloadNotIncludedImpl instance = new PayloadNotIncludedImpl();
+        instance.setReason(template.getReason());
+        instance.setPayloadType(template.getPayloadType());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of PayloadNotIncluded
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static PayloadNotIncluded deepCopy(@Nullable final PayloadNotIncluded template) {
+        if (template == null) {
+            return null;
+        }
         PayloadNotIncludedImpl instance = new PayloadNotIncludedImpl();
         instance.setReason(template.getReason());
         instance.setPayloadType(template.getPayloadType());

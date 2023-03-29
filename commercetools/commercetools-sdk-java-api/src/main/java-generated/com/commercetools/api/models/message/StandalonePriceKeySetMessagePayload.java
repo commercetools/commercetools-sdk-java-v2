@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -70,11 +72,28 @@ public interface StandalonePriceKeySetMessagePayload extends MessagePayload {
     }
 
     /**
-     * factory method to copy an instance of StandalonePriceKeySetMessagePayload
+     * factory method to create a shallow copy StandalonePriceKeySetMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
     public static StandalonePriceKeySetMessagePayload of(final StandalonePriceKeySetMessagePayload template) {
+        StandalonePriceKeySetMessagePayloadImpl instance = new StandalonePriceKeySetMessagePayloadImpl();
+        instance.setKey(template.getKey());
+        instance.setOldKey(template.getOldKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StandalonePriceKeySetMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StandalonePriceKeySetMessagePayload deepCopy(
+            @Nullable final StandalonePriceKeySetMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
         StandalonePriceKeySetMessagePayloadImpl instance = new StandalonePriceKeySetMessagePayloadImpl();
         instance.setKey(template.getKey());
         instance.setOldKey(template.getOldKey());

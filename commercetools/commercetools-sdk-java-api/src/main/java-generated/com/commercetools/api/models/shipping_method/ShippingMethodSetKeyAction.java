@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -55,11 +57,26 @@ public interface ShippingMethodSetKeyAction extends ShippingMethodUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ShippingMethodSetKeyAction
+     * factory method to create a shallow copy ShippingMethodSetKeyAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ShippingMethodSetKeyAction of(final ShippingMethodSetKeyAction template) {
+        ShippingMethodSetKeyActionImpl instance = new ShippingMethodSetKeyActionImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ShippingMethodSetKeyAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ShippingMethodSetKeyAction deepCopy(@Nullable final ShippingMethodSetKeyAction template) {
+        if (template == null) {
+            return null;
+        }
         ShippingMethodSetKeyActionImpl instance = new ShippingMethodSetKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;

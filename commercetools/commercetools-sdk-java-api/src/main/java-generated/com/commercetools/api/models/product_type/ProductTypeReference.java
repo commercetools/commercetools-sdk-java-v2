@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -75,7 +76,7 @@ public interface ProductTypeReference extends Reference, com.commercetools.api.m
     }
 
     /**
-     * factory method to copy an instance of ProductTypeReference
+     * factory method to create a shallow copy ProductTypeReference
      * @param template instance to be copied
      * @return copy instance
      */
@@ -83,6 +84,24 @@ public interface ProductTypeReference extends Reference, com.commercetools.api.m
         ProductTypeReferenceImpl instance = new ProductTypeReferenceImpl();
         instance.setId(template.getId());
         instance.setObj(template.getObj());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductTypeReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductTypeReference deepCopy(@Nullable final ProductTypeReference template) {
+        if (template == null) {
+            return null;
+        }
+        ProductTypeReferenceImpl instance = new ProductTypeReferenceImpl();
+        instance.setId(template.getId());
+        instance.setObj(Optional.ofNullable(template.getObj())
+                .map(com.commercetools.api.models.product_type.ProductType::deepCopy)
+                .orElse(null));
         return instance;
     }
 

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -76,7 +77,7 @@ public interface TypeChangeLocalizedEnumValueLabelAction extends TypeUpdateActio
     }
 
     /**
-     * factory method to copy an instance of TypeChangeLocalizedEnumValueLabelAction
+     * factory method to create a shallow copy TypeChangeLocalizedEnumValueLabelAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -84,6 +85,25 @@ public interface TypeChangeLocalizedEnumValueLabelAction extends TypeUpdateActio
         TypeChangeLocalizedEnumValueLabelActionImpl instance = new TypeChangeLocalizedEnumValueLabelActionImpl();
         instance.setFieldName(template.getFieldName());
         instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of TypeChangeLocalizedEnumValueLabelAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static TypeChangeLocalizedEnumValueLabelAction deepCopy(
+            @Nullable final TypeChangeLocalizedEnumValueLabelAction template) {
+        if (template == null) {
+            return null;
+        }
+        TypeChangeLocalizedEnumValueLabelActionImpl instance = new TypeChangeLocalizedEnumValueLabelActionImpl();
+        instance.setFieldName(template.getFieldName());
+        instance.setValue(Optional.ofNullable(template.getValue())
+                .map(com.commercetools.api.models.type.CustomFieldLocalizedEnumValue::deepCopy)
+                .orElse(null));
         return instance;
     }
 

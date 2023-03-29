@@ -4,7 +4,9 @@ package com.commercetools.api.models.subscription;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.fasterxml.jackson.annotation.*;
@@ -65,13 +67,32 @@ public interface SubscriptionSetChangesAction extends SubscriptionUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of SubscriptionSetChangesAction
+     * factory method to create a shallow copy SubscriptionSetChangesAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static SubscriptionSetChangesAction of(final SubscriptionSetChangesAction template) {
         SubscriptionSetChangesActionImpl instance = new SubscriptionSetChangesActionImpl();
         instance.setChanges(template.getChanges());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SubscriptionSetChangesAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SubscriptionSetChangesAction deepCopy(@Nullable final SubscriptionSetChangesAction template) {
+        if (template == null) {
+            return null;
+        }
+        SubscriptionSetChangesActionImpl instance = new SubscriptionSetChangesActionImpl();
+        instance.setChanges(Optional.ofNullable(template.getChanges())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.subscription.ChangeSubscription::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

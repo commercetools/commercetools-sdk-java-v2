@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -87,7 +88,7 @@ public interface CustomFieldExpandedValue {
     }
 
     /**
-     * factory method to copy an instance of CustomFieldExpandedValue
+     * factory method to create a shallow copy CustomFieldExpandedValue
      * @param template instance to be copied
      * @return copy instance
      */
@@ -96,6 +97,25 @@ public interface CustomFieldExpandedValue {
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         instance.setLabel(template.getLabel());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomFieldExpandedValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomFieldExpandedValue deepCopy(@Nullable final CustomFieldExpandedValue template) {
+        if (template == null) {
+            return null;
+        }
+        CustomFieldExpandedValueImpl instance = new CustomFieldExpandedValueImpl();
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        instance.setLabel(Optional.ofNullable(template.getLabel())
+                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
+                .orElse(null));
         return instance;
     }
 

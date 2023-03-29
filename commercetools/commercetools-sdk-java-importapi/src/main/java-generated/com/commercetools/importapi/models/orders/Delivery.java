@@ -5,7 +5,9 @@ import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -137,7 +139,7 @@ public interface Delivery {
     }
 
     /**
-     * factory method to copy an instance of Delivery
+     * factory method to create a shallow copy Delivery
      * @param template instance to be copied
      * @return copy instance
      */
@@ -148,6 +150,35 @@ public interface Delivery {
         instance.setItems(template.getItems());
         instance.setParcels(template.getParcels());
         instance.setAddress(template.getAddress());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of Delivery
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static Delivery deepCopy(@Nullable final Delivery template) {
+        if (template == null) {
+            return null;
+        }
+        DeliveryImpl instance = new DeliveryImpl();
+        instance.setId(template.getId());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setItems(Optional.ofNullable(template.getItems())
+                .map(t -> t.stream()
+                        .map(com.commercetools.importapi.models.orders.DeliveryItem::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setParcels(Optional.ofNullable(template.getParcels())
+                .map(t -> t.stream()
+                        .map(com.commercetools.importapi.models.orders.Parcel::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setAddress(Optional.ofNullable(template.getAddress())
+                .map(com.commercetools.importapi.models.common.Address::deepCopy)
+                .orElse(null));
         return instance;
     }
 

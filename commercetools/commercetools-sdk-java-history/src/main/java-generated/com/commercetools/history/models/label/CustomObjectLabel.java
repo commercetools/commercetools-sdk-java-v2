@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -82,11 +83,27 @@ public interface CustomObjectLabel extends Label {
     }
 
     /**
-     * factory method to copy an instance of CustomObjectLabel
+     * factory method to create a shallow copy CustomObjectLabel
      * @param template instance to be copied
      * @return copy instance
      */
     public static CustomObjectLabel of(final CustomObjectLabel template) {
+        CustomObjectLabelImpl instance = new CustomObjectLabelImpl();
+        instance.setKey(template.getKey());
+        instance.setContainer(template.getContainer());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomObjectLabel
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomObjectLabel deepCopy(@Nullable final CustomObjectLabel template) {
+        if (template == null) {
+            return null;
+        }
         CustomObjectLabelImpl instance = new CustomObjectLabelImpl();
         instance.setKey(template.getKey());
         instance.setContainer(template.getContainer());

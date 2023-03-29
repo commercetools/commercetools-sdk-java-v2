@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -86,7 +87,7 @@ public interface ProductSelectionProductAddedMessage extends Message {
     }
 
     /**
-     * factory method to copy an instance of ProductSelectionProductAddedMessage
+     * factory method to create a shallow copy ProductSelectionProductAddedMessage
      * @param template instance to be copied
      * @return copy instance
      */
@@ -104,6 +105,45 @@ public interface ProductSelectionProductAddedMessage extends Message {
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setProduct(template.getProduct());
         instance.setVariantSelection(template.getVariantSelection());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductSelectionProductAddedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductSelectionProductAddedMessage deepCopy(
+            @Nullable final ProductSelectionProductAddedMessage template) {
+        if (template == null) {
+            return null;
+        }
+        ProductSelectionProductAddedMessageImpl instance = new ProductSelectionProductAddedMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(Optional.ofNullable(template.getLastModifiedBy())
+                .map(com.commercetools.api.models.common.LastModifiedBy::deepCopy)
+                .orElse(null));
+        instance.setCreatedBy(Optional.ofNullable(template.getCreatedBy())
+                .map(com.commercetools.api.models.common.CreatedBy::deepCopy)
+                .orElse(null));
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(Optional.ofNullable(template.getResource())
+                .map(com.commercetools.api.models.common.Reference::deepCopy)
+                .orElse(null));
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(Optional.ofNullable(template.getResourceUserProvidedIdentifiers())
+                .map(com.commercetools.api.models.message.UserProvidedIdentifiers::deepCopy)
+                .orElse(null));
+        instance.setProduct(Optional.ofNullable(template.getProduct())
+                .map(com.commercetools.api.models.product.ProductReference::deepCopy)
+                .orElse(null));
+        instance.setVariantSelection(Optional.ofNullable(template.getVariantSelection())
+                .map(com.commercetools.api.models.product_selection.ProductVariantSelection::deepCopy)
+                .orElse(null));
         return instance;
     }
 

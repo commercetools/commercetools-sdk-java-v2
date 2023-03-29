@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -140,7 +141,7 @@ public interface ReviewStateTransitionMessagePayload extends MessagePayload {
     }
 
     /**
-     * factory method to copy an instance of ReviewStateTransitionMessagePayload
+     * factory method to create a shallow copy ReviewStateTransitionMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -151,6 +152,33 @@ public interface ReviewStateTransitionMessagePayload extends MessagePayload {
         instance.setOldIncludedInStatistics(template.getOldIncludedInStatistics());
         instance.setNewIncludedInStatistics(template.getNewIncludedInStatistics());
         instance.setTarget(template.getTarget());
+        instance.setForce(template.getForce());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ReviewStateTransitionMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ReviewStateTransitionMessagePayload deepCopy(
+            @Nullable final ReviewStateTransitionMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        ReviewStateTransitionMessagePayloadImpl instance = new ReviewStateTransitionMessagePayloadImpl();
+        instance.setOldState(Optional.ofNullable(template.getOldState())
+                .map(com.commercetools.api.models.state.StateReference::deepCopy)
+                .orElse(null));
+        instance.setNewState(Optional.ofNullable(template.getNewState())
+                .map(com.commercetools.api.models.state.StateReference::deepCopy)
+                .orElse(null));
+        instance.setOldIncludedInStatistics(template.getOldIncludedInStatistics());
+        instance.setNewIncludedInStatistics(template.getNewIncludedInStatistics());
+        instance.setTarget(Optional.ofNullable(template.getTarget())
+                .map(com.commercetools.api.models.common.Reference::deepCopy)
+                .orElse(null));
         instance.setForce(template.getForce());
         return instance;
     }

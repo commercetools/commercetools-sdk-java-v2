@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -90,15 +91,33 @@ public interface ProjectNotConfiguredForLanguagesError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of ProjectNotConfiguredForLanguagesError
+     * factory method to create a shallow copy ProjectNotConfiguredForLanguagesError
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProjectNotConfiguredForLanguagesError of(final ProjectNotConfiguredForLanguagesError template) {
         ProjectNotConfiguredForLanguagesErrorImpl instance = new ProjectNotConfiguredForLanguagesErrorImpl();
         instance.setMessage(template.getMessage());
-        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         instance.setLanguages(template.getLanguages());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProjectNotConfiguredForLanguagesError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProjectNotConfiguredForLanguagesError deepCopy(
+            @Nullable final ProjectNotConfiguredForLanguagesError template) {
+        if (template == null) {
+            return null;
+        }
+        ProjectNotConfiguredForLanguagesErrorImpl instance = new ProjectNotConfiguredForLanguagesErrorImpl();
+        instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        instance.setLanguages(Optional.ofNullable(template.getLanguages()).map(ArrayList::new).orElse(null));
         return instance;
     }
 

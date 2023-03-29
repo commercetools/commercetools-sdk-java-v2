@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -61,13 +62,30 @@ public interface MyCartRemoveDiscountCodeAction extends MyCartUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of MyCartRemoveDiscountCodeAction
+     * factory method to create a shallow copy MyCartRemoveDiscountCodeAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static MyCartRemoveDiscountCodeAction of(final MyCartRemoveDiscountCodeAction template) {
         MyCartRemoveDiscountCodeActionImpl instance = new MyCartRemoveDiscountCodeActionImpl();
         instance.setDiscountCode(template.getDiscountCode());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MyCartRemoveDiscountCodeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MyCartRemoveDiscountCodeAction deepCopy(@Nullable final MyCartRemoveDiscountCodeAction template) {
+        if (template == null) {
+            return null;
+        }
+        MyCartRemoveDiscountCodeActionImpl instance = new MyCartRemoveDiscountCodeActionImpl();
+        instance.setDiscountCode(Optional.ofNullable(template.getDiscountCode())
+                .map(com.commercetools.api.models.discount_code.DiscountCodeReference::deepCopy)
+                .orElse(null));
         return instance;
     }
 

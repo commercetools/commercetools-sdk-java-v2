@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -73,6 +74,101 @@ public interface KeyReference {
      */
 
     public void setKey(final String key);
+
+    /**
+     * factory method to create a deep copy of KeyReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static KeyReference deepCopy(@Nullable final KeyReference template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.importapi.models.common.CartKeyReference) {
+            return com.commercetools.importapi.models.common.CartKeyReference
+                    .deepCopy((com.commercetools.importapi.models.common.CartKeyReference) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.common.CartDiscountKeyReference) {
+            return com.commercetools.importapi.models.common.CartDiscountKeyReference
+                    .deepCopy((com.commercetools.importapi.models.common.CartDiscountKeyReference) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.common.CategoryKeyReference) {
+            return com.commercetools.importapi.models.common.CategoryKeyReference
+                    .deepCopy((com.commercetools.importapi.models.common.CategoryKeyReference) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.common.ChannelKeyReference) {
+            return com.commercetools.importapi.models.common.ChannelKeyReference
+                    .deepCopy((com.commercetools.importapi.models.common.ChannelKeyReference) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.common.CustomerKeyReference) {
+            return com.commercetools.importapi.models.common.CustomerKeyReference
+                    .deepCopy((com.commercetools.importapi.models.common.CustomerKeyReference) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.common.CustomerGroupKeyReference) {
+            return com.commercetools.importapi.models.common.CustomerGroupKeyReference
+                    .deepCopy((com.commercetools.importapi.models.common.CustomerGroupKeyReference) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.common.DiscountCodeKeyReference) {
+            return com.commercetools.importapi.models.common.DiscountCodeKeyReference
+                    .deepCopy((com.commercetools.importapi.models.common.DiscountCodeKeyReference) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.common.OrderKeyReference) {
+            return com.commercetools.importapi.models.common.OrderKeyReference
+                    .deepCopy((com.commercetools.importapi.models.common.OrderKeyReference) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.common.PaymentKeyReference) {
+            return com.commercetools.importapi.models.common.PaymentKeyReference
+                    .deepCopy((com.commercetools.importapi.models.common.PaymentKeyReference) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.common.PriceKeyReference) {
+            return com.commercetools.importapi.models.common.PriceKeyReference
+                    .deepCopy((com.commercetools.importapi.models.common.PriceKeyReference) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.common.ProductKeyReference) {
+            return com.commercetools.importapi.models.common.ProductKeyReference
+                    .deepCopy((com.commercetools.importapi.models.common.ProductKeyReference) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.common.ProductDiscountKeyReference) {
+            return com.commercetools.importapi.models.common.ProductDiscountKeyReference
+                    .deepCopy((com.commercetools.importapi.models.common.ProductDiscountKeyReference) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.common.ProductTypeKeyReference) {
+            return com.commercetools.importapi.models.common.ProductTypeKeyReference
+                    .deepCopy((com.commercetools.importapi.models.common.ProductTypeKeyReference) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.common.ProductVariantKeyReference) {
+            return com.commercetools.importapi.models.common.ProductVariantKeyReference
+                    .deepCopy((com.commercetools.importapi.models.common.ProductVariantKeyReference) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.common.ShippingMethodKeyReference) {
+            return com.commercetools.importapi.models.common.ShippingMethodKeyReference
+                    .deepCopy((com.commercetools.importapi.models.common.ShippingMethodKeyReference) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.common.StateKeyReference) {
+            return com.commercetools.importapi.models.common.StateKeyReference
+                    .deepCopy((com.commercetools.importapi.models.common.StateKeyReference) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.common.StoreKeyReference) {
+            return com.commercetools.importapi.models.common.StoreKeyReference
+                    .deepCopy((com.commercetools.importapi.models.common.StoreKeyReference) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.common.TaxCategoryKeyReference) {
+            return com.commercetools.importapi.models.common.TaxCategoryKeyReference
+                    .deepCopy((com.commercetools.importapi.models.common.TaxCategoryKeyReference) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.common.TypeKeyReference) {
+            return com.commercetools.importapi.models.common.TypeKeyReference
+                    .deepCopy((com.commercetools.importapi.models.common.TypeKeyReference) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.common.CustomObjectKeyReference) {
+            return com.commercetools.importapi.models.common.CustomObjectKeyReference
+                    .deepCopy((com.commercetools.importapi.models.common.CustomObjectKeyReference) template);
+        }
+        KeyReferenceImpl instance = new KeyReferenceImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
 
     /**
      * builder for cartDiscount subtype

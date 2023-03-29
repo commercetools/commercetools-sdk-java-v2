@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,27 @@ public interface MyPaymentSetMethodInfoInterfaceAction extends MyPaymentUpdateAc
     }
 
     /**
-     * factory method to copy an instance of MyPaymentSetMethodInfoInterfaceAction
+     * factory method to create a shallow copy MyPaymentSetMethodInfoInterfaceAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static MyPaymentSetMethodInfoInterfaceAction of(final MyPaymentSetMethodInfoInterfaceAction template) {
+        MyPaymentSetMethodInfoInterfaceActionImpl instance = new MyPaymentSetMethodInfoInterfaceActionImpl();
+        instance.setInterface(template.getInterface());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MyPaymentSetMethodInfoInterfaceAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MyPaymentSetMethodInfoInterfaceAction deepCopy(
+            @Nullable final MyPaymentSetMethodInfoInterfaceAction template) {
+        if (template == null) {
+            return null;
+        }
         MyPaymentSetMethodInfoInterfaceActionImpl instance = new MyPaymentSetMethodInfoInterfaceActionImpl();
         instance.setInterface(template.getInterface());
         return instance;

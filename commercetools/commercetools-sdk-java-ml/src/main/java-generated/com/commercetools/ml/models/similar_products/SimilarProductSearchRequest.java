@@ -4,7 +4,9 @@ package com.commercetools.ml.models.similar_products;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.fasterxml.jackson.annotation.*;
@@ -165,7 +167,7 @@ public interface SimilarProductSearchRequest {
     }
 
     /**
-     * factory method to copy an instance of SimilarProductSearchRequest
+     * factory method to create a shallow copy SimilarProductSearchRequest
      * @param template instance to be copied
      * @return copy instance
      */
@@ -177,6 +179,34 @@ public interface SimilarProductSearchRequest {
         instance.setCurrencyCode(template.getCurrencyCode());
         instance.setSimilarityMeasures(template.getSimilarityMeasures());
         instance.setProductSetSelectors(template.getProductSetSelectors());
+        instance.setConfidenceMin(template.getConfidenceMin());
+        instance.setConfidenceMax(template.getConfidenceMax());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SimilarProductSearchRequest
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SimilarProductSearchRequest deepCopy(@Nullable final SimilarProductSearchRequest template) {
+        if (template == null) {
+            return null;
+        }
+        SimilarProductSearchRequestImpl instance = new SimilarProductSearchRequestImpl();
+        instance.setLimit(template.getLimit());
+        instance.setOffset(template.getOffset());
+        instance.setLanguage(template.getLanguage());
+        instance.setCurrencyCode(template.getCurrencyCode());
+        instance.setSimilarityMeasures(Optional.ofNullable(template.getSimilarityMeasures())
+                .map(com.commercetools.ml.models.similar_products.SimilarityMeasures::deepCopy)
+                .orElse(null));
+        instance.setProductSetSelectors(Optional.ofNullable(template.getProductSetSelectors())
+                .map(t -> t.stream()
+                        .map(com.commercetools.ml.models.similar_products.ProductSetSelector::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setConfidenceMin(template.getConfidenceMin());
         instance.setConfidenceMax(template.getConfidenceMax());
         return instance;

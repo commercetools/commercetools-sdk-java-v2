@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -61,13 +62,30 @@ public interface MyShoppingListChangeNameAction extends MyShoppingListUpdateActi
     }
 
     /**
-     * factory method to copy an instance of MyShoppingListChangeNameAction
+     * factory method to create a shallow copy MyShoppingListChangeNameAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static MyShoppingListChangeNameAction of(final MyShoppingListChangeNameAction template) {
         MyShoppingListChangeNameActionImpl instance = new MyShoppingListChangeNameActionImpl();
         instance.setName(template.getName());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MyShoppingListChangeNameAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MyShoppingListChangeNameAction deepCopy(@Nullable final MyShoppingListChangeNameAction template) {
+        if (template == null) {
+            return null;
+        }
+        MyShoppingListChangeNameActionImpl instance = new MyShoppingListChangeNameActionImpl();
+        instance.setName(Optional.ofNullable(template.getName())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
         return instance;
     }
 

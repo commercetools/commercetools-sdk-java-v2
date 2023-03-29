@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -98,11 +99,28 @@ public interface SetValidUntilChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetValidUntilChange
+     * factory method to create a shallow copy SetValidUntilChange
      * @param template instance to be copied
      * @return copy instance
      */
     public static SetValidUntilChange of(final SetValidUntilChange template) {
+        SetValidUntilChangeImpl instance = new SetValidUntilChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetValidUntilChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetValidUntilChange deepCopy(@Nullable final SetValidUntilChange template) {
+        if (template == null) {
+            return null;
+        }
         SetValidUntilChangeImpl instance = new SetValidUntilChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());

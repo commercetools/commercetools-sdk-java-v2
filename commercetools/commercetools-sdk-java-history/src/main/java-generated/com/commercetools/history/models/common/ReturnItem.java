@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -165,11 +166,33 @@ public interface ReturnItem {
     }
 
     /**
-     * factory method to copy an instance of ReturnItem
+     * factory method to create a shallow copy ReturnItem
      * @param template instance to be copied
      * @return copy instance
      */
     public static ReturnItem of(final ReturnItem template) {
+        ReturnItemImpl instance = new ReturnItemImpl();
+        instance.setId(template.getId());
+        instance.setQuantity(template.getQuantity());
+        instance.setType(template.getType());
+        instance.setComment(template.getComment());
+        instance.setShipmentState(template.getShipmentState());
+        instance.setPaymentState(template.getPaymentState());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setCreatedAt(template.getCreatedAt());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ReturnItem
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ReturnItem deepCopy(@Nullable final ReturnItem template) {
+        if (template == null) {
+            return null;
+        }
         ReturnItemImpl instance = new ReturnItemImpl();
         instance.setId(template.getId());
         instance.setQuantity(template.getQuantity());

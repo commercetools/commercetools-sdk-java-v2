@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -75,7 +76,7 @@ public interface ShippingMethodReference extends Reference, com.commercetools.ap
     }
 
     /**
-     * factory method to copy an instance of ShippingMethodReference
+     * factory method to create a shallow copy ShippingMethodReference
      * @param template instance to be copied
      * @return copy instance
      */
@@ -83,6 +84,24 @@ public interface ShippingMethodReference extends Reference, com.commercetools.ap
         ShippingMethodReferenceImpl instance = new ShippingMethodReferenceImpl();
         instance.setId(template.getId());
         instance.setObj(template.getObj());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ShippingMethodReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ShippingMethodReference deepCopy(@Nullable final ShippingMethodReference template) {
+        if (template == null) {
+            return null;
+        }
+        ShippingMethodReferenceImpl instance = new ShippingMethodReferenceImpl();
+        instance.setId(template.getId());
+        instance.setObj(Optional.ofNullable(template.getObj())
+                .map(com.commercetools.api.models.shipping_method.ShippingMethod::deepCopy)
+                .orElse(null));
         return instance;
     }
 

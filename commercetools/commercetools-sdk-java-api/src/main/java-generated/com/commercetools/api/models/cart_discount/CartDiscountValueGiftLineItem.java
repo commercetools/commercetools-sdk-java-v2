@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -108,7 +109,7 @@ public interface CartDiscountValueGiftLineItem extends CartDiscountValue {
     }
 
     /**
-     * factory method to copy an instance of CartDiscountValueGiftLineItem
+     * factory method to create a shallow copy CartDiscountValueGiftLineItem
      * @param template instance to be copied
      * @return copy instance
      */
@@ -118,6 +119,30 @@ public interface CartDiscountValueGiftLineItem extends CartDiscountValue {
         instance.setVariantId(template.getVariantId());
         instance.setSupplyChannel(template.getSupplyChannel());
         instance.setDistributionChannel(template.getDistributionChannel());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartDiscountValueGiftLineItem
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartDiscountValueGiftLineItem deepCopy(@Nullable final CartDiscountValueGiftLineItem template) {
+        if (template == null) {
+            return null;
+        }
+        CartDiscountValueGiftLineItemImpl instance = new CartDiscountValueGiftLineItemImpl();
+        instance.setProduct(Optional.ofNullable(template.getProduct())
+                .map(com.commercetools.api.models.product.ProductReference::deepCopy)
+                .orElse(null));
+        instance.setVariantId(template.getVariantId());
+        instance.setSupplyChannel(Optional.ofNullable(template.getSupplyChannel())
+                .map(com.commercetools.api.models.channel.ChannelReference::deepCopy)
+                .orElse(null));
+        instance.setDistributionChannel(Optional.ofNullable(template.getDistributionChannel())
+                .map(com.commercetools.api.models.channel.ChannelReference::deepCopy)
+                .orElse(null));
         return instance;
     }
 

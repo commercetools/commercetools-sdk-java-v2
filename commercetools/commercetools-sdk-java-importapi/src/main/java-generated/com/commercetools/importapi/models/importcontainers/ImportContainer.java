@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.ImportResourceType;
@@ -118,11 +119,30 @@ public interface ImportContainer {
     }
 
     /**
-     * factory method to copy an instance of ImportContainer
+     * factory method to create a shallow copy ImportContainer
      * @param template instance to be copied
      * @return copy instance
      */
     public static ImportContainer of(final ImportContainer template) {
+        ImportContainerImpl instance = new ImportContainerImpl();
+        instance.setKey(template.getKey());
+        instance.setResourceType(template.getResourceType());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ImportContainer
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ImportContainer deepCopy(@Nullable final ImportContainer template) {
+        if (template == null) {
+            return null;
+        }
         ImportContainerImpl instance = new ImportContainerImpl();
         instance.setKey(template.getKey());
         instance.setResourceType(template.getResourceType());

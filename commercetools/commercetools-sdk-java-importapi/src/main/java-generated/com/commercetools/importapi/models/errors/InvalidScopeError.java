@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -41,11 +43,26 @@ public interface InvalidScopeError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of InvalidScopeError
+     * factory method to create a shallow copy InvalidScopeError
      * @param template instance to be copied
      * @return copy instance
      */
     public static InvalidScopeError of(final InvalidScopeError template) {
+        InvalidScopeErrorImpl instance = new InvalidScopeErrorImpl();
+        instance.setMessage(template.getMessage());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of InvalidScopeError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static InvalidScopeError deepCopy(@Nullable final InvalidScopeError template) {
+        if (template == null) {
+            return null;
+        }
         InvalidScopeErrorImpl instance = new InvalidScopeErrorImpl();
         instance.setMessage(template.getMessage());
         return instance;

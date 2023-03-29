@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -132,7 +133,7 @@ public interface ProductPriceDiscountsSetUpdatedPrice {
     }
 
     /**
-     * factory method to copy an instance of ProductPriceDiscountsSetUpdatedPrice
+     * factory method to create a shallow copy ProductPriceDiscountsSetUpdatedPrice
      * @param template instance to be copied
      * @return copy instance
      */
@@ -143,6 +144,29 @@ public interface ProductPriceDiscountsSetUpdatedPrice {
         instance.setSku(template.getSku());
         instance.setPriceId(template.getPriceId());
         instance.setDiscounted(template.getDiscounted());
+        instance.setStaged(template.getStaged());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductPriceDiscountsSetUpdatedPrice
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductPriceDiscountsSetUpdatedPrice deepCopy(
+            @Nullable final ProductPriceDiscountsSetUpdatedPrice template) {
+        if (template == null) {
+            return null;
+        }
+        ProductPriceDiscountsSetUpdatedPriceImpl instance = new ProductPriceDiscountsSetUpdatedPriceImpl();
+        instance.setVariantId(template.getVariantId());
+        instance.setVariantKey(template.getVariantKey());
+        instance.setSku(template.getSku());
+        instance.setPriceId(template.getPriceId());
+        instance.setDiscounted(Optional.ofNullable(template.getDiscounted())
+                .map(com.commercetools.api.models.common.DiscountedPrice::deepCopy)
+                .orElse(null));
         instance.setStaged(template.getStaged());
         return instance;
     }

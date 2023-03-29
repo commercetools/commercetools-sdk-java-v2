@@ -4,7 +4,9 @@ package com.commercetools.importapi.models.orders;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -94,7 +96,7 @@ public interface ShippingRateDraft extends io.vrap.rmf.base.client.Draft<Shippin
     }
 
     /**
-     * factory method to copy an instance of ShippingRateDraft
+     * factory method to create a shallow copy ShippingRateDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -103,6 +105,31 @@ public interface ShippingRateDraft extends io.vrap.rmf.base.client.Draft<Shippin
         instance.setPrice(template.getPrice());
         instance.setFreeAbove(template.getFreeAbove());
         instance.setTiers(template.getTiers());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ShippingRateDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ShippingRateDraft deepCopy(@Nullable final ShippingRateDraft template) {
+        if (template == null) {
+            return null;
+        }
+        ShippingRateDraftImpl instance = new ShippingRateDraftImpl();
+        instance.setPrice(Optional.ofNullable(template.getPrice())
+                .map(com.commercetools.importapi.models.common.Money::deepCopy)
+                .orElse(null));
+        instance.setFreeAbove(Optional.ofNullable(template.getFreeAbove())
+                .map(com.commercetools.importapi.models.common.Money::deepCopy)
+                .orElse(null));
+        instance.setTiers(Optional.ofNullable(template.getTiers())
+                .map(t -> t.stream()
+                        .map(com.commercetools.importapi.models.orders.ShippingRatePriceTier::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

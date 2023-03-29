@@ -4,7 +4,9 @@ package com.commercetools.api.models.product_discount;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -127,7 +129,7 @@ public interface ProductDiscountPagedQueryResponse
     }
 
     /**
-     * factory method to copy an instance of ProductDiscountPagedQueryResponse
+     * factory method to create a shallow copy ProductDiscountPagedQueryResponse
      * @param template instance to be copied
      * @return copy instance
      */
@@ -138,6 +140,30 @@ public interface ProductDiscountPagedQueryResponse
         instance.setCount(template.getCount());
         instance.setTotal(template.getTotal());
         instance.setResults(template.getResults());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductDiscountPagedQueryResponse
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductDiscountPagedQueryResponse deepCopy(
+            @Nullable final ProductDiscountPagedQueryResponse template) {
+        if (template == null) {
+            return null;
+        }
+        ProductDiscountPagedQueryResponseImpl instance = new ProductDiscountPagedQueryResponseImpl();
+        instance.setLimit(template.getLimit());
+        instance.setOffset(template.getOffset());
+        instance.setCount(template.getCount());
+        instance.setTotal(template.getTotal());
+        instance.setResults(Optional.ofNullable(template.getResults())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.product_discount.ProductDiscount::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

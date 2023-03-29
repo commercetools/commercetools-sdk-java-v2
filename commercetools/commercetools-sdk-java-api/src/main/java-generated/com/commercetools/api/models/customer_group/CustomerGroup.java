@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -187,7 +188,7 @@ public interface CustomerGroup
     }
 
     /**
-     * factory method to copy an instance of CustomerGroup
+     * factory method to create a shallow copy CustomerGroup
      * @param template instance to be copied
      * @return copy instance
      */
@@ -202,6 +203,35 @@ public interface CustomerGroup
         instance.setKey(template.getKey());
         instance.setName(template.getName());
         instance.setCustom(template.getCustom());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomerGroup
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomerGroup deepCopy(@Nullable final CustomerGroup template) {
+        if (template == null) {
+            return null;
+        }
+        CustomerGroupImpl instance = new CustomerGroupImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(Optional.ofNullable(template.getLastModifiedBy())
+                .map(com.commercetools.api.models.common.LastModifiedBy::deepCopy)
+                .orElse(null));
+        instance.setCreatedBy(Optional.ofNullable(template.getCreatedBy())
+                .map(com.commercetools.api.models.common.CreatedBy::deepCopy)
+                .orElse(null));
+        instance.setKey(template.getKey());
+        instance.setName(template.getName());
+        instance.setCustom(Optional.ofNullable(template.getCustom())
+                .map(com.commercetools.api.models.type.CustomFields::deepCopy)
+                .orElse(null));
         return instance;
     }
 

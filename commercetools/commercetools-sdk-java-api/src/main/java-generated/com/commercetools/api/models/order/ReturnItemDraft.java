@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -132,7 +133,7 @@ public interface ReturnItemDraft extends com.commercetools.api.models.Customizab
     }
 
     /**
-     * factory method to copy an instance of ReturnItemDraft
+     * factory method to create a shallow copy ReturnItemDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -144,6 +145,28 @@ public interface ReturnItemDraft extends com.commercetools.api.models.Customizab
         instance.setComment(template.getComment());
         instance.setShipmentState(template.getShipmentState());
         instance.setCustom(template.getCustom());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ReturnItemDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ReturnItemDraft deepCopy(@Nullable final ReturnItemDraft template) {
+        if (template == null) {
+            return null;
+        }
+        ReturnItemDraftImpl instance = new ReturnItemDraftImpl();
+        instance.setQuantity(template.getQuantity());
+        instance.setLineItemId(template.getLineItemId());
+        instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setComment(template.getComment());
+        instance.setShipmentState(template.getShipmentState());
+        instance.setCustom(Optional.ofNullable(template.getCustom())
+                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
+                .orElse(null));
         return instance;
     }
 

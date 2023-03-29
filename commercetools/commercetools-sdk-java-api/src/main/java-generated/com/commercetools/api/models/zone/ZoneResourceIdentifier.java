@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.commercetools.api.models.common.ResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -71,11 +73,27 @@ public interface ZoneResourceIdentifier extends ResourceIdentifier, com.commerce
     }
 
     /**
-     * factory method to copy an instance of ZoneResourceIdentifier
+     * factory method to create a shallow copy ZoneResourceIdentifier
      * @param template instance to be copied
      * @return copy instance
      */
     public static ZoneResourceIdentifier of(final ZoneResourceIdentifier template) {
+        ZoneResourceIdentifierImpl instance = new ZoneResourceIdentifierImpl();
+        instance.setId(template.getId());
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ZoneResourceIdentifier
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ZoneResourceIdentifier deepCopy(@Nullable final ZoneResourceIdentifier template) {
+        if (template == null) {
+            return null;
+        }
         ZoneResourceIdentifierImpl instance = new ZoneResourceIdentifierImpl();
         instance.setId(template.getId());
         instance.setKey(template.getKey());

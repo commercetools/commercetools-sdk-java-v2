@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -79,7 +80,7 @@ public interface AssociateDraft extends io.vrap.rmf.base.client.Draft<AssociateD
     }
 
     /**
-     * factory method to copy an instance of AssociateDraft
+     * factory method to create a shallow copy AssociateDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -87,6 +88,24 @@ public interface AssociateDraft extends io.vrap.rmf.base.client.Draft<AssociateD
         AssociateDraftImpl instance = new AssociateDraftImpl();
         instance.setRoles(template.getRoles());
         instance.setCustomer(template.getCustomer());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of AssociateDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AssociateDraft deepCopy(@Nullable final AssociateDraft template) {
+        if (template == null) {
+            return null;
+        }
+        AssociateDraftImpl instance = new AssociateDraftImpl();
+        instance.setRoles(Optional.ofNullable(template.getRoles()).map(ArrayList::new).orElse(null));
+        instance.setCustomer(Optional.ofNullable(template.getCustomer())
+                .map(com.commercetools.api.models.customer.CustomerResourceIdentifier::deepCopy)
+                .orElse(null));
         return instance;
     }
 

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -118,7 +119,7 @@ public interface SetProductPriceCustomFieldChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetProductPriceCustomFieldChange
+     * factory method to create a shallow copy SetProductPriceCustomFieldChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -128,6 +129,28 @@ public interface SetProductPriceCustomFieldChange extends Change {
         instance.setCatalogData(template.getCatalogData());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetProductPriceCustomFieldChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetProductPriceCustomFieldChange deepCopy(@Nullable final SetProductPriceCustomFieldChange template) {
+        if (template == null) {
+            return null;
+        }
+        SetProductPriceCustomFieldChangeImpl instance = new SetProductPriceCustomFieldChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setCatalogData(template.getCatalogData());
+        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
+                .map(com.commercetools.history.models.common.CustomFields::deepCopy)
+                .orElse(null));
+        instance.setNextValue(Optional.ofNullable(template.getNextValue())
+                .map(com.commercetools.history.models.common.CustomFields::deepCopy)
+                .orElse(null));
         return instance;
     }
 

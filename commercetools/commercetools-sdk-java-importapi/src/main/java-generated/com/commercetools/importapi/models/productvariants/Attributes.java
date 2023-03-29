@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -54,13 +55,28 @@ public interface Attributes {
     }
 
     /**
-     * factory method to copy an instance of Attributes
+     * factory method to create a shallow copy Attributes
      * @param template instance to be copied
      * @return copy instance
      */
     public static Attributes of(final Attributes template) {
         AttributesImpl instance = new AttributesImpl();
-        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of Attributes
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static Attributes deepCopy(@Nullable final Attributes template) {
+        if (template == null) {
+            return null;
+        }
+        AttributesImpl instance = new AttributesImpl();
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
 

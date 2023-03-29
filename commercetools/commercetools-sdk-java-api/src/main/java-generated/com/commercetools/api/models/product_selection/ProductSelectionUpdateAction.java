@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -48,6 +49,56 @@ public interface ProductSelectionUpdateAction
     @NotNull
     @JsonProperty("action")
     public String getAction();
+
+    /**
+     * factory method to create a deep copy of ProductSelectionUpdateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductSelectionUpdateAction deepCopy(@Nullable final ProductSelectionUpdateAction template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.product_selection.ProductSelectionAddProductAction) {
+            return com.commercetools.api.models.product_selection.ProductSelectionAddProductAction.deepCopy(
+                (com.commercetools.api.models.product_selection.ProductSelectionAddProductAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.product_selection.ProductSelectionChangeNameAction) {
+            return com.commercetools.api.models.product_selection.ProductSelectionChangeNameAction.deepCopy(
+                (com.commercetools.api.models.product_selection.ProductSelectionChangeNameAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.product_selection.ProductSelectionExcludeProductAction) {
+            return com.commercetools.api.models.product_selection.ProductSelectionExcludeProductAction.deepCopy(
+                (com.commercetools.api.models.product_selection.ProductSelectionExcludeProductAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.product_selection.ProductSelectionRemoveProductAction) {
+            return com.commercetools.api.models.product_selection.ProductSelectionRemoveProductAction.deepCopy(
+                (com.commercetools.api.models.product_selection.ProductSelectionRemoveProductAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.product_selection.ProductSelectionSetCustomFieldAction) {
+            return com.commercetools.api.models.product_selection.ProductSelectionSetCustomFieldAction.deepCopy(
+                (com.commercetools.api.models.product_selection.ProductSelectionSetCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.product_selection.ProductSelectionSetCustomTypeAction) {
+            return com.commercetools.api.models.product_selection.ProductSelectionSetCustomTypeAction.deepCopy(
+                (com.commercetools.api.models.product_selection.ProductSelectionSetCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.product_selection.ProductSelectionSetKeyAction) {
+            return com.commercetools.api.models.product_selection.ProductSelectionSetKeyAction
+                    .deepCopy((com.commercetools.api.models.product_selection.ProductSelectionSetKeyAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.product_selection.ProductSelectionSetVariantExclusionAction) {
+            return com.commercetools.api.models.product_selection.ProductSelectionSetVariantExclusionAction.deepCopy(
+                (com.commercetools.api.models.product_selection.ProductSelectionSetVariantExclusionAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.product_selection.ProductSelectionSetVariantSelectionAction) {
+            return com.commercetools.api.models.product_selection.ProductSelectionSetVariantSelectionAction.deepCopy(
+                (com.commercetools.api.models.product_selection.ProductSelectionSetVariantSelectionAction) template);
+        }
+        ProductSelectionUpdateActionImpl instance = new ProductSelectionUpdateActionImpl();
+        return instance;
+    }
 
     /**
      * builder for addProduct subtype

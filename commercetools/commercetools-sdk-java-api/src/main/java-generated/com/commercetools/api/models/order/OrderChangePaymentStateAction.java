@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -55,11 +57,26 @@ public interface OrderChangePaymentStateAction extends OrderUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of OrderChangePaymentStateAction
+     * factory method to create a shallow copy OrderChangePaymentStateAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static OrderChangePaymentStateAction of(final OrderChangePaymentStateAction template) {
+        OrderChangePaymentStateActionImpl instance = new OrderChangePaymentStateActionImpl();
+        instance.setPaymentState(template.getPaymentState());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderChangePaymentStateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderChangePaymentStateAction deepCopy(@Nullable final OrderChangePaymentStateAction template) {
+        if (template == null) {
+            return null;
+        }
         OrderChangePaymentStateActionImpl instance = new OrderChangePaymentStateActionImpl();
         instance.setPaymentState(template.getPaymentState());
         return instance;

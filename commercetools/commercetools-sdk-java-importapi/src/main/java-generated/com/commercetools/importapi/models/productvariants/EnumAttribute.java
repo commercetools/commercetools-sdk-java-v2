@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,27 @@ public interface EnumAttribute extends Attribute {
     }
 
     /**
-     * factory method to copy an instance of EnumAttribute
+     * factory method to create a shallow copy EnumAttribute
      * @param template instance to be copied
      * @return copy instance
      */
     public static EnumAttribute of(final EnumAttribute template) {
+        EnumAttributeImpl instance = new EnumAttributeImpl();
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of EnumAttribute
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static EnumAttribute deepCopy(@Nullable final EnumAttribute template) {
+        if (template == null) {
+            return null;
+        }
         EnumAttributeImpl instance = new EnumAttributeImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());

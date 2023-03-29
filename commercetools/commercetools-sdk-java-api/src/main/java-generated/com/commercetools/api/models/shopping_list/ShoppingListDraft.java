@@ -4,7 +4,9 @@ package com.commercetools.api.models.shopping_list;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -226,7 +228,7 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
     }
 
     /**
-     * factory method to copy an instance of ShoppingListDraft
+     * factory method to create a shallow copy ShoppingListDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -243,6 +245,51 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
         instance.setTextLineItems(template.getTextLineItems());
         instance.setStore(template.getStore());
         instance.setCustom(template.getCustom());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ShoppingListDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ShoppingListDraft deepCopy(@Nullable final ShoppingListDraft template) {
+        if (template == null) {
+            return null;
+        }
+        ShoppingListDraftImpl instance = new ShoppingListDraftImpl();
+        instance.setName(Optional.ofNullable(template.getName())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setSlug(Optional.ofNullable(template.getSlug())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setCustomer(Optional.ofNullable(template.getCustomer())
+                .map(com.commercetools.api.models.customer.CustomerResourceIdentifier::deepCopy)
+                .orElse(null));
+        instance.setKey(template.getKey());
+        instance.setDescription(Optional.ofNullable(template.getDescription())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setAnonymousId(template.getAnonymousId());
+        instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
+        instance.setLineItems(Optional.ofNullable(template.getLineItems())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setTextLineItems(Optional.ofNullable(template.getTextLineItems())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.shopping_list.TextLineItemDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setStore(Optional.ofNullable(template.getStore())
+                .map(com.commercetools.api.models.store.StoreResourceIdentifier::deepCopy)
+                .orElse(null));
+        instance.setCustom(Optional.ofNullable(template.getCustom())
+                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
+                .orElse(null));
         return instance;
     }
 

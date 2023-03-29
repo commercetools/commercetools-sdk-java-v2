@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -41,11 +43,26 @@ public interface PriceKeyReference extends KeyReference {
     }
 
     /**
-     * factory method to copy an instance of PriceKeyReference
+     * factory method to create a shallow copy PriceKeyReference
      * @param template instance to be copied
      * @return copy instance
      */
     public static PriceKeyReference of(final PriceKeyReference template) {
+        PriceKeyReferenceImpl instance = new PriceKeyReferenceImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of PriceKeyReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static PriceKeyReference deepCopy(@Nullable final PriceKeyReference template) {
+        if (template == null) {
+            return null;
+        }
         PriceKeyReferenceImpl instance = new PriceKeyReferenceImpl();
         instance.setKey(template.getKey());
         return instance;

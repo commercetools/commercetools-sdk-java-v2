@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -59,11 +60,27 @@ public interface DateTimeAttribute extends Attribute {
     }
 
     /**
-     * factory method to copy an instance of DateTimeAttribute
+     * factory method to create a shallow copy DateTimeAttribute
      * @param template instance to be copied
      * @return copy instance
      */
     public static DateTimeAttribute of(final DateTimeAttribute template) {
+        DateTimeAttributeImpl instance = new DateTimeAttributeImpl();
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of DateTimeAttribute
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static DateTimeAttribute deepCopy(@Nullable final DateTimeAttribute template) {
+        if (template == null) {
+            return null;
+        }
         DateTimeAttributeImpl instance = new DateTimeAttributeImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());

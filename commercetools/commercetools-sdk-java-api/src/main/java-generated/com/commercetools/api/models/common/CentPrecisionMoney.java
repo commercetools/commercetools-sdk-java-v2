@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -60,11 +61,28 @@ public interface CentPrecisionMoney extends TypedMoney {
     }
 
     /**
-     * factory method to copy an instance of CentPrecisionMoney
+     * factory method to create a shallow copy CentPrecisionMoney
      * @param template instance to be copied
      * @return copy instance
      */
     public static CentPrecisionMoney of(final CentPrecisionMoney template) {
+        CentPrecisionMoneyImpl instance = new CentPrecisionMoneyImpl();
+        instance.setCentAmount(template.getCentAmount());
+        instance.setCurrencyCode(template.getCurrencyCode());
+        instance.setFractionDigits(template.getFractionDigits());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CentPrecisionMoney
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CentPrecisionMoney deepCopy(@Nullable final CentPrecisionMoney template) {
+        if (template == null) {
+            return null;
+        }
         CentPrecisionMoneyImpl instance = new CentPrecisionMoneyImpl();
         instance.setCentAmount(template.getCentAmount());
         instance.setCurrencyCode(template.getCurrencyCode());

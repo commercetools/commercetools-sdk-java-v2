@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,27 @@ public interface ProductRevertStagedVariantChangesAction extends ProductUpdateAc
     }
 
     /**
-     * factory method to copy an instance of ProductRevertStagedVariantChangesAction
+     * factory method to create a shallow copy ProductRevertStagedVariantChangesAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductRevertStagedVariantChangesAction of(final ProductRevertStagedVariantChangesAction template) {
+        ProductRevertStagedVariantChangesActionImpl instance = new ProductRevertStagedVariantChangesActionImpl();
+        instance.setVariantId(template.getVariantId());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductRevertStagedVariantChangesAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductRevertStagedVariantChangesAction deepCopy(
+            @Nullable final ProductRevertStagedVariantChangesAction template) {
+        if (template == null) {
+            return null;
+        }
         ProductRevertStagedVariantChangesActionImpl instance = new ProductRevertStagedVariantChangesActionImpl();
         instance.setVariantId(template.getVariantId());
         return instance;

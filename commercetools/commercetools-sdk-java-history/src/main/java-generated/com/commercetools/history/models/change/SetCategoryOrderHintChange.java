@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -134,7 +135,7 @@ public interface SetCategoryOrderHintChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetCategoryOrderHintChange
+     * factory method to create a shallow copy SetCategoryOrderHintChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -145,6 +146,29 @@ public interface SetCategoryOrderHintChange extends Change {
         instance.setCategoryId(template.getCategoryId());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetCategoryOrderHintChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetCategoryOrderHintChange deepCopy(@Nullable final SetCategoryOrderHintChange template) {
+        if (template == null) {
+            return null;
+        }
+        SetCategoryOrderHintChangeImpl instance = new SetCategoryOrderHintChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setCatalogData(template.getCatalogData());
+        instance.setCategoryId(template.getCategoryId());
+        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
+                .map(com.commercetools.history.models.common.CategoryOrderHints::deepCopy)
+                .orElse(null));
+        instance.setNextValue(Optional.ofNullable(template.getNextValue())
+                .map(com.commercetools.history.models.common.CategoryOrderHints::deepCopy)
+                .orElse(null));
         return instance;
     }
 

@@ -4,7 +4,9 @@ package com.commercetools.api.models.graph_ql;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.fasterxml.jackson.annotation.*;
@@ -75,7 +77,7 @@ public interface GraphQLResponse {
     }
 
     /**
-     * factory method to copy an instance of GraphQLResponse
+     * factory method to create a shallow copy GraphQLResponse
      * @param template instance to be copied
      * @return copy instance
      */
@@ -83,6 +85,26 @@ public interface GraphQLResponse {
         GraphQLResponseImpl instance = new GraphQLResponseImpl();
         instance.setData(template.getData());
         instance.setErrors(template.getErrors());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of GraphQLResponse
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static GraphQLResponse deepCopy(@Nullable final GraphQLResponse template) {
+        if (template == null) {
+            return null;
+        }
+        GraphQLResponseImpl instance = new GraphQLResponseImpl();
+        instance.setData(template.getData());
+        instance.setErrors(Optional.ofNullable(template.getErrors())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.graph_ql.GraphQLError::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

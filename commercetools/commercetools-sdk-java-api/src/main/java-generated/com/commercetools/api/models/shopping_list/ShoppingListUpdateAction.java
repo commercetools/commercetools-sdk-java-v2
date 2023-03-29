@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -62,6 +63,117 @@ public interface ShoppingListUpdateAction
     @NotNull
     @JsonProperty("action")
     public String getAction();
+
+    /**
+     * factory method to create a deep copy of ShoppingListUpdateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ShoppingListUpdateAction deepCopy(@Nullable final ShoppingListUpdateAction template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.shopping_list.ShoppingListAddLineItemAction) {
+            return com.commercetools.api.models.shopping_list.ShoppingListAddLineItemAction
+                    .deepCopy((com.commercetools.api.models.shopping_list.ShoppingListAddLineItemAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.shopping_list.ShoppingListAddTextLineItemAction) {
+            return com.commercetools.api.models.shopping_list.ShoppingListAddTextLineItemAction
+                    .deepCopy((com.commercetools.api.models.shopping_list.ShoppingListAddTextLineItemAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.shopping_list.ShoppingListChangeLineItemQuantityAction) {
+            return com.commercetools.api.models.shopping_list.ShoppingListChangeLineItemQuantityAction.deepCopy(
+                (com.commercetools.api.models.shopping_list.ShoppingListChangeLineItemQuantityAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.shopping_list.ShoppingListChangeLineItemsOrderAction) {
+            return com.commercetools.api.models.shopping_list.ShoppingListChangeLineItemsOrderAction.deepCopy(
+                (com.commercetools.api.models.shopping_list.ShoppingListChangeLineItemsOrderAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.shopping_list.ShoppingListChangeNameAction) {
+            return com.commercetools.api.models.shopping_list.ShoppingListChangeNameAction
+                    .deepCopy((com.commercetools.api.models.shopping_list.ShoppingListChangeNameAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.shopping_list.ShoppingListChangeTextLineItemNameAction) {
+            return com.commercetools.api.models.shopping_list.ShoppingListChangeTextLineItemNameAction.deepCopy(
+                (com.commercetools.api.models.shopping_list.ShoppingListChangeTextLineItemNameAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.shopping_list.ShoppingListChangeTextLineItemQuantityAction) {
+            return com.commercetools.api.models.shopping_list.ShoppingListChangeTextLineItemQuantityAction.deepCopy(
+                (com.commercetools.api.models.shopping_list.ShoppingListChangeTextLineItemQuantityAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.shopping_list.ShoppingListChangeTextLineItemsOrderAction) {
+            return com.commercetools.api.models.shopping_list.ShoppingListChangeTextLineItemsOrderAction.deepCopy(
+                (com.commercetools.api.models.shopping_list.ShoppingListChangeTextLineItemsOrderAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.shopping_list.ShoppingListRemoveLineItemAction) {
+            return com.commercetools.api.models.shopping_list.ShoppingListRemoveLineItemAction
+                    .deepCopy((com.commercetools.api.models.shopping_list.ShoppingListRemoveLineItemAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.shopping_list.ShoppingListRemoveTextLineItemAction) {
+            return com.commercetools.api.models.shopping_list.ShoppingListRemoveTextLineItemAction.deepCopy(
+                (com.commercetools.api.models.shopping_list.ShoppingListRemoveTextLineItemAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.shopping_list.ShoppingListSetAnonymousIdAction) {
+            return com.commercetools.api.models.shopping_list.ShoppingListSetAnonymousIdAction
+                    .deepCopy((com.commercetools.api.models.shopping_list.ShoppingListSetAnonymousIdAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.shopping_list.ShoppingListSetCustomFieldAction) {
+            return com.commercetools.api.models.shopping_list.ShoppingListSetCustomFieldAction
+                    .deepCopy((com.commercetools.api.models.shopping_list.ShoppingListSetCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.shopping_list.ShoppingListSetCustomTypeAction) {
+            return com.commercetools.api.models.shopping_list.ShoppingListSetCustomTypeAction
+                    .deepCopy((com.commercetools.api.models.shopping_list.ShoppingListSetCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.shopping_list.ShoppingListSetCustomerAction) {
+            return com.commercetools.api.models.shopping_list.ShoppingListSetCustomerAction
+                    .deepCopy((com.commercetools.api.models.shopping_list.ShoppingListSetCustomerAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.shopping_list.ShoppingListSetDeleteDaysAfterLastModificationAction) {
+            return com.commercetools.api.models.shopping_list.ShoppingListSetDeleteDaysAfterLastModificationAction
+                    .deepCopy(
+                        (com.commercetools.api.models.shopping_list.ShoppingListSetDeleteDaysAfterLastModificationAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.shopping_list.ShoppingListSetDescriptionAction) {
+            return com.commercetools.api.models.shopping_list.ShoppingListSetDescriptionAction
+                    .deepCopy((com.commercetools.api.models.shopping_list.ShoppingListSetDescriptionAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.shopping_list.ShoppingListSetKeyAction) {
+            return com.commercetools.api.models.shopping_list.ShoppingListSetKeyAction
+                    .deepCopy((com.commercetools.api.models.shopping_list.ShoppingListSetKeyAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.shopping_list.ShoppingListSetLineItemCustomFieldAction) {
+            return com.commercetools.api.models.shopping_list.ShoppingListSetLineItemCustomFieldAction.deepCopy(
+                (com.commercetools.api.models.shopping_list.ShoppingListSetLineItemCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.shopping_list.ShoppingListSetLineItemCustomTypeAction) {
+            return com.commercetools.api.models.shopping_list.ShoppingListSetLineItemCustomTypeAction.deepCopy(
+                (com.commercetools.api.models.shopping_list.ShoppingListSetLineItemCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.shopping_list.ShoppingListSetSlugAction) {
+            return com.commercetools.api.models.shopping_list.ShoppingListSetSlugAction
+                    .deepCopy((com.commercetools.api.models.shopping_list.ShoppingListSetSlugAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.shopping_list.ShoppingListSetStoreAction) {
+            return com.commercetools.api.models.shopping_list.ShoppingListSetStoreAction
+                    .deepCopy((com.commercetools.api.models.shopping_list.ShoppingListSetStoreAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.shopping_list.ShoppingListSetTextLineItemCustomFieldAction) {
+            return com.commercetools.api.models.shopping_list.ShoppingListSetTextLineItemCustomFieldAction.deepCopy(
+                (com.commercetools.api.models.shopping_list.ShoppingListSetTextLineItemCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.shopping_list.ShoppingListSetTextLineItemCustomTypeAction) {
+            return com.commercetools.api.models.shopping_list.ShoppingListSetTextLineItemCustomTypeAction.deepCopy(
+                (com.commercetools.api.models.shopping_list.ShoppingListSetTextLineItemCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.shopping_list.ShoppingListSetTextLineItemDescriptionAction) {
+            return com.commercetools.api.models.shopping_list.ShoppingListSetTextLineItemDescriptionAction.deepCopy(
+                (com.commercetools.api.models.shopping_list.ShoppingListSetTextLineItemDescriptionAction) template);
+        }
+        ShoppingListUpdateActionImpl instance = new ShoppingListUpdateActionImpl();
+        return instance;
+    }
 
     /**
      * builder for addLineItem subtype

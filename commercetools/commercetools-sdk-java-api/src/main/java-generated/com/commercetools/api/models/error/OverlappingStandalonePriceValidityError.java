@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -226,20 +227,53 @@ public interface OverlappingStandalonePriceValidityError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of OverlappingStandalonePriceValidityError
+     * factory method to create a shallow copy OverlappingStandalonePriceValidityError
      * @param template instance to be copied
      * @return copy instance
      */
     public static OverlappingStandalonePriceValidityError of(final OverlappingStandalonePriceValidityError template) {
         OverlappingStandalonePriceValidityErrorImpl instance = new OverlappingStandalonePriceValidityErrorImpl();
         instance.setMessage(template.getMessage());
-        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         instance.setConflictingStandalonePrice(template.getConflictingStandalonePrice());
         instance.setSku(template.getSku());
         instance.setCurrency(template.getCurrency());
         instance.setCountry(template.getCountry());
         instance.setCustomerGroup(template.getCustomerGroup());
         instance.setChannel(template.getChannel());
+        instance.setValidFrom(template.getValidFrom());
+        instance.setValidUntil(template.getValidUntil());
+        instance.setConflictingValidFrom(template.getConflictingValidFrom());
+        instance.setConflictingValidUntil(template.getConflictingValidUntil());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OverlappingStandalonePriceValidityError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OverlappingStandalonePriceValidityError deepCopy(
+            @Nullable final OverlappingStandalonePriceValidityError template) {
+        if (template == null) {
+            return null;
+        }
+        OverlappingStandalonePriceValidityErrorImpl instance = new OverlappingStandalonePriceValidityErrorImpl();
+        instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        instance.setConflictingStandalonePrice(Optional.ofNullable(template.getConflictingStandalonePrice())
+                .map(com.commercetools.api.models.standalone_price.StandalonePriceReference::deepCopy)
+                .orElse(null));
+        instance.setSku(template.getSku());
+        instance.setCurrency(template.getCurrency());
+        instance.setCountry(template.getCountry());
+        instance.setCustomerGroup(Optional.ofNullable(template.getCustomerGroup())
+                .map(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier::deepCopy)
+                .orElse(null));
+        instance.setChannel(Optional.ofNullable(template.getChannel())
+                .map(com.commercetools.api.models.channel.ChannelResourceIdentifier::deepCopy)
+                .orElse(null));
         instance.setValidFrom(template.getValidFrom());
         instance.setValidUntil(template.getValidUntil());
         instance.setConflictingValidFrom(template.getConflictingValidFrom());

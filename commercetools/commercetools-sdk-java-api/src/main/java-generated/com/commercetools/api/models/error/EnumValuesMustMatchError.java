@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -67,14 +68,30 @@ public interface EnumValuesMustMatchError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of EnumValuesMustMatchError
+     * factory method to create a shallow copy EnumValuesMustMatchError
      * @param template instance to be copied
      * @return copy instance
      */
     public static EnumValuesMustMatchError of(final EnumValuesMustMatchError template) {
         EnumValuesMustMatchErrorImpl instance = new EnumValuesMustMatchErrorImpl();
         instance.setMessage(template.getMessage());
-        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of EnumValuesMustMatchError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static EnumValuesMustMatchError deepCopy(@Nullable final EnumValuesMustMatchError template) {
+        if (template == null) {
+            return null;
+        }
+        EnumValuesMustMatchErrorImpl instance = new EnumValuesMustMatchErrorImpl();
+        instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
 

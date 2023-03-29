@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -68,11 +69,27 @@ public interface ErrorByExtension {
     }
 
     /**
-     * factory method to copy an instance of ErrorByExtension
+     * factory method to create a shallow copy ErrorByExtension
      * @param template instance to be copied
      * @return copy instance
      */
     public static ErrorByExtension of(final ErrorByExtension template) {
+        ErrorByExtensionImpl instance = new ErrorByExtensionImpl();
+        instance.setId(template.getId());
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ErrorByExtension
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ErrorByExtension deepCopy(@Nullable final ErrorByExtension template) {
+        if (template == null) {
+            return null;
+        }
         ErrorByExtensionImpl instance = new ErrorByExtensionImpl();
         instance.setId(template.getId());
         instance.setKey(template.getKey());

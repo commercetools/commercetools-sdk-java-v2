@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -42,6 +43,36 @@ public interface CartDiscountValue {
     @NotNull
     @JsonProperty("type")
     public String getType();
+
+    /**
+     * factory method to create a deep copy of CartDiscountValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartDiscountValue deepCopy(@Nullable final CartDiscountValue template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountValueAbsolute) {
+            return com.commercetools.api.models.cart_discount.CartDiscountValueAbsolute
+                    .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountValueAbsolute) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountValueFixed) {
+            return com.commercetools.api.models.cart_discount.CartDiscountValueFixed
+                    .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountValueFixed) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItem) {
+            return com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItem
+                    .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItem) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountValueRelative) {
+            return com.commercetools.api.models.cart_discount.CartDiscountValueRelative
+                    .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountValueRelative) template);
+        }
+        CartDiscountValueImpl instance = new CartDiscountValueImpl();
+        return instance;
+    }
 
     /**
      * builder for absolute subtype

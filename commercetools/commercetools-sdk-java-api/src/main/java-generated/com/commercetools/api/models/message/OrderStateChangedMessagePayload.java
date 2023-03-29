@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order.OrderState;
@@ -75,11 +76,27 @@ public interface OrderStateChangedMessagePayload extends OrderMessagePayload {
     }
 
     /**
-     * factory method to copy an instance of OrderStateChangedMessagePayload
+     * factory method to create a shallow copy OrderStateChangedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
     public static OrderStateChangedMessagePayload of(final OrderStateChangedMessagePayload template) {
+        OrderStateChangedMessagePayloadImpl instance = new OrderStateChangedMessagePayloadImpl();
+        instance.setOrderState(template.getOrderState());
+        instance.setOldOrderState(template.getOldOrderState());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderStateChangedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderStateChangedMessagePayload deepCopy(@Nullable final OrderStateChangedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
         OrderStateChangedMessagePayloadImpl instance = new OrderStateChangedMessagePayloadImpl();
         instance.setOrderState(template.getOrderState());
         instance.setOldOrderState(template.getOldOrderState());

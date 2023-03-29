@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -88,11 +89,28 @@ public interface ProductSetPriceKeyAction extends ProductUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ProductSetPriceKeyAction
+     * factory method to create a shallow copy ProductSetPriceKeyAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductSetPriceKeyAction of(final ProductSetPriceKeyAction template) {
+        ProductSetPriceKeyActionImpl instance = new ProductSetPriceKeyActionImpl();
+        instance.setPriceId(template.getPriceId());
+        instance.setStaged(template.getStaged());
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductSetPriceKeyAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductSetPriceKeyAction deepCopy(@Nullable final ProductSetPriceKeyAction template) {
+        if (template == null) {
+            return null;
+        }
         ProductSetPriceKeyActionImpl instance = new ProductSetPriceKeyActionImpl();
         instance.setPriceId(template.getPriceId());
         instance.setStaged(template.getStaged());

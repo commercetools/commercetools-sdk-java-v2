@@ -5,7 +5,9 @@ import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -655,7 +657,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
     }
 
     /**
-     * factory method to copy an instance of Quote
+     * factory method to create a shallow copy Quote
      * @param template instance to be copied
      * @return copy instance
      */
@@ -697,6 +699,106 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
         instance.setState(template.getState());
         instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
         instance.setBusinessUnit(template.getBusinessUnit());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of Quote
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static Quote deepCopy(@Nullable final Quote template) {
+        if (template == null) {
+            return null;
+        }
+        QuoteImpl instance = new QuoteImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setKey(template.getKey());
+        instance.setLastModifiedBy(Optional.ofNullable(template.getLastModifiedBy())
+                .map(com.commercetools.api.models.common.LastModifiedBy::deepCopy)
+                .orElse(null));
+        instance.setCreatedBy(Optional.ofNullable(template.getCreatedBy())
+                .map(com.commercetools.api.models.common.CreatedBy::deepCopy)
+                .orElse(null));
+        instance.setQuoteRequest(Optional.ofNullable(template.getQuoteRequest())
+                .map(com.commercetools.api.models.quote_request.QuoteRequestReference::deepCopy)
+                .orElse(null));
+        instance.setStagedQuote(Optional.ofNullable(template.getStagedQuote())
+                .map(com.commercetools.api.models.staged_quote.StagedQuoteReference::deepCopy)
+                .orElse(null));
+        instance.setCustomer(Optional.ofNullable(template.getCustomer())
+                .map(com.commercetools.api.models.customer.CustomerReference::deepCopy)
+                .orElse(null));
+        instance.setCustomerGroup(Optional.ofNullable(template.getCustomerGroup())
+                .map(com.commercetools.api.models.customer_group.CustomerGroupReference::deepCopy)
+                .orElse(null));
+        instance.setValidTo(template.getValidTo());
+        instance.setSellerComment(template.getSellerComment());
+        instance.setBuyerComment(template.getBuyerComment());
+        instance.setStore(Optional.ofNullable(template.getStore())
+                .map(com.commercetools.api.models.store.StoreKeyReference::deepCopy)
+                .orElse(null));
+        instance.setLineItems(Optional.ofNullable(template.getLineItems())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.cart.LineItem::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setCustomLineItems(Optional.ofNullable(template.getCustomLineItems())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.cart.CustomLineItem::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setTotalPrice(Optional.ofNullable(template.getTotalPrice())
+                .map(com.commercetools.api.models.common.TypedMoney::deepCopy)
+                .orElse(null));
+        instance.setTaxedPrice(Optional.ofNullable(template.getTaxedPrice())
+                .map(com.commercetools.api.models.cart.TaxedPrice::deepCopy)
+                .orElse(null));
+        instance.setShippingAddress(Optional.ofNullable(template.getShippingAddress())
+                .map(com.commercetools.api.models.common.Address::deepCopy)
+                .orElse(null));
+        instance.setBillingAddress(Optional.ofNullable(template.getBillingAddress())
+                .map(com.commercetools.api.models.common.Address::deepCopy)
+                .orElse(null));
+        instance.setInventoryMode(template.getInventoryMode());
+        instance.setTaxMode(template.getTaxMode());
+        instance.setTaxRoundingMode(template.getTaxRoundingMode());
+        instance.setTaxCalculationMode(template.getTaxCalculationMode());
+        instance.setCountry(template.getCountry());
+        instance.setShippingInfo(Optional.ofNullable(template.getShippingInfo())
+                .map(com.commercetools.api.models.cart.ShippingInfo::deepCopy)
+                .orElse(null));
+        instance.setPaymentInfo(Optional.ofNullable(template.getPaymentInfo())
+                .map(com.commercetools.api.models.order.PaymentInfo::deepCopy)
+                .orElse(null));
+        instance.setShippingRateInput(Optional.ofNullable(template.getShippingRateInput())
+                .map(com.commercetools.api.models.cart.ShippingRateInput::deepCopy)
+                .orElse(null));
+        instance.setItemShippingAddresses(Optional.ofNullable(template.getItemShippingAddresses())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.common.Address::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setDirectDiscounts(Optional.ofNullable(template.getDirectDiscounts())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.cart.DirectDiscount::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setCustom(Optional.ofNullable(template.getCustom())
+                .map(com.commercetools.api.models.type.CustomFields::deepCopy)
+                .orElse(null));
+        instance.setQuoteState(template.getQuoteState());
+        instance.setState(Optional.ofNullable(template.getState())
+                .map(com.commercetools.api.models.state.StateReference::deepCopy)
+                .orElse(null));
+        instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
+        instance.setBusinessUnit(Optional.ofNullable(template.getBusinessUnit())
+                .map(com.commercetools.api.models.business_unit.BusinessUnitKeyReference::deepCopy)
+                .orElse(null));
         return instance;
     }
 

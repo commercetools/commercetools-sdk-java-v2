@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -43,6 +44,41 @@ public interface ChangeTargetChangeValue {
     @NotNull
     @JsonProperty("type")
     public String getType();
+
+    /**
+     * factory method to create a deep copy of ChangeTargetChangeValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChangeTargetChangeValue deepCopy(@Nullable final ChangeTargetChangeValue template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.history.models.change_value.ChangeTargetCustomLineItemsChangeValue) {
+            return com.commercetools.history.models.change_value.ChangeTargetCustomLineItemsChangeValue.deepCopy(
+                (com.commercetools.history.models.change_value.ChangeTargetCustomLineItemsChangeValue) template);
+        }
+        if (template instanceof com.commercetools.history.models.change_value.ChangeTargetLineItemsChangeValue) {
+            return com.commercetools.history.models.change_value.ChangeTargetLineItemsChangeValue.deepCopy(
+                (com.commercetools.history.models.change_value.ChangeTargetLineItemsChangeValue) template);
+        }
+        if (template instanceof com.commercetools.history.models.change_value.ChangeTargetMultiBuyCustomLineItemsChangeValue) {
+            return com.commercetools.history.models.change_value.ChangeTargetMultiBuyCustomLineItemsChangeValue
+                    .deepCopy(
+                        (com.commercetools.history.models.change_value.ChangeTargetMultiBuyCustomLineItemsChangeValue) template);
+        }
+        if (template instanceof com.commercetools.history.models.change_value.ChangeTargetMultiBuyLineItemsChangeValue) {
+            return com.commercetools.history.models.change_value.ChangeTargetMultiBuyLineItemsChangeValue.deepCopy(
+                (com.commercetools.history.models.change_value.ChangeTargetMultiBuyLineItemsChangeValue) template);
+        }
+        if (template instanceof com.commercetools.history.models.change_value.ChangeTargetShippingChangeValue) {
+            return com.commercetools.history.models.change_value.ChangeTargetShippingChangeValue
+                    .deepCopy((com.commercetools.history.models.change_value.ChangeTargetShippingChangeValue) template);
+        }
+        ChangeTargetChangeValueImpl instance = new ChangeTargetChangeValueImpl();
+        return instance;
+    }
 
     /**
      * builder for customLineItems subtype

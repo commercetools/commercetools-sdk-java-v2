@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -85,7 +86,7 @@ public interface RemoveAttributeDefinitionChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of RemoveAttributeDefinitionChange
+     * factory method to create a shallow copy RemoveAttributeDefinitionChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -93,6 +94,24 @@ public interface RemoveAttributeDefinitionChange extends Change {
         RemoveAttributeDefinitionChangeImpl instance = new RemoveAttributeDefinitionChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of RemoveAttributeDefinitionChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static RemoveAttributeDefinitionChange deepCopy(@Nullable final RemoveAttributeDefinitionChange template) {
+        if (template == null) {
+            return null;
+        }
+        RemoveAttributeDefinitionChangeImpl instance = new RemoveAttributeDefinitionChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
+                .map(com.commercetools.history.models.common.AttributeDefinition::deepCopy)
+                .orElse(null));
         return instance;
     }
 

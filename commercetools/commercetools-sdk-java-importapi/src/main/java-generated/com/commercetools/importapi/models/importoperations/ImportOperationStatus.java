@@ -4,7 +4,9 @@ package com.commercetools.importapi.models.importoperations;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -93,7 +95,7 @@ public interface ImportOperationStatus {
     }
 
     /**
-     * factory method to copy an instance of ImportOperationStatus
+     * factory method to create a shallow copy ImportOperationStatus
      * @param template instance to be copied
      * @return copy instance
      */
@@ -102,6 +104,27 @@ public interface ImportOperationStatus {
         instance.setOperationId(template.getOperationId());
         instance.setState(template.getState());
         instance.setErrors(template.getErrors());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ImportOperationStatus
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ImportOperationStatus deepCopy(@Nullable final ImportOperationStatus template) {
+        if (template == null) {
+            return null;
+        }
+        ImportOperationStatusImpl instance = new ImportOperationStatusImpl();
+        instance.setOperationId(template.getOperationId());
+        instance.setState(template.getState());
+        instance.setErrors(Optional.ofNullable(template.getErrors())
+                .map(t -> t.stream()
+                        .map(com.commercetools.importapi.models.errors.ErrorObject::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

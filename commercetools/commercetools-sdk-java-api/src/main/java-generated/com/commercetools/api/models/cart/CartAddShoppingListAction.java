@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -92,7 +93,7 @@ public interface CartAddShoppingListAction extends CartUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of CartAddShoppingListAction
+     * factory method to create a shallow copy CartAddShoppingListAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -101,6 +102,29 @@ public interface CartAddShoppingListAction extends CartUpdateAction {
         instance.setShoppingList(template.getShoppingList());
         instance.setDistributionChannel(template.getDistributionChannel());
         instance.setSupplyChannel(template.getSupplyChannel());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartAddShoppingListAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartAddShoppingListAction deepCopy(@Nullable final CartAddShoppingListAction template) {
+        if (template == null) {
+            return null;
+        }
+        CartAddShoppingListActionImpl instance = new CartAddShoppingListActionImpl();
+        instance.setShoppingList(Optional.ofNullable(template.getShoppingList())
+                .map(com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier::deepCopy)
+                .orElse(null));
+        instance.setDistributionChannel(Optional.ofNullable(template.getDistributionChannel())
+                .map(com.commercetools.api.models.channel.ChannelResourceIdentifier::deepCopy)
+                .orElse(null));
+        instance.setSupplyChannel(Optional.ofNullable(template.getSupplyChannel())
+                .map(com.commercetools.api.models.channel.ChannelResourceIdentifier::deepCopy)
+                .orElse(null));
         return instance;
     }
 

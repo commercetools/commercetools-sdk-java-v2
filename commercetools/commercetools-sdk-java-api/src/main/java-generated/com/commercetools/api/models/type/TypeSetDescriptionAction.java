@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.common.LocalizedString;
@@ -58,13 +59,30 @@ public interface TypeSetDescriptionAction extends TypeUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of TypeSetDescriptionAction
+     * factory method to create a shallow copy TypeSetDescriptionAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static TypeSetDescriptionAction of(final TypeSetDescriptionAction template) {
         TypeSetDescriptionActionImpl instance = new TypeSetDescriptionActionImpl();
         instance.setDescription(template.getDescription());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of TypeSetDescriptionAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static TypeSetDescriptionAction deepCopy(@Nullable final TypeSetDescriptionAction template) {
+        if (template == null) {
+            return null;
+        }
+        TypeSetDescriptionActionImpl instance = new TypeSetDescriptionActionImpl();
+        instance.setDescription(Optional.ofNullable(template.getDescription())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
         return instance;
     }
 

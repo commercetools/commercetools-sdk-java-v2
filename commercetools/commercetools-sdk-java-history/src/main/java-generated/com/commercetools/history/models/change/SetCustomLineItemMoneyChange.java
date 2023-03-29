@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -136,7 +137,7 @@ public interface SetCustomLineItemMoneyChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetCustomLineItemMoneyChange
+     * factory method to create a shallow copy SetCustomLineItemMoneyChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -147,6 +148,31 @@ public interface SetCustomLineItemMoneyChange extends Change {
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetCustomLineItemMoneyChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetCustomLineItemMoneyChange deepCopy(@Nullable final SetCustomLineItemMoneyChange template) {
+        if (template == null) {
+            return null;
+        }
+        SetCustomLineItemMoneyChangeImpl instance = new SetCustomLineItemMoneyChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setCustomLineItem(Optional.ofNullable(template.getCustomLineItem())
+                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setNextValue(Optional.ofNullable(template.getNextValue())
+                .map(com.commercetools.history.models.common.Money::deepCopy)
+                .orElse(null));
+        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
+                .map(com.commercetools.history.models.common.Money::deepCopy)
+                .orElse(null));
         return instance;
     }
 

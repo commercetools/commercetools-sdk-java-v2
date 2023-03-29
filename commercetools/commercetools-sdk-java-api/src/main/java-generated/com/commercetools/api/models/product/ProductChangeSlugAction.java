@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -76,13 +77,31 @@ public interface ProductChangeSlugAction extends ProductUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ProductChangeSlugAction
+     * factory method to create a shallow copy ProductChangeSlugAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductChangeSlugAction of(final ProductChangeSlugAction template) {
         ProductChangeSlugActionImpl instance = new ProductChangeSlugActionImpl();
         instance.setSlug(template.getSlug());
+        instance.setStaged(template.getStaged());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductChangeSlugAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductChangeSlugAction deepCopy(@Nullable final ProductChangeSlugAction template) {
+        if (template == null) {
+            return null;
+        }
+        ProductChangeSlugActionImpl instance = new ProductChangeSlugActionImpl();
+        instance.setSlug(Optional.ofNullable(template.getSlug())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
         instance.setStaged(template.getStaged());
         return instance;
     }

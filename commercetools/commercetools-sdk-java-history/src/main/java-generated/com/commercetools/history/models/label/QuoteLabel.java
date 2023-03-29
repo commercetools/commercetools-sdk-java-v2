@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -119,7 +120,7 @@ public interface QuoteLabel extends Label {
     }
 
     /**
-     * factory method to copy an instance of QuoteLabel
+     * factory method to create a shallow copy QuoteLabel
      * @param template instance to be copied
      * @return copy instance
      */
@@ -129,6 +130,30 @@ public interface QuoteLabel extends Label {
         instance.setCustomer(template.getCustomer());
         instance.setStagedQuote(template.getStagedQuote());
         instance.setQuoteRequest(template.getQuoteRequest());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of QuoteLabel
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static QuoteLabel deepCopy(@Nullable final QuoteLabel template) {
+        if (template == null) {
+            return null;
+        }
+        QuoteLabelImpl instance = new QuoteLabelImpl();
+        instance.setKey(template.getKey());
+        instance.setCustomer(Optional.ofNullable(template.getCustomer())
+                .map(com.commercetools.history.models.common.Reference::deepCopy)
+                .orElse(null));
+        instance.setStagedQuote(Optional.ofNullable(template.getStagedQuote())
+                .map(com.commercetools.history.models.common.Reference::deepCopy)
+                .orElse(null));
+        instance.setQuoteRequest(Optional.ofNullable(template.getQuoteRequest())
+                .map(com.commercetools.history.models.common.Reference::deepCopy)
+                .orElse(null));
         return instance;
     }
 

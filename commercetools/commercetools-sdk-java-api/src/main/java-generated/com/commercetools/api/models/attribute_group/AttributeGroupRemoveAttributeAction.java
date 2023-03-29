@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -60,13 +61,31 @@ public interface AttributeGroupRemoveAttributeAction extends AttributeGroupUpdat
     }
 
     /**
-     * factory method to copy an instance of AttributeGroupRemoveAttributeAction
+     * factory method to create a shallow copy AttributeGroupRemoveAttributeAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static AttributeGroupRemoveAttributeAction of(final AttributeGroupRemoveAttributeAction template) {
         AttributeGroupRemoveAttributeActionImpl instance = new AttributeGroupRemoveAttributeActionImpl();
         instance.setAttribute(template.getAttribute());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of AttributeGroupRemoveAttributeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AttributeGroupRemoveAttributeAction deepCopy(
+            @Nullable final AttributeGroupRemoveAttributeAction template) {
+        if (template == null) {
+            return null;
+        }
+        AttributeGroupRemoveAttributeActionImpl instance = new AttributeGroupRemoveAttributeActionImpl();
+        instance.setAttribute(Optional.ofNullable(template.getAttribute())
+                .map(com.commercetools.api.models.attribute_group.AttributeReference::deepCopy)
+                .orElse(null));
         return instance;
     }
 

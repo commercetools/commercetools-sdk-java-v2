@@ -4,7 +4,9 @@ package com.commercetools.history.models.change;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -136,7 +138,7 @@ public interface SetParcelItemsChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetParcelItemsChange
+     * factory method to create a shallow copy SetParcelItemsChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -146,6 +148,34 @@ public interface SetParcelItemsChange extends Change {
         instance.setParcel(template.getParcel());
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetParcelItemsChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetParcelItemsChange deepCopy(@Nullable final SetParcelItemsChange template) {
+        if (template == null) {
+            return null;
+        }
+        SetParcelItemsChangeImpl instance = new SetParcelItemsChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setParcel(Optional.ofNullable(template.getParcel())
+                .map(com.commercetools.history.models.change_value.ParcelChangeValue::deepCopy)
+                .orElse(null));
+        instance.setNextValue(Optional.ofNullable(template.getNextValue())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.DeliveryItem::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.DeliveryItem::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

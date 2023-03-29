@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -70,7 +71,7 @@ public interface ParcelMeasurementDraft extends io.vrap.rmf.base.client.Draft<Pa
     }
 
     /**
-     * factory method to copy an instance of ParcelMeasurementDraft
+     * factory method to create a shallow copy ParcelMeasurementDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -78,6 +79,24 @@ public interface ParcelMeasurementDraft extends io.vrap.rmf.base.client.Draft<Pa
         ParcelMeasurementDraftImpl instance = new ParcelMeasurementDraftImpl();
         instance.setParcelId(template.getParcelId());
         instance.setMeasurements(template.getMeasurements());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ParcelMeasurementDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ParcelMeasurementDraft deepCopy(@Nullable final ParcelMeasurementDraft template) {
+        if (template == null) {
+            return null;
+        }
+        ParcelMeasurementDraftImpl instance = new ParcelMeasurementDraftImpl();
+        instance.setParcelId(template.getParcelId());
+        instance.setMeasurements(Optional.ofNullable(template.getMeasurements())
+                .map(com.commercetools.importapi.models.orders.ParcelMeasurements::deepCopy)
+                .orElse(null));
         return instance;
     }
 

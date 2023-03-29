@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -72,7 +73,7 @@ public interface ExtensionInput {
     }
 
     /**
-     * factory method to copy an instance of ExtensionInput
+     * factory method to create a shallow copy ExtensionInput
      * @param template instance to be copied
      * @return copy instance
      */
@@ -80,6 +81,24 @@ public interface ExtensionInput {
         ExtensionInputImpl instance = new ExtensionInputImpl();
         instance.setAction(template.getAction());
         instance.setResource(template.getResource());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ExtensionInput
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ExtensionInput deepCopy(@Nullable final ExtensionInput template) {
+        if (template == null) {
+            return null;
+        }
+        ExtensionInputImpl instance = new ExtensionInputImpl();
+        instance.setAction(template.getAction());
+        instance.setResource(Optional.ofNullable(template.getResource())
+                .map(com.commercetools.api.models.common.Reference::deepCopy)
+                .orElse(null));
         return instance;
     }
 

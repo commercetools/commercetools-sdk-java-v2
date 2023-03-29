@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -70,7 +71,7 @@ public interface CustomFieldsDraft extends io.vrap.rmf.base.client.Draft<CustomF
     }
 
     /**
-     * factory method to copy an instance of CustomFieldsDraft
+     * factory method to create a shallow copy CustomFieldsDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -78,6 +79,26 @@ public interface CustomFieldsDraft extends io.vrap.rmf.base.client.Draft<CustomF
         CustomFieldsDraftImpl instance = new CustomFieldsDraftImpl();
         instance.setType(template.getType());
         instance.setFields(template.getFields());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomFieldsDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomFieldsDraft deepCopy(@Nullable final CustomFieldsDraft template) {
+        if (template == null) {
+            return null;
+        }
+        CustomFieldsDraftImpl instance = new CustomFieldsDraftImpl();
+        instance.setType(Optional.ofNullable(template.getType())
+                .map(com.commercetools.api.models.type.TypeResourceIdentifier::deepCopy)
+                .orElse(null));
+        instance.setFields(Optional.ofNullable(template.getFields())
+                .map(com.commercetools.api.models.type.FieldContainer::deepCopy)
+                .orElse(null));
         return instance;
     }
 

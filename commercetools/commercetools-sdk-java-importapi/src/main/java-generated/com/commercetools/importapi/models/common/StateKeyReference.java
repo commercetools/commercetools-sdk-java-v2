@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -41,11 +43,26 @@ public interface StateKeyReference extends KeyReference {
     }
 
     /**
-     * factory method to copy an instance of StateKeyReference
+     * factory method to create a shallow copy StateKeyReference
      * @param template instance to be copied
      * @return copy instance
      */
     public static StateKeyReference of(final StateKeyReference template) {
+        StateKeyReferenceImpl instance = new StateKeyReferenceImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StateKeyReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StateKeyReference deepCopy(@Nullable final StateKeyReference template) {
+        if (template == null) {
+            return null;
+        }
         StateKeyReferenceImpl instance = new StateKeyReferenceImpl();
         instance.setKey(template.getKey());
         return instance;

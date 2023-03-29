@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.state.StateResourceIdentifier;
@@ -83,7 +84,7 @@ public interface PaymentStatusDraft extends io.vrap.rmf.base.client.Draft<Paymen
     }
 
     /**
-     * factory method to copy an instance of PaymentStatusDraft
+     * factory method to create a shallow copy PaymentStatusDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -92,6 +93,25 @@ public interface PaymentStatusDraft extends io.vrap.rmf.base.client.Draft<Paymen
         instance.setInterfaceCode(template.getInterfaceCode());
         instance.setInterfaceText(template.getInterfaceText());
         instance.setState(template.getState());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of PaymentStatusDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static PaymentStatusDraft deepCopy(@Nullable final PaymentStatusDraft template) {
+        if (template == null) {
+            return null;
+        }
+        PaymentStatusDraftImpl instance = new PaymentStatusDraftImpl();
+        instance.setInterfaceCode(template.getInterfaceCode());
+        instance.setInterfaceText(template.getInterfaceText());
+        instance.setState(Optional.ofNullable(template.getState())
+                .map(com.commercetools.api.models.state.StateResourceIdentifier::deepCopy)
+                .orElse(null));
         return instance;
     }
 

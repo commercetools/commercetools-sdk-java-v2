@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.TaxMode;
@@ -62,11 +63,26 @@ public interface MyCartChangeTaxModeAction extends MyCartUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of MyCartChangeTaxModeAction
+     * factory method to create a shallow copy MyCartChangeTaxModeAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static MyCartChangeTaxModeAction of(final MyCartChangeTaxModeAction template) {
+        MyCartChangeTaxModeActionImpl instance = new MyCartChangeTaxModeActionImpl();
+        instance.setTaxMode(template.getTaxMode());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MyCartChangeTaxModeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MyCartChangeTaxModeAction deepCopy(@Nullable final MyCartChangeTaxModeAction template) {
+        if (template == null) {
+            return null;
+        }
         MyCartChangeTaxModeActionImpl instance = new MyCartChangeTaxModeActionImpl();
         instance.setTaxMode(template.getTaxMode());
         return instance;

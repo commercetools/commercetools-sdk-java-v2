@@ -4,7 +4,9 @@ package com.commercetools.api.models.shipping_method;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -125,7 +127,7 @@ public interface ShippingMethodPagedQueryResponse
     }
 
     /**
-     * factory method to copy an instance of ShippingMethodPagedQueryResponse
+     * factory method to create a shallow copy ShippingMethodPagedQueryResponse
      * @param template instance to be copied
      * @return copy instance
      */
@@ -136,6 +138,29 @@ public interface ShippingMethodPagedQueryResponse
         instance.setTotal(template.getTotal());
         instance.setOffset(template.getOffset());
         instance.setResults(template.getResults());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ShippingMethodPagedQueryResponse
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ShippingMethodPagedQueryResponse deepCopy(@Nullable final ShippingMethodPagedQueryResponse template) {
+        if (template == null) {
+            return null;
+        }
+        ShippingMethodPagedQueryResponseImpl instance = new ShippingMethodPagedQueryResponseImpl();
+        instance.setLimit(template.getLimit());
+        instance.setCount(template.getCount());
+        instance.setTotal(template.getTotal());
+        instance.setOffset(template.getOffset());
+        instance.setResults(Optional.ofNullable(template.getResults())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.shipping_method.ShippingMethod::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

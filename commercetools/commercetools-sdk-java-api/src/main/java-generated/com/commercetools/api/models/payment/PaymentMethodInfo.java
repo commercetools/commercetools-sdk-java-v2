@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.common.LocalizedString;
@@ -83,7 +84,7 @@ public interface PaymentMethodInfo {
     }
 
     /**
-     * factory method to copy an instance of PaymentMethodInfo
+     * factory method to create a shallow copy PaymentMethodInfo
      * @param template instance to be copied
      * @return copy instance
      */
@@ -92,6 +93,25 @@ public interface PaymentMethodInfo {
         instance.setPaymentInterface(template.getPaymentInterface());
         instance.setMethod(template.getMethod());
         instance.setName(template.getName());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of PaymentMethodInfo
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static PaymentMethodInfo deepCopy(@Nullable final PaymentMethodInfo template) {
+        if (template == null) {
+            return null;
+        }
+        PaymentMethodInfoImpl instance = new PaymentMethodInfoImpl();
+        instance.setPaymentInterface(template.getPaymentInterface());
+        instance.setMethod(template.getMethod());
+        instance.setName(Optional.ofNullable(template.getName())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
         return instance;
     }
 

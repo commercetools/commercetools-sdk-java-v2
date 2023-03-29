@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -45,6 +46,44 @@ public interface AttributeGroupUpdateAction
     @NotNull
     @JsonProperty("action")
     public String getAction();
+
+    /**
+     * factory method to create a deep copy of AttributeGroupUpdateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AttributeGroupUpdateAction deepCopy(@Nullable final AttributeGroupUpdateAction template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.attribute_group.AttributeGroupAddAttributeAction) {
+            return com.commercetools.api.models.attribute_group.AttributeGroupAddAttributeAction
+                    .deepCopy((com.commercetools.api.models.attribute_group.AttributeGroupAddAttributeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.attribute_group.AttributeGroupChangeNameAction) {
+            return com.commercetools.api.models.attribute_group.AttributeGroupChangeNameAction
+                    .deepCopy((com.commercetools.api.models.attribute_group.AttributeGroupChangeNameAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.attribute_group.AttributeGroupRemoveAttributeAction) {
+            return com.commercetools.api.models.attribute_group.AttributeGroupRemoveAttributeAction.deepCopy(
+                (com.commercetools.api.models.attribute_group.AttributeGroupRemoveAttributeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.attribute_group.AttributeGroupSetAttributesAction) {
+            return com.commercetools.api.models.attribute_group.AttributeGroupSetAttributesAction.deepCopy(
+                (com.commercetools.api.models.attribute_group.AttributeGroupSetAttributesAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.attribute_group.AttributeGroupSetDescriptionAction) {
+            return com.commercetools.api.models.attribute_group.AttributeGroupSetDescriptionAction.deepCopy(
+                (com.commercetools.api.models.attribute_group.AttributeGroupSetDescriptionAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.attribute_group.AttributeGroupSetKeyAction) {
+            return com.commercetools.api.models.attribute_group.AttributeGroupSetKeyAction
+                    .deepCopy((com.commercetools.api.models.attribute_group.AttributeGroupSetKeyAction) template);
+        }
+        AttributeGroupUpdateActionImpl instance = new AttributeGroupUpdateActionImpl();
+        return instance;
+    }
 
     /**
      * builder for addAttribute subtype

@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -169,6 +170,38 @@ public interface ReturnItem extends com.commercetools.api.models.Customizable<Re
      */
 
     public void setCreatedAt(final ZonedDateTime createdAt);
+
+    /**
+     * factory method to create a deep copy of ReturnItem
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ReturnItem deepCopy(@Nullable final ReturnItem template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.order.CustomLineItemReturnItem) {
+            return com.commercetools.api.models.order.CustomLineItemReturnItem
+                    .deepCopy((com.commercetools.api.models.order.CustomLineItemReturnItem) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.LineItemReturnItem) {
+            return com.commercetools.api.models.order.LineItemReturnItem
+                    .deepCopy((com.commercetools.api.models.order.LineItemReturnItem) template);
+        }
+        ReturnItemImpl instance = new ReturnItemImpl();
+        instance.setId(template.getId());
+        instance.setQuantity(template.getQuantity());
+        instance.setComment(template.getComment());
+        instance.setShipmentState(template.getShipmentState());
+        instance.setPaymentState(template.getPaymentState());
+        instance.setCustom(Optional.ofNullable(template.getCustom())
+                .map(com.commercetools.api.models.type.CustomFields::deepCopy)
+                .orElse(null));
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setCreatedAt(template.getCreatedAt());
+        return instance;
+    }
 
     /**
      * builder for customLineItemReturnItem subtype

@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -136,7 +137,7 @@ public interface TextLineItem extends com.commercetools.api.models.Customizable<
     }
 
     /**
-     * factory method to copy an instance of TextLineItem
+     * factory method to create a shallow copy TextLineItem
      * @param template instance to be copied
      * @return copy instance
      */
@@ -147,6 +148,32 @@ public interface TextLineItem extends com.commercetools.api.models.Customizable<
         instance.setDescription(template.getDescription());
         instance.setId(template.getId());
         instance.setName(template.getName());
+        instance.setQuantity(template.getQuantity());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of TextLineItem
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static TextLineItem deepCopy(@Nullable final TextLineItem template) {
+        if (template == null) {
+            return null;
+        }
+        TextLineItemImpl instance = new TextLineItemImpl();
+        instance.setAddedAt(template.getAddedAt());
+        instance.setCustom(Optional.ofNullable(template.getCustom())
+                .map(com.commercetools.api.models.type.CustomFields::deepCopy)
+                .orElse(null));
+        instance.setDescription(Optional.ofNullable(template.getDescription())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setId(template.getId());
+        instance.setName(Optional.ofNullable(template.getName())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
         instance.setQuantity(template.getQuantity());
         return instance;
     }

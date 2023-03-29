@@ -4,7 +4,9 @@ package com.commercetools.api.models.cart;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -201,7 +203,7 @@ public interface CustomShippingDraft
     }
 
     /**
-     * factory method to copy an instance of CustomShippingDraft
+     * factory method to create a shallow copy CustomShippingDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -216,6 +218,45 @@ public interface CustomShippingDraft
         instance.setExternalTaxRate(template.getExternalTaxRate());
         instance.setDeliveries(template.getDeliveries());
         instance.setCustom(template.getCustom());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomShippingDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomShippingDraft deepCopy(@Nullable final CustomShippingDraft template) {
+        if (template == null) {
+            return null;
+        }
+        CustomShippingDraftImpl instance = new CustomShippingDraftImpl();
+        instance.setKey(template.getKey());
+        instance.setShippingMethodName(template.getShippingMethodName());
+        instance.setShippingAddress(Optional.ofNullable(template.getShippingAddress())
+                .map(com.commercetools.api.models.common.BaseAddress::deepCopy)
+                .orElse(null));
+        instance.setShippingRate(Optional.ofNullable(template.getShippingRate())
+                .map(com.commercetools.api.models.shipping_method.ShippingRateDraft::deepCopy)
+                .orElse(null));
+        instance.setShippingRateInput(Optional.ofNullable(template.getShippingRateInput())
+                .map(com.commercetools.api.models.cart.ShippingRateInputDraft::deepCopy)
+                .orElse(null));
+        instance.setTaxCategory(Optional.ofNullable(template.getTaxCategory())
+                .map(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier::deepCopy)
+                .orElse(null));
+        instance.setExternalTaxRate(Optional.ofNullable(template.getExternalTaxRate())
+                .map(com.commercetools.api.models.cart.ExternalTaxRateDraft::deepCopy)
+                .orElse(null));
+        instance.setDeliveries(Optional.ofNullable(template.getDeliveries())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.order.DeliveryDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setCustom(Optional.ofNullable(template.getCustom())
+                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
+                .orElse(null));
         return instance;
     }
 

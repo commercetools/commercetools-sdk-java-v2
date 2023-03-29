@@ -5,7 +5,9 @@ import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -190,7 +192,7 @@ public interface LineItemPrice {
     }
 
     /**
-     * factory method to copy an instance of LineItemPrice
+     * factory method to create a shallow copy LineItemPrice
      * @param template instance to be copied
      * @return copy instance
      */
@@ -205,6 +207,43 @@ public interface LineItemPrice {
         instance.setDiscounted(template.getDiscounted());
         instance.setTiers(template.getTiers());
         instance.setCustom(template.getCustom());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of LineItemPrice
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static LineItemPrice deepCopy(@Nullable final LineItemPrice template) {
+        if (template == null) {
+            return null;
+        }
+        LineItemPriceImpl instance = new LineItemPriceImpl();
+        instance.setValue(Optional.ofNullable(template.getValue())
+                .map(com.commercetools.importapi.models.common.TypedMoney::deepCopy)
+                .orElse(null));
+        instance.setCountry(template.getCountry());
+        instance.setValidFrom(template.getValidFrom());
+        instance.setValidUntil(template.getValidUntil());
+        instance.setCustomerGroup(Optional.ofNullable(template.getCustomerGroup())
+                .map(com.commercetools.importapi.models.common.CustomerGroupKeyReference::deepCopy)
+                .orElse(null));
+        instance.setChannel(Optional.ofNullable(template.getChannel())
+                .map(com.commercetools.importapi.models.common.ChannelKeyReference::deepCopy)
+                .orElse(null));
+        instance.setDiscounted(Optional.ofNullable(template.getDiscounted())
+                .map(com.commercetools.importapi.models.common.DiscountedPrice::deepCopy)
+                .orElse(null));
+        instance.setTiers(Optional.ofNullable(template.getTiers())
+                .map(t -> t.stream()
+                        .map(com.commercetools.importapi.models.common.PriceTier::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setCustom(Optional.ofNullable(template.getCustom())
+                .map(com.commercetools.importapi.models.customfields.Custom::deepCopy)
+                .orElse(null));
         return instance;
     }
 

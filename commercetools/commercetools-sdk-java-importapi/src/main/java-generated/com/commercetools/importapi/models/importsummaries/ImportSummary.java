@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -71,13 +72,31 @@ public interface ImportSummary {
     }
 
     /**
-     * factory method to copy an instance of ImportSummary
+     * factory method to create a shallow copy ImportSummary
      * @param template instance to be copied
      * @return copy instance
      */
     public static ImportSummary of(final ImportSummary template) {
         ImportSummaryImpl instance = new ImportSummaryImpl();
         instance.setStates(template.getStates());
+        instance.setTotal(template.getTotal());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ImportSummary
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ImportSummary deepCopy(@Nullable final ImportSummary template) {
+        if (template == null) {
+            return null;
+        }
+        ImportSummaryImpl instance = new ImportSummaryImpl();
+        instance.setStates(Optional.ofNullable(template.getStates())
+                .map(com.commercetools.importapi.models.importsummaries.OperationStates::deepCopy)
+                .orElse(null));
         instance.setTotal(template.getTotal());
         return instance;
     }

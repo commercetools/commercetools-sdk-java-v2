@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -121,7 +122,7 @@ public interface MyTransactionDraft extends com.commercetools.api.models.Customi
     }
 
     /**
-     * factory method to copy an instance of MyTransactionDraft
+     * factory method to create a shallow copy MyTransactionDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -132,6 +133,29 @@ public interface MyTransactionDraft extends com.commercetools.api.models.Customi
         instance.setAmount(template.getAmount());
         instance.setInteractionId(template.getInteractionId());
         instance.setCustom(template.getCustom());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MyTransactionDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MyTransactionDraft deepCopy(@Nullable final MyTransactionDraft template) {
+        if (template == null) {
+            return null;
+        }
+        MyTransactionDraftImpl instance = new MyTransactionDraftImpl();
+        instance.setTimestamp(template.getTimestamp());
+        instance.setType(template.getType());
+        instance.setAmount(Optional.ofNullable(template.getAmount())
+                .map(com.commercetools.api.models.common.Money::deepCopy)
+                .orElse(null));
+        instance.setInteractionId(template.getInteractionId());
+        instance.setCustom(Optional.ofNullable(template.getCustom())
+                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
+                .orElse(null));
         return instance;
     }
 

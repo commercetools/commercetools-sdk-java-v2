@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.common.StateType;
@@ -99,11 +100,28 @@ public interface ChangeStateTypeChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of ChangeStateTypeChange
+     * factory method to create a shallow copy ChangeStateTypeChange
      * @param template instance to be copied
      * @return copy instance
      */
     public static ChangeStateTypeChange of(final ChangeStateTypeChange template) {
+        ChangeStateTypeChangeImpl instance = new ChangeStateTypeChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChangeStateTypeChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChangeStateTypeChange deepCopy(@Nullable final ChangeStateTypeChange template) {
+        if (template == null) {
+            return null;
+        }
         ChangeStateTypeChangeImpl instance = new ChangeStateTypeChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -98,11 +99,28 @@ public interface SetStatusInterfaceTextChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetStatusInterfaceTextChange
+     * factory method to create a shallow copy SetStatusInterfaceTextChange
      * @param template instance to be copied
      * @return copy instance
      */
     public static SetStatusInterfaceTextChange of(final SetStatusInterfaceTextChange template) {
+        SetStatusInterfaceTextChangeImpl instance = new SetStatusInterfaceTextChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetStatusInterfaceTextChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetStatusInterfaceTextChange deepCopy(@Nullable final SetStatusInterfaceTextChange template) {
+        if (template == null) {
+            return null;
+        }
         SetStatusInterfaceTextChangeImpl instance = new SetStatusInterfaceTextChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());

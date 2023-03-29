@@ -5,7 +5,9 @@ import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -94,13 +96,34 @@ public interface ReturnInfoDraft extends io.vrap.rmf.base.client.Draft<ReturnInf
     }
 
     /**
-     * factory method to copy an instance of ReturnInfoDraft
+     * factory method to create a shallow copy ReturnInfoDraft
      * @param template instance to be copied
      * @return copy instance
      */
     public static ReturnInfoDraft of(final ReturnInfoDraft template) {
         ReturnInfoDraftImpl instance = new ReturnInfoDraftImpl();
         instance.setItems(template.getItems());
+        instance.setReturnTrackingId(template.getReturnTrackingId());
+        instance.setReturnDate(template.getReturnDate());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ReturnInfoDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ReturnInfoDraft deepCopy(@Nullable final ReturnInfoDraft template) {
+        if (template == null) {
+            return null;
+        }
+        ReturnInfoDraftImpl instance = new ReturnInfoDraftImpl();
+        instance.setItems(Optional.ofNullable(template.getItems())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.order.ReturnItemDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setReturnTrackingId(template.getReturnTrackingId());
         instance.setReturnDate(template.getReturnDate());
         return instance;

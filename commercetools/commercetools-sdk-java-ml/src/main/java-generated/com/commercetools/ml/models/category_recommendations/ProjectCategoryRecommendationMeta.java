@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -91,7 +92,7 @@ public interface ProjectCategoryRecommendationMeta {
     }
 
     /**
-     * factory method to copy an instance of ProjectCategoryRecommendationMeta
+     * factory method to create a shallow copy ProjectCategoryRecommendationMeta
      * @param template instance to be copied
      * @return copy instance
      */
@@ -100,6 +101,25 @@ public interface ProjectCategoryRecommendationMeta {
         instance.setProductName(template.getProductName());
         instance.setProductImageUrl(template.getProductImageUrl());
         instance.setGeneralCategoryNames(template.getGeneralCategoryNames());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProjectCategoryRecommendationMeta
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProjectCategoryRecommendationMeta deepCopy(
+            @Nullable final ProjectCategoryRecommendationMeta template) {
+        if (template == null) {
+            return null;
+        }
+        ProjectCategoryRecommendationMetaImpl instance = new ProjectCategoryRecommendationMetaImpl();
+        instance.setProductName(template.getProductName());
+        instance.setProductImageUrl(template.getProductImageUrl());
+        instance.setGeneralCategoryNames(
+            Optional.ofNullable(template.getGeneralCategoryNames()).map(ArrayList::new).orElse(null));
         return instance;
     }
 

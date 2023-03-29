@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -73,11 +74,27 @@ public interface DiscountCodeSetCustomFieldAction extends DiscountCodeUpdateActi
     }
 
     /**
-     * factory method to copy an instance of DiscountCodeSetCustomFieldAction
+     * factory method to create a shallow copy DiscountCodeSetCustomFieldAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static DiscountCodeSetCustomFieldAction of(final DiscountCodeSetCustomFieldAction template) {
+        DiscountCodeSetCustomFieldActionImpl instance = new DiscountCodeSetCustomFieldActionImpl();
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of DiscountCodeSetCustomFieldAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static DiscountCodeSetCustomFieldAction deepCopy(@Nullable final DiscountCodeSetCustomFieldAction template) {
+        if (template == null) {
+            return null;
+        }
         DiscountCodeSetCustomFieldActionImpl instance = new DiscountCodeSetCustomFieldActionImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());

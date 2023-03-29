@@ -4,7 +4,9 @@ package com.commercetools.api.models.order_edit;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -86,7 +88,7 @@ public interface StagedOrderSetDeliveryItemsAction extends StagedOrderUpdateActi
     }
 
     /**
-     * factory method to copy an instance of StagedOrderSetDeliveryItemsAction
+     * factory method to create a shallow copy StagedOrderSetDeliveryItemsAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -94,6 +96,27 @@ public interface StagedOrderSetDeliveryItemsAction extends StagedOrderUpdateActi
         StagedOrderSetDeliveryItemsActionImpl instance = new StagedOrderSetDeliveryItemsActionImpl();
         instance.setDeliveryId(template.getDeliveryId());
         instance.setItems(template.getItems());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedOrderSetDeliveryItemsAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedOrderSetDeliveryItemsAction deepCopy(
+            @Nullable final StagedOrderSetDeliveryItemsAction template) {
+        if (template == null) {
+            return null;
+        }
+        StagedOrderSetDeliveryItemsActionImpl instance = new StagedOrderSetDeliveryItemsActionImpl();
+        instance.setDeliveryId(template.getDeliveryId());
+        instance.setItems(Optional.ofNullable(template.getItems())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.order.DeliveryItem::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

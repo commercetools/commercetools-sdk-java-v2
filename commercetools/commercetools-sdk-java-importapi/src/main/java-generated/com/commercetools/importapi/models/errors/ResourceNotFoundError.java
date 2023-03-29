@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -56,11 +58,27 @@ public interface ResourceNotFoundError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of ResourceNotFoundError
+     * factory method to create a shallow copy ResourceNotFoundError
      * @param template instance to be copied
      * @return copy instance
      */
     public static ResourceNotFoundError of(final ResourceNotFoundError template) {
+        ResourceNotFoundErrorImpl instance = new ResourceNotFoundErrorImpl();
+        instance.setMessage(template.getMessage());
+        instance.setResource(template.getResource());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ResourceNotFoundError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ResourceNotFoundError deepCopy(@Nullable final ResourceNotFoundError template) {
+        if (template == null) {
+            return null;
+        }
         ResourceNotFoundErrorImpl instance = new ResourceNotFoundErrorImpl();
         instance.setMessage(template.getMessage());
         instance.setResource(template.getResource());

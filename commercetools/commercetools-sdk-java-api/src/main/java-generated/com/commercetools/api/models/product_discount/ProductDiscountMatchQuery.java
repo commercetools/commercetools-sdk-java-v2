@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -104,7 +105,7 @@ public interface ProductDiscountMatchQuery {
     }
 
     /**
-     * factory method to copy an instance of ProductDiscountMatchQuery
+     * factory method to create a shallow copy ProductDiscountMatchQuery
      * @param template instance to be copied
      * @return copy instance
      */
@@ -114,6 +115,26 @@ public interface ProductDiscountMatchQuery {
         instance.setVariantId(template.getVariantId());
         instance.setStaged(template.getStaged());
         instance.setPrice(template.getPrice());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductDiscountMatchQuery
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductDiscountMatchQuery deepCopy(@Nullable final ProductDiscountMatchQuery template) {
+        if (template == null) {
+            return null;
+        }
+        ProductDiscountMatchQueryImpl instance = new ProductDiscountMatchQueryImpl();
+        instance.setProductId(template.getProductId());
+        instance.setVariantId(template.getVariantId());
+        instance.setStaged(template.getStaged());
+        instance.setPrice(Optional.ofNullable(template.getPrice())
+                .map(com.commercetools.api.models.common.QueryPrice::deepCopy)
+                .orElse(null));
         return instance;
     }
 

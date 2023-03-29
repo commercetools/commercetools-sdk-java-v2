@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -225,7 +226,7 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
     }
 
     /**
-     * factory method to copy an instance of ShoppingListLineItem
+     * factory method to create a shallow copy ShoppingListLineItem
      * @param template instance to be copied
      * @return copy instance
      */
@@ -242,6 +243,41 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
         instance.setVariantId(template.getVariantId());
         instance.setVariant(template.getVariant());
         instance.setProductSlug(template.getProductSlug());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ShoppingListLineItem
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ShoppingListLineItem deepCopy(@Nullable final ShoppingListLineItem template) {
+        if (template == null) {
+            return null;
+        }
+        ShoppingListLineItemImpl instance = new ShoppingListLineItemImpl();
+        instance.setAddedAt(template.getAddedAt());
+        instance.setCustom(Optional.ofNullable(template.getCustom())
+                .map(com.commercetools.api.models.type.CustomFields::deepCopy)
+                .orElse(null));
+        instance.setDeactivatedAt(template.getDeactivatedAt());
+        instance.setId(template.getId());
+        instance.setName(Optional.ofNullable(template.getName())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setProductId(template.getProductId());
+        instance.setProductType(Optional.ofNullable(template.getProductType())
+                .map(com.commercetools.api.models.product_type.ProductTypeReference::deepCopy)
+                .orElse(null));
+        instance.setQuantity(template.getQuantity());
+        instance.setVariantId(template.getVariantId());
+        instance.setVariant(Optional.ofNullable(template.getVariant())
+                .map(com.commercetools.api.models.product.ProductVariant::deepCopy)
+                .orElse(null));
+        instance.setProductSlug(Optional.ofNullable(template.getProductSlug())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
         return instance;
     }
 

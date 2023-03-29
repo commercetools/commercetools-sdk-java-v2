@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -86,7 +87,7 @@ public interface ProductLabel extends Label {
     }
 
     /**
-     * factory method to copy an instance of ProductLabel
+     * factory method to create a shallow copy ProductLabel
      * @param template instance to be copied
      * @return copy instance
      */
@@ -94,6 +95,26 @@ public interface ProductLabel extends Label {
         ProductLabelImpl instance = new ProductLabelImpl();
         instance.setSlug(template.getSlug());
         instance.setName(template.getName());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductLabel
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductLabel deepCopy(@Nullable final ProductLabel template) {
+        if (template == null) {
+            return null;
+        }
+        ProductLabelImpl instance = new ProductLabelImpl();
+        instance.setSlug(Optional.ofNullable(template.getSlug())
+                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setName(Optional.ofNullable(template.getName())
+                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
+                .orElse(null));
         return instance;
     }
 

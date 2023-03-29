@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -53,11 +54,26 @@ public interface StoreCountry {
     }
 
     /**
-     * factory method to copy an instance of StoreCountry
+     * factory method to create a shallow copy StoreCountry
      * @param template instance to be copied
      * @return copy instance
      */
     public static StoreCountry of(final StoreCountry template) {
+        StoreCountryImpl instance = new StoreCountryImpl();
+        instance.setCode(template.getCode());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StoreCountry
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StoreCountry deepCopy(@Nullable final StoreCountry template) {
+        if (template == null) {
+            return null;
+        }
         StoreCountryImpl instance = new StoreCountryImpl();
         instance.setCode(template.getCode());
         return instance;

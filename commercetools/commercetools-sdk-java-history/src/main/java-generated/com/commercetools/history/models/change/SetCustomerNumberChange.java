@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -98,11 +99,28 @@ public interface SetCustomerNumberChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetCustomerNumberChange
+     * factory method to create a shallow copy SetCustomerNumberChange
      * @param template instance to be copied
      * @return copy instance
      */
     public static SetCustomerNumberChange of(final SetCustomerNumberChange template) {
+        SetCustomerNumberChangeImpl instance = new SetCustomerNumberChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetCustomerNumberChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetCustomerNumberChange deepCopy(@Nullable final SetCustomerNumberChange template) {
+        if (template == null) {
+            return null;
+        }
         SetCustomerNumberChangeImpl instance = new SetCustomerNumberChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());

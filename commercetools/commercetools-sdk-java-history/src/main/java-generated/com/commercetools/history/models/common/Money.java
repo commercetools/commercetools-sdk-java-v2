@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -101,11 +102,29 @@ public interface Money {
     }
 
     /**
-     * factory method to copy an instance of Money
+     * factory method to create a shallow copy Money
      * @param template instance to be copied
      * @return copy instance
      */
     public static Money of(final Money template) {
+        MoneyImpl instance = new MoneyImpl();
+        instance.setCurrencyCode(template.getCurrencyCode());
+        instance.setCentAmount(template.getCentAmount());
+        instance.setFractionDigits(template.getFractionDigits());
+        instance.setType(template.getType());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of Money
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static Money deepCopy(@Nullable final Money template) {
+        if (template == null) {
+            return null;
+        }
         MoneyImpl instance = new MoneyImpl();
         instance.setCurrencyCode(template.getCurrencyCode());
         instance.setCentAmount(template.getCentAmount());

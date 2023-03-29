@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -86,15 +87,34 @@ public interface DuplicatePriceKeyError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of DuplicatePriceKeyError
+     * factory method to create a shallow copy DuplicatePriceKeyError
      * @param template instance to be copied
      * @return copy instance
      */
     public static DuplicatePriceKeyError of(final DuplicatePriceKeyError template) {
         DuplicatePriceKeyErrorImpl instance = new DuplicatePriceKeyErrorImpl();
         instance.setMessage(template.getMessage());
-        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         instance.setConflictingPrice(template.getConflictingPrice());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of DuplicatePriceKeyError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static DuplicatePriceKeyError deepCopy(@Nullable final DuplicatePriceKeyError template) {
+        if (template == null) {
+            return null;
+        }
+        DuplicatePriceKeyErrorImpl instance = new DuplicatePriceKeyErrorImpl();
+        instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        instance.setConflictingPrice(Optional.ofNullable(template.getConflictingPrice())
+                .map(com.commercetools.api.models.common.Price::deepCopy)
+                .orElse(null));
         return instance;
     }
 

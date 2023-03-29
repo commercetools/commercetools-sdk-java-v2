@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -98,11 +99,28 @@ public interface SetMaxApplicationsChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetMaxApplicationsChange
+     * factory method to create a shallow copy SetMaxApplicationsChange
      * @param template instance to be copied
      * @return copy instance
      */
     public static SetMaxApplicationsChange of(final SetMaxApplicationsChange template) {
+        SetMaxApplicationsChangeImpl instance = new SetMaxApplicationsChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetMaxApplicationsChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetMaxApplicationsChange deepCopy(@Nullable final SetMaxApplicationsChange template) {
+        if (template == null) {
+            return null;
+        }
         SetMaxApplicationsChangeImpl instance = new SetMaxApplicationsChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -88,7 +89,7 @@ public interface TaxedItemPrice {
     }
 
     /**
-     * factory method to copy an instance of TaxedItemPrice
+     * factory method to create a shallow copy TaxedItemPrice
      * @param template instance to be copied
      * @return copy instance
      */
@@ -97,6 +98,29 @@ public interface TaxedItemPrice {
         instance.setTotalNet(template.getTotalNet());
         instance.setTotalGross(template.getTotalGross());
         instance.setTotalTax(template.getTotalTax());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of TaxedItemPrice
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static TaxedItemPrice deepCopy(@Nullable final TaxedItemPrice template) {
+        if (template == null) {
+            return null;
+        }
+        TaxedItemPriceImpl instance = new TaxedItemPriceImpl();
+        instance.setTotalNet(Optional.ofNullable(template.getTotalNet())
+                .map(com.commercetools.api.models.common.CentPrecisionMoney::deepCopy)
+                .orElse(null));
+        instance.setTotalGross(Optional.ofNullable(template.getTotalGross())
+                .map(com.commercetools.api.models.common.CentPrecisionMoney::deepCopy)
+                .orElse(null));
+        instance.setTotalTax(Optional.ofNullable(template.getTotalTax())
+                .map(com.commercetools.api.models.common.CentPrecisionMoney::deepCopy)
+                .orElse(null));
         return instance;
     }
 

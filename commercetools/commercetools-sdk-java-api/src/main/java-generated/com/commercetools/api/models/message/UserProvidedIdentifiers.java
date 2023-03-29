@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.common.LocalizedString;
@@ -143,7 +144,7 @@ public interface UserProvidedIdentifiers {
     }
 
     /**
-     * factory method to copy an instance of UserProvidedIdentifiers
+     * factory method to create a shallow copy UserProvidedIdentifiers
      * @param template instance to be copied
      * @return copy instance
      */
@@ -156,6 +157,31 @@ public interface UserProvidedIdentifiers {
         instance.setSku(template.getSku());
         instance.setSlug(template.getSlug());
         instance.setContainerAndKey(template.getContainerAndKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of UserProvidedIdentifiers
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static UserProvidedIdentifiers deepCopy(@Nullable final UserProvidedIdentifiers template) {
+        if (template == null) {
+            return null;
+        }
+        UserProvidedIdentifiersImpl instance = new UserProvidedIdentifiersImpl();
+        instance.setKey(template.getKey());
+        instance.setExternalId(template.getExternalId());
+        instance.setOrderNumber(template.getOrderNumber());
+        instance.setCustomerNumber(template.getCustomerNumber());
+        instance.setSku(template.getSku());
+        instance.setSlug(Optional.ofNullable(template.getSlug())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setContainerAndKey(Optional.ofNullable(template.getContainerAndKey())
+                .map(com.commercetools.api.models.message.ContainerAndKey::deepCopy)
+                .orElse(null));
         return instance;
     }
 

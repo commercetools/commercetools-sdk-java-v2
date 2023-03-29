@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -88,11 +89,29 @@ public interface ProductSetCategoryOrderHintAction extends ProductUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ProductSetCategoryOrderHintAction
+     * factory method to create a shallow copy ProductSetCategoryOrderHintAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductSetCategoryOrderHintAction of(final ProductSetCategoryOrderHintAction template) {
+        ProductSetCategoryOrderHintActionImpl instance = new ProductSetCategoryOrderHintActionImpl();
+        instance.setCategoryId(template.getCategoryId());
+        instance.setOrderHint(template.getOrderHint());
+        instance.setStaged(template.getStaged());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductSetCategoryOrderHintAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductSetCategoryOrderHintAction deepCopy(
+            @Nullable final ProductSetCategoryOrderHintAction template) {
+        if (template == null) {
+            return null;
+        }
         ProductSetCategoryOrderHintActionImpl instance = new ProductSetCategoryOrderHintActionImpl();
         instance.setCategoryId(template.getCategoryId());
         instance.setOrderHint(template.getOrderHint());

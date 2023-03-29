@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -86,7 +87,7 @@ public interface OrderEditAppliedMessage extends OrderMessage {
     }
 
     /**
-     * factory method to copy an instance of OrderEditAppliedMessage
+     * factory method to create a shallow copy OrderEditAppliedMessage
      * @param template instance to be copied
      * @return copy instance
      */
@@ -104,6 +105,44 @@ public interface OrderEditAppliedMessage extends OrderMessage {
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setEdit(template.getEdit());
         instance.setResult(template.getResult());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderEditAppliedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderEditAppliedMessage deepCopy(@Nullable final OrderEditAppliedMessage template) {
+        if (template == null) {
+            return null;
+        }
+        OrderEditAppliedMessageImpl instance = new OrderEditAppliedMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(Optional.ofNullable(template.getLastModifiedBy())
+                .map(com.commercetools.api.models.common.LastModifiedBy::deepCopy)
+                .orElse(null));
+        instance.setCreatedBy(Optional.ofNullable(template.getCreatedBy())
+                .map(com.commercetools.api.models.common.CreatedBy::deepCopy)
+                .orElse(null));
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(Optional.ofNullable(template.getResource())
+                .map(com.commercetools.api.models.common.Reference::deepCopy)
+                .orElse(null));
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(Optional.ofNullable(template.getResourceUserProvidedIdentifiers())
+                .map(com.commercetools.api.models.message.UserProvidedIdentifiers::deepCopy)
+                .orElse(null));
+        instance.setEdit(Optional.ofNullable(template.getEdit())
+                .map(com.commercetools.api.models.order_edit.OrderEdit::deepCopy)
+                .orElse(null));
+        instance.setResult(Optional.ofNullable(template.getResult())
+                .map(com.commercetools.api.models.order_edit.OrderEditApplied::deepCopy)
+                .orElse(null));
         return instance;
     }
 

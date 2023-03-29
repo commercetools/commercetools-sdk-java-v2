@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -119,7 +120,7 @@ public interface TextLineItemDraft extends com.commercetools.api.models.Customiz
     }
 
     /**
-     * factory method to copy an instance of TextLineItemDraft
+     * factory method to create a shallow copy TextLineItemDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -129,6 +130,31 @@ public interface TextLineItemDraft extends com.commercetools.api.models.Customiz
         instance.setCustom(template.getCustom());
         instance.setDescription(template.getDescription());
         instance.setName(template.getName());
+        instance.setQuantity(template.getQuantity());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of TextLineItemDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static TextLineItemDraft deepCopy(@Nullable final TextLineItemDraft template) {
+        if (template == null) {
+            return null;
+        }
+        TextLineItemDraftImpl instance = new TextLineItemDraftImpl();
+        instance.setAddedAt(template.getAddedAt());
+        instance.setCustom(Optional.ofNullable(template.getCustom())
+                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
+                .orElse(null));
+        instance.setDescription(Optional.ofNullable(template.getDescription())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setName(Optional.ofNullable(template.getName())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
         instance.setQuantity(template.getQuantity());
         return instance;
     }

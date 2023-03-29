@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -64,6 +65,120 @@ public interface BusinessUnitUpdateAction
     @NotNull
     @JsonProperty("action")
     public String getAction();
+
+    /**
+     * factory method to create a deep copy of BusinessUnitUpdateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static BusinessUnitUpdateAction deepCopy(@Nullable final BusinessUnitUpdateAction template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitAddAddressAction) {
+            return com.commercetools.api.models.business_unit.BusinessUnitAddAddressAction
+                    .deepCopy((com.commercetools.api.models.business_unit.BusinessUnitAddAddressAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitAddAssociateAction) {
+            return com.commercetools.api.models.business_unit.BusinessUnitAddAssociateAction
+                    .deepCopy((com.commercetools.api.models.business_unit.BusinessUnitAddAssociateAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitAddBillingAddressIdAction) {
+            return com.commercetools.api.models.business_unit.BusinessUnitAddBillingAddressIdAction.deepCopy(
+                (com.commercetools.api.models.business_unit.BusinessUnitAddBillingAddressIdAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitAddShippingAddressIdAction) {
+            return com.commercetools.api.models.business_unit.BusinessUnitAddShippingAddressIdAction.deepCopy(
+                (com.commercetools.api.models.business_unit.BusinessUnitAddShippingAddressIdAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitAddStoreAction) {
+            return com.commercetools.api.models.business_unit.BusinessUnitAddStoreAction
+                    .deepCopy((com.commercetools.api.models.business_unit.BusinessUnitAddStoreAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitChangeAddressAction) {
+            return com.commercetools.api.models.business_unit.BusinessUnitChangeAddressAction
+                    .deepCopy((com.commercetools.api.models.business_unit.BusinessUnitChangeAddressAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitChangeAssociateAction) {
+            return com.commercetools.api.models.business_unit.BusinessUnitChangeAssociateAction
+                    .deepCopy((com.commercetools.api.models.business_unit.BusinessUnitChangeAssociateAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitChangeNameAction) {
+            return com.commercetools.api.models.business_unit.BusinessUnitChangeNameAction
+                    .deepCopy((com.commercetools.api.models.business_unit.BusinessUnitChangeNameAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitChangeParentUnitAction) {
+            return com.commercetools.api.models.business_unit.BusinessUnitChangeParentUnitAction
+                    .deepCopy((com.commercetools.api.models.business_unit.BusinessUnitChangeParentUnitAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitChangeStatusAction) {
+            return com.commercetools.api.models.business_unit.BusinessUnitChangeStatusAction
+                    .deepCopy((com.commercetools.api.models.business_unit.BusinessUnitChangeStatusAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitRemoveAddressAction) {
+            return com.commercetools.api.models.business_unit.BusinessUnitRemoveAddressAction
+                    .deepCopy((com.commercetools.api.models.business_unit.BusinessUnitRemoveAddressAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitRemoveAssociateAction) {
+            return com.commercetools.api.models.business_unit.BusinessUnitRemoveAssociateAction
+                    .deepCopy((com.commercetools.api.models.business_unit.BusinessUnitRemoveAssociateAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitRemoveBillingAddressIdAction) {
+            return com.commercetools.api.models.business_unit.BusinessUnitRemoveBillingAddressIdAction.deepCopy(
+                (com.commercetools.api.models.business_unit.BusinessUnitRemoveBillingAddressIdAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitRemoveShippingAddressIdAction) {
+            return com.commercetools.api.models.business_unit.BusinessUnitRemoveShippingAddressIdAction.deepCopy(
+                (com.commercetools.api.models.business_unit.BusinessUnitRemoveShippingAddressIdAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitRemoveStoreAction) {
+            return com.commercetools.api.models.business_unit.BusinessUnitRemoveStoreAction
+                    .deepCopy((com.commercetools.api.models.business_unit.BusinessUnitRemoveStoreAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitSetAddressCustomFieldAction) {
+            return com.commercetools.api.models.business_unit.BusinessUnitSetAddressCustomFieldAction.deepCopy(
+                (com.commercetools.api.models.business_unit.BusinessUnitSetAddressCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitSetAddressCustomTypeAction) {
+            return com.commercetools.api.models.business_unit.BusinessUnitSetAddressCustomTypeAction.deepCopy(
+                (com.commercetools.api.models.business_unit.BusinessUnitSetAddressCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitSetAssociatesAction) {
+            return com.commercetools.api.models.business_unit.BusinessUnitSetAssociatesAction
+                    .deepCopy((com.commercetools.api.models.business_unit.BusinessUnitSetAssociatesAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitSetContactEmailAction) {
+            return com.commercetools.api.models.business_unit.BusinessUnitSetContactEmailAction
+                    .deepCopy((com.commercetools.api.models.business_unit.BusinessUnitSetContactEmailAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitSetCustomFieldAction) {
+            return com.commercetools.api.models.business_unit.BusinessUnitSetCustomFieldAction
+                    .deepCopy((com.commercetools.api.models.business_unit.BusinessUnitSetCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitSetCustomTypeAction) {
+            return com.commercetools.api.models.business_unit.BusinessUnitSetCustomTypeAction
+                    .deepCopy((com.commercetools.api.models.business_unit.BusinessUnitSetCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitSetDefaultBillingAddressAction) {
+            return com.commercetools.api.models.business_unit.BusinessUnitSetDefaultBillingAddressAction.deepCopy(
+                (com.commercetools.api.models.business_unit.BusinessUnitSetDefaultBillingAddressAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitSetDefaultShippingAddressAction) {
+            return com.commercetools.api.models.business_unit.BusinessUnitSetDefaultShippingAddressAction.deepCopy(
+                (com.commercetools.api.models.business_unit.BusinessUnitSetDefaultShippingAddressAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitSetStoreModeAction) {
+            return com.commercetools.api.models.business_unit.BusinessUnitSetStoreModeAction
+                    .deepCopy((com.commercetools.api.models.business_unit.BusinessUnitSetStoreModeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitSetStoresAction) {
+            return com.commercetools.api.models.business_unit.BusinessUnitSetStoresAction
+                    .deepCopy((com.commercetools.api.models.business_unit.BusinessUnitSetStoresAction) template);
+        }
+        BusinessUnitUpdateActionImpl instance = new BusinessUnitUpdateActionImpl();
+        return instance;
+    }
 
     /**
      * builder for addAddress subtype

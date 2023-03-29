@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -45,6 +46,44 @@ public interface Destination {
     @NotNull
     @JsonProperty("type")
     public String getType();
+
+    /**
+     * factory method to create a deep copy of Destination
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static Destination deepCopy(@Nullable final Destination template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.subscription.EventBridgeDestination) {
+            return com.commercetools.api.models.subscription.EventBridgeDestination
+                    .deepCopy((com.commercetools.api.models.subscription.EventBridgeDestination) template);
+        }
+        if (template instanceof com.commercetools.api.models.subscription.GoogleCloudPubSubDestination) {
+            return com.commercetools.api.models.subscription.GoogleCloudPubSubDestination
+                    .deepCopy((com.commercetools.api.models.subscription.GoogleCloudPubSubDestination) template);
+        }
+        if (template instanceof com.commercetools.api.models.subscription.SnsDestination) {
+            return com.commercetools.api.models.subscription.SnsDestination
+                    .deepCopy((com.commercetools.api.models.subscription.SnsDestination) template);
+        }
+        if (template instanceof com.commercetools.api.models.subscription.SqsDestination) {
+            return com.commercetools.api.models.subscription.SqsDestination
+                    .deepCopy((com.commercetools.api.models.subscription.SqsDestination) template);
+        }
+        if (template instanceof com.commercetools.api.models.subscription.AzureEventGridDestination) {
+            return com.commercetools.api.models.subscription.AzureEventGridDestination
+                    .deepCopy((com.commercetools.api.models.subscription.AzureEventGridDestination) template);
+        }
+        if (template instanceof com.commercetools.api.models.subscription.AzureServiceBusDestination) {
+            return com.commercetools.api.models.subscription.AzureServiceBusDestination
+                    .deepCopy((com.commercetools.api.models.subscription.AzureServiceBusDestination) template);
+        }
+        DestinationImpl instance = new DestinationImpl();
+        return instance;
+    }
 
     /**
      * builder for eventGrid subtype

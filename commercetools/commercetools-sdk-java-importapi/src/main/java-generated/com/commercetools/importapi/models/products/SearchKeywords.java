@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -73,13 +74,28 @@ public interface SearchKeywords {
     }
 
     /**
-     * factory method to copy an instance of SearchKeywords
+     * factory method to create a shallow copy SearchKeywords
      * @param template instance to be copied
      * @return copy instance
      */
     public static SearchKeywords of(final SearchKeywords template) {
         SearchKeywordsImpl instance = new SearchKeywordsImpl();
-        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SearchKeywords
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SearchKeywords deepCopy(@Nullable final SearchKeywords template) {
+        if (template == null) {
+            return null;
+        }
+        SearchKeywordsImpl instance = new SearchKeywordsImpl();
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
 

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -82,7 +83,7 @@ public interface TypeChangeLocalizedEnumValueOrderAction extends TypeUpdateActio
     }
 
     /**
-     * factory method to copy an instance of TypeChangeLocalizedEnumValueOrderAction
+     * factory method to create a shallow copy TypeChangeLocalizedEnumValueOrderAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -90,6 +91,23 @@ public interface TypeChangeLocalizedEnumValueOrderAction extends TypeUpdateActio
         TypeChangeLocalizedEnumValueOrderActionImpl instance = new TypeChangeLocalizedEnumValueOrderActionImpl();
         instance.setFieldName(template.getFieldName());
         instance.setKeys(template.getKeys());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of TypeChangeLocalizedEnumValueOrderAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static TypeChangeLocalizedEnumValueOrderAction deepCopy(
+            @Nullable final TypeChangeLocalizedEnumValueOrderAction template) {
+        if (template == null) {
+            return null;
+        }
+        TypeChangeLocalizedEnumValueOrderActionImpl instance = new TypeChangeLocalizedEnumValueOrderActionImpl();
+        instance.setFieldName(template.getFieldName());
+        instance.setKeys(Optional.ofNullable(template.getKeys()).map(ArrayList::new).orElse(null));
         return instance;
     }
 

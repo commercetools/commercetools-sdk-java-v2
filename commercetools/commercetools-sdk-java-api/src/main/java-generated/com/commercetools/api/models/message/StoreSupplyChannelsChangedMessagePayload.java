@@ -4,7 +4,9 @@ package com.commercetools.api.models.message;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.channel.ChannelReference;
@@ -89,7 +91,7 @@ public interface StoreSupplyChannelsChangedMessagePayload extends MessagePayload
     }
 
     /**
-     * factory method to copy an instance of StoreSupplyChannelsChangedMessagePayload
+     * factory method to create a shallow copy StoreSupplyChannelsChangedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -97,6 +99,31 @@ public interface StoreSupplyChannelsChangedMessagePayload extends MessagePayload
         StoreSupplyChannelsChangedMessagePayloadImpl instance = new StoreSupplyChannelsChangedMessagePayloadImpl();
         instance.setAddedSupplyChannels(template.getAddedSupplyChannels());
         instance.setRemovedSupplyChannels(template.getRemovedSupplyChannels());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StoreSupplyChannelsChangedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StoreSupplyChannelsChangedMessagePayload deepCopy(
+            @Nullable final StoreSupplyChannelsChangedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        StoreSupplyChannelsChangedMessagePayloadImpl instance = new StoreSupplyChannelsChangedMessagePayloadImpl();
+        instance.setAddedSupplyChannels(Optional.ofNullable(template.getAddedSupplyChannels())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.channel.ChannelReference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setRemovedSupplyChannels(Optional.ofNullable(template.getRemovedSupplyChannels())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.channel.ChannelReference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

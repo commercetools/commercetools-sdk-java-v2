@@ -5,7 +5,9 @@ import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -308,7 +310,7 @@ public interface ProductDiscount
     }
 
     /**
-     * factory method to copy an instance of ProductDiscount
+     * factory method to create a shallow copy ProductDiscount
      * @param template instance to be copied
      * @return copy instance
      */
@@ -328,6 +330,50 @@ public interface ProductDiscount
         instance.setSortOrder(template.getSortOrder());
         instance.setIsActive(template.getIsActive());
         instance.setReferences(template.getReferences());
+        instance.setValidFrom(template.getValidFrom());
+        instance.setValidUntil(template.getValidUntil());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductDiscount
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductDiscount deepCopy(@Nullable final ProductDiscount template) {
+        if (template == null) {
+            return null;
+        }
+        ProductDiscountImpl instance = new ProductDiscountImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(Optional.ofNullable(template.getLastModifiedBy())
+                .map(com.commercetools.api.models.common.LastModifiedBy::deepCopy)
+                .orElse(null));
+        instance.setCreatedBy(Optional.ofNullable(template.getCreatedBy())
+                .map(com.commercetools.api.models.common.CreatedBy::deepCopy)
+                .orElse(null));
+        instance.setName(Optional.ofNullable(template.getName())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setKey(template.getKey());
+        instance.setDescription(Optional.ofNullable(template.getDescription())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setValue(Optional.ofNullable(template.getValue())
+                .map(com.commercetools.api.models.product_discount.ProductDiscountValue::deepCopy)
+                .orElse(null));
+        instance.setPredicate(template.getPredicate());
+        instance.setSortOrder(template.getSortOrder());
+        instance.setIsActive(template.getIsActive());
+        instance.setReferences(Optional.ofNullable(template.getReferences())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.common.Reference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setValidFrom(template.getValidFrom());
         instance.setValidUntil(template.getValidUntil());
         return instance;

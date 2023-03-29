@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,26 @@ public interface QuoteChangeQuoteStateAction extends QuoteUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of QuoteChangeQuoteStateAction
+     * factory method to create a shallow copy QuoteChangeQuoteStateAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static QuoteChangeQuoteStateAction of(final QuoteChangeQuoteStateAction template) {
+        QuoteChangeQuoteStateActionImpl instance = new QuoteChangeQuoteStateActionImpl();
+        instance.setQuoteState(template.getQuoteState());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of QuoteChangeQuoteStateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static QuoteChangeQuoteStateAction deepCopy(@Nullable final QuoteChangeQuoteStateAction template) {
+        if (template == null) {
+            return null;
+        }
         QuoteChangeQuoteStateActionImpl instance = new QuoteChangeQuoteStateActionImpl();
         instance.setQuoteState(template.getQuoteState());
         return instance;

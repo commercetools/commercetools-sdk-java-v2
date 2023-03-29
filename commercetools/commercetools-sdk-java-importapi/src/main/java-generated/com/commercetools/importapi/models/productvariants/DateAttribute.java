@@ -6,6 +6,7 @@ import java.time.LocalDate;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -59,11 +60,27 @@ public interface DateAttribute extends Attribute {
     }
 
     /**
-     * factory method to copy an instance of DateAttribute
+     * factory method to create a shallow copy DateAttribute
      * @param template instance to be copied
      * @return copy instance
      */
     public static DateAttribute of(final DateAttribute template) {
+        DateAttributeImpl instance = new DateAttributeImpl();
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of DateAttribute
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static DateAttribute deepCopy(@Nullable final DateAttribute template) {
+        if (template == null) {
+            return null;
+        }
         DateAttributeImpl instance = new DateAttributeImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());

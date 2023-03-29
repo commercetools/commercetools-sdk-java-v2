@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -60,13 +61,30 @@ public interface PaymentAddTransactionAction extends PaymentUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of PaymentAddTransactionAction
+     * factory method to create a shallow copy PaymentAddTransactionAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static PaymentAddTransactionAction of(final PaymentAddTransactionAction template) {
         PaymentAddTransactionActionImpl instance = new PaymentAddTransactionActionImpl();
         instance.setTransaction(template.getTransaction());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of PaymentAddTransactionAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static PaymentAddTransactionAction deepCopy(@Nullable final PaymentAddTransactionAction template) {
+        if (template == null) {
+            return null;
+        }
+        PaymentAddTransactionActionImpl instance = new PaymentAddTransactionActionImpl();
+        instance.setTransaction(Optional.ofNullable(template.getTransaction())
+                .map(com.commercetools.api.models.payment.TransactionDraft::deepCopy)
+                .orElse(null));
         return instance;
     }
 

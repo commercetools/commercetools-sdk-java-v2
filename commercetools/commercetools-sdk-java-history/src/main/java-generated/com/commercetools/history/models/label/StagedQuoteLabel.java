@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -102,7 +103,7 @@ public interface StagedQuoteLabel extends Label {
     }
 
     /**
-     * factory method to copy an instance of StagedQuoteLabel
+     * factory method to create a shallow copy StagedQuoteLabel
      * @param template instance to be copied
      * @return copy instance
      */
@@ -111,6 +112,27 @@ public interface StagedQuoteLabel extends Label {
         instance.setKey(template.getKey());
         instance.setCustomer(template.getCustomer());
         instance.setQuoteRequest(template.getQuoteRequest());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedQuoteLabel
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedQuoteLabel deepCopy(@Nullable final StagedQuoteLabel template) {
+        if (template == null) {
+            return null;
+        }
+        StagedQuoteLabelImpl instance = new StagedQuoteLabelImpl();
+        instance.setKey(template.getKey());
+        instance.setCustomer(Optional.ofNullable(template.getCustomer())
+                .map(com.commercetools.history.models.common.Reference::deepCopy)
+                .orElse(null));
+        instance.setQuoteRequest(Optional.ofNullable(template.getQuoteRequest())
+                .map(com.commercetools.history.models.common.Reference::deepCopy)
+                .orElse(null));
         return instance;
     }
 

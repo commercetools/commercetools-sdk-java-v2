@@ -4,7 +4,9 @@ package com.commercetools.importapi.models.importrequests;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -69,13 +71,32 @@ public interface InventoryImportRequest extends ImportRequest {
     }
 
     /**
-     * factory method to copy an instance of InventoryImportRequest
+     * factory method to create a shallow copy InventoryImportRequest
      * @param template instance to be copied
      * @return copy instance
      */
     public static InventoryImportRequest of(final InventoryImportRequest template) {
         InventoryImportRequestImpl instance = new InventoryImportRequestImpl();
         instance.setResources(template.getResources());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of InventoryImportRequest
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static InventoryImportRequest deepCopy(@Nullable final InventoryImportRequest template) {
+        if (template == null) {
+            return null;
+        }
+        InventoryImportRequestImpl instance = new InventoryImportRequestImpl();
+        instance.setResources(Optional.ofNullable(template.getResources())
+                .map(t -> t.stream()
+                        .map(com.commercetools.importapi.models.inventories.InventoryImport::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

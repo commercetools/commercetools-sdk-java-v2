@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -75,7 +76,7 @@ public interface PriceTierDraft extends io.vrap.rmf.base.client.Draft<PriceTierD
     }
 
     /**
-     * factory method to copy an instance of PriceTierDraft
+     * factory method to create a shallow copy PriceTierDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -83,6 +84,24 @@ public interface PriceTierDraft extends io.vrap.rmf.base.client.Draft<PriceTierD
         PriceTierDraftImpl instance = new PriceTierDraftImpl();
         instance.setMinimumQuantity(template.getMinimumQuantity());
         instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of PriceTierDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static PriceTierDraft deepCopy(@Nullable final PriceTierDraft template) {
+        if (template == null) {
+            return null;
+        }
+        PriceTierDraftImpl instance = new PriceTierDraftImpl();
+        instance.setMinimumQuantity(template.getMinimumQuantity());
+        instance.setValue(Optional.ofNullable(template.getValue())
+                .map(com.commercetools.api.models.common.Money::deepCopy)
+                .orElse(null));
         return instance;
     }
 

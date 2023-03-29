@@ -4,7 +4,9 @@ package com.commercetools.history.models.change;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -135,7 +137,7 @@ public interface AddToCategoryChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of AddToCategoryChange
+     * factory method to create a shallow copy AddToCategoryChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -145,6 +147,34 @@ public interface AddToCategoryChange extends Change {
         instance.setCategory(template.getCategory());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of AddToCategoryChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AddToCategoryChange deepCopy(@Nullable final AddToCategoryChange template) {
+        if (template == null) {
+            return null;
+        }
+        AddToCategoryChangeImpl instance = new AddToCategoryChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setCategory(Optional.ofNullable(template.getCategory())
+                .map(com.commercetools.history.models.common.Reference::deepCopy)
+                .orElse(null));
+        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.Reference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setNextValue(Optional.ofNullable(template.getNextValue())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.Reference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

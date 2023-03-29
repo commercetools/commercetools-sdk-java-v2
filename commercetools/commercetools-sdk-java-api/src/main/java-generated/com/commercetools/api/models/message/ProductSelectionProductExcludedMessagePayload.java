@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -79,7 +80,7 @@ public interface ProductSelectionProductExcludedMessagePayload extends MessagePa
     }
 
     /**
-     * factory method to copy an instance of ProductSelectionProductExcludedMessagePayload
+     * factory method to create a shallow copy ProductSelectionProductExcludedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -88,6 +89,27 @@ public interface ProductSelectionProductExcludedMessagePayload extends MessagePa
         ProductSelectionProductExcludedMessagePayloadImpl instance = new ProductSelectionProductExcludedMessagePayloadImpl();
         instance.setProduct(template.getProduct());
         instance.setVariantExclusion(template.getVariantExclusion());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductSelectionProductExcludedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductSelectionProductExcludedMessagePayload deepCopy(
+            @Nullable final ProductSelectionProductExcludedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        ProductSelectionProductExcludedMessagePayloadImpl instance = new ProductSelectionProductExcludedMessagePayloadImpl();
+        instance.setProduct(Optional.ofNullable(template.getProduct())
+                .map(com.commercetools.api.models.product.ProductReference::deepCopy)
+                .orElse(null));
+        instance.setVariantExclusion(Optional.ofNullable(template.getVariantExclusion())
+                .map(com.commercetools.api.models.product_selection.ProductVariantExclusion::deepCopy)
+                .orElse(null));
         return instance;
     }
 

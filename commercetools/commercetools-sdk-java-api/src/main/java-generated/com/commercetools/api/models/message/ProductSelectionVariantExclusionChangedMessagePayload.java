@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -96,7 +97,7 @@ public interface ProductSelectionVariantExclusionChangedMessagePayload extends M
     }
 
     /**
-     * factory method to copy an instance of ProductSelectionVariantExclusionChangedMessagePayload
+     * factory method to create a shallow copy ProductSelectionVariantExclusionChangedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -106,6 +107,30 @@ public interface ProductSelectionVariantExclusionChangedMessagePayload extends M
         instance.setProduct(template.getProduct());
         instance.setOldVariantExclusion(template.getOldVariantExclusion());
         instance.setNewVariantExclusion(template.getNewVariantExclusion());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductSelectionVariantExclusionChangedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductSelectionVariantExclusionChangedMessagePayload deepCopy(
+            @Nullable final ProductSelectionVariantExclusionChangedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        ProductSelectionVariantExclusionChangedMessagePayloadImpl instance = new ProductSelectionVariantExclusionChangedMessagePayloadImpl();
+        instance.setProduct(Optional.ofNullable(template.getProduct())
+                .map(com.commercetools.api.models.product.ProductReference::deepCopy)
+                .orElse(null));
+        instance.setOldVariantExclusion(Optional.ofNullable(template.getOldVariantExclusion())
+                .map(com.commercetools.api.models.product_selection.ProductVariantExclusion::deepCopy)
+                .orElse(null));
+        instance.setNewVariantExclusion(Optional.ofNullable(template.getNewVariantExclusion())
+                .map(com.commercetools.api.models.product_selection.ProductVariantExclusion::deepCopy)
+                .orElse(null));
         return instance;
     }
 

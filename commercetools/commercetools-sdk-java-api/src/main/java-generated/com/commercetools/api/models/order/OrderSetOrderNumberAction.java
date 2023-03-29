@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -55,11 +57,26 @@ public interface OrderSetOrderNumberAction extends OrderUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of OrderSetOrderNumberAction
+     * factory method to create a shallow copy OrderSetOrderNumberAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static OrderSetOrderNumberAction of(final OrderSetOrderNumberAction template) {
+        OrderSetOrderNumberActionImpl instance = new OrderSetOrderNumberActionImpl();
+        instance.setOrderNumber(template.getOrderNumber());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderSetOrderNumberAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderSetOrderNumberAction deepCopy(@Nullable final OrderSetOrderNumberAction template) {
+        if (template == null) {
+            return null;
+        }
         OrderSetOrderNumberActionImpl instance = new OrderSetOrderNumberActionImpl();
         instance.setOrderNumber(template.getOrderNumber());
         return instance;

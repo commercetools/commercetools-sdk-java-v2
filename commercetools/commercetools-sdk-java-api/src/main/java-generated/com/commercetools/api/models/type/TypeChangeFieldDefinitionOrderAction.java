@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -66,13 +67,29 @@ public interface TypeChangeFieldDefinitionOrderAction extends TypeUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of TypeChangeFieldDefinitionOrderAction
+     * factory method to create a shallow copy TypeChangeFieldDefinitionOrderAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static TypeChangeFieldDefinitionOrderAction of(final TypeChangeFieldDefinitionOrderAction template) {
         TypeChangeFieldDefinitionOrderActionImpl instance = new TypeChangeFieldDefinitionOrderActionImpl();
         instance.setFieldNames(template.getFieldNames());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of TypeChangeFieldDefinitionOrderAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static TypeChangeFieldDefinitionOrderAction deepCopy(
+            @Nullable final TypeChangeFieldDefinitionOrderAction template) {
+        if (template == null) {
+            return null;
+        }
+        TypeChangeFieldDefinitionOrderActionImpl instance = new TypeChangeFieldDefinitionOrderActionImpl();
+        instance.setFieldNames(Optional.ofNullable(template.getFieldNames()).map(ArrayList::new).orElse(null));
         return instance;
     }
 

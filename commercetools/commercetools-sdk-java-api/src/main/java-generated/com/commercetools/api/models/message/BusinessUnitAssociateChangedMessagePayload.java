@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -61,7 +62,7 @@ public interface BusinessUnitAssociateChangedMessagePayload extends MessagePaylo
     }
 
     /**
-     * factory method to copy an instance of BusinessUnitAssociateChangedMessagePayload
+     * factory method to create a shallow copy BusinessUnitAssociateChangedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -69,6 +70,24 @@ public interface BusinessUnitAssociateChangedMessagePayload extends MessagePaylo
             final BusinessUnitAssociateChangedMessagePayload template) {
         BusinessUnitAssociateChangedMessagePayloadImpl instance = new BusinessUnitAssociateChangedMessagePayloadImpl();
         instance.setAssociate(template.getAssociate());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of BusinessUnitAssociateChangedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static BusinessUnitAssociateChangedMessagePayload deepCopy(
+            @Nullable final BusinessUnitAssociateChangedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        BusinessUnitAssociateChangedMessagePayloadImpl instance = new BusinessUnitAssociateChangedMessagePayloadImpl();
+        instance.setAssociate(Optional.ofNullable(template.getAssociate())
+                .map(com.commercetools.api.models.business_unit.Associate::deepCopy)
+                .orElse(null));
         return instance;
     }
 

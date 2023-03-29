@@ -4,7 +4,9 @@ package com.commercetools.api.models.product;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -233,7 +235,7 @@ public interface ProductData extends ProductDataLike {
     }
 
     /**
-     * factory method to copy an instance of ProductData
+     * factory method to create a shallow copy ProductData
      * @param template instance to be copied
      * @return copy instance
      */
@@ -250,6 +252,57 @@ public interface ProductData extends ProductDataLike {
         instance.setMasterVariant(template.getMasterVariant());
         instance.setVariants(template.getVariants());
         instance.setSearchKeywords(template.getSearchKeywords());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductData
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductData deepCopy(@Nullable final ProductData template) {
+        if (template == null) {
+            return null;
+        }
+        ProductDataImpl instance = new ProductDataImpl();
+        instance.setName(Optional.ofNullable(template.getName())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setCategories(Optional.ofNullable(template.getCategories())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.category.CategoryReference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setCategoryOrderHints(Optional.ofNullable(template.getCategoryOrderHints())
+                .map(com.commercetools.api.models.product.CategoryOrderHints::deepCopy)
+                .orElse(null));
+        instance.setDescription(Optional.ofNullable(template.getDescription())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setSlug(Optional.ofNullable(template.getSlug())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setMetaTitle(Optional.ofNullable(template.getMetaTitle())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setMetaDescription(Optional.ofNullable(template.getMetaDescription())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setMetaKeywords(Optional.ofNullable(template.getMetaKeywords())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setMasterVariant(Optional.ofNullable(template.getMasterVariant())
+                .map(com.commercetools.api.models.product.ProductVariant::deepCopy)
+                .orElse(null));
+        instance.setVariants(Optional.ofNullable(template.getVariants())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.product.ProductVariant::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setSearchKeywords(Optional.ofNullable(template.getSearchKeywords())
+                .map(com.commercetools.api.models.product.SearchKeywords::deepCopy)
+                .orElse(null));
         return instance;
     }
 

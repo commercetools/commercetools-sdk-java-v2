@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -77,7 +78,7 @@ public interface ProductTypeChangeLocalizedEnumValueLabelAction extends ProductT
     }
 
     /**
-     * factory method to copy an instance of ProductTypeChangeLocalizedEnumValueLabelAction
+     * factory method to create a shallow copy ProductTypeChangeLocalizedEnumValueLabelAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -86,6 +87,25 @@ public interface ProductTypeChangeLocalizedEnumValueLabelAction extends ProductT
         ProductTypeChangeLocalizedEnumValueLabelActionImpl instance = new ProductTypeChangeLocalizedEnumValueLabelActionImpl();
         instance.setAttributeName(template.getAttributeName());
         instance.setNewValue(template.getNewValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductTypeChangeLocalizedEnumValueLabelAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductTypeChangeLocalizedEnumValueLabelAction deepCopy(
+            @Nullable final ProductTypeChangeLocalizedEnumValueLabelAction template) {
+        if (template == null) {
+            return null;
+        }
+        ProductTypeChangeLocalizedEnumValueLabelActionImpl instance = new ProductTypeChangeLocalizedEnumValueLabelActionImpl();
+        instance.setAttributeName(template.getAttributeName());
+        instance.setNewValue(Optional.ofNullable(template.getNewValue())
+                .map(com.commercetools.api.models.product_type.AttributeLocalizedEnumValue::deepCopy)
+                .orElse(null));
         return instance;
     }
 

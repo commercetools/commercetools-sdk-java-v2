@@ -4,7 +4,9 @@ package com.commercetools.api.models.business_unit;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.store.StoreResourceIdentifier;
@@ -66,13 +68,32 @@ public interface BusinessUnitSetStoresAction extends BusinessUnitUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of BusinessUnitSetStoresAction
+     * factory method to create a shallow copy BusinessUnitSetStoresAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static BusinessUnitSetStoresAction of(final BusinessUnitSetStoresAction template) {
         BusinessUnitSetStoresActionImpl instance = new BusinessUnitSetStoresActionImpl();
         instance.setStores(template.getStores());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of BusinessUnitSetStoresAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static BusinessUnitSetStoresAction deepCopy(@Nullable final BusinessUnitSetStoresAction template) {
+        if (template == null) {
+            return null;
+        }
+        BusinessUnitSetStoresActionImpl instance = new BusinessUnitSetStoresActionImpl();
+        instance.setStores(Optional.ofNullable(template.getStores())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.store.StoreResourceIdentifier::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

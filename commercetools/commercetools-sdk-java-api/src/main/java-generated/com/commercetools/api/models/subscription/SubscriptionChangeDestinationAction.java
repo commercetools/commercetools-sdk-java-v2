@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -60,13 +61,31 @@ public interface SubscriptionChangeDestinationAction extends SubscriptionUpdateA
     }
 
     /**
-     * factory method to copy an instance of SubscriptionChangeDestinationAction
+     * factory method to create a shallow copy SubscriptionChangeDestinationAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static SubscriptionChangeDestinationAction of(final SubscriptionChangeDestinationAction template) {
         SubscriptionChangeDestinationActionImpl instance = new SubscriptionChangeDestinationActionImpl();
         instance.setDestination(template.getDestination());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SubscriptionChangeDestinationAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SubscriptionChangeDestinationAction deepCopy(
+            @Nullable final SubscriptionChangeDestinationAction template) {
+        if (template == null) {
+            return null;
+        }
+        SubscriptionChangeDestinationActionImpl instance = new SubscriptionChangeDestinationActionImpl();
+        instance.setDestination(Optional.ofNullable(template.getDestination())
+                .map(com.commercetools.api.models.subscription.Destination::deepCopy)
+                .orElse(null));
         return instance;
     }
 

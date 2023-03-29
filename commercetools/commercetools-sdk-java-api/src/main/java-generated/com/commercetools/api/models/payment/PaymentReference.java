@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -75,7 +76,7 @@ public interface PaymentReference extends Reference, com.commercetools.api.model
     }
 
     /**
-     * factory method to copy an instance of PaymentReference
+     * factory method to create a shallow copy PaymentReference
      * @param template instance to be copied
      * @return copy instance
      */
@@ -83,6 +84,24 @@ public interface PaymentReference extends Reference, com.commercetools.api.model
         PaymentReferenceImpl instance = new PaymentReferenceImpl();
         instance.setId(template.getId());
         instance.setObj(template.getObj());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of PaymentReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static PaymentReference deepCopy(@Nullable final PaymentReference template) {
+        if (template == null) {
+            return null;
+        }
+        PaymentReferenceImpl instance = new PaymentReferenceImpl();
+        instance.setId(template.getId());
+        instance.setObj(Optional.ofNullable(template.getObj())
+                .map(com.commercetools.api.models.payment.Payment::deepCopy)
+                .orElse(null));
         return instance;
     }
 

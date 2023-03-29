@@ -4,7 +4,9 @@ package com.commercetools.api.models.message;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -109,7 +111,7 @@ public interface OrderCustomLineItemDiscountSetMessage extends OrderMessage {
     }
 
     /**
-     * factory method to copy an instance of OrderCustomLineItemDiscountSetMessage
+     * factory method to create a shallow copy OrderCustomLineItemDiscountSetMessage
      * @param template instance to be copied
      * @return copy instance
      */
@@ -128,6 +130,48 @@ public interface OrderCustomLineItemDiscountSetMessage extends OrderMessage {
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setDiscountedPricePerQuantity(template.getDiscountedPricePerQuantity());
         instance.setTaxedPrice(template.getTaxedPrice());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderCustomLineItemDiscountSetMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderCustomLineItemDiscountSetMessage deepCopy(
+            @Nullable final OrderCustomLineItemDiscountSetMessage template) {
+        if (template == null) {
+            return null;
+        }
+        OrderCustomLineItemDiscountSetMessageImpl instance = new OrderCustomLineItemDiscountSetMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(Optional.ofNullable(template.getLastModifiedBy())
+                .map(com.commercetools.api.models.common.LastModifiedBy::deepCopy)
+                .orElse(null));
+        instance.setCreatedBy(Optional.ofNullable(template.getCreatedBy())
+                .map(com.commercetools.api.models.common.CreatedBy::deepCopy)
+                .orElse(null));
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(Optional.ofNullable(template.getResource())
+                .map(com.commercetools.api.models.common.Reference::deepCopy)
+                .orElse(null));
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(Optional.ofNullable(template.getResourceUserProvidedIdentifiers())
+                .map(com.commercetools.api.models.message.UserProvidedIdentifiers::deepCopy)
+                .orElse(null));
+        instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setDiscountedPricePerQuantity(Optional.ofNullable(template.getDiscountedPricePerQuantity())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setTaxedPrice(Optional.ofNullable(template.getTaxedPrice())
+                .map(com.commercetools.api.models.cart.TaxedItemPrice::deepCopy)
+                .orElse(null));
         return instance;
     }
 

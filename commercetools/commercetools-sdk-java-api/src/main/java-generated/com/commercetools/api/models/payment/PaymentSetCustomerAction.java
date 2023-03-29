@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.customer.CustomerResourceIdentifier;
@@ -58,13 +59,30 @@ public interface PaymentSetCustomerAction extends PaymentUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of PaymentSetCustomerAction
+     * factory method to create a shallow copy PaymentSetCustomerAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static PaymentSetCustomerAction of(final PaymentSetCustomerAction template) {
         PaymentSetCustomerActionImpl instance = new PaymentSetCustomerActionImpl();
         instance.setCustomer(template.getCustomer());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of PaymentSetCustomerAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static PaymentSetCustomerAction deepCopy(@Nullable final PaymentSetCustomerAction template) {
+        if (template == null) {
+            return null;
+        }
+        PaymentSetCustomerActionImpl instance = new PaymentSetCustomerActionImpl();
+        instance.setCustomer(Optional.ofNullable(template.getCustomer())
+                .map(com.commercetools.api.models.customer.CustomerResourceIdentifier::deepCopy)
+                .orElse(null));
         return instance;
     }
 

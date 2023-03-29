@@ -4,7 +4,9 @@ package com.commercetools.importapi.models.importcontainers;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -127,7 +129,7 @@ public interface ImportContainerPagedResponse {
     }
 
     /**
-     * factory method to copy an instance of ImportContainerPagedResponse
+     * factory method to create a shallow copy ImportContainerPagedResponse
      * @param template instance to be copied
      * @return copy instance
      */
@@ -138,6 +140,29 @@ public interface ImportContainerPagedResponse {
         instance.setCount(template.getCount());
         instance.setTotal(template.getTotal());
         instance.setResults(template.getResults());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ImportContainerPagedResponse
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ImportContainerPagedResponse deepCopy(@Nullable final ImportContainerPagedResponse template) {
+        if (template == null) {
+            return null;
+        }
+        ImportContainerPagedResponseImpl instance = new ImportContainerPagedResponseImpl();
+        instance.setLimit(template.getLimit());
+        instance.setOffset(template.getOffset());
+        instance.setCount(template.getCount());
+        instance.setTotal(template.getTotal());
+        instance.setResults(Optional.ofNullable(template.getResults())
+                .map(t -> t.stream()
+                        .map(com.commercetools.importapi.models.importcontainers.ImportContainer::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

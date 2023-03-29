@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -70,11 +72,28 @@ public interface MyCustomerSetDefaultBillingAddressAction extends MyCustomerUpda
     }
 
     /**
-     * factory method to copy an instance of MyCustomerSetDefaultBillingAddressAction
+     * factory method to create a shallow copy MyCustomerSetDefaultBillingAddressAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static MyCustomerSetDefaultBillingAddressAction of(final MyCustomerSetDefaultBillingAddressAction template) {
+        MyCustomerSetDefaultBillingAddressActionImpl instance = new MyCustomerSetDefaultBillingAddressActionImpl();
+        instance.setAddressId(template.getAddressId());
+        instance.setAddressKey(template.getAddressKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MyCustomerSetDefaultBillingAddressAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MyCustomerSetDefaultBillingAddressAction deepCopy(
+            @Nullable final MyCustomerSetDefaultBillingAddressAction template) {
+        if (template == null) {
+            return null;
+        }
         MyCustomerSetDefaultBillingAddressActionImpl instance = new MyCustomerSetDefaultBillingAddressActionImpl();
         instance.setAddressId(template.getAddressId());
         instance.setAddressKey(template.getAddressKey());

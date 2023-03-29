@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,26 @@ public interface ChangeStatusUpdateAction extends ImageSearchConfigUpdateAction 
     }
 
     /**
-     * factory method to copy an instance of ChangeStatusUpdateAction
+     * factory method to create a shallow copy ChangeStatusUpdateAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ChangeStatusUpdateAction of(final ChangeStatusUpdateAction template) {
+        ChangeStatusUpdateActionImpl instance = new ChangeStatusUpdateActionImpl();
+        instance.setStatus(template.getStatus());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChangeStatusUpdateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChangeStatusUpdateAction deepCopy(@Nullable final ChangeStatusUpdateAction template) {
+        if (template == null) {
+            return null;
+        }
         ChangeStatusUpdateActionImpl instance = new ChangeStatusUpdateActionImpl();
         instance.setStatus(template.getStatus());
         return instance;

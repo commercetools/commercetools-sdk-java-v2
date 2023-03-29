@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -87,13 +88,32 @@ public interface ProductVariant {
     }
 
     /**
-     * factory method to copy an instance of ProductVariant
+     * factory method to create a shallow copy ProductVariant
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductVariant of(final ProductVariant template) {
         ProductVariantImpl instance = new ProductVariantImpl();
         instance.setProduct(template.getProduct());
+        instance.setStaged(template.getStaged());
+        instance.setVariantId(template.getVariantId());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductVariant
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductVariant deepCopy(@Nullable final ProductVariant template) {
+        if (template == null) {
+            return null;
+        }
+        ProductVariantImpl instance = new ProductVariantImpl();
+        instance.setProduct(Optional.ofNullable(template.getProduct())
+                .map(com.commercetools.ml.models.common.ProductReference::deepCopy)
+                .orElse(null));
         instance.setStaged(template.getStaged());
         instance.setVariantId(template.getVariantId());
         return instance;

@@ -4,7 +4,9 @@ package com.commercetools.history.models.change_history;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -123,7 +125,7 @@ public interface ErrorResponse {
     }
 
     /**
-     * factory method to copy an instance of ErrorResponse
+     * factory method to create a shallow copy ErrorResponse
      * @param template instance to be copied
      * @return copy instance
      */
@@ -134,6 +136,29 @@ public interface ErrorResponse {
         instance.setError(template.getError());
         instance.setErrorDescription(template.getErrorDescription());
         instance.setErrors(template.getErrors());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ErrorResponse
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ErrorResponse deepCopy(@Nullable final ErrorResponse template) {
+        if (template == null) {
+            return null;
+        }
+        ErrorResponseImpl instance = new ErrorResponseImpl();
+        instance.setStatusCode(template.getStatusCode());
+        instance.setMessage(template.getMessage());
+        instance.setError(template.getError());
+        instance.setErrorDescription(template.getErrorDescription());
+        instance.setErrors(Optional.ofNullable(template.getErrors())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.change_history.ErrorObject::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

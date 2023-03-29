@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.common.ResourceIdentifier;
@@ -209,7 +210,7 @@ public interface ReviewDraft extends com.commercetools.api.models.CustomizableDr
     }
 
     /**
-     * factory method to copy an instance of ReviewDraft
+     * factory method to create a shallow copy ReviewDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -226,6 +227,39 @@ public interface ReviewDraft extends com.commercetools.api.models.CustomizableDr
         instance.setRating(template.getRating());
         instance.setCustomer(template.getCustomer());
         instance.setCustom(template.getCustom());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ReviewDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ReviewDraft deepCopy(@Nullable final ReviewDraft template) {
+        if (template == null) {
+            return null;
+        }
+        ReviewDraftImpl instance = new ReviewDraftImpl();
+        instance.setKey(template.getKey());
+        instance.setUniquenessValue(template.getUniquenessValue());
+        instance.setLocale(template.getLocale());
+        instance.setAuthorName(template.getAuthorName());
+        instance.setTitle(template.getTitle());
+        instance.setText(template.getText());
+        instance.setTarget(Optional.ofNullable(template.getTarget())
+                .map(com.commercetools.api.models.common.ResourceIdentifier::deepCopy)
+                .orElse(null));
+        instance.setState(Optional.ofNullable(template.getState())
+                .map(com.commercetools.api.models.state.StateResourceIdentifier::deepCopy)
+                .orElse(null));
+        instance.setRating(template.getRating());
+        instance.setCustomer(Optional.ofNullable(template.getCustomer())
+                .map(com.commercetools.api.models.customer.CustomerResourceIdentifier::deepCopy)
+                .orElse(null));
+        instance.setCustom(Optional.ofNullable(template.getCustom())
+                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
+                .orElse(null));
         return instance;
     }
 

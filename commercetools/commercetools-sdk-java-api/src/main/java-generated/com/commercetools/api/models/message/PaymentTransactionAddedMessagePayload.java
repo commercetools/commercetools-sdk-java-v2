@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -61,13 +62,31 @@ public interface PaymentTransactionAddedMessagePayload extends MessagePayload {
     }
 
     /**
-     * factory method to copy an instance of PaymentTransactionAddedMessagePayload
+     * factory method to create a shallow copy PaymentTransactionAddedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
     public static PaymentTransactionAddedMessagePayload of(final PaymentTransactionAddedMessagePayload template) {
         PaymentTransactionAddedMessagePayloadImpl instance = new PaymentTransactionAddedMessagePayloadImpl();
         instance.setTransaction(template.getTransaction());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of PaymentTransactionAddedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static PaymentTransactionAddedMessagePayload deepCopy(
+            @Nullable final PaymentTransactionAddedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        PaymentTransactionAddedMessagePayloadImpl instance = new PaymentTransactionAddedMessagePayloadImpl();
+        instance.setTransaction(Optional.ofNullable(template.getTransaction())
+                .map(com.commercetools.api.models.payment.Transaction::deepCopy)
+                .orElse(null));
         return instance;
     }
 

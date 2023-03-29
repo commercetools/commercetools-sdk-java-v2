@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -77,13 +78,32 @@ public interface ProductRemovedFromCategoryMessagePayload extends MessagePayload
     }
 
     /**
-     * factory method to copy an instance of ProductRemovedFromCategoryMessagePayload
+     * factory method to create a shallow copy ProductRemovedFromCategoryMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductRemovedFromCategoryMessagePayload of(final ProductRemovedFromCategoryMessagePayload template) {
         ProductRemovedFromCategoryMessagePayloadImpl instance = new ProductRemovedFromCategoryMessagePayloadImpl();
         instance.setCategory(template.getCategory());
+        instance.setStaged(template.getStaged());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductRemovedFromCategoryMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductRemovedFromCategoryMessagePayload deepCopy(
+            @Nullable final ProductRemovedFromCategoryMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        ProductRemovedFromCategoryMessagePayloadImpl instance = new ProductRemovedFromCategoryMessagePayloadImpl();
+        instance.setCategory(Optional.ofNullable(template.getCategory())
+                .map(com.commercetools.api.models.category.CategoryReference::deepCopy)
+                .orElse(null));
         instance.setStaged(template.getStaged());
         return instance;
     }

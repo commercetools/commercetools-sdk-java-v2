@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -51,6 +52,72 @@ public interface ProjectUpdateAction extends com.commercetools.api.models.Resour
     @NotNull
     @JsonProperty("action")
     public String getAction();
+
+    /**
+     * factory method to create a deep copy of ProjectUpdateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProjectUpdateAction deepCopy(@Nullable final ProjectUpdateAction template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.project.ProjectChangeBusinessUnitStatusOnCreationAction) {
+            return com.commercetools.api.models.project.ProjectChangeBusinessUnitStatusOnCreationAction.deepCopy(
+                (com.commercetools.api.models.project.ProjectChangeBusinessUnitStatusOnCreationAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.project.ProjectChangeCartsConfigurationAction) {
+            return com.commercetools.api.models.project.ProjectChangeCartsConfigurationAction
+                    .deepCopy((com.commercetools.api.models.project.ProjectChangeCartsConfigurationAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.project.ProjectChangeCountriesAction) {
+            return com.commercetools.api.models.project.ProjectChangeCountriesAction
+                    .deepCopy((com.commercetools.api.models.project.ProjectChangeCountriesAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.project.ProjectChangeCountryTaxRateFallbackEnabledAction) {
+            return com.commercetools.api.models.project.ProjectChangeCountryTaxRateFallbackEnabledAction.deepCopy(
+                (com.commercetools.api.models.project.ProjectChangeCountryTaxRateFallbackEnabledAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.project.ProjectChangeCurrenciesAction) {
+            return com.commercetools.api.models.project.ProjectChangeCurrenciesAction
+                    .deepCopy((com.commercetools.api.models.project.ProjectChangeCurrenciesAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.project.ProjectChangeLanguagesAction) {
+            return com.commercetools.api.models.project.ProjectChangeLanguagesAction
+                    .deepCopy((com.commercetools.api.models.project.ProjectChangeLanguagesAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.project.ProjectChangeMessagesConfigurationAction) {
+            return com.commercetools.api.models.project.ProjectChangeMessagesConfigurationAction
+                    .deepCopy((com.commercetools.api.models.project.ProjectChangeMessagesConfigurationAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.project.ProjectChangeNameAction) {
+            return com.commercetools.api.models.project.ProjectChangeNameAction
+                    .deepCopy((com.commercetools.api.models.project.ProjectChangeNameAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.project.ProjectChangeOrderSearchStatusAction) {
+            return com.commercetools.api.models.project.ProjectChangeOrderSearchStatusAction
+                    .deepCopy((com.commercetools.api.models.project.ProjectChangeOrderSearchStatusAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.project.ProjectChangeProductSearchIndexingEnabledAction) {
+            return com.commercetools.api.models.project.ProjectChangeProductSearchIndexingEnabledAction.deepCopy(
+                (com.commercetools.api.models.project.ProjectChangeProductSearchIndexingEnabledAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.project.ProjectChangeShoppingListsConfigurationAction) {
+            return com.commercetools.api.models.project.ProjectChangeShoppingListsConfigurationAction.deepCopy(
+                (com.commercetools.api.models.project.ProjectChangeShoppingListsConfigurationAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.project.ProjectSetExternalOAuthAction) {
+            return com.commercetools.api.models.project.ProjectSetExternalOAuthAction
+                    .deepCopy((com.commercetools.api.models.project.ProjectSetExternalOAuthAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.project.ProjectSetShippingRateInputTypeAction) {
+            return com.commercetools.api.models.project.ProjectSetShippingRateInputTypeAction
+                    .deepCopy((com.commercetools.api.models.project.ProjectSetShippingRateInputTypeAction) template);
+        }
+        ProjectUpdateActionImpl instance = new ProjectUpdateActionImpl();
+        return instance;
+    }
 
     /**
      * builder for changeMyBusinessUnitStatusOnCreation subtype

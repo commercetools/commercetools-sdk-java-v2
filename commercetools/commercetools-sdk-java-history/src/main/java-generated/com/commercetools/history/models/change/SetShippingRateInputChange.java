@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.change_value.SetCartClassificationShippingRateInputValue;
@@ -126,11 +127,28 @@ public interface SetShippingRateInputChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetShippingRateInputChange
+     * factory method to create a shallow copy SetShippingRateInputChange
      * @param template instance to be copied
      * @return copy instance
      */
     public static SetShippingRateInputChange of(final SetShippingRateInputChange template) {
+        SetShippingRateInputChangeImpl instance = new SetShippingRateInputChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setNextValue(template.getNextValue());
+        instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetShippingRateInputChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetShippingRateInputChange deepCopy(@Nullable final SetShippingRateInputChange template) {
+        if (template == null) {
+            return null;
+        }
         SetShippingRateInputChangeImpl instance = new SetShippingRateInputChangeImpl();
         instance.setChange(template.getChange());
         instance.setNextValue(template.getNextValue());

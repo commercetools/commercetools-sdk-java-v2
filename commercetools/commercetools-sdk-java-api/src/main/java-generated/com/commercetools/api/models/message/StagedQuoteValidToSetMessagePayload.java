@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -59,11 +60,27 @@ public interface StagedQuoteValidToSetMessagePayload extends MessagePayload {
     }
 
     /**
-     * factory method to copy an instance of StagedQuoteValidToSetMessagePayload
+     * factory method to create a shallow copy StagedQuoteValidToSetMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
     public static StagedQuoteValidToSetMessagePayload of(final StagedQuoteValidToSetMessagePayload template) {
+        StagedQuoteValidToSetMessagePayloadImpl instance = new StagedQuoteValidToSetMessagePayloadImpl();
+        instance.setValidTo(template.getValidTo());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedQuoteValidToSetMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedQuoteValidToSetMessagePayload deepCopy(
+            @Nullable final StagedQuoteValidToSetMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
         StagedQuoteValidToSetMessagePayloadImpl instance = new StagedQuoteValidToSetMessagePayloadImpl();
         instance.setValidTo(template.getValidTo());
         return instance;

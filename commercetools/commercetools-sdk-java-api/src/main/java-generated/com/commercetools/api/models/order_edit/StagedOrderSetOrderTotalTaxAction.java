@@ -4,7 +4,9 @@ package com.commercetools.api.models.order_edit;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -88,7 +90,7 @@ public interface StagedOrderSetOrderTotalTaxAction extends StagedOrderUpdateActi
     }
 
     /**
-     * factory method to copy an instance of StagedOrderSetOrderTotalTaxAction
+     * factory method to create a shallow copy StagedOrderSetOrderTotalTaxAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -96,6 +98,29 @@ public interface StagedOrderSetOrderTotalTaxAction extends StagedOrderUpdateActi
         StagedOrderSetOrderTotalTaxActionImpl instance = new StagedOrderSetOrderTotalTaxActionImpl();
         instance.setExternalTotalGross(template.getExternalTotalGross());
         instance.setExternalTaxPortions(template.getExternalTaxPortions());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedOrderSetOrderTotalTaxAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedOrderSetOrderTotalTaxAction deepCopy(
+            @Nullable final StagedOrderSetOrderTotalTaxAction template) {
+        if (template == null) {
+            return null;
+        }
+        StagedOrderSetOrderTotalTaxActionImpl instance = new StagedOrderSetOrderTotalTaxActionImpl();
+        instance.setExternalTotalGross(Optional.ofNullable(template.getExternalTotalGross())
+                .map(com.commercetools.api.models.common.Money::deepCopy)
+                .orElse(null));
+        instance.setExternalTaxPortions(Optional.ofNullable(template.getExternalTaxPortions())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.cart.TaxPortionDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

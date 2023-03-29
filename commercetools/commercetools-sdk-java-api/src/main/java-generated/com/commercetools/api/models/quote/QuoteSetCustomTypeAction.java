@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.type.FieldContainer;
@@ -74,7 +75,7 @@ public interface QuoteSetCustomTypeAction extends QuoteUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of QuoteSetCustomTypeAction
+     * factory method to create a shallow copy QuoteSetCustomTypeAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -82,6 +83,26 @@ public interface QuoteSetCustomTypeAction extends QuoteUpdateAction {
         QuoteSetCustomTypeActionImpl instance = new QuoteSetCustomTypeActionImpl();
         instance.setType(template.getType());
         instance.setFields(template.getFields());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of QuoteSetCustomTypeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static QuoteSetCustomTypeAction deepCopy(@Nullable final QuoteSetCustomTypeAction template) {
+        if (template == null) {
+            return null;
+        }
+        QuoteSetCustomTypeActionImpl instance = new QuoteSetCustomTypeActionImpl();
+        instance.setType(Optional.ofNullable(template.getType())
+                .map(com.commercetools.api.models.type.TypeResourceIdentifier::deepCopy)
+                .orElse(null));
+        instance.setFields(Optional.ofNullable(template.getFields())
+                .map(com.commercetools.api.models.type.FieldContainer::deepCopy)
+                .orElse(null));
         return instance;
     }
 

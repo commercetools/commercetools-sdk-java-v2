@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -92,7 +93,7 @@ public interface QuoteRequestStateTransitionMessagePayload extends MessagePayloa
     }
 
     /**
-     * factory method to copy an instance of QuoteRequestStateTransitionMessagePayload
+     * factory method to create a shallow copy QuoteRequestStateTransitionMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -101,6 +102,28 @@ public interface QuoteRequestStateTransitionMessagePayload extends MessagePayloa
         QuoteRequestStateTransitionMessagePayloadImpl instance = new QuoteRequestStateTransitionMessagePayloadImpl();
         instance.setState(template.getState());
         instance.setOldState(template.getOldState());
+        instance.setForce(template.getForce());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of QuoteRequestStateTransitionMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static QuoteRequestStateTransitionMessagePayload deepCopy(
+            @Nullable final QuoteRequestStateTransitionMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        QuoteRequestStateTransitionMessagePayloadImpl instance = new QuoteRequestStateTransitionMessagePayloadImpl();
+        instance.setState(Optional.ofNullable(template.getState())
+                .map(com.commercetools.api.models.state.StateReference::deepCopy)
+                .orElse(null));
+        instance.setOldState(Optional.ofNullable(template.getOldState())
+                .map(com.commercetools.api.models.state.StateReference::deepCopy)
+                .orElse(null));
         instance.setForce(template.getForce());
         return instance;
     }

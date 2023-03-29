@@ -4,7 +4,9 @@ package com.commercetools.api.models.common;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -79,7 +81,7 @@ public interface Update extends com.commercetools.api.models.ResourceUpdate<Upda
     }
 
     /**
-     * factory method to copy an instance of Update
+     * factory method to create a shallow copy Update
      * @param template instance to be copied
      * @return copy instance
      */
@@ -87,6 +89,26 @@ public interface Update extends com.commercetools.api.models.ResourceUpdate<Upda
         UpdateImpl instance = new UpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(template.getActions());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of Update
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static Update deepCopy(@Nullable final Update template) {
+        if (template == null) {
+            return null;
+        }
+        UpdateImpl instance = new UpdateImpl();
+        instance.setVersion(template.getVersion());
+        instance.setActions(Optional.ofNullable(template.getActions())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.common.UpdateAction::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

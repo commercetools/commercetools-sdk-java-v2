@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -76,7 +77,7 @@ public interface StagedOrderSetParcelMeasurementsAction extends StagedOrderUpdat
     }
 
     /**
-     * factory method to copy an instance of StagedOrderSetParcelMeasurementsAction
+     * factory method to create a shallow copy StagedOrderSetParcelMeasurementsAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -84,6 +85,25 @@ public interface StagedOrderSetParcelMeasurementsAction extends StagedOrderUpdat
         StagedOrderSetParcelMeasurementsActionImpl instance = new StagedOrderSetParcelMeasurementsActionImpl();
         instance.setParcelId(template.getParcelId());
         instance.setMeasurements(template.getMeasurements());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedOrderSetParcelMeasurementsAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedOrderSetParcelMeasurementsAction deepCopy(
+            @Nullable final StagedOrderSetParcelMeasurementsAction template) {
+        if (template == null) {
+            return null;
+        }
+        StagedOrderSetParcelMeasurementsActionImpl instance = new StagedOrderSetParcelMeasurementsActionImpl();
+        instance.setParcelId(template.getParcelId());
+        instance.setMeasurements(Optional.ofNullable(template.getMeasurements())
+                .map(com.commercetools.api.models.order.ParcelMeasurements::deepCopy)
+                .orElse(null));
         return instance;
     }
 

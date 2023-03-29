@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -120,7 +121,7 @@ public interface ChangeAssetNameChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of ChangeAssetNameChange
+     * factory method to create a shallow copy ChangeAssetNameChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -130,6 +131,30 @@ public interface ChangeAssetNameChange extends Change {
         instance.setAsset(template.getAsset());
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChangeAssetNameChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChangeAssetNameChange deepCopy(@Nullable final ChangeAssetNameChange template) {
+        if (template == null) {
+            return null;
+        }
+        ChangeAssetNameChangeImpl instance = new ChangeAssetNameChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setAsset(Optional.ofNullable(template.getAsset())
+                .map(com.commercetools.history.models.change_value.AssetChangeValue::deepCopy)
+                .orElse(null));
+        instance.setNextValue(Optional.ofNullable(template.getNextValue())
+                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
+                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
+                .orElse(null));
         return instance;
     }
 

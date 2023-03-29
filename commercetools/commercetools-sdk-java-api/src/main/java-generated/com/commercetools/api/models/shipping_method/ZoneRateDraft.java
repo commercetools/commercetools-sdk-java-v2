@@ -4,7 +4,9 @@ package com.commercetools.api.models.shipping_method;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -81,7 +83,7 @@ public interface ZoneRateDraft extends io.vrap.rmf.base.client.Draft<ZoneRateDra
     }
 
     /**
-     * factory method to copy an instance of ZoneRateDraft
+     * factory method to create a shallow copy ZoneRateDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -89,6 +91,28 @@ public interface ZoneRateDraft extends io.vrap.rmf.base.client.Draft<ZoneRateDra
         ZoneRateDraftImpl instance = new ZoneRateDraftImpl();
         instance.setZone(template.getZone());
         instance.setShippingRates(template.getShippingRates());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ZoneRateDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ZoneRateDraft deepCopy(@Nullable final ZoneRateDraft template) {
+        if (template == null) {
+            return null;
+        }
+        ZoneRateDraftImpl instance = new ZoneRateDraftImpl();
+        instance.setZone(Optional.ofNullable(template.getZone())
+                .map(com.commercetools.api.models.zone.ZoneResourceIdentifier::deepCopy)
+                .orElse(null));
+        instance.setShippingRates(Optional.ofNullable(template.getShippingRates())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.shipping_method.ShippingRateDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

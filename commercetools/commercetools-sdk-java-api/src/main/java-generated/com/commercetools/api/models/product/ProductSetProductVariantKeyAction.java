@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -100,11 +102,30 @@ public interface ProductSetProductVariantKeyAction extends ProductUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ProductSetProductVariantKeyAction
+     * factory method to create a shallow copy ProductSetProductVariantKeyAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductSetProductVariantKeyAction of(final ProductSetProductVariantKeyAction template) {
+        ProductSetProductVariantKeyActionImpl instance = new ProductSetProductVariantKeyActionImpl();
+        instance.setVariantId(template.getVariantId());
+        instance.setSku(template.getSku());
+        instance.setKey(template.getKey());
+        instance.setStaged(template.getStaged());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductSetProductVariantKeyAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductSetProductVariantKeyAction deepCopy(
+            @Nullable final ProductSetProductVariantKeyAction template) {
+        if (template == null) {
+            return null;
+        }
         ProductSetProductVariantKeyActionImpl instance = new ProductSetProductVariantKeyActionImpl();
         instance.setVariantId(template.getVariantId());
         instance.setSku(template.getSku());

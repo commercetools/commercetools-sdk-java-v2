@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -73,11 +74,28 @@ public interface StandalonePriceSetCustomFieldAction extends StandalonePriceUpda
     }
 
     /**
-     * factory method to copy an instance of StandalonePriceSetCustomFieldAction
+     * factory method to create a shallow copy StandalonePriceSetCustomFieldAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static StandalonePriceSetCustomFieldAction of(final StandalonePriceSetCustomFieldAction template) {
+        StandalonePriceSetCustomFieldActionImpl instance = new StandalonePriceSetCustomFieldActionImpl();
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StandalonePriceSetCustomFieldAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StandalonePriceSetCustomFieldAction deepCopy(
+            @Nullable final StandalonePriceSetCustomFieldAction template) {
+        if (template == null) {
+            return null;
+        }
         StandalonePriceSetCustomFieldActionImpl instance = new StandalonePriceSetCustomFieldActionImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());

@@ -4,7 +4,9 @@ package com.commercetools.ml.models.similar_products;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -128,7 +130,7 @@ public interface SimilarProductsPagedQueryResult {
     }
 
     /**
-     * factory method to copy an instance of SimilarProductsPagedQueryResult
+     * factory method to create a shallow copy SimilarProductsPagedQueryResult
      * @param template instance to be copied
      * @return copy instance
      */
@@ -139,6 +141,31 @@ public interface SimilarProductsPagedQueryResult {
         instance.setOffset(template.getOffset());
         instance.setResults(template.getResults());
         instance.setMeta(template.getMeta());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SimilarProductsPagedQueryResult
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SimilarProductsPagedQueryResult deepCopy(@Nullable final SimilarProductsPagedQueryResult template) {
+        if (template == null) {
+            return null;
+        }
+        SimilarProductsPagedQueryResultImpl instance = new SimilarProductsPagedQueryResultImpl();
+        instance.setCount(template.getCount());
+        instance.setTotal(template.getTotal());
+        instance.setOffset(template.getOffset());
+        instance.setResults(Optional.ofNullable(template.getResults())
+                .map(t -> t.stream()
+                        .map(com.commercetools.ml.models.similar_products.SimilarProductPair::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setMeta(Optional.ofNullable(template.getMeta())
+                .map(com.commercetools.ml.models.similar_products.SimilarProductSearchRequestMeta::deepCopy)
+                .orElse(null));
         return instance;
     }
 

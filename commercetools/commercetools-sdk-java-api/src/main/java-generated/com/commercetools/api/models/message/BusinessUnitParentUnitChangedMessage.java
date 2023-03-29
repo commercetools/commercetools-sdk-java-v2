@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.business_unit.BusinessUnitKeyReference;
@@ -80,7 +81,7 @@ public interface BusinessUnitParentUnitChangedMessage extends Message {
     }
 
     /**
-     * factory method to copy an instance of BusinessUnitParentUnitChangedMessage
+     * factory method to create a shallow copy BusinessUnitParentUnitChangedMessage
      * @param template instance to be copied
      * @return copy instance
      */
@@ -98,6 +99,45 @@ public interface BusinessUnitParentUnitChangedMessage extends Message {
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setOldParentUnit(template.getOldParentUnit());
         instance.setNewParentUnit(template.getNewParentUnit());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of BusinessUnitParentUnitChangedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static BusinessUnitParentUnitChangedMessage deepCopy(
+            @Nullable final BusinessUnitParentUnitChangedMessage template) {
+        if (template == null) {
+            return null;
+        }
+        BusinessUnitParentUnitChangedMessageImpl instance = new BusinessUnitParentUnitChangedMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(Optional.ofNullable(template.getLastModifiedBy())
+                .map(com.commercetools.api.models.common.LastModifiedBy::deepCopy)
+                .orElse(null));
+        instance.setCreatedBy(Optional.ofNullable(template.getCreatedBy())
+                .map(com.commercetools.api.models.common.CreatedBy::deepCopy)
+                .orElse(null));
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(Optional.ofNullable(template.getResource())
+                .map(com.commercetools.api.models.common.Reference::deepCopy)
+                .orElse(null));
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(Optional.ofNullable(template.getResourceUserProvidedIdentifiers())
+                .map(com.commercetools.api.models.message.UserProvidedIdentifiers::deepCopy)
+                .orElse(null));
+        instance.setOldParentUnit(Optional.ofNullable(template.getOldParentUnit())
+                .map(com.commercetools.api.models.business_unit.BusinessUnitKeyReference::deepCopy)
+                .orElse(null));
+        instance.setNewParentUnit(Optional.ofNullable(template.getNewParentUnit())
+                .map(com.commercetools.api.models.business_unit.BusinessUnitKeyReference::deepCopy)
+                .orElse(null));
         return instance;
     }
 

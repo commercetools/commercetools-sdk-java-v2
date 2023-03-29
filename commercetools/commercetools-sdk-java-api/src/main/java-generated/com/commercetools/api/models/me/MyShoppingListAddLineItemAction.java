@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.type.CustomFieldsDraft;
@@ -135,7 +136,7 @@ public interface MyShoppingListAddLineItemAction extends MyShoppingListUpdateAct
     }
 
     /**
-     * factory method to copy an instance of MyShoppingListAddLineItemAction
+     * factory method to create a shallow copy MyShoppingListAddLineItemAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -147,6 +148,28 @@ public interface MyShoppingListAddLineItemAction extends MyShoppingListUpdateAct
         instance.setQuantity(template.getQuantity());
         instance.setAddedAt(template.getAddedAt());
         instance.setCustom(template.getCustom());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MyShoppingListAddLineItemAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MyShoppingListAddLineItemAction deepCopy(@Nullable final MyShoppingListAddLineItemAction template) {
+        if (template == null) {
+            return null;
+        }
+        MyShoppingListAddLineItemActionImpl instance = new MyShoppingListAddLineItemActionImpl();
+        instance.setSku(template.getSku());
+        instance.setProductId(template.getProductId());
+        instance.setVariantId(template.getVariantId());
+        instance.setQuantity(template.getQuantity());
+        instance.setAddedAt(template.getAddedAt());
+        instance.setCustom(Optional.ofNullable(template.getCustom())
+                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
+                .orElse(null));
         return instance;
     }
 

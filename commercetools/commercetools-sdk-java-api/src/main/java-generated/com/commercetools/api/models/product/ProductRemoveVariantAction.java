@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -85,11 +87,28 @@ public interface ProductRemoveVariantAction extends ProductUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ProductRemoveVariantAction
+     * factory method to create a shallow copy ProductRemoveVariantAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductRemoveVariantAction of(final ProductRemoveVariantAction template) {
+        ProductRemoveVariantActionImpl instance = new ProductRemoveVariantActionImpl();
+        instance.setId(template.getId());
+        instance.setSku(template.getSku());
+        instance.setStaged(template.getStaged());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductRemoveVariantAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductRemoveVariantAction deepCopy(@Nullable final ProductRemoveVariantAction template) {
+        if (template == null) {
+            return null;
+        }
         ProductRemoveVariantActionImpl instance = new ProductRemoveVariantActionImpl();
         instance.setId(template.getId());
         instance.setSku(template.getSku());

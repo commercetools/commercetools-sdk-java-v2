@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -123,7 +124,7 @@ public interface InventoryEntryQuantitySetMessagePayload extends MessagePayload 
     }
 
     /**
-     * factory method to copy an instance of InventoryEntryQuantitySetMessagePayload
+     * factory method to create a shallow copy InventoryEntryQuantitySetMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -134,6 +135,28 @@ public interface InventoryEntryQuantitySetMessagePayload extends MessagePayload 
         instance.setOldAvailableQuantity(template.getOldAvailableQuantity());
         instance.setNewAvailableQuantity(template.getNewAvailableQuantity());
         instance.setSupplyChannel(template.getSupplyChannel());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of InventoryEntryQuantitySetMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static InventoryEntryQuantitySetMessagePayload deepCopy(
+            @Nullable final InventoryEntryQuantitySetMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        InventoryEntryQuantitySetMessagePayloadImpl instance = new InventoryEntryQuantitySetMessagePayloadImpl();
+        instance.setOldQuantityOnStock(template.getOldQuantityOnStock());
+        instance.setNewQuantityOnStock(template.getNewQuantityOnStock());
+        instance.setOldAvailableQuantity(template.getOldAvailableQuantity());
+        instance.setNewAvailableQuantity(template.getNewAvailableQuantity());
+        instance.setSupplyChannel(Optional.ofNullable(template.getSupplyChannel())
+                .map(com.commercetools.api.models.channel.ChannelReference::deepCopy)
+                .orElse(null));
         return instance;
     }
 

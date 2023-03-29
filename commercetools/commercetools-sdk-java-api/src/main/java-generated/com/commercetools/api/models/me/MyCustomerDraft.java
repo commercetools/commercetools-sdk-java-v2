@@ -5,7 +5,9 @@ import java.time.*;
 import java.time.LocalDate;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -301,7 +303,7 @@ public interface MyCustomerDraft extends com.commercetools.api.models.Customizab
     }
 
     /**
-     * factory method to copy an instance of MyCustomerDraft
+     * factory method to create a shallow copy MyCustomerDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -323,6 +325,46 @@ public interface MyCustomerDraft extends com.commercetools.api.models.Customizab
         instance.setCustom(template.getCustom());
         instance.setLocale(template.getLocale());
         instance.setStores(template.getStores());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MyCustomerDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MyCustomerDraft deepCopy(@Nullable final MyCustomerDraft template) {
+        if (template == null) {
+            return null;
+        }
+        MyCustomerDraftImpl instance = new MyCustomerDraftImpl();
+        instance.setEmail(template.getEmail());
+        instance.setPassword(template.getPassword());
+        instance.setFirstName(template.getFirstName());
+        instance.setLastName(template.getLastName());
+        instance.setMiddleName(template.getMiddleName());
+        instance.setTitle(template.getTitle());
+        instance.setSalutation(template.getSalutation());
+        instance.setDateOfBirth(template.getDateOfBirth());
+        instance.setCompanyName(template.getCompanyName());
+        instance.setVatId(template.getVatId());
+        instance.setAddresses(Optional.ofNullable(template.getAddresses())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.common.BaseAddress::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setDefaultShippingAddress(template.getDefaultShippingAddress());
+        instance.setDefaultBillingAddress(template.getDefaultBillingAddress());
+        instance.setCustom(Optional.ofNullable(template.getCustom())
+                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
+                .orElse(null));
+        instance.setLocale(template.getLocale());
+        instance.setStores(Optional.ofNullable(template.getStores())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.store.StoreResourceIdentifier::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

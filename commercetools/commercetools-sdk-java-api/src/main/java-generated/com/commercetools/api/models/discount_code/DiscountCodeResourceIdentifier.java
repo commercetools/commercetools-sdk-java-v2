@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.commercetools.api.models.common.ResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -72,11 +74,27 @@ public interface DiscountCodeResourceIdentifier
     }
 
     /**
-     * factory method to copy an instance of DiscountCodeResourceIdentifier
+     * factory method to create a shallow copy DiscountCodeResourceIdentifier
      * @param template instance to be copied
      * @return copy instance
      */
     public static DiscountCodeResourceIdentifier of(final DiscountCodeResourceIdentifier template) {
+        DiscountCodeResourceIdentifierImpl instance = new DiscountCodeResourceIdentifierImpl();
+        instance.setId(template.getId());
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of DiscountCodeResourceIdentifier
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static DiscountCodeResourceIdentifier deepCopy(@Nullable final DiscountCodeResourceIdentifier template) {
+        if (template == null) {
+            return null;
+        }
         DiscountCodeResourceIdentifierImpl instance = new DiscountCodeResourceIdentifierImpl();
         instance.setId(template.getId());
         instance.setKey(template.getKey());

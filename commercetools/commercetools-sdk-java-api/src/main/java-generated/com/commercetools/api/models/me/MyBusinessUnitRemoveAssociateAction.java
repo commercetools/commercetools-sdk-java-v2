@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -61,13 +62,31 @@ public interface MyBusinessUnitRemoveAssociateAction extends MyBusinessUnitUpdat
     }
 
     /**
-     * factory method to copy an instance of MyBusinessUnitRemoveAssociateAction
+     * factory method to create a shallow copy MyBusinessUnitRemoveAssociateAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static MyBusinessUnitRemoveAssociateAction of(final MyBusinessUnitRemoveAssociateAction template) {
         MyBusinessUnitRemoveAssociateActionImpl instance = new MyBusinessUnitRemoveAssociateActionImpl();
         instance.setCustomer(template.getCustomer());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MyBusinessUnitRemoveAssociateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MyBusinessUnitRemoveAssociateAction deepCopy(
+            @Nullable final MyBusinessUnitRemoveAssociateAction template) {
+        if (template == null) {
+            return null;
+        }
+        MyBusinessUnitRemoveAssociateActionImpl instance = new MyBusinessUnitRemoveAssociateActionImpl();
+        instance.setCustomer(Optional.ofNullable(template.getCustomer())
+                .map(com.commercetools.api.models.customer.CustomerResourceIdentifier::deepCopy)
+                .orElse(null));
         return instance;
     }
 

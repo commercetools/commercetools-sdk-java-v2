@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -45,6 +46,44 @@ public interface TaxCategoryUpdateAction
     @NotNull
     @JsonProperty("action")
     public String getAction();
+
+    /**
+     * factory method to create a deep copy of TaxCategoryUpdateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static TaxCategoryUpdateAction deepCopy(@Nullable final TaxCategoryUpdateAction template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.tax_category.TaxCategoryAddTaxRateAction) {
+            return com.commercetools.api.models.tax_category.TaxCategoryAddTaxRateAction
+                    .deepCopy((com.commercetools.api.models.tax_category.TaxCategoryAddTaxRateAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.tax_category.TaxCategoryChangeNameAction) {
+            return com.commercetools.api.models.tax_category.TaxCategoryChangeNameAction
+                    .deepCopy((com.commercetools.api.models.tax_category.TaxCategoryChangeNameAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.tax_category.TaxCategoryRemoveTaxRateAction) {
+            return com.commercetools.api.models.tax_category.TaxCategoryRemoveTaxRateAction
+                    .deepCopy((com.commercetools.api.models.tax_category.TaxCategoryRemoveTaxRateAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.tax_category.TaxCategoryReplaceTaxRateAction) {
+            return com.commercetools.api.models.tax_category.TaxCategoryReplaceTaxRateAction
+                    .deepCopy((com.commercetools.api.models.tax_category.TaxCategoryReplaceTaxRateAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.tax_category.TaxCategorySetDescriptionAction) {
+            return com.commercetools.api.models.tax_category.TaxCategorySetDescriptionAction
+                    .deepCopy((com.commercetools.api.models.tax_category.TaxCategorySetDescriptionAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.tax_category.TaxCategorySetKeyAction) {
+            return com.commercetools.api.models.tax_category.TaxCategorySetKeyAction
+                    .deepCopy((com.commercetools.api.models.tax_category.TaxCategorySetKeyAction) template);
+        }
+        TaxCategoryUpdateActionImpl instance = new TaxCategoryUpdateActionImpl();
+        return instance;
+    }
 
     /**
      * builder for addTaxRate subtype

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -98,11 +99,28 @@ public interface SetTitleChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetTitleChange
+     * factory method to create a shallow copy SetTitleChange
      * @param template instance to be copied
      * @return copy instance
      */
     public static SetTitleChange of(final SetTitleChange template) {
+        SetTitleChangeImpl instance = new SetTitleChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetTitleChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetTitleChange deepCopy(@Nullable final SetTitleChange template) {
+        if (template == null) {
+            return null;
+        }
         SetTitleChangeImpl instance = new SetTitleChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());

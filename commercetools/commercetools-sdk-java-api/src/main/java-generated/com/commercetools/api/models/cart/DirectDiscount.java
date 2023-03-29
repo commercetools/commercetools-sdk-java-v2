@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -90,7 +91,7 @@ public interface DirectDiscount {
     }
 
     /**
-     * factory method to copy an instance of DirectDiscount
+     * factory method to create a shallow copy DirectDiscount
      * @param template instance to be copied
      * @return copy instance
      */
@@ -99,6 +100,27 @@ public interface DirectDiscount {
         instance.setId(template.getId());
         instance.setValue(template.getValue());
         instance.setTarget(template.getTarget());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of DirectDiscount
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static DirectDiscount deepCopy(@Nullable final DirectDiscount template) {
+        if (template == null) {
+            return null;
+        }
+        DirectDiscountImpl instance = new DirectDiscountImpl();
+        instance.setId(template.getId());
+        instance.setValue(Optional.ofNullable(template.getValue())
+                .map(com.commercetools.api.models.cart_discount.CartDiscountValue::deepCopy)
+                .orElse(null));
+        instance.setTarget(Optional.ofNullable(template.getTarget())
+                .map(com.commercetools.api.models.cart_discount.CartDiscountTarget::deepCopy)
+                .orElse(null));
         return instance;
     }
 

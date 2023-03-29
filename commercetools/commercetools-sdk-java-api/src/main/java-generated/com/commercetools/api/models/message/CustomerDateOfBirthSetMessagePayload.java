@@ -6,6 +6,8 @@ import java.time.LocalDate;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -56,11 +58,27 @@ public interface CustomerDateOfBirthSetMessagePayload extends MessagePayload {
     }
 
     /**
-     * factory method to copy an instance of CustomerDateOfBirthSetMessagePayload
+     * factory method to create a shallow copy CustomerDateOfBirthSetMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
     public static CustomerDateOfBirthSetMessagePayload of(final CustomerDateOfBirthSetMessagePayload template) {
+        CustomerDateOfBirthSetMessagePayloadImpl instance = new CustomerDateOfBirthSetMessagePayloadImpl();
+        instance.setDateOfBirth(template.getDateOfBirth());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomerDateOfBirthSetMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomerDateOfBirthSetMessagePayload deepCopy(
+            @Nullable final CustomerDateOfBirthSetMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
         CustomerDateOfBirthSetMessagePayloadImpl instance = new CustomerDateOfBirthSetMessagePayloadImpl();
         instance.setDateOfBirth(template.getDateOfBirth());
         return instance;

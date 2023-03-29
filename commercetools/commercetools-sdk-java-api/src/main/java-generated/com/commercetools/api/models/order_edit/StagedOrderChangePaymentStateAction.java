@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.commercetools.api.models.order.PaymentState;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.fasterxml.jackson.annotation.*;
@@ -57,11 +59,27 @@ public interface StagedOrderChangePaymentStateAction extends StagedOrderUpdateAc
     }
 
     /**
-     * factory method to copy an instance of StagedOrderChangePaymentStateAction
+     * factory method to create a shallow copy StagedOrderChangePaymentStateAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static StagedOrderChangePaymentStateAction of(final StagedOrderChangePaymentStateAction template) {
+        StagedOrderChangePaymentStateActionImpl instance = new StagedOrderChangePaymentStateActionImpl();
+        instance.setPaymentState(template.getPaymentState());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedOrderChangePaymentStateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedOrderChangePaymentStateAction deepCopy(
+            @Nullable final StagedOrderChangePaymentStateAction template) {
+        if (template == null) {
+            return null;
+        }
         StagedOrderChangePaymentStateActionImpl instance = new StagedOrderChangePaymentStateActionImpl();
         instance.setPaymentState(template.getPaymentState());
         return instance;

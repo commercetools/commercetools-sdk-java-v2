@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -101,7 +102,7 @@ public interface RemoveEnumValuesChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of RemoveEnumValuesChange
+     * factory method to create a shallow copy RemoveEnumValuesChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -110,6 +111,25 @@ public interface RemoveEnumValuesChange extends Change {
         instance.setChange(template.getChange());
         instance.setAttributeName(template.getAttributeName());
         instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of RemoveEnumValuesChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static RemoveEnumValuesChange deepCopy(@Nullable final RemoveEnumValuesChange template) {
+        if (template == null) {
+            return null;
+        }
+        RemoveEnumValuesChangeImpl instance = new RemoveEnumValuesChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setAttributeName(template.getAttributeName());
+        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
+                .map(com.commercetools.history.models.change_value.EnumValue::deepCopy)
+                .orElse(null));
         return instance;
     }
 

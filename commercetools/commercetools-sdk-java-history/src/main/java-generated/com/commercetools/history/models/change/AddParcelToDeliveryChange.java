@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -101,7 +102,7 @@ public interface AddParcelToDeliveryChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of AddParcelToDeliveryChange
+     * factory method to create a shallow copy AddParcelToDeliveryChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -110,6 +111,25 @@ public interface AddParcelToDeliveryChange extends Change {
         instance.setChange(template.getChange());
         instance.setDeliveryId(template.getDeliveryId());
         instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of AddParcelToDeliveryChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AddParcelToDeliveryChange deepCopy(@Nullable final AddParcelToDeliveryChange template) {
+        if (template == null) {
+            return null;
+        }
+        AddParcelToDeliveryChangeImpl instance = new AddParcelToDeliveryChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setDeliveryId(template.getDeliveryId());
+        instance.setNextValue(Optional.ofNullable(template.getNextValue())
+                .map(com.commercetools.history.models.common.Parcel::deepCopy)
+                .orElse(null));
         return instance;
     }
 

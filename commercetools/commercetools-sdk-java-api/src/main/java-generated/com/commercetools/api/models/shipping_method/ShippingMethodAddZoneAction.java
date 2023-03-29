@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -61,13 +62,30 @@ public interface ShippingMethodAddZoneAction extends ShippingMethodUpdateAction 
     }
 
     /**
-     * factory method to copy an instance of ShippingMethodAddZoneAction
+     * factory method to create a shallow copy ShippingMethodAddZoneAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ShippingMethodAddZoneAction of(final ShippingMethodAddZoneAction template) {
         ShippingMethodAddZoneActionImpl instance = new ShippingMethodAddZoneActionImpl();
         instance.setZone(template.getZone());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ShippingMethodAddZoneAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ShippingMethodAddZoneAction deepCopy(@Nullable final ShippingMethodAddZoneAction template) {
+        if (template == null) {
+            return null;
+        }
+        ShippingMethodAddZoneActionImpl instance = new ShippingMethodAddZoneActionImpl();
+        instance.setZone(Optional.ofNullable(template.getZone())
+                .map(com.commercetools.api.models.zone.ZoneResourceIdentifier::deepCopy)
+                .orElse(null));
         return instance;
     }
 

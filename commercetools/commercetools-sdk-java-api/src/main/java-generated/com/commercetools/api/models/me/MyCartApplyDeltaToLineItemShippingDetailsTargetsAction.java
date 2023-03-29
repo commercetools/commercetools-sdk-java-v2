@@ -4,7 +4,9 @@ package com.commercetools.api.models.me;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -85,7 +87,7 @@ public interface MyCartApplyDeltaToLineItemShippingDetailsTargetsAction extends 
     }
 
     /**
-     * factory method to copy an instance of MyCartApplyDeltaToLineItemShippingDetailsTargetsAction
+     * factory method to create a shallow copy MyCartApplyDeltaToLineItemShippingDetailsTargetsAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -94,6 +96,27 @@ public interface MyCartApplyDeltaToLineItemShippingDetailsTargetsAction extends 
         MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl instance = new MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl();
         instance.setLineItemId(template.getLineItemId());
         instance.setTargetsDelta(template.getTargetsDelta());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MyCartApplyDeltaToLineItemShippingDetailsTargetsAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MyCartApplyDeltaToLineItemShippingDetailsTargetsAction deepCopy(
+            @Nullable final MyCartApplyDeltaToLineItemShippingDetailsTargetsAction template) {
+        if (template == null) {
+            return null;
+        }
+        MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl instance = new MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl();
+        instance.setLineItemId(template.getLineItemId());
+        instance.setTargetsDelta(Optional.ofNullable(template.getTargetsDelta())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.cart.ItemShippingTarget::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

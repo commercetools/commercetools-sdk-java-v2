@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -55,11 +57,26 @@ public interface CartDiscountSetKeyAction extends CartDiscountUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of CartDiscountSetKeyAction
+     * factory method to create a shallow copy CartDiscountSetKeyAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static CartDiscountSetKeyAction of(final CartDiscountSetKeyAction template) {
+        CartDiscountSetKeyActionImpl instance = new CartDiscountSetKeyActionImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartDiscountSetKeyAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartDiscountSetKeyAction deepCopy(@Nullable final CartDiscountSetKeyAction template) {
+        if (template == null) {
+            return null;
+        }
         CartDiscountSetKeyActionImpl instance = new CartDiscountSetKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;

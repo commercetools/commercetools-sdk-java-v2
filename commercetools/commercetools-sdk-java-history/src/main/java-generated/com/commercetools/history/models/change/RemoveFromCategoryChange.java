@@ -4,7 +4,9 @@ package com.commercetools.history.models.change;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -135,7 +137,7 @@ public interface RemoveFromCategoryChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of RemoveFromCategoryChange
+     * factory method to create a shallow copy RemoveFromCategoryChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -145,6 +147,34 @@ public interface RemoveFromCategoryChange extends Change {
         instance.setCategory(template.getCategory());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of RemoveFromCategoryChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static RemoveFromCategoryChange deepCopy(@Nullable final RemoveFromCategoryChange template) {
+        if (template == null) {
+            return null;
+        }
+        RemoveFromCategoryChangeImpl instance = new RemoveFromCategoryChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setCategory(Optional.ofNullable(template.getCategory())
+                .map(com.commercetools.history.models.common.Reference::deepCopy)
+                .orElse(null));
+        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.Reference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setNextValue(Optional.ofNullable(template.getNextValue())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.Reference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

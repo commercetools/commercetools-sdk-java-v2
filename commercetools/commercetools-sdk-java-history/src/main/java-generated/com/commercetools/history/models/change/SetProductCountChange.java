@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -98,11 +99,28 @@ public interface SetProductCountChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetProductCountChange
+     * factory method to create a shallow copy SetProductCountChange
      * @param template instance to be copied
      * @return copy instance
      */
     public static SetProductCountChange of(final SetProductCountChange template) {
+        SetProductCountChangeImpl instance = new SetProductCountChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetProductCountChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetProductCountChange deepCopy(@Nullable final SetProductCountChange template) {
+        if (template == null) {
+            return null;
+        }
         SetProductCountChangeImpl instance = new SetProductCountChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());

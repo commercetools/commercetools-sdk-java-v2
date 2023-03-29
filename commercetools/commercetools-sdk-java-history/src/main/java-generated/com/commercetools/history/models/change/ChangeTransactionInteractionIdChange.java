@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -117,7 +118,7 @@ public interface ChangeTransactionInteractionIdChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of ChangeTransactionInteractionIdChange
+     * factory method to create a shallow copy ChangeTransactionInteractionIdChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -125,6 +126,27 @@ public interface ChangeTransactionInteractionIdChange extends Change {
         ChangeTransactionInteractionIdChangeImpl instance = new ChangeTransactionInteractionIdChangeImpl();
         instance.setChange(template.getChange());
         instance.setTransaction(template.getTransaction());
+        instance.setNextValue(template.getNextValue());
+        instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChangeTransactionInteractionIdChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChangeTransactionInteractionIdChange deepCopy(
+            @Nullable final ChangeTransactionInteractionIdChange template) {
+        if (template == null) {
+            return null;
+        }
+        ChangeTransactionInteractionIdChangeImpl instance = new ChangeTransactionInteractionIdChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setTransaction(Optional.ofNullable(template.getTransaction())
+                .map(com.commercetools.history.models.change_value.TransactionChangeValue::deepCopy)
+                .orElse(null));
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
         return instance;

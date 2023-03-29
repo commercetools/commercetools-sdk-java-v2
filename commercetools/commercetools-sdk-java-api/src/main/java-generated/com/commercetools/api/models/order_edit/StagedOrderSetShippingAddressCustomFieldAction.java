@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
@@ -74,12 +75,29 @@ public interface StagedOrderSetShippingAddressCustomFieldAction extends StagedOr
     }
 
     /**
-     * factory method to copy an instance of StagedOrderSetShippingAddressCustomFieldAction
+     * factory method to create a shallow copy StagedOrderSetShippingAddressCustomFieldAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static StagedOrderSetShippingAddressCustomFieldAction of(
             final StagedOrderSetShippingAddressCustomFieldAction template) {
+        StagedOrderSetShippingAddressCustomFieldActionImpl instance = new StagedOrderSetShippingAddressCustomFieldActionImpl();
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedOrderSetShippingAddressCustomFieldAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedOrderSetShippingAddressCustomFieldAction deepCopy(
+            @Nullable final StagedOrderSetShippingAddressCustomFieldAction template) {
+        if (template == null) {
+            return null;
+        }
         StagedOrderSetShippingAddressCustomFieldActionImpl instance = new StagedOrderSetShippingAddressCustomFieldActionImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());

@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -41,11 +43,26 @@ public interface ProductReference extends Reference {
     }
 
     /**
-     * factory method to copy an instance of ProductReference
+     * factory method to create a shallow copy ProductReference
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductReference of(final ProductReference template) {
+        ProductReferenceImpl instance = new ProductReferenceImpl();
+        instance.setId(template.getId());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductReference deepCopy(@Nullable final ProductReference template) {
+        if (template == null) {
+            return null;
+        }
         ProductReferenceImpl instance = new ProductReferenceImpl();
         instance.setId(template.getId());
         return instance;

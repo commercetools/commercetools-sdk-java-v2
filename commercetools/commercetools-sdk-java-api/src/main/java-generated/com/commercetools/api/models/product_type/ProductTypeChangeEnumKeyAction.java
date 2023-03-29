@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -92,11 +93,28 @@ public interface ProductTypeChangeEnumKeyAction extends ProductTypeUpdateAction 
     }
 
     /**
-     * factory method to copy an instance of ProductTypeChangeEnumKeyAction
+     * factory method to create a shallow copy ProductTypeChangeEnumKeyAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductTypeChangeEnumKeyAction of(final ProductTypeChangeEnumKeyAction template) {
+        ProductTypeChangeEnumKeyActionImpl instance = new ProductTypeChangeEnumKeyActionImpl();
+        instance.setAttributeName(template.getAttributeName());
+        instance.setKey(template.getKey());
+        instance.setNewKey(template.getNewKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductTypeChangeEnumKeyAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductTypeChangeEnumKeyAction deepCopy(@Nullable final ProductTypeChangeEnumKeyAction template) {
+        if (template == null) {
+            return null;
+        }
         ProductTypeChangeEnumKeyActionImpl instance = new ProductTypeChangeEnumKeyActionImpl();
         instance.setAttributeName(template.getAttributeName());
         instance.setKey(template.getKey());

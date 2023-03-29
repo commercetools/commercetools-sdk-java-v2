@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -136,11 +137,30 @@ public interface ProductSetAttributeAction extends ProductUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ProductSetAttributeAction
+     * factory method to create a shallow copy ProductSetAttributeAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductSetAttributeAction of(final ProductSetAttributeAction template) {
+        ProductSetAttributeActionImpl instance = new ProductSetAttributeActionImpl();
+        instance.setVariantId(template.getVariantId());
+        instance.setSku(template.getSku());
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        instance.setStaged(template.getStaged());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductSetAttributeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductSetAttributeAction deepCopy(@Nullable final ProductSetAttributeAction template) {
+        if (template == null) {
+            return null;
+        }
         ProductSetAttributeActionImpl instance = new ProductSetAttributeActionImpl();
         instance.setVariantId(template.getVariantId());
         instance.setSku(template.getSku());

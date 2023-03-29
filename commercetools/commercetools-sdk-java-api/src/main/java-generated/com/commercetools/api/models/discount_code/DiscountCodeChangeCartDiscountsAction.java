@@ -4,7 +4,9 @@ package com.commercetools.api.models.discount_code;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -69,13 +71,33 @@ public interface DiscountCodeChangeCartDiscountsAction extends DiscountCodeUpdat
     }
 
     /**
-     * factory method to copy an instance of DiscountCodeChangeCartDiscountsAction
+     * factory method to create a shallow copy DiscountCodeChangeCartDiscountsAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static DiscountCodeChangeCartDiscountsAction of(final DiscountCodeChangeCartDiscountsAction template) {
         DiscountCodeChangeCartDiscountsActionImpl instance = new DiscountCodeChangeCartDiscountsActionImpl();
         instance.setCartDiscounts(template.getCartDiscounts());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of DiscountCodeChangeCartDiscountsAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static DiscountCodeChangeCartDiscountsAction deepCopy(
+            @Nullable final DiscountCodeChangeCartDiscountsAction template) {
+        if (template == null) {
+            return null;
+        }
+        DiscountCodeChangeCartDiscountsActionImpl instance = new DiscountCodeChangeCartDiscountsActionImpl();
+        instance.setCartDiscounts(Optional.ofNullable(template.getCartDiscounts())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

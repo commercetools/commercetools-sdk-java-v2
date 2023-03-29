@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -60,7 +61,7 @@ public interface ProjectChangeShoppingListsConfigurationAction extends ProjectUp
     }
 
     /**
-     * factory method to copy an instance of ProjectChangeShoppingListsConfigurationAction
+     * factory method to create a shallow copy ProjectChangeShoppingListsConfigurationAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -68,6 +69,24 @@ public interface ProjectChangeShoppingListsConfigurationAction extends ProjectUp
             final ProjectChangeShoppingListsConfigurationAction template) {
         ProjectChangeShoppingListsConfigurationActionImpl instance = new ProjectChangeShoppingListsConfigurationActionImpl();
         instance.setShoppingListsConfiguration(template.getShoppingListsConfiguration());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProjectChangeShoppingListsConfigurationAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProjectChangeShoppingListsConfigurationAction deepCopy(
+            @Nullable final ProjectChangeShoppingListsConfigurationAction template) {
+        if (template == null) {
+            return null;
+        }
+        ProjectChangeShoppingListsConfigurationActionImpl instance = new ProjectChangeShoppingListsConfigurationActionImpl();
+        instance.setShoppingListsConfiguration(Optional.ofNullable(template.getShoppingListsConfiguration())
+                .map(com.commercetools.api.models.project.ShoppingListsConfiguration::deepCopy)
+                .orElse(null));
         return instance;
     }
 

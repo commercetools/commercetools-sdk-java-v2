@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -109,7 +110,7 @@ public interface CartDiscountValueGiftLineItemDraft
     }
 
     /**
-     * factory method to copy an instance of CartDiscountValueGiftLineItemDraft
+     * factory method to create a shallow copy CartDiscountValueGiftLineItemDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -119,6 +120,31 @@ public interface CartDiscountValueGiftLineItemDraft
         instance.setVariantId(template.getVariantId());
         instance.setSupplyChannel(template.getSupplyChannel());
         instance.setDistributionChannel(template.getDistributionChannel());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartDiscountValueGiftLineItemDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartDiscountValueGiftLineItemDraft deepCopy(
+            @Nullable final CartDiscountValueGiftLineItemDraft template) {
+        if (template == null) {
+            return null;
+        }
+        CartDiscountValueGiftLineItemDraftImpl instance = new CartDiscountValueGiftLineItemDraftImpl();
+        instance.setProduct(Optional.ofNullable(template.getProduct())
+                .map(com.commercetools.api.models.product.ProductResourceIdentifier::deepCopy)
+                .orElse(null));
+        instance.setVariantId(template.getVariantId());
+        instance.setSupplyChannel(Optional.ofNullable(template.getSupplyChannel())
+                .map(com.commercetools.api.models.channel.ChannelResourceIdentifier::deepCopy)
+                .orElse(null));
+        instance.setDistributionChannel(Optional.ofNullable(template.getDistributionChannel())
+                .map(com.commercetools.api.models.channel.ChannelResourceIdentifier::deepCopy)
+                .orElse(null));
         return instance;
     }
 

@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -138,7 +140,7 @@ public interface ProductSetAssetTagsAction extends ProductUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ProductSetAssetTagsAction
+     * factory method to create a shallow copy ProductSetAssetTagsAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -150,6 +152,26 @@ public interface ProductSetAssetTagsAction extends ProductUpdateAction {
         instance.setAssetId(template.getAssetId());
         instance.setAssetKey(template.getAssetKey());
         instance.setTags(template.getTags());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductSetAssetTagsAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductSetAssetTagsAction deepCopy(@Nullable final ProductSetAssetTagsAction template) {
+        if (template == null) {
+            return null;
+        }
+        ProductSetAssetTagsActionImpl instance = new ProductSetAssetTagsActionImpl();
+        instance.setVariantId(template.getVariantId());
+        instance.setSku(template.getSku());
+        instance.setStaged(template.getStaged());
+        instance.setAssetId(template.getAssetId());
+        instance.setAssetKey(template.getAssetKey());
+        instance.setTags(Optional.ofNullable(template.getTags()).map(ArrayList::new).orElse(null));
         return instance;
     }
 

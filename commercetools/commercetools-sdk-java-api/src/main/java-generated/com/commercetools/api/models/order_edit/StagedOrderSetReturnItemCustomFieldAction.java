@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
@@ -90,12 +91,30 @@ public interface StagedOrderSetReturnItemCustomFieldAction extends StagedOrderUp
     }
 
     /**
-     * factory method to copy an instance of StagedOrderSetReturnItemCustomFieldAction
+     * factory method to create a shallow copy StagedOrderSetReturnItemCustomFieldAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static StagedOrderSetReturnItemCustomFieldAction of(
             final StagedOrderSetReturnItemCustomFieldAction template) {
+        StagedOrderSetReturnItemCustomFieldActionImpl instance = new StagedOrderSetReturnItemCustomFieldActionImpl();
+        instance.setReturnItemId(template.getReturnItemId());
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedOrderSetReturnItemCustomFieldAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedOrderSetReturnItemCustomFieldAction deepCopy(
+            @Nullable final StagedOrderSetReturnItemCustomFieldAction template) {
+        if (template == null) {
+            return null;
+        }
         StagedOrderSetReturnItemCustomFieldActionImpl instance = new StagedOrderSetReturnItemCustomFieldActionImpl();
         instance.setReturnItemId(template.getReturnItemId());
         instance.setName(template.getName());

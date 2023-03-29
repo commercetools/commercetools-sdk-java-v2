@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -61,13 +62,31 @@ public interface IndividualExclusionProductSelectionType extends ProductSelectio
     }
 
     /**
-     * factory method to copy an instance of IndividualExclusionProductSelectionType
+     * factory method to create a shallow copy IndividualExclusionProductSelectionType
      * @param template instance to be copied
      * @return copy instance
      */
     public static IndividualExclusionProductSelectionType of(final IndividualExclusionProductSelectionType template) {
         IndividualExclusionProductSelectionTypeImpl instance = new IndividualExclusionProductSelectionTypeImpl();
         instance.setName(template.getName());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of IndividualExclusionProductSelectionType
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static IndividualExclusionProductSelectionType deepCopy(
+            @Nullable final IndividualExclusionProductSelectionType template) {
+        if (template == null) {
+            return null;
+        }
+        IndividualExclusionProductSelectionTypeImpl instance = new IndividualExclusionProductSelectionTypeImpl();
+        instance.setName(Optional.ofNullable(template.getName())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
         return instance;
     }
 

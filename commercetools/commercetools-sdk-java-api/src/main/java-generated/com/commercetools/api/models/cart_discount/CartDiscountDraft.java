@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -243,7 +244,7 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
     }
 
     /**
-     * factory method to copy an instance of CartDiscountDraft
+     * factory method to create a shallow copy CartDiscountDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -262,6 +263,43 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
         instance.setRequiresDiscountCode(template.getRequiresDiscountCode());
         instance.setStackingMode(template.getStackingMode());
         instance.setCustom(template.getCustom());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartDiscountDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartDiscountDraft deepCopy(@Nullable final CartDiscountDraft template) {
+        if (template == null) {
+            return null;
+        }
+        CartDiscountDraftImpl instance = new CartDiscountDraftImpl();
+        instance.setName(Optional.ofNullable(template.getName())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setKey(template.getKey());
+        instance.setDescription(Optional.ofNullable(template.getDescription())
+                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setValue(Optional.ofNullable(template.getValue())
+                .map(com.commercetools.api.models.cart_discount.CartDiscountValueDraft::deepCopy)
+                .orElse(null));
+        instance.setCartPredicate(template.getCartPredicate());
+        instance.setTarget(Optional.ofNullable(template.getTarget())
+                .map(com.commercetools.api.models.cart_discount.CartDiscountTarget::deepCopy)
+                .orElse(null));
+        instance.setSortOrder(template.getSortOrder());
+        instance.setIsActive(template.getIsActive());
+        instance.setValidFrom(template.getValidFrom());
+        instance.setValidUntil(template.getValidUntil());
+        instance.setRequiresDiscountCode(template.getRequiresDiscountCode());
+        instance.setStackingMode(template.getStackingMode());
+        instance.setCustom(Optional.ofNullable(template.getCustom())
+                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
+                .orElse(null));
         return instance;
     }
 

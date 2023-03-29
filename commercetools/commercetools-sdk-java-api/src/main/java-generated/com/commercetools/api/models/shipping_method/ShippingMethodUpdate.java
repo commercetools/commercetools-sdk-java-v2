@@ -4,7 +4,9 @@ package com.commercetools.api.models.shipping_method;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -80,7 +82,7 @@ public interface ShippingMethodUpdate extends
     }
 
     /**
-     * factory method to copy an instance of ShippingMethodUpdate
+     * factory method to create a shallow copy ShippingMethodUpdate
      * @param template instance to be copied
      * @return copy instance
      */
@@ -88,6 +90,26 @@ public interface ShippingMethodUpdate extends
         ShippingMethodUpdateImpl instance = new ShippingMethodUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(template.getActions());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ShippingMethodUpdate
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ShippingMethodUpdate deepCopy(@Nullable final ShippingMethodUpdate template) {
+        if (template == null) {
+            return null;
+        }
+        ShippingMethodUpdateImpl instance = new ShippingMethodUpdateImpl();
+        instance.setVersion(template.getVersion());
+        instance.setActions(Optional.ofNullable(template.getActions())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

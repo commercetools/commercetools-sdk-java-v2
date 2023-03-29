@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -76,7 +77,7 @@ public interface ProductTypeAddPlainEnumValueAction extends ProductTypeUpdateAct
     }
 
     /**
-     * factory method to copy an instance of ProductTypeAddPlainEnumValueAction
+     * factory method to create a shallow copy ProductTypeAddPlainEnumValueAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -84,6 +85,25 @@ public interface ProductTypeAddPlainEnumValueAction extends ProductTypeUpdateAct
         ProductTypeAddPlainEnumValueActionImpl instance = new ProductTypeAddPlainEnumValueActionImpl();
         instance.setAttributeName(template.getAttributeName());
         instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductTypeAddPlainEnumValueAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductTypeAddPlainEnumValueAction deepCopy(
+            @Nullable final ProductTypeAddPlainEnumValueAction template) {
+        if (template == null) {
+            return null;
+        }
+        ProductTypeAddPlainEnumValueActionImpl instance = new ProductTypeAddPlainEnumValueActionImpl();
+        instance.setAttributeName(template.getAttributeName());
+        instance.setValue(Optional.ofNullable(template.getValue())
+                .map(com.commercetools.api.models.product_type.AttributePlainEnumValue::deepCopy)
+                .orElse(null));
         return instance;
     }
 

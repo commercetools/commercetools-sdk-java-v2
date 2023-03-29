@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,26 @@ public interface OrderChangeOrderStateAction extends OrderUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of OrderChangeOrderStateAction
+     * factory method to create a shallow copy OrderChangeOrderStateAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static OrderChangeOrderStateAction of(final OrderChangeOrderStateAction template) {
+        OrderChangeOrderStateActionImpl instance = new OrderChangeOrderStateActionImpl();
+        instance.setOrderState(template.getOrderState());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderChangeOrderStateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderChangeOrderStateAction deepCopy(@Nullable final OrderChangeOrderStateAction template) {
+        if (template == null) {
+            return null;
+        }
         OrderChangeOrderStateActionImpl instance = new OrderChangeOrderStateActionImpl();
         instance.setOrderState(template.getOrderState());
         return instance;

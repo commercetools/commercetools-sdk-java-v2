@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.commercetools.api.models.common.ResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -72,11 +74,27 @@ public interface AttributeGroupResourceIdentifier
     }
 
     /**
-     * factory method to copy an instance of AttributeGroupResourceIdentifier
+     * factory method to create a shallow copy AttributeGroupResourceIdentifier
      * @param template instance to be copied
      * @return copy instance
      */
     public static AttributeGroupResourceIdentifier of(final AttributeGroupResourceIdentifier template) {
+        AttributeGroupResourceIdentifierImpl instance = new AttributeGroupResourceIdentifierImpl();
+        instance.setId(template.getId());
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of AttributeGroupResourceIdentifier
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AttributeGroupResourceIdentifier deepCopy(@Nullable final AttributeGroupResourceIdentifier template) {
+        if (template == null) {
+            return null;
+        }
         AttributeGroupResourceIdentifierImpl instance = new AttributeGroupResourceIdentifierImpl();
         instance.setId(template.getId());
         instance.setKey(template.getKey());

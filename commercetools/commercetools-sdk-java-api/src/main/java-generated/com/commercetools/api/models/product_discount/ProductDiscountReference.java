@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -76,7 +77,7 @@ public interface ProductDiscountReference
     }
 
     /**
-     * factory method to copy an instance of ProductDiscountReference
+     * factory method to create a shallow copy ProductDiscountReference
      * @param template instance to be copied
      * @return copy instance
      */
@@ -84,6 +85,24 @@ public interface ProductDiscountReference
         ProductDiscountReferenceImpl instance = new ProductDiscountReferenceImpl();
         instance.setId(template.getId());
         instance.setObj(template.getObj());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductDiscountReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductDiscountReference deepCopy(@Nullable final ProductDiscountReference template) {
+        if (template == null) {
+            return null;
+        }
+        ProductDiscountReferenceImpl instance = new ProductDiscountReferenceImpl();
+        instance.setId(template.getId());
+        instance.setObj(Optional.ofNullable(template.getObj())
+                .map(com.commercetools.api.models.product_discount.ProductDiscount::deepCopy)
+                .orElse(null));
         return instance;
     }
 

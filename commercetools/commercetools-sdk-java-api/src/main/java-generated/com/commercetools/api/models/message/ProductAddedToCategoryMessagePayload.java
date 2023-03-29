@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -77,13 +78,32 @@ public interface ProductAddedToCategoryMessagePayload extends MessagePayload {
     }
 
     /**
-     * factory method to copy an instance of ProductAddedToCategoryMessagePayload
+     * factory method to create a shallow copy ProductAddedToCategoryMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductAddedToCategoryMessagePayload of(final ProductAddedToCategoryMessagePayload template) {
         ProductAddedToCategoryMessagePayloadImpl instance = new ProductAddedToCategoryMessagePayloadImpl();
         instance.setCategory(template.getCategory());
+        instance.setStaged(template.getStaged());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductAddedToCategoryMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductAddedToCategoryMessagePayload deepCopy(
+            @Nullable final ProductAddedToCategoryMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        ProductAddedToCategoryMessagePayloadImpl instance = new ProductAddedToCategoryMessagePayloadImpl();
+        instance.setCategory(Optional.ofNullable(template.getCategory())
+                .map(com.commercetools.api.models.category.CategoryReference::deepCopy)
+                .orElse(null));
         instance.setStaged(template.getStaged());
         return instance;
     }

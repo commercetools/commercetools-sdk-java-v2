@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.store.StoreResourceIdentifier;
@@ -58,13 +59,30 @@ public interface OrderSetStoreAction extends OrderUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of OrderSetStoreAction
+     * factory method to create a shallow copy OrderSetStoreAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static OrderSetStoreAction of(final OrderSetStoreAction template) {
         OrderSetStoreActionImpl instance = new OrderSetStoreActionImpl();
         instance.setStore(template.getStore());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderSetStoreAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderSetStoreAction deepCopy(@Nullable final OrderSetStoreAction template) {
+        if (template == null) {
+            return null;
+        }
+        OrderSetStoreActionImpl instance = new OrderSetStoreActionImpl();
+        instance.setStore(Optional.ofNullable(template.getStore())
+                .map(com.commercetools.api.models.store.StoreResourceIdentifier::deepCopy)
+                .orElse(null));
         return instance;
     }
 

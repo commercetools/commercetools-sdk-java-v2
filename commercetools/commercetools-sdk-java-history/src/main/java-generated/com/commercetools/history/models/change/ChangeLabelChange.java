@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -134,7 +135,7 @@ public interface ChangeLabelChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of ChangeLabelChange
+     * factory method to create a shallow copy ChangeLabelChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -145,6 +146,29 @@ public interface ChangeLabelChange extends Change {
         instance.setAttributeName(template.getAttributeName());
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChangeLabelChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChangeLabelChange deepCopy(@Nullable final ChangeLabelChange template) {
+        if (template == null) {
+            return null;
+        }
+        ChangeLabelChangeImpl instance = new ChangeLabelChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setFieldName(template.getFieldName());
+        instance.setAttributeName(template.getAttributeName());
+        instance.setNextValue(Optional.ofNullable(template.getNextValue())
+                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
+                .orElse(null));
+        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
+                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
+                .orElse(null));
         return instance;
     }
 

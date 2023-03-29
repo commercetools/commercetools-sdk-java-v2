@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -67,11 +69,27 @@ public interface CartsConfiguration {
     }
 
     /**
-     * factory method to copy an instance of CartsConfiguration
+     * factory method to create a shallow copy CartsConfiguration
      * @param template instance to be copied
      * @return copy instance
      */
     public static CartsConfiguration of(final CartsConfiguration template) {
+        CartsConfigurationImpl instance = new CartsConfigurationImpl();
+        instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
+        instance.setCountryTaxRateFallbackEnabled(template.getCountryTaxRateFallbackEnabled());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartsConfiguration
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartsConfiguration deepCopy(@Nullable final CartsConfiguration template) {
+        if (template == null) {
+            return null;
+        }
         CartsConfigurationImpl instance = new CartsConfigurationImpl();
         instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
         instance.setCountryTaxRateFallbackEnabled(template.getCountryTaxRateFallbackEnabled());

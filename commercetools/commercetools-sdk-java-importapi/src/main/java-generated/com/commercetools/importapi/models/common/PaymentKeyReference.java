@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -41,11 +43,26 @@ public interface PaymentKeyReference extends KeyReference {
     }
 
     /**
-     * factory method to copy an instance of PaymentKeyReference
+     * factory method to create a shallow copy PaymentKeyReference
      * @param template instance to be copied
      * @return copy instance
      */
     public static PaymentKeyReference of(final PaymentKeyReference template) {
+        PaymentKeyReferenceImpl instance = new PaymentKeyReferenceImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of PaymentKeyReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static PaymentKeyReference deepCopy(@Nullable final PaymentKeyReference template) {
+        if (template == null) {
+            return null;
+        }
         PaymentKeyReferenceImpl instance = new PaymentKeyReferenceImpl();
         instance.setKey(template.getKey());
         return instance;

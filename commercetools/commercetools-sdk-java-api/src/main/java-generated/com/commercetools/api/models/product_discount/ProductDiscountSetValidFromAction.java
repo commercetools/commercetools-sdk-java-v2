@@ -6,6 +6,8 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -56,11 +58,27 @@ public interface ProductDiscountSetValidFromAction extends ProductDiscountUpdate
     }
 
     /**
-     * factory method to copy an instance of ProductDiscountSetValidFromAction
+     * factory method to create a shallow copy ProductDiscountSetValidFromAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductDiscountSetValidFromAction of(final ProductDiscountSetValidFromAction template) {
+        ProductDiscountSetValidFromActionImpl instance = new ProductDiscountSetValidFromActionImpl();
+        instance.setValidFrom(template.getValidFrom());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductDiscountSetValidFromAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductDiscountSetValidFromAction deepCopy(
+            @Nullable final ProductDiscountSetValidFromAction template) {
+        if (template == null) {
+            return null;
+        }
         ProductDiscountSetValidFromActionImpl instance = new ProductDiscountSetValidFromActionImpl();
         instance.setValidFrom(template.getValidFrom());
         return instance;

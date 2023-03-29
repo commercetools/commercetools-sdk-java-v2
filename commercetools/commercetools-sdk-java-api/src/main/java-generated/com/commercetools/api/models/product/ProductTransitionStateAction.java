@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.state.StateResourceIdentifier;
@@ -73,13 +74,31 @@ public interface ProductTransitionStateAction extends ProductUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ProductTransitionStateAction
+     * factory method to create a shallow copy ProductTransitionStateAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductTransitionStateAction of(final ProductTransitionStateAction template) {
         ProductTransitionStateActionImpl instance = new ProductTransitionStateActionImpl();
         instance.setState(template.getState());
+        instance.setForce(template.getForce());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductTransitionStateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductTransitionStateAction deepCopy(@Nullable final ProductTransitionStateAction template) {
+        if (template == null) {
+            return null;
+        }
+        ProductTransitionStateActionImpl instance = new ProductTransitionStateActionImpl();
+        instance.setState(Optional.ofNullable(template.getState())
+                .map(com.commercetools.api.models.state.StateResourceIdentifier::deepCopy)
+                .orElse(null));
         instance.setForce(template.getForce());
         return instance;
     }

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -77,7 +78,7 @@ public interface CartChangeCustomLineItemMoneyAction extends CartUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of CartChangeCustomLineItemMoneyAction
+     * factory method to create a shallow copy CartChangeCustomLineItemMoneyAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -85,6 +86,25 @@ public interface CartChangeCustomLineItemMoneyAction extends CartUpdateAction {
         CartChangeCustomLineItemMoneyActionImpl instance = new CartChangeCustomLineItemMoneyActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setMoney(template.getMoney());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartChangeCustomLineItemMoneyAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartChangeCustomLineItemMoneyAction deepCopy(
+            @Nullable final CartChangeCustomLineItemMoneyAction template) {
+        if (template == null) {
+            return null;
+        }
+        CartChangeCustomLineItemMoneyActionImpl instance = new CartChangeCustomLineItemMoneyActionImpl();
+        instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setMoney(Optional.ofNullable(template.getMoney())
+                .map(com.commercetools.api.models.common.Money::deepCopy)
+                .orElse(null));
         return instance;
     }
 

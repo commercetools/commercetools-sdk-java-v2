@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -40,11 +42,25 @@ public interface AttributeBooleanType extends AttributeType {
     }
 
     /**
-     * factory method to copy an instance of AttributeBooleanType
+     * factory method to create a shallow copy AttributeBooleanType
      * @param template instance to be copied
      * @return copy instance
      */
     public static AttributeBooleanType of(final AttributeBooleanType template) {
+        AttributeBooleanTypeImpl instance = new AttributeBooleanTypeImpl();
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of AttributeBooleanType
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AttributeBooleanType deepCopy(@Nullable final AttributeBooleanType template) {
+        if (template == null) {
+            return null;
+        }
         AttributeBooleanTypeImpl instance = new AttributeBooleanTypeImpl();
         return instance;
     }

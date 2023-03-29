@@ -4,7 +4,9 @@ package com.commercetools.importapi.models.order_patches;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -105,7 +107,7 @@ public interface DeliveryDraft extends io.vrap.rmf.base.client.Draft<DeliveryDra
     }
 
     /**
-     * factory method to copy an instance of DeliveryDraft
+     * factory method to create a shallow copy DeliveryDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -114,6 +116,33 @@ public interface DeliveryDraft extends io.vrap.rmf.base.client.Draft<DeliveryDra
         instance.setItems(template.getItems());
         instance.setAddress(template.getAddress());
         instance.setParcels(template.getParcels());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of DeliveryDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static DeliveryDraft deepCopy(@Nullable final DeliveryDraft template) {
+        if (template == null) {
+            return null;
+        }
+        DeliveryDraftImpl instance = new DeliveryDraftImpl();
+        instance.setItems(Optional.ofNullable(template.getItems())
+                .map(t -> t.stream()
+                        .map(com.commercetools.importapi.models.orders.DeliveryItem::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setAddress(Optional.ofNullable(template.getAddress())
+                .map(com.commercetools.importapi.models.common.Address::deepCopy)
+                .orElse(null));
+        instance.setParcels(Optional.ofNullable(template.getParcels())
+                .map(t -> t.stream()
+                        .map(com.commercetools.importapi.models.order_patches.DeliveryParcelDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

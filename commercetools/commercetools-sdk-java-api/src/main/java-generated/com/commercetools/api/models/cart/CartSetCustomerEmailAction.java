@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -55,11 +57,26 @@ public interface CartSetCustomerEmailAction extends CartUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of CartSetCustomerEmailAction
+     * factory method to create a shallow copy CartSetCustomerEmailAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static CartSetCustomerEmailAction of(final CartSetCustomerEmailAction template) {
+        CartSetCustomerEmailActionImpl instance = new CartSetCustomerEmailActionImpl();
+        instance.setEmail(template.getEmail());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartSetCustomerEmailAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartSetCustomerEmailAction deepCopy(@Nullable final CartSetCustomerEmailAction template) {
+        if (template == null) {
+            return null;
+        }
         CartSetCustomerEmailActionImpl instance = new CartSetCustomerEmailActionImpl();
         instance.setEmail(template.getEmail());
         return instance;

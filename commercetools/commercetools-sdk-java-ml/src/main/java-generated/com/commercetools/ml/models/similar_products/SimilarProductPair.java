@@ -4,7 +4,9 @@ package com.commercetools.ml.models.similar_products;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -79,7 +81,7 @@ public interface SimilarProductPair {
     }
 
     /**
-     * factory method to copy an instance of SimilarProductPair
+     * factory method to create a shallow copy SimilarProductPair
      * @param template instance to be copied
      * @return copy instance
      */
@@ -87,6 +89,26 @@ public interface SimilarProductPair {
         SimilarProductPairImpl instance = new SimilarProductPairImpl();
         instance.setConfidence(template.getConfidence());
         instance.setProducts(template.getProducts());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SimilarProductPair
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SimilarProductPair deepCopy(@Nullable final SimilarProductPair template) {
+        if (template == null) {
+            return null;
+        }
+        SimilarProductPairImpl instance = new SimilarProductPairImpl();
+        instance.setConfidence(template.getConfidence());
+        instance.setProducts(Optional.ofNullable(template.getProducts())
+                .map(t -> t.stream()
+                        .map(com.commercetools.ml.models.similar_products.SimilarProduct::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

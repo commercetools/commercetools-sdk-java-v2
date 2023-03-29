@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -75,7 +76,7 @@ public interface TaxCategoryReference extends Reference, com.commercetools.api.m
     }
 
     /**
-     * factory method to copy an instance of TaxCategoryReference
+     * factory method to create a shallow copy TaxCategoryReference
      * @param template instance to be copied
      * @return copy instance
      */
@@ -83,6 +84,24 @@ public interface TaxCategoryReference extends Reference, com.commercetools.api.m
         TaxCategoryReferenceImpl instance = new TaxCategoryReferenceImpl();
         instance.setId(template.getId());
         instance.setObj(template.getObj());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of TaxCategoryReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static TaxCategoryReference deepCopy(@Nullable final TaxCategoryReference template) {
+        if (template == null) {
+            return null;
+        }
+        TaxCategoryReferenceImpl instance = new TaxCategoryReferenceImpl();
+        instance.setId(template.getId());
+        instance.setObj(Optional.ofNullable(template.getObj())
+                .map(com.commercetools.api.models.tax_category.TaxCategory::deepCopy)
+                .orElse(null));
         return instance;
     }
 

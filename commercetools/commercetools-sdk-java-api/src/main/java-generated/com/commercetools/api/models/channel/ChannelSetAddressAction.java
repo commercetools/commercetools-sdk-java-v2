@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.common.BaseAddress;
@@ -58,13 +59,30 @@ public interface ChannelSetAddressAction extends ChannelUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ChannelSetAddressAction
+     * factory method to create a shallow copy ChannelSetAddressAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ChannelSetAddressAction of(final ChannelSetAddressAction template) {
         ChannelSetAddressActionImpl instance = new ChannelSetAddressActionImpl();
         instance.setAddress(template.getAddress());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChannelSetAddressAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChannelSetAddressAction deepCopy(@Nullable final ChannelSetAddressAction template) {
+        if (template == null) {
+            return null;
+        }
+        ChannelSetAddressActionImpl instance = new ChannelSetAddressActionImpl();
+        instance.setAddress(Optional.ofNullable(template.getAddress())
+                .map(com.commercetools.api.models.common.BaseAddress::deepCopy)
+                .orElse(null));
         return instance;
     }
 

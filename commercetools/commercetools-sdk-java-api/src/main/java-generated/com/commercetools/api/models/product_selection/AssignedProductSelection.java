@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -106,7 +107,7 @@ public interface AssignedProductSelection {
     }
 
     /**
-     * factory method to copy an instance of AssignedProductSelection
+     * factory method to create a shallow copy AssignedProductSelection
      * @param template instance to be copied
      * @return copy instance
      */
@@ -115,6 +116,30 @@ public interface AssignedProductSelection {
         instance.setProductSelection(template.getProductSelection());
         instance.setVariantSelection(template.getVariantSelection());
         instance.setVariantExclusion(template.getVariantExclusion());
+        instance.setCreatedAt(template.getCreatedAt());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of AssignedProductSelection
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AssignedProductSelection deepCopy(@Nullable final AssignedProductSelection template) {
+        if (template == null) {
+            return null;
+        }
+        AssignedProductSelectionImpl instance = new AssignedProductSelectionImpl();
+        instance.setProductSelection(Optional.ofNullable(template.getProductSelection())
+                .map(com.commercetools.api.models.product_selection.ProductSelectionReference::deepCopy)
+                .orElse(null));
+        instance.setVariantSelection(Optional.ofNullable(template.getVariantSelection())
+                .map(com.commercetools.api.models.product_selection.ProductVariantSelection::deepCopy)
+                .orElse(null));
+        instance.setVariantExclusion(Optional.ofNullable(template.getVariantExclusion())
+                .map(com.commercetools.api.models.product_selection.ProductVariantExclusion::deepCopy)
+                .orElse(null));
         instance.setCreatedAt(template.getCreatedAt());
         return instance;
     }

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -88,7 +89,7 @@ public interface SetCartClassificationShippingRateInputValue {
     }
 
     /**
-     * factory method to copy an instance of SetCartClassificationShippingRateInputValue
+     * factory method to create a shallow copy SetCartClassificationShippingRateInputValue
      * @param template instance to be copied
      * @return copy instance
      */
@@ -98,6 +99,26 @@ public interface SetCartClassificationShippingRateInputValue {
         instance.setType(template.getType());
         instance.setKey(template.getKey());
         instance.setLabel(template.getLabel());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetCartClassificationShippingRateInputValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetCartClassificationShippingRateInputValue deepCopy(
+            @Nullable final SetCartClassificationShippingRateInputValue template) {
+        if (template == null) {
+            return null;
+        }
+        SetCartClassificationShippingRateInputValueImpl instance = new SetCartClassificationShippingRateInputValueImpl();
+        instance.setType(template.getType());
+        instance.setKey(template.getKey());
+        instance.setLabel(Optional.ofNullable(template.getLabel())
+                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
+                .orElse(null));
         return instance;
     }
 

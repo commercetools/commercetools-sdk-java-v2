@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -60,13 +61,31 @@ public interface BusinessUnitChangeParentUnitAction extends BusinessUnitUpdateAc
     }
 
     /**
-     * factory method to copy an instance of BusinessUnitChangeParentUnitAction
+     * factory method to create a shallow copy BusinessUnitChangeParentUnitAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static BusinessUnitChangeParentUnitAction of(final BusinessUnitChangeParentUnitAction template) {
         BusinessUnitChangeParentUnitActionImpl instance = new BusinessUnitChangeParentUnitActionImpl();
         instance.setParentUnit(template.getParentUnit());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of BusinessUnitChangeParentUnitAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static BusinessUnitChangeParentUnitAction deepCopy(
+            @Nullable final BusinessUnitChangeParentUnitAction template) {
+        if (template == null) {
+            return null;
+        }
+        BusinessUnitChangeParentUnitActionImpl instance = new BusinessUnitChangeParentUnitActionImpl();
+        instance.setParentUnit(Optional.ofNullable(template.getParentUnit())
+                .map(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier::deepCopy)
+                .orElse(null));
         return instance;
     }
 

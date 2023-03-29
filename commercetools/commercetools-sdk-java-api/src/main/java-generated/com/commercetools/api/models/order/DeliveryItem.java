@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -69,11 +70,27 @@ public interface DeliveryItem {
     }
 
     /**
-     * factory method to copy an instance of DeliveryItem
+     * factory method to create a shallow copy DeliveryItem
      * @param template instance to be copied
      * @return copy instance
      */
     public static DeliveryItem of(final DeliveryItem template) {
+        DeliveryItemImpl instance = new DeliveryItemImpl();
+        instance.setId(template.getId());
+        instance.setQuantity(template.getQuantity());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of DeliveryItem
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static DeliveryItem deepCopy(@Nullable final DeliveryItem template) {
+        if (template == null) {
+            return null;
+        }
         DeliveryItemImpl instance = new DeliveryItemImpl();
         instance.setId(template.getId());
         instance.setQuantity(template.getQuantity());

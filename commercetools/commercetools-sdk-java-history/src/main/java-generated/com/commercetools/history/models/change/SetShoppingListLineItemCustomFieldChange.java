@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -147,7 +148,7 @@ public interface SetShoppingListLineItemCustomFieldChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetShoppingListLineItemCustomFieldChange
+     * factory method to create a shallow copy SetShoppingListLineItemCustomFieldChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -157,6 +158,29 @@ public interface SetShoppingListLineItemCustomFieldChange extends Change {
         instance.setName(template.getName());
         instance.setCustomTypeId(template.getCustomTypeId());
         instance.setLineItem(template.getLineItem());
+        instance.setNextValue(template.getNextValue());
+        instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetShoppingListLineItemCustomFieldChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetShoppingListLineItemCustomFieldChange deepCopy(
+            @Nullable final SetShoppingListLineItemCustomFieldChange template) {
+        if (template == null) {
+            return null;
+        }
+        SetShoppingListLineItemCustomFieldChangeImpl instance = new SetShoppingListLineItemCustomFieldChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setName(template.getName());
+        instance.setCustomTypeId(template.getCustomTypeId());
+        instance.setLineItem(Optional.ofNullable(template.getLineItem())
+                .map(com.commercetools.history.models.change_value.ShoppingListLineItemValue::deepCopy)
+                .orElse(null));
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
         return instance;

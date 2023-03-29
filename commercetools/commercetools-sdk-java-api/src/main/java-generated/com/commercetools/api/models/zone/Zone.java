@@ -5,7 +5,9 @@ import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -209,7 +211,7 @@ public interface Zone extends BaseResource, ZoneMixin, com.commercetools.api.mod
     }
 
     /**
-     * factory method to copy an instance of Zone
+     * factory method to create a shallow copy Zone
      * @param template instance to be copied
      * @return copy instance
      */
@@ -225,6 +227,38 @@ public interface Zone extends BaseResource, ZoneMixin, com.commercetools.api.mod
         instance.setName(template.getName());
         instance.setDescription(template.getDescription());
         instance.setLocations(template.getLocations());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of Zone
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static Zone deepCopy(@Nullable final Zone template) {
+        if (template == null) {
+            return null;
+        }
+        ZoneImpl instance = new ZoneImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(Optional.ofNullable(template.getLastModifiedBy())
+                .map(com.commercetools.api.models.common.LastModifiedBy::deepCopy)
+                .orElse(null));
+        instance.setCreatedBy(Optional.ofNullable(template.getCreatedBy())
+                .map(com.commercetools.api.models.common.CreatedBy::deepCopy)
+                .orElse(null));
+        instance.setKey(template.getKey());
+        instance.setName(template.getName());
+        instance.setDescription(template.getDescription());
+        instance.setLocations(Optional.ofNullable(template.getLocations())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.zone.Location::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -40,11 +42,25 @@ public interface CartScoreType extends ShippingRateInputType {
     }
 
     /**
-     * factory method to copy an instance of CartScoreType
+     * factory method to create a shallow copy CartScoreType
      * @param template instance to be copied
      * @return copy instance
      */
     public static CartScoreType of(final CartScoreType template) {
+        CartScoreTypeImpl instance = new CartScoreTypeImpl();
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartScoreType
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartScoreType deepCopy(@Nullable final CartScoreType template) {
+        if (template == null) {
+            return null;
+        }
         CartScoreTypeImpl instance = new CartScoreTypeImpl();
         return instance;
     }

@@ -4,7 +4,9 @@ package com.commercetools.api.models.message;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -125,7 +127,7 @@ public interface DeliveryItemsUpdatedMessagePayload extends OrderMessagePayload 
     }
 
     /**
-     * factory method to copy an instance of DeliveryItemsUpdatedMessagePayload
+     * factory method to create a shallow copy DeliveryItemsUpdatedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -134,6 +136,33 @@ public interface DeliveryItemsUpdatedMessagePayload extends OrderMessagePayload 
         instance.setDeliveryId(template.getDeliveryId());
         instance.setItems(template.getItems());
         instance.setOldItems(template.getOldItems());
+        instance.setShippingKey(template.getShippingKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of DeliveryItemsUpdatedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static DeliveryItemsUpdatedMessagePayload deepCopy(
+            @Nullable final DeliveryItemsUpdatedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        DeliveryItemsUpdatedMessagePayloadImpl instance = new DeliveryItemsUpdatedMessagePayloadImpl();
+        instance.setDeliveryId(template.getDeliveryId());
+        instance.setItems(Optional.ofNullable(template.getItems())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.order.DeliveryItem::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setOldItems(Optional.ofNullable(template.getOldItems())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.order.DeliveryItem::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setShippingKey(template.getShippingKey());
         return instance;
     }

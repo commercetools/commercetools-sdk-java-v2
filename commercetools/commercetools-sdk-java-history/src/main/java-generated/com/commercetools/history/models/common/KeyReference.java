@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -69,11 +70,27 @@ public interface KeyReference {
     }
 
     /**
-     * factory method to copy an instance of KeyReference
+     * factory method to create a shallow copy KeyReference
      * @param template instance to be copied
      * @return copy instance
      */
     public static KeyReference of(final KeyReference template) {
+        KeyReferenceImpl instance = new KeyReferenceImpl();
+        instance.setKey(template.getKey());
+        instance.setTypeId(template.getTypeId());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of KeyReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static KeyReference deepCopy(@Nullable final KeyReference template) {
+        if (template == null) {
+            return null;
+        }
         KeyReferenceImpl instance = new KeyReferenceImpl();
         instance.setKey(template.getKey());
         instance.setTypeId(template.getTypeId());

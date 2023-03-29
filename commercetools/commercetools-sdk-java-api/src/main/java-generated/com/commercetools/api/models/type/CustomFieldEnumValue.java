@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -69,11 +70,27 @@ public interface CustomFieldEnumValue {
     }
 
     /**
-     * factory method to copy an instance of CustomFieldEnumValue
+     * factory method to create a shallow copy CustomFieldEnumValue
      * @param template instance to be copied
      * @return copy instance
      */
     public static CustomFieldEnumValue of(final CustomFieldEnumValue template) {
+        CustomFieldEnumValueImpl instance = new CustomFieldEnumValueImpl();
+        instance.setKey(template.getKey());
+        instance.setLabel(template.getLabel());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomFieldEnumValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomFieldEnumValue deepCopy(@Nullable final CustomFieldEnumValue template) {
+        if (template == null) {
+            return null;
+        }
         CustomFieldEnumValueImpl instance = new CustomFieldEnumValueImpl();
         instance.setKey(template.getKey());
         instance.setLabel(template.getLabel());

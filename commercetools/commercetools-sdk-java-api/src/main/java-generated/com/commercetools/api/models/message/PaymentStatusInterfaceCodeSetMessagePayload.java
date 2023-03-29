@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -73,12 +74,29 @@ public interface PaymentStatusInterfaceCodeSetMessagePayload extends MessagePayl
     }
 
     /**
-     * factory method to copy an instance of PaymentStatusInterfaceCodeSetMessagePayload
+     * factory method to create a shallow copy PaymentStatusInterfaceCodeSetMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
     public static PaymentStatusInterfaceCodeSetMessagePayload of(
             final PaymentStatusInterfaceCodeSetMessagePayload template) {
+        PaymentStatusInterfaceCodeSetMessagePayloadImpl instance = new PaymentStatusInterfaceCodeSetMessagePayloadImpl();
+        instance.setPaymentId(template.getPaymentId());
+        instance.setInterfaceCode(template.getInterfaceCode());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of PaymentStatusInterfaceCodeSetMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static PaymentStatusInterfaceCodeSetMessagePayload deepCopy(
+            @Nullable final PaymentStatusInterfaceCodeSetMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
         PaymentStatusInterfaceCodeSetMessagePayloadImpl instance = new PaymentStatusInterfaceCodeSetMessagePayloadImpl();
         instance.setPaymentId(template.getPaymentId());
         instance.setInterfaceCode(template.getInterfaceCode());

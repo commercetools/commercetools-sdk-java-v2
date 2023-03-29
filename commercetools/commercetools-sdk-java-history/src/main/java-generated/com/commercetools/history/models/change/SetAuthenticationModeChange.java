@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.common.AuthenticationMode;
@@ -99,11 +100,28 @@ public interface SetAuthenticationModeChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetAuthenticationModeChange
+     * factory method to create a shallow copy SetAuthenticationModeChange
      * @param template instance to be copied
      * @return copy instance
      */
     public static SetAuthenticationModeChange of(final SetAuthenticationModeChange template) {
+        SetAuthenticationModeChangeImpl instance = new SetAuthenticationModeChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetAuthenticationModeChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetAuthenticationModeChange deepCopy(@Nullable final SetAuthenticationModeChange template) {
+        if (template == null) {
+            return null;
+        }
         SetAuthenticationModeChangeImpl instance = new SetAuthenticationModeChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());

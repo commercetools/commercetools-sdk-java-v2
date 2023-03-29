@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -143,7 +144,7 @@ public interface QuoteDraft extends com.commercetools.api.models.CustomizableDra
     }
 
     /**
-     * factory method to copy an instance of QuoteDraft
+     * factory method to create a shallow copy QuoteDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -155,6 +156,32 @@ public interface QuoteDraft extends com.commercetools.api.models.CustomizableDra
         instance.setStagedQuoteStateToSent(template.getStagedQuoteStateToSent());
         instance.setState(template.getState());
         instance.setCustom(template.getCustom());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of QuoteDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static QuoteDraft deepCopy(@Nullable final QuoteDraft template) {
+        if (template == null) {
+            return null;
+        }
+        QuoteDraftImpl instance = new QuoteDraftImpl();
+        instance.setKey(template.getKey());
+        instance.setStagedQuote(Optional.ofNullable(template.getStagedQuote())
+                .map(com.commercetools.api.models.staged_quote.StagedQuoteResourceIdentifier::deepCopy)
+                .orElse(null));
+        instance.setStagedQuoteVersion(template.getStagedQuoteVersion());
+        instance.setStagedQuoteStateToSent(template.getStagedQuoteStateToSent());
+        instance.setState(Optional.ofNullable(template.getState())
+                .map(com.commercetools.api.models.state.StateReference::deepCopy)
+                .orElse(null));
+        instance.setCustom(Optional.ofNullable(template.getCustom())
+                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
+                .orElse(null));
         return instance;
     }
 

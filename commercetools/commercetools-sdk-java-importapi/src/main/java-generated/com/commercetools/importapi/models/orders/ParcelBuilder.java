@@ -38,6 +38,9 @@ public class ParcelBuilder implements Builder<Parcel> {
     @Nullable
     private java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> items;
 
+    @Nullable
+    private com.commercetools.importapi.models.customfields.Custom custom;
+
     /**
      * set the value to the id
      * @param id value to be set
@@ -175,6 +178,29 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
+     *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public ParcelBuilder custom(
+            Function<com.commercetools.importapi.models.customfields.CustomBuilder, com.commercetools.importapi.models.customfields.CustomBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.importapi.models.customfields.CustomBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+     * @param custom value to be set
+     * @return Builder
+     */
+
+    public ParcelBuilder custom(@Nullable final com.commercetools.importapi.models.customfields.Custom custom) {
+        this.custom = custom;
+        return this;
+    }
+
+    /**
      * value of id}
      * @return id
      */
@@ -223,13 +249,23 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
+     *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+     * @return custom
+     */
+
+    @Nullable
+    public com.commercetools.importapi.models.customfields.Custom getCustom() {
+        return this.custom;
+    }
+
+    /**
      * builds Parcel with checking for non-null required values
      * @return Parcel
      */
     public Parcel build() {
         Objects.requireNonNull(id, Parcel.class + ": id is missing");
         Objects.requireNonNull(createdAt, Parcel.class + ": createdAt is missing");
-        return new ParcelImpl(id, createdAt, measurements, trackingData, items);
+        return new ParcelImpl(id, createdAt, measurements, trackingData, items, custom);
     }
 
     /**
@@ -237,7 +273,7 @@ public class ParcelBuilder implements Builder<Parcel> {
      * @return Parcel
      */
     public Parcel buildUnchecked() {
-        return new ParcelImpl(id, createdAt, measurements, trackingData, items);
+        return new ParcelImpl(id, createdAt, measurements, trackingData, items, custom);
     }
 
     /**
@@ -260,6 +296,7 @@ public class ParcelBuilder implements Builder<Parcel> {
         builder.measurements = template.getMeasurements();
         builder.trackingData = template.getTrackingData();
         builder.items = template.getItems();
+        builder.custom = template.getCustom();
         return builder;
     }
 

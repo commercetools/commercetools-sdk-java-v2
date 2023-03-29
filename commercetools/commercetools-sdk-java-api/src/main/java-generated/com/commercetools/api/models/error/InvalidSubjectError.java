@@ -48,7 +48,7 @@ public interface InvalidSubjectError extends ErrorObject {
     public static InvalidSubjectError of(final InvalidSubjectError template) {
         InvalidSubjectErrorImpl instance = new InvalidSubjectErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         return instance;
     }
 

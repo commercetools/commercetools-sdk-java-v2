@@ -61,6 +61,7 @@ public interface CategoryOrderHints {
      */
     public static CategoryOrderHints of(final CategoryOrderHints template) {
         CategoryOrderHintsImpl instance = new CategoryOrderHintsImpl();
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         return instance;
     }
 

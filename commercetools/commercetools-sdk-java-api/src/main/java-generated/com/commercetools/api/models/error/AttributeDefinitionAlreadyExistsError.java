@@ -122,7 +122,7 @@ public interface AttributeDefinitionAlreadyExistsError extends ErrorObject {
     public static AttributeDefinitionAlreadyExistsError of(final AttributeDefinitionAlreadyExistsError template) {
         AttributeDefinitionAlreadyExistsErrorImpl instance = new AttributeDefinitionAlreadyExistsErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         instance.setConflictingProductTypeId(template.getConflictingProductTypeId());
         instance.setConflictingProductTypeName(template.getConflictingProductTypeName());
         instance.setConflictingAttributeName(template.getConflictingAttributeName());

@@ -48,7 +48,7 @@ public interface InsufficientScopeError extends ErrorObject {
     public static InsufficientScopeError of(final InsufficientScopeError template) {
         InsufficientScopeErrorImpl instance = new InsufficientScopeErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         return instance;
     }
 

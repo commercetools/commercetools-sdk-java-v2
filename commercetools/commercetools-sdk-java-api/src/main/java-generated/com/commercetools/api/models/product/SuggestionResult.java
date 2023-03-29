@@ -63,6 +63,7 @@ public interface SuggestionResult {
      */
     public static SuggestionResult of(final SuggestionResult template) {
         SuggestionResultImpl instance = new SuggestionResultImpl();
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         return instance;
     }
 

@@ -73,7 +73,7 @@ public interface SearchIndexingInProgressError extends ErrorObject {
     public static SearchIndexingInProgressError of(final SearchIndexingInProgressError template) {
         SearchIndexingInProgressErrorImpl instance = new SearchIndexingInProgressErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         return instance;
     }
 

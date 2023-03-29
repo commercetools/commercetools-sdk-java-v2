@@ -22,7 +22,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     AssociateDraft associateDraft = AssociateDraft.builder()
- *             .plusRoles(rolesBuilder -> rolesBuilder)
  *             .customer(customerBuilder -> customerBuilder)
  *             .build()
  * </code></pre>
@@ -36,7 +35,7 @@ public interface AssociateDraft extends io.vrap.rmf.base.client.Draft<AssociateD
      *  <p>Roles the Associate should hold within the Business Unit.</p>
      * @return roles
      */
-    @NotNull
+
     @JsonProperty("roles")
     public List<AssociateRole> getRoles();
 

@@ -130,7 +130,7 @@ public interface ExtensionUpdateActionsFailedError extends ErrorObject {
     public static ExtensionUpdateActionsFailedError of(final ExtensionUpdateActionsFailedError template) {
         ExtensionUpdateActionsFailedErrorImpl instance = new ExtensionUpdateActionsFailedErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         instance.setLocalizedMessage(template.getLocalizedMessage());
         instance.setExtensionExtraInfo(template.getExtensionExtraInfo());
         instance.setExtensionErrors(template.getExtensionErrors());

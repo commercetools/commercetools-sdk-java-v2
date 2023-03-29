@@ -74,7 +74,7 @@ public interface OverCapacityError extends ErrorObject {
     public static OverCapacityError of(final OverCapacityError template) {
         OverCapacityErrorImpl instance = new OverCapacityErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         return instance;
     }
 

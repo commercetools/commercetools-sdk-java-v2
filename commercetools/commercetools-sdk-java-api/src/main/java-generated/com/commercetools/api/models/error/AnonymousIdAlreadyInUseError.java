@@ -74,7 +74,7 @@ public interface AnonymousIdAlreadyInUseError extends ErrorObject {
     public static AnonymousIdAlreadyInUseError of(final AnonymousIdAlreadyInUseError template) {
         AnonymousIdAlreadyInUseErrorImpl instance = new AnonymousIdAlreadyInUseErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         return instance;
     }
 

@@ -60,6 +60,7 @@ public interface Attributes {
      */
     public static Attributes of(final Attributes template) {
         AttributesImpl instance = new AttributesImpl();
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         return instance;
     }
 

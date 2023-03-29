@@ -106,7 +106,7 @@ public interface InvalidItemShippingDetailsError extends ErrorObject {
     public static InvalidItemShippingDetailsError of(final InvalidItemShippingDetailsError template) {
         InvalidItemShippingDetailsErrorImpl instance = new InvalidItemShippingDetailsErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         instance.setSubject(template.getSubject());
         instance.setItemId(template.getItemId());
         return instance;

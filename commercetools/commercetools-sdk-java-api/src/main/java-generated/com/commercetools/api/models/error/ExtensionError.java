@@ -127,7 +127,7 @@ public interface ExtensionError {
         instance.setMessage(template.getMessage());
         instance.setExtensionId(template.getExtensionId());
         instance.setExtensionKey(template.getExtensionKey());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         return instance;
     }
 

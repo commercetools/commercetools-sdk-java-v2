@@ -191,7 +191,7 @@ public interface ExtensionBadResponseError extends ErrorObject {
     public static ExtensionBadResponseError of(final ExtensionBadResponseError template) {
         ExtensionBadResponseErrorImpl instance = new ExtensionBadResponseErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         instance.setLocalizedMessage(template.getLocalizedMessage());
         instance.setExtensionExtraInfo(template.getExtensionExtraInfo());
         instance.setExtensionErrors(template.getExtensionErrors());

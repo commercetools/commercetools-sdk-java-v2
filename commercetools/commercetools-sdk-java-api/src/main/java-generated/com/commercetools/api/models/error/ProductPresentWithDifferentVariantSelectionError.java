@@ -112,7 +112,7 @@ public interface ProductPresentWithDifferentVariantSelectionError extends ErrorO
             final ProductPresentWithDifferentVariantSelectionError template) {
         ProductPresentWithDifferentVariantSelectionErrorImpl instance = new ProductPresentWithDifferentVariantSelectionErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         instance.setProduct(template.getProduct());
         instance.setExistingVariantSelection(template.getExistingVariantSelection());
         return instance;

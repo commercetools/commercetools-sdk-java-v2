@@ -203,7 +203,7 @@ public interface DuplicateStandalonePriceScopeError extends ErrorObject {
     public static DuplicateStandalonePriceScopeError of(final DuplicateStandalonePriceScopeError template) {
         DuplicateStandalonePriceScopeErrorImpl instance = new DuplicateStandalonePriceScopeErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         instance.setConflictingStandalonePrice(template.getConflictingStandalonePrice());
         instance.setSku(template.getSku());
         instance.setCurrency(template.getCurrency());

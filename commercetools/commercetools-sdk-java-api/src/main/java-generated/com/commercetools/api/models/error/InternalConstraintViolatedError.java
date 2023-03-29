@@ -73,7 +73,7 @@ public interface InternalConstraintViolatedError extends ErrorObject {
     public static InternalConstraintViolatedError of(final InternalConstraintViolatedError template) {
         InternalConstraintViolatedErrorImpl instance = new InternalConstraintViolatedErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         return instance;
     }
 

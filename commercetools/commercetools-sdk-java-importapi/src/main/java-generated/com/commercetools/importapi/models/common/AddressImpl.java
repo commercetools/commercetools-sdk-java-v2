@@ -327,7 +327,7 @@ public class AddressImpl implements Address, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields for the address.</p>
+     *  <p>Custom Fields defined for the Address. Custom Fields can only be applied to <code>shippingAddress</code>.</p>
      */
 
     public com.commercetools.importapi.models.customfields.Custom getCustom() {

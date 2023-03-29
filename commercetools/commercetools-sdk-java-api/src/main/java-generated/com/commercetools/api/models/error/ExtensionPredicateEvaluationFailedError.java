@@ -91,7 +91,7 @@ public interface ExtensionPredicateEvaluationFailedError extends ErrorObject {
     public static ExtensionPredicateEvaluationFailedError of(final ExtensionPredicateEvaluationFailedError template) {
         ExtensionPredicateEvaluationFailedErrorImpl instance = new ExtensionPredicateEvaluationFailedErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         instance.setErrorByExtension(template.getErrorByExtension());
         return instance;
     }

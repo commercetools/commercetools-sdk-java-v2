@@ -60,6 +60,7 @@ public interface GraphQLVariablesMap {
      */
     public static GraphQLVariablesMap of(final GraphQLVariablesMap template) {
         GraphQLVariablesMapImpl instance = new GraphQLVariablesMapImpl();
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         return instance;
     }
 

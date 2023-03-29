@@ -73,7 +73,7 @@ public interface SearchFacetPathNotFoundError extends ErrorObject {
     public static SearchFacetPathNotFoundError of(final SearchFacetPathNotFoundError template) {
         SearchFacetPathNotFoundErrorImpl instance = new SearchFacetPathNotFoundErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         return instance;
     }
 

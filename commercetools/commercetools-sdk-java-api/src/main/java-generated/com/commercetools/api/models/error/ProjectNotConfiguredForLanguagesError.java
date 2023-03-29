@@ -97,7 +97,7 @@ public interface ProjectNotConfiguredForLanguagesError extends ErrorObject {
     public static ProjectNotConfiguredForLanguagesError of(final ProjectNotConfiguredForLanguagesError template) {
         ProjectNotConfiguredForLanguagesErrorImpl instance = new ProjectNotConfiguredForLanguagesErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         instance.setLanguages(template.getLanguages());
         return instance;
     }

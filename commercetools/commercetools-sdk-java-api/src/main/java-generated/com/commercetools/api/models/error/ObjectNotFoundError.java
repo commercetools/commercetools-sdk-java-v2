@@ -73,7 +73,7 @@ public interface ObjectNotFoundError extends ErrorObject {
     public static ObjectNotFoundError of(final ObjectNotFoundError template) {
         ObjectNotFoundErrorImpl instance = new ObjectNotFoundErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         return instance;
     }
 

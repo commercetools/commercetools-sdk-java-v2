@@ -233,7 +233,7 @@ public interface OverlappingStandalonePriceValidityError extends ErrorObject {
     public static OverlappingStandalonePriceValidityError of(final OverlappingStandalonePriceValidityError template) {
         OverlappingStandalonePriceValidityErrorImpl instance = new OverlappingStandalonePriceValidityErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         instance.setConflictingStandalonePrice(template.getConflictingStandalonePrice());
         instance.setSku(template.getSku());
         instance.setCurrency(template.getCurrency());

@@ -104,7 +104,7 @@ public interface ExtensionNoResponseError extends ErrorObject {
     public static ExtensionNoResponseError of(final ExtensionNoResponseError template) {
         ExtensionNoResponseErrorImpl instance = new ExtensionNoResponseErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         instance.setExtensionId(template.getExtensionId());
         instance.setExtensionKey(template.getExtensionKey());
         return instance;

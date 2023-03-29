@@ -93,7 +93,7 @@ public interface EditPreviewFailedError extends ErrorObject {
     public static EditPreviewFailedError of(final EditPreviewFailedError template) {
         EditPreviewFailedErrorImpl instance = new EditPreviewFailedErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         instance.setResult(template.getResult());
         return instance;
     }

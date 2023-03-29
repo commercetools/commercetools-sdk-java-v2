@@ -74,7 +74,7 @@ public interface PendingOperationError extends ErrorObject {
     public static PendingOperationError of(final PendingOperationError template) {
         PendingOperationErrorImpl instance = new PendingOperationErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         return instance;
     }
 

@@ -74,7 +74,7 @@ public interface InvalidOperationError extends ErrorObject {
     public static InvalidOperationError of(final InvalidOperationError template) {
         InvalidOperationErrorImpl instance = new InvalidOperationErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         return instance;
     }
 

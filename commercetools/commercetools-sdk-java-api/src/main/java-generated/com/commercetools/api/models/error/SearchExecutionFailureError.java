@@ -73,7 +73,7 @@ public interface SearchExecutionFailureError extends ErrorObject {
     public static SearchExecutionFailureError of(final SearchExecutionFailureError template) {
         SearchExecutionFailureErrorImpl instance = new SearchExecutionFailureErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         return instance;
     }
 

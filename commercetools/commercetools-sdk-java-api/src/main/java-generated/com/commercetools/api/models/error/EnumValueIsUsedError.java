@@ -74,7 +74,7 @@ public interface EnumValueIsUsedError extends ErrorObject {
     public static EnumValueIsUsedError of(final EnumValueIsUsedError template) {
         EnumValueIsUsedErrorImpl instance = new EnumValueIsUsedErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         return instance;
     }
 

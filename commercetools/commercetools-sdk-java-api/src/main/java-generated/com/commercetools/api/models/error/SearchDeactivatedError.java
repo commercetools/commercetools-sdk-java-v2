@@ -74,7 +74,7 @@ public interface SearchDeactivatedError extends ErrorObject {
     public static SearchDeactivatedError of(final SearchDeactivatedError template) {
         SearchDeactivatedErrorImpl instance = new SearchDeactivatedErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         return instance;
     }
 

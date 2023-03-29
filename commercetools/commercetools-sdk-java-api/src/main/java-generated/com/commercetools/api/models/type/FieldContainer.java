@@ -60,6 +60,7 @@ public interface FieldContainer {
      */
     public static FieldContainer of(final FieldContainer template) {
         FieldContainerImpl instance = new FieldContainerImpl();
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         return instance;
     }
 

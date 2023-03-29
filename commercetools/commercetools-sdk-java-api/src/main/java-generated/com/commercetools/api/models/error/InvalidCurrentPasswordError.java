@@ -78,7 +78,7 @@ public interface InvalidCurrentPasswordError extends ErrorObject {
     public static InvalidCurrentPasswordError of(final InvalidCurrentPasswordError template) {
         InvalidCurrentPasswordErrorImpl instance = new InvalidCurrentPasswordErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         return instance;
     }
 

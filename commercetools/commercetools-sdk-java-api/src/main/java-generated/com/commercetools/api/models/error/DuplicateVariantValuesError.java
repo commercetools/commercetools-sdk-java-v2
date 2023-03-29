@@ -91,7 +91,7 @@ public interface DuplicateVariantValuesError extends ErrorObject {
     public static DuplicateVariantValuesError of(final DuplicateVariantValuesError template) {
         DuplicateVariantValuesErrorImpl instance = new DuplicateVariantValuesErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         instance.setVariantValues(template.getVariantValues());
         return instance;
     }

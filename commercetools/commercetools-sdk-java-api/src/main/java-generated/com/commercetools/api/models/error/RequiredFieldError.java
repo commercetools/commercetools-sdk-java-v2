@@ -89,7 +89,7 @@ public interface RequiredFieldError extends ErrorObject {
     public static RequiredFieldError of(final RequiredFieldError template) {
         RequiredFieldErrorImpl instance = new RequiredFieldErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         instance.setField(template.getField());
         return instance;
     }

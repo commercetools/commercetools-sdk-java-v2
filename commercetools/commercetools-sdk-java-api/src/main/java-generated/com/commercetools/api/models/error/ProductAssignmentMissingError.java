@@ -99,7 +99,7 @@ public interface ProductAssignmentMissingError extends ErrorObject {
     public static ProductAssignmentMissingError of(final ProductAssignmentMissingError template) {
         ProductAssignmentMissingErrorImpl instance = new ProductAssignmentMissingErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
         instance.setProduct(template.getProduct());
         return instance;
     }

@@ -377,7 +377,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *  <p>Custom Fields for the address.</p>
+     *  <p>Custom Fields defined for the Address. Custom Fields can only be applied to <code>shippingAddress</code>.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -389,7 +389,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *  <p>Custom Fields for the address.</p>
+     *  <p>Custom Fields defined for the Address. Custom Fields can only be applied to <code>shippingAddress</code>.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -649,7 +649,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *  <p>Custom Fields for the address.</p>
+     *  <p>Custom Fields defined for the Address. Custom Fields can only be applied to <code>shippingAddress</code>.</p>
      * @return custom
      */
 

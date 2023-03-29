@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -61,13 +62,28 @@ public interface ReviewCreatedMessagePayload extends MessagePayload {
     }
 
     /**
-     * factory method to copy an instance of ReviewCreatedMessagePayload
+     * factory method to create a shallow copy ReviewCreatedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
     public static ReviewCreatedMessagePayload of(final ReviewCreatedMessagePayload template) {
         ReviewCreatedMessagePayloadImpl instance = new ReviewCreatedMessagePayloadImpl();
         instance.setReview(template.getReview());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ReviewCreatedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ReviewCreatedMessagePayload deepCopy(@Nullable final ReviewCreatedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        ReviewCreatedMessagePayloadImpl instance = new ReviewCreatedMessagePayloadImpl();
+        instance.setReview(com.commercetools.api.models.review.Review.deepCopy(template.getReview()));
         return instance;
     }
 

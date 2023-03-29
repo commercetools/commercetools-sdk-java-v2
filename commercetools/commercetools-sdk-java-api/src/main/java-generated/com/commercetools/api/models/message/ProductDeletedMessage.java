@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -90,7 +91,7 @@ public interface ProductDeletedMessage extends Message {
     }
 
     /**
-     * factory method to copy an instance of ProductDeletedMessage
+     * factory method to create a shallow copy ProductDeletedMessage
      * @param template instance to be copied
      * @return copy instance
      */
@@ -108,6 +109,36 @@ public interface ProductDeletedMessage extends Message {
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setRemovedImageUrls(template.getRemovedImageUrls());
         instance.setCurrentProjection(template.getCurrentProjection());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductDeletedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductDeletedMessage deepCopy(@Nullable final ProductDeletedMessage template) {
+        if (template == null) {
+            return null;
+        }
+        ProductDeletedMessageImpl instance = new ProductDeletedMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
+                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setRemovedImageUrls(
+            Optional.ofNullable(template.getRemovedImageUrls()).map(ArrayList::new).orElse(null));
+        instance.setCurrentProjection(
+            com.commercetools.api.models.product.ProductProjection.deepCopy(template.getCurrentProjection()));
         return instance;
     }
 

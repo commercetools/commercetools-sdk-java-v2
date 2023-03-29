@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -69,11 +70,27 @@ public interface InventoryQuantityValue {
     }
 
     /**
-     * factory method to copy an instance of InventoryQuantityValue
+     * factory method to create a shallow copy InventoryQuantityValue
      * @param template instance to be copied
      * @return copy instance
      */
     public static InventoryQuantityValue of(final InventoryQuantityValue template) {
+        InventoryQuantityValueImpl instance = new InventoryQuantityValueImpl();
+        instance.setQuantityOnStock(template.getQuantityOnStock());
+        instance.setAvailableQuantity(template.getAvailableQuantity());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of InventoryQuantityValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static InventoryQuantityValue deepCopy(@Nullable final InventoryQuantityValue template) {
+        if (template == null) {
+            return null;
+        }
         InventoryQuantityValueImpl instance = new InventoryQuantityValueImpl();
         instance.setQuantityOnStock(template.getQuantityOnStock());
         instance.setAvailableQuantity(template.getAvailableQuantity());

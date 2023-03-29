@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.type.FieldContainer;
@@ -74,7 +75,7 @@ public interface CartSetBillingAddressCustomTypeAction extends CartUpdateAction 
     }
 
     /**
-     * factory method to copy an instance of CartSetBillingAddressCustomTypeAction
+     * factory method to create a shallow copy CartSetBillingAddressCustomTypeAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -82,6 +83,23 @@ public interface CartSetBillingAddressCustomTypeAction extends CartUpdateAction 
         CartSetBillingAddressCustomTypeActionImpl instance = new CartSetBillingAddressCustomTypeActionImpl();
         instance.setType(template.getType());
         instance.setFields(template.getFields());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartSetBillingAddressCustomTypeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartSetBillingAddressCustomTypeAction deepCopy(
+            @Nullable final CartSetBillingAddressCustomTypeAction template) {
+        if (template == null) {
+            return null;
+        }
+        CartSetBillingAddressCustomTypeActionImpl instance = new CartSetBillingAddressCustomTypeActionImpl();
+        instance.setType(com.commercetools.api.models.type.TypeResourceIdentifier.deepCopy(template.getType()));
+        instance.setFields(com.commercetools.api.models.type.FieldContainer.deepCopy(template.getFields()));
         return instance;
     }
 

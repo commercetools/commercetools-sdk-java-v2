@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -90,12 +91,30 @@ public interface OrderCustomLineItemQuantityChangedMessagePayload extends OrderM
     }
 
     /**
-     * factory method to copy an instance of OrderCustomLineItemQuantityChangedMessagePayload
+     * factory method to create a shallow copy OrderCustomLineItemQuantityChangedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
     public static OrderCustomLineItemQuantityChangedMessagePayload of(
             final OrderCustomLineItemQuantityChangedMessagePayload template) {
+        OrderCustomLineItemQuantityChangedMessagePayloadImpl instance = new OrderCustomLineItemQuantityChangedMessagePayloadImpl();
+        instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setQuantity(template.getQuantity());
+        instance.setOldQuantity(template.getOldQuantity());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderCustomLineItemQuantityChangedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderCustomLineItemQuantityChangedMessagePayload deepCopy(
+            @Nullable final OrderCustomLineItemQuantityChangedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
         OrderCustomLineItemQuantityChangedMessagePayloadImpl instance = new OrderCustomLineItemQuantityChangedMessagePayloadImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setQuantity(template.getQuantity());

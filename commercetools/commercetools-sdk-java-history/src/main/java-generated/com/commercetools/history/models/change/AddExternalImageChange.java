@@ -4,7 +4,9 @@ package com.commercetools.history.models.change;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -134,7 +136,7 @@ public interface AddExternalImageChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of AddExternalImageChange
+     * factory method to create a shallow copy AddExternalImageChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -144,6 +146,32 @@ public interface AddExternalImageChange extends Change {
         instance.setCatalogData(template.getCatalogData());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of AddExternalImageChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AddExternalImageChange deepCopy(@Nullable final AddExternalImageChange template) {
+        if (template == null) {
+            return null;
+        }
+        AddExternalImageChangeImpl instance = new AddExternalImageChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setCatalogData(template.getCatalogData());
+        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.Image::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setNextValue(Optional.ofNullable(template.getNextValue())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.Image::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

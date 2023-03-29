@@ -4,7 +4,9 @@ package com.commercetools.api.models.message;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -146,7 +148,7 @@ public interface OrderLineItemDiscountSetMessagePayload extends OrderMessagePayl
     }
 
     /**
-     * factory method to copy an instance of OrderLineItemDiscountSetMessagePayload
+     * factory method to create a shallow copy OrderLineItemDiscountSetMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -157,6 +159,34 @@ public interface OrderLineItemDiscountSetMessagePayload extends OrderMessagePayl
         instance.setTotalPrice(template.getTotalPrice());
         instance.setTaxedPrice(template.getTaxedPrice());
         instance.setTaxedPricePortions(template.getTaxedPricePortions());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderLineItemDiscountSetMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderLineItemDiscountSetMessagePayload deepCopy(
+            @Nullable final OrderLineItemDiscountSetMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        OrderLineItemDiscountSetMessagePayloadImpl instance = new OrderLineItemDiscountSetMessagePayloadImpl();
+        instance.setLineItemId(template.getLineItemId());
+        instance.setDiscountedPricePerQuantity(Optional.ofNullable(template.getDiscountedPricePerQuantity())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setTotalPrice(com.commercetools.api.models.common.Money.deepCopy(template.getTotalPrice()));
+        instance.setTaxedPrice(com.commercetools.api.models.cart.TaxedItemPrice.deepCopy(template.getTaxedPrice()));
+        instance.setTaxedPricePortions(Optional.ofNullable(template.getTaxedPricePortions())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.cart.MethodTaxedPrice::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

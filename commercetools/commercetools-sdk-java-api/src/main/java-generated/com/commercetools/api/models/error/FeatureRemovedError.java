@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -66,14 +67,30 @@ public interface FeatureRemovedError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of FeatureRemovedError
+     * factory method to create a shallow copy FeatureRemovedError
      * @param template instance to be copied
      * @return copy instance
      */
     public static FeatureRemovedError of(final FeatureRemovedError template) {
         FeatureRemovedErrorImpl instance = new FeatureRemovedErrorImpl();
         instance.setMessage(template.getMessage());
-        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of FeatureRemovedError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static FeatureRemovedError deepCopy(@Nullable final FeatureRemovedError template) {
+        if (template == null) {
+            return null;
+        }
+        FeatureRemovedErrorImpl instance = new FeatureRemovedErrorImpl();
+        instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
 

@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -41,11 +43,26 @@ public interface InvalidOperation extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of InvalidOperation
+     * factory method to create a shallow copy InvalidOperation
      * @param template instance to be copied
      * @return copy instance
      */
     public static InvalidOperation of(final InvalidOperation template) {
+        InvalidOperationImpl instance = new InvalidOperationImpl();
+        instance.setMessage(template.getMessage());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of InvalidOperation
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static InvalidOperation deepCopy(@Nullable final InvalidOperation template) {
+        if (template == null) {
+            return null;
+        }
         InvalidOperationImpl instance = new InvalidOperationImpl();
         instance.setMessage(template.getMessage());
         return instance;

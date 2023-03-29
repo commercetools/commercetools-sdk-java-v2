@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.TaxCalculationMode;
@@ -60,12 +61,28 @@ public interface StagedOrderChangeTaxCalculationModeAction extends StagedOrderUp
     }
 
     /**
-     * factory method to copy an instance of StagedOrderChangeTaxCalculationModeAction
+     * factory method to create a shallow copy StagedOrderChangeTaxCalculationModeAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static StagedOrderChangeTaxCalculationModeAction of(
             final StagedOrderChangeTaxCalculationModeAction template) {
+        StagedOrderChangeTaxCalculationModeActionImpl instance = new StagedOrderChangeTaxCalculationModeActionImpl();
+        instance.setTaxCalculationMode(template.getTaxCalculationMode());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedOrderChangeTaxCalculationModeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedOrderChangeTaxCalculationModeAction deepCopy(
+            @Nullable final StagedOrderChangeTaxCalculationModeAction template) {
+        if (template == null) {
+            return null;
+        }
         StagedOrderChangeTaxCalculationModeActionImpl instance = new StagedOrderChangeTaxCalculationModeActionImpl();
         instance.setTaxCalculationMode(template.getTaxCalculationMode());
         return instance;

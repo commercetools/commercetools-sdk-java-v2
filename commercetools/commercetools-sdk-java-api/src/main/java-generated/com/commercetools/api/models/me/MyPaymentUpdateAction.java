@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -46,6 +47,48 @@ public interface MyPaymentUpdateAction
     @NotNull
     @JsonProperty("action")
     public String getAction();
+
+    /**
+     * factory method to create a deep copy of MyPaymentUpdateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MyPaymentUpdateAction deepCopy(@Nullable final MyPaymentUpdateAction template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.me.MyPaymentAddTransactionAction) {
+            return com.commercetools.api.models.me.MyPaymentAddTransactionAction
+                    .deepCopy((com.commercetools.api.models.me.MyPaymentAddTransactionAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.me.MyPaymentChangeAmountPlannedAction) {
+            return com.commercetools.api.models.me.MyPaymentChangeAmountPlannedAction
+                    .deepCopy((com.commercetools.api.models.me.MyPaymentChangeAmountPlannedAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.me.MyPaymentSetCustomFieldAction) {
+            return com.commercetools.api.models.me.MyPaymentSetCustomFieldAction
+                    .deepCopy((com.commercetools.api.models.me.MyPaymentSetCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.me.MyPaymentSetMethodInfoInterfaceAction) {
+            return com.commercetools.api.models.me.MyPaymentSetMethodInfoInterfaceAction
+                    .deepCopy((com.commercetools.api.models.me.MyPaymentSetMethodInfoInterfaceAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.me.MyPaymentSetMethodInfoMethodAction) {
+            return com.commercetools.api.models.me.MyPaymentSetMethodInfoMethodAction
+                    .deepCopy((com.commercetools.api.models.me.MyPaymentSetMethodInfoMethodAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.me.MyPaymentSetMethodInfoNameAction) {
+            return com.commercetools.api.models.me.MyPaymentSetMethodInfoNameAction
+                    .deepCopy((com.commercetools.api.models.me.MyPaymentSetMethodInfoNameAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.me.MyPaymentSetTransactionCustomFieldAction) {
+            return com.commercetools.api.models.me.MyPaymentSetTransactionCustomFieldAction
+                    .deepCopy((com.commercetools.api.models.me.MyPaymentSetTransactionCustomFieldAction) template);
+        }
+        MyPaymentUpdateActionImpl instance = new MyPaymentUpdateActionImpl();
+        return instance;
+    }
 
     /**
      * builder for addTransaction subtype

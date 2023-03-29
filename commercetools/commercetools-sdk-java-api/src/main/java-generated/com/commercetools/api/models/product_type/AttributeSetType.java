@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -60,13 +61,29 @@ public interface AttributeSetType extends AttributeType {
     }
 
     /**
-     * factory method to copy an instance of AttributeSetType
+     * factory method to create a shallow copy AttributeSetType
      * @param template instance to be copied
      * @return copy instance
      */
     public static AttributeSetType of(final AttributeSetType template) {
         AttributeSetTypeImpl instance = new AttributeSetTypeImpl();
         instance.setElementType(template.getElementType());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of AttributeSetType
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AttributeSetType deepCopy(@Nullable final AttributeSetType template) {
+        if (template == null) {
+            return null;
+        }
+        AttributeSetTypeImpl instance = new AttributeSetTypeImpl();
+        instance.setElementType(
+            com.commercetools.api.models.product_type.AttributeType.deepCopy(template.getElementType()));
         return instance;
     }
 

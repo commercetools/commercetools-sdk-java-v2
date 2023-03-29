@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -50,11 +52,26 @@ public interface ShoppingListsConfiguration {
     }
 
     /**
-     * factory method to copy an instance of ShoppingListsConfiguration
+     * factory method to create a shallow copy ShoppingListsConfiguration
      * @param template instance to be copied
      * @return copy instance
      */
     public static ShoppingListsConfiguration of(final ShoppingListsConfiguration template) {
+        ShoppingListsConfigurationImpl instance = new ShoppingListsConfigurationImpl();
+        instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ShoppingListsConfiguration
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ShoppingListsConfiguration deepCopy(@Nullable final ShoppingListsConfiguration template) {
+        if (template == null) {
+            return null;
+        }
         ShoppingListsConfigurationImpl instance = new ShoppingListsConfigurationImpl();
         instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
         return instance;

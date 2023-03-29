@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -61,13 +62,28 @@ public interface MyBusinessUnitAddAddressAction extends MyBusinessUnitUpdateActi
     }
 
     /**
-     * factory method to copy an instance of MyBusinessUnitAddAddressAction
+     * factory method to create a shallow copy MyBusinessUnitAddAddressAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static MyBusinessUnitAddAddressAction of(final MyBusinessUnitAddAddressAction template) {
         MyBusinessUnitAddAddressActionImpl instance = new MyBusinessUnitAddAddressActionImpl();
         instance.setAddress(template.getAddress());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MyBusinessUnitAddAddressAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MyBusinessUnitAddAddressAction deepCopy(@Nullable final MyBusinessUnitAddAddressAction template) {
+        if (template == null) {
+            return null;
+        }
+        MyBusinessUnitAddAddressActionImpl instance = new MyBusinessUnitAddAddressActionImpl();
+        instance.setAddress(com.commercetools.api.models.common.BaseAddress.deepCopy(template.getAddress()));
         return instance;
     }
 

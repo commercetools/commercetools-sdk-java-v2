@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -102,7 +103,7 @@ public interface RemoveTextLineItemChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of RemoveTextLineItemChange
+     * factory method to create a shallow copy RemoveTextLineItemChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -111,6 +112,24 @@ public interface RemoveTextLineItemChange extends Change {
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of RemoveTextLineItemChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static RemoveTextLineItemChange deepCopy(@Nullable final RemoveTextLineItemChange template) {
+        if (template == null) {
+            return null;
+        }
+        RemoveTextLineItemChangeImpl instance = new RemoveTextLineItemChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.TextLineItem.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.TextLineItem.deepCopy(template.getNextValue()));
         return instance;
     }
 

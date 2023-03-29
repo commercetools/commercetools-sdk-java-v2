@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -98,11 +99,28 @@ public interface ChangePredicateChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of ChangePredicateChange
+     * factory method to create a shallow copy ChangePredicateChange
      * @param template instance to be copied
      * @return copy instance
      */
     public static ChangePredicateChange of(final ChangePredicateChange template) {
+        ChangePredicateChangeImpl instance = new ChangePredicateChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChangePredicateChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChangePredicateChange deepCopy(@Nullable final ChangePredicateChange template) {
+        if (template == null) {
+            return null;
+        }
         ChangePredicateChangeImpl instance = new ChangePredicateChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());

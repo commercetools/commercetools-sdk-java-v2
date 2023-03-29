@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.common.LocalizedString;
@@ -58,13 +59,29 @@ public interface DiscountCodeSetDescriptionAction extends DiscountCodeUpdateActi
     }
 
     /**
-     * factory method to copy an instance of DiscountCodeSetDescriptionAction
+     * factory method to create a shallow copy DiscountCodeSetDescriptionAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static DiscountCodeSetDescriptionAction of(final DiscountCodeSetDescriptionAction template) {
         DiscountCodeSetDescriptionActionImpl instance = new DiscountCodeSetDescriptionActionImpl();
         instance.setDescription(template.getDescription());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of DiscountCodeSetDescriptionAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static DiscountCodeSetDescriptionAction deepCopy(@Nullable final DiscountCodeSetDescriptionAction template) {
+        if (template == null) {
+            return null;
+        }
+        DiscountCodeSetDescriptionActionImpl instance = new DiscountCodeSetDescriptionActionImpl();
+        instance.setDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
         return instance;
     }
 

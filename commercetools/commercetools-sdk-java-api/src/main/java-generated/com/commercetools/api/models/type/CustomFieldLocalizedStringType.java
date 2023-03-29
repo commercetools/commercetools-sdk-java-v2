@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -40,11 +42,25 @@ public interface CustomFieldLocalizedStringType extends FieldType {
     }
 
     /**
-     * factory method to copy an instance of CustomFieldLocalizedStringType
+     * factory method to create a shallow copy CustomFieldLocalizedStringType
      * @param template instance to be copied
      * @return copy instance
      */
     public static CustomFieldLocalizedStringType of(final CustomFieldLocalizedStringType template) {
+        CustomFieldLocalizedStringTypeImpl instance = new CustomFieldLocalizedStringTypeImpl();
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomFieldLocalizedStringType
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomFieldLocalizedStringType deepCopy(@Nullable final CustomFieldLocalizedStringType template) {
+        if (template == null) {
+            return null;
+        }
         CustomFieldLocalizedStringTypeImpl instance = new CustomFieldLocalizedStringTypeImpl();
         return instance;
     }

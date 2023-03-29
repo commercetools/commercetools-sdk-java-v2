@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -98,11 +99,28 @@ public interface SetRestockableInDaysChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetRestockableInDaysChange
+     * factory method to create a shallow copy SetRestockableInDaysChange
      * @param template instance to be copied
      * @return copy instance
      */
     public static SetRestockableInDaysChange of(final SetRestockableInDaysChange template) {
+        SetRestockableInDaysChangeImpl instance = new SetRestockableInDaysChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetRestockableInDaysChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetRestockableInDaysChange deepCopy(@Nullable final SetRestockableInDaysChange template) {
+        if (template == null) {
+            return null;
+        }
         SetRestockableInDaysChangeImpl instance = new SetRestockableInDaysChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());

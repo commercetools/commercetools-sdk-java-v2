@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -55,13 +56,29 @@ public interface SimilarProductSearchRequestMeta {
     }
 
     /**
-     * factory method to copy an instance of SimilarProductSearchRequestMeta
+     * factory method to create a shallow copy SimilarProductSearchRequestMeta
      * @param template instance to be copied
      * @return copy instance
      */
     public static SimilarProductSearchRequestMeta of(final SimilarProductSearchRequestMeta template) {
         SimilarProductSearchRequestMetaImpl instance = new SimilarProductSearchRequestMetaImpl();
         instance.setSimilarityMeasures(template.getSimilarityMeasures());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SimilarProductSearchRequestMeta
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SimilarProductSearchRequestMeta deepCopy(@Nullable final SimilarProductSearchRequestMeta template) {
+        if (template == null) {
+            return null;
+        }
+        SimilarProductSearchRequestMetaImpl instance = new SimilarProductSearchRequestMetaImpl();
+        instance.setSimilarityMeasures(
+            com.commercetools.ml.models.similar_products.SimilarityMeasures.deepCopy(template.getSimilarityMeasures()));
         return instance;
     }
 

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -203,7 +204,7 @@ public interface LineItem {
     }
 
     /**
-     * factory method to copy an instance of LineItem
+     * factory method to create a shallow copy LineItem
      * @param template instance to be copied
      * @return copy instance
      */
@@ -218,6 +219,31 @@ public interface LineItem {
         instance.setProductType(template.getProductType());
         instance.setQuantity(template.getQuantity());
         instance.setVariant(template.getVariant());
+        instance.setVariantId(template.getVariantId());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of LineItem
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static LineItem deepCopy(@Nullable final LineItem template) {
+        if (template == null) {
+            return null;
+        }
+        LineItemImpl instance = new LineItemImpl();
+        instance.setAddedAt(template.getAddedAt());
+        instance.setCustom(com.commercetools.history.models.common.CustomFields.deepCopy(template.getCustom()));
+        instance.setId(template.getId());
+        instance.setName(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setProductId(template.getProductId());
+        instance.setProductSlug(
+            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getProductSlug()));
+        instance.setProductType(com.commercetools.history.models.common.Reference.deepCopy(template.getProductType()));
+        instance.setQuantity(template.getQuantity());
+        instance.setVariant(com.commercetools.history.models.common.Variant.deepCopy(template.getVariant()));
         instance.setVariantId(template.getVariantId());
         return instance;
     }

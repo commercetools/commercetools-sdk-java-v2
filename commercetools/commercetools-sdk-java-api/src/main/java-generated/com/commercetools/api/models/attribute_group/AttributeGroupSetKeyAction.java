@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -55,11 +57,26 @@ public interface AttributeGroupSetKeyAction extends AttributeGroupUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of AttributeGroupSetKeyAction
+     * factory method to create a shallow copy AttributeGroupSetKeyAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static AttributeGroupSetKeyAction of(final AttributeGroupSetKeyAction template) {
+        AttributeGroupSetKeyActionImpl instance = new AttributeGroupSetKeyActionImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of AttributeGroupSetKeyAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AttributeGroupSetKeyAction deepCopy(@Nullable final AttributeGroupSetKeyAction template) {
+        if (template == null) {
+            return null;
+        }
         AttributeGroupSetKeyActionImpl instance = new AttributeGroupSetKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;

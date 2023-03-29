@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -39,6 +40,24 @@ public interface MyQuoteRequestUpdateAction
     @NotNull
     @JsonProperty("action")
     public String getAction();
+
+    /**
+     * factory method to create a deep copy of MyQuoteRequestUpdateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MyQuoteRequestUpdateAction deepCopy(@Nullable final MyQuoteRequestUpdateAction template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.me.MyQuoteRequestCancelAction) {
+            return com.commercetools.api.models.me.MyQuoteRequestCancelAction
+                    .deepCopy((com.commercetools.api.models.me.MyQuoteRequestCancelAction) template);
+        }
+        MyQuoteRequestUpdateActionImpl instance = new MyQuoteRequestUpdateActionImpl();
+        return instance;
+    }
 
     /**
      * builder for cancelQuoteRequest subtype

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.customer.CustomerReference;
@@ -98,7 +99,7 @@ public interface ClientLogging {
     }
 
     /**
-     * factory method to copy an instance of ClientLogging
+     * factory method to create a shallow copy ClientLogging
      * @param template instance to be copied
      * @return copy instance
      */
@@ -107,6 +108,32 @@ public interface ClientLogging {
         instance.setClientId(template.getClientId());
         instance.setExternalUserId(template.getExternalUserId());
         instance.setCustomer(template.getCustomer());
+        instance.setAnonymousId(template.getAnonymousId());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ClientLogging
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ClientLogging deepCopy(@Nullable final ClientLogging template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.common.CreatedBy) {
+            return com.commercetools.api.models.common.CreatedBy
+                    .deepCopy((com.commercetools.api.models.common.CreatedBy) template);
+        }
+        if (template instanceof com.commercetools.api.models.common.LastModifiedBy) {
+            return com.commercetools.api.models.common.LastModifiedBy
+                    .deepCopy((com.commercetools.api.models.common.LastModifiedBy) template);
+        }
+        ClientLoggingImpl instance = new ClientLoggingImpl();
+        instance.setClientId(template.getClientId());
+        instance.setExternalUserId(template.getExternalUserId());
+        instance.setCustomer(com.commercetools.api.models.customer.CustomerReference.deepCopy(template.getCustomer()));
         instance.setAnonymousId(template.getAnonymousId());
         return instance;
     }

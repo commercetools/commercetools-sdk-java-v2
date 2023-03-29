@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -61,13 +62,28 @@ public interface MoneyField extends CustomField {
     }
 
     /**
-     * factory method to copy an instance of MoneyField
+     * factory method to create a shallow copy MoneyField
      * @param template instance to be copied
      * @return copy instance
      */
     public static MoneyField of(final MoneyField template) {
         MoneyFieldImpl instance = new MoneyFieldImpl();
         instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MoneyField
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MoneyField deepCopy(@Nullable final MoneyField template) {
+        if (template == null) {
+            return null;
+        }
+        MoneyFieldImpl instance = new MoneyFieldImpl();
+        instance.setValue(com.commercetools.importapi.models.common.TypedMoney.deepCopy(template.getValue()));
         return instance;
     }
 

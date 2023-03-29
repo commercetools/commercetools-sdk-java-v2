@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -70,11 +71,27 @@ public interface ImageSearchConfigResponse {
     }
 
     /**
-     * factory method to copy an instance of ImageSearchConfigResponse
+     * factory method to create a shallow copy ImageSearchConfigResponse
      * @param template instance to be copied
      * @return copy instance
      */
     public static ImageSearchConfigResponse of(final ImageSearchConfigResponse template) {
+        ImageSearchConfigResponseImpl instance = new ImageSearchConfigResponseImpl();
+        instance.setStatus(template.getStatus());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ImageSearchConfigResponse
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ImageSearchConfigResponse deepCopy(@Nullable final ImageSearchConfigResponse template) {
+        if (template == null) {
+            return null;
+        }
         ImageSearchConfigResponseImpl instance = new ImageSearchConfigResponseImpl();
         instance.setStatus(template.getStatus());
         instance.setLastModifiedAt(template.getLastModifiedAt());

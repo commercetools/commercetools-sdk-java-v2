@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -75,7 +76,7 @@ public interface CustomerReference extends Reference, com.commercetools.api.mode
     }
 
     /**
-     * factory method to copy an instance of CustomerReference
+     * factory method to create a shallow copy CustomerReference
      * @param template instance to be copied
      * @return copy instance
      */
@@ -83,6 +84,22 @@ public interface CustomerReference extends Reference, com.commercetools.api.mode
         CustomerReferenceImpl instance = new CustomerReferenceImpl();
         instance.setId(template.getId());
         instance.setObj(template.getObj());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomerReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomerReference deepCopy(@Nullable final CustomerReference template) {
+        if (template == null) {
+            return null;
+        }
+        CustomerReferenceImpl instance = new CustomerReferenceImpl();
+        instance.setId(template.getId());
+        instance.setObj(com.commercetools.api.models.customer.Customer.deepCopy(template.getObj()));
         return instance;
     }
 

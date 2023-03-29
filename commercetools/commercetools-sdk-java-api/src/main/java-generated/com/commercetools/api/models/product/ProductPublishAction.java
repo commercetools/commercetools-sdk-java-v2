@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.commercetools.api.models.cart.ProductPublishScope;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -56,11 +58,26 @@ public interface ProductPublishAction extends ProductUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ProductPublishAction
+     * factory method to create a shallow copy ProductPublishAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductPublishAction of(final ProductPublishAction template) {
+        ProductPublishActionImpl instance = new ProductPublishActionImpl();
+        instance.setScope(template.getScope());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductPublishAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductPublishAction deepCopy(@Nullable final ProductPublishAction template) {
+        if (template == null) {
+            return null;
+        }
         ProductPublishActionImpl instance = new ProductPublishActionImpl();
         instance.setScope(template.getScope());
         return instance;

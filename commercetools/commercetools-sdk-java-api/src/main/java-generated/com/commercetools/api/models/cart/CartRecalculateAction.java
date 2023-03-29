@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -62,11 +64,26 @@ public interface CartRecalculateAction extends CartUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of CartRecalculateAction
+     * factory method to create a shallow copy CartRecalculateAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static CartRecalculateAction of(final CartRecalculateAction template) {
+        CartRecalculateActionImpl instance = new CartRecalculateActionImpl();
+        instance.setUpdateProductData(template.getUpdateProductData());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartRecalculateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartRecalculateAction deepCopy(@Nullable final CartRecalculateAction template) {
+        if (template == null) {
+            return null;
+        }
         CartRecalculateActionImpl instance = new CartRecalculateActionImpl();
         instance.setUpdateProductData(template.getUpdateProductData());
         return instance;

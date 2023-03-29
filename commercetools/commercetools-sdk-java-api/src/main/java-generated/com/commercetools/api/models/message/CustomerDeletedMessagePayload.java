@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -40,11 +42,25 @@ public interface CustomerDeletedMessagePayload extends MessagePayload {
     }
 
     /**
-     * factory method to copy an instance of CustomerDeletedMessagePayload
+     * factory method to create a shallow copy CustomerDeletedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
     public static CustomerDeletedMessagePayload of(final CustomerDeletedMessagePayload template) {
+        CustomerDeletedMessagePayloadImpl instance = new CustomerDeletedMessagePayloadImpl();
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomerDeletedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomerDeletedMessagePayload deepCopy(@Nullable final CustomerDeletedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
         CustomerDeletedMessagePayloadImpl instance = new CustomerDeletedMessagePayloadImpl();
         return instance;
     }

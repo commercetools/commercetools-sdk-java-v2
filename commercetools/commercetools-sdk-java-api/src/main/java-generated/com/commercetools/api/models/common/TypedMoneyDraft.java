@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -54,6 +56,31 @@ public interface TypedMoneyDraft extends Money {
      */
 
     public void setFractionDigits(final Integer fractionDigits);
+
+    /**
+     * factory method to create a deep copy of TypedMoneyDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static TypedMoneyDraft deepCopy(@Nullable final TypedMoneyDraft template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.common.HighPrecisionMoneyDraft) {
+            return com.commercetools.api.models.common.HighPrecisionMoneyDraft
+                    .deepCopy((com.commercetools.api.models.common.HighPrecisionMoneyDraft) template);
+        }
+        if (template instanceof com.commercetools.api.models.common.CentPrecisionMoneyDraft) {
+            return com.commercetools.api.models.common.CentPrecisionMoneyDraft
+                    .deepCopy((com.commercetools.api.models.common.CentPrecisionMoneyDraft) template);
+        }
+        TypedMoneyDraftImpl instance = new TypedMoneyDraftImpl();
+        instance.setCentAmount(template.getCentAmount());
+        instance.setCurrencyCode(template.getCurrencyCode());
+        instance.setFractionDigits(template.getFractionDigits());
+        return instance;
+    }
 
     /**
      * builder for centPrecision subtype

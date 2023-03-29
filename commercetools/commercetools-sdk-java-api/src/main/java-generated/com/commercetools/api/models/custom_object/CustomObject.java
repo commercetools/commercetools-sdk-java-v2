@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -185,7 +186,7 @@ public interface CustomObject
     }
 
     /**
-     * factory method to copy an instance of CustomObject
+     * factory method to create a shallow copy CustomObject
      * @param template instance to be copied
      * @return copy instance
      */
@@ -197,6 +198,30 @@ public interface CustomObject
         instance.setLastModifiedAt(template.getLastModifiedAt());
         instance.setLastModifiedBy(template.getLastModifiedBy());
         instance.setCreatedBy(template.getCreatedBy());
+        instance.setContainer(template.getContainer());
+        instance.setKey(template.getKey());
+        instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomObject
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomObject deepCopy(@Nullable final CustomObject template) {
+        if (template == null) {
+            return null;
+        }
+        CustomObjectImpl instance = new CustomObjectImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setContainer(template.getContainer());
         instance.setKey(template.getKey());
         instance.setValue(template.getValue());

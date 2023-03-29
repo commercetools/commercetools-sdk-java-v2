@@ -4,7 +4,9 @@ package com.commercetools.importapi.models.producttypes;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -68,13 +70,32 @@ public interface AttributeEnumType extends AttributeType {
     }
 
     /**
-     * factory method to copy an instance of AttributeEnumType
+     * factory method to create a shallow copy AttributeEnumType
      * @param template instance to be copied
      * @return copy instance
      */
     public static AttributeEnumType of(final AttributeEnumType template) {
         AttributeEnumTypeImpl instance = new AttributeEnumTypeImpl();
         instance.setValues(template.getValues());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of AttributeEnumType
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AttributeEnumType deepCopy(@Nullable final AttributeEnumType template) {
+        if (template == null) {
+            return null;
+        }
+        AttributeEnumTypeImpl instance = new AttributeEnumTypeImpl();
+        instance.setValues(Optional.ofNullable(template.getValues())
+                .map(t -> t.stream()
+                        .map(com.commercetools.importapi.models.producttypes.AttributePlainEnumValue::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

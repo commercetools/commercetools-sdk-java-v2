@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -41,11 +43,26 @@ public interface ContentionError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of ContentionError
+     * factory method to create a shallow copy ContentionError
      * @param template instance to be copied
      * @return copy instance
      */
     public static ContentionError of(final ContentionError template) {
+        ContentionErrorImpl instance = new ContentionErrorImpl();
+        instance.setMessage(template.getMessage());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ContentionError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ContentionError deepCopy(@Nullable final ContentionError template) {
+        if (template == null) {
+            return null;
+        }
         ContentionErrorImpl instance = new ContentionErrorImpl();
         instance.setMessage(template.getMessage());
         return instance;

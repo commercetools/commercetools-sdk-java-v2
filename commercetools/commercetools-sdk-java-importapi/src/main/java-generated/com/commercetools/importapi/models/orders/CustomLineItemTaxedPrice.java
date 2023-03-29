@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -73,7 +74,7 @@ public interface CustomLineItemTaxedPrice {
     }
 
     /**
-     * factory method to copy an instance of CustomLineItemTaxedPrice
+     * factory method to create a shallow copy CustomLineItemTaxedPrice
      * @param template instance to be copied
      * @return copy instance
      */
@@ -81,6 +82,22 @@ public interface CustomLineItemTaxedPrice {
         CustomLineItemTaxedPriceImpl instance = new CustomLineItemTaxedPriceImpl();
         instance.setTotalNet(template.getTotalNet());
         instance.setTotalGross(template.getTotalGross());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomLineItemTaxedPrice
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomLineItemTaxedPrice deepCopy(@Nullable final CustomLineItemTaxedPrice template) {
+        if (template == null) {
+            return null;
+        }
+        CustomLineItemTaxedPriceImpl instance = new CustomLineItemTaxedPriceImpl();
+        instance.setTotalNet(com.commercetools.importapi.models.common.TypedMoney.deepCopy(template.getTotalNet()));
+        instance.setTotalGross(com.commercetools.importapi.models.common.TypedMoney.deepCopy(template.getTotalGross()));
         return instance;
     }
 

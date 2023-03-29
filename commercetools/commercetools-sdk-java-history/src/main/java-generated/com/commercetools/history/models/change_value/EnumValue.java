@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -69,11 +70,27 @@ public interface EnumValue {
     }
 
     /**
-     * factory method to copy an instance of EnumValue
+     * factory method to create a shallow copy EnumValue
      * @param template instance to be copied
      * @return copy instance
      */
     public static EnumValue of(final EnumValue template) {
+        EnumValueImpl instance = new EnumValueImpl();
+        instance.setKey(template.getKey());
+        instance.setLabel(template.getLabel());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of EnumValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static EnumValue deepCopy(@Nullable final EnumValue template) {
+        if (template == null) {
+            return null;
+        }
         EnumValueImpl instance = new EnumValueImpl();
         instance.setKey(template.getKey());
         instance.setLabel(template.getLabel());

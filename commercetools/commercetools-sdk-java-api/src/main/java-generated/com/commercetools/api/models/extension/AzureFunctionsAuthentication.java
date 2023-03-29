@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -59,11 +60,26 @@ public interface AzureFunctionsAuthentication extends HttpDestinationAuthenticat
     }
 
     /**
-     * factory method to copy an instance of AzureFunctionsAuthentication
+     * factory method to create a shallow copy AzureFunctionsAuthentication
      * @param template instance to be copied
      * @return copy instance
      */
     public static AzureFunctionsAuthentication of(final AzureFunctionsAuthentication template) {
+        AzureFunctionsAuthenticationImpl instance = new AzureFunctionsAuthenticationImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of AzureFunctionsAuthentication
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AzureFunctionsAuthentication deepCopy(@Nullable final AzureFunctionsAuthentication template) {
+        if (template == null) {
+            return null;
+        }
         AzureFunctionsAuthenticationImpl instance = new AzureFunctionsAuthenticationImpl();
         instance.setKey(template.getKey());
         return instance;

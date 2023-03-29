@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
@@ -75,12 +76,29 @@ public interface StagedOrderChangeCustomLineItemQuantityAction extends StagedOrd
     }
 
     /**
-     * factory method to copy an instance of StagedOrderChangeCustomLineItemQuantityAction
+     * factory method to create a shallow copy StagedOrderChangeCustomLineItemQuantityAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static StagedOrderChangeCustomLineItemQuantityAction of(
             final StagedOrderChangeCustomLineItemQuantityAction template) {
+        StagedOrderChangeCustomLineItemQuantityActionImpl instance = new StagedOrderChangeCustomLineItemQuantityActionImpl();
+        instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setQuantity(template.getQuantity());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedOrderChangeCustomLineItemQuantityAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedOrderChangeCustomLineItemQuantityAction deepCopy(
+            @Nullable final StagedOrderChangeCustomLineItemQuantityAction template) {
+        if (template == null) {
+            return null;
+        }
         StagedOrderChangeCustomLineItemQuantityActionImpl instance = new StagedOrderChangeCustomLineItemQuantityActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setQuantity(template.getQuantity());

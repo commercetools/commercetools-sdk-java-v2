@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -71,14 +72,30 @@ public interface InvalidCurrentPasswordError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of InvalidCurrentPasswordError
+     * factory method to create a shallow copy InvalidCurrentPasswordError
      * @param template instance to be copied
      * @return copy instance
      */
     public static InvalidCurrentPasswordError of(final InvalidCurrentPasswordError template) {
         InvalidCurrentPasswordErrorImpl instance = new InvalidCurrentPasswordErrorImpl();
         instance.setMessage(template.getMessage());
-        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of InvalidCurrentPasswordError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static InvalidCurrentPasswordError deepCopy(@Nullable final InvalidCurrentPasswordError template) {
+        if (template == null) {
+            return null;
+        }
+        InvalidCurrentPasswordErrorImpl instance = new InvalidCurrentPasswordErrorImpl();
+        instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
 

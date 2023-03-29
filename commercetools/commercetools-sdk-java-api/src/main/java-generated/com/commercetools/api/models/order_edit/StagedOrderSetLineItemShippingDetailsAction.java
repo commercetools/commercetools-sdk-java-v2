@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -76,7 +77,7 @@ public interface StagedOrderSetLineItemShippingDetailsAction extends StagedOrder
     }
 
     /**
-     * factory method to copy an instance of StagedOrderSetLineItemShippingDetailsAction
+     * factory method to create a shallow copy StagedOrderSetLineItemShippingDetailsAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -85,6 +86,24 @@ public interface StagedOrderSetLineItemShippingDetailsAction extends StagedOrder
         StagedOrderSetLineItemShippingDetailsActionImpl instance = new StagedOrderSetLineItemShippingDetailsActionImpl();
         instance.setLineItemId(template.getLineItemId());
         instance.setShippingDetails(template.getShippingDetails());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedOrderSetLineItemShippingDetailsAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedOrderSetLineItemShippingDetailsAction deepCopy(
+            @Nullable final StagedOrderSetLineItemShippingDetailsAction template) {
+        if (template == null) {
+            return null;
+        }
+        StagedOrderSetLineItemShippingDetailsActionImpl instance = new StagedOrderSetLineItemShippingDetailsActionImpl();
+        instance.setLineItemId(template.getLineItemId());
+        instance.setShippingDetails(
+            com.commercetools.api.models.cart.ItemShippingDetailsDraft.deepCopy(template.getShippingDetails()));
         return instance;
     }
 

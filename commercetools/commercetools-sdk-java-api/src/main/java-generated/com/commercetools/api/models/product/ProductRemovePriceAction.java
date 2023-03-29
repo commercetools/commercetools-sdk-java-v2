@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -73,11 +74,27 @@ public interface ProductRemovePriceAction extends ProductUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ProductRemovePriceAction
+     * factory method to create a shallow copy ProductRemovePriceAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductRemovePriceAction of(final ProductRemovePriceAction template) {
+        ProductRemovePriceActionImpl instance = new ProductRemovePriceActionImpl();
+        instance.setPriceId(template.getPriceId());
+        instance.setStaged(template.getStaged());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductRemovePriceAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductRemovePriceAction deepCopy(@Nullable final ProductRemovePriceAction template) {
+        if (template == null) {
+            return null;
+        }
         ProductRemovePriceActionImpl instance = new ProductRemovePriceActionImpl();
         instance.setPriceId(template.getPriceId());
         instance.setStaged(template.getStaged());

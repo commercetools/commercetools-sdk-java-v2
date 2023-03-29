@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -40,11 +42,25 @@ public interface AttributeMoneyType extends AttributeType {
     }
 
     /**
-     * factory method to copy an instance of AttributeMoneyType
+     * factory method to create a shallow copy AttributeMoneyType
      * @param template instance to be copied
      * @return copy instance
      */
     public static AttributeMoneyType of(final AttributeMoneyType template) {
+        AttributeMoneyTypeImpl instance = new AttributeMoneyTypeImpl();
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of AttributeMoneyType
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AttributeMoneyType deepCopy(@Nullable final AttributeMoneyType template) {
+        if (template == null) {
+            return null;
+        }
         AttributeMoneyTypeImpl instance = new AttributeMoneyTypeImpl();
         return instance;
     }

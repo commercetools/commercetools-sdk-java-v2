@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -74,11 +75,27 @@ public interface AzureEventGridDestination extends Destination {
     }
 
     /**
-     * factory method to copy an instance of AzureEventGridDestination
+     * factory method to create a shallow copy AzureEventGridDestination
      * @param template instance to be copied
      * @return copy instance
      */
     public static AzureEventGridDestination of(final AzureEventGridDestination template) {
+        AzureEventGridDestinationImpl instance = new AzureEventGridDestinationImpl();
+        instance.setUri(template.getUri());
+        instance.setAccessKey(template.getAccessKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of AzureEventGridDestination
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AzureEventGridDestination deepCopy(@Nullable final AzureEventGridDestination template) {
+        if (template == null) {
+            return null;
+        }
         AzureEventGridDestinationImpl instance = new AzureEventGridDestinationImpl();
         instance.setUri(template.getUri());
         instance.setAccessKey(template.getAccessKey());

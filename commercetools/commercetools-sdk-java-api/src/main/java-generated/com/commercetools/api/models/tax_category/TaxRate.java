@@ -4,7 +4,9 @@ package com.commercetools.api.models.tax_category;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -155,7 +157,7 @@ public interface TaxRate {
     }
 
     /**
-     * factory method to copy an instance of TaxRate
+     * factory method to create a shallow copy TaxRate
      * @param template instance to be copied
      * @return copy instance
      */
@@ -168,6 +170,31 @@ public interface TaxRate {
         instance.setCountry(template.getCountry());
         instance.setState(template.getState());
         instance.setSubRates(template.getSubRates());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of TaxRate
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static TaxRate deepCopy(@Nullable final TaxRate template) {
+        if (template == null) {
+            return null;
+        }
+        TaxRateImpl instance = new TaxRateImpl();
+        instance.setId(template.getId());
+        instance.setName(template.getName());
+        instance.setAmount(template.getAmount());
+        instance.setIncludedInPrice(template.getIncludedInPrice());
+        instance.setCountry(template.getCountry());
+        instance.setState(template.getState());
+        instance.setSubRates(Optional.ofNullable(template.getSubRates())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.tax_category.SubRate::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

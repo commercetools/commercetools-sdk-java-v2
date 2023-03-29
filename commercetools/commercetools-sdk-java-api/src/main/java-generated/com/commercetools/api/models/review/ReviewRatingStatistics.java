@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -119,11 +120,30 @@ public interface ReviewRatingStatistics {
     }
 
     /**
-     * factory method to copy an instance of ReviewRatingStatistics
+     * factory method to create a shallow copy ReviewRatingStatistics
      * @param template instance to be copied
      * @return copy instance
      */
     public static ReviewRatingStatistics of(final ReviewRatingStatistics template) {
+        ReviewRatingStatisticsImpl instance = new ReviewRatingStatisticsImpl();
+        instance.setAverageRating(template.getAverageRating());
+        instance.setHighestRating(template.getHighestRating());
+        instance.setLowestRating(template.getLowestRating());
+        instance.setCount(template.getCount());
+        instance.setRatingsDistribution(template.getRatingsDistribution());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ReviewRatingStatistics
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ReviewRatingStatistics deepCopy(@Nullable final ReviewRatingStatistics template) {
+        if (template == null) {
+            return null;
+        }
         ReviewRatingStatisticsImpl instance = new ReviewRatingStatisticsImpl();
         instance.setAverageRating(template.getAverageRating());
         instance.setHighestRating(template.getHighestRating());

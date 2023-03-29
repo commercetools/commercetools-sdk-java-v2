@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.common.SelectionMode;
@@ -131,12 +132,32 @@ public interface ChangeTargetMultiBuyCustomLineItemsChangeValue extends ChangeTa
     }
 
     /**
-     * factory method to copy an instance of ChangeTargetMultiBuyCustomLineItemsChangeValue
+     * factory method to create a shallow copy ChangeTargetMultiBuyCustomLineItemsChangeValue
      * @param template instance to be copied
      * @return copy instance
      */
     public static ChangeTargetMultiBuyCustomLineItemsChangeValue of(
             final ChangeTargetMultiBuyCustomLineItemsChangeValue template) {
+        ChangeTargetMultiBuyCustomLineItemsChangeValueImpl instance = new ChangeTargetMultiBuyCustomLineItemsChangeValueImpl();
+        instance.setPredicate(template.getPredicate());
+        instance.setTriggerQuantity(template.getTriggerQuantity());
+        instance.setDiscountedQuantity(template.getDiscountedQuantity());
+        instance.setMaxOccurrence(template.getMaxOccurrence());
+        instance.setSelectionMode(template.getSelectionMode());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChangeTargetMultiBuyCustomLineItemsChangeValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChangeTargetMultiBuyCustomLineItemsChangeValue deepCopy(
+            @Nullable final ChangeTargetMultiBuyCustomLineItemsChangeValue template) {
+        if (template == null) {
+            return null;
+        }
         ChangeTargetMultiBuyCustomLineItemsChangeValueImpl instance = new ChangeTargetMultiBuyCustomLineItemsChangeValueImpl();
         instance.setPredicate(template.getPredicate());
         instance.setTriggerQuantity(template.getTriggerQuantity());

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.common.LocalizedString;
@@ -58,13 +59,29 @@ public interface CategorySetDescriptionAction extends CategoryUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of CategorySetDescriptionAction
+     * factory method to create a shallow copy CategorySetDescriptionAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static CategorySetDescriptionAction of(final CategorySetDescriptionAction template) {
         CategorySetDescriptionActionImpl instance = new CategorySetDescriptionActionImpl();
         instance.setDescription(template.getDescription());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CategorySetDescriptionAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CategorySetDescriptionAction deepCopy(@Nullable final CategorySetDescriptionAction template) {
+        if (template == null) {
+            return null;
+        }
+        CategorySetDescriptionActionImpl instance = new CategorySetDescriptionActionImpl();
+        instance.setDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
         return instance;
     }
 

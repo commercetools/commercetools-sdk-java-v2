@@ -4,7 +4,9 @@ package com.commercetools.importapi.models.customfields;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -69,13 +71,32 @@ public interface ReferenceSetField extends CustomField {
     }
 
     /**
-     * factory method to copy an instance of ReferenceSetField
+     * factory method to create a shallow copy ReferenceSetField
      * @param template instance to be copied
      * @return copy instance
      */
     public static ReferenceSetField of(final ReferenceSetField template) {
         ReferenceSetFieldImpl instance = new ReferenceSetFieldImpl();
         instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ReferenceSetField
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ReferenceSetField deepCopy(@Nullable final ReferenceSetField template) {
+        if (template == null) {
+            return null;
+        }
+        ReferenceSetFieldImpl instance = new ReferenceSetFieldImpl();
+        instance.setValue(Optional.ofNullable(template.getValue())
+                .map(t -> t.stream()
+                        .map(com.commercetools.importapi.models.common.KeyReference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

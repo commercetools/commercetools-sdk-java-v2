@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -70,11 +72,28 @@ public interface CustomerRemoveShippingAddressIdAction extends CustomerUpdateAct
     }
 
     /**
-     * factory method to copy an instance of CustomerRemoveShippingAddressIdAction
+     * factory method to create a shallow copy CustomerRemoveShippingAddressIdAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static CustomerRemoveShippingAddressIdAction of(final CustomerRemoveShippingAddressIdAction template) {
+        CustomerRemoveShippingAddressIdActionImpl instance = new CustomerRemoveShippingAddressIdActionImpl();
+        instance.setAddressId(template.getAddressId());
+        instance.setAddressKey(template.getAddressKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomerRemoveShippingAddressIdAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomerRemoveShippingAddressIdAction deepCopy(
+            @Nullable final CustomerRemoveShippingAddressIdAction template) {
+        if (template == null) {
+            return null;
+        }
         CustomerRemoveShippingAddressIdActionImpl instance = new CustomerRemoveShippingAddressIdActionImpl();
         instance.setAddressId(template.getAddressId());
         instance.setAddressKey(template.getAddressKey());

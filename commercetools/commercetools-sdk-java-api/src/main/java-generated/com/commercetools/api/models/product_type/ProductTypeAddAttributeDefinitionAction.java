@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -60,13 +61,30 @@ public interface ProductTypeAddAttributeDefinitionAction extends ProductTypeUpda
     }
 
     /**
-     * factory method to copy an instance of ProductTypeAddAttributeDefinitionAction
+     * factory method to create a shallow copy ProductTypeAddAttributeDefinitionAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductTypeAddAttributeDefinitionAction of(final ProductTypeAddAttributeDefinitionAction template) {
         ProductTypeAddAttributeDefinitionActionImpl instance = new ProductTypeAddAttributeDefinitionActionImpl();
         instance.setAttribute(template.getAttribute());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductTypeAddAttributeDefinitionAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductTypeAddAttributeDefinitionAction deepCopy(
+            @Nullable final ProductTypeAddAttributeDefinitionAction template) {
+        if (template == null) {
+            return null;
+        }
+        ProductTypeAddAttributeDefinitionActionImpl instance = new ProductTypeAddAttributeDefinitionActionImpl();
+        instance.setAttribute(
+            com.commercetools.api.models.product_type.AttributeDefinitionDraft.deepCopy(template.getAttribute()));
         return instance;
     }
 

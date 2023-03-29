@@ -4,7 +4,9 @@ package com.commercetools.api.models.cart;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -217,7 +219,7 @@ public interface CustomLineItemImportDraft
     }
 
     /**
-     * factory method to copy an instance of CustomLineItemImportDraft
+     * factory method to create a shallow copy CustomLineItemImportDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -232,6 +234,36 @@ public interface CustomLineItemImportDraft
         instance.setTaxCategory(template.getTaxCategory());
         instance.setCustom(template.getCustom());
         instance.setShippingDetails(template.getShippingDetails());
+        instance.setPriceMode(template.getPriceMode());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomLineItemImportDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomLineItemImportDraft deepCopy(@Nullable final CustomLineItemImportDraft template) {
+        if (template == null) {
+            return null;
+        }
+        CustomLineItemImportDraftImpl instance = new CustomLineItemImportDraftImpl();
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setQuantity(template.getQuantity());
+        instance.setMoney(com.commercetools.api.models.common.Money.deepCopy(template.getMoney()));
+        instance.setSlug(template.getSlug());
+        instance.setState(Optional.ofNullable(template.getState())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.order.ItemState::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setTaxRate(com.commercetools.api.models.tax_category.TaxRate.deepCopy(template.getTaxRate()));
+        instance.setTaxCategory(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier
+                .deepCopy(template.getTaxCategory()));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setShippingDetails(
+            com.commercetools.api.models.cart.ItemShippingDetailsDraft.deepCopy(template.getShippingDetails()));
         instance.setPriceMode(template.getPriceMode());
         return instance;
     }

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -76,13 +77,29 @@ public interface DeliveryAddedMessagePayload extends OrderMessagePayload {
     }
 
     /**
-     * factory method to copy an instance of DeliveryAddedMessagePayload
+     * factory method to create a shallow copy DeliveryAddedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
     public static DeliveryAddedMessagePayload of(final DeliveryAddedMessagePayload template) {
         DeliveryAddedMessagePayloadImpl instance = new DeliveryAddedMessagePayloadImpl();
         instance.setDelivery(template.getDelivery());
+        instance.setShippingKey(template.getShippingKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of DeliveryAddedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static DeliveryAddedMessagePayload deepCopy(@Nullable final DeliveryAddedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        DeliveryAddedMessagePayloadImpl instance = new DeliveryAddedMessagePayloadImpl();
+        instance.setDelivery(com.commercetools.api.models.order.Delivery.deepCopy(template.getDelivery()));
         instance.setShippingKey(template.getShippingKey());
         return instance;
     }

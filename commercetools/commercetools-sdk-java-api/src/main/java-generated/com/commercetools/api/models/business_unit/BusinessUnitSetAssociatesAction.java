@@ -4,7 +4,9 @@ package com.commercetools.api.models.business_unit;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -68,13 +70,32 @@ public interface BusinessUnitSetAssociatesAction extends BusinessUnitUpdateActio
     }
 
     /**
-     * factory method to copy an instance of BusinessUnitSetAssociatesAction
+     * factory method to create a shallow copy BusinessUnitSetAssociatesAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static BusinessUnitSetAssociatesAction of(final BusinessUnitSetAssociatesAction template) {
         BusinessUnitSetAssociatesActionImpl instance = new BusinessUnitSetAssociatesActionImpl();
         instance.setAssociates(template.getAssociates());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of BusinessUnitSetAssociatesAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static BusinessUnitSetAssociatesAction deepCopy(@Nullable final BusinessUnitSetAssociatesAction template) {
+        if (template == null) {
+            return null;
+        }
+        BusinessUnitSetAssociatesActionImpl instance = new BusinessUnitSetAssociatesActionImpl();
+        instance.setAssociates(Optional.ofNullable(template.getAssociates())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.business_unit.AssociateDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

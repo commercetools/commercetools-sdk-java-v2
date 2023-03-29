@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -79,7 +80,7 @@ public interface ProductSelectionProductAddedMessagePayload extends MessagePaylo
     }
 
     /**
-     * factory method to copy an instance of ProductSelectionProductAddedMessagePayload
+     * factory method to create a shallow copy ProductSelectionProductAddedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -88,6 +89,24 @@ public interface ProductSelectionProductAddedMessagePayload extends MessagePaylo
         ProductSelectionProductAddedMessagePayloadImpl instance = new ProductSelectionProductAddedMessagePayloadImpl();
         instance.setProduct(template.getProduct());
         instance.setVariantSelection(template.getVariantSelection());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductSelectionProductAddedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductSelectionProductAddedMessagePayload deepCopy(
+            @Nullable final ProductSelectionProductAddedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        ProductSelectionProductAddedMessagePayloadImpl instance = new ProductSelectionProductAddedMessagePayloadImpl();
+        instance.setProduct(com.commercetools.api.models.product.ProductReference.deepCopy(template.getProduct()));
+        instance.setVariantSelection(com.commercetools.api.models.product_selection.ProductVariantSelection
+                .deepCopy(template.getVariantSelection()));
         return instance;
     }
 

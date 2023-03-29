@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,26 @@ public interface StateChangeKeyAction extends StateUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of StateChangeKeyAction
+     * factory method to create a shallow copy StateChangeKeyAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static StateChangeKeyAction of(final StateChangeKeyAction template) {
+        StateChangeKeyActionImpl instance = new StateChangeKeyActionImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StateChangeKeyAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StateChangeKeyAction deepCopy(@Nullable final StateChangeKeyAction template) {
+        if (template == null) {
+            return null;
+        }
         StateChangeKeyActionImpl instance = new StateChangeKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;

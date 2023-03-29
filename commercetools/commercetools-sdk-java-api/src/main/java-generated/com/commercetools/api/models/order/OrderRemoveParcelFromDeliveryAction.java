@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,27 @@ public interface OrderRemoveParcelFromDeliveryAction extends OrderUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of OrderRemoveParcelFromDeliveryAction
+     * factory method to create a shallow copy OrderRemoveParcelFromDeliveryAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static OrderRemoveParcelFromDeliveryAction of(final OrderRemoveParcelFromDeliveryAction template) {
+        OrderRemoveParcelFromDeliveryActionImpl instance = new OrderRemoveParcelFromDeliveryActionImpl();
+        instance.setParcelId(template.getParcelId());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderRemoveParcelFromDeliveryAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderRemoveParcelFromDeliveryAction deepCopy(
+            @Nullable final OrderRemoveParcelFromDeliveryAction template) {
+        if (template == null) {
+            return null;
+        }
         OrderRemoveParcelFromDeliveryActionImpl instance = new OrderRemoveParcelFromDeliveryActionImpl();
         instance.setParcelId(template.getParcelId());
         return instance;

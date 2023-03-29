@@ -5,7 +5,9 @@ import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -238,7 +240,7 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
     }
 
     /**
-     * factory method to copy an instance of StandalonePriceDraft
+     * factory method to create a shallow copy StandalonePriceDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -255,6 +257,39 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
         instance.setTiers(template.getTiers());
         instance.setDiscounted(template.getDiscounted());
         instance.setCustom(template.getCustom());
+        instance.setActive(template.getActive());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StandalonePriceDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StandalonePriceDraft deepCopy(@Nullable final StandalonePriceDraft template) {
+        if (template == null) {
+            return null;
+        }
+        StandalonePriceDraftImpl instance = new StandalonePriceDraftImpl();
+        instance.setKey(template.getKey());
+        instance.setSku(template.getSku());
+        instance.setValue(com.commercetools.api.models.common.Money.deepCopy(template.getValue()));
+        instance.setCountry(template.getCountry());
+        instance.setCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier
+                .deepCopy(template.getCustomerGroup()));
+        instance.setChannel(
+            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getChannel()));
+        instance.setValidFrom(template.getValidFrom());
+        instance.setValidUntil(template.getValidUntil());
+        instance.setTiers(Optional.ofNullable(template.getTiers())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.common.PriceTierDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setDiscounted(
+            com.commercetools.api.models.common.DiscountedPriceDraft.deepCopy(template.getDiscounted()));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         instance.setActive(template.getActive());
         return instance;
     }

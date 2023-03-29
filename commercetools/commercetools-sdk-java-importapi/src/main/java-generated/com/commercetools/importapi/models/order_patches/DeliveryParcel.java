@@ -4,7 +4,9 @@ package com.commercetools.importapi.models.order_patches;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -110,7 +112,7 @@ public interface DeliveryParcel {
     }
 
     /**
-     * factory method to copy an instance of DeliveryParcel
+     * factory method to create a shallow copy DeliveryParcel
      * @param template instance to be copied
      * @return copy instance
      */
@@ -120,6 +122,30 @@ public interface DeliveryParcel {
         instance.setMeasurements(template.getMeasurements());
         instance.setTrackingData(template.getTrackingData());
         instance.setItems(template.getItems());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of DeliveryParcel
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static DeliveryParcel deepCopy(@Nullable final DeliveryParcel template) {
+        if (template == null) {
+            return null;
+        }
+        DeliveryParcelImpl instance = new DeliveryParcelImpl();
+        instance.setDeliveryId(template.getDeliveryId());
+        instance.setMeasurements(
+            com.commercetools.importapi.models.orders.ParcelMeasurements.deepCopy(template.getMeasurements()));
+        instance.setTrackingData(
+            com.commercetools.importapi.models.orders.TrackingData.deepCopy(template.getTrackingData()));
+        instance.setItems(Optional.ofNullable(template.getItems())
+                .map(t -> t.stream()
+                        .map(com.commercetools.importapi.models.orders.DeliveryItem::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

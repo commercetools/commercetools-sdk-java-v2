@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -84,11 +85,28 @@ public interface CustomerResetPassword {
     }
 
     /**
-     * factory method to copy an instance of CustomerResetPassword
+     * factory method to create a shallow copy CustomerResetPassword
      * @param template instance to be copied
      * @return copy instance
      */
     public static CustomerResetPassword of(final CustomerResetPassword template) {
+        CustomerResetPasswordImpl instance = new CustomerResetPasswordImpl();
+        instance.setTokenValue(template.getTokenValue());
+        instance.setNewPassword(template.getNewPassword());
+        instance.setVersion(template.getVersion());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomerResetPassword
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomerResetPassword deepCopy(@Nullable final CustomerResetPassword template) {
+        if (template == null) {
+            return null;
+        }
         CustomerResetPasswordImpl instance = new CustomerResetPasswordImpl();
         instance.setTokenValue(template.getTokenValue());
         instance.setNewPassword(template.getNewPassword());

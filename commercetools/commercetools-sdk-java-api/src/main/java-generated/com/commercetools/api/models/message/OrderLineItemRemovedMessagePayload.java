@@ -4,7 +4,9 @@ package com.commercetools.api.models.message;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -183,7 +185,7 @@ public interface OrderLineItemRemovedMessagePayload extends OrderMessagePayload 
     }
 
     /**
-     * factory method to copy an instance of OrderLineItemRemovedMessagePayload
+     * factory method to create a shallow copy OrderLineItemRemovedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -197,6 +199,36 @@ public interface OrderLineItemRemovedMessagePayload extends OrderMessagePayload 
         instance.setNewTaxedPrice(template.getNewTaxedPrice());
         instance.setNewPrice(template.getNewPrice());
         instance.setNewShippingDetail(template.getNewShippingDetail());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderLineItemRemovedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderLineItemRemovedMessagePayload deepCopy(
+            @Nullable final OrderLineItemRemovedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        OrderLineItemRemovedMessagePayloadImpl instance = new OrderLineItemRemovedMessagePayloadImpl();
+        instance.setLineItemId(template.getLineItemId());
+        instance.setRemovedQuantity(template.getRemovedQuantity());
+        instance.setNewQuantity(template.getNewQuantity());
+        instance.setNewState(Optional.ofNullable(template.getNewState())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.order.ItemState::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setNewTotalPrice(
+            com.commercetools.api.models.common.CentPrecisionMoney.deepCopy(template.getNewTotalPrice()));
+        instance.setNewTaxedPrice(
+            com.commercetools.api.models.cart.TaxedItemPrice.deepCopy(template.getNewTaxedPrice()));
+        instance.setNewPrice(com.commercetools.api.models.common.Price.deepCopy(template.getNewPrice()));
+        instance.setNewShippingDetail(
+            com.commercetools.api.models.cart.ItemShippingDetails.deepCopy(template.getNewShippingDetail()));
         return instance;
     }
 

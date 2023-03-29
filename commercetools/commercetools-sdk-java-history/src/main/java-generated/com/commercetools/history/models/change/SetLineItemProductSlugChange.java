@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -135,7 +136,7 @@ public interface SetLineItemProductSlugChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetLineItemProductSlugChange
+     * factory method to create a shallow copy SetLineItemProductSlugChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -146,6 +147,27 @@ public interface SetLineItemProductSlugChange extends Change {
         instance.setVariant(template.getVariant());
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetLineItemProductSlugChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetLineItemProductSlugChange deepCopy(@Nullable final SetLineItemProductSlugChange template) {
+        if (template == null) {
+            return null;
+        }
+        SetLineItemProductSlugChangeImpl instance = new SetLineItemProductSlugChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setLineItem(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getLineItem()));
+        instance.setVariant(template.getVariant());
+        instance.setNextValue(
+            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getPreviousValue()));
         return instance;
     }
 

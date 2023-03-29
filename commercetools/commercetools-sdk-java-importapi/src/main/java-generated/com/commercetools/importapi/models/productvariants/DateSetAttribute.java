@@ -6,6 +6,7 @@ import java.time.LocalDate;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -67,7 +68,7 @@ public interface DateSetAttribute extends Attribute {
     }
 
     /**
-     * factory method to copy an instance of DateSetAttribute
+     * factory method to create a shallow copy DateSetAttribute
      * @param template instance to be copied
      * @return copy instance
      */
@@ -75,6 +76,22 @@ public interface DateSetAttribute extends Attribute {
         DateSetAttributeImpl instance = new DateSetAttributeImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of DateSetAttribute
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static DateSetAttribute deepCopy(@Nullable final DateSetAttribute template) {
+        if (template == null) {
+            return null;
+        }
+        DateSetAttributeImpl instance = new DateSetAttributeImpl();
+        instance.setName(template.getName());
+        instance.setValue(Optional.ofNullable(template.getValue()).map(ArrayList::new).orElse(null));
         return instance;
     }
 

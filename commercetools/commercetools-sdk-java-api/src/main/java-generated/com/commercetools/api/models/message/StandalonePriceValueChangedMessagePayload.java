@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -92,7 +93,7 @@ public interface StandalonePriceValueChangedMessagePayload extends MessagePayloa
     }
 
     /**
-     * factory method to copy an instance of StandalonePriceValueChangedMessagePayload
+     * factory method to create a shallow copy StandalonePriceValueChangedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -102,6 +103,24 @@ public interface StandalonePriceValueChangedMessagePayload extends MessagePayloa
         instance.setValue(template.getValue());
         instance.setStaged(template.getStaged());
         instance.setOldValue(template.getOldValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StandalonePriceValueChangedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StandalonePriceValueChangedMessagePayload deepCopy(
+            @Nullable final StandalonePriceValueChangedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        StandalonePriceValueChangedMessagePayloadImpl instance = new StandalonePriceValueChangedMessagePayloadImpl();
+        instance.setValue(com.commercetools.api.models.common.Money.deepCopy(template.getValue()));
+        instance.setStaged(template.getStaged());
+        instance.setOldValue(com.commercetools.api.models.common.Money.deepCopy(template.getOldValue()));
         return instance;
     }
 

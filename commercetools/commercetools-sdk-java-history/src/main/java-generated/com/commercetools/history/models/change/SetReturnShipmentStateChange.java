@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.common.ReturnShipmentState;
@@ -99,11 +100,28 @@ public interface SetReturnShipmentStateChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetReturnShipmentStateChange
+     * factory method to create a shallow copy SetReturnShipmentStateChange
      * @param template instance to be copied
      * @return copy instance
      */
     public static SetReturnShipmentStateChange of(final SetReturnShipmentStateChange template) {
+        SetReturnShipmentStateChangeImpl instance = new SetReturnShipmentStateChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setNextValue(template.getNextValue());
+        instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetReturnShipmentStateChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetReturnShipmentStateChange deepCopy(@Nullable final SetReturnShipmentStateChange template) {
+        if (template == null) {
+            return null;
+        }
         SetReturnShipmentStateChangeImpl instance = new SetReturnShipmentStateChangeImpl();
         instance.setChange(template.getChange());
         instance.setNextValue(template.getNextValue());

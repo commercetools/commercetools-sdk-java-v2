@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -39,6 +40,24 @@ public interface ImageSearchConfigUpdateAction {
     @NotNull
     @JsonProperty("action")
     public String getAction();
+
+    /**
+     * factory method to create a deep copy of ImageSearchConfigUpdateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ImageSearchConfigUpdateAction deepCopy(@Nullable final ImageSearchConfigUpdateAction template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.ml.models.image_search_config.ChangeStatusUpdateAction) {
+            return com.commercetools.ml.models.image_search_config.ChangeStatusUpdateAction
+                    .deepCopy((com.commercetools.ml.models.image_search_config.ChangeStatusUpdateAction) template);
+        }
+        ImageSearchConfigUpdateActionImpl instance = new ImageSearchConfigUpdateActionImpl();
+        return instance;
+    }
 
     /**
      * builder for changeStatus subtype

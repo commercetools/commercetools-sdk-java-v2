@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -55,11 +57,26 @@ public interface ZoneSetKeyAction extends ZoneUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ZoneSetKeyAction
+     * factory method to create a shallow copy ZoneSetKeyAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ZoneSetKeyAction of(final ZoneSetKeyAction template) {
+        ZoneSetKeyActionImpl instance = new ZoneSetKeyActionImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ZoneSetKeyAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ZoneSetKeyAction deepCopy(@Nullable final ZoneSetKeyAction template) {
+        if (template == null) {
+            return null;
+        }
         ZoneSetKeyActionImpl instance = new ZoneSetKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;

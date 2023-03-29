@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -136,7 +137,7 @@ public interface SetLineItemDistributionChannelChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetLineItemDistributionChannelChange
+     * factory method to create a shallow copy SetLineItemDistributionChannelChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -147,6 +148,27 @@ public interface SetLineItemDistributionChannelChange extends Change {
         instance.setVariant(template.getVariant());
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetLineItemDistributionChannelChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetLineItemDistributionChannelChange deepCopy(
+            @Nullable final SetLineItemDistributionChannelChange template) {
+        if (template == null) {
+            return null;
+        }
+        SetLineItemDistributionChannelChangeImpl instance = new SetLineItemDistributionChannelChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setLineItem(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getLineItem()));
+        instance.setVariant(template.getVariant());
+        instance.setNextValue(com.commercetools.history.models.common.Reference.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.Reference.deepCopy(template.getPreviousValue()));
         return instance;
     }
 

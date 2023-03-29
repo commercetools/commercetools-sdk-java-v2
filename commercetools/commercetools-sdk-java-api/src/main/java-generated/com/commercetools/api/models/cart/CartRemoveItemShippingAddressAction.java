@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,27 @@ public interface CartRemoveItemShippingAddressAction extends CartUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of CartRemoveItemShippingAddressAction
+     * factory method to create a shallow copy CartRemoveItemShippingAddressAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static CartRemoveItemShippingAddressAction of(final CartRemoveItemShippingAddressAction template) {
+        CartRemoveItemShippingAddressActionImpl instance = new CartRemoveItemShippingAddressActionImpl();
+        instance.setAddressKey(template.getAddressKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartRemoveItemShippingAddressAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartRemoveItemShippingAddressAction deepCopy(
+            @Nullable final CartRemoveItemShippingAddressAction template) {
+        if (template == null) {
+            return null;
+        }
         CartRemoveItemShippingAddressActionImpl instance = new CartRemoveItemShippingAddressActionImpl();
         instance.setAddressKey(template.getAddressKey());
         return instance;

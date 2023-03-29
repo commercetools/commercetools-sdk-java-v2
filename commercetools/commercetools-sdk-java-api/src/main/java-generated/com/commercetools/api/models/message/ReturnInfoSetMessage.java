@@ -4,7 +4,9 @@ package com.commercetools.api.models.message;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.order.ReturnInfo;
@@ -73,7 +75,7 @@ public interface ReturnInfoSetMessage extends OrderMessage {
     }
 
     /**
-     * factory method to copy an instance of ReturnInfoSetMessage
+     * factory method to create a shallow copy ReturnInfoSetMessage
      * @param template instance to be copied
      * @return copy instance
      */
@@ -90,6 +92,37 @@ public interface ReturnInfoSetMessage extends OrderMessage {
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setReturnInfo(template.getReturnInfo());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ReturnInfoSetMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ReturnInfoSetMessage deepCopy(@Nullable final ReturnInfoSetMessage template) {
+        if (template == null) {
+            return null;
+        }
+        ReturnInfoSetMessageImpl instance = new ReturnInfoSetMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
+                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setReturnInfo(Optional.ofNullable(template.getReturnInfo())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.order.ReturnInfo::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

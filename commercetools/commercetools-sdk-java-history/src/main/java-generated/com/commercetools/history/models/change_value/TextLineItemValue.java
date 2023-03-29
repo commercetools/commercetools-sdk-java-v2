@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -72,7 +73,7 @@ public interface TextLineItemValue {
     }
 
     /**
-     * factory method to copy an instance of TextLineItemValue
+     * factory method to create a shallow copy TextLineItemValue
      * @param template instance to be copied
      * @return copy instance
      */
@@ -80,6 +81,22 @@ public interface TextLineItemValue {
         TextLineItemValueImpl instance = new TextLineItemValueImpl();
         instance.setId(template.getId());
         instance.setName(template.getName());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of TextLineItemValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static TextLineItemValue deepCopy(@Nullable final TextLineItemValue template) {
+        if (template == null) {
+            return null;
+        }
+        TextLineItemValueImpl instance = new TextLineItemValueImpl();
+        instance.setId(template.getId());
+        instance.setName(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getName()));
         return instance;
     }
 

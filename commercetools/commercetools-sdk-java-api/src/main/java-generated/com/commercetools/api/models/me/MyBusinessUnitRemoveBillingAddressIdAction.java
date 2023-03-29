@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -70,12 +72,29 @@ public interface MyBusinessUnitRemoveBillingAddressIdAction extends MyBusinessUn
     }
 
     /**
-     * factory method to copy an instance of MyBusinessUnitRemoveBillingAddressIdAction
+     * factory method to create a shallow copy MyBusinessUnitRemoveBillingAddressIdAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static MyBusinessUnitRemoveBillingAddressIdAction of(
             final MyBusinessUnitRemoveBillingAddressIdAction template) {
+        MyBusinessUnitRemoveBillingAddressIdActionImpl instance = new MyBusinessUnitRemoveBillingAddressIdActionImpl();
+        instance.setAddressId(template.getAddressId());
+        instance.setAddressKey(template.getAddressKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MyBusinessUnitRemoveBillingAddressIdAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MyBusinessUnitRemoveBillingAddressIdAction deepCopy(
+            @Nullable final MyBusinessUnitRemoveBillingAddressIdAction template) {
+        if (template == null) {
+            return null;
+        }
         MyBusinessUnitRemoveBillingAddressIdActionImpl instance = new MyBusinessUnitRemoveBillingAddressIdActionImpl();
         instance.setAddressId(template.getAddressId());
         instance.setAddressKey(template.getAddressKey());

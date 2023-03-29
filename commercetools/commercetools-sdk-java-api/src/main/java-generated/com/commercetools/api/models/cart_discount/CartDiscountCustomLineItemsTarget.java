@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,27 @@ public interface CartDiscountCustomLineItemsTarget extends CartDiscountTarget {
     }
 
     /**
-     * factory method to copy an instance of CartDiscountCustomLineItemsTarget
+     * factory method to create a shallow copy CartDiscountCustomLineItemsTarget
      * @param template instance to be copied
      * @return copy instance
      */
     public static CartDiscountCustomLineItemsTarget of(final CartDiscountCustomLineItemsTarget template) {
+        CartDiscountCustomLineItemsTargetImpl instance = new CartDiscountCustomLineItemsTargetImpl();
+        instance.setPredicate(template.getPredicate());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartDiscountCustomLineItemsTarget
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartDiscountCustomLineItemsTarget deepCopy(
+            @Nullable final CartDiscountCustomLineItemsTarget template) {
+        if (template == null) {
+            return null;
+        }
         CartDiscountCustomLineItemsTargetImpl instance = new CartDiscountCustomLineItemsTargetImpl();
         instance.setPredicate(template.getPredicate());
         return instance;

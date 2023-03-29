@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -59,11 +60,26 @@ public interface DateTimeField extends CustomField {
     }
 
     /**
-     * factory method to copy an instance of DateTimeField
+     * factory method to create a shallow copy DateTimeField
      * @param template instance to be copied
      * @return copy instance
      */
     public static DateTimeField of(final DateTimeField template) {
+        DateTimeFieldImpl instance = new DateTimeFieldImpl();
+        instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of DateTimeField
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static DateTimeField deepCopy(@Nullable final DateTimeField template) {
+        if (template == null) {
+            return null;
+        }
         DateTimeFieldImpl instance = new DateTimeFieldImpl();
         instance.setValue(template.getValue());
         return instance;

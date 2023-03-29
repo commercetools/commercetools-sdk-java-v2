@@ -5,7 +5,9 @@ import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -330,7 +332,7 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
     }
 
     /**
-     * factory method to copy an instance of Store
+     * factory method to create a shallow copy Store
      * @param template instance to be copied
      * @return copy instance
      */
@@ -350,6 +352,51 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
         instance.setSupplyChannels(template.getSupplyChannels());
         instance.setProductSelections(template.getProductSelections());
         instance.setCustom(template.getCustom());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of Store
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static Store deepCopy(@Nullable final Store template) {
+        if (template == null) {
+            return null;
+        }
+        StoreImpl instance = new StoreImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
+        instance.setKey(template.getKey());
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setLanguages(Optional.ofNullable(template.getLanguages()).map(ArrayList::new).orElse(null));
+        instance.setCountries(Optional.ofNullable(template.getCountries())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.store_country.StoreCountry::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setDistributionChannels(Optional.ofNullable(template.getDistributionChannels())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.channel.ChannelReference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setSupplyChannels(Optional.ofNullable(template.getSupplyChannels())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.channel.ChannelReference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setProductSelections(Optional.ofNullable(template.getProductSelections())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.store.ProductSelectionSetting::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         return instance;
     }
 

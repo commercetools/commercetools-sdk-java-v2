@@ -1,6 +1,8 @@
 
 package com.commercetools;
 
+import static com.commercetools.TestUtils.stringFromResource;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -13,7 +15,9 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import org.assertj.core.api.Assertions;
+import org.json.JSONException;
 import org.junit.jupiter.api.Test;
+import org.skyscreamer.jsonassert.JSONAssert;
 
 public class ProductTest {
 
@@ -47,5 +51,27 @@ public class ProductTest {
 
         Assertions.assertThat(JsonUtils.toJsonString(productProjection))
                 .isEqualTo("{\"masterVariant\":{\"id\":1,\"sku\":\"foo\"},\"variants\":[{\"id\":2,\"sku\":\"bar\"}]}");
+    }
+
+    @Test
+    public void deepCopy() {
+        Product product = JsonUtils.fromJsonString(stringFromResource("product.json"), Product.class);
+        final Product copy = Product.deepCopy(product);
+        final String productString;
+        final String copyString;
+        try {
+            copyString = JsonUtils.toJsonString(copy);
+            productString = JsonUtils.toJsonString(product);
+        }
+        catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        }
+
+        try {
+            JSONAssert.assertEquals(productString, copyString, true);
+        }
+        catch (JSONException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

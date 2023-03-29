@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -85,7 +86,7 @@ public interface RemoveDiscountCodeChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of RemoveDiscountCodeChange
+     * factory method to create a shallow copy RemoveDiscountCodeChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -93,6 +94,23 @@ public interface RemoveDiscountCodeChange extends Change {
         RemoveDiscountCodeChangeImpl instance = new RemoveDiscountCodeChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of RemoveDiscountCodeChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static RemoveDiscountCodeChange deepCopy(@Nullable final RemoveDiscountCodeChange template) {
+        if (template == null) {
+            return null;
+        }
+        RemoveDiscountCodeChangeImpl instance = new RemoveDiscountCodeChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.DiscountCodeInfo.deepCopy(template.getPreviousValue()));
         return instance;
     }
 

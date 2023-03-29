@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -55,11 +57,26 @@ public interface CustomerSetLastNameAction extends CustomerUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of CustomerSetLastNameAction
+     * factory method to create a shallow copy CustomerSetLastNameAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static CustomerSetLastNameAction of(final CustomerSetLastNameAction template) {
+        CustomerSetLastNameActionImpl instance = new CustomerSetLastNameActionImpl();
+        instance.setLastName(template.getLastName());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomerSetLastNameAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomerSetLastNameAction deepCopy(@Nullable final CustomerSetLastNameAction template) {
+        if (template == null) {
+            return null;
+        }
         CustomerSetLastNameActionImpl instance = new CustomerSetLastNameActionImpl();
         instance.setLastName(template.getLastName());
         return instance;

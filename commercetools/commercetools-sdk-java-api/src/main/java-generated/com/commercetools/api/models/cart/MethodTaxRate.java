@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -70,7 +71,7 @@ public interface MethodTaxRate {
     }
 
     /**
-     * factory method to copy an instance of MethodTaxRate
+     * factory method to create a shallow copy MethodTaxRate
      * @param template instance to be copied
      * @return copy instance
      */
@@ -78,6 +79,22 @@ public interface MethodTaxRate {
         MethodTaxRateImpl instance = new MethodTaxRateImpl();
         instance.setShippingMethodKey(template.getShippingMethodKey());
         instance.setTaxRate(template.getTaxRate());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MethodTaxRate
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MethodTaxRate deepCopy(@Nullable final MethodTaxRate template) {
+        if (template == null) {
+            return null;
+        }
+        MethodTaxRateImpl instance = new MethodTaxRateImpl();
+        instance.setShippingMethodKey(template.getShippingMethodKey());
+        instance.setTaxRate(com.commercetools.api.models.tax_category.TaxRate.deepCopy(template.getTaxRate()));
         return instance;
     }
 

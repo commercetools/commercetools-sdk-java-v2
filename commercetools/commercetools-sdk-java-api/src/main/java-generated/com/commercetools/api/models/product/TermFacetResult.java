@@ -4,7 +4,9 @@ package com.commercetools.api.models.product;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -132,7 +134,7 @@ public interface TermFacetResult extends FacetResult {
     }
 
     /**
-     * factory method to copy an instance of TermFacetResult
+     * factory method to create a shallow copy TermFacetResult
      * @param template instance to be copied
      * @return copy instance
      */
@@ -143,6 +145,29 @@ public interface TermFacetResult extends FacetResult {
         instance.setTotal(template.getTotal());
         instance.setOther(template.getOther());
         instance.setTerms(template.getTerms());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of TermFacetResult
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static TermFacetResult deepCopy(@Nullable final TermFacetResult template) {
+        if (template == null) {
+            return null;
+        }
+        TermFacetResultImpl instance = new TermFacetResultImpl();
+        instance.setDataType(template.getDataType());
+        instance.setMissing(template.getMissing());
+        instance.setTotal(template.getTotal());
+        instance.setOther(template.getOther());
+        instance.setTerms(Optional.ofNullable(template.getTerms())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.product.FacetTerm::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

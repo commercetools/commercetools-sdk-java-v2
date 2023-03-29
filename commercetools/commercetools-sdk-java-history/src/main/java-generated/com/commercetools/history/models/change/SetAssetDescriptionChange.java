@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -120,7 +121,7 @@ public interface SetAssetDescriptionChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetAssetDescriptionChange
+     * factory method to create a shallow copy SetAssetDescriptionChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -130,6 +131,26 @@ public interface SetAssetDescriptionChange extends Change {
         instance.setAsset(template.getAsset());
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetAssetDescriptionChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetAssetDescriptionChange deepCopy(@Nullable final SetAssetDescriptionChange template) {
+        if (template == null) {
+            return null;
+        }
+        SetAssetDescriptionChangeImpl instance = new SetAssetDescriptionChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setAsset(com.commercetools.history.models.change_value.AssetChangeValue.deepCopy(template.getAsset()));
+        instance.setNextValue(
+            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getPreviousValue()));
         return instance;
     }
 

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -61,13 +62,29 @@ public interface OrderEditAddStagedActionAction extends OrderEditUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of OrderEditAddStagedActionAction
+     * factory method to create a shallow copy OrderEditAddStagedActionAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static OrderEditAddStagedActionAction of(final OrderEditAddStagedActionAction template) {
         OrderEditAddStagedActionActionImpl instance = new OrderEditAddStagedActionActionImpl();
         instance.setStagedAction(template.getStagedAction());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderEditAddStagedActionAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderEditAddStagedActionAction deepCopy(@Nullable final OrderEditAddStagedActionAction template) {
+        if (template == null) {
+            return null;
+        }
+        OrderEditAddStagedActionActionImpl instance = new OrderEditAddStagedActionActionImpl();
+        instance.setStagedAction(
+            com.commercetools.api.models.order.StagedOrderUpdateAction.deepCopy(template.getStagedAction()));
         return instance;
     }
 

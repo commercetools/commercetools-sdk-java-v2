@@ -4,7 +4,9 @@ package com.commercetools.api.models.cart;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -126,7 +128,7 @@ public interface CartPagedQueryResponse extends com.commercetools.api.models.Res
     }
 
     /**
-     * factory method to copy an instance of CartPagedQueryResponse
+     * factory method to create a shallow copy CartPagedQueryResponse
      * @param template instance to be copied
      * @return copy instance
      */
@@ -137,6 +139,27 @@ public interface CartPagedQueryResponse extends com.commercetools.api.models.Res
         instance.setCount(template.getCount());
         instance.setTotal(template.getTotal());
         instance.setResults(template.getResults());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartPagedQueryResponse
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartPagedQueryResponse deepCopy(@Nullable final CartPagedQueryResponse template) {
+        if (template == null) {
+            return null;
+        }
+        CartPagedQueryResponseImpl instance = new CartPagedQueryResponseImpl();
+        instance.setLimit(template.getLimit());
+        instance.setOffset(template.getOffset());
+        instance.setCount(template.getCount());
+        instance.setTotal(template.getTotal());
+        instance.setResults(Optional.ofNullable(template.getResults())
+                .map(t -> t.stream().map(com.commercetools.api.models.cart.Cart::deepCopy).collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

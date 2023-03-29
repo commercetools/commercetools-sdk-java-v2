@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.customer.CustomerReference;
@@ -98,7 +99,7 @@ public interface LastModifiedBy extends ClientLogging {
     }
 
     /**
-     * factory method to copy an instance of LastModifiedBy
+     * factory method to create a shallow copy LastModifiedBy
      * @param template instance to be copied
      * @return copy instance
      */
@@ -107,6 +108,24 @@ public interface LastModifiedBy extends ClientLogging {
         instance.setClientId(template.getClientId());
         instance.setExternalUserId(template.getExternalUserId());
         instance.setCustomer(template.getCustomer());
+        instance.setAnonymousId(template.getAnonymousId());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of LastModifiedBy
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static LastModifiedBy deepCopy(@Nullable final LastModifiedBy template) {
+        if (template == null) {
+            return null;
+        }
+        LastModifiedByImpl instance = new LastModifiedByImpl();
+        instance.setClientId(template.getClientId());
+        instance.setExternalUserId(template.getExternalUserId());
+        instance.setCustomer(com.commercetools.api.models.customer.CustomerReference.deepCopy(template.getCustomer()));
         instance.setAnonymousId(template.getAnonymousId());
         return instance;
     }

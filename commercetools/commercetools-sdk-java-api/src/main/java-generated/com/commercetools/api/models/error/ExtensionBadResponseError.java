@@ -4,7 +4,9 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -184,17 +186,45 @@ public interface ExtensionBadResponseError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of ExtensionBadResponseError
+     * factory method to create a shallow copy ExtensionBadResponseError
      * @param template instance to be copied
      * @return copy instance
      */
     public static ExtensionBadResponseError of(final ExtensionBadResponseError template) {
         ExtensionBadResponseErrorImpl instance = new ExtensionBadResponseErrorImpl();
         instance.setMessage(template.getMessage());
-        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         instance.setLocalizedMessage(template.getLocalizedMessage());
         instance.setExtensionExtraInfo(template.getExtensionExtraInfo());
         instance.setExtensionErrors(template.getExtensionErrors());
+        instance.setExtensionBody(template.getExtensionBody());
+        instance.setExtensionStatusCode(template.getExtensionStatusCode());
+        instance.setExtensionId(template.getExtensionId());
+        instance.setExtensionKey(template.getExtensionKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ExtensionBadResponseError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ExtensionBadResponseError deepCopy(@Nullable final ExtensionBadResponseError template) {
+        if (template == null) {
+            return null;
+        }
+        ExtensionBadResponseErrorImpl instance = new ExtensionBadResponseErrorImpl();
+        instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        instance.setLocalizedMessage(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getLocalizedMessage()));
+        instance.setExtensionExtraInfo(template.getExtensionExtraInfo());
+        instance.setExtensionErrors(Optional.ofNullable(template.getExtensionErrors())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.error.ExtensionError::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setExtensionBody(template.getExtensionBody());
         instance.setExtensionStatusCode(template.getExtensionStatusCode());
         instance.setExtensionId(template.getExtensionId());

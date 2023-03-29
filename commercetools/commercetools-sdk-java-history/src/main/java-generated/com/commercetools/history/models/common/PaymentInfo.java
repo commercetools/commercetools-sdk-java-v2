@@ -4,7 +4,9 @@ package com.commercetools.history.models.common;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -63,13 +65,32 @@ public interface PaymentInfo {
     }
 
     /**
-     * factory method to copy an instance of PaymentInfo
+     * factory method to create a shallow copy PaymentInfo
      * @param template instance to be copied
      * @return copy instance
      */
     public static PaymentInfo of(final PaymentInfo template) {
         PaymentInfoImpl instance = new PaymentInfoImpl();
         instance.setPayments(template.getPayments());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of PaymentInfo
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static PaymentInfo deepCopy(@Nullable final PaymentInfo template) {
+        if (template == null) {
+            return null;
+        }
+        PaymentInfoImpl instance = new PaymentInfoImpl();
+        instance.setPayments(Optional.ofNullable(template.getPayments())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.Reference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

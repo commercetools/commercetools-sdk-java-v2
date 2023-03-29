@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -121,7 +122,7 @@ public interface Asset {
     }
 
     /**
-     * factory method to copy an instance of Asset
+     * factory method to create a shallow copy Asset
      * @param template instance to be copied
      * @return copy instance
      */
@@ -131,6 +132,26 @@ public interface Asset {
         instance.setName(template.getName());
         instance.setDescription(template.getDescription());
         instance.setCustom(template.getCustom());
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of Asset
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static Asset deepCopy(@Nullable final Asset template) {
+        if (template == null) {
+            return null;
+        }
+        AssetImpl instance = new AssetImpl();
+        instance.setId(template.getId());
+        instance.setName(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setDescription(
+            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setCustom(com.commercetools.history.models.common.CustomFields.deepCopy(template.getCustom()));
         instance.setKey(template.getKey());
         return instance;
     }

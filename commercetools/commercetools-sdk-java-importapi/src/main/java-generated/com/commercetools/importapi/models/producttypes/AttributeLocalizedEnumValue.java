@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -82,7 +83,7 @@ public interface AttributeLocalizedEnumValue {
     }
 
     /**
-     * factory method to copy an instance of AttributeLocalizedEnumValue
+     * factory method to create a shallow copy AttributeLocalizedEnumValue
      * @param template instance to be copied
      * @return copy instance
      */
@@ -90,6 +91,22 @@ public interface AttributeLocalizedEnumValue {
         AttributeLocalizedEnumValueImpl instance = new AttributeLocalizedEnumValueImpl();
         instance.setKey(template.getKey());
         instance.setLabel(template.getLabel());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of AttributeLocalizedEnumValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AttributeLocalizedEnumValue deepCopy(@Nullable final AttributeLocalizedEnumValue template) {
+        if (template == null) {
+            return null;
+        }
+        AttributeLocalizedEnumValueImpl instance = new AttributeLocalizedEnumValueImpl();
+        instance.setKey(template.getKey());
+        instance.setLabel(com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getLabel()));
         return instance;
     }
 

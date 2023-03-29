@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,27 @@ public interface BusinessUnitNameChangedMessagePayload extends MessagePayload {
     }
 
     /**
-     * factory method to copy an instance of BusinessUnitNameChangedMessagePayload
+     * factory method to create a shallow copy BusinessUnitNameChangedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
     public static BusinessUnitNameChangedMessagePayload of(final BusinessUnitNameChangedMessagePayload template) {
+        BusinessUnitNameChangedMessagePayloadImpl instance = new BusinessUnitNameChangedMessagePayloadImpl();
+        instance.setName(template.getName());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of BusinessUnitNameChangedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static BusinessUnitNameChangedMessagePayload deepCopy(
+            @Nullable final BusinessUnitNameChangedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
         BusinessUnitNameChangedMessagePayloadImpl instance = new BusinessUnitNameChangedMessagePayloadImpl();
         instance.setName(template.getName());
         return instance;

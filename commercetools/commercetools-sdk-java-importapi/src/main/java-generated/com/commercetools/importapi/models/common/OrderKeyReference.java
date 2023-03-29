@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -41,11 +43,26 @@ public interface OrderKeyReference extends KeyReference {
     }
 
     /**
-     * factory method to copy an instance of OrderKeyReference
+     * factory method to create a shallow copy OrderKeyReference
      * @param template instance to be copied
      * @return copy instance
      */
     public static OrderKeyReference of(final OrderKeyReference template) {
+        OrderKeyReferenceImpl instance = new OrderKeyReferenceImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderKeyReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderKeyReference deepCopy(@Nullable final OrderKeyReference template) {
+        if (template == null) {
+            return null;
+        }
         OrderKeyReferenceImpl instance = new OrderKeyReferenceImpl();
         instance.setKey(template.getKey());
         return instance;

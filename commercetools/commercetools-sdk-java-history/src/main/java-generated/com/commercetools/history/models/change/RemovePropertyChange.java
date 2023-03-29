@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -97,11 +98,28 @@ public interface RemovePropertyChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of RemovePropertyChange
+     * factory method to create a shallow copy RemovePropertyChange
      * @param template instance to be copied
      * @return copy instance
      */
     public static RemovePropertyChange of(final RemovePropertyChange template) {
+        RemovePropertyChangeImpl instance = new RemovePropertyChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setPath(template.getPath());
+        instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of RemovePropertyChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static RemovePropertyChange deepCopy(@Nullable final RemovePropertyChange template) {
+        if (template == null) {
+            return null;
+        }
         RemovePropertyChangeImpl instance = new RemovePropertyChangeImpl();
         instance.setChange(template.getChange());
         instance.setPath(template.getPath());

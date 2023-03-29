@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -73,11 +74,27 @@ public interface ChannelSetCustomFieldAction extends ChannelUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ChannelSetCustomFieldAction
+     * factory method to create a shallow copy ChannelSetCustomFieldAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ChannelSetCustomFieldAction of(final ChannelSetCustomFieldAction template) {
+        ChannelSetCustomFieldActionImpl instance = new ChannelSetCustomFieldActionImpl();
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChannelSetCustomFieldAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChannelSetCustomFieldAction deepCopy(@Nullable final ChannelSetCustomFieldAction template) {
+        if (template == null) {
+            return null;
+        }
         ChannelSetCustomFieldActionImpl instance = new ChannelSetCustomFieldActionImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());

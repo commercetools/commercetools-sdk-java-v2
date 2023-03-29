@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -72,13 +73,30 @@ public interface DiscountCodeInfo {
     }
 
     /**
-     * factory method to copy an instance of DiscountCodeInfo
+     * factory method to create a shallow copy DiscountCodeInfo
      * @param template instance to be copied
      * @return copy instance
      */
     public static DiscountCodeInfo of(final DiscountCodeInfo template) {
         DiscountCodeInfoImpl instance = new DiscountCodeInfoImpl();
         instance.setDiscountCode(template.getDiscountCode());
+        instance.setState(template.getState());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of DiscountCodeInfo
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static DiscountCodeInfo deepCopy(@Nullable final DiscountCodeInfo template) {
+        if (template == null) {
+            return null;
+        }
+        DiscountCodeInfoImpl instance = new DiscountCodeInfoImpl();
+        instance.setDiscountCode(
+            com.commercetools.api.models.discount_code.DiscountCodeReference.deepCopy(template.getDiscountCode()));
         instance.setState(template.getState());
         return instance;
     }

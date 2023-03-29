@@ -4,7 +4,9 @@ package com.commercetools.api.models.order_edit;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -86,7 +88,7 @@ public interface StagedOrderImportCustomLineItemStateAction extends StagedOrderU
     }
 
     /**
-     * factory method to copy an instance of StagedOrderImportCustomLineItemStateAction
+     * factory method to create a shallow copy StagedOrderImportCustomLineItemStateAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -95,6 +97,27 @@ public interface StagedOrderImportCustomLineItemStateAction extends StagedOrderU
         StagedOrderImportCustomLineItemStateActionImpl instance = new StagedOrderImportCustomLineItemStateActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setState(template.getState());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedOrderImportCustomLineItemStateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedOrderImportCustomLineItemStateAction deepCopy(
+            @Nullable final StagedOrderImportCustomLineItemStateAction template) {
+        if (template == null) {
+            return null;
+        }
+        StagedOrderImportCustomLineItemStateActionImpl instance = new StagedOrderImportCustomLineItemStateActionImpl();
+        instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setState(Optional.ofNullable(template.getState())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.order.ItemState::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

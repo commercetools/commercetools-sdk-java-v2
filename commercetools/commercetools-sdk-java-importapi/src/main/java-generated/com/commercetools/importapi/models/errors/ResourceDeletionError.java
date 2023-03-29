@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -56,11 +58,27 @@ public interface ResourceDeletionError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of ResourceDeletionError
+     * factory method to create a shallow copy ResourceDeletionError
      * @param template instance to be copied
      * @return copy instance
      */
     public static ResourceDeletionError of(final ResourceDeletionError template) {
+        ResourceDeletionErrorImpl instance = new ResourceDeletionErrorImpl();
+        instance.setMessage(template.getMessage());
+        instance.setResource(template.getResource());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ResourceDeletionError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ResourceDeletionError deepCopy(@Nullable final ResourceDeletionError template) {
+        if (template == null) {
+            return null;
+        }
         ResourceDeletionErrorImpl instance = new ResourceDeletionErrorImpl();
         instance.setMessage(template.getMessage());
         instance.setResource(template.getResource());

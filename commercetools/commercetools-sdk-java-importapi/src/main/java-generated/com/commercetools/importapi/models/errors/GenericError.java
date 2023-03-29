@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -41,11 +43,26 @@ public interface GenericError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of GenericError
+     * factory method to create a shallow copy GenericError
      * @param template instance to be copied
      * @return copy instance
      */
     public static GenericError of(final GenericError template) {
+        GenericErrorImpl instance = new GenericErrorImpl();
+        instance.setMessage(template.getMessage());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of GenericError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static GenericError deepCopy(@Nullable final GenericError template) {
+        if (template == null) {
+            return null;
+        }
         GenericErrorImpl instance = new GenericErrorImpl();
         instance.setMessage(template.getMessage());
         return instance;

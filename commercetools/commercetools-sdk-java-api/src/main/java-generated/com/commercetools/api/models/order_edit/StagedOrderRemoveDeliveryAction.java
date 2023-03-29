@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
@@ -59,11 +60,26 @@ public interface StagedOrderRemoveDeliveryAction extends StagedOrderUpdateAction
     }
 
     /**
-     * factory method to copy an instance of StagedOrderRemoveDeliveryAction
+     * factory method to create a shallow copy StagedOrderRemoveDeliveryAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static StagedOrderRemoveDeliveryAction of(final StagedOrderRemoveDeliveryAction template) {
+        StagedOrderRemoveDeliveryActionImpl instance = new StagedOrderRemoveDeliveryActionImpl();
+        instance.setDeliveryId(template.getDeliveryId());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedOrderRemoveDeliveryAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedOrderRemoveDeliveryAction deepCopy(@Nullable final StagedOrderRemoveDeliveryAction template) {
+        if (template == null) {
+            return null;
+        }
         StagedOrderRemoveDeliveryActionImpl instance = new StagedOrderRemoveDeliveryActionImpl();
         instance.setDeliveryId(template.getDeliveryId());
         return instance;

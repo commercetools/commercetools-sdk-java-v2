@@ -4,7 +4,9 @@ package com.commercetools.api.models.shopping_list;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -80,7 +82,7 @@ public interface ShoppingListUpdate extends
     }
 
     /**
-     * factory method to copy an instance of ShoppingListUpdate
+     * factory method to create a shallow copy ShoppingListUpdate
      * @param template instance to be copied
      * @return copy instance
      */
@@ -88,6 +90,26 @@ public interface ShoppingListUpdate extends
         ShoppingListUpdateImpl instance = new ShoppingListUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(template.getActions());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ShoppingListUpdate
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ShoppingListUpdate deepCopy(@Nullable final ShoppingListUpdate template) {
+        if (template == null) {
+            return null;
+        }
+        ShoppingListUpdateImpl instance = new ShoppingListUpdateImpl();
+        instance.setVersion(template.getVersion());
+        instance.setActions(Optional.ofNullable(template.getActions())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.shopping_list.ShoppingListUpdateAction::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -55,11 +57,27 @@ public interface InventoryEntrySetRestockableInDaysAction extends InventoryEntry
     }
 
     /**
-     * factory method to copy an instance of InventoryEntrySetRestockableInDaysAction
+     * factory method to create a shallow copy InventoryEntrySetRestockableInDaysAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static InventoryEntrySetRestockableInDaysAction of(final InventoryEntrySetRestockableInDaysAction template) {
+        InventoryEntrySetRestockableInDaysActionImpl instance = new InventoryEntrySetRestockableInDaysActionImpl();
+        instance.setRestockableInDays(template.getRestockableInDays());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of InventoryEntrySetRestockableInDaysAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static InventoryEntrySetRestockableInDaysAction deepCopy(
+            @Nullable final InventoryEntrySetRestockableInDaysAction template) {
+        if (template == null) {
+            return null;
+        }
         InventoryEntrySetRestockableInDaysActionImpl instance = new InventoryEntrySetRestockableInDaysActionImpl();
         instance.setRestockableInDays(template.getRestockableInDays());
         return instance;

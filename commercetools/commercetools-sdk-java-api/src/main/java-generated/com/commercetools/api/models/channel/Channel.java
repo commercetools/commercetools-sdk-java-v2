@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -273,7 +274,7 @@ public interface Channel extends BaseResource, ChannelMixin, com.commercetools.a
     }
 
     /**
-     * factory method to copy an instance of Channel
+     * factory method to create a shallow copy Channel
      * @param template instance to be copied
      * @return copy instance
      */
@@ -293,6 +294,37 @@ public interface Channel extends BaseResource, ChannelMixin, com.commercetools.a
         instance.setReviewRatingStatistics(template.getReviewRatingStatistics());
         instance.setCustom(template.getCustom());
         instance.setGeoLocation(template.getGeoLocation());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of Channel
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static Channel deepCopy(@Nullable final Channel template) {
+        if (template == null) {
+            return null;
+        }
+        ChannelImpl instance = new ChannelImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
+        instance.setKey(template.getKey());
+        instance.setRoles(Optional.ofNullable(template.getRoles()).map(ArrayList::new).orElse(null));
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setAddress(com.commercetools.api.models.common.Address.deepCopy(template.getAddress()));
+        instance.setReviewRatingStatistics(
+            com.commercetools.api.models.review.ReviewRatingStatistics.deepCopy(template.getReviewRatingStatistics()));
+        instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
+        instance.setGeoLocation(com.commercetools.api.models.common.GeoJson.deepCopy(template.getGeoLocation()));
         return instance;
     }
 

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.type.FieldContainer;
@@ -74,7 +75,7 @@ public interface CategorySetCustomTypeAction extends CategoryUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of CategorySetCustomTypeAction
+     * factory method to create a shallow copy CategorySetCustomTypeAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -82,6 +83,22 @@ public interface CategorySetCustomTypeAction extends CategoryUpdateAction {
         CategorySetCustomTypeActionImpl instance = new CategorySetCustomTypeActionImpl();
         instance.setType(template.getType());
         instance.setFields(template.getFields());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CategorySetCustomTypeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CategorySetCustomTypeAction deepCopy(@Nullable final CategorySetCustomTypeAction template) {
+        if (template == null) {
+            return null;
+        }
+        CategorySetCustomTypeActionImpl instance = new CategorySetCustomTypeActionImpl();
+        instance.setType(com.commercetools.api.models.type.TypeResourceIdentifier.deepCopy(template.getType()));
+        instance.setFields(com.commercetools.api.models.type.FieldContainer.deepCopy(template.getFields()));
         return instance;
     }
 

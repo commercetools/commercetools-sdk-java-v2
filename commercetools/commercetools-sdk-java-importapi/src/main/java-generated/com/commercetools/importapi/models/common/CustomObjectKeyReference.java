@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -59,11 +60,27 @@ public interface CustomObjectKeyReference extends KeyReference {
     }
 
     /**
-     * factory method to copy an instance of CustomObjectKeyReference
+     * factory method to create a shallow copy CustomObjectKeyReference
      * @param template instance to be copied
      * @return copy instance
      */
     public static CustomObjectKeyReference of(final CustomObjectKeyReference template) {
+        CustomObjectKeyReferenceImpl instance = new CustomObjectKeyReferenceImpl();
+        instance.setKey(template.getKey());
+        instance.setContainer(template.getContainer());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomObjectKeyReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomObjectKeyReference deepCopy(@Nullable final CustomObjectKeyReference template) {
+        if (template == null) {
+            return null;
+        }
         CustomObjectKeyReferenceImpl instance = new CustomObjectKeyReferenceImpl();
         instance.setKey(template.getKey());
         instance.setContainer(template.getContainer());

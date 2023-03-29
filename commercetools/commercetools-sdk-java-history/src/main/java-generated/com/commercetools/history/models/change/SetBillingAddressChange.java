@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -102,7 +103,7 @@ public interface SetBillingAddressChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetBillingAddressChange
+     * factory method to create a shallow copy SetBillingAddressChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -111,6 +112,24 @@ public interface SetBillingAddressChange extends Change {
         instance.setChange(template.getChange());
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetBillingAddressChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetBillingAddressChange deepCopy(@Nullable final SetBillingAddressChange template) {
+        if (template == null) {
+            return null;
+        }
+        SetBillingAddressChangeImpl instance = new SetBillingAddressChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setNextValue(com.commercetools.history.models.common.Address.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.Address.deepCopy(template.getPreviousValue()));
         return instance;
     }
 

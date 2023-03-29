@@ -4,7 +4,9 @@ package com.commercetools.api.models.product_selection;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -127,7 +129,7 @@ public interface ProductSelectionPagedQueryResponse
     }
 
     /**
-     * factory method to copy an instance of ProductSelectionPagedQueryResponse
+     * factory method to create a shallow copy ProductSelectionPagedQueryResponse
      * @param template instance to be copied
      * @return copy instance
      */
@@ -138,6 +140,30 @@ public interface ProductSelectionPagedQueryResponse
         instance.setCount(template.getCount());
         instance.setTotal(template.getTotal());
         instance.setResults(template.getResults());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductSelectionPagedQueryResponse
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductSelectionPagedQueryResponse deepCopy(
+            @Nullable final ProductSelectionPagedQueryResponse template) {
+        if (template == null) {
+            return null;
+        }
+        ProductSelectionPagedQueryResponseImpl instance = new ProductSelectionPagedQueryResponseImpl();
+        instance.setLimit(template.getLimit());
+        instance.setOffset(template.getOffset());
+        instance.setCount(template.getCount());
+        instance.setTotal(template.getTotal());
+        instance.setResults(Optional.ofNullable(template.getResults())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.product_selection.ProductSelection::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

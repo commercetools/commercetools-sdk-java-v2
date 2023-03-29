@@ -4,7 +4,9 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -96,7 +98,7 @@ public interface AuthErrorResponse extends ErrorResponse {
     }
 
     /**
-     * factory method to copy an instance of AuthErrorResponse
+     * factory method to create a shallow copy AuthErrorResponse
      * @param template instance to be copied
      * @return copy instance
      */
@@ -105,6 +107,29 @@ public interface AuthErrorResponse extends ErrorResponse {
         instance.setStatusCode(template.getStatusCode());
         instance.setMessage(template.getMessage());
         instance.setErrors(template.getErrors());
+        instance.setError(template.getError());
+        instance.setErrorDescription(template.getErrorDescription());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of AuthErrorResponse
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AuthErrorResponse deepCopy(@Nullable final AuthErrorResponse template) {
+        if (template == null) {
+            return null;
+        }
+        AuthErrorResponseImpl instance = new AuthErrorResponseImpl();
+        instance.setStatusCode(template.getStatusCode());
+        instance.setMessage(template.getMessage());
+        instance.setErrors(Optional.ofNullable(template.getErrors())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.error.ErrorObject::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setError(template.getError());
         instance.setErrorDescription(template.getErrorDescription());
         return instance;

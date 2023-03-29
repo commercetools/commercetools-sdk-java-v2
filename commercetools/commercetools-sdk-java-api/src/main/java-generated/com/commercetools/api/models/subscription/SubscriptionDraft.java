@@ -4,7 +4,9 @@ package com.commercetools.api.models.subscription;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -132,7 +134,7 @@ public interface SubscriptionDraft
     }
 
     /**
-     * factory method to copy an instance of SubscriptionDraft
+     * factory method to create a shallow copy SubscriptionDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -143,6 +145,34 @@ public interface SubscriptionDraft
         instance.setKey(template.getKey());
         instance.setMessages(template.getMessages());
         instance.setFormat(template.getFormat());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SubscriptionDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SubscriptionDraft deepCopy(@Nullable final SubscriptionDraft template) {
+        if (template == null) {
+            return null;
+        }
+        SubscriptionDraftImpl instance = new SubscriptionDraftImpl();
+        instance.setChanges(Optional.ofNullable(template.getChanges())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.subscription.ChangeSubscription::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setDestination(
+            com.commercetools.api.models.subscription.Destination.deepCopy(template.getDestination()));
+        instance.setKey(template.getKey());
+        instance.setMessages(Optional.ofNullable(template.getMessages())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.subscription.MessageSubscription::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setFormat(com.commercetools.api.models.subscription.DeliveryFormat.deepCopy(template.getFormat()));
         return instance;
     }
 

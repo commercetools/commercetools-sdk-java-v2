@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.commercetools.api.models.common.ResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -71,11 +73,27 @@ public interface CartResourceIdentifier extends ResourceIdentifier, com.commerce
     }
 
     /**
-     * factory method to copy an instance of CartResourceIdentifier
+     * factory method to create a shallow copy CartResourceIdentifier
      * @param template instance to be copied
      * @return copy instance
      */
     public static CartResourceIdentifier of(final CartResourceIdentifier template) {
+        CartResourceIdentifierImpl instance = new CartResourceIdentifierImpl();
+        instance.setId(template.getId());
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartResourceIdentifier
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartResourceIdentifier deepCopy(@Nullable final CartResourceIdentifier template) {
+        if (template == null) {
+            return null;
+        }
         CartResourceIdentifierImpl instance = new CartResourceIdentifierImpl();
         instance.setId(template.getId());
         instance.setKey(template.getKey());

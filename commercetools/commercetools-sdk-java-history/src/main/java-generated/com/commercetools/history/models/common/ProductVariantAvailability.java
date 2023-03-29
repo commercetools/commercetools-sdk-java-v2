@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -103,7 +104,7 @@ public interface ProductVariantAvailability {
     }
 
     /**
-     * factory method to copy an instance of ProductVariantAvailability
+     * factory method to create a shallow copy ProductVariantAvailability
      * @param template instance to be copied
      * @return copy instance
      */
@@ -113,6 +114,25 @@ public interface ProductVariantAvailability {
         instance.setRestockableInDays(template.getRestockableInDays());
         instance.setAvailableQuantity(template.getAvailableQuantity());
         instance.setChannels(template.getChannels());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductVariantAvailability
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductVariantAvailability deepCopy(@Nullable final ProductVariantAvailability template) {
+        if (template == null) {
+            return null;
+        }
+        ProductVariantAvailabilityImpl instance = new ProductVariantAvailabilityImpl();
+        instance.setIsOnStock(template.getIsOnStock());
+        instance.setRestockableInDays(template.getRestockableInDays());
+        instance.setAvailableQuantity(template.getAvailableQuantity());
+        instance.setChannels(com.commercetools.history.models.common.ProductVariantChannelAvailabilityMap
+                .deepCopy(template.getChannels()));
         return instance;
     }
 

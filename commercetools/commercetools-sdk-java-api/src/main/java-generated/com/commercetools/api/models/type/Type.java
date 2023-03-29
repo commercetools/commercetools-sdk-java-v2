@@ -5,7 +5,9 @@ import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -236,7 +238,7 @@ public interface Type extends BaseResource, TypeMixin, com.commercetools.api.mod
     }
 
     /**
-     * factory method to copy an instance of Type
+     * factory method to create a shallow copy Type
      * @param template instance to be copied
      * @return copy instance
      */
@@ -253,6 +255,38 @@ public interface Type extends BaseResource, TypeMixin, com.commercetools.api.mod
         instance.setDescription(template.getDescription());
         instance.setResourceTypeIds(template.getResourceTypeIds());
         instance.setFieldDefinitions(template.getFieldDefinitions());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of Type
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static Type deepCopy(@Nullable final Type template) {
+        if (template == null) {
+            return null;
+        }
+        TypeImpl instance = new TypeImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
+        instance.setKey(template.getKey());
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setResourceTypeIds(
+            Optional.ofNullable(template.getResourceTypeIds()).map(ArrayList::new).orElse(null));
+        instance.setFieldDefinitions(Optional.ofNullable(template.getFieldDefinitions())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.type.FieldDefinition::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

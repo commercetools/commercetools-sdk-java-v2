@@ -4,7 +4,9 @@ package com.commercetools.api.models.cart;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -66,13 +68,32 @@ public interface ItemShippingDetailsDraft extends io.vrap.rmf.base.client.Draft<
     }
 
     /**
-     * factory method to copy an instance of ItemShippingDetailsDraft
+     * factory method to create a shallow copy ItemShippingDetailsDraft
      * @param template instance to be copied
      * @return copy instance
      */
     public static ItemShippingDetailsDraft of(final ItemShippingDetailsDraft template) {
         ItemShippingDetailsDraftImpl instance = new ItemShippingDetailsDraftImpl();
         instance.setTargets(template.getTargets());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ItemShippingDetailsDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ItemShippingDetailsDraft deepCopy(@Nullable final ItemShippingDetailsDraft template) {
+        if (template == null) {
+            return null;
+        }
+        ItemShippingDetailsDraftImpl instance = new ItemShippingDetailsDraftImpl();
+        instance.setTargets(Optional.ofNullable(template.getTargets())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.cart.ItemShippingTarget::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

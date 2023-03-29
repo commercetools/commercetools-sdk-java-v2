@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -40,6 +41,28 @@ public interface ShippingRateInputDraft {
     @NotNull
     @JsonProperty("type")
     public String getType();
+
+    /**
+     * factory method to create a deep copy of ShippingRateInputDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ShippingRateInputDraft deepCopy(@Nullable final ShippingRateInputDraft template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.cart.ScoreShippingRateInputDraft) {
+            return com.commercetools.api.models.cart.ScoreShippingRateInputDraft
+                    .deepCopy((com.commercetools.api.models.cart.ScoreShippingRateInputDraft) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.ClassificationShippingRateInputDraft) {
+            return com.commercetools.api.models.cart.ClassificationShippingRateInputDraft
+                    .deepCopy((com.commercetools.api.models.cart.ClassificationShippingRateInputDraft) template);
+        }
+        ShippingRateInputDraftImpl instance = new ShippingRateInputDraftImpl();
+        return instance;
+    }
 
     /**
      * builder for classification subtype

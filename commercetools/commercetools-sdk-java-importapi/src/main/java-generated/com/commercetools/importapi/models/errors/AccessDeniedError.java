@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -41,11 +43,26 @@ public interface AccessDeniedError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of AccessDeniedError
+     * factory method to create a shallow copy AccessDeniedError
      * @param template instance to be copied
      * @return copy instance
      */
     public static AccessDeniedError of(final AccessDeniedError template) {
+        AccessDeniedErrorImpl instance = new AccessDeniedErrorImpl();
+        instance.setMessage(template.getMessage());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of AccessDeniedError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AccessDeniedError deepCopy(@Nullable final AccessDeniedError template) {
+        if (template == null) {
+            return null;
+        }
         AccessDeniedErrorImpl instance = new AccessDeniedErrorImpl();
         instance.setMessage(template.getMessage());
         return instance;

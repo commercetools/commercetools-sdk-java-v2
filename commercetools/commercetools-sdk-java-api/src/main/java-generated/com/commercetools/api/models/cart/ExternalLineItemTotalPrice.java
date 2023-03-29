@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -75,7 +76,7 @@ public interface ExternalLineItemTotalPrice {
     }
 
     /**
-     * factory method to copy an instance of ExternalLineItemTotalPrice
+     * factory method to create a shallow copy ExternalLineItemTotalPrice
      * @param template instance to be copied
      * @return copy instance
      */
@@ -83,6 +84,22 @@ public interface ExternalLineItemTotalPrice {
         ExternalLineItemTotalPriceImpl instance = new ExternalLineItemTotalPriceImpl();
         instance.setPrice(template.getPrice());
         instance.setTotalPrice(template.getTotalPrice());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ExternalLineItemTotalPrice
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ExternalLineItemTotalPrice deepCopy(@Nullable final ExternalLineItemTotalPrice template) {
+        if (template == null) {
+            return null;
+        }
+        ExternalLineItemTotalPriceImpl instance = new ExternalLineItemTotalPriceImpl();
+        instance.setPrice(com.commercetools.api.models.common.Money.deepCopy(template.getPrice()));
+        instance.setTotalPrice(com.commercetools.api.models.common.Money.deepCopy(template.getTotalPrice()));
         return instance;
     }
 

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.common.LocalizedString;
@@ -58,13 +59,29 @@ public interface CartDiscountSetDescriptionAction extends CartDiscountUpdateActi
     }
 
     /**
-     * factory method to copy an instance of CartDiscountSetDescriptionAction
+     * factory method to create a shallow copy CartDiscountSetDescriptionAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static CartDiscountSetDescriptionAction of(final CartDiscountSetDescriptionAction template) {
         CartDiscountSetDescriptionActionImpl instance = new CartDiscountSetDescriptionActionImpl();
         instance.setDescription(template.getDescription());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartDiscountSetDescriptionAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartDiscountSetDescriptionAction deepCopy(@Nullable final CartDiscountSetDescriptionAction template) {
+        if (template == null) {
+            return null;
+        }
+        CartDiscountSetDescriptionActionImpl instance = new CartDiscountSetDescriptionActionImpl();
+        instance.setDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
         return instance;
     }
 

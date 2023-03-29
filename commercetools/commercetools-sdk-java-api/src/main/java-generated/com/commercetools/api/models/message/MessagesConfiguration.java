@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -68,11 +69,27 @@ public interface MessagesConfiguration {
     }
 
     /**
-     * factory method to copy an instance of MessagesConfiguration
+     * factory method to create a shallow copy MessagesConfiguration
      * @param template instance to be copied
      * @return copy instance
      */
     public static MessagesConfiguration of(final MessagesConfiguration template) {
+        MessagesConfigurationImpl instance = new MessagesConfigurationImpl();
+        instance.setEnabled(template.getEnabled());
+        instance.setDeleteDaysAfterCreation(template.getDeleteDaysAfterCreation());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MessagesConfiguration
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MessagesConfiguration deepCopy(@Nullable final MessagesConfiguration template) {
+        if (template == null) {
+            return null;
+        }
         MessagesConfigurationImpl instance = new MessagesConfigurationImpl();
         instance.setEnabled(template.getEnabled());
         instance.setDeleteDaysAfterCreation(template.getDeleteDaysAfterCreation());

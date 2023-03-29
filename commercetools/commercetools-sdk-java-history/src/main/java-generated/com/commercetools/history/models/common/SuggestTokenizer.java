@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -53,11 +54,26 @@ public interface SuggestTokenizer {
     }
 
     /**
-     * factory method to copy an instance of SuggestTokenizer
+     * factory method to create a shallow copy SuggestTokenizer
      * @param template instance to be copied
      * @return copy instance
      */
     public static SuggestTokenizer of(final SuggestTokenizer template) {
+        SuggestTokenizerImpl instance = new SuggestTokenizerImpl();
+        instance.setType(template.getType());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SuggestTokenizer
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SuggestTokenizer deepCopy(@Nullable final SuggestTokenizer template) {
+        if (template == null) {
+            return null;
+        }
         SuggestTokenizerImpl instance = new SuggestTokenizerImpl();
         instance.setType(template.getType());
         return instance;

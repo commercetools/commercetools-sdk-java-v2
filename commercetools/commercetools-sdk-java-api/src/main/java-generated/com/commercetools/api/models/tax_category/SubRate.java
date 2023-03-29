@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -69,11 +70,27 @@ public interface SubRate {
     }
 
     /**
-     * factory method to copy an instance of SubRate
+     * factory method to create a shallow copy SubRate
      * @param template instance to be copied
      * @return copy instance
      */
     public static SubRate of(final SubRate template) {
+        SubRateImpl instance = new SubRateImpl();
+        instance.setName(template.getName());
+        instance.setAmount(template.getAmount());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SubRate
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SubRate deepCopy(@Nullable final SubRate template) {
+        if (template == null) {
+            return null;
+        }
         SubRateImpl instance = new SubRateImpl();
         instance.setName(template.getName());
         instance.setAmount(template.getAmount());

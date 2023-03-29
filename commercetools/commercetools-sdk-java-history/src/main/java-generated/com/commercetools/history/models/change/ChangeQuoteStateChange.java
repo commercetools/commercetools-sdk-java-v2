@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.common.QuoteState;
@@ -99,11 +100,28 @@ public interface ChangeQuoteStateChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of ChangeQuoteStateChange
+     * factory method to create a shallow copy ChangeQuoteStateChange
      * @param template instance to be copied
      * @return copy instance
      */
     public static ChangeQuoteStateChange of(final ChangeQuoteStateChange template) {
+        ChangeQuoteStateChangeImpl instance = new ChangeQuoteStateChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setNextValue(template.getNextValue());
+        instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChangeQuoteStateChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChangeQuoteStateChange deepCopy(@Nullable final ChangeQuoteStateChange template) {
+        if (template == null) {
+            return null;
+        }
         ChangeQuoteStateChangeImpl instance = new ChangeQuoteStateChangeImpl();
         instance.setChange(template.getChange());
         instance.setNextValue(template.getNextValue());

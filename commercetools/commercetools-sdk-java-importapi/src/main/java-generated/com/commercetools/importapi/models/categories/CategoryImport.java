@@ -4,7 +4,9 @@ package com.commercetools.importapi.models.categories;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -221,7 +223,7 @@ public interface CategoryImport extends ImportResource {
     }
 
     /**
-     * factory method to copy an instance of CategoryImport
+     * factory method to create a shallow copy CategoryImport
      * @param template instance to be copied
      * @return copy instance
      */
@@ -239,6 +241,41 @@ public interface CategoryImport extends ImportResource {
         instance.setMetaKeywords(template.getMetaKeywords());
         instance.setAssets(template.getAssets());
         instance.setCustom(template.getCustom());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CategoryImport
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CategoryImport deepCopy(@Nullable final CategoryImport template) {
+        if (template == null) {
+            return null;
+        }
+        CategoryImportImpl instance = new CategoryImportImpl();
+        instance.setKey(template.getKey());
+        instance.setName(com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setSlug(com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getSlug()));
+        instance.setDescription(
+            com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setParent(
+            com.commercetools.importapi.models.common.CategoryKeyReference.deepCopy(template.getParent()));
+        instance.setOrderHint(template.getOrderHint());
+        instance.setExternalId(template.getExternalId());
+        instance.setMetaTitle(
+            com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getMetaTitle()));
+        instance.setMetaDescription(
+            com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getMetaDescription()));
+        instance.setMetaKeywords(
+            com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getMetaKeywords()));
+        instance.setAssets(Optional.ofNullable(template.getAssets())
+                .map(t -> t.stream()
+                        .map(com.commercetools.importapi.models.common.Asset::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setCustom(com.commercetools.importapi.models.customfields.Custom.deepCopy(template.getCustom()));
         return instance;
     }
 

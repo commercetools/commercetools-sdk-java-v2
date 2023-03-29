@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -69,11 +70,27 @@ public interface OrderEditApply {
     }
 
     /**
-     * factory method to copy an instance of OrderEditApply
+     * factory method to create a shallow copy OrderEditApply
      * @param template instance to be copied
      * @return copy instance
      */
     public static OrderEditApply of(final OrderEditApply template) {
+        OrderEditApplyImpl instance = new OrderEditApplyImpl();
+        instance.setEditVersion(template.getEditVersion());
+        instance.setResourceVersion(template.getResourceVersion());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderEditApply
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderEditApply deepCopy(@Nullable final OrderEditApply template) {
+        if (template == null) {
+            return null;
+        }
         OrderEditApplyImpl instance = new OrderEditApplyImpl();
         instance.setEditVersion(template.getEditVersion());
         instance.setResourceVersion(template.getResourceVersion());

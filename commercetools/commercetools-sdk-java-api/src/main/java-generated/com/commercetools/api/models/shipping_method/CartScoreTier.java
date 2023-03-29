@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -105,7 +106,7 @@ public interface CartScoreTier extends ShippingRatePriceTier {
     }
 
     /**
-     * factory method to copy an instance of CartScoreTier
+     * factory method to create a shallow copy CartScoreTier
      * @param template instance to be copied
      * @return copy instance
      */
@@ -114,6 +115,25 @@ public interface CartScoreTier extends ShippingRatePriceTier {
         instance.setScore(template.getScore());
         instance.setPrice(template.getPrice());
         instance.setPriceFunction(template.getPriceFunction());
+        instance.setIsMatching(template.getIsMatching());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartScoreTier
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartScoreTier deepCopy(@Nullable final CartScoreTier template) {
+        if (template == null) {
+            return null;
+        }
+        CartScoreTierImpl instance = new CartScoreTierImpl();
+        instance.setScore(template.getScore());
+        instance.setPrice(com.commercetools.api.models.common.Money.deepCopy(template.getPrice()));
+        instance.setPriceFunction(
+            com.commercetools.api.models.shipping_method.PriceFunction.deepCopy(template.getPriceFunction()));
         instance.setIsMatching(template.getIsMatching());
         return instance;
     }

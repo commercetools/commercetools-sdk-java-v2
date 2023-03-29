@@ -4,7 +4,9 @@ package com.commercetools.api.models.product_selection;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -80,7 +82,7 @@ public interface ProductSelectionUpdate extends
     }
 
     /**
-     * factory method to copy an instance of ProductSelectionUpdate
+     * factory method to create a shallow copy ProductSelectionUpdate
      * @param template instance to be copied
      * @return copy instance
      */
@@ -88,6 +90,26 @@ public interface ProductSelectionUpdate extends
         ProductSelectionUpdateImpl instance = new ProductSelectionUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(template.getActions());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductSelectionUpdate
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductSelectionUpdate deepCopy(@Nullable final ProductSelectionUpdate template) {
+        if (template == null) {
+            return null;
+        }
+        ProductSelectionUpdateImpl instance = new ProductSelectionUpdateImpl();
+        instance.setVersion(template.getVersion());
+        instance.setActions(Optional.ofNullable(template.getActions())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.product_selection.ProductSelectionUpdateAction::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

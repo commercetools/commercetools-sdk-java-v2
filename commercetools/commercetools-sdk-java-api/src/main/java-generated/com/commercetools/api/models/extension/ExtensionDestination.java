@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -43,6 +44,32 @@ public interface ExtensionDestination {
     @NotNull
     @JsonProperty("type")
     public String getType();
+
+    /**
+     * factory method to create a deep copy of ExtensionDestination
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ExtensionDestination deepCopy(@Nullable final ExtensionDestination template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.extension.GoogleCloudFunctionDestination) {
+            return com.commercetools.api.models.extension.GoogleCloudFunctionDestination
+                    .deepCopy((com.commercetools.api.models.extension.GoogleCloudFunctionDestination) template);
+        }
+        if (template instanceof com.commercetools.api.models.extension.HttpDestination) {
+            return com.commercetools.api.models.extension.HttpDestination
+                    .deepCopy((com.commercetools.api.models.extension.HttpDestination) template);
+        }
+        if (template instanceof com.commercetools.api.models.extension.AWSLambdaDestination) {
+            return com.commercetools.api.models.extension.AWSLambdaDestination
+                    .deepCopy((com.commercetools.api.models.extension.AWSLambdaDestination) template);
+        }
+        ExtensionDestinationImpl instance = new ExtensionDestinationImpl();
+        return instance;
+    }
 
     /**
      * builder for awsLambda subtype

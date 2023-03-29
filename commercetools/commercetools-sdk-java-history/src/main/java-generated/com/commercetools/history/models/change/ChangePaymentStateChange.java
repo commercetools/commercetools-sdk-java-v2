@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.common.PaymentState;
@@ -99,11 +100,28 @@ public interface ChangePaymentStateChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of ChangePaymentStateChange
+     * factory method to create a shallow copy ChangePaymentStateChange
      * @param template instance to be copied
      * @return copy instance
      */
     public static ChangePaymentStateChange of(final ChangePaymentStateChange template) {
+        ChangePaymentStateChangeImpl instance = new ChangePaymentStateChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setNextValue(template.getNextValue());
+        instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChangePaymentStateChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChangePaymentStateChange deepCopy(@Nullable final ChangePaymentStateChange template) {
+        if (template == null) {
+            return null;
+        }
         ChangePaymentStateChangeImpl instance = new ChangePaymentStateChangeImpl();
         instance.setChange(template.getChange());
         instance.setNextValue(template.getNextValue());

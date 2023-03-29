@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.type.FieldContainer;
@@ -74,7 +75,7 @@ public interface BusinessUnitSetCustomTypeAction extends BusinessUnitUpdateActio
     }
 
     /**
-     * factory method to copy an instance of BusinessUnitSetCustomTypeAction
+     * factory method to create a shallow copy BusinessUnitSetCustomTypeAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -82,6 +83,22 @@ public interface BusinessUnitSetCustomTypeAction extends BusinessUnitUpdateActio
         BusinessUnitSetCustomTypeActionImpl instance = new BusinessUnitSetCustomTypeActionImpl();
         instance.setType(template.getType());
         instance.setFields(template.getFields());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of BusinessUnitSetCustomTypeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static BusinessUnitSetCustomTypeAction deepCopy(@Nullable final BusinessUnitSetCustomTypeAction template) {
+        if (template == null) {
+            return null;
+        }
+        BusinessUnitSetCustomTypeActionImpl instance = new BusinessUnitSetCustomTypeActionImpl();
+        instance.setType(com.commercetools.api.models.type.TypeResourceIdentifier.deepCopy(template.getType()));
+        instance.setFields(com.commercetools.api.models.type.FieldContainer.deepCopy(template.getFields()));
         return instance;
     }
 

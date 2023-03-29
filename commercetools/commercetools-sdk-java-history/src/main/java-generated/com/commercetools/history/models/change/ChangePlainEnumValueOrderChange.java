@@ -4,7 +4,9 @@ package com.commercetools.history.models.change;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -134,7 +136,7 @@ public interface ChangePlainEnumValueOrderChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of ChangePlainEnumValueOrderChange
+     * factory method to create a shallow copy ChangePlainEnumValueOrderChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -144,6 +146,32 @@ public interface ChangePlainEnumValueOrderChange extends Change {
         instance.setAttributeName(template.getAttributeName());
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChangePlainEnumValueOrderChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChangePlainEnumValueOrderChange deepCopy(@Nullable final ChangePlainEnumValueOrderChange template) {
+        if (template == null) {
+            return null;
+        }
+        ChangePlainEnumValueOrderChangeImpl instance = new ChangePlainEnumValueOrderChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setAttributeName(template.getAttributeName());
+        instance.setNextValue(Optional.ofNullable(template.getNextValue())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.change_value.EnumValue::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.change_value.EnumValue::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

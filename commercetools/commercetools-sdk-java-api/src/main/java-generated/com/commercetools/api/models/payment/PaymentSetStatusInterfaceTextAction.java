@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,27 @@ public interface PaymentSetStatusInterfaceTextAction extends PaymentUpdateAction
     }
 
     /**
-     * factory method to copy an instance of PaymentSetStatusInterfaceTextAction
+     * factory method to create a shallow copy PaymentSetStatusInterfaceTextAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static PaymentSetStatusInterfaceTextAction of(final PaymentSetStatusInterfaceTextAction template) {
+        PaymentSetStatusInterfaceTextActionImpl instance = new PaymentSetStatusInterfaceTextActionImpl();
+        instance.setInterfaceText(template.getInterfaceText());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of PaymentSetStatusInterfaceTextAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static PaymentSetStatusInterfaceTextAction deepCopy(
+            @Nullable final PaymentSetStatusInterfaceTextAction template) {
+        if (template == null) {
+            return null;
+        }
         PaymentSetStatusInterfaceTextActionImpl instance = new PaymentSetStatusInterfaceTextActionImpl();
         instance.setInterfaceText(template.getInterfaceText());
         return instance;

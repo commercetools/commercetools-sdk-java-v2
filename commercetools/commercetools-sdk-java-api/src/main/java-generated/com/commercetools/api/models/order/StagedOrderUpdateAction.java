@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order_edit.StagedOrderAddCustomLineItemAction;
@@ -213,6 +214,366 @@ public interface StagedOrderUpdateAction
     @NotNull
     @JsonProperty("action")
     public String getAction();
+
+    /**
+     * factory method to create a deep copy of StagedOrderUpdateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedOrderUpdateAction deepCopy(@Nullable final StagedOrderUpdateAction template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderAddCustomLineItemAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderAddCustomLineItemAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderAddCustomLineItemAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderAddDeliveryAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderAddDeliveryAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderAddDeliveryAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderAddDiscountCodeAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderAddDiscountCodeAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderAddDiscountCodeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderAddItemShippingAddressAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderAddItemShippingAddressAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderAddItemShippingAddressAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderAddLineItemAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderAddLineItemAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderAddLineItemAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderAddParcelToDeliveryAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderAddParcelToDeliveryAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderAddParcelToDeliveryAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderAddPaymentAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderAddPaymentAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderAddPaymentAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderAddReturnInfoAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderAddReturnInfoAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderAddReturnInfoAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderAddShoppingListAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderAddShoppingListAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderAddShoppingListAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderChangeCustomLineItemMoneyAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderChangeCustomLineItemMoneyAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderChangeCustomLineItemMoneyAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderChangeCustomLineItemQuantityAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderChangeCustomLineItemQuantityAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderChangeCustomLineItemQuantityAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderChangeLineItemQuantityAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderChangeLineItemQuantityAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderChangeLineItemQuantityAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderChangeOrderStateAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderChangeOrderStateAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderChangeOrderStateAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderChangePaymentStateAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderChangePaymentStateAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderChangePaymentStateAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderChangeShipmentStateAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderChangeShipmentStateAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderChangeShipmentStateAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderChangeTaxCalculationModeAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderChangeTaxCalculationModeAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderChangeTaxCalculationModeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderChangeTaxModeAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderChangeTaxModeAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderChangeTaxModeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderChangeTaxRoundingModeAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderChangeTaxRoundingModeAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderChangeTaxRoundingModeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderImportCustomLineItemStateAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderImportCustomLineItemStateAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderImportCustomLineItemStateAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderImportLineItemStateAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderImportLineItemStateAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderImportLineItemStateAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderRemoveCustomLineItemAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderRemoveCustomLineItemAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderRemoveCustomLineItemAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderRemoveDeliveryAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderRemoveDeliveryAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderRemoveDeliveryAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderRemoveDiscountCodeAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderRemoveDiscountCodeAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderRemoveDiscountCodeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderRemoveItemShippingAddressAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderRemoveItemShippingAddressAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderRemoveItemShippingAddressAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderRemoveLineItemAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderRemoveLineItemAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderRemoveLineItemAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderRemoveParcelFromDeliveryAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderRemoveParcelFromDeliveryAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderRemoveParcelFromDeliveryAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderRemovePaymentAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderRemovePaymentAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderRemovePaymentAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetBillingAddressAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetBillingAddressAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderSetBillingAddressAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetBillingAddressCustomFieldAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetBillingAddressCustomFieldAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderSetBillingAddressCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetBillingAddressCustomTypeAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetBillingAddressCustomTypeAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderSetBillingAddressCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetCountryAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetCountryAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderSetCountryAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetCustomFieldAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetCustomFieldAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderSetCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetCustomLineItemCustomFieldAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetCustomLineItemCustomFieldAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderSetCustomLineItemCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetCustomLineItemCustomTypeAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetCustomLineItemCustomTypeAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderSetCustomLineItemCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetCustomLineItemShippingDetailsAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetCustomLineItemShippingDetailsAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderSetCustomLineItemShippingDetailsAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetCustomLineItemTaxAmountAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetCustomLineItemTaxAmountAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderSetCustomLineItemTaxAmountAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetCustomLineItemTaxRateAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetCustomLineItemTaxRateAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderSetCustomLineItemTaxRateAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetCustomShippingMethodAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetCustomShippingMethodAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderSetCustomShippingMethodAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetCustomTypeAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetCustomTypeAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderSetCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetCustomerEmailAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetCustomerEmailAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderSetCustomerEmailAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetCustomerGroupAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetCustomerGroupAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderSetCustomerGroupAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetCustomerIdAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetCustomerIdAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderSetCustomerIdAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetDeliveryAddressAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetDeliveryAddressAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderSetDeliveryAddressAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetDeliveryAddressCustomFieldAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetDeliveryAddressCustomFieldAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderSetDeliveryAddressCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetDeliveryAddressCustomTypeAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetDeliveryAddressCustomTypeAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderSetDeliveryAddressCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetDeliveryCustomFieldAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetDeliveryCustomFieldAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderSetDeliveryCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetDeliveryCustomTypeAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetDeliveryCustomTypeAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderSetDeliveryCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetDeliveryItemsAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetDeliveryItemsAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderSetDeliveryItemsAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetItemShippingAddressCustomFieldAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetItemShippingAddressCustomFieldAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderSetItemShippingAddressCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetItemShippingAddressCustomTypeAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetItemShippingAddressCustomTypeAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderSetItemShippingAddressCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetLineItemCustomFieldAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetLineItemCustomFieldAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderSetLineItemCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetLineItemCustomTypeAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetLineItemCustomTypeAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderSetLineItemCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetLineItemDistributionChannelAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetLineItemDistributionChannelAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderSetLineItemDistributionChannelAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetLineItemPriceAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetLineItemPriceAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderSetLineItemPriceAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetLineItemShippingDetailsAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetLineItemShippingDetailsAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderSetLineItemShippingDetailsAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetLineItemTaxAmountAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetLineItemTaxAmountAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderSetLineItemTaxAmountAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetLineItemTaxRateAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetLineItemTaxRateAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderSetLineItemTaxRateAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetLineItemTotalPriceAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetLineItemTotalPriceAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderSetLineItemTotalPriceAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetLocaleAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetLocaleAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderSetLocaleAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetOrderNumberAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetOrderNumberAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderSetOrderNumberAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetOrderTotalTaxAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetOrderTotalTaxAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderSetOrderTotalTaxAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetParcelCustomFieldAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetParcelCustomFieldAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderSetParcelCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetParcelCustomTypeAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetParcelCustomTypeAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderSetParcelCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetParcelItemsAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetParcelItemsAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderSetParcelItemsAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetParcelMeasurementsAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetParcelMeasurementsAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderSetParcelMeasurementsAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetParcelTrackingDataAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetParcelTrackingDataAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderSetParcelTrackingDataAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetPurchaseOrderNumberAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetPurchaseOrderNumberAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderSetPurchaseOrderNumberAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetReturnInfoAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetReturnInfoAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderSetReturnInfoAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetReturnItemCustomFieldAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetReturnItemCustomFieldAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderSetReturnItemCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetReturnItemCustomTypeAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetReturnItemCustomTypeAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderSetReturnItemCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetReturnPaymentStateAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetReturnPaymentStateAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderSetReturnPaymentStateAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetReturnShipmentStateAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetReturnShipmentStateAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderSetReturnShipmentStateAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetShippingAddressAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetShippingAddressAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderSetShippingAddressAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetShippingAddressAndCustomShippingMethodAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetShippingAddressAndCustomShippingMethodAction
+                    .deepCopy(
+                        (com.commercetools.api.models.order_edit.StagedOrderSetShippingAddressAndCustomShippingMethodAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetShippingAddressAndShippingMethodAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetShippingAddressAndShippingMethodAction
+                    .deepCopy(
+                        (com.commercetools.api.models.order_edit.StagedOrderSetShippingAddressAndShippingMethodAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetShippingAddressCustomFieldAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetShippingAddressCustomFieldAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderSetShippingAddressCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetShippingAddressCustomTypeAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetShippingAddressCustomTypeAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderSetShippingAddressCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetShippingMethodAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetShippingMethodAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderSetShippingMethodAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetShippingMethodTaxAmountAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetShippingMethodTaxAmountAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderSetShippingMethodTaxAmountAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetShippingMethodTaxRateAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetShippingMethodTaxRateAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderSetShippingMethodTaxRateAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetShippingRateInputAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetShippingRateInputAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderSetShippingRateInputAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderTransitionCustomLineItemStateAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderTransitionCustomLineItemStateAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderTransitionCustomLineItemStateAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderTransitionLineItemStateAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderTransitionLineItemStateAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderTransitionLineItemStateAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderTransitionStateAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderTransitionStateAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderTransitionStateAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderUpdateItemShippingAddressAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderUpdateItemShippingAddressAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderUpdateItemShippingAddressAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderUpdateSyncInfoAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderUpdateSyncInfoAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderUpdateSyncInfoAction) template);
+        }
+        StagedOrderUpdateActionImpl instance = new StagedOrderUpdateActionImpl();
+        return instance;
+    }
 
     /**
      * builder for addCustomLineItem subtype

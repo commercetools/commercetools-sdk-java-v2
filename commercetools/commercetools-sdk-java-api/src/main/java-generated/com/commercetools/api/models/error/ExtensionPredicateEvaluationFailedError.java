@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -84,15 +85,34 @@ public interface ExtensionPredicateEvaluationFailedError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of ExtensionPredicateEvaluationFailedError
+     * factory method to create a shallow copy ExtensionPredicateEvaluationFailedError
      * @param template instance to be copied
      * @return copy instance
      */
     public static ExtensionPredicateEvaluationFailedError of(final ExtensionPredicateEvaluationFailedError template) {
         ExtensionPredicateEvaluationFailedErrorImpl instance = new ExtensionPredicateEvaluationFailedErrorImpl();
         instance.setMessage(template.getMessage());
-        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         instance.setErrorByExtension(template.getErrorByExtension());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ExtensionPredicateEvaluationFailedError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ExtensionPredicateEvaluationFailedError deepCopy(
+            @Nullable final ExtensionPredicateEvaluationFailedError template) {
+        if (template == null) {
+            return null;
+        }
+        ExtensionPredicateEvaluationFailedErrorImpl instance = new ExtensionPredicateEvaluationFailedErrorImpl();
+        instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        instance.setErrorByExtension(
+            com.commercetools.api.models.error.ErrorByExtension.deepCopy(template.getErrorByExtension()));
         return instance;
     }
 

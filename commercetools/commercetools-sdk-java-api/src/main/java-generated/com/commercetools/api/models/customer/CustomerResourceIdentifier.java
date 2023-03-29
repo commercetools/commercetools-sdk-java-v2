@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.commercetools.api.models.common.ResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -72,11 +74,27 @@ public interface CustomerResourceIdentifier
     }
 
     /**
-     * factory method to copy an instance of CustomerResourceIdentifier
+     * factory method to create a shallow copy CustomerResourceIdentifier
      * @param template instance to be copied
      * @return copy instance
      */
     public static CustomerResourceIdentifier of(final CustomerResourceIdentifier template) {
+        CustomerResourceIdentifierImpl instance = new CustomerResourceIdentifierImpl();
+        instance.setId(template.getId());
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomerResourceIdentifier
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomerResourceIdentifier deepCopy(@Nullable final CustomerResourceIdentifier template) {
+        if (template == null) {
+            return null;
+        }
         CustomerResourceIdentifierImpl instance = new CustomerResourceIdentifierImpl();
         instance.setId(template.getId());
         instance.setKey(template.getKey());

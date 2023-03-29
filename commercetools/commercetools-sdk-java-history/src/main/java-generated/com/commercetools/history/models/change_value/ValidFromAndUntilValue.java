@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -69,11 +70,27 @@ public interface ValidFromAndUntilValue {
     }
 
     /**
-     * factory method to copy an instance of ValidFromAndUntilValue
+     * factory method to create a shallow copy ValidFromAndUntilValue
      * @param template instance to be copied
      * @return copy instance
      */
     public static ValidFromAndUntilValue of(final ValidFromAndUntilValue template) {
+        ValidFromAndUntilValueImpl instance = new ValidFromAndUntilValueImpl();
+        instance.setValidFrom(template.getValidFrom());
+        instance.setValidUntil(template.getValidUntil());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ValidFromAndUntilValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ValidFromAndUntilValue deepCopy(@Nullable final ValidFromAndUntilValue template) {
+        if (template == null) {
+            return null;
+        }
         ValidFromAndUntilValueImpl instance = new ValidFromAndUntilValueImpl();
         instance.setValidFrom(template.getValidFrom());
         instance.setValidUntil(template.getValidUntil());

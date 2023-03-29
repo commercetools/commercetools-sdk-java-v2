@@ -6,6 +6,8 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -56,11 +58,27 @@ public interface InventoryEntrySetExpectedDeliveryAction extends InventoryEntryU
     }
 
     /**
-     * factory method to copy an instance of InventoryEntrySetExpectedDeliveryAction
+     * factory method to create a shallow copy InventoryEntrySetExpectedDeliveryAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static InventoryEntrySetExpectedDeliveryAction of(final InventoryEntrySetExpectedDeliveryAction template) {
+        InventoryEntrySetExpectedDeliveryActionImpl instance = new InventoryEntrySetExpectedDeliveryActionImpl();
+        instance.setExpectedDelivery(template.getExpectedDelivery());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of InventoryEntrySetExpectedDeliveryAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static InventoryEntrySetExpectedDeliveryAction deepCopy(
+            @Nullable final InventoryEntrySetExpectedDeliveryAction template) {
+        if (template == null) {
+            return null;
+        }
         InventoryEntrySetExpectedDeliveryActionImpl instance = new InventoryEntrySetExpectedDeliveryActionImpl();
         instance.setExpectedDelivery(template.getExpectedDelivery());
         return instance;

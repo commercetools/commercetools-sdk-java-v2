@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.commercetools.api.models.common.ResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -72,11 +74,27 @@ public interface TaxCategoryResourceIdentifier
     }
 
     /**
-     * factory method to copy an instance of TaxCategoryResourceIdentifier
+     * factory method to create a shallow copy TaxCategoryResourceIdentifier
      * @param template instance to be copied
      * @return copy instance
      */
     public static TaxCategoryResourceIdentifier of(final TaxCategoryResourceIdentifier template) {
+        TaxCategoryResourceIdentifierImpl instance = new TaxCategoryResourceIdentifierImpl();
+        instance.setId(template.getId());
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of TaxCategoryResourceIdentifier
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static TaxCategoryResourceIdentifier deepCopy(@Nullable final TaxCategoryResourceIdentifier template) {
+        if (template == null) {
+            return null;
+        }
         TaxCategoryResourceIdentifierImpl instance = new TaxCategoryResourceIdentifierImpl();
         instance.setId(template.getId());
         instance.setKey(template.getKey());

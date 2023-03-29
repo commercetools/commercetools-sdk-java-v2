@@ -4,7 +4,9 @@ package com.commercetools.importapi.models.importrequests;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -69,13 +71,32 @@ public interface CategoryImportRequest extends ImportRequest {
     }
 
     /**
-     * factory method to copy an instance of CategoryImportRequest
+     * factory method to create a shallow copy CategoryImportRequest
      * @param template instance to be copied
      * @return copy instance
      */
     public static CategoryImportRequest of(final CategoryImportRequest template) {
         CategoryImportRequestImpl instance = new CategoryImportRequestImpl();
         instance.setResources(template.getResources());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CategoryImportRequest
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CategoryImportRequest deepCopy(@Nullable final CategoryImportRequest template) {
+        if (template == null) {
+            return null;
+        }
+        CategoryImportRequestImpl instance = new CategoryImportRequestImpl();
+        instance.setResources(Optional.ofNullable(template.getResources())
+                .map(t -> t.stream()
+                        .map(com.commercetools.importapi.models.categories.CategoryImport::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -71,7 +72,7 @@ public interface MyBusinessUnitAssociateDraft extends io.vrap.rmf.base.client.Dr
     }
 
     /**
-     * factory method to copy an instance of MyBusinessUnitAssociateDraft
+     * factory method to create a shallow copy MyBusinessUnitAssociateDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -79,6 +80,22 @@ public interface MyBusinessUnitAssociateDraft extends io.vrap.rmf.base.client.Dr
         MyBusinessUnitAssociateDraftImpl instance = new MyBusinessUnitAssociateDraftImpl();
         instance.setVersion(template.getVersion());
         instance.setCustomer(template.getCustomer());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MyBusinessUnitAssociateDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MyBusinessUnitAssociateDraft deepCopy(@Nullable final MyBusinessUnitAssociateDraft template) {
+        if (template == null) {
+            return null;
+        }
+        MyBusinessUnitAssociateDraftImpl instance = new MyBusinessUnitAssociateDraftImpl();
+        instance.setVersion(template.getVersion());
+        instance.setCustomer(com.commercetools.api.models.me.MyCustomerDraft.deepCopy(template.getCustomer()));
         return instance;
     }
 

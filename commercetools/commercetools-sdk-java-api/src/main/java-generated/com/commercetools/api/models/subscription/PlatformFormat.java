@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -40,11 +42,25 @@ public interface PlatformFormat extends DeliveryFormat {
     }
 
     /**
-     * factory method to copy an instance of PlatformFormat
+     * factory method to create a shallow copy PlatformFormat
      * @param template instance to be copied
      * @return copy instance
      */
     public static PlatformFormat of(final PlatformFormat template) {
+        PlatformFormatImpl instance = new PlatformFormatImpl();
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of PlatformFormat
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static PlatformFormat deepCopy(@Nullable final PlatformFormat template) {
+        if (template == null) {
+            return null;
+        }
         PlatformFormatImpl instance = new PlatformFormatImpl();
         return instance;
     }

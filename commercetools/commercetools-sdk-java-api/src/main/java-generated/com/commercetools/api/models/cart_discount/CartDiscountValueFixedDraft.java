@@ -4,7 +4,9 @@ package com.commercetools.api.models.cart_discount;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -70,13 +72,32 @@ public interface CartDiscountValueFixedDraft
     }
 
     /**
-     * factory method to copy an instance of CartDiscountValueFixedDraft
+     * factory method to create a shallow copy CartDiscountValueFixedDraft
      * @param template instance to be copied
      * @return copy instance
      */
     public static CartDiscountValueFixedDraft of(final CartDiscountValueFixedDraft template) {
         CartDiscountValueFixedDraftImpl instance = new CartDiscountValueFixedDraftImpl();
         instance.setMoney(template.getMoney());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartDiscountValueFixedDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartDiscountValueFixedDraft deepCopy(@Nullable final CartDiscountValueFixedDraft template) {
+        if (template == null) {
+            return null;
+        }
+        CartDiscountValueFixedDraftImpl instance = new CartDiscountValueFixedDraftImpl();
+        instance.setMoney(Optional.ofNullable(template.getMoney())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.common.Money::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

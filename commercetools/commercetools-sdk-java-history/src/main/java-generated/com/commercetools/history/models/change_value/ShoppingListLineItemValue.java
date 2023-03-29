@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -88,7 +89,7 @@ public interface ShoppingListLineItemValue {
     }
 
     /**
-     * factory method to copy an instance of ShoppingListLineItemValue
+     * factory method to create a shallow copy ShoppingListLineItemValue
      * @param template instance to be copied
      * @return copy instance
      */
@@ -96,6 +97,23 @@ public interface ShoppingListLineItemValue {
         ShoppingListLineItemValueImpl instance = new ShoppingListLineItemValueImpl();
         instance.setId(template.getId());
         instance.setName(template.getName());
+        instance.setVariantId(template.getVariantId());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ShoppingListLineItemValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ShoppingListLineItemValue deepCopy(@Nullable final ShoppingListLineItemValue template) {
+        if (template == null) {
+            return null;
+        }
+        ShoppingListLineItemValueImpl instance = new ShoppingListLineItemValueImpl();
+        instance.setId(template.getId());
+        instance.setName(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getName()));
         instance.setVariantId(template.getVariantId());
         return instance;
     }

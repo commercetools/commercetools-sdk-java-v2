@@ -4,7 +4,9 @@ package com.commercetools.api.models.message;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.channel.ChannelReference;
@@ -96,7 +98,7 @@ public interface StoreDistributionChannelsChangedMessage extends Message {
     }
 
     /**
-     * factory method to copy an instance of StoreDistributionChannelsChangedMessage
+     * factory method to create a shallow copy StoreDistributionChannelsChangedMessage
      * @param template instance to be copied
      * @return copy instance
      */
@@ -114,6 +116,43 @@ public interface StoreDistributionChannelsChangedMessage extends Message {
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setAddedDistributionChannels(template.getAddedDistributionChannels());
         instance.setRemovedDistributionChannels(template.getRemovedDistributionChannels());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StoreDistributionChannelsChangedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StoreDistributionChannelsChangedMessage deepCopy(
+            @Nullable final StoreDistributionChannelsChangedMessage template) {
+        if (template == null) {
+            return null;
+        }
+        StoreDistributionChannelsChangedMessageImpl instance = new StoreDistributionChannelsChangedMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
+                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setAddedDistributionChannels(Optional.ofNullable(template.getAddedDistributionChannels())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.channel.ChannelReference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setRemovedDistributionChannels(Optional.ofNullable(template.getRemovedDistributionChannels())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.channel.ChannelReference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -132,7 +133,7 @@ public interface ModifiedBy {
     }
 
     /**
-     * factory method to copy an instance of ModifiedBy
+     * factory method to create a shallow copy ModifiedBy
      * @param template instance to be copied
      * @return copy instance
      */
@@ -141,6 +142,26 @@ public interface ModifiedBy {
         instance.setId(template.getId());
         instance.setType(template.getType());
         instance.setCustomer(template.getCustomer());
+        instance.setAnonymousId(template.getAnonymousId());
+        instance.setClientId(template.getClientId());
+        instance.setIsPlatformClient(template.getIsPlatformClient());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ModifiedBy
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ModifiedBy deepCopy(@Nullable final ModifiedBy template) {
+        if (template == null) {
+            return null;
+        }
+        ModifiedByImpl instance = new ModifiedByImpl();
+        instance.setId(template.getId());
+        instance.setType(template.getType());
+        instance.setCustomer(com.commercetools.history.models.common.Reference.deepCopy(template.getCustomer()));
         instance.setAnonymousId(template.getAnonymousId());
         instance.setClientId(template.getClientId());
         instance.setIsPlatformClient(template.getIsPlatformClient());

@@ -6,6 +6,7 @@ import java.time.LocalDate;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -59,11 +60,26 @@ public interface DateField extends CustomField {
     }
 
     /**
-     * factory method to copy an instance of DateField
+     * factory method to create a shallow copy DateField
      * @param template instance to be copied
      * @return copy instance
      */
     public static DateField of(final DateField template) {
+        DateFieldImpl instance = new DateFieldImpl();
+        instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of DateField
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static DateField deepCopy(@Nullable final DateField template) {
+        if (template == null) {
+            return null;
+        }
         DateFieldImpl instance = new DateFieldImpl();
         instance.setValue(template.getValue());
         return instance;

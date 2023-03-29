@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -56,11 +58,27 @@ public interface StagedOrderSetCustomerEmailAction extends StagedOrderUpdateActi
     }
 
     /**
-     * factory method to copy an instance of StagedOrderSetCustomerEmailAction
+     * factory method to create a shallow copy StagedOrderSetCustomerEmailAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static StagedOrderSetCustomerEmailAction of(final StagedOrderSetCustomerEmailAction template) {
+        StagedOrderSetCustomerEmailActionImpl instance = new StagedOrderSetCustomerEmailActionImpl();
+        instance.setEmail(template.getEmail());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedOrderSetCustomerEmailAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedOrderSetCustomerEmailAction deepCopy(
+            @Nullable final StagedOrderSetCustomerEmailAction template) {
+        if (template == null) {
+            return null;
+        }
         StagedOrderSetCustomerEmailActionImpl instance = new StagedOrderSetCustomerEmailActionImpl();
         instance.setEmail(template.getEmail());
         return instance;

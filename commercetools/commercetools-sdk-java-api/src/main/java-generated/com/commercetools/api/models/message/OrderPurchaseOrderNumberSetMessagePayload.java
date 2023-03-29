@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -70,12 +72,29 @@ public interface OrderPurchaseOrderNumberSetMessagePayload extends OrderMessageP
     }
 
     /**
-     * factory method to copy an instance of OrderPurchaseOrderNumberSetMessagePayload
+     * factory method to create a shallow copy OrderPurchaseOrderNumberSetMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
     public static OrderPurchaseOrderNumberSetMessagePayload of(
             final OrderPurchaseOrderNumberSetMessagePayload template) {
+        OrderPurchaseOrderNumberSetMessagePayloadImpl instance = new OrderPurchaseOrderNumberSetMessagePayloadImpl();
+        instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
+        instance.setOldPurchaseOrderNumber(template.getOldPurchaseOrderNumber());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderPurchaseOrderNumberSetMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderPurchaseOrderNumberSetMessagePayload deepCopy(
+            @Nullable final OrderPurchaseOrderNumberSetMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
         OrderPurchaseOrderNumberSetMessagePayloadImpl instance = new OrderPurchaseOrderNumberSetMessagePayloadImpl();
         instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
         instance.setOldPurchaseOrderNumber(template.getOldPurchaseOrderNumber());

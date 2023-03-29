@@ -4,7 +4,9 @@ package com.commercetools.history.models.change_history;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -240,7 +242,7 @@ public interface Record {
     }
 
     /**
-     * factory method to copy an instance of Record
+     * factory method to create a shallow copy Record
      * @param template instance to be copied
      * @return copy instance
      */
@@ -256,6 +258,40 @@ public interface Record {
         instance.setChanges(template.getChanges());
         instance.setResource(template.getResource());
         instance.setStores(template.getStores());
+        instance.setWithoutChanges(template.getWithoutChanges());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of Record
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static Record deepCopy(@Nullable final Record template) {
+        if (template == null) {
+            return null;
+        }
+        RecordImpl instance = new RecordImpl();
+        instance.setVersion(template.getVersion());
+        instance.setPreviousVersion(template.getPreviousVersion());
+        instance.setType(template.getType());
+        instance.setModifiedBy(
+            com.commercetools.history.models.change_history.ModifiedBy.deepCopy(template.getModifiedBy()));
+        instance.setModifiedAt(template.getModifiedAt());
+        instance.setLabel(com.commercetools.history.models.label.Label.deepCopy(template.getLabel()));
+        instance.setPreviousLabel(com.commercetools.history.models.label.Label.deepCopy(template.getPreviousLabel()));
+        instance.setChanges(Optional.ofNullable(template.getChanges())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.change.Change::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setResource(com.commercetools.history.models.common.Reference.deepCopy(template.getResource()));
+        instance.setStores(Optional.ofNullable(template.getStores())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.KeyReference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setWithoutChanges(template.getWithoutChanges());
         return instance;
     }

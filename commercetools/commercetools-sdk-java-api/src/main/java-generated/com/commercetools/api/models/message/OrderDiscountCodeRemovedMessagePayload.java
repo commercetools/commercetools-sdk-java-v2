@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -61,13 +62,30 @@ public interface OrderDiscountCodeRemovedMessagePayload extends OrderMessagePayl
     }
 
     /**
-     * factory method to copy an instance of OrderDiscountCodeRemovedMessagePayload
+     * factory method to create a shallow copy OrderDiscountCodeRemovedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
     public static OrderDiscountCodeRemovedMessagePayload of(final OrderDiscountCodeRemovedMessagePayload template) {
         OrderDiscountCodeRemovedMessagePayloadImpl instance = new OrderDiscountCodeRemovedMessagePayloadImpl();
         instance.setDiscountCode(template.getDiscountCode());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderDiscountCodeRemovedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderDiscountCodeRemovedMessagePayload deepCopy(
+            @Nullable final OrderDiscountCodeRemovedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        OrderDiscountCodeRemovedMessagePayloadImpl instance = new OrderDiscountCodeRemovedMessagePayloadImpl();
+        instance.setDiscountCode(
+            com.commercetools.api.models.discount_code.DiscountCodeReference.deepCopy(template.getDiscountCode()));
         return instance;
     }
 

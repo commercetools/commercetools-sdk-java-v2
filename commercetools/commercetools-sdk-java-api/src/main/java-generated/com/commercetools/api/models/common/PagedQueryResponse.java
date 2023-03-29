@@ -4,7 +4,9 @@ package com.commercetools.api.models.common;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -141,7 +143,7 @@ public interface PagedQueryResponse extends com.commercetools.api.models.Resourc
     }
 
     /**
-     * factory method to copy an instance of PagedQueryResponse
+     * factory method to create a shallow copy PagedQueryResponse
      * @param template instance to be copied
      * @return copy instance
      */
@@ -152,6 +154,30 @@ public interface PagedQueryResponse extends com.commercetools.api.models.Resourc
         instance.setCount(template.getCount());
         instance.setTotal(template.getTotal());
         instance.setResults(template.getResults());
+        instance.setMeta(template.getMeta());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of PagedQueryResponse
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static PagedQueryResponse deepCopy(@Nullable final PagedQueryResponse template) {
+        if (template == null) {
+            return null;
+        }
+        PagedQueryResponseImpl instance = new PagedQueryResponseImpl();
+        instance.setLimit(template.getLimit());
+        instance.setOffset(template.getOffset());
+        instance.setCount(template.getCount());
+        instance.setTotal(template.getTotal());
+        instance.setResults(Optional.ofNullable(template.getResults())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.common.BaseResource::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setMeta(template.getMeta());
         return instance;
     }

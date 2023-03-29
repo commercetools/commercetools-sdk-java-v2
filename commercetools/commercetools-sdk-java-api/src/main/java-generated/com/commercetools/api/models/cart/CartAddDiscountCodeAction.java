@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -60,11 +61,26 @@ public interface CartAddDiscountCodeAction extends CartUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of CartAddDiscountCodeAction
+     * factory method to create a shallow copy CartAddDiscountCodeAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static CartAddDiscountCodeAction of(final CartAddDiscountCodeAction template) {
+        CartAddDiscountCodeActionImpl instance = new CartAddDiscountCodeActionImpl();
+        instance.setCode(template.getCode());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartAddDiscountCodeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartAddDiscountCodeAction deepCopy(@Nullable final CartAddDiscountCodeAction template) {
+        if (template == null) {
+            return null;
+        }
         CartAddDiscountCodeActionImpl instance = new CartAddDiscountCodeActionImpl();
         instance.setCode(template.getCode());
         return instance;

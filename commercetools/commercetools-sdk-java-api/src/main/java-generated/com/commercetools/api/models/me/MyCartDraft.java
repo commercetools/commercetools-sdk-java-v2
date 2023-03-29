@@ -4,7 +4,9 @@ package com.commercetools.api.models.me;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -316,7 +318,7 @@ public interface MyCartDraft extends com.commercetools.api.models.CustomizableDr
     }
 
     /**
-     * factory method to copy an instance of MyCartDraft
+     * factory method to create a shallow copy MyCartDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -338,6 +340,48 @@ public interface MyCartDraft extends com.commercetools.api.models.CustomizableDr
         instance.setLocale(template.getLocale());
         instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
         instance.setCustom(template.getCustom());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MyCartDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MyCartDraft deepCopy(@Nullable final MyCartDraft template) {
+        if (template == null) {
+            return null;
+        }
+        MyCartDraftImpl instance = new MyCartDraftImpl();
+        instance.setCurrency(template.getCurrency());
+        instance.setCustomerEmail(template.getCustomerEmail());
+        instance.setBusinessUnit(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier
+                .deepCopy(template.getBusinessUnit()));
+        instance.setStore(com.commercetools.api.models.store.StoreResourceIdentifier.deepCopy(template.getStore()));
+        instance.setLineItems(Optional.ofNullable(template.getLineItems())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.me.MyLineItemDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setTaxMode(template.getTaxMode());
+        instance.setInventoryMode(template.getInventoryMode());
+        instance.setBillingAddress(
+            com.commercetools.api.models.common.BaseAddress.deepCopy(template.getBillingAddress()));
+        instance.setShippingAddress(
+            com.commercetools.api.models.common.BaseAddress.deepCopy(template.getShippingAddress()));
+        instance.setShippingMethod(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier
+                .deepCopy(template.getShippingMethod()));
+        instance.setItemShippingAddresses(Optional.ofNullable(template.getItemShippingAddresses())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.common.BaseAddress::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setDiscountCodes(Optional.ofNullable(template.getDiscountCodes()).map(ArrayList::new).orElse(null));
+        instance.setCountry(template.getCountry());
+        instance.setLocale(template.getLocale());
+        instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;
     }
 

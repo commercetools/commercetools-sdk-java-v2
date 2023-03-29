@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -106,7 +107,7 @@ public interface ProductSetProductPriceCustomTypeAction extends ProductUpdateAct
     }
 
     /**
-     * factory method to copy an instance of ProductSetProductPriceCustomTypeAction
+     * factory method to create a shallow copy ProductSetProductPriceCustomTypeAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -116,6 +117,25 @@ public interface ProductSetProductPriceCustomTypeAction extends ProductUpdateAct
         instance.setStaged(template.getStaged());
         instance.setType(template.getType());
         instance.setFields(template.getFields());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductSetProductPriceCustomTypeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductSetProductPriceCustomTypeAction deepCopy(
+            @Nullable final ProductSetProductPriceCustomTypeAction template) {
+        if (template == null) {
+            return null;
+        }
+        ProductSetProductPriceCustomTypeActionImpl instance = new ProductSetProductPriceCustomTypeActionImpl();
+        instance.setPriceId(template.getPriceId());
+        instance.setStaged(template.getStaged());
+        instance.setType(com.commercetools.api.models.type.TypeResourceIdentifier.deepCopy(template.getType()));
+        instance.setFields(com.commercetools.api.models.type.FieldContainer.deepCopy(template.getFields()));
         return instance;
     }
 

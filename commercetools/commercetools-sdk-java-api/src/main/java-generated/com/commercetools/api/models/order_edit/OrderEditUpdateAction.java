@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -45,6 +46,44 @@ public interface OrderEditUpdateAction
     @NotNull
     @JsonProperty("action")
     public String getAction();
+
+    /**
+     * factory method to create a deep copy of OrderEditUpdateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderEditUpdateAction deepCopy(@Nullable final OrderEditUpdateAction template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.OrderEditAddStagedActionAction) {
+            return com.commercetools.api.models.order_edit.OrderEditAddStagedActionAction
+                    .deepCopy((com.commercetools.api.models.order_edit.OrderEditAddStagedActionAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.OrderEditSetCommentAction) {
+            return com.commercetools.api.models.order_edit.OrderEditSetCommentAction
+                    .deepCopy((com.commercetools.api.models.order_edit.OrderEditSetCommentAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.OrderEditSetCustomFieldAction) {
+            return com.commercetools.api.models.order_edit.OrderEditSetCustomFieldAction
+                    .deepCopy((com.commercetools.api.models.order_edit.OrderEditSetCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.OrderEditSetCustomTypeAction) {
+            return com.commercetools.api.models.order_edit.OrderEditSetCustomTypeAction
+                    .deepCopy((com.commercetools.api.models.order_edit.OrderEditSetCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.OrderEditSetKeyAction) {
+            return com.commercetools.api.models.order_edit.OrderEditSetKeyAction
+                    .deepCopy((com.commercetools.api.models.order_edit.OrderEditSetKeyAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.OrderEditSetStagedActionsAction) {
+            return com.commercetools.api.models.order_edit.OrderEditSetStagedActionsAction
+                    .deepCopy((com.commercetools.api.models.order_edit.OrderEditSetStagedActionsAction) template);
+        }
+        OrderEditUpdateActionImpl instance = new OrderEditUpdateActionImpl();
+        return instance;
+    }
 
     /**
      * builder for addStagedAction subtype

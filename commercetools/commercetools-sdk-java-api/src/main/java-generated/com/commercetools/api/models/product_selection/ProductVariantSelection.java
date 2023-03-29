@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -42,6 +43,36 @@ public interface ProductVariantSelection {
     @NotNull
     @JsonProperty("type")
     public ProductVariantSelectionTypeEnum getType();
+
+    /**
+     * factory method to create a deep copy of ProductVariantSelection
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductVariantSelection deepCopy(@Nullable final ProductVariantSelection template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.product_selection.ProductVariantSelectionExclusion) {
+            return com.commercetools.api.models.product_selection.ProductVariantSelectionExclusion.deepCopy(
+                (com.commercetools.api.models.product_selection.ProductVariantSelectionExclusion) template);
+        }
+        if (template instanceof com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeAllExcept) {
+            return com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeAllExcept.deepCopy(
+                (com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeAllExcept) template);
+        }
+        if (template instanceof com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeOnly) {
+            return com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeOnly.deepCopy(
+                (com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeOnly) template);
+        }
+        if (template instanceof com.commercetools.api.models.product_selection.ProductVariantSelectionInclusion) {
+            return com.commercetools.api.models.product_selection.ProductVariantSelectionInclusion.deepCopy(
+                (com.commercetools.api.models.product_selection.ProductVariantSelectionInclusion) template);
+        }
+        ProductVariantSelectionImpl instance = new ProductVariantSelectionImpl();
+        return instance;
+    }
 
     /**
      * builder for exclusion subtype

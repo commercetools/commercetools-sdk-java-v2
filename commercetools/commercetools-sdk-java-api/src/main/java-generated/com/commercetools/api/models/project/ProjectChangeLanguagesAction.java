@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -66,13 +67,28 @@ public interface ProjectChangeLanguagesAction extends ProjectUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ProjectChangeLanguagesAction
+     * factory method to create a shallow copy ProjectChangeLanguagesAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProjectChangeLanguagesAction of(final ProjectChangeLanguagesAction template) {
         ProjectChangeLanguagesActionImpl instance = new ProjectChangeLanguagesActionImpl();
         instance.setLanguages(template.getLanguages());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProjectChangeLanguagesAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProjectChangeLanguagesAction deepCopy(@Nullable final ProjectChangeLanguagesAction template) {
+        if (template == null) {
+            return null;
+        }
+        ProjectChangeLanguagesActionImpl instance = new ProjectChangeLanguagesActionImpl();
+        instance.setLanguages(Optional.ofNullable(template.getLanguages()).map(ArrayList::new).orElse(null));
         return instance;
     }
 

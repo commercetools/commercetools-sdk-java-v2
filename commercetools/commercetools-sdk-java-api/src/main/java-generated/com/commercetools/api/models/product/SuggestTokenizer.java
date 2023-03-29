@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -40,6 +41,28 @@ public interface SuggestTokenizer {
     @NotNull
     @JsonProperty("type")
     public String getType();
+
+    /**
+     * factory method to create a deep copy of SuggestTokenizer
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SuggestTokenizer deepCopy(@Nullable final SuggestTokenizer template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.product.WhitespaceTokenizer) {
+            return com.commercetools.api.models.product.WhitespaceTokenizer
+                    .deepCopy((com.commercetools.api.models.product.WhitespaceTokenizer) template);
+        }
+        if (template instanceof com.commercetools.api.models.product.CustomTokenizer) {
+            return com.commercetools.api.models.product.CustomTokenizer
+                    .deepCopy((com.commercetools.api.models.product.CustomTokenizer) template);
+        }
+        SuggestTokenizerImpl instance = new SuggestTokenizerImpl();
+        return instance;
+    }
 
     /**
      * builder for custom subtype

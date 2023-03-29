@@ -5,7 +5,9 @@ import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -94,13 +96,34 @@ public interface ReturnInfo {
     }
 
     /**
-     * factory method to copy an instance of ReturnInfo
+     * factory method to create a shallow copy ReturnInfo
      * @param template instance to be copied
      * @return copy instance
      */
     public static ReturnInfo of(final ReturnInfo template) {
         ReturnInfoImpl instance = new ReturnInfoImpl();
         instance.setItems(template.getItems());
+        instance.setReturnTrackingId(template.getReturnTrackingId());
+        instance.setReturnDate(template.getReturnDate());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ReturnInfo
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ReturnInfo deepCopy(@Nullable final ReturnInfo template) {
+        if (template == null) {
+            return null;
+        }
+        ReturnInfoImpl instance = new ReturnInfoImpl();
+        instance.setItems(Optional.ofNullable(template.getItems())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.order.ReturnItem::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setReturnTrackingId(template.getReturnTrackingId());
         instance.setReturnDate(template.getReturnDate());
         return instance;

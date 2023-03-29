@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -133,11 +134,31 @@ public interface CustomerToken {
     }
 
     /**
-     * factory method to copy an instance of CustomerToken
+     * factory method to create a shallow copy CustomerToken
      * @param template instance to be copied
      * @return copy instance
      */
     public static CustomerToken of(final CustomerToken template) {
+        CustomerTokenImpl instance = new CustomerTokenImpl();
+        instance.setId(template.getId());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setCustomerId(template.getCustomerId());
+        instance.setExpiresAt(template.getExpiresAt());
+        instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomerToken
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomerToken deepCopy(@Nullable final CustomerToken template) {
+        if (template == null) {
+            return null;
+        }
         CustomerTokenImpl instance = new CustomerTokenImpl();
         instance.setId(template.getId());
         instance.setCreatedAt(template.getCreatedAt());

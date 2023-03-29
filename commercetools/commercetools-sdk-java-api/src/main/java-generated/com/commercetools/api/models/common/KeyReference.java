@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.business_unit.BusinessUnitKeyReference;
@@ -57,6 +58,29 @@ public interface KeyReference extends com.commercetools.api.models.WithKey {
      */
 
     public void setKey(final String key);
+
+    /**
+     * factory method to create a deep copy of KeyReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static KeyReference deepCopy(@Nullable final KeyReference template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.store.StoreKeyReference) {
+            return com.commercetools.api.models.store.StoreKeyReference
+                    .deepCopy((com.commercetools.api.models.store.StoreKeyReference) template);
+        }
+        if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitKeyReference) {
+            return com.commercetools.api.models.business_unit.BusinessUnitKeyReference
+                    .deepCopy((com.commercetools.api.models.business_unit.BusinessUnitKeyReference) template);
+        }
+        KeyReferenceImpl instance = new KeyReferenceImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
 
     /**
      * builder for businessUnit subtype

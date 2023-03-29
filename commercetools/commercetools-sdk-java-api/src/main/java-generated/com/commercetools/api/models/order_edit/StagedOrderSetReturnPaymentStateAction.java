@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order.ReturnPaymentState;
@@ -76,11 +77,28 @@ public interface StagedOrderSetReturnPaymentStateAction extends StagedOrderUpdat
     }
 
     /**
-     * factory method to copy an instance of StagedOrderSetReturnPaymentStateAction
+     * factory method to create a shallow copy StagedOrderSetReturnPaymentStateAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static StagedOrderSetReturnPaymentStateAction of(final StagedOrderSetReturnPaymentStateAction template) {
+        StagedOrderSetReturnPaymentStateActionImpl instance = new StagedOrderSetReturnPaymentStateActionImpl();
+        instance.setReturnItemId(template.getReturnItemId());
+        instance.setPaymentState(template.getPaymentState());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedOrderSetReturnPaymentStateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedOrderSetReturnPaymentStateAction deepCopy(
+            @Nullable final StagedOrderSetReturnPaymentStateAction template) {
+        if (template == null) {
+            return null;
+        }
         StagedOrderSetReturnPaymentStateActionImpl instance = new StagedOrderSetReturnPaymentStateActionImpl();
         instance.setReturnItemId(template.getReturnItemId());
         instance.setPaymentState(template.getPaymentState());

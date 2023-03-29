@@ -4,7 +4,9 @@ package com.commercetools.api.models.order;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -112,7 +114,7 @@ public interface OrderAddParcelToDeliveryAction extends OrderUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of OrderAddParcelToDeliveryAction
+     * factory method to create a shallow copy OrderAddParcelToDeliveryAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -122,6 +124,29 @@ public interface OrderAddParcelToDeliveryAction extends OrderUpdateAction {
         instance.setMeasurements(template.getMeasurements());
         instance.setTrackingData(template.getTrackingData());
         instance.setItems(template.getItems());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderAddParcelToDeliveryAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderAddParcelToDeliveryAction deepCopy(@Nullable final OrderAddParcelToDeliveryAction template) {
+        if (template == null) {
+            return null;
+        }
+        OrderAddParcelToDeliveryActionImpl instance = new OrderAddParcelToDeliveryActionImpl();
+        instance.setDeliveryId(template.getDeliveryId());
+        instance.setMeasurements(
+            com.commercetools.api.models.order.ParcelMeasurements.deepCopy(template.getMeasurements()));
+        instance.setTrackingData(com.commercetools.api.models.order.TrackingData.deepCopy(template.getTrackingData()));
+        instance.setItems(Optional.ofNullable(template.getItems())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.order.DeliveryItem::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

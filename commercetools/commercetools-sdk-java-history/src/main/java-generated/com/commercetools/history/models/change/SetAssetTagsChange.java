@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -133,7 +134,7 @@ public interface SetAssetTagsChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetAssetTagsChange
+     * factory method to create a shallow copy SetAssetTagsChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -143,6 +144,24 @@ public interface SetAssetTagsChange extends Change {
         instance.setAsset(template.getAsset());
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetAssetTagsChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetAssetTagsChange deepCopy(@Nullable final SetAssetTagsChange template) {
+        if (template == null) {
+            return null;
+        }
+        SetAssetTagsChangeImpl instance = new SetAssetTagsChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setAsset(com.commercetools.history.models.change_value.AssetChangeValue.deepCopy(template.getAsset()));
+        instance.setNextValue(Optional.ofNullable(template.getNextValue()).map(ArrayList::new).orElse(null));
+        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue()).map(ArrayList::new).orElse(null));
         return instance;
     }
 

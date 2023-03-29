@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -110,11 +112,30 @@ public interface SimilarityMeasures {
     }
 
     /**
-     * factory method to copy an instance of SimilarityMeasures
+     * factory method to create a shallow copy SimilarityMeasures
      * @param template instance to be copied
      * @return copy instance
      */
     public static SimilarityMeasures of(final SimilarityMeasures template) {
+        SimilarityMeasuresImpl instance = new SimilarityMeasuresImpl();
+        instance.setName(template.getName());
+        instance.setDescription(template.getDescription());
+        instance.setAttribute(template.getAttribute());
+        instance.setVariantCount(template.getVariantCount());
+        instance.setPrice(template.getPrice());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SimilarityMeasures
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SimilarityMeasures deepCopy(@Nullable final SimilarityMeasures template) {
+        if (template == null) {
+            return null;
+        }
         SimilarityMeasuresImpl instance = new SimilarityMeasuresImpl();
         instance.setName(template.getName());
         instance.setDescription(template.getDescription());

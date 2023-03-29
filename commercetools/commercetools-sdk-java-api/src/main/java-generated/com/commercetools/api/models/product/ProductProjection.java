@@ -5,7 +5,9 @@ import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -424,7 +426,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
     }
 
     /**
-     * factory method to copy an instance of ProductProjection
+     * factory method to create a shallow copy ProductProjection
      * @param template instance to be copied
      * @return copy instance
      */
@@ -452,6 +454,60 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
         instance.setTaxCategory(template.getTaxCategory());
         instance.setState(template.getState());
         instance.setReviewRatingStatistics(template.getReviewRatingStatistics());
+        instance.setPriceMode(template.getPriceMode());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductProjection
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductProjection deepCopy(@Nullable final ProductProjection template) {
+        if (template == null) {
+            return null;
+        }
+        ProductProjectionImpl instance = new ProductProjectionImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setKey(template.getKey());
+        instance.setProductType(
+            com.commercetools.api.models.product_type.ProductTypeReference.deepCopy(template.getProductType()));
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setSlug(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getSlug()));
+        instance.setCategories(Optional.ofNullable(template.getCategories())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.category.CategoryReference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setCategoryOrderHints(
+            com.commercetools.api.models.product.CategoryOrderHints.deepCopy(template.getCategoryOrderHints()));
+        instance.setMetaTitle(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaTitle()));
+        instance.setMetaDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaDescription()));
+        instance.setMetaKeywords(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaKeywords()));
+        instance.setSearchKeywords(
+            com.commercetools.api.models.product.SearchKeywords.deepCopy(template.getSearchKeywords()));
+        instance.setHasStagedChanges(template.getHasStagedChanges());
+        instance.setPublished(template.getPublished());
+        instance.setMasterVariant(
+            com.commercetools.api.models.product.ProductVariant.deepCopy(template.getMasterVariant()));
+        instance.setVariants(Optional.ofNullable(template.getVariants())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.product.ProductVariant::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setTaxCategory(
+            com.commercetools.api.models.tax_category.TaxCategoryReference.deepCopy(template.getTaxCategory()));
+        instance.setState(com.commercetools.api.models.state.StateReference.deepCopy(template.getState()));
+        instance.setReviewRatingStatistics(
+            com.commercetools.api.models.review.ReviewRatingStatistics.deepCopy(template.getReviewRatingStatistics()));
         instance.setPriceMode(template.getPriceMode());
         return instance;
     }

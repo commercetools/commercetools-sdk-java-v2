@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -59,12 +60,28 @@ public interface ProductTypeRemoveAttributeDefinitionAction extends ProductTypeU
     }
 
     /**
-     * factory method to copy an instance of ProductTypeRemoveAttributeDefinitionAction
+     * factory method to create a shallow copy ProductTypeRemoveAttributeDefinitionAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductTypeRemoveAttributeDefinitionAction of(
             final ProductTypeRemoveAttributeDefinitionAction template) {
+        ProductTypeRemoveAttributeDefinitionActionImpl instance = new ProductTypeRemoveAttributeDefinitionActionImpl();
+        instance.setName(template.getName());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductTypeRemoveAttributeDefinitionAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductTypeRemoveAttributeDefinitionAction deepCopy(
+            @Nullable final ProductTypeRemoveAttributeDefinitionAction template) {
+        if (template == null) {
+            return null;
+        }
         ProductTypeRemoveAttributeDefinitionActionImpl instance = new ProductTypeRemoveAttributeDefinitionActionImpl();
         instance.setName(template.getName());
         return instance;

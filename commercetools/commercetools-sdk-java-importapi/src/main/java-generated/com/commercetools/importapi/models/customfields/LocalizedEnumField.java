@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,26 @@ public interface LocalizedEnumField extends CustomField {
     }
 
     /**
-     * factory method to copy an instance of LocalizedEnumField
+     * factory method to create a shallow copy LocalizedEnumField
      * @param template instance to be copied
      * @return copy instance
      */
     public static LocalizedEnumField of(final LocalizedEnumField template) {
+        LocalizedEnumFieldImpl instance = new LocalizedEnumFieldImpl();
+        instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of LocalizedEnumField
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static LocalizedEnumField deepCopy(@Nullable final LocalizedEnumField template) {
+        if (template == null) {
+            return null;
+        }
         LocalizedEnumFieldImpl instance = new LocalizedEnumFieldImpl();
         instance.setValue(template.getValue());
         return instance;

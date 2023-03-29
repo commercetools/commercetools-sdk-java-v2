@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -71,7 +72,7 @@ public interface DiscountedLineItemPriceForQuantity {
     }
 
     /**
-     * factory method to copy an instance of DiscountedLineItemPriceForQuantity
+     * factory method to create a shallow copy DiscountedLineItemPriceForQuantity
      * @param template instance to be copied
      * @return copy instance
      */
@@ -79,6 +80,24 @@ public interface DiscountedLineItemPriceForQuantity {
         DiscountedLineItemPriceForQuantityImpl instance = new DiscountedLineItemPriceForQuantityImpl();
         instance.setQuantity(template.getQuantity());
         instance.setDiscountedPrice(template.getDiscountedPrice());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of DiscountedLineItemPriceForQuantity
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static DiscountedLineItemPriceForQuantity deepCopy(
+            @Nullable final DiscountedLineItemPriceForQuantity template) {
+        if (template == null) {
+            return null;
+        }
+        DiscountedLineItemPriceForQuantityImpl instance = new DiscountedLineItemPriceForQuantityImpl();
+        instance.setQuantity(template.getQuantity());
+        instance.setDiscountedPrice(
+            com.commercetools.api.models.cart.DiscountedLineItemPrice.deepCopy(template.getDiscountedPrice()));
         return instance;
     }
 

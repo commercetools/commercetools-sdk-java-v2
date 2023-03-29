@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -84,7 +85,7 @@ public interface GraphQLRequest {
     }
 
     /**
-     * factory method to copy an instance of GraphQLRequest
+     * factory method to create a shallow copy GraphQLRequest
      * @param template instance to be copied
      * @return copy instance
      */
@@ -93,6 +94,24 @@ public interface GraphQLRequest {
         instance.setQuery(template.getQuery());
         instance.setOperationName(template.getOperationName());
         instance.setVariables(template.getVariables());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of GraphQLRequest
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static GraphQLRequest deepCopy(@Nullable final GraphQLRequest template) {
+        if (template == null) {
+            return null;
+        }
+        GraphQLRequestImpl instance = new GraphQLRequestImpl();
+        instance.setQuery(template.getQuery());
+        instance.setOperationName(template.getOperationName());
+        instance.setVariables(
+            com.commercetools.api.models.graph_ql.GraphQLVariablesMap.deepCopy(template.getVariables()));
         return instance;
     }
 

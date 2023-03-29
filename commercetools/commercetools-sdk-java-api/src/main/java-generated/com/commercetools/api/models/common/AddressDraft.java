@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.type.CustomFieldsDraft;
@@ -55,7 +56,7 @@ public interface AddressDraft extends BaseAddress, com.commercetools.api.models.
     }
 
     /**
-     * factory method to copy an instance of AddressDraft
+     * factory method to create a shallow copy AddressDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -87,6 +88,46 @@ public interface AddressDraft extends BaseAddress, com.commercetools.api.models.
         instance.setAdditionalAddressInfo(template.getAdditionalAddressInfo());
         instance.setExternalId(template.getExternalId());
         instance.setCustom(template.getCustom());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of AddressDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AddressDraft deepCopy(@Nullable final AddressDraft template) {
+        if (template == null) {
+            return null;
+        }
+        AddressDraftImpl instance = new AddressDraftImpl();
+        instance.setId(template.getId());
+        instance.setKey(template.getKey());
+        instance.setCountry(template.getCountry());
+        instance.setTitle(template.getTitle());
+        instance.setSalutation(template.getSalutation());
+        instance.setFirstName(template.getFirstName());
+        instance.setLastName(template.getLastName());
+        instance.setStreetName(template.getStreetName());
+        instance.setStreetNumber(template.getStreetNumber());
+        instance.setAdditionalStreetInfo(template.getAdditionalStreetInfo());
+        instance.setPostalCode(template.getPostalCode());
+        instance.setCity(template.getCity());
+        instance.setRegion(template.getRegion());
+        instance.setState(template.getState());
+        instance.setCompany(template.getCompany());
+        instance.setDepartment(template.getDepartment());
+        instance.setBuilding(template.getBuilding());
+        instance.setApartment(template.getApartment());
+        instance.setPOBox(template.getPOBox());
+        instance.setPhone(template.getPhone());
+        instance.setMobile(template.getMobile());
+        instance.setEmail(template.getEmail());
+        instance.setFax(template.getFax());
+        instance.setAdditionalAddressInfo(template.getAdditionalAddressInfo());
+        instance.setExternalId(template.getExternalId());
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;
     }
 

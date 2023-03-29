@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -55,11 +57,26 @@ public interface ReviewSetKeyAction extends ReviewUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ReviewSetKeyAction
+     * factory method to create a shallow copy ReviewSetKeyAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ReviewSetKeyAction of(final ReviewSetKeyAction template) {
+        ReviewSetKeyActionImpl instance = new ReviewSetKeyActionImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ReviewSetKeyAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ReviewSetKeyAction deepCopy(@Nullable final ReviewSetKeyAction template) {
+        if (template == null) {
+            return null;
+        }
         ReviewSetKeyActionImpl instance = new ReviewSetKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;

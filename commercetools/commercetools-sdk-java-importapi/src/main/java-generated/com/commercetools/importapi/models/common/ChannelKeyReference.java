@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -41,11 +43,26 @@ public interface ChannelKeyReference extends KeyReference {
     }
 
     /**
-     * factory method to copy an instance of ChannelKeyReference
+     * factory method to create a shallow copy ChannelKeyReference
      * @param template instance to be copied
      * @return copy instance
      */
     public static ChannelKeyReference of(final ChannelKeyReference template) {
+        ChannelKeyReferenceImpl instance = new ChannelKeyReferenceImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChannelKeyReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChannelKeyReference deepCopy(@Nullable final ChannelKeyReference template) {
+        if (template == null) {
+            return null;
+        }
         ChannelKeyReferenceImpl instance = new ChannelKeyReferenceImpl();
         instance.setKey(template.getKey());
         return instance;

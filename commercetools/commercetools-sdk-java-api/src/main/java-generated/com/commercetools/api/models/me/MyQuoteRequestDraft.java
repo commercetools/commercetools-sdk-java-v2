@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -85,11 +86,28 @@ public interface MyQuoteRequestDraft extends io.vrap.rmf.base.client.Draft<MyQuo
     }
 
     /**
-     * factory method to copy an instance of MyQuoteRequestDraft
+     * factory method to create a shallow copy MyQuoteRequestDraft
      * @param template instance to be copied
      * @return copy instance
      */
     public static MyQuoteRequestDraft of(final MyQuoteRequestDraft template) {
+        MyQuoteRequestDraftImpl instance = new MyQuoteRequestDraftImpl();
+        instance.setCartId(template.getCartId());
+        instance.setCartVersion(template.getCartVersion());
+        instance.setComment(template.getComment());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MyQuoteRequestDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MyQuoteRequestDraft deepCopy(@Nullable final MyQuoteRequestDraft template) {
+        if (template == null) {
+            return null;
+        }
         MyQuoteRequestDraftImpl instance = new MyQuoteRequestDraftImpl();
         instance.setCartId(template.getCartId());
         instance.setCartVersion(template.getCartVersion());

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -70,11 +71,27 @@ public interface ExternalOAuth {
     }
 
     /**
-     * factory method to copy an instance of ExternalOAuth
+     * factory method to create a shallow copy ExternalOAuth
      * @param template instance to be copied
      * @return copy instance
      */
     public static ExternalOAuth of(final ExternalOAuth template) {
+        ExternalOAuthImpl instance = new ExternalOAuthImpl();
+        instance.setUrl(template.getUrl());
+        instance.setAuthorizationHeader(template.getAuthorizationHeader());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ExternalOAuth
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ExternalOAuth deepCopy(@Nullable final ExternalOAuth template) {
+        if (template == null) {
+            return null;
+        }
         ExternalOAuthImpl instance = new ExternalOAuthImpl();
         instance.setUrl(template.getUrl());
         instance.setAuthorizationHeader(template.getAuthorizationHeader());

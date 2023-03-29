@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.common.AttributeConstraintEnum;
@@ -115,11 +116,29 @@ public interface ChangeAttributeConstraintChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of ChangeAttributeConstraintChange
+     * factory method to create a shallow copy ChangeAttributeConstraintChange
      * @param template instance to be copied
      * @return copy instance
      */
     public static ChangeAttributeConstraintChange of(final ChangeAttributeConstraintChange template) {
+        ChangeAttributeConstraintChangeImpl instance = new ChangeAttributeConstraintChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setAttributeName(template.getAttributeName());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChangeAttributeConstraintChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChangeAttributeConstraintChange deepCopy(@Nullable final ChangeAttributeConstraintChange template) {
+        if (template == null) {
+            return null;
+        }
         ChangeAttributeConstraintChangeImpl instance = new ChangeAttributeConstraintChangeImpl();
         instance.setChange(template.getChange());
         instance.setAttributeName(template.getAttributeName());

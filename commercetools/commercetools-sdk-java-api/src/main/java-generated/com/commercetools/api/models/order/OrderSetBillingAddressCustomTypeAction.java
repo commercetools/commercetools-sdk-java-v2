@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.type.FieldContainer;
@@ -74,7 +75,7 @@ public interface OrderSetBillingAddressCustomTypeAction extends OrderUpdateActio
     }
 
     /**
-     * factory method to copy an instance of OrderSetBillingAddressCustomTypeAction
+     * factory method to create a shallow copy OrderSetBillingAddressCustomTypeAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -82,6 +83,23 @@ public interface OrderSetBillingAddressCustomTypeAction extends OrderUpdateActio
         OrderSetBillingAddressCustomTypeActionImpl instance = new OrderSetBillingAddressCustomTypeActionImpl();
         instance.setType(template.getType());
         instance.setFields(template.getFields());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderSetBillingAddressCustomTypeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderSetBillingAddressCustomTypeAction deepCopy(
+            @Nullable final OrderSetBillingAddressCustomTypeAction template) {
+        if (template == null) {
+            return null;
+        }
+        OrderSetBillingAddressCustomTypeActionImpl instance = new OrderSetBillingAddressCustomTypeActionImpl();
+        instance.setType(com.commercetools.api.models.type.TypeResourceIdentifier.deepCopy(template.getType()));
+        instance.setFields(com.commercetools.api.models.type.FieldContainer.deepCopy(template.getFields()));
         return instance;
     }
 

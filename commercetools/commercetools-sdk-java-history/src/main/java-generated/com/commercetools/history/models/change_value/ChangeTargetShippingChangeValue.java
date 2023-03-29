@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -50,11 +51,25 @@ public interface ChangeTargetShippingChangeValue extends ChangeTargetChangeValue
     }
 
     /**
-     * factory method to copy an instance of ChangeTargetShippingChangeValue
+     * factory method to create a shallow copy ChangeTargetShippingChangeValue
      * @param template instance to be copied
      * @return copy instance
      */
     public static ChangeTargetShippingChangeValue of(final ChangeTargetShippingChangeValue template) {
+        ChangeTargetShippingChangeValueImpl instance = new ChangeTargetShippingChangeValueImpl();
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChangeTargetShippingChangeValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChangeTargetShippingChangeValue deepCopy(@Nullable final ChangeTargetShippingChangeValue template) {
+        if (template == null) {
+            return null;
+        }
         ChangeTargetShippingChangeValueImpl instance = new ChangeTargetShippingChangeValueImpl();
         return instance;
     }

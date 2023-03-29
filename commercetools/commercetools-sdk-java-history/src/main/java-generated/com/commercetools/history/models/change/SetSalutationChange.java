@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -98,11 +99,28 @@ public interface SetSalutationChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetSalutationChange
+     * factory method to create a shallow copy SetSalutationChange
      * @param template instance to be copied
      * @return copy instance
      */
     public static SetSalutationChange of(final SetSalutationChange template) {
+        SetSalutationChangeImpl instance = new SetSalutationChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetSalutationChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetSalutationChange deepCopy(@Nullable final SetSalutationChange template) {
+        if (template == null) {
+            return null;
+        }
         SetSalutationChangeImpl instance = new SetSalutationChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());

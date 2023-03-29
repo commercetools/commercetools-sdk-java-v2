@@ -4,7 +4,9 @@ package com.commercetools.api.models.attribute_group;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -80,7 +82,7 @@ public interface AttributeGroupUpdate extends
     }
 
     /**
-     * factory method to copy an instance of AttributeGroupUpdate
+     * factory method to create a shallow copy AttributeGroupUpdate
      * @param template instance to be copied
      * @return copy instance
      */
@@ -88,6 +90,26 @@ public interface AttributeGroupUpdate extends
         AttributeGroupUpdateImpl instance = new AttributeGroupUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(template.getActions());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of AttributeGroupUpdate
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AttributeGroupUpdate deepCopy(@Nullable final AttributeGroupUpdate template) {
+        if (template == null) {
+            return null;
+        }
+        AttributeGroupUpdateImpl instance = new AttributeGroupUpdateImpl();
+        instance.setVersion(template.getVersion());
+        instance.setActions(Optional.ofNullable(template.getActions())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.attribute_group.AttributeGroupUpdateAction::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

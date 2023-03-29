@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -119,11 +120,30 @@ public interface ProductPriceKeySetMessagePayload extends MessagePayload {
     }
 
     /**
-     * factory method to copy an instance of ProductPriceKeySetMessagePayload
+     * factory method to create a shallow copy ProductPriceKeySetMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductPriceKeySetMessagePayload of(final ProductPriceKeySetMessagePayload template) {
+        ProductPriceKeySetMessagePayloadImpl instance = new ProductPriceKeySetMessagePayloadImpl();
+        instance.setVariantId(template.getVariantId());
+        instance.setPriceId(template.getPriceId());
+        instance.setOldKey(template.getOldKey());
+        instance.setKey(template.getKey());
+        instance.setStaged(template.getStaged());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductPriceKeySetMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductPriceKeySetMessagePayload deepCopy(@Nullable final ProductPriceKeySetMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
         ProductPriceKeySetMessagePayloadImpl instance = new ProductPriceKeySetMessagePayloadImpl();
         instance.setVariantId(template.getVariantId());
         instance.setPriceId(template.getPriceId());

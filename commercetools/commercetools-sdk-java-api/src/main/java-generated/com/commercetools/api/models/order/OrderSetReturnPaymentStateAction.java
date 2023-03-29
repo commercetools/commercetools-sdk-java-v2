@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -74,11 +75,27 @@ public interface OrderSetReturnPaymentStateAction extends OrderUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of OrderSetReturnPaymentStateAction
+     * factory method to create a shallow copy OrderSetReturnPaymentStateAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static OrderSetReturnPaymentStateAction of(final OrderSetReturnPaymentStateAction template) {
+        OrderSetReturnPaymentStateActionImpl instance = new OrderSetReturnPaymentStateActionImpl();
+        instance.setReturnItemId(template.getReturnItemId());
+        instance.setPaymentState(template.getPaymentState());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderSetReturnPaymentStateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderSetReturnPaymentStateAction deepCopy(@Nullable final OrderSetReturnPaymentStateAction template) {
+        if (template == null) {
+            return null;
+        }
         OrderSetReturnPaymentStateActionImpl instance = new OrderSetReturnPaymentStateActionImpl();
         instance.setReturnItemId(template.getReturnItemId());
         instance.setPaymentState(template.getPaymentState());

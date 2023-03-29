@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -74,7 +75,7 @@ public interface HttpDestination extends ExtensionDestination {
     }
 
     /**
-     * factory method to copy an instance of HttpDestination
+     * factory method to create a shallow copy HttpDestination
      * @param template instance to be copied
      * @return copy instance
      */
@@ -82,6 +83,23 @@ public interface HttpDestination extends ExtensionDestination {
         HttpDestinationImpl instance = new HttpDestinationImpl();
         instance.setUrl(template.getUrl());
         instance.setAuthentication(template.getAuthentication());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of HttpDestination
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static HttpDestination deepCopy(@Nullable final HttpDestination template) {
+        if (template == null) {
+            return null;
+        }
+        HttpDestinationImpl instance = new HttpDestinationImpl();
+        instance.setUrl(template.getUrl());
+        instance.setAuthentication(com.commercetools.api.models.extension.HttpDestinationAuthentication
+                .deepCopy(template.getAuthentication()));
         return instance;
     }
 

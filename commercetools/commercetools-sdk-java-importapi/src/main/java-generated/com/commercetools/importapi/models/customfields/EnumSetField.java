@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -66,13 +67,28 @@ public interface EnumSetField extends CustomField {
     }
 
     /**
-     * factory method to copy an instance of EnumSetField
+     * factory method to create a shallow copy EnumSetField
      * @param template instance to be copied
      * @return copy instance
      */
     public static EnumSetField of(final EnumSetField template) {
         EnumSetFieldImpl instance = new EnumSetFieldImpl();
         instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of EnumSetField
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static EnumSetField deepCopy(@Nullable final EnumSetField template) {
+        if (template == null) {
+            return null;
+        }
+        EnumSetFieldImpl instance = new EnumSetFieldImpl();
+        instance.setValue(Optional.ofNullable(template.getValue()).map(ArrayList::new).orElse(null));
         return instance;
     }
 

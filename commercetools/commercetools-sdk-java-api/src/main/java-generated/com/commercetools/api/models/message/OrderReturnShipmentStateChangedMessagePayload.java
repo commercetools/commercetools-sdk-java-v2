@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order.ReturnShipmentState;
@@ -75,12 +76,29 @@ public interface OrderReturnShipmentStateChangedMessagePayload extends OrderMess
     }
 
     /**
-     * factory method to copy an instance of OrderReturnShipmentStateChangedMessagePayload
+     * factory method to create a shallow copy OrderReturnShipmentStateChangedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
     public static OrderReturnShipmentStateChangedMessagePayload of(
             final OrderReturnShipmentStateChangedMessagePayload template) {
+        OrderReturnShipmentStateChangedMessagePayloadImpl instance = new OrderReturnShipmentStateChangedMessagePayloadImpl();
+        instance.setReturnItemId(template.getReturnItemId());
+        instance.setReturnShipmentState(template.getReturnShipmentState());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderReturnShipmentStateChangedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderReturnShipmentStateChangedMessagePayload deepCopy(
+            @Nullable final OrderReturnShipmentStateChangedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
         OrderReturnShipmentStateChangedMessagePayloadImpl instance = new OrderReturnShipmentStateChangedMessagePayloadImpl();
         instance.setReturnItemId(template.getReturnItemId());
         instance.setReturnShipmentState(template.getReturnShipmentState());

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -74,11 +75,27 @@ public interface TypeChangeInputHintAction extends TypeUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of TypeChangeInputHintAction
+     * factory method to create a shallow copy TypeChangeInputHintAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static TypeChangeInputHintAction of(final TypeChangeInputHintAction template) {
+        TypeChangeInputHintActionImpl instance = new TypeChangeInputHintActionImpl();
+        instance.setFieldName(template.getFieldName());
+        instance.setInputHint(template.getInputHint());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of TypeChangeInputHintAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static TypeChangeInputHintAction deepCopy(@Nullable final TypeChangeInputHintAction template) {
+        if (template == null) {
+            return null;
+        }
         TypeChangeInputHintActionImpl instance = new TypeChangeInputHintActionImpl();
         instance.setFieldName(template.getFieldName());
         instance.setInputHint(template.getInputHint());

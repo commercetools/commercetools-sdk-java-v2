@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -74,12 +75,29 @@ public interface ProductTypeChangeAttributeConstraintAction extends ProductTypeU
     }
 
     /**
-     * factory method to copy an instance of ProductTypeChangeAttributeConstraintAction
+     * factory method to create a shallow copy ProductTypeChangeAttributeConstraintAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductTypeChangeAttributeConstraintAction of(
             final ProductTypeChangeAttributeConstraintAction template) {
+        ProductTypeChangeAttributeConstraintActionImpl instance = new ProductTypeChangeAttributeConstraintActionImpl();
+        instance.setAttributeName(template.getAttributeName());
+        instance.setNewValue(template.getNewValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductTypeChangeAttributeConstraintAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductTypeChangeAttributeConstraintAction deepCopy(
+            @Nullable final ProductTypeChangeAttributeConstraintAction template) {
+        if (template == null) {
+            return null;
+        }
         ProductTypeChangeAttributeConstraintActionImpl instance = new ProductTypeChangeAttributeConstraintActionImpl();
         instance.setAttributeName(template.getAttributeName());
         instance.setNewValue(template.getNewValue());

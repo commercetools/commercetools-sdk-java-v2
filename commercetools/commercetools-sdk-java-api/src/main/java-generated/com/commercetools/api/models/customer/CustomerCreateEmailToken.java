@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -84,11 +85,28 @@ public interface CustomerCreateEmailToken {
     }
 
     /**
-     * factory method to copy an instance of CustomerCreateEmailToken
+     * factory method to create a shallow copy CustomerCreateEmailToken
      * @param template instance to be copied
      * @return copy instance
      */
     public static CustomerCreateEmailToken of(final CustomerCreateEmailToken template) {
+        CustomerCreateEmailTokenImpl instance = new CustomerCreateEmailTokenImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setTtlMinutes(template.getTtlMinutes());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomerCreateEmailToken
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomerCreateEmailToken deepCopy(@Nullable final CustomerCreateEmailToken template) {
+        if (template == null) {
+            return null;
+        }
         CustomerCreateEmailTokenImpl instance = new CustomerCreateEmailTokenImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());

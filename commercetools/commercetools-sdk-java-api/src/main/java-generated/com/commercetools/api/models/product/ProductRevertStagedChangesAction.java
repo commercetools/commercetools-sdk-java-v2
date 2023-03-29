@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -40,11 +42,25 @@ public interface ProductRevertStagedChangesAction extends ProductUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ProductRevertStagedChangesAction
+     * factory method to create a shallow copy ProductRevertStagedChangesAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductRevertStagedChangesAction of(final ProductRevertStagedChangesAction template) {
+        ProductRevertStagedChangesActionImpl instance = new ProductRevertStagedChangesActionImpl();
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductRevertStagedChangesAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductRevertStagedChangesAction deepCopy(@Nullable final ProductRevertStagedChangesAction template) {
+        if (template == null) {
+            return null;
+        }
         ProductRevertStagedChangesActionImpl instance = new ProductRevertStagedChangesActionImpl();
         return instance;
     }

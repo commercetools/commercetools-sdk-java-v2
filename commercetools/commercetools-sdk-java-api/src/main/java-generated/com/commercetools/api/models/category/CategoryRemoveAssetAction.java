@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -70,11 +72,27 @@ public interface CategoryRemoveAssetAction extends CategoryUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of CategoryRemoveAssetAction
+     * factory method to create a shallow copy CategoryRemoveAssetAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static CategoryRemoveAssetAction of(final CategoryRemoveAssetAction template) {
+        CategoryRemoveAssetActionImpl instance = new CategoryRemoveAssetActionImpl();
+        instance.setAssetId(template.getAssetId());
+        instance.setAssetKey(template.getAssetKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CategoryRemoveAssetAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CategoryRemoveAssetAction deepCopy(@Nullable final CategoryRemoveAssetAction template) {
+        if (template == null) {
+            return null;
+        }
         CategoryRemoveAssetActionImpl instance = new CategoryRemoveAssetActionImpl();
         instance.setAssetId(template.getAssetId());
         instance.setAssetKey(template.getAssetKey());

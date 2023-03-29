@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -73,11 +74,27 @@ public interface ProductLegacySetSkuAction extends ProductUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ProductLegacySetSkuAction
+     * factory method to create a shallow copy ProductLegacySetSkuAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductLegacySetSkuAction of(final ProductLegacySetSkuAction template) {
+        ProductLegacySetSkuActionImpl instance = new ProductLegacySetSkuActionImpl();
+        instance.setSku(template.getSku());
+        instance.setVariantId(template.getVariantId());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductLegacySetSkuAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductLegacySetSkuAction deepCopy(@Nullable final ProductLegacySetSkuAction template) {
+        if (template == null) {
+            return null;
+        }
         ProductLegacySetSkuActionImpl instance = new ProductLegacySetSkuActionImpl();
         instance.setSku(template.getSku());
         instance.setVariantId(template.getVariantId());

@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -93,7 +94,7 @@ public interface ResourceUpdatedDeliveryPayload extends DeliveryPayload {
     }
 
     /**
-     * factory method to copy an instance of ResourceUpdatedDeliveryPayload
+     * factory method to create a shallow copy ResourceUpdatedDeliveryPayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -102,6 +103,27 @@ public interface ResourceUpdatedDeliveryPayload extends DeliveryPayload {
         instance.setProjectKey(template.getProjectKey());
         instance.setResource(template.getResource());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+        instance.setVersion(template.getVersion());
+        instance.setOldVersion(template.getOldVersion());
+        instance.setModifiedAt(template.getModifiedAt());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ResourceUpdatedDeliveryPayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ResourceUpdatedDeliveryPayload deepCopy(@Nullable final ResourceUpdatedDeliveryPayload template) {
+        if (template == null) {
+            return null;
+        }
+        ResourceUpdatedDeliveryPayloadImpl instance = new ResourceUpdatedDeliveryPayloadImpl();
+        instance.setProjectKey(template.getProjectKey());
+        instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
+                .deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setVersion(template.getVersion());
         instance.setOldVersion(template.getOldVersion());
         instance.setModifiedAt(template.getModifiedAt());

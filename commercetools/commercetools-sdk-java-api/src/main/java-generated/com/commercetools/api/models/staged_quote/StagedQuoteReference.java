@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.common.Reference;
@@ -59,7 +60,7 @@ public interface StagedQuoteReference extends Reference, com.commercetools.api.m
     }
 
     /**
-     * factory method to copy an instance of StagedQuoteReference
+     * factory method to create a shallow copy StagedQuoteReference
      * @param template instance to be copied
      * @return copy instance
      */
@@ -67,6 +68,22 @@ public interface StagedQuoteReference extends Reference, com.commercetools.api.m
         StagedQuoteReferenceImpl instance = new StagedQuoteReferenceImpl();
         instance.setId(template.getId());
         instance.setObj(template.getObj());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedQuoteReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedQuoteReference deepCopy(@Nullable final StagedQuoteReference template) {
+        if (template == null) {
+            return null;
+        }
+        StagedQuoteReferenceImpl instance = new StagedQuoteReferenceImpl();
+        instance.setId(template.getId());
+        instance.setObj(com.commercetools.api.models.staged_quote.StagedQuote.deepCopy(template.getObj()));
         return instance;
     }
 

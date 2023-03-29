@@ -4,7 +4,9 @@ package com.commercetools.api.models.category;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -234,7 +236,7 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
     }
 
     /**
-     * factory method to copy an instance of CategoryDraft
+     * factory method to create a shallow copy CategoryDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -251,6 +253,40 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
         instance.setMetaKeywords(template.getMetaKeywords());
         instance.setCustom(template.getCustom());
         instance.setAssets(template.getAssets());
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CategoryDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CategoryDraft deepCopy(@Nullable final CategoryDraft template) {
+        if (template == null) {
+            return null;
+        }
+        CategoryDraftImpl instance = new CategoryDraftImpl();
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setSlug(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getSlug()));
+        instance.setDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setParent(
+            com.commercetools.api.models.category.CategoryResourceIdentifier.deepCopy(template.getParent()));
+        instance.setOrderHint(template.getOrderHint());
+        instance.setExternalId(template.getExternalId());
+        instance.setMetaTitle(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaTitle()));
+        instance.setMetaDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaDescription()));
+        instance.setMetaKeywords(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaKeywords()));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setAssets(Optional.ofNullable(template.getAssets())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.common.AssetDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setKey(template.getKey());
         return instance;
     }

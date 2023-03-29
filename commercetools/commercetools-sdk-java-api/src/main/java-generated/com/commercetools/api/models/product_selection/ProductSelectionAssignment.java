@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -111,7 +112,7 @@ public interface ProductSelectionAssignment {
     }
 
     /**
-     * factory method to copy an instance of ProductSelectionAssignment
+     * factory method to create a shallow copy ProductSelectionAssignment
      * @param template instance to be copied
      * @return copy instance
      */
@@ -121,6 +122,27 @@ public interface ProductSelectionAssignment {
         instance.setProductSelection(template.getProductSelection());
         instance.setVariantSelection(template.getVariantSelection());
         instance.setVariantExclusion(template.getVariantExclusion());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductSelectionAssignment
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductSelectionAssignment deepCopy(@Nullable final ProductSelectionAssignment template) {
+        if (template == null) {
+            return null;
+        }
+        ProductSelectionAssignmentImpl instance = new ProductSelectionAssignmentImpl();
+        instance.setProduct(com.commercetools.api.models.product.ProductReference.deepCopy(template.getProduct()));
+        instance.setProductSelection(com.commercetools.api.models.product_selection.ProductSelectionReference
+                .deepCopy(template.getProductSelection()));
+        instance.setVariantSelection(com.commercetools.api.models.product_selection.ProductVariantSelection
+                .deepCopy(template.getVariantSelection()));
+        instance.setVariantExclusion(com.commercetools.api.models.product_selection.ProductVariantExclusion
+                .deepCopy(template.getVariantExclusion()));
         return instance;
     }
 

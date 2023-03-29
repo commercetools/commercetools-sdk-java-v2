@@ -4,7 +4,9 @@ package com.commercetools.api.models.review;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -126,7 +128,7 @@ public interface ReviewPagedQueryResponse extends com.commercetools.api.models.R
     }
 
     /**
-     * factory method to copy an instance of ReviewPagedQueryResponse
+     * factory method to create a shallow copy ReviewPagedQueryResponse
      * @param template instance to be copied
      * @return copy instance
      */
@@ -137,6 +139,29 @@ public interface ReviewPagedQueryResponse extends com.commercetools.api.models.R
         instance.setTotal(template.getTotal());
         instance.setOffset(template.getOffset());
         instance.setResults(template.getResults());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ReviewPagedQueryResponse
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ReviewPagedQueryResponse deepCopy(@Nullable final ReviewPagedQueryResponse template) {
+        if (template == null) {
+            return null;
+        }
+        ReviewPagedQueryResponseImpl instance = new ReviewPagedQueryResponseImpl();
+        instance.setLimit(template.getLimit());
+        instance.setCount(template.getCount());
+        instance.setTotal(template.getTotal());
+        instance.setOffset(template.getOffset());
+        instance.setResults(Optional.ofNullable(template.getResults())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.review.Review::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -55,12 +57,28 @@ public interface DiscountCodeSetMaxApplicationsPerCustomerAction extends Discoun
     }
 
     /**
-     * factory method to copy an instance of DiscountCodeSetMaxApplicationsPerCustomerAction
+     * factory method to create a shallow copy DiscountCodeSetMaxApplicationsPerCustomerAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static DiscountCodeSetMaxApplicationsPerCustomerAction of(
             final DiscountCodeSetMaxApplicationsPerCustomerAction template) {
+        DiscountCodeSetMaxApplicationsPerCustomerActionImpl instance = new DiscountCodeSetMaxApplicationsPerCustomerActionImpl();
+        instance.setMaxApplicationsPerCustomer(template.getMaxApplicationsPerCustomer());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of DiscountCodeSetMaxApplicationsPerCustomerAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static DiscountCodeSetMaxApplicationsPerCustomerAction deepCopy(
+            @Nullable final DiscountCodeSetMaxApplicationsPerCustomerAction template) {
+        if (template == null) {
+            return null;
+        }
         DiscountCodeSetMaxApplicationsPerCustomerActionImpl instance = new DiscountCodeSetMaxApplicationsPerCustomerActionImpl();
         instance.setMaxApplicationsPerCustomer(template.getMaxApplicationsPerCustomer());
         return instance;

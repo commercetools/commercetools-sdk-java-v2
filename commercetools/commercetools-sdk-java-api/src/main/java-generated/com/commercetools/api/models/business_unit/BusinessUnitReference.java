@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -75,7 +76,7 @@ public interface BusinessUnitReference extends Reference, com.commercetools.api.
     }
 
     /**
-     * factory method to copy an instance of BusinessUnitReference
+     * factory method to create a shallow copy BusinessUnitReference
      * @param template instance to be copied
      * @return copy instance
      */
@@ -83,6 +84,22 @@ public interface BusinessUnitReference extends Reference, com.commercetools.api.
         BusinessUnitReferenceImpl instance = new BusinessUnitReferenceImpl();
         instance.setId(template.getId());
         instance.setObj(template.getObj());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of BusinessUnitReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static BusinessUnitReference deepCopy(@Nullable final BusinessUnitReference template) {
+        if (template == null) {
+            return null;
+        }
+        BusinessUnitReferenceImpl instance = new BusinessUnitReferenceImpl();
+        instance.setId(template.getId());
+        instance.setObj(com.commercetools.api.models.business_unit.BusinessUnit.deepCopy(template.getObj()));
         return instance;
     }
 

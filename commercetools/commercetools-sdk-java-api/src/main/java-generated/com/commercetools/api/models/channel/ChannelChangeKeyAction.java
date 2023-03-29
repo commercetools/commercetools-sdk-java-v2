@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,26 @@ public interface ChannelChangeKeyAction extends ChannelUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ChannelChangeKeyAction
+     * factory method to create a shallow copy ChannelChangeKeyAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ChannelChangeKeyAction of(final ChannelChangeKeyAction template) {
+        ChannelChangeKeyActionImpl instance = new ChannelChangeKeyActionImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChannelChangeKeyAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChannelChangeKeyAction deepCopy(@Nullable final ChannelChangeKeyAction template) {
+        if (template == null) {
+            return null;
+        }
         ChannelChangeKeyActionImpl instance = new ChannelChangeKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;

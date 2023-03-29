@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -53,11 +54,26 @@ public interface UpdateAction extends com.commercetools.api.models.ResourceUpdat
     }
 
     /**
-     * factory method to copy an instance of UpdateAction
+     * factory method to create a shallow copy UpdateAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static UpdateAction of(final UpdateAction template) {
+        UpdateActionImpl instance = new UpdateActionImpl();
+        instance.setAction(template.getAction());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of UpdateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static UpdateAction deepCopy(@Nullable final UpdateAction template) {
+        if (template == null) {
+            return null;
+        }
         UpdateActionImpl instance = new UpdateActionImpl();
         instance.setAction(template.getAction());
         return instance;

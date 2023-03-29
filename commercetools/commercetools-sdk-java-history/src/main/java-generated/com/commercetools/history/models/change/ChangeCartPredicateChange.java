@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -98,11 +99,28 @@ public interface ChangeCartPredicateChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of ChangeCartPredicateChange
+     * factory method to create a shallow copy ChangeCartPredicateChange
      * @param template instance to be copied
      * @return copy instance
      */
     public static ChangeCartPredicateChange of(final ChangeCartPredicateChange template) {
+        ChangeCartPredicateChangeImpl instance = new ChangeCartPredicateChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChangeCartPredicateChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChangeCartPredicateChange deepCopy(@Nullable final ChangeCartPredicateChange template) {
+        if (template == null) {
+            return null;
+        }
         ChangeCartPredicateChangeImpl instance = new ChangeCartPredicateChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());

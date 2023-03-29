@@ -5,7 +5,9 @@ import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -422,6 +424,66 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
      */
 
     public void setTopLevelUnit(final BusinessUnitKeyReference topLevelUnit);
+
+    /**
+     * factory method to create a deep copy of BusinessUnit
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static BusinessUnit deepCopy(@Nullable final BusinessUnit template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.business_unit.Company) {
+            return com.commercetools.api.models.business_unit.Company
+                    .deepCopy((com.commercetools.api.models.business_unit.Company) template);
+        }
+        if (template instanceof com.commercetools.api.models.business_unit.Division) {
+            return com.commercetools.api.models.business_unit.Division
+                    .deepCopy((com.commercetools.api.models.business_unit.Division) template);
+        }
+        BusinessUnitImpl instance = new BusinessUnitImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
+        instance.setKey(template.getKey());
+        instance.setStatus(template.getStatus());
+        instance.setStores(Optional.ofNullable(template.getStores())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.store.StoreKeyReference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setStoreMode(template.getStoreMode());
+        instance.setName(template.getName());
+        instance.setContactEmail(template.getContactEmail());
+        instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
+        instance.setAddresses(Optional.ofNullable(template.getAddresses())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.common.Address::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setShippingAddressIds(
+            Optional.ofNullable(template.getShippingAddressIds()).map(ArrayList::new).orElse(null));
+        instance.setDefaultShippingAddressId(template.getDefaultShippingAddressId());
+        instance.setBillingAddressIds(
+            Optional.ofNullable(template.getBillingAddressIds()).map(ArrayList::new).orElse(null));
+        instance.setDefaultBillingAddressId(template.getDefaultBillingAddressId());
+        instance.setAssociates(Optional.ofNullable(template.getAssociates())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.business_unit.Associate::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setParentUnit(
+            com.commercetools.api.models.business_unit.BusinessUnitKeyReference.deepCopy(template.getParentUnit()));
+        instance.setTopLevelUnit(
+            com.commercetools.api.models.business_unit.BusinessUnitKeyReference.deepCopy(template.getTopLevelUnit()));
+        return instance;
+    }
 
     /**
      * builder for company subtype

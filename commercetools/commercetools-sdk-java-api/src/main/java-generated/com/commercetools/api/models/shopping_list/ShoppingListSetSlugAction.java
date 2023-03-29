@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.common.LocalizedString;
@@ -58,13 +59,28 @@ public interface ShoppingListSetSlugAction extends ShoppingListUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ShoppingListSetSlugAction
+     * factory method to create a shallow copy ShoppingListSetSlugAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ShoppingListSetSlugAction of(final ShoppingListSetSlugAction template) {
         ShoppingListSetSlugActionImpl instance = new ShoppingListSetSlugActionImpl();
         instance.setSlug(template.getSlug());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ShoppingListSetSlugAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ShoppingListSetSlugAction deepCopy(@Nullable final ShoppingListSetSlugAction template) {
+        if (template == null) {
+            return null;
+        }
+        ShoppingListSetSlugActionImpl instance = new ShoppingListSetSlugActionImpl();
+        instance.setSlug(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getSlug()));
         return instance;
     }
 

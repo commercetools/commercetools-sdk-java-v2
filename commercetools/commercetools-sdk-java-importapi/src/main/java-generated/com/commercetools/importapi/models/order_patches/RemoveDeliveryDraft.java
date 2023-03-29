@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -53,11 +54,26 @@ public interface RemoveDeliveryDraft extends io.vrap.rmf.base.client.Draft<Remov
     }
 
     /**
-     * factory method to copy an instance of RemoveDeliveryDraft
+     * factory method to create a shallow copy RemoveDeliveryDraft
      * @param template instance to be copied
      * @return copy instance
      */
     public static RemoveDeliveryDraft of(final RemoveDeliveryDraft template) {
+        RemoveDeliveryDraftImpl instance = new RemoveDeliveryDraftImpl();
+        instance.setId(template.getId());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of RemoveDeliveryDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static RemoveDeliveryDraft deepCopy(@Nullable final RemoveDeliveryDraft template) {
+        if (template == null) {
+            return null;
+        }
         RemoveDeliveryDraftImpl instance = new RemoveDeliveryDraftImpl();
         instance.setId(template.getId());
         return instance;

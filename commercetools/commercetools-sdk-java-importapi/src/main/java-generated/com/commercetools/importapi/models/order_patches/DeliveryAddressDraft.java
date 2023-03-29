@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -70,7 +71,7 @@ public interface DeliveryAddressDraft extends io.vrap.rmf.base.client.Draft<Deli
     }
 
     /**
-     * factory method to copy an instance of DeliveryAddressDraft
+     * factory method to create a shallow copy DeliveryAddressDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -78,6 +79,22 @@ public interface DeliveryAddressDraft extends io.vrap.rmf.base.client.Draft<Deli
         DeliveryAddressDraftImpl instance = new DeliveryAddressDraftImpl();
         instance.setDeliveryId(template.getDeliveryId());
         instance.setAddress(template.getAddress());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of DeliveryAddressDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static DeliveryAddressDraft deepCopy(@Nullable final DeliveryAddressDraft template) {
+        if (template == null) {
+            return null;
+        }
+        DeliveryAddressDraftImpl instance = new DeliveryAddressDraftImpl();
+        instance.setDeliveryId(template.getDeliveryId());
+        instance.setAddress(com.commercetools.importapi.models.common.Address.deepCopy(template.getAddress()));
         return instance;
     }
 

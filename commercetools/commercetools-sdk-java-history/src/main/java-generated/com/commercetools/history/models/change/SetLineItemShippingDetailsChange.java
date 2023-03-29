@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -118,7 +119,7 @@ public interface SetLineItemShippingDetailsChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetLineItemShippingDetailsChange
+     * factory method to create a shallow copy SetLineItemShippingDetailsChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -128,6 +129,26 @@ public interface SetLineItemShippingDetailsChange extends Change {
         instance.setLineItemId(template.getLineItemId());
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetLineItemShippingDetailsChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetLineItemShippingDetailsChange deepCopy(@Nullable final SetLineItemShippingDetailsChange template) {
+        if (template == null) {
+            return null;
+        }
+        SetLineItemShippingDetailsChangeImpl instance = new SetLineItemShippingDetailsChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setLineItemId(template.getLineItemId());
+        instance.setNextValue(
+            com.commercetools.history.models.common.ItemShippingDetails.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.ItemShippingDetails.deepCopy(template.getPreviousValue()));
         return instance;
     }
 

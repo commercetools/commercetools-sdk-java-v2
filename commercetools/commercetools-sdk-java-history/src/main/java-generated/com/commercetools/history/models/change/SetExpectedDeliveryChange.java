@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -98,11 +99,28 @@ public interface SetExpectedDeliveryChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetExpectedDeliveryChange
+     * factory method to create a shallow copy SetExpectedDeliveryChange
      * @param template instance to be copied
      * @return copy instance
      */
     public static SetExpectedDeliveryChange of(final SetExpectedDeliveryChange template) {
+        SetExpectedDeliveryChangeImpl instance = new SetExpectedDeliveryChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetExpectedDeliveryChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetExpectedDeliveryChange deepCopy(@Nullable final SetExpectedDeliveryChange template) {
+        if (template == null) {
+            return null;
+        }
         SetExpectedDeliveryChangeImpl instance = new SetExpectedDeliveryChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());

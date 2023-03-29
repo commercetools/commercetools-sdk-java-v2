@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -136,7 +137,7 @@ public interface ProductChangeAssetNameAction extends ProductUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ProductChangeAssetNameAction
+     * factory method to create a shallow copy ProductChangeAssetNameAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -148,6 +149,26 @@ public interface ProductChangeAssetNameAction extends ProductUpdateAction {
         instance.setAssetId(template.getAssetId());
         instance.setAssetKey(template.getAssetKey());
         instance.setName(template.getName());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductChangeAssetNameAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductChangeAssetNameAction deepCopy(@Nullable final ProductChangeAssetNameAction template) {
+        if (template == null) {
+            return null;
+        }
+        ProductChangeAssetNameActionImpl instance = new ProductChangeAssetNameActionImpl();
+        instance.setVariantId(template.getVariantId());
+        instance.setSku(template.getSku());
+        instance.setStaged(template.getStaged());
+        instance.setAssetId(template.getAssetId());
+        instance.setAssetKey(template.getAssetKey());
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
         return instance;
     }
 

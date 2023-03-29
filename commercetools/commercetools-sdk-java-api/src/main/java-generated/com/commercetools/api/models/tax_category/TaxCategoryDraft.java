@@ -4,7 +4,9 @@ package com.commercetools.api.models.tax_category;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -108,7 +110,7 @@ public interface TaxCategoryDraft
     }
 
     /**
-     * factory method to copy an instance of TaxCategoryDraft
+     * factory method to create a shallow copy TaxCategoryDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -117,6 +119,28 @@ public interface TaxCategoryDraft
         instance.setName(template.getName());
         instance.setDescription(template.getDescription());
         instance.setRates(template.getRates());
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of TaxCategoryDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static TaxCategoryDraft deepCopy(@Nullable final TaxCategoryDraft template) {
+        if (template == null) {
+            return null;
+        }
+        TaxCategoryDraftImpl instance = new TaxCategoryDraftImpl();
+        instance.setName(template.getName());
+        instance.setDescription(template.getDescription());
+        instance.setRates(Optional.ofNullable(template.getRates())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.tax_category.TaxRateDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setKey(template.getKey());
         return instance;
     }

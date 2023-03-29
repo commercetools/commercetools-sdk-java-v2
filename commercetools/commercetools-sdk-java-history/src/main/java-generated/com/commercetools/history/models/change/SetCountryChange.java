@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -98,11 +99,28 @@ public interface SetCountryChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetCountryChange
+     * factory method to create a shallow copy SetCountryChange
      * @param template instance to be copied
      * @return copy instance
      */
     public static SetCountryChange of(final SetCountryChange template) {
+        SetCountryChangeImpl instance = new SetCountryChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetCountryChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetCountryChange deepCopy(@Nullable final SetCountryChange template) {
+        if (template == null) {
+            return null;
+        }
         SetCountryChangeImpl instance = new SetCountryChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());

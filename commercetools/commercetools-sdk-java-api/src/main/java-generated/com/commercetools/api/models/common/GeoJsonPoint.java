@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -66,13 +67,28 @@ public interface GeoJsonPoint extends GeoJson {
     }
 
     /**
-     * factory method to copy an instance of GeoJsonPoint
+     * factory method to create a shallow copy GeoJsonPoint
      * @param template instance to be copied
      * @return copy instance
      */
     public static GeoJsonPoint of(final GeoJsonPoint template) {
         GeoJsonPointImpl instance = new GeoJsonPointImpl();
         instance.setCoordinates(template.getCoordinates());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of GeoJsonPoint
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static GeoJsonPoint deepCopy(@Nullable final GeoJsonPoint template) {
+        if (template == null) {
+            return null;
+        }
+        GeoJsonPointImpl instance = new GeoJsonPointImpl();
+        instance.setCoordinates(Optional.ofNullable(template.getCoordinates()).map(ArrayList::new).orElse(null));
         return instance;
     }
 

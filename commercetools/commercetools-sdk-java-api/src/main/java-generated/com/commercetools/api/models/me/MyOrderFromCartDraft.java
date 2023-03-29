@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -69,11 +70,27 @@ public interface MyOrderFromCartDraft extends io.vrap.rmf.base.client.Draft<MyOr
     }
 
     /**
-     * factory method to copy an instance of MyOrderFromCartDraft
+     * factory method to create a shallow copy MyOrderFromCartDraft
      * @param template instance to be copied
      * @return copy instance
      */
     public static MyOrderFromCartDraft of(final MyOrderFromCartDraft template) {
+        MyOrderFromCartDraftImpl instance = new MyOrderFromCartDraftImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MyOrderFromCartDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MyOrderFromCartDraft deepCopy(@Nullable final MyOrderFromCartDraft template) {
+        if (template == null) {
+            return null;
+        }
         MyOrderFromCartDraftImpl instance = new MyOrderFromCartDraftImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());

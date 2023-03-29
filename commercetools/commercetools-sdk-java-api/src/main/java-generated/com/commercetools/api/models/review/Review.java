@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -323,7 +324,7 @@ public interface Review extends BaseResource, ReviewMixin, com.commercetools.api
     }
 
     /**
-     * factory method to copy an instance of Review
+     * factory method to create a shallow copy Review
      * @param template instance to be copied
      * @return copy instance
      */
@@ -347,6 +348,39 @@ public interface Review extends BaseResource, ReviewMixin, com.commercetools.api
         instance.setState(template.getState());
         instance.setCustomer(template.getCustomer());
         instance.setCustom(template.getCustom());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of Review
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static Review deepCopy(@Nullable final Review template) {
+        if (template == null) {
+            return null;
+        }
+        ReviewImpl instance = new ReviewImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
+        instance.setKey(template.getKey());
+        instance.setUniquenessValue(template.getUniquenessValue());
+        instance.setLocale(template.getLocale());
+        instance.setAuthorName(template.getAuthorName());
+        instance.setTitle(template.getTitle());
+        instance.setText(template.getText());
+        instance.setTarget(com.commercetools.api.models.common.Reference.deepCopy(template.getTarget()));
+        instance.setIncludedInStatistics(template.getIncludedInStatistics());
+        instance.setRating(template.getRating());
+        instance.setState(com.commercetools.api.models.state.StateReference.deepCopy(template.getState()));
+        instance.setCustomer(com.commercetools.api.models.customer.CustomerReference.deepCopy(template.getCustomer()));
+        instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         return instance;
     }
 

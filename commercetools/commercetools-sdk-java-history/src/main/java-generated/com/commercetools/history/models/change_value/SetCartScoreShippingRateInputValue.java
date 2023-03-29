@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -69,11 +70,28 @@ public interface SetCartScoreShippingRateInputValue {
     }
 
     /**
-     * factory method to copy an instance of SetCartScoreShippingRateInputValue
+     * factory method to create a shallow copy SetCartScoreShippingRateInputValue
      * @param template instance to be copied
      * @return copy instance
      */
     public static SetCartScoreShippingRateInputValue of(final SetCartScoreShippingRateInputValue template) {
+        SetCartScoreShippingRateInputValueImpl instance = new SetCartScoreShippingRateInputValueImpl();
+        instance.setType(template.getType());
+        instance.setScore(template.getScore());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetCartScoreShippingRateInputValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetCartScoreShippingRateInputValue deepCopy(
+            @Nullable final SetCartScoreShippingRateInputValue template) {
+        if (template == null) {
+            return null;
+        }
         SetCartScoreShippingRateInputValueImpl instance = new SetCartScoreShippingRateInputValueImpl();
         instance.setType(template.getType());
         instance.setScore(template.getScore());

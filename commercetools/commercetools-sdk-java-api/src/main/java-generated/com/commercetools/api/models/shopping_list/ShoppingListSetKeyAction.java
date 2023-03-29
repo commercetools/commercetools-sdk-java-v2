@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -55,11 +57,26 @@ public interface ShoppingListSetKeyAction extends ShoppingListUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ShoppingListSetKeyAction
+     * factory method to create a shallow copy ShoppingListSetKeyAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ShoppingListSetKeyAction of(final ShoppingListSetKeyAction template) {
+        ShoppingListSetKeyActionImpl instance = new ShoppingListSetKeyActionImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ShoppingListSetKeyAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ShoppingListSetKeyAction deepCopy(@Nullable final ShoppingListSetKeyAction template) {
+        if (template == null) {
+            return null;
+        }
         ShoppingListSetKeyActionImpl instance = new ShoppingListSetKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;

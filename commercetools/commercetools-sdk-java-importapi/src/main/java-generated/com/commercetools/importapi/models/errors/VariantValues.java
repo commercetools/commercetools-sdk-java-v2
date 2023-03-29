@@ -4,7 +4,9 @@ package com.commercetools.importapi.models.errors;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -105,7 +107,7 @@ public interface VariantValues {
     }
 
     /**
-     * factory method to copy an instance of VariantValues
+     * factory method to create a shallow copy VariantValues
      * @param template instance to be copied
      * @return copy instance
      */
@@ -114,6 +116,31 @@ public interface VariantValues {
         instance.setSku(template.getSku());
         instance.setPrices(template.getPrices());
         instance.setAttributes(template.getAttributes());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of VariantValues
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static VariantValues deepCopy(@Nullable final VariantValues template) {
+        if (template == null) {
+            return null;
+        }
+        VariantValuesImpl instance = new VariantValuesImpl();
+        instance.setSku(template.getSku());
+        instance.setPrices(Optional.ofNullable(template.getPrices())
+                .map(t -> t.stream()
+                        .map(com.commercetools.importapi.models.prices.PriceImport::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setAttributes(Optional.ofNullable(template.getAttributes())
+                .map(t -> t.stream()
+                        .map(com.commercetools.importapi.models.productvariants.Attribute::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

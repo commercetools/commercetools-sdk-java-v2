@@ -4,7 +4,9 @@ package com.commercetools.api.models.category;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -80,7 +82,7 @@ public interface CategoryUpdate extends
     }
 
     /**
-     * factory method to copy an instance of CategoryUpdate
+     * factory method to create a shallow copy CategoryUpdate
      * @param template instance to be copied
      * @return copy instance
      */
@@ -88,6 +90,26 @@ public interface CategoryUpdate extends
         CategoryUpdateImpl instance = new CategoryUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(template.getActions());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CategoryUpdate
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CategoryUpdate deepCopy(@Nullable final CategoryUpdate template) {
+        if (template == null) {
+            return null;
+        }
+        CategoryUpdateImpl instance = new CategoryUpdateImpl();
+        instance.setVersion(template.getVersion());
+        instance.setActions(Optional.ofNullable(template.getActions())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.category.CategoryUpdateAction::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

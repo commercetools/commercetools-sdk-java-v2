@@ -4,7 +4,9 @@ package com.commercetools.api.models.order_edit;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.common.BaseAddress;
@@ -124,7 +126,7 @@ public interface StagedOrderAddDeliveryAction
     }
 
     /**
-     * factory method to copy an instance of StagedOrderAddDeliveryAction
+     * factory method to create a shallow copy StagedOrderAddDeliveryAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -134,6 +136,32 @@ public interface StagedOrderAddDeliveryAction
         instance.setAddress(template.getAddress());
         instance.setParcels(template.getParcels());
         instance.setCustom(template.getCustom());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedOrderAddDeliveryAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedOrderAddDeliveryAction deepCopy(@Nullable final StagedOrderAddDeliveryAction template) {
+        if (template == null) {
+            return null;
+        }
+        StagedOrderAddDeliveryActionImpl instance = new StagedOrderAddDeliveryActionImpl();
+        instance.setItems(Optional.ofNullable(template.getItems())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.order.DeliveryItem::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setAddress(com.commercetools.api.models.common.BaseAddress.deepCopy(template.getAddress()));
+        instance.setParcels(Optional.ofNullable(template.getParcels())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.order.ParcelDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;
     }
 

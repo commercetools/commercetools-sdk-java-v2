@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.ImportResourceType;
@@ -69,11 +70,27 @@ public interface ImportContainerUpdateDraft extends io.vrap.rmf.base.client.Draf
     }
 
     /**
-     * factory method to copy an instance of ImportContainerUpdateDraft
+     * factory method to create a shallow copy ImportContainerUpdateDraft
      * @param template instance to be copied
      * @return copy instance
      */
     public static ImportContainerUpdateDraft of(final ImportContainerUpdateDraft template) {
+        ImportContainerUpdateDraftImpl instance = new ImportContainerUpdateDraftImpl();
+        instance.setVersion(template.getVersion());
+        instance.setResourceType(template.getResourceType());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ImportContainerUpdateDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ImportContainerUpdateDraft deepCopy(@Nullable final ImportContainerUpdateDraft template) {
+        if (template == null) {
+            return null;
+        }
         ImportContainerUpdateDraftImpl instance = new ImportContainerUpdateDraftImpl();
         instance.setVersion(template.getVersion());
         instance.setResourceType(template.getResourceType());

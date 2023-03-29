@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -143,7 +144,7 @@ public interface StagedQuoteDraft
     }
 
     /**
-     * factory method to copy an instance of StagedQuoteDraft
+     * factory method to create a shallow copy StagedQuoteDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -155,6 +156,27 @@ public interface StagedQuoteDraft
         instance.setKey(template.getKey());
         instance.setCustom(template.getCustom());
         instance.setState(template.getState());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedQuoteDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedQuoteDraft deepCopy(@Nullable final StagedQuoteDraft template) {
+        if (template == null) {
+            return null;
+        }
+        StagedQuoteDraftImpl instance = new StagedQuoteDraftImpl();
+        instance.setQuoteRequest(com.commercetools.api.models.quote_request.QuoteRequestResourceIdentifier
+                .deepCopy(template.getQuoteRequest()));
+        instance.setQuoteRequestVersion(template.getQuoteRequestVersion());
+        instance.setQuoteRequestStateToAccepted(template.getQuoteRequestStateToAccepted());
+        instance.setKey(template.getKey());
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setState(com.commercetools.api.models.state.StateReference.deepCopy(template.getState()));
         return instance;
     }
 

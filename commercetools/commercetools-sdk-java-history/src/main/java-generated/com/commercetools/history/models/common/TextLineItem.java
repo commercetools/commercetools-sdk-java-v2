@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -137,7 +138,7 @@ public interface TextLineItem {
     }
 
     /**
-     * factory method to copy an instance of TextLineItem
+     * factory method to create a shallow copy TextLineItem
      * @param template instance to be copied
      * @return copy instance
      */
@@ -148,6 +149,27 @@ public interface TextLineItem {
         instance.setDescription(template.getDescription());
         instance.setId(template.getId());
         instance.setName(template.getName());
+        instance.setQuantity(template.getQuantity());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of TextLineItem
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static TextLineItem deepCopy(@Nullable final TextLineItem template) {
+        if (template == null) {
+            return null;
+        }
+        TextLineItemImpl instance = new TextLineItemImpl();
+        instance.setAddedAt(template.getAddedAt());
+        instance.setCustom(com.commercetools.history.models.common.CustomFields.deepCopy(template.getCustom()));
+        instance.setDescription(
+            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setId(template.getId());
+        instance.setName(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getName()));
         instance.setQuantity(template.getQuantity());
         return instance;
     }

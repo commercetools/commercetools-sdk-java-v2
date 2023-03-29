@@ -4,7 +4,9 @@ package com.commercetools.history.models.change;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -118,7 +120,7 @@ public interface SetStoresChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetStoresChange
+     * factory method to create a shallow copy SetStoresChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -127,6 +129,31 @@ public interface SetStoresChange extends Change {
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetStoresChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetStoresChange deepCopy(@Nullable final SetStoresChange template) {
+        if (template == null) {
+            return null;
+        }
+        SetStoresChangeImpl instance = new SetStoresChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.Reference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setNextValue(Optional.ofNullable(template.getNextValue())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.Reference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

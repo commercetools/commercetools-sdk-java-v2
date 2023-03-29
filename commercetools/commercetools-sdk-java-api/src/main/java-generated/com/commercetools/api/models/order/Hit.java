@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -84,11 +85,28 @@ public interface Hit {
     }
 
     /**
-     * factory method to copy an instance of Hit
+     * factory method to create a shallow copy Hit
      * @param template instance to be copied
      * @return copy instance
      */
     public static Hit of(final Hit template) {
+        HitImpl instance = new HitImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setRelevance(template.getRelevance());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of Hit
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static Hit deepCopy(@Nullable final Hit template) {
+        if (template == null) {
+            return null;
+        }
         HitImpl instance = new HitImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());

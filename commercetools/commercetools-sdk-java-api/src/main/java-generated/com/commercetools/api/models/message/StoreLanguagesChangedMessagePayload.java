@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -86,7 +88,7 @@ public interface StoreLanguagesChangedMessagePayload extends MessagePayload {
     }
 
     /**
-     * factory method to copy an instance of StoreLanguagesChangedMessagePayload
+     * factory method to create a shallow copy StoreLanguagesChangedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -94,6 +96,24 @@ public interface StoreLanguagesChangedMessagePayload extends MessagePayload {
         StoreLanguagesChangedMessagePayloadImpl instance = new StoreLanguagesChangedMessagePayloadImpl();
         instance.setAddedLanguages(template.getAddedLanguages());
         instance.setRemovedLanguages(template.getRemovedLanguages());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StoreLanguagesChangedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StoreLanguagesChangedMessagePayload deepCopy(
+            @Nullable final StoreLanguagesChangedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        StoreLanguagesChangedMessagePayloadImpl instance = new StoreLanguagesChangedMessagePayloadImpl();
+        instance.setAddedLanguages(Optional.ofNullable(template.getAddedLanguages()).map(ArrayList::new).orElse(null));
+        instance.setRemovedLanguages(
+            Optional.ofNullable(template.getRemovedLanguages()).map(ArrayList::new).orElse(null));
         return instance;
     }
 

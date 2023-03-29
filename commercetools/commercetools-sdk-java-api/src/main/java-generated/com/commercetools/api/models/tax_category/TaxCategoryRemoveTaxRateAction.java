@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,26 @@ public interface TaxCategoryRemoveTaxRateAction extends TaxCategoryUpdateAction 
     }
 
     /**
-     * factory method to copy an instance of TaxCategoryRemoveTaxRateAction
+     * factory method to create a shallow copy TaxCategoryRemoveTaxRateAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static TaxCategoryRemoveTaxRateAction of(final TaxCategoryRemoveTaxRateAction template) {
+        TaxCategoryRemoveTaxRateActionImpl instance = new TaxCategoryRemoveTaxRateActionImpl();
+        instance.setTaxRateId(template.getTaxRateId());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of TaxCategoryRemoveTaxRateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static TaxCategoryRemoveTaxRateAction deepCopy(@Nullable final TaxCategoryRemoveTaxRateAction template) {
+        if (template == null) {
+            return null;
+        }
         TaxCategoryRemoveTaxRateActionImpl instance = new TaxCategoryRemoveTaxRateActionImpl();
         instance.setTaxRateId(template.getTaxRateId());
         return instance;

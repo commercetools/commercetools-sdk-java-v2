@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -71,13 +72,30 @@ public interface ProductSelectionSettingDraft extends io.vrap.rmf.base.client.Dr
     }
 
     /**
-     * factory method to copy an instance of ProductSelectionSettingDraft
+     * factory method to create a shallow copy ProductSelectionSettingDraft
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductSelectionSettingDraft of(final ProductSelectionSettingDraft template) {
         ProductSelectionSettingDraftImpl instance = new ProductSelectionSettingDraftImpl();
         instance.setProductSelection(template.getProductSelection());
+        instance.setActive(template.getActive());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductSelectionSettingDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductSelectionSettingDraft deepCopy(@Nullable final ProductSelectionSettingDraft template) {
+        if (template == null) {
+            return null;
+        }
+        ProductSelectionSettingDraftImpl instance = new ProductSelectionSettingDraftImpl();
+        instance.setProductSelection(com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier
+                .deepCopy(template.getProductSelection()));
         instance.setActive(template.getActive());
         return instance;
     }

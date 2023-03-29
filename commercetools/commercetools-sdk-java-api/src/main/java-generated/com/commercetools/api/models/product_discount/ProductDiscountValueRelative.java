@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,26 @@ public interface ProductDiscountValueRelative extends ProductDiscountValue {
     }
 
     /**
-     * factory method to copy an instance of ProductDiscountValueRelative
+     * factory method to create a shallow copy ProductDiscountValueRelative
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductDiscountValueRelative of(final ProductDiscountValueRelative template) {
+        ProductDiscountValueRelativeImpl instance = new ProductDiscountValueRelativeImpl();
+        instance.setPermyriad(template.getPermyriad());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductDiscountValueRelative
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductDiscountValueRelative deepCopy(@Nullable final ProductDiscountValueRelative template) {
+        if (template == null) {
+            return null;
+        }
         ProductDiscountValueRelativeImpl instance = new ProductDiscountValueRelativeImpl();
         instance.setPermyriad(template.getPermyriad());
         return instance;

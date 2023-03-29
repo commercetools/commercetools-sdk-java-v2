@@ -5,7 +5,9 @@ import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -331,7 +333,7 @@ public interface ShoppingList
     }
 
     /**
-     * factory method to copy an instance of ShoppingList
+     * factory method to create a shallow copy ShoppingList
      * @param template instance to be copied
      * @return copy instance
      */
@@ -354,6 +356,47 @@ public interface ShoppingList
         instance.setCustom(template.getCustom());
         instance.setLastModifiedBy(template.getLastModifiedBy());
         instance.setCreatedBy(template.getCreatedBy());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ShoppingList
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ShoppingList deepCopy(@Nullable final ShoppingList template) {
+        if (template == null) {
+            return null;
+        }
+        ShoppingListImpl instance = new ShoppingListImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setKey(template.getKey());
+        instance.setCustomer(com.commercetools.api.models.customer.CustomerReference.deepCopy(template.getCustomer()));
+        instance.setSlug(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getSlug()));
+        instance.setDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setLineItems(Optional.ofNullable(template.getLineItems())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.shopping_list.ShoppingListLineItem::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setTextLineItems(Optional.ofNullable(template.getTextLineItems())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.shopping_list.TextLineItem::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
+        instance.setAnonymousId(template.getAnonymousId());
+        instance.setStore(com.commercetools.api.models.store.StoreKeyReference.deepCopy(template.getStore()));
+        instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         return instance;
     }
 

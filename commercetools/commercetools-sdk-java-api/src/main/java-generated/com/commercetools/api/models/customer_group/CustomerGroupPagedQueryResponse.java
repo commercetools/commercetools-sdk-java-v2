@@ -4,7 +4,9 @@ package com.commercetools.api.models.customer_group;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -127,7 +129,7 @@ public interface CustomerGroupPagedQueryResponse
     }
 
     /**
-     * factory method to copy an instance of CustomerGroupPagedQueryResponse
+     * factory method to create a shallow copy CustomerGroupPagedQueryResponse
      * @param template instance to be copied
      * @return copy instance
      */
@@ -138,6 +140,29 @@ public interface CustomerGroupPagedQueryResponse
         instance.setCount(template.getCount());
         instance.setTotal(template.getTotal());
         instance.setResults(template.getResults());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomerGroupPagedQueryResponse
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomerGroupPagedQueryResponse deepCopy(@Nullable final CustomerGroupPagedQueryResponse template) {
+        if (template == null) {
+            return null;
+        }
+        CustomerGroupPagedQueryResponseImpl instance = new CustomerGroupPagedQueryResponseImpl();
+        instance.setLimit(template.getLimit());
+        instance.setOffset(template.getOffset());
+        instance.setCount(template.getCount());
+        instance.setTotal(template.getTotal());
+        instance.setResults(Optional.ofNullable(template.getResults())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.customer_group.CustomerGroup::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

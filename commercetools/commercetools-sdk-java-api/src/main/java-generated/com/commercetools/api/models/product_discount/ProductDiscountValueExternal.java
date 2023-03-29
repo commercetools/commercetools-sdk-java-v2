@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -40,11 +42,25 @@ public interface ProductDiscountValueExternal extends ProductDiscountValue {
     }
 
     /**
-     * factory method to copy an instance of ProductDiscountValueExternal
+     * factory method to create a shallow copy ProductDiscountValueExternal
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductDiscountValueExternal of(final ProductDiscountValueExternal template) {
+        ProductDiscountValueExternalImpl instance = new ProductDiscountValueExternalImpl();
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductDiscountValueExternal
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductDiscountValueExternal deepCopy(@Nullable final ProductDiscountValueExternal template) {
+        if (template == null) {
+            return null;
+        }
         ProductDiscountValueExternalImpl instance = new ProductDiscountValueExternalImpl();
         return instance;
     }

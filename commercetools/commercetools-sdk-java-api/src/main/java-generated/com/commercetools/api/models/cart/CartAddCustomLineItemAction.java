@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -198,7 +199,7 @@ public interface CartAddCustomLineItemAction
     }
 
     /**
-     * factory method to copy an instance of CartAddCustomLineItemAction
+     * factory method to create a shallow copy CartAddCustomLineItemAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -212,6 +213,32 @@ public interface CartAddCustomLineItemAction
         instance.setExternalTaxRate(template.getExternalTaxRate());
         instance.setShippingDetails(template.getShippingDetails());
         instance.setCustom(template.getCustom());
+        instance.setPriceMode(template.getPriceMode());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartAddCustomLineItemAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartAddCustomLineItemAction deepCopy(@Nullable final CartAddCustomLineItemAction template) {
+        if (template == null) {
+            return null;
+        }
+        CartAddCustomLineItemActionImpl instance = new CartAddCustomLineItemActionImpl();
+        instance.setMoney(com.commercetools.api.models.common.Money.deepCopy(template.getMoney()));
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setQuantity(template.getQuantity());
+        instance.setSlug(template.getSlug());
+        instance.setTaxCategory(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier
+                .deepCopy(template.getTaxCategory()));
+        instance.setExternalTaxRate(
+            com.commercetools.api.models.cart.ExternalTaxRateDraft.deepCopy(template.getExternalTaxRate()));
+        instance.setShippingDetails(
+            com.commercetools.api.models.cart.ItemShippingDetailsDraft.deepCopy(template.getShippingDetails()));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         instance.setPriceMode(template.getPriceMode());
         return instance;
     }

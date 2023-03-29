@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -119,11 +120,30 @@ public interface ProductMoveImageToPositionAction extends ProductUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ProductMoveImageToPositionAction
+     * factory method to create a shallow copy ProductMoveImageToPositionAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductMoveImageToPositionAction of(final ProductMoveImageToPositionAction template) {
+        ProductMoveImageToPositionActionImpl instance = new ProductMoveImageToPositionActionImpl();
+        instance.setVariantId(template.getVariantId());
+        instance.setSku(template.getSku());
+        instance.setImageUrl(template.getImageUrl());
+        instance.setPosition(template.getPosition());
+        instance.setStaged(template.getStaged());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductMoveImageToPositionAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductMoveImageToPositionAction deepCopy(@Nullable final ProductMoveImageToPositionAction template) {
+        if (template == null) {
+            return null;
+        }
         ProductMoveImageToPositionActionImpl instance = new ProductMoveImageToPositionActionImpl();
         instance.setVariantId(template.getVariantId());
         instance.setSku(template.getSku());

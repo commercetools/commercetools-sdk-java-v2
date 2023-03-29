@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -53,11 +54,26 @@ public interface ShippingRatePriceTier {
     }
 
     /**
-     * factory method to copy an instance of ShippingRatePriceTier
+     * factory method to create a shallow copy ShippingRatePriceTier
      * @param template instance to be copied
      * @return copy instance
      */
     public static ShippingRatePriceTier of(final ShippingRatePriceTier template) {
+        ShippingRatePriceTierImpl instance = new ShippingRatePriceTierImpl();
+        instance.setType(template.getType());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ShippingRatePriceTier
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ShippingRatePriceTier deepCopy(@Nullable final ShippingRatePriceTier template) {
+        if (template == null) {
+            return null;
+        }
         ShippingRatePriceTierImpl instance = new ShippingRatePriceTierImpl();
         instance.setType(template.getType());
         return instance;

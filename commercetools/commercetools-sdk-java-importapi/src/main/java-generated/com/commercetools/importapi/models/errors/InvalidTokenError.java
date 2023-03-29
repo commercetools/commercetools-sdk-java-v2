@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -41,11 +43,26 @@ public interface InvalidTokenError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of InvalidTokenError
+     * factory method to create a shallow copy InvalidTokenError
      * @param template instance to be copied
      * @return copy instance
      */
     public static InvalidTokenError of(final InvalidTokenError template) {
+        InvalidTokenErrorImpl instance = new InvalidTokenErrorImpl();
+        instance.setMessage(template.getMessage());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of InvalidTokenError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static InvalidTokenError deepCopy(@Nullable final InvalidTokenError template) {
+        if (template == null) {
+            return null;
+        }
         InvalidTokenErrorImpl instance = new InvalidTokenErrorImpl();
         instance.setMessage(template.getMessage());
         return instance;

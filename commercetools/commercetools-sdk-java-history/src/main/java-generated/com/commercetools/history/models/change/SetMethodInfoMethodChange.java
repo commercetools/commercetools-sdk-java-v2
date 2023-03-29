@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -98,11 +99,28 @@ public interface SetMethodInfoMethodChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetMethodInfoMethodChange
+     * factory method to create a shallow copy SetMethodInfoMethodChange
      * @param template instance to be copied
      * @return copy instance
      */
     public static SetMethodInfoMethodChange of(final SetMethodInfoMethodChange template) {
+        SetMethodInfoMethodChangeImpl instance = new SetMethodInfoMethodChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetMethodInfoMethodChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetMethodInfoMethodChange deepCopy(@Nullable final SetMethodInfoMethodChange template) {
+        if (template == null) {
+            return null;
+        }
         SetMethodInfoMethodChangeImpl instance = new SetMethodInfoMethodChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());

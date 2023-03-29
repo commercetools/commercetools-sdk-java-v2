@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -40,11 +42,25 @@ public interface CartFreezeCartAction extends CartUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of CartFreezeCartAction
+     * factory method to create a shallow copy CartFreezeCartAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static CartFreezeCartAction of(final CartFreezeCartAction template) {
+        CartFreezeCartActionImpl instance = new CartFreezeCartActionImpl();
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartFreezeCartAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartFreezeCartAction deepCopy(@Nullable final CartFreezeCartAction template) {
+        if (template == null) {
+            return null;
+        }
         CartFreezeCartActionImpl instance = new CartFreezeCartActionImpl();
         return instance;
     }

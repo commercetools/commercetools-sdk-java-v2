@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -61,13 +62,30 @@ public interface ShippingMethodChangeTaxCategoryAction extends ShippingMethodUpd
     }
 
     /**
-     * factory method to copy an instance of ShippingMethodChangeTaxCategoryAction
+     * factory method to create a shallow copy ShippingMethodChangeTaxCategoryAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ShippingMethodChangeTaxCategoryAction of(final ShippingMethodChangeTaxCategoryAction template) {
         ShippingMethodChangeTaxCategoryActionImpl instance = new ShippingMethodChangeTaxCategoryActionImpl();
         instance.setTaxCategory(template.getTaxCategory());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ShippingMethodChangeTaxCategoryAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ShippingMethodChangeTaxCategoryAction deepCopy(
+            @Nullable final ShippingMethodChangeTaxCategoryAction template) {
+        if (template == null) {
+            return null;
+        }
+        ShippingMethodChangeTaxCategoryActionImpl instance = new ShippingMethodChangeTaxCategoryActionImpl();
+        instance.setTaxCategory(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier
+                .deepCopy(template.getTaxCategory()));
         return instance;
     }
 

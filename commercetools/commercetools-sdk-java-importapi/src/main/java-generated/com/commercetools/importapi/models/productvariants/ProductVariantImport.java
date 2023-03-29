@@ -4,7 +4,9 @@ package com.commercetools.importapi.models.productvariants;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -175,7 +177,7 @@ public interface ProductVariantImport extends ImportResource {
     }
 
     /**
-     * factory method to copy an instance of ProductVariantImport
+     * factory method to create a shallow copy ProductVariantImport
      * @param template instance to be copied
      * @return copy instance
      */
@@ -189,6 +191,41 @@ public interface ProductVariantImport extends ImportResource {
         instance.setAssets(template.getAssets());
         instance.setPublish(template.getPublish());
         instance.setProduct(template.getProduct());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductVariantImport
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductVariantImport deepCopy(@Nullable final ProductVariantImport template) {
+        if (template == null) {
+            return null;
+        }
+        ProductVariantImportImpl instance = new ProductVariantImportImpl();
+        instance.setKey(template.getKey());
+        instance.setSku(template.getSku());
+        instance.setIsMasterVariant(template.getIsMasterVariant());
+        instance.setAttributes(Optional.ofNullable(template.getAttributes())
+                .map(t -> t.stream()
+                        .map(com.commercetools.importapi.models.productvariants.Attribute::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setImages(Optional.ofNullable(template.getImages())
+                .map(t -> t.stream()
+                        .map(com.commercetools.importapi.models.common.Image::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setAssets(Optional.ofNullable(template.getAssets())
+                .map(t -> t.stream()
+                        .map(com.commercetools.importapi.models.common.Asset::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setPublish(template.getPublish());
+        instance.setProduct(
+            com.commercetools.importapi.models.common.ProductKeyReference.deepCopy(template.getProduct()));
         return instance;
     }
 

@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -151,7 +152,7 @@ public interface Transaction extends com.commercetools.api.models.Customizable<T
     }
 
     /**
-     * factory method to copy an instance of Transaction
+     * factory method to create a shallow copy Transaction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -164,6 +165,27 @@ public interface Transaction extends com.commercetools.api.models.Customizable<T
         instance.setInteractionId(template.getInteractionId());
         instance.setState(template.getState());
         instance.setCustom(template.getCustom());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of Transaction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static Transaction deepCopy(@Nullable final Transaction template) {
+        if (template == null) {
+            return null;
+        }
+        TransactionImpl instance = new TransactionImpl();
+        instance.setId(template.getId());
+        instance.setTimestamp(template.getTimestamp());
+        instance.setType(template.getType());
+        instance.setAmount(com.commercetools.api.models.common.CentPrecisionMoney.deepCopy(template.getAmount()));
+        instance.setInteractionId(template.getInteractionId());
+        instance.setState(template.getState());
+        instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         return instance;
     }
 

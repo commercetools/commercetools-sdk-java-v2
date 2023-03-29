@@ -7,6 +7,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -177,11 +178,34 @@ public interface ApiClient extends com.commercetools.api.models.Identifiable<Api
     }
 
     /**
-     * factory method to copy an instance of ApiClient
+     * factory method to create a shallow copy ApiClient
      * @param template instance to be copied
      * @return copy instance
      */
     public static ApiClient of(final ApiClient template) {
+        ApiClientImpl instance = new ApiClientImpl();
+        instance.setId(template.getId());
+        instance.setName(template.getName());
+        instance.setScope(template.getScope());
+        instance.setSecret(template.getSecret());
+        instance.setLastUsedAt(template.getLastUsedAt());
+        instance.setDeleteAt(template.getDeleteAt());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setAccessTokenValiditySeconds(template.getAccessTokenValiditySeconds());
+        instance.setRefreshTokenValiditySeconds(template.getRefreshTokenValiditySeconds());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ApiClient
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ApiClient deepCopy(@Nullable final ApiClient template) {
+        if (template == null) {
+            return null;
+        }
         ApiClientImpl instance = new ApiClientImpl();
         instance.setId(template.getId());
         instance.setName(template.getName());

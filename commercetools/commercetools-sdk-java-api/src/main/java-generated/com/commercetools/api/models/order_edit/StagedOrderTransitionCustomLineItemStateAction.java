@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -127,7 +128,7 @@ public interface StagedOrderTransitionCustomLineItemStateAction extends StagedOr
     }
 
     /**
-     * factory method to copy an instance of StagedOrderTransitionCustomLineItemStateAction
+     * factory method to create a shallow copy StagedOrderTransitionCustomLineItemStateAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -138,6 +139,27 @@ public interface StagedOrderTransitionCustomLineItemStateAction extends StagedOr
         instance.setQuantity(template.getQuantity());
         instance.setFromState(template.getFromState());
         instance.setToState(template.getToState());
+        instance.setActualTransitionDate(template.getActualTransitionDate());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedOrderTransitionCustomLineItemStateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedOrderTransitionCustomLineItemStateAction deepCopy(
+            @Nullable final StagedOrderTransitionCustomLineItemStateAction template) {
+        if (template == null) {
+            return null;
+        }
+        StagedOrderTransitionCustomLineItemStateActionImpl instance = new StagedOrderTransitionCustomLineItemStateActionImpl();
+        instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setQuantity(template.getQuantity());
+        instance.setFromState(
+            com.commercetools.api.models.state.StateResourceIdentifier.deepCopy(template.getFromState()));
+        instance.setToState(com.commercetools.api.models.state.StateResourceIdentifier.deepCopy(template.getToState()));
         instance.setActualTransitionDate(template.getActualTransitionDate());
         return instance;
     }

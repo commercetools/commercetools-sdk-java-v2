@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -48,6 +49,56 @@ public interface InventoryEntryUpdateAction
     @NotNull
     @JsonProperty("action")
     public String getAction();
+
+    /**
+     * factory method to create a deep copy of InventoryEntryUpdateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static InventoryEntryUpdateAction deepCopy(@Nullable final InventoryEntryUpdateAction template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.inventory.InventoryEntryAddQuantityAction) {
+            return com.commercetools.api.models.inventory.InventoryEntryAddQuantityAction
+                    .deepCopy((com.commercetools.api.models.inventory.InventoryEntryAddQuantityAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.inventory.InventoryEntryChangeQuantityAction) {
+            return com.commercetools.api.models.inventory.InventoryEntryChangeQuantityAction
+                    .deepCopy((com.commercetools.api.models.inventory.InventoryEntryChangeQuantityAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.inventory.InventoryEntryRemoveQuantityAction) {
+            return com.commercetools.api.models.inventory.InventoryEntryRemoveQuantityAction
+                    .deepCopy((com.commercetools.api.models.inventory.InventoryEntryRemoveQuantityAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.inventory.InventoryEntrySetCustomFieldAction) {
+            return com.commercetools.api.models.inventory.InventoryEntrySetCustomFieldAction
+                    .deepCopy((com.commercetools.api.models.inventory.InventoryEntrySetCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.inventory.InventoryEntrySetCustomTypeAction) {
+            return com.commercetools.api.models.inventory.InventoryEntrySetCustomTypeAction
+                    .deepCopy((com.commercetools.api.models.inventory.InventoryEntrySetCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.inventory.InventoryEntrySetExpectedDeliveryAction) {
+            return com.commercetools.api.models.inventory.InventoryEntrySetExpectedDeliveryAction.deepCopy(
+                (com.commercetools.api.models.inventory.InventoryEntrySetExpectedDeliveryAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.inventory.InventoryEntrySetKeyAction) {
+            return com.commercetools.api.models.inventory.InventoryEntrySetKeyAction
+                    .deepCopy((com.commercetools.api.models.inventory.InventoryEntrySetKeyAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.inventory.InventoryEntrySetRestockableInDaysAction) {
+            return com.commercetools.api.models.inventory.InventoryEntrySetRestockableInDaysAction.deepCopy(
+                (com.commercetools.api.models.inventory.InventoryEntrySetRestockableInDaysAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.inventory.InventoryEntrySetSupplyChannelAction) {
+            return com.commercetools.api.models.inventory.InventoryEntrySetSupplyChannelAction
+                    .deepCopy((com.commercetools.api.models.inventory.InventoryEntrySetSupplyChannelAction) template);
+        }
+        InventoryEntryUpdateActionImpl instance = new InventoryEntryUpdateActionImpl();
+        return instance;
+    }
 
     /**
      * builder for addQuantity subtype

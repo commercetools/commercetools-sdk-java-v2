@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -81,7 +82,7 @@ public interface StandalonePriceActiveChangedMessage extends Message {
     }
 
     /**
-     * factory method to copy an instance of StandalonePriceActiveChangedMessage
+     * factory method to create a shallow copy StandalonePriceActiveChangedMessage
      * @param template instance to be copied
      * @return copy instance
      */
@@ -97,6 +98,35 @@ public interface StandalonePriceActiveChangedMessage extends Message {
         instance.setResource(template.getResource());
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+        instance.setActive(template.getActive());
+        instance.setOldActive(template.getOldActive());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StandalonePriceActiveChangedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StandalonePriceActiveChangedMessage deepCopy(
+            @Nullable final StandalonePriceActiveChangedMessage template) {
+        if (template == null) {
+            return null;
+        }
+        StandalonePriceActiveChangedMessageImpl instance = new StandalonePriceActiveChangedMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
+                .deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setActive(template.getActive());
         instance.setOldActive(template.getOldActive());
         return instance;

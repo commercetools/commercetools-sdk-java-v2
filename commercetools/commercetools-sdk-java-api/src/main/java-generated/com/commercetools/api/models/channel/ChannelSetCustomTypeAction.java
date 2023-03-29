@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.type.FieldContainer;
@@ -74,7 +75,7 @@ public interface ChannelSetCustomTypeAction extends ChannelUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ChannelSetCustomTypeAction
+     * factory method to create a shallow copy ChannelSetCustomTypeAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -82,6 +83,22 @@ public interface ChannelSetCustomTypeAction extends ChannelUpdateAction {
         ChannelSetCustomTypeActionImpl instance = new ChannelSetCustomTypeActionImpl();
         instance.setType(template.getType());
         instance.setFields(template.getFields());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChannelSetCustomTypeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChannelSetCustomTypeAction deepCopy(@Nullable final ChannelSetCustomTypeAction template) {
+        if (template == null) {
+            return null;
+        }
+        ChannelSetCustomTypeActionImpl instance = new ChannelSetCustomTypeActionImpl();
+        instance.setType(com.commercetools.api.models.type.TypeResourceIdentifier.deepCopy(template.getType()));
+        instance.setFields(com.commercetools.api.models.type.FieldContainer.deepCopy(template.getFields()));
         return instance;
     }
 

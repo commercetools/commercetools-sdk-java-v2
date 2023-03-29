@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -55,11 +57,26 @@ public interface CategorySetKeyAction extends CategoryUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of CategorySetKeyAction
+     * factory method to create a shallow copy CategorySetKeyAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static CategorySetKeyAction of(final CategorySetKeyAction template) {
+        CategorySetKeyActionImpl instance = new CategorySetKeyActionImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CategorySetKeyAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CategorySetKeyAction deepCopy(@Nullable final CategorySetKeyAction template) {
+        if (template == null) {
+            return null;
+        }
         CategorySetKeyActionImpl instance = new CategorySetKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;

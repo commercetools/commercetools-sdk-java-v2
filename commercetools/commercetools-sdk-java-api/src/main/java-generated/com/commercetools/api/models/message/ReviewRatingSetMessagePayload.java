@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -105,7 +106,7 @@ public interface ReviewRatingSetMessagePayload extends MessagePayload {
     }
 
     /**
-     * factory method to copy an instance of ReviewRatingSetMessagePayload
+     * factory method to create a shallow copy ReviewRatingSetMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -115,6 +116,24 @@ public interface ReviewRatingSetMessagePayload extends MessagePayload {
         instance.setNewRating(template.getNewRating());
         instance.setIncludedInStatistics(template.getIncludedInStatistics());
         instance.setTarget(template.getTarget());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ReviewRatingSetMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ReviewRatingSetMessagePayload deepCopy(@Nullable final ReviewRatingSetMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        ReviewRatingSetMessagePayloadImpl instance = new ReviewRatingSetMessagePayloadImpl();
+        instance.setOldRating(template.getOldRating());
+        instance.setNewRating(template.getNewRating());
+        instance.setIncludedInStatistics(template.getIncludedInStatistics());
+        instance.setTarget(com.commercetools.api.models.common.Reference.deepCopy(template.getTarget()));
         return instance;
     }
 

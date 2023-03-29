@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.attribute_group.AttributeGroupReference;
@@ -113,6 +114,141 @@ public interface Reference extends ReferenceMixin {
      */
 
     public void setId(final String id);
+
+    /**
+     * factory method to create a deep copy of Reference
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static Reference deepCopy(@Nullable final Reference template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.custom_object.CustomObjectReference) {
+            return com.commercetools.api.models.custom_object.CustomObjectReference
+                    .deepCopy((com.commercetools.api.models.custom_object.CustomObjectReference) template);
+        }
+        if (template instanceof com.commercetools.api.models.customer_group.CustomerGroupReference) {
+            return com.commercetools.api.models.customer_group.CustomerGroupReference
+                    .deepCopy((com.commercetools.api.models.customer_group.CustomerGroupReference) template);
+        }
+        if (template instanceof com.commercetools.api.models.customer.CustomerReference) {
+            return com.commercetools.api.models.customer.CustomerReference
+                    .deepCopy((com.commercetools.api.models.customer.CustomerReference) template);
+        }
+        if (template instanceof com.commercetools.api.models.discount_code.DiscountCodeReference) {
+            return com.commercetools.api.models.discount_code.DiscountCodeReference
+                    .deepCopy((com.commercetools.api.models.discount_code.DiscountCodeReference) template);
+        }
+        if (template instanceof com.commercetools.api.models.inventory.InventoryEntryReference) {
+            return com.commercetools.api.models.inventory.InventoryEntryReference
+                    .deepCopy((com.commercetools.api.models.inventory.InventoryEntryReference) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.OrderEditReference) {
+            return com.commercetools.api.models.order_edit.OrderEditReference
+                    .deepCopy((com.commercetools.api.models.order_edit.OrderEditReference) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderReference) {
+            return com.commercetools.api.models.order.OrderReference
+                    .deepCopy((com.commercetools.api.models.order.OrderReference) template);
+        }
+        if (template instanceof com.commercetools.api.models.payment.PaymentReference) {
+            return com.commercetools.api.models.payment.PaymentReference
+                    .deepCopy((com.commercetools.api.models.payment.PaymentReference) template);
+        }
+        if (template instanceof com.commercetools.api.models.product_discount.ProductDiscountReference) {
+            return com.commercetools.api.models.product_discount.ProductDiscountReference
+                    .deepCopy((com.commercetools.api.models.product_discount.ProductDiscountReference) template);
+        }
+        if (template instanceof com.commercetools.api.models.product_selection.ProductSelectionReference) {
+            return com.commercetools.api.models.product_selection.ProductSelectionReference
+                    .deepCopy((com.commercetools.api.models.product_selection.ProductSelectionReference) template);
+        }
+        if (template instanceof com.commercetools.api.models.product_type.ProductTypeReference) {
+            return com.commercetools.api.models.product_type.ProductTypeReference
+                    .deepCopy((com.commercetools.api.models.product_type.ProductTypeReference) template);
+        }
+        if (template instanceof com.commercetools.api.models.product.ProductReference) {
+            return com.commercetools.api.models.product.ProductReference
+                    .deepCopy((com.commercetools.api.models.product.ProductReference) template);
+        }
+        if (template instanceof com.commercetools.api.models.quote_request.QuoteRequestReference) {
+            return com.commercetools.api.models.quote_request.QuoteRequestReference
+                    .deepCopy((com.commercetools.api.models.quote_request.QuoteRequestReference) template);
+        }
+        if (template instanceof com.commercetools.api.models.quote.QuoteReference) {
+            return com.commercetools.api.models.quote.QuoteReference
+                    .deepCopy((com.commercetools.api.models.quote.QuoteReference) template);
+        }
+        if (template instanceof com.commercetools.api.models.review.ReviewReference) {
+            return com.commercetools.api.models.review.ReviewReference
+                    .deepCopy((com.commercetools.api.models.review.ReviewReference) template);
+        }
+        if (template instanceof com.commercetools.api.models.shipping_method.ShippingMethodReference) {
+            return com.commercetools.api.models.shipping_method.ShippingMethodReference
+                    .deepCopy((com.commercetools.api.models.shipping_method.ShippingMethodReference) template);
+        }
+        if (template instanceof com.commercetools.api.models.shopping_list.ShoppingListReference) {
+            return com.commercetools.api.models.shopping_list.ShoppingListReference
+                    .deepCopy((com.commercetools.api.models.shopping_list.ShoppingListReference) template);
+        }
+        if (template instanceof com.commercetools.api.models.staged_quote.StagedQuoteReference) {
+            return com.commercetools.api.models.staged_quote.StagedQuoteReference
+                    .deepCopy((com.commercetools.api.models.staged_quote.StagedQuoteReference) template);
+        }
+        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceReference) {
+            return com.commercetools.api.models.standalone_price.StandalonePriceReference
+                    .deepCopy((com.commercetools.api.models.standalone_price.StandalonePriceReference) template);
+        }
+        if (template instanceof com.commercetools.api.models.state.StateReference) {
+            return com.commercetools.api.models.state.StateReference
+                    .deepCopy((com.commercetools.api.models.state.StateReference) template);
+        }
+        if (template instanceof com.commercetools.api.models.store.StoreReference) {
+            return com.commercetools.api.models.store.StoreReference
+                    .deepCopy((com.commercetools.api.models.store.StoreReference) template);
+        }
+        if (template instanceof com.commercetools.api.models.tax_category.TaxCategoryReference) {
+            return com.commercetools.api.models.tax_category.TaxCategoryReference
+                    .deepCopy((com.commercetools.api.models.tax_category.TaxCategoryReference) template);
+        }
+        if (template instanceof com.commercetools.api.models.type.TypeReference) {
+            return com.commercetools.api.models.type.TypeReference
+                    .deepCopy((com.commercetools.api.models.type.TypeReference) template);
+        }
+        if (template instanceof com.commercetools.api.models.zone.ZoneReference) {
+            return com.commercetools.api.models.zone.ZoneReference
+                    .deepCopy((com.commercetools.api.models.zone.ZoneReference) template);
+        }
+        if (template instanceof com.commercetools.api.models.category.CategoryReference) {
+            return com.commercetools.api.models.category.CategoryReference
+                    .deepCopy((com.commercetools.api.models.category.CategoryReference) template);
+        }
+        if (template instanceof com.commercetools.api.models.channel.ChannelReference) {
+            return com.commercetools.api.models.channel.ChannelReference
+                    .deepCopy((com.commercetools.api.models.channel.ChannelReference) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountReference) {
+            return com.commercetools.api.models.cart_discount.CartDiscountReference
+                    .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountReference) template);
+        }
+        if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitReference) {
+            return com.commercetools.api.models.business_unit.BusinessUnitReference
+                    .deepCopy((com.commercetools.api.models.business_unit.BusinessUnitReference) template);
+        }
+        if (template instanceof com.commercetools.api.models.attribute_group.AttributeGroupReference) {
+            return com.commercetools.api.models.attribute_group.AttributeGroupReference
+                    .deepCopy((com.commercetools.api.models.attribute_group.AttributeGroupReference) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartReference) {
+            return com.commercetools.api.models.cart.CartReference
+                    .deepCopy((com.commercetools.api.models.cart.CartReference) template);
+        }
+        ReferenceImpl instance = new ReferenceImpl();
+        instance.setId(template.getId());
+        return instance;
+    }
 
     /**
      * builder for attributeGroup subtype

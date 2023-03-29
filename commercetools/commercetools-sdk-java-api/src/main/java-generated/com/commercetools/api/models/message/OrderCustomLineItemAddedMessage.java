@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -68,7 +69,7 @@ public interface OrderCustomLineItemAddedMessage extends OrderMessage {
     }
 
     /**
-     * factory method to copy an instance of OrderCustomLineItemAddedMessage
+     * factory method to create a shallow copy OrderCustomLineItemAddedMessage
      * @param template instance to be copied
      * @return copy instance
      */
@@ -85,6 +86,34 @@ public interface OrderCustomLineItemAddedMessage extends OrderMessage {
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setCustomLineItem(template.getCustomLineItem());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderCustomLineItemAddedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderCustomLineItemAddedMessage deepCopy(@Nullable final OrderCustomLineItemAddedMessage template) {
+        if (template == null) {
+            return null;
+        }
+        OrderCustomLineItemAddedMessageImpl instance = new OrderCustomLineItemAddedMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
+                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setCustomLineItem(
+            com.commercetools.api.models.cart.CustomLineItem.deepCopy(template.getCustomLineItem()));
         return instance;
     }
 

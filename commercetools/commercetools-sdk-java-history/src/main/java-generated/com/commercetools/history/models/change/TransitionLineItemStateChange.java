@@ -4,7 +4,9 @@ package com.commercetools.history.models.change;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -150,7 +152,7 @@ public interface TransitionLineItemStateChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of TransitionLineItemStateChange
+     * factory method to create a shallow copy TransitionLineItemStateChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -161,6 +163,33 @@ public interface TransitionLineItemStateChange extends Change {
         instance.setStateId(template.getStateId());
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of TransitionLineItemStateChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static TransitionLineItemStateChange deepCopy(@Nullable final TransitionLineItemStateChange template) {
+        if (template == null) {
+            return null;
+        }
+        TransitionLineItemStateChangeImpl instance = new TransitionLineItemStateChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setLineItemId(template.getLineItemId());
+        instance.setStateId(template.getStateId());
+        instance.setNextValue(Optional.ofNullable(template.getNextValue())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.ItemState::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.ItemState::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

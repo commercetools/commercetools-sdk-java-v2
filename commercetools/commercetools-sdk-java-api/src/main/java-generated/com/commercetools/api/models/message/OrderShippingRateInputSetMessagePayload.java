@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.cart.ShippingRateInput;
@@ -73,7 +74,7 @@ public interface OrderShippingRateInputSetMessagePayload extends OrderMessagePay
     }
 
     /**
-     * factory method to copy an instance of OrderShippingRateInputSetMessagePayload
+     * factory method to create a shallow copy OrderShippingRateInputSetMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -81,6 +82,25 @@ public interface OrderShippingRateInputSetMessagePayload extends OrderMessagePay
         OrderShippingRateInputSetMessagePayloadImpl instance = new OrderShippingRateInputSetMessagePayloadImpl();
         instance.setShippingRateInput(template.getShippingRateInput());
         instance.setOldShippingRateInput(template.getOldShippingRateInput());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderShippingRateInputSetMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderShippingRateInputSetMessagePayload deepCopy(
+            @Nullable final OrderShippingRateInputSetMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        OrderShippingRateInputSetMessagePayloadImpl instance = new OrderShippingRateInputSetMessagePayloadImpl();
+        instance.setShippingRateInput(
+            com.commercetools.api.models.cart.ShippingRateInput.deepCopy(template.getShippingRateInput()));
+        instance.setOldShippingRateInput(
+            com.commercetools.api.models.cart.ShippingRateInput.deepCopy(template.getOldShippingRateInput()));
         return instance;
     }
 

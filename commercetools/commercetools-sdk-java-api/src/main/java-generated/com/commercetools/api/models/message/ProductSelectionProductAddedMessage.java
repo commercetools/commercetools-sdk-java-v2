@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -86,7 +87,7 @@ public interface ProductSelectionProductAddedMessage extends Message {
     }
 
     /**
-     * factory method to copy an instance of ProductSelectionProductAddedMessage
+     * factory method to create a shallow copy ProductSelectionProductAddedMessage
      * @param template instance to be copied
      * @return copy instance
      */
@@ -104,6 +105,36 @@ public interface ProductSelectionProductAddedMessage extends Message {
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setProduct(template.getProduct());
         instance.setVariantSelection(template.getVariantSelection());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductSelectionProductAddedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductSelectionProductAddedMessage deepCopy(
+            @Nullable final ProductSelectionProductAddedMessage template) {
+        if (template == null) {
+            return null;
+        }
+        ProductSelectionProductAddedMessageImpl instance = new ProductSelectionProductAddedMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
+                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setProduct(com.commercetools.api.models.product.ProductReference.deepCopy(template.getProduct()));
+        instance.setVariantSelection(com.commercetools.api.models.product_selection.ProductVariantSelection
+                .deepCopy(template.getVariantSelection()));
         return instance;
     }
 

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -74,11 +75,27 @@ public interface EventBridgeDestination extends Destination {
     }
 
     /**
-     * factory method to copy an instance of EventBridgeDestination
+     * factory method to create a shallow copy EventBridgeDestination
      * @param template instance to be copied
      * @return copy instance
      */
     public static EventBridgeDestination of(final EventBridgeDestination template) {
+        EventBridgeDestinationImpl instance = new EventBridgeDestinationImpl();
+        instance.setRegion(template.getRegion());
+        instance.setAccountId(template.getAccountId());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of EventBridgeDestination
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static EventBridgeDestination deepCopy(@Nullable final EventBridgeDestination template) {
+        if (template == null) {
+            return null;
+        }
         EventBridgeDestinationImpl instance = new EventBridgeDestinationImpl();
         instance.setRegion(template.getRegion());
         instance.setAccountId(template.getAccountId());

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -85,11 +86,28 @@ public interface TransactionChangeValue {
     }
 
     /**
-     * factory method to copy an instance of TransactionChangeValue
+     * factory method to create a shallow copy TransactionChangeValue
      * @param template instance to be copied
      * @return copy instance
      */
     public static TransactionChangeValue of(final TransactionChangeValue template) {
+        TransactionChangeValueImpl instance = new TransactionChangeValueImpl();
+        instance.setId(template.getId());
+        instance.setInteractionId(template.getInteractionId());
+        instance.setTimestamp(template.getTimestamp());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of TransactionChangeValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static TransactionChangeValue deepCopy(@Nullable final TransactionChangeValue template) {
+        if (template == null) {
+            return null;
+        }
         TransactionChangeValueImpl instance = new TransactionChangeValueImpl();
         instance.setId(template.getId());
         instance.setInteractionId(template.getInteractionId());

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,27 @@ public interface ProductDiscountChangeIsActiveAction extends ProductDiscountUpda
     }
 
     /**
-     * factory method to copy an instance of ProductDiscountChangeIsActiveAction
+     * factory method to create a shallow copy ProductDiscountChangeIsActiveAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductDiscountChangeIsActiveAction of(final ProductDiscountChangeIsActiveAction template) {
+        ProductDiscountChangeIsActiveActionImpl instance = new ProductDiscountChangeIsActiveActionImpl();
+        instance.setIsActive(template.getIsActive());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductDiscountChangeIsActiveAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductDiscountChangeIsActiveAction deepCopy(
+            @Nullable final ProductDiscountChangeIsActiveAction template) {
+        if (template == null) {
+            return null;
+        }
         ProductDiscountChangeIsActiveActionImpl instance = new ProductDiscountChangeIsActiveActionImpl();
         instance.setIsActive(template.getIsActive());
         return instance;

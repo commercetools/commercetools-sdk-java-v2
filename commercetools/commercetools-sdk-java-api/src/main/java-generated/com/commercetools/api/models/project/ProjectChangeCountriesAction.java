@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -66,13 +67,28 @@ public interface ProjectChangeCountriesAction extends ProjectUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ProjectChangeCountriesAction
+     * factory method to create a shallow copy ProjectChangeCountriesAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProjectChangeCountriesAction of(final ProjectChangeCountriesAction template) {
         ProjectChangeCountriesActionImpl instance = new ProjectChangeCountriesActionImpl();
         instance.setCountries(template.getCountries());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProjectChangeCountriesAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProjectChangeCountriesAction deepCopy(@Nullable final ProjectChangeCountriesAction template) {
+        if (template == null) {
+            return null;
+        }
+        ProjectChangeCountriesActionImpl instance = new ProjectChangeCountriesActionImpl();
+        instance.setCountries(Optional.ofNullable(template.getCountries()).map(ArrayList::new).orElse(null));
         return instance;
     }
 

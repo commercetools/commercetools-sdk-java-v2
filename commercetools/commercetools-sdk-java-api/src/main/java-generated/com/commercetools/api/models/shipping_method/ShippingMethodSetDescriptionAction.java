@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -56,11 +58,27 @@ public interface ShippingMethodSetDescriptionAction extends ShippingMethodUpdate
     }
 
     /**
-     * factory method to copy an instance of ShippingMethodSetDescriptionAction
+     * factory method to create a shallow copy ShippingMethodSetDescriptionAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ShippingMethodSetDescriptionAction of(final ShippingMethodSetDescriptionAction template) {
+        ShippingMethodSetDescriptionActionImpl instance = new ShippingMethodSetDescriptionActionImpl();
+        instance.setDescription(template.getDescription());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ShippingMethodSetDescriptionAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ShippingMethodSetDescriptionAction deepCopy(
+            @Nullable final ShippingMethodSetDescriptionAction template) {
+        if (template == null) {
+            return null;
+        }
         ShippingMethodSetDescriptionActionImpl instance = new ShippingMethodSetDescriptionActionImpl();
         instance.setDescription(template.getDescription());
         return instance;

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
@@ -58,13 +59,30 @@ public interface InventoryEntrySetSupplyChannelAction extends InventoryEntryUpda
     }
 
     /**
-     * factory method to copy an instance of InventoryEntrySetSupplyChannelAction
+     * factory method to create a shallow copy InventoryEntrySetSupplyChannelAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static InventoryEntrySetSupplyChannelAction of(final InventoryEntrySetSupplyChannelAction template) {
         InventoryEntrySetSupplyChannelActionImpl instance = new InventoryEntrySetSupplyChannelActionImpl();
         instance.setSupplyChannel(template.getSupplyChannel());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of InventoryEntrySetSupplyChannelAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static InventoryEntrySetSupplyChannelAction deepCopy(
+            @Nullable final InventoryEntrySetSupplyChannelAction template) {
+        if (template == null) {
+            return null;
+        }
+        InventoryEntrySetSupplyChannelActionImpl instance = new InventoryEntrySetSupplyChannelActionImpl();
+        instance.setSupplyChannel(
+            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getSupplyChannel()));
         return instance;
     }
 

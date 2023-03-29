@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -66,11 +67,26 @@ public interface PublishChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of PublishChange
+     * factory method to create a shallow copy PublishChange
      * @param template instance to be copied
      * @return copy instance
      */
     public static PublishChange of(final PublishChange template) {
+        PublishChangeImpl instance = new PublishChangeImpl();
+        instance.setChange(template.getChange());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of PublishChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static PublishChange deepCopy(@Nullable final PublishChange template) {
+        if (template == null) {
+            return null;
+        }
         PublishChangeImpl instance = new PublishChangeImpl();
         instance.setChange(template.getChange());
         return instance;

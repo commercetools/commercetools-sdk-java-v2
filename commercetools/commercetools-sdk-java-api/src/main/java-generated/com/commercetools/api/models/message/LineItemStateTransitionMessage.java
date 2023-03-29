@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -134,7 +135,7 @@ public interface LineItemStateTransitionMessage extends OrderMessage {
     }
 
     /**
-     * factory method to copy an instance of LineItemStateTransitionMessage
+     * factory method to create a shallow copy LineItemStateTransitionMessage
      * @param template instance to be copied
      * @return copy instance
      */
@@ -155,6 +156,37 @@ public interface LineItemStateTransitionMessage extends OrderMessage {
         instance.setQuantity(template.getQuantity());
         instance.setFromState(template.getFromState());
         instance.setToState(template.getToState());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of LineItemStateTransitionMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static LineItemStateTransitionMessage deepCopy(@Nullable final LineItemStateTransitionMessage template) {
+        if (template == null) {
+            return null;
+        }
+        LineItemStateTransitionMessageImpl instance = new LineItemStateTransitionMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
+                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setLineItemId(template.getLineItemId());
+        instance.setTransitionDate(template.getTransitionDate());
+        instance.setQuantity(template.getQuantity());
+        instance.setFromState(com.commercetools.api.models.state.StateReference.deepCopy(template.getFromState()));
+        instance.setToState(com.commercetools.api.models.state.StateReference.deepCopy(template.getToState()));
         return instance;
     }
 

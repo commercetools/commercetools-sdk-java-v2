@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,26 @@ public interface NumberField extends CustomField {
     }
 
     /**
-     * factory method to copy an instance of NumberField
+     * factory method to create a shallow copy NumberField
      * @param template instance to be copied
      * @return copy instance
      */
     public static NumberField of(final NumberField template) {
+        NumberFieldImpl instance = new NumberFieldImpl();
+        instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of NumberField
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static NumberField deepCopy(@Nullable final NumberField template) {
+        if (template == null) {
+            return null;
+        }
         NumberFieldImpl instance = new NumberFieldImpl();
         instance.setValue(template.getValue());
         return instance;

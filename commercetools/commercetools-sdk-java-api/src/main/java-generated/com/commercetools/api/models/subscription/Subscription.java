@@ -5,7 +5,9 @@ import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -252,7 +254,7 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
     }
 
     /**
-     * factory method to copy an instance of Subscription
+     * factory method to create a shallow copy Subscription
      * @param template instance to be copied
      * @return copy instance
      */
@@ -269,6 +271,42 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
         instance.setKey(template.getKey());
         instance.setMessages(template.getMessages());
         instance.setFormat(template.getFormat());
+        instance.setStatus(template.getStatus());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of Subscription
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static Subscription deepCopy(@Nullable final Subscription template) {
+        if (template == null) {
+            return null;
+        }
+        SubscriptionImpl instance = new SubscriptionImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
+        instance.setChanges(Optional.ofNullable(template.getChanges())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.subscription.ChangeSubscription::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setDestination(
+            com.commercetools.api.models.subscription.Destination.deepCopy(template.getDestination()));
+        instance.setKey(template.getKey());
+        instance.setMessages(Optional.ofNullable(template.getMessages())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.subscription.MessageSubscription::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setFormat(com.commercetools.api.models.subscription.DeliveryFormat.deepCopy(template.getFormat()));
         instance.setStatus(template.getStatus());
         return instance;
     }

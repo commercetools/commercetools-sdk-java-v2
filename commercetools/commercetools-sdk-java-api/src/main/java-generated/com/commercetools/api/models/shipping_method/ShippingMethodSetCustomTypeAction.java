@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.type.FieldContainer;
@@ -74,7 +75,7 @@ public interface ShippingMethodSetCustomTypeAction extends ShippingMethodUpdateA
     }
 
     /**
-     * factory method to copy an instance of ShippingMethodSetCustomTypeAction
+     * factory method to create a shallow copy ShippingMethodSetCustomTypeAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -82,6 +83,23 @@ public interface ShippingMethodSetCustomTypeAction extends ShippingMethodUpdateA
         ShippingMethodSetCustomTypeActionImpl instance = new ShippingMethodSetCustomTypeActionImpl();
         instance.setType(template.getType());
         instance.setFields(template.getFields());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ShippingMethodSetCustomTypeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ShippingMethodSetCustomTypeAction deepCopy(
+            @Nullable final ShippingMethodSetCustomTypeAction template) {
+        if (template == null) {
+            return null;
+        }
+        ShippingMethodSetCustomTypeActionImpl instance = new ShippingMethodSetCustomTypeActionImpl();
+        instance.setType(com.commercetools.api.models.type.TypeResourceIdentifier.deepCopy(template.getType()));
+        instance.setFields(com.commercetools.api.models.type.FieldContainer.deepCopy(template.getFields()));
         return instance;
     }
 

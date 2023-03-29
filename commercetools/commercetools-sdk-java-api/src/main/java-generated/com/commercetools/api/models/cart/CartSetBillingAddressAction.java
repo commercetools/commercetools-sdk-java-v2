@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.common.BaseAddress;
@@ -58,13 +59,28 @@ public interface CartSetBillingAddressAction extends CartUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of CartSetBillingAddressAction
+     * factory method to create a shallow copy CartSetBillingAddressAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static CartSetBillingAddressAction of(final CartSetBillingAddressAction template) {
         CartSetBillingAddressActionImpl instance = new CartSetBillingAddressActionImpl();
         instance.setAddress(template.getAddress());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartSetBillingAddressAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartSetBillingAddressAction deepCopy(@Nullable final CartSetBillingAddressAction template) {
+        if (template == null) {
+            return null;
+        }
+        CartSetBillingAddressActionImpl instance = new CartSetBillingAddressActionImpl();
+        instance.setAddress(com.commercetools.api.models.common.BaseAddress.deepCopy(template.getAddress()));
         return instance;
     }
 

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -74,13 +75,29 @@ public interface ProductVariantSelectionIncludeAllExcept extends ProductVariantS
     }
 
     /**
-     * factory method to copy an instance of ProductVariantSelectionIncludeAllExcept
+     * factory method to create a shallow copy ProductVariantSelectionIncludeAllExcept
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductVariantSelectionIncludeAllExcept of(final ProductVariantSelectionIncludeAllExcept template) {
         ProductVariantSelectionIncludeAllExceptImpl instance = new ProductVariantSelectionIncludeAllExceptImpl();
         instance.setSkus(template.getSkus());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductVariantSelectionIncludeAllExcept
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductVariantSelectionIncludeAllExcept deepCopy(
+            @Nullable final ProductVariantSelectionIncludeAllExcept template) {
+        if (template == null) {
+            return null;
+        }
+        ProductVariantSelectionIncludeAllExceptImpl instance = new ProductVariantSelectionIncludeAllExceptImpl();
+        instance.setSkus(Optional.ofNullable(template.getSkus()).map(ArrayList::new).orElse(null));
         return instance;
     }
 

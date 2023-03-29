@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -120,7 +121,7 @@ public interface FieldDefinition {
     }
 
     /**
-     * factory method to copy an instance of FieldDefinition
+     * factory method to create a shallow copy FieldDefinition
      * @param template instance to be copied
      * @return copy instance
      */
@@ -129,6 +130,25 @@ public interface FieldDefinition {
         instance.setType(template.getType());
         instance.setName(template.getName());
         instance.setLabel(template.getLabel());
+        instance.setRequired(template.getRequired());
+        instance.setInputHint(template.getInputHint());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of FieldDefinition
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static FieldDefinition deepCopy(@Nullable final FieldDefinition template) {
+        if (template == null) {
+            return null;
+        }
+        FieldDefinitionImpl instance = new FieldDefinitionImpl();
+        instance.setType(com.commercetools.api.models.type.FieldType.deepCopy(template.getType()));
+        instance.setName(template.getName());
+        instance.setLabel(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getLabel()));
         instance.setRequired(template.getRequired());
         instance.setInputHint(template.getInputHint());
         return instance;

@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -41,11 +43,26 @@ public interface InvalidCredentialsError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of InvalidCredentialsError
+     * factory method to create a shallow copy InvalidCredentialsError
      * @param template instance to be copied
      * @return copy instance
      */
     public static InvalidCredentialsError of(final InvalidCredentialsError template) {
+        InvalidCredentialsErrorImpl instance = new InvalidCredentialsErrorImpl();
+        instance.setMessage(template.getMessage());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of InvalidCredentialsError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static InvalidCredentialsError deepCopy(@Nullable final InvalidCredentialsError template) {
+        if (template == null) {
+            return null;
+        }
         InvalidCredentialsErrorImpl instance = new InvalidCredentialsErrorImpl();
         instance.setMessage(template.getMessage());
         return instance;

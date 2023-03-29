@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -77,13 +78,29 @@ public interface OrderLineItemAddedMessagePayload extends OrderMessagePayload {
     }
 
     /**
-     * factory method to copy an instance of OrderLineItemAddedMessagePayload
+     * factory method to create a shallow copy OrderLineItemAddedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
     public static OrderLineItemAddedMessagePayload of(final OrderLineItemAddedMessagePayload template) {
         OrderLineItemAddedMessagePayloadImpl instance = new OrderLineItemAddedMessagePayloadImpl();
         instance.setLineItem(template.getLineItem());
+        instance.setAddedQuantity(template.getAddedQuantity());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderLineItemAddedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderLineItemAddedMessagePayload deepCopy(@Nullable final OrderLineItemAddedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        OrderLineItemAddedMessagePayloadImpl instance = new OrderLineItemAddedMessagePayloadImpl();
+        instance.setLineItem(com.commercetools.api.models.cart.LineItem.deepCopy(template.getLineItem()));
         instance.setAddedQuantity(template.getAddedQuantity());
         return instance;
     }

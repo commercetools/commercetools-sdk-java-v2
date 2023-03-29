@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.KeyReference;
@@ -59,11 +60,26 @@ public interface StoreKeyReference extends KeyReference {
     }
 
     /**
-     * factory method to copy an instance of StoreKeyReference
+     * factory method to create a shallow copy StoreKeyReference
      * @param template instance to be copied
      * @return copy instance
      */
     public static StoreKeyReference of(final StoreKeyReference template) {
+        StoreKeyReferenceImpl instance = new StoreKeyReferenceImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StoreKeyReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StoreKeyReference deepCopy(@Nullable final StoreKeyReference template) {
+        if (template == null) {
+            return null;
+        }
         StoreKeyReferenceImpl instance = new StoreKeyReferenceImpl();
         instance.setKey(template.getKey());
         return instance;

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -89,12 +90,30 @@ public interface MyShoppingListSetTextLineItemCustomFieldAction extends MyShoppi
     }
 
     /**
-     * factory method to copy an instance of MyShoppingListSetTextLineItemCustomFieldAction
+     * factory method to create a shallow copy MyShoppingListSetTextLineItemCustomFieldAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static MyShoppingListSetTextLineItemCustomFieldAction of(
             final MyShoppingListSetTextLineItemCustomFieldAction template) {
+        MyShoppingListSetTextLineItemCustomFieldActionImpl instance = new MyShoppingListSetTextLineItemCustomFieldActionImpl();
+        instance.setTextLineItemId(template.getTextLineItemId());
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MyShoppingListSetTextLineItemCustomFieldAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MyShoppingListSetTextLineItemCustomFieldAction deepCopy(
+            @Nullable final MyShoppingListSetTextLineItemCustomFieldAction template) {
+        if (template == null) {
+            return null;
+        }
         MyShoppingListSetTextLineItemCustomFieldActionImpl instance = new MyShoppingListSetTextLineItemCustomFieldActionImpl();
         instance.setTextLineItemId(template.getTextLineItemId());
         instance.setName(template.getName());

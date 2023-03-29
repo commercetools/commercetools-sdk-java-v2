@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -35,11 +37,25 @@ public interface OrderSearchQuery {
     }
 
     /**
-     * factory method to copy an instance of OrderSearchQuery
+     * factory method to create a shallow copy OrderSearchQuery
      * @param template instance to be copied
      * @return copy instance
      */
     public static OrderSearchQuery of(final OrderSearchQuery template) {
+        OrderSearchQueryImpl instance = new OrderSearchQueryImpl();
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderSearchQuery
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderSearchQuery deepCopy(@Nullable final OrderSearchQuery template) {
+        if (template == null) {
+            return null;
+        }
         OrderSearchQueryImpl instance = new OrderSearchQueryImpl();
         return instance;
     }

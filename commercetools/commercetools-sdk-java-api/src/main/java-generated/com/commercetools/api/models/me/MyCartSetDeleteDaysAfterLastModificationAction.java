@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -56,12 +58,28 @@ public interface MyCartSetDeleteDaysAfterLastModificationAction extends MyCartUp
     }
 
     /**
-     * factory method to copy an instance of MyCartSetDeleteDaysAfterLastModificationAction
+     * factory method to create a shallow copy MyCartSetDeleteDaysAfterLastModificationAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static MyCartSetDeleteDaysAfterLastModificationAction of(
             final MyCartSetDeleteDaysAfterLastModificationAction template) {
+        MyCartSetDeleteDaysAfterLastModificationActionImpl instance = new MyCartSetDeleteDaysAfterLastModificationActionImpl();
+        instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MyCartSetDeleteDaysAfterLastModificationAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MyCartSetDeleteDaysAfterLastModificationAction deepCopy(
+            @Nullable final MyCartSetDeleteDaysAfterLastModificationAction template) {
+        if (template == null) {
+            return null;
+        }
         MyCartSetDeleteDaysAfterLastModificationActionImpl instance = new MyCartSetDeleteDaysAfterLastModificationActionImpl();
         instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
         return instance;

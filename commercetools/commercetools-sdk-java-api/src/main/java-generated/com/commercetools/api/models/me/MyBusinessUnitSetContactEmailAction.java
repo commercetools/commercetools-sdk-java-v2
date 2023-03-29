@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -55,11 +57,27 @@ public interface MyBusinessUnitSetContactEmailAction extends MyBusinessUnitUpdat
     }
 
     /**
-     * factory method to copy an instance of MyBusinessUnitSetContactEmailAction
+     * factory method to create a shallow copy MyBusinessUnitSetContactEmailAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static MyBusinessUnitSetContactEmailAction of(final MyBusinessUnitSetContactEmailAction template) {
+        MyBusinessUnitSetContactEmailActionImpl instance = new MyBusinessUnitSetContactEmailActionImpl();
+        instance.setContactEmail(template.getContactEmail());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MyBusinessUnitSetContactEmailAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MyBusinessUnitSetContactEmailAction deepCopy(
+            @Nullable final MyBusinessUnitSetContactEmailAction template) {
+        if (template == null) {
+            return null;
+        }
         MyBusinessUnitSetContactEmailActionImpl instance = new MyBusinessUnitSetContactEmailActionImpl();
         instance.setContactEmail(template.getContactEmail());
         return instance;

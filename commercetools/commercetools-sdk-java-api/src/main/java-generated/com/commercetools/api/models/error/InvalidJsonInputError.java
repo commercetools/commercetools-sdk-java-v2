@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -83,14 +84,31 @@ public interface InvalidJsonInputError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of InvalidJsonInputError
+     * factory method to create a shallow copy InvalidJsonInputError
      * @param template instance to be copied
      * @return copy instance
      */
     public static InvalidJsonInputError of(final InvalidJsonInputError template) {
         InvalidJsonInputErrorImpl instance = new InvalidJsonInputErrorImpl();
         instance.setMessage(template.getMessage());
-        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        instance.setDetailedErrorMessage(template.getDetailedErrorMessage());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of InvalidJsonInputError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static InvalidJsonInputError deepCopy(@Nullable final InvalidJsonInputError template) {
+        if (template == null) {
+            return null;
+        }
+        InvalidJsonInputErrorImpl instance = new InvalidJsonInputErrorImpl();
+        instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         instance.setDetailedErrorMessage(template.getDetailedErrorMessage());
         return instance;
     }

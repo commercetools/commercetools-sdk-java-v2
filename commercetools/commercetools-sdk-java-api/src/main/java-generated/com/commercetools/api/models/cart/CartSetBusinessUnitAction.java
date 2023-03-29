@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -61,13 +62,29 @@ public interface CartSetBusinessUnitAction extends CartUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of CartSetBusinessUnitAction
+     * factory method to create a shallow copy CartSetBusinessUnitAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static CartSetBusinessUnitAction of(final CartSetBusinessUnitAction template) {
         CartSetBusinessUnitActionImpl instance = new CartSetBusinessUnitActionImpl();
         instance.setBusinessUnit(template.getBusinessUnit());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartSetBusinessUnitAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartSetBusinessUnitAction deepCopy(@Nullable final CartSetBusinessUnitAction template) {
+        if (template == null) {
+            return null;
+        }
+        CartSetBusinessUnitActionImpl instance = new CartSetBusinessUnitActionImpl();
+        instance.setBusinessUnit(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier
+                .deepCopy(template.getBusinessUnit()));
         return instance;
     }
 

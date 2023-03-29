@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -106,7 +107,7 @@ public interface ParcelTrackingDataUpdatedMessagePayload extends OrderMessagePay
     }
 
     /**
-     * factory method to copy an instance of ParcelTrackingDataUpdatedMessagePayload
+     * factory method to create a shallow copy ParcelTrackingDataUpdatedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -115,6 +116,25 @@ public interface ParcelTrackingDataUpdatedMessagePayload extends OrderMessagePay
         instance.setDeliveryId(template.getDeliveryId());
         instance.setParcelId(template.getParcelId());
         instance.setTrackingData(template.getTrackingData());
+        instance.setShippingKey(template.getShippingKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ParcelTrackingDataUpdatedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ParcelTrackingDataUpdatedMessagePayload deepCopy(
+            @Nullable final ParcelTrackingDataUpdatedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        ParcelTrackingDataUpdatedMessagePayloadImpl instance = new ParcelTrackingDataUpdatedMessagePayloadImpl();
+        instance.setDeliveryId(template.getDeliveryId());
+        instance.setParcelId(template.getParcelId());
+        instance.setTrackingData(com.commercetools.api.models.order.TrackingData.deepCopy(template.getTrackingData()));
         instance.setShippingKey(template.getShippingKey());
         return instance;
     }

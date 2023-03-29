@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -136,7 +137,7 @@ public interface SetLineItemDiscountedPricePerQuantityChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetLineItemDiscountedPricePerQuantityChange
+     * factory method to create a shallow copy SetLineItemDiscountedPricePerQuantityChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -148,6 +149,28 @@ public interface SetLineItemDiscountedPricePerQuantityChange extends Change {
         instance.setVariant(template.getVariant());
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetLineItemDiscountedPricePerQuantityChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetLineItemDiscountedPricePerQuantityChange deepCopy(
+            @Nullable final SetLineItemDiscountedPricePerQuantityChange template) {
+        if (template == null) {
+            return null;
+        }
+        SetLineItemDiscountedPricePerQuantityChangeImpl instance = new SetLineItemDiscountedPricePerQuantityChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setLineItem(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getLineItem()));
+        instance.setVariant(template.getVariant());
+        instance.setNextValue(com.commercetools.history.models.common.DiscountedLineItemPriceForQuantity
+                .deepCopy(template.getNextValue()));
+        instance.setPreviousValue(com.commercetools.history.models.common.DiscountedLineItemPriceForQuantity
+                .deepCopy(template.getPreviousValue()));
         return instance;
     }
 

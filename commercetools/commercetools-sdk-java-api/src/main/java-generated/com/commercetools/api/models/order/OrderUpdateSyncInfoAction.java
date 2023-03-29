@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -92,13 +93,31 @@ public interface OrderUpdateSyncInfoAction extends OrderUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of OrderUpdateSyncInfoAction
+     * factory method to create a shallow copy OrderUpdateSyncInfoAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static OrderUpdateSyncInfoAction of(final OrderUpdateSyncInfoAction template) {
         OrderUpdateSyncInfoActionImpl instance = new OrderUpdateSyncInfoActionImpl();
         instance.setChannel(template.getChannel());
+        instance.setExternalId(template.getExternalId());
+        instance.setSyncedAt(template.getSyncedAt());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderUpdateSyncInfoAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderUpdateSyncInfoAction deepCopy(@Nullable final OrderUpdateSyncInfoAction template) {
+        if (template == null) {
+            return null;
+        }
+        OrderUpdateSyncInfoActionImpl instance = new OrderUpdateSyncInfoActionImpl();
+        instance.setChannel(
+            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getChannel()));
         instance.setExternalId(template.getExternalId());
         instance.setSyncedAt(template.getSyncedAt());
         return instance;

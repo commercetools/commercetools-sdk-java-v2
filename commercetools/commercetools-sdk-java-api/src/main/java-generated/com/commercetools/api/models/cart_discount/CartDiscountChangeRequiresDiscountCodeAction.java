@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,12 +59,28 @@ public interface CartDiscountChangeRequiresDiscountCodeAction extends CartDiscou
     }
 
     /**
-     * factory method to copy an instance of CartDiscountChangeRequiresDiscountCodeAction
+     * factory method to create a shallow copy CartDiscountChangeRequiresDiscountCodeAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static CartDiscountChangeRequiresDiscountCodeAction of(
             final CartDiscountChangeRequiresDiscountCodeAction template) {
+        CartDiscountChangeRequiresDiscountCodeActionImpl instance = new CartDiscountChangeRequiresDiscountCodeActionImpl();
+        instance.setRequiresDiscountCode(template.getRequiresDiscountCode());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartDiscountChangeRequiresDiscountCodeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartDiscountChangeRequiresDiscountCodeAction deepCopy(
+            @Nullable final CartDiscountChangeRequiresDiscountCodeAction template) {
+        if (template == null) {
+            return null;
+        }
         CartDiscountChangeRequiresDiscountCodeActionImpl instance = new CartDiscountChangeRequiresDiscountCodeActionImpl();
         instance.setRequiresDiscountCode(template.getRequiresDiscountCode());
         return instance;

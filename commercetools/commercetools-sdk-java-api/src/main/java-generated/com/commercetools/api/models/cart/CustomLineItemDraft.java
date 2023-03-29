@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -190,7 +191,7 @@ public interface CustomLineItemDraft extends com.commercetools.api.models.Custom
     }
 
     /**
-     * factory method to copy an instance of CustomLineItemDraft
+     * factory method to create a shallow copy CustomLineItemDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -204,6 +205,32 @@ public interface CustomLineItemDraft extends com.commercetools.api.models.Custom
         instance.setExternalTaxRate(template.getExternalTaxRate());
         instance.setCustom(template.getCustom());
         instance.setShippingDetails(template.getShippingDetails());
+        instance.setPriceMode(template.getPriceMode());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomLineItemDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomLineItemDraft deepCopy(@Nullable final CustomLineItemDraft template) {
+        if (template == null) {
+            return null;
+        }
+        CustomLineItemDraftImpl instance = new CustomLineItemDraftImpl();
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setQuantity(template.getQuantity());
+        instance.setMoney(com.commercetools.api.models.common.Money.deepCopy(template.getMoney()));
+        instance.setSlug(template.getSlug());
+        instance.setTaxCategory(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier
+                .deepCopy(template.getTaxCategory()));
+        instance.setExternalTaxRate(
+            com.commercetools.api.models.cart.ExternalTaxRateDraft.deepCopy(template.getExternalTaxRate()));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setShippingDetails(
+            com.commercetools.api.models.cart.ItemShippingDetailsDraft.deepCopy(template.getShippingDetails()));
         instance.setPriceMode(template.getPriceMode());
         return instance;
     }

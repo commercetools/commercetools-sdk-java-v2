@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -101,7 +102,7 @@ public interface ParcelAddedToDeliveryMessage extends OrderMessage {
     }
 
     /**
-     * factory method to copy an instance of ParcelAddedToDeliveryMessage
+     * factory method to create a shallow copy ParcelAddedToDeliveryMessage
      * @param template instance to be copied
      * @return copy instance
      */
@@ -119,6 +120,35 @@ public interface ParcelAddedToDeliveryMessage extends OrderMessage {
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setDelivery(template.getDelivery());
         instance.setParcel(template.getParcel());
+        instance.setShippingKey(template.getShippingKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ParcelAddedToDeliveryMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ParcelAddedToDeliveryMessage deepCopy(@Nullable final ParcelAddedToDeliveryMessage template) {
+        if (template == null) {
+            return null;
+        }
+        ParcelAddedToDeliveryMessageImpl instance = new ParcelAddedToDeliveryMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
+                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setDelivery(com.commercetools.api.models.order.Delivery.deepCopy(template.getDelivery()));
+        instance.setParcel(com.commercetools.api.models.order.Parcel.deepCopy(template.getParcel()));
         instance.setShippingKey(template.getShippingKey());
         return instance;
     }

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -85,7 +86,7 @@ public interface PaymentLabel extends Label {
     }
 
     /**
-     * factory method to copy an instance of PaymentLabel
+     * factory method to create a shallow copy PaymentLabel
      * @param template instance to be copied
      * @return copy instance
      */
@@ -93,6 +94,22 @@ public interface PaymentLabel extends Label {
         PaymentLabelImpl instance = new PaymentLabelImpl();
         instance.setKey(template.getKey());
         instance.setAmountPlanned(template.getAmountPlanned());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of PaymentLabel
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static PaymentLabel deepCopy(@Nullable final PaymentLabel template) {
+        if (template == null) {
+            return null;
+        }
+        PaymentLabelImpl instance = new PaymentLabelImpl();
+        instance.setKey(template.getKey());
+        instance.setAmountPlanned(com.commercetools.history.models.common.Money.deepCopy(template.getAmountPlanned()));
         return instance;
     }
 

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -117,7 +118,7 @@ public interface ChangeTextLineItemQuantityChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of ChangeTextLineItemQuantityChange
+     * factory method to create a shallow copy ChangeTextLineItemQuantityChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -125,6 +126,25 @@ public interface ChangeTextLineItemQuantityChange extends Change {
         ChangeTextLineItemQuantityChangeImpl instance = new ChangeTextLineItemQuantityChangeImpl();
         instance.setChange(template.getChange());
         instance.setTextLineItem(template.getTextLineItem());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChangeTextLineItemQuantityChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChangeTextLineItemQuantityChange deepCopy(@Nullable final ChangeTextLineItemQuantityChange template) {
+        if (template == null) {
+            return null;
+        }
+        ChangeTextLineItemQuantityChangeImpl instance = new ChangeTextLineItemQuantityChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setTextLineItem(
+            com.commercetools.history.models.change_value.TextLineItemValue.deepCopy(template.getTextLineItem()));
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
         return instance;

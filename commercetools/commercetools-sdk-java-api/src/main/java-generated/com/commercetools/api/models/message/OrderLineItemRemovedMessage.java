@@ -4,7 +4,9 @@ package com.commercetools.api.models.message;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -190,7 +192,7 @@ public interface OrderLineItemRemovedMessage extends OrderMessage {
     }
 
     /**
-     * factory method to copy an instance of OrderLineItemRemovedMessage
+     * factory method to create a shallow copy OrderLineItemRemovedMessage
      * @param template instance to be copied
      * @return copy instance
      */
@@ -214,6 +216,47 @@ public interface OrderLineItemRemovedMessage extends OrderMessage {
         instance.setNewTaxedPrice(template.getNewTaxedPrice());
         instance.setNewPrice(template.getNewPrice());
         instance.setNewShippingDetail(template.getNewShippingDetail());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderLineItemRemovedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderLineItemRemovedMessage deepCopy(@Nullable final OrderLineItemRemovedMessage template) {
+        if (template == null) {
+            return null;
+        }
+        OrderLineItemRemovedMessageImpl instance = new OrderLineItemRemovedMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
+                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setLineItemId(template.getLineItemId());
+        instance.setRemovedQuantity(template.getRemovedQuantity());
+        instance.setNewQuantity(template.getNewQuantity());
+        instance.setNewState(Optional.ofNullable(template.getNewState())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.order.ItemState::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setNewTotalPrice(
+            com.commercetools.api.models.common.CentPrecisionMoney.deepCopy(template.getNewTotalPrice()));
+        instance.setNewTaxedPrice(
+            com.commercetools.api.models.cart.TaxedItemPrice.deepCopy(template.getNewTaxedPrice()));
+        instance.setNewPrice(com.commercetools.api.models.common.Price.deepCopy(template.getNewPrice()));
+        instance.setNewShippingDetail(
+            com.commercetools.api.models.cart.ItemShippingDetails.deepCopy(template.getNewShippingDetail()));
         return instance;
     }
 

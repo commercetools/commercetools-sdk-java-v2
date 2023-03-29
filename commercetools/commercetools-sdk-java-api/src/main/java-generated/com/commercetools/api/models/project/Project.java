@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -300,7 +301,7 @@ public interface Project extends com.commercetools.api.models.WithKey {
     }
 
     /**
-     * factory method to copy an instance of Project
+     * factory method to create a shallow copy Project
      * @param template instance to be copied
      * @return copy instance
      */
@@ -321,6 +322,41 @@ public interface Project extends com.commercetools.api.models.WithKey {
         instance.setExternalOAuth(template.getExternalOAuth());
         instance.setSearchIndexing(template.getSearchIndexing());
         instance.setBusinessUnits(template.getBusinessUnits());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of Project
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static Project deepCopy(@Nullable final Project template) {
+        if (template == null) {
+            return null;
+        }
+        ProjectImpl instance = new ProjectImpl();
+        instance.setVersion(template.getVersion());
+        instance.setKey(template.getKey());
+        instance.setName(template.getName());
+        instance.setCountries(Optional.ofNullable(template.getCountries()).map(ArrayList::new).orElse(null));
+        instance.setCurrencies(Optional.ofNullable(template.getCurrencies()).map(ArrayList::new).orElse(null));
+        instance.setLanguages(Optional.ofNullable(template.getLanguages()).map(ArrayList::new).orElse(null));
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setTrialUntil(template.getTrialUntil());
+        instance.setMessages(
+            com.commercetools.api.models.message.MessagesConfiguration.deepCopy(template.getMessages()));
+        instance.setCarts(com.commercetools.api.models.project.CartsConfiguration.deepCopy(template.getCarts()));
+        instance.setShoppingLists(
+            com.commercetools.api.models.project.ShoppingListsConfiguration.deepCopy(template.getShoppingLists()));
+        instance.setShippingRateInputType(
+            com.commercetools.api.models.project.ShippingRateInputType.deepCopy(template.getShippingRateInputType()));
+        instance.setExternalOAuth(
+            com.commercetools.api.models.project.ExternalOAuth.deepCopy(template.getExternalOAuth()));
+        instance.setSearchIndexing(
+            com.commercetools.api.models.project.SearchIndexingConfiguration.deepCopy(template.getSearchIndexing()));
+        instance.setBusinessUnits(
+            com.commercetools.api.models.project.BusinessUnitConfiguration.deepCopy(template.getBusinessUnits()));
         return instance;
     }
 

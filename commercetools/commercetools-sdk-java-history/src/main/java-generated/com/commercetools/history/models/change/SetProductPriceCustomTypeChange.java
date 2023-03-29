@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -118,7 +119,7 @@ public interface SetProductPriceCustomTypeChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetProductPriceCustomTypeChange
+     * factory method to create a shallow copy SetProductPriceCustomTypeChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -128,6 +129,25 @@ public interface SetProductPriceCustomTypeChange extends Change {
         instance.setCatalogData(template.getCatalogData());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetProductPriceCustomTypeChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetProductPriceCustomTypeChange deepCopy(@Nullable final SetProductPriceCustomTypeChange template) {
+        if (template == null) {
+            return null;
+        }
+        SetProductPriceCustomTypeChangeImpl instance = new SetProductPriceCustomTypeChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setCatalogData(template.getCatalogData());
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.CustomFields.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.CustomFields.deepCopy(template.getNextValue()));
         return instance;
     }
 

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -74,7 +75,7 @@ public interface OrderSetParcelMeasurementsAction extends OrderUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of OrderSetParcelMeasurementsAction
+     * factory method to create a shallow copy OrderSetParcelMeasurementsAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -82,6 +83,23 @@ public interface OrderSetParcelMeasurementsAction extends OrderUpdateAction {
         OrderSetParcelMeasurementsActionImpl instance = new OrderSetParcelMeasurementsActionImpl();
         instance.setParcelId(template.getParcelId());
         instance.setMeasurements(template.getMeasurements());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderSetParcelMeasurementsAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderSetParcelMeasurementsAction deepCopy(@Nullable final OrderSetParcelMeasurementsAction template) {
+        if (template == null) {
+            return null;
+        }
+        OrderSetParcelMeasurementsActionImpl instance = new OrderSetParcelMeasurementsActionImpl();
+        instance.setParcelId(template.getParcelId());
+        instance.setMeasurements(
+            com.commercetools.api.models.order.ParcelMeasurements.deepCopy(template.getMeasurements()));
         return instance;
     }
 

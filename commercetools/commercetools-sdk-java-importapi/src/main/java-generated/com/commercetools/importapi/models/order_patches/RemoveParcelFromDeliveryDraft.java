@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -53,11 +54,26 @@ public interface RemoveParcelFromDeliveryDraft extends io.vrap.rmf.base.client.D
     }
 
     /**
-     * factory method to copy an instance of RemoveParcelFromDeliveryDraft
+     * factory method to create a shallow copy RemoveParcelFromDeliveryDraft
      * @param template instance to be copied
      * @return copy instance
      */
     public static RemoveParcelFromDeliveryDraft of(final RemoveParcelFromDeliveryDraft template) {
+        RemoveParcelFromDeliveryDraftImpl instance = new RemoveParcelFromDeliveryDraftImpl();
+        instance.setParcelId(template.getParcelId());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of RemoveParcelFromDeliveryDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static RemoveParcelFromDeliveryDraft deepCopy(@Nullable final RemoveParcelFromDeliveryDraft template) {
+        if (template == null) {
+            return null;
+        }
         RemoveParcelFromDeliveryDraftImpl instance = new RemoveParcelFromDeliveryDraftImpl();
         instance.setParcelId(template.getParcelId());
         return instance;

@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.commercetools.api.models.common.ResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -72,11 +74,27 @@ public interface ChannelResourceIdentifier
     }
 
     /**
-     * factory method to copy an instance of ChannelResourceIdentifier
+     * factory method to create a shallow copy ChannelResourceIdentifier
      * @param template instance to be copied
      * @return copy instance
      */
     public static ChannelResourceIdentifier of(final ChannelResourceIdentifier template) {
+        ChannelResourceIdentifierImpl instance = new ChannelResourceIdentifierImpl();
+        instance.setId(template.getId());
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChannelResourceIdentifier
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChannelResourceIdentifier deepCopy(@Nullable final ChannelResourceIdentifier template) {
+        if (template == null) {
+            return null;
+        }
         ChannelResourceIdentifierImpl instance = new ChannelResourceIdentifierImpl();
         instance.setId(template.getId());
         instance.setKey(template.getKey());

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -66,7 +67,7 @@ public interface ShoppingListChangeTextLineItemsOrderAction extends ShoppingList
     }
 
     /**
-     * factory method to copy an instance of ShoppingListChangeTextLineItemsOrderAction
+     * factory method to create a shallow copy ShoppingListChangeTextLineItemsOrderAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -74,6 +75,23 @@ public interface ShoppingListChangeTextLineItemsOrderAction extends ShoppingList
             final ShoppingListChangeTextLineItemsOrderAction template) {
         ShoppingListChangeTextLineItemsOrderActionImpl instance = new ShoppingListChangeTextLineItemsOrderActionImpl();
         instance.setTextLineItemOrder(template.getTextLineItemOrder());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ShoppingListChangeTextLineItemsOrderAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ShoppingListChangeTextLineItemsOrderAction deepCopy(
+            @Nullable final ShoppingListChangeTextLineItemsOrderAction template) {
+        if (template == null) {
+            return null;
+        }
+        ShoppingListChangeTextLineItemsOrderActionImpl instance = new ShoppingListChangeTextLineItemsOrderActionImpl();
+        instance.setTextLineItemOrder(
+            Optional.ofNullable(template.getTextLineItemOrder()).map(ArrayList::new).orElse(null));
         return instance;
     }
 

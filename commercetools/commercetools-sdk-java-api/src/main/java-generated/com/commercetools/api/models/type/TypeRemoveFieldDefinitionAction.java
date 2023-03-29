@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,26 @@ public interface TypeRemoveFieldDefinitionAction extends TypeUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of TypeRemoveFieldDefinitionAction
+     * factory method to create a shallow copy TypeRemoveFieldDefinitionAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static TypeRemoveFieldDefinitionAction of(final TypeRemoveFieldDefinitionAction template) {
+        TypeRemoveFieldDefinitionActionImpl instance = new TypeRemoveFieldDefinitionActionImpl();
+        instance.setFieldName(template.getFieldName());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of TypeRemoveFieldDefinitionAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static TypeRemoveFieldDefinitionAction deepCopy(@Nullable final TypeRemoveFieldDefinitionAction template) {
+        if (template == null) {
+            return null;
+        }
         TypeRemoveFieldDefinitionActionImpl instance = new TypeRemoveFieldDefinitionActionImpl();
         instance.setFieldName(template.getFieldName());
         return instance;

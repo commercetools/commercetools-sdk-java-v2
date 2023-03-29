@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -102,7 +103,7 @@ public interface SetMetaDescriptionChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetMetaDescriptionChange
+     * factory method to create a shallow copy SetMetaDescriptionChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -111,6 +112,25 @@ public interface SetMetaDescriptionChange extends Change {
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetMetaDescriptionChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetMetaDescriptionChange deepCopy(@Nullable final SetMetaDescriptionChange template) {
+        if (template == null) {
+            return null;
+        }
+        SetMetaDescriptionChangeImpl instance = new SetMetaDescriptionChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(
+            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getNextValue()));
         return instance;
     }
 

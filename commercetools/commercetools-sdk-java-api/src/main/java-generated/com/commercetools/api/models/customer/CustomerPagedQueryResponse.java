@@ -4,7 +4,9 @@ package com.commercetools.api.models.customer;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -126,7 +128,7 @@ public interface CustomerPagedQueryResponse extends com.commercetools.api.models
     }
 
     /**
-     * factory method to copy an instance of CustomerPagedQueryResponse
+     * factory method to create a shallow copy CustomerPagedQueryResponse
      * @param template instance to be copied
      * @return copy instance
      */
@@ -137,6 +139,29 @@ public interface CustomerPagedQueryResponse extends com.commercetools.api.models
         instance.setCount(template.getCount());
         instance.setTotal(template.getTotal());
         instance.setResults(template.getResults());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomerPagedQueryResponse
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomerPagedQueryResponse deepCopy(@Nullable final CustomerPagedQueryResponse template) {
+        if (template == null) {
+            return null;
+        }
+        CustomerPagedQueryResponseImpl instance = new CustomerPagedQueryResponseImpl();
+        instance.setLimit(template.getLimit());
+        instance.setOffset(template.getOffset());
+        instance.setCount(template.getCount());
+        instance.setTotal(template.getTotal());
+        instance.setResults(Optional.ofNullable(template.getResults())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.customer.Customer::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

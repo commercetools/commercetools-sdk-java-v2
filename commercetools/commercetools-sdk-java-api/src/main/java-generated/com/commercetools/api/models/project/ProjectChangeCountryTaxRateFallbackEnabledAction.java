@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,12 +59,28 @@ public interface ProjectChangeCountryTaxRateFallbackEnabledAction extends Projec
     }
 
     /**
-     * factory method to copy an instance of ProjectChangeCountryTaxRateFallbackEnabledAction
+     * factory method to create a shallow copy ProjectChangeCountryTaxRateFallbackEnabledAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProjectChangeCountryTaxRateFallbackEnabledAction of(
             final ProjectChangeCountryTaxRateFallbackEnabledAction template) {
+        ProjectChangeCountryTaxRateFallbackEnabledActionImpl instance = new ProjectChangeCountryTaxRateFallbackEnabledActionImpl();
+        instance.setCountryTaxRateFallbackEnabled(template.getCountryTaxRateFallbackEnabled());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProjectChangeCountryTaxRateFallbackEnabledAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProjectChangeCountryTaxRateFallbackEnabledAction deepCopy(
+            @Nullable final ProjectChangeCountryTaxRateFallbackEnabledAction template) {
+        if (template == null) {
+            return null;
+        }
         ProjectChangeCountryTaxRateFallbackEnabledActionImpl instance = new ProjectChangeCountryTaxRateFallbackEnabledActionImpl();
         instance.setCountryTaxRateFallbackEnabled(template.getCountryTaxRateFallbackEnabled());
         return instance;

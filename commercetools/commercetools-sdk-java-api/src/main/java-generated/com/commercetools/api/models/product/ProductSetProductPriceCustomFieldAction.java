@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -104,11 +105,30 @@ public interface ProductSetProductPriceCustomFieldAction extends ProductUpdateAc
     }
 
     /**
-     * factory method to copy an instance of ProductSetProductPriceCustomFieldAction
+     * factory method to create a shallow copy ProductSetProductPriceCustomFieldAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductSetProductPriceCustomFieldAction of(final ProductSetProductPriceCustomFieldAction template) {
+        ProductSetProductPriceCustomFieldActionImpl instance = new ProductSetProductPriceCustomFieldActionImpl();
+        instance.setPriceId(template.getPriceId());
+        instance.setStaged(template.getStaged());
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductSetProductPriceCustomFieldAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductSetProductPriceCustomFieldAction deepCopy(
+            @Nullable final ProductSetProductPriceCustomFieldAction template) {
+        if (template == null) {
+            return null;
+        }
         ProductSetProductPriceCustomFieldActionImpl instance = new ProductSetProductPriceCustomFieldActionImpl();
         instance.setPriceId(template.getPriceId());
         instance.setStaged(template.getStaged());

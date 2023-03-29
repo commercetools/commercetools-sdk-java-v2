@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -78,7 +79,7 @@ public interface ShippingMethodRemoveShippingRateAction extends ShippingMethodUp
     }
 
     /**
-     * factory method to copy an instance of ShippingMethodRemoveShippingRateAction
+     * factory method to create a shallow copy ShippingMethodRemoveShippingRateAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -86,6 +87,24 @@ public interface ShippingMethodRemoveShippingRateAction extends ShippingMethodUp
         ShippingMethodRemoveShippingRateActionImpl instance = new ShippingMethodRemoveShippingRateActionImpl();
         instance.setZone(template.getZone());
         instance.setShippingRate(template.getShippingRate());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ShippingMethodRemoveShippingRateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ShippingMethodRemoveShippingRateAction deepCopy(
+            @Nullable final ShippingMethodRemoveShippingRateAction template) {
+        if (template == null) {
+            return null;
+        }
+        ShippingMethodRemoveShippingRateActionImpl instance = new ShippingMethodRemoveShippingRateActionImpl();
+        instance.setZone(com.commercetools.api.models.zone.ZoneResourceIdentifier.deepCopy(template.getZone()));
+        instance.setShippingRate(
+            com.commercetools.api.models.shipping_method.ShippingRateDraft.deepCopy(template.getShippingRate()));
         return instance;
     }
 

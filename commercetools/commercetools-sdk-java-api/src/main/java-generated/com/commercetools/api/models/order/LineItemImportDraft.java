@@ -4,7 +4,9 @@ package com.commercetools.api.models.order;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -241,7 +243,7 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
     }
 
     /**
-     * factory method to copy an instance of LineItemImportDraft
+     * factory method to create a shallow copy LineItemImportDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -259,6 +261,40 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
         instance.setCustom(template.getCustom());
         instance.setInventoryMode(template.getInventoryMode());
         instance.setShippingDetails(template.getShippingDetails());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of LineItemImportDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static LineItemImportDraft deepCopy(@Nullable final LineItemImportDraft template) {
+        if (template == null) {
+            return null;
+        }
+        LineItemImportDraftImpl instance = new LineItemImportDraftImpl();
+        instance.setProductId(template.getProductId());
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setVariant(
+            com.commercetools.api.models.order.ProductVariantImportDraft.deepCopy(template.getVariant()));
+        instance.setPrice(com.commercetools.api.models.common.PriceDraft.deepCopy(template.getPrice()));
+        instance.setQuantity(template.getQuantity());
+        instance.setState(Optional.ofNullable(template.getState())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.order.ItemState::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setSupplyChannel(
+            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getSupplyChannel()));
+        instance.setDistributionChannel(
+            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getDistributionChannel()));
+        instance.setTaxRate(com.commercetools.api.models.tax_category.TaxRate.deepCopy(template.getTaxRate()));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setInventoryMode(template.getInventoryMode());
+        instance.setShippingDetails(
+            com.commercetools.api.models.cart.ItemShippingDetailsDraft.deepCopy(template.getShippingDetails()));
         return instance;
     }
 

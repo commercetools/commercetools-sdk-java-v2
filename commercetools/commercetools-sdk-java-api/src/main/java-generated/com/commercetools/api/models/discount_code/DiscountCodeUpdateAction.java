@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -52,6 +53,72 @@ public interface DiscountCodeUpdateAction
     @NotNull
     @JsonProperty("action")
     public String getAction();
+
+    /**
+     * factory method to create a deep copy of DiscountCodeUpdateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static DiscountCodeUpdateAction deepCopy(@Nullable final DiscountCodeUpdateAction template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.discount_code.DiscountCodeChangeCartDiscountsAction) {
+            return com.commercetools.api.models.discount_code.DiscountCodeChangeCartDiscountsAction.deepCopy(
+                (com.commercetools.api.models.discount_code.DiscountCodeChangeCartDiscountsAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.discount_code.DiscountCodeChangeGroupsAction) {
+            return com.commercetools.api.models.discount_code.DiscountCodeChangeGroupsAction
+                    .deepCopy((com.commercetools.api.models.discount_code.DiscountCodeChangeGroupsAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.discount_code.DiscountCodeChangeIsActiveAction) {
+            return com.commercetools.api.models.discount_code.DiscountCodeChangeIsActiveAction
+                    .deepCopy((com.commercetools.api.models.discount_code.DiscountCodeChangeIsActiveAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.discount_code.DiscountCodeSetCartPredicateAction) {
+            return com.commercetools.api.models.discount_code.DiscountCodeSetCartPredicateAction
+                    .deepCopy((com.commercetools.api.models.discount_code.DiscountCodeSetCartPredicateAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.discount_code.DiscountCodeSetCustomFieldAction) {
+            return com.commercetools.api.models.discount_code.DiscountCodeSetCustomFieldAction
+                    .deepCopy((com.commercetools.api.models.discount_code.DiscountCodeSetCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.discount_code.DiscountCodeSetCustomTypeAction) {
+            return com.commercetools.api.models.discount_code.DiscountCodeSetCustomTypeAction
+                    .deepCopy((com.commercetools.api.models.discount_code.DiscountCodeSetCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.discount_code.DiscountCodeSetDescriptionAction) {
+            return com.commercetools.api.models.discount_code.DiscountCodeSetDescriptionAction
+                    .deepCopy((com.commercetools.api.models.discount_code.DiscountCodeSetDescriptionAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsAction) {
+            return com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsAction.deepCopy(
+                (com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsPerCustomerAction) {
+            return com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsPerCustomerAction.deepCopy(
+                (com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsPerCustomerAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.discount_code.DiscountCodeSetNameAction) {
+            return com.commercetools.api.models.discount_code.DiscountCodeSetNameAction
+                    .deepCopy((com.commercetools.api.models.discount_code.DiscountCodeSetNameAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.discount_code.DiscountCodeSetValidFromAction) {
+            return com.commercetools.api.models.discount_code.DiscountCodeSetValidFromAction
+                    .deepCopy((com.commercetools.api.models.discount_code.DiscountCodeSetValidFromAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.discount_code.DiscountCodeSetValidFromAndUntilAction) {
+            return com.commercetools.api.models.discount_code.DiscountCodeSetValidFromAndUntilAction.deepCopy(
+                (com.commercetools.api.models.discount_code.DiscountCodeSetValidFromAndUntilAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.discount_code.DiscountCodeSetValidUntilAction) {
+            return com.commercetools.api.models.discount_code.DiscountCodeSetValidUntilAction
+                    .deepCopy((com.commercetools.api.models.discount_code.DiscountCodeSetValidUntilAction) template);
+        }
+        DiscountCodeUpdateActionImpl instance = new DiscountCodeUpdateActionImpl();
+        return instance;
+    }
 
     /**
      * builder for changeCartDiscounts subtype

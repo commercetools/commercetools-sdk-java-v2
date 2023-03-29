@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -66,11 +67,27 @@ public interface ChangeTargetCustomLineItemsChangeValue extends ChangeTargetChan
     }
 
     /**
-     * factory method to copy an instance of ChangeTargetCustomLineItemsChangeValue
+     * factory method to create a shallow copy ChangeTargetCustomLineItemsChangeValue
      * @param template instance to be copied
      * @return copy instance
      */
     public static ChangeTargetCustomLineItemsChangeValue of(final ChangeTargetCustomLineItemsChangeValue template) {
+        ChangeTargetCustomLineItemsChangeValueImpl instance = new ChangeTargetCustomLineItemsChangeValueImpl();
+        instance.setPredicate(template.getPredicate());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChangeTargetCustomLineItemsChangeValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChangeTargetCustomLineItemsChangeValue deepCopy(
+            @Nullable final ChangeTargetCustomLineItemsChangeValue template) {
+        if (template == null) {
+            return null;
+        }
         ChangeTargetCustomLineItemsChangeValueImpl instance = new ChangeTargetCustomLineItemsChangeValueImpl();
         instance.setPredicate(template.getPredicate());
         return instance;

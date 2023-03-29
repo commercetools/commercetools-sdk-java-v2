@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.common.StateRole;
@@ -115,7 +116,7 @@ public interface AddStateRolesChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of AddStateRolesChange
+     * factory method to create a shallow copy AddStateRolesChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -124,6 +125,23 @@ public interface AddStateRolesChange extends Change {
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of AddStateRolesChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AddStateRolesChange deepCopy(@Nullable final AddStateRolesChange template) {
+        if (template == null) {
+            return null;
+        }
+        AddStateRolesChangeImpl instance = new AddStateRolesChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue()).map(ArrayList::new).orElse(null));
+        instance.setNextValue(Optional.ofNullable(template.getNextValue()).map(ArrayList::new).orElse(null));
         return instance;
     }
 

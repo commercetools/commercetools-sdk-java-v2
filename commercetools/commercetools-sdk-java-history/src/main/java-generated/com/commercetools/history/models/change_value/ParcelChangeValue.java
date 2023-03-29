@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -69,11 +70,27 @@ public interface ParcelChangeValue {
     }
 
     /**
-     * factory method to copy an instance of ParcelChangeValue
+     * factory method to create a shallow copy ParcelChangeValue
      * @param template instance to be copied
      * @return copy instance
      */
     public static ParcelChangeValue of(final ParcelChangeValue template) {
+        ParcelChangeValueImpl instance = new ParcelChangeValueImpl();
+        instance.setId(template.getId());
+        instance.setCreatedAt(template.getCreatedAt());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ParcelChangeValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ParcelChangeValue deepCopy(@Nullable final ParcelChangeValue template) {
+        if (template == null) {
+            return null;
+        }
         ParcelChangeValueImpl instance = new ParcelChangeValueImpl();
         instance.setId(template.getId());
         instance.setCreatedAt(template.getCreatedAt());

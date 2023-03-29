@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -89,11 +90,29 @@ public interface MyCartSetLineItemCustomFieldAction extends MyCartUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of MyCartSetLineItemCustomFieldAction
+     * factory method to create a shallow copy MyCartSetLineItemCustomFieldAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static MyCartSetLineItemCustomFieldAction of(final MyCartSetLineItemCustomFieldAction template) {
+        MyCartSetLineItemCustomFieldActionImpl instance = new MyCartSetLineItemCustomFieldActionImpl();
+        instance.setLineItemId(template.getLineItemId());
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MyCartSetLineItemCustomFieldAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MyCartSetLineItemCustomFieldAction deepCopy(
+            @Nullable final MyCartSetLineItemCustomFieldAction template) {
+        if (template == null) {
+            return null;
+        }
         MyCartSetLineItemCustomFieldActionImpl instance = new MyCartSetLineItemCustomFieldActionImpl();
         instance.setLineItemId(template.getLineItemId());
         instance.setName(template.getName());

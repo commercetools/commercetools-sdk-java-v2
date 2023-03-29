@@ -4,7 +4,9 @@ package com.commercetools.api.models.product;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -127,7 +129,7 @@ public interface ProductProjectionPagedQueryResponse
     }
 
     /**
-     * factory method to copy an instance of ProductProjectionPagedQueryResponse
+     * factory method to create a shallow copy ProductProjectionPagedQueryResponse
      * @param template instance to be copied
      * @return copy instance
      */
@@ -138,6 +140,30 @@ public interface ProductProjectionPagedQueryResponse
         instance.setTotal(template.getTotal());
         instance.setOffset(template.getOffset());
         instance.setResults(template.getResults());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductProjectionPagedQueryResponse
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductProjectionPagedQueryResponse deepCopy(
+            @Nullable final ProductProjectionPagedQueryResponse template) {
+        if (template == null) {
+            return null;
+        }
+        ProductProjectionPagedQueryResponseImpl instance = new ProductProjectionPagedQueryResponseImpl();
+        instance.setLimit(template.getLimit());
+        instance.setCount(template.getCount());
+        instance.setTotal(template.getTotal());
+        instance.setOffset(template.getOffset());
+        instance.setResults(Optional.ofNullable(template.getResults())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.product.ProductProjection::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

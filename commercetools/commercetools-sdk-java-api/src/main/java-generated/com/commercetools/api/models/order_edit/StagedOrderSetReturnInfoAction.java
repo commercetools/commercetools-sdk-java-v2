@@ -4,7 +4,9 @@ package com.commercetools.api.models.order_edit;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.order.ReturnInfoDraft;
@@ -67,13 +69,32 @@ public interface StagedOrderSetReturnInfoAction extends StagedOrderUpdateAction 
     }
 
     /**
-     * factory method to copy an instance of StagedOrderSetReturnInfoAction
+     * factory method to create a shallow copy StagedOrderSetReturnInfoAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static StagedOrderSetReturnInfoAction of(final StagedOrderSetReturnInfoAction template) {
         StagedOrderSetReturnInfoActionImpl instance = new StagedOrderSetReturnInfoActionImpl();
         instance.setItems(template.getItems());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedOrderSetReturnInfoAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedOrderSetReturnInfoAction deepCopy(@Nullable final StagedOrderSetReturnInfoAction template) {
+        if (template == null) {
+            return null;
+        }
+        StagedOrderSetReturnInfoActionImpl instance = new StagedOrderSetReturnInfoActionImpl();
+        instance.setItems(Optional.ofNullable(template.getItems())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.order.ReturnInfoDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

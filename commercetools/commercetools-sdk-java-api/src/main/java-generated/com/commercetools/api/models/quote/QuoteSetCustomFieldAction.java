@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -73,11 +74,27 @@ public interface QuoteSetCustomFieldAction extends QuoteUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of QuoteSetCustomFieldAction
+     * factory method to create a shallow copy QuoteSetCustomFieldAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static QuoteSetCustomFieldAction of(final QuoteSetCustomFieldAction template) {
+        QuoteSetCustomFieldActionImpl instance = new QuoteSetCustomFieldActionImpl();
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of QuoteSetCustomFieldAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static QuoteSetCustomFieldAction deepCopy(@Nullable final QuoteSetCustomFieldAction template) {
+        if (template == null) {
+            return null;
+        }
         QuoteSetCustomFieldActionImpl instance = new QuoteSetCustomFieldActionImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());

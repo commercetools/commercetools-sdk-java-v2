@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -102,7 +103,7 @@ public interface ChangeQuantityChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of ChangeQuantityChange
+     * factory method to create a shallow copy ChangeQuantityChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -111,6 +112,25 @@ public interface ChangeQuantityChange extends Change {
         instance.setChange(template.getChange());
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChangeQuantityChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChangeQuantityChange deepCopy(@Nullable final ChangeQuantityChange template) {
+        if (template == null) {
+            return null;
+        }
+        ChangeQuantityChangeImpl instance = new ChangeQuantityChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setNextValue(
+            com.commercetools.history.models.change_value.InventoryQuantityValue.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(
+            com.commercetools.history.models.change_value.InventoryQuantityValue.deepCopy(template.getPreviousValue()));
         return instance;
     }
 

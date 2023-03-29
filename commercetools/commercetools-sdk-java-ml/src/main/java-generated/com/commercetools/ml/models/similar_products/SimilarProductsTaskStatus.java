@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -88,7 +89,7 @@ public interface SimilarProductsTaskStatus {
     }
 
     /**
-     * factory method to copy an instance of SimilarProductsTaskStatus
+     * factory method to create a shallow copy SimilarProductsTaskStatus
      * @param template instance to be copied
      * @return copy instance
      */
@@ -97,6 +98,24 @@ public interface SimilarProductsTaskStatus {
         instance.setState(template.getState());
         instance.setExpires(template.getExpires());
         instance.setResult(template.getResult());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SimilarProductsTaskStatus
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SimilarProductsTaskStatus deepCopy(@Nullable final SimilarProductsTaskStatus template) {
+        if (template == null) {
+            return null;
+        }
+        SimilarProductsTaskStatusImpl instance = new SimilarProductsTaskStatusImpl();
+        instance.setState(template.getState());
+        instance.setExpires(template.getExpires());
+        instance.setResult(com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResult
+                .deepCopy(template.getResult()));
         return instance;
     }
 

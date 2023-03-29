@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -50,6 +51,72 @@ public interface AttributeType {
     @NotNull
     @JsonProperty("name")
     public String getName();
+
+    /**
+     * factory method to create a deep copy of AttributeType
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AttributeType deepCopy(@Nullable final AttributeType template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.importapi.models.producttypes.AttributeBooleanType) {
+            return com.commercetools.importapi.models.producttypes.AttributeBooleanType
+                    .deepCopy((com.commercetools.importapi.models.producttypes.AttributeBooleanType) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.producttypes.AttributeDateTimeType) {
+            return com.commercetools.importapi.models.producttypes.AttributeDateTimeType
+                    .deepCopy((com.commercetools.importapi.models.producttypes.AttributeDateTimeType) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.producttypes.AttributeDateType) {
+            return com.commercetools.importapi.models.producttypes.AttributeDateType
+                    .deepCopy((com.commercetools.importapi.models.producttypes.AttributeDateType) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.producttypes.AttributeEnumType) {
+            return com.commercetools.importapi.models.producttypes.AttributeEnumType
+                    .deepCopy((com.commercetools.importapi.models.producttypes.AttributeEnumType) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.producttypes.AttributeLocalizableTextType) {
+            return com.commercetools.importapi.models.producttypes.AttributeLocalizableTextType
+                    .deepCopy((com.commercetools.importapi.models.producttypes.AttributeLocalizableTextType) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.producttypes.AttributeLocalizedEnumType) {
+            return com.commercetools.importapi.models.producttypes.AttributeLocalizedEnumType
+                    .deepCopy((com.commercetools.importapi.models.producttypes.AttributeLocalizedEnumType) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.producttypes.AttributeMoneyType) {
+            return com.commercetools.importapi.models.producttypes.AttributeMoneyType
+                    .deepCopy((com.commercetools.importapi.models.producttypes.AttributeMoneyType) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.producttypes.AttributeNestedType) {
+            return com.commercetools.importapi.models.producttypes.AttributeNestedType
+                    .deepCopy((com.commercetools.importapi.models.producttypes.AttributeNestedType) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.producttypes.AttributeNumberType) {
+            return com.commercetools.importapi.models.producttypes.AttributeNumberType
+                    .deepCopy((com.commercetools.importapi.models.producttypes.AttributeNumberType) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.producttypes.AttributeReferenceType) {
+            return com.commercetools.importapi.models.producttypes.AttributeReferenceType
+                    .deepCopy((com.commercetools.importapi.models.producttypes.AttributeReferenceType) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.producttypes.AttributeSetType) {
+            return com.commercetools.importapi.models.producttypes.AttributeSetType
+                    .deepCopy((com.commercetools.importapi.models.producttypes.AttributeSetType) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.producttypes.AttributeTextType) {
+            return com.commercetools.importapi.models.producttypes.AttributeTextType
+                    .deepCopy((com.commercetools.importapi.models.producttypes.AttributeTextType) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.producttypes.AttributeTimeType) {
+            return com.commercetools.importapi.models.producttypes.AttributeTimeType
+                    .deepCopy((com.commercetools.importapi.models.producttypes.AttributeTimeType) template);
+        }
+        AttributeTypeImpl instance = new AttributeTypeImpl();
+        return instance;
+    }
 
     /**
      * builder for boolean subtype

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -43,6 +44,36 @@ public interface QuoteRequestUpdateAction
     @NotNull
     @JsonProperty("action")
     public String getAction();
+
+    /**
+     * factory method to create a deep copy of QuoteRequestUpdateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static QuoteRequestUpdateAction deepCopy(@Nullable final QuoteRequestUpdateAction template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.quote_request.QuoteRequestChangeQuoteRequestStateAction) {
+            return com.commercetools.api.models.quote_request.QuoteRequestChangeQuoteRequestStateAction.deepCopy(
+                (com.commercetools.api.models.quote_request.QuoteRequestChangeQuoteRequestStateAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.quote_request.QuoteRequestSetCustomFieldAction) {
+            return com.commercetools.api.models.quote_request.QuoteRequestSetCustomFieldAction
+                    .deepCopy((com.commercetools.api.models.quote_request.QuoteRequestSetCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.quote_request.QuoteRequestSetCustomTypeAction) {
+            return com.commercetools.api.models.quote_request.QuoteRequestSetCustomTypeAction
+                    .deepCopy((com.commercetools.api.models.quote_request.QuoteRequestSetCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.quote_request.QuoteRequestTransitionStateAction) {
+            return com.commercetools.api.models.quote_request.QuoteRequestTransitionStateAction
+                    .deepCopy((com.commercetools.api.models.quote_request.QuoteRequestTransitionStateAction) template);
+        }
+        QuoteRequestUpdateActionImpl instance = new QuoteRequestUpdateActionImpl();
+        return instance;
+    }
 
     /**
      * builder for changeQuoteRequestState subtype

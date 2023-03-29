@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -68,7 +69,7 @@ public interface CustomerAddressChangedMessage extends Message {
     }
 
     /**
-     * factory method to copy an instance of CustomerAddressChangedMessage
+     * factory method to create a shallow copy CustomerAddressChangedMessage
      * @param template instance to be copied
      * @return copy instance
      */
@@ -85,6 +86,33 @@ public interface CustomerAddressChangedMessage extends Message {
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setAddress(template.getAddress());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomerAddressChangedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomerAddressChangedMessage deepCopy(@Nullable final CustomerAddressChangedMessage template) {
+        if (template == null) {
+            return null;
+        }
+        CustomerAddressChangedMessageImpl instance = new CustomerAddressChangedMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
+                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setAddress(com.commercetools.api.models.common.Address.deepCopy(template.getAddress()));
         return instance;
     }
 

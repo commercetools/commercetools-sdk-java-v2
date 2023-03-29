@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -40,11 +42,25 @@ public interface AttributeTimeType extends AttributeType {
     }
 
     /**
-     * factory method to copy an instance of AttributeTimeType
+     * factory method to create a shallow copy AttributeTimeType
      * @param template instance to be copied
      * @return copy instance
      */
     public static AttributeTimeType of(final AttributeTimeType template) {
+        AttributeTimeTypeImpl instance = new AttributeTimeTypeImpl();
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of AttributeTimeType
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AttributeTimeType deepCopy(@Nullable final AttributeTimeType template) {
+        if (template == null) {
+            return null;
+        }
         AttributeTimeTypeImpl instance = new AttributeTimeTypeImpl();
         return instance;
     }

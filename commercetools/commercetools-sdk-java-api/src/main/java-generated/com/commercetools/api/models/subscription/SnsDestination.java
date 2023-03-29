@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -106,11 +107,29 @@ public interface SnsDestination extends Destination {
     }
 
     /**
-     * factory method to copy an instance of SnsDestination
+     * factory method to create a shallow copy SnsDestination
      * @param template instance to be copied
      * @return copy instance
      */
     public static SnsDestination of(final SnsDestination template) {
+        SnsDestinationImpl instance = new SnsDestinationImpl();
+        instance.setAccessKey(template.getAccessKey());
+        instance.setAccessSecret(template.getAccessSecret());
+        instance.setTopicArn(template.getTopicArn());
+        instance.setAuthenticationMode(template.getAuthenticationMode());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SnsDestination
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SnsDestination deepCopy(@Nullable final SnsDestination template) {
+        if (template == null) {
+            return null;
+        }
         SnsDestinationImpl instance = new SnsDestinationImpl();
         instance.setAccessKey(template.getAccessKey());
         instance.setAccessSecret(template.getAccessSecret());

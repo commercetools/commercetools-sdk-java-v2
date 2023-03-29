@@ -4,7 +4,9 @@ package com.commercetools.importapi.models.productvariants;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -69,7 +71,7 @@ public interface MoneySetAttribute extends Attribute {
     }
 
     /**
-     * factory method to copy an instance of MoneySetAttribute
+     * factory method to create a shallow copy MoneySetAttribute
      * @param template instance to be copied
      * @return copy instance
      */
@@ -77,6 +79,26 @@ public interface MoneySetAttribute extends Attribute {
         MoneySetAttributeImpl instance = new MoneySetAttributeImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MoneySetAttribute
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MoneySetAttribute deepCopy(@Nullable final MoneySetAttribute template) {
+        if (template == null) {
+            return null;
+        }
+        MoneySetAttributeImpl instance = new MoneySetAttributeImpl();
+        instance.setName(template.getName());
+        instance.setValue(Optional.ofNullable(template.getValue())
+                .map(t -> t.stream()
+                        .map(com.commercetools.importapi.models.common.TypedMoney::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

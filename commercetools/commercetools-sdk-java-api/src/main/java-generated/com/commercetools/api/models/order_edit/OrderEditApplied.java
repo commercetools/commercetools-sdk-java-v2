@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -94,7 +95,7 @@ public interface OrderEditApplied extends OrderEditResult {
     }
 
     /**
-     * factory method to copy an instance of OrderEditApplied
+     * factory method to create a shallow copy OrderEditApplied
      * @param template instance to be copied
      * @return copy instance
      */
@@ -103,6 +104,25 @@ public interface OrderEditApplied extends OrderEditResult {
         instance.setAppliedAt(template.getAppliedAt());
         instance.setExcerptBeforeEdit(template.getExcerptBeforeEdit());
         instance.setExcerptAfterEdit(template.getExcerptAfterEdit());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderEditApplied
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderEditApplied deepCopy(@Nullable final OrderEditApplied template) {
+        if (template == null) {
+            return null;
+        }
+        OrderEditAppliedImpl instance = new OrderEditAppliedImpl();
+        instance.setAppliedAt(template.getAppliedAt());
+        instance.setExcerptBeforeEdit(
+            com.commercetools.api.models.order_edit.OrderExcerpt.deepCopy(template.getExcerptBeforeEdit()));
+        instance.setExcerptAfterEdit(
+            com.commercetools.api.models.order_edit.OrderExcerpt.deepCopy(template.getExcerptAfterEdit()));
         return instance;
     }
 

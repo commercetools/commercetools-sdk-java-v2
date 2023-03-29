@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -68,11 +69,27 @@ public interface Location {
     }
 
     /**
-     * factory method to copy an instance of Location
+     * factory method to create a shallow copy Location
      * @param template instance to be copied
      * @return copy instance
      */
     public static Location of(final Location template) {
+        LocationImpl instance = new LocationImpl();
+        instance.setCountry(template.getCountry());
+        instance.setState(template.getState());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of Location
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static Location deepCopy(@Nullable final Location template) {
+        if (template == null) {
+            return null;
+        }
         LocationImpl instance = new LocationImpl();
         instance.setCountry(template.getCountry());
         instance.setState(template.getState());

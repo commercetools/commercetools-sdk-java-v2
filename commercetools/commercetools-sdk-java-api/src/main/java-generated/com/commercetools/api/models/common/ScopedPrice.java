@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -199,7 +200,7 @@ public interface ScopedPrice extends com.commercetools.api.models.Customizable<S
     }
 
     /**
-     * factory method to copy an instance of ScopedPrice
+     * factory method to create a shallow copy ScopedPrice
      * @param template instance to be copied
      * @return copy instance
      */
@@ -215,6 +216,31 @@ public interface ScopedPrice extends com.commercetools.api.models.Customizable<S
         instance.setValidUntil(template.getValidUntil());
         instance.setDiscounted(template.getDiscounted());
         instance.setCustom(template.getCustom());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ScopedPrice
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ScopedPrice deepCopy(@Nullable final ScopedPrice template) {
+        if (template == null) {
+            return null;
+        }
+        ScopedPriceImpl instance = new ScopedPriceImpl();
+        instance.setId(template.getId());
+        instance.setValue(com.commercetools.api.models.common.TypedMoney.deepCopy(template.getValue()));
+        instance.setCurrentValue(com.commercetools.api.models.common.TypedMoney.deepCopy(template.getCurrentValue()));
+        instance.setCountry(template.getCountry());
+        instance.setCustomerGroup(
+            com.commercetools.api.models.customer_group.CustomerGroupReference.deepCopy(template.getCustomerGroup()));
+        instance.setChannel(com.commercetools.api.models.channel.ChannelReference.deepCopy(template.getChannel()));
+        instance.setValidFrom(template.getValidFrom());
+        instance.setValidUntil(template.getValidUntil());
+        instance.setDiscounted(com.commercetools.api.models.common.DiscountedPrice.deepCopy(template.getDiscounted()));
+        instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         return instance;
     }
 

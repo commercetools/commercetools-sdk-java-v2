@@ -4,7 +4,9 @@ package com.commercetools.ml.models.image_search_config;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -63,13 +65,32 @@ public interface ImageSearchConfigRequest {
     }
 
     /**
-     * factory method to copy an instance of ImageSearchConfigRequest
+     * factory method to create a shallow copy ImageSearchConfigRequest
      * @param template instance to be copied
      * @return copy instance
      */
     public static ImageSearchConfigRequest of(final ImageSearchConfigRequest template) {
         ImageSearchConfigRequestImpl instance = new ImageSearchConfigRequestImpl();
         instance.setActions(template.getActions());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ImageSearchConfigRequest
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ImageSearchConfigRequest deepCopy(@Nullable final ImageSearchConfigRequest template) {
+        if (template == null) {
+            return null;
+        }
+        ImageSearchConfigRequestImpl instance = new ImageSearchConfigRequestImpl();
+        instance.setActions(Optional.ofNullable(template.getActions())
+                .map(t -> t.stream()
+                        .map(com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateAction::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

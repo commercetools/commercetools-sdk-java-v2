@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -196,11 +197,35 @@ public interface FacetRange {
     }
 
     /**
-     * factory method to copy an instance of FacetRange
+     * factory method to create a shallow copy FacetRange
      * @param template instance to be copied
      * @return copy instance
      */
     public static FacetRange of(final FacetRange template) {
+        FacetRangeImpl instance = new FacetRangeImpl();
+        instance.setFrom(template.getFrom());
+        instance.setFromStr(template.getFromStr());
+        instance.setTo(template.getTo());
+        instance.setToStr(template.getToStr());
+        instance.setCount(template.getCount());
+        instance.setProductCount(template.getProductCount());
+        instance.setTotal(template.getTotal());
+        instance.setMin(template.getMin());
+        instance.setMax(template.getMax());
+        instance.setMean(template.getMean());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of FacetRange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static FacetRange deepCopy(@Nullable final FacetRange template) {
+        if (template == null) {
+            return null;
+        }
         FacetRangeImpl instance = new FacetRangeImpl();
         instance.setFrom(template.getFrom());
         instance.setFromStr(template.getFromStr());

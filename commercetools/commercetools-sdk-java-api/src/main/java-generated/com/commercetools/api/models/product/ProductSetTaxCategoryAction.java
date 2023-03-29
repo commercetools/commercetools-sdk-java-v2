@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier;
@@ -58,13 +59,29 @@ public interface ProductSetTaxCategoryAction extends ProductUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ProductSetTaxCategoryAction
+     * factory method to create a shallow copy ProductSetTaxCategoryAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductSetTaxCategoryAction of(final ProductSetTaxCategoryAction template) {
         ProductSetTaxCategoryActionImpl instance = new ProductSetTaxCategoryActionImpl();
         instance.setTaxCategory(template.getTaxCategory());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductSetTaxCategoryAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductSetTaxCategoryAction deepCopy(@Nullable final ProductSetTaxCategoryAction template) {
+        if (template == null) {
+            return null;
+        }
+        ProductSetTaxCategoryActionImpl instance = new ProductSetTaxCategoryActionImpl();
+        instance.setTaxCategory(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier
+                .deepCopy(template.getTaxCategory()));
         return instance;
     }
 

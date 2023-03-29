@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -75,13 +76,30 @@ public interface ProductSetSearchKeywordsAction extends ProductUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ProductSetSearchKeywordsAction
+     * factory method to create a shallow copy ProductSetSearchKeywordsAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductSetSearchKeywordsAction of(final ProductSetSearchKeywordsAction template) {
         ProductSetSearchKeywordsActionImpl instance = new ProductSetSearchKeywordsActionImpl();
         instance.setSearchKeywords(template.getSearchKeywords());
+        instance.setStaged(template.getStaged());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductSetSearchKeywordsAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductSetSearchKeywordsAction deepCopy(@Nullable final ProductSetSearchKeywordsAction template) {
+        if (template == null) {
+            return null;
+        }
+        ProductSetSearchKeywordsActionImpl instance = new ProductSetSearchKeywordsActionImpl();
+        instance.setSearchKeywords(
+            com.commercetools.api.models.product.SearchKeywords.deepCopy(template.getSearchKeywords()));
         instance.setStaged(template.getStaged());
         return instance;
     }

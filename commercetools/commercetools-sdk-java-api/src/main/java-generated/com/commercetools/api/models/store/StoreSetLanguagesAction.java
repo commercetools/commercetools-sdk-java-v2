@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -63,13 +65,28 @@ public interface StoreSetLanguagesAction extends StoreUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of StoreSetLanguagesAction
+     * factory method to create a shallow copy StoreSetLanguagesAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static StoreSetLanguagesAction of(final StoreSetLanguagesAction template) {
         StoreSetLanguagesActionImpl instance = new StoreSetLanguagesActionImpl();
         instance.setLanguages(template.getLanguages());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StoreSetLanguagesAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StoreSetLanguagesAction deepCopy(@Nullable final StoreSetLanguagesAction template) {
+        if (template == null) {
+            return null;
+        }
+        StoreSetLanguagesActionImpl instance = new StoreSetLanguagesActionImpl();
+        instance.setLanguages(Optional.ofNullable(template.getLanguages()).map(ArrayList::new).orElse(null));
         return instance;
     }
 

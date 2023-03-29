@@ -6,6 +6,8 @@ import java.time.LocalDate;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -56,11 +58,26 @@ public interface CustomerSetDateOfBirthAction extends CustomerUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of CustomerSetDateOfBirthAction
+     * factory method to create a shallow copy CustomerSetDateOfBirthAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static CustomerSetDateOfBirthAction of(final CustomerSetDateOfBirthAction template) {
+        CustomerSetDateOfBirthActionImpl instance = new CustomerSetDateOfBirthActionImpl();
+        instance.setDateOfBirth(template.getDateOfBirth());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomerSetDateOfBirthAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomerSetDateOfBirthAction deepCopy(@Nullable final CustomerSetDateOfBirthAction template) {
+        if (template == null) {
+            return null;
+        }
         CustomerSetDateOfBirthActionImpl instance = new CustomerSetDateOfBirthActionImpl();
         instance.setDateOfBirth(template.getDateOfBirth());
         return instance;

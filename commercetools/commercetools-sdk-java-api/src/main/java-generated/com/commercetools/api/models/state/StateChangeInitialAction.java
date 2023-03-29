@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,26 @@ public interface StateChangeInitialAction extends StateUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of StateChangeInitialAction
+     * factory method to create a shallow copy StateChangeInitialAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static StateChangeInitialAction of(final StateChangeInitialAction template) {
+        StateChangeInitialActionImpl instance = new StateChangeInitialActionImpl();
+        instance.setInitial(template.getInitial());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StateChangeInitialAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StateChangeInitialAction deepCopy(@Nullable final StateChangeInitialAction template) {
+        if (template == null) {
+            return null;
+        }
         StateChangeInitialActionImpl instance = new StateChangeInitialActionImpl();
         instance.setInitial(template.getInitial());
         return instance;

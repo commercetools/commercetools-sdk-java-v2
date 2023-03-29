@@ -146,15 +146,10 @@ public interface TextLineItemDraft extends com.commercetools.api.models.Customiz
         }
         TextLineItemDraftImpl instance = new TextLineItemDraftImpl();
         instance.setAddedAt(template.getAddedAt());
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
-                .orElse(null));
-        instance.setDescription(Optional.ofNullable(template.getDescription())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setName(Optional.ofNullable(template.getName())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
         instance.setQuantity(template.getQuantity());
         return instance;
     }

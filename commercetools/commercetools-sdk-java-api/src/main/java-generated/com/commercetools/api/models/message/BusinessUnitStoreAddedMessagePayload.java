@@ -84,9 +84,7 @@ public interface BusinessUnitStoreAddedMessagePayload extends MessagePayload {
             return null;
         }
         BusinessUnitStoreAddedMessagePayloadImpl instance = new BusinessUnitStoreAddedMessagePayloadImpl();
-        instance.setStore(Optional.ofNullable(template.getStore())
-                .map(com.commercetools.api.models.store.StoreKeyReference::deepCopy)
-                .orElse(null));
+        instance.setStore(com.commercetools.api.models.store.StoreKeyReference.deepCopy(template.getStore()));
         return instance;
     }
 

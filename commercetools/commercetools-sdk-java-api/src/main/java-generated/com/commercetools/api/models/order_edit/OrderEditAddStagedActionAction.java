@@ -83,9 +83,8 @@ public interface OrderEditAddStagedActionAction extends OrderEditUpdateAction {
             return null;
         }
         OrderEditAddStagedActionActionImpl instance = new OrderEditAddStagedActionActionImpl();
-        instance.setStagedAction(Optional.ofNullable(template.getStagedAction())
-                .map(com.commercetools.api.models.order.StagedOrderUpdateAction::deepCopy)
-                .orElse(null));
+        instance.setStagedAction(
+            com.commercetools.api.models.order.StagedOrderUpdateAction.deepCopy(template.getStagedAction()));
         return instance;
     }
 

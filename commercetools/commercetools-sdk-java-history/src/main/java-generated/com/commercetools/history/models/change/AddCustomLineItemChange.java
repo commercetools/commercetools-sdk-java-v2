@@ -127,12 +127,9 @@ public interface AddCustomLineItemChange extends Change {
         }
         AddCustomLineItemChangeImpl instance = new AddCustomLineItemChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.common.CustomLineItem::deepCopy)
-                .orElse(null));
-        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(com.commercetools.history.models.common.CustomLineItem::deepCopy)
-                .orElse(null));
+        instance.setNextValue(com.commercetools.history.models.common.CustomLineItem.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.CustomLineItem.deepCopy(template.getPreviousValue()));
         return instance;
     }
 

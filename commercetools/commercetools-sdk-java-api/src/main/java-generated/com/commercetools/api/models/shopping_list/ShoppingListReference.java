@@ -99,9 +99,7 @@ public interface ShoppingListReference extends Reference, com.commercetools.api.
         }
         ShoppingListReferenceImpl instance = new ShoppingListReferenceImpl();
         instance.setId(template.getId());
-        instance.setObj(Optional.ofNullable(template.getObj())
-                .map(com.commercetools.api.models.shopping_list.ShoppingList::deepCopy)
-                .orElse(null));
+        instance.setObj(com.commercetools.api.models.shopping_list.ShoppingList.deepCopy(template.getObj()));
         return instance;
     }
 

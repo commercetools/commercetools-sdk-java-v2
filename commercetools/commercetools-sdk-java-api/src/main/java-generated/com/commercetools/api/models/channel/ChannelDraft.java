@@ -187,21 +187,12 @@ public interface ChannelDraft extends com.commercetools.api.models.CustomizableD
         ChannelDraftImpl instance = new ChannelDraftImpl();
         instance.setKey(template.getKey());
         instance.setRoles(Optional.ofNullable(template.getRoles()).map(ArrayList::new).orElse(null));
-        instance.setName(Optional.ofNullable(template.getName())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setDescription(Optional.ofNullable(template.getDescription())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setAddress(Optional.ofNullable(template.getAddress())
-                .map(com.commercetools.api.models.common.BaseAddress::deepCopy)
-                .orElse(null));
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
-                .orElse(null));
-        instance.setGeoLocation(Optional.ofNullable(template.getGeoLocation())
-                .map(com.commercetools.api.models.common.GeoJson::deepCopy)
-                .orElse(null));
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setAddress(com.commercetools.api.models.common.BaseAddress.deepCopy(template.getAddress()));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setGeoLocation(com.commercetools.api.models.common.GeoJson.deepCopy(template.getGeoLocation()));
         return instance;
     }
 

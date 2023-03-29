@@ -128,9 +128,8 @@ public interface ProductPublishedMessagePayload extends MessagePayload {
         ProductPublishedMessagePayloadImpl instance = new ProductPublishedMessagePayloadImpl();
         instance.setRemovedImageUrls(
             Optional.ofNullable(template.getRemovedImageUrls()).map(ArrayList::new).orElse(null));
-        instance.setProductProjection(Optional.ofNullable(template.getProductProjection())
-                .map(com.commercetools.api.models.product.ProductProjection::deepCopy)
-                .orElse(null));
+        instance.setProductProjection(
+            com.commercetools.api.models.product.ProductProjection.deepCopy(template.getProductProjection()));
         instance.setScope(template.getScope());
         return instance;
     }

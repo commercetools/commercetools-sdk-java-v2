@@ -234,29 +234,22 @@ public interface CustomShippingDraft
         CustomShippingDraftImpl instance = new CustomShippingDraftImpl();
         instance.setKey(template.getKey());
         instance.setShippingMethodName(template.getShippingMethodName());
-        instance.setShippingAddress(Optional.ofNullable(template.getShippingAddress())
-                .map(com.commercetools.api.models.common.BaseAddress::deepCopy)
-                .orElse(null));
-        instance.setShippingRate(Optional.ofNullable(template.getShippingRate())
-                .map(com.commercetools.api.models.shipping_method.ShippingRateDraft::deepCopy)
-                .orElse(null));
-        instance.setShippingRateInput(Optional.ofNullable(template.getShippingRateInput())
-                .map(com.commercetools.api.models.cart.ShippingRateInputDraft::deepCopy)
-                .orElse(null));
-        instance.setTaxCategory(Optional.ofNullable(template.getTaxCategory())
-                .map(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier::deepCopy)
-                .orElse(null));
-        instance.setExternalTaxRate(Optional.ofNullable(template.getExternalTaxRate())
-                .map(com.commercetools.api.models.cart.ExternalTaxRateDraft::deepCopy)
-                .orElse(null));
+        instance.setShippingAddress(
+            com.commercetools.api.models.common.BaseAddress.deepCopy(template.getShippingAddress()));
+        instance.setShippingRate(
+            com.commercetools.api.models.shipping_method.ShippingRateDraft.deepCopy(template.getShippingRate()));
+        instance.setShippingRateInput(
+            com.commercetools.api.models.cart.ShippingRateInputDraft.deepCopy(template.getShippingRateInput()));
+        instance.setTaxCategory(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier
+                .deepCopy(template.getTaxCategory()));
+        instance.setExternalTaxRate(
+            com.commercetools.api.models.cart.ExternalTaxRateDraft.deepCopy(template.getExternalTaxRate()));
         instance.setDeliveries(Optional.ofNullable(template.getDeliveries())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.order.DeliveryDraft::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;
     }
 

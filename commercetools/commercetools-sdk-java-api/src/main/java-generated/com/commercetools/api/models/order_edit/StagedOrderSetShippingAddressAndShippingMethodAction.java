@@ -120,15 +120,11 @@ public interface StagedOrderSetShippingAddressAndShippingMethodAction extends St
             return null;
         }
         StagedOrderSetShippingAddressAndShippingMethodActionImpl instance = new StagedOrderSetShippingAddressAndShippingMethodActionImpl();
-        instance.setAddress(Optional.ofNullable(template.getAddress())
-                .map(com.commercetools.api.models.common.BaseAddress::deepCopy)
-                .orElse(null));
-        instance.setShippingMethod(Optional.ofNullable(template.getShippingMethod())
-                .map(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier::deepCopy)
-                .orElse(null));
-        instance.setExternalTaxRate(Optional.ofNullable(template.getExternalTaxRate())
-                .map(com.commercetools.api.models.cart.ExternalTaxRateDraft::deepCopy)
-                .orElse(null));
+        instance.setAddress(com.commercetools.api.models.common.BaseAddress.deepCopy(template.getAddress()));
+        instance.setShippingMethod(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier
+                .deepCopy(template.getShippingMethod()));
+        instance.setExternalTaxRate(
+            com.commercetools.api.models.cart.ExternalTaxRateDraft.deepCopy(template.getExternalTaxRate()));
         return instance;
     }
 

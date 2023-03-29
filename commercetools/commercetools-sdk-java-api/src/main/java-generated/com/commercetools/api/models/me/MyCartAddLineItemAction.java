@@ -229,18 +229,13 @@ public interface MyCartAddLineItemAction
         instance.setSku(template.getSku());
         instance.setQuantity(template.getQuantity());
         instance.setAddedAt(template.getAddedAt());
-        instance.setDistributionChannel(Optional.ofNullable(template.getDistributionChannel())
-                .map(com.commercetools.api.models.channel.ChannelResourceIdentifier::deepCopy)
-                .orElse(null));
-        instance.setSupplyChannel(Optional.ofNullable(template.getSupplyChannel())
-                .map(com.commercetools.api.models.channel.ChannelResourceIdentifier::deepCopy)
-                .orElse(null));
-        instance.setShippingDetails(Optional.ofNullable(template.getShippingDetails())
-                .map(com.commercetools.api.models.cart.ItemShippingDetailsDraft::deepCopy)
-                .orElse(null));
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
-                .orElse(null));
+        instance.setDistributionChannel(
+            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getDistributionChannel()));
+        instance.setSupplyChannel(
+            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getSupplyChannel()));
+        instance.setShippingDetails(
+            com.commercetools.api.models.cart.ItemShippingDetailsDraft.deepCopy(template.getShippingDetails()));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;
     }
 

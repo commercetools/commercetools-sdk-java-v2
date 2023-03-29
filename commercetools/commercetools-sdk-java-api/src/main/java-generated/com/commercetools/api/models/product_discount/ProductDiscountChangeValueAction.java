@@ -82,9 +82,8 @@ public interface ProductDiscountChangeValueAction extends ProductDiscountUpdateA
             return null;
         }
         ProductDiscountChangeValueActionImpl instance = new ProductDiscountChangeValueActionImpl();
-        instance.setValue(Optional.ofNullable(template.getValue())
-                .map(com.commercetools.api.models.product_discount.ProductDiscountValueDraft::deepCopy)
-                .orElse(null));
+        instance.setValue(
+            com.commercetools.api.models.product_discount.ProductDiscountValueDraft.deepCopy(template.getValue()));
         return instance;
     }
 

@@ -109,9 +109,7 @@ public interface AddReturnInfoChange extends Change {
         }
         AddReturnInfoChangeImpl instance = new AddReturnInfoChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.common.ReturnInfo::deepCopy)
-                .orElse(null));
+        instance.setNextValue(com.commercetools.history.models.common.ReturnInfo.deepCopy(template.getNextValue()));
         return instance;
     }
 

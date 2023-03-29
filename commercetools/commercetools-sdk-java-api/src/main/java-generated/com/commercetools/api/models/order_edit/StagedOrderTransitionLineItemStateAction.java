@@ -156,12 +156,9 @@ public interface StagedOrderTransitionLineItemStateAction extends StagedOrderUpd
         StagedOrderTransitionLineItemStateActionImpl instance = new StagedOrderTransitionLineItemStateActionImpl();
         instance.setLineItemId(template.getLineItemId());
         instance.setQuantity(template.getQuantity());
-        instance.setFromState(Optional.ofNullable(template.getFromState())
-                .map(com.commercetools.api.models.state.StateResourceIdentifier::deepCopy)
-                .orElse(null));
-        instance.setToState(Optional.ofNullable(template.getToState())
-                .map(com.commercetools.api.models.state.StateResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setFromState(
+            com.commercetools.api.models.state.StateResourceIdentifier.deepCopy(template.getFromState()));
+        instance.setToState(com.commercetools.api.models.state.StateResourceIdentifier.deepCopy(template.getToState()));
         instance.setActualTransitionDate(template.getActualTransitionDate());
         return instance;
     }

@@ -366,32 +366,21 @@ public interface Review extends BaseResource, ReviewMixin, com.commercetools.api
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(Optional.ofNullable(template.getLastModifiedBy())
-                .map(com.commercetools.api.models.common.LastModifiedBy::deepCopy)
-                .orElse(null));
-        instance.setCreatedBy(Optional.ofNullable(template.getCreatedBy())
-                .map(com.commercetools.api.models.common.CreatedBy::deepCopy)
-                .orElse(null));
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setKey(template.getKey());
         instance.setUniquenessValue(template.getUniquenessValue());
         instance.setLocale(template.getLocale());
         instance.setAuthorName(template.getAuthorName());
         instance.setTitle(template.getTitle());
         instance.setText(template.getText());
-        instance.setTarget(Optional.ofNullable(template.getTarget())
-                .map(com.commercetools.api.models.common.Reference::deepCopy)
-                .orElse(null));
+        instance.setTarget(com.commercetools.api.models.common.Reference.deepCopy(template.getTarget()));
         instance.setIncludedInStatistics(template.getIncludedInStatistics());
         instance.setRating(template.getRating());
-        instance.setState(Optional.ofNullable(template.getState())
-                .map(com.commercetools.api.models.state.StateReference::deepCopy)
-                .orElse(null));
-        instance.setCustomer(Optional.ofNullable(template.getCustomer())
-                .map(com.commercetools.api.models.customer.CustomerReference::deepCopy)
-                .orElse(null));
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFields::deepCopy)
-                .orElse(null));
+        instance.setState(com.commercetools.api.models.state.StateReference.deepCopy(template.getState()));
+        instance.setCustomer(com.commercetools.api.models.customer.CustomerReference.deepCopy(template.getCustomer()));
+        instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         return instance;
     }
 

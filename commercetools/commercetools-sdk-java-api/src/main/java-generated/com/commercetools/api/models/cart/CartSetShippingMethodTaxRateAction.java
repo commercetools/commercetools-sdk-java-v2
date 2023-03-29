@@ -80,9 +80,8 @@ public interface CartSetShippingMethodTaxRateAction extends CartUpdateAction {
             return null;
         }
         CartSetShippingMethodTaxRateActionImpl instance = new CartSetShippingMethodTaxRateActionImpl();
-        instance.setExternalTaxRate(Optional.ofNullable(template.getExternalTaxRate())
-                .map(com.commercetools.api.models.cart.ExternalTaxRateDraft::deepCopy)
-                .orElse(null));
+        instance.setExternalTaxRate(
+            com.commercetools.api.models.cart.ExternalTaxRateDraft.deepCopy(template.getExternalTaxRate()));
         return instance;
     }
 

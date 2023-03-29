@@ -111,9 +111,7 @@ public interface DuplicateAttributeValueError extends ErrorObject {
         DuplicateAttributeValueErrorImpl instance = new DuplicateAttributeValueErrorImpl();
         instance.setMessage(template.getMessage());
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
-        instance.setAttribute(Optional.ofNullable(template.getAttribute())
-                .map(com.commercetools.api.models.product.Attribute::deepCopy)
-                .orElse(null));
+        instance.setAttribute(com.commercetools.api.models.product.Attribute.deepCopy(template.getAttribute()));
         return instance;
     }
 

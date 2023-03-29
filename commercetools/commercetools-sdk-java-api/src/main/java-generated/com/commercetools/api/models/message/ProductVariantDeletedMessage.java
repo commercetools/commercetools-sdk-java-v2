@@ -127,23 +127,15 @@ public interface ProductVariantDeletedMessage extends Message {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(Optional.ofNullable(template.getLastModifiedBy())
-                .map(com.commercetools.api.models.common.LastModifiedBy::deepCopy)
-                .orElse(null));
-        instance.setCreatedBy(Optional.ofNullable(template.getCreatedBy())
-                .map(com.commercetools.api.models.common.CreatedBy::deepCopy)
-                .orElse(null));
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
-        instance.setResource(Optional.ofNullable(template.getResource())
-                .map(com.commercetools.api.models.common.Reference::deepCopy)
-                .orElse(null));
+        instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(Optional.ofNullable(template.getResourceUserProvidedIdentifiers())
-                .map(com.commercetools.api.models.message.UserProvidedIdentifiers::deepCopy)
-                .orElse(null));
-        instance.setVariant(Optional.ofNullable(template.getVariant())
-                .map(com.commercetools.api.models.product.ProductVariant::deepCopy)
-                .orElse(null));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
+                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setVariant(com.commercetools.api.models.product.ProductVariant.deepCopy(template.getVariant()));
         instance.setRemovedImageUrls(
             Optional.ofNullable(template.getRemovedImageUrls()).map(ArrayList::new).orElse(null));
         return instance;

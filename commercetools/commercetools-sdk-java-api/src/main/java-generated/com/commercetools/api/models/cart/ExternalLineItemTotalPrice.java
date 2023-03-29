@@ -98,12 +98,8 @@ public interface ExternalLineItemTotalPrice {
             return null;
         }
         ExternalLineItemTotalPriceImpl instance = new ExternalLineItemTotalPriceImpl();
-        instance.setPrice(Optional.ofNullable(template.getPrice())
-                .map(com.commercetools.api.models.common.Money::deepCopy)
-                .orElse(null));
-        instance.setTotalPrice(Optional.ofNullable(template.getTotalPrice())
-                .map(com.commercetools.api.models.common.Money::deepCopy)
-                .orElse(null));
+        instance.setPrice(com.commercetools.api.models.common.Money.deepCopy(template.getPrice()));
+        instance.setTotalPrice(com.commercetools.api.models.common.Money.deepCopy(template.getTotalPrice()));
         return instance;
     }
 

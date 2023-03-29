@@ -96,12 +96,9 @@ public interface DiscountedPriceDraft extends io.vrap.rmf.base.client.Draft<Disc
             return null;
         }
         DiscountedPriceDraftImpl instance = new DiscountedPriceDraftImpl();
-        instance.setValue(Optional.ofNullable(template.getValue())
-                .map(com.commercetools.api.models.common.Money::deepCopy)
-                .orElse(null));
-        instance.setDiscount(Optional.ofNullable(template.getDiscount())
-                .map(com.commercetools.api.models.product_discount.ProductDiscountReference::deepCopy)
-                .orElse(null));
+        instance.setValue(com.commercetools.api.models.common.Money.deepCopy(template.getValue()));
+        instance.setDiscount(
+            com.commercetools.api.models.product_discount.ProductDiscountReference.deepCopy(template.getDiscount()));
         return instance;
     }
 

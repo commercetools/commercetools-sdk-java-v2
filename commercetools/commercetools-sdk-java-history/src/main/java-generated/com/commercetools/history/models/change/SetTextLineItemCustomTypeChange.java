@@ -146,15 +146,11 @@ public interface SetTextLineItemCustomTypeChange extends Change {
         }
         SetTextLineItemCustomTypeChangeImpl instance = new SetTextLineItemCustomTypeChangeImpl();
         instance.setChange(template.getChange());
-        instance.setTextLineItem(Optional.ofNullable(template.getTextLineItem())
-                .map(com.commercetools.history.models.change_value.TextLineItemValue::deepCopy)
-                .orElse(null));
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.common.CustomFields::deepCopy)
-                .orElse(null));
-        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(com.commercetools.history.models.common.CustomFields::deepCopy)
-                .orElse(null));
+        instance.setTextLineItem(
+            com.commercetools.history.models.change_value.TextLineItemValue.deepCopy(template.getTextLineItem()));
+        instance.setNextValue(com.commercetools.history.models.common.CustomFields.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.CustomFields.deepCopy(template.getPreviousValue()));
         return instance;
     }
 

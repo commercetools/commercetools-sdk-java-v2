@@ -161,9 +161,8 @@ public interface ChangeCustomLineItemQuantityChange extends Change {
         }
         ChangeCustomLineItemQuantityChangeImpl instance = new ChangeCustomLineItemQuantityChangeImpl();
         instance.setChange(template.getChange());
-        instance.setCustomLineItem(Optional.ofNullable(template.getCustomLineItem())
-                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setCustomLineItem(
+            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getCustomLineItem()));
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());

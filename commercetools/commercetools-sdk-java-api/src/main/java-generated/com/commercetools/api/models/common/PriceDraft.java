@@ -248,29 +248,22 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
         }
         PriceDraftImpl instance = new PriceDraftImpl();
         instance.setKey(template.getKey());
-        instance.setValue(Optional.ofNullable(template.getValue())
-                .map(com.commercetools.api.models.common.Money::deepCopy)
-                .orElse(null));
+        instance.setValue(com.commercetools.api.models.common.Money.deepCopy(template.getValue()));
         instance.setCountry(template.getCountry());
-        instance.setCustomerGroup(Optional.ofNullable(template.getCustomerGroup())
-                .map(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier::deepCopy)
-                .orElse(null));
-        instance.setChannel(Optional.ofNullable(template.getChannel())
-                .map(com.commercetools.api.models.channel.ChannelResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier
+                .deepCopy(template.getCustomerGroup()));
+        instance.setChannel(
+            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getChannel()));
         instance.setValidFrom(template.getValidFrom());
         instance.setValidUntil(template.getValidUntil());
-        instance.setDiscounted(Optional.ofNullable(template.getDiscounted())
-                .map(com.commercetools.api.models.common.DiscountedPriceDraft::deepCopy)
-                .orElse(null));
+        instance.setDiscounted(
+            com.commercetools.api.models.common.DiscountedPriceDraft.deepCopy(template.getDiscounted()));
         instance.setTiers(Optional.ofNullable(template.getTiers())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.common.PriceTierDraft::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;
     }
 

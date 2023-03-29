@@ -119,12 +119,10 @@ public interface OrderEditApplied extends OrderEditResult {
         }
         OrderEditAppliedImpl instance = new OrderEditAppliedImpl();
         instance.setAppliedAt(template.getAppliedAt());
-        instance.setExcerptBeforeEdit(Optional.ofNullable(template.getExcerptBeforeEdit())
-                .map(com.commercetools.api.models.order_edit.OrderExcerpt::deepCopy)
-                .orElse(null));
-        instance.setExcerptAfterEdit(Optional.ofNullable(template.getExcerptAfterEdit())
-                .map(com.commercetools.api.models.order_edit.OrderExcerpt::deepCopy)
-                .orElse(null));
+        instance.setExcerptBeforeEdit(
+            com.commercetools.api.models.order_edit.OrderExcerpt.deepCopy(template.getExcerptBeforeEdit()));
+        instance.setExcerptAfterEdit(
+            com.commercetools.api.models.order_edit.OrderExcerpt.deepCopy(template.getExcerptAfterEdit()));
         return instance;
     }
 

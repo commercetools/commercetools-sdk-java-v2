@@ -82,9 +82,7 @@ public interface StagedOrderSetShippingAddressAction extends StagedOrderUpdateAc
             return null;
         }
         StagedOrderSetShippingAddressActionImpl instance = new StagedOrderSetShippingAddressActionImpl();
-        instance.setAddress(Optional.ofNullable(template.getAddress())
-                .map(com.commercetools.api.models.common.BaseAddress::deepCopy)
-                .orElse(null));
+        instance.setAddress(com.commercetools.api.models.common.BaseAddress.deepCopy(template.getAddress()));
         return instance;
     }
 

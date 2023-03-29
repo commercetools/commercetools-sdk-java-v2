@@ -117,12 +117,8 @@ public interface StagedQuoteStateTransitionMessagePayload extends MessagePayload
             return null;
         }
         StagedQuoteStateTransitionMessagePayloadImpl instance = new StagedQuoteStateTransitionMessagePayloadImpl();
-        instance.setState(Optional.ofNullable(template.getState())
-                .map(com.commercetools.api.models.state.StateReference::deepCopy)
-                .orElse(null));
-        instance.setOldState(Optional.ofNullable(template.getOldState())
-                .map(com.commercetools.api.models.state.StateReference::deepCopy)
-                .orElse(null));
+        instance.setState(com.commercetools.api.models.state.StateReference.deepCopy(template.getState()));
+        instance.setOldState(com.commercetools.api.models.state.StateReference.deepCopy(template.getOldState()));
         instance.setForce(template.getForce());
         return instance;
     }

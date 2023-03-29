@@ -145,12 +145,10 @@ public interface SetAttributeChange extends Change {
         SetAttributeChangeImpl instance = new SetAttributeChangeImpl();
         instance.setChange(template.getChange());
         instance.setCatalogData(template.getCatalogData());
-        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(com.commercetools.history.models.change_value.AttributeValue::deepCopy)
-                .orElse(null));
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.change_value.AttributeValue::deepCopy)
-                .orElse(null));
+        instance.setPreviousValue(
+            com.commercetools.history.models.change_value.AttributeValue.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(
+            com.commercetools.history.models.change_value.AttributeValue.deepCopy(template.getNextValue()));
         return instance;
     }
 

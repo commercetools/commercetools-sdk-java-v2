@@ -94,11 +94,8 @@ public interface CustomerSignInResult {
             return null;
         }
         CustomerSignInResultImpl instance = new CustomerSignInResultImpl();
-        instance.setCustomer(Optional.ofNullable(template.getCustomer())
-                .map(com.commercetools.api.models.customer.Customer::deepCopy)
-                .orElse(null));
-        instance.setCart(
-            Optional.ofNullable(template.getCart()).map(com.commercetools.api.models.cart.Cart::deepCopy).orElse(null));
+        instance.setCustomer(com.commercetools.api.models.customer.Customer.deepCopy(template.getCustomer()));
+        instance.setCart(com.commercetools.api.models.cart.Cart.deepCopy(template.getCart()));
         return instance;
     }
 

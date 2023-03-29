@@ -109,9 +109,7 @@ public interface PaymentStatusDraft extends io.vrap.rmf.base.client.Draft<Paymen
         PaymentStatusDraftImpl instance = new PaymentStatusDraftImpl();
         instance.setInterfaceCode(template.getInterfaceCode());
         instance.setInterfaceText(template.getInterfaceText());
-        instance.setState(Optional.ofNullable(template.getState())
-                .map(com.commercetools.api.models.state.StateResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setState(com.commercetools.api.models.state.StateResourceIdentifier.deepCopy(template.getState()));
         return instance;
     }
 

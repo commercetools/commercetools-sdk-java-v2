@@ -109,9 +109,8 @@ public interface AddAttributeDefinitionChange extends Change {
         }
         AddAttributeDefinitionChangeImpl instance = new AddAttributeDefinitionChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.common.AttributeDefinition::deepCopy)
-                .orElse(null));
+        instance.setNextValue(
+            com.commercetools.history.models.common.AttributeDefinition.deepCopy(template.getNextValue()));
         return instance;
     }
 

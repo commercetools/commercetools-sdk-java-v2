@@ -167,9 +167,7 @@ public interface MyShoppingListAddLineItemAction extends MyShoppingListUpdateAct
         instance.setVariantId(template.getVariantId());
         instance.setQuantity(template.getQuantity());
         instance.setAddedAt(template.getAddedAt());
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;
     }
 

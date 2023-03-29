@@ -119,9 +119,7 @@ public interface ProductPriceRemovedMessagePayload extends MessagePayload {
         }
         ProductPriceRemovedMessagePayloadImpl instance = new ProductPriceRemovedMessagePayloadImpl();
         instance.setVariantId(template.getVariantId());
-        instance.setPrice(Optional.ofNullable(template.getPrice())
-                .map(com.commercetools.api.models.common.Price::deepCopy)
-                .orElse(null));
+        instance.setPrice(com.commercetools.api.models.common.Price.deepCopy(template.getPrice()));
         instance.setStaged(template.getStaged());
         return instance;
     }

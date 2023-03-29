@@ -103,9 +103,7 @@ public interface StagedOrderSetLineItemPriceAction extends StagedOrderUpdateActi
         }
         StagedOrderSetLineItemPriceActionImpl instance = new StagedOrderSetLineItemPriceActionImpl();
         instance.setLineItemId(template.getLineItemId());
-        instance.setExternalPrice(Optional.ofNullable(template.getExternalPrice())
-                .map(com.commercetools.api.models.common.Money::deepCopy)
-                .orElse(null));
+        instance.setExternalPrice(com.commercetools.api.models.common.Money.deepCopy(template.getExternalPrice()));
         return instance;
     }
 

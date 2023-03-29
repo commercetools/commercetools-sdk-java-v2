@@ -82,9 +82,7 @@ public interface CustomFieldSetType extends FieldType {
             return null;
         }
         CustomFieldSetTypeImpl instance = new CustomFieldSetTypeImpl();
-        instance.setElementType(Optional.ofNullable(template.getElementType())
-                .map(com.commercetools.api.models.type.FieldType::deepCopy)
-                .orElse(null));
+        instance.setElementType(com.commercetools.api.models.type.FieldType.deepCopy(template.getElementType()));
         return instance;
     }
 

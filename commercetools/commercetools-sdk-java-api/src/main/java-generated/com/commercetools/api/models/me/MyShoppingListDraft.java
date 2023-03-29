@@ -196,12 +196,9 @@ public interface MyShoppingListDraft extends com.commercetools.api.models.Custom
             return null;
         }
         MyShoppingListDraftImpl instance = new MyShoppingListDraftImpl();
-        instance.setName(Optional.ofNullable(template.getName())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setDescription(Optional.ofNullable(template.getDescription())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
         instance.setLineItems(Optional.ofNullable(template.getLineItems())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft::deepCopy)
@@ -212,13 +209,9 @@ public interface MyShoppingListDraft extends com.commercetools.api.models.Custom
                         .map(com.commercetools.api.models.shopping_list.TextLineItemDraft::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
-        instance.setStore(Optional.ofNullable(template.getStore())
-                .map(com.commercetools.api.models.store.StoreResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setStore(com.commercetools.api.models.store.StoreResourceIdentifier.deepCopy(template.getStore()));
         return instance;
     }
 

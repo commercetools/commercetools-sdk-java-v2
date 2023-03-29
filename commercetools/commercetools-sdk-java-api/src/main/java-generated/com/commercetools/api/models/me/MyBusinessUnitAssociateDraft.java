@@ -95,9 +95,7 @@ public interface MyBusinessUnitAssociateDraft extends io.vrap.rmf.base.client.Dr
         }
         MyBusinessUnitAssociateDraftImpl instance = new MyBusinessUnitAssociateDraftImpl();
         instance.setVersion(template.getVersion());
-        instance.setCustomer(Optional.ofNullable(template.getCustomer())
-                .map(com.commercetools.api.models.me.MyCustomerDraft::deepCopy)
-                .orElse(null));
+        instance.setCustomer(com.commercetools.api.models.me.MyCustomerDraft.deepCopy(template.getCustomer()));
         return instance;
     }
 

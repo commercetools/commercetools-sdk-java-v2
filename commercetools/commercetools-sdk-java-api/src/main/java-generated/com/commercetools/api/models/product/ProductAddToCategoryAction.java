@@ -115,9 +115,8 @@ public interface ProductAddToCategoryAction extends ProductUpdateAction {
             return null;
         }
         ProductAddToCategoryActionImpl instance = new ProductAddToCategoryActionImpl();
-        instance.setCategory(Optional.ofNullable(template.getCategory())
-                .map(com.commercetools.api.models.category.CategoryResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setCategory(
+            com.commercetools.api.models.category.CategoryResourceIdentifier.deepCopy(template.getCategory()));
         instance.setOrderHint(template.getOrderHint());
         instance.setStaged(template.getStaged());
         return instance;

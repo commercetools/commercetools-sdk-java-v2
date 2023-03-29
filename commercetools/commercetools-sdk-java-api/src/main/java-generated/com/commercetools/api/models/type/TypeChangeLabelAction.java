@@ -101,9 +101,7 @@ public interface TypeChangeLabelAction extends TypeUpdateAction {
         }
         TypeChangeLabelActionImpl instance = new TypeChangeLabelActionImpl();
         instance.setFieldName(template.getFieldName());
-        instance.setLabel(Optional.ofNullable(template.getLabel())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setLabel(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getLabel()));
         return instance;
     }
 

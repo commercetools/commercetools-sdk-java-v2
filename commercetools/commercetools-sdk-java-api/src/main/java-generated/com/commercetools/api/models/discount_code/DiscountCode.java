@@ -431,18 +431,12 @@ public interface DiscountCode
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(Optional.ofNullable(template.getLastModifiedBy())
-                .map(com.commercetools.api.models.common.LastModifiedBy::deepCopy)
-                .orElse(null));
-        instance.setCreatedBy(Optional.ofNullable(template.getCreatedBy())
-                .map(com.commercetools.api.models.common.CreatedBy::deepCopy)
-                .orElse(null));
-        instance.setName(Optional.ofNullable(template.getName())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setDescription(Optional.ofNullable(template.getDescription())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
         instance.setCode(template.getCode());
         instance.setCartDiscounts(Optional.ofNullable(template.getCartDiscounts())
                 .map(t -> t.stream()
@@ -458,9 +452,7 @@ public interface DiscountCode
                 .orElse(null));
         instance.setMaxApplications(template.getMaxApplications());
         instance.setMaxApplicationsPerCustomer(template.getMaxApplicationsPerCustomer());
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFields::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         instance.setGroups(Optional.ofNullable(template.getGroups()).map(ArrayList::new).orElse(null));
         instance.setValidFrom(template.getValidFrom());
         instance.setValidUntil(template.getValidUntil());

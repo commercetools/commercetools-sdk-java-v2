@@ -312,32 +312,19 @@ public interface Channel extends BaseResource, ChannelMixin, com.commercetools.a
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(Optional.ofNullable(template.getLastModifiedBy())
-                .map(com.commercetools.api.models.common.LastModifiedBy::deepCopy)
-                .orElse(null));
-        instance.setCreatedBy(Optional.ofNullable(template.getCreatedBy())
-                .map(com.commercetools.api.models.common.CreatedBy::deepCopy)
-                .orElse(null));
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setKey(template.getKey());
         instance.setRoles(Optional.ofNullable(template.getRoles()).map(ArrayList::new).orElse(null));
-        instance.setName(Optional.ofNullable(template.getName())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setDescription(Optional.ofNullable(template.getDescription())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setAddress(Optional.ofNullable(template.getAddress())
-                .map(com.commercetools.api.models.common.Address::deepCopy)
-                .orElse(null));
-        instance.setReviewRatingStatistics(Optional.ofNullable(template.getReviewRatingStatistics())
-                .map(com.commercetools.api.models.review.ReviewRatingStatistics::deepCopy)
-                .orElse(null));
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFields::deepCopy)
-                .orElse(null));
-        instance.setGeoLocation(Optional.ofNullable(template.getGeoLocation())
-                .map(com.commercetools.api.models.common.GeoJson::deepCopy)
-                .orElse(null));
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setAddress(com.commercetools.api.models.common.Address.deepCopy(template.getAddress()));
+        instance.setReviewRatingStatistics(
+            com.commercetools.api.models.review.ReviewRatingStatistics.deepCopy(template.getReviewRatingStatistics()));
+        instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
+        instance.setGeoLocation(com.commercetools.api.models.common.GeoJson.deepCopy(template.getGeoLocation()));
         return instance;
     }
 

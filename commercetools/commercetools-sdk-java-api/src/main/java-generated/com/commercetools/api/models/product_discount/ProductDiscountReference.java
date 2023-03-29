@@ -100,9 +100,7 @@ public interface ProductDiscountReference
         }
         ProductDiscountReferenceImpl instance = new ProductDiscountReferenceImpl();
         instance.setId(template.getId());
-        instance.setObj(Optional.ofNullable(template.getObj())
-                .map(com.commercetools.api.models.product_discount.ProductDiscount::deepCopy)
-                .orElse(null));
+        instance.setObj(com.commercetools.api.models.product_discount.ProductDiscount.deepCopy(template.getObj()));
         return instance;
     }
 

@@ -138,12 +138,9 @@ public interface AttributeGroupDraft
             return null;
         }
         AttributeGroupDraftImpl instance = new AttributeGroupDraftImpl();
-        instance.setName(Optional.ofNullable(template.getName())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setDescription(Optional.ofNullable(template.getDescription())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
         instance.setAttributes(Optional.ofNullable(template.getAttributes())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.attribute_group.AttributeReference::deepCopy)

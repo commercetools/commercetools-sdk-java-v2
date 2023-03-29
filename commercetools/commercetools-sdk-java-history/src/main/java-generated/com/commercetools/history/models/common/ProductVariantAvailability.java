@@ -131,9 +131,8 @@ public interface ProductVariantAvailability {
         instance.setIsOnStock(template.getIsOnStock());
         instance.setRestockableInDays(template.getRestockableInDays());
         instance.setAvailableQuantity(template.getAvailableQuantity());
-        instance.setChannels(Optional.ofNullable(template.getChannels())
-                .map(com.commercetools.history.models.common.ProductVariantChannelAvailabilityMap::deepCopy)
-                .orElse(null));
+        instance.setChannels(com.commercetools.history.models.common.ProductVariantChannelAvailabilityMap
+                .deepCopy(template.getChannels()));
         return instance;
     }
 

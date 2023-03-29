@@ -118,9 +118,7 @@ public interface ProductAssignmentMissingError extends ErrorObject {
         ProductAssignmentMissingErrorImpl instance = new ProductAssignmentMissingErrorImpl();
         instance.setMessage(template.getMessage());
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
-        instance.setProduct(Optional.ofNullable(template.getProduct())
-                .map(com.commercetools.api.models.product.ProductReference::deepCopy)
-                .orElse(null));
+        instance.setProduct(com.commercetools.api.models.product.ProductReference.deepCopy(template.getProduct()));
         return instance;
     }
 

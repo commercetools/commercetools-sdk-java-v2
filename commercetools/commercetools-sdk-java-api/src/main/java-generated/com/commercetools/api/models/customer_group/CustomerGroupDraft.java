@@ -112,9 +112,7 @@ public interface CustomerGroupDraft extends com.commercetools.api.models.Customi
         CustomerGroupDraftImpl instance = new CustomerGroupDraftImpl();
         instance.setKey(template.getKey());
         instance.setGroupName(template.getGroupName());
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;
     }
 

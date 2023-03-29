@@ -94,9 +94,8 @@ public interface ParcelMeasurementDraft extends io.vrap.rmf.base.client.Draft<Pa
         }
         ParcelMeasurementDraftImpl instance = new ParcelMeasurementDraftImpl();
         instance.setParcelId(template.getParcelId());
-        instance.setMeasurements(Optional.ofNullable(template.getMeasurements())
-                .map(com.commercetools.importapi.models.orders.ParcelMeasurements::deepCopy)
-                .orElse(null));
+        instance.setMeasurements(
+            com.commercetools.importapi.models.orders.ParcelMeasurements.deepCopy(template.getMeasurements()));
         return instance;
     }
 

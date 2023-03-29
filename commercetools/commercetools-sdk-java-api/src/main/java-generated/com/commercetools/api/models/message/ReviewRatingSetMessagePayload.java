@@ -133,9 +133,7 @@ public interface ReviewRatingSetMessagePayload extends MessagePayload {
         instance.setOldRating(template.getOldRating());
         instance.setNewRating(template.getNewRating());
         instance.setIncludedInStatistics(template.getIncludedInStatistics());
-        instance.setTarget(Optional.ofNullable(template.getTarget())
-                .map(com.commercetools.api.models.common.Reference::deepCopy)
-                .orElse(null));
+        instance.setTarget(com.commercetools.api.models.common.Reference.deepCopy(template.getTarget()));
         return instance;
     }
 

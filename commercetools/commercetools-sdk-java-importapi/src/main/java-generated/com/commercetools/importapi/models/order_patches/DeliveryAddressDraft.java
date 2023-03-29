@@ -94,9 +94,7 @@ public interface DeliveryAddressDraft extends io.vrap.rmf.base.client.Draft<Deli
         }
         DeliveryAddressDraftImpl instance = new DeliveryAddressDraftImpl();
         instance.setDeliveryId(template.getDeliveryId());
-        instance.setAddress(Optional.ofNullable(template.getAddress())
-                .map(com.commercetools.importapi.models.common.Address::deepCopy)
-                .orElse(null));
+        instance.setAddress(com.commercetools.importapi.models.common.Address.deepCopy(template.getAddress()));
         return instance;
     }
 

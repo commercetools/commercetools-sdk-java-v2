@@ -189,21 +189,17 @@ public interface MessageDeliveryPayload extends DeliveryPayload {
         }
         MessageDeliveryPayloadImpl instance = new MessageDeliveryPayloadImpl();
         instance.setProjectKey(template.getProjectKey());
-        instance.setResource(Optional.ofNullable(template.getResource())
-                .map(com.commercetools.api.models.common.Reference::deepCopy)
-                .orElse(null));
-        instance.setResourceUserProvidedIdentifiers(Optional.ofNullable(template.getResourceUserProvidedIdentifiers())
-                .map(com.commercetools.api.models.message.UserProvidedIdentifiers::deepCopy)
-                .orElse(null));
+        instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
+                .deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setPayloadNotIncluded(Optional.ofNullable(template.getPayloadNotIncluded())
-                .map(com.commercetools.api.models.subscription.PayloadNotIncluded::deepCopy)
-                .orElse(null));
+        instance.setPayloadNotIncluded(
+            com.commercetools.api.models.subscription.PayloadNotIncluded.deepCopy(template.getPayloadNotIncluded()));
         return instance;
     }
 

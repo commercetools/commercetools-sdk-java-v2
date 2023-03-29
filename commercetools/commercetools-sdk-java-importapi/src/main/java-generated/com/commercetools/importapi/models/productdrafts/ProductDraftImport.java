@@ -395,49 +395,35 @@ public interface ProductDraftImport extends ImportResource {
         }
         ProductDraftImportImpl instance = new ProductDraftImportImpl();
         instance.setKey(template.getKey());
-        instance.setProductType(Optional.ofNullable(template.getProductType())
-                .map(com.commercetools.importapi.models.common.ProductTypeKeyReference::deepCopy)
-                .orElse(null));
-        instance.setName(Optional.ofNullable(template.getName())
-                .map(com.commercetools.importapi.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setSlug(Optional.ofNullable(template.getSlug())
-                .map(com.commercetools.importapi.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setDescription(Optional.ofNullable(template.getDescription())
-                .map(com.commercetools.importapi.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setProductType(
+            com.commercetools.importapi.models.common.ProductTypeKeyReference.deepCopy(template.getProductType()));
+        instance.setName(com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setSlug(com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getSlug()));
+        instance.setDescription(
+            com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getDescription()));
         instance.setCategories(Optional.ofNullable(template.getCategories())
                 .map(t -> t.stream()
                         .map(com.commercetools.importapi.models.common.CategoryKeyReference::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setMetaTitle(Optional.ofNullable(template.getMetaTitle())
-                .map(com.commercetools.importapi.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setMetaDescription(Optional.ofNullable(template.getMetaDescription())
-                .map(com.commercetools.importapi.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setMetaKeywords(Optional.ofNullable(template.getMetaKeywords())
-                .map(com.commercetools.importapi.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setMasterVariant(Optional.ofNullable(template.getMasterVariant())
-                .map(com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport::deepCopy)
-                .orElse(null));
+        instance.setMetaTitle(
+            com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getMetaTitle()));
+        instance.setMetaDescription(
+            com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getMetaDescription()));
+        instance.setMetaKeywords(
+            com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getMetaKeywords()));
+        instance.setMasterVariant(com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport
+                .deepCopy(template.getMasterVariant()));
         instance.setVariants(Optional.ofNullable(template.getVariants())
                 .map(t -> t.stream()
                         .map(com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setTaxCategory(Optional.ofNullable(template.getTaxCategory())
-                .map(com.commercetools.importapi.models.common.TaxCategoryKeyReference::deepCopy)
-                .orElse(null));
-        instance.setSearchKeywords(Optional.ofNullable(template.getSearchKeywords())
-                .map(com.commercetools.importapi.models.products.SearchKeywords::deepCopy)
-                .orElse(null));
-        instance.setState(Optional.ofNullable(template.getState())
-                .map(com.commercetools.importapi.models.common.StateKeyReference::deepCopy)
-                .orElse(null));
+        instance.setTaxCategory(
+            com.commercetools.importapi.models.common.TaxCategoryKeyReference.deepCopy(template.getTaxCategory()));
+        instance.setSearchKeywords(
+            com.commercetools.importapi.models.products.SearchKeywords.deepCopy(template.getSearchKeywords()));
+        instance.setState(com.commercetools.importapi.models.common.StateKeyReference.deepCopy(template.getState()));
         instance.setPublish(template.getPublish());
         instance.setPriceMode(template.getPriceMode());
         return instance;

@@ -82,9 +82,8 @@ public interface AttributeNestedType extends AttributeType {
             return null;
         }
         AttributeNestedTypeImpl instance = new AttributeNestedTypeImpl();
-        instance.setTypeReference(Optional.ofNullable(template.getTypeReference())
-                .map(com.commercetools.api.models.product_type.ProductTypeReference::deepCopy)
-                .orElse(null));
+        instance.setTypeReference(
+            com.commercetools.api.models.product_type.ProductTypeReference.deepCopy(template.getTypeReference()));
         return instance;
     }
 

@@ -102,9 +102,8 @@ public interface StagedOrderSetCustomLineItemTaxRateAction extends StagedOrderUp
         }
         StagedOrderSetCustomLineItemTaxRateActionImpl instance = new StagedOrderSetCustomLineItemTaxRateActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
-        instance.setExternalTaxRate(Optional.ofNullable(template.getExternalTaxRate())
-                .map(com.commercetools.api.models.cart.ExternalTaxRateDraft::deepCopy)
-                .orElse(null));
+        instance.setExternalTaxRate(
+            com.commercetools.api.models.cart.ExternalTaxRateDraft.deepCopy(template.getExternalTaxRate()));
         return instance;
     }
 

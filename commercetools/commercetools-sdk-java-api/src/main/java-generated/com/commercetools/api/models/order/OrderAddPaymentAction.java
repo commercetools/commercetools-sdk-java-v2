@@ -83,9 +83,8 @@ public interface OrderAddPaymentAction extends OrderUpdateAction {
             return null;
         }
         OrderAddPaymentActionImpl instance = new OrderAddPaymentActionImpl();
-        instance.setPayment(Optional.ofNullable(template.getPayment())
-                .map(com.commercetools.api.models.payment.PaymentResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setPayment(
+            com.commercetools.api.models.payment.PaymentResourceIdentifier.deepCopy(template.getPayment()));
         return instance;
     }
 

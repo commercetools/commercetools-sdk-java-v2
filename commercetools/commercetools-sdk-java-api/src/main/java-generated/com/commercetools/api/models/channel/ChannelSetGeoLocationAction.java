@@ -80,9 +80,7 @@ public interface ChannelSetGeoLocationAction extends ChannelUpdateAction {
             return null;
         }
         ChannelSetGeoLocationActionImpl instance = new ChannelSetGeoLocationActionImpl();
-        instance.setGeoLocation(Optional.ofNullable(template.getGeoLocation())
-                .map(com.commercetools.api.models.common.GeoJson::deepCopy)
-                .orElse(null));
+        instance.setGeoLocation(com.commercetools.api.models.common.GeoJson.deepCopy(template.getGeoLocation()));
         return instance;
     }
 

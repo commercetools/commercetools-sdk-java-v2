@@ -147,15 +147,11 @@ public interface SetShoppingListLineItemCustomTypeChange extends Change {
         }
         SetShoppingListLineItemCustomTypeChangeImpl instance = new SetShoppingListLineItemCustomTypeChangeImpl();
         instance.setChange(template.getChange());
-        instance.setLineItem(Optional.ofNullable(template.getLineItem())
-                .map(com.commercetools.history.models.change_value.ShoppingListLineItemValue::deepCopy)
-                .orElse(null));
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.common.CustomFields::deepCopy)
-                .orElse(null));
-        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(com.commercetools.history.models.common.CustomFields::deepCopy)
-                .orElse(null));
+        instance.setLineItem(
+            com.commercetools.history.models.change_value.ShoppingListLineItemValue.deepCopy(template.getLineItem()));
+        instance.setNextValue(com.commercetools.history.models.common.CustomFields.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.CustomFields.deepCopy(template.getPreviousValue()));
         return instance;
     }
 

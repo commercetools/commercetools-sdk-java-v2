@@ -95,9 +95,7 @@ public interface ReplicaCartDraft
             return null;
         }
         ReplicaCartDraftImpl instance = new ReplicaCartDraftImpl();
-        instance.setReference(Optional.ofNullable(template.getReference())
-                .map(com.commercetools.api.models.common.Reference::deepCopy)
-                .orElse(null));
+        instance.setReference(com.commercetools.api.models.common.Reference.deepCopy(template.getReference()));
         instance.setKey(template.getKey());
         return instance;
     }

@@ -178,9 +178,8 @@ public interface SetShoppingListLineItemCustomFieldChange extends Change {
         instance.setChange(template.getChange());
         instance.setName(template.getName());
         instance.setCustomTypeId(template.getCustomTypeId());
-        instance.setLineItem(Optional.ofNullable(template.getLineItem())
-                .map(com.commercetools.history.models.change_value.ShoppingListLineItemValue::deepCopy)
-                .orElse(null));
+        instance.setLineItem(
+            com.commercetools.history.models.change_value.ShoppingListLineItemValue.deepCopy(template.getLineItem()));
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
         return instance;

@@ -163,9 +163,8 @@ public interface SetParcelItemsChange extends Change {
         }
         SetParcelItemsChangeImpl instance = new SetParcelItemsChangeImpl();
         instance.setChange(template.getChange());
-        instance.setParcel(Optional.ofNullable(template.getParcel())
-                .map(com.commercetools.history.models.change_value.ParcelChangeValue::deepCopy)
-                .orElse(null));
+        instance.setParcel(
+            com.commercetools.history.models.change_value.ParcelChangeValue.deepCopy(template.getParcel()));
         instance.setNextValue(Optional.ofNullable(template.getNextValue())
                 .map(t -> t.stream()
                         .map(com.commercetools.history.models.common.DeliveryItem::deepCopy)

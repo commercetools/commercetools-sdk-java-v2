@@ -196,9 +196,7 @@ public interface SetOrderLineItemCustomFieldChange extends Change {
         instance.setCustomTypeId(template.getCustomTypeId());
         instance.setName(template.getName());
         instance.setVariant(template.getVariant());
-        instance.setLineItem(Optional.ofNullable(template.getLineItem())
-                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setLineItem(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getLineItem()));
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
         return instance;

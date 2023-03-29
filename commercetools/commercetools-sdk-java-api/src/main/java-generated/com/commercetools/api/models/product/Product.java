@@ -291,28 +291,19 @@ public interface Product extends BaseResource, ProductMixin, com.commercetools.a
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(Optional.ofNullable(template.getLastModifiedBy())
-                .map(com.commercetools.api.models.common.LastModifiedBy::deepCopy)
-                .orElse(null));
-        instance.setCreatedBy(Optional.ofNullable(template.getCreatedBy())
-                .map(com.commercetools.api.models.common.CreatedBy::deepCopy)
-                .orElse(null));
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setKey(template.getKey());
-        instance.setProductType(Optional.ofNullable(template.getProductType())
-                .map(com.commercetools.api.models.product_type.ProductTypeReference::deepCopy)
-                .orElse(null));
-        instance.setMasterData(Optional.ofNullable(template.getMasterData())
-                .map(com.commercetools.api.models.product.ProductCatalogData::deepCopy)
-                .orElse(null));
-        instance.setTaxCategory(Optional.ofNullable(template.getTaxCategory())
-                .map(com.commercetools.api.models.tax_category.TaxCategoryReference::deepCopy)
-                .orElse(null));
-        instance.setState(Optional.ofNullable(template.getState())
-                .map(com.commercetools.api.models.state.StateReference::deepCopy)
-                .orElse(null));
-        instance.setReviewRatingStatistics(Optional.ofNullable(template.getReviewRatingStatistics())
-                .map(com.commercetools.api.models.review.ReviewRatingStatistics::deepCopy)
-                .orElse(null));
+        instance.setProductType(
+            com.commercetools.api.models.product_type.ProductTypeReference.deepCopy(template.getProductType()));
+        instance.setMasterData(
+            com.commercetools.api.models.product.ProductCatalogData.deepCopy(template.getMasterData()));
+        instance.setTaxCategory(
+            com.commercetools.api.models.tax_category.TaxCategoryReference.deepCopy(template.getTaxCategory()));
+        instance.setState(com.commercetools.api.models.state.StateReference.deepCopy(template.getState()));
+        instance.setReviewRatingStatistics(
+            com.commercetools.api.models.review.ReviewRatingStatistics.deepCopy(template.getReviewRatingStatistics()));
         instance.setPriceMode(template.getPriceMode());
         return instance;
     }

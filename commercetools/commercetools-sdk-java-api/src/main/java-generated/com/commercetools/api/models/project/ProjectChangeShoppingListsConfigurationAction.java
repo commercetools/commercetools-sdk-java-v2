@@ -84,9 +84,8 @@ public interface ProjectChangeShoppingListsConfigurationAction extends ProjectUp
             return null;
         }
         ProjectChangeShoppingListsConfigurationActionImpl instance = new ProjectChangeShoppingListsConfigurationActionImpl();
-        instance.setShoppingListsConfiguration(Optional.ofNullable(template.getShoppingListsConfiguration())
-                .map(com.commercetools.api.models.project.ShoppingListsConfiguration::deepCopy)
-                .orElse(null));
+        instance.setShoppingListsConfiguration(com.commercetools.api.models.project.ShoppingListsConfiguration
+                .deepCopy(template.getShoppingListsConfiguration()));
         return instance;
     }
 

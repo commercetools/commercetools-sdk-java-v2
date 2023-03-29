@@ -334,9 +334,7 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
         instance.setBillingAddresses(
             Optional.ofNullable(template.getBillingAddresses()).map(ArrayList::new).orElse(null));
         instance.setDefaultBillingAddress(template.getDefaultBillingAddress());
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;
     }
 

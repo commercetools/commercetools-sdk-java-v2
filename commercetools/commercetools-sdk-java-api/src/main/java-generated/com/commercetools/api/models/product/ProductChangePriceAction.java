@@ -117,9 +117,7 @@ public interface ProductChangePriceAction extends ProductUpdateAction {
         }
         ProductChangePriceActionImpl instance = new ProductChangePriceActionImpl();
         instance.setPriceId(template.getPriceId());
-        instance.setPrice(Optional.ofNullable(template.getPrice())
-                .map(com.commercetools.api.models.common.PriceDraft::deepCopy)
-                .orElse(null));
+        instance.setPrice(com.commercetools.api.models.common.PriceDraft.deepCopy(template.getPrice()));
         instance.setStaged(template.getStaged());
         return instance;
     }

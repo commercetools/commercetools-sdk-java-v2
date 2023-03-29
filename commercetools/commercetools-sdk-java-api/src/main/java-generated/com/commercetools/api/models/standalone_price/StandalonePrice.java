@@ -398,24 +398,16 @@ public interface StandalonePrice
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(Optional.ofNullable(template.getLastModifiedBy())
-                .map(com.commercetools.api.models.common.LastModifiedBy::deepCopy)
-                .orElse(null));
-        instance.setCreatedBy(Optional.ofNullable(template.getCreatedBy())
-                .map(com.commercetools.api.models.common.CreatedBy::deepCopy)
-                .orElse(null));
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setKey(template.getKey());
         instance.setSku(template.getSku());
-        instance.setValue(Optional.ofNullable(template.getValue())
-                .map(com.commercetools.api.models.common.TypedMoney::deepCopy)
-                .orElse(null));
+        instance.setValue(com.commercetools.api.models.common.TypedMoney.deepCopy(template.getValue()));
         instance.setCountry(template.getCountry());
-        instance.setCustomerGroup(Optional.ofNullable(template.getCustomerGroup())
-                .map(com.commercetools.api.models.customer_group.CustomerGroupReference::deepCopy)
-                .orElse(null));
-        instance.setChannel(Optional.ofNullable(template.getChannel())
-                .map(com.commercetools.api.models.channel.ChannelReference::deepCopy)
-                .orElse(null));
+        instance.setCustomerGroup(
+            com.commercetools.api.models.customer_group.CustomerGroupReference.deepCopy(template.getCustomerGroup()));
+        instance.setChannel(com.commercetools.api.models.channel.ChannelReference.deepCopy(template.getChannel()));
         instance.setValidFrom(template.getValidFrom());
         instance.setValidUntil(template.getValidUntil());
         instance.setTiers(Optional.ofNullable(template.getTiers())
@@ -423,15 +415,10 @@ public interface StandalonePrice
                         .map(com.commercetools.api.models.common.PriceTier::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setDiscounted(Optional.ofNullable(template.getDiscounted())
-                .map(com.commercetools.api.models.common.DiscountedPrice::deepCopy)
-                .orElse(null));
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFields::deepCopy)
-                .orElse(null));
-        instance.setStaged(Optional.ofNullable(template.getStaged())
-                .map(com.commercetools.api.models.standalone_price.StagedStandalonePrice::deepCopy)
-                .orElse(null));
+        instance.setDiscounted(com.commercetools.api.models.common.DiscountedPrice.deepCopy(template.getDiscounted()));
+        instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
+        instance.setStaged(
+            com.commercetools.api.models.standalone_price.StagedStandalonePrice.deepCopy(template.getStaged()));
         instance.setActive(template.getActive());
         return instance;
     }

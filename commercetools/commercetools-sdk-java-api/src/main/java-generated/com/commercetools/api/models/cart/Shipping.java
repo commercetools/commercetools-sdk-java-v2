@@ -157,18 +157,13 @@ public interface Shipping {
         }
         ShippingImpl instance = new ShippingImpl();
         instance.setShippingKey(template.getShippingKey());
-        instance.setShippingInfo(Optional.ofNullable(template.getShippingInfo())
-                .map(com.commercetools.api.models.cart.ShippingInfo::deepCopy)
-                .orElse(null));
-        instance.setShippingAddress(Optional.ofNullable(template.getShippingAddress())
-                .map(com.commercetools.api.models.common.Address::deepCopy)
-                .orElse(null));
-        instance.setShippingRateInput(Optional.ofNullable(template.getShippingRateInput())
-                .map(com.commercetools.api.models.cart.ShippingRateInput::deepCopy)
-                .orElse(null));
-        instance.setShippingCustomFields(Optional.ofNullable(template.getShippingCustomFields())
-                .map(com.commercetools.api.models.type.CustomFields::deepCopy)
-                .orElse(null));
+        instance.setShippingInfo(com.commercetools.api.models.cart.ShippingInfo.deepCopy(template.getShippingInfo()));
+        instance.setShippingAddress(
+            com.commercetools.api.models.common.Address.deepCopy(template.getShippingAddress()));
+        instance.setShippingRateInput(
+            com.commercetools.api.models.cart.ShippingRateInput.deepCopy(template.getShippingRateInput()));
+        instance.setShippingCustomFields(
+            com.commercetools.api.models.type.CustomFields.deepCopy(template.getShippingCustomFields()));
         return instance;
     }
 

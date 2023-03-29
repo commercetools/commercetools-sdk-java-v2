@@ -85,9 +85,8 @@ public interface StandalonePriceStagedChangesAppliedMessagePayload extends Messa
             return null;
         }
         StandalonePriceStagedChangesAppliedMessagePayloadImpl instance = new StandalonePriceStagedChangesAppliedMessagePayloadImpl();
-        instance.setStagedChanges(Optional.ofNullable(template.getStagedChanges())
-                .map(com.commercetools.api.models.standalone_price.StagedStandalonePrice::deepCopy)
-                .orElse(null));
+        instance.setStagedChanges(
+            com.commercetools.api.models.standalone_price.StagedStandalonePrice.deepCopy(template.getStagedChanges()));
         return instance;
     }
 

@@ -177,9 +177,7 @@ public interface SetLineItemProductKeyChange extends Change {
         }
         SetLineItemProductKeyChangeImpl instance = new SetLineItemProductKeyChangeImpl();
         instance.setChange(template.getChange());
-        instance.setLineItem(Optional.ofNullable(template.getLineItem())
-                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setLineItem(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getLineItem()));
         instance.setLineItemId(template.getLineItemId());
         instance.setVariant(template.getVariant());
         instance.setPreviousValue(template.getPreviousValue());

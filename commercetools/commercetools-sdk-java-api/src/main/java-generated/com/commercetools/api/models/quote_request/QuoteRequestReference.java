@@ -83,9 +83,7 @@ public interface QuoteRequestReference extends Reference, com.commercetools.api.
         }
         QuoteRequestReferenceImpl instance = new QuoteRequestReferenceImpl();
         instance.setId(template.getId());
-        instance.setObj(Optional.ofNullable(template.getObj())
-                .map(com.commercetools.api.models.quote_request.QuoteRequest::deepCopy)
-                .orElse(null));
+        instance.setObj(com.commercetools.api.models.quote_request.QuoteRequest.deepCopy(template.getObj()));
         return instance;
     }
 

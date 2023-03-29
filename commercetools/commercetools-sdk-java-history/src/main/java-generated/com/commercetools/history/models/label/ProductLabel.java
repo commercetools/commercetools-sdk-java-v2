@@ -109,12 +109,8 @@ public interface ProductLabel extends Label {
             return null;
         }
         ProductLabelImpl instance = new ProductLabelImpl();
-        instance.setSlug(Optional.ofNullable(template.getSlug())
-                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setName(Optional.ofNullable(template.getName())
-                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setSlug(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getSlug()));
+        instance.setName(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getName()));
         return instance;
     }
 

@@ -152,12 +152,8 @@ public interface DeliveryDraft extends com.commercetools.api.models.Customizable
                         .map(com.commercetools.api.models.order.ParcelDraft::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setAddress(Optional.ofNullable(template.getAddress())
-                .map(com.commercetools.api.models.common.AddressDraft::deepCopy)
-                .orElse(null));
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
-                .orElse(null));
+        instance.setAddress(com.commercetools.api.models.common.AddressDraft.deepCopy(template.getAddress()));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;
     }
 

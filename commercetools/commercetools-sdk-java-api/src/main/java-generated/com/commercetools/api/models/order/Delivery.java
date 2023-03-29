@@ -193,12 +193,8 @@ public interface Delivery extends DeliveryMixin, com.commercetools.api.models.Cu
                         .map(com.commercetools.api.models.order.Parcel::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setAddress(Optional.ofNullable(template.getAddress())
-                .map(com.commercetools.api.models.common.Address::deepCopy)
-                .orElse(null));
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFields::deepCopy)
-                .orElse(null));
+        instance.setAddress(com.commercetools.api.models.common.Address.deepCopy(template.getAddress()));
+        instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         return instance;
     }
 

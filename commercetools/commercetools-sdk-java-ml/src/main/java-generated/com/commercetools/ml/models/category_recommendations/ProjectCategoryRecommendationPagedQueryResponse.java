@@ -166,9 +166,8 @@ public interface ProjectCategoryRecommendationPagedQueryResponse {
                             com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendation::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setMeta(Optional.ofNullable(template.getMeta())
-                .map(com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMeta::deepCopy)
-                .orElse(null));
+        instance.setMeta(com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMeta
+                .deepCopy(template.getMeta()));
         return instance;
     }
 

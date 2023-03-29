@@ -114,9 +114,8 @@ public interface SimilarProductsTaskStatus {
         SimilarProductsTaskStatusImpl instance = new SimilarProductsTaskStatusImpl();
         instance.setState(template.getState());
         instance.setExpires(template.getExpires());
-        instance.setResult(Optional.ofNullable(template.getResult())
-                .map(com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResult::deepCopy)
-                .orElse(null));
+        instance.setResult(com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResult
+                .deepCopy(template.getResult()));
         return instance;
     }
 

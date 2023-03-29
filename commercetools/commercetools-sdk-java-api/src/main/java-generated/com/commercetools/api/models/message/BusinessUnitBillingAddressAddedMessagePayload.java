@@ -85,9 +85,7 @@ public interface BusinessUnitBillingAddressAddedMessagePayload extends MessagePa
             return null;
         }
         BusinessUnitBillingAddressAddedMessagePayloadImpl instance = new BusinessUnitBillingAddressAddedMessagePayloadImpl();
-        instance.setAddress(Optional.ofNullable(template.getAddress())
-                .map(com.commercetools.api.models.common.Address::deepCopy)
-                .orElse(null));
+        instance.setAddress(com.commercetools.api.models.common.Address.deepCopy(template.getAddress()));
         return instance;
     }
 

@@ -99,9 +99,7 @@ public interface PriceTier {
         }
         PriceTierImpl instance = new PriceTierImpl();
         instance.setMinimumQuantity(template.getMinimumQuantity());
-        instance.setValue(Optional.ofNullable(template.getValue())
-                .map(com.commercetools.api.models.common.TypedMoney::deepCopy)
-                .orElse(null));
+        instance.setValue(com.commercetools.api.models.common.TypedMoney.deepCopy(template.getValue()));
         return instance;
     }
 

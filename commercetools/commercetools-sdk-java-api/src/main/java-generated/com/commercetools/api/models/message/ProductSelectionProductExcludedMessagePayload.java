@@ -104,12 +104,9 @@ public interface ProductSelectionProductExcludedMessagePayload extends MessagePa
             return null;
         }
         ProductSelectionProductExcludedMessagePayloadImpl instance = new ProductSelectionProductExcludedMessagePayloadImpl();
-        instance.setProduct(Optional.ofNullable(template.getProduct())
-                .map(com.commercetools.api.models.product.ProductReference::deepCopy)
-                .orElse(null));
-        instance.setVariantExclusion(Optional.ofNullable(template.getVariantExclusion())
-                .map(com.commercetools.api.models.product_selection.ProductVariantExclusion::deepCopy)
-                .orElse(null));
+        instance.setProduct(com.commercetools.api.models.product.ProductReference.deepCopy(template.getProduct()));
+        instance.setVariantExclusion(com.commercetools.api.models.product_selection.ProductVariantExclusion
+                .deepCopy(template.getVariantExclusion()));
         return instance;
     }
 

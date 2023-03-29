@@ -97,12 +97,10 @@ public interface OrderCustomerGroupSetMessagePayload extends OrderMessagePayload
             return null;
         }
         OrderCustomerGroupSetMessagePayloadImpl instance = new OrderCustomerGroupSetMessagePayloadImpl();
-        instance.setCustomerGroup(Optional.ofNullable(template.getCustomerGroup())
-                .map(com.commercetools.api.models.customer_group.CustomerGroupReference::deepCopy)
-                .orElse(null));
-        instance.setOldCustomerGroup(Optional.ofNullable(template.getOldCustomerGroup())
-                .map(com.commercetools.api.models.customer_group.CustomerGroupReference::deepCopy)
-                .orElse(null));
+        instance.setCustomerGroup(
+            com.commercetools.api.models.customer_group.CustomerGroupReference.deepCopy(template.getCustomerGroup()));
+        instance.setOldCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupReference
+                .deepCopy(template.getOldCustomerGroup()));
         return instance;
     }
 

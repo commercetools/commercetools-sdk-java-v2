@@ -82,9 +82,8 @@ public interface BusinessUnitAddAssociateAction extends BusinessUnitUpdateAction
             return null;
         }
         BusinessUnitAddAssociateActionImpl instance = new BusinessUnitAddAssociateActionImpl();
-        instance.setAssociate(Optional.ofNullable(template.getAssociate())
-                .map(com.commercetools.api.models.business_unit.AssociateDraft::deepCopy)
-                .orElse(null));
+        instance.setAssociate(
+            com.commercetools.api.models.business_unit.AssociateDraft.deepCopy(template.getAssociate()));
         return instance;
     }
 

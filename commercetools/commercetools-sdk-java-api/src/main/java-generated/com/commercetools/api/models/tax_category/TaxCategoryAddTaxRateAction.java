@@ -82,9 +82,7 @@ public interface TaxCategoryAddTaxRateAction extends TaxCategoryUpdateAction {
             return null;
         }
         TaxCategoryAddTaxRateActionImpl instance = new TaxCategoryAddTaxRateActionImpl();
-        instance.setTaxRate(Optional.ofNullable(template.getTaxRate())
-                .map(com.commercetools.api.models.tax_category.TaxRateDraft::deepCopy)
-                .orElse(null));
+        instance.setTaxRate(com.commercetools.api.models.tax_category.TaxRateDraft.deepCopy(template.getTaxRate()));
         return instance;
     }
 

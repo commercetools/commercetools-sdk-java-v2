@@ -98,9 +98,7 @@ public interface MyDivisionDraft extends MyBusinessUnitDraft, io.vrap.rmf.base.c
         instance.setKey(template.getKey());
         instance.setName(template.getName());
         instance.setContactEmail(template.getContactEmail());
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFields::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         instance.setAddresses(Optional.ofNullable(template.getAddresses())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.common.BaseAddress::deepCopy)
@@ -112,9 +110,8 @@ public interface MyDivisionDraft extends MyBusinessUnitDraft, io.vrap.rmf.base.c
         instance.setBillingAddresses(
             Optional.ofNullable(template.getBillingAddresses()).map(ArrayList::new).orElse(null));
         instance.setDefaultBillingAddress(template.getDefaultBillingAddress());
-        instance.setParentUnit(Optional.ofNullable(template.getParentUnit())
-                .map(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setParentUnit(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier
+                .deepCopy(template.getParentUnit()));
         return instance;
     }
 

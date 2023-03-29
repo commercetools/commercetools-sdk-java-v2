@@ -163,9 +163,7 @@ public interface SetAssetSourcesChange extends Change {
         }
         SetAssetSourcesChangeImpl instance = new SetAssetSourcesChangeImpl();
         instance.setChange(template.getChange());
-        instance.setAsset(Optional.ofNullable(template.getAsset())
-                .map(com.commercetools.history.models.change_value.AssetChangeValue::deepCopy)
-                .orElse(null));
+        instance.setAsset(com.commercetools.history.models.change_value.AssetChangeValue.deepCopy(template.getAsset()));
         instance.setNextValue(Optional.ofNullable(template.getNextValue())
                 .map(t -> t.stream()
                         .map(com.commercetools.history.models.common.AssetSource::deepCopy)

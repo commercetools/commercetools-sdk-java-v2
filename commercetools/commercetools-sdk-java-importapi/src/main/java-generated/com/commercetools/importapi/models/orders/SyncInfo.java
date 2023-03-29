@@ -112,9 +112,8 @@ public interface SyncInfo {
             return null;
         }
         SyncInfoImpl instance = new SyncInfoImpl();
-        instance.setChannel(Optional.ofNullable(template.getChannel())
-                .map(com.commercetools.importapi.models.common.ChannelKeyReference::deepCopy)
-                .orElse(null));
+        instance.setChannel(
+            com.commercetools.importapi.models.common.ChannelKeyReference.deepCopy(template.getChannel()));
         instance.setExternalId(template.getExternalId());
         instance.setSyncedAt(template.getSyncedAt());
         return instance;

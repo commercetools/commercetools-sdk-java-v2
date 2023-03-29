@@ -113,9 +113,7 @@ public interface TaxPortion {
         TaxPortionImpl instance = new TaxPortionImpl();
         instance.setName(template.getName());
         instance.setRate(template.getRate());
-        instance.setAmount(Optional.ofNullable(template.getAmount())
-                .map(com.commercetools.importapi.models.common.TypedMoney::deepCopy)
-                .orElse(null));
+        instance.setAmount(com.commercetools.importapi.models.common.TypedMoney.deepCopy(template.getAmount()));
         return instance;
     }
 

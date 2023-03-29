@@ -127,9 +127,7 @@ public interface RemoveParcelFromDeliveryChange extends Change {
         RemoveParcelFromDeliveryChangeImpl instance = new RemoveParcelFromDeliveryChangeImpl();
         instance.setChange(template.getChange());
         instance.setDeliveryId(template.getDeliveryId());
-        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(com.commercetools.history.models.common.Parcel::deepCopy)
-                .orElse(null));
+        instance.setPreviousValue(com.commercetools.history.models.common.Parcel.deepCopy(template.getPreviousValue()));
         return instance;
     }
 

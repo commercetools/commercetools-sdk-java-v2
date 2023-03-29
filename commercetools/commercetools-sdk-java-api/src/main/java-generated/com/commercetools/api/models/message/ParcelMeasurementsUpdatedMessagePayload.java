@@ -134,9 +134,8 @@ public interface ParcelMeasurementsUpdatedMessagePayload extends OrderMessagePay
         ParcelMeasurementsUpdatedMessagePayloadImpl instance = new ParcelMeasurementsUpdatedMessagePayloadImpl();
         instance.setDeliveryId(template.getDeliveryId());
         instance.setParcelId(template.getParcelId());
-        instance.setMeasurements(Optional.ofNullable(template.getMeasurements())
-                .map(com.commercetools.api.models.order.ParcelMeasurements::deepCopy)
-                .orElse(null));
+        instance.setMeasurements(
+            com.commercetools.api.models.order.ParcelMeasurements.deepCopy(template.getMeasurements()));
         instance.setShippingKey(template.getShippingKey());
         return instance;
     }

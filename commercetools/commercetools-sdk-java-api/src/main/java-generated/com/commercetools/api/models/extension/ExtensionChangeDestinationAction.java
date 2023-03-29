@@ -82,9 +82,8 @@ public interface ExtensionChangeDestinationAction extends ExtensionUpdateAction 
             return null;
         }
         ExtensionChangeDestinationActionImpl instance = new ExtensionChangeDestinationActionImpl();
-        instance.setDestination(Optional.ofNullable(template.getDestination())
-                .map(com.commercetools.api.models.extension.ExtensionDestination::deepCopy)
-                .orElse(null));
+        instance.setDestination(
+            com.commercetools.api.models.extension.ExtensionDestination.deepCopy(template.getDestination()));
         return instance;
     }
 

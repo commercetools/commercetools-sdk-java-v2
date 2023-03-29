@@ -109,9 +109,7 @@ public interface PaymentStatus {
         PaymentStatusImpl instance = new PaymentStatusImpl();
         instance.setInterfaceCode(template.getInterfaceCode());
         instance.setInterfaceText(template.getInterfaceText());
-        instance.setState(Optional.ofNullable(template.getState())
-                .map(com.commercetools.api.models.state.StateReference::deepCopy)
-                .orElse(null));
+        instance.setState(com.commercetools.api.models.state.StateReference.deepCopy(template.getState()));
         return instance;
     }
 

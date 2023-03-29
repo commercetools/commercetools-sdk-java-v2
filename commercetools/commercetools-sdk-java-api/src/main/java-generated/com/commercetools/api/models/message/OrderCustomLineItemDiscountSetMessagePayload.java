@@ -135,9 +135,7 @@ public interface OrderCustomLineItemDiscountSetMessagePayload extends OrderMessa
                         .map(com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setTaxedPrice(Optional.ofNullable(template.getTaxedPrice())
-                .map(com.commercetools.api.models.cart.TaxedItemPrice::deepCopy)
-                .orElse(null));
+        instance.setTaxedPrice(com.commercetools.api.models.cart.TaxedItemPrice.deepCopy(template.getTaxedPrice()));
         return instance;
     }
 

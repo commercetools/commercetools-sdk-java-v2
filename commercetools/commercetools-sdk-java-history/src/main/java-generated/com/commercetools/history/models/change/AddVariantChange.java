@@ -145,12 +145,9 @@ public interface AddVariantChange extends Change {
         AddVariantChangeImpl instance = new AddVariantChangeImpl();
         instance.setChange(template.getChange());
         instance.setCatalogData(template.getCatalogData());
-        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(com.commercetools.history.models.common.Variant::deepCopy)
-                .orElse(null));
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.common.Variant::deepCopy)
-                .orElse(null));
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.Variant.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.Variant.deepCopy(template.getNextValue()));
         return instance;
     }
 

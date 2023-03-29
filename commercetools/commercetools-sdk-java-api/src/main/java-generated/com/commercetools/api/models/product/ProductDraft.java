@@ -360,53 +360,37 @@ public interface ProductDraft
             return null;
         }
         ProductDraftImpl instance = new ProductDraftImpl();
-        instance.setProductType(Optional.ofNullable(template.getProductType())
-                .map(com.commercetools.api.models.product_type.ProductTypeResourceIdentifier::deepCopy)
-                .orElse(null));
-        instance.setName(Optional.ofNullable(template.getName())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setSlug(Optional.ofNullable(template.getSlug())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setProductType(com.commercetools.api.models.product_type.ProductTypeResourceIdentifier
+                .deepCopy(template.getProductType()));
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setSlug(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getSlug()));
         instance.setKey(template.getKey());
-        instance.setDescription(Optional.ofNullable(template.getDescription())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
         instance.setCategories(Optional.ofNullable(template.getCategories())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.category.CategoryResourceIdentifier::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setCategoryOrderHints(Optional.ofNullable(template.getCategoryOrderHints())
-                .map(com.commercetools.api.models.product.CategoryOrderHints::deepCopy)
-                .orElse(null));
-        instance.setMetaTitle(Optional.ofNullable(template.getMetaTitle())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setMetaDescription(Optional.ofNullable(template.getMetaDescription())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setMetaKeywords(Optional.ofNullable(template.getMetaKeywords())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setMasterVariant(Optional.ofNullable(template.getMasterVariant())
-                .map(com.commercetools.api.models.product.ProductVariantDraft::deepCopy)
-                .orElse(null));
+        instance.setCategoryOrderHints(
+            com.commercetools.api.models.product.CategoryOrderHints.deepCopy(template.getCategoryOrderHints()));
+        instance.setMetaTitle(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaTitle()));
+        instance.setMetaDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaDescription()));
+        instance.setMetaKeywords(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaKeywords()));
+        instance.setMasterVariant(
+            com.commercetools.api.models.product.ProductVariantDraft.deepCopy(template.getMasterVariant()));
         instance.setVariants(Optional.ofNullable(template.getVariants())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.product.ProductVariantDraft::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setTaxCategory(Optional.ofNullable(template.getTaxCategory())
-                .map(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier::deepCopy)
-                .orElse(null));
-        instance.setSearchKeywords(Optional.ofNullable(template.getSearchKeywords())
-                .map(com.commercetools.api.models.product.SearchKeywords::deepCopy)
-                .orElse(null));
-        instance.setState(Optional.ofNullable(template.getState())
-                .map(com.commercetools.api.models.state.StateResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setTaxCategory(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier
+                .deepCopy(template.getTaxCategory()));
+        instance.setSearchKeywords(
+            com.commercetools.api.models.product.SearchKeywords.deepCopy(template.getSearchKeywords()));
+        instance.setState(com.commercetools.api.models.state.StateResourceIdentifier.deepCopy(template.getState()));
         instance.setPublish(template.getPublish());
         instance.setPriceMode(template.getPriceMode());
         return instance;

@@ -82,9 +82,8 @@ public interface PaymentAddTransactionAction extends PaymentUpdateAction {
             return null;
         }
         PaymentAddTransactionActionImpl instance = new PaymentAddTransactionActionImpl();
-        instance.setTransaction(Optional.ofNullable(template.getTransaction())
-                .map(com.commercetools.api.models.payment.TransactionDraft::deepCopy)
-                .orElse(null));
+        instance.setTransaction(
+            com.commercetools.api.models.payment.TransactionDraft.deepCopy(template.getTransaction()));
         return instance;
     }
 

@@ -82,9 +82,8 @@ public interface AttributeSetType extends AttributeType {
             return null;
         }
         AttributeSetTypeImpl instance = new AttributeSetTypeImpl();
-        instance.setElementType(Optional.ofNullable(template.getElementType())
-                .map(com.commercetools.api.models.product_type.AttributeType::deepCopy)
-                .orElse(null));
+        instance.setElementType(
+            com.commercetools.api.models.product_type.AttributeType.deepCopy(template.getElementType()));
         return instance;
     }
 

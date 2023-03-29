@@ -224,9 +224,8 @@ public interface ProductVariantImport extends ImportResource {
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setPublish(template.getPublish());
-        instance.setProduct(Optional.ofNullable(template.getProduct())
-                .map(com.commercetools.importapi.models.common.ProductKeyReference::deepCopy)
-                .orElse(null));
+        instance.setProduct(
+            com.commercetools.importapi.models.common.ProductKeyReference.deepCopy(template.getProduct()));
         return instance;
     }
 

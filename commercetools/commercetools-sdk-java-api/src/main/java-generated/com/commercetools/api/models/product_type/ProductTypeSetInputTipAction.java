@@ -99,9 +99,7 @@ public interface ProductTypeSetInputTipAction extends ProductTypeUpdateAction {
         }
         ProductTypeSetInputTipActionImpl instance = new ProductTypeSetInputTipActionImpl();
         instance.setAttributeName(template.getAttributeName());
-        instance.setInputTip(Optional.ofNullable(template.getInputTip())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setInputTip(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getInputTip()));
         return instance;
     }
 

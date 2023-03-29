@@ -99,9 +99,7 @@ public interface ProductChangeSlugAction extends ProductUpdateAction {
             return null;
         }
         ProductChangeSlugActionImpl instance = new ProductChangeSlugActionImpl();
-        instance.setSlug(Optional.ofNullable(template.getSlug())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setSlug(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getSlug()));
         instance.setStaged(template.getStaged());
         return instance;
     }

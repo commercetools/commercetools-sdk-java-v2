@@ -162,12 +162,9 @@ public interface TypeDraft extends com.commercetools.api.models.WithKey, io.vrap
         }
         TypeDraftImpl instance = new TypeDraftImpl();
         instance.setKey(template.getKey());
-        instance.setName(Optional.ofNullable(template.getName())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setDescription(Optional.ofNullable(template.getDescription())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
         instance.setResourceTypeIds(
             Optional.ofNullable(template.getResourceTypeIds()).map(ArrayList::new).orElse(null));
         instance.setFieldDefinitions(Optional.ofNullable(template.getFieldDefinitions())

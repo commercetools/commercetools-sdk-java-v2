@@ -144,20 +144,15 @@ public interface TaxedPrice {
             return null;
         }
         TaxedPriceImpl instance = new TaxedPriceImpl();
-        instance.setTotalNet(Optional.ofNullable(template.getTotalNet())
-                .map(com.commercetools.api.models.common.CentPrecisionMoney::deepCopy)
-                .orElse(null));
-        instance.setTotalGross(Optional.ofNullable(template.getTotalGross())
-                .map(com.commercetools.api.models.common.CentPrecisionMoney::deepCopy)
-                .orElse(null));
+        instance.setTotalNet(com.commercetools.api.models.common.CentPrecisionMoney.deepCopy(template.getTotalNet()));
+        instance.setTotalGross(
+            com.commercetools.api.models.common.CentPrecisionMoney.deepCopy(template.getTotalGross()));
         instance.setTaxPortions(Optional.ofNullable(template.getTaxPortions())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.cart.TaxPortion::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setTotalTax(Optional.ofNullable(template.getTotalTax())
-                .map(com.commercetools.api.models.common.CentPrecisionMoney::deepCopy)
-                .orElse(null));
+        instance.setTotalTax(com.commercetools.api.models.common.CentPrecisionMoney.deepCopy(template.getTotalTax()));
         return instance;
     }
 

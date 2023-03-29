@@ -84,9 +84,7 @@ public interface MyPaymentChangeAmountPlannedAction extends MyPaymentUpdateActio
             return null;
         }
         MyPaymentChangeAmountPlannedActionImpl instance = new MyPaymentChangeAmountPlannedActionImpl();
-        instance.setAmount(Optional.ofNullable(template.getAmount())
-                .map(com.commercetools.api.models.common.Money::deepCopy)
-                .orElse(null));
+        instance.setAmount(com.commercetools.api.models.common.Money.deepCopy(template.getAmount()));
         return instance;
     }
 

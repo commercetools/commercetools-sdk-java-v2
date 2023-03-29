@@ -141,12 +141,9 @@ public interface MyCartChangeLineItemQuantityAction extends MyCartUpdateAction {
         MyCartChangeLineItemQuantityActionImpl instance = new MyCartChangeLineItemQuantityActionImpl();
         instance.setLineItemId(template.getLineItemId());
         instance.setQuantity(template.getQuantity());
-        instance.setExternalPrice(Optional.ofNullable(template.getExternalPrice())
-                .map(com.commercetools.api.models.common.Money::deepCopy)
-                .orElse(null));
-        instance.setExternalTotalPrice(Optional.ofNullable(template.getExternalTotalPrice())
-                .map(com.commercetools.api.models.cart.ExternalLineItemTotalPrice::deepCopy)
-                .orElse(null));
+        instance.setExternalPrice(com.commercetools.api.models.common.Money.deepCopy(template.getExternalPrice()));
+        instance.setExternalTotalPrice(
+            com.commercetools.api.models.cart.ExternalLineItemTotalPrice.deepCopy(template.getExternalTotalPrice()));
         return instance;
     }
 

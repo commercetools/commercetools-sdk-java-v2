@@ -350,22 +350,15 @@ public interface ProductDiscount
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(Optional.ofNullable(template.getLastModifiedBy())
-                .map(com.commercetools.api.models.common.LastModifiedBy::deepCopy)
-                .orElse(null));
-        instance.setCreatedBy(Optional.ofNullable(template.getCreatedBy())
-                .map(com.commercetools.api.models.common.CreatedBy::deepCopy)
-                .orElse(null));
-        instance.setName(Optional.ofNullable(template.getName())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
         instance.setKey(template.getKey());
-        instance.setDescription(Optional.ofNullable(template.getDescription())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setValue(Optional.ofNullable(template.getValue())
-                .map(com.commercetools.api.models.product_discount.ProductDiscountValue::deepCopy)
-                .orElse(null));
+        instance.setDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setValue(
+            com.commercetools.api.models.product_discount.ProductDiscountValue.deepCopy(template.getValue()));
         instance.setPredicate(template.getPredicate());
         instance.setSortOrder(template.getSortOrder());
         instance.setIsActive(template.getIsActive());

@@ -276,24 +276,17 @@ public interface Record {
         instance.setVersion(template.getVersion());
         instance.setPreviousVersion(template.getPreviousVersion());
         instance.setType(template.getType());
-        instance.setModifiedBy(Optional.ofNullable(template.getModifiedBy())
-                .map(com.commercetools.history.models.change_history.ModifiedBy::deepCopy)
-                .orElse(null));
+        instance.setModifiedBy(
+            com.commercetools.history.models.change_history.ModifiedBy.deepCopy(template.getModifiedBy()));
         instance.setModifiedAt(template.getModifiedAt());
-        instance.setLabel(Optional.ofNullable(template.getLabel())
-                .map(com.commercetools.history.models.label.Label::deepCopy)
-                .orElse(null));
-        instance.setPreviousLabel(Optional.ofNullable(template.getPreviousLabel())
-                .map(com.commercetools.history.models.label.Label::deepCopy)
-                .orElse(null));
+        instance.setLabel(com.commercetools.history.models.label.Label.deepCopy(template.getLabel()));
+        instance.setPreviousLabel(com.commercetools.history.models.label.Label.deepCopy(template.getPreviousLabel()));
         instance.setChanges(Optional.ofNullable(template.getChanges())
                 .map(t -> t.stream()
                         .map(com.commercetools.history.models.change.Change::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setResource(Optional.ofNullable(template.getResource())
-                .map(com.commercetools.history.models.common.Reference::deepCopy)
-                .orElse(null));
+        instance.setResource(com.commercetools.history.models.common.Reference.deepCopy(template.getResource()));
         instance.setStores(Optional.ofNullable(template.getStores())
                 .map(t -> t.stream()
                         .map(com.commercetools.history.models.common.KeyReference::deepCopy)

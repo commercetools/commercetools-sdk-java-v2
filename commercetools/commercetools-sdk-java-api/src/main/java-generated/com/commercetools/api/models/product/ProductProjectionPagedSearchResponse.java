@@ -182,9 +182,7 @@ public interface ProductProjectionPagedSearchResponse
                         .map(com.commercetools.api.models.product.ProductProjection::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setFacets(Optional.ofNullable(template.getFacets())
-                .map(com.commercetools.api.models.product.FacetResults::deepCopy)
-                .orElse(null));
+        instance.setFacets(com.commercetools.api.models.product.FacetResults.deepCopy(template.getFacets()));
         return instance;
     }
 

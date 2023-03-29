@@ -83,9 +83,7 @@ public interface CategoryCreatedMessagePayload extends MessagePayload {
             return null;
         }
         CategoryCreatedMessagePayloadImpl instance = new CategoryCreatedMessagePayloadImpl();
-        instance.setCategory(Optional.ofNullable(template.getCategory())
-                .map(com.commercetools.api.models.category.Category::deepCopy)
-                .orElse(null));
+        instance.setCategory(com.commercetools.api.models.category.Category.deepCopy(template.getCategory()));
         return instance;
     }
 

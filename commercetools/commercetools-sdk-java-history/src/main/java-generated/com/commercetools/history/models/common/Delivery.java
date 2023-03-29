@@ -190,12 +190,8 @@ public interface Delivery {
                         .map(com.commercetools.history.models.common.Parcel::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setAddress(Optional.ofNullable(template.getAddress())
-                .map(com.commercetools.history.models.common.Address::deepCopy)
-                .orElse(null));
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.history.models.common.CustomFields::deepCopy)
-                .orElse(null));
+        instance.setAddress(com.commercetools.history.models.common.Address.deepCopy(template.getAddress()));
+        instance.setCustom(com.commercetools.history.models.common.CustomFields.deepCopy(template.getCustom()));
         return instance;
     }
 

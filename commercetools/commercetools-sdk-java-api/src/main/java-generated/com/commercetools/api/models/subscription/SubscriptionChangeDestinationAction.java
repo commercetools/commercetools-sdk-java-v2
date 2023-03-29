@@ -83,9 +83,8 @@ public interface SubscriptionChangeDestinationAction extends SubscriptionUpdateA
             return null;
         }
         SubscriptionChangeDestinationActionImpl instance = new SubscriptionChangeDestinationActionImpl();
-        instance.setDestination(Optional.ofNullable(template.getDestination())
-                .map(com.commercetools.api.models.subscription.Destination::deepCopy)
-                .orElse(null));
+        instance.setDestination(
+            com.commercetools.api.models.subscription.Destination.deepCopy(template.getDestination()));
         return instance;
     }
 

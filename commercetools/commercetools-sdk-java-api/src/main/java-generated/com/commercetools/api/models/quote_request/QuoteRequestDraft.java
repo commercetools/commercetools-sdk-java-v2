@@ -179,18 +179,12 @@ public interface QuoteRequestDraft
             return null;
         }
         QuoteRequestDraftImpl instance = new QuoteRequestDraftImpl();
-        instance.setCart(Optional.ofNullable(template.getCart())
-                .map(com.commercetools.api.models.cart.CartResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setCart(com.commercetools.api.models.cart.CartResourceIdentifier.deepCopy(template.getCart()));
         instance.setCartVersion(template.getCartVersion());
         instance.setKey(template.getKey());
         instance.setComment(template.getComment());
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
-                .orElse(null));
-        instance.setState(Optional.ofNullable(template.getState())
-                .map(com.commercetools.api.models.state.StateReference::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setState(com.commercetools.api.models.state.StateReference.deepCopy(template.getState()));
         instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
         return instance;
     }

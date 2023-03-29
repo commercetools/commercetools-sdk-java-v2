@@ -84,9 +84,8 @@ public interface InventoryEntryCreatedMessagePayload extends MessagePayload {
             return null;
         }
         InventoryEntryCreatedMessagePayloadImpl instance = new InventoryEntryCreatedMessagePayloadImpl();
-        instance.setInventoryEntry(Optional.ofNullable(template.getInventoryEntry())
-                .map(com.commercetools.api.models.inventory.InventoryEntry::deepCopy)
-                .orElse(null));
+        instance.setInventoryEntry(
+            com.commercetools.api.models.inventory.InventoryEntry.deepCopy(template.getInventoryEntry()));
         return instance;
     }
 

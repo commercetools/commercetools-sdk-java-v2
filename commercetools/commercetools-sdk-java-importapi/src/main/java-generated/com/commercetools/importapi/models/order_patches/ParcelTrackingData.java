@@ -94,9 +94,8 @@ public interface ParcelTrackingData {
         }
         ParcelTrackingDataImpl instance = new ParcelTrackingDataImpl();
         instance.setParcelId(template.getParcelId());
-        instance.setTrackingData(Optional.ofNullable(template.getTrackingData())
-                .map(com.commercetools.importapi.models.orders.TrackingData::deepCopy)
-                .orElse(null));
+        instance.setTrackingData(
+            com.commercetools.importapi.models.orders.TrackingData.deepCopy(template.getTrackingData()));
         return instance;
     }
 

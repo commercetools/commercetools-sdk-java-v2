@@ -83,9 +83,7 @@ public interface MoneyField extends CustomField {
             return null;
         }
         MoneyFieldImpl instance = new MoneyFieldImpl();
-        instance.setValue(Optional.ofNullable(template.getValue())
-                .map(com.commercetools.importapi.models.common.TypedMoney::deepCopy)
-                .orElse(null));
+        instance.setValue(com.commercetools.importapi.models.common.TypedMoney.deepCopy(template.getValue()));
         return instance;
     }
 

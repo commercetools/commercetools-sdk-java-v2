@@ -127,9 +127,8 @@ public interface AddPlainEnumValueChange extends Change {
         AddPlainEnumValueChangeImpl instance = new AddPlainEnumValueChangeImpl();
         instance.setChange(template.getChange());
         instance.setAttributeName(template.getAttributeName());
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.change_value.EnumValue::deepCopy)
-                .orElse(null));
+        instance.setNextValue(
+            com.commercetools.history.models.change_value.EnumValue.deepCopy(template.getNextValue()));
         return instance;
     }
 

@@ -159,9 +159,7 @@ public interface SetAssetTagsChange extends Change {
         }
         SetAssetTagsChangeImpl instance = new SetAssetTagsChangeImpl();
         instance.setChange(template.getChange());
-        instance.setAsset(Optional.ofNullable(template.getAsset())
-                .map(com.commercetools.history.models.change_value.AssetChangeValue::deepCopy)
-                .orElse(null));
+        instance.setAsset(com.commercetools.history.models.change_value.AssetChangeValue.deepCopy(template.getAsset()));
         instance.setNextValue(Optional.ofNullable(template.getNextValue()).map(ArrayList::new).orElse(null));
         instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue()).map(ArrayList::new).orElse(null));
         return instance;

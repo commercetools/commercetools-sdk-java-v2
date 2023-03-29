@@ -99,9 +99,7 @@ public interface StoreReference extends Reference, com.commercetools.api.models.
         }
         StoreReferenceImpl instance = new StoreReferenceImpl();
         instance.setId(template.getId());
-        instance.setObj(Optional.ofNullable(template.getObj())
-                .map(com.commercetools.api.models.store.Store::deepCopy)
-                .orElse(null));
+        instance.setObj(com.commercetools.api.models.store.Store.deepCopy(template.getObj()));
         return instance;
     }
 

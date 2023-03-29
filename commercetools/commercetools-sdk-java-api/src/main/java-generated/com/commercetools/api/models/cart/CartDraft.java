@@ -607,16 +607,12 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
         instance.setKey(template.getKey());
         instance.setCustomerId(template.getCustomerId());
         instance.setCustomerEmail(template.getCustomerEmail());
-        instance.setCustomerGroup(Optional.ofNullable(template.getCustomerGroup())
-                .map(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier
+                .deepCopy(template.getCustomerGroup()));
         instance.setAnonymousId(template.getAnonymousId());
-        instance.setBusinessUnit(Optional.ofNullable(template.getBusinessUnit())
-                .map(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier::deepCopy)
-                .orElse(null));
-        instance.setStore(Optional.ofNullable(template.getStore())
-                .map(com.commercetools.api.models.store.StoreResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setBusinessUnit(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier
+                .deepCopy(template.getBusinessUnit()));
+        instance.setStore(com.commercetools.api.models.store.StoreResourceIdentifier.deepCopy(template.getStore()));
         instance.setLineItems(Optional.ofNullable(template.getLineItems())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.cart.LineItemDraft::deepCopy)
@@ -628,24 +624,19 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setTaxMode(template.getTaxMode());
-        instance.setExternalTaxRateForShippingMethod(Optional.ofNullable(template.getExternalTaxRateForShippingMethod())
-                .map(com.commercetools.api.models.cart.ExternalTaxRateDraft::deepCopy)
-                .orElse(null));
+        instance.setExternalTaxRateForShippingMethod(com.commercetools.api.models.cart.ExternalTaxRateDraft
+                .deepCopy(template.getExternalTaxRateForShippingMethod()));
         instance.setTaxRoundingMode(template.getTaxRoundingMode());
         instance.setTaxCalculationMode(template.getTaxCalculationMode());
         instance.setInventoryMode(template.getInventoryMode());
-        instance.setBillingAddress(Optional.ofNullable(template.getBillingAddress())
-                .map(com.commercetools.api.models.common.BaseAddress::deepCopy)
-                .orElse(null));
-        instance.setShippingAddress(Optional.ofNullable(template.getShippingAddress())
-                .map(com.commercetools.api.models.common.BaseAddress::deepCopy)
-                .orElse(null));
-        instance.setShippingMethod(Optional.ofNullable(template.getShippingMethod())
-                .map(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier::deepCopy)
-                .orElse(null));
-        instance.setShippingRateInput(Optional.ofNullable(template.getShippingRateInput())
-                .map(com.commercetools.api.models.cart.ShippingRateInputDraft::deepCopy)
-                .orElse(null));
+        instance.setBillingAddress(
+            com.commercetools.api.models.common.BaseAddress.deepCopy(template.getBillingAddress()));
+        instance.setShippingAddress(
+            com.commercetools.api.models.common.BaseAddress.deepCopy(template.getShippingAddress()));
+        instance.setShippingMethod(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier
+                .deepCopy(template.getShippingMethod()));
+        instance.setShippingRateInput(
+            com.commercetools.api.models.cart.ShippingRateInputDraft.deepCopy(template.getShippingRateInput()));
         instance.setShippingMode(template.getShippingMode());
         instance.setCustomShipping(Optional.ofNullable(template.getCustomShipping())
                 .map(t -> t.stream()
@@ -667,9 +658,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
         instance.setLocale(template.getLocale());
         instance.setOrigin(template.getOrigin());
         instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;
     }
 

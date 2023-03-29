@@ -240,16 +240,13 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
         ShippingMethodDraftImpl instance = new ShippingMethodDraftImpl();
         instance.setKey(template.getKey());
         instance.setName(template.getName());
-        instance.setLocalizedName(Optional.ofNullable(template.getLocalizedName())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setLocalizedName(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getLocalizedName()));
         instance.setDescription(template.getDescription());
-        instance.setLocalizedDescription(Optional.ofNullable(template.getLocalizedDescription())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setTaxCategory(Optional.ofNullable(template.getTaxCategory())
-                .map(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setLocalizedDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getLocalizedDescription()));
+        instance.setTaxCategory(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier
+                .deepCopy(template.getTaxCategory()));
         instance.setZoneRates(Optional.ofNullable(template.getZoneRates())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.shipping_method.ZoneRateDraft::deepCopy)
@@ -257,9 +254,7 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
                 .orElse(null));
         instance.setIsDefault(template.getIsDefault());
         instance.setPredicate(template.getPredicate());
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;
     }
 

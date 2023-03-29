@@ -99,9 +99,7 @@ public interface CustomerReference extends Reference, com.commercetools.api.mode
         }
         CustomerReferenceImpl instance = new CustomerReferenceImpl();
         instance.setId(template.getId());
-        instance.setObj(Optional.ofNullable(template.getObj())
-                .map(com.commercetools.api.models.customer.Customer::deepCopy)
-                .orElse(null));
+        instance.setObj(com.commercetools.api.models.customer.Customer.deepCopy(template.getObj()));
         return instance;
     }
 

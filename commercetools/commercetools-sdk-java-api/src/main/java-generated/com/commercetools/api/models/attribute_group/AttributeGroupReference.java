@@ -99,9 +99,7 @@ public interface AttributeGroupReference extends Reference, com.commercetools.ap
         }
         AttributeGroupReferenceImpl instance = new AttributeGroupReferenceImpl();
         instance.setId(template.getId());
-        instance.setObj(Optional.ofNullable(template.getObj())
-                .map(com.commercetools.api.models.attribute_group.AttributeGroup::deepCopy)
-                .orElse(null));
+        instance.setObj(com.commercetools.api.models.attribute_group.AttributeGroup.deepCopy(template.getObj()));
         return instance;
     }
 

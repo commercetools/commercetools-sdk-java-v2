@@ -145,15 +145,10 @@ public interface QuoteLabel extends Label {
         }
         QuoteLabelImpl instance = new QuoteLabelImpl();
         instance.setKey(template.getKey());
-        instance.setCustomer(Optional.ofNullable(template.getCustomer())
-                .map(com.commercetools.history.models.common.Reference::deepCopy)
-                .orElse(null));
-        instance.setStagedQuote(Optional.ofNullable(template.getStagedQuote())
-                .map(com.commercetools.history.models.common.Reference::deepCopy)
-                .orElse(null));
-        instance.setQuoteRequest(Optional.ofNullable(template.getQuoteRequest())
-                .map(com.commercetools.history.models.common.Reference::deepCopy)
-                .orElse(null));
+        instance.setCustomer(com.commercetools.history.models.common.Reference.deepCopy(template.getCustomer()));
+        instance.setStagedQuote(com.commercetools.history.models.common.Reference.deepCopy(template.getStagedQuote()));
+        instance.setQuoteRequest(
+            com.commercetools.history.models.common.Reference.deepCopy(template.getQuoteRequest()));
         return instance;
     }
 

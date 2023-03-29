@@ -84,9 +84,7 @@ public interface BusinessUnitAddressChangedMessagePayload extends MessagePayload
             return null;
         }
         BusinessUnitAddressChangedMessagePayloadImpl instance = new BusinessUnitAddressChangedMessagePayloadImpl();
-        instance.setAddress(Optional.ofNullable(template.getAddress())
-                .map(com.commercetools.api.models.common.Address::deepCopy)
-                .orElse(null));
+        instance.setAddress(com.commercetools.api.models.common.Address.deepCopy(template.getAddress()));
         return instance;
     }
 

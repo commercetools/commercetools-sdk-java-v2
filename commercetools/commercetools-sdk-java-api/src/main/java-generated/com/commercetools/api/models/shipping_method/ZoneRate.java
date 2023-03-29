@@ -105,9 +105,7 @@ public interface ZoneRate {
             return null;
         }
         ZoneRateImpl instance = new ZoneRateImpl();
-        instance.setZone(Optional.ofNullable(template.getZone())
-                .map(com.commercetools.api.models.zone.ZoneReference::deepCopy)
-                .orElse(null));
+        instance.setZone(com.commercetools.api.models.zone.ZoneReference.deepCopy(template.getZone()));
         instance.setShippingRates(Optional.ofNullable(template.getShippingRates())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.shipping_method.ShippingRate::deepCopy)

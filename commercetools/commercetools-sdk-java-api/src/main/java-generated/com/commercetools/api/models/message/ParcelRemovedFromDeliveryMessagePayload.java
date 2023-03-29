@@ -118,9 +118,7 @@ public interface ParcelRemovedFromDeliveryMessagePayload extends OrderMessagePay
         }
         ParcelRemovedFromDeliveryMessagePayloadImpl instance = new ParcelRemovedFromDeliveryMessagePayloadImpl();
         instance.setDeliveryId(template.getDeliveryId());
-        instance.setParcel(Optional.ofNullable(template.getParcel())
-                .map(com.commercetools.api.models.order.Parcel::deepCopy)
-                .orElse(null));
+        instance.setParcel(com.commercetools.api.models.order.Parcel.deepCopy(template.getParcel()));
         instance.setShippingKey(template.getShippingKey());
         return instance;
     }

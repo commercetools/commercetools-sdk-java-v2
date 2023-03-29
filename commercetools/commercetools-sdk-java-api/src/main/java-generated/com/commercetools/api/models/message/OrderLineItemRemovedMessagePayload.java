@@ -222,18 +222,13 @@ public interface OrderLineItemRemovedMessagePayload extends OrderMessagePayload 
                         .map(com.commercetools.api.models.order.ItemState::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setNewTotalPrice(Optional.ofNullable(template.getNewTotalPrice())
-                .map(com.commercetools.api.models.common.CentPrecisionMoney::deepCopy)
-                .orElse(null));
-        instance.setNewTaxedPrice(Optional.ofNullable(template.getNewTaxedPrice())
-                .map(com.commercetools.api.models.cart.TaxedItemPrice::deepCopy)
-                .orElse(null));
-        instance.setNewPrice(Optional.ofNullable(template.getNewPrice())
-                .map(com.commercetools.api.models.common.Price::deepCopy)
-                .orElse(null));
-        instance.setNewShippingDetail(Optional.ofNullable(template.getNewShippingDetail())
-                .map(com.commercetools.api.models.cart.ItemShippingDetails::deepCopy)
-                .orElse(null));
+        instance.setNewTotalPrice(
+            com.commercetools.api.models.common.CentPrecisionMoney.deepCopy(template.getNewTotalPrice()));
+        instance.setNewTaxedPrice(
+            com.commercetools.api.models.cart.TaxedItemPrice.deepCopy(template.getNewTaxedPrice()));
+        instance.setNewPrice(com.commercetools.api.models.common.Price.deepCopy(template.getNewPrice()));
+        instance.setNewShippingDetail(
+            com.commercetools.api.models.cart.ItemShippingDetails.deepCopy(template.getNewShippingDetail()));
         return instance;
     }
 

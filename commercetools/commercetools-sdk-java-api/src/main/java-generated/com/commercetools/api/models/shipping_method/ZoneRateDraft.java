@@ -105,9 +105,7 @@ public interface ZoneRateDraft extends io.vrap.rmf.base.client.Draft<ZoneRateDra
             return null;
         }
         ZoneRateDraftImpl instance = new ZoneRateDraftImpl();
-        instance.setZone(Optional.ofNullable(template.getZone())
-                .map(com.commercetools.api.models.zone.ZoneResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setZone(com.commercetools.api.models.zone.ZoneResourceIdentifier.deepCopy(template.getZone()));
         instance.setShippingRates(Optional.ofNullable(template.getShippingRates())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.shipping_method.ShippingRateDraft::deepCopy)

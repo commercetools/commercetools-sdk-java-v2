@@ -161,9 +161,7 @@ public interface RemoveBillingAddressIdChange extends Change {
         instance.setChange(template.getChange());
         instance.setNextValue(Optional.ofNullable(template.getNextValue()).map(ArrayList::new).orElse(null));
         instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue()).map(ArrayList::new).orElse(null));
-        instance.setAddress(Optional.ofNullable(template.getAddress())
-                .map(com.commercetools.history.models.common.Address::deepCopy)
-                .orElse(null));
+        instance.setAddress(com.commercetools.history.models.common.Address.deepCopy(template.getAddress()));
         return instance;
     }
 

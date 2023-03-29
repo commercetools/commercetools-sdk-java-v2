@@ -133,20 +133,15 @@ public interface ParcelDraft extends com.commercetools.api.models.CustomizableDr
             return null;
         }
         ParcelDraftImpl instance = new ParcelDraftImpl();
-        instance.setMeasurements(Optional.ofNullable(template.getMeasurements())
-                .map(com.commercetools.api.models.order.ParcelMeasurements::deepCopy)
-                .orElse(null));
-        instance.setTrackingData(Optional.ofNullable(template.getTrackingData())
-                .map(com.commercetools.api.models.order.TrackingData::deepCopy)
-                .orElse(null));
+        instance.setMeasurements(
+            com.commercetools.api.models.order.ParcelMeasurements.deepCopy(template.getMeasurements()));
+        instance.setTrackingData(com.commercetools.api.models.order.TrackingData.deepCopy(template.getTrackingData()));
         instance.setItems(Optional.ofNullable(template.getItems())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.order.DeliveryItem::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;
     }
 

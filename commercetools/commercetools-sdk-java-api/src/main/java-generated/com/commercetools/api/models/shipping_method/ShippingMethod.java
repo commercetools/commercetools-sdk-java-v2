@@ -349,24 +349,18 @@ public interface ShippingMethod
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(Optional.ofNullable(template.getLastModifiedBy())
-                .map(com.commercetools.api.models.common.LastModifiedBy::deepCopy)
-                .orElse(null));
-        instance.setCreatedBy(Optional.ofNullable(template.getCreatedBy())
-                .map(com.commercetools.api.models.common.CreatedBy::deepCopy)
-                .orElse(null));
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setKey(template.getKey());
         instance.setName(template.getName());
-        instance.setLocalizedName(Optional.ofNullable(template.getLocalizedName())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setLocalizedName(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getLocalizedName()));
         instance.setDescription(template.getDescription());
-        instance.setLocalizedDescription(Optional.ofNullable(template.getLocalizedDescription())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setTaxCategory(Optional.ofNullable(template.getTaxCategory())
-                .map(com.commercetools.api.models.tax_category.TaxCategoryReference::deepCopy)
-                .orElse(null));
+        instance.setLocalizedDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getLocalizedDescription()));
+        instance.setTaxCategory(
+            com.commercetools.api.models.tax_category.TaxCategoryReference.deepCopy(template.getTaxCategory()));
         instance.setZoneRates(Optional.ofNullable(template.getZoneRates())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.shipping_method.ZoneRate::deepCopy)
@@ -374,9 +368,7 @@ public interface ShippingMethod
                 .orElse(null));
         instance.setIsDefault(template.getIsDefault());
         instance.setPredicate(template.getPredicate());
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFields::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         return instance;
     }
 

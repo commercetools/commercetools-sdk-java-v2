@@ -93,9 +93,7 @@ public interface MethodTaxedPrice {
         }
         MethodTaxedPriceImpl instance = new MethodTaxedPriceImpl();
         instance.setShippingMethodKey(template.getShippingMethodKey());
-        instance.setTaxedPrice(Optional.ofNullable(template.getTaxedPrice())
-                .map(com.commercetools.api.models.cart.TaxedItemPrice::deepCopy)
-                .orElse(null));
+        instance.setTaxedPrice(com.commercetools.api.models.cart.TaxedItemPrice.deepCopy(template.getTaxedPrice()));
         return instance;
     }
 

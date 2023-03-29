@@ -84,9 +84,7 @@ public interface IndividualExclusionProductSelectionType extends ProductSelectio
             return null;
         }
         IndividualExclusionProductSelectionTypeImpl instance = new IndividualExclusionProductSelectionTypeImpl();
-        instance.setName(Optional.ofNullable(template.getName())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
         return instance;
     }
 

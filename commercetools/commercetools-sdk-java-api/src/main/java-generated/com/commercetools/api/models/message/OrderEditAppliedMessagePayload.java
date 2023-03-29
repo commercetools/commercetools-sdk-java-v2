@@ -102,12 +102,8 @@ public interface OrderEditAppliedMessagePayload extends OrderMessagePayload {
             return null;
         }
         OrderEditAppliedMessagePayloadImpl instance = new OrderEditAppliedMessagePayloadImpl();
-        instance.setEdit(Optional.ofNullable(template.getEdit())
-                .map(com.commercetools.api.models.order_edit.OrderEdit::deepCopy)
-                .orElse(null));
-        instance.setResult(Optional.ofNullable(template.getResult())
-                .map(com.commercetools.api.models.order_edit.OrderEditApplied::deepCopy)
-                .orElse(null));
+        instance.setEdit(com.commercetools.api.models.order_edit.OrderEdit.deepCopy(template.getEdit()));
+        instance.setResult(com.commercetools.api.models.order_edit.OrderEditApplied.deepCopy(template.getResult()));
         return instance;
     }
 

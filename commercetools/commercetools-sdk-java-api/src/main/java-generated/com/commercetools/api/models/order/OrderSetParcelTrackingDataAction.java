@@ -98,9 +98,7 @@ public interface OrderSetParcelTrackingDataAction extends OrderUpdateAction {
         }
         OrderSetParcelTrackingDataActionImpl instance = new OrderSetParcelTrackingDataActionImpl();
         instance.setParcelId(template.getParcelId());
-        instance.setTrackingData(Optional.ofNullable(template.getTrackingData())
-                .map(com.commercetools.api.models.order.TrackingData::deepCopy)
-                .orElse(null));
+        instance.setTrackingData(com.commercetools.api.models.order.TrackingData.deepCopy(template.getTrackingData()));
         return instance;
     }
 

@@ -304,24 +304,18 @@ public interface InventoryEntry
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(Optional.ofNullable(template.getLastModifiedBy())
-                .map(com.commercetools.api.models.common.LastModifiedBy::deepCopy)
-                .orElse(null));
-        instance.setCreatedBy(Optional.ofNullable(template.getCreatedBy())
-                .map(com.commercetools.api.models.common.CreatedBy::deepCopy)
-                .orElse(null));
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setKey(template.getKey());
         instance.setSku(template.getSku());
-        instance.setSupplyChannel(Optional.ofNullable(template.getSupplyChannel())
-                .map(com.commercetools.api.models.channel.ChannelReference::deepCopy)
-                .orElse(null));
+        instance.setSupplyChannel(
+            com.commercetools.api.models.channel.ChannelReference.deepCopy(template.getSupplyChannel()));
         instance.setQuantityOnStock(template.getQuantityOnStock());
         instance.setAvailableQuantity(template.getAvailableQuantity());
         instance.setRestockableInDays(template.getRestockableInDays());
         instance.setExpectedDelivery(template.getExpectedDelivery());
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFields::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         return instance;
     }
 

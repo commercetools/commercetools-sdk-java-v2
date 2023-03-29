@@ -83,9 +83,7 @@ public interface CustomerCreatedMessagePayload extends MessagePayload {
             return null;
         }
         CustomerCreatedMessagePayloadImpl instance = new CustomerCreatedMessagePayloadImpl();
-        instance.setCustomer(Optional.ofNullable(template.getCustomer())
-                .map(com.commercetools.api.models.customer.Customer::deepCopy)
-                .orElse(null));
+        instance.setCustomer(com.commercetools.api.models.customer.Customer.deepCopy(template.getCustomer()));
         return instance;
     }
 

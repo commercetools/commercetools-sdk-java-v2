@@ -94,9 +94,8 @@ public interface ProductSelectionSetting {
             return null;
         }
         ProductSelectionSettingImpl instance = new ProductSelectionSettingImpl();
-        instance.setProductSelection(Optional.ofNullable(template.getProductSelection())
-                .map(com.commercetools.history.models.common.Reference::deepCopy)
-                .orElse(null));
+        instance.setProductSelection(
+            com.commercetools.history.models.common.Reference.deepCopy(template.getProductSelection()));
         instance.setActive(template.getActive());
         return instance;
     }

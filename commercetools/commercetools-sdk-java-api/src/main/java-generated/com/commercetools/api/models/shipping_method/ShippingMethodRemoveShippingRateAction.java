@@ -102,12 +102,9 @@ public interface ShippingMethodRemoveShippingRateAction extends ShippingMethodUp
             return null;
         }
         ShippingMethodRemoveShippingRateActionImpl instance = new ShippingMethodRemoveShippingRateActionImpl();
-        instance.setZone(Optional.ofNullable(template.getZone())
-                .map(com.commercetools.api.models.zone.ZoneResourceIdentifier::deepCopy)
-                .orElse(null));
-        instance.setShippingRate(Optional.ofNullable(template.getShippingRate())
-                .map(com.commercetools.api.models.shipping_method.ShippingRateDraft::deepCopy)
-                .orElse(null));
+        instance.setZone(com.commercetools.api.models.zone.ZoneResourceIdentifier.deepCopy(template.getZone()));
+        instance.setShippingRate(
+            com.commercetools.api.models.shipping_method.ShippingRateDraft.deepCopy(template.getShippingRate()));
         return instance;
     }
 

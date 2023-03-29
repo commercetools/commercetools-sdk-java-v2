@@ -99,9 +99,7 @@ public interface TaxCategoryReference extends Reference, com.commercetools.api.m
         }
         TaxCategoryReferenceImpl instance = new TaxCategoryReferenceImpl();
         instance.setId(template.getId());
-        instance.setObj(Optional.ofNullable(template.getObj())
-                .map(com.commercetools.api.models.tax_category.TaxCategory::deepCopy)
-                .orElse(null));
+        instance.setObj(com.commercetools.api.models.tax_category.TaxCategory.deepCopy(template.getObj()));
         return instance;
     }
 

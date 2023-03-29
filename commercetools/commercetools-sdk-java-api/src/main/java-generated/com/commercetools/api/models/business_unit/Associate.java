@@ -104,9 +104,7 @@ public interface Associate {
         }
         AssociateImpl instance = new AssociateImpl();
         instance.setRoles(Optional.ofNullable(template.getRoles()).map(ArrayList::new).orElse(null));
-        instance.setCustomer(Optional.ofNullable(template.getCustomer())
-                .map(com.commercetools.api.models.customer.CustomerReference::deepCopy)
-                .orElse(null));
+        instance.setCustomer(com.commercetools.api.models.customer.CustomerReference.deepCopy(template.getCustomer()));
         return instance;
     }
 

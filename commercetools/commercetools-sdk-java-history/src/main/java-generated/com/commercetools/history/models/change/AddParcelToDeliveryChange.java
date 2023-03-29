@@ -127,9 +127,7 @@ public interface AddParcelToDeliveryChange extends Change {
         AddParcelToDeliveryChangeImpl instance = new AddParcelToDeliveryChangeImpl();
         instance.setChange(template.getChange());
         instance.setDeliveryId(template.getDeliveryId());
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.common.Parcel::deepCopy)
-                .orElse(null));
+        instance.setNextValue(com.commercetools.history.models.common.Parcel.deepCopy(template.getNextValue()));
         return instance;
     }
 

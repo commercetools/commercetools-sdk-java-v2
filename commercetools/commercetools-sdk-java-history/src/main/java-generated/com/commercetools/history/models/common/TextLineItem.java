@@ -165,16 +165,11 @@ public interface TextLineItem {
         }
         TextLineItemImpl instance = new TextLineItemImpl();
         instance.setAddedAt(template.getAddedAt());
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.history.models.common.CustomFields::deepCopy)
-                .orElse(null));
-        instance.setDescription(Optional.ofNullable(template.getDescription())
-                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.history.models.common.CustomFields.deepCopy(template.getCustom()));
+        instance.setDescription(
+            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getDescription()));
         instance.setId(template.getId());
-        instance.setName(Optional.ofNullable(template.getName())
-                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setName(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getName()));
         instance.setQuantity(template.getQuantity());
         return instance;
     }

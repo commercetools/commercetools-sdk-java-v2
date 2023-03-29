@@ -83,9 +83,8 @@ public interface CartSetBusinessUnitAction extends CartUpdateAction {
             return null;
         }
         CartSetBusinessUnitActionImpl instance = new CartSetBusinessUnitActionImpl();
-        instance.setBusinessUnit(Optional.ofNullable(template.getBusinessUnit())
-                .map(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setBusinessUnit(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier
+                .deepCopy(template.getBusinessUnit()));
         return instance;
     }
 

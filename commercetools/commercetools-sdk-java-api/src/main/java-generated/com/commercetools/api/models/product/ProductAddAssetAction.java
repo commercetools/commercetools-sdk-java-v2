@@ -150,9 +150,7 @@ public interface ProductAddAssetAction extends ProductUpdateAction {
         instance.setVariantId(template.getVariantId());
         instance.setSku(template.getSku());
         instance.setStaged(template.getStaged());
-        instance.setAsset(Optional.ofNullable(template.getAsset())
-                .map(com.commercetools.api.models.common.AssetDraft::deepCopy)
-                .orElse(null));
+        instance.setAsset(com.commercetools.api.models.common.AssetDraft.deepCopy(template.getAsset()));
         instance.setPosition(template.getPosition());
         return instance;
     }

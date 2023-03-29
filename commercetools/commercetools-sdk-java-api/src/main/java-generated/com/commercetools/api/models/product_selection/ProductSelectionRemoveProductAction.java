@@ -84,9 +84,8 @@ public interface ProductSelectionRemoveProductAction extends ProductSelectionUpd
             return null;
         }
         ProductSelectionRemoveProductActionImpl instance = new ProductSelectionRemoveProductActionImpl();
-        instance.setProduct(Optional.ofNullable(template.getProduct())
-                .map(com.commercetools.api.models.product.ProductResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setProduct(
+            com.commercetools.api.models.product.ProductResourceIdentifier.deepCopy(template.getProduct()));
         return instance;
     }
 

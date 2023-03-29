@@ -109,9 +109,7 @@ public interface AddTextLineItemChange extends Change {
         }
         AddTextLineItemChangeImpl instance = new AddTextLineItemChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.common.TextLineItem::deepCopy)
-                .orElse(null));
+        instance.setNextValue(com.commercetools.history.models.common.TextLineItem.deepCopy(template.getNextValue()));
         return instance;
     }
 

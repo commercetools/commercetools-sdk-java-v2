@@ -142,9 +142,8 @@ public interface MissingRoleOnChannelError extends ErrorObject {
         MissingRoleOnChannelErrorImpl instance = new MissingRoleOnChannelErrorImpl();
         instance.setMessage(template.getMessage());
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
-        instance.setChannel(Optional.ofNullable(template.getChannel())
-                .map(com.commercetools.api.models.channel.ChannelResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setChannel(
+            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getChannel()));
         instance.setMissingRole(template.getMissingRole());
         return instance;
     }

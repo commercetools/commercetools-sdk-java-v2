@@ -133,16 +133,12 @@ public interface CartDiscountValueGiftLineItem extends CartDiscountValue {
             return null;
         }
         CartDiscountValueGiftLineItemImpl instance = new CartDiscountValueGiftLineItemImpl();
-        instance.setProduct(Optional.ofNullable(template.getProduct())
-                .map(com.commercetools.api.models.product.ProductReference::deepCopy)
-                .orElse(null));
+        instance.setProduct(com.commercetools.api.models.product.ProductReference.deepCopy(template.getProduct()));
         instance.setVariantId(template.getVariantId());
-        instance.setSupplyChannel(Optional.ofNullable(template.getSupplyChannel())
-                .map(com.commercetools.api.models.channel.ChannelReference::deepCopy)
-                .orElse(null));
-        instance.setDistributionChannel(Optional.ofNullable(template.getDistributionChannel())
-                .map(com.commercetools.api.models.channel.ChannelReference::deepCopy)
-                .orElse(null));
+        instance.setSupplyChannel(
+            com.commercetools.api.models.channel.ChannelReference.deepCopy(template.getSupplyChannel()));
+        instance.setDistributionChannel(
+            com.commercetools.api.models.channel.ChannelReference.deepCopy(template.getDistributionChannel()));
         return instance;
     }
 

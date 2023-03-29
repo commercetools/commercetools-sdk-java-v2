@@ -101,9 +101,8 @@ public interface StagedOrderSetLineItemTotalPriceAction extends StagedOrderUpdat
         }
         StagedOrderSetLineItemTotalPriceActionImpl instance = new StagedOrderSetLineItemTotalPriceActionImpl();
         instance.setLineItemId(template.getLineItemId());
-        instance.setExternalTotalPrice(Optional.ofNullable(template.getExternalTotalPrice())
-                .map(com.commercetools.api.models.cart.ExternalLineItemTotalPrice::deepCopy)
-                .orElse(null));
+        instance.setExternalTotalPrice(
+            com.commercetools.api.models.cart.ExternalLineItemTotalPrice.deepCopy(template.getExternalTotalPrice()));
         return instance;
     }
 

@@ -96,9 +96,7 @@ public interface ExtensionInput {
         }
         ExtensionInputImpl instance = new ExtensionInputImpl();
         instance.setAction(template.getAction());
-        instance.setResource(Optional.ofNullable(template.getResource())
-                .map(com.commercetools.api.models.common.Reference::deepCopy)
-                .orElse(null));
+        instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         return instance;
     }
 

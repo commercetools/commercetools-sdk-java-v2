@@ -169,17 +169,13 @@ public interface OrderAddDeliveryAction
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setShippingKey(template.getShippingKey());
-        instance.setAddress(Optional.ofNullable(template.getAddress())
-                .map(com.commercetools.api.models.common.BaseAddress::deepCopy)
-                .orElse(null));
+        instance.setAddress(com.commercetools.api.models.common.BaseAddress.deepCopy(template.getAddress()));
         instance.setParcels(Optional.ofNullable(template.getParcels())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.order.ParcelDraft::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;
     }
 

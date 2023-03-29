@@ -108,9 +108,8 @@ public interface ProductDeletedMessagePayload extends MessagePayload {
         ProductDeletedMessagePayloadImpl instance = new ProductDeletedMessagePayloadImpl();
         instance.setRemovedImageUrls(
             Optional.ofNullable(template.getRemovedImageUrls()).map(ArrayList::new).orElse(null));
-        instance.setCurrentProjection(Optional.ofNullable(template.getCurrentProjection())
-                .map(com.commercetools.api.models.product.ProductProjection::deepCopy)
-                .orElse(null));
+        instance.setCurrentProjection(
+            com.commercetools.api.models.product.ProductProjection.deepCopy(template.getCurrentProjection()));
         return instance;
     }
 

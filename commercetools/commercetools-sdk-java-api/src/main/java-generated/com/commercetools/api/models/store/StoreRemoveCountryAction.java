@@ -83,9 +83,7 @@ public interface StoreRemoveCountryAction extends StoreUpdateAction {
             return null;
         }
         StoreRemoveCountryActionImpl instance = new StoreRemoveCountryActionImpl();
-        instance.setCountry(Optional.ofNullable(template.getCountry())
-                .map(com.commercetools.api.models.store_country.StoreCountry::deepCopy)
-                .orElse(null));
+        instance.setCountry(com.commercetools.api.models.store_country.StoreCountry.deepCopy(template.getCountry()));
         return instance;
     }
 

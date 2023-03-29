@@ -136,18 +136,13 @@ public interface ProductSelectionAssignment {
             return null;
         }
         ProductSelectionAssignmentImpl instance = new ProductSelectionAssignmentImpl();
-        instance.setProduct(Optional.ofNullable(template.getProduct())
-                .map(com.commercetools.api.models.product.ProductReference::deepCopy)
-                .orElse(null));
-        instance.setProductSelection(Optional.ofNullable(template.getProductSelection())
-                .map(com.commercetools.api.models.product_selection.ProductSelectionReference::deepCopy)
-                .orElse(null));
-        instance.setVariantSelection(Optional.ofNullable(template.getVariantSelection())
-                .map(com.commercetools.api.models.product_selection.ProductVariantSelection::deepCopy)
-                .orElse(null));
-        instance.setVariantExclusion(Optional.ofNullable(template.getVariantExclusion())
-                .map(com.commercetools.api.models.product_selection.ProductVariantExclusion::deepCopy)
-                .orElse(null));
+        instance.setProduct(com.commercetools.api.models.product.ProductReference.deepCopy(template.getProduct()));
+        instance.setProductSelection(com.commercetools.api.models.product_selection.ProductSelectionReference
+                .deepCopy(template.getProductSelection()));
+        instance.setVariantSelection(com.commercetools.api.models.product_selection.ProductVariantSelection
+                .deepCopy(template.getVariantSelection()));
+        instance.setVariantExclusion(com.commercetools.api.models.product_selection.ProductVariantExclusion
+                .deepCopy(template.getVariantExclusion()));
         return instance;
     }
 

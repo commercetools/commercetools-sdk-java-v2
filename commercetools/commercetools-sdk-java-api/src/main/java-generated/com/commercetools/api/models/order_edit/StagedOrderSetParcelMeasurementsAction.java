@@ -101,9 +101,8 @@ public interface StagedOrderSetParcelMeasurementsAction extends StagedOrderUpdat
         }
         StagedOrderSetParcelMeasurementsActionImpl instance = new StagedOrderSetParcelMeasurementsActionImpl();
         instance.setParcelId(template.getParcelId());
-        instance.setMeasurements(Optional.ofNullable(template.getMeasurements())
-                .map(com.commercetools.api.models.order.ParcelMeasurements::deepCopy)
-                .orElse(null));
+        instance.setMeasurements(
+            com.commercetools.api.models.order.ParcelMeasurements.deepCopy(template.getMeasurements()));
         return instance;
     }
 

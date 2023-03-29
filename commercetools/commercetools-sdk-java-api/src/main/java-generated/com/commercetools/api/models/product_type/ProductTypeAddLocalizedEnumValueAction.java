@@ -101,9 +101,8 @@ public interface ProductTypeAddLocalizedEnumValueAction extends ProductTypeUpdat
         }
         ProductTypeAddLocalizedEnumValueActionImpl instance = new ProductTypeAddLocalizedEnumValueActionImpl();
         instance.setAttributeName(template.getAttributeName());
-        instance.setValue(Optional.ofNullable(template.getValue())
-                .map(com.commercetools.api.models.product_type.AttributeLocalizedEnumValue::deepCopy)
-                .orElse(null));
+        instance.setValue(
+            com.commercetools.api.models.product_type.AttributeLocalizedEnumValue.deepCopy(template.getValue()));
         return instance;
     }
 

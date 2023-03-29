@@ -96,9 +96,7 @@ public interface TextLineItemValue {
         }
         TextLineItemValueImpl instance = new TextLineItemValueImpl();
         instance.setId(template.getId());
-        instance.setName(Optional.ofNullable(template.getName())
-                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setName(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getName()));
         return instance;
     }
 

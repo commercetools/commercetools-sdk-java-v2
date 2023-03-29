@@ -83,9 +83,7 @@ public interface StandalonePriceReference extends Reference {
         }
         StandalonePriceReferenceImpl instance = new StandalonePriceReferenceImpl();
         instance.setId(template.getId());
-        instance.setObj(Optional.ofNullable(template.getObj())
-                .map(com.commercetools.api.models.standalone_price.StandalonePrice::deepCopy)
-                .orElse(null));
+        instance.setObj(com.commercetools.api.models.standalone_price.StandalonePrice.deepCopy(template.getObj()));
         return instance;
     }
 

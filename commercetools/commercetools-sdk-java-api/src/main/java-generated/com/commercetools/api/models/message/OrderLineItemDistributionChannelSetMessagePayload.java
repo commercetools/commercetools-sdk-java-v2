@@ -101,9 +101,8 @@ public interface OrderLineItemDistributionChannelSetMessagePayload extends Order
         }
         OrderLineItemDistributionChannelSetMessagePayloadImpl instance = new OrderLineItemDistributionChannelSetMessagePayloadImpl();
         instance.setLineItemId(template.getLineItemId());
-        instance.setDistributionChannel(Optional.ofNullable(template.getDistributionChannel())
-                .map(com.commercetools.api.models.channel.ChannelReference::deepCopy)
-                .orElse(null));
+        instance.setDistributionChannel(
+            com.commercetools.api.models.channel.ChannelReference.deepCopy(template.getDistributionChannel()));
         return instance;
     }
 

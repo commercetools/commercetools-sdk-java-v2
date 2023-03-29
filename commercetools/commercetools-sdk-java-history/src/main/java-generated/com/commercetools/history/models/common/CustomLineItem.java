@@ -183,18 +183,11 @@ public interface CustomLineItem {
         }
         CustomLineItemImpl instance = new CustomLineItemImpl();
         instance.setId(template.getId());
-        instance.setName(Optional.ofNullable(template.getName())
-                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setMoney(Optional.ofNullable(template.getMoney())
-                .map(com.commercetools.history.models.common.Money::deepCopy)
-                .orElse(null));
-        instance.setTaxedPrice(Optional.ofNullable(template.getTaxedPrice())
-                .map(com.commercetools.history.models.common.TaxedItemPrice::deepCopy)
-                .orElse(null));
-        instance.setTotalPrice(Optional.ofNullable(template.getTotalPrice())
-                .map(com.commercetools.history.models.common.Money::deepCopy)
-                .orElse(null));
+        instance.setName(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setMoney(com.commercetools.history.models.common.Money.deepCopy(template.getMoney()));
+        instance.setTaxedPrice(
+            com.commercetools.history.models.common.TaxedItemPrice.deepCopy(template.getTaxedPrice()));
+        instance.setTotalPrice(com.commercetools.history.models.common.Money.deepCopy(template.getTotalPrice()));
         instance.setSlug(template.getSlug());
         instance.setQuantity(template.getQuantity());
         return instance;

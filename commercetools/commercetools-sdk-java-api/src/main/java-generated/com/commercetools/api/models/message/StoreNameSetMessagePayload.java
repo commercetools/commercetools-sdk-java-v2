@@ -105,9 +105,7 @@ public interface StoreNameSetMessagePayload extends MessagePayload {
             return null;
         }
         StoreNameSetMessagePayloadImpl instance = new StoreNameSetMessagePayloadImpl();
-        instance.setName(Optional.ofNullable(template.getName())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
         instance.setNameAllLocales(Optional.ofNullable(template.getNameAllLocales())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.common.LocalizedString::deepCopy)

@@ -148,15 +148,10 @@ public interface Asset {
         }
         AssetImpl instance = new AssetImpl();
         instance.setId(template.getId());
-        instance.setName(Optional.ofNullable(template.getName())
-                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setDescription(Optional.ofNullable(template.getDescription())
-                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.history.models.common.CustomFields::deepCopy)
-                .orElse(null));
+        instance.setName(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setDescription(
+            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setCustom(com.commercetools.history.models.common.CustomFields.deepCopy(template.getCustom()));
         instance.setKey(template.getKey());
         return instance;
     }

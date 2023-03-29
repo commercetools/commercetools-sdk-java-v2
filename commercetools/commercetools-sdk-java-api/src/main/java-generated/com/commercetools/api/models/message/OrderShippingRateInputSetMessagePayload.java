@@ -97,12 +97,10 @@ public interface OrderShippingRateInputSetMessagePayload extends OrderMessagePay
             return null;
         }
         OrderShippingRateInputSetMessagePayloadImpl instance = new OrderShippingRateInputSetMessagePayloadImpl();
-        instance.setShippingRateInput(Optional.ofNullable(template.getShippingRateInput())
-                .map(com.commercetools.api.models.cart.ShippingRateInput::deepCopy)
-                .orElse(null));
-        instance.setOldShippingRateInput(Optional.ofNullable(template.getOldShippingRateInput())
-                .map(com.commercetools.api.models.cart.ShippingRateInput::deepCopy)
-                .orElse(null));
+        instance.setShippingRateInput(
+            com.commercetools.api.models.cart.ShippingRateInput.deepCopy(template.getShippingRateInput()));
+        instance.setOldShippingRateInput(
+            com.commercetools.api.models.cart.ShippingRateInput.deepCopy(template.getOldShippingRateInput()));
         return instance;
     }
 

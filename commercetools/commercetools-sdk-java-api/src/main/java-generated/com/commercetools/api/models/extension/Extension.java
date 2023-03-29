@@ -245,16 +245,12 @@ public interface Extension extends BaseResource, com.commercetools.api.models.Do
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(Optional.ofNullable(template.getLastModifiedBy())
-                .map(com.commercetools.api.models.common.LastModifiedBy::deepCopy)
-                .orElse(null));
-        instance.setCreatedBy(Optional.ofNullable(template.getCreatedBy())
-                .map(com.commercetools.api.models.common.CreatedBy::deepCopy)
-                .orElse(null));
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setKey(template.getKey());
-        instance.setDestination(Optional.ofNullable(template.getDestination())
-                .map(com.commercetools.api.models.extension.ExtensionDestination::deepCopy)
-                .orElse(null));
+        instance.setDestination(
+            com.commercetools.api.models.extension.ExtensionDestination.deepCopy(template.getDestination()));
         instance.setTriggers(Optional.ofNullable(template.getTriggers())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.extension.ExtensionTrigger::deepCopy)

@@ -83,9 +83,7 @@ public interface ProductDiscountChangeNameAction extends ProductDiscountUpdateAc
             return null;
         }
         ProductDiscountChangeNameActionImpl instance = new ProductDiscountChangeNameActionImpl();
-        instance.setName(Optional.ofNullable(template.getName())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
         return instance;
     }
 

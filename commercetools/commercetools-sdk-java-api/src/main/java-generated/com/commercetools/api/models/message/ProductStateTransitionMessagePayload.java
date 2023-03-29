@@ -101,9 +101,7 @@ public interface ProductStateTransitionMessagePayload extends MessagePayload {
             return null;
         }
         ProductStateTransitionMessagePayloadImpl instance = new ProductStateTransitionMessagePayloadImpl();
-        instance.setState(Optional.ofNullable(template.getState())
-                .map(com.commercetools.api.models.state.StateReference::deepCopy)
-                .orElse(null));
+        instance.setState(com.commercetools.api.models.state.StateReference.deepCopy(template.getState()));
         instance.setForce(template.getForce());
         return instance;
     }

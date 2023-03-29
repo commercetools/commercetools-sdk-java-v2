@@ -150,32 +150,21 @@ public interface OrderCustomerSetMessage extends OrderMessage {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(Optional.ofNullable(template.getLastModifiedBy())
-                .map(com.commercetools.api.models.common.LastModifiedBy::deepCopy)
-                .orElse(null));
-        instance.setCreatedBy(Optional.ofNullable(template.getCreatedBy())
-                .map(com.commercetools.api.models.common.CreatedBy::deepCopy)
-                .orElse(null));
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
-        instance.setResource(Optional.ofNullable(template.getResource())
-                .map(com.commercetools.api.models.common.Reference::deepCopy)
-                .orElse(null));
+        instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(Optional.ofNullable(template.getResourceUserProvidedIdentifiers())
-                .map(com.commercetools.api.models.message.UserProvidedIdentifiers::deepCopy)
-                .orElse(null));
-        instance.setCustomer(Optional.ofNullable(template.getCustomer())
-                .map(com.commercetools.api.models.customer.CustomerReference::deepCopy)
-                .orElse(null));
-        instance.setCustomerGroup(Optional.ofNullable(template.getCustomerGroup())
-                .map(com.commercetools.api.models.customer_group.CustomerGroupReference::deepCopy)
-                .orElse(null));
-        instance.setOldCustomer(Optional.ofNullable(template.getOldCustomer())
-                .map(com.commercetools.api.models.customer.CustomerReference::deepCopy)
-                .orElse(null));
-        instance.setOldCustomerGroup(Optional.ofNullable(template.getOldCustomerGroup())
-                .map(com.commercetools.api.models.customer_group.CustomerGroupReference::deepCopy)
-                .orElse(null));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
+                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setCustomer(com.commercetools.api.models.customer.CustomerReference.deepCopy(template.getCustomer()));
+        instance.setCustomerGroup(
+            com.commercetools.api.models.customer_group.CustomerGroupReference.deepCopy(template.getCustomerGroup()));
+        instance.setOldCustomer(
+            com.commercetools.api.models.customer.CustomerReference.deepCopy(template.getOldCustomer()));
+        instance.setOldCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupReference
+                .deepCopy(template.getOldCustomerGroup()));
         return instance;
     }
 

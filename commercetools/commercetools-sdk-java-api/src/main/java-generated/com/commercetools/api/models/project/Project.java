@@ -344,27 +344,19 @@ public interface Project extends com.commercetools.api.models.WithKey {
         instance.setLanguages(Optional.ofNullable(template.getLanguages()).map(ArrayList::new).orElse(null));
         instance.setCreatedAt(template.getCreatedAt());
         instance.setTrialUntil(template.getTrialUntil());
-        instance.setMessages(Optional.ofNullable(template.getMessages())
-                .map(com.commercetools.api.models.message.MessagesConfiguration::deepCopy)
-                .orElse(null));
-        instance.setCarts(Optional.ofNullable(template.getCarts())
-                .map(com.commercetools.api.models.project.CartsConfiguration::deepCopy)
-                .orElse(null));
-        instance.setShoppingLists(Optional.ofNullable(template.getShoppingLists())
-                .map(com.commercetools.api.models.project.ShoppingListsConfiguration::deepCopy)
-                .orElse(null));
-        instance.setShippingRateInputType(Optional.ofNullable(template.getShippingRateInputType())
-                .map(com.commercetools.api.models.project.ShippingRateInputType::deepCopy)
-                .orElse(null));
-        instance.setExternalOAuth(Optional.ofNullable(template.getExternalOAuth())
-                .map(com.commercetools.api.models.project.ExternalOAuth::deepCopy)
-                .orElse(null));
-        instance.setSearchIndexing(Optional.ofNullable(template.getSearchIndexing())
-                .map(com.commercetools.api.models.project.SearchIndexingConfiguration::deepCopy)
-                .orElse(null));
-        instance.setBusinessUnits(Optional.ofNullable(template.getBusinessUnits())
-                .map(com.commercetools.api.models.project.BusinessUnitConfiguration::deepCopy)
-                .orElse(null));
+        instance.setMessages(
+            com.commercetools.api.models.message.MessagesConfiguration.deepCopy(template.getMessages()));
+        instance.setCarts(com.commercetools.api.models.project.CartsConfiguration.deepCopy(template.getCarts()));
+        instance.setShoppingLists(
+            com.commercetools.api.models.project.ShoppingListsConfiguration.deepCopy(template.getShoppingLists()));
+        instance.setShippingRateInputType(
+            com.commercetools.api.models.project.ShippingRateInputType.deepCopy(template.getShippingRateInputType()));
+        instance.setExternalOAuth(
+            com.commercetools.api.models.project.ExternalOAuth.deepCopy(template.getExternalOAuth()));
+        instance.setSearchIndexing(
+            com.commercetools.api.models.project.SearchIndexingConfiguration.deepCopy(template.getSearchIndexing()));
+        instance.setBusinessUnits(
+            com.commercetools.api.models.project.BusinessUnitConfiguration.deepCopy(template.getBusinessUnits()));
         return instance;
     }
 

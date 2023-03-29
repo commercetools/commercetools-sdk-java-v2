@@ -83,9 +83,7 @@ public interface QuoteCreatedMessagePayload extends MessagePayload {
             return null;
         }
         QuoteCreatedMessagePayloadImpl instance = new QuoteCreatedMessagePayloadImpl();
-        instance.setQuote(Optional.ofNullable(template.getQuote())
-                .map(com.commercetools.api.models.quote.Quote::deepCopy)
-                .orElse(null));
+        instance.setQuote(com.commercetools.api.models.quote.Quote.deepCopy(template.getQuote()));
         return instance;
     }
 

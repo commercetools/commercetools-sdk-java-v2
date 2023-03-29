@@ -83,9 +83,8 @@ public interface StagedQuoteCreatedMessagePayload extends MessagePayload {
             return null;
         }
         StagedQuoteCreatedMessagePayloadImpl instance = new StagedQuoteCreatedMessagePayloadImpl();
-        instance.setStagedQuote(Optional.ofNullable(template.getStagedQuote())
-                .map(com.commercetools.api.models.staged_quote.StagedQuote::deepCopy)
-                .orElse(null));
+        instance.setStagedQuote(
+            com.commercetools.api.models.staged_quote.StagedQuote.deepCopy(template.getStagedQuote()));
         return instance;
     }
 

@@ -80,9 +80,8 @@ public interface ShoppingListSetCustomerAction extends ShoppingListUpdateAction 
             return null;
         }
         ShoppingListSetCustomerActionImpl instance = new ShoppingListSetCustomerActionImpl();
-        instance.setCustomer(Optional.ofNullable(template.getCustomer())
-                .map(com.commercetools.api.models.customer.CustomerResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setCustomer(
+            com.commercetools.api.models.customer.CustomerResourceIdentifier.deepCopy(template.getCustomer()));
         return instance;
     }
 

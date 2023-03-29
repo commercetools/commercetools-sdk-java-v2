@@ -90,12 +90,10 @@ public interface SearchIndexingConfiguration {
             return null;
         }
         SearchIndexingConfigurationImpl instance = new SearchIndexingConfigurationImpl();
-        instance.setProducts(Optional.ofNullable(template.getProducts())
-                .map(com.commercetools.api.models.project.SearchIndexingConfigurationValues::deepCopy)
-                .orElse(null));
-        instance.setOrders(Optional.ofNullable(template.getOrders())
-                .map(com.commercetools.api.models.project.SearchIndexingConfigurationValues::deepCopy)
-                .orElse(null));
+        instance.setProducts(
+            com.commercetools.api.models.project.SearchIndexingConfigurationValues.deepCopy(template.getProducts()));
+        instance.setOrders(
+            com.commercetools.api.models.project.SearchIndexingConfigurationValues.deepCopy(template.getOrders()));
         return instance;
     }
 

@@ -100,9 +100,7 @@ public interface PaymentTransitionStateAction extends PaymentUpdateAction {
             return null;
         }
         PaymentTransitionStateActionImpl instance = new PaymentTransitionStateActionImpl();
-        instance.setState(Optional.ofNullable(template.getState())
-                .map(com.commercetools.api.models.state.StateResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setState(com.commercetools.api.models.state.StateResourceIdentifier.deepCopy(template.getState()));
         instance.setForce(template.getForce());
         return instance;
     }

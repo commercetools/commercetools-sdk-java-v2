@@ -84,9 +84,8 @@ public interface BusinessUnitCreatedMessagePayload extends MessagePayload {
             return null;
         }
         BusinessUnitCreatedMessagePayloadImpl instance = new BusinessUnitCreatedMessagePayloadImpl();
-        instance.setBusinessUnit(Optional.ofNullable(template.getBusinessUnit())
-                .map(com.commercetools.api.models.business_unit.BusinessUnit::deepCopy)
-                .orElse(null));
+        instance.setBusinessUnit(
+            com.commercetools.api.models.business_unit.BusinessUnit.deepCopy(template.getBusinessUnit()));
         return instance;
     }
 

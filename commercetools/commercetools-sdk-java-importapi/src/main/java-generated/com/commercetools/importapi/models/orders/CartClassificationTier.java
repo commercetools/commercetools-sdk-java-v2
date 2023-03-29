@@ -144,9 +144,7 @@ public interface CartClassificationTier extends ShippingRatePriceTier {
         }
         CartClassificationTierImpl instance = new CartClassificationTierImpl();
         instance.setValue(template.getValue());
-        instance.setPrice(Optional.ofNullable(template.getPrice())
-                .map(com.commercetools.importapi.models.common.Money::deepCopy)
-                .orElse(null));
+        instance.setPrice(com.commercetools.importapi.models.common.Money.deepCopy(template.getPrice()));
         instance.setTiers(Optional.ofNullable(template.getTiers())
                 .map(t -> t.stream()
                         .map(com.commercetools.importapi.models.orders.ShippingRatePriceTier::deepCopy)

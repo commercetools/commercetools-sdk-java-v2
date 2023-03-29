@@ -84,9 +84,8 @@ public interface OrderDiscountCodeAddedMessagePayload extends OrderMessagePayloa
             return null;
         }
         OrderDiscountCodeAddedMessagePayloadImpl instance = new OrderDiscountCodeAddedMessagePayloadImpl();
-        instance.setDiscountCode(Optional.ofNullable(template.getDiscountCode())
-                .map(com.commercetools.api.models.discount_code.DiscountCodeReference::deepCopy)
-                .orElse(null));
+        instance.setDiscountCode(
+            com.commercetools.api.models.discount_code.DiscountCodeReference.deepCopy(template.getDiscountCode()));
         return instance;
     }
 

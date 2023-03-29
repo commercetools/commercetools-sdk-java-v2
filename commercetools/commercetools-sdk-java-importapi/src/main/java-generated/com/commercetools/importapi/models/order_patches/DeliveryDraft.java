@@ -135,9 +135,7 @@ public interface DeliveryDraft extends io.vrap.rmf.base.client.Draft<DeliveryDra
                         .map(com.commercetools.importapi.models.orders.DeliveryItem::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setAddress(Optional.ofNullable(template.getAddress())
-                .map(com.commercetools.importapi.models.common.Address::deepCopy)
-                .orElse(null));
+        instance.setAddress(com.commercetools.importapi.models.common.Address.deepCopy(template.getAddress()));
         instance.setParcels(Optional.ofNullable(template.getParcels())
                 .map(t -> t.stream()
                         .map(com.commercetools.importapi.models.order_patches.DeliveryParcelDraft::deepCopy)

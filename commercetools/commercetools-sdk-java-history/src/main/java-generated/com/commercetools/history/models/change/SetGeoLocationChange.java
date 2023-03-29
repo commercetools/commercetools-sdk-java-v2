@@ -127,12 +127,9 @@ public interface SetGeoLocationChange extends Change {
         }
         SetGeoLocationChangeImpl instance = new SetGeoLocationChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.common.GeoLocation::deepCopy)
-                .orElse(null));
-        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(com.commercetools.history.models.common.GeoLocation::deepCopy)
-                .orElse(null));
+        instance.setNextValue(com.commercetools.history.models.common.GeoLocation.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.GeoLocation.deepCopy(template.getPreviousValue()));
         return instance;
     }
 

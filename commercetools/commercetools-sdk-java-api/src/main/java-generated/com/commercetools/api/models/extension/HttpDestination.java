@@ -98,9 +98,8 @@ public interface HttpDestination extends ExtensionDestination {
         }
         HttpDestinationImpl instance = new HttpDestinationImpl();
         instance.setUrl(template.getUrl());
-        instance.setAuthentication(Optional.ofNullable(template.getAuthentication())
-                .map(com.commercetools.api.models.extension.HttpDestinationAuthentication::deepCopy)
-                .orElse(null));
+        instance.setAuthentication(com.commercetools.api.models.extension.HttpDestinationAuthentication
+                .deepCopy(template.getAuthentication()));
         return instance;
     }
 

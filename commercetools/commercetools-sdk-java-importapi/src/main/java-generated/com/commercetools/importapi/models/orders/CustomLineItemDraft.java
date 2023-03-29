@@ -290,18 +290,11 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
             return null;
         }
         CustomLineItemDraftImpl instance = new CustomLineItemDraftImpl();
-        instance.setName(Optional.ofNullable(template.getName())
-                .map(com.commercetools.importapi.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setMoney(Optional.ofNullable(template.getMoney())
-                .map(com.commercetools.importapi.models.common.TypedMoney::deepCopy)
-                .orElse(null));
-        instance.setTaxedPrice(Optional.ofNullable(template.getTaxedPrice())
-                .map(com.commercetools.importapi.models.orders.CustomLineItemTaxedPrice::deepCopy)
-                .orElse(null));
-        instance.setTotalPrice(Optional.ofNullable(template.getTotalPrice())
-                .map(com.commercetools.importapi.models.common.TypedMoney::deepCopy)
-                .orElse(null));
+        instance.setName(com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setMoney(com.commercetools.importapi.models.common.TypedMoney.deepCopy(template.getMoney()));
+        instance.setTaxedPrice(
+            com.commercetools.importapi.models.orders.CustomLineItemTaxedPrice.deepCopy(template.getTaxedPrice()));
+        instance.setTotalPrice(com.commercetools.importapi.models.common.TypedMoney.deepCopy(template.getTotalPrice()));
         instance.setSlug(template.getSlug());
         instance.setQuantity(template.getQuantity());
         instance.setState(Optional.ofNullable(template.getState())
@@ -309,23 +302,18 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
                         .map(com.commercetools.importapi.models.orders.ItemState::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setTaxCategory(Optional.ofNullable(template.getTaxCategory())
-                .map(com.commercetools.importapi.models.common.TaxCategoryKeyReference::deepCopy)
-                .orElse(null));
-        instance.setTaxRate(Optional.ofNullable(template.getTaxRate())
-                .map(com.commercetools.importapi.models.prices.TaxRate::deepCopy)
-                .orElse(null));
-        instance.setExternalTaxRate(Optional.ofNullable(template.getExternalTaxRate())
-                .map(com.commercetools.importapi.models.orders.ExternalTaxRateDraft::deepCopy)
-                .orElse(null));
+        instance.setTaxCategory(
+            com.commercetools.importapi.models.common.TaxCategoryKeyReference.deepCopy(template.getTaxCategory()));
+        instance.setTaxRate(com.commercetools.importapi.models.prices.TaxRate.deepCopy(template.getTaxRate()));
+        instance.setExternalTaxRate(
+            com.commercetools.importapi.models.orders.ExternalTaxRateDraft.deepCopy(template.getExternalTaxRate()));
         instance.setDiscountedPricePerQuantity(Optional.ofNullable(template.getDiscountedPricePerQuantity())
                 .map(t -> t.stream()
                         .map(com.commercetools.importapi.models.orders.DiscountedLineItemPriceDraft::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setShippingDetails(Optional.ofNullable(template.getShippingDetails())
-                .map(com.commercetools.importapi.models.orders.ItemShippingDetailsDraft::deepCopy)
-                .orElse(null));
+        instance.setShippingDetails(
+            com.commercetools.importapi.models.orders.ItemShippingDetailsDraft.deepCopy(template.getShippingDetails()));
         return instance;
     }
 

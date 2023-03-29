@@ -258,16 +258,12 @@ public interface StandalonePriceImport extends ImportResource {
         StandalonePriceImportImpl instance = new StandalonePriceImportImpl();
         instance.setKey(template.getKey());
         instance.setSku(template.getSku());
-        instance.setValue(Optional.ofNullable(template.getValue())
-                .map(com.commercetools.importapi.models.common.TypedMoney::deepCopy)
-                .orElse(null));
+        instance.setValue(com.commercetools.importapi.models.common.TypedMoney.deepCopy(template.getValue()));
         instance.setCountry(template.getCountry());
-        instance.setCustomerGroup(Optional.ofNullable(template.getCustomerGroup())
-                .map(com.commercetools.importapi.models.common.CustomerGroupKeyReference::deepCopy)
-                .orElse(null));
-        instance.setChannel(Optional.ofNullable(template.getChannel())
-                .map(com.commercetools.importapi.models.common.ChannelKeyReference::deepCopy)
-                .orElse(null));
+        instance.setCustomerGroup(
+            com.commercetools.importapi.models.common.CustomerGroupKeyReference.deepCopy(template.getCustomerGroup()));
+        instance.setChannel(
+            com.commercetools.importapi.models.common.ChannelKeyReference.deepCopy(template.getChannel()));
         instance.setValidFrom(template.getValidFrom());
         instance.setValidUntil(template.getValidUntil());
         instance.setTiers(Optional.ofNullable(template.getTiers())
@@ -275,12 +271,9 @@ public interface StandalonePriceImport extends ImportResource {
                         .map(com.commercetools.importapi.models.common.PriceTier::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setDiscounted(Optional.ofNullable(template.getDiscounted())
-                .map(com.commercetools.importapi.models.common.DiscountedPrice::deepCopy)
-                .orElse(null));
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.importapi.models.customfields.Custom::deepCopy)
-                .orElse(null));
+        instance.setDiscounted(
+            com.commercetools.importapi.models.common.DiscountedPrice.deepCopy(template.getDiscounted()));
+        instance.setCustom(com.commercetools.importapi.models.customfields.Custom.deepCopy(template.getCustom()));
         return instance;
     }
 

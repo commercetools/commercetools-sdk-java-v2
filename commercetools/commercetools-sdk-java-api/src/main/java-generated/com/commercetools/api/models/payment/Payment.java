@@ -440,37 +440,25 @@ public interface Payment extends BaseResource, PaymentMixin, com.commercetools.a
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(Optional.ofNullable(template.getLastModifiedBy())
-                .map(com.commercetools.api.models.common.LastModifiedBy::deepCopy)
-                .orElse(null));
-        instance.setCreatedBy(Optional.ofNullable(template.getCreatedBy())
-                .map(com.commercetools.api.models.common.CreatedBy::deepCopy)
-                .orElse(null));
-        instance.setCustomer(Optional.ofNullable(template.getCustomer())
-                .map(com.commercetools.api.models.customer.CustomerReference::deepCopy)
-                .orElse(null));
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
+        instance.setCustomer(com.commercetools.api.models.customer.CustomerReference.deepCopy(template.getCustomer()));
         instance.setAnonymousId(template.getAnonymousId());
         instance.setExternalId(template.getExternalId());
         instance.setInterfaceId(template.getInterfaceId());
-        instance.setAmountPlanned(Optional.ofNullable(template.getAmountPlanned())
-                .map(com.commercetools.api.models.common.CentPrecisionMoney::deepCopy)
-                .orElse(null));
-        instance.setAmountAuthorized(Optional.ofNullable(template.getAmountAuthorized())
-                .map(com.commercetools.api.models.common.TypedMoney::deepCopy)
-                .orElse(null));
+        instance.setAmountPlanned(
+            com.commercetools.api.models.common.CentPrecisionMoney.deepCopy(template.getAmountPlanned()));
+        instance.setAmountAuthorized(
+            com.commercetools.api.models.common.TypedMoney.deepCopy(template.getAmountAuthorized()));
         instance.setAuthorizedUntil(template.getAuthorizedUntil());
-        instance.setAmountPaid(Optional.ofNullable(template.getAmountPaid())
-                .map(com.commercetools.api.models.common.TypedMoney::deepCopy)
-                .orElse(null));
-        instance.setAmountRefunded(Optional.ofNullable(template.getAmountRefunded())
-                .map(com.commercetools.api.models.common.TypedMoney::deepCopy)
-                .orElse(null));
-        instance.setPaymentMethodInfo(Optional.ofNullable(template.getPaymentMethodInfo())
-                .map(com.commercetools.api.models.payment.PaymentMethodInfo::deepCopy)
-                .orElse(null));
-        instance.setPaymentStatus(Optional.ofNullable(template.getPaymentStatus())
-                .map(com.commercetools.api.models.payment.PaymentStatus::deepCopy)
-                .orElse(null));
+        instance.setAmountPaid(com.commercetools.api.models.common.TypedMoney.deepCopy(template.getAmountPaid()));
+        instance.setAmountRefunded(
+            com.commercetools.api.models.common.TypedMoney.deepCopy(template.getAmountRefunded()));
+        instance.setPaymentMethodInfo(
+            com.commercetools.api.models.payment.PaymentMethodInfo.deepCopy(template.getPaymentMethodInfo()));
+        instance.setPaymentStatus(
+            com.commercetools.api.models.payment.PaymentStatus.deepCopy(template.getPaymentStatus()));
         instance.setTransactions(Optional.ofNullable(template.getTransactions())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.payment.Transaction::deepCopy)
@@ -481,9 +469,7 @@ public interface Payment extends BaseResource, PaymentMixin, com.commercetools.a
                         .map(com.commercetools.api.models.type.CustomFields::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFields::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         instance.setKey(template.getKey());
         return instance;
     }

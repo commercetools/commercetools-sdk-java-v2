@@ -99,9 +99,7 @@ public interface DiscountCodeReference extends Reference, com.commercetools.api.
         }
         DiscountCodeReferenceImpl instance = new DiscountCodeReferenceImpl();
         instance.setId(template.getId());
-        instance.setObj(Optional.ofNullable(template.getObj())
-                .map(com.commercetools.api.models.discount_code.DiscountCode::deepCopy)
-                .orElse(null));
+        instance.setObj(com.commercetools.api.models.discount_code.DiscountCode.deepCopy(template.getObj()));
         return instance;
     }
 

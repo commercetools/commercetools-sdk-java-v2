@@ -146,15 +146,11 @@ public interface SetParcelTrackingDataChange extends Change {
         }
         SetParcelTrackingDataChangeImpl instance = new SetParcelTrackingDataChangeImpl();
         instance.setChange(template.getChange());
-        instance.setParcel(Optional.ofNullable(template.getParcel())
-                .map(com.commercetools.history.models.change_value.ParcelChangeValue::deepCopy)
-                .orElse(null));
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.common.TrackingData::deepCopy)
-                .orElse(null));
-        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(com.commercetools.history.models.common.TrackingData::deepCopy)
-                .orElse(null));
+        instance.setParcel(
+            com.commercetools.history.models.change_value.ParcelChangeValue.deepCopy(template.getParcel()));
+        instance.setNextValue(com.commercetools.history.models.common.TrackingData.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.TrackingData.deepCopy(template.getPreviousValue()));
         return instance;
     }
 

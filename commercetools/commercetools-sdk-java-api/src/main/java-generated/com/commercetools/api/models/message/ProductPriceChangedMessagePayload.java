@@ -153,16 +153,10 @@ public interface ProductPriceChangedMessagePayload extends MessagePayload {
         }
         ProductPriceChangedMessagePayloadImpl instance = new ProductPriceChangedMessagePayloadImpl();
         instance.setVariantId(template.getVariantId());
-        instance.setOldPrice(Optional.ofNullable(template.getOldPrice())
-                .map(com.commercetools.api.models.common.Price::deepCopy)
-                .orElse(null));
-        instance.setNewPrice(Optional.ofNullable(template.getNewPrice())
-                .map(com.commercetools.api.models.common.Price::deepCopy)
-                .orElse(null));
+        instance.setOldPrice(com.commercetools.api.models.common.Price.deepCopy(template.getOldPrice()));
+        instance.setNewPrice(com.commercetools.api.models.common.Price.deepCopy(template.getNewPrice()));
         instance.setStaged(template.getStaged());
-        instance.setOldStagedPrice(Optional.ofNullable(template.getOldStagedPrice())
-                .map(com.commercetools.api.models.common.Price::deepCopy)
-                .orElse(null));
+        instance.setOldStagedPrice(com.commercetools.api.models.common.Price.deepCopy(template.getOldStagedPrice()));
         return instance;
     }
 

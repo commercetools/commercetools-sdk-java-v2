@@ -192,18 +192,14 @@ public interface OrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<Order
             return null;
         }
         OrderFromQuoteDraftImpl instance = new OrderFromQuoteDraftImpl();
-        instance.setQuote(Optional.ofNullable(template.getQuote())
-                .map(com.commercetools.api.models.quote.QuoteResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setQuote(com.commercetools.api.models.quote.QuoteResourceIdentifier.deepCopy(template.getQuote()));
         instance.setVersion(template.getVersion());
         instance.setQuoteStateToAccepted(template.getQuoteStateToAccepted());
         instance.setOrderNumber(template.getOrderNumber());
         instance.setPaymentState(template.getPaymentState());
         instance.setShipmentState(template.getShipmentState());
         instance.setOrderState(template.getOrderState());
-        instance.setState(Optional.ofNullable(template.getState())
-                .map(com.commercetools.api.models.state.StateResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setState(com.commercetools.api.models.state.StateResourceIdentifier.deepCopy(template.getState()));
         return instance;
     }
 

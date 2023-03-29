@@ -168,9 +168,7 @@ public interface ProductChangeAssetNameAction extends ProductUpdateAction {
         instance.setStaged(template.getStaged());
         instance.setAssetId(template.getAssetId());
         instance.setAssetKey(template.getAssetKey());
-        instance.setName(Optional.ofNullable(template.getName())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
         return instance;
     }
 

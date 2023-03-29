@@ -80,9 +80,8 @@ public interface ProductSetTaxCategoryAction extends ProductUpdateAction {
             return null;
         }
         ProductSetTaxCategoryActionImpl instance = new ProductSetTaxCategoryActionImpl();
-        instance.setTaxCategory(Optional.ofNullable(template.getTaxCategory())
-                .map(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setTaxCategory(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier
+                .deepCopy(template.getTaxCategory()));
         return instance;
     }
 

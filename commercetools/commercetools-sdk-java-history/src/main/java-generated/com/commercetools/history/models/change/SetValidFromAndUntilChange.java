@@ -127,12 +127,10 @@ public interface SetValidFromAndUntilChange extends Change {
         }
         SetValidFromAndUntilChangeImpl instance = new SetValidFromAndUntilChangeImpl();
         instance.setChange(template.getChange());
-        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(com.commercetools.history.models.change_value.ValidFromAndUntilValue::deepCopy)
-                .orElse(null));
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.change_value.ValidFromAndUntilValue::deepCopy)
-                .orElse(null));
+        instance.setPreviousValue(
+            com.commercetools.history.models.change_value.ValidFromAndUntilValue.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(
+            com.commercetools.history.models.change_value.ValidFromAndUntilValue.deepCopy(template.getNextValue()));
         return instance;
     }
 

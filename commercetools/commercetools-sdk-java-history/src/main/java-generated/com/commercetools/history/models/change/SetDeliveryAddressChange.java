@@ -145,12 +145,9 @@ public interface SetDeliveryAddressChange extends Change {
         SetDeliveryAddressChangeImpl instance = new SetDeliveryAddressChangeImpl();
         instance.setChange(template.getChange());
         instance.setDeliveryId(template.getDeliveryId());
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.common.Address::deepCopy)
-                .orElse(null));
-        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(com.commercetools.history.models.common.Address::deepCopy)
-                .orElse(null));
+        instance.setNextValue(com.commercetools.history.models.common.Address.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.Address.deepCopy(template.getPreviousValue()));
         return instance;
     }
 

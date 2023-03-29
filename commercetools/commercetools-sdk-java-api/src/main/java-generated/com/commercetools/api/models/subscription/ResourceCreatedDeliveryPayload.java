@@ -104,12 +104,9 @@ public interface ResourceCreatedDeliveryPayload extends DeliveryPayload {
         }
         ResourceCreatedDeliveryPayloadImpl instance = new ResourceCreatedDeliveryPayloadImpl();
         instance.setProjectKey(template.getProjectKey());
-        instance.setResource(Optional.ofNullable(template.getResource())
-                .map(com.commercetools.api.models.common.Reference::deepCopy)
-                .orElse(null));
-        instance.setResourceUserProvidedIdentifiers(Optional.ofNullable(template.getResourceUserProvidedIdentifiers())
-                .map(com.commercetools.api.models.message.UserProvidedIdentifiers::deepCopy)
-                .orElse(null));
+        instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
+                .deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setVersion(template.getVersion());
         instance.setModifiedAt(template.getModifiedAt());
         return instance;

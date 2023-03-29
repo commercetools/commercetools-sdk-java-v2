@@ -127,9 +127,7 @@ public interface AddressDraft extends BaseAddress, com.commercetools.api.models.
         instance.setFax(template.getFax());
         instance.setAdditionalAddressInfo(template.getAdditionalAddressInfo());
         instance.setExternalId(template.getExternalId());
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;
     }
 

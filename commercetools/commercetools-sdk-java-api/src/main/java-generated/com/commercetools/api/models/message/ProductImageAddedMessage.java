@@ -138,24 +138,16 @@ public interface ProductImageAddedMessage extends Message {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(Optional.ofNullable(template.getLastModifiedBy())
-                .map(com.commercetools.api.models.common.LastModifiedBy::deepCopy)
-                .orElse(null));
-        instance.setCreatedBy(Optional.ofNullable(template.getCreatedBy())
-                .map(com.commercetools.api.models.common.CreatedBy::deepCopy)
-                .orElse(null));
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
-        instance.setResource(Optional.ofNullable(template.getResource())
-                .map(com.commercetools.api.models.common.Reference::deepCopy)
-                .orElse(null));
+        instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(Optional.ofNullable(template.getResourceUserProvidedIdentifiers())
-                .map(com.commercetools.api.models.message.UserProvidedIdentifiers::deepCopy)
-                .orElse(null));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
+                .deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setVariantId(template.getVariantId());
-        instance.setImage(Optional.ofNullable(template.getImage())
-                .map(com.commercetools.api.models.common.Image::deepCopy)
-                .orElse(null));
+        instance.setImage(com.commercetools.api.models.common.Image.deepCopy(template.getImage()));
         instance.setStaged(template.getStaged());
         return instance;
     }

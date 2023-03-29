@@ -113,9 +113,7 @@ public interface ShoppingListLineItemValue {
         }
         ShoppingListLineItemValueImpl instance = new ShoppingListLineItemValueImpl();
         instance.setId(template.getId());
-        instance.setName(Optional.ofNullable(template.getName())
-                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setName(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getName()));
         instance.setVariantId(template.getVariantId());
         return instance;
     }

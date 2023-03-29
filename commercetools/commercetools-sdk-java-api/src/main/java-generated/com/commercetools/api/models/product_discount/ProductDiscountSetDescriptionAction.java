@@ -81,9 +81,8 @@ public interface ProductDiscountSetDescriptionAction extends ProductDiscountUpda
             return null;
         }
         ProductDiscountSetDescriptionActionImpl instance = new ProductDiscountSetDescriptionActionImpl();
-        instance.setDescription(Optional.ofNullable(template.getDescription())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
         return instance;
     }
 

@@ -81,9 +81,7 @@ public interface StandalonePriceDiscountSetMessagePayload extends MessagePayload
             return null;
         }
         StandalonePriceDiscountSetMessagePayloadImpl instance = new StandalonePriceDiscountSetMessagePayloadImpl();
-        instance.setDiscounted(Optional.ofNullable(template.getDiscounted())
-                .map(com.commercetools.api.models.common.DiscountedPrice::deepCopy)
-                .orElse(null));
+        instance.setDiscounted(com.commercetools.api.models.common.DiscountedPrice.deepCopy(template.getDiscounted()));
         return instance;
     }
 

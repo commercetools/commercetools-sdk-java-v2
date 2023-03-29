@@ -106,9 +106,7 @@ public interface StagedOrderChangeCustomLineItemMoneyAction extends StagedOrderU
         }
         StagedOrderChangeCustomLineItemMoneyActionImpl instance = new StagedOrderChangeCustomLineItemMoneyActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
-        instance.setMoney(Optional.ofNullable(template.getMoney())
-                .map(com.commercetools.api.models.common.Money::deepCopy)
-                .orElse(null));
+        instance.setMoney(com.commercetools.api.models.common.Money.deepCopy(template.getMoney()));
         return instance;
     }
 

@@ -101,9 +101,8 @@ public interface ProductTypeAddPlainEnumValueAction extends ProductTypeUpdateAct
         }
         ProductTypeAddPlainEnumValueActionImpl instance = new ProductTypeAddPlainEnumValueActionImpl();
         instance.setAttributeName(template.getAttributeName());
-        instance.setValue(Optional.ofNullable(template.getValue())
-                .map(com.commercetools.api.models.product_type.AttributePlainEnumValue::deepCopy)
-                .orElse(null));
+        instance.setValue(
+            com.commercetools.api.models.product_type.AttributePlainEnumValue.deepCopy(template.getValue()));
         return instance;
     }
 

@@ -165,9 +165,8 @@ public interface ProductSetAssetDescriptionAction extends ProductUpdateAction {
         instance.setStaged(template.getStaged());
         instance.setAssetId(template.getAssetId());
         instance.setAssetKey(template.getAssetKey());
-        instance.setDescription(Optional.ofNullable(template.getDescription())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
         return instance;
     }
 

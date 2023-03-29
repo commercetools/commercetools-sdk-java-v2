@@ -171,17 +171,13 @@ public interface OrderEditDraft extends com.commercetools.api.models.Customizabl
         }
         OrderEditDraftImpl instance = new OrderEditDraftImpl();
         instance.setKey(template.getKey());
-        instance.setResource(Optional.ofNullable(template.getResource())
-                .map(com.commercetools.api.models.order.OrderReference::deepCopy)
-                .orElse(null));
+        instance.setResource(com.commercetools.api.models.order.OrderReference.deepCopy(template.getResource()));
         instance.setStagedActions(Optional.ofNullable(template.getStagedActions())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.order.StagedOrderUpdateAction::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         instance.setComment(template.getComment());
         instance.setDryRun(template.getDryRun());
         return instance;

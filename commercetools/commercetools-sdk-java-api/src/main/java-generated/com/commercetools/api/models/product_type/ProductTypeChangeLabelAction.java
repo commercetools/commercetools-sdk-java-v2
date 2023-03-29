@@ -101,9 +101,7 @@ public interface ProductTypeChangeLabelAction extends ProductTypeUpdateAction {
         }
         ProductTypeChangeLabelActionImpl instance = new ProductTypeChangeLabelActionImpl();
         instance.setAttributeName(template.getAttributeName());
-        instance.setLabel(Optional.ofNullable(template.getLabel())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setLabel(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getLabel()));
         return instance;
     }
 

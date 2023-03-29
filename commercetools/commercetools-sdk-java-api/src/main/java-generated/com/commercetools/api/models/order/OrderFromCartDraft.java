@@ -224,21 +224,15 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
         }
         OrderFromCartDraftImpl instance = new OrderFromCartDraftImpl();
         instance.setId(template.getId());
-        instance.setCart(Optional.ofNullable(template.getCart())
-                .map(com.commercetools.api.models.cart.CartResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setCart(com.commercetools.api.models.cart.CartResourceIdentifier.deepCopy(template.getCart()));
         instance.setVersion(template.getVersion());
         instance.setOrderNumber(template.getOrderNumber());
         instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
         instance.setPaymentState(template.getPaymentState());
         instance.setShipmentState(template.getShipmentState());
         instance.setOrderState(template.getOrderState());
-        instance.setState(Optional.ofNullable(template.getState())
-                .map(com.commercetools.api.models.state.StateResourceIdentifier::deepCopy)
-                .orElse(null));
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
-                .orElse(null));
+        instance.setState(com.commercetools.api.models.state.StateResourceIdentifier.deepCopy(template.getState()));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;
     }
 

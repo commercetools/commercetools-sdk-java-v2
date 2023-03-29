@@ -85,9 +85,8 @@ public interface DuplicateVariantValuesError extends ErrorObject {
         }
         DuplicateVariantValuesErrorImpl instance = new DuplicateVariantValuesErrorImpl();
         instance.setMessage(template.getMessage());
-        instance.setVariantValues(Optional.ofNullable(template.getVariantValues())
-                .map(com.commercetools.importapi.models.errors.VariantValues::deepCopy)
-                .orElse(null));
+        instance.setVariantValues(
+            com.commercetools.importapi.models.errors.VariantValues.deepCopy(template.getVariantValues()));
         return instance;
     }
 

@@ -111,9 +111,8 @@ public interface SearchIndexingConfigurationValues {
         SearchIndexingConfigurationValuesImpl instance = new SearchIndexingConfigurationValuesImpl();
         instance.setStatus(template.getStatus());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(Optional.ofNullable(template.getLastModifiedBy())
-                .map(com.commercetools.api.models.common.LastModifiedBy::deepCopy)
-                .orElse(null));
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         return instance;
     }
 

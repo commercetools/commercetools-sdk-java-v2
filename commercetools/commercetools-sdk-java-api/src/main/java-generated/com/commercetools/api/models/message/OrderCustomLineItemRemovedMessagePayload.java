@@ -102,9 +102,8 @@ public interface OrderCustomLineItemRemovedMessagePayload extends OrderMessagePa
         }
         OrderCustomLineItemRemovedMessagePayloadImpl instance = new OrderCustomLineItemRemovedMessagePayloadImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
-        instance.setCustomLineItem(Optional.ofNullable(template.getCustomLineItem())
-                .map(com.commercetools.api.models.cart.CustomLineItem::deepCopy)
-                .orElse(null));
+        instance.setCustomLineItem(
+            com.commercetools.api.models.cart.CustomLineItem.deepCopy(template.getCustomLineItem()));
         return instance;
     }
 

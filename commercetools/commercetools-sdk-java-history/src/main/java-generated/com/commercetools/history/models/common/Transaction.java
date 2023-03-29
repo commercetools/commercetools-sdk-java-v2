@@ -165,9 +165,7 @@ public interface Transaction {
         instance.setId(template.getId());
         instance.setTimestamp(template.getTimestamp());
         instance.setType(template.getType());
-        instance.setAmount(Optional.ofNullable(template.getAmount())
-                .map(com.commercetools.history.models.common.Money::deepCopy)
-                .orElse(null));
+        instance.setAmount(com.commercetools.history.models.common.Money.deepCopy(template.getAmount()));
         instance.setInteractionId(template.getInteractionId());
         instance.setState(template.getState());
         return instance;

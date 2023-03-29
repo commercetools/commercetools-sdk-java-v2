@@ -118,9 +118,7 @@ public interface ProductImageAddedMessagePayload extends MessagePayload {
         }
         ProductImageAddedMessagePayloadImpl instance = new ProductImageAddedMessagePayloadImpl();
         instance.setVariantId(template.getVariantId());
-        instance.setImage(Optional.ofNullable(template.getImage())
-                .map(com.commercetools.api.models.common.Image::deepCopy)
-                .orElse(null));
+        instance.setImage(com.commercetools.api.models.common.Image.deepCopy(template.getImage()));
         instance.setStaged(template.getStaged());
         return instance;
     }

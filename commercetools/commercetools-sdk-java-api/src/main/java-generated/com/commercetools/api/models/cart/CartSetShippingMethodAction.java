@@ -98,12 +98,10 @@ public interface CartSetShippingMethodAction extends CartUpdateAction {
             return null;
         }
         CartSetShippingMethodActionImpl instance = new CartSetShippingMethodActionImpl();
-        instance.setShippingMethod(Optional.ofNullable(template.getShippingMethod())
-                .map(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier::deepCopy)
-                .orElse(null));
-        instance.setExternalTaxRate(Optional.ofNullable(template.getExternalTaxRate())
-                .map(com.commercetools.api.models.cart.ExternalTaxRateDraft::deepCopy)
-                .orElse(null));
+        instance.setShippingMethod(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier
+                .deepCopy(template.getShippingMethod()));
+        instance.setExternalTaxRate(
+            com.commercetools.api.models.cart.ExternalTaxRateDraft.deepCopy(template.getExternalTaxRate()));
         return instance;
     }
 

@@ -127,12 +127,10 @@ public interface ChangeValueChange extends Change {
         }
         ChangeValueChangeImpl instance = new ChangeValueChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.change_value.ChangeValueChangeValue::deepCopy)
-                .orElse(null));
-        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(com.commercetools.history.models.change_value.ChangeValueChangeValue::deepCopy)
-                .orElse(null));
+        instance.setNextValue(
+            com.commercetools.history.models.change_value.ChangeValueChangeValue.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(
+            com.commercetools.history.models.change_value.ChangeValueChangeValue.deepCopy(template.getPreviousValue()));
         return instance;
     }
 

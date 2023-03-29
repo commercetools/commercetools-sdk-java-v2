@@ -162,9 +162,7 @@ public interface ShoppingListLineItemDraft
         instance.setVariantId(template.getVariantId());
         instance.setSku(template.getSku());
         instance.setAddedAt(template.getAddedAt());
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         instance.setQuantity(template.getQuantity());
         return instance;
     }

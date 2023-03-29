@@ -99,9 +99,8 @@ public interface StoreAddProductSelectionAction extends StoreUpdateAction {
             return null;
         }
         StoreAddProductSelectionActionImpl instance = new StoreAddProductSelectionActionImpl();
-        instance.setProductSelection(Optional.ofNullable(template.getProductSelection())
-                .map(com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setProductSelection(com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier
+                .deepCopy(template.getProductSelection()));
         instance.setActive(template.getActive());
         return instance;
     }

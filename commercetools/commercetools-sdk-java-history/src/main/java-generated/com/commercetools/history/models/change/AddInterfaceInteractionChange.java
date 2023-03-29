@@ -109,9 +109,8 @@ public interface AddInterfaceInteractionChange extends Change {
         }
         AddInterfaceInteractionChangeImpl instance = new AddInterfaceInteractionChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.change_value.CustomFieldExpandedValue::deepCopy)
-                .orElse(null));
+        instance.setNextValue(
+            com.commercetools.history.models.change_value.CustomFieldExpandedValue.deepCopy(template.getNextValue()));
         return instance;
     }
 

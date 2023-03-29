@@ -118,13 +118,9 @@ public interface StandalonePriceValueChangedMessagePayload extends MessagePayloa
             return null;
         }
         StandalonePriceValueChangedMessagePayloadImpl instance = new StandalonePriceValueChangedMessagePayloadImpl();
-        instance.setValue(Optional.ofNullable(template.getValue())
-                .map(com.commercetools.api.models.common.Money::deepCopy)
-                .orElse(null));
+        instance.setValue(com.commercetools.api.models.common.Money.deepCopy(template.getValue()));
         instance.setStaged(template.getStaged());
-        instance.setOldValue(Optional.ofNullable(template.getOldValue())
-                .map(com.commercetools.api.models.common.Money::deepCopy)
-                .orElse(null));
+        instance.setOldValue(com.commercetools.api.models.common.Money.deepCopy(template.getOldValue()));
         return instance;
     }
 

@@ -99,8 +99,7 @@ public interface ZoneReference extends Reference, com.commercetools.api.models.I
         }
         ZoneReferenceImpl instance = new ZoneReferenceImpl();
         instance.setId(template.getId());
-        instance.setObj(
-            Optional.ofNullable(template.getObj()).map(com.commercetools.api.models.zone.Zone::deepCopy).orElse(null));
+        instance.setObj(com.commercetools.api.models.zone.Zone.deepCopy(template.getObj()));
         return instance;
     }
 

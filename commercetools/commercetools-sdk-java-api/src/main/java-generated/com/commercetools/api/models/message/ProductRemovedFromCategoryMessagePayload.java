@@ -101,9 +101,7 @@ public interface ProductRemovedFromCategoryMessagePayload extends MessagePayload
             return null;
         }
         ProductRemovedFromCategoryMessagePayloadImpl instance = new ProductRemovedFromCategoryMessagePayloadImpl();
-        instance.setCategory(Optional.ofNullable(template.getCategory())
-                .map(com.commercetools.api.models.category.CategoryReference::deepCopy)
-                .orElse(null));
+        instance.setCategory(com.commercetools.api.models.category.CategoryReference.deepCopy(template.getCategory()));
         instance.setStaged(template.getStaged());
         return instance;
     }

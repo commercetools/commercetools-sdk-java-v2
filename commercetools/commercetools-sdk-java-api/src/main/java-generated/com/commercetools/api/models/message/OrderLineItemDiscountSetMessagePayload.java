@@ -180,12 +180,8 @@ public interface OrderLineItemDiscountSetMessagePayload extends OrderMessagePayl
                         .map(com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setTotalPrice(Optional.ofNullable(template.getTotalPrice())
-                .map(com.commercetools.api.models.common.Money::deepCopy)
-                .orElse(null));
-        instance.setTaxedPrice(Optional.ofNullable(template.getTaxedPrice())
-                .map(com.commercetools.api.models.cart.TaxedItemPrice::deepCopy)
-                .orElse(null));
+        instance.setTotalPrice(com.commercetools.api.models.common.Money.deepCopy(template.getTotalPrice()));
+        instance.setTaxedPrice(com.commercetools.api.models.cart.TaxedItemPrice.deepCopy(template.getTaxedPrice()));
         instance.setTaxedPricePortions(Optional.ofNullable(template.getTaxedPricePortions())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.cart.MethodTaxedPrice::deepCopy)

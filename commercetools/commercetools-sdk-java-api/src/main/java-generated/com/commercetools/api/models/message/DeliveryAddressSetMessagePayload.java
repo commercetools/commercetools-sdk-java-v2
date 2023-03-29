@@ -131,12 +131,8 @@ public interface DeliveryAddressSetMessagePayload extends OrderMessagePayload {
         }
         DeliveryAddressSetMessagePayloadImpl instance = new DeliveryAddressSetMessagePayloadImpl();
         instance.setDeliveryId(template.getDeliveryId());
-        instance.setAddress(Optional.ofNullable(template.getAddress())
-                .map(com.commercetools.api.models.common.Address::deepCopy)
-                .orElse(null));
-        instance.setOldAddress(Optional.ofNullable(template.getOldAddress())
-                .map(com.commercetools.api.models.common.Address::deepCopy)
-                .orElse(null));
+        instance.setAddress(com.commercetools.api.models.common.Address.deepCopy(template.getAddress()));
+        instance.setOldAddress(com.commercetools.api.models.common.Address.deepCopy(template.getOldAddress()));
         instance.setShippingKey(template.getShippingKey());
         return instance;
     }

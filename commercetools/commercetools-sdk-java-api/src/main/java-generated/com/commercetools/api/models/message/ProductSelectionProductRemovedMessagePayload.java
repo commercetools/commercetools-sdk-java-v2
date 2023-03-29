@@ -85,9 +85,7 @@ public interface ProductSelectionProductRemovedMessagePayload extends MessagePay
             return null;
         }
         ProductSelectionProductRemovedMessagePayloadImpl instance = new ProductSelectionProductRemovedMessagePayloadImpl();
-        instance.setProduct(Optional.ofNullable(template.getProduct())
-                .map(com.commercetools.api.models.product.ProductReference::deepCopy)
-                .orElse(null));
+        instance.setProduct(com.commercetools.api.models.product.ProductReference.deepCopy(template.getProduct()));
         return instance;
     }
 

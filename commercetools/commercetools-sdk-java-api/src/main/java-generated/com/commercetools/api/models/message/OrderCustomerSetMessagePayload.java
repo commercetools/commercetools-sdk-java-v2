@@ -129,18 +129,13 @@ public interface OrderCustomerSetMessagePayload extends OrderMessagePayload {
             return null;
         }
         OrderCustomerSetMessagePayloadImpl instance = new OrderCustomerSetMessagePayloadImpl();
-        instance.setCustomer(Optional.ofNullable(template.getCustomer())
-                .map(com.commercetools.api.models.customer.CustomerReference::deepCopy)
-                .orElse(null));
-        instance.setCustomerGroup(Optional.ofNullable(template.getCustomerGroup())
-                .map(com.commercetools.api.models.customer_group.CustomerGroupReference::deepCopy)
-                .orElse(null));
-        instance.setOldCustomer(Optional.ofNullable(template.getOldCustomer())
-                .map(com.commercetools.api.models.customer.CustomerReference::deepCopy)
-                .orElse(null));
-        instance.setOldCustomerGroup(Optional.ofNullable(template.getOldCustomerGroup())
-                .map(com.commercetools.api.models.customer_group.CustomerGroupReference::deepCopy)
-                .orElse(null));
+        instance.setCustomer(com.commercetools.api.models.customer.CustomerReference.deepCopy(template.getCustomer()));
+        instance.setCustomerGroup(
+            com.commercetools.api.models.customer_group.CustomerGroupReference.deepCopy(template.getCustomerGroup()));
+        instance.setOldCustomer(
+            com.commercetools.api.models.customer.CustomerReference.deepCopy(template.getOldCustomer()));
+        instance.setOldCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupReference
+                .deepCopy(template.getOldCustomerGroup()));
         return instance;
     }
 

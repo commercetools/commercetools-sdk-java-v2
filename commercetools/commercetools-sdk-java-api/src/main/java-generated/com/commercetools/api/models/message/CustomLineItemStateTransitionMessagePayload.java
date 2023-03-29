@@ -158,12 +158,8 @@ public interface CustomLineItemStateTransitionMessagePayload extends OrderMessag
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setTransitionDate(template.getTransitionDate());
         instance.setQuantity(template.getQuantity());
-        instance.setFromState(Optional.ofNullable(template.getFromState())
-                .map(com.commercetools.api.models.state.StateReference::deepCopy)
-                .orElse(null));
-        instance.setToState(Optional.ofNullable(template.getToState())
-                .map(com.commercetools.api.models.state.StateReference::deepCopy)
-                .orElse(null));
+        instance.setFromState(com.commercetools.api.models.state.StateReference.deepCopy(template.getFromState()));
+        instance.setToState(com.commercetools.api.models.state.StateReference.deepCopy(template.getToState()));
         return instance;
     }
 

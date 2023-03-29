@@ -95,9 +95,7 @@ public interface Price {
         }
         PriceImpl instance = new PriceImpl();
         instance.setId(template.getId());
-        instance.setValue(Optional.ofNullable(template.getValue())
-                .map(com.commercetools.history.models.common.Money::deepCopy)
-                .orElse(null));
+        instance.setValue(com.commercetools.history.models.common.Money.deepCopy(template.getValue()));
         return instance;
     }
 

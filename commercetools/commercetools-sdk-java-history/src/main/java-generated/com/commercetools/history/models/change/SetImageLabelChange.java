@@ -145,12 +145,8 @@ public interface SetImageLabelChange extends Change {
         SetImageLabelChangeImpl instance = new SetImageLabelChangeImpl();
         instance.setChange(template.getChange());
         instance.setCatalogData(template.getCatalogData());
-        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(com.commercetools.history.models.common.Image::deepCopy)
-                .orElse(null));
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.common.Image::deepCopy)
-                .orElse(null));
+        instance.setPreviousValue(com.commercetools.history.models.common.Image.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.Image.deepCopy(template.getNextValue()));
         return instance;
     }
 

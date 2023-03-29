@@ -80,9 +80,8 @@ public interface CategorySetMetaKeywordsAction extends CategoryUpdateAction {
             return null;
         }
         CategorySetMetaKeywordsActionImpl instance = new CategorySetMetaKeywordsActionImpl();
-        instance.setMetaKeywords(Optional.ofNullable(template.getMetaKeywords())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setMetaKeywords(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaKeywords()));
         return instance;
     }
 

@@ -143,9 +143,8 @@ public interface ChangeTextLineItemQuantityChange extends Change {
         }
         ChangeTextLineItemQuantityChangeImpl instance = new ChangeTextLineItemQuantityChangeImpl();
         instance.setChange(template.getChange());
-        instance.setTextLineItem(Optional.ofNullable(template.getTextLineItem())
-                .map(com.commercetools.history.models.change_value.TextLineItemValue::deepCopy)
-                .orElse(null));
+        instance.setTextLineItem(
+            com.commercetools.history.models.change_value.TextLineItemValue.deepCopy(template.getTextLineItem()));
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
         return instance;

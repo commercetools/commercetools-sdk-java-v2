@@ -143,9 +143,8 @@ public interface ChangeTransactionTimestampChange extends Change {
         }
         ChangeTransactionTimestampChangeImpl instance = new ChangeTransactionTimestampChangeImpl();
         instance.setChange(template.getChange());
-        instance.setTransaction(Optional.ofNullable(template.getTransaction())
-                .map(com.commercetools.history.models.change_value.TransactionChangeValue::deepCopy)
-                .orElse(null));
+        instance.setTransaction(
+            com.commercetools.history.models.change_value.TransactionChangeValue.deepCopy(template.getTransaction()));
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
         return instance;

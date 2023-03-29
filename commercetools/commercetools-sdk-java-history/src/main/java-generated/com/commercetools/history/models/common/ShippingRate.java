@@ -139,12 +139,8 @@ public interface ShippingRate {
             return null;
         }
         ShippingRateImpl instance = new ShippingRateImpl();
-        instance.setPrice(Optional.ofNullable(template.getPrice())
-                .map(com.commercetools.history.models.common.Money::deepCopy)
-                .orElse(null));
-        instance.setFreeAbove(Optional.ofNullable(template.getFreeAbove())
-                .map(com.commercetools.history.models.common.Money::deepCopy)
-                .orElse(null));
+        instance.setPrice(com.commercetools.history.models.common.Money.deepCopy(template.getPrice()));
+        instance.setFreeAbove(com.commercetools.history.models.common.Money.deepCopy(template.getFreeAbove()));
         instance.setIsMatching(template.getIsMatching());
         instance.setTiers(Optional.ofNullable(template.getTiers())
                 .map(t -> t.stream()

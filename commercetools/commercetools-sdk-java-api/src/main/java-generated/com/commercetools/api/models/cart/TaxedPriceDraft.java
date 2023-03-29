@@ -126,12 +126,8 @@ public interface TaxedPriceDraft extends io.vrap.rmf.base.client.Draft<TaxedPric
             return null;
         }
         TaxedPriceDraftImpl instance = new TaxedPriceDraftImpl();
-        instance.setTotalNet(Optional.ofNullable(template.getTotalNet())
-                .map(com.commercetools.api.models.common.Money::deepCopy)
-                .orElse(null));
-        instance.setTotalGross(Optional.ofNullable(template.getTotalGross())
-                .map(com.commercetools.api.models.common.Money::deepCopy)
-                .orElse(null));
+        instance.setTotalNet(com.commercetools.api.models.common.Money.deepCopy(template.getTotalNet()));
+        instance.setTotalGross(com.commercetools.api.models.common.Money.deepCopy(template.getTotalGross()));
         instance.setTaxPortions(Optional.ofNullable(template.getTaxPortions())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.cart.TaxPortionDraft::deepCopy)

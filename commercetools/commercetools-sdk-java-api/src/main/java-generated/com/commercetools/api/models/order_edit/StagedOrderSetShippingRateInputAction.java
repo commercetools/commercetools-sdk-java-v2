@@ -82,9 +82,8 @@ public interface StagedOrderSetShippingRateInputAction extends StagedOrderUpdate
             return null;
         }
         StagedOrderSetShippingRateInputActionImpl instance = new StagedOrderSetShippingRateInputActionImpl();
-        instance.setShippingRateInput(Optional.ofNullable(template.getShippingRateInput())
-                .map(com.commercetools.api.models.cart.ShippingRateInputDraft::deepCopy)
-                .orElse(null));
+        instance.setShippingRateInput(
+            com.commercetools.api.models.cart.ShippingRateInputDraft.deepCopy(template.getShippingRateInput()));
         return instance;
     }
 

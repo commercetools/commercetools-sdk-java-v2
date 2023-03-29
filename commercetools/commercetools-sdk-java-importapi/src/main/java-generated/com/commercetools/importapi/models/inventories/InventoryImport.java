@@ -168,12 +168,9 @@ public interface InventoryImport extends ImportResource {
         instance.setQuantityOnStock(template.getQuantityOnStock());
         instance.setRestockableInDays(template.getRestockableInDays());
         instance.setExpectedDelivery(template.getExpectedDelivery());
-        instance.setSupplyChannel(Optional.ofNullable(template.getSupplyChannel())
-                .map(com.commercetools.importapi.models.common.ChannelKeyReference::deepCopy)
-                .orElse(null));
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.importapi.models.customfields.Custom::deepCopy)
-                .orElse(null));
+        instance.setSupplyChannel(
+            com.commercetools.importapi.models.common.ChannelKeyReference.deepCopy(template.getSupplyChannel()));
+        instance.setCustom(com.commercetools.importapi.models.customfields.Custom.deepCopy(template.getCustom()));
         return instance;
     }
 

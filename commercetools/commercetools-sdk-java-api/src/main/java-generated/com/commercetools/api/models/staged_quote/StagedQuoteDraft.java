@@ -170,18 +170,13 @@ public interface StagedQuoteDraft
             return null;
         }
         StagedQuoteDraftImpl instance = new StagedQuoteDraftImpl();
-        instance.setQuoteRequest(Optional.ofNullable(template.getQuoteRequest())
-                .map(com.commercetools.api.models.quote_request.QuoteRequestResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setQuoteRequest(com.commercetools.api.models.quote_request.QuoteRequestResourceIdentifier
+                .deepCopy(template.getQuoteRequest()));
         instance.setQuoteRequestVersion(template.getQuoteRequestVersion());
         instance.setQuoteRequestStateToAccepted(template.getQuoteRequestStateToAccepted());
         instance.setKey(template.getKey());
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
-                .orElse(null));
-        instance.setState(Optional.ofNullable(template.getState())
-                .map(com.commercetools.api.models.state.StateReference::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setState(com.commercetools.api.models.state.StateReference.deepCopy(template.getState()));
         return instance;
     }
 

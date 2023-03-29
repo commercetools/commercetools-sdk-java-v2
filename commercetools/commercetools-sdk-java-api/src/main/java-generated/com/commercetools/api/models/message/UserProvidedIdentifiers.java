@@ -176,12 +176,9 @@ public interface UserProvidedIdentifiers {
         instance.setOrderNumber(template.getOrderNumber());
         instance.setCustomerNumber(template.getCustomerNumber());
         instance.setSku(template.getSku());
-        instance.setSlug(Optional.ofNullable(template.getSlug())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setContainerAndKey(Optional.ofNullable(template.getContainerAndKey())
-                .map(com.commercetools.api.models.message.ContainerAndKey::deepCopy)
-                .orElse(null));
+        instance.setSlug(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getSlug()));
+        instance.setContainerAndKey(
+            com.commercetools.api.models.message.ContainerAndKey.deepCopy(template.getContainerAndKey()));
         return instance;
     }
 

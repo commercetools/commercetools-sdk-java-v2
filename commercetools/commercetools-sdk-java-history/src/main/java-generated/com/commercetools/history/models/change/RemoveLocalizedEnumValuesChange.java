@@ -127,9 +127,8 @@ public interface RemoveLocalizedEnumValuesChange extends Change {
         RemoveLocalizedEnumValuesChangeImpl instance = new RemoveLocalizedEnumValuesChangeImpl();
         instance.setChange(template.getChange());
         instance.setAttributeName(template.getAttributeName());
-        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(com.commercetools.history.models.change_value.LocalizedEnumValue::deepCopy)
-                .orElse(null));
+        instance.setPreviousValue(
+            com.commercetools.history.models.change_value.LocalizedEnumValue.deepCopy(template.getPreviousValue()));
         return instance;
     }
 

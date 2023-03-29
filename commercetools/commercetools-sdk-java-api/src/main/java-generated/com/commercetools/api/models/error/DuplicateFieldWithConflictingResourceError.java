@@ -148,9 +148,8 @@ public interface DuplicateFieldWithConflictingResourceError extends ErrorObject 
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         instance.setField(template.getField());
         instance.setDuplicateValue(template.getDuplicateValue());
-        instance.setConflictingResource(Optional.ofNullable(template.getConflictingResource())
-                .map(com.commercetools.api.models.common.Reference::deepCopy)
-                .orElse(null));
+        instance.setConflictingResource(
+            com.commercetools.api.models.common.Reference.deepCopy(template.getConflictingResource()));
         return instance;
     }
 

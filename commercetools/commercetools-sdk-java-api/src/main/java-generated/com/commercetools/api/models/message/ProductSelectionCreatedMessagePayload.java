@@ -84,9 +84,8 @@ public interface ProductSelectionCreatedMessagePayload extends MessagePayload {
             return null;
         }
         ProductSelectionCreatedMessagePayloadImpl instance = new ProductSelectionCreatedMessagePayloadImpl();
-        instance.setProductSelection(Optional.ofNullable(template.getProductSelection())
-                .map(com.commercetools.api.models.product_selection.ProductSelectionType::deepCopy)
-                .orElse(null));
+        instance.setProductSelection(com.commercetools.api.models.product_selection.ProductSelectionType
+                .deepCopy(template.getProductSelection()));
         return instance;
     }
 

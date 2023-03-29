@@ -97,12 +97,8 @@ public interface ShoppingListSetCustomTypeAction extends ShoppingListUpdateActio
             return null;
         }
         ShoppingListSetCustomTypeActionImpl instance = new ShoppingListSetCustomTypeActionImpl();
-        instance.setType(Optional.ofNullable(template.getType())
-                .map(com.commercetools.api.models.type.TypeResourceIdentifier::deepCopy)
-                .orElse(null));
-        instance.setFields(Optional.ofNullable(template.getFields())
-                .map(com.commercetools.api.models.type.FieldContainer::deepCopy)
-                .orElse(null));
+        instance.setType(com.commercetools.api.models.type.TypeResourceIdentifier.deepCopy(template.getType()));
+        instance.setFields(com.commercetools.api.models.type.FieldContainer.deepCopy(template.getFields()));
         return instance;
     }
 

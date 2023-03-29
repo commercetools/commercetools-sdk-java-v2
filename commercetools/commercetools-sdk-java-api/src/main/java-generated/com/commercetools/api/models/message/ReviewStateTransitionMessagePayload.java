@@ -168,17 +168,11 @@ public interface ReviewStateTransitionMessagePayload extends MessagePayload {
             return null;
         }
         ReviewStateTransitionMessagePayloadImpl instance = new ReviewStateTransitionMessagePayloadImpl();
-        instance.setOldState(Optional.ofNullable(template.getOldState())
-                .map(com.commercetools.api.models.state.StateReference::deepCopy)
-                .orElse(null));
-        instance.setNewState(Optional.ofNullable(template.getNewState())
-                .map(com.commercetools.api.models.state.StateReference::deepCopy)
-                .orElse(null));
+        instance.setOldState(com.commercetools.api.models.state.StateReference.deepCopy(template.getOldState()));
+        instance.setNewState(com.commercetools.api.models.state.StateReference.deepCopy(template.getNewState()));
         instance.setOldIncludedInStatistics(template.getOldIncludedInStatistics());
         instance.setNewIncludedInStatistics(template.getNewIncludedInStatistics());
-        instance.setTarget(Optional.ofNullable(template.getTarget())
-                .map(com.commercetools.api.models.common.Reference::deepCopy)
-                .orElse(null));
+        instance.setTarget(com.commercetools.api.models.common.Reference.deepCopy(template.getTarget()));
         instance.setForce(template.getForce());
         return instance;
     }

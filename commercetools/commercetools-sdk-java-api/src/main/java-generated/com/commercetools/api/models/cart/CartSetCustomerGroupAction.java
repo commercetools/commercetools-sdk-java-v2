@@ -81,9 +81,8 @@ public interface CartSetCustomerGroupAction extends CartUpdateAction {
             return null;
         }
         CartSetCustomerGroupActionImpl instance = new CartSetCustomerGroupActionImpl();
-        instance.setCustomerGroup(Optional.ofNullable(template.getCustomerGroup())
-                .map(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier
+                .deepCopy(template.getCustomerGroup()));
         return instance;
     }
 

@@ -95,12 +95,9 @@ public interface DiscountedLineItemPortion {
             return null;
         }
         DiscountedLineItemPortionImpl instance = new DiscountedLineItemPortionImpl();
-        instance.setDiscount(Optional.ofNullable(template.getDiscount())
-                .map(com.commercetools.history.models.common.Reference::deepCopy)
-                .orElse(null));
-        instance.setDiscountedAmount(Optional.ofNullable(template.getDiscountedAmount())
-                .map(com.commercetools.history.models.common.Money::deepCopy)
-                .orElse(null));
+        instance.setDiscount(com.commercetools.history.models.common.Reference.deepCopy(template.getDiscount()));
+        instance.setDiscountedAmount(
+            com.commercetools.history.models.common.Money.deepCopy(template.getDiscountedAmount()));
         return instance;
     }
 

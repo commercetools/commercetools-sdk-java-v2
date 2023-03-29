@@ -276,12 +276,9 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
             return null;
         }
         DiscountCodeDraftImpl instance = new DiscountCodeDraftImpl();
-        instance.setName(Optional.ofNullable(template.getName())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setDescription(Optional.ofNullable(template.getDescription())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
         instance.setCode(template.getCode());
         instance.setCartDiscounts(Optional.ofNullable(template.getCartDiscounts())
                 .map(t -> t.stream()
@@ -292,9 +289,7 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
         instance.setIsActive(template.getIsActive());
         instance.setMaxApplications(template.getMaxApplications());
         instance.setMaxApplicationsPerCustomer(template.getMaxApplicationsPerCustomer());
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         instance.setGroups(Optional.ofNullable(template.getGroups()).map(ArrayList::new).orElse(null));
         instance.setValidFrom(template.getValidFrom());
         instance.setValidUntil(template.getValidUntil());

@@ -125,9 +125,7 @@ public interface LastModifiedBy extends ClientLogging {
         LastModifiedByImpl instance = new LastModifiedByImpl();
         instance.setClientId(template.getClientId());
         instance.setExternalUserId(template.getExternalUserId());
-        instance.setCustomer(Optional.ofNullable(template.getCustomer())
-                .map(com.commercetools.api.models.customer.CustomerReference::deepCopy)
-                .orElse(null));
+        instance.setCustomer(com.commercetools.api.models.customer.CustomerReference.deepCopy(template.getCustomer()));
         instance.setAnonymousId(template.getAnonymousId());
         return instance;
     }

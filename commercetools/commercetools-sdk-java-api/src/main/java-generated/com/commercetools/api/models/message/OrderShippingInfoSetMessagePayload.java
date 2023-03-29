@@ -97,12 +97,9 @@ public interface OrderShippingInfoSetMessagePayload extends OrderMessagePayload 
             return null;
         }
         OrderShippingInfoSetMessagePayloadImpl instance = new OrderShippingInfoSetMessagePayloadImpl();
-        instance.setShippingInfo(Optional.ofNullable(template.getShippingInfo())
-                .map(com.commercetools.api.models.cart.ShippingInfo::deepCopy)
-                .orElse(null));
-        instance.setOldShippingInfo(Optional.ofNullable(template.getOldShippingInfo())
-                .map(com.commercetools.api.models.cart.ShippingInfo::deepCopy)
-                .orElse(null));
+        instance.setShippingInfo(com.commercetools.api.models.cart.ShippingInfo.deepCopy(template.getShippingInfo()));
+        instance.setOldShippingInfo(
+            com.commercetools.api.models.cart.ShippingInfo.deepCopy(template.getOldShippingInfo()));
         return instance;
     }
 

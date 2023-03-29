@@ -146,15 +146,10 @@ public interface SetAssetCustomTypeChange extends Change {
         }
         SetAssetCustomTypeChangeImpl instance = new SetAssetCustomTypeChangeImpl();
         instance.setChange(template.getChange());
-        instance.setAsset(Optional.ofNullable(template.getAsset())
-                .map(com.commercetools.history.models.change_value.AssetChangeValue::deepCopy)
-                .orElse(null));
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.common.CustomFields::deepCopy)
-                .orElse(null));
-        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(com.commercetools.history.models.common.CustomFields::deepCopy)
-                .orElse(null));
+        instance.setAsset(com.commercetools.history.models.change_value.AssetChangeValue.deepCopy(template.getAsset()));
+        instance.setNextValue(com.commercetools.history.models.common.CustomFields.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.CustomFields.deepCopy(template.getPreviousValue()));
         return instance;
     }
 

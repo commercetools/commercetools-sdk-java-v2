@@ -176,9 +176,7 @@ public interface Delivery {
                         .map(com.commercetools.importapi.models.orders.Parcel::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setAddress(Optional.ofNullable(template.getAddress())
-                .map(com.commercetools.importapi.models.common.Address::deepCopy)
-                .orElse(null));
+        instance.setAddress(com.commercetools.importapi.models.common.Address.deepCopy(template.getAddress()));
         return instance;
     }
 

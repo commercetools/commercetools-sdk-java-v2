@@ -146,12 +146,9 @@ public interface SetShippingMethodTaxRateChange extends Change {
         SetShippingMethodTaxRateChangeImpl instance = new SetShippingMethodTaxRateChangeImpl();
         instance.setChange(template.getChange());
         instance.setTaxMode(template.getTaxMode());
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.common.TaxRate::deepCopy)
-                .orElse(null));
-        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(com.commercetools.history.models.common.TaxRate::deepCopy)
-                .orElse(null));
+        instance.setNextValue(com.commercetools.history.models.common.TaxRate.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.TaxRate.deepCopy(template.getPreviousValue()));
         return instance;
     }
 

@@ -81,9 +81,8 @@ public interface ShippingMethodSetLocalizedNameAction extends ShippingMethodUpda
             return null;
         }
         ShippingMethodSetLocalizedNameActionImpl instance = new ShippingMethodSetLocalizedNameActionImpl();
-        instance.setLocalizedName(Optional.ofNullable(template.getLocalizedName())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setLocalizedName(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getLocalizedName()));
         return instance;
     }
 

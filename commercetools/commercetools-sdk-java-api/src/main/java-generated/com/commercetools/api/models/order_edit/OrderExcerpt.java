@@ -112,12 +112,8 @@ public interface OrderExcerpt {
             return null;
         }
         OrderExcerptImpl instance = new OrderExcerptImpl();
-        instance.setTotalPrice(Optional.ofNullable(template.getTotalPrice())
-                .map(com.commercetools.api.models.common.TypedMoney::deepCopy)
-                .orElse(null));
-        instance.setTaxedPrice(Optional.ofNullable(template.getTaxedPrice())
-                .map(com.commercetools.api.models.cart.TaxedPrice::deepCopy)
-                .orElse(null));
+        instance.setTotalPrice(com.commercetools.api.models.common.TypedMoney.deepCopy(template.getTotalPrice()));
+        instance.setTaxedPrice(com.commercetools.api.models.cart.TaxedPrice.deepCopy(template.getTaxedPrice()));
         instance.setVersion(template.getVersion());
         return instance;
     }

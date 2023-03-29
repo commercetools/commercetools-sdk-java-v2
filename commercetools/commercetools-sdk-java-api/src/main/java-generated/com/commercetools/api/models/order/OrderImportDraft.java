@@ -513,38 +513,24 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
                         .map(com.commercetools.api.models.cart.CustomLineItemImportDraft::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setTotalPrice(Optional.ofNullable(template.getTotalPrice())
-                .map(com.commercetools.api.models.common.Money::deepCopy)
-                .orElse(null));
-        instance.setTaxedPrice(Optional.ofNullable(template.getTaxedPrice())
-                .map(com.commercetools.api.models.cart.TaxedPriceDraft::deepCopy)
-                .orElse(null));
-        instance.setShippingAddress(Optional.ofNullable(template.getShippingAddress())
-                .map(com.commercetools.api.models.common.BaseAddress::deepCopy)
-                .orElse(null));
-        instance.setBillingAddress(Optional.ofNullable(template.getBillingAddress())
-                .map(com.commercetools.api.models.common.BaseAddress::deepCopy)
-                .orElse(null));
-        instance.setCustomerGroup(Optional.ofNullable(template.getCustomerGroup())
-                .map(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setTotalPrice(com.commercetools.api.models.common.Money.deepCopy(template.getTotalPrice()));
+        instance.setTaxedPrice(com.commercetools.api.models.cart.TaxedPriceDraft.deepCopy(template.getTaxedPrice()));
+        instance.setShippingAddress(
+            com.commercetools.api.models.common.BaseAddress.deepCopy(template.getShippingAddress()));
+        instance.setBillingAddress(
+            com.commercetools.api.models.common.BaseAddress.deepCopy(template.getBillingAddress()));
+        instance.setCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier
+                .deepCopy(template.getCustomerGroup()));
         instance.setCountry(template.getCountry());
         instance.setOrderState(template.getOrderState());
-        instance.setState(Optional.ofNullable(template.getState())
-                .map(com.commercetools.api.models.state.StateReference::deepCopy)
-                .orElse(null));
+        instance.setState(com.commercetools.api.models.state.StateReference.deepCopy(template.getState()));
         instance.setShipmentState(template.getShipmentState());
         instance.setPaymentState(template.getPaymentState());
-        instance.setShippingInfo(Optional.ofNullable(template.getShippingInfo())
-                .map(com.commercetools.api.models.order.ShippingInfoImportDraft::deepCopy)
-                .orElse(null));
-        instance.setPaymentInfo(Optional.ofNullable(template.getPaymentInfo())
-                .map(com.commercetools.api.models.order.PaymentInfo::deepCopy)
-                .orElse(null));
+        instance.setShippingInfo(
+            com.commercetools.api.models.order.ShippingInfoImportDraft.deepCopy(template.getShippingInfo()));
+        instance.setPaymentInfo(com.commercetools.api.models.order.PaymentInfo.deepCopy(template.getPaymentInfo()));
         instance.setCompletedAt(template.getCompletedAt());
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         instance.setInventoryMode(template.getInventoryMode());
         instance.setTaxRoundingMode(template.getTaxRoundingMode());
         instance.setItemShippingAddresses(Optional.ofNullable(template.getItemShippingAddresses())
@@ -552,12 +538,9 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
                         .map(com.commercetools.api.models.common.BaseAddress::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setBusinessUnit(Optional.ofNullable(template.getBusinessUnit())
-                .map(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier::deepCopy)
-                .orElse(null));
-        instance.setStore(Optional.ofNullable(template.getStore())
-                .map(com.commercetools.api.models.store.StoreResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setBusinessUnit(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier
+                .deepCopy(template.getBusinessUnit()));
+        instance.setStore(com.commercetools.api.models.store.StoreResourceIdentifier.deepCopy(template.getStore()));
         instance.setOrigin(template.getOrigin());
         return instance;
     }

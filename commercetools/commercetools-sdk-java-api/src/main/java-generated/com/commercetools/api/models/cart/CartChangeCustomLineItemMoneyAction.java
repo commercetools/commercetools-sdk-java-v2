@@ -102,9 +102,7 @@ public interface CartChangeCustomLineItemMoneyAction extends CartUpdateAction {
         }
         CartChangeCustomLineItemMoneyActionImpl instance = new CartChangeCustomLineItemMoneyActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
-        instance.setMoney(Optional.ofNullable(template.getMoney())
-                .map(com.commercetools.api.models.common.Money::deepCopy)
-                .orElse(null));
+        instance.setMoney(com.commercetools.api.models.common.Money.deepCopy(template.getMoney()));
         return instance;
     }
 

@@ -97,12 +97,8 @@ public interface OrderBillingAddressSetMessagePayload extends OrderMessagePayloa
             return null;
         }
         OrderBillingAddressSetMessagePayloadImpl instance = new OrderBillingAddressSetMessagePayloadImpl();
-        instance.setAddress(Optional.ofNullable(template.getAddress())
-                .map(com.commercetools.api.models.common.Address::deepCopy)
-                .orElse(null));
-        instance.setOldAddress(Optional.ofNullable(template.getOldAddress())
-                .map(com.commercetools.api.models.common.Address::deepCopy)
-                .orElse(null));
+        instance.setAddress(com.commercetools.api.models.common.Address.deepCopy(template.getAddress()));
+        instance.setOldAddress(com.commercetools.api.models.common.Address.deepCopy(template.getOldAddress()));
         return instance;
     }
 

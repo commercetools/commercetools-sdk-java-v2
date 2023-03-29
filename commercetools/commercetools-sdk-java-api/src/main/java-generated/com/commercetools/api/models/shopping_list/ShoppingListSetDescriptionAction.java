@@ -80,9 +80,8 @@ public interface ShoppingListSetDescriptionAction extends ShoppingListUpdateActi
             return null;
         }
         ShoppingListSetDescriptionActionImpl instance = new ShoppingListSetDescriptionActionImpl();
-        instance.setDescription(Optional.ofNullable(template.getDescription())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
         return instance;
     }
 

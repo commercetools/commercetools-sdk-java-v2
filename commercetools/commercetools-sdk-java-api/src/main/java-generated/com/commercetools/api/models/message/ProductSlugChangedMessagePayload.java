@@ -99,12 +99,8 @@ public interface ProductSlugChangedMessagePayload extends MessagePayload {
             return null;
         }
         ProductSlugChangedMessagePayloadImpl instance = new ProductSlugChangedMessagePayloadImpl();
-        instance.setSlug(Optional.ofNullable(template.getSlug())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setOldSlug(Optional.ofNullable(template.getOldSlug())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setSlug(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getSlug()));
+        instance.setOldSlug(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getOldSlug()));
         return instance;
     }
 

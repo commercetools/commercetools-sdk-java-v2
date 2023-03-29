@@ -83,9 +83,7 @@ public interface OrderPaymentAddedMessagePayload extends MessagePayload {
             return null;
         }
         OrderPaymentAddedMessagePayloadImpl instance = new OrderPaymentAddedMessagePayloadImpl();
-        instance.setPayment(Optional.ofNullable(template.getPayment())
-                .map(com.commercetools.api.models.payment.PaymentReference::deepCopy)
-                .orElse(null));
+        instance.setPayment(com.commercetools.api.models.payment.PaymentReference.deepCopy(template.getPayment()));
         return instance;
     }
 

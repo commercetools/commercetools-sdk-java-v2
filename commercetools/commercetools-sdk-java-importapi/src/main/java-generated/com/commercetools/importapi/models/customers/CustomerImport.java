@@ -495,9 +495,8 @@ public interface CustomerImport extends ImportResource {
         instance.setCompanyName(template.getCompanyName());
         instance.setVatId(template.getVatId());
         instance.setIsEmailVerified(template.getIsEmailVerified());
-        instance.setCustomerGroup(Optional.ofNullable(template.getCustomerGroup())
-                .map(com.commercetools.importapi.models.common.CustomerGroupKeyReference::deepCopy)
-                .orElse(null));
+        instance.setCustomerGroup(
+            com.commercetools.importapi.models.common.CustomerGroupKeyReference.deepCopy(template.getCustomerGroup()));
         instance.setAddresses(Optional.ofNullable(template.getAddresses())
                 .map(t -> t.stream()
                         .map(com.commercetools.importapi.models.customers.CustomerAddress::deepCopy)
@@ -510,9 +509,7 @@ public interface CustomerImport extends ImportResource {
         instance.setShippingAddresses(
             Optional.ofNullable(template.getShippingAddresses()).map(ArrayList::new).orElse(null));
         instance.setLocale(template.getLocale());
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.importapi.models.customfields.Custom::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.importapi.models.customfields.Custom.deepCopy(template.getCustom()));
         instance.setAuthenticationMode(template.getAuthenticationMode());
         return instance;
     }

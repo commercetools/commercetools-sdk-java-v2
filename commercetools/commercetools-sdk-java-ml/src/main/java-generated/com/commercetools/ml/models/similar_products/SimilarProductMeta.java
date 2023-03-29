@@ -124,15 +124,9 @@ public interface SimilarProductMeta {
             return null;
         }
         SimilarProductMetaImpl instance = new SimilarProductMetaImpl();
-        instance.setName(Optional.ofNullable(template.getName())
-                .map(com.commercetools.ml.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setDescription(Optional.ofNullable(template.getDescription())
-                .map(com.commercetools.ml.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setPrice(Optional.ofNullable(template.getPrice())
-                .map(com.commercetools.ml.models.common.Money::deepCopy)
-                .orElse(null));
+        instance.setName(com.commercetools.ml.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setDescription(com.commercetools.ml.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setPrice(com.commercetools.ml.models.common.Money.deepCopy(template.getPrice()));
         instance.setVariantCount(template.getVariantCount());
         return instance;
     }

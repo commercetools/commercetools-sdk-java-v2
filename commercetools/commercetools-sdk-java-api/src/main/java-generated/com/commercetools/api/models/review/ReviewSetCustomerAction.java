@@ -80,9 +80,8 @@ public interface ReviewSetCustomerAction extends ReviewUpdateAction {
             return null;
         }
         ReviewSetCustomerActionImpl instance = new ReviewSetCustomerActionImpl();
-        instance.setCustomer(Optional.ofNullable(template.getCustomer())
-                .map(com.commercetools.api.models.customer.CustomerResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setCustomer(
+            com.commercetools.api.models.customer.CustomerResourceIdentifier.deepCopy(template.getCustomer()));
         return instance;
     }
 

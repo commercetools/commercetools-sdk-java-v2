@@ -110,9 +110,8 @@ public interface GraphQLRequest {
         GraphQLRequestImpl instance = new GraphQLRequestImpl();
         instance.setQuery(template.getQuery());
         instance.setOperationName(template.getOperationName());
-        instance.setVariables(Optional.ofNullable(template.getVariables())
-                .map(com.commercetools.api.models.graph_ql.GraphQLVariablesMap::deepCopy)
-                .orElse(null));
+        instance.setVariables(
+            com.commercetools.api.models.graph_ql.GraphQLVariablesMap.deepCopy(template.getVariables()));
         return instance;
     }
 

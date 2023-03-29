@@ -100,9 +100,7 @@ public interface TaxCategoryReplaceTaxRateAction extends TaxCategoryUpdateAction
         }
         TaxCategoryReplaceTaxRateActionImpl instance = new TaxCategoryReplaceTaxRateActionImpl();
         instance.setTaxRateId(template.getTaxRateId());
-        instance.setTaxRate(Optional.ofNullable(template.getTaxRate())
-                .map(com.commercetools.api.models.tax_category.TaxRateDraft::deepCopy)
-                .orElse(null));
+        instance.setTaxRate(com.commercetools.api.models.tax_category.TaxRateDraft.deepCopy(template.getTaxRate()));
         return instance;
     }
 

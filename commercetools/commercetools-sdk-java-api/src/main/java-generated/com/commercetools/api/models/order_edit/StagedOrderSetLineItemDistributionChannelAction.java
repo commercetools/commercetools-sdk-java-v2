@@ -102,9 +102,8 @@ public interface StagedOrderSetLineItemDistributionChannelAction extends StagedO
         }
         StagedOrderSetLineItemDistributionChannelActionImpl instance = new StagedOrderSetLineItemDistributionChannelActionImpl();
         instance.setLineItemId(template.getLineItemId());
-        instance.setDistributionChannel(Optional.ofNullable(template.getDistributionChannel())
-                .map(com.commercetools.api.models.channel.ChannelResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setDistributionChannel(
+            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getDistributionChannel()));
         return instance;
     }
 

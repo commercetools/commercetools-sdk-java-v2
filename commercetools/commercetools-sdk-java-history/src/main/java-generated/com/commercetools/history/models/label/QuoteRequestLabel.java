@@ -109,9 +109,7 @@ public interface QuoteRequestLabel extends Label {
         }
         QuoteRequestLabelImpl instance = new QuoteRequestLabelImpl();
         instance.setKey(template.getKey());
-        instance.setCustomer(Optional.ofNullable(template.getCustomer())
-                .map(com.commercetools.history.models.common.Reference::deepCopy)
-                .orElse(null));
+        instance.setCustomer(com.commercetools.history.models.common.Reference.deepCopy(template.getCustomer()));
         return instance;
     }
 

@@ -204,16 +204,11 @@ public interface Asset {
                         .map(com.commercetools.importapi.models.common.AssetSource::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setName(Optional.ofNullable(template.getName())
-                .map(com.commercetools.importapi.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setDescription(Optional.ofNullable(template.getDescription())
-                .map(com.commercetools.importapi.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setName(com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setDescription(
+            com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getDescription()));
         instance.setTags(Optional.ofNullable(template.getTags()).map(ArrayList::new).orElse(null));
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.importapi.models.customfields.Custom::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.importapi.models.customfields.Custom.deepCopy(template.getCustom()));
         return instance;
     }
 

@@ -146,15 +146,11 @@ public interface ChangeAssetNameChange extends Change {
         }
         ChangeAssetNameChangeImpl instance = new ChangeAssetNameChangeImpl();
         instance.setChange(template.getChange());
-        instance.setAsset(Optional.ofNullable(template.getAsset())
-                .map(com.commercetools.history.models.change_value.AssetChangeValue::deepCopy)
-                .orElse(null));
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setAsset(com.commercetools.history.models.change_value.AssetChangeValue.deepCopy(template.getAsset()));
+        instance.setNextValue(
+            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getPreviousValue()));
         return instance;
     }
 

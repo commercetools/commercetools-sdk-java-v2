@@ -100,9 +100,8 @@ public interface TypeAddLocalizedEnumValueAction extends TypeUpdateAction {
         }
         TypeAddLocalizedEnumValueActionImpl instance = new TypeAddLocalizedEnumValueActionImpl();
         instance.setFieldName(template.getFieldName());
-        instance.setValue(Optional.ofNullable(template.getValue())
-                .map(com.commercetools.api.models.type.CustomFieldLocalizedEnumValue::deepCopy)
-                .orElse(null));
+        instance.setValue(
+            com.commercetools.api.models.type.CustomFieldLocalizedEnumValue.deepCopy(template.getValue()));
         return instance;
     }
 

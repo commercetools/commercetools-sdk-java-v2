@@ -83,9 +83,7 @@ public interface StagedQuoteReference extends Reference, com.commercetools.api.m
         }
         StagedQuoteReferenceImpl instance = new StagedQuoteReferenceImpl();
         instance.setId(template.getId());
-        instance.setObj(Optional.ofNullable(template.getObj())
-                .map(com.commercetools.api.models.staged_quote.StagedQuote::deepCopy)
-                .orElse(null));
+        instance.setObj(com.commercetools.api.models.staged_quote.StagedQuote.deepCopy(template.getObj()));
         return instance;
     }
 

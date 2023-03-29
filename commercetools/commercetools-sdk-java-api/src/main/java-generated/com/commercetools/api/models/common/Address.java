@@ -141,9 +141,7 @@ public interface Address extends BaseAddress, com.commercetools.api.models.Custo
         instance.setFax(template.getFax());
         instance.setAdditionalAddressInfo(template.getAdditionalAddressInfo());
         instance.setExternalId(template.getExternalId());
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFields::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         return instance;
     }
 

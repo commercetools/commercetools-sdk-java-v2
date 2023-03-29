@@ -89,9 +89,8 @@ public interface CartSetShippingRateInputAction extends CartUpdateAction {
             return null;
         }
         CartSetShippingRateInputActionImpl instance = new CartSetShippingRateInputActionImpl();
-        instance.setShippingRateInput(Optional.ofNullable(template.getShippingRateInput())
-                .map(com.commercetools.api.models.cart.ShippingRateInputDraft::deepCopy)
-                .orElse(null));
+        instance.setShippingRateInput(
+            com.commercetools.api.models.cart.ShippingRateInputDraft.deepCopy(template.getShippingRateInput()));
         return instance;
     }
 

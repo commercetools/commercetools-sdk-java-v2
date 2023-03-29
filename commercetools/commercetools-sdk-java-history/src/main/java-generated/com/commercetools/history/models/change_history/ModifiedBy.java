@@ -161,9 +161,7 @@ public interface ModifiedBy {
         ModifiedByImpl instance = new ModifiedByImpl();
         instance.setId(template.getId());
         instance.setType(template.getType());
-        instance.setCustomer(Optional.ofNullable(template.getCustomer())
-                .map(com.commercetools.history.models.common.Reference::deepCopy)
-                .orElse(null));
+        instance.setCustomer(com.commercetools.history.models.common.Reference.deepCopy(template.getCustomer()));
         instance.setAnonymousId(template.getAnonymousId());
         instance.setClientId(template.getClientId());
         instance.setIsPlatformClient(template.getIsPlatformClient());

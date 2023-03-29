@@ -80,9 +80,7 @@ public interface PaymentSetMethodInfoNameAction extends PaymentUpdateAction {
             return null;
         }
         PaymentSetMethodInfoNameActionImpl instance = new PaymentSetMethodInfoNameActionImpl();
-        instance.setName(Optional.ofNullable(template.getName())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
         return instance;
     }
 

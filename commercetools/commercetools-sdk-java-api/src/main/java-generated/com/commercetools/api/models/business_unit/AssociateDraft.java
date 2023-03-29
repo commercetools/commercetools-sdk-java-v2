@@ -103,9 +103,8 @@ public interface AssociateDraft extends io.vrap.rmf.base.client.Draft<AssociateD
         }
         AssociateDraftImpl instance = new AssociateDraftImpl();
         instance.setRoles(Optional.ofNullable(template.getRoles()).map(ArrayList::new).orElse(null));
-        instance.setCustomer(Optional.ofNullable(template.getCustomer())
-                .map(com.commercetools.api.models.customer.CustomerResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setCustomer(
+            com.commercetools.api.models.customer.CustomerResourceIdentifier.deepCopy(template.getCustomer()));
         return instance;
     }
 

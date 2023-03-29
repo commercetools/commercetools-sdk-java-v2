@@ -158,12 +158,10 @@ public interface Parcel {
         ParcelImpl instance = new ParcelImpl();
         instance.setId(template.getId());
         instance.setCreatedAt(template.getCreatedAt());
-        instance.setMeasurements(Optional.ofNullable(template.getMeasurements())
-                .map(com.commercetools.history.models.common.ParcelMeasurements::deepCopy)
-                .orElse(null));
-        instance.setTrackingData(Optional.ofNullable(template.getTrackingData())
-                .map(com.commercetools.history.models.common.TrackingData::deepCopy)
-                .orElse(null));
+        instance.setMeasurements(
+            com.commercetools.history.models.common.ParcelMeasurements.deepCopy(template.getMeasurements()));
+        instance.setTrackingData(
+            com.commercetools.history.models.common.TrackingData.deepCopy(template.getTrackingData()));
         instance.setItems(Optional.ofNullable(template.getItems())
                 .map(t -> t.stream()
                         .map(com.commercetools.history.models.common.DeliveryItem::deepCopy)

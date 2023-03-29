@@ -116,9 +116,8 @@ public interface ProductSetDiscountedPriceAction extends ProductUpdateAction {
         ProductSetDiscountedPriceActionImpl instance = new ProductSetDiscountedPriceActionImpl();
         instance.setPriceId(template.getPriceId());
         instance.setStaged(template.getStaged());
-        instance.setDiscounted(Optional.ofNullable(template.getDiscounted())
-                .map(com.commercetools.api.models.common.DiscountedPriceDraft::deepCopy)
-                .orElse(null));
+        instance.setDiscounted(
+            com.commercetools.api.models.common.DiscountedPriceDraft.deepCopy(template.getDiscounted()));
         return instance;
     }
 

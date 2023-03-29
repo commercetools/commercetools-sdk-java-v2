@@ -96,9 +96,7 @@ public interface ItemState {
         }
         ItemStateImpl instance = new ItemStateImpl();
         instance.setQuantity(template.getQuantity());
-        instance.setState(Optional.ofNullable(template.getState())
-                .map(com.commercetools.api.models.state.StateReference::deepCopy)
-                .orElse(null));
+        instance.setState(com.commercetools.api.models.state.StateReference.deepCopy(template.getState()));
         return instance;
     }
 

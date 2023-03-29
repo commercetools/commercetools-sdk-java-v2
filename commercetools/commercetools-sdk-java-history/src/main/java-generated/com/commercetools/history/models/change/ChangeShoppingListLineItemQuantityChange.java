@@ -144,9 +144,8 @@ public interface ChangeShoppingListLineItemQuantityChange extends Change {
         }
         ChangeShoppingListLineItemQuantityChangeImpl instance = new ChangeShoppingListLineItemQuantityChangeImpl();
         instance.setChange(template.getChange());
-        instance.setLineItem(Optional.ofNullable(template.getLineItem())
-                .map(com.commercetools.history.models.change_value.ShoppingListLineItemValue::deepCopy)
-                .orElse(null));
+        instance.setLineItem(
+            com.commercetools.history.models.change_value.ShoppingListLineItemValue.deepCopy(template.getLineItem()));
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
         return instance;

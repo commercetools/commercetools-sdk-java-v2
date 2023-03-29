@@ -199,9 +199,8 @@ public interface SimilarProductSearchRequest {
         instance.setOffset(template.getOffset());
         instance.setLanguage(template.getLanguage());
         instance.setCurrencyCode(template.getCurrencyCode());
-        instance.setSimilarityMeasures(Optional.ofNullable(template.getSimilarityMeasures())
-                .map(com.commercetools.ml.models.similar_products.SimilarityMeasures::deepCopy)
-                .orElse(null));
+        instance.setSimilarityMeasures(
+            com.commercetools.ml.models.similar_products.SimilarityMeasures.deepCopy(template.getSimilarityMeasures()));
         instance.setProductSetSelectors(Optional.ofNullable(template.getProductSetSelectors())
                 .map(t -> t.stream()
                         .map(com.commercetools.ml.models.similar_products.ProductSetSelector::deepCopy)

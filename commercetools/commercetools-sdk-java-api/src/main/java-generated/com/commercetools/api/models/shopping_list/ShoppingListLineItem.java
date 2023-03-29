@@ -258,26 +258,18 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
         }
         ShoppingListLineItemImpl instance = new ShoppingListLineItemImpl();
         instance.setAddedAt(template.getAddedAt());
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFields::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         instance.setDeactivatedAt(template.getDeactivatedAt());
         instance.setId(template.getId());
-        instance.setName(Optional.ofNullable(template.getName())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
         instance.setProductId(template.getProductId());
-        instance.setProductType(Optional.ofNullable(template.getProductType())
-                .map(com.commercetools.api.models.product_type.ProductTypeReference::deepCopy)
-                .orElse(null));
+        instance.setProductType(
+            com.commercetools.api.models.product_type.ProductTypeReference.deepCopy(template.getProductType()));
         instance.setQuantity(template.getQuantity());
         instance.setVariantId(template.getVariantId());
-        instance.setVariant(Optional.ofNullable(template.getVariant())
-                .map(com.commercetools.api.models.product.ProductVariant::deepCopy)
-                .orElse(null));
-        instance.setProductSlug(Optional.ofNullable(template.getProductSlug())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setVariant(com.commercetools.api.models.product.ProductVariant.deepCopy(template.getVariant()));
+        instance.setProductSlug(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getProductSlug()));
         return instance;
     }
 

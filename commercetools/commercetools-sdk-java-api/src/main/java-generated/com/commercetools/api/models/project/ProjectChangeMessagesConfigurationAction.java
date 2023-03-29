@@ -84,9 +84,8 @@ public interface ProjectChangeMessagesConfigurationAction extends ProjectUpdateA
             return null;
         }
         ProjectChangeMessagesConfigurationActionImpl instance = new ProjectChangeMessagesConfigurationActionImpl();
-        instance.setMessagesConfiguration(Optional.ofNullable(template.getMessagesConfiguration())
-                .map(com.commercetools.api.models.message.MessagesConfigurationDraft::deepCopy)
-                .orElse(null));
+        instance.setMessagesConfiguration(com.commercetools.api.models.message.MessagesConfigurationDraft
+                .deepCopy(template.getMessagesConfiguration()));
         return instance;
     }
 

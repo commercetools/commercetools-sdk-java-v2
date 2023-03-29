@@ -170,9 +170,7 @@ public interface ProductPriceExternalDiscountSetMessagePayload extends MessagePa
         instance.setVariantKey(template.getVariantKey());
         instance.setSku(template.getSku());
         instance.setPriceId(template.getPriceId());
-        instance.setDiscounted(Optional.ofNullable(template.getDiscounted())
-                .map(com.commercetools.api.models.common.DiscountedPrice::deepCopy)
-                .orElse(null));
+        instance.setDiscounted(com.commercetools.api.models.common.DiscountedPrice.deepCopy(template.getDiscounted()));
         instance.setStaged(template.getStaged());
         return instance;
     }

@@ -112,9 +112,8 @@ public interface EditPreviewFailedError extends ErrorObject {
         EditPreviewFailedErrorImpl instance = new EditPreviewFailedErrorImpl();
         instance.setMessage(template.getMessage());
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
-        instance.setResult(Optional.ofNullable(template.getResult())
-                .map(com.commercetools.api.models.order_edit.OrderEditPreviewFailure::deepCopy)
-                .orElse(null));
+        instance.setResult(
+            com.commercetools.api.models.order_edit.OrderEditPreviewFailure.deepCopy(template.getResult()));
         return instance;
     }
 

@@ -181,12 +181,8 @@ public interface SetDiscountedPriceChange extends Change {
         instance.setCatalogData(template.getCatalogData());
         instance.setVariant(template.getVariant());
         instance.setPriceId(template.getPriceId());
-        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(com.commercetools.history.models.common.Price::deepCopy)
-                .orElse(null));
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.common.Price::deepCopy)
-                .orElse(null));
+        instance.setPreviousValue(com.commercetools.history.models.common.Price.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.Price.deepCopy(template.getNextValue()));
         return instance;
     }
 

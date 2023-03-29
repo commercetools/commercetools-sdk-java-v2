@@ -131,12 +131,9 @@ public interface CartScoreTier extends ShippingRatePriceTier {
         }
         CartScoreTierImpl instance = new CartScoreTierImpl();
         instance.setScore(template.getScore());
-        instance.setPrice(Optional.ofNullable(template.getPrice())
-                .map(com.commercetools.api.models.common.Money::deepCopy)
-                .orElse(null));
-        instance.setPriceFunction(Optional.ofNullable(template.getPriceFunction())
-                .map(com.commercetools.api.models.shipping_method.PriceFunction::deepCopy)
-                .orElse(null));
+        instance.setPrice(com.commercetools.api.models.common.Money.deepCopy(template.getPrice()));
+        instance.setPriceFunction(
+            com.commercetools.api.models.shipping_method.PriceFunction.deepCopy(template.getPriceFunction()));
         instance.setIsMatching(template.getIsMatching());
         return instance;
     }

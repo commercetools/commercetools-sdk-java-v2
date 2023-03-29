@@ -127,9 +127,7 @@ public interface UpdateSyncInfoChange extends Change {
         UpdateSyncInfoChangeImpl instance = new UpdateSyncInfoChangeImpl();
         instance.setChange(template.getChange());
         instance.setChannelId(template.getChannelId());
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.common.SyncInfo::deepCopy)
-                .orElse(null));
+        instance.setNextValue(com.commercetools.history.models.common.SyncInfo.deepCopy(template.getNextValue()));
         return instance;
     }
 

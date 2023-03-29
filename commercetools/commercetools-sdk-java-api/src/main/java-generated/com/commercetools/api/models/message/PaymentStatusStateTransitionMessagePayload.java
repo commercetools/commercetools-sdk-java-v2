@@ -102,9 +102,7 @@ public interface PaymentStatusStateTransitionMessagePayload extends MessagePaylo
             return null;
         }
         PaymentStatusStateTransitionMessagePayloadImpl instance = new PaymentStatusStateTransitionMessagePayloadImpl();
-        instance.setState(Optional.ofNullable(template.getState())
-                .map(com.commercetools.api.models.state.StateReference::deepCopy)
-                .orElse(null));
+        instance.setState(com.commercetools.api.models.state.StateReference.deepCopy(template.getState()));
         instance.setForce(template.getForce());
         return instance;
     }

@@ -179,15 +179,12 @@ public interface InventoryEntryDraft extends com.commercetools.api.models.Custom
         InventoryEntryDraftImpl instance = new InventoryEntryDraftImpl();
         instance.setSku(template.getSku());
         instance.setKey(template.getKey());
-        instance.setSupplyChannel(Optional.ofNullable(template.getSupplyChannel())
-                .map(com.commercetools.api.models.channel.ChannelResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setSupplyChannel(
+            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getSupplyChannel()));
         instance.setQuantityOnStock(template.getQuantityOnStock());
         instance.setRestockableInDays(template.getRestockableInDays());
         instance.setExpectedDelivery(template.getExpectedDelivery());
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;
     }
 

@@ -100,9 +100,7 @@ public interface OrderLineItemAddedMessagePayload extends OrderMessagePayload {
             return null;
         }
         OrderLineItemAddedMessagePayloadImpl instance = new OrderLineItemAddedMessagePayloadImpl();
-        instance.setLineItem(Optional.ofNullable(template.getLineItem())
-                .map(com.commercetools.api.models.cart.LineItem::deepCopy)
-                .orElse(null));
+        instance.setLineItem(com.commercetools.api.models.cart.LineItem.deepCopy(template.getLineItem()));
         instance.setAddedQuantity(template.getAddedQuantity());
         return instance;
     }

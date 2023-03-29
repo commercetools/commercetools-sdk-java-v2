@@ -153,9 +153,8 @@ public interface ExtensionUpdateActionsFailedError extends ErrorObject {
         ExtensionUpdateActionsFailedErrorImpl instance = new ExtensionUpdateActionsFailedErrorImpl();
         instance.setMessage(template.getMessage());
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
-        instance.setLocalizedMessage(Optional.ofNullable(template.getLocalizedMessage())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setLocalizedMessage(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getLocalizedMessage()));
         instance.setExtensionExtraInfo(template.getExtensionExtraInfo());
         instance.setExtensionErrors(Optional.ofNullable(template.getExtensionErrors())
                 .map(t -> t.stream()

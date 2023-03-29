@@ -109,9 +109,8 @@ public interface RemoveProductChange extends Change {
         }
         RemoveProductChangeImpl instance = new RemoveProductChangeImpl();
         instance.setChange(template.getChange());
-        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(com.commercetools.history.models.common.Reference::deepCopy)
-                .orElse(null));
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.Reference.deepCopy(template.getPreviousValue()));
         return instance;
     }
 

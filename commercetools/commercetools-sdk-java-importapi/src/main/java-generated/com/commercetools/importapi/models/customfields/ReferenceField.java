@@ -83,9 +83,7 @@ public interface ReferenceField extends CustomField {
             return null;
         }
         ReferenceFieldImpl instance = new ReferenceFieldImpl();
-        instance.setValue(Optional.ofNullable(template.getValue())
-                .map(com.commercetools.importapi.models.common.KeyReference::deepCopy)
-                .orElse(null));
+        instance.setValue(com.commercetools.importapi.models.common.KeyReference.deepCopy(template.getValue()));
         return instance;
     }
 

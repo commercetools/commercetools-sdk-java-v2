@@ -117,15 +117,12 @@ public interface StagedOrderAddShoppingListAction extends StagedOrderUpdateActio
             return null;
         }
         StagedOrderAddShoppingListActionImpl instance = new StagedOrderAddShoppingListActionImpl();
-        instance.setShoppingList(Optional.ofNullable(template.getShoppingList())
-                .map(com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier::deepCopy)
-                .orElse(null));
-        instance.setSupplyChannel(Optional.ofNullable(template.getSupplyChannel())
-                .map(com.commercetools.api.models.channel.ChannelResourceIdentifier::deepCopy)
-                .orElse(null));
-        instance.setDistributionChannel(Optional.ofNullable(template.getDistributionChannel())
-                .map(com.commercetools.api.models.channel.ChannelResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setShoppingList(com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier
+                .deepCopy(template.getShoppingList()));
+        instance.setSupplyChannel(
+            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getSupplyChannel()));
+        instance.setDistributionChannel(
+            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getDistributionChannel()));
         return instance;
     }
 

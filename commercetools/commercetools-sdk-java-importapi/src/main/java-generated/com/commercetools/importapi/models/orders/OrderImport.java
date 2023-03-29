@@ -482,9 +482,8 @@ public interface OrderImport {
         }
         OrderImportImpl instance = new OrderImportImpl();
         instance.setOrderNumber(template.getOrderNumber());
-        instance.setCustomer(Optional.ofNullable(template.getCustomer())
-                .map(com.commercetools.importapi.models.common.CustomerKeyReference::deepCopy)
-                .orElse(null));
+        instance.setCustomer(
+            com.commercetools.importapi.models.common.CustomerKeyReference.deepCopy(template.getCustomer()));
         instance.setCustomerEmail(template.getCustomerEmail());
         instance.setLineItems(Optional.ofNullable(template.getLineItems())
                 .map(t -> t.stream()
@@ -496,32 +495,22 @@ public interface OrderImport {
                         .map(com.commercetools.importapi.models.orders.CustomLineItemDraft::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setTotalPrice(Optional.ofNullable(template.getTotalPrice())
-                .map(com.commercetools.importapi.models.common.TypedMoney::deepCopy)
-                .orElse(null));
-        instance.setTaxedPrice(Optional.ofNullable(template.getTaxedPrice())
-                .map(com.commercetools.importapi.models.orders.TaxedPrice::deepCopy)
-                .orElse(null));
-        instance.setShippingAddress(Optional.ofNullable(template.getShippingAddress())
-                .map(com.commercetools.importapi.models.common.Address::deepCopy)
-                .orElse(null));
-        instance.setBillingAddress(Optional.ofNullable(template.getBillingAddress())
-                .map(com.commercetools.importapi.models.common.Address::deepCopy)
-                .orElse(null));
-        instance.setCustomerGroup(Optional.ofNullable(template.getCustomerGroup())
-                .map(com.commercetools.importapi.models.common.CustomerGroupKeyReference::deepCopy)
-                .orElse(null));
+        instance.setTotalPrice(com.commercetools.importapi.models.common.TypedMoney.deepCopy(template.getTotalPrice()));
+        instance.setTaxedPrice(com.commercetools.importapi.models.orders.TaxedPrice.deepCopy(template.getTaxedPrice()));
+        instance.setShippingAddress(
+            com.commercetools.importapi.models.common.Address.deepCopy(template.getShippingAddress()));
+        instance.setBillingAddress(
+            com.commercetools.importapi.models.common.Address.deepCopy(template.getBillingAddress()));
+        instance.setCustomerGroup(
+            com.commercetools.importapi.models.common.CustomerGroupKeyReference.deepCopy(template.getCustomerGroup()));
         instance.setCountry(template.getCountry());
         instance.setOrderState(template.getOrderState());
         instance.setShipmentState(template.getShipmentState());
         instance.setPaymentState(template.getPaymentState());
-        instance.setShippingInfo(Optional.ofNullable(template.getShippingInfo())
-                .map(com.commercetools.importapi.models.orders.ShippingInfoImportDraft::deepCopy)
-                .orElse(null));
+        instance.setShippingInfo(
+            com.commercetools.importapi.models.orders.ShippingInfoImportDraft.deepCopy(template.getShippingInfo()));
         instance.setCompletedAt(template.getCompletedAt());
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.importapi.models.customfields.Custom::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.importapi.models.customfields.Custom.deepCopy(template.getCustom()));
         instance.setInventoryMode(template.getInventoryMode());
         instance.setTaxRoundingMode(template.getTaxRoundingMode());
         instance.setTaxCalculationMode(template.getTaxCalculationMode());
@@ -531,12 +520,8 @@ public interface OrderImport {
                         .map(com.commercetools.importapi.models.common.Address::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setStore(Optional.ofNullable(template.getStore())
-                .map(com.commercetools.importapi.models.common.StoreKeyReference::deepCopy)
-                .orElse(null));
-        instance.setState(Optional.ofNullable(template.getState())
-                .map(com.commercetools.importapi.models.common.StateKeyReference::deepCopy)
-                .orElse(null));
+        instance.setStore(com.commercetools.importapi.models.common.StoreKeyReference.deepCopy(template.getStore()));
+        instance.setState(com.commercetools.importapi.models.common.StateKeyReference.deepCopy(template.getState()));
         return instance;
     }
 

@@ -219,32 +219,26 @@ public interface OrderField {
             return null;
         }
         OrderFieldImpl instance = new OrderFieldImpl();
-        instance.setAddReturnInfo(Optional.ofNullable(template.getAddReturnInfo())
-                .map(com.commercetools.importapi.models.order_patches.ReturnInfo::deepCopy)
-                .orElse(null));
-        instance.setAddParcelToDelivery(Optional.ofNullable(template.getAddParcelToDelivery())
-                .map(com.commercetools.importapi.models.order_patches.DeliveryParcel::deepCopy)
-                .orElse(null));
+        instance.setAddReturnInfo(
+            com.commercetools.importapi.models.order_patches.ReturnInfo.deepCopy(template.getAddReturnInfo()));
+        instance.setAddParcelToDelivery(com.commercetools.importapi.models.order_patches.DeliveryParcel
+                .deepCopy(template.getAddParcelToDelivery()));
         instance.setAddDeliveries(Optional.ofNullable(template.getAddDeliveries())
                 .map(t -> t.stream()
                         .map(com.commercetools.importapi.models.order_patches.DeliveryDraft::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setRemoveDelivery(Optional.ofNullable(template.getRemoveDelivery())
-                .map(com.commercetools.importapi.models.order_patches.RemoveDeliveryDraft::deepCopy)
-                .orElse(null));
-        instance.setRemoveParcelFromDelivery(Optional.ofNullable(template.getRemoveParcelFromDelivery())
-                .map(com.commercetools.importapi.models.order_patches.RemoveParcelFromDeliveryDraft::deepCopy)
-                .orElse(null));
-        instance.setSetDeliveryAddress(Optional.ofNullable(template.getSetDeliveryAddress())
-                .map(com.commercetools.importapi.models.order_patches.DeliveryAddressDraft::deepCopy)
-                .orElse(null));
-        instance.setSetParcelMeasurements(Optional.ofNullable(template.getSetParcelMeasurements())
-                .map(com.commercetools.importapi.models.order_patches.ParcelMeasurementDraft::deepCopy)
-                .orElse(null));
-        instance.setSetParcelTrackingData(Optional.ofNullable(template.getSetParcelTrackingData())
-                .map(com.commercetools.importapi.models.order_patches.ParcelTrackingData::deepCopy)
-                .orElse(null));
+        instance.setRemoveDelivery(com.commercetools.importapi.models.order_patches.RemoveDeliveryDraft
+                .deepCopy(template.getRemoveDelivery()));
+        instance.setRemoveParcelFromDelivery(
+            com.commercetools.importapi.models.order_patches.RemoveParcelFromDeliveryDraft
+                    .deepCopy(template.getRemoveParcelFromDelivery()));
+        instance.setSetDeliveryAddress(com.commercetools.importapi.models.order_patches.DeliveryAddressDraft
+                .deepCopy(template.getSetDeliveryAddress()));
+        instance.setSetParcelMeasurements(com.commercetools.importapi.models.order_patches.ParcelMeasurementDraft
+                .deepCopy(template.getSetParcelMeasurements()));
+        instance.setSetParcelTrackingData(com.commercetools.importapi.models.order_patches.ParcelTrackingData
+                .deepCopy(template.getSetParcelTrackingData()));
         instance.setSetParcelItems(Optional.ofNullable(template.getSetParcelItems())
                 .map(t -> t.stream()
                         .map(com.commercetools.importapi.models.order_patches.ParcelItems::deepCopy)

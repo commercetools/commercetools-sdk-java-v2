@@ -112,9 +112,8 @@ public interface Image {
         }
         ImageImpl instance = new ImageImpl();
         instance.setUrl(template.getUrl());
-        instance.setDimensions(Optional.ofNullable(template.getDimensions())
-                .map(com.commercetools.history.models.common.ImageDimensions::deepCopy)
-                .orElse(null));
+        instance.setDimensions(
+            com.commercetools.history.models.common.ImageDimensions.deepCopy(template.getDimensions()));
         instance.setLabel(template.getLabel());
         return instance;
     }

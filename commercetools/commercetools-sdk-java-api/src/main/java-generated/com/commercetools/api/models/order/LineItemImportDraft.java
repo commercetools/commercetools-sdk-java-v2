@@ -276,37 +276,25 @@ public interface LineItemImportDraft extends com.commercetools.api.models.Custom
         }
         LineItemImportDraftImpl instance = new LineItemImportDraftImpl();
         instance.setProductId(template.getProductId());
-        instance.setName(Optional.ofNullable(template.getName())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setVariant(Optional.ofNullable(template.getVariant())
-                .map(com.commercetools.api.models.order.ProductVariantImportDraft::deepCopy)
-                .orElse(null));
-        instance.setPrice(Optional.ofNullable(template.getPrice())
-                .map(com.commercetools.api.models.common.PriceDraft::deepCopy)
-                .orElse(null));
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setVariant(
+            com.commercetools.api.models.order.ProductVariantImportDraft.deepCopy(template.getVariant()));
+        instance.setPrice(com.commercetools.api.models.common.PriceDraft.deepCopy(template.getPrice()));
         instance.setQuantity(template.getQuantity());
         instance.setState(Optional.ofNullable(template.getState())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.order.ItemState::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setSupplyChannel(Optional.ofNullable(template.getSupplyChannel())
-                .map(com.commercetools.api.models.channel.ChannelResourceIdentifier::deepCopy)
-                .orElse(null));
-        instance.setDistributionChannel(Optional.ofNullable(template.getDistributionChannel())
-                .map(com.commercetools.api.models.channel.ChannelResourceIdentifier::deepCopy)
-                .orElse(null));
-        instance.setTaxRate(Optional.ofNullable(template.getTaxRate())
-                .map(com.commercetools.api.models.tax_category.TaxRate::deepCopy)
-                .orElse(null));
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
-                .orElse(null));
+        instance.setSupplyChannel(
+            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getSupplyChannel()));
+        instance.setDistributionChannel(
+            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getDistributionChannel()));
+        instance.setTaxRate(com.commercetools.api.models.tax_category.TaxRate.deepCopy(template.getTaxRate()));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         instance.setInventoryMode(template.getInventoryMode());
-        instance.setShippingDetails(Optional.ofNullable(template.getShippingDetails())
-                .map(com.commercetools.api.models.cart.ItemShippingDetailsDraft::deepCopy)
-                .orElse(null));
+        instance.setShippingDetails(
+            com.commercetools.api.models.cart.ItemShippingDetailsDraft.deepCopy(template.getShippingDetails()));
         return instance;
     }
 

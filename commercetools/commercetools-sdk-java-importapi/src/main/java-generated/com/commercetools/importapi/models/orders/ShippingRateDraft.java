@@ -119,12 +119,8 @@ public interface ShippingRateDraft extends io.vrap.rmf.base.client.Draft<Shippin
             return null;
         }
         ShippingRateDraftImpl instance = new ShippingRateDraftImpl();
-        instance.setPrice(Optional.ofNullable(template.getPrice())
-                .map(com.commercetools.importapi.models.common.Money::deepCopy)
-                .orElse(null));
-        instance.setFreeAbove(Optional.ofNullable(template.getFreeAbove())
-                .map(com.commercetools.importapi.models.common.Money::deepCopy)
-                .orElse(null));
+        instance.setPrice(com.commercetools.importapi.models.common.Money.deepCopy(template.getPrice()));
+        instance.setFreeAbove(com.commercetools.importapi.models.common.Money.deepCopy(template.getFreeAbove()));
         instance.setTiers(Optional.ofNullable(template.getTiers())
                 .map(t -> t.stream()
                         .map(com.commercetools.importapi.models.orders.ShippingRatePriceTier::deepCopy)

@@ -80,9 +80,8 @@ public interface CategorySetMetaDescriptionAction extends CategoryUpdateAction {
             return null;
         }
         CategorySetMetaDescriptionActionImpl instance = new CategorySetMetaDescriptionActionImpl();
-        instance.setMetaDescription(Optional.ofNullable(template.getMetaDescription())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setMetaDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaDescription()));
         return instance;
     }
 

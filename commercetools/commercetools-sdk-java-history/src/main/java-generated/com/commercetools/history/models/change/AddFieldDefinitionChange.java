@@ -109,9 +109,8 @@ public interface AddFieldDefinitionChange extends Change {
         }
         AddFieldDefinitionChangeImpl instance = new AddFieldDefinitionChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.common.FieldDefinition::deepCopy)
-                .orElse(null));
+        instance.setNextValue(
+            com.commercetools.history.models.common.FieldDefinition.deepCopy(template.getNextValue()));
         return instance;
     }
 

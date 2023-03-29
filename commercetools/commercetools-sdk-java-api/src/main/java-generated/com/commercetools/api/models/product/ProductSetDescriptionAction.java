@@ -96,9 +96,8 @@ public interface ProductSetDescriptionAction extends ProductUpdateAction {
             return null;
         }
         ProductSetDescriptionActionImpl instance = new ProductSetDescriptionActionImpl();
-        instance.setDescription(Optional.ofNullable(template.getDescription())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
         instance.setStaged(template.getStaged());
         return instance;
     }

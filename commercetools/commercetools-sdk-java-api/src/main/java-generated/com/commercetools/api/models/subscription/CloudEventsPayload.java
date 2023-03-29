@@ -242,9 +242,7 @@ public interface CloudEventsPayload {
         instance.setSequence(template.getSequence());
         instance.setSequencetype(template.getSequencetype());
         instance.setDataref(template.getDataref());
-        instance.setData(Optional.ofNullable(template.getData())
-                .map(com.commercetools.api.models.subscription.DeliveryPayload::deepCopy)
-                .orElse(null));
+        instance.setData(com.commercetools.api.models.subscription.DeliveryPayload.deepCopy(template.getData()));
         return instance;
     }
 

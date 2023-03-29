@@ -146,13 +146,9 @@ public interface FieldDefinition {
             return null;
         }
         FieldDefinitionImpl instance = new FieldDefinitionImpl();
-        instance.setType(Optional.ofNullable(template.getType())
-                .map(com.commercetools.api.models.type.FieldType::deepCopy)
-                .orElse(null));
+        instance.setType(com.commercetools.api.models.type.FieldType.deepCopy(template.getType()));
         instance.setName(template.getName());
-        instance.setLabel(Optional.ofNullable(template.getLabel())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setLabel(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getLabel()));
         instance.setRequired(template.getRequired());
         instance.setInputHint(template.getInputHint());
         return instance;

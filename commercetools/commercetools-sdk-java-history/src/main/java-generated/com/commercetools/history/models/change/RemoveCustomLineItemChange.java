@@ -127,12 +127,9 @@ public interface RemoveCustomLineItemChange extends Change {
         }
         RemoveCustomLineItemChangeImpl instance = new RemoveCustomLineItemChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.common.CustomLineItem::deepCopy)
-                .orElse(null));
-        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(com.commercetools.history.models.common.CustomLineItem::deepCopy)
-                .orElse(null));
+        instance.setNextValue(com.commercetools.history.models.common.CustomLineItem.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.CustomLineItem.deepCopy(template.getPreviousValue()));
         return instance;
     }
 

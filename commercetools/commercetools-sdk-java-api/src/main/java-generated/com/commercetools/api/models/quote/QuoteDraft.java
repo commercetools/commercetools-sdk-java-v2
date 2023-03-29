@@ -171,17 +171,12 @@ public interface QuoteDraft extends com.commercetools.api.models.CustomizableDra
         }
         QuoteDraftImpl instance = new QuoteDraftImpl();
         instance.setKey(template.getKey());
-        instance.setStagedQuote(Optional.ofNullable(template.getStagedQuote())
-                .map(com.commercetools.api.models.staged_quote.StagedQuoteResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setStagedQuote(com.commercetools.api.models.staged_quote.StagedQuoteResourceIdentifier
+                .deepCopy(template.getStagedQuote()));
         instance.setStagedQuoteVersion(template.getStagedQuoteVersion());
         instance.setStagedQuoteStateToSent(template.getStagedQuoteStateToSent());
-        instance.setState(Optional.ofNullable(template.getState())
-                .map(com.commercetools.api.models.state.StateReference::deepCopy)
-                .orElse(null));
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
-                .orElse(null));
+        instance.setState(com.commercetools.api.models.state.StateReference.deepCopy(template.getState()));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;
     }
 

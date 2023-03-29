@@ -144,12 +144,9 @@ public interface StagedOrderAddParcelToDeliveryAction extends StagedOrderUpdateA
         }
         StagedOrderAddParcelToDeliveryActionImpl instance = new StagedOrderAddParcelToDeliveryActionImpl();
         instance.setDeliveryId(template.getDeliveryId());
-        instance.setMeasurements(Optional.ofNullable(template.getMeasurements())
-                .map(com.commercetools.api.models.order.ParcelMeasurements::deepCopy)
-                .orElse(null));
-        instance.setTrackingData(Optional.ofNullable(template.getTrackingData())
-                .map(com.commercetools.api.models.order.TrackingData::deepCopy)
-                .orElse(null));
+        instance.setMeasurements(
+            com.commercetools.api.models.order.ParcelMeasurements.deepCopy(template.getMeasurements()));
+        instance.setTrackingData(com.commercetools.api.models.order.TrackingData.deepCopy(template.getTrackingData()));
         instance.setItems(Optional.ofNullable(template.getItems())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.order.DeliveryItem::deepCopy)

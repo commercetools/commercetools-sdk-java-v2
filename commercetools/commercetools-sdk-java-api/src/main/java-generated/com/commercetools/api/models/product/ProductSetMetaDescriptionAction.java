@@ -96,9 +96,8 @@ public interface ProductSetMetaDescriptionAction extends ProductUpdateAction {
             return null;
         }
         ProductSetMetaDescriptionActionImpl instance = new ProductSetMetaDescriptionActionImpl();
-        instance.setMetaDescription(Optional.ofNullable(template.getMetaDescription())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setMetaDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaDescription()));
         instance.setStaged(template.getStaged());
         return instance;
     }

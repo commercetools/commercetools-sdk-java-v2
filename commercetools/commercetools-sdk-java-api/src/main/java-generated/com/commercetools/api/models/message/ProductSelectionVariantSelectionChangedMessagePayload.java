@@ -122,15 +122,11 @@ public interface ProductSelectionVariantSelectionChangedMessagePayload extends M
             return null;
         }
         ProductSelectionVariantSelectionChangedMessagePayloadImpl instance = new ProductSelectionVariantSelectionChangedMessagePayloadImpl();
-        instance.setProduct(Optional.ofNullable(template.getProduct())
-                .map(com.commercetools.api.models.product.ProductReference::deepCopy)
-                .orElse(null));
-        instance.setOldVariantSelection(Optional.ofNullable(template.getOldVariantSelection())
-                .map(com.commercetools.api.models.product_selection.ProductVariantSelection::deepCopy)
-                .orElse(null));
-        instance.setNewVariantSelection(Optional.ofNullable(template.getNewVariantSelection())
-                .map(com.commercetools.api.models.product_selection.ProductVariantSelection::deepCopy)
-                .orElse(null));
+        instance.setProduct(com.commercetools.api.models.product.ProductReference.deepCopy(template.getProduct()));
+        instance.setOldVariantSelection(com.commercetools.api.models.product_selection.ProductVariantSelection
+                .deepCopy(template.getOldVariantSelection()));
+        instance.setNewVariantSelection(com.commercetools.api.models.product_selection.ProductVariantSelection
+                .deepCopy(template.getNewVariantSelection()));
         return instance;
     }
 

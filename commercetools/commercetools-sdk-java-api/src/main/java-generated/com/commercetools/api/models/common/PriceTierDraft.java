@@ -99,9 +99,7 @@ public interface PriceTierDraft extends io.vrap.rmf.base.client.Draft<PriceTierD
         }
         PriceTierDraftImpl instance = new PriceTierDraftImpl();
         instance.setMinimumQuantity(template.getMinimumQuantity());
-        instance.setValue(Optional.ofNullable(template.getValue())
-                .map(com.commercetools.api.models.common.Money::deepCopy)
-                .orElse(null));
+        instance.setValue(com.commercetools.api.models.common.Money.deepCopy(template.getValue()));
         return instance;
     }
 

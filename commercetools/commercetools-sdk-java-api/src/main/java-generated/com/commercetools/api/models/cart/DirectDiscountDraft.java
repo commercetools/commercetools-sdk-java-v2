@@ -99,12 +99,9 @@ public interface DirectDiscountDraft extends io.vrap.rmf.base.client.Draft<Direc
             return null;
         }
         DirectDiscountDraftImpl instance = new DirectDiscountDraftImpl();
-        instance.setValue(Optional.ofNullable(template.getValue())
-                .map(com.commercetools.api.models.cart_discount.CartDiscountValue::deepCopy)
-                .orElse(null));
-        instance.setTarget(Optional.ofNullable(template.getTarget())
-                .map(com.commercetools.api.models.cart_discount.CartDiscountTarget::deepCopy)
-                .orElse(null));
+        instance.setValue(com.commercetools.api.models.cart_discount.CartDiscountValue.deepCopy(template.getValue()));
+        instance.setTarget(
+            com.commercetools.api.models.cart_discount.CartDiscountTarget.deepCopy(template.getTarget()));
         return instance;
     }
 

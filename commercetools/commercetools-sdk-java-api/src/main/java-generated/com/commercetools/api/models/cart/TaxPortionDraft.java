@@ -114,9 +114,7 @@ public interface TaxPortionDraft extends io.vrap.rmf.base.client.Draft<TaxPortio
         TaxPortionDraftImpl instance = new TaxPortionDraftImpl();
         instance.setName(template.getName());
         instance.setRate(template.getRate());
-        instance.setAmount(Optional.ofNullable(template.getAmount())
-                .map(com.commercetools.api.models.common.Money::deepCopy)
-                .orElse(null));
+        instance.setAmount(com.commercetools.api.models.common.Money.deepCopy(template.getAmount()));
         return instance;
     }
 

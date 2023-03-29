@@ -99,9 +99,7 @@ public interface StateReference extends Reference, com.commercetools.api.models.
         }
         StateReferenceImpl instance = new StateReferenceImpl();
         instance.setId(template.getId());
-        instance.setObj(Optional.ofNullable(template.getObj())
-                .map(com.commercetools.api.models.state.State::deepCopy)
-                .orElse(null));
+        instance.setObj(com.commercetools.api.models.state.State.deepCopy(template.getObj()));
         return instance;
     }
 

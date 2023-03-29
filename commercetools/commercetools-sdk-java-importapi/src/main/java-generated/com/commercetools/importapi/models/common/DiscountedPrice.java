@@ -95,12 +95,9 @@ public interface DiscountedPrice {
             return null;
         }
         DiscountedPriceImpl instance = new DiscountedPriceImpl();
-        instance.setValue(Optional.ofNullable(template.getValue())
-                .map(com.commercetools.importapi.models.common.TypedMoney::deepCopy)
-                .orElse(null));
-        instance.setDiscount(Optional.ofNullable(template.getDiscount())
-                .map(com.commercetools.importapi.models.common.ProductDiscountKeyReference::deepCopy)
-                .orElse(null));
+        instance.setValue(com.commercetools.importapi.models.common.TypedMoney.deepCopy(template.getValue()));
+        instance.setDiscount(
+            com.commercetools.importapi.models.common.ProductDiscountKeyReference.deepCopy(template.getDiscount()));
         return instance;
     }
 

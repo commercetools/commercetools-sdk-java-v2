@@ -96,9 +96,7 @@ public interface AttributeLocalizedEnumValue {
         }
         AttributeLocalizedEnumValueImpl instance = new AttributeLocalizedEnumValueImpl();
         instance.setKey(template.getKey());
-        instance.setLabel(Optional.ofNullable(template.getLabel())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setLabel(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getLabel()));
         return instance;
     }
 

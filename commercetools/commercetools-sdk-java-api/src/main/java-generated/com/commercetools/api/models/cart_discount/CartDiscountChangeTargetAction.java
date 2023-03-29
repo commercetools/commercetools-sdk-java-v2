@@ -82,9 +82,8 @@ public interface CartDiscountChangeTargetAction extends CartDiscountUpdateAction
             return null;
         }
         CartDiscountChangeTargetActionImpl instance = new CartDiscountChangeTargetActionImpl();
-        instance.setTarget(Optional.ofNullable(template.getTarget())
-                .map(com.commercetools.api.models.cart_discount.CartDiscountTarget::deepCopy)
-                .orElse(null));
+        instance.setTarget(
+            com.commercetools.api.models.cart_discount.CartDiscountTarget.deepCopy(template.getTarget()));
         return instance;
     }
 

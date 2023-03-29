@@ -143,16 +143,12 @@ public interface ChangeValueGiftLineItemChangeValue extends ChangeValueChangeVal
             return null;
         }
         ChangeValueGiftLineItemChangeValueImpl instance = new ChangeValueGiftLineItemChangeValueImpl();
-        instance.setProduct(Optional.ofNullable(template.getProduct())
-                .map(com.commercetools.history.models.common.Reference::deepCopy)
-                .orElse(null));
+        instance.setProduct(com.commercetools.history.models.common.Reference.deepCopy(template.getProduct()));
         instance.setVariantId(template.getVariantId());
-        instance.setSupplyChannel(Optional.ofNullable(template.getSupplyChannel())
-                .map(com.commercetools.history.models.common.Reference::deepCopy)
-                .orElse(null));
-        instance.setDistributionChannel(Optional.ofNullable(template.getDistributionChannel())
-                .map(com.commercetools.history.models.common.Reference::deepCopy)
-                .orElse(null));
+        instance.setSupplyChannel(
+            com.commercetools.history.models.common.Reference.deepCopy(template.getSupplyChannel()));
+        instance.setDistributionChannel(
+            com.commercetools.history.models.common.Reference.deepCopy(template.getDistributionChannel()));
         return instance;
     }
 

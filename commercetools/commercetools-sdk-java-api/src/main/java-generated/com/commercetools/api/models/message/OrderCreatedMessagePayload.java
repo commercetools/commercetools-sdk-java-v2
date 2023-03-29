@@ -83,9 +83,7 @@ public interface OrderCreatedMessagePayload extends OrderMessagePayload {
             return null;
         }
         OrderCreatedMessagePayloadImpl instance = new OrderCreatedMessagePayloadImpl();
-        instance.setOrder(Optional.ofNullable(template.getOrder())
-                .map(com.commercetools.api.models.order.Order::deepCopy)
-                .orElse(null));
+        instance.setOrder(com.commercetools.api.models.order.Order.deepCopy(template.getOrder()));
         return instance;
     }
 

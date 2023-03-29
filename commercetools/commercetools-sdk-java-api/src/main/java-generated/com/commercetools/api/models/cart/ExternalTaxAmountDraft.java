@@ -101,12 +101,8 @@ public interface ExternalTaxAmountDraft extends io.vrap.rmf.base.client.Draft<Ex
             return null;
         }
         ExternalTaxAmountDraftImpl instance = new ExternalTaxAmountDraftImpl();
-        instance.setTotalGross(Optional.ofNullable(template.getTotalGross())
-                .map(com.commercetools.api.models.common.Money::deepCopy)
-                .orElse(null));
-        instance.setTaxRate(Optional.ofNullable(template.getTaxRate())
-                .map(com.commercetools.api.models.cart.ExternalTaxRateDraft::deepCopy)
-                .orElse(null));
+        instance.setTotalGross(com.commercetools.api.models.common.Money.deepCopy(template.getTotalGross()));
+        instance.setTaxRate(com.commercetools.api.models.cart.ExternalTaxRateDraft.deepCopy(template.getTaxRate()));
         return instance;
     }
 

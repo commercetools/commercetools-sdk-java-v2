@@ -83,9 +83,8 @@ public interface TypeAddFieldDefinitionAction extends TypeUpdateAction {
             return null;
         }
         TypeAddFieldDefinitionActionImpl instance = new TypeAddFieldDefinitionActionImpl();
-        instance.setFieldDefinition(Optional.ofNullable(template.getFieldDefinition())
-                .map(com.commercetools.api.models.type.FieldDefinition::deepCopy)
-                .orElse(null));
+        instance.setFieldDefinition(
+            com.commercetools.api.models.type.FieldDefinition.deepCopy(template.getFieldDefinition()));
         return instance;
     }
 

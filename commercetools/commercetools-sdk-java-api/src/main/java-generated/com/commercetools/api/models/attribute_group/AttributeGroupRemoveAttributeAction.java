@@ -83,9 +83,8 @@ public interface AttributeGroupRemoveAttributeAction extends AttributeGroupUpdat
             return null;
         }
         AttributeGroupRemoveAttributeActionImpl instance = new AttributeGroupRemoveAttributeActionImpl();
-        instance.setAttribute(Optional.ofNullable(template.getAttribute())
-                .map(com.commercetools.api.models.attribute_group.AttributeReference::deepCopy)
-                .orElse(null));
+        instance.setAttribute(
+            com.commercetools.api.models.attribute_group.AttributeReference.deepCopy(template.getAttribute()));
         return instance;
     }
 

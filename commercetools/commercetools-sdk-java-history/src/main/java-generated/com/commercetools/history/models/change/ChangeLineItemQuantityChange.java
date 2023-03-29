@@ -160,9 +160,7 @@ public interface ChangeLineItemQuantityChange extends Change {
         }
         ChangeLineItemQuantityChangeImpl instance = new ChangeLineItemQuantityChangeImpl();
         instance.setChange(template.getChange());
-        instance.setLineItem(Optional.ofNullable(template.getLineItem())
-                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setLineItem(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getLineItem()));
         instance.setLineItemId(template.getLineItemId());
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());

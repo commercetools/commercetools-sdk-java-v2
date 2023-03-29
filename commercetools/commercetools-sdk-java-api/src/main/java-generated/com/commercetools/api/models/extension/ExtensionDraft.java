@@ -140,9 +140,8 @@ public interface ExtensionDraft
         }
         ExtensionDraftImpl instance = new ExtensionDraftImpl();
         instance.setKey(template.getKey());
-        instance.setDestination(Optional.ofNullable(template.getDestination())
-                .map(com.commercetools.api.models.extension.ExtensionDestination::deepCopy)
-                .orElse(null));
+        instance.setDestination(
+            com.commercetools.api.models.extension.ExtensionDestination.deepCopy(template.getDestination()));
         instance.setTriggers(Optional.ofNullable(template.getTriggers())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.extension.ExtensionTrigger::deepCopy)

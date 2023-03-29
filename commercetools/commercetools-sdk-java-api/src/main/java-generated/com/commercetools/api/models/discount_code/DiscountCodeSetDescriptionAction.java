@@ -80,9 +80,8 @@ public interface DiscountCodeSetDescriptionAction extends DiscountCodeUpdateActi
             return null;
         }
         DiscountCodeSetDescriptionActionImpl instance = new DiscountCodeSetDescriptionActionImpl();
-        instance.setDescription(Optional.ofNullable(template.getDescription())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
         return instance;
     }
 

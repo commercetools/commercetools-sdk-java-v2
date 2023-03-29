@@ -102,9 +102,8 @@ public interface StagedOrderSetCustomLineItemShippingDetailsAction extends Stage
         }
         StagedOrderSetCustomLineItemShippingDetailsActionImpl instance = new StagedOrderSetCustomLineItemShippingDetailsActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
-        instance.setShippingDetails(Optional.ofNullable(template.getShippingDetails())
-                .map(com.commercetools.api.models.cart.ItemShippingDetailsDraft::deepCopy)
-                .orElse(null));
+        instance.setShippingDetails(
+            com.commercetools.api.models.cart.ItemShippingDetailsDraft.deepCopy(template.getShippingDetails()));
         return instance;
     }
 

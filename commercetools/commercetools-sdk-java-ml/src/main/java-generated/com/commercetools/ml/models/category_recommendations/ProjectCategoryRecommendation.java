@@ -112,9 +112,7 @@ public interface ProjectCategoryRecommendation {
             return null;
         }
         ProjectCategoryRecommendationImpl instance = new ProjectCategoryRecommendationImpl();
-        instance.setCategory(Optional.ofNullable(template.getCategory())
-                .map(com.commercetools.ml.models.common.CategoryReference::deepCopy)
-                .orElse(null));
+        instance.setCategory(com.commercetools.ml.models.common.CategoryReference.deepCopy(template.getCategory()));
         instance.setConfidence(template.getConfidence());
         instance.setPath(template.getPath());
         return instance;

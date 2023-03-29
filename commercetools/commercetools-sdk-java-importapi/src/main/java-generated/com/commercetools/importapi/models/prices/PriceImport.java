@@ -294,36 +294,27 @@ public interface PriceImport extends ImportResource {
         }
         PriceImportImpl instance = new PriceImportImpl();
         instance.setKey(template.getKey());
-        instance.setValue(Optional.ofNullable(template.getValue())
-                .map(com.commercetools.importapi.models.common.TypedMoney::deepCopy)
-                .orElse(null));
+        instance.setValue(com.commercetools.importapi.models.common.TypedMoney.deepCopy(template.getValue()));
         instance.setCountry(template.getCountry());
         instance.setValidFrom(template.getValidFrom());
         instance.setValidUntil(template.getValidUntil());
-        instance.setCustomerGroup(Optional.ofNullable(template.getCustomerGroup())
-                .map(com.commercetools.importapi.models.common.CustomerGroupKeyReference::deepCopy)
-                .orElse(null));
-        instance.setChannel(Optional.ofNullable(template.getChannel())
-                .map(com.commercetools.importapi.models.common.ChannelKeyReference::deepCopy)
-                .orElse(null));
-        instance.setDiscounted(Optional.ofNullable(template.getDiscounted())
-                .map(com.commercetools.importapi.models.common.DiscountedPrice::deepCopy)
-                .orElse(null));
+        instance.setCustomerGroup(
+            com.commercetools.importapi.models.common.CustomerGroupKeyReference.deepCopy(template.getCustomerGroup()));
+        instance.setChannel(
+            com.commercetools.importapi.models.common.ChannelKeyReference.deepCopy(template.getChannel()));
+        instance.setDiscounted(
+            com.commercetools.importapi.models.common.DiscountedPrice.deepCopy(template.getDiscounted()));
         instance.setPublish(template.getPublish());
         instance.setTiers(Optional.ofNullable(template.getTiers())
                 .map(t -> t.stream()
                         .map(com.commercetools.importapi.models.common.PriceTier::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.importapi.models.customfields.Custom::deepCopy)
-                .orElse(null));
-        instance.setProductVariant(Optional.ofNullable(template.getProductVariant())
-                .map(com.commercetools.importapi.models.common.ProductVariantKeyReference::deepCopy)
-                .orElse(null));
-        instance.setProduct(Optional.ofNullable(template.getProduct())
-                .map(com.commercetools.importapi.models.common.ProductKeyReference::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.importapi.models.customfields.Custom.deepCopy(template.getCustom()));
+        instance.setProductVariant(com.commercetools.importapi.models.common.ProductVariantKeyReference
+                .deepCopy(template.getProductVariant()));
+        instance.setProduct(
+            com.commercetools.importapi.models.common.ProductKeyReference.deepCopy(template.getProduct()));
         return instance;
     }
 

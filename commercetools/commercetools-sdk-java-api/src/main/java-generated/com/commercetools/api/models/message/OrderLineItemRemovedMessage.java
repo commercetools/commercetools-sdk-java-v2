@@ -234,20 +234,14 @@ public interface OrderLineItemRemovedMessage extends OrderMessage {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(Optional.ofNullable(template.getLastModifiedBy())
-                .map(com.commercetools.api.models.common.LastModifiedBy::deepCopy)
-                .orElse(null));
-        instance.setCreatedBy(Optional.ofNullable(template.getCreatedBy())
-                .map(com.commercetools.api.models.common.CreatedBy::deepCopy)
-                .orElse(null));
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setSequenceNumber(template.getSequenceNumber());
-        instance.setResource(Optional.ofNullable(template.getResource())
-                .map(com.commercetools.api.models.common.Reference::deepCopy)
-                .orElse(null));
+        instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setResourceUserProvidedIdentifiers(Optional.ofNullable(template.getResourceUserProvidedIdentifiers())
-                .map(com.commercetools.api.models.message.UserProvidedIdentifiers::deepCopy)
-                .orElse(null));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
+                .deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setLineItemId(template.getLineItemId());
         instance.setRemovedQuantity(template.getRemovedQuantity());
         instance.setNewQuantity(template.getNewQuantity());
@@ -256,18 +250,13 @@ public interface OrderLineItemRemovedMessage extends OrderMessage {
                         .map(com.commercetools.api.models.order.ItemState::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setNewTotalPrice(Optional.ofNullable(template.getNewTotalPrice())
-                .map(com.commercetools.api.models.common.CentPrecisionMoney::deepCopy)
-                .orElse(null));
-        instance.setNewTaxedPrice(Optional.ofNullable(template.getNewTaxedPrice())
-                .map(com.commercetools.api.models.cart.TaxedItemPrice::deepCopy)
-                .orElse(null));
-        instance.setNewPrice(Optional.ofNullable(template.getNewPrice())
-                .map(com.commercetools.api.models.common.Price::deepCopy)
-                .orElse(null));
-        instance.setNewShippingDetail(Optional.ofNullable(template.getNewShippingDetail())
-                .map(com.commercetools.api.models.cart.ItemShippingDetails::deepCopy)
-                .orElse(null));
+        instance.setNewTotalPrice(
+            com.commercetools.api.models.common.CentPrecisionMoney.deepCopy(template.getNewTotalPrice()));
+        instance.setNewTaxedPrice(
+            com.commercetools.api.models.cart.TaxedItemPrice.deepCopy(template.getNewTaxedPrice()));
+        instance.setNewPrice(com.commercetools.api.models.common.Price.deepCopy(template.getNewPrice()));
+        instance.setNewShippingDetail(
+            com.commercetools.api.models.cart.ItemShippingDetails.deepCopy(template.getNewShippingDetail()));
         return instance;
     }
 

@@ -85,9 +85,7 @@ public interface MoneyAttribute extends Attribute {
         }
         MoneyAttributeImpl instance = new MoneyAttributeImpl();
         instance.setName(template.getName());
-        instance.setValue(Optional.ofNullable(template.getValue())
-                .map(com.commercetools.importapi.models.common.TypedMoney::deepCopy)
-                .orElse(null));
+        instance.setValue(com.commercetools.importapi.models.common.TypedMoney.deepCopy(template.getValue()));
         return instance;
     }
 

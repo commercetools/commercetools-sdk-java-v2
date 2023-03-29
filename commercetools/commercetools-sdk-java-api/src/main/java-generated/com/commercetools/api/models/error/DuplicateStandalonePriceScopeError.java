@@ -230,18 +230,15 @@ public interface DuplicateStandalonePriceScopeError extends ErrorObject {
         DuplicateStandalonePriceScopeErrorImpl instance = new DuplicateStandalonePriceScopeErrorImpl();
         instance.setMessage(template.getMessage());
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
-        instance.setConflictingStandalonePrice(Optional.ofNullable(template.getConflictingStandalonePrice())
-                .map(com.commercetools.api.models.standalone_price.StandalonePriceReference::deepCopy)
-                .orElse(null));
+        instance.setConflictingStandalonePrice(com.commercetools.api.models.standalone_price.StandalonePriceReference
+                .deepCopy(template.getConflictingStandalonePrice()));
         instance.setSku(template.getSku());
         instance.setCurrency(template.getCurrency());
         instance.setCountry(template.getCountry());
-        instance.setCustomerGroup(Optional.ofNullable(template.getCustomerGroup())
-                .map(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier::deepCopy)
-                .orElse(null));
-        instance.setChannel(Optional.ofNullable(template.getChannel())
-                .map(com.commercetools.api.models.channel.ChannelResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier
+                .deepCopy(template.getCustomerGroup()));
+        instance.setChannel(
+            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getChannel()));
         instance.setValidFrom(template.getValidFrom());
         instance.setValidUntil(template.getValidUntil());
         return instance;

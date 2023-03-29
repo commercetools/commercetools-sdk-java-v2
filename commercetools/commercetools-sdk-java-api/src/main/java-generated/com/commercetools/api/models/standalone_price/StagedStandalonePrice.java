@@ -95,12 +95,8 @@ public interface StagedStandalonePrice {
             return null;
         }
         StagedStandalonePriceImpl instance = new StagedStandalonePriceImpl();
-        instance.setValue(Optional.ofNullable(template.getValue())
-                .map(com.commercetools.api.models.common.TypedMoney::deepCopy)
-                .orElse(null));
-        instance.setDiscounted(Optional.ofNullable(template.getDiscounted())
-                .map(com.commercetools.api.models.common.DiscountedPrice::deepCopy)
-                .orElse(null));
+        instance.setValue(com.commercetools.api.models.common.TypedMoney.deepCopy(template.getValue()));
+        instance.setDiscounted(com.commercetools.api.models.common.DiscountedPrice.deepCopy(template.getDiscounted()));
         return instance;
     }
 

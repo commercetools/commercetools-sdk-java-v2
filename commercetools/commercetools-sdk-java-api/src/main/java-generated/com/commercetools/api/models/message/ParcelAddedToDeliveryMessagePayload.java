@@ -119,12 +119,8 @@ public interface ParcelAddedToDeliveryMessagePayload extends OrderMessagePayload
             return null;
         }
         ParcelAddedToDeliveryMessagePayloadImpl instance = new ParcelAddedToDeliveryMessagePayloadImpl();
-        instance.setDelivery(Optional.ofNullable(template.getDelivery())
-                .map(com.commercetools.api.models.order.Delivery::deepCopy)
-                .orElse(null));
-        instance.setParcel(Optional.ofNullable(template.getParcel())
-                .map(com.commercetools.api.models.order.Parcel::deepCopy)
-                .orElse(null));
+        instance.setDelivery(com.commercetools.api.models.order.Delivery.deepCopy(template.getDelivery()));
+        instance.setParcel(com.commercetools.api.models.order.Parcel.deepCopy(template.getParcel()));
         instance.setShippingKey(template.getShippingKey());
         return instance;
     }

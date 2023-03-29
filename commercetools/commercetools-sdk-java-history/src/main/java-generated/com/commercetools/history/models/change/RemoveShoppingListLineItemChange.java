@@ -127,12 +127,9 @@ public interface RemoveShoppingListLineItemChange extends Change {
         }
         RemoveShoppingListLineItemChangeImpl instance = new RemoveShoppingListLineItemChangeImpl();
         instance.setChange(template.getChange());
-        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(com.commercetools.history.models.common.LineItem::deepCopy)
-                .orElse(null));
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.common.LineItem::deepCopy)
-                .orElse(null));
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.LineItem.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.LineItem.deepCopy(template.getNextValue()));
         return instance;
     }
 

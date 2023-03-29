@@ -85,9 +85,8 @@ public interface StoreAddSupplyChannelAction extends StoreUpdateAction {
             return null;
         }
         StoreAddSupplyChannelActionImpl instance = new StoreAddSupplyChannelActionImpl();
-        instance.setSupplyChannel(Optional.ofNullable(template.getSupplyChannel())
-                .map(com.commercetools.api.models.channel.ChannelResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setSupplyChannel(
+            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getSupplyChannel()));
         return instance;
     }
 

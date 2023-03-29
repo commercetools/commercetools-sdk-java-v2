@@ -127,12 +127,10 @@ public interface SetMetaKeywordsChange extends Change {
         }
         SetMetaKeywordsChangeImpl instance = new SetMetaKeywordsChangeImpl();
         instance.setChange(template.getChange());
-        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(
+            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getNextValue()));
         return instance;
     }
 

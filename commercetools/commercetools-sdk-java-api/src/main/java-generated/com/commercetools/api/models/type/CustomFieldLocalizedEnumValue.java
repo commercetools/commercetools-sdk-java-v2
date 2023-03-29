@@ -96,9 +96,7 @@ public interface CustomFieldLocalizedEnumValue {
         }
         CustomFieldLocalizedEnumValueImpl instance = new CustomFieldLocalizedEnumValueImpl();
         instance.setKey(template.getKey());
-        instance.setLabel(Optional.ofNullable(template.getLabel())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setLabel(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getLabel()));
         return instance;
     }
 

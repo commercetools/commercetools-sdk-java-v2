@@ -91,9 +91,7 @@ public interface LocalizedLabel extends Label {
             return null;
         }
         LocalizedLabelImpl instance = new LocalizedLabelImpl();
-        instance.setValue(Optional.ofNullable(template.getValue())
-                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setValue(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getValue()));
         return instance;
     }
 

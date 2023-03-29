@@ -107,9 +107,7 @@ public interface ProductVariantDeletedMessagePayload extends MessagePayload {
             return null;
         }
         ProductVariantDeletedMessagePayloadImpl instance = new ProductVariantDeletedMessagePayloadImpl();
-        instance.setVariant(Optional.ofNullable(template.getVariant())
-                .map(com.commercetools.api.models.product.ProductVariant::deepCopy)
-                .orElse(null));
+        instance.setVariant(com.commercetools.api.models.product.ProductVariant.deepCopy(template.getVariant()));
         instance.setRemovedImageUrls(
             Optional.ofNullable(template.getRemovedImageUrls()).map(ArrayList::new).orElse(null));
         return instance;

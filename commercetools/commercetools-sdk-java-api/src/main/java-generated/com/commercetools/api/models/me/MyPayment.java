@@ -212,24 +212,18 @@ public interface MyPayment extends com.commercetools.api.models.DomainResource<M
         MyPaymentImpl instance = new MyPaymentImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
-        instance.setCustomer(Optional.ofNullable(template.getCustomer())
-                .map(com.commercetools.api.models.customer.CustomerReference::deepCopy)
-                .orElse(null));
+        instance.setCustomer(com.commercetools.api.models.customer.CustomerReference.deepCopy(template.getCustomer()));
         instance.setAnonymousId(template.getAnonymousId());
-        instance.setAmountPlanned(Optional.ofNullable(template.getAmountPlanned())
-                .map(com.commercetools.api.models.common.CentPrecisionMoney::deepCopy)
-                .orElse(null));
-        instance.setPaymentMethodInfo(Optional.ofNullable(template.getPaymentMethodInfo())
-                .map(com.commercetools.api.models.payment.PaymentMethodInfo::deepCopy)
-                .orElse(null));
+        instance.setAmountPlanned(
+            com.commercetools.api.models.common.CentPrecisionMoney.deepCopy(template.getAmountPlanned()));
+        instance.setPaymentMethodInfo(
+            com.commercetools.api.models.payment.PaymentMethodInfo.deepCopy(template.getPaymentMethodInfo()));
         instance.setTransactions(Optional.ofNullable(template.getTransactions())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.payment.Transaction::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFields::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         return instance;
     }
 

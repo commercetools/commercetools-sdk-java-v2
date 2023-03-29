@@ -107,13 +107,9 @@ public interface SimilarProduct {
             return null;
         }
         SimilarProductImpl instance = new SimilarProductImpl();
-        instance.setProduct(Optional.ofNullable(template.getProduct())
-                .map(com.commercetools.ml.models.common.ProductReference::deepCopy)
-                .orElse(null));
+        instance.setProduct(com.commercetools.ml.models.common.ProductReference.deepCopy(template.getProduct()));
         instance.setVariantId(template.getVariantId());
-        instance.setMeta(Optional.ofNullable(template.getMeta())
-                .map(com.commercetools.ml.models.similar_products.SimilarProductMeta::deepCopy)
-                .orElse(null));
+        instance.setMeta(com.commercetools.ml.models.similar_products.SimilarProductMeta.deepCopy(template.getMeta()));
         return instance;
     }
 

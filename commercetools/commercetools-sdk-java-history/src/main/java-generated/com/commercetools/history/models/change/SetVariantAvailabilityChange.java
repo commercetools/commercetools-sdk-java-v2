@@ -163,12 +163,10 @@ public interface SetVariantAvailabilityChange extends Change {
         instance.setChange(template.getChange());
         instance.setCatalogData(template.getCatalogData());
         instance.setVariant(template.getVariant());
-        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(com.commercetools.history.models.common.ProductVariantAvailability::deepCopy)
-                .orElse(null));
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.common.ProductVariantAvailability::deepCopy)
-                .orElse(null));
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.ProductVariantAvailability.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(
+            com.commercetools.history.models.common.ProductVariantAvailability.deepCopy(template.getNextValue()));
         return instance;
     }
 

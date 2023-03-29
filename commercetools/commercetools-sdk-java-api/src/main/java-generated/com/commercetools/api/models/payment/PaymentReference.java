@@ -99,9 +99,7 @@ public interface PaymentReference extends Reference, com.commercetools.api.model
         }
         PaymentReferenceImpl instance = new PaymentReferenceImpl();
         instance.setId(template.getId());
-        instance.setObj(Optional.ofNullable(template.getObj())
-                .map(com.commercetools.api.models.payment.Payment::deepCopy)
-                .orElse(null));
+        instance.setObj(com.commercetools.api.models.payment.Payment.deepCopy(template.getObj()));
         return instance;
     }
 

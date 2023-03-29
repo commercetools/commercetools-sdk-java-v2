@@ -129,18 +129,11 @@ public interface MyPaymentDraft extends com.commercetools.api.models.Customizabl
             return null;
         }
         MyPaymentDraftImpl instance = new MyPaymentDraftImpl();
-        instance.setAmountPlanned(Optional.ofNullable(template.getAmountPlanned())
-                .map(com.commercetools.api.models.common.Money::deepCopy)
-                .orElse(null));
-        instance.setPaymentMethodInfo(Optional.ofNullable(template.getPaymentMethodInfo())
-                .map(com.commercetools.api.models.payment.PaymentMethodInfo::deepCopy)
-                .orElse(null));
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
-                .orElse(null));
-        instance.setTransaction(Optional.ofNullable(template.getTransaction())
-                .map(com.commercetools.api.models.me.MyTransactionDraft::deepCopy)
-                .orElse(null));
+        instance.setAmountPlanned(com.commercetools.api.models.common.Money.deepCopy(template.getAmountPlanned()));
+        instance.setPaymentMethodInfo(
+            com.commercetools.api.models.payment.PaymentMethodInfo.deepCopy(template.getPaymentMethodInfo()));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setTransaction(com.commercetools.api.models.me.MyTransactionDraft.deepCopy(template.getTransaction()));
         return instance;
     }
 

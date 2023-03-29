@@ -133,12 +133,9 @@ public interface Division extends BusinessUnit {
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(Optional.ofNullable(template.getLastModifiedBy())
-                .map(com.commercetools.api.models.common.LastModifiedBy::deepCopy)
-                .orElse(null));
-        instance.setCreatedBy(Optional.ofNullable(template.getCreatedBy())
-                .map(com.commercetools.api.models.common.CreatedBy::deepCopy)
-                .orElse(null));
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setKey(template.getKey());
         instance.setStatus(template.getStatus());
         instance.setStores(Optional.ofNullable(template.getStores())
@@ -149,9 +146,7 @@ public interface Division extends BusinessUnit {
         instance.setStoreMode(template.getStoreMode());
         instance.setName(template.getName());
         instance.setContactEmail(template.getContactEmail());
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFields::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         instance.setAddresses(Optional.ofNullable(template.getAddresses())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.common.Address::deepCopy)
@@ -168,12 +163,10 @@ public interface Division extends BusinessUnit {
                         .map(com.commercetools.api.models.business_unit.Associate::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setParentUnit(Optional.ofNullable(template.getParentUnit())
-                .map(com.commercetools.api.models.business_unit.BusinessUnitKeyReference::deepCopy)
-                .orElse(null));
-        instance.setTopLevelUnit(Optional.ofNullable(template.getTopLevelUnit())
-                .map(com.commercetools.api.models.business_unit.BusinessUnitKeyReference::deepCopy)
-                .orElse(null));
+        instance.setParentUnit(
+            com.commercetools.api.models.business_unit.BusinessUnitKeyReference.deepCopy(template.getParentUnit()));
+        instance.setTopLevelUnit(
+            com.commercetools.api.models.business_unit.BusinessUnitKeyReference.deepCopy(template.getTopLevelUnit()));
         return instance;
     }
 

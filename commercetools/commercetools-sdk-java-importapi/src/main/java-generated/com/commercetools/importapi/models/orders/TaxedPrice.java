@@ -123,12 +123,8 @@ public interface TaxedPrice {
             return null;
         }
         TaxedPriceImpl instance = new TaxedPriceImpl();
-        instance.setTotalNet(Optional.ofNullable(template.getTotalNet())
-                .map(com.commercetools.importapi.models.common.Money::deepCopy)
-                .orElse(null));
-        instance.setTotalGross(Optional.ofNullable(template.getTotalGross())
-                .map(com.commercetools.importapi.models.common.Money::deepCopy)
-                .orElse(null));
+        instance.setTotalNet(com.commercetools.importapi.models.common.Money.deepCopy(template.getTotalNet()));
+        instance.setTotalGross(com.commercetools.importapi.models.common.Money.deepCopy(template.getTotalGross()));
         instance.setTaxPortions(Optional.ofNullable(template.getTaxPortions())
                 .map(t -> t.stream()
                         .map(com.commercetools.importapi.models.orders.TaxPortion::deepCopy)

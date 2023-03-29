@@ -145,9 +145,8 @@ public interface AddLocalizedEnumValueChange extends Change {
         instance.setChange(template.getChange());
         instance.setFieldName(template.getFieldName());
         instance.setAttributeName(template.getAttributeName());
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.change_value.LocalizedEnumValue::deepCopy)
-                .orElse(null));
+        instance.setNextValue(
+            com.commercetools.history.models.change_value.LocalizedEnumValue.deepCopy(template.getNextValue()));
         return instance;
     }
 

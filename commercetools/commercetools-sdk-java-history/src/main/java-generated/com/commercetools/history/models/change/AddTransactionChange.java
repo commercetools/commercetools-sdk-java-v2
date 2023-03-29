@@ -109,9 +109,7 @@ public interface AddTransactionChange extends Change {
         }
         AddTransactionChangeImpl instance = new AddTransactionChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.common.Transaction::deepCopy)
-                .orElse(null));
+        instance.setNextValue(com.commercetools.history.models.common.Transaction.deepCopy(template.getNextValue()));
         return instance;
     }
 

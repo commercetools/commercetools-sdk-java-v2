@@ -165,16 +165,12 @@ public interface SetLineItemDiscountedPricePerQuantityChange extends Change {
         }
         SetLineItemDiscountedPricePerQuantityChangeImpl instance = new SetLineItemDiscountedPricePerQuantityChangeImpl();
         instance.setChange(template.getChange());
-        instance.setLineItem(Optional.ofNullable(template.getLineItem())
-                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setLineItem(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getLineItem()));
         instance.setVariant(template.getVariant());
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.common.DiscountedLineItemPriceForQuantity::deepCopy)
-                .orElse(null));
-        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(com.commercetools.history.models.common.DiscountedLineItemPriceForQuantity::deepCopy)
-                .orElse(null));
+        instance.setNextValue(com.commercetools.history.models.common.DiscountedLineItemPriceForQuantity
+                .deepCopy(template.getNextValue()));
+        instance.setPreviousValue(com.commercetools.history.models.common.DiscountedLineItemPriceForQuantity
+                .deepCopy(template.getPreviousValue()));
         return instance;
     }
 

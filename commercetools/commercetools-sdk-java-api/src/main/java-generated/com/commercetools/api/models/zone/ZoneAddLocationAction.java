@@ -82,9 +82,7 @@ public interface ZoneAddLocationAction extends ZoneUpdateAction {
             return null;
         }
         ZoneAddLocationActionImpl instance = new ZoneAddLocationActionImpl();
-        instance.setLocation(Optional.ofNullable(template.getLocation())
-                .map(com.commercetools.api.models.zone.Location::deepCopy)
-                .orElse(null));
+        instance.setLocation(com.commercetools.api.models.zone.Location.deepCopy(template.getLocation()));
         return instance;
     }
 

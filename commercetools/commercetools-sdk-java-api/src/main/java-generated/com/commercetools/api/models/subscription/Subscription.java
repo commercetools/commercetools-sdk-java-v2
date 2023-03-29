@@ -290,29 +290,23 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(Optional.ofNullable(template.getLastModifiedBy())
-                .map(com.commercetools.api.models.common.LastModifiedBy::deepCopy)
-                .orElse(null));
-        instance.setCreatedBy(Optional.ofNullable(template.getCreatedBy())
-                .map(com.commercetools.api.models.common.CreatedBy::deepCopy)
-                .orElse(null));
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setChanges(Optional.ofNullable(template.getChanges())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.subscription.ChangeSubscription::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setDestination(Optional.ofNullable(template.getDestination())
-                .map(com.commercetools.api.models.subscription.Destination::deepCopy)
-                .orElse(null));
+        instance.setDestination(
+            com.commercetools.api.models.subscription.Destination.deepCopy(template.getDestination()));
         instance.setKey(template.getKey());
         instance.setMessages(Optional.ofNullable(template.getMessages())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.subscription.MessageSubscription::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setFormat(Optional.ofNullable(template.getFormat())
-                .map(com.commercetools.api.models.subscription.DeliveryFormat::deepCopy)
-                .orElse(null));
+        instance.setFormat(com.commercetools.api.models.subscription.DeliveryFormat.deepCopy(template.getFormat()));
         instance.setStatus(template.getStatus());
         return instance;
     }

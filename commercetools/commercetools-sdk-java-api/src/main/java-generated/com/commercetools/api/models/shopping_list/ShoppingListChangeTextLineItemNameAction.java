@@ -102,9 +102,7 @@ public interface ShoppingListChangeTextLineItemNameAction extends ShoppingListUp
         }
         ShoppingListChangeTextLineItemNameActionImpl instance = new ShoppingListChangeTextLineItemNameActionImpl();
         instance.setTextLineItemId(template.getTextLineItemId());
-        instance.setName(Optional.ofNullable(template.getName())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
         return instance;
     }
 

@@ -108,9 +108,7 @@ public interface DiscountedLineItemPriceDraft extends io.vrap.rmf.base.client.Dr
             return null;
         }
         DiscountedLineItemPriceDraftImpl instance = new DiscountedLineItemPriceDraftImpl();
-        instance.setValue(Optional.ofNullable(template.getValue())
-                .map(com.commercetools.api.models.common.Money::deepCopy)
-                .orElse(null));
+        instance.setValue(com.commercetools.api.models.common.Money.deepCopy(template.getValue()));
         instance.setIncludedDiscounts(Optional.ofNullable(template.getIncludedDiscounts())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.cart.DiscountedLineItemPortion::deepCopy)

@@ -82,9 +82,8 @@ public interface CategoryChangeParentAction extends CategoryUpdateAction {
             return null;
         }
         CategoryChangeParentActionImpl instance = new CategoryChangeParentActionImpl();
-        instance.setParent(Optional.ofNullable(template.getParent())
-                .map(com.commercetools.api.models.category.CategoryResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setParent(
+            com.commercetools.api.models.category.CategoryResourceIdentifier.deepCopy(template.getParent()));
         return instance;
     }
 

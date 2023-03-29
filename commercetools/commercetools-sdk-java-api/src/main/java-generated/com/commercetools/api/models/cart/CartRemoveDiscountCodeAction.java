@@ -83,9 +83,8 @@ public interface CartRemoveDiscountCodeAction extends CartUpdateAction {
             return null;
         }
         CartRemoveDiscountCodeActionImpl instance = new CartRemoveDiscountCodeActionImpl();
-        instance.setDiscountCode(Optional.ofNullable(template.getDiscountCode())
-                .map(com.commercetools.api.models.discount_code.DiscountCodeReference::deepCopy)
-                .orElse(null));
+        instance.setDiscountCode(
+            com.commercetools.api.models.discount_code.DiscountCodeReference.deepCopy(template.getDiscountCode()));
         return instance;
     }
 

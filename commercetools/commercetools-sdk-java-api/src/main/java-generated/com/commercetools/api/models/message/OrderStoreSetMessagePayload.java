@@ -80,9 +80,7 @@ public interface OrderStoreSetMessagePayload extends OrderMessagePayload {
             return null;
         }
         OrderStoreSetMessagePayloadImpl instance = new OrderStoreSetMessagePayloadImpl();
-        instance.setStore(Optional.ofNullable(template.getStore())
-                .map(com.commercetools.api.models.store.StoreKeyReference::deepCopy)
-                .orElse(null));
+        instance.setStore(com.commercetools.api.models.store.StoreKeyReference.deepCopy(template.getStore()));
         return instance;
     }
 

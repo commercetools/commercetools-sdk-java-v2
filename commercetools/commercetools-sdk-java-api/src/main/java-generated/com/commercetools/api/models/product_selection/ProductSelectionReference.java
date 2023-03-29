@@ -100,9 +100,7 @@ public interface ProductSelectionReference
         }
         ProductSelectionReferenceImpl instance = new ProductSelectionReferenceImpl();
         instance.setId(template.getId());
-        instance.setObj(Optional.ofNullable(template.getObj())
-                .map(com.commercetools.api.models.product_selection.ProductSelection::deepCopy)
-                .orElse(null));
+        instance.setObj(com.commercetools.api.models.product_selection.ProductSelection.deepCopy(template.getObj()));
         return instance;
     }
 

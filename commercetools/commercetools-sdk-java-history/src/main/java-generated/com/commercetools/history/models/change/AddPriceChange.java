@@ -145,9 +145,7 @@ public interface AddPriceChange extends Change {
         instance.setChange(template.getChange());
         instance.setCatalogData(template.getCatalogData());
         instance.setPriceId(template.getPriceId());
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.common.Price::deepCopy)
-                .orElse(null));
+        instance.setNextValue(com.commercetools.history.models.common.Price.deepCopy(template.getNextValue()));
         return instance;
     }
 

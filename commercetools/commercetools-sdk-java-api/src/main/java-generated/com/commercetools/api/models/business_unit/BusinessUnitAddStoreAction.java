@@ -83,9 +83,7 @@ public interface BusinessUnitAddStoreAction extends BusinessUnitUpdateAction {
             return null;
         }
         BusinessUnitAddStoreActionImpl instance = new BusinessUnitAddStoreActionImpl();
-        instance.setStore(Optional.ofNullable(template.getStore())
-                .map(com.commercetools.api.models.store.StoreResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setStore(com.commercetools.api.models.store.StoreResourceIdentifier.deepCopy(template.getStore()));
         return instance;
     }
 

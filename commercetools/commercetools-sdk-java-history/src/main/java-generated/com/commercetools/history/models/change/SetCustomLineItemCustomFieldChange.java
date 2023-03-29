@@ -177,9 +177,8 @@ public interface SetCustomLineItemCustomFieldChange extends Change {
         SetCustomLineItemCustomFieldChangeImpl instance = new SetCustomLineItemCustomFieldChangeImpl();
         instance.setChange(template.getChange());
         instance.setName(template.getName());
-        instance.setCustomLineItem(Optional.ofNullable(template.getCustomLineItem())
-                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setCustomLineItem(
+            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getCustomLineItem()));
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());

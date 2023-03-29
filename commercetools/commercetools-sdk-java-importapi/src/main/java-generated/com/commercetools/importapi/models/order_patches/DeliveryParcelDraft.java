@@ -118,12 +118,10 @@ public interface DeliveryParcelDraft extends io.vrap.rmf.base.client.Draft<Deliv
             return null;
         }
         DeliveryParcelDraftImpl instance = new DeliveryParcelDraftImpl();
-        instance.setMeasurements(Optional.ofNullable(template.getMeasurements())
-                .map(com.commercetools.importapi.models.orders.ParcelMeasurements::deepCopy)
-                .orElse(null));
-        instance.setTrackingData(Optional.ofNullable(template.getTrackingData())
-                .map(com.commercetools.importapi.models.orders.TrackingData::deepCopy)
-                .orElse(null));
+        instance.setMeasurements(
+            com.commercetools.importapi.models.orders.ParcelMeasurements.deepCopy(template.getMeasurements()));
+        instance.setTrackingData(
+            com.commercetools.importapi.models.orders.TrackingData.deepCopy(template.getTrackingData()));
         instance.setItems(Optional.ofNullable(template.getItems())
                 .map(t -> t.stream()
                         .map(com.commercetools.importapi.models.orders.DeliveryItem::deepCopy)

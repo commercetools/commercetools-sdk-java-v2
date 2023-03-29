@@ -129,9 +129,7 @@ public interface Reservation {
         }
         ReservationImpl instance = new ReservationImpl();
         instance.setQuantity(template.getQuantity());
-        instance.setOwner(Optional.ofNullable(template.getOwner())
-                .map(com.commercetools.history.models.common.Reference::deepCopy)
-                .orElse(null));
+        instance.setOwner(com.commercetools.history.models.common.Reference.deepCopy(template.getOwner()));
         instance.setCreatedAt(template.getCreatedAt());
         instance.setCheckoutStartedAt(template.getCheckoutStartedAt());
         return instance;

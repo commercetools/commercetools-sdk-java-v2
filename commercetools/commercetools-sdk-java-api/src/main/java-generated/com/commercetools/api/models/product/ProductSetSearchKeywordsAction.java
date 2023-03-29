@@ -98,9 +98,8 @@ public interface ProductSetSearchKeywordsAction extends ProductUpdateAction {
             return null;
         }
         ProductSetSearchKeywordsActionImpl instance = new ProductSetSearchKeywordsActionImpl();
-        instance.setSearchKeywords(Optional.ofNullable(template.getSearchKeywords())
-                .map(com.commercetools.api.models.product.SearchKeywords::deepCopy)
-                .orElse(null));
+        instance.setSearchKeywords(
+            com.commercetools.api.models.product.SearchKeywords.deepCopy(template.getSearchKeywords()));
         instance.setStaged(template.getStaged());
         return instance;
     }

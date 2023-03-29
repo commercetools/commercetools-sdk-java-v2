@@ -132,9 +132,7 @@ public interface ProductDiscountMatchQuery {
         instance.setProductId(template.getProductId());
         instance.setVariantId(template.getVariantId());
         instance.setStaged(template.getStaged());
-        instance.setPrice(Optional.ofNullable(template.getPrice())
-                .map(com.commercetools.api.models.common.QueryPrice::deepCopy)
-                .orElse(null));
+        instance.setPrice(com.commercetools.api.models.common.QueryPrice.deepCopy(template.getPrice()));
         return instance;
     }
 

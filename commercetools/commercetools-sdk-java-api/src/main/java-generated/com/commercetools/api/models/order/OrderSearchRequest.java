@@ -134,9 +134,7 @@ public interface OrderSearchRequest {
             return null;
         }
         OrderSearchRequestImpl instance = new OrderSearchRequestImpl();
-        instance.setQuery(Optional.ofNullable(template.getQuery())
-                .map(com.commercetools.api.models.order.OrderSearchQuery::deepCopy)
-                .orElse(null));
+        instance.setQuery(com.commercetools.api.models.order.OrderSearchQuery.deepCopy(template.getQuery()));
         instance.setSort(Optional.ofNullable(template.getSort())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.order.OrderSearchSorting::deepCopy)

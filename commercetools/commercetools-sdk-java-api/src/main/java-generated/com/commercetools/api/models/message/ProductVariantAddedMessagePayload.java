@@ -101,9 +101,7 @@ public interface ProductVariantAddedMessagePayload extends MessagePayload {
             return null;
         }
         ProductVariantAddedMessagePayloadImpl instance = new ProductVariantAddedMessagePayloadImpl();
-        instance.setVariant(Optional.ofNullable(template.getVariant())
-                .map(com.commercetools.api.models.product.ProductVariant::deepCopy)
-                .orElse(null));
+        instance.setVariant(com.commercetools.api.models.product.ProductVariant.deepCopy(template.getVariant()));
         instance.setStaged(template.getStaged());
         return instance;
     }

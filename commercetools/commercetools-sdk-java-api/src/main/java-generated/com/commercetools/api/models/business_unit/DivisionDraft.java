@@ -139,12 +139,9 @@ public interface DivisionDraft extends BusinessUnitDraft, io.vrap.rmf.base.clien
         instance.setBillingAddresses(
             Optional.ofNullable(template.getBillingAddresses()).map(ArrayList::new).orElse(null));
         instance.setDefaultBillingAddress(template.getDefaultBillingAddress());
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
-                .orElse(null));
-        instance.setParentUnit(Optional.ofNullable(template.getParentUnit())
-                .map(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setParentUnit(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier
+                .deepCopy(template.getParentUnit()));
         return instance;
     }
 

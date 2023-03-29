@@ -99,9 +99,7 @@ public interface OrderSetDeliveryAddressAction extends OrderUpdateAction {
         }
         OrderSetDeliveryAddressActionImpl instance = new OrderSetDeliveryAddressActionImpl();
         instance.setDeliveryId(template.getDeliveryId());
-        instance.setAddress(Optional.ofNullable(template.getAddress())
-                .map(com.commercetools.api.models.common.BaseAddress::deepCopy)
-                .orElse(null));
+        instance.setAddress(com.commercetools.api.models.common.BaseAddress.deepCopy(template.getAddress()));
         return instance;
     }
 

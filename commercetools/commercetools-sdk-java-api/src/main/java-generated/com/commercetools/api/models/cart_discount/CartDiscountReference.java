@@ -99,9 +99,7 @@ public interface CartDiscountReference extends Reference, com.commercetools.api.
         }
         CartDiscountReferenceImpl instance = new CartDiscountReferenceImpl();
         instance.setId(template.getId());
-        instance.setObj(Optional.ofNullable(template.getObj())
-                .map(com.commercetools.api.models.cart_discount.CartDiscount::deepCopy)
-                .orElse(null));
+        instance.setObj(com.commercetools.api.models.cart_discount.CartDiscount.deepCopy(template.getObj()));
         return instance;
     }
 

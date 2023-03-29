@@ -94,9 +94,8 @@ public interface DiscountCodeInfo {
             return null;
         }
         DiscountCodeInfoImpl instance = new DiscountCodeInfoImpl();
-        instance.setDiscountCode(Optional.ofNullable(template.getDiscountCode())
-                .map(com.commercetools.history.models.common.Reference::deepCopy)
-                .orElse(null));
+        instance.setDiscountCode(
+            com.commercetools.history.models.common.Reference.deepCopy(template.getDiscountCode()));
         instance.setState(template.getState());
         return instance;
     }

@@ -133,12 +133,9 @@ public interface ProductPresentWithDifferentVariantSelectionError extends ErrorO
         ProductPresentWithDifferentVariantSelectionErrorImpl instance = new ProductPresentWithDifferentVariantSelectionErrorImpl();
         instance.setMessage(template.getMessage());
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
-        instance.setProduct(Optional.ofNullable(template.getProduct())
-                .map(com.commercetools.api.models.product.ProductReference::deepCopy)
-                .orElse(null));
-        instance.setExistingVariantSelection(Optional.ofNullable(template.getExistingVariantSelection())
-                .map(com.commercetools.api.models.product_selection.ProductVariantSelection::deepCopy)
-                .orElse(null));
+        instance.setProduct(com.commercetools.api.models.product.ProductReference.deepCopy(template.getProduct()));
+        instance.setExistingVariantSelection(com.commercetools.api.models.product_selection.ProductVariantSelection
+                .deepCopy(template.getExistingVariantSelection()));
         return instance;
     }
 

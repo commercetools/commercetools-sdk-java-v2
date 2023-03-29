@@ -83,9 +83,7 @@ public interface OrderDeletedMessagePayload extends OrderMessagePayload {
             return null;
         }
         OrderDeletedMessagePayloadImpl instance = new OrderDeletedMessagePayloadImpl();
-        instance.setOrder(Optional.ofNullable(template.getOrder())
-                .map(com.commercetools.api.models.order.Order::deepCopy)
-                .orElse(null));
+        instance.setOrder(com.commercetools.api.models.order.Order.deepCopy(template.getOrder()));
         return instance;
     }
 

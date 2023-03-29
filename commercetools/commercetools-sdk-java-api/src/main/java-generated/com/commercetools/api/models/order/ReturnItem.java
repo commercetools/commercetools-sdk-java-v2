@@ -195,9 +195,7 @@ public interface ReturnItem extends com.commercetools.api.models.Customizable<Re
         instance.setComment(template.getComment());
         instance.setShipmentState(template.getShipmentState());
         instance.setPaymentState(template.getPaymentState());
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFields::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         instance.setLastModifiedAt(template.getLastModifiedAt());
         instance.setCreatedAt(template.getCreatedAt());
         return instance;

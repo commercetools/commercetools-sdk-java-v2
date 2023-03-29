@@ -79,9 +79,8 @@ public interface ProjectSetExternalOAuthAction extends ProjectUpdateAction {
             return null;
         }
         ProjectSetExternalOAuthActionImpl instance = new ProjectSetExternalOAuthActionImpl();
-        instance.setExternalOAuth(Optional.ofNullable(template.getExternalOAuth())
-                .map(com.commercetools.api.models.project.ExternalOAuth::deepCopy)
-                .orElse(null));
+        instance.setExternalOAuth(
+            com.commercetools.api.models.project.ExternalOAuth.deepCopy(template.getExternalOAuth()));
         return instance;
     }
 

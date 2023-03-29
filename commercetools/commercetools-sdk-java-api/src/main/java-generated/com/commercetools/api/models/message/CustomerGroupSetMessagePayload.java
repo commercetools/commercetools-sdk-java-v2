@@ -80,9 +80,8 @@ public interface CustomerGroupSetMessagePayload extends MessagePayload {
             return null;
         }
         CustomerGroupSetMessagePayloadImpl instance = new CustomerGroupSetMessagePayloadImpl();
-        instance.setCustomerGroup(Optional.ofNullable(template.getCustomerGroup())
-                .map(com.commercetools.api.models.customer_group.CustomerGroupReference::deepCopy)
-                .orElse(null));
+        instance.setCustomerGroup(
+            com.commercetools.api.models.customer_group.CustomerGroupReference.deepCopy(template.getCustomerGroup()));
         return instance;
     }
 

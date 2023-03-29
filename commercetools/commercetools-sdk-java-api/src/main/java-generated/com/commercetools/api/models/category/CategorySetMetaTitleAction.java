@@ -80,9 +80,7 @@ public interface CategorySetMetaTitleAction extends CategoryUpdateAction {
             return null;
         }
         CategorySetMetaTitleActionImpl instance = new CategorySetMetaTitleActionImpl();
-        instance.setMetaTitle(Optional.ofNullable(template.getMetaTitle())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setMetaTitle(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaTitle()));
         return instance;
     }
 

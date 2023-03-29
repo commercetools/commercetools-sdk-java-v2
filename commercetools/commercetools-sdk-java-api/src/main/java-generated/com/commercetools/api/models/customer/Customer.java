@@ -614,12 +614,9 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
         instance.setKey(template.getKey());
         instance.setCustomerNumber(template.getCustomerNumber());
         instance.setExternalId(template.getExternalId());
-        instance.setLastModifiedBy(Optional.ofNullable(template.getLastModifiedBy())
-                .map(com.commercetools.api.models.common.LastModifiedBy::deepCopy)
-                .orElse(null));
-        instance.setCreatedBy(Optional.ofNullable(template.getCreatedBy())
-                .map(com.commercetools.api.models.common.CreatedBy::deepCopy)
-                .orElse(null));
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setEmail(template.getEmail());
         instance.setPassword(template.getPassword());
         instance.setFirstName(template.getFirstName());
@@ -641,12 +638,9 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
         instance.setBillingAddressIds(
             Optional.ofNullable(template.getBillingAddressIds()).map(ArrayList::new).orElse(null));
         instance.setIsEmailVerified(template.getIsEmailVerified());
-        instance.setCustomerGroup(Optional.ofNullable(template.getCustomerGroup())
-                .map(com.commercetools.api.models.customer_group.CustomerGroupReference::deepCopy)
-                .orElse(null));
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFields::deepCopy)
-                .orElse(null));
+        instance.setCustomerGroup(
+            com.commercetools.api.models.customer_group.CustomerGroupReference.deepCopy(template.getCustomerGroup()));
+        instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         instance.setLocale(template.getLocale());
         instance.setSalutation(template.getSalutation());
         instance.setStores(Optional.ofNullable(template.getStores())

@@ -99,9 +99,8 @@ public interface ProductRemoveFromCategoryAction extends ProductUpdateAction {
             return null;
         }
         ProductRemoveFromCategoryActionImpl instance = new ProductRemoveFromCategoryActionImpl();
-        instance.setCategory(Optional.ofNullable(template.getCategory())
-                .map(com.commercetools.api.models.category.CategoryResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setCategory(
+            com.commercetools.api.models.category.CategoryResourceIdentifier.deepCopy(template.getCategory()));
         instance.setStaged(template.getStaged());
         return instance;
     }

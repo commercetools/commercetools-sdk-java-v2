@@ -143,9 +143,7 @@ public interface SetAssetKeyChange extends Change {
         }
         SetAssetKeyChangeImpl instance = new SetAssetKeyChangeImpl();
         instance.setChange(template.getChange());
-        instance.setAsset(Optional.ofNullable(template.getAsset())
-                .map(com.commercetools.history.models.change_value.AssetChangeValue::deepCopy)
-                .orElse(null));
+        instance.setAsset(com.commercetools.history.models.change_value.AssetChangeValue.deepCopy(template.getAsset()));
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
         return instance;

@@ -84,9 +84,7 @@ public interface ShoppingListStoreSetMessagePayload extends MessagePayload {
             return null;
         }
         ShoppingListStoreSetMessagePayloadImpl instance = new ShoppingListStoreSetMessagePayloadImpl();
-        instance.setStore(Optional.ofNullable(template.getStore())
-                .map(com.commercetools.api.models.store.StoreKeyReference::deepCopy)
-                .orElse(null));
+        instance.setStore(com.commercetools.api.models.store.StoreKeyReference.deepCopy(template.getStore()));
         return instance;
     }
 

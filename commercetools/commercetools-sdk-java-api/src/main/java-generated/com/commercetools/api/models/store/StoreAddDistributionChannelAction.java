@@ -85,9 +85,8 @@ public interface StoreAddDistributionChannelAction extends StoreUpdateAction {
             return null;
         }
         StoreAddDistributionChannelActionImpl instance = new StoreAddDistributionChannelActionImpl();
-        instance.setDistributionChannel(Optional.ofNullable(template.getDistributionChannel())
-                .map(com.commercetools.api.models.channel.ChannelResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setDistributionChannel(
+            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getDistributionChannel()));
         return instance;
     }
 

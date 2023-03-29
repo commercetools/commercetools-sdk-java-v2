@@ -136,15 +136,12 @@ public interface CartSetCustomShippingMethodAction extends CartUpdateAction {
         }
         CartSetCustomShippingMethodActionImpl instance = new CartSetCustomShippingMethodActionImpl();
         instance.setShippingMethodName(template.getShippingMethodName());
-        instance.setShippingRate(Optional.ofNullable(template.getShippingRate())
-                .map(com.commercetools.api.models.shipping_method.ShippingRateDraft::deepCopy)
-                .orElse(null));
-        instance.setTaxCategory(Optional.ofNullable(template.getTaxCategory())
-                .map(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier::deepCopy)
-                .orElse(null));
-        instance.setExternalTaxRate(Optional.ofNullable(template.getExternalTaxRate())
-                .map(com.commercetools.api.models.cart.ExternalTaxRateDraft::deepCopy)
-                .orElse(null));
+        instance.setShippingRate(
+            com.commercetools.api.models.shipping_method.ShippingRateDraft.deepCopy(template.getShippingRate()));
+        instance.setTaxCategory(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier
+                .deepCopy(template.getTaxCategory()));
+        instance.setExternalTaxRate(
+            com.commercetools.api.models.cart.ExternalTaxRateDraft.deepCopy(template.getExternalTaxRate()));
         return instance;
     }
 

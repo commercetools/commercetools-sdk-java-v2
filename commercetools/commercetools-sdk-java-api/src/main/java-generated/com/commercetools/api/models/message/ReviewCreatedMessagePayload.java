@@ -83,9 +83,7 @@ public interface ReviewCreatedMessagePayload extends MessagePayload {
             return null;
         }
         ReviewCreatedMessagePayloadImpl instance = new ReviewCreatedMessagePayloadImpl();
-        instance.setReview(Optional.ofNullable(template.getReview())
-                .map(com.commercetools.api.models.review.Review::deepCopy)
-                .orElse(null));
+        instance.setReview(com.commercetools.api.models.review.Review.deepCopy(template.getReview()));
         return instance;
     }
 

@@ -154,9 +154,8 @@ public interface InventoryEntryQuantitySetMessagePayload extends MessagePayload 
         instance.setNewQuantityOnStock(template.getNewQuantityOnStock());
         instance.setOldAvailableQuantity(template.getOldAvailableQuantity());
         instance.setNewAvailableQuantity(template.getNewAvailableQuantity());
-        instance.setSupplyChannel(Optional.ofNullable(template.getSupplyChannel())
-                .map(com.commercetools.api.models.channel.ChannelReference::deepCopy)
-                .orElse(null));
+        instance.setSupplyChannel(
+            com.commercetools.api.models.channel.ChannelReference.deepCopy(template.getSupplyChannel()));
         return instance;
     }
 

@@ -162,9 +162,7 @@ public interface RemoveFromCategoryChange extends Change {
         }
         RemoveFromCategoryChangeImpl instance = new RemoveFromCategoryChangeImpl();
         instance.setChange(template.getChange());
-        instance.setCategory(Optional.ofNullable(template.getCategory())
-                .map(com.commercetools.history.models.common.Reference::deepCopy)
-                .orElse(null));
+        instance.setCategory(com.commercetools.history.models.common.Reference.deepCopy(template.getCategory()));
         instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
                 .map(t -> t.stream()
                         .map(com.commercetools.history.models.common.Reference::deepCopy)

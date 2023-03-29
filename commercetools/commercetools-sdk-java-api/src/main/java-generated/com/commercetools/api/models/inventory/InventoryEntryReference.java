@@ -99,9 +99,7 @@ public interface InventoryEntryReference extends Reference, com.commercetools.ap
         }
         InventoryEntryReferenceImpl instance = new InventoryEntryReferenceImpl();
         instance.setId(template.getId());
-        instance.setObj(Optional.ofNullable(template.getObj())
-                .map(com.commercetools.api.models.inventory.InventoryEntry::deepCopy)
-                .orElse(null));
+        instance.setObj(com.commercetools.api.models.inventory.InventoryEntry.deepCopy(template.getObj()));
         return instance;
     }
 

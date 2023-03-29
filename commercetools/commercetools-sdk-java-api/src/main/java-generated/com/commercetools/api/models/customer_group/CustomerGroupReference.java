@@ -99,9 +99,7 @@ public interface CustomerGroupReference extends Reference, com.commercetools.api
         }
         CustomerGroupReferenceImpl instance = new CustomerGroupReferenceImpl();
         instance.setId(template.getId());
-        instance.setObj(Optional.ofNullable(template.getObj())
-                .map(com.commercetools.api.models.customer_group.CustomerGroup::deepCopy)
-                .orElse(null));
+        instance.setObj(com.commercetools.api.models.customer_group.CustomerGroup.deepCopy(template.getObj()));
         return instance;
     }
 

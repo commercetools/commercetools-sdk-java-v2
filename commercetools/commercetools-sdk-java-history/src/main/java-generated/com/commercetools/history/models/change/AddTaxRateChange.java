@@ -109,9 +109,7 @@ public interface AddTaxRateChange extends Change {
         }
         AddTaxRateChangeImpl instance = new AddTaxRateChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.common.TaxRate::deepCopy)
-                .orElse(null));
+        instance.setNextValue(com.commercetools.history.models.common.TaxRate.deepCopy(template.getNextValue()));
         return instance;
     }
 

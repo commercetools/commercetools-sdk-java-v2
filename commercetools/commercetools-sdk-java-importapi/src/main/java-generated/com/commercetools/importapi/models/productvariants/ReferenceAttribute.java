@@ -85,9 +85,7 @@ public interface ReferenceAttribute extends Attribute {
         }
         ReferenceAttributeImpl instance = new ReferenceAttributeImpl();
         instance.setName(template.getName());
-        instance.setValue(Optional.ofNullable(template.getValue())
-                .map(com.commercetools.importapi.models.common.KeyReference::deepCopy)
-                .orElse(null));
+        instance.setValue(com.commercetools.importapi.models.common.KeyReference.deepCopy(template.getValue()));
         return instance;
     }
 

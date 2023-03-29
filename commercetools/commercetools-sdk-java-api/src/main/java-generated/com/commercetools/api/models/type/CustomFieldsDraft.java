@@ -93,12 +93,8 @@ public interface CustomFieldsDraft extends io.vrap.rmf.base.client.Draft<CustomF
             return null;
         }
         CustomFieldsDraftImpl instance = new CustomFieldsDraftImpl();
-        instance.setType(Optional.ofNullable(template.getType())
-                .map(com.commercetools.api.models.type.TypeResourceIdentifier::deepCopy)
-                .orElse(null));
-        instance.setFields(Optional.ofNullable(template.getFields())
-                .map(com.commercetools.api.models.type.FieldContainer::deepCopy)
-                .orElse(null));
+        instance.setType(com.commercetools.api.models.type.TypeResourceIdentifier.deepCopy(template.getType()));
+        instance.setFields(com.commercetools.api.models.type.FieldContainer.deepCopy(template.getFields()));
         return instance;
     }
 

@@ -116,15 +116,12 @@ public interface CartAddShoppingListAction extends CartUpdateAction {
             return null;
         }
         CartAddShoppingListActionImpl instance = new CartAddShoppingListActionImpl();
-        instance.setShoppingList(Optional.ofNullable(template.getShoppingList())
-                .map(com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier::deepCopy)
-                .orElse(null));
-        instance.setDistributionChannel(Optional.ofNullable(template.getDistributionChannel())
-                .map(com.commercetools.api.models.channel.ChannelResourceIdentifier::deepCopy)
-                .orElse(null));
-        instance.setSupplyChannel(Optional.ofNullable(template.getSupplyChannel())
-                .map(com.commercetools.api.models.channel.ChannelResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setShoppingList(com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier
+                .deepCopy(template.getShoppingList()));
+        instance.setDistributionChannel(
+            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getDistributionChannel()));
+        instance.setSupplyChannel(
+            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getSupplyChannel()));
         return instance;
     }
 

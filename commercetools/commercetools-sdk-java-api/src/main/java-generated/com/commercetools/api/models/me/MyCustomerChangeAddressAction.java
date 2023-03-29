@@ -118,9 +118,7 @@ public interface MyCustomerChangeAddressAction extends MyCustomerUpdateAction {
         MyCustomerChangeAddressActionImpl instance = new MyCustomerChangeAddressActionImpl();
         instance.setAddressId(template.getAddressId());
         instance.setAddressKey(template.getAddressKey());
-        instance.setAddress(Optional.ofNullable(template.getAddress())
-                .map(com.commercetools.api.models.common.BaseAddress::deepCopy)
-                .orElse(null));
+        instance.setAddress(com.commercetools.api.models.common.BaseAddress.deepCopy(template.getAddress()));
         return instance;
     }
 

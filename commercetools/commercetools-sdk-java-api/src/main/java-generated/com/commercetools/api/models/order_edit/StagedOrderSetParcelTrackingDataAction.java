@@ -101,9 +101,7 @@ public interface StagedOrderSetParcelTrackingDataAction extends StagedOrderUpdat
         }
         StagedOrderSetParcelTrackingDataActionImpl instance = new StagedOrderSetParcelTrackingDataActionImpl();
         instance.setParcelId(template.getParcelId());
-        instance.setTrackingData(Optional.ofNullable(template.getTrackingData())
-                .map(com.commercetools.api.models.order.TrackingData::deepCopy)
-                .orElse(null));
+        instance.setTrackingData(com.commercetools.api.models.order.TrackingData.deepCopy(template.getTrackingData()));
         return instance;
     }
 

@@ -84,9 +84,7 @@ public interface PaymentInteractionAddedMessagePayload extends MessagePayload {
             return null;
         }
         PaymentInteractionAddedMessagePayloadImpl instance = new PaymentInteractionAddedMessagePayloadImpl();
-        instance.setInteraction(Optional.ofNullable(template.getInteraction())
-                .map(com.commercetools.api.models.type.CustomFields::deepCopy)
-                .orElse(null));
+        instance.setInteraction(com.commercetools.api.models.type.CustomFields.deepCopy(template.getInteraction()));
         return instance;
     }
 

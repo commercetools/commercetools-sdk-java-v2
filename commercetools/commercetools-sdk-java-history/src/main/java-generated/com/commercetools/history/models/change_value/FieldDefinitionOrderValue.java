@@ -96,9 +96,7 @@ public interface FieldDefinitionOrderValue {
         }
         FieldDefinitionOrderValueImpl instance = new FieldDefinitionOrderValueImpl();
         instance.setName(template.getName());
-        instance.setLabel(Optional.ofNullable(template.getLabel())
-                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setLabel(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getLabel()));
         return instance;
     }
 

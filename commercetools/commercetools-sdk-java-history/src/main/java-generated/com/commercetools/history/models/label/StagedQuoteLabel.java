@@ -127,12 +127,9 @@ public interface StagedQuoteLabel extends Label {
         }
         StagedQuoteLabelImpl instance = new StagedQuoteLabelImpl();
         instance.setKey(template.getKey());
-        instance.setCustomer(Optional.ofNullable(template.getCustomer())
-                .map(com.commercetools.history.models.common.Reference::deepCopy)
-                .orElse(null));
-        instance.setQuoteRequest(Optional.ofNullable(template.getQuoteRequest())
-                .map(com.commercetools.history.models.common.Reference::deepCopy)
-                .orElse(null));
+        instance.setCustomer(com.commercetools.history.models.common.Reference.deepCopy(template.getCustomer()));
+        instance.setQuoteRequest(
+            com.commercetools.history.models.common.Reference.deepCopy(template.getQuoteRequest()));
         return instance;
     }
 

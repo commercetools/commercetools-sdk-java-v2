@@ -83,9 +83,7 @@ public interface ShippingMethodRemoveZoneAction extends ShippingMethodUpdateActi
             return null;
         }
         ShippingMethodRemoveZoneActionImpl instance = new ShippingMethodRemoveZoneActionImpl();
-        instance.setZone(Optional.ofNullable(template.getZone())
-                .map(com.commercetools.api.models.zone.ZoneResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setZone(com.commercetools.api.models.zone.ZoneResourceIdentifier.deepCopy(template.getZone()));
         return instance;
     }
 

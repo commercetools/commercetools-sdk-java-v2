@@ -113,9 +113,7 @@ public interface CustomFieldExpandedValue {
         CustomFieldExpandedValueImpl instance = new CustomFieldExpandedValueImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());
-        instance.setLabel(Optional.ofNullable(template.getLabel())
-                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setLabel(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getLabel()));
         return instance;
     }
 

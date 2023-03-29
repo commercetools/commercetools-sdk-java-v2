@@ -109,9 +109,7 @@ public interface RemoveAssetChange extends Change {
         }
         RemoveAssetChangeImpl instance = new RemoveAssetChangeImpl();
         instance.setChange(template.getChange());
-        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(com.commercetools.history.models.common.Asset::deepCopy)
-                .orElse(null));
+        instance.setPreviousValue(com.commercetools.history.models.common.Asset.deepCopy(template.getPreviousValue()));
         return instance;
     }
 

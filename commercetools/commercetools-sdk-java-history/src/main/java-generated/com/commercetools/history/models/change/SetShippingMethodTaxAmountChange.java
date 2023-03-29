@@ -146,12 +146,10 @@ public interface SetShippingMethodTaxAmountChange extends Change {
         SetShippingMethodTaxAmountChangeImpl instance = new SetShippingMethodTaxAmountChangeImpl();
         instance.setChange(template.getChange());
         instance.setTaxMode(template.getTaxMode());
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValue::deepCopy)
-                .orElse(null));
-        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValue::deepCopy)
-                .orElse(null));
+        instance.setNextValue(com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValue
+                .deepCopy(template.getNextValue()));
+        instance.setPreviousValue(com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValue
+                .deepCopy(template.getPreviousValue()));
         return instance;
     }
 

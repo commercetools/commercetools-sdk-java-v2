@@ -277,29 +277,22 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
             return null;
         }
         CartDiscountDraftImpl instance = new CartDiscountDraftImpl();
-        instance.setName(Optional.ofNullable(template.getName())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
         instance.setKey(template.getKey());
-        instance.setDescription(Optional.ofNullable(template.getDescription())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setValue(Optional.ofNullable(template.getValue())
-                .map(com.commercetools.api.models.cart_discount.CartDiscountValueDraft::deepCopy)
-                .orElse(null));
+        instance.setDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setValue(
+            com.commercetools.api.models.cart_discount.CartDiscountValueDraft.deepCopy(template.getValue()));
         instance.setCartPredicate(template.getCartPredicate());
-        instance.setTarget(Optional.ofNullable(template.getTarget())
-                .map(com.commercetools.api.models.cart_discount.CartDiscountTarget::deepCopy)
-                .orElse(null));
+        instance.setTarget(
+            com.commercetools.api.models.cart_discount.CartDiscountTarget.deepCopy(template.getTarget()));
         instance.setSortOrder(template.getSortOrder());
         instance.setIsActive(template.getIsActive());
         instance.setValidFrom(template.getValidFrom());
         instance.setValidUntil(template.getValidUntil());
         instance.setRequiresDiscountCode(template.getRequiresDiscountCode());
         instance.setStackingMode(template.getStackingMode());
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;
     }
 

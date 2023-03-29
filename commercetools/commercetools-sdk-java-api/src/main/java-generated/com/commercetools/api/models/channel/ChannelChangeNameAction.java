@@ -83,9 +83,7 @@ public interface ChannelChangeNameAction extends ChannelUpdateAction {
             return null;
         }
         ChannelChangeNameActionImpl instance = new ChannelChangeNameActionImpl();
-        instance.setName(Optional.ofNullable(template.getName())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
         return instance;
     }
 

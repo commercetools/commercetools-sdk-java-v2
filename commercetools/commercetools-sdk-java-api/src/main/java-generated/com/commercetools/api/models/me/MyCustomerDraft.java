@@ -356,9 +356,7 @@ public interface MyCustomerDraft extends com.commercetools.api.models.Customizab
                 .orElse(null));
         instance.setDefaultShippingAddress(template.getDefaultShippingAddress());
         instance.setDefaultBillingAddress(template.getDefaultBillingAddress());
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         instance.setLocale(template.getLocale());
         instance.setStores(Optional.ofNullable(template.getStores())
                 .map(t -> t.stream()

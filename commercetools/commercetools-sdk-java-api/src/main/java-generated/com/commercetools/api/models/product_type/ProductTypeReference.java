@@ -99,9 +99,7 @@ public interface ProductTypeReference extends Reference, com.commercetools.api.m
         }
         ProductTypeReferenceImpl instance = new ProductTypeReferenceImpl();
         instance.setId(template.getId());
-        instance.setObj(Optional.ofNullable(template.getObj())
-                .map(com.commercetools.api.models.product_type.ProductType::deepCopy)
-                .orElse(null));
+        instance.setObj(com.commercetools.api.models.product_type.ProductType.deepCopy(template.getObj()));
         return instance;
     }
 

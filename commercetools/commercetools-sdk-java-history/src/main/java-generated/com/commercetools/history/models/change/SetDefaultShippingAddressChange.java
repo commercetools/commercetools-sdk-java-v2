@@ -127,12 +127,9 @@ public interface SetDefaultShippingAddressChange extends Change {
         }
         SetDefaultShippingAddressChangeImpl instance = new SetDefaultShippingAddressChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.common.Address::deepCopy)
-                .orElse(null));
-        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(com.commercetools.history.models.common.Address::deepCopy)
-                .orElse(null));
+        instance.setNextValue(com.commercetools.history.models.common.Address.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.Address.deepCopy(template.getPreviousValue()));
         return instance;
     }
 

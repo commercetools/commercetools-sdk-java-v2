@@ -355,34 +355,22 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
         instance.setKey(template.getKey());
-        instance.setLastModifiedBy(Optional.ofNullable(template.getLastModifiedBy())
-                .map(com.commercetools.api.models.common.LastModifiedBy::deepCopy)
-                .orElse(null));
-        instance.setCreatedBy(Optional.ofNullable(template.getCreatedBy())
-                .map(com.commercetools.api.models.common.CreatedBy::deepCopy)
-                .orElse(null));
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setStagedQuoteState(template.getStagedQuoteState());
-        instance.setCustomer(Optional.ofNullable(template.getCustomer())
-                .map(com.commercetools.api.models.customer.CustomerReference::deepCopy)
-                .orElse(null));
-        instance.setQuoteRequest(Optional.ofNullable(template.getQuoteRequest())
-                .map(com.commercetools.api.models.quote_request.QuoteRequestReference::deepCopy)
-                .orElse(null));
-        instance.setQuotationCart(Optional.ofNullable(template.getQuotationCart())
-                .map(com.commercetools.api.models.cart.CartReference::deepCopy)
-                .orElse(null));
+        instance.setCustomer(com.commercetools.api.models.customer.CustomerReference.deepCopy(template.getCustomer()));
+        instance.setQuoteRequest(
+            com.commercetools.api.models.quote_request.QuoteRequestReference.deepCopy(template.getQuoteRequest()));
+        instance.setQuotationCart(
+            com.commercetools.api.models.cart.CartReference.deepCopy(template.getQuotationCart()));
         instance.setValidTo(template.getValidTo());
         instance.setSellerComment(template.getSellerComment());
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFields::deepCopy)
-                .orElse(null));
-        instance.setState(Optional.ofNullable(template.getState())
-                .map(com.commercetools.api.models.state.StateReference::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
+        instance.setState(com.commercetools.api.models.state.StateReference.deepCopy(template.getState()));
         instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
-        instance.setBusinessUnit(Optional.ofNullable(template.getBusinessUnit())
-                .map(com.commercetools.api.models.business_unit.BusinessUnitKeyReference::deepCopy)
-                .orElse(null));
+        instance.setBusinessUnit(
+            com.commercetools.api.models.business_unit.BusinessUnitKeyReference.deepCopy(template.getBusinessUnit()));
         return instance;
     }
 

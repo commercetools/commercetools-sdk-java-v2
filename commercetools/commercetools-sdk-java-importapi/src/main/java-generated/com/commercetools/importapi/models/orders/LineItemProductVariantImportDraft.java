@@ -168,9 +168,8 @@ public interface LineItemProductVariantImportDraft
             return null;
         }
         LineItemProductVariantImportDraftImpl instance = new LineItemProductVariantImportDraftImpl();
-        instance.setProductVariant(Optional.ofNullable(template.getProductVariant())
-                .map(com.commercetools.importapi.models.common.ProductVariantKeyReference::deepCopy)
-                .orElse(null));
+        instance.setProductVariant(com.commercetools.importapi.models.common.ProductVariantKeyReference
+                .deepCopy(template.getProductVariant()));
         instance.setSku(template.getSku());
         instance.setPrices(Optional.ofNullable(template.getPrices())
                 .map(t -> t.stream()

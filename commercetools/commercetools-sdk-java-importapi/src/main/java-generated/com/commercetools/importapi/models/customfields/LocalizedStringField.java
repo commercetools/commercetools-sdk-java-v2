@@ -93,9 +93,7 @@ public interface LocalizedStringField extends CustomField {
             return null;
         }
         LocalizedStringFieldImpl instance = new LocalizedStringFieldImpl();
-        instance.setValue(Optional.ofNullable(template.getValue())
-                .map(com.commercetools.importapi.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setValue(com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getValue()));
         return instance;
     }
 

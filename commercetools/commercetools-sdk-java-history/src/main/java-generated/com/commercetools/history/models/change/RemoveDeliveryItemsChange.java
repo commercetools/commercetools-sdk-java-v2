@@ -109,9 +109,8 @@ public interface RemoveDeliveryItemsChange extends Change {
         }
         RemoveDeliveryItemsChangeImpl instance = new RemoveDeliveryItemsChangeImpl();
         instance.setChange(template.getChange());
-        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(com.commercetools.history.models.common.Delivery::deepCopy)
-                .orElse(null));
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.Delivery.deepCopy(template.getPreviousValue()));
         return instance;
     }
 

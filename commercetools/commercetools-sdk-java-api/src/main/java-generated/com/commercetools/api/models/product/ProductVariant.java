@@ -304,9 +304,7 @@ public interface ProductVariant extends com.commercetools.api.models.WithKey {
                         .map(com.commercetools.api.models.product.Attribute::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setPrice(Optional.ofNullable(template.getPrice())
-                .map(com.commercetools.api.models.common.Price::deepCopy)
-                .orElse(null));
+        instance.setPrice(com.commercetools.api.models.common.Price.deepCopy(template.getPrice()));
         instance.setImages(Optional.ofNullable(template.getImages())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.common.Image::deepCopy)
@@ -317,13 +315,10 @@ public interface ProductVariant extends com.commercetools.api.models.WithKey {
                         .map(com.commercetools.api.models.common.Asset::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setAvailability(Optional.ofNullable(template.getAvailability())
-                .map(com.commercetools.api.models.product.ProductVariantAvailability::deepCopy)
-                .orElse(null));
+        instance.setAvailability(
+            com.commercetools.api.models.product.ProductVariantAvailability.deepCopy(template.getAvailability()));
         instance.setIsMatchingVariant(template.getIsMatchingVariant());
-        instance.setScopedPrice(Optional.ofNullable(template.getScopedPrice())
-                .map(com.commercetools.api.models.common.ScopedPrice::deepCopy)
-                .orElse(null));
+        instance.setScopedPrice(com.commercetools.api.models.common.ScopedPrice.deepCopy(template.getScopedPrice()));
         instance.setScopedPriceDiscounted(template.getScopedPriceDiscounted());
         return instance;
     }

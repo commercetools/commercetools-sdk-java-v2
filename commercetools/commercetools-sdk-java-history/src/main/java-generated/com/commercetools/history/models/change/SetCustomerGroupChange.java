@@ -127,12 +127,9 @@ public interface SetCustomerGroupChange extends Change {
         }
         SetCustomerGroupChangeImpl instance = new SetCustomerGroupChangeImpl();
         instance.setChange(template.getChange());
-        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(com.commercetools.history.models.common.Reference::deepCopy)
-                .orElse(null));
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.common.Reference::deepCopy)
-                .orElse(null));
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.Reference.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.Reference.deepCopy(template.getNextValue()));
         return instance;
     }
 

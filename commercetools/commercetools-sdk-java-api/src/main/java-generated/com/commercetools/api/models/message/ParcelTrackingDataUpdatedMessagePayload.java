@@ -134,9 +134,7 @@ public interface ParcelTrackingDataUpdatedMessagePayload extends OrderMessagePay
         ParcelTrackingDataUpdatedMessagePayloadImpl instance = new ParcelTrackingDataUpdatedMessagePayloadImpl();
         instance.setDeliveryId(template.getDeliveryId());
         instance.setParcelId(template.getParcelId());
-        instance.setTrackingData(Optional.ofNullable(template.getTrackingData())
-                .map(com.commercetools.api.models.order.TrackingData::deepCopy)
-                .orElse(null));
+        instance.setTrackingData(com.commercetools.api.models.order.TrackingData.deepCopy(template.getTrackingData()));
         instance.setShippingKey(template.getShippingKey());
         return instance;
     }

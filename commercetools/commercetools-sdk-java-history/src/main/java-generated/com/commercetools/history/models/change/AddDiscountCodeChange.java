@@ -109,9 +109,8 @@ public interface AddDiscountCodeChange extends Change {
         }
         AddDiscountCodeChangeImpl instance = new AddDiscountCodeChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.common.DiscountCodeInfo::deepCopy)
-                .orElse(null));
+        instance.setNextValue(
+            com.commercetools.history.models.common.DiscountCodeInfo.deepCopy(template.getNextValue()));
         return instance;
     }
 

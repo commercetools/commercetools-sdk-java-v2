@@ -189,9 +189,8 @@ public interface CustomerSignin {
         instance.setEmail(template.getEmail());
         instance.setPassword(template.getPassword());
         instance.setAnonymousCartId(template.getAnonymousCartId());
-        instance.setAnonymousCart(Optional.ofNullable(template.getAnonymousCart())
-                .map(com.commercetools.api.models.cart.CartResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setAnonymousCart(
+            com.commercetools.api.models.cart.CartResourceIdentifier.deepCopy(template.getAnonymousCart()));
         instance.setAnonymousCartSignInMode(template.getAnonymousCartSignInMode());
         instance.setAnonymousId(template.getAnonymousId());
         instance.setUpdateProductData(template.getUpdateProductData());

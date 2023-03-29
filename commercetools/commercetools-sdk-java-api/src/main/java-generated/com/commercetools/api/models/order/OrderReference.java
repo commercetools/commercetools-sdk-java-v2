@@ -83,9 +83,7 @@ public interface OrderReference extends Reference, com.commercetools.api.models.
         }
         OrderReferenceImpl instance = new OrderReferenceImpl();
         instance.setId(template.getId());
-        instance.setObj(Optional.ofNullable(template.getObj())
-                .map(com.commercetools.api.models.order.Order::deepCopy)
-                .orElse(null));
+        instance.setObj(com.commercetools.api.models.order.Order.deepCopy(template.getObj()));
         return instance;
     }
 

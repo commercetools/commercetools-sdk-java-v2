@@ -99,9 +99,7 @@ public interface StandalonePriceChangeValueAction extends StandalonePriceUpdateA
             return null;
         }
         StandalonePriceChangeValueActionImpl instance = new StandalonePriceChangeValueActionImpl();
-        instance.setValue(Optional.ofNullable(template.getValue())
-                .map(com.commercetools.api.models.common.Money::deepCopy)
-                .orElse(null));
+        instance.setValue(com.commercetools.api.models.common.Money.deepCopy(template.getValue()));
         instance.setStaged(template.getStaged());
         return instance;
     }

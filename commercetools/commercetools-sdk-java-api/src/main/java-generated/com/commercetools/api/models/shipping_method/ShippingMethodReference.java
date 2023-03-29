@@ -99,9 +99,7 @@ public interface ShippingMethodReference extends Reference, com.commercetools.ap
         }
         ShippingMethodReferenceImpl instance = new ShippingMethodReferenceImpl();
         instance.setId(template.getId());
-        instance.setObj(Optional.ofNullable(template.getObj())
-                .map(com.commercetools.api.models.shipping_method.ShippingMethod::deepCopy)
-                .orElse(null));
+        instance.setObj(com.commercetools.api.models.shipping_method.ShippingMethod.deepCopy(template.getObj()));
         return instance;
     }
 

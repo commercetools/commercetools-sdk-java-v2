@@ -80,9 +80,8 @@ public interface PaymentSetCustomerAction extends PaymentUpdateAction {
             return null;
         }
         PaymentSetCustomerActionImpl instance = new PaymentSetCustomerActionImpl();
-        instance.setCustomer(Optional.ofNullable(template.getCustomer())
-                .map(com.commercetools.api.models.customer.CustomerResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setCustomer(
+            com.commercetools.api.models.customer.CustomerResourceIdentifier.deepCopy(template.getCustomer()));
         return instance;
     }
 

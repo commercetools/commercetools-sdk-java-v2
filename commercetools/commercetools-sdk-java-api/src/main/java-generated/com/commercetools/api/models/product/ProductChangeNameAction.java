@@ -99,9 +99,7 @@ public interface ProductChangeNameAction extends ProductUpdateAction {
             return null;
         }
         ProductChangeNameActionImpl instance = new ProductChangeNameActionImpl();
-        instance.setName(Optional.ofNullable(template.getName())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
         instance.setStaged(template.getStaged());
         return instance;
     }

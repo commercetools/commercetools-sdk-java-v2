@@ -102,12 +102,10 @@ public interface ProductSelectionSetVariantSelectionAction extends ProductSelect
             return null;
         }
         ProductSelectionSetVariantSelectionActionImpl instance = new ProductSelectionSetVariantSelectionActionImpl();
-        instance.setProduct(Optional.ofNullable(template.getProduct())
-                .map(com.commercetools.api.models.product.ProductResourceIdentifier::deepCopy)
-                .orElse(null));
-        instance.setVariantSelection(Optional.ofNullable(template.getVariantSelection())
-                .map(com.commercetools.api.models.product_selection.ProductVariantSelection::deepCopy)
-                .orElse(null));
+        instance.setProduct(
+            com.commercetools.api.models.product.ProductResourceIdentifier.deepCopy(template.getProduct()));
+        instance.setVariantSelection(com.commercetools.api.models.product_selection.ProductVariantSelection
+                .deepCopy(template.getVariantSelection()));
         return instance;
     }
 

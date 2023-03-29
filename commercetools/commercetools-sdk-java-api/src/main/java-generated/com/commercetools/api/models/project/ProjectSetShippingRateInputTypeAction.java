@@ -80,9 +80,8 @@ public interface ProjectSetShippingRateInputTypeAction extends ProjectUpdateActi
             return null;
         }
         ProjectSetShippingRateInputTypeActionImpl instance = new ProjectSetShippingRateInputTypeActionImpl();
-        instance.setShippingRateInputType(Optional.ofNullable(template.getShippingRateInputType())
-                .map(com.commercetools.api.models.project.ShippingRateInputType::deepCopy)
-                .orElse(null));
+        instance.setShippingRateInputType(
+            com.commercetools.api.models.project.ShippingRateInputType.deepCopy(template.getShippingRateInputType()));
         return instance;
     }
 

@@ -129,12 +129,8 @@ public interface ProductSelectionDraft extends com.commercetools.api.models.Cust
         }
         ProductSelectionDraftImpl instance = new ProductSelectionDraftImpl();
         instance.setKey(template.getKey());
-        instance.setName(Optional.ofNullable(template.getName())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
-                .orElse(null));
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         instance.setType(template.getType());
         return instance;
     }

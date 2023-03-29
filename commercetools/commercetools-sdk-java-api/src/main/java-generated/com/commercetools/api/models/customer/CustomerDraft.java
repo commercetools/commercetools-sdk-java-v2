@@ -562,9 +562,8 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
         instance.setMiddleName(template.getMiddleName());
         instance.setTitle(template.getTitle());
         instance.setAnonymousCartId(template.getAnonymousCartId());
-        instance.setAnonymousCart(Optional.ofNullable(template.getAnonymousCart())
-                .map(com.commercetools.api.models.cart.CartResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setAnonymousCart(
+            com.commercetools.api.models.cart.CartResourceIdentifier.deepCopy(template.getAnonymousCart()));
         instance.setAnonymousId(template.getAnonymousId());
         instance.setDateOfBirth(template.getDateOfBirth());
         instance.setCompanyName(template.getCompanyName());
@@ -581,12 +580,9 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
         instance.setBillingAddresses(
             Optional.ofNullable(template.getBillingAddresses()).map(ArrayList::new).orElse(null));
         instance.setIsEmailVerified(template.getIsEmailVerified());
-        instance.setCustomerGroup(Optional.ofNullable(template.getCustomerGroup())
-                .map(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier::deepCopy)
-                .orElse(null));
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
-                .orElse(null));
+        instance.setCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier
+                .deepCopy(template.getCustomerGroup()));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         instance.setLocale(template.getLocale());
         instance.setSalutation(template.getSalutation());
         instance.setStores(Optional.ofNullable(template.getStores())

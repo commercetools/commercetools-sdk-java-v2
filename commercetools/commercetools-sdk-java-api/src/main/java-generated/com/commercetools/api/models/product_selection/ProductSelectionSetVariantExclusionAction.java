@@ -102,12 +102,10 @@ public interface ProductSelectionSetVariantExclusionAction extends ProductSelect
             return null;
         }
         ProductSelectionSetVariantExclusionActionImpl instance = new ProductSelectionSetVariantExclusionActionImpl();
-        instance.setProduct(Optional.ofNullable(template.getProduct())
-                .map(com.commercetools.api.models.product.ProductResourceIdentifier::deepCopy)
-                .orElse(null));
-        instance.setVariantExclusion(Optional.ofNullable(template.getVariantExclusion())
-                .map(com.commercetools.api.models.product_selection.ProductVariantExclusion::deepCopy)
-                .orElse(null));
+        instance.setProduct(
+            com.commercetools.api.models.product.ProductResourceIdentifier.deepCopy(template.getProduct()));
+        instance.setVariantExclusion(com.commercetools.api.models.product_selection.ProductVariantExclusion
+                .deepCopy(template.getVariantExclusion()));
         return instance;
     }
 

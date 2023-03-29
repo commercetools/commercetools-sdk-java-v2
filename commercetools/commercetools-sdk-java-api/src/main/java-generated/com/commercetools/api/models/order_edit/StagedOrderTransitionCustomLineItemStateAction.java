@@ -157,12 +157,9 @@ public interface StagedOrderTransitionCustomLineItemStateAction extends StagedOr
         StagedOrderTransitionCustomLineItemStateActionImpl instance = new StagedOrderTransitionCustomLineItemStateActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setQuantity(template.getQuantity());
-        instance.setFromState(Optional.ofNullable(template.getFromState())
-                .map(com.commercetools.api.models.state.StateResourceIdentifier::deepCopy)
-                .orElse(null));
-        instance.setToState(Optional.ofNullable(template.getToState())
-                .map(com.commercetools.api.models.state.StateResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setFromState(
+            com.commercetools.api.models.state.StateResourceIdentifier.deepCopy(template.getFromState()));
+        instance.setToState(com.commercetools.api.models.state.StateResourceIdentifier.deepCopy(template.getToState()));
         instance.setActualTransitionDate(template.getActualTransitionDate());
         return instance;
     }

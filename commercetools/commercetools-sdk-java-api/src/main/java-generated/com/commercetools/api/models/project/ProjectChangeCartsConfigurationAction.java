@@ -83,9 +83,8 @@ public interface ProjectChangeCartsConfigurationAction extends ProjectUpdateActi
             return null;
         }
         ProjectChangeCartsConfigurationActionImpl instance = new ProjectChangeCartsConfigurationActionImpl();
-        instance.setCartsConfiguration(Optional.ofNullable(template.getCartsConfiguration())
-                .map(com.commercetools.api.models.project.CartsConfiguration::deepCopy)
-                .orElse(null));
+        instance.setCartsConfiguration(
+            com.commercetools.api.models.project.CartsConfiguration.deepCopy(template.getCartsConfiguration()));
         return instance;
     }
 

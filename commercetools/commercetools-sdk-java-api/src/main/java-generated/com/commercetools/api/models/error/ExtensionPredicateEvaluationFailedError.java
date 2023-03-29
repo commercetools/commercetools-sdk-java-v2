@@ -111,9 +111,8 @@ public interface ExtensionPredicateEvaluationFailedError extends ErrorObject {
         ExtensionPredicateEvaluationFailedErrorImpl instance = new ExtensionPredicateEvaluationFailedErrorImpl();
         instance.setMessage(template.getMessage());
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
-        instance.setErrorByExtension(Optional.ofNullable(template.getErrorByExtension())
-                .map(com.commercetools.api.models.error.ErrorByExtension::deepCopy)
-                .orElse(null));
+        instance.setErrorByExtension(
+            com.commercetools.api.models.error.ErrorByExtension.deepCopy(template.getErrorByExtension()));
         return instance;
     }
 

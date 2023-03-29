@@ -266,43 +266,31 @@ public interface ProductData extends ProductDataLike {
             return null;
         }
         ProductDataImpl instance = new ProductDataImpl();
-        instance.setName(Optional.ofNullable(template.getName())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
         instance.setCategories(Optional.ofNullable(template.getCategories())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.category.CategoryReference::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setCategoryOrderHints(Optional.ofNullable(template.getCategoryOrderHints())
-                .map(com.commercetools.api.models.product.CategoryOrderHints::deepCopy)
-                .orElse(null));
-        instance.setDescription(Optional.ofNullable(template.getDescription())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setSlug(Optional.ofNullable(template.getSlug())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setMetaTitle(Optional.ofNullable(template.getMetaTitle())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setMetaDescription(Optional.ofNullable(template.getMetaDescription())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setMetaKeywords(Optional.ofNullable(template.getMetaKeywords())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setMasterVariant(Optional.ofNullable(template.getMasterVariant())
-                .map(com.commercetools.api.models.product.ProductVariant::deepCopy)
-                .orElse(null));
+        instance.setCategoryOrderHints(
+            com.commercetools.api.models.product.CategoryOrderHints.deepCopy(template.getCategoryOrderHints()));
+        instance.setDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setSlug(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getSlug()));
+        instance.setMetaTitle(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaTitle()));
+        instance.setMetaDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaDescription()));
+        instance.setMetaKeywords(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaKeywords()));
+        instance.setMasterVariant(
+            com.commercetools.api.models.product.ProductVariant.deepCopy(template.getMasterVariant()));
         instance.setVariants(Optional.ofNullable(template.getVariants())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.product.ProductVariant::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setSearchKeywords(Optional.ofNullable(template.getSearchKeywords())
-                .map(com.commercetools.api.models.product.SearchKeywords::deepCopy)
-                .orElse(null));
+        instance.setSearchKeywords(
+            com.commercetools.api.models.product.SearchKeywords.deepCopy(template.getSearchKeywords()));
         return instance;
     }
 

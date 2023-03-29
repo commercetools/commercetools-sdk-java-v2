@@ -116,9 +116,8 @@ public interface OrderUpdateSyncInfoAction extends OrderUpdateAction {
             return null;
         }
         OrderUpdateSyncInfoActionImpl instance = new OrderUpdateSyncInfoActionImpl();
-        instance.setChannel(Optional.ofNullable(template.getChannel())
-                .map(com.commercetools.api.models.channel.ChannelResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setChannel(
+            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getChannel()));
         instance.setExternalId(template.getExternalId());
         instance.setSyncedAt(template.getSyncedAt());
         return instance;

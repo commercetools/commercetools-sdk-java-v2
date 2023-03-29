@@ -117,9 +117,7 @@ public interface CartValueTier extends ShippingRatePriceTier {
         }
         CartValueTierImpl instance = new CartValueTierImpl();
         instance.setMinimumCentAmount(template.getMinimumCentAmount());
-        instance.setPrice(Optional.ofNullable(template.getPrice())
-                .map(com.commercetools.api.models.common.Money::deepCopy)
-                .orElse(null));
+        instance.setPrice(com.commercetools.api.models.common.Money.deepCopy(template.getPrice()));
         instance.setIsMatching(template.getIsMatching());
         return instance;
     }

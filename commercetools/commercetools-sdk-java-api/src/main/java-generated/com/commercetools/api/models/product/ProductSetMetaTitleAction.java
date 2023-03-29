@@ -96,9 +96,7 @@ public interface ProductSetMetaTitleAction extends ProductUpdateAction {
             return null;
         }
         ProductSetMetaTitleActionImpl instance = new ProductSetMetaTitleActionImpl();
-        instance.setMetaTitle(Optional.ofNullable(template.getMetaTitle())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setMetaTitle(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaTitle()));
         instance.setStaged(template.getStaged());
         return instance;
     }

@@ -111,9 +111,7 @@ public interface ProductVariant {
             return null;
         }
         ProductVariantImpl instance = new ProductVariantImpl();
-        instance.setProduct(Optional.ofNullable(template.getProduct())
-                .map(com.commercetools.ml.models.common.ProductReference::deepCopy)
-                .orElse(null));
+        instance.setProduct(com.commercetools.ml.models.common.ProductReference.deepCopy(template.getProduct()));
         instance.setStaged(template.getStaged());
         instance.setVariantId(template.getVariantId());
         return instance;

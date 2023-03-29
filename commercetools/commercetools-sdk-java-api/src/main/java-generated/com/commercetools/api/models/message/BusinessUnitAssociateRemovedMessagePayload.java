@@ -85,9 +85,7 @@ public interface BusinessUnitAssociateRemovedMessagePayload extends MessagePaylo
             return null;
         }
         BusinessUnitAssociateRemovedMessagePayloadImpl instance = new BusinessUnitAssociateRemovedMessagePayloadImpl();
-        instance.setAssociate(Optional.ofNullable(template.getAssociate())
-                .map(com.commercetools.api.models.business_unit.Associate::deepCopy)
-                .orElse(null));
+        instance.setAssociate(com.commercetools.api.models.business_unit.Associate.deepCopy(template.getAssociate()));
         return instance;
     }
 

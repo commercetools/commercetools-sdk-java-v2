@@ -109,9 +109,7 @@ public interface AddProductChange extends Change {
         }
         AddProductChangeImpl instance = new AddProductChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.common.Reference::deepCopy)
-                .orElse(null));
+        instance.setNextValue(com.commercetools.history.models.common.Reference.deepCopy(template.getNextValue()));
         return instance;
     }
 

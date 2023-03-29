@@ -99,8 +99,7 @@ public interface CartReference extends Reference, com.commercetools.api.models.I
         }
         CartReferenceImpl instance = new CartReferenceImpl();
         instance.setId(template.getId());
-        instance.setObj(
-            Optional.ofNullable(template.getObj()).map(com.commercetools.api.models.cart.Cart::deepCopy).orElse(null));
+        instance.setObj(com.commercetools.api.models.cart.Cart.deepCopy(template.getObj()));
         return instance;
     }
 

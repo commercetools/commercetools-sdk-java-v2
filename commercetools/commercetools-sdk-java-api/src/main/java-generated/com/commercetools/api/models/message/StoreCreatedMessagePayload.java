@@ -228,9 +228,7 @@ public interface StoreCreatedMessagePayload extends MessagePayload {
             return null;
         }
         StoreCreatedMessagePayloadImpl instance = new StoreCreatedMessagePayloadImpl();
-        instance.setName(Optional.ofNullable(template.getName())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
         instance.setLanguages(Optional.ofNullable(template.getLanguages()).map(ArrayList::new).orElse(null));
         instance.setCountries(Optional.ofNullable(template.getCountries())
                 .map(t -> t.stream()
@@ -252,9 +250,7 @@ public interface StoreCreatedMessagePayload extends MessagePayload {
                         .map(com.commercetools.api.models.store.ProductSelectionSetting::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFields::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         return instance;
     }
 

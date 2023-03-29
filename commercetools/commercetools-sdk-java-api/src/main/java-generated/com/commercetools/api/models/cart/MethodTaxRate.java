@@ -94,9 +94,7 @@ public interface MethodTaxRate {
         }
         MethodTaxRateImpl instance = new MethodTaxRateImpl();
         instance.setShippingMethodKey(template.getShippingMethodKey());
-        instance.setTaxRate(Optional.ofNullable(template.getTaxRate())
-                .map(com.commercetools.api.models.tax_category.TaxRate::deepCopy)
-                .orElse(null));
+        instance.setTaxRate(com.commercetools.api.models.tax_category.TaxRate.deepCopy(template.getTaxRate()));
         return instance;
     }
 

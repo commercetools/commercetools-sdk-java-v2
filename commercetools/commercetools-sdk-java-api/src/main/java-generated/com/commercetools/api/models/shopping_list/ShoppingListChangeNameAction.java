@@ -83,9 +83,7 @@ public interface ShoppingListChangeNameAction extends ShoppingListUpdateAction {
             return null;
         }
         ShoppingListChangeNameActionImpl instance = new ShoppingListChangeNameActionImpl();
-        instance.setName(Optional.ofNullable(template.getName())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
         return instance;
     }
 

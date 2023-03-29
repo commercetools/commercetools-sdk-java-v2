@@ -83,9 +83,8 @@ public interface ProductCreatedMessagePayload extends MessagePayload {
             return null;
         }
         ProductCreatedMessagePayloadImpl instance = new ProductCreatedMessagePayloadImpl();
-        instance.setProductProjection(Optional.ofNullable(template.getProductProjection())
-                .map(com.commercetools.api.models.product.ProductProjection::deepCopy)
-                .orElse(null));
+        instance.setProductProjection(
+            com.commercetools.api.models.product.ProductProjection.deepCopy(template.getProductProjection()));
         return instance;
     }
 

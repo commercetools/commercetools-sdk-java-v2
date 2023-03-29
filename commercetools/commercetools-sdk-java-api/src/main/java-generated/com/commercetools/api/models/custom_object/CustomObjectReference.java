@@ -99,9 +99,7 @@ public interface CustomObjectReference extends Reference, com.commercetools.api.
         }
         CustomObjectReferenceImpl instance = new CustomObjectReferenceImpl();
         instance.setId(template.getId());
-        instance.setObj(Optional.ofNullable(template.getObj())
-                .map(com.commercetools.api.models.custom_object.CustomObject::deepCopy)
-                .orElse(null));
+        instance.setObj(com.commercetools.api.models.custom_object.CustomObject.deepCopy(template.getObj()));
         return instance;
     }
 

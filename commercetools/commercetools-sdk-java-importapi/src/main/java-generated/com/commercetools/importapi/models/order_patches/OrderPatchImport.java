@@ -95,9 +95,7 @@ public interface OrderPatchImport {
         }
         OrderPatchImportImpl instance = new OrderPatchImportImpl();
         instance.setOrderNumber(template.getOrderNumber());
-        instance.setFields(Optional.ofNullable(template.getFields())
-                .map(com.commercetools.importapi.models.order_patches.OrderField::deepCopy)
-                .orElse(null));
+        instance.setFields(com.commercetools.importapi.models.order_patches.OrderField.deepCopy(template.getFields()));
         return instance;
     }
 

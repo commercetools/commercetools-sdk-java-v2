@@ -82,9 +82,8 @@ public interface AttributeGroupAddAttributeAction extends AttributeGroupUpdateAc
             return null;
         }
         AttributeGroupAddAttributeActionImpl instance = new AttributeGroupAddAttributeActionImpl();
-        instance.setAttribute(Optional.ofNullable(template.getAttribute())
-                .map(com.commercetools.api.models.attribute_group.AttributeReference::deepCopy)
-                .orElse(null));
+        instance.setAttribute(
+            com.commercetools.api.models.attribute_group.AttributeReference.deepCopy(template.getAttribute()));
         return instance;
     }
 

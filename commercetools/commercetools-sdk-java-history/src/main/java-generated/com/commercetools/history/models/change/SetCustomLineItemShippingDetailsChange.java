@@ -146,12 +146,10 @@ public interface SetCustomLineItemShippingDetailsChange extends Change {
         SetCustomLineItemShippingDetailsChangeImpl instance = new SetCustomLineItemShippingDetailsChangeImpl();
         instance.setChange(template.getChange());
         instance.setCustomLineItemId(template.getCustomLineItemId());
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.common.ItemShippingDetails::deepCopy)
-                .orElse(null));
-        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(com.commercetools.history.models.common.ItemShippingDetails::deepCopy)
-                .orElse(null));
+        instance.setNextValue(
+            com.commercetools.history.models.common.ItemShippingDetails.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.ItemShippingDetails.deepCopy(template.getPreviousValue()));
         return instance;
     }
 

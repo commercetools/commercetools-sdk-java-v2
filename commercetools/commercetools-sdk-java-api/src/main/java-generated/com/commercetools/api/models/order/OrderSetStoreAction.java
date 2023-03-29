@@ -80,9 +80,7 @@ public interface OrderSetStoreAction extends OrderUpdateAction {
             return null;
         }
         OrderSetStoreActionImpl instance = new OrderSetStoreActionImpl();
-        instance.setStore(Optional.ofNullable(template.getStore())
-                .map(com.commercetools.api.models.store.StoreResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setStore(com.commercetools.api.models.store.StoreResourceIdentifier.deepCopy(template.getStore()));
         return instance;
     }
 

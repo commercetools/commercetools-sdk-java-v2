@@ -84,9 +84,8 @@ public interface StandalonePriceCreatedMessagePayload extends MessagePayload {
             return null;
         }
         StandalonePriceCreatedMessagePayloadImpl instance = new StandalonePriceCreatedMessagePayloadImpl();
-        instance.setStandalonePrice(Optional.ofNullable(template.getStandalonePrice())
-                .map(com.commercetools.api.models.standalone_price.StandalonePrice::deepCopy)
-                .orElse(null));
+        instance.setStandalonePrice(
+            com.commercetools.api.models.standalone_price.StandalonePrice.deepCopy(template.getStandalonePrice()));
         return instance;
     }
 

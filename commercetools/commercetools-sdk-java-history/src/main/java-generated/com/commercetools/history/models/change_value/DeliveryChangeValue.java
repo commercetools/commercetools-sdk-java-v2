@@ -138,9 +138,7 @@ public interface DeliveryChangeValue {
                         .map(com.commercetools.history.models.common.DeliveryItem::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setAddress(Optional.ofNullable(template.getAddress())
-                .map(com.commercetools.history.models.common.Address::deepCopy)
-                .orElse(null));
+        instance.setAddress(com.commercetools.history.models.common.Address.deepCopy(template.getAddress()));
         instance.setParcels(Optional.ofNullable(template.getParcels())
                 .map(t -> t.stream()
                         .map(com.commercetools.history.models.common.Parcel::deepCopy)

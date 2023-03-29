@@ -235,24 +235,15 @@ public interface LineItem {
         }
         LineItemImpl instance = new LineItemImpl();
         instance.setAddedAt(template.getAddedAt());
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.history.models.common.CustomFields::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.history.models.common.CustomFields.deepCopy(template.getCustom()));
         instance.setId(template.getId());
-        instance.setName(Optional.ofNullable(template.getName())
-                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setName(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getName()));
         instance.setProductId(template.getProductId());
-        instance.setProductSlug(Optional.ofNullable(template.getProductSlug())
-                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setProductType(Optional.ofNullable(template.getProductType())
-                .map(com.commercetools.history.models.common.Reference::deepCopy)
-                .orElse(null));
+        instance.setProductSlug(
+            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getProductSlug()));
+        instance.setProductType(com.commercetools.history.models.common.Reference.deepCopy(template.getProductType()));
         instance.setQuantity(template.getQuantity());
-        instance.setVariant(Optional.ofNullable(template.getVariant())
-                .map(com.commercetools.history.models.common.Variant::deepCopy)
-                .orElse(null));
+        instance.setVariant(com.commercetools.history.models.common.Variant.deepCopy(template.getVariant()));
         instance.setVariantId(template.getVariantId());
         return instance;
     }

@@ -105,9 +105,7 @@ public interface DiscountedLineItemPrice {
             return null;
         }
         DiscountedLineItemPriceImpl instance = new DiscountedLineItemPriceImpl();
-        instance.setValue(Optional.ofNullable(template.getValue())
-                .map(com.commercetools.api.models.common.TypedMoney::deepCopy)
-                .orElse(null));
+        instance.setValue(com.commercetools.api.models.common.TypedMoney.deepCopy(template.getValue()));
         instance.setIncludedDiscounts(Optional.ofNullable(template.getIncludedDiscounts())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.cart.DiscountedLineItemPortion::deepCopy)

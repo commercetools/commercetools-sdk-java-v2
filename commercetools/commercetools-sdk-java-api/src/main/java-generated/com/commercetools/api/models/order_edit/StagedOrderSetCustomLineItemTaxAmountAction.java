@@ -112,9 +112,8 @@ public interface StagedOrderSetCustomLineItemTaxAmountAction extends StagedOrder
         }
         StagedOrderSetCustomLineItemTaxAmountActionImpl instance = new StagedOrderSetCustomLineItemTaxAmountActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
-        instance.setExternalTaxAmount(Optional.ofNullable(template.getExternalTaxAmount())
-                .map(com.commercetools.api.models.cart.ExternalTaxAmountDraft::deepCopy)
-                .orElse(null));
+        instance.setExternalTaxAmount(
+            com.commercetools.api.models.cart.ExternalTaxAmountDraft.deepCopy(template.getExternalTaxAmount()));
         return instance;
     }
 

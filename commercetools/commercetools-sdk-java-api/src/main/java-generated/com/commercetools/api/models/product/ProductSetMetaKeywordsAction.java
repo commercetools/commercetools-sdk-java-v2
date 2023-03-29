@@ -96,9 +96,8 @@ public interface ProductSetMetaKeywordsAction extends ProductUpdateAction {
             return null;
         }
         ProductSetMetaKeywordsActionImpl instance = new ProductSetMetaKeywordsActionImpl();
-        instance.setMetaKeywords(Optional.ofNullable(template.getMetaKeywords())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setMetaKeywords(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaKeywords()));
         instance.setStaged(template.getStaged());
         return instance;
     }

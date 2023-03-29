@@ -149,13 +149,9 @@ public interface MyTransactionDraft extends com.commercetools.api.models.Customi
         MyTransactionDraftImpl instance = new MyTransactionDraftImpl();
         instance.setTimestamp(template.getTimestamp());
         instance.setType(template.getType());
-        instance.setAmount(Optional.ofNullable(template.getAmount())
-                .map(com.commercetools.api.models.common.Money::deepCopy)
-                .orElse(null));
+        instance.setAmount(com.commercetools.api.models.common.Money.deepCopy(template.getAmount()));
         instance.setInteractionId(template.getInteractionId());
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;
     }
 

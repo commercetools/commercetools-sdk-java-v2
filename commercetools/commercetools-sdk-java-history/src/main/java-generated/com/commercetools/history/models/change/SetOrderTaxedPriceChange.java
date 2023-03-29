@@ -146,12 +146,9 @@ public interface SetOrderTaxedPriceChange extends Change {
         SetOrderTaxedPriceChangeImpl instance = new SetOrderTaxedPriceChangeImpl();
         instance.setChange(template.getChange());
         instance.setTaxMode(template.getTaxMode());
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.common.TaxedItemPrice::deepCopy)
-                .orElse(null));
-        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(com.commercetools.history.models.common.TaxedItemPrice::deepCopy)
-                .orElse(null));
+        instance.setNextValue(com.commercetools.history.models.common.TaxedItemPrice.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.TaxedItemPrice.deepCopy(template.getPreviousValue()));
         return instance;
     }
 

@@ -199,18 +199,12 @@ public interface AttributeDefinition {
             return null;
         }
         AttributeDefinitionImpl instance = new AttributeDefinitionImpl();
-        instance.setType(Optional.ofNullable(template.getType())
-                .map(com.commercetools.api.models.product_type.AttributeType::deepCopy)
-                .orElse(null));
+        instance.setType(com.commercetools.api.models.product_type.AttributeType.deepCopy(template.getType()));
         instance.setName(template.getName());
-        instance.setLabel(Optional.ofNullable(template.getLabel())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setLabel(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getLabel()));
         instance.setIsRequired(template.getIsRequired());
         instance.setAttributeConstraint(template.getAttributeConstraint());
-        instance.setInputTip(Optional.ofNullable(template.getInputTip())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setInputTip(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getInputTip()));
         instance.setInputHint(template.getInputHint());
         instance.setIsSearchable(template.getIsSearchable());
         return instance;

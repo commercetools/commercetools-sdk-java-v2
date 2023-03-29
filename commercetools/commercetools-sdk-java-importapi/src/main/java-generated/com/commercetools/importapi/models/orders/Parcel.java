@@ -170,20 +170,16 @@ public interface Parcel {
         ParcelImpl instance = new ParcelImpl();
         instance.setId(template.getId());
         instance.setCreatedAt(template.getCreatedAt());
-        instance.setMeasurements(Optional.ofNullable(template.getMeasurements())
-                .map(com.commercetools.importapi.models.orders.ParcelMeasurements::deepCopy)
-                .orElse(null));
-        instance.setTrackingData(Optional.ofNullable(template.getTrackingData())
-                .map(com.commercetools.importapi.models.orders.TrackingData::deepCopy)
-                .orElse(null));
+        instance.setMeasurements(
+            com.commercetools.importapi.models.orders.ParcelMeasurements.deepCopy(template.getMeasurements()));
+        instance.setTrackingData(
+            com.commercetools.importapi.models.orders.TrackingData.deepCopy(template.getTrackingData()));
         instance.setItems(Optional.ofNullable(template.getItems())
                 .map(t -> t.stream()
                         .map(com.commercetools.importapi.models.orders.DeliveryItem::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.importapi.models.customfields.Custom::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.importapi.models.customfields.Custom.deepCopy(template.getCustom()));
         return instance;
     }
 

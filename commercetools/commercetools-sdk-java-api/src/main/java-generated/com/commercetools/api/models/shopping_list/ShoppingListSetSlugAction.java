@@ -80,9 +80,7 @@ public interface ShoppingListSetSlugAction extends ShoppingListUpdateAction {
             return null;
         }
         ShoppingListSetSlugActionImpl instance = new ShoppingListSetSlugActionImpl();
-        instance.setSlug(Optional.ofNullable(template.getSlug())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setSlug(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getSlug()));
         return instance;
     }
 

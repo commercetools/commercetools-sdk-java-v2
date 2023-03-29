@@ -130,12 +130,8 @@ public interface ProductCatalogData {
         }
         ProductCatalogDataImpl instance = new ProductCatalogDataImpl();
         instance.setPublished(template.getPublished());
-        instance.setCurrent(Optional.ofNullable(template.getCurrent())
-                .map(com.commercetools.api.models.product.ProductData::deepCopy)
-                .orElse(null));
-        instance.setStaged(Optional.ofNullable(template.getStaged())
-                .map(com.commercetools.api.models.product.ProductData::deepCopy)
-                .orElse(null));
+        instance.setCurrent(com.commercetools.api.models.product.ProductData.deepCopy(template.getCurrent()));
+        instance.setStaged(com.commercetools.api.models.product.ProductData.deepCopy(template.getStaged()));
         instance.setHasStagedChanges(template.getHasStagedChanges());
         return instance;
     }

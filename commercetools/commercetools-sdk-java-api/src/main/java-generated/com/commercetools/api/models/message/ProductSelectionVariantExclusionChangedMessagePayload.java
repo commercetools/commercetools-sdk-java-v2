@@ -122,15 +122,11 @@ public interface ProductSelectionVariantExclusionChangedMessagePayload extends M
             return null;
         }
         ProductSelectionVariantExclusionChangedMessagePayloadImpl instance = new ProductSelectionVariantExclusionChangedMessagePayloadImpl();
-        instance.setProduct(Optional.ofNullable(template.getProduct())
-                .map(com.commercetools.api.models.product.ProductReference::deepCopy)
-                .orElse(null));
-        instance.setOldVariantExclusion(Optional.ofNullable(template.getOldVariantExclusion())
-                .map(com.commercetools.api.models.product_selection.ProductVariantExclusion::deepCopy)
-                .orElse(null));
-        instance.setNewVariantExclusion(Optional.ofNullable(template.getNewVariantExclusion())
-                .map(com.commercetools.api.models.product_selection.ProductVariantExclusion::deepCopy)
-                .orElse(null));
+        instance.setProduct(com.commercetools.api.models.product.ProductReference.deepCopy(template.getProduct()));
+        instance.setOldVariantExclusion(com.commercetools.api.models.product_selection.ProductVariantExclusion
+                .deepCopy(template.getOldVariantExclusion()));
+        instance.setNewVariantExclusion(com.commercetools.api.models.product_selection.ProductVariantExclusion
+                .deepCopy(template.getNewVariantExclusion()));
         return instance;
     }
 

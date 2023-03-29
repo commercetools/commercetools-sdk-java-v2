@@ -98,12 +98,10 @@ public interface BusinessUnitParentUnitChangedMessagePayload extends MessagePayl
             return null;
         }
         BusinessUnitParentUnitChangedMessagePayloadImpl instance = new BusinessUnitParentUnitChangedMessagePayloadImpl();
-        instance.setOldParentUnit(Optional.ofNullable(template.getOldParentUnit())
-                .map(com.commercetools.api.models.business_unit.BusinessUnitKeyReference::deepCopy)
-                .orElse(null));
-        instance.setNewParentUnit(Optional.ofNullable(template.getNewParentUnit())
-                .map(com.commercetools.api.models.business_unit.BusinessUnitKeyReference::deepCopy)
-                .orElse(null));
+        instance.setOldParentUnit(
+            com.commercetools.api.models.business_unit.BusinessUnitKeyReference.deepCopy(template.getOldParentUnit()));
+        instance.setNewParentUnit(
+            com.commercetools.api.models.business_unit.BusinessUnitKeyReference.deepCopy(template.getNewParentUnit()));
         return instance;
     }
 

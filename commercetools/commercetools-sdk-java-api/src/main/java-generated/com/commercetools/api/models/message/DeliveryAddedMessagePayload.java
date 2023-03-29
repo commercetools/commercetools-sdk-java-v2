@@ -99,9 +99,7 @@ public interface DeliveryAddedMessagePayload extends OrderMessagePayload {
             return null;
         }
         DeliveryAddedMessagePayloadImpl instance = new DeliveryAddedMessagePayloadImpl();
-        instance.setDelivery(Optional.ofNullable(template.getDelivery())
-                .map(com.commercetools.api.models.order.Delivery::deepCopy)
-                .orElse(null));
+        instance.setDelivery(com.commercetools.api.models.order.Delivery.deepCopy(template.getDelivery()));
         instance.setShippingKey(template.getShippingKey());
         return instance;
     }

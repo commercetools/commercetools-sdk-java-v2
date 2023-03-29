@@ -177,9 +177,7 @@ public interface SetAssetCustomFieldChange extends Change {
         instance.setChange(template.getChange());
         instance.setName(template.getName());
         instance.setCustomTypeId(template.getCustomTypeId());
-        instance.setAsset(Optional.ofNullable(template.getAsset())
-                .map(com.commercetools.history.models.change_value.AssetChangeValue::deepCopy)
-                .orElse(null));
+        instance.setAsset(com.commercetools.history.models.change_value.AssetChangeValue.deepCopy(template.getAsset()));
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
         return instance;

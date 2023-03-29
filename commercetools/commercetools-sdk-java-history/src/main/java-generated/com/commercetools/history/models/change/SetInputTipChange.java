@@ -145,12 +145,10 @@ public interface SetInputTipChange extends Change {
         SetInputTipChangeImpl instance = new SetInputTipChangeImpl();
         instance.setChange(template.getChange());
         instance.setAttributeName(template.getAttributeName());
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setNextValue(
+            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getPreviousValue()));
         return instance;
     }
 

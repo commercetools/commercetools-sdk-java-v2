@@ -253,9 +253,7 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
         }
         StoreDraftImpl instance = new StoreDraftImpl();
         instance.setKey(template.getKey());
-        instance.setName(Optional.ofNullable(template.getName())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
         instance.setLanguages(Optional.ofNullable(template.getLanguages()).map(ArrayList::new).orElse(null));
         instance.setCountries(Optional.ofNullable(template.getCountries())
                 .map(t -> t.stream()
@@ -277,9 +275,7 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
                         .map(com.commercetools.api.models.store.ProductSelectionSettingDraft::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;
     }
 

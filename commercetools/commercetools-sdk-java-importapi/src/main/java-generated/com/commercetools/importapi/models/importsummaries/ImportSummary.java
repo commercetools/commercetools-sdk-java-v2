@@ -94,9 +94,8 @@ public interface ImportSummary {
             return null;
         }
         ImportSummaryImpl instance = new ImportSummaryImpl();
-        instance.setStates(Optional.ofNullable(template.getStates())
-                .map(com.commercetools.importapi.models.importsummaries.OperationStates::deepCopy)
-                .orElse(null));
+        instance.setStates(
+            com.commercetools.importapi.models.importsummaries.OperationStates.deepCopy(template.getStates()));
         instance.setTotal(template.getTotal());
         return instance;
     }

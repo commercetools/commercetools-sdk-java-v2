@@ -82,9 +82,8 @@ public interface ShippingMethodSetLocalizedDescriptionAction extends ShippingMet
             return null;
         }
         ShippingMethodSetLocalizedDescriptionActionImpl instance = new ShippingMethodSetLocalizedDescriptionActionImpl();
-        instance.setLocalizedDescription(Optional.ofNullable(template.getLocalizedDescription())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setLocalizedDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getLocalizedDescription()));
         return instance;
     }
 

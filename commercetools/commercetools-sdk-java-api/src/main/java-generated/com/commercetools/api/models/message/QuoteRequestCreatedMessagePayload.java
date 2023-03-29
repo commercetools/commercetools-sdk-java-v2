@@ -84,9 +84,8 @@ public interface QuoteRequestCreatedMessagePayload extends MessagePayload {
             return null;
         }
         QuoteRequestCreatedMessagePayloadImpl instance = new QuoteRequestCreatedMessagePayloadImpl();
-        instance.setQuoteRequest(Optional.ofNullable(template.getQuoteRequest())
-                .map(com.commercetools.api.models.quote_request.QuoteRequest::deepCopy)
-                .orElse(null));
+        instance.setQuoteRequest(
+            com.commercetools.api.models.quote_request.QuoteRequest.deepCopy(template.getQuoteRequest()));
         return instance;
     }
 

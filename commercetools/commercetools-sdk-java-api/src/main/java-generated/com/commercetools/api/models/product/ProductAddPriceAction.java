@@ -133,9 +133,7 @@ public interface ProductAddPriceAction extends ProductUpdateAction {
         ProductAddPriceActionImpl instance = new ProductAddPriceActionImpl();
         instance.setVariantId(template.getVariantId());
         instance.setSku(template.getSku());
-        instance.setPrice(Optional.ofNullable(template.getPrice())
-                .map(com.commercetools.api.models.common.PriceDraft::deepCopy)
-                .orElse(null));
+        instance.setPrice(com.commercetools.api.models.common.PriceDraft.deepCopy(template.getPrice()));
         instance.setStaged(template.getStaged());
         return instance;
     }

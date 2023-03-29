@@ -84,9 +84,8 @@ public interface MyBusinessUnitRemoveAssociateAction extends MyBusinessUnitUpdat
             return null;
         }
         MyBusinessUnitRemoveAssociateActionImpl instance = new MyBusinessUnitRemoveAssociateActionImpl();
-        instance.setCustomer(Optional.ofNullable(template.getCustomer())
-                .map(com.commercetools.api.models.customer.CustomerResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setCustomer(
+            com.commercetools.api.models.customer.CustomerResourceIdentifier.deepCopy(template.getCustomer()));
         return instance;
     }
 

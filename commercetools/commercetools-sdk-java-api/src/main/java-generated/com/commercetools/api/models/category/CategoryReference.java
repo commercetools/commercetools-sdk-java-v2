@@ -99,9 +99,7 @@ public interface CategoryReference extends Reference, com.commercetools.api.mode
         }
         CategoryReferenceImpl instance = new CategoryReferenceImpl();
         instance.setId(template.getId());
-        instance.setObj(Optional.ofNullable(template.getObj())
-                .map(com.commercetools.api.models.category.Category::deepCopy)
-                .orElse(null));
+        instance.setObj(com.commercetools.api.models.category.Category.deepCopy(template.getObj()));
         return instance;
     }
 

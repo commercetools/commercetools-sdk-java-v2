@@ -356,12 +356,9 @@ public interface MyCartDraft extends com.commercetools.api.models.CustomizableDr
         MyCartDraftImpl instance = new MyCartDraftImpl();
         instance.setCurrency(template.getCurrency());
         instance.setCustomerEmail(template.getCustomerEmail());
-        instance.setBusinessUnit(Optional.ofNullable(template.getBusinessUnit())
-                .map(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier::deepCopy)
-                .orElse(null));
-        instance.setStore(Optional.ofNullable(template.getStore())
-                .map(com.commercetools.api.models.store.StoreResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setBusinessUnit(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier
+                .deepCopy(template.getBusinessUnit()));
+        instance.setStore(com.commercetools.api.models.store.StoreResourceIdentifier.deepCopy(template.getStore()));
         instance.setLineItems(Optional.ofNullable(template.getLineItems())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.me.MyLineItemDraft::deepCopy)
@@ -369,15 +366,12 @@ public interface MyCartDraft extends com.commercetools.api.models.CustomizableDr
                 .orElse(null));
         instance.setTaxMode(template.getTaxMode());
         instance.setInventoryMode(template.getInventoryMode());
-        instance.setBillingAddress(Optional.ofNullable(template.getBillingAddress())
-                .map(com.commercetools.api.models.common.BaseAddress::deepCopy)
-                .orElse(null));
-        instance.setShippingAddress(Optional.ofNullable(template.getShippingAddress())
-                .map(com.commercetools.api.models.common.BaseAddress::deepCopy)
-                .orElse(null));
-        instance.setShippingMethod(Optional.ofNullable(template.getShippingMethod())
-                .map(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setBillingAddress(
+            com.commercetools.api.models.common.BaseAddress.deepCopy(template.getBillingAddress()));
+        instance.setShippingAddress(
+            com.commercetools.api.models.common.BaseAddress.deepCopy(template.getShippingAddress()));
+        instance.setShippingMethod(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier
+                .deepCopy(template.getShippingMethod()));
         instance.setItemShippingAddresses(Optional.ofNullable(template.getItemShippingAddresses())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.common.BaseAddress::deepCopy)
@@ -387,9 +381,7 @@ public interface MyCartDraft extends com.commercetools.api.models.CustomizableDr
         instance.setCountry(template.getCountry());
         instance.setLocale(template.getLocale());
         instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;
     }
 

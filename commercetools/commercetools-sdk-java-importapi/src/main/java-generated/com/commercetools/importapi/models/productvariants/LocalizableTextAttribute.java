@@ -95,9 +95,7 @@ public interface LocalizableTextAttribute extends Attribute {
         }
         LocalizableTextAttributeImpl instance = new LocalizableTextAttributeImpl();
         instance.setName(template.getName());
-        instance.setValue(Optional.ofNullable(template.getValue())
-                .map(com.commercetools.importapi.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setValue(com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getValue()));
         return instance;
     }
 

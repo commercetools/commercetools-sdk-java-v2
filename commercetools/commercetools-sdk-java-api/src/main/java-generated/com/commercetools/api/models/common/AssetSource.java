@@ -126,9 +126,7 @@ public interface AssetSource extends com.commercetools.api.models.WithKey {
         AssetSourceImpl instance = new AssetSourceImpl();
         instance.setUri(template.getUri());
         instance.setKey(template.getKey());
-        instance.setDimensions(Optional.ofNullable(template.getDimensions())
-                .map(com.commercetools.api.models.common.AssetDimensions::deepCopy)
-                .orElse(null));
+        instance.setDimensions(com.commercetools.api.models.common.AssetDimensions.deepCopy(template.getDimensions()));
         instance.setContentType(template.getContentType());
         return instance;
     }

@@ -145,12 +145,9 @@ public interface SetSearchKeywordsChange extends Change {
         SetSearchKeywordsChangeImpl instance = new SetSearchKeywordsChangeImpl();
         instance.setChange(template.getChange());
         instance.setCatalogData(template.getCatalogData());
-        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(com.commercetools.history.models.common.SearchKeywords::deepCopy)
-                .orElse(null));
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.common.SearchKeywords::deepCopy)
-                .orElse(null));
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.SearchKeywords.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.SearchKeywords.deepCopy(template.getNextValue()));
         return instance;
     }
 

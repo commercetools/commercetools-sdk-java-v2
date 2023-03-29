@@ -163,16 +163,11 @@ public interface SetCustomLineItemMoneyChange extends Change {
         }
         SetCustomLineItemMoneyChangeImpl instance = new SetCustomLineItemMoneyChangeImpl();
         instance.setChange(template.getChange());
-        instance.setCustomLineItem(Optional.ofNullable(template.getCustomLineItem())
-                .map(com.commercetools.history.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setCustomLineItem(
+            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getCustomLineItem()));
         instance.setCustomLineItemId(template.getCustomLineItemId());
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.common.Money::deepCopy)
-                .orElse(null));
-        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(com.commercetools.history.models.common.Money::deepCopy)
-                .orElse(null));
+        instance.setNextValue(com.commercetools.history.models.common.Money.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(com.commercetools.history.models.common.Money.deepCopy(template.getPreviousValue()));
         return instance;
     }
 

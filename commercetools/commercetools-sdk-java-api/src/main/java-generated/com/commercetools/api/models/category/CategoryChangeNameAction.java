@@ -83,9 +83,7 @@ public interface CategoryChangeNameAction extends CategoryUpdateAction {
             return null;
         }
         CategoryChangeNameActionImpl instance = new CategoryChangeNameActionImpl();
-        instance.setName(Optional.ofNullable(template.getName())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
         return instance;
     }
 

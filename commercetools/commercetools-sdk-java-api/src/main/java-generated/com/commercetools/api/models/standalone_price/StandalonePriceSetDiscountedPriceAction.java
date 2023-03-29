@@ -81,9 +81,8 @@ public interface StandalonePriceSetDiscountedPriceAction extends StandalonePrice
             return null;
         }
         StandalonePriceSetDiscountedPriceActionImpl instance = new StandalonePriceSetDiscountedPriceActionImpl();
-        instance.setDiscounted(Optional.ofNullable(template.getDiscounted())
-                .map(com.commercetools.api.models.common.DiscountedPriceDraft::deepCopy)
-                .orElse(null));
+        instance.setDiscounted(
+            com.commercetools.api.models.common.DiscountedPriceDraft.deepCopy(template.getDiscounted()));
         return instance;
     }
 

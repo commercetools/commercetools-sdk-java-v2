@@ -100,9 +100,7 @@ public interface TypeAddEnumValueAction extends TypeUpdateAction {
         }
         TypeAddEnumValueActionImpl instance = new TypeAddEnumValueActionImpl();
         instance.setFieldName(template.getFieldName());
-        instance.setValue(Optional.ofNullable(template.getValue())
-                .map(com.commercetools.api.models.type.CustomFieldEnumValue::deepCopy)
-                .orElse(null));
+        instance.setValue(com.commercetools.api.models.type.CustomFieldEnumValue.deepCopy(template.getValue()));
         return instance;
     }
 

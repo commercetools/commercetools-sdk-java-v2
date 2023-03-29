@@ -104,12 +104,9 @@ public interface ProductSelectionProductAddedMessagePayload extends MessagePaylo
             return null;
         }
         ProductSelectionProductAddedMessagePayloadImpl instance = new ProductSelectionProductAddedMessagePayloadImpl();
-        instance.setProduct(Optional.ofNullable(template.getProduct())
-                .map(com.commercetools.api.models.product.ProductReference::deepCopy)
-                .orElse(null));
-        instance.setVariantSelection(Optional.ofNullable(template.getVariantSelection())
-                .map(com.commercetools.api.models.product_selection.ProductVariantSelection::deepCopy)
-                .orElse(null));
+        instance.setProduct(com.commercetools.api.models.product.ProductReference.deepCopy(template.getProduct()));
+        instance.setVariantSelection(com.commercetools.api.models.product_selection.ProductVariantSelection
+                .deepCopy(template.getVariantSelection()));
         return instance;
     }
 

@@ -95,12 +95,8 @@ public interface CustomFields extends CustomFieldsMixin {
             return null;
         }
         CustomFieldsImpl instance = new CustomFieldsImpl();
-        instance.setType(Optional.ofNullable(template.getType())
-                .map(com.commercetools.api.models.type.TypeReference::deepCopy)
-                .orElse(null));
-        instance.setFields(Optional.ofNullable(template.getFields())
-                .map(com.commercetools.api.models.type.FieldContainer::deepCopy)
-                .orElse(null));
+        instance.setType(com.commercetools.api.models.type.TypeReference.deepCopy(template.getType()));
+        instance.setFields(com.commercetools.api.models.type.FieldContainer.deepCopy(template.getFields()));
         return instance;
     }
 

@@ -83,9 +83,8 @@ public interface ProductTypeAddAttributeDefinitionAction extends ProductTypeUpda
             return null;
         }
         ProductTypeAddAttributeDefinitionActionImpl instance = new ProductTypeAddAttributeDefinitionActionImpl();
-        instance.setAttribute(Optional.ofNullable(template.getAttribute())
-                .map(com.commercetools.api.models.product_type.AttributeDefinitionDraft::deepCopy)
-                .orElse(null));
+        instance.setAttribute(
+            com.commercetools.api.models.product_type.AttributeDefinitionDraft.deepCopy(template.getAttribute()));
         return instance;
     }
 

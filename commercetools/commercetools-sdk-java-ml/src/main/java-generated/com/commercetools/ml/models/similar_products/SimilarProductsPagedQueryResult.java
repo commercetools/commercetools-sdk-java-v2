@@ -163,9 +163,8 @@ public interface SimilarProductsPagedQueryResult {
                         .map(com.commercetools.ml.models.similar_products.SimilarProductPair::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setMeta(Optional.ofNullable(template.getMeta())
-                .map(com.commercetools.ml.models.similar_products.SimilarProductSearchRequestMeta::deepCopy)
-                .orElse(null));
+        instance.setMeta(
+            com.commercetools.ml.models.similar_products.SimilarProductSearchRequestMeta.deepCopy(template.getMeta()));
         return instance;
     }
 

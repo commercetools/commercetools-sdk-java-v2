@@ -94,9 +94,8 @@ public interface ProductSelectionSettingDraft extends io.vrap.rmf.base.client.Dr
             return null;
         }
         ProductSelectionSettingDraftImpl instance = new ProductSelectionSettingDraftImpl();
-        instance.setProductSelection(Optional.ofNullable(template.getProductSelection())
-                .map(com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setProductSelection(com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier
+                .deepCopy(template.getProductSelection()));
         instance.setActive(template.getActive());
         return instance;
     }

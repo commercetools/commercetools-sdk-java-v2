@@ -86,9 +86,8 @@ public interface DuplicateAttributeValueError extends ErrorObject {
         }
         DuplicateAttributeValueErrorImpl instance = new DuplicateAttributeValueErrorImpl();
         instance.setMessage(template.getMessage());
-        instance.setAttribute(Optional.ofNullable(template.getAttribute())
-                .map(com.commercetools.importapi.models.productvariants.Attribute::deepCopy)
-                .orElse(null));
+        instance.setAttribute(
+            com.commercetools.importapi.models.productvariants.Attribute.deepCopy(template.getAttribute()));
         return instance;
     }
 

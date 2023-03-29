@@ -112,9 +112,8 @@ public interface DuplicatePriceKeyError extends ErrorObject {
         DuplicatePriceKeyErrorImpl instance = new DuplicatePriceKeyErrorImpl();
         instance.setMessage(template.getMessage());
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
-        instance.setConflictingPrice(Optional.ofNullable(template.getConflictingPrice())
-                .map(com.commercetools.api.models.common.Price::deepCopy)
-                .orElse(null));
+        instance.setConflictingPrice(
+            com.commercetools.api.models.common.Price.deepCopy(template.getConflictingPrice()));
         return instance;
     }
 

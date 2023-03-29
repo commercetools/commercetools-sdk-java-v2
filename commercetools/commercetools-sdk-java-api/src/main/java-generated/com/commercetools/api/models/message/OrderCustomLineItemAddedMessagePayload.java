@@ -84,9 +84,8 @@ public interface OrderCustomLineItemAddedMessagePayload extends OrderMessagePayl
             return null;
         }
         OrderCustomLineItemAddedMessagePayloadImpl instance = new OrderCustomLineItemAddedMessagePayloadImpl();
-        instance.setCustomLineItem(Optional.ofNullable(template.getCustomLineItem())
-                .map(com.commercetools.api.models.cart.CustomLineItem::deepCopy)
-                .orElse(null));
+        instance.setCustomLineItem(
+            com.commercetools.api.models.cart.CustomLineItem.deepCopy(template.getCustomLineItem()));
         return instance;
     }
 

@@ -96,9 +96,8 @@ public interface DiscountedLineItemPriceForQuantity {
         }
         DiscountedLineItemPriceForQuantityImpl instance = new DiscountedLineItemPriceForQuantityImpl();
         instance.setQuantity(template.getQuantity());
-        instance.setDiscountedPrice(Optional.ofNullable(template.getDiscountedPrice())
-                .map(com.commercetools.history.models.common.DiscountedLineItemPrice::deepCopy)
-                .orElse(null));
+        instance.setDiscountedPrice(
+            com.commercetools.history.models.common.DiscountedLineItemPrice.deepCopy(template.getDiscountedPrice()));
         return instance;
     }
 

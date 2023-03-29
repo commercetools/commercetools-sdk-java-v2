@@ -256,37 +256,26 @@ public interface CategoryImport extends ImportResource {
         }
         CategoryImportImpl instance = new CategoryImportImpl();
         instance.setKey(template.getKey());
-        instance.setName(Optional.ofNullable(template.getName())
-                .map(com.commercetools.importapi.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setSlug(Optional.ofNullable(template.getSlug())
-                .map(com.commercetools.importapi.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setDescription(Optional.ofNullable(template.getDescription())
-                .map(com.commercetools.importapi.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setParent(Optional.ofNullable(template.getParent())
-                .map(com.commercetools.importapi.models.common.CategoryKeyReference::deepCopy)
-                .orElse(null));
+        instance.setName(com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setSlug(com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getSlug()));
+        instance.setDescription(
+            com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setParent(
+            com.commercetools.importapi.models.common.CategoryKeyReference.deepCopy(template.getParent()));
         instance.setOrderHint(template.getOrderHint());
         instance.setExternalId(template.getExternalId());
-        instance.setMetaTitle(Optional.ofNullable(template.getMetaTitle())
-                .map(com.commercetools.importapi.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setMetaDescription(Optional.ofNullable(template.getMetaDescription())
-                .map(com.commercetools.importapi.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setMetaKeywords(Optional.ofNullable(template.getMetaKeywords())
-                .map(com.commercetools.importapi.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setMetaTitle(
+            com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getMetaTitle()));
+        instance.setMetaDescription(
+            com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getMetaDescription()));
+        instance.setMetaKeywords(
+            com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getMetaKeywords()));
         instance.setAssets(Optional.ofNullable(template.getAssets())
                 .map(t -> t.stream()
                         .map(com.commercetools.importapi.models.common.Asset::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.importapi.models.customfields.Custom::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.importapi.models.customfields.Custom.deepCopy(template.getCustom()));
         return instance;
     }
 

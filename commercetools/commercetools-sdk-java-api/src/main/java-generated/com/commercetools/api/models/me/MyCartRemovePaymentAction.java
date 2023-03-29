@@ -83,9 +83,8 @@ public interface MyCartRemovePaymentAction extends MyCartUpdateAction {
             return null;
         }
         MyCartRemovePaymentActionImpl instance = new MyCartRemovePaymentActionImpl();
-        instance.setPayment(Optional.ofNullable(template.getPayment())
-                .map(com.commercetools.api.models.payment.PaymentResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setPayment(
+            com.commercetools.api.models.payment.PaymentResourceIdentifier.deepCopy(template.getPayment()));
         return instance;
     }
 

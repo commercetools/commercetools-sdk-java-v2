@@ -127,9 +127,8 @@ public interface StagedOrderSetLineItemTaxAmountAction extends StagedOrderUpdate
         }
         StagedOrderSetLineItemTaxAmountActionImpl instance = new StagedOrderSetLineItemTaxAmountActionImpl();
         instance.setLineItemId(template.getLineItemId());
-        instance.setExternalTaxAmount(Optional.ofNullable(template.getExternalTaxAmount())
-                .map(com.commercetools.api.models.cart.ExternalTaxAmountDraft::deepCopy)
-                .orElse(null));
+        instance.setExternalTaxAmount(
+            com.commercetools.api.models.cart.ExternalTaxAmountDraft.deepCopy(template.getExternalTaxAmount()));
         instance.setShippingKey(template.getShippingKey());
         return instance;
     }

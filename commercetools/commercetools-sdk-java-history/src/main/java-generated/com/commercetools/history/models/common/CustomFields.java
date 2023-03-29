@@ -95,9 +95,7 @@ public interface CustomFields {
             return null;
         }
         CustomFieldsImpl instance = new CustomFieldsImpl();
-        instance.setType(Optional.ofNullable(template.getType())
-                .map(com.commercetools.history.models.common.Reference::deepCopy)
-                .orElse(null));
+        instance.setType(com.commercetools.history.models.common.Reference.deepCopy(template.getType()));
         instance.setFields(template.getFields());
         return instance;
     }

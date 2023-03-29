@@ -100,9 +100,7 @@ public interface QuoteRequestTransitionStateAction extends QuoteRequestUpdateAct
             return null;
         }
         QuoteRequestTransitionStateActionImpl instance = new QuoteRequestTransitionStateActionImpl();
-        instance.setState(Optional.ofNullable(template.getState())
-                .map(com.commercetools.api.models.state.StateResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setState(com.commercetools.api.models.state.StateResourceIdentifier.deepCopy(template.getState()));
         instance.setForce(template.getForce());
         return instance;
     }

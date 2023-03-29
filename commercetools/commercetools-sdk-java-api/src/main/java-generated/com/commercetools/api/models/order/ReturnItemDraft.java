@@ -164,9 +164,7 @@ public interface ReturnItemDraft extends com.commercetools.api.models.Customizab
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setComment(template.getComment());
         instance.setShipmentState(template.getShipmentState());
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;
     }
 

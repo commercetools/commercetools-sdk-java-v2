@@ -109,9 +109,7 @@ public interface PaymentLabel extends Label {
         }
         PaymentLabelImpl instance = new PaymentLabelImpl();
         instance.setKey(template.getKey());
-        instance.setAmountPlanned(Optional.ofNullable(template.getAmountPlanned())
-                .map(com.commercetools.history.models.common.Money::deepCopy)
-                .orElse(null));
+        instance.setAmountPlanned(com.commercetools.history.models.common.Money.deepCopy(template.getAmountPlanned()));
         return instance;
     }
 

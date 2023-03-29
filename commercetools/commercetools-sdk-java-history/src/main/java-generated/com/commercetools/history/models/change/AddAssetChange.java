@@ -127,12 +127,8 @@ public interface AddAssetChange extends Change {
         }
         AddAssetChangeImpl instance = new AddAssetChangeImpl();
         instance.setChange(template.getChange());
-        instance.setNextValue(Optional.ofNullable(template.getNextValue())
-                .map(com.commercetools.history.models.common.Asset::deepCopy)
-                .orElse(null));
-        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(com.commercetools.history.models.common.Asset::deepCopy)
-                .orElse(null));
+        instance.setNextValue(com.commercetools.history.models.common.Asset.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(com.commercetools.history.models.common.Asset.deepCopy(template.getPreviousValue()));
         return instance;
     }
 

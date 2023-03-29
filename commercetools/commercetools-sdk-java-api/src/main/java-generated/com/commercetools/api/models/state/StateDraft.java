@@ -208,12 +208,9 @@ public interface StateDraft extends com.commercetools.api.models.WithKey, io.vra
         StateDraftImpl instance = new StateDraftImpl();
         instance.setKey(template.getKey());
         instance.setType(template.getType());
-        instance.setName(Optional.ofNullable(template.getName())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
-        instance.setDescription(Optional.ofNullable(template.getDescription())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
         instance.setInitial(template.getInitial());
         instance.setRoles(Optional.ofNullable(template.getRoles()).map(ArrayList::new).orElse(null));
         instance.setTransitions(Optional.ofNullable(template.getTransitions())

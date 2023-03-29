@@ -95,9 +95,8 @@ public interface SearchKeyword {
         }
         SearchKeywordImpl instance = new SearchKeywordImpl();
         instance.setText(template.getText());
-        instance.setSuggestTokenizer(Optional.ofNullable(template.getSuggestTokenizer())
-                .map(com.commercetools.history.models.common.SuggestTokenizer::deepCopy)
-                .orElse(null));
+        instance.setSuggestTokenizer(
+            com.commercetools.history.models.common.SuggestTokenizer.deepCopy(template.getSuggestTokenizer()));
         return instance;
     }
 

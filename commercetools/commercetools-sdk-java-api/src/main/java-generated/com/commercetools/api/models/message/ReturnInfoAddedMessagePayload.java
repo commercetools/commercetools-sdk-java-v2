@@ -83,9 +83,7 @@ public interface ReturnInfoAddedMessagePayload extends OrderMessagePayload {
             return null;
         }
         ReturnInfoAddedMessagePayloadImpl instance = new ReturnInfoAddedMessagePayloadImpl();
-        instance.setReturnInfo(Optional.ofNullable(template.getReturnInfo())
-                .map(com.commercetools.api.models.order.ReturnInfo::deepCopy)
-                .orElse(null));
+        instance.setReturnInfo(com.commercetools.api.models.order.ReturnInfo.deepCopy(template.getReturnInfo()));
         return instance;
     }
 

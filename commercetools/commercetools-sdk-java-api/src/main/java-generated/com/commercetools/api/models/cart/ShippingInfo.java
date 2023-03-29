@@ -243,32 +243,22 @@ public interface ShippingInfo {
         }
         ShippingInfoImpl instance = new ShippingInfoImpl();
         instance.setShippingMethodName(template.getShippingMethodName());
-        instance.setPrice(Optional.ofNullable(template.getPrice())
-                .map(com.commercetools.api.models.common.CentPrecisionMoney::deepCopy)
-                .orElse(null));
-        instance.setShippingRate(Optional.ofNullable(template.getShippingRate())
-                .map(com.commercetools.api.models.shipping_method.ShippingRate::deepCopy)
-                .orElse(null));
-        instance.setTaxedPrice(Optional.ofNullable(template.getTaxedPrice())
-                .map(com.commercetools.api.models.cart.TaxedItemPrice::deepCopy)
-                .orElse(null));
-        instance.setTaxRate(Optional.ofNullable(template.getTaxRate())
-                .map(com.commercetools.api.models.tax_category.TaxRate::deepCopy)
-                .orElse(null));
-        instance.setTaxCategory(Optional.ofNullable(template.getTaxCategory())
-                .map(com.commercetools.api.models.tax_category.TaxCategoryReference::deepCopy)
-                .orElse(null));
-        instance.setShippingMethod(Optional.ofNullable(template.getShippingMethod())
-                .map(com.commercetools.api.models.shipping_method.ShippingMethodReference::deepCopy)
-                .orElse(null));
+        instance.setPrice(com.commercetools.api.models.common.CentPrecisionMoney.deepCopy(template.getPrice()));
+        instance.setShippingRate(
+            com.commercetools.api.models.shipping_method.ShippingRate.deepCopy(template.getShippingRate()));
+        instance.setTaxedPrice(com.commercetools.api.models.cart.TaxedItemPrice.deepCopy(template.getTaxedPrice()));
+        instance.setTaxRate(com.commercetools.api.models.tax_category.TaxRate.deepCopy(template.getTaxRate()));
+        instance.setTaxCategory(
+            com.commercetools.api.models.tax_category.TaxCategoryReference.deepCopy(template.getTaxCategory()));
+        instance.setShippingMethod(com.commercetools.api.models.shipping_method.ShippingMethodReference
+                .deepCopy(template.getShippingMethod()));
         instance.setDeliveries(Optional.ofNullable(template.getDeliveries())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.order.Delivery::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setDiscountedPrice(Optional.ofNullable(template.getDiscountedPrice())
-                .map(com.commercetools.api.models.cart.DiscountedLineItemPrice::deepCopy)
-                .orElse(null));
+        instance.setDiscountedPrice(
+            com.commercetools.api.models.cart.DiscountedLineItemPrice.deepCopy(template.getDiscountedPrice()));
         instance.setShippingMethodState(template.getShippingMethodState());
         return instance;
     }

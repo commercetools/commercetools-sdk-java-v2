@@ -80,9 +80,8 @@ public interface CartDiscountSetDescriptionAction extends CartDiscountUpdateActi
             return null;
         }
         CartDiscountSetDescriptionActionImpl instance = new CartDiscountSetDescriptionActionImpl();
-        instance.setDescription(Optional.ofNullable(template.getDescription())
-                .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
-                .orElse(null));
+        instance.setDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
         return instance;
     }
 

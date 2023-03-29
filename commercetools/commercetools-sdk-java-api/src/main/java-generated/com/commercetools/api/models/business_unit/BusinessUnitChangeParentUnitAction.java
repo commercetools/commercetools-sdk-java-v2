@@ -83,9 +83,8 @@ public interface BusinessUnitChangeParentUnitAction extends BusinessUnitUpdateAc
             return null;
         }
         BusinessUnitChangeParentUnitActionImpl instance = new BusinessUnitChangeParentUnitActionImpl();
-        instance.setParentUnit(Optional.ofNullable(template.getParentUnit())
-                .map(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setParentUnit(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier
+                .deepCopy(template.getParentUnit()));
         return instance;
     }
 

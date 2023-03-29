@@ -182,14 +182,10 @@ public interface Transaction extends com.commercetools.api.models.Customizable<T
         instance.setId(template.getId());
         instance.setTimestamp(template.getTimestamp());
         instance.setType(template.getType());
-        instance.setAmount(Optional.ofNullable(template.getAmount())
-                .map(com.commercetools.api.models.common.CentPrecisionMoney::deepCopy)
-                .orElse(null));
+        instance.setAmount(com.commercetools.api.models.common.CentPrecisionMoney.deepCopy(template.getAmount()));
         instance.setInteractionId(template.getInteractionId());
         instance.setState(template.getState());
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFields::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         return instance;
     }
 

@@ -101,9 +101,7 @@ public interface ProductAddedToCategoryMessagePayload extends MessagePayload {
             return null;
         }
         ProductAddedToCategoryMessagePayloadImpl instance = new ProductAddedToCategoryMessagePayloadImpl();
-        instance.setCategory(Optional.ofNullable(template.getCategory())
-                .map(com.commercetools.api.models.category.CategoryReference::deepCopy)
-                .orElse(null));
+        instance.setCategory(com.commercetools.api.models.category.CategoryReference.deepCopy(template.getCategory()));
         instance.setStaged(template.getStaged());
         return instance;
     }

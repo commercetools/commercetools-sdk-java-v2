@@ -284,27 +284,18 @@ public interface OrderEdit extends BaseResource, OrderEditMixin, com.commercetoo
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
-        instance.setLastModifiedBy(Optional.ofNullable(template.getLastModifiedBy())
-                .map(com.commercetools.api.models.common.LastModifiedBy::deepCopy)
-                .orElse(null));
-        instance.setCreatedBy(Optional.ofNullable(template.getCreatedBy())
-                .map(com.commercetools.api.models.common.CreatedBy::deepCopy)
-                .orElse(null));
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
         instance.setKey(template.getKey());
-        instance.setResource(Optional.ofNullable(template.getResource())
-                .map(com.commercetools.api.models.order.OrderReference::deepCopy)
-                .orElse(null));
+        instance.setResource(com.commercetools.api.models.order.OrderReference.deepCopy(template.getResource()));
         instance.setStagedActions(Optional.ofNullable(template.getStagedActions())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.order.StagedOrderUpdateAction::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setCustom(Optional.ofNullable(template.getCustom())
-                .map(com.commercetools.api.models.type.CustomFields::deepCopy)
-                .orElse(null));
-        instance.setResult(Optional.ofNullable(template.getResult())
-                .map(com.commercetools.api.models.order_edit.OrderEditResult::deepCopy)
-                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
+        instance.setResult(com.commercetools.api.models.order_edit.OrderEditResult.deepCopy(template.getResult()));
         instance.setComment(template.getComment());
         return instance;
     }

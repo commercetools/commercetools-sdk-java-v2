@@ -77,9 +77,8 @@ public interface SimilarProductSearchRequestMeta {
             return null;
         }
         SimilarProductSearchRequestMetaImpl instance = new SimilarProductSearchRequestMetaImpl();
-        instance.setSimilarityMeasures(Optional.ofNullable(template.getSimilarityMeasures())
-                .map(com.commercetools.ml.models.similar_products.SimilarityMeasures::deepCopy)
-                .orElse(null));
+        instance.setSimilarityMeasures(
+            com.commercetools.ml.models.similar_products.SimilarityMeasures.deepCopy(template.getSimilarityMeasures()));
         return instance;
     }
 

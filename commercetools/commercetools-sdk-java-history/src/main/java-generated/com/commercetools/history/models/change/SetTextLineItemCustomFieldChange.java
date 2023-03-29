@@ -177,9 +177,8 @@ public interface SetTextLineItemCustomFieldChange extends Change {
         instance.setChange(template.getChange());
         instance.setName(template.getName());
         instance.setCustomTypeId(template.getCustomTypeId());
-        instance.setTextLineItem(Optional.ofNullable(template.getTextLineItem())
-                .map(com.commercetools.history.models.change_value.TextLineItemValue::deepCopy)
-                .orElse(null));
+        instance.setTextLineItem(
+            com.commercetools.history.models.change_value.TextLineItemValue.deepCopy(template.getTextLineItem()));
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
         return instance;

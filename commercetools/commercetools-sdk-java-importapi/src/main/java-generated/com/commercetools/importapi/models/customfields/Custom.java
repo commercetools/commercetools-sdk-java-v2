@@ -94,12 +94,9 @@ public interface Custom {
             return null;
         }
         CustomImpl instance = new CustomImpl();
-        instance.setType(Optional.ofNullable(template.getType())
-                .map(com.commercetools.importapi.models.common.TypeKeyReference::deepCopy)
-                .orElse(null));
-        instance.setFields(Optional.ofNullable(template.getFields())
-                .map(com.commercetools.importapi.models.customfields.FieldContainer::deepCopy)
-                .orElse(null));
+        instance.setType(com.commercetools.importapi.models.common.TypeKeyReference.deepCopy(template.getType()));
+        instance.setFields(
+            com.commercetools.importapi.models.customfields.FieldContainer.deepCopy(template.getFields()));
         return instance;
     }
 

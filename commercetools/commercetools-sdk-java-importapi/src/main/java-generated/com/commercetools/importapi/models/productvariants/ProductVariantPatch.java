@@ -122,12 +122,10 @@ public interface ProductVariantPatch {
             return null;
         }
         ProductVariantPatchImpl instance = new ProductVariantPatchImpl();
-        instance.setProductVariant(Optional.ofNullable(template.getProductVariant())
-                .map(com.commercetools.importapi.models.common.ProductVariantKeyReference::deepCopy)
-                .orElse(null));
-        instance.setAttributes(Optional.ofNullable(template.getAttributes())
-                .map(com.commercetools.importapi.models.productvariants.Attributes::deepCopy)
-                .orElse(null));
+        instance.setProductVariant(com.commercetools.importapi.models.common.ProductVariantKeyReference
+                .deepCopy(template.getProductVariant()));
+        instance.setAttributes(
+            com.commercetools.importapi.models.productvariants.Attributes.deepCopy(template.getAttributes()));
         instance.setStaged(template.getStaged());
         return instance;
     }

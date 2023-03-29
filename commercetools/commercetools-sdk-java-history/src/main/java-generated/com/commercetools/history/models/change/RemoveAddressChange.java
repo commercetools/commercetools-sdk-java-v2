@@ -109,9 +109,8 @@ public interface RemoveAddressChange extends Change {
         }
         RemoveAddressChangeImpl instance = new RemoveAddressChangeImpl();
         instance.setChange(template.getChange());
-        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
-                .map(com.commercetools.history.models.common.Address::deepCopy)
-                .orElse(null));
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.Address.deepCopy(template.getPreviousValue()));
         return instance;
     }
 

@@ -84,9 +84,8 @@ public interface StagedOrderRemovePaymentAction extends StagedOrderUpdateAction 
             return null;
         }
         StagedOrderRemovePaymentActionImpl instance = new StagedOrderRemovePaymentActionImpl();
-        instance.setPayment(Optional.ofNullable(template.getPayment())
-                .map(com.commercetools.api.models.payment.PaymentResourceIdentifier::deepCopy)
-                .orElse(null));
+        instance.setPayment(
+            com.commercetools.api.models.payment.PaymentResourceIdentifier.deepCopy(template.getPayment()));
         return instance;
     }
 

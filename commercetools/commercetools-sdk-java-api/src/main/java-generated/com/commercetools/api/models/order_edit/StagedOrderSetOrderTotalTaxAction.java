@@ -113,9 +113,8 @@ public interface StagedOrderSetOrderTotalTaxAction extends StagedOrderUpdateActi
             return null;
         }
         StagedOrderSetOrderTotalTaxActionImpl instance = new StagedOrderSetOrderTotalTaxActionImpl();
-        instance.setExternalTotalGross(Optional.ofNullable(template.getExternalTotalGross())
-                .map(com.commercetools.api.models.common.Money::deepCopy)
-                .orElse(null));
+        instance.setExternalTotalGross(
+            com.commercetools.api.models.common.Money.deepCopy(template.getExternalTotalGross()));
         instance.setExternalTaxPortions(Optional.ofNullable(template.getExternalTaxPortions())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.cart.TaxPortionDraft::deepCopy)

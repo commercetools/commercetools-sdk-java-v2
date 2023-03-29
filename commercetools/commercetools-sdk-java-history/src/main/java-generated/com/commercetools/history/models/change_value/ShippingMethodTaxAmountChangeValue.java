@@ -98,12 +98,8 @@ public interface ShippingMethodTaxAmountChangeValue {
             return null;
         }
         ShippingMethodTaxAmountChangeValueImpl instance = new ShippingMethodTaxAmountChangeValueImpl();
-        instance.setTaxedPrice(Optional.ofNullable(template.getTaxedPrice())
-                .map(com.commercetools.history.models.common.TaxedPrice::deepCopy)
-                .orElse(null));
-        instance.setTaxRate(Optional.ofNullable(template.getTaxRate())
-                .map(com.commercetools.history.models.common.TaxRate::deepCopy)
-                .orElse(null));
+        instance.setTaxedPrice(com.commercetools.history.models.common.TaxedPrice.deepCopy(template.getTaxedPrice()));
+        instance.setTaxRate(com.commercetools.history.models.common.TaxRate.deepCopy(template.getTaxRate()));
         return instance;
     }
 

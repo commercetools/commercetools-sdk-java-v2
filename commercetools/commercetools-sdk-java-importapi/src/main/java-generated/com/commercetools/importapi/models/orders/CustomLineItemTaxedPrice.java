@@ -96,12 +96,8 @@ public interface CustomLineItemTaxedPrice {
             return null;
         }
         CustomLineItemTaxedPriceImpl instance = new CustomLineItemTaxedPriceImpl();
-        instance.setTotalNet(Optional.ofNullable(template.getTotalNet())
-                .map(com.commercetools.importapi.models.common.TypedMoney::deepCopy)
-                .orElse(null));
-        instance.setTotalGross(Optional.ofNullable(template.getTotalGross())
-                .map(com.commercetools.importapi.models.common.TypedMoney::deepCopy)
-                .orElse(null));
+        instance.setTotalNet(com.commercetools.importapi.models.common.TypedMoney.deepCopy(template.getTotalNet()));
+        instance.setTotalGross(com.commercetools.importapi.models.common.TypedMoney.deepCopy(template.getTotalGross()));
         return instance;
     }
 

@@ -110,9 +110,7 @@ public interface OrderEditPreviewSuccess extends OrderEditResult {
             return null;
         }
         OrderEditPreviewSuccessImpl instance = new OrderEditPreviewSuccessImpl();
-        instance.setPreview(Optional.ofNullable(template.getPreview())
-                .map(com.commercetools.api.models.order_edit.StagedOrder::deepCopy)
-                .orElse(null));
+        instance.setPreview(com.commercetools.api.models.order_edit.StagedOrder.deepCopy(template.getPreview()));
         instance.setMessagePayloads(Optional.ofNullable(template.getMessagePayloads())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.message.MessagePayload::deepCopy)

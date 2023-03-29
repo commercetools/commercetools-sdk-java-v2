@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -61,13 +62,29 @@ public interface OrderUpdateItemShippingAddressAction extends OrderUpdateAction 
     }
 
     /**
-     * factory method to copy an instance of OrderUpdateItemShippingAddressAction
+     * factory method to create a shallow copy OrderUpdateItemShippingAddressAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static OrderUpdateItemShippingAddressAction of(final OrderUpdateItemShippingAddressAction template) {
         OrderUpdateItemShippingAddressActionImpl instance = new OrderUpdateItemShippingAddressActionImpl();
         instance.setAddress(template.getAddress());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderUpdateItemShippingAddressAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderUpdateItemShippingAddressAction deepCopy(
+            @Nullable final OrderUpdateItemShippingAddressAction template) {
+        if (template == null) {
+            return null;
+        }
+        OrderUpdateItemShippingAddressActionImpl instance = new OrderUpdateItemShippingAddressActionImpl();
+        instance.setAddress(com.commercetools.api.models.common.BaseAddress.deepCopy(template.getAddress()));
         return instance;
     }
 

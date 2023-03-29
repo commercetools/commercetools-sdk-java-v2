@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.common.StagedQuoteState;
@@ -99,11 +100,28 @@ public interface ChangeStagedQuoteStateChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of ChangeStagedQuoteStateChange
+     * factory method to create a shallow copy ChangeStagedQuoteStateChange
      * @param template instance to be copied
      * @return copy instance
      */
     public static ChangeStagedQuoteStateChange of(final ChangeStagedQuoteStateChange template) {
+        ChangeStagedQuoteStateChangeImpl instance = new ChangeStagedQuoteStateChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setNextValue(template.getNextValue());
+        instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChangeStagedQuoteStateChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChangeStagedQuoteStateChange deepCopy(@Nullable final ChangeStagedQuoteStateChange template) {
+        if (template == null) {
+            return null;
+        }
         ChangeStagedQuoteStateChangeImpl instance = new ChangeStagedQuoteStateChangeImpl();
         instance.setChange(template.getChange());
         instance.setNextValue(template.getNextValue());

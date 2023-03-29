@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -102,7 +103,7 @@ public interface SetCustomShippingMethodChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetCustomShippingMethodChange
+     * factory method to create a shallow copy SetCustomShippingMethodChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -111,6 +112,25 @@ public interface SetCustomShippingMethodChange extends Change {
         instance.setChange(template.getChange());
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetCustomShippingMethodChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetCustomShippingMethodChange deepCopy(@Nullable final SetCustomShippingMethodChange template) {
+        if (template == null) {
+            return null;
+        }
+        SetCustomShippingMethodChangeImpl instance = new SetCustomShippingMethodChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setNextValue(com.commercetools.history.models.change_value.CustomShippingMethodChangeValue
+                .deepCopy(template.getNextValue()));
+        instance.setPreviousValue(com.commercetools.history.models.change_value.CustomShippingMethodChangeValue
+                .deepCopy(template.getPreviousValue()));
         return instance;
     }
 

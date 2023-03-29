@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -114,11 +115,29 @@ public interface SetSkuChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetSkuChange
+     * factory method to create a shallow copy SetSkuChange
      * @param template instance to be copied
      * @return copy instance
      */
     public static SetSkuChange of(final SetSkuChange template) {
+        SetSkuChangeImpl instance = new SetSkuChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setCatalogData(template.getCatalogData());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetSkuChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetSkuChange deepCopy(@Nullable final SetSkuChange template) {
+        if (template == null) {
+            return null;
+        }
         SetSkuChangeImpl instance = new SetSkuChangeImpl();
         instance.setChange(template.getChange());
         instance.setCatalogData(template.getCatalogData());

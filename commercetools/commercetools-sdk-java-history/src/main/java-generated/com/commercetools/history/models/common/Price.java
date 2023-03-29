@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -71,7 +72,7 @@ public interface Price {
     }
 
     /**
-     * factory method to copy an instance of Price
+     * factory method to create a shallow copy Price
      * @param template instance to be copied
      * @return copy instance
      */
@@ -79,6 +80,22 @@ public interface Price {
         PriceImpl instance = new PriceImpl();
         instance.setId(template.getId());
         instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of Price
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static Price deepCopy(@Nullable final Price template) {
+        if (template == null) {
+            return null;
+        }
+        PriceImpl instance = new PriceImpl();
+        instance.setId(template.getId());
+        instance.setValue(com.commercetools.history.models.common.Money.deepCopy(template.getValue()));
         return instance;
     }
 

@@ -4,6 +4,9 @@ package com.commercetools.api.models.order_edit;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.api.models.order.Order;
 import com.fasterxml.jackson.annotation.*;
@@ -49,7 +52,7 @@ public interface StagedOrder extends Order {
     }
 
     /**
-     * factory method to copy an instance of StagedOrder
+     * factory method to create a shallow copy StagedOrder
      * @param template instance to be copied
      * @return copy instance
      */
@@ -102,6 +105,105 @@ public interface StagedOrder extends Order {
         instance.setShippingRateInput(template.getShippingRateInput());
         instance.setItemShippingAddresses(template.getItemShippingAddresses());
         instance.setRefusedGifts(template.getRefusedGifts());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedOrder
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedOrder deepCopy(@Nullable final StagedOrder template) {
+        if (template == null) {
+            return null;
+        }
+        StagedOrderImpl instance = new StagedOrderImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
+        instance.setCompletedAt(template.getCompletedAt());
+        instance.setOrderNumber(template.getOrderNumber());
+        instance.setCustomerId(template.getCustomerId());
+        instance.setCustomerEmail(template.getCustomerEmail());
+        instance.setAnonymousId(template.getAnonymousId());
+        instance.setBusinessUnit(
+            com.commercetools.api.models.business_unit.BusinessUnitKeyReference.deepCopy(template.getBusinessUnit()));
+        instance.setStore(com.commercetools.api.models.store.StoreKeyReference.deepCopy(template.getStore()));
+        instance.setLineItems(Optional.ofNullable(template.getLineItems())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.cart.LineItem::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setCustomLineItems(Optional.ofNullable(template.getCustomLineItems())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.cart.CustomLineItem::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setTotalPrice(com.commercetools.api.models.common.TypedMoney.deepCopy(template.getTotalPrice()));
+        instance.setTaxedPrice(com.commercetools.api.models.cart.TaxedPrice.deepCopy(template.getTaxedPrice()));
+        instance.setTaxedShippingPrice(
+            com.commercetools.api.models.cart.TaxedPrice.deepCopy(template.getTaxedShippingPrice()));
+        instance.setShippingAddress(
+            com.commercetools.api.models.common.Address.deepCopy(template.getShippingAddress()));
+        instance.setBillingAddress(com.commercetools.api.models.common.Address.deepCopy(template.getBillingAddress()));
+        instance.setShippingMode(template.getShippingMode());
+        instance.setShipping(Optional.ofNullable(template.getShipping())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.cart.Shipping::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setTaxMode(template.getTaxMode());
+        instance.setTaxRoundingMode(template.getTaxRoundingMode());
+        instance.setCustomerGroup(
+            com.commercetools.api.models.customer_group.CustomerGroupReference.deepCopy(template.getCustomerGroup()));
+        instance.setCountry(template.getCountry());
+        instance.setOrderState(template.getOrderState());
+        instance.setState(com.commercetools.api.models.state.StateReference.deepCopy(template.getState()));
+        instance.setShipmentState(template.getShipmentState());
+        instance.setPaymentState(template.getPaymentState());
+        instance.setShippingInfo(com.commercetools.api.models.cart.ShippingInfo.deepCopy(template.getShippingInfo()));
+        instance.setSyncInfo(Optional.ofNullable(template.getSyncInfo())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.order.SyncInfo::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setReturnInfo(Optional.ofNullable(template.getReturnInfo())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.order.ReturnInfo::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
+        instance.setDiscountCodes(Optional.ofNullable(template.getDiscountCodes())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.cart.DiscountCodeInfo::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setLastMessageSequenceNumber(template.getLastMessageSequenceNumber());
+        instance.setCart(com.commercetools.api.models.cart.CartReference.deepCopy(template.getCart()));
+        instance.setQuote(com.commercetools.api.models.quote.QuoteReference.deepCopy(template.getQuote()));
+        instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
+        instance.setPaymentInfo(com.commercetools.api.models.order.PaymentInfo.deepCopy(template.getPaymentInfo()));
+        instance.setLocale(template.getLocale());
+        instance.setInventoryMode(template.getInventoryMode());
+        instance.setOrigin(template.getOrigin());
+        instance.setTaxCalculationMode(template.getTaxCalculationMode());
+        instance.setShippingRateInput(
+            com.commercetools.api.models.cart.ShippingRateInput.deepCopy(template.getShippingRateInput()));
+        instance.setItemShippingAddresses(Optional.ofNullable(template.getItemShippingAddresses())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.common.Address::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setRefusedGifts(Optional.ofNullable(template.getRefusedGifts())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.cart_discount.CartDiscountReference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

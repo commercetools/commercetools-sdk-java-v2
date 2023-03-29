@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -98,11 +99,28 @@ public interface ChangeEmailChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of ChangeEmailChange
+     * factory method to create a shallow copy ChangeEmailChange
      * @param template instance to be copied
      * @return copy instance
      */
     public static ChangeEmailChange of(final ChangeEmailChange template) {
+        ChangeEmailChangeImpl instance = new ChangeEmailChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChangeEmailChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChangeEmailChange deepCopy(@Nullable final ChangeEmailChange template) {
+        if (template == null) {
+            return null;
+        }
         ChangeEmailChangeImpl instance = new ChangeEmailChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());

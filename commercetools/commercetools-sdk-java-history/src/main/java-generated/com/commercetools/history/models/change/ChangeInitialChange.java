@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -98,11 +99,28 @@ public interface ChangeInitialChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of ChangeInitialChange
+     * factory method to create a shallow copy ChangeInitialChange
      * @param template instance to be copied
      * @return copy instance
      */
     public static ChangeInitialChange of(final ChangeInitialChange template) {
+        ChangeInitialChangeImpl instance = new ChangeInitialChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChangeInitialChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChangeInitialChange deepCopy(@Nullable final ChangeInitialChange template) {
+        if (template == null) {
+            return null;
+        }
         ChangeInitialChangeImpl instance = new ChangeInitialChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());

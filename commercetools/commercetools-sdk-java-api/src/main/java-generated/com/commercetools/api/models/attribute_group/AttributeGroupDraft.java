@@ -4,7 +4,9 @@ package com.commercetools.api.models.attribute_group;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -112,7 +114,7 @@ public interface AttributeGroupDraft
     }
 
     /**
-     * factory method to copy an instance of AttributeGroupDraft
+     * factory method to create a shallow copy AttributeGroupDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -121,6 +123,29 @@ public interface AttributeGroupDraft
         instance.setName(template.getName());
         instance.setDescription(template.getDescription());
         instance.setAttributes(template.getAttributes());
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of AttributeGroupDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AttributeGroupDraft deepCopy(@Nullable final AttributeGroupDraft template) {
+        if (template == null) {
+            return null;
+        }
+        AttributeGroupDraftImpl instance = new AttributeGroupDraftImpl();
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setAttributes(Optional.ofNullable(template.getAttributes())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.attribute_group.AttributeReference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setKey(template.getKey());
         return instance;
     }

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.store.StoreResourceIdentifier;
@@ -58,13 +59,28 @@ public interface ShoppingListSetStoreAction extends ShoppingListUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ShoppingListSetStoreAction
+     * factory method to create a shallow copy ShoppingListSetStoreAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ShoppingListSetStoreAction of(final ShoppingListSetStoreAction template) {
         ShoppingListSetStoreActionImpl instance = new ShoppingListSetStoreActionImpl();
         instance.setStore(template.getStore());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ShoppingListSetStoreAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ShoppingListSetStoreAction deepCopy(@Nullable final ShoppingListSetStoreAction template) {
+        if (template == null) {
+            return null;
+        }
+        ShoppingListSetStoreActionImpl instance = new ShoppingListSetStoreActionImpl();
+        instance.setStore(com.commercetools.api.models.store.StoreResourceIdentifier.deepCopy(template.getStore()));
         return instance;
     }
 

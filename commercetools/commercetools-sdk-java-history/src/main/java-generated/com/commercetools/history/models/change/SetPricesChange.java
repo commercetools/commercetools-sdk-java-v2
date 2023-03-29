@@ -4,7 +4,9 @@ package com.commercetools.history.models.change;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -150,7 +152,7 @@ public interface SetPricesChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetPricesChange
+     * factory method to create a shallow copy SetPricesChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -161,6 +163,33 @@ public interface SetPricesChange extends Change {
         instance.setVariant(template.getVariant());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetPricesChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetPricesChange deepCopy(@Nullable final SetPricesChange template) {
+        if (template == null) {
+            return null;
+        }
+        SetPricesChangeImpl instance = new SetPricesChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setCatalogData(template.getCatalogData());
+        instance.setVariant(template.getVariant());
+        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.Price::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setNextValue(Optional.ofNullable(template.getNextValue())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.Price::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

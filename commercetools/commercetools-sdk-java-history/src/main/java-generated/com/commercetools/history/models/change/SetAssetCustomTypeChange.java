@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -120,7 +121,7 @@ public interface SetAssetCustomTypeChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetAssetCustomTypeChange
+     * factory method to create a shallow copy SetAssetCustomTypeChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -130,6 +131,25 @@ public interface SetAssetCustomTypeChange extends Change {
         instance.setAsset(template.getAsset());
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetAssetCustomTypeChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetAssetCustomTypeChange deepCopy(@Nullable final SetAssetCustomTypeChange template) {
+        if (template == null) {
+            return null;
+        }
+        SetAssetCustomTypeChangeImpl instance = new SetAssetCustomTypeChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setAsset(com.commercetools.history.models.change_value.AssetChangeValue.deepCopy(template.getAsset()));
+        instance.setNextValue(com.commercetools.history.models.common.CustomFields.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.CustomFields.deepCopy(template.getPreviousValue()));
         return instance;
     }
 

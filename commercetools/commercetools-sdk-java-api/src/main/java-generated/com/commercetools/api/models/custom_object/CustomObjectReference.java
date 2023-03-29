@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -75,7 +76,7 @@ public interface CustomObjectReference extends Reference, com.commercetools.api.
     }
 
     /**
-     * factory method to copy an instance of CustomObjectReference
+     * factory method to create a shallow copy CustomObjectReference
      * @param template instance to be copied
      * @return copy instance
      */
@@ -83,6 +84,22 @@ public interface CustomObjectReference extends Reference, com.commercetools.api.
         CustomObjectReferenceImpl instance = new CustomObjectReferenceImpl();
         instance.setId(template.getId());
         instance.setObj(template.getObj());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomObjectReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomObjectReference deepCopy(@Nullable final CustomObjectReference template) {
+        if (template == null) {
+            return null;
+        }
+        CustomObjectReferenceImpl instance = new CustomObjectReferenceImpl();
+        instance.setId(template.getId());
+        instance.setObj(com.commercetools.api.models.custom_object.CustomObject.deepCopy(template.getObj()));
         return instance;
     }
 

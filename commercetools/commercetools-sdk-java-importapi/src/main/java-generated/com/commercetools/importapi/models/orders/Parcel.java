@@ -5,10 +5,13 @@ import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.importapi.models.customfields.Custom;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -73,6 +76,14 @@ public interface Parcel {
     public List<DeliveryItem> getItems();
 
     /**
+     *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+     * @return custom
+     */
+    @Valid
+    @JsonProperty("custom")
+    public Custom getCustom();
+
+    /**
      * set id
      * @param id value to be set
      */
@@ -116,6 +127,13 @@ public interface Parcel {
     public void setItems(final List<DeliveryItem> items);
 
     /**
+     *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+     * @param custom value to be set
+     */
+
+    public void setCustom(final Custom custom);
+
+    /**
      * factory method
      * @return instance of Parcel
      */
@@ -124,7 +142,7 @@ public interface Parcel {
     }
 
     /**
-     * factory method to copy an instance of Parcel
+     * factory method to create a shallow copy Parcel
      * @param template instance to be copied
      * @return copy instance
      */
@@ -135,6 +153,33 @@ public interface Parcel {
         instance.setMeasurements(template.getMeasurements());
         instance.setTrackingData(template.getTrackingData());
         instance.setItems(template.getItems());
+        instance.setCustom(template.getCustom());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of Parcel
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static Parcel deepCopy(@Nullable final Parcel template) {
+        if (template == null) {
+            return null;
+        }
+        ParcelImpl instance = new ParcelImpl();
+        instance.setId(template.getId());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setMeasurements(
+            com.commercetools.importapi.models.orders.ParcelMeasurements.deepCopy(template.getMeasurements()));
+        instance.setTrackingData(
+            com.commercetools.importapi.models.orders.TrackingData.deepCopy(template.getTrackingData()));
+        instance.setItems(Optional.ofNullable(template.getItems())
+                .map(t -> t.stream()
+                        .map(com.commercetools.importapi.models.orders.DeliveryItem::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setCustom(com.commercetools.importapi.models.customfields.Custom.deepCopy(template.getCustom()));
         return instance;
     }
 

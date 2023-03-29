@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -66,7 +67,7 @@ public interface ProductTypeChangeAttributeOrderByNameAction extends ProductType
     }
 
     /**
-     * factory method to copy an instance of ProductTypeChangeAttributeOrderByNameAction
+     * factory method to create a shallow copy ProductTypeChangeAttributeOrderByNameAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -74,6 +75,22 @@ public interface ProductTypeChangeAttributeOrderByNameAction extends ProductType
             final ProductTypeChangeAttributeOrderByNameAction template) {
         ProductTypeChangeAttributeOrderByNameActionImpl instance = new ProductTypeChangeAttributeOrderByNameActionImpl();
         instance.setAttributeNames(template.getAttributeNames());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductTypeChangeAttributeOrderByNameAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductTypeChangeAttributeOrderByNameAction deepCopy(
+            @Nullable final ProductTypeChangeAttributeOrderByNameAction template) {
+        if (template == null) {
+            return null;
+        }
+        ProductTypeChangeAttributeOrderByNameActionImpl instance = new ProductTypeChangeAttributeOrderByNameActionImpl();
+        instance.setAttributeNames(Optional.ofNullable(template.getAttributeNames()).map(ArrayList::new).orElse(null));
         return instance;
     }
 

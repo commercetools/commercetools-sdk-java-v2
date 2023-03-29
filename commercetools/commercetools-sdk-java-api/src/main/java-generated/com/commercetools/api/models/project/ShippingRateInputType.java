@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.shipping_method.ShippingRateTierType;
@@ -42,6 +43,32 @@ public interface ShippingRateInputType {
     @NotNull
     @JsonProperty("type")
     public ShippingRateTierType getType();
+
+    /**
+     * factory method to create a deep copy of ShippingRateInputType
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ShippingRateInputType deepCopy(@Nullable final ShippingRateInputType template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.project.CartClassificationType) {
+            return com.commercetools.api.models.project.CartClassificationType
+                    .deepCopy((com.commercetools.api.models.project.CartClassificationType) template);
+        }
+        if (template instanceof com.commercetools.api.models.project.CartScoreType) {
+            return com.commercetools.api.models.project.CartScoreType
+                    .deepCopy((com.commercetools.api.models.project.CartScoreType) template);
+        }
+        if (template instanceof com.commercetools.api.models.project.CartValueType) {
+            return com.commercetools.api.models.project.CartValueType
+                    .deepCopy((com.commercetools.api.models.project.CartValueType) template);
+        }
+        ShippingRateInputTypeImpl instance = new ShippingRateInputTypeImpl();
+        return instance;
+    }
 
     /**
      * builder for cartClassification subtype

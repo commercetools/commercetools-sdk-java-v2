@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -126,7 +127,7 @@ public interface OrderTransitionLineItemStateAction extends OrderUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of OrderTransitionLineItemStateAction
+     * factory method to create a shallow copy OrderTransitionLineItemStateAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -136,6 +137,27 @@ public interface OrderTransitionLineItemStateAction extends OrderUpdateAction {
         instance.setQuantity(template.getQuantity());
         instance.setFromState(template.getFromState());
         instance.setToState(template.getToState());
+        instance.setActualTransitionDate(template.getActualTransitionDate());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderTransitionLineItemStateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderTransitionLineItemStateAction deepCopy(
+            @Nullable final OrderTransitionLineItemStateAction template) {
+        if (template == null) {
+            return null;
+        }
+        OrderTransitionLineItemStateActionImpl instance = new OrderTransitionLineItemStateActionImpl();
+        instance.setLineItemId(template.getLineItemId());
+        instance.setQuantity(template.getQuantity());
+        instance.setFromState(
+            com.commercetools.api.models.state.StateResourceIdentifier.deepCopy(template.getFromState()));
+        instance.setToState(com.commercetools.api.models.state.StateResourceIdentifier.deepCopy(template.getToState()));
         instance.setActualTransitionDate(template.getActualTransitionDate());
         return instance;
     }

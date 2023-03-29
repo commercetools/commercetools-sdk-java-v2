@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.common.BaseAddress;
@@ -59,13 +60,29 @@ public interface StagedOrderSetShippingAddressAction extends StagedOrderUpdateAc
     }
 
     /**
-     * factory method to copy an instance of StagedOrderSetShippingAddressAction
+     * factory method to create a shallow copy StagedOrderSetShippingAddressAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static StagedOrderSetShippingAddressAction of(final StagedOrderSetShippingAddressAction template) {
         StagedOrderSetShippingAddressActionImpl instance = new StagedOrderSetShippingAddressActionImpl();
         instance.setAddress(template.getAddress());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedOrderSetShippingAddressAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedOrderSetShippingAddressAction deepCopy(
+            @Nullable final StagedOrderSetShippingAddressAction template) {
+        if (template == null) {
+            return null;
+        }
+        StagedOrderSetShippingAddressActionImpl instance = new StagedOrderSetShippingAddressActionImpl();
+        instance.setAddress(com.commercetools.api.models.common.BaseAddress.deepCopy(template.getAddress()));
         return instance;
     }
 

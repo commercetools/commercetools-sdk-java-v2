@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.RoundingMode;
@@ -60,11 +61,27 @@ public interface StagedOrderChangeTaxRoundingModeAction extends StagedOrderUpdat
     }
 
     /**
-     * factory method to copy an instance of StagedOrderChangeTaxRoundingModeAction
+     * factory method to create a shallow copy StagedOrderChangeTaxRoundingModeAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static StagedOrderChangeTaxRoundingModeAction of(final StagedOrderChangeTaxRoundingModeAction template) {
+        StagedOrderChangeTaxRoundingModeActionImpl instance = new StagedOrderChangeTaxRoundingModeActionImpl();
+        instance.setTaxRoundingMode(template.getTaxRoundingMode());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedOrderChangeTaxRoundingModeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedOrderChangeTaxRoundingModeAction deepCopy(
+            @Nullable final StagedOrderChangeTaxRoundingModeAction template) {
+        if (template == null) {
+            return null;
+        }
         StagedOrderChangeTaxRoundingModeActionImpl instance = new StagedOrderChangeTaxRoundingModeActionImpl();
         instance.setTaxRoundingMode(template.getTaxRoundingMode());
         return instance;

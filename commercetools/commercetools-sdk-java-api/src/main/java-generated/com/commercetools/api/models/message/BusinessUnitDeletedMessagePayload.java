@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -40,11 +42,26 @@ public interface BusinessUnitDeletedMessagePayload extends MessagePayload {
     }
 
     /**
-     * factory method to copy an instance of BusinessUnitDeletedMessagePayload
+     * factory method to create a shallow copy BusinessUnitDeletedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
     public static BusinessUnitDeletedMessagePayload of(final BusinessUnitDeletedMessagePayload template) {
+        BusinessUnitDeletedMessagePayloadImpl instance = new BusinessUnitDeletedMessagePayloadImpl();
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of BusinessUnitDeletedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static BusinessUnitDeletedMessagePayload deepCopy(
+            @Nullable final BusinessUnitDeletedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
         BusinessUnitDeletedMessagePayloadImpl instance = new BusinessUnitDeletedMessagePayloadImpl();
         return instance;
     }

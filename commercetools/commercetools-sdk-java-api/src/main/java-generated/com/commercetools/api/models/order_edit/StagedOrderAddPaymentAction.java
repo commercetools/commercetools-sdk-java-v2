@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -62,13 +63,29 @@ public interface StagedOrderAddPaymentAction extends StagedOrderUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of StagedOrderAddPaymentAction
+     * factory method to create a shallow copy StagedOrderAddPaymentAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static StagedOrderAddPaymentAction of(final StagedOrderAddPaymentAction template) {
         StagedOrderAddPaymentActionImpl instance = new StagedOrderAddPaymentActionImpl();
         instance.setPayment(template.getPayment());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedOrderAddPaymentAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedOrderAddPaymentAction deepCopy(@Nullable final StagedOrderAddPaymentAction template) {
+        if (template == null) {
+            return null;
+        }
+        StagedOrderAddPaymentActionImpl instance = new StagedOrderAddPaymentActionImpl();
+        instance.setPayment(
+            com.commercetools.api.models.payment.PaymentResourceIdentifier.deepCopy(template.getPayment()));
         return instance;
     }
 

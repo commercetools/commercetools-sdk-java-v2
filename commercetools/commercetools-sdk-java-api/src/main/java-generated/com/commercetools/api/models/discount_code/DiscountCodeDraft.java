@@ -5,7 +5,9 @@ import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -242,7 +244,7 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
     }
 
     /**
-     * factory method to copy an instance of DiscountCodeDraft
+     * factory method to create a shallow copy DiscountCodeDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -258,6 +260,37 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
         instance.setMaxApplicationsPerCustomer(template.getMaxApplicationsPerCustomer());
         instance.setCustom(template.getCustom());
         instance.setGroups(template.getGroups());
+        instance.setValidFrom(template.getValidFrom());
+        instance.setValidUntil(template.getValidUntil());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of DiscountCodeDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static DiscountCodeDraft deepCopy(@Nullable final DiscountCodeDraft template) {
+        if (template == null) {
+            return null;
+        }
+        DiscountCodeDraftImpl instance = new DiscountCodeDraftImpl();
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setCode(template.getCode());
+        instance.setCartDiscounts(Optional.ofNullable(template.getCartDiscounts())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setCartPredicate(template.getCartPredicate());
+        instance.setIsActive(template.getIsActive());
+        instance.setMaxApplications(template.getMaxApplications());
+        instance.setMaxApplicationsPerCustomer(template.getMaxApplicationsPerCustomer());
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setGroups(Optional.ofNullable(template.getGroups()).map(ArrayList::new).orElse(null));
         instance.setValidFrom(template.getValidFrom());
         instance.setValidUntil(template.getValidUntil());
         return instance;

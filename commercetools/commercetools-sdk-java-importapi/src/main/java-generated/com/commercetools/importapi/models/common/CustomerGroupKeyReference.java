@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -41,11 +43,26 @@ public interface CustomerGroupKeyReference extends KeyReference {
     }
 
     /**
-     * factory method to copy an instance of CustomerGroupKeyReference
+     * factory method to create a shallow copy CustomerGroupKeyReference
      * @param template instance to be copied
      * @return copy instance
      */
     public static CustomerGroupKeyReference of(final CustomerGroupKeyReference template) {
+        CustomerGroupKeyReferenceImpl instance = new CustomerGroupKeyReferenceImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomerGroupKeyReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomerGroupKeyReference deepCopy(@Nullable final CustomerGroupKeyReference template) {
+        if (template == null) {
+            return null;
+        }
         CustomerGroupKeyReferenceImpl instance = new CustomerGroupKeyReferenceImpl();
         instance.setKey(template.getKey());
         return instance;

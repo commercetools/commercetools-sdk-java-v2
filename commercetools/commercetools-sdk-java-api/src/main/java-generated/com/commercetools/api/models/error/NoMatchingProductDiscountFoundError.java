@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -67,14 +68,31 @@ public interface NoMatchingProductDiscountFoundError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of NoMatchingProductDiscountFoundError
+     * factory method to create a shallow copy NoMatchingProductDiscountFoundError
      * @param template instance to be copied
      * @return copy instance
      */
     public static NoMatchingProductDiscountFoundError of(final NoMatchingProductDiscountFoundError template) {
         NoMatchingProductDiscountFoundErrorImpl instance = new NoMatchingProductDiscountFoundErrorImpl();
         instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        return instance;
+    }
 
+    /**
+     * factory method to create a deep copy of NoMatchingProductDiscountFoundError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static NoMatchingProductDiscountFoundError deepCopy(
+            @Nullable final NoMatchingProductDiscountFoundError template) {
+        if (template == null) {
+            return null;
+        }
+        NoMatchingProductDiscountFoundErrorImpl instance = new NoMatchingProductDiscountFoundErrorImpl();
+        instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
 

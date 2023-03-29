@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -40,11 +42,25 @@ public interface CartDiscountShippingCostTarget extends CartDiscountTarget {
     }
 
     /**
-     * factory method to copy an instance of CartDiscountShippingCostTarget
+     * factory method to create a shallow copy CartDiscountShippingCostTarget
      * @param template instance to be copied
      * @return copy instance
      */
     public static CartDiscountShippingCostTarget of(final CartDiscountShippingCostTarget template) {
+        CartDiscountShippingCostTargetImpl instance = new CartDiscountShippingCostTargetImpl();
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartDiscountShippingCostTarget
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartDiscountShippingCostTarget deepCopy(@Nullable final CartDiscountShippingCostTarget template) {
+        if (template == null) {
+            return null;
+        }
         CartDiscountShippingCostTargetImpl instance = new CartDiscountShippingCostTargetImpl();
         return instance;
     }

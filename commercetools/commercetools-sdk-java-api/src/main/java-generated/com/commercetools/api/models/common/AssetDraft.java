@@ -4,7 +4,9 @@ package com.commercetools.api.models.common;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -150,7 +152,7 @@ public interface AssetDraft extends com.commercetools.api.models.CustomizableDra
     }
 
     /**
-     * factory method to copy an instance of AssetDraft
+     * factory method to create a shallow copy AssetDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -161,6 +163,31 @@ public interface AssetDraft extends com.commercetools.api.models.CustomizableDra
         instance.setDescription(template.getDescription());
         instance.setTags(template.getTags());
         instance.setCustom(template.getCustom());
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of AssetDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AssetDraft deepCopy(@Nullable final AssetDraft template) {
+        if (template == null) {
+            return null;
+        }
+        AssetDraftImpl instance = new AssetDraftImpl();
+        instance.setSources(Optional.ofNullable(template.getSources())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.common.AssetSource::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setTags(Optional.ofNullable(template.getTags()).map(ArrayList::new).orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         instance.setKey(template.getKey());
         return instance;
     }

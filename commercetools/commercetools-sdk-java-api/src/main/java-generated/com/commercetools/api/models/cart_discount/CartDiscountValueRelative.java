@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,26 @@ public interface CartDiscountValueRelative extends CartDiscountValue {
     }
 
     /**
-     * factory method to copy an instance of CartDiscountValueRelative
+     * factory method to create a shallow copy CartDiscountValueRelative
      * @param template instance to be copied
      * @return copy instance
      */
     public static CartDiscountValueRelative of(final CartDiscountValueRelative template) {
+        CartDiscountValueRelativeImpl instance = new CartDiscountValueRelativeImpl();
+        instance.setPermyriad(template.getPermyriad());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartDiscountValueRelative
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartDiscountValueRelative deepCopy(@Nullable final CartDiscountValueRelative template) {
+        if (template == null) {
+            return null;
+        }
         CartDiscountValueRelativeImpl instance = new CartDiscountValueRelativeImpl();
         instance.setPermyriad(template.getPermyriad());
         return instance;

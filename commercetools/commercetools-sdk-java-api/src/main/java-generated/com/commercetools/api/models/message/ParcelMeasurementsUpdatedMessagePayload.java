@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -106,7 +107,7 @@ public interface ParcelMeasurementsUpdatedMessagePayload extends OrderMessagePay
     }
 
     /**
-     * factory method to copy an instance of ParcelMeasurementsUpdatedMessagePayload
+     * factory method to create a shallow copy ParcelMeasurementsUpdatedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -115,6 +116,26 @@ public interface ParcelMeasurementsUpdatedMessagePayload extends OrderMessagePay
         instance.setDeliveryId(template.getDeliveryId());
         instance.setParcelId(template.getParcelId());
         instance.setMeasurements(template.getMeasurements());
+        instance.setShippingKey(template.getShippingKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ParcelMeasurementsUpdatedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ParcelMeasurementsUpdatedMessagePayload deepCopy(
+            @Nullable final ParcelMeasurementsUpdatedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        ParcelMeasurementsUpdatedMessagePayloadImpl instance = new ParcelMeasurementsUpdatedMessagePayloadImpl();
+        instance.setDeliveryId(template.getDeliveryId());
+        instance.setParcelId(template.getParcelId());
+        instance.setMeasurements(
+            com.commercetools.api.models.order.ParcelMeasurements.deepCopy(template.getMeasurements()));
         instance.setShippingKey(template.getShippingKey());
         return instance;
     }

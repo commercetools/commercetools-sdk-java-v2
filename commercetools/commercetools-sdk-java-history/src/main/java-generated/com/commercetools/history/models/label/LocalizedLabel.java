@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -69,13 +70,28 @@ public interface LocalizedLabel extends Label {
     }
 
     /**
-     * factory method to copy an instance of LocalizedLabel
+     * factory method to create a shallow copy LocalizedLabel
      * @param template instance to be copied
      * @return copy instance
      */
     public static LocalizedLabel of(final LocalizedLabel template) {
         LocalizedLabelImpl instance = new LocalizedLabelImpl();
         instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of LocalizedLabel
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static LocalizedLabel deepCopy(@Nullable final LocalizedLabel template) {
+        if (template == null) {
+            return null;
+        }
+        LocalizedLabelImpl instance = new LocalizedLabelImpl();
+        instance.setValue(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getValue()));
         return instance;
     }
 

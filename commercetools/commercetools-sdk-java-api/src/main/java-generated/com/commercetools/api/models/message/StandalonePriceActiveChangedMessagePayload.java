@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -74,12 +75,29 @@ public interface StandalonePriceActiveChangedMessagePayload extends MessagePaylo
     }
 
     /**
-     * factory method to copy an instance of StandalonePriceActiveChangedMessagePayload
+     * factory method to create a shallow copy StandalonePriceActiveChangedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
     public static StandalonePriceActiveChangedMessagePayload of(
             final StandalonePriceActiveChangedMessagePayload template) {
+        StandalonePriceActiveChangedMessagePayloadImpl instance = new StandalonePriceActiveChangedMessagePayloadImpl();
+        instance.setActive(template.getActive());
+        instance.setOldActive(template.getOldActive());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StandalonePriceActiveChangedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StandalonePriceActiveChangedMessagePayload deepCopy(
+            @Nullable final StandalonePriceActiveChangedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
         StandalonePriceActiveChangedMessagePayloadImpl instance = new StandalonePriceActiveChangedMessagePayloadImpl();
         instance.setActive(template.getActive());
         instance.setOldActive(template.getOldActive());

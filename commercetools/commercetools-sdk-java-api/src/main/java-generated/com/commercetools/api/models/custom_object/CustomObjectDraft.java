@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -99,11 +100,29 @@ public interface CustomObjectDraft extends io.vrap.rmf.base.client.Draft<CustomO
     }
 
     /**
-     * factory method to copy an instance of CustomObjectDraft
+     * factory method to create a shallow copy CustomObjectDraft
      * @param template instance to be copied
      * @return copy instance
      */
     public static CustomObjectDraft of(final CustomObjectDraft template) {
+        CustomObjectDraftImpl instance = new CustomObjectDraftImpl();
+        instance.setContainer(template.getContainer());
+        instance.setKey(template.getKey());
+        instance.setValue(template.getValue());
+        instance.setVersion(template.getVersion());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomObjectDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomObjectDraft deepCopy(@Nullable final CustomObjectDraft template) {
+        if (template == null) {
+            return null;
+        }
         CustomObjectDraftImpl instance = new CustomObjectDraftImpl();
         instance.setContainer(template.getContainer());
         instance.setKey(template.getKey());

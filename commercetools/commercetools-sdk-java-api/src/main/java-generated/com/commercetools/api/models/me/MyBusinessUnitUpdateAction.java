@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -56,6 +57,92 @@ public interface MyBusinessUnitUpdateAction {
     @NotNull
     @JsonProperty("action")
     public String getAction();
+
+    /**
+     * factory method to create a deep copy of MyBusinessUnitUpdateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MyBusinessUnitUpdateAction deepCopy(@Nullable final MyBusinessUnitUpdateAction template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.me.MyBusinessUnitAddAddressAction) {
+            return com.commercetools.api.models.me.MyBusinessUnitAddAddressAction
+                    .deepCopy((com.commercetools.api.models.me.MyBusinessUnitAddAddressAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.me.MyBusinessUnitAddBillingAddressIdAction) {
+            return com.commercetools.api.models.me.MyBusinessUnitAddBillingAddressIdAction
+                    .deepCopy((com.commercetools.api.models.me.MyBusinessUnitAddBillingAddressIdAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.me.MyBusinessUnitAddShippingAddressIdAction) {
+            return com.commercetools.api.models.me.MyBusinessUnitAddShippingAddressIdAction
+                    .deepCopy((com.commercetools.api.models.me.MyBusinessUnitAddShippingAddressIdAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.me.MyBusinessUnitChangeAddressAction) {
+            return com.commercetools.api.models.me.MyBusinessUnitChangeAddressAction
+                    .deepCopy((com.commercetools.api.models.me.MyBusinessUnitChangeAddressAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.me.MyBusinessUnitChangeAssociateAction) {
+            return com.commercetools.api.models.me.MyBusinessUnitChangeAssociateAction
+                    .deepCopy((com.commercetools.api.models.me.MyBusinessUnitChangeAssociateAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.me.MyBusinessUnitChangeNameAction) {
+            return com.commercetools.api.models.me.MyBusinessUnitChangeNameAction
+                    .deepCopy((com.commercetools.api.models.me.MyBusinessUnitChangeNameAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.me.MyBusinessUnitChangeParentUnitAction) {
+            return com.commercetools.api.models.me.MyBusinessUnitChangeParentUnitAction
+                    .deepCopy((com.commercetools.api.models.me.MyBusinessUnitChangeParentUnitAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.me.MyBusinessUnitRemoveAddressAction) {
+            return com.commercetools.api.models.me.MyBusinessUnitRemoveAddressAction
+                    .deepCopy((com.commercetools.api.models.me.MyBusinessUnitRemoveAddressAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.me.MyBusinessUnitRemoveAssociateAction) {
+            return com.commercetools.api.models.me.MyBusinessUnitRemoveAssociateAction
+                    .deepCopy((com.commercetools.api.models.me.MyBusinessUnitRemoveAssociateAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.me.MyBusinessUnitRemoveBillingAddressIdAction) {
+            return com.commercetools.api.models.me.MyBusinessUnitRemoveBillingAddressIdAction
+                    .deepCopy((com.commercetools.api.models.me.MyBusinessUnitRemoveBillingAddressIdAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.me.MyBusinessUnitRemoveShippingAddressIdAction) {
+            return com.commercetools.api.models.me.MyBusinessUnitRemoveShippingAddressIdAction
+                    .deepCopy((com.commercetools.api.models.me.MyBusinessUnitRemoveShippingAddressIdAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.me.MyBusinessUnitSetAddressCustomFieldAction) {
+            return com.commercetools.api.models.me.MyBusinessUnitSetAddressCustomFieldAction
+                    .deepCopy((com.commercetools.api.models.me.MyBusinessUnitSetAddressCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.me.MyBusinessUnitSetAddressCustomTypeAction) {
+            return com.commercetools.api.models.me.MyBusinessUnitSetAddressCustomTypeAction
+                    .deepCopy((com.commercetools.api.models.me.MyBusinessUnitSetAddressCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.me.MyBusinessUnitSetContactEmailAction) {
+            return com.commercetools.api.models.me.MyBusinessUnitSetContactEmailAction
+                    .deepCopy((com.commercetools.api.models.me.MyBusinessUnitSetContactEmailAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.me.MyBusinessUnitSetCustomFieldAction) {
+            return com.commercetools.api.models.me.MyBusinessUnitSetCustomFieldAction
+                    .deepCopy((com.commercetools.api.models.me.MyBusinessUnitSetCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.me.MyBusinessUnitSetCustomTypeAction) {
+            return com.commercetools.api.models.me.MyBusinessUnitSetCustomTypeAction
+                    .deepCopy((com.commercetools.api.models.me.MyBusinessUnitSetCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.me.MyBusinessUnitSetDefaultBillingAddressAction) {
+            return com.commercetools.api.models.me.MyBusinessUnitSetDefaultBillingAddressAction
+                    .deepCopy((com.commercetools.api.models.me.MyBusinessUnitSetDefaultBillingAddressAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.me.MyBusinessUnitSetDefaultShippingAddressAction) {
+            return com.commercetools.api.models.me.MyBusinessUnitSetDefaultShippingAddressAction
+                    .deepCopy((com.commercetools.api.models.me.MyBusinessUnitSetDefaultShippingAddressAction) template);
+        }
+        MyBusinessUnitUpdateActionImpl instance = new MyBusinessUnitUpdateActionImpl();
+        return instance;
+    }
 
     /**
      * builder for addAddress subtype

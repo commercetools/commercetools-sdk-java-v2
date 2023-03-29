@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.commercetools.api.models.common.ResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -71,11 +73,27 @@ public interface StateResourceIdentifier extends ResourceIdentifier, com.commerc
     }
 
     /**
-     * factory method to copy an instance of StateResourceIdentifier
+     * factory method to create a shallow copy StateResourceIdentifier
      * @param template instance to be copied
      * @return copy instance
      */
     public static StateResourceIdentifier of(final StateResourceIdentifier template) {
+        StateResourceIdentifierImpl instance = new StateResourceIdentifierImpl();
+        instance.setId(template.getId());
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StateResourceIdentifier
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StateResourceIdentifier deepCopy(@Nullable final StateResourceIdentifier template) {
+        if (template == null) {
+            return null;
+        }
         StateResourceIdentifierImpl instance = new StateResourceIdentifierImpl();
         instance.setId(template.getId());
         instance.setKey(template.getKey());

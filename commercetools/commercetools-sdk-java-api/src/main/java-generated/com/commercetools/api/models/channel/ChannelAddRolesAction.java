@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -66,13 +67,28 @@ public interface ChannelAddRolesAction extends ChannelUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ChannelAddRolesAction
+     * factory method to create a shallow copy ChannelAddRolesAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ChannelAddRolesAction of(final ChannelAddRolesAction template) {
         ChannelAddRolesActionImpl instance = new ChannelAddRolesActionImpl();
         instance.setRoles(template.getRoles());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChannelAddRolesAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChannelAddRolesAction deepCopy(@Nullable final ChannelAddRolesAction template) {
+        if (template == null) {
+            return null;
+        }
+        ChannelAddRolesActionImpl instance = new ChannelAddRolesActionImpl();
+        instance.setRoles(Optional.ofNullable(template.getRoles()).map(ArrayList::new).orElse(null));
         return instance;
     }
 

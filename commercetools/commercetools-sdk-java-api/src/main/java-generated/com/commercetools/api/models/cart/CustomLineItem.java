@@ -4,7 +4,9 @@ package com.commercetools.api.models.cart;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -294,7 +296,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     }
 
     /**
-     * factory method to copy an instance of CustomLineItem
+     * factory method to create a shallow copy CustomLineItem
      * @param template instance to be copied
      * @return copy instance
      */
@@ -313,6 +315,45 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
         instance.setDiscountedPricePerQuantity(template.getDiscountedPricePerQuantity());
         instance.setCustom(template.getCustom());
         instance.setShippingDetails(template.getShippingDetails());
+        instance.setPriceMode(template.getPriceMode());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomLineItem
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomLineItem deepCopy(@Nullable final CustomLineItem template) {
+        if (template == null) {
+            return null;
+        }
+        CustomLineItemImpl instance = new CustomLineItemImpl();
+        instance.setId(template.getId());
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setMoney(com.commercetools.api.models.common.TypedMoney.deepCopy(template.getMoney()));
+        instance.setTaxedPrice(com.commercetools.api.models.cart.TaxedItemPrice.deepCopy(template.getTaxedPrice()));
+        instance.setTotalPrice(
+            com.commercetools.api.models.common.CentPrecisionMoney.deepCopy(template.getTotalPrice()));
+        instance.setSlug(template.getSlug());
+        instance.setQuantity(template.getQuantity());
+        instance.setState(Optional.ofNullable(template.getState())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.order.ItemState::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setTaxCategory(
+            com.commercetools.api.models.tax_category.TaxCategoryReference.deepCopy(template.getTaxCategory()));
+        instance.setTaxRate(com.commercetools.api.models.tax_category.TaxRate.deepCopy(template.getTaxRate()));
+        instance.setDiscountedPricePerQuantity(Optional.ofNullable(template.getDiscountedPricePerQuantity())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
+        instance.setShippingDetails(
+            com.commercetools.api.models.cart.ItemShippingDetails.deepCopy(template.getShippingDetails()));
         instance.setPriceMode(template.getPriceMode());
         return instance;
     }

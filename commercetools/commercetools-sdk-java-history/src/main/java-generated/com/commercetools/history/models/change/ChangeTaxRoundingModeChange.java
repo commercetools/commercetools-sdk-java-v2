@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.history.models.common.RoundingMode;
@@ -99,11 +100,28 @@ public interface ChangeTaxRoundingModeChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of ChangeTaxRoundingModeChange
+     * factory method to create a shallow copy ChangeTaxRoundingModeChange
      * @param template instance to be copied
      * @return copy instance
      */
     public static ChangeTaxRoundingModeChange of(final ChangeTaxRoundingModeChange template) {
+        ChangeTaxRoundingModeChangeImpl instance = new ChangeTaxRoundingModeChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChangeTaxRoundingModeChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChangeTaxRoundingModeChange deepCopy(@Nullable final ChangeTaxRoundingModeChange template) {
+        if (template == null) {
+            return null;
+        }
         ChangeTaxRoundingModeChangeImpl instance = new ChangeTaxRoundingModeChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());

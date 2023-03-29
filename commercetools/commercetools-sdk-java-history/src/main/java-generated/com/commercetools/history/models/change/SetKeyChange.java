@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -98,11 +99,28 @@ public interface SetKeyChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetKeyChange
+     * factory method to create a shallow copy SetKeyChange
      * @param template instance to be copied
      * @return copy instance
      */
     public static SetKeyChange of(final SetKeyChange template) {
+        SetKeyChangeImpl instance = new SetKeyChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetKeyChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetKeyChange deepCopy(@Nullable final SetKeyChange template) {
+        if (template == null) {
+            return null;
+        }
         SetKeyChangeImpl instance = new SetKeyChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());

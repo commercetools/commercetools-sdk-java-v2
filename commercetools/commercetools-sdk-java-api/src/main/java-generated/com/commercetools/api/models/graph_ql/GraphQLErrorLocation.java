@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -69,11 +70,27 @@ public interface GraphQLErrorLocation {
     }
 
     /**
-     * factory method to copy an instance of GraphQLErrorLocation
+     * factory method to create a shallow copy GraphQLErrorLocation
      * @param template instance to be copied
      * @return copy instance
      */
     public static GraphQLErrorLocation of(final GraphQLErrorLocation template) {
+        GraphQLErrorLocationImpl instance = new GraphQLErrorLocationImpl();
+        instance.setLine(template.getLine());
+        instance.setColumn(template.getColumn());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of GraphQLErrorLocation
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static GraphQLErrorLocation deepCopy(@Nullable final GraphQLErrorLocation template) {
+        if (template == null) {
+            return null;
+        }
         GraphQLErrorLocationImpl instance = new GraphQLErrorLocationImpl();
         instance.setLine(template.getLine());
         instance.setColumn(template.getColumn());

@@ -4,7 +4,9 @@ package com.commercetools.api.models.graph_ql;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -103,7 +105,7 @@ public interface GraphQLError {
     }
 
     /**
-     * factory method to copy an instance of GraphQLError
+     * factory method to create a shallow copy GraphQLError
      * @param template instance to be copied
      * @return copy instance
      */
@@ -112,6 +114,27 @@ public interface GraphQLError {
         instance.setMessage(template.getMessage());
         instance.setLocations(template.getLocations());
         instance.setPath(template.getPath());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of GraphQLError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static GraphQLError deepCopy(@Nullable final GraphQLError template) {
+        if (template == null) {
+            return null;
+        }
+        GraphQLErrorImpl instance = new GraphQLErrorImpl();
+        instance.setMessage(template.getMessage());
+        instance.setLocations(Optional.ofNullable(template.getLocations())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.graph_ql.GraphQLErrorLocation::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setPath(Optional.ofNullable(template.getPath()).map(ArrayList::new).orElse(null));
         return instance;
     }
 

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -92,7 +93,7 @@ public interface ExtensionTrigger {
     }
 
     /**
-     * factory method to copy an instance of ExtensionTrigger
+     * factory method to create a shallow copy ExtensionTrigger
      * @param template instance to be copied
      * @return copy instance
      */
@@ -100,6 +101,23 @@ public interface ExtensionTrigger {
         ExtensionTriggerImpl instance = new ExtensionTriggerImpl();
         instance.setResourceTypeId(template.getResourceTypeId());
         instance.setActions(template.getActions());
+        instance.setCondition(template.getCondition());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ExtensionTrigger
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ExtensionTrigger deepCopy(@Nullable final ExtensionTrigger template) {
+        if (template == null) {
+            return null;
+        }
+        ExtensionTriggerImpl instance = new ExtensionTriggerImpl();
+        instance.setResourceTypeId(template.getResourceTypeId());
+        instance.setActions(Optional.ofNullable(template.getActions()).map(ArrayList::new).orElse(null));
         instance.setCondition(template.getCondition());
         return instance;
     }

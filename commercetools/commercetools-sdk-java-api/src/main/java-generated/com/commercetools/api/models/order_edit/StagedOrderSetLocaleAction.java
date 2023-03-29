@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -56,11 +58,26 @@ public interface StagedOrderSetLocaleAction extends StagedOrderUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of StagedOrderSetLocaleAction
+     * factory method to create a shallow copy StagedOrderSetLocaleAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static StagedOrderSetLocaleAction of(final StagedOrderSetLocaleAction template) {
+        StagedOrderSetLocaleActionImpl instance = new StagedOrderSetLocaleActionImpl();
+        instance.setLocale(template.getLocale());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedOrderSetLocaleAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedOrderSetLocaleAction deepCopy(@Nullable final StagedOrderSetLocaleAction template) {
+        if (template == null) {
+            return null;
+        }
         StagedOrderSetLocaleActionImpl instance = new StagedOrderSetLocaleActionImpl();
         instance.setLocale(template.getLocale());
         return instance;

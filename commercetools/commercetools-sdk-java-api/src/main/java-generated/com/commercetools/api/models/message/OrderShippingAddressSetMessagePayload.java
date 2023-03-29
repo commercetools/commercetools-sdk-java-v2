@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.common.Address;
@@ -73,7 +74,7 @@ public interface OrderShippingAddressSetMessagePayload extends OrderMessagePaylo
     }
 
     /**
-     * factory method to copy an instance of OrderShippingAddressSetMessagePayload
+     * factory method to create a shallow copy OrderShippingAddressSetMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -81,6 +82,23 @@ public interface OrderShippingAddressSetMessagePayload extends OrderMessagePaylo
         OrderShippingAddressSetMessagePayloadImpl instance = new OrderShippingAddressSetMessagePayloadImpl();
         instance.setAddress(template.getAddress());
         instance.setOldAddress(template.getOldAddress());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderShippingAddressSetMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderShippingAddressSetMessagePayload deepCopy(
+            @Nullable final OrderShippingAddressSetMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        OrderShippingAddressSetMessagePayloadImpl instance = new OrderShippingAddressSetMessagePayloadImpl();
+        instance.setAddress(com.commercetools.api.models.common.Address.deepCopy(template.getAddress()));
+        instance.setOldAddress(com.commercetools.api.models.common.Address.deepCopy(template.getOldAddress()));
         return instance;
     }
 

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -61,13 +62,28 @@ public interface OrderDeletedMessagePayload extends OrderMessagePayload {
     }
 
     /**
-     * factory method to copy an instance of OrderDeletedMessagePayload
+     * factory method to create a shallow copy OrderDeletedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
     public static OrderDeletedMessagePayload of(final OrderDeletedMessagePayload template) {
         OrderDeletedMessagePayloadImpl instance = new OrderDeletedMessagePayloadImpl();
         instance.setOrder(template.getOrder());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderDeletedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderDeletedMessagePayload deepCopy(@Nullable final OrderDeletedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        OrderDeletedMessagePayloadImpl instance = new OrderDeletedMessagePayloadImpl();
+        instance.setOrder(com.commercetools.api.models.order.Order.deepCopy(template.getOrder()));
         return instance;
     }
 

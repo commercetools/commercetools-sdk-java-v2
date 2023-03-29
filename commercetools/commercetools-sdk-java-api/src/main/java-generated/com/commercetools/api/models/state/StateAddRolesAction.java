@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -66,13 +67,28 @@ public interface StateAddRolesAction extends StateUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of StateAddRolesAction
+     * factory method to create a shallow copy StateAddRolesAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static StateAddRolesAction of(final StateAddRolesAction template) {
         StateAddRolesActionImpl instance = new StateAddRolesActionImpl();
         instance.setRoles(template.getRoles());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StateAddRolesAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StateAddRolesAction deepCopy(@Nullable final StateAddRolesAction template) {
+        if (template == null) {
+            return null;
+        }
+        StateAddRolesActionImpl instance = new StateAddRolesActionImpl();
+        instance.setRoles(Optional.ofNullable(template.getRoles()).map(ArrayList::new).orElse(null));
         return instance;
     }
 

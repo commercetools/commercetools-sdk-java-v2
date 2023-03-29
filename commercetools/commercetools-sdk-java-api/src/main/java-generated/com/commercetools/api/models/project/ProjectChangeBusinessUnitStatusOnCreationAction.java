@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,12 +59,28 @@ public interface ProjectChangeBusinessUnitStatusOnCreationAction extends Project
     }
 
     /**
-     * factory method to copy an instance of ProjectChangeBusinessUnitStatusOnCreationAction
+     * factory method to create a shallow copy ProjectChangeBusinessUnitStatusOnCreationAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProjectChangeBusinessUnitStatusOnCreationAction of(
             final ProjectChangeBusinessUnitStatusOnCreationAction template) {
+        ProjectChangeBusinessUnitStatusOnCreationActionImpl instance = new ProjectChangeBusinessUnitStatusOnCreationActionImpl();
+        instance.setStatus(template.getStatus());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProjectChangeBusinessUnitStatusOnCreationAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProjectChangeBusinessUnitStatusOnCreationAction deepCopy(
+            @Nullable final ProjectChangeBusinessUnitStatusOnCreationAction template) {
+        if (template == null) {
+            return null;
+        }
         ProjectChangeBusinessUnitStatusOnCreationActionImpl instance = new ProjectChangeBusinessUnitStatusOnCreationActionImpl();
         instance.setStatus(template.getStatus());
         return instance;

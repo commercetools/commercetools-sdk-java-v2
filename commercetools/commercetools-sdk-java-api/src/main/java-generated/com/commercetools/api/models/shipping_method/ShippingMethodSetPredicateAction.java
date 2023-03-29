@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -55,11 +57,26 @@ public interface ShippingMethodSetPredicateAction extends ShippingMethodUpdateAc
     }
 
     /**
-     * factory method to copy an instance of ShippingMethodSetPredicateAction
+     * factory method to create a shallow copy ShippingMethodSetPredicateAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ShippingMethodSetPredicateAction of(final ShippingMethodSetPredicateAction template) {
+        ShippingMethodSetPredicateActionImpl instance = new ShippingMethodSetPredicateActionImpl();
+        instance.setPredicate(template.getPredicate());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ShippingMethodSetPredicateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ShippingMethodSetPredicateAction deepCopy(@Nullable final ShippingMethodSetPredicateAction template) {
+        if (template == null) {
+            return null;
+        }
         ShippingMethodSetPredicateActionImpl instance = new ShippingMethodSetPredicateActionImpl();
         instance.setPredicate(template.getPredicate());
         return instance;

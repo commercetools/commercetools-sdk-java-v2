@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -71,7 +72,7 @@ public interface ItemState {
     }
 
     /**
-     * factory method to copy an instance of ItemState
+     * factory method to create a shallow copy ItemState
      * @param template instance to be copied
      * @return copy instance
      */
@@ -79,6 +80,22 @@ public interface ItemState {
         ItemStateImpl instance = new ItemStateImpl();
         instance.setQuantity(template.getQuantity());
         instance.setState(template.getState());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ItemState
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ItemState deepCopy(@Nullable final ItemState template) {
+        if (template == null) {
+            return null;
+        }
+        ItemStateImpl instance = new ItemStateImpl();
+        instance.setQuantity(template.getQuantity());
+        instance.setState(com.commercetools.history.models.common.Reference.deepCopy(template.getState()));
         return instance;
     }
 

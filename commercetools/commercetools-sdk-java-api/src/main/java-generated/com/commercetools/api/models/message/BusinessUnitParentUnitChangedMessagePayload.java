@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.business_unit.BusinessUnitKeyReference;
@@ -73,7 +74,7 @@ public interface BusinessUnitParentUnitChangedMessagePayload extends MessagePayl
     }
 
     /**
-     * factory method to copy an instance of BusinessUnitParentUnitChangedMessagePayload
+     * factory method to create a shallow copy BusinessUnitParentUnitChangedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -82,6 +83,25 @@ public interface BusinessUnitParentUnitChangedMessagePayload extends MessagePayl
         BusinessUnitParentUnitChangedMessagePayloadImpl instance = new BusinessUnitParentUnitChangedMessagePayloadImpl();
         instance.setOldParentUnit(template.getOldParentUnit());
         instance.setNewParentUnit(template.getNewParentUnit());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of BusinessUnitParentUnitChangedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static BusinessUnitParentUnitChangedMessagePayload deepCopy(
+            @Nullable final BusinessUnitParentUnitChangedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        BusinessUnitParentUnitChangedMessagePayloadImpl instance = new BusinessUnitParentUnitChangedMessagePayloadImpl();
+        instance.setOldParentUnit(
+            com.commercetools.api.models.business_unit.BusinessUnitKeyReference.deepCopy(template.getOldParentUnit()));
+        instance.setNewParentUnit(
+            com.commercetools.api.models.business_unit.BusinessUnitKeyReference.deepCopy(template.getNewParentUnit()));
         return instance;
     }
 

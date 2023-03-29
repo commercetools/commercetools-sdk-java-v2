@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -104,7 +105,7 @@ public interface ProductPresentWithDifferentVariantSelectionError extends ErrorO
     }
 
     /**
-     * factory method to copy an instance of ProductPresentWithDifferentVariantSelectionError
+     * factory method to create a shallow copy ProductPresentWithDifferentVariantSelectionError
      * @param template instance to be copied
      * @return copy instance
      */
@@ -112,9 +113,29 @@ public interface ProductPresentWithDifferentVariantSelectionError extends ErrorO
             final ProductPresentWithDifferentVariantSelectionError template) {
         ProductPresentWithDifferentVariantSelectionErrorImpl instance = new ProductPresentWithDifferentVariantSelectionErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         instance.setProduct(template.getProduct());
         instance.setExistingVariantSelection(template.getExistingVariantSelection());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductPresentWithDifferentVariantSelectionError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductPresentWithDifferentVariantSelectionError deepCopy(
+            @Nullable final ProductPresentWithDifferentVariantSelectionError template) {
+        if (template == null) {
+            return null;
+        }
+        ProductPresentWithDifferentVariantSelectionErrorImpl instance = new ProductPresentWithDifferentVariantSelectionErrorImpl();
+        instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        instance.setProduct(com.commercetools.api.models.product.ProductReference.deepCopy(template.getProduct()));
+        instance.setExistingVariantSelection(com.commercetools.api.models.product_selection.ProductVariantSelection
+                .deepCopy(template.getExistingVariantSelection()));
         return instance;
     }
 

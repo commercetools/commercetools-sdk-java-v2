@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.commercetools.api.models.common.ResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -72,11 +74,27 @@ public interface OrderEditResourceIdentifier
     }
 
     /**
-     * factory method to copy an instance of OrderEditResourceIdentifier
+     * factory method to create a shallow copy OrderEditResourceIdentifier
      * @param template instance to be copied
      * @return copy instance
      */
     public static OrderEditResourceIdentifier of(final OrderEditResourceIdentifier template) {
+        OrderEditResourceIdentifierImpl instance = new OrderEditResourceIdentifierImpl();
+        instance.setId(template.getId());
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderEditResourceIdentifier
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderEditResourceIdentifier deepCopy(@Nullable final OrderEditResourceIdentifier template) {
+        if (template == null) {
+            return null;
+        }
         OrderEditResourceIdentifierImpl instance = new OrderEditResourceIdentifierImpl();
         instance.setId(template.getId());
         instance.setKey(template.getKey());

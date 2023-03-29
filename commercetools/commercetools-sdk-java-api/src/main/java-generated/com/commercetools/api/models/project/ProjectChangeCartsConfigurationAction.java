@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -60,13 +61,30 @@ public interface ProjectChangeCartsConfigurationAction extends ProjectUpdateActi
     }
 
     /**
-     * factory method to copy an instance of ProjectChangeCartsConfigurationAction
+     * factory method to create a shallow copy ProjectChangeCartsConfigurationAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProjectChangeCartsConfigurationAction of(final ProjectChangeCartsConfigurationAction template) {
         ProjectChangeCartsConfigurationActionImpl instance = new ProjectChangeCartsConfigurationActionImpl();
         instance.setCartsConfiguration(template.getCartsConfiguration());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProjectChangeCartsConfigurationAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProjectChangeCartsConfigurationAction deepCopy(
+            @Nullable final ProjectChangeCartsConfigurationAction template) {
+        if (template == null) {
+            return null;
+        }
+        ProjectChangeCartsConfigurationActionImpl instance = new ProjectChangeCartsConfigurationActionImpl();
+        instance.setCartsConfiguration(
+            com.commercetools.api.models.project.CartsConfiguration.deepCopy(template.getCartsConfiguration()));
         return instance;
     }
 

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -67,14 +68,30 @@ public interface BadGatewayError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of BadGatewayError
+     * factory method to create a shallow copy BadGatewayError
      * @param template instance to be copied
      * @return copy instance
      */
     public static BadGatewayError of(final BadGatewayError template) {
         BadGatewayErrorImpl instance = new BadGatewayErrorImpl();
         instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        return instance;
+    }
 
+    /**
+     * factory method to create a deep copy of BadGatewayError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static BadGatewayError deepCopy(@Nullable final BadGatewayError template) {
+        if (template == null) {
+            return null;
+        }
+        BadGatewayErrorImpl instance = new BadGatewayErrorImpl();
+        instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
 

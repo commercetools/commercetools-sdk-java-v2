@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -128,11 +129,30 @@ public interface SetCustomFieldChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetCustomFieldChange
+     * factory method to create a shallow copy SetCustomFieldChange
      * @param template instance to be copied
      * @return copy instance
      */
     public static SetCustomFieldChange of(final SetCustomFieldChange template) {
+        SetCustomFieldChangeImpl instance = new SetCustomFieldChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setName(template.getName());
+        instance.setCustomTypeId(template.getCustomTypeId());
+        instance.setNextValue(template.getNextValue());
+        instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetCustomFieldChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetCustomFieldChange deepCopy(@Nullable final SetCustomFieldChange template) {
+        if (template == null) {
+            return null;
+        }
         SetCustomFieldChangeImpl instance = new SetCustomFieldChangeImpl();
         instance.setChange(template.getChange());
         instance.setName(template.getName());

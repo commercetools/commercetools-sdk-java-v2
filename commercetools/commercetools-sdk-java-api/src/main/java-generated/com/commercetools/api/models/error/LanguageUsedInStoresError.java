@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -67,14 +68,30 @@ public interface LanguageUsedInStoresError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of LanguageUsedInStoresError
+     * factory method to create a shallow copy LanguageUsedInStoresError
      * @param template instance to be copied
      * @return copy instance
      */
     public static LanguageUsedInStoresError of(final LanguageUsedInStoresError template) {
         LanguageUsedInStoresErrorImpl instance = new LanguageUsedInStoresErrorImpl();
         instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        return instance;
+    }
 
+    /**
+     * factory method to create a deep copy of LanguageUsedInStoresError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static LanguageUsedInStoresError deepCopy(@Nullable final LanguageUsedInStoresError template) {
+        if (template == null) {
+            return null;
+        }
+        LanguageUsedInStoresErrorImpl instance = new LanguageUsedInStoresErrorImpl();
+        instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
 

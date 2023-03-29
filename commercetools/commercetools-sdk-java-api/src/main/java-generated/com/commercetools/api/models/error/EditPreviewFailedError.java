@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -86,15 +87,33 @@ public interface EditPreviewFailedError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of EditPreviewFailedError
+     * factory method to create a shallow copy EditPreviewFailedError
      * @param template instance to be copied
      * @return copy instance
      */
     public static EditPreviewFailedError of(final EditPreviewFailedError template) {
         EditPreviewFailedErrorImpl instance = new EditPreviewFailedErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         instance.setResult(template.getResult());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of EditPreviewFailedError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static EditPreviewFailedError deepCopy(@Nullable final EditPreviewFailedError template) {
+        if (template == null) {
+            return null;
+        }
+        EditPreviewFailedErrorImpl instance = new EditPreviewFailedErrorImpl();
+        instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        instance.setResult(
+            com.commercetools.api.models.order_edit.OrderEditPreviewFailure.deepCopy(template.getResult()));
         return instance;
     }
 

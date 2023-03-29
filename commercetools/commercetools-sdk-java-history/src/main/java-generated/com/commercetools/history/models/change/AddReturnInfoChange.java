@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -85,7 +86,7 @@ public interface AddReturnInfoChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of AddReturnInfoChange
+     * factory method to create a shallow copy AddReturnInfoChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -93,6 +94,22 @@ public interface AddReturnInfoChange extends Change {
         AddReturnInfoChangeImpl instance = new AddReturnInfoChangeImpl();
         instance.setChange(template.getChange());
         instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of AddReturnInfoChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AddReturnInfoChange deepCopy(@Nullable final AddReturnInfoChange template) {
+        if (template == null) {
+            return null;
+        }
+        AddReturnInfoChangeImpl instance = new AddReturnInfoChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setNextValue(com.commercetools.history.models.common.ReturnInfo.deepCopy(template.getNextValue()));
         return instance;
     }
 

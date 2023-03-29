@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -61,13 +62,28 @@ public interface ReferenceField extends CustomField {
     }
 
     /**
-     * factory method to copy an instance of ReferenceField
+     * factory method to create a shallow copy ReferenceField
      * @param template instance to be copied
      * @return copy instance
      */
     public static ReferenceField of(final ReferenceField template) {
         ReferenceFieldImpl instance = new ReferenceFieldImpl();
         instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ReferenceField
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ReferenceField deepCopy(@Nullable final ReferenceField template) {
+        if (template == null) {
+            return null;
+        }
+        ReferenceFieldImpl instance = new ReferenceFieldImpl();
+        instance.setValue(com.commercetools.importapi.models.common.KeyReference.deepCopy(template.getValue()));
         return instance;
     }
 

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -85,11 +86,28 @@ public interface Variant {
     }
 
     /**
-     * factory method to copy an instance of Variant
+     * factory method to create a shallow copy Variant
      * @param template instance to be copied
      * @return copy instance
      */
     public static Variant of(final Variant template) {
+        VariantImpl instance = new VariantImpl();
+        instance.setId(template.getId());
+        instance.setSku(template.getSku());
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of Variant
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static Variant deepCopy(@Nullable final Variant template) {
+        if (template == null) {
+            return null;
+        }
         VariantImpl instance = new VariantImpl();
         instance.setId(template.getId());
         instance.setSku(template.getSku());

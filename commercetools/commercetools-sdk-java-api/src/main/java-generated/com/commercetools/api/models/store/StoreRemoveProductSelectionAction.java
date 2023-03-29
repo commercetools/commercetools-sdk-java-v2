@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -61,13 +62,30 @@ public interface StoreRemoveProductSelectionAction extends StoreUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of StoreRemoveProductSelectionAction
+     * factory method to create a shallow copy StoreRemoveProductSelectionAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static StoreRemoveProductSelectionAction of(final StoreRemoveProductSelectionAction template) {
         StoreRemoveProductSelectionActionImpl instance = new StoreRemoveProductSelectionActionImpl();
         instance.setProductSelection(template.getProductSelection());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StoreRemoveProductSelectionAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StoreRemoveProductSelectionAction deepCopy(
+            @Nullable final StoreRemoveProductSelectionAction template) {
+        if (template == null) {
+            return null;
+        }
+        StoreRemoveProductSelectionActionImpl instance = new StoreRemoveProductSelectionActionImpl();
+        instance.setProductSelection(com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier
+                .deepCopy(template.getProductSelection()));
         return instance;
     }
 

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.common.GeoJson;
@@ -58,13 +59,28 @@ public interface ChannelSetGeoLocationAction extends ChannelUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ChannelSetGeoLocationAction
+     * factory method to create a shallow copy ChannelSetGeoLocationAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ChannelSetGeoLocationAction of(final ChannelSetGeoLocationAction template) {
         ChannelSetGeoLocationActionImpl instance = new ChannelSetGeoLocationActionImpl();
         instance.setGeoLocation(template.getGeoLocation());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChannelSetGeoLocationAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChannelSetGeoLocationAction deepCopy(@Nullable final ChannelSetGeoLocationAction template) {
+        if (template == null) {
+            return null;
+        }
+        ChannelSetGeoLocationActionImpl instance = new ChannelSetGeoLocationActionImpl();
+        instance.setGeoLocation(com.commercetools.api.models.common.GeoJson.deepCopy(template.getGeoLocation()));
         return instance;
     }
 

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -73,11 +74,28 @@ public interface CartSetBillingAddressCustomFieldAction extends CartUpdateAction
     }
 
     /**
-     * factory method to copy an instance of CartSetBillingAddressCustomFieldAction
+     * factory method to create a shallow copy CartSetBillingAddressCustomFieldAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static CartSetBillingAddressCustomFieldAction of(final CartSetBillingAddressCustomFieldAction template) {
+        CartSetBillingAddressCustomFieldActionImpl instance = new CartSetBillingAddressCustomFieldActionImpl();
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartSetBillingAddressCustomFieldAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartSetBillingAddressCustomFieldAction deepCopy(
+            @Nullable final CartSetBillingAddressCustomFieldAction template) {
+        if (template == null) {
+            return null;
+        }
         CartSetBillingAddressCustomFieldActionImpl instance = new CartSetBillingAddressCustomFieldActionImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());

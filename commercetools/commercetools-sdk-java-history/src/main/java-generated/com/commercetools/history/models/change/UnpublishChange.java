@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -66,11 +67,26 @@ public interface UnpublishChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of UnpublishChange
+     * factory method to create a shallow copy UnpublishChange
      * @param template instance to be copied
      * @return copy instance
      */
     public static UnpublishChange of(final UnpublishChange template) {
+        UnpublishChangeImpl instance = new UnpublishChangeImpl();
+        instance.setChange(template.getChange());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of UnpublishChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static UnpublishChange deepCopy(@Nullable final UnpublishChange template) {
+        if (template == null) {
+            return null;
+        }
         UnpublishChangeImpl instance = new UnpublishChangeImpl();
         instance.setChange(template.getChange());
         return instance;

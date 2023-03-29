@@ -6,6 +6,8 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -71,12 +73,29 @@ public interface ProductDiscountSetValidFromAndUntilAction extends ProductDiscou
     }
 
     /**
-     * factory method to copy an instance of ProductDiscountSetValidFromAndUntilAction
+     * factory method to create a shallow copy ProductDiscountSetValidFromAndUntilAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductDiscountSetValidFromAndUntilAction of(
             final ProductDiscountSetValidFromAndUntilAction template) {
+        ProductDiscountSetValidFromAndUntilActionImpl instance = new ProductDiscountSetValidFromAndUntilActionImpl();
+        instance.setValidFrom(template.getValidFrom());
+        instance.setValidUntil(template.getValidUntil());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductDiscountSetValidFromAndUntilAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductDiscountSetValidFromAndUntilAction deepCopy(
+            @Nullable final ProductDiscountSetValidFromAndUntilAction template) {
+        if (template == null) {
+            return null;
+        }
         ProductDiscountSetValidFromAndUntilActionImpl instance = new ProductDiscountSetValidFromAndUntilActionImpl();
         instance.setValidFrom(template.getValidFrom());
         instance.setValidUntil(template.getValidUntil());

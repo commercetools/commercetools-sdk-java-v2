@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -60,13 +61,29 @@ public interface ExtensionChangeDestinationAction extends ExtensionUpdateAction 
     }
 
     /**
-     * factory method to copy an instance of ExtensionChangeDestinationAction
+     * factory method to create a shallow copy ExtensionChangeDestinationAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ExtensionChangeDestinationAction of(final ExtensionChangeDestinationAction template) {
         ExtensionChangeDestinationActionImpl instance = new ExtensionChangeDestinationActionImpl();
         instance.setDestination(template.getDestination());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ExtensionChangeDestinationAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ExtensionChangeDestinationAction deepCopy(@Nullable final ExtensionChangeDestinationAction template) {
+        if (template == null) {
+            return null;
+        }
+        ExtensionChangeDestinationActionImpl instance = new ExtensionChangeDestinationActionImpl();
+        instance.setDestination(
+            com.commercetools.api.models.extension.ExtensionDestination.deepCopy(template.getDestination()));
         return instance;
     }
 

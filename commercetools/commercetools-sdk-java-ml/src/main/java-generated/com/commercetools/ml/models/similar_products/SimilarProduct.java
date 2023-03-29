@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.ml.models.common.ProductReference;
@@ -83,7 +84,7 @@ public interface SimilarProduct {
     }
 
     /**
-     * factory method to copy an instance of SimilarProduct
+     * factory method to create a shallow copy SimilarProduct
      * @param template instance to be copied
      * @return copy instance
      */
@@ -92,6 +93,23 @@ public interface SimilarProduct {
         instance.setProduct(template.getProduct());
         instance.setVariantId(template.getVariantId());
         instance.setMeta(template.getMeta());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SimilarProduct
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SimilarProduct deepCopy(@Nullable final SimilarProduct template) {
+        if (template == null) {
+            return null;
+        }
+        SimilarProductImpl instance = new SimilarProductImpl();
+        instance.setProduct(com.commercetools.ml.models.common.ProductReference.deepCopy(template.getProduct()));
+        instance.setVariantId(template.getVariantId());
+        instance.setMeta(com.commercetools.ml.models.similar_products.SimilarProductMeta.deepCopy(template.getMeta()));
         return instance;
     }
 

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -53,11 +54,26 @@ public interface AttributeType {
     }
 
     /**
-     * factory method to copy an instance of AttributeType
+     * factory method to create a shallow copy AttributeType
      * @param template instance to be copied
      * @return copy instance
      */
     public static AttributeType of(final AttributeType template) {
+        AttributeTypeImpl instance = new AttributeTypeImpl();
+        instance.setName(template.getName());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of AttributeType
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AttributeType deepCopy(@Nullable final AttributeType template) {
+        if (template == null) {
+            return null;
+        }
         AttributeTypeImpl instance = new AttributeTypeImpl();
         instance.setName(template.getName());
         return instance;

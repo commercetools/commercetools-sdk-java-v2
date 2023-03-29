@@ -5,7 +5,9 @@ import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -453,7 +455,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
     }
 
     /**
-     * factory method to copy an instance of OrderImportDraft
+     * factory method to create a shallow copy OrderImportDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -483,6 +485,62 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
         instance.setItemShippingAddresses(template.getItemShippingAddresses());
         instance.setBusinessUnit(template.getBusinessUnit());
         instance.setStore(template.getStore());
+        instance.setOrigin(template.getOrigin());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderImportDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderImportDraft deepCopy(@Nullable final OrderImportDraft template) {
+        if (template == null) {
+            return null;
+        }
+        OrderImportDraftImpl instance = new OrderImportDraftImpl();
+        instance.setOrderNumber(template.getOrderNumber());
+        instance.setCustomerId(template.getCustomerId());
+        instance.setCustomerEmail(template.getCustomerEmail());
+        instance.setLineItems(Optional.ofNullable(template.getLineItems())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.order.LineItemImportDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setCustomLineItems(Optional.ofNullable(template.getCustomLineItems())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.cart.CustomLineItemImportDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setTotalPrice(com.commercetools.api.models.common.Money.deepCopy(template.getTotalPrice()));
+        instance.setTaxedPrice(com.commercetools.api.models.cart.TaxedPriceDraft.deepCopy(template.getTaxedPrice()));
+        instance.setShippingAddress(
+            com.commercetools.api.models.common.BaseAddress.deepCopy(template.getShippingAddress()));
+        instance.setBillingAddress(
+            com.commercetools.api.models.common.BaseAddress.deepCopy(template.getBillingAddress()));
+        instance.setCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier
+                .deepCopy(template.getCustomerGroup()));
+        instance.setCountry(template.getCountry());
+        instance.setOrderState(template.getOrderState());
+        instance.setState(com.commercetools.api.models.state.StateReference.deepCopy(template.getState()));
+        instance.setShipmentState(template.getShipmentState());
+        instance.setPaymentState(template.getPaymentState());
+        instance.setShippingInfo(
+            com.commercetools.api.models.order.ShippingInfoImportDraft.deepCopy(template.getShippingInfo()));
+        instance.setPaymentInfo(com.commercetools.api.models.order.PaymentInfo.deepCopy(template.getPaymentInfo()));
+        instance.setCompletedAt(template.getCompletedAt());
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setInventoryMode(template.getInventoryMode());
+        instance.setTaxRoundingMode(template.getTaxRoundingMode());
+        instance.setItemShippingAddresses(Optional.ofNullable(template.getItemShippingAddresses())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.common.BaseAddress::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setBusinessUnit(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier
+                .deepCopy(template.getBusinessUnit()));
+        instance.setStore(com.commercetools.api.models.store.StoreResourceIdentifier.deepCopy(template.getStore()));
         instance.setOrigin(template.getOrigin());
         return instance;
     }

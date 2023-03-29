@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -62,7 +63,7 @@ public interface DuplicateAttributeValueError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of DuplicateAttributeValueError
+     * factory method to create a shallow copy DuplicateAttributeValueError
      * @param template instance to be copied
      * @return copy instance
      */
@@ -70,6 +71,23 @@ public interface DuplicateAttributeValueError extends ErrorObject {
         DuplicateAttributeValueErrorImpl instance = new DuplicateAttributeValueErrorImpl();
         instance.setMessage(template.getMessage());
         instance.setAttribute(template.getAttribute());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of DuplicateAttributeValueError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static DuplicateAttributeValueError deepCopy(@Nullable final DuplicateAttributeValueError template) {
+        if (template == null) {
+            return null;
+        }
+        DuplicateAttributeValueErrorImpl instance = new DuplicateAttributeValueErrorImpl();
+        instance.setMessage(template.getMessage());
+        instance.setAttribute(
+            com.commercetools.importapi.models.productvariants.Attribute.deepCopy(template.getAttribute()));
         return instance;
     }
 

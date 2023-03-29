@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -67,14 +68,30 @@ public interface AnonymousIdAlreadyInUseError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of AnonymousIdAlreadyInUseError
+     * factory method to create a shallow copy AnonymousIdAlreadyInUseError
      * @param template instance to be copied
      * @return copy instance
      */
     public static AnonymousIdAlreadyInUseError of(final AnonymousIdAlreadyInUseError template) {
         AnonymousIdAlreadyInUseErrorImpl instance = new AnonymousIdAlreadyInUseErrorImpl();
         instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        return instance;
+    }
 
+    /**
+     * factory method to create a deep copy of AnonymousIdAlreadyInUseError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AnonymousIdAlreadyInUseError deepCopy(@Nullable final AnonymousIdAlreadyInUseError template) {
+        if (template == null) {
+            return null;
+        }
+        AnonymousIdAlreadyInUseErrorImpl instance = new AnonymousIdAlreadyInUseErrorImpl();
+        instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
 

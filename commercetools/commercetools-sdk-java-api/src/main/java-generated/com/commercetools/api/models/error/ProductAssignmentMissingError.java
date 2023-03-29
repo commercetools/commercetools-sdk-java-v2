@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -92,15 +93,32 @@ public interface ProductAssignmentMissingError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of ProductAssignmentMissingError
+     * factory method to create a shallow copy ProductAssignmentMissingError
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductAssignmentMissingError of(final ProductAssignmentMissingError template) {
         ProductAssignmentMissingErrorImpl instance = new ProductAssignmentMissingErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         instance.setProduct(template.getProduct());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductAssignmentMissingError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductAssignmentMissingError deepCopy(@Nullable final ProductAssignmentMissingError template) {
+        if (template == null) {
+            return null;
+        }
+        ProductAssignmentMissingErrorImpl instance = new ProductAssignmentMissingErrorImpl();
+        instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        instance.setProduct(com.commercetools.api.models.product.ProductReference.deepCopy(template.getProduct()));
         return instance;
     }
 

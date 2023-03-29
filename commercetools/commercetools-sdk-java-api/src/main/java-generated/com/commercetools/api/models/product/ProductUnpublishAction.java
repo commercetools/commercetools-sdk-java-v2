@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -40,11 +42,25 @@ public interface ProductUnpublishAction extends ProductUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ProductUnpublishAction
+     * factory method to create a shallow copy ProductUnpublishAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductUnpublishAction of(final ProductUnpublishAction template) {
+        ProductUnpublishActionImpl instance = new ProductUnpublishActionImpl();
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductUnpublishAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductUnpublishAction deepCopy(@Nullable final ProductUnpublishAction template) {
+        if (template == null) {
+            return null;
+        }
         ProductUnpublishActionImpl instance = new ProductUnpublishActionImpl();
         return instance;
     }

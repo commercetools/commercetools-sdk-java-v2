@@ -4,7 +4,9 @@ package com.commercetools.api.models.project;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -69,13 +71,32 @@ public interface CartClassificationType extends ShippingRateInputType {
     }
 
     /**
-     * factory method to copy an instance of CartClassificationType
+     * factory method to create a shallow copy CartClassificationType
      * @param template instance to be copied
      * @return copy instance
      */
     public static CartClassificationType of(final CartClassificationType template) {
         CartClassificationTypeImpl instance = new CartClassificationTypeImpl();
         instance.setValues(template.getValues());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartClassificationType
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartClassificationType deepCopy(@Nullable final CartClassificationType template) {
+        if (template == null) {
+            return null;
+        }
+        CartClassificationTypeImpl instance = new CartClassificationTypeImpl();
+        instance.setValues(Optional.ofNullable(template.getValues())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.type.CustomFieldLocalizedEnumValue::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

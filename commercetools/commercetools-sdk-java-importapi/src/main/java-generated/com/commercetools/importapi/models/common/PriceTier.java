@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -71,7 +72,7 @@ public interface PriceTier {
     }
 
     /**
-     * factory method to copy an instance of PriceTier
+     * factory method to create a shallow copy PriceTier
      * @param template instance to be copied
      * @return copy instance
      */
@@ -79,6 +80,22 @@ public interface PriceTier {
         PriceTierImpl instance = new PriceTierImpl();
         instance.setMinimumQuantity(template.getMinimumQuantity());
         instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of PriceTier
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static PriceTier deepCopy(@Nullable final PriceTier template) {
+        if (template == null) {
+            return null;
+        }
+        PriceTierImpl instance = new PriceTierImpl();
+        instance.setMinimumQuantity(template.getMinimumQuantity());
+        instance.setValue(com.commercetools.importapi.models.common.TypedMoney.deepCopy(template.getValue()));
         return instance;
     }
 

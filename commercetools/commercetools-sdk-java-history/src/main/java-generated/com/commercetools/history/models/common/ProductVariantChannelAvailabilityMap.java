@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -57,12 +58,29 @@ public interface ProductVariantChannelAvailabilityMap {
     }
 
     /**
-     * factory method to copy an instance of ProductVariantChannelAvailabilityMap
+     * factory method to create a shallow copy ProductVariantChannelAvailabilityMap
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductVariantChannelAvailabilityMap of(final ProductVariantChannelAvailabilityMap template) {
         ProductVariantChannelAvailabilityMapImpl instance = new ProductVariantChannelAvailabilityMapImpl();
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductVariantChannelAvailabilityMap
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductVariantChannelAvailabilityMap deepCopy(
+            @Nullable final ProductVariantChannelAvailabilityMap template) {
+        if (template == null) {
+            return null;
+        }
+        ProductVariantChannelAvailabilityMapImpl instance = new ProductVariantChannelAvailabilityMapImpl();
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
 

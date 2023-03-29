@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.customer.CustomerReference;
@@ -111,7 +112,7 @@ public interface OrderCustomerSetMessage extends OrderMessage {
     }
 
     /**
-     * factory method to copy an instance of OrderCustomerSetMessage
+     * factory method to create a shallow copy OrderCustomerSetMessage
      * @param template instance to be copied
      * @return copy instance
      */
@@ -131,6 +132,39 @@ public interface OrderCustomerSetMessage extends OrderMessage {
         instance.setCustomerGroup(template.getCustomerGroup());
         instance.setOldCustomer(template.getOldCustomer());
         instance.setOldCustomerGroup(template.getOldCustomerGroup());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderCustomerSetMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderCustomerSetMessage deepCopy(@Nullable final OrderCustomerSetMessage template) {
+        if (template == null) {
+            return null;
+        }
+        OrderCustomerSetMessageImpl instance = new OrderCustomerSetMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
+                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setCustomer(com.commercetools.api.models.customer.CustomerReference.deepCopy(template.getCustomer()));
+        instance.setCustomerGroup(
+            com.commercetools.api.models.customer_group.CustomerGroupReference.deepCopy(template.getCustomerGroup()));
+        instance.setOldCustomer(
+            com.commercetools.api.models.customer.CustomerReference.deepCopy(template.getOldCustomer()));
+        instance.setOldCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupReference
+                .deepCopy(template.getOldCustomerGroup()));
         return instance;
     }
 

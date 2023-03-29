@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,26 @@ public interface MyBusinessUnitChangeNameAction extends MyBusinessUnitUpdateActi
     }
 
     /**
-     * factory method to copy an instance of MyBusinessUnitChangeNameAction
+     * factory method to create a shallow copy MyBusinessUnitChangeNameAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static MyBusinessUnitChangeNameAction of(final MyBusinessUnitChangeNameAction template) {
+        MyBusinessUnitChangeNameActionImpl instance = new MyBusinessUnitChangeNameActionImpl();
+        instance.setName(template.getName());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MyBusinessUnitChangeNameAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MyBusinessUnitChangeNameAction deepCopy(@Nullable final MyBusinessUnitChangeNameAction template) {
+        if (template == null) {
+            return null;
+        }
         MyBusinessUnitChangeNameActionImpl instance = new MyBusinessUnitChangeNameActionImpl();
         instance.setName(template.getName());
         return instance;

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -50,11 +51,25 @@ public interface ChangeValueExternalChangeValue extends ChangeValueChangeValue {
     }
 
     /**
-     * factory method to copy an instance of ChangeValueExternalChangeValue
+     * factory method to create a shallow copy ChangeValueExternalChangeValue
      * @param template instance to be copied
      * @return copy instance
      */
     public static ChangeValueExternalChangeValue of(final ChangeValueExternalChangeValue template) {
+        ChangeValueExternalChangeValueImpl instance = new ChangeValueExternalChangeValueImpl();
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChangeValueExternalChangeValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChangeValueExternalChangeValue deepCopy(@Nullable final ChangeValueExternalChangeValue template) {
+        if (template == null) {
+            return null;
+        }
         ChangeValueExternalChangeValueImpl instance = new ChangeValueExternalChangeValueImpl();
         return instance;
     }

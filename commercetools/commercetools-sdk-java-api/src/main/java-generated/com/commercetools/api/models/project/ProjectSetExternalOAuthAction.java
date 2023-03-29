@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.fasterxml.jackson.annotation.*;
@@ -57,13 +58,29 @@ public interface ProjectSetExternalOAuthAction extends ProjectUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ProjectSetExternalOAuthAction
+     * factory method to create a shallow copy ProjectSetExternalOAuthAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProjectSetExternalOAuthAction of(final ProjectSetExternalOAuthAction template) {
         ProjectSetExternalOAuthActionImpl instance = new ProjectSetExternalOAuthActionImpl();
         instance.setExternalOAuth(template.getExternalOAuth());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProjectSetExternalOAuthAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProjectSetExternalOAuthAction deepCopy(@Nullable final ProjectSetExternalOAuthAction template) {
+        if (template == null) {
+            return null;
+        }
+        ProjectSetExternalOAuthActionImpl instance = new ProjectSetExternalOAuthActionImpl();
+        instance.setExternalOAuth(
+            com.commercetools.api.models.project.ExternalOAuth.deepCopy(template.getExternalOAuth()));
         return instance;
     }
 

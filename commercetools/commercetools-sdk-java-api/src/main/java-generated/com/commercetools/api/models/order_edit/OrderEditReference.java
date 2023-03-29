@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -75,7 +76,7 @@ public interface OrderEditReference extends Reference, com.commercetools.api.mod
     }
 
     /**
-     * factory method to copy an instance of OrderEditReference
+     * factory method to create a shallow copy OrderEditReference
      * @param template instance to be copied
      * @return copy instance
      */
@@ -83,6 +84,22 @@ public interface OrderEditReference extends Reference, com.commercetools.api.mod
         OrderEditReferenceImpl instance = new OrderEditReferenceImpl();
         instance.setId(template.getId());
         instance.setObj(template.getObj());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderEditReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderEditReference deepCopy(@Nullable final OrderEditReference template) {
+        if (template == null) {
+            return null;
+        }
+        OrderEditReferenceImpl instance = new OrderEditReferenceImpl();
+        instance.setId(template.getId());
+        instance.setObj(com.commercetools.api.models.order_edit.OrderEdit.deepCopy(template.getObj()));
         return instance;
     }
 

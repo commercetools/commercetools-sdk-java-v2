@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -133,11 +134,31 @@ public interface OperationStates {
     }
 
     /**
-     * factory method to copy an instance of OperationStates
+     * factory method to create a shallow copy OperationStates
      * @param template instance to be copied
      * @return copy instance
      */
     public static OperationStates of(final OperationStates template) {
+        OperationStatesImpl instance = new OperationStatesImpl();
+        instance.setProcessing(template.getProcessing());
+        instance.setValidationFailed(template.getValidationFailed());
+        instance.setUnresolved(template.getUnresolved());
+        instance.setWaitForMasterVariant(template.getWaitForMasterVariant());
+        instance.setImported(template.getImported());
+        instance.setRejected(template.getRejected());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OperationStates
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OperationStates deepCopy(@Nullable final OperationStates template) {
+        if (template == null) {
+            return null;
+        }
         OperationStatesImpl instance = new OperationStatesImpl();
         instance.setProcessing(template.getProcessing());
         instance.setValidationFailed(template.getValidationFailed());

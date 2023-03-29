@@ -6,6 +6,8 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -56,11 +58,26 @@ public interface CartDiscountSetValidUntilAction extends CartDiscountUpdateActio
     }
 
     /**
-     * factory method to copy an instance of CartDiscountSetValidUntilAction
+     * factory method to create a shallow copy CartDiscountSetValidUntilAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static CartDiscountSetValidUntilAction of(final CartDiscountSetValidUntilAction template) {
+        CartDiscountSetValidUntilActionImpl instance = new CartDiscountSetValidUntilActionImpl();
+        instance.setValidUntil(template.getValidUntil());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartDiscountSetValidUntilAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartDiscountSetValidUntilAction deepCopy(@Nullable final CartDiscountSetValidUntilAction template) {
+        if (template == null) {
+            return null;
+        }
         CartDiscountSetValidUntilActionImpl instance = new CartDiscountSetValidUntilActionImpl();
         instance.setValidUntil(template.getValidUntil());
         return instance;

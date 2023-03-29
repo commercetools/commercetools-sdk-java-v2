@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,27 @@ public interface ProductDiscountChangePredicateAction extends ProductDiscountUpd
     }
 
     /**
-     * factory method to copy an instance of ProductDiscountChangePredicateAction
+     * factory method to create a shallow copy ProductDiscountChangePredicateAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductDiscountChangePredicateAction of(final ProductDiscountChangePredicateAction template) {
+        ProductDiscountChangePredicateActionImpl instance = new ProductDiscountChangePredicateActionImpl();
+        instance.setPredicate(template.getPredicate());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductDiscountChangePredicateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductDiscountChangePredicateAction deepCopy(
+            @Nullable final ProductDiscountChangePredicateAction template) {
+        if (template == null) {
+            return null;
+        }
         ProductDiscountChangePredicateActionImpl instance = new ProductDiscountChangePredicateActionImpl();
         instance.setPredicate(template.getPredicate());
         return instance;

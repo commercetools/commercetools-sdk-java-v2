@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -73,11 +74,28 @@ public interface OrderSetBillingAddressCustomFieldAction extends OrderUpdateActi
     }
 
     /**
-     * factory method to copy an instance of OrderSetBillingAddressCustomFieldAction
+     * factory method to create a shallow copy OrderSetBillingAddressCustomFieldAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static OrderSetBillingAddressCustomFieldAction of(final OrderSetBillingAddressCustomFieldAction template) {
+        OrderSetBillingAddressCustomFieldActionImpl instance = new OrderSetBillingAddressCustomFieldActionImpl();
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderSetBillingAddressCustomFieldAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderSetBillingAddressCustomFieldAction deepCopy(
+            @Nullable final OrderSetBillingAddressCustomFieldAction template) {
+        if (template == null) {
+            return null;
+        }
         OrderSetBillingAddressCustomFieldActionImpl instance = new OrderSetBillingAddressCustomFieldActionImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());

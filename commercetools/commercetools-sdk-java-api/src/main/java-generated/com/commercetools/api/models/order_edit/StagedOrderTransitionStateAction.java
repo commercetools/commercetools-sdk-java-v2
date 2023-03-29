@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -77,13 +78,29 @@ public interface StagedOrderTransitionStateAction extends StagedOrderUpdateActio
     }
 
     /**
-     * factory method to copy an instance of StagedOrderTransitionStateAction
+     * factory method to create a shallow copy StagedOrderTransitionStateAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static StagedOrderTransitionStateAction of(final StagedOrderTransitionStateAction template) {
         StagedOrderTransitionStateActionImpl instance = new StagedOrderTransitionStateActionImpl();
         instance.setState(template.getState());
+        instance.setForce(template.getForce());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedOrderTransitionStateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedOrderTransitionStateAction deepCopy(@Nullable final StagedOrderTransitionStateAction template) {
+        if (template == null) {
+            return null;
+        }
+        StagedOrderTransitionStateActionImpl instance = new StagedOrderTransitionStateActionImpl();
+        instance.setState(com.commercetools.api.models.state.StateResourceIdentifier.deepCopy(template.getState()));
         instance.setForce(template.getForce());
         return instance;
     }

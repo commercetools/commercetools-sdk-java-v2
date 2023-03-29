@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -192,7 +193,7 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
     }
 
     /**
-     * factory method to copy an instance of OrderFromCartDraft
+     * factory method to create a shallow copy OrderFromCartDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -208,6 +209,30 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
         instance.setOrderState(template.getOrderState());
         instance.setState(template.getState());
         instance.setCustom(template.getCustom());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderFromCartDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderFromCartDraft deepCopy(@Nullable final OrderFromCartDraft template) {
+        if (template == null) {
+            return null;
+        }
+        OrderFromCartDraftImpl instance = new OrderFromCartDraftImpl();
+        instance.setId(template.getId());
+        instance.setCart(com.commercetools.api.models.cart.CartResourceIdentifier.deepCopy(template.getCart()));
+        instance.setVersion(template.getVersion());
+        instance.setOrderNumber(template.getOrderNumber());
+        instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
+        instance.setPaymentState(template.getPaymentState());
+        instance.setShipmentState(template.getShipmentState());
+        instance.setOrderState(template.getOrderState());
+        instance.setState(com.commercetools.api.models.state.StateResourceIdentifier.deepCopy(template.getState()));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;
     }
 

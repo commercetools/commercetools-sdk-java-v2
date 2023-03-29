@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -69,11 +70,27 @@ public interface TaskToken {
     }
 
     /**
-     * factory method to copy an instance of TaskToken
+     * factory method to create a shallow copy TaskToken
      * @param template instance to be copied
      * @return copy instance
      */
     public static TaskToken of(final TaskToken template) {
+        TaskTokenImpl instance = new TaskTokenImpl();
+        instance.setTaskId(template.getTaskId());
+        instance.setUriPath(template.getUriPath());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of TaskToken
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static TaskToken deepCopy(@Nullable final TaskToken template) {
+        if (template == null) {
+            return null;
+        }
         TaskTokenImpl instance = new TaskTokenImpl();
         instance.setTaskId(template.getTaskId());
         instance.setUriPath(template.getUriPath());

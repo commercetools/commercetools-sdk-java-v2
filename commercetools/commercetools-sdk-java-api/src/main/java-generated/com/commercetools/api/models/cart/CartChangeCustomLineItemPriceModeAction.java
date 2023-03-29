@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -74,11 +75,28 @@ public interface CartChangeCustomLineItemPriceModeAction extends CartUpdateActio
     }
 
     /**
-     * factory method to copy an instance of CartChangeCustomLineItemPriceModeAction
+     * factory method to create a shallow copy CartChangeCustomLineItemPriceModeAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static CartChangeCustomLineItemPriceModeAction of(final CartChangeCustomLineItemPriceModeAction template) {
+        CartChangeCustomLineItemPriceModeActionImpl instance = new CartChangeCustomLineItemPriceModeActionImpl();
+        instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setMode(template.getMode());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartChangeCustomLineItemPriceModeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartChangeCustomLineItemPriceModeAction deepCopy(
+            @Nullable final CartChangeCustomLineItemPriceModeAction template) {
+        if (template == null) {
+            return null;
+        }
         CartChangeCustomLineItemPriceModeActionImpl instance = new CartChangeCustomLineItemPriceModeActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setMode(template.getMode());

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -71,7 +72,7 @@ public interface SearchKeyword {
     }
 
     /**
-     * factory method to copy an instance of SearchKeyword
+     * factory method to create a shallow copy SearchKeyword
      * @param template instance to be copied
      * @return copy instance
      */
@@ -79,6 +80,23 @@ public interface SearchKeyword {
         SearchKeywordImpl instance = new SearchKeywordImpl();
         instance.setText(template.getText());
         instance.setSuggestTokenizer(template.getSuggestTokenizer());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SearchKeyword
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SearchKeyword deepCopy(@Nullable final SearchKeyword template) {
+        if (template == null) {
+            return null;
+        }
+        SearchKeywordImpl instance = new SearchKeywordImpl();
+        instance.setText(template.getText());
+        instance.setSuggestTokenizer(
+            com.commercetools.history.models.common.SuggestTokenizer.deepCopy(template.getSuggestTokenizer()));
         return instance;
     }
 

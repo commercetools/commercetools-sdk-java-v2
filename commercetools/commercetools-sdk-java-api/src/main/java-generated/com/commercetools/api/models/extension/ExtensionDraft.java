@@ -4,7 +4,9 @@ package com.commercetools.api.models.extension;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -113,7 +115,7 @@ public interface ExtensionDraft
     }
 
     /**
-     * factory method to copy an instance of ExtensionDraft
+     * factory method to create a shallow copy ExtensionDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -122,6 +124,29 @@ public interface ExtensionDraft
         instance.setKey(template.getKey());
         instance.setDestination(template.getDestination());
         instance.setTriggers(template.getTriggers());
+        instance.setTimeoutInMs(template.getTimeoutInMs());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ExtensionDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ExtensionDraft deepCopy(@Nullable final ExtensionDraft template) {
+        if (template == null) {
+            return null;
+        }
+        ExtensionDraftImpl instance = new ExtensionDraftImpl();
+        instance.setKey(template.getKey());
+        instance.setDestination(
+            com.commercetools.api.models.extension.ExtensionDestination.deepCopy(template.getDestination()));
+        instance.setTriggers(Optional.ofNullable(template.getTriggers())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.extension.ExtensionTrigger::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setTimeoutInMs(template.getTimeoutInMs());
         return instance;
     }

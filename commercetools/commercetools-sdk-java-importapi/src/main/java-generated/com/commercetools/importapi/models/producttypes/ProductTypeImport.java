@@ -4,7 +4,9 @@ package com.commercetools.importapi.models.producttypes;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -95,7 +97,7 @@ public interface ProductTypeImport extends ImportResource {
     }
 
     /**
-     * factory method to copy an instance of ProductTypeImport
+     * factory method to create a shallow copy ProductTypeImport
      * @param template instance to be copied
      * @return copy instance
      */
@@ -105,6 +107,28 @@ public interface ProductTypeImport extends ImportResource {
         instance.setName(template.getName());
         instance.setDescription(template.getDescription());
         instance.setAttributes(template.getAttributes());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductTypeImport
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductTypeImport deepCopy(@Nullable final ProductTypeImport template) {
+        if (template == null) {
+            return null;
+        }
+        ProductTypeImportImpl instance = new ProductTypeImportImpl();
+        instance.setKey(template.getKey());
+        instance.setName(template.getName());
+        instance.setDescription(template.getDescription());
+        instance.setAttributes(Optional.ofNullable(template.getAttributes())
+                .map(t -> t.stream()
+                        .map(com.commercetools.importapi.models.producttypes.AttributeDefinition::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

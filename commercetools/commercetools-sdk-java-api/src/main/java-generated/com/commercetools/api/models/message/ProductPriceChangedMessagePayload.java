@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -125,7 +126,7 @@ public interface ProductPriceChangedMessagePayload extends MessagePayload {
     }
 
     /**
-     * factory method to copy an instance of ProductPriceChangedMessagePayload
+     * factory method to create a shallow copy ProductPriceChangedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -136,6 +137,26 @@ public interface ProductPriceChangedMessagePayload extends MessagePayload {
         instance.setNewPrice(template.getNewPrice());
         instance.setStaged(template.getStaged());
         instance.setOldStagedPrice(template.getOldStagedPrice());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductPriceChangedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductPriceChangedMessagePayload deepCopy(
+            @Nullable final ProductPriceChangedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        ProductPriceChangedMessagePayloadImpl instance = new ProductPriceChangedMessagePayloadImpl();
+        instance.setVariantId(template.getVariantId());
+        instance.setOldPrice(com.commercetools.api.models.common.Price.deepCopy(template.getOldPrice()));
+        instance.setNewPrice(com.commercetools.api.models.common.Price.deepCopy(template.getNewPrice()));
+        instance.setStaged(template.getStaged());
+        instance.setOldStagedPrice(com.commercetools.api.models.common.Price.deepCopy(template.getOldStagedPrice()));
         return instance;
     }
 

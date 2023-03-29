@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -61,13 +62,29 @@ public interface TypeAddFieldDefinitionAction extends TypeUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of TypeAddFieldDefinitionAction
+     * factory method to create a shallow copy TypeAddFieldDefinitionAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static TypeAddFieldDefinitionAction of(final TypeAddFieldDefinitionAction template) {
         TypeAddFieldDefinitionActionImpl instance = new TypeAddFieldDefinitionActionImpl();
         instance.setFieldDefinition(template.getFieldDefinition());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of TypeAddFieldDefinitionAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static TypeAddFieldDefinitionAction deepCopy(@Nullable final TypeAddFieldDefinitionAction template) {
+        if (template == null) {
+            return null;
+        }
+        TypeAddFieldDefinitionActionImpl instance = new TypeAddFieldDefinitionActionImpl();
+        instance.setFieldDefinition(
+            com.commercetools.api.models.type.FieldDefinition.deepCopy(template.getFieldDefinition()));
         return instance;
     }
 

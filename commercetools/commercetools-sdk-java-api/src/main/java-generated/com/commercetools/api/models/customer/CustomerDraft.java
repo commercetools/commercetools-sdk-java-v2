@@ -5,7 +5,9 @@ import java.time.*;
 import java.time.LocalDate;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -503,7 +505,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
     }
 
     /**
-     * factory method to copy an instance of CustomerDraft
+     * factory method to create a shallow copy CustomerDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -535,6 +537,59 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
         instance.setLocale(template.getLocale());
         instance.setSalutation(template.getSalutation());
         instance.setStores(template.getStores());
+        instance.setAuthenticationMode(template.getAuthenticationMode());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomerDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomerDraft deepCopy(@Nullable final CustomerDraft template) {
+        if (template == null) {
+            return null;
+        }
+        CustomerDraftImpl instance = new CustomerDraftImpl();
+        instance.setKey(template.getKey());
+        instance.setCustomerNumber(template.getCustomerNumber());
+        instance.setExternalId(template.getExternalId());
+        instance.setEmail(template.getEmail());
+        instance.setPassword(template.getPassword());
+        instance.setFirstName(template.getFirstName());
+        instance.setLastName(template.getLastName());
+        instance.setMiddleName(template.getMiddleName());
+        instance.setTitle(template.getTitle());
+        instance.setAnonymousCartId(template.getAnonymousCartId());
+        instance.setAnonymousCart(
+            com.commercetools.api.models.cart.CartResourceIdentifier.deepCopy(template.getAnonymousCart()));
+        instance.setAnonymousId(template.getAnonymousId());
+        instance.setDateOfBirth(template.getDateOfBirth());
+        instance.setCompanyName(template.getCompanyName());
+        instance.setVatId(template.getVatId());
+        instance.setAddresses(Optional.ofNullable(template.getAddresses())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.common.BaseAddress::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setDefaultShippingAddress(template.getDefaultShippingAddress());
+        instance.setShippingAddresses(
+            Optional.ofNullable(template.getShippingAddresses()).map(ArrayList::new).orElse(null));
+        instance.setDefaultBillingAddress(template.getDefaultBillingAddress());
+        instance.setBillingAddresses(
+            Optional.ofNullable(template.getBillingAddresses()).map(ArrayList::new).orElse(null));
+        instance.setIsEmailVerified(template.getIsEmailVerified());
+        instance.setCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier
+                .deepCopy(template.getCustomerGroup()));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setLocale(template.getLocale());
+        instance.setSalutation(template.getSalutation());
+        instance.setStores(Optional.ofNullable(template.getStores())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.store.StoreResourceIdentifier::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setAuthenticationMode(template.getAuthenticationMode());
         return instance;
     }

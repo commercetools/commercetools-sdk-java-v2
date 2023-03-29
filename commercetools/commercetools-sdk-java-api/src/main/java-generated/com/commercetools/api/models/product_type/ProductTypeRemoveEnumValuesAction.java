@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -83,7 +84,7 @@ public interface ProductTypeRemoveEnumValuesAction extends ProductTypeUpdateActi
     }
 
     /**
-     * factory method to copy an instance of ProductTypeRemoveEnumValuesAction
+     * factory method to create a shallow copy ProductTypeRemoveEnumValuesAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -91,6 +92,23 @@ public interface ProductTypeRemoveEnumValuesAction extends ProductTypeUpdateActi
         ProductTypeRemoveEnumValuesActionImpl instance = new ProductTypeRemoveEnumValuesActionImpl();
         instance.setAttributeName(template.getAttributeName());
         instance.setKeys(template.getKeys());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductTypeRemoveEnumValuesAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductTypeRemoveEnumValuesAction deepCopy(
+            @Nullable final ProductTypeRemoveEnumValuesAction template) {
+        if (template == null) {
+            return null;
+        }
+        ProductTypeRemoveEnumValuesActionImpl instance = new ProductTypeRemoveEnumValuesActionImpl();
+        instance.setAttributeName(template.getAttributeName());
+        instance.setKeys(Optional.ofNullable(template.getKeys()).map(ArrayList::new).orElse(null));
         return instance;
     }
 

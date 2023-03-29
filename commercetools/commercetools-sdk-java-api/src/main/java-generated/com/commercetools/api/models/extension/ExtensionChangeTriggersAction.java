@@ -4,7 +4,9 @@ package com.commercetools.api.models.extension;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -68,13 +70,32 @@ public interface ExtensionChangeTriggersAction extends ExtensionUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ExtensionChangeTriggersAction
+     * factory method to create a shallow copy ExtensionChangeTriggersAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ExtensionChangeTriggersAction of(final ExtensionChangeTriggersAction template) {
         ExtensionChangeTriggersActionImpl instance = new ExtensionChangeTriggersActionImpl();
         instance.setTriggers(template.getTriggers());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ExtensionChangeTriggersAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ExtensionChangeTriggersAction deepCopy(@Nullable final ExtensionChangeTriggersAction template) {
+        if (template == null) {
+            return null;
+        }
+        ExtensionChangeTriggersActionImpl instance = new ExtensionChangeTriggersActionImpl();
+        instance.setTriggers(Optional.ofNullable(template.getTriggers())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.extension.ExtensionTrigger::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

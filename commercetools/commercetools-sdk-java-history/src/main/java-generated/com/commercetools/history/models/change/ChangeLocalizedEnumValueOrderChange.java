@@ -4,7 +4,9 @@ package com.commercetools.history.models.change;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -150,7 +152,7 @@ public interface ChangeLocalizedEnumValueOrderChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of ChangeLocalizedEnumValueOrderChange
+     * factory method to create a shallow copy ChangeLocalizedEnumValueOrderChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -161,6 +163,34 @@ public interface ChangeLocalizedEnumValueOrderChange extends Change {
         instance.setAttributeName(template.getAttributeName());
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChangeLocalizedEnumValueOrderChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChangeLocalizedEnumValueOrderChange deepCopy(
+            @Nullable final ChangeLocalizedEnumValueOrderChange template) {
+        if (template == null) {
+            return null;
+        }
+        ChangeLocalizedEnumValueOrderChangeImpl instance = new ChangeLocalizedEnumValueOrderChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setFieldName(template.getFieldName());
+        instance.setAttributeName(template.getAttributeName());
+        instance.setNextValue(Optional.ofNullable(template.getNextValue())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.change_value.LocalizedEnumValue::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.change_value.LocalizedEnumValue::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

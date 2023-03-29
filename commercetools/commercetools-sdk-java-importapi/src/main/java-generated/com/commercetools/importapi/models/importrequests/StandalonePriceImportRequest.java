@@ -4,7 +4,9 @@ package com.commercetools.importapi.models.importrequests;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -69,13 +71,32 @@ public interface StandalonePriceImportRequest extends ImportRequest {
     }
 
     /**
-     * factory method to copy an instance of StandalonePriceImportRequest
+     * factory method to create a shallow copy StandalonePriceImportRequest
      * @param template instance to be copied
      * @return copy instance
      */
     public static StandalonePriceImportRequest of(final StandalonePriceImportRequest template) {
         StandalonePriceImportRequestImpl instance = new StandalonePriceImportRequestImpl();
         instance.setResources(template.getResources());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StandalonePriceImportRequest
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StandalonePriceImportRequest deepCopy(@Nullable final StandalonePriceImportRequest template) {
+        if (template == null) {
+            return null;
+        }
+        StandalonePriceImportRequestImpl instance = new StandalonePriceImportRequestImpl();
+        instance.setResources(Optional.ofNullable(template.getResources())
+                .map(t -> t.stream()
+                        .map(com.commercetools.importapi.models.standalone_prices.StandalonePriceImport::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

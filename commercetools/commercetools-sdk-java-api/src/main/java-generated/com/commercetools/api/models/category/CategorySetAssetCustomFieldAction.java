@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -103,11 +104,30 @@ public interface CategorySetAssetCustomFieldAction extends CategoryUpdateAction 
     }
 
     /**
-     * factory method to copy an instance of CategorySetAssetCustomFieldAction
+     * factory method to create a shallow copy CategorySetAssetCustomFieldAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static CategorySetAssetCustomFieldAction of(final CategorySetAssetCustomFieldAction template) {
+        CategorySetAssetCustomFieldActionImpl instance = new CategorySetAssetCustomFieldActionImpl();
+        instance.setAssetId(template.getAssetId());
+        instance.setAssetKey(template.getAssetKey());
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CategorySetAssetCustomFieldAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CategorySetAssetCustomFieldAction deepCopy(
+            @Nullable final CategorySetAssetCustomFieldAction template) {
+        if (template == null) {
+            return null;
+        }
         CategorySetAssetCustomFieldActionImpl instance = new CategorySetAssetCustomFieldActionImpl();
         instance.setAssetId(template.getAssetId());
         instance.setAssetKey(template.getAssetKey());

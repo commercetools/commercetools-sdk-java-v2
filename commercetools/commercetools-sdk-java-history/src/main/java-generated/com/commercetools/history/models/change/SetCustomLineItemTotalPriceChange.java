@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -136,7 +137,7 @@ public interface SetCustomLineItemTotalPriceChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetCustomLineItemTotalPriceChange
+     * factory method to create a shallow copy SetCustomLineItemTotalPriceChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -147,6 +148,27 @@ public interface SetCustomLineItemTotalPriceChange extends Change {
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetCustomLineItemTotalPriceChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetCustomLineItemTotalPriceChange deepCopy(
+            @Nullable final SetCustomLineItemTotalPriceChange template) {
+        if (template == null) {
+            return null;
+        }
+        SetCustomLineItemTotalPriceChangeImpl instance = new SetCustomLineItemTotalPriceChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setCustomLineItem(
+            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getCustomLineItem()));
+        instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setNextValue(com.commercetools.history.models.common.Money.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(com.commercetools.history.models.common.Money.deepCopy(template.getPreviousValue()));
         return instance;
     }
 

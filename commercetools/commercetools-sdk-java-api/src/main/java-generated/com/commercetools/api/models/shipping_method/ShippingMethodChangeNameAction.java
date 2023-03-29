@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,26 @@ public interface ShippingMethodChangeNameAction extends ShippingMethodUpdateActi
     }
 
     /**
-     * factory method to copy an instance of ShippingMethodChangeNameAction
+     * factory method to create a shallow copy ShippingMethodChangeNameAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ShippingMethodChangeNameAction of(final ShippingMethodChangeNameAction template) {
+        ShippingMethodChangeNameActionImpl instance = new ShippingMethodChangeNameActionImpl();
+        instance.setName(template.getName());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ShippingMethodChangeNameAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ShippingMethodChangeNameAction deepCopy(@Nullable final ShippingMethodChangeNameAction template) {
+        if (template == null) {
+            return null;
+        }
         ShippingMethodChangeNameActionImpl instance = new ShippingMethodChangeNameActionImpl();
         instance.setName(template.getName());
         return instance;

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -72,13 +73,29 @@ public interface ReplicaCartDraft
     }
 
     /**
-     * factory method to copy an instance of ReplicaCartDraft
+     * factory method to create a shallow copy ReplicaCartDraft
      * @param template instance to be copied
      * @return copy instance
      */
     public static ReplicaCartDraft of(final ReplicaCartDraft template) {
         ReplicaCartDraftImpl instance = new ReplicaCartDraftImpl();
         instance.setReference(template.getReference());
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ReplicaCartDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ReplicaCartDraft deepCopy(@Nullable final ReplicaCartDraft template) {
+        if (template == null) {
+            return null;
+        }
+        ReplicaCartDraftImpl instance = new ReplicaCartDraftImpl();
+        instance.setReference(com.commercetools.api.models.common.Reference.deepCopy(template.getReference()));
         instance.setKey(template.getKey());
         return instance;
     }

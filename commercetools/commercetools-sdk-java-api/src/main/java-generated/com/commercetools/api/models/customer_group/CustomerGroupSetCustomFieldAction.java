@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -73,11 +74,28 @@ public interface CustomerGroupSetCustomFieldAction extends CustomerGroupUpdateAc
     }
 
     /**
-     * factory method to copy an instance of CustomerGroupSetCustomFieldAction
+     * factory method to create a shallow copy CustomerGroupSetCustomFieldAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static CustomerGroupSetCustomFieldAction of(final CustomerGroupSetCustomFieldAction template) {
+        CustomerGroupSetCustomFieldActionImpl instance = new CustomerGroupSetCustomFieldActionImpl();
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomerGroupSetCustomFieldAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomerGroupSetCustomFieldAction deepCopy(
+            @Nullable final CustomerGroupSetCustomFieldAction template) {
+        if (template == null) {
+            return null;
+        }
         CustomerGroupSetCustomFieldActionImpl instance = new CustomerGroupSetCustomFieldActionImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -151,7 +152,7 @@ public interface QuoteRequestDraft
     }
 
     /**
-     * factory method to copy an instance of QuoteRequestDraft
+     * factory method to create a shallow copy QuoteRequestDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -163,6 +164,27 @@ public interface QuoteRequestDraft
         instance.setComment(template.getComment());
         instance.setCustom(template.getCustom());
         instance.setState(template.getState());
+        instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of QuoteRequestDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static QuoteRequestDraft deepCopy(@Nullable final QuoteRequestDraft template) {
+        if (template == null) {
+            return null;
+        }
+        QuoteRequestDraftImpl instance = new QuoteRequestDraftImpl();
+        instance.setCart(com.commercetools.api.models.cart.CartResourceIdentifier.deepCopy(template.getCart()));
+        instance.setCartVersion(template.getCartVersion());
+        instance.setKey(template.getKey());
+        instance.setComment(template.getComment());
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setState(com.commercetools.api.models.state.StateReference.deepCopy(template.getState()));
         instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
         return instance;
     }

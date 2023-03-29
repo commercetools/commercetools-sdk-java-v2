@@ -4,6 +4,8 @@ package com.commercetools.api.models.business_unit;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -14,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     AssociateDraft associateDraft = AssociateDraft.builder()
- *             .plusRoles(rolesBuilder -> rolesBuilder)
  *             .customer(customerBuilder -> customerBuilder)
  *             .build()
  * </code></pre>
@@ -23,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AssociateDraftBuilder implements Builder<AssociateDraft> {
 
+    @Nullable
     private java.util.List<com.commercetools.api.models.business_unit.AssociateRole> roles;
 
     private com.commercetools.api.models.customer.CustomerResourceIdentifier customer;
@@ -33,7 +35,8 @@ public class AssociateDraftBuilder implements Builder<AssociateDraft> {
      * @return Builder
      */
 
-    public AssociateDraftBuilder roles(final com.commercetools.api.models.business_unit.AssociateRole... roles) {
+    public AssociateDraftBuilder roles(
+            @Nullable final com.commercetools.api.models.business_unit.AssociateRole... roles) {
         this.roles = new ArrayList<>(Arrays.asList(roles));
         return this;
     }
@@ -45,7 +48,7 @@ public class AssociateDraftBuilder implements Builder<AssociateDraft> {
      */
 
     public AssociateDraftBuilder roles(
-            final java.util.List<com.commercetools.api.models.business_unit.AssociateRole> roles) {
+            @Nullable final java.util.List<com.commercetools.api.models.business_unit.AssociateRole> roles) {
         this.roles = roles;
         return this;
     }
@@ -56,7 +59,8 @@ public class AssociateDraftBuilder implements Builder<AssociateDraft> {
      * @return Builder
      */
 
-    public AssociateDraftBuilder plusRoles(final com.commercetools.api.models.business_unit.AssociateRole... roles) {
+    public AssociateDraftBuilder plusRoles(
+            @Nullable final com.commercetools.api.models.business_unit.AssociateRole... roles) {
         if (this.roles == null) {
             this.roles = new ArrayList<>();
         }
@@ -94,6 +98,7 @@ public class AssociateDraftBuilder implements Builder<AssociateDraft> {
      * @return roles
      */
 
+    @Nullable
     public java.util.List<com.commercetools.api.models.business_unit.AssociateRole> getRoles() {
         return this.roles;
     }
@@ -112,7 +117,6 @@ public class AssociateDraftBuilder implements Builder<AssociateDraft> {
      * @return AssociateDraft
      */
     public AssociateDraft build() {
-        Objects.requireNonNull(roles, AssociateDraft.class + ": roles is missing");
         Objects.requireNonNull(customer, AssociateDraft.class + ": customer is missing");
         return new AssociateDraftImpl(roles, customer);
     }

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -61,13 +62,28 @@ public interface AttributeGroupChangeNameAction extends AttributeGroupUpdateActi
     }
 
     /**
-     * factory method to copy an instance of AttributeGroupChangeNameAction
+     * factory method to create a shallow copy AttributeGroupChangeNameAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static AttributeGroupChangeNameAction of(final AttributeGroupChangeNameAction template) {
         AttributeGroupChangeNameActionImpl instance = new AttributeGroupChangeNameActionImpl();
         instance.setName(template.getName());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of AttributeGroupChangeNameAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AttributeGroupChangeNameAction deepCopy(@Nullable final AttributeGroupChangeNameAction template) {
+        if (template == null) {
+            return null;
+        }
+        AttributeGroupChangeNameActionImpl instance = new AttributeGroupChangeNameActionImpl();
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
         return instance;
     }
 

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -66,14 +67,30 @@ public interface ObjectNotFoundError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of ObjectNotFoundError
+     * factory method to create a shallow copy ObjectNotFoundError
      * @param template instance to be copied
      * @return copy instance
      */
     public static ObjectNotFoundError of(final ObjectNotFoundError template) {
         ObjectNotFoundErrorImpl instance = new ObjectNotFoundErrorImpl();
         instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        return instance;
+    }
 
+    /**
+     * factory method to create a deep copy of ObjectNotFoundError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ObjectNotFoundError deepCopy(@Nullable final ObjectNotFoundError template) {
+        if (template == null) {
+            return null;
+        }
+        ObjectNotFoundErrorImpl instance = new ObjectNotFoundErrorImpl();
+        instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
 

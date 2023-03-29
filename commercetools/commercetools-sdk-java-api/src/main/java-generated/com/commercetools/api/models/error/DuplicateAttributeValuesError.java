@@ -4,7 +4,9 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -93,15 +95,36 @@ public interface DuplicateAttributeValuesError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of DuplicateAttributeValuesError
+     * factory method to create a shallow copy DuplicateAttributeValuesError
      * @param template instance to be copied
      * @return copy instance
      */
     public static DuplicateAttributeValuesError of(final DuplicateAttributeValuesError template) {
         DuplicateAttributeValuesErrorImpl instance = new DuplicateAttributeValuesErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         instance.setAttributes(template.getAttributes());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of DuplicateAttributeValuesError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static DuplicateAttributeValuesError deepCopy(@Nullable final DuplicateAttributeValuesError template) {
+        if (template == null) {
+            return null;
+        }
+        DuplicateAttributeValuesErrorImpl instance = new DuplicateAttributeValuesErrorImpl();
+        instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        instance.setAttributes(Optional.ofNullable(template.getAttributes())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.product.Attribute::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

@@ -4,7 +4,9 @@ package com.commercetools.api.models.product;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -321,7 +323,7 @@ public interface ProductDraft
     }
 
     /**
-     * factory method to copy an instance of ProductDraft
+     * factory method to create a shallow copy ProductDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -342,6 +344,53 @@ public interface ProductDraft
         instance.setTaxCategory(template.getTaxCategory());
         instance.setSearchKeywords(template.getSearchKeywords());
         instance.setState(template.getState());
+        instance.setPublish(template.getPublish());
+        instance.setPriceMode(template.getPriceMode());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductDraft deepCopy(@Nullable final ProductDraft template) {
+        if (template == null) {
+            return null;
+        }
+        ProductDraftImpl instance = new ProductDraftImpl();
+        instance.setProductType(com.commercetools.api.models.product_type.ProductTypeResourceIdentifier
+                .deepCopy(template.getProductType()));
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setSlug(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getSlug()));
+        instance.setKey(template.getKey());
+        instance.setDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setCategories(Optional.ofNullable(template.getCategories())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.category.CategoryResourceIdentifier::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setCategoryOrderHints(
+            com.commercetools.api.models.product.CategoryOrderHints.deepCopy(template.getCategoryOrderHints()));
+        instance.setMetaTitle(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaTitle()));
+        instance.setMetaDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaDescription()));
+        instance.setMetaKeywords(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaKeywords()));
+        instance.setMasterVariant(
+            com.commercetools.api.models.product.ProductVariantDraft.deepCopy(template.getMasterVariant()));
+        instance.setVariants(Optional.ofNullable(template.getVariants())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.product.ProductVariantDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setTaxCategory(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier
+                .deepCopy(template.getTaxCategory()));
+        instance.setSearchKeywords(
+            com.commercetools.api.models.product.SearchKeywords.deepCopy(template.getSearchKeywords()));
+        instance.setState(com.commercetools.api.models.state.StateResourceIdentifier.deepCopy(template.getState()));
         instance.setPublish(template.getPublish());
         instance.setPriceMode(template.getPriceMode());
         return instance;

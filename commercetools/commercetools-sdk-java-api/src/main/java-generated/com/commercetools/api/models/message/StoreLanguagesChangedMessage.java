@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -93,7 +95,7 @@ public interface StoreLanguagesChangedMessage extends Message {
     }
 
     /**
-     * factory method to copy an instance of StoreLanguagesChangedMessage
+     * factory method to create a shallow copy StoreLanguagesChangedMessage
      * @param template instance to be copied
      * @return copy instance
      */
@@ -111,6 +113,35 @@ public interface StoreLanguagesChangedMessage extends Message {
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setAddedLanguages(template.getAddedLanguages());
         instance.setRemovedLanguages(template.getRemovedLanguages());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StoreLanguagesChangedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StoreLanguagesChangedMessage deepCopy(@Nullable final StoreLanguagesChangedMessage template) {
+        if (template == null) {
+            return null;
+        }
+        StoreLanguagesChangedMessageImpl instance = new StoreLanguagesChangedMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
+                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setAddedLanguages(Optional.ofNullable(template.getAddedLanguages()).map(ArrayList::new).orElse(null));
+        instance.setRemovedLanguages(
+            Optional.ofNullable(template.getRemovedLanguages()).map(ArrayList::new).orElse(null));
         return instance;
     }
 

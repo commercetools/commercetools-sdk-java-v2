@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.customer.CustomerResourceIdentifier;
@@ -58,13 +59,29 @@ public interface ShoppingListSetCustomerAction extends ShoppingListUpdateAction 
     }
 
     /**
-     * factory method to copy an instance of ShoppingListSetCustomerAction
+     * factory method to create a shallow copy ShoppingListSetCustomerAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ShoppingListSetCustomerAction of(final ShoppingListSetCustomerAction template) {
         ShoppingListSetCustomerActionImpl instance = new ShoppingListSetCustomerActionImpl();
         instance.setCustomer(template.getCustomer());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ShoppingListSetCustomerAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ShoppingListSetCustomerAction deepCopy(@Nullable final ShoppingListSetCustomerAction template) {
+        if (template == null) {
+            return null;
+        }
+        ShoppingListSetCustomerActionImpl instance = new ShoppingListSetCustomerActionImpl();
+        instance.setCustomer(
+            com.commercetools.api.models.customer.CustomerResourceIdentifier.deepCopy(template.getCustomer()));
         return instance;
     }
 

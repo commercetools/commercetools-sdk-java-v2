@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -41,14 +43,30 @@ public interface InsufficientScopeError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of InsufficientScopeError
+     * factory method to create a shallow copy InsufficientScopeError
      * @param template instance to be copied
      * @return copy instance
      */
     public static InsufficientScopeError of(final InsufficientScopeError template) {
         InsufficientScopeErrorImpl instance = new InsufficientScopeErrorImpl();
         instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        return instance;
+    }
 
+    /**
+     * factory method to create a deep copy of InsufficientScopeError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static InsufficientScopeError deepCopy(@Nullable final InsufficientScopeError template) {
+        if (template == null) {
+            return null;
+        }
+        InsufficientScopeErrorImpl instance = new InsufficientScopeErrorImpl();
+        instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
 

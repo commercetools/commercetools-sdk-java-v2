@@ -4,7 +4,9 @@ package com.commercetools.history.models.change;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -134,7 +136,7 @@ public interface SetDeliveryItemsChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetDeliveryItemsChange
+     * factory method to create a shallow copy SetDeliveryItemsChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -144,6 +146,32 @@ public interface SetDeliveryItemsChange extends Change {
         instance.setDeliveryId(template.getDeliveryId());
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetDeliveryItemsChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetDeliveryItemsChange deepCopy(@Nullable final SetDeliveryItemsChange template) {
+        if (template == null) {
+            return null;
+        }
+        SetDeliveryItemsChangeImpl instance = new SetDeliveryItemsChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setDeliveryId(template.getDeliveryId());
+        instance.setNextValue(Optional.ofNullable(template.getNextValue())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.DeliveryItem::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.DeliveryItem::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

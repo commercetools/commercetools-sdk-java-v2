@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -40,11 +42,25 @@ public interface CustomFieldStringType extends FieldType {
     }
 
     /**
-     * factory method to copy an instance of CustomFieldStringType
+     * factory method to create a shallow copy CustomFieldStringType
      * @param template instance to be copied
      * @return copy instance
      */
     public static CustomFieldStringType of(final CustomFieldStringType template) {
+        CustomFieldStringTypeImpl instance = new CustomFieldStringTypeImpl();
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomFieldStringType
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomFieldStringType deepCopy(@Nullable final CustomFieldStringType template) {
+        if (template == null) {
+            return null;
+        }
         CustomFieldStringTypeImpl instance = new CustomFieldStringTypeImpl();
         return instance;
     }

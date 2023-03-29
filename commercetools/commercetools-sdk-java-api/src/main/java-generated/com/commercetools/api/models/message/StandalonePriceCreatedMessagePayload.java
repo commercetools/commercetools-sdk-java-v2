@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -61,13 +62,30 @@ public interface StandalonePriceCreatedMessagePayload extends MessagePayload {
     }
 
     /**
-     * factory method to copy an instance of StandalonePriceCreatedMessagePayload
+     * factory method to create a shallow copy StandalonePriceCreatedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
     public static StandalonePriceCreatedMessagePayload of(final StandalonePriceCreatedMessagePayload template) {
         StandalonePriceCreatedMessagePayloadImpl instance = new StandalonePriceCreatedMessagePayloadImpl();
         instance.setStandalonePrice(template.getStandalonePrice());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StandalonePriceCreatedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StandalonePriceCreatedMessagePayload deepCopy(
+            @Nullable final StandalonePriceCreatedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        StandalonePriceCreatedMessagePayloadImpl instance = new StandalonePriceCreatedMessagePayloadImpl();
+        instance.setStandalonePrice(
+            com.commercetools.api.models.standalone_price.StandalonePrice.deepCopy(template.getStandalonePrice()));
         return instance;
     }
 

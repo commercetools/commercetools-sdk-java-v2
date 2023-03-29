@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -121,11 +122,30 @@ public interface SqsDestination extends Destination {
     }
 
     /**
-     * factory method to copy an instance of SqsDestination
+     * factory method to create a shallow copy SqsDestination
      * @param template instance to be copied
      * @return copy instance
      */
     public static SqsDestination of(final SqsDestination template) {
+        SqsDestinationImpl instance = new SqsDestinationImpl();
+        instance.setAccessKey(template.getAccessKey());
+        instance.setAccessSecret(template.getAccessSecret());
+        instance.setQueueUrl(template.getQueueUrl());
+        instance.setRegion(template.getRegion());
+        instance.setAuthenticationMode(template.getAuthenticationMode());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SqsDestination
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SqsDestination deepCopy(@Nullable final SqsDestination template) {
+        if (template == null) {
+            return null;
+        }
         SqsDestinationImpl instance = new SqsDestinationImpl();
         instance.setAccessKey(template.getAccessKey());
         instance.setAccessSecret(template.getAccessSecret());

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -74,11 +75,28 @@ public interface ProductTypeChangeIsSearchableAction extends ProductTypeUpdateAc
     }
 
     /**
-     * factory method to copy an instance of ProductTypeChangeIsSearchableAction
+     * factory method to create a shallow copy ProductTypeChangeIsSearchableAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductTypeChangeIsSearchableAction of(final ProductTypeChangeIsSearchableAction template) {
+        ProductTypeChangeIsSearchableActionImpl instance = new ProductTypeChangeIsSearchableActionImpl();
+        instance.setAttributeName(template.getAttributeName());
+        instance.setIsSearchable(template.getIsSearchable());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductTypeChangeIsSearchableAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductTypeChangeIsSearchableAction deepCopy(
+            @Nullable final ProductTypeChangeIsSearchableAction template) {
+        if (template == null) {
+            return null;
+        }
         ProductTypeChangeIsSearchableActionImpl instance = new ProductTypeChangeIsSearchableActionImpl();
         instance.setAttributeName(template.getAttributeName());
         instance.setIsSearchable(template.getIsSearchable());

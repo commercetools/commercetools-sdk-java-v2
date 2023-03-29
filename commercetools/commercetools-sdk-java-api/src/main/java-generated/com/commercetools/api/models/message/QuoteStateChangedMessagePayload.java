@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.quote.QuoteState;
@@ -75,11 +76,27 @@ public interface QuoteStateChangedMessagePayload extends MessagePayload {
     }
 
     /**
-     * factory method to copy an instance of QuoteStateChangedMessagePayload
+     * factory method to create a shallow copy QuoteStateChangedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
     public static QuoteStateChangedMessagePayload of(final QuoteStateChangedMessagePayload template) {
+        QuoteStateChangedMessagePayloadImpl instance = new QuoteStateChangedMessagePayloadImpl();
+        instance.setQuoteState(template.getQuoteState());
+        instance.setOldQuoteState(template.getOldQuoteState());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of QuoteStateChangedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static QuoteStateChangedMessagePayload deepCopy(@Nullable final QuoteStateChangedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
         QuoteStateChangedMessagePayloadImpl instance = new QuoteStateChangedMessagePayloadImpl();
         instance.setQuoteState(template.getQuoteState());
         instance.setOldQuoteState(template.getOldQuoteState());

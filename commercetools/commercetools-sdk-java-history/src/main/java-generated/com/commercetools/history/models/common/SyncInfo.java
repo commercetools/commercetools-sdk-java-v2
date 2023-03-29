@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -87,13 +88,30 @@ public interface SyncInfo {
     }
 
     /**
-     * factory method to copy an instance of SyncInfo
+     * factory method to create a shallow copy SyncInfo
      * @param template instance to be copied
      * @return copy instance
      */
     public static SyncInfo of(final SyncInfo template) {
         SyncInfoImpl instance = new SyncInfoImpl();
         instance.setChannel(template.getChannel());
+        instance.setExternalId(template.getExternalId());
+        instance.setSyncedAt(template.getSyncedAt());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SyncInfo
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SyncInfo deepCopy(@Nullable final SyncInfo template) {
+        if (template == null) {
+            return null;
+        }
+        SyncInfoImpl instance = new SyncInfoImpl();
+        instance.setChannel(com.commercetools.history.models.common.Reference.deepCopy(template.getChannel()));
         instance.setExternalId(template.getExternalId());
         instance.setSyncedAt(template.getSyncedAt());
         return instance;

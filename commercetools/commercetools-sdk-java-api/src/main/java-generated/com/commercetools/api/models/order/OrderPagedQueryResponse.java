@@ -4,7 +4,9 @@ package com.commercetools.api.models.order;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -126,7 +128,7 @@ public interface OrderPagedQueryResponse extends com.commercetools.api.models.Re
     }
 
     /**
-     * factory method to copy an instance of OrderPagedQueryResponse
+     * factory method to create a shallow copy OrderPagedQueryResponse
      * @param template instance to be copied
      * @return copy instance
      */
@@ -137,6 +139,29 @@ public interface OrderPagedQueryResponse extends com.commercetools.api.models.Re
         instance.setTotal(template.getTotal());
         instance.setOffset(template.getOffset());
         instance.setResults(template.getResults());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderPagedQueryResponse
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderPagedQueryResponse deepCopy(@Nullable final OrderPagedQueryResponse template) {
+        if (template == null) {
+            return null;
+        }
+        OrderPagedQueryResponseImpl instance = new OrderPagedQueryResponseImpl();
+        instance.setLimit(template.getLimit());
+        instance.setCount(template.getCount());
+        instance.setTotal(template.getTotal());
+        instance.setOffset(template.getOffset());
+        instance.setResults(Optional.ofNullable(template.getResults())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.order.Order::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

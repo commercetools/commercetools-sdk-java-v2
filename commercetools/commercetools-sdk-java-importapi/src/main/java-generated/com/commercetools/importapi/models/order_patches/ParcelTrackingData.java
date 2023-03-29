@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -70,7 +71,7 @@ public interface ParcelTrackingData {
     }
 
     /**
-     * factory method to copy an instance of ParcelTrackingData
+     * factory method to create a shallow copy ParcelTrackingData
      * @param template instance to be copied
      * @return copy instance
      */
@@ -78,6 +79,23 @@ public interface ParcelTrackingData {
         ParcelTrackingDataImpl instance = new ParcelTrackingDataImpl();
         instance.setParcelId(template.getParcelId());
         instance.setTrackingData(template.getTrackingData());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ParcelTrackingData
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ParcelTrackingData deepCopy(@Nullable final ParcelTrackingData template) {
+        if (template == null) {
+            return null;
+        }
+        ParcelTrackingDataImpl instance = new ParcelTrackingDataImpl();
+        instance.setParcelId(template.getParcelId());
+        instance.setTrackingData(
+            com.commercetools.importapi.models.orders.TrackingData.deepCopy(template.getTrackingData()));
         return instance;
     }
 

@@ -4,7 +4,9 @@ package com.commercetools.api.models.shipping_method;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -81,7 +83,7 @@ public interface ZoneRate {
     }
 
     /**
-     * factory method to copy an instance of ZoneRate
+     * factory method to create a shallow copy ZoneRate
      * @param template instance to be copied
      * @return copy instance
      */
@@ -89,6 +91,26 @@ public interface ZoneRate {
         ZoneRateImpl instance = new ZoneRateImpl();
         instance.setZone(template.getZone());
         instance.setShippingRates(template.getShippingRates());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ZoneRate
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ZoneRate deepCopy(@Nullable final ZoneRate template) {
+        if (template == null) {
+            return null;
+        }
+        ZoneRateImpl instance = new ZoneRateImpl();
+        instance.setZone(com.commercetools.api.models.zone.ZoneReference.deepCopy(template.getZone()));
+        instance.setShippingRates(Optional.ofNullable(template.getShippingRates())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.shipping_method.ShippingRate::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

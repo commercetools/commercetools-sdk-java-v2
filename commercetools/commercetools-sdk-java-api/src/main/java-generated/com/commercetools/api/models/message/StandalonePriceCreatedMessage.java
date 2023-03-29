@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -68,7 +69,7 @@ public interface StandalonePriceCreatedMessage extends Message {
     }
 
     /**
-     * factory method to copy an instance of StandalonePriceCreatedMessage
+     * factory method to create a shallow copy StandalonePriceCreatedMessage
      * @param template instance to be copied
      * @return copy instance
      */
@@ -85,6 +86,34 @@ public interface StandalonePriceCreatedMessage extends Message {
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setStandalonePrice(template.getStandalonePrice());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StandalonePriceCreatedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StandalonePriceCreatedMessage deepCopy(@Nullable final StandalonePriceCreatedMessage template) {
+        if (template == null) {
+            return null;
+        }
+        StandalonePriceCreatedMessageImpl instance = new StandalonePriceCreatedMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
+                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setStandalonePrice(
+            com.commercetools.api.models.standalone_price.StandalonePrice.deepCopy(template.getStandalonePrice()));
         return instance;
     }
 

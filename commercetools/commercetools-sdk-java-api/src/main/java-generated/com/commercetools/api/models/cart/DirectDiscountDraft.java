@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -76,7 +77,7 @@ public interface DirectDiscountDraft extends io.vrap.rmf.base.client.Draft<Direc
     }
 
     /**
-     * factory method to copy an instance of DirectDiscountDraft
+     * factory method to create a shallow copy DirectDiscountDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -84,6 +85,23 @@ public interface DirectDiscountDraft extends io.vrap.rmf.base.client.Draft<Direc
         DirectDiscountDraftImpl instance = new DirectDiscountDraftImpl();
         instance.setValue(template.getValue());
         instance.setTarget(template.getTarget());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of DirectDiscountDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static DirectDiscountDraft deepCopy(@Nullable final DirectDiscountDraft template) {
+        if (template == null) {
+            return null;
+        }
+        DirectDiscountDraftImpl instance = new DirectDiscountDraftImpl();
+        instance.setValue(com.commercetools.api.models.cart_discount.CartDiscountValue.deepCopy(template.getValue()));
+        instance.setTarget(
+            com.commercetools.api.models.cart_discount.CartDiscountTarget.deepCopy(template.getTarget()));
         return instance;
     }
 

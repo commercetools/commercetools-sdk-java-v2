@@ -5,7 +5,9 @@ import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -360,7 +362,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     }
 
     /**
-     * factory method to copy an instance of Category
+     * factory method to create a shallow copy Category
      * @param template instance to be copied
      * @return copy instance
      */
@@ -384,6 +386,51 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
         instance.setMetaKeywords(template.getMetaKeywords());
         instance.setCustom(template.getCustom());
         instance.setAssets(template.getAssets());
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of Category
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static Category deepCopy(@Nullable final Category template) {
+        if (template == null) {
+            return null;
+        }
+        CategoryImpl instance = new CategoryImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setSlug(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getSlug()));
+        instance.setDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setAncestors(Optional.ofNullable(template.getAncestors())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.category.CategoryReference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setParent(com.commercetools.api.models.category.CategoryReference.deepCopy(template.getParent()));
+        instance.setOrderHint(template.getOrderHint());
+        instance.setExternalId(template.getExternalId());
+        instance.setMetaTitle(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaTitle()));
+        instance.setMetaDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaDescription()));
+        instance.setMetaKeywords(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaKeywords()));
+        instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
+        instance.setAssets(Optional.ofNullable(template.getAssets())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.common.Asset::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setKey(template.getKey());
         return instance;
     }

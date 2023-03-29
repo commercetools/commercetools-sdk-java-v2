@@ -4,7 +4,9 @@ package com.commercetools.api.models.me;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -80,7 +82,7 @@ public interface MyShoppingListUpdate extends
     }
 
     /**
-     * factory method to copy an instance of MyShoppingListUpdate
+     * factory method to create a shallow copy MyShoppingListUpdate
      * @param template instance to be copied
      * @return copy instance
      */
@@ -88,6 +90,26 @@ public interface MyShoppingListUpdate extends
         MyShoppingListUpdateImpl instance = new MyShoppingListUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(template.getActions());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MyShoppingListUpdate
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MyShoppingListUpdate deepCopy(@Nullable final MyShoppingListUpdate template) {
+        if (template == null) {
+            return null;
+        }
+        MyShoppingListUpdateImpl instance = new MyShoppingListUpdateImpl();
+        instance.setVersion(template.getVersion());
+        instance.setActions(Optional.ofNullable(template.getActions())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.me.MyShoppingListUpdateAction::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

@@ -4,7 +4,9 @@ package com.commercetools.importapi.models.orders;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -81,7 +83,7 @@ public interface DiscountedLineItemPriceDraft extends io.vrap.rmf.base.client.Dr
     }
 
     /**
-     * factory method to copy an instance of DiscountedLineItemPriceDraft
+     * factory method to create a shallow copy DiscountedLineItemPriceDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -89,6 +91,26 @@ public interface DiscountedLineItemPriceDraft extends io.vrap.rmf.base.client.Dr
         DiscountedLineItemPriceDraftImpl instance = new DiscountedLineItemPriceDraftImpl();
         instance.setValue(template.getValue());
         instance.setIncludedDiscounts(template.getIncludedDiscounts());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of DiscountedLineItemPriceDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static DiscountedLineItemPriceDraft deepCopy(@Nullable final DiscountedLineItemPriceDraft template) {
+        if (template == null) {
+            return null;
+        }
+        DiscountedLineItemPriceDraftImpl instance = new DiscountedLineItemPriceDraftImpl();
+        instance.setValue(com.commercetools.importapi.models.common.Money.deepCopy(template.getValue()));
+        instance.setIncludedDiscounts(Optional.ofNullable(template.getIncludedDiscounts())
+                .map(t -> t.stream()
+                        .map(com.commercetools.importapi.models.orders.DiscountedLineItemPortion::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -54,12 +55,28 @@ public interface GraphQLVariablesMap {
     }
 
     /**
-     * factory method to copy an instance of GraphQLVariablesMap
+     * factory method to create a shallow copy GraphQLVariablesMap
      * @param template instance to be copied
      * @return copy instance
      */
     public static GraphQLVariablesMap of(final GraphQLVariablesMap template) {
         GraphQLVariablesMapImpl instance = new GraphQLVariablesMapImpl();
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of GraphQLVariablesMap
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static GraphQLVariablesMap deepCopy(@Nullable final GraphQLVariablesMap template) {
+        if (template == null) {
+            return null;
+        }
+        GraphQLVariablesMapImpl instance = new GraphQLVariablesMapImpl();
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
 

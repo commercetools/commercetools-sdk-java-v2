@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -40,11 +42,26 @@ public interface StandalonePriceApplyStagedChangesAction extends StandalonePrice
     }
 
     /**
-     * factory method to copy an instance of StandalonePriceApplyStagedChangesAction
+     * factory method to create a shallow copy StandalonePriceApplyStagedChangesAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static StandalonePriceApplyStagedChangesAction of(final StandalonePriceApplyStagedChangesAction template) {
+        StandalonePriceApplyStagedChangesActionImpl instance = new StandalonePriceApplyStagedChangesActionImpl();
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StandalonePriceApplyStagedChangesAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StandalonePriceApplyStagedChangesAction deepCopy(
+            @Nullable final StandalonePriceApplyStagedChangesAction template) {
+        if (template == null) {
+            return null;
+        }
         StandalonePriceApplyStagedChangesActionImpl instance = new StandalonePriceApplyStagedChangesActionImpl();
         return instance;
     }

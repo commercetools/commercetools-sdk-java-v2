@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -85,7 +86,7 @@ public interface QuoteRequestLabel extends Label {
     }
 
     /**
-     * factory method to copy an instance of QuoteRequestLabel
+     * factory method to create a shallow copy QuoteRequestLabel
      * @param template instance to be copied
      * @return copy instance
      */
@@ -93,6 +94,22 @@ public interface QuoteRequestLabel extends Label {
         QuoteRequestLabelImpl instance = new QuoteRequestLabelImpl();
         instance.setKey(template.getKey());
         instance.setCustomer(template.getCustomer());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of QuoteRequestLabel
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static QuoteRequestLabel deepCopy(@Nullable final QuoteRequestLabel template) {
+        if (template == null) {
+            return null;
+        }
+        QuoteRequestLabelImpl instance = new QuoteRequestLabelImpl();
+        instance.setKey(template.getKey());
+        instance.setCustomer(com.commercetools.history.models.common.Reference.deepCopy(template.getCustomer()));
         return instance;
     }
 

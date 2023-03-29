@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -55,11 +57,27 @@ public interface DiscountCodeSetCartPredicateAction extends DiscountCodeUpdateAc
     }
 
     /**
-     * factory method to copy an instance of DiscountCodeSetCartPredicateAction
+     * factory method to create a shallow copy DiscountCodeSetCartPredicateAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static DiscountCodeSetCartPredicateAction of(final DiscountCodeSetCartPredicateAction template) {
+        DiscountCodeSetCartPredicateActionImpl instance = new DiscountCodeSetCartPredicateActionImpl();
+        instance.setCartPredicate(template.getCartPredicate());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of DiscountCodeSetCartPredicateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static DiscountCodeSetCartPredicateAction deepCopy(
+            @Nullable final DiscountCodeSetCartPredicateAction template) {
+        if (template == null) {
+            return null;
+        }
         DiscountCodeSetCartPredicateActionImpl instance = new DiscountCodeSetCartPredicateActionImpl();
         instance.setCartPredicate(template.getCartPredicate());
         return instance;

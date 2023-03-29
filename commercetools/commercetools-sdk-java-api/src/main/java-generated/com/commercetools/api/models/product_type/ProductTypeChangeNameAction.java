@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,26 @@ public interface ProductTypeChangeNameAction extends ProductTypeUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ProductTypeChangeNameAction
+     * factory method to create a shallow copy ProductTypeChangeNameAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductTypeChangeNameAction of(final ProductTypeChangeNameAction template) {
+        ProductTypeChangeNameActionImpl instance = new ProductTypeChangeNameActionImpl();
+        instance.setName(template.getName());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductTypeChangeNameAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductTypeChangeNameAction deepCopy(@Nullable final ProductTypeChangeNameAction template) {
+        if (template == null) {
+            return null;
+        }
         ProductTypeChangeNameActionImpl instance = new ProductTypeChangeNameActionImpl();
         instance.setName(template.getName());
         return instance;

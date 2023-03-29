@@ -4,7 +4,9 @@ package com.commercetools.api.models.message;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.common.LocalizedString;
@@ -81,7 +83,7 @@ public interface StoreNameSetMessagePayload extends MessagePayload {
     }
 
     /**
-     * factory method to copy an instance of StoreNameSetMessagePayload
+     * factory method to create a shallow copy StoreNameSetMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -89,6 +91,26 @@ public interface StoreNameSetMessagePayload extends MessagePayload {
         StoreNameSetMessagePayloadImpl instance = new StoreNameSetMessagePayloadImpl();
         instance.setName(template.getName());
         instance.setNameAllLocales(template.getNameAllLocales());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StoreNameSetMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StoreNameSetMessagePayload deepCopy(@Nullable final StoreNameSetMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        StoreNameSetMessagePayloadImpl instance = new StoreNameSetMessagePayloadImpl();
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setNameAllLocales(Optional.ofNullable(template.getNameAllLocales())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.common.LocalizedString::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -112,7 +113,7 @@ public interface InvalidFieldError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of InvalidFieldError
+     * factory method to create a shallow copy InvalidFieldError
      * @param template instance to be copied
      * @return copy instance
      */
@@ -122,6 +123,25 @@ public interface InvalidFieldError extends ErrorObject {
         instance.setField(template.getField());
         instance.setInvalidValue(template.getInvalidValue());
         instance.setAllowedValues(template.getAllowedValues());
+        instance.setResourceIndex(template.getResourceIndex());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of InvalidFieldError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static InvalidFieldError deepCopy(@Nullable final InvalidFieldError template) {
+        if (template == null) {
+            return null;
+        }
+        InvalidFieldErrorImpl instance = new InvalidFieldErrorImpl();
+        instance.setMessage(template.getMessage());
+        instance.setField(template.getField());
+        instance.setInvalidValue(template.getInvalidValue());
+        instance.setAllowedValues(Optional.ofNullable(template.getAllowedValues()).map(ArrayList::new).orElse(null));
         instance.setResourceIndex(template.getResourceIndex());
         return instance;
     }

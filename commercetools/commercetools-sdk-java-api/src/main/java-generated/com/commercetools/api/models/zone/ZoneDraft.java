@@ -4,7 +4,9 @@ package com.commercetools.api.models.zone;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -107,7 +109,7 @@ public interface ZoneDraft extends com.commercetools.api.models.WithKey, io.vrap
     }
 
     /**
-     * factory method to copy an instance of ZoneDraft
+     * factory method to create a shallow copy ZoneDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -117,6 +119,28 @@ public interface ZoneDraft extends com.commercetools.api.models.WithKey, io.vrap
         instance.setName(template.getName());
         instance.setDescription(template.getDescription());
         instance.setLocations(template.getLocations());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ZoneDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ZoneDraft deepCopy(@Nullable final ZoneDraft template) {
+        if (template == null) {
+            return null;
+        }
+        ZoneDraftImpl instance = new ZoneDraftImpl();
+        instance.setKey(template.getKey());
+        instance.setName(template.getName());
+        instance.setDescription(template.getDescription());
+        instance.setLocations(Optional.ofNullable(template.getLocations())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.zone.Location::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

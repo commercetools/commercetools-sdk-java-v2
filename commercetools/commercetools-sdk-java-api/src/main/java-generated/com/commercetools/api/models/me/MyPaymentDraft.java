@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -104,7 +105,7 @@ public interface MyPaymentDraft extends com.commercetools.api.models.Customizabl
     }
 
     /**
-     * factory method to copy an instance of MyPaymentDraft
+     * factory method to create a shallow copy MyPaymentDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -114,6 +115,25 @@ public interface MyPaymentDraft extends com.commercetools.api.models.Customizabl
         instance.setPaymentMethodInfo(template.getPaymentMethodInfo());
         instance.setCustom(template.getCustom());
         instance.setTransaction(template.getTransaction());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MyPaymentDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MyPaymentDraft deepCopy(@Nullable final MyPaymentDraft template) {
+        if (template == null) {
+            return null;
+        }
+        MyPaymentDraftImpl instance = new MyPaymentDraftImpl();
+        instance.setAmountPlanned(com.commercetools.api.models.common.Money.deepCopy(template.getAmountPlanned()));
+        instance.setPaymentMethodInfo(
+            com.commercetools.api.models.payment.PaymentMethodInfo.deepCopy(template.getPaymentMethodInfo()));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setTransaction(com.commercetools.api.models.me.MyTransactionDraft.deepCopy(template.getTransaction()));
         return instance;
     }
 

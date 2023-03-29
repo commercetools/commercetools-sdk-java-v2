@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -43,6 +44,40 @@ public interface QuoteUpdateAction extends com.commercetools.api.models.Resource
     @NotNull
     @JsonProperty("action")
     public String getAction();
+
+    /**
+     * factory method to create a deep copy of QuoteUpdateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static QuoteUpdateAction deepCopy(@Nullable final QuoteUpdateAction template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.quote.QuoteChangeQuoteStateAction) {
+            return com.commercetools.api.models.quote.QuoteChangeQuoteStateAction
+                    .deepCopy((com.commercetools.api.models.quote.QuoteChangeQuoteStateAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.quote.QuoteRequestQuoteRenegotiationAction) {
+            return com.commercetools.api.models.quote.QuoteRequestQuoteRenegotiationAction
+                    .deepCopy((com.commercetools.api.models.quote.QuoteRequestQuoteRenegotiationAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.quote.QuoteSetCustomFieldAction) {
+            return com.commercetools.api.models.quote.QuoteSetCustomFieldAction
+                    .deepCopy((com.commercetools.api.models.quote.QuoteSetCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.quote.QuoteSetCustomTypeAction) {
+            return com.commercetools.api.models.quote.QuoteSetCustomTypeAction
+                    .deepCopy((com.commercetools.api.models.quote.QuoteSetCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.quote.QuoteTransitionStateAction) {
+            return com.commercetools.api.models.quote.QuoteTransitionStateAction
+                    .deepCopy((com.commercetools.api.models.quote.QuoteTransitionStateAction) template);
+        }
+        QuoteUpdateActionImpl instance = new QuoteUpdateActionImpl();
+        return instance;
+    }
 
     /**
      * builder for changeQuoteState subtype

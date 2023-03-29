@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -75,11 +76,28 @@ public interface PaymentChangeTransactionTimestampAction extends PaymentUpdateAc
     }
 
     /**
-     * factory method to copy an instance of PaymentChangeTransactionTimestampAction
+     * factory method to create a shallow copy PaymentChangeTransactionTimestampAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static PaymentChangeTransactionTimestampAction of(final PaymentChangeTransactionTimestampAction template) {
+        PaymentChangeTransactionTimestampActionImpl instance = new PaymentChangeTransactionTimestampActionImpl();
+        instance.setTransactionId(template.getTransactionId());
+        instance.setTimestamp(template.getTimestamp());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of PaymentChangeTransactionTimestampAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static PaymentChangeTransactionTimestampAction deepCopy(
+            @Nullable final PaymentChangeTransactionTimestampAction template) {
+        if (template == null) {
+            return null;
+        }
         PaymentChangeTransactionTimestampActionImpl instance = new PaymentChangeTransactionTimestampActionImpl();
         instance.setTransactionId(template.getTransactionId());
         instance.setTimestamp(template.getTimestamp());

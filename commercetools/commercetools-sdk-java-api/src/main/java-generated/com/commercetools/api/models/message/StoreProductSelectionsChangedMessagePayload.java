@@ -4,7 +4,9 @@ package com.commercetools.api.models.message;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.store.ProductSelectionSetting;
@@ -112,7 +114,7 @@ public interface StoreProductSelectionsChangedMessagePayload extends MessagePayl
     }
 
     /**
-     * factory method to copy an instance of StoreProductSelectionsChangedMessagePayload
+     * factory method to create a shallow copy StoreProductSelectionsChangedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -122,6 +124,36 @@ public interface StoreProductSelectionsChangedMessagePayload extends MessagePayl
         instance.setAddedProductSelections(template.getAddedProductSelections());
         instance.setRemovedProductSelections(template.getRemovedProductSelections());
         instance.setUpdatedProductSelections(template.getUpdatedProductSelections());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StoreProductSelectionsChangedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StoreProductSelectionsChangedMessagePayload deepCopy(
+            @Nullable final StoreProductSelectionsChangedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        StoreProductSelectionsChangedMessagePayloadImpl instance = new StoreProductSelectionsChangedMessagePayloadImpl();
+        instance.setAddedProductSelections(Optional.ofNullable(template.getAddedProductSelections())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.store.ProductSelectionSetting::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setRemovedProductSelections(Optional.ofNullable(template.getRemovedProductSelections())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.store.ProductSelectionSetting::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setUpdatedProductSelections(Optional.ofNullable(template.getUpdatedProductSelections())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.store.ProductSelectionSetting::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

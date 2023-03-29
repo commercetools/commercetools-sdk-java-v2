@@ -4,7 +4,9 @@ package com.commercetools.api.models.product;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -144,7 +146,7 @@ public interface ProductSetAssetSourcesAction extends ProductUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ProductSetAssetSourcesAction
+     * factory method to create a shallow copy ProductSetAssetSourcesAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -156,6 +158,30 @@ public interface ProductSetAssetSourcesAction extends ProductUpdateAction {
         instance.setAssetId(template.getAssetId());
         instance.setAssetKey(template.getAssetKey());
         instance.setSources(template.getSources());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductSetAssetSourcesAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductSetAssetSourcesAction deepCopy(@Nullable final ProductSetAssetSourcesAction template) {
+        if (template == null) {
+            return null;
+        }
+        ProductSetAssetSourcesActionImpl instance = new ProductSetAssetSourcesActionImpl();
+        instance.setVariantId(template.getVariantId());
+        instance.setSku(template.getSku());
+        instance.setStaged(template.getStaged());
+        instance.setAssetId(template.getAssetId());
+        instance.setAssetKey(template.getAssetKey());
+        instance.setSources(Optional.ofNullable(template.getSources())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.common.AssetSource::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

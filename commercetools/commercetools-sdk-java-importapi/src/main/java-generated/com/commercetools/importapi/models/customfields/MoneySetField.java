@@ -4,7 +4,9 @@ package com.commercetools.importapi.models.customfields;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -69,13 +71,32 @@ public interface MoneySetField extends CustomField {
     }
 
     /**
-     * factory method to copy an instance of MoneySetField
+     * factory method to create a shallow copy MoneySetField
      * @param template instance to be copied
      * @return copy instance
      */
     public static MoneySetField of(final MoneySetField template) {
         MoneySetFieldImpl instance = new MoneySetFieldImpl();
         instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MoneySetField
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MoneySetField deepCopy(@Nullable final MoneySetField template) {
+        if (template == null) {
+            return null;
+        }
+        MoneySetFieldImpl instance = new MoneySetFieldImpl();
+        instance.setValue(Optional.ofNullable(template.getValue())
+                .map(t -> t.stream()
+                        .map(com.commercetools.importapi.models.common.Money::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

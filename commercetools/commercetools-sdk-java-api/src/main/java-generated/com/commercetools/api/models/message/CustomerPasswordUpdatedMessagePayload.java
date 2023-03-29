@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,27 @@ public interface CustomerPasswordUpdatedMessagePayload extends MessagePayload {
     }
 
     /**
-     * factory method to copy an instance of CustomerPasswordUpdatedMessagePayload
+     * factory method to create a shallow copy CustomerPasswordUpdatedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
     public static CustomerPasswordUpdatedMessagePayload of(final CustomerPasswordUpdatedMessagePayload template) {
+        CustomerPasswordUpdatedMessagePayloadImpl instance = new CustomerPasswordUpdatedMessagePayloadImpl();
+        instance.setReset(template.getReset());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomerPasswordUpdatedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomerPasswordUpdatedMessagePayload deepCopy(
+            @Nullable final CustomerPasswordUpdatedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
         CustomerPasswordUpdatedMessagePayloadImpl instance = new CustomerPasswordUpdatedMessagePayloadImpl();
         instance.setReset(template.getReset());
         return instance;

@@ -4,7 +4,9 @@ package com.commercetools.api.models.product;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -114,7 +116,7 @@ public interface ProductSetPricesAction extends ProductUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ProductSetPricesAction
+     * factory method to create a shallow copy ProductSetPricesAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -123,6 +125,28 @@ public interface ProductSetPricesAction extends ProductUpdateAction {
         instance.setVariantId(template.getVariantId());
         instance.setSku(template.getSku());
         instance.setPrices(template.getPrices());
+        instance.setStaged(template.getStaged());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductSetPricesAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductSetPricesAction deepCopy(@Nullable final ProductSetPricesAction template) {
+        if (template == null) {
+            return null;
+        }
+        ProductSetPricesActionImpl instance = new ProductSetPricesActionImpl();
+        instance.setVariantId(template.getVariantId());
+        instance.setSku(template.getSku());
+        instance.setPrices(Optional.ofNullable(template.getPrices())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.common.PriceDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setStaged(template.getStaged());
         return instance;
     }

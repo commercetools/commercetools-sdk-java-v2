@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -77,7 +78,7 @@ public interface ResourceCreatedDeliveryPayload extends DeliveryPayload {
     }
 
     /**
-     * factory method to copy an instance of ResourceCreatedDeliveryPayload
+     * factory method to create a shallow copy ResourceCreatedDeliveryPayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -86,6 +87,26 @@ public interface ResourceCreatedDeliveryPayload extends DeliveryPayload {
         instance.setProjectKey(template.getProjectKey());
         instance.setResource(template.getResource());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+        instance.setVersion(template.getVersion());
+        instance.setModifiedAt(template.getModifiedAt());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ResourceCreatedDeliveryPayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ResourceCreatedDeliveryPayload deepCopy(@Nullable final ResourceCreatedDeliveryPayload template) {
+        if (template == null) {
+            return null;
+        }
+        ResourceCreatedDeliveryPayloadImpl instance = new ResourceCreatedDeliveryPayloadImpl();
+        instance.setProjectKey(template.getProjectKey());
+        instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
+                .deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setVersion(template.getVersion());
         instance.setModifiedAt(template.getModifiedAt());
         return instance;

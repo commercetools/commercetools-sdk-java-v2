@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -66,14 +67,31 @@ public interface QueryComplexityLimitExceededError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of QueryComplexityLimitExceededError
+     * factory method to create a shallow copy QueryComplexityLimitExceededError
      * @param template instance to be copied
      * @return copy instance
      */
     public static QueryComplexityLimitExceededError of(final QueryComplexityLimitExceededError template) {
         QueryComplexityLimitExceededErrorImpl instance = new QueryComplexityLimitExceededErrorImpl();
         instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        return instance;
+    }
 
+    /**
+     * factory method to create a deep copy of QueryComplexityLimitExceededError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static QueryComplexityLimitExceededError deepCopy(
+            @Nullable final QueryComplexityLimitExceededError template) {
+        if (template == null) {
+            return null;
+        }
+        QueryComplexityLimitExceededErrorImpl instance = new QueryComplexityLimitExceededErrorImpl();
+        instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
 

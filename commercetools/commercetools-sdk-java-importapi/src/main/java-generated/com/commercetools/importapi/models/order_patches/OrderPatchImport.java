@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -71,7 +72,7 @@ public interface OrderPatchImport {
     }
 
     /**
-     * factory method to copy an instance of OrderPatchImport
+     * factory method to create a shallow copy OrderPatchImport
      * @param template instance to be copied
      * @return copy instance
      */
@@ -79,6 +80,22 @@ public interface OrderPatchImport {
         OrderPatchImportImpl instance = new OrderPatchImportImpl();
         instance.setOrderNumber(template.getOrderNumber());
         instance.setFields(template.getFields());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderPatchImport
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderPatchImport deepCopy(@Nullable final OrderPatchImport template) {
+        if (template == null) {
+            return null;
+        }
+        OrderPatchImportImpl instance = new OrderPatchImportImpl();
+        instance.setOrderNumber(template.getOrderNumber());
+        instance.setFields(com.commercetools.importapi.models.order_patches.OrderField.deepCopy(template.getFields()));
         return instance;
     }
 

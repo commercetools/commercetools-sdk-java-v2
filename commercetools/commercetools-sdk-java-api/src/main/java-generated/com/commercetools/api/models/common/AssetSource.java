@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -99,7 +100,7 @@ public interface AssetSource extends com.commercetools.api.models.WithKey {
     }
 
     /**
-     * factory method to copy an instance of AssetSource
+     * factory method to create a shallow copy AssetSource
      * @param template instance to be copied
      * @return copy instance
      */
@@ -108,6 +109,24 @@ public interface AssetSource extends com.commercetools.api.models.WithKey {
         instance.setUri(template.getUri());
         instance.setKey(template.getKey());
         instance.setDimensions(template.getDimensions());
+        instance.setContentType(template.getContentType());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of AssetSource
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AssetSource deepCopy(@Nullable final AssetSource template) {
+        if (template == null) {
+            return null;
+        }
+        AssetSourceImpl instance = new AssetSourceImpl();
+        instance.setUri(template.getUri());
+        instance.setKey(template.getKey());
+        instance.setDimensions(com.commercetools.api.models.common.AssetDimensions.deepCopy(template.getDimensions()));
         instance.setContentType(template.getContentType());
         return instance;
     }

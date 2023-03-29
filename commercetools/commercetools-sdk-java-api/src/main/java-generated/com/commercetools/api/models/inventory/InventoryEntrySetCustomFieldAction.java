@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -73,11 +74,28 @@ public interface InventoryEntrySetCustomFieldAction extends InventoryEntryUpdate
     }
 
     /**
-     * factory method to copy an instance of InventoryEntrySetCustomFieldAction
+     * factory method to create a shallow copy InventoryEntrySetCustomFieldAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static InventoryEntrySetCustomFieldAction of(final InventoryEntrySetCustomFieldAction template) {
+        InventoryEntrySetCustomFieldActionImpl instance = new InventoryEntrySetCustomFieldActionImpl();
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of InventoryEntrySetCustomFieldAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static InventoryEntrySetCustomFieldAction deepCopy(
+            @Nullable final InventoryEntrySetCustomFieldAction template) {
+        if (template == null) {
+            return null;
+        }
         InventoryEntrySetCustomFieldActionImpl instance = new InventoryEntrySetCustomFieldActionImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -74,7 +75,7 @@ public interface CartSetCustomLineItemTaxRateAction extends CartUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of CartSetCustomLineItemTaxRateAction
+     * factory method to create a shallow copy CartSetCustomLineItemTaxRateAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -82,6 +83,24 @@ public interface CartSetCustomLineItemTaxRateAction extends CartUpdateAction {
         CartSetCustomLineItemTaxRateActionImpl instance = new CartSetCustomLineItemTaxRateActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setExternalTaxRate(template.getExternalTaxRate());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartSetCustomLineItemTaxRateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartSetCustomLineItemTaxRateAction deepCopy(
+            @Nullable final CartSetCustomLineItemTaxRateAction template) {
+        if (template == null) {
+            return null;
+        }
+        CartSetCustomLineItemTaxRateActionImpl instance = new CartSetCustomLineItemTaxRateActionImpl();
+        instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setExternalTaxRate(
+            com.commercetools.api.models.cart.ExternalTaxRateDraft.deepCopy(template.getExternalTaxRate()));
         return instance;
     }
 

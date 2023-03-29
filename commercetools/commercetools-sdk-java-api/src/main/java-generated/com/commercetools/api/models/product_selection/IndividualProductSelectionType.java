@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -61,13 +62,28 @@ public interface IndividualProductSelectionType extends ProductSelectionType {
     }
 
     /**
-     * factory method to copy an instance of IndividualProductSelectionType
+     * factory method to create a shallow copy IndividualProductSelectionType
      * @param template instance to be copied
      * @return copy instance
      */
     public static IndividualProductSelectionType of(final IndividualProductSelectionType template) {
         IndividualProductSelectionTypeImpl instance = new IndividualProductSelectionTypeImpl();
         instance.setName(template.getName());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of IndividualProductSelectionType
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static IndividualProductSelectionType deepCopy(@Nullable final IndividualProductSelectionType template) {
+        if (template == null) {
+            return null;
+        }
+        IndividualProductSelectionTypeImpl instance = new IndividualProductSelectionTypeImpl();
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
         return instance;
     }
 

@@ -5,7 +5,9 @@ import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -140,7 +142,7 @@ public interface Parcel extends ParcelMixin, com.commercetools.api.models.Custom
     }
 
     /**
-     * factory method to copy an instance of Parcel
+     * factory method to create a shallow copy Parcel
      * @param template instance to be copied
      * @return copy instance
      */
@@ -152,6 +154,31 @@ public interface Parcel extends ParcelMixin, com.commercetools.api.models.Custom
         instance.setTrackingData(template.getTrackingData());
         instance.setItems(template.getItems());
         instance.setCustom(template.getCustom());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of Parcel
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static Parcel deepCopy(@Nullable final Parcel template) {
+        if (template == null) {
+            return null;
+        }
+        ParcelImpl instance = new ParcelImpl();
+        instance.setId(template.getId());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setMeasurements(
+            com.commercetools.api.models.order.ParcelMeasurements.deepCopy(template.getMeasurements()));
+        instance.setTrackingData(com.commercetools.api.models.order.TrackingData.deepCopy(template.getTrackingData()));
+        instance.setItems(Optional.ofNullable(template.getItems())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.order.DeliveryItem::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         return instance;
     }
 

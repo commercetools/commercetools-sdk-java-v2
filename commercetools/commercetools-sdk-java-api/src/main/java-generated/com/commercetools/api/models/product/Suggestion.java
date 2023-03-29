@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -53,11 +54,26 @@ public interface Suggestion {
     }
 
     /**
-     * factory method to copy an instance of Suggestion
+     * factory method to create a shallow copy Suggestion
      * @param template instance to be copied
      * @return copy instance
      */
     public static Suggestion of(final Suggestion template) {
+        SuggestionImpl instance = new SuggestionImpl();
+        instance.setText(template.getText());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of Suggestion
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static Suggestion deepCopy(@Nullable final Suggestion template) {
+        if (template == null) {
+            return null;
+        }
         SuggestionImpl instance = new SuggestionImpl();
         instance.setText(template.getText());
         return instance;

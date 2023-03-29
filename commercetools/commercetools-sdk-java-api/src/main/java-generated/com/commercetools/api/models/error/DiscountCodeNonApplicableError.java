@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -162,14 +163,36 @@ public interface DiscountCodeNonApplicableError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of DiscountCodeNonApplicableError
+     * factory method to create a shallow copy DiscountCodeNonApplicableError
      * @param template instance to be copied
      * @return copy instance
      */
     public static DiscountCodeNonApplicableError of(final DiscountCodeNonApplicableError template) {
         DiscountCodeNonApplicableErrorImpl instance = new DiscountCodeNonApplicableErrorImpl();
         instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        instance.setDiscountCode(template.getDiscountCode());
+        instance.setReason(template.getReason());
+        instance.setDiscountCodeId(template.getDiscountCodeId());
+        instance.setValidFrom(template.getValidFrom());
+        instance.setValidUntil(template.getValidUntil());
+        instance.setValidityCheckTime(template.getValidityCheckTime());
+        return instance;
+    }
 
+    /**
+     * factory method to create a deep copy of DiscountCodeNonApplicableError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static DiscountCodeNonApplicableError deepCopy(@Nullable final DiscountCodeNonApplicableError template) {
+        if (template == null) {
+            return null;
+        }
+        DiscountCodeNonApplicableErrorImpl instance = new DiscountCodeNonApplicableErrorImpl();
+        instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         instance.setDiscountCode(template.getDiscountCode());
         instance.setReason(template.getReason());
         instance.setDiscountCodeId(template.getDiscountCodeId());

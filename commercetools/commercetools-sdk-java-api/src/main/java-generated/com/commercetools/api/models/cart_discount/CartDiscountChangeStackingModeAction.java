@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,27 @@ public interface CartDiscountChangeStackingModeAction extends CartDiscountUpdate
     }
 
     /**
-     * factory method to copy an instance of CartDiscountChangeStackingModeAction
+     * factory method to create a shallow copy CartDiscountChangeStackingModeAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static CartDiscountChangeStackingModeAction of(final CartDiscountChangeStackingModeAction template) {
+        CartDiscountChangeStackingModeActionImpl instance = new CartDiscountChangeStackingModeActionImpl();
+        instance.setStackingMode(template.getStackingMode());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartDiscountChangeStackingModeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartDiscountChangeStackingModeAction deepCopy(
+            @Nullable final CartDiscountChangeStackingModeAction template) {
+        if (template == null) {
+            return null;
+        }
         CartDiscountChangeStackingModeActionImpl instance = new CartDiscountChangeStackingModeActionImpl();
         instance.setStackingMode(template.getStackingMode());
         return instance;

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.CartReference;
@@ -68,11 +69,26 @@ public interface ReplicaMyCartDraft extends io.vrap.rmf.base.client.Draft<Replic
     }
 
     /**
-     * factory method to copy an instance of ReplicaMyCartDraft
+     * factory method to create a shallow copy ReplicaMyCartDraft
      * @param template instance to be copied
      * @return copy instance
      */
     public static ReplicaMyCartDraft of(final ReplicaMyCartDraft template) {
+        ReplicaMyCartDraftImpl instance = new ReplicaMyCartDraftImpl();
+        instance.setReference(template.getReference());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ReplicaMyCartDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ReplicaMyCartDraft deepCopy(@Nullable final ReplicaMyCartDraft template) {
+        if (template == null) {
+            return null;
+        }
         ReplicaMyCartDraftImpl instance = new ReplicaMyCartDraftImpl();
         instance.setReference(template.getReference());
         return instance;

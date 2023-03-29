@@ -4,7 +4,9 @@ package com.commercetools.api.models.me;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -205,6 +207,43 @@ public interface MyBusinessUnitDraft
      */
 
     public void setDefaultBillingAddress(final Integer defaultBillingAddress);
+
+    /**
+     * factory method to create a deep copy of MyBusinessUnitDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MyBusinessUnitDraft deepCopy(@Nullable final MyBusinessUnitDraft template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.me.MyCompanyDraft) {
+            return com.commercetools.api.models.me.MyCompanyDraft
+                    .deepCopy((com.commercetools.api.models.me.MyCompanyDraft) template);
+        }
+        if (template instanceof com.commercetools.api.models.me.MyDivisionDraft) {
+            return com.commercetools.api.models.me.MyDivisionDraft
+                    .deepCopy((com.commercetools.api.models.me.MyDivisionDraft) template);
+        }
+        MyBusinessUnitDraftImpl instance = new MyBusinessUnitDraftImpl();
+        instance.setKey(template.getKey());
+        instance.setName(template.getName());
+        instance.setContactEmail(template.getContactEmail());
+        instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
+        instance.setAddresses(Optional.ofNullable(template.getAddresses())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.common.BaseAddress::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setShippingAddresses(
+            Optional.ofNullable(template.getShippingAddresses()).map(ArrayList::new).orElse(null));
+        instance.setDefaultShippingAddress(template.getDefaultShippingAddress());
+        instance.setBillingAddresses(
+            Optional.ofNullable(template.getBillingAddresses()).map(ArrayList::new).orElse(null));
+        instance.setDefaultBillingAddress(template.getDefaultBillingAddress());
+        return instance;
+    }
 
     /**
      * builder for company subtype

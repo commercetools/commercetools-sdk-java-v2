@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order.PaymentState;
@@ -74,11 +75,28 @@ public interface OrderPaymentStateChangedMessagePayload extends OrderMessagePayl
     }
 
     /**
-     * factory method to copy an instance of OrderPaymentStateChangedMessagePayload
+     * factory method to create a shallow copy OrderPaymentStateChangedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
     public static OrderPaymentStateChangedMessagePayload of(final OrderPaymentStateChangedMessagePayload template) {
+        OrderPaymentStateChangedMessagePayloadImpl instance = new OrderPaymentStateChangedMessagePayloadImpl();
+        instance.setPaymentState(template.getPaymentState());
+        instance.setOldPaymentState(template.getOldPaymentState());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderPaymentStateChangedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderPaymentStateChangedMessagePayload deepCopy(
+            @Nullable final OrderPaymentStateChangedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
         OrderPaymentStateChangedMessagePayloadImpl instance = new OrderPaymentStateChangedMessagePayloadImpl();
         instance.setPaymentState(template.getPaymentState());
         instance.setOldPaymentState(template.getOldPaymentState());

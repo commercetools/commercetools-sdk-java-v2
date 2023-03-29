@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -82,14 +83,31 @@ public interface RequiredFieldError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of RequiredFieldError
+     * factory method to create a shallow copy RequiredFieldError
      * @param template instance to be copied
      * @return copy instance
      */
     public static RequiredFieldError of(final RequiredFieldError template) {
         RequiredFieldErrorImpl instance = new RequiredFieldErrorImpl();
         instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        instance.setField(template.getField());
+        return instance;
+    }
 
+    /**
+     * factory method to create a deep copy of RequiredFieldError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static RequiredFieldError deepCopy(@Nullable final RequiredFieldError template) {
+        if (template == null) {
+            return null;
+        }
+        RequiredFieldErrorImpl instance = new RequiredFieldErrorImpl();
+        instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         instance.setField(template.getField());
         return instance;
     }

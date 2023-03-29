@@ -4,7 +4,9 @@ package com.commercetools.importapi.models.customfields;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -69,13 +71,32 @@ public interface LocalizedStringSetField extends CustomField {
     }
 
     /**
-     * factory method to copy an instance of LocalizedStringSetField
+     * factory method to create a shallow copy LocalizedStringSetField
      * @param template instance to be copied
      * @return copy instance
      */
     public static LocalizedStringSetField of(final LocalizedStringSetField template) {
         LocalizedStringSetFieldImpl instance = new LocalizedStringSetFieldImpl();
         instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of LocalizedStringSetField
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static LocalizedStringSetField deepCopy(@Nullable final LocalizedStringSetField template) {
+        if (template == null) {
+            return null;
+        }
+        LocalizedStringSetFieldImpl instance = new LocalizedStringSetFieldImpl();
+        instance.setValue(Optional.ofNullable(template.getValue())
+                .map(t -> t.stream()
+                        .map(com.commercetools.importapi.models.common.LocalizedString::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -54,6 +55,76 @@ public interface ShippingMethodUpdateAction
     @NotNull
     @JsonProperty("action")
     public String getAction();
+
+    /**
+     * factory method to create a deep copy of ShippingMethodUpdateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ShippingMethodUpdateAction deepCopy(@Nullable final ShippingMethodUpdateAction template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.shipping_method.ShippingMethodAddShippingRateAction) {
+            return com.commercetools.api.models.shipping_method.ShippingMethodAddShippingRateAction.deepCopy(
+                (com.commercetools.api.models.shipping_method.ShippingMethodAddShippingRateAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.shipping_method.ShippingMethodAddZoneAction) {
+            return com.commercetools.api.models.shipping_method.ShippingMethodAddZoneAction
+                    .deepCopy((com.commercetools.api.models.shipping_method.ShippingMethodAddZoneAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.shipping_method.ShippingMethodChangeIsDefaultAction) {
+            return com.commercetools.api.models.shipping_method.ShippingMethodChangeIsDefaultAction.deepCopy(
+                (com.commercetools.api.models.shipping_method.ShippingMethodChangeIsDefaultAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.shipping_method.ShippingMethodChangeNameAction) {
+            return com.commercetools.api.models.shipping_method.ShippingMethodChangeNameAction
+                    .deepCopy((com.commercetools.api.models.shipping_method.ShippingMethodChangeNameAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.shipping_method.ShippingMethodChangeTaxCategoryAction) {
+            return com.commercetools.api.models.shipping_method.ShippingMethodChangeTaxCategoryAction.deepCopy(
+                (com.commercetools.api.models.shipping_method.ShippingMethodChangeTaxCategoryAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.shipping_method.ShippingMethodRemoveShippingRateAction) {
+            return com.commercetools.api.models.shipping_method.ShippingMethodRemoveShippingRateAction.deepCopy(
+                (com.commercetools.api.models.shipping_method.ShippingMethodRemoveShippingRateAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.shipping_method.ShippingMethodRemoveZoneAction) {
+            return com.commercetools.api.models.shipping_method.ShippingMethodRemoveZoneAction
+                    .deepCopy((com.commercetools.api.models.shipping_method.ShippingMethodRemoveZoneAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.shipping_method.ShippingMethodSetCustomFieldAction) {
+            return com.commercetools.api.models.shipping_method.ShippingMethodSetCustomFieldAction.deepCopy(
+                (com.commercetools.api.models.shipping_method.ShippingMethodSetCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.shipping_method.ShippingMethodSetCustomTypeAction) {
+            return com.commercetools.api.models.shipping_method.ShippingMethodSetCustomTypeAction.deepCopy(
+                (com.commercetools.api.models.shipping_method.ShippingMethodSetCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.shipping_method.ShippingMethodSetDescriptionAction) {
+            return com.commercetools.api.models.shipping_method.ShippingMethodSetDescriptionAction.deepCopy(
+                (com.commercetools.api.models.shipping_method.ShippingMethodSetDescriptionAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.shipping_method.ShippingMethodSetKeyAction) {
+            return com.commercetools.api.models.shipping_method.ShippingMethodSetKeyAction
+                    .deepCopy((com.commercetools.api.models.shipping_method.ShippingMethodSetKeyAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.shipping_method.ShippingMethodSetLocalizedDescriptionAction) {
+            return com.commercetools.api.models.shipping_method.ShippingMethodSetLocalizedDescriptionAction.deepCopy(
+                (com.commercetools.api.models.shipping_method.ShippingMethodSetLocalizedDescriptionAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.shipping_method.ShippingMethodSetLocalizedNameAction) {
+            return com.commercetools.api.models.shipping_method.ShippingMethodSetLocalizedNameAction.deepCopy(
+                (com.commercetools.api.models.shipping_method.ShippingMethodSetLocalizedNameAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.shipping_method.ShippingMethodSetPredicateAction) {
+            return com.commercetools.api.models.shipping_method.ShippingMethodSetPredicateAction
+                    .deepCopy((com.commercetools.api.models.shipping_method.ShippingMethodSetPredicateAction) template);
+        }
+        ShippingMethodUpdateActionImpl instance = new ShippingMethodUpdateActionImpl();
+        return instance;
+    }
 
     /**
      * builder for addShippingRate subtype

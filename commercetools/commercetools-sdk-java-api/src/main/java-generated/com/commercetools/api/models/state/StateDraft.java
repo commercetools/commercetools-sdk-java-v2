@@ -4,7 +4,9 @@ package com.commercetools.api.models.state;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -177,7 +179,7 @@ public interface StateDraft extends com.commercetools.api.models.WithKey, io.vra
     }
 
     /**
-     * factory method to copy an instance of StateDraft
+     * factory method to create a shallow copy StateDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -190,6 +192,32 @@ public interface StateDraft extends com.commercetools.api.models.WithKey, io.vra
         instance.setInitial(template.getInitial());
         instance.setRoles(template.getRoles());
         instance.setTransitions(template.getTransitions());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StateDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StateDraft deepCopy(@Nullable final StateDraft template) {
+        if (template == null) {
+            return null;
+        }
+        StateDraftImpl instance = new StateDraftImpl();
+        instance.setKey(template.getKey());
+        instance.setType(template.getType());
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setInitial(template.getInitial());
+        instance.setRoles(Optional.ofNullable(template.getRoles()).map(ArrayList::new).orElse(null));
+        instance.setTransitions(Optional.ofNullable(template.getTransitions())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.state.StateResourceIdentifier::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

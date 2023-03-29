@@ -4,7 +4,9 @@ package com.commercetools.api.models.type;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -134,7 +136,7 @@ public interface TypeDraft extends com.commercetools.api.models.WithKey, io.vrap
     }
 
     /**
-     * factory method to copy an instance of TypeDraft
+     * factory method to create a shallow copy TypeDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -145,6 +147,31 @@ public interface TypeDraft extends com.commercetools.api.models.WithKey, io.vrap
         instance.setDescription(template.getDescription());
         instance.setResourceTypeIds(template.getResourceTypeIds());
         instance.setFieldDefinitions(template.getFieldDefinitions());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of TypeDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static TypeDraft deepCopy(@Nullable final TypeDraft template) {
+        if (template == null) {
+            return null;
+        }
+        TypeDraftImpl instance = new TypeDraftImpl();
+        instance.setKey(template.getKey());
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setResourceTypeIds(
+            Optional.ofNullable(template.getResourceTypeIds()).map(ArrayList::new).orElse(null));
+        instance.setFieldDefinitions(Optional.ofNullable(template.getFieldDefinitions())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.type.FieldDefinition::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

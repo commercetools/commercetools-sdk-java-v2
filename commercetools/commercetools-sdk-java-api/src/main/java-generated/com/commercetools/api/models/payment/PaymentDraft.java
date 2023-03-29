@@ -4,7 +4,9 @@ package com.commercetools.api.models.payment;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -285,7 +287,7 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
     }
 
     /**
-     * factory method to copy an instance of PaymentDraft
+     * factory method to create a shallow copy PaymentDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -305,6 +307,47 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
         instance.setTransactions(template.getTransactions());
         instance.setInterfaceInteractions(template.getInterfaceInteractions());
         instance.setCustom(template.getCustom());
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of PaymentDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static PaymentDraft deepCopy(@Nullable final PaymentDraft template) {
+        if (template == null) {
+            return null;
+        }
+        PaymentDraftImpl instance = new PaymentDraftImpl();
+        instance.setCustomer(
+            com.commercetools.api.models.customer.CustomerResourceIdentifier.deepCopy(template.getCustomer()));
+        instance.setAnonymousId(template.getAnonymousId());
+        instance.setExternalId(template.getExternalId());
+        instance.setInterfaceId(template.getInterfaceId());
+        instance.setAmountPlanned(com.commercetools.api.models.common.Money.deepCopy(template.getAmountPlanned()));
+        instance.setAmountAuthorized(
+            com.commercetools.api.models.common.Money.deepCopy(template.getAmountAuthorized()));
+        instance.setAuthorizedUntil(template.getAuthorizedUntil());
+        instance.setAmountPaid(com.commercetools.api.models.common.Money.deepCopy(template.getAmountPaid()));
+        instance.setAmountRefunded(com.commercetools.api.models.common.Money.deepCopy(template.getAmountRefunded()));
+        instance.setPaymentMethodInfo(
+            com.commercetools.api.models.payment.PaymentMethodInfo.deepCopy(template.getPaymentMethodInfo()));
+        instance.setPaymentStatus(
+            com.commercetools.api.models.payment.PaymentStatusDraft.deepCopy(template.getPaymentStatus()));
+        instance.setTransactions(Optional.ofNullable(template.getTransactions())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.payment.TransactionDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setInterfaceInteractions(Optional.ofNullable(template.getInterfaceInteractions())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.type.CustomFieldsDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         instance.setKey(template.getKey());
         return instance;
     }

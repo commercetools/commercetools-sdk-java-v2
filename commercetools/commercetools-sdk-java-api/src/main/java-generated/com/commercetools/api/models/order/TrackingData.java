@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -110,11 +112,30 @@ public interface TrackingData {
     }
 
     /**
-     * factory method to copy an instance of TrackingData
+     * factory method to create a shallow copy TrackingData
      * @param template instance to be copied
      * @return copy instance
      */
     public static TrackingData of(final TrackingData template) {
+        TrackingDataImpl instance = new TrackingDataImpl();
+        instance.setTrackingId(template.getTrackingId());
+        instance.setCarrier(template.getCarrier());
+        instance.setProvider(template.getProvider());
+        instance.setProviderTransaction(template.getProviderTransaction());
+        instance.setIsReturn(template.getIsReturn());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of TrackingData
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static TrackingData deepCopy(@Nullable final TrackingData template) {
+        if (template == null) {
+            return null;
+        }
         TrackingDataImpl instance = new TrackingDataImpl();
         instance.setTrackingId(template.getTrackingId());
         instance.setCarrier(template.getCarrier());

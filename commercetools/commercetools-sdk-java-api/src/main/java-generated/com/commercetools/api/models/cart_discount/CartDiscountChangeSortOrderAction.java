@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,27 @@ public interface CartDiscountChangeSortOrderAction extends CartDiscountUpdateAct
     }
 
     /**
-     * factory method to copy an instance of CartDiscountChangeSortOrderAction
+     * factory method to create a shallow copy CartDiscountChangeSortOrderAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static CartDiscountChangeSortOrderAction of(final CartDiscountChangeSortOrderAction template) {
+        CartDiscountChangeSortOrderActionImpl instance = new CartDiscountChangeSortOrderActionImpl();
+        instance.setSortOrder(template.getSortOrder());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartDiscountChangeSortOrderAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartDiscountChangeSortOrderAction deepCopy(
+            @Nullable final CartDiscountChangeSortOrderAction template) {
+        if (template == null) {
+            return null;
+        }
         CartDiscountChangeSortOrderActionImpl instance = new CartDiscountChangeSortOrderActionImpl();
         instance.setSortOrder(template.getSortOrder());
         return instance;

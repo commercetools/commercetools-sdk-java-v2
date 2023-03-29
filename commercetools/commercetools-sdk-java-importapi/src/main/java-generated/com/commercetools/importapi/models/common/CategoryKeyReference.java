@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -41,11 +43,26 @@ public interface CategoryKeyReference extends KeyReference {
     }
 
     /**
-     * factory method to copy an instance of CategoryKeyReference
+     * factory method to create a shallow copy CategoryKeyReference
      * @param template instance to be copied
      * @return copy instance
      */
     public static CategoryKeyReference of(final CategoryKeyReference template) {
+        CategoryKeyReferenceImpl instance = new CategoryKeyReferenceImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CategoryKeyReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CategoryKeyReference deepCopy(@Nullable final CategoryKeyReference template) {
+        if (template == null) {
+            return null;
+        }
         CategoryKeyReferenceImpl instance = new CategoryKeyReferenceImpl();
         instance.setKey(template.getKey());
         return instance;

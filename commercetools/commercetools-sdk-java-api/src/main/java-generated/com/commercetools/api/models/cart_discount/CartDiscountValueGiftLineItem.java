@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -108,7 +109,7 @@ public interface CartDiscountValueGiftLineItem extends CartDiscountValue {
     }
 
     /**
-     * factory method to copy an instance of CartDiscountValueGiftLineItem
+     * factory method to create a shallow copy CartDiscountValueGiftLineItem
      * @param template instance to be copied
      * @return copy instance
      */
@@ -118,6 +119,26 @@ public interface CartDiscountValueGiftLineItem extends CartDiscountValue {
         instance.setVariantId(template.getVariantId());
         instance.setSupplyChannel(template.getSupplyChannel());
         instance.setDistributionChannel(template.getDistributionChannel());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartDiscountValueGiftLineItem
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartDiscountValueGiftLineItem deepCopy(@Nullable final CartDiscountValueGiftLineItem template) {
+        if (template == null) {
+            return null;
+        }
+        CartDiscountValueGiftLineItemImpl instance = new CartDiscountValueGiftLineItemImpl();
+        instance.setProduct(com.commercetools.api.models.product.ProductReference.deepCopy(template.getProduct()));
+        instance.setVariantId(template.getVariantId());
+        instance.setSupplyChannel(
+            com.commercetools.api.models.channel.ChannelReference.deepCopy(template.getSupplyChannel()));
+        instance.setDistributionChannel(
+            com.commercetools.api.models.channel.ChannelReference.deepCopy(template.getDistributionChannel()));
         return instance;
     }
 

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -42,6 +43,36 @@ public interface ChangeValueChangeValue {
     @NotNull
     @JsonProperty("type")
     public String getType();
+
+    /**
+     * factory method to create a deep copy of ChangeValueChangeValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChangeValueChangeValue deepCopy(@Nullable final ChangeValueChangeValue template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.history.models.change_value.ChangeValueAbsoluteChangeValue) {
+            return com.commercetools.history.models.change_value.ChangeValueAbsoluteChangeValue
+                    .deepCopy((com.commercetools.history.models.change_value.ChangeValueAbsoluteChangeValue) template);
+        }
+        if (template instanceof com.commercetools.history.models.change_value.ChangeValueExternalChangeValue) {
+            return com.commercetools.history.models.change_value.ChangeValueExternalChangeValue
+                    .deepCopy((com.commercetools.history.models.change_value.ChangeValueExternalChangeValue) template);
+        }
+        if (template instanceof com.commercetools.history.models.change_value.ChangeValueGiftLineItemChangeValue) {
+            return com.commercetools.history.models.change_value.ChangeValueGiftLineItemChangeValue.deepCopy(
+                (com.commercetools.history.models.change_value.ChangeValueGiftLineItemChangeValue) template);
+        }
+        if (template instanceof com.commercetools.history.models.change_value.ChangeValueRelativeChangeValue) {
+            return com.commercetools.history.models.change_value.ChangeValueRelativeChangeValue
+                    .deepCopy((com.commercetools.history.models.change_value.ChangeValueRelativeChangeValue) template);
+        }
+        ChangeValueChangeValueImpl instance = new ChangeValueChangeValueImpl();
+        return instance;
+    }
 
     /**
      * builder for absolute subtype

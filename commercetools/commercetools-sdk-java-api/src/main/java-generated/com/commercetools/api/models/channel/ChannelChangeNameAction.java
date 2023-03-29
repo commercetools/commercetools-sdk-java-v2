@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -61,13 +62,28 @@ public interface ChannelChangeNameAction extends ChannelUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ChannelChangeNameAction
+     * factory method to create a shallow copy ChannelChangeNameAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ChannelChangeNameAction of(final ChannelChangeNameAction template) {
         ChannelChangeNameActionImpl instance = new ChannelChangeNameActionImpl();
         instance.setName(template.getName());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChannelChangeNameAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChannelChangeNameAction deepCopy(@Nullable final ChannelChangeNameAction template) {
+        if (template == null) {
+            return null;
+        }
+        ChannelChangeNameActionImpl instance = new ChannelChangeNameActionImpl();
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
         return instance;
     }
 

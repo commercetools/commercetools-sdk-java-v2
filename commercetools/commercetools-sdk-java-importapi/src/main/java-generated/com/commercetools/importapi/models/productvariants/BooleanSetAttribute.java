@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -66,7 +67,7 @@ public interface BooleanSetAttribute extends Attribute {
     }
 
     /**
-     * factory method to copy an instance of BooleanSetAttribute
+     * factory method to create a shallow copy BooleanSetAttribute
      * @param template instance to be copied
      * @return copy instance
      */
@@ -74,6 +75,22 @@ public interface BooleanSetAttribute extends Attribute {
         BooleanSetAttributeImpl instance = new BooleanSetAttributeImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of BooleanSetAttribute
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static BooleanSetAttribute deepCopy(@Nullable final BooleanSetAttribute template) {
+        if (template == null) {
+            return null;
+        }
+        BooleanSetAttributeImpl instance = new BooleanSetAttributeImpl();
+        instance.setName(template.getName());
+        instance.setValue(Optional.ofNullable(template.getValue()).map(ArrayList::new).orElse(null));
         return instance;
     }
 

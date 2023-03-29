@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.ReferenceTypeId;
@@ -113,14 +114,33 @@ public interface ReferencedResourceNotFoundError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of ReferencedResourceNotFoundError
+     * factory method to create a shallow copy ReferencedResourceNotFoundError
      * @param template instance to be copied
      * @return copy instance
      */
     public static ReferencedResourceNotFoundError of(final ReferencedResourceNotFoundError template) {
         ReferencedResourceNotFoundErrorImpl instance = new ReferencedResourceNotFoundErrorImpl();
         instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        instance.setTypeId(template.getTypeId());
+        instance.setId(template.getId());
+        instance.setKey(template.getKey());
+        return instance;
+    }
 
+    /**
+     * factory method to create a deep copy of ReferencedResourceNotFoundError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ReferencedResourceNotFoundError deepCopy(@Nullable final ReferencedResourceNotFoundError template) {
+        if (template == null) {
+            return null;
+        }
+        ReferencedResourceNotFoundErrorImpl instance = new ReferencedResourceNotFoundErrorImpl();
+        instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         instance.setTypeId(template.getTypeId());
         instance.setId(template.getId());
         instance.setKey(template.getKey());

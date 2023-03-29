@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -55,12 +57,28 @@ public interface ShoppingListSetDeleteDaysAfterLastModificationAction extends Sh
     }
 
     /**
-     * factory method to copy an instance of ShoppingListSetDeleteDaysAfterLastModificationAction
+     * factory method to create a shallow copy ShoppingListSetDeleteDaysAfterLastModificationAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ShoppingListSetDeleteDaysAfterLastModificationAction of(
             final ShoppingListSetDeleteDaysAfterLastModificationAction template) {
+        ShoppingListSetDeleteDaysAfterLastModificationActionImpl instance = new ShoppingListSetDeleteDaysAfterLastModificationActionImpl();
+        instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ShoppingListSetDeleteDaysAfterLastModificationAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ShoppingListSetDeleteDaysAfterLastModificationAction deepCopy(
+            @Nullable final ShoppingListSetDeleteDaysAfterLastModificationAction template) {
+        if (template == null) {
+            return null;
+        }
         ShoppingListSetDeleteDaysAfterLastModificationActionImpl instance = new ShoppingListSetDeleteDaysAfterLastModificationActionImpl();
         instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
         return instance;

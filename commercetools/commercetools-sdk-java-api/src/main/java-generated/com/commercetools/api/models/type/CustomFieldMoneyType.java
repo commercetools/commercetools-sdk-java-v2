@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -40,11 +42,25 @@ public interface CustomFieldMoneyType extends FieldType {
     }
 
     /**
-     * factory method to copy an instance of CustomFieldMoneyType
+     * factory method to create a shallow copy CustomFieldMoneyType
      * @param template instance to be copied
      * @return copy instance
      */
     public static CustomFieldMoneyType of(final CustomFieldMoneyType template) {
+        CustomFieldMoneyTypeImpl instance = new CustomFieldMoneyTypeImpl();
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomFieldMoneyType
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomFieldMoneyType deepCopy(@Nullable final CustomFieldMoneyType template) {
+        if (template == null) {
+            return null;
+        }
         CustomFieldMoneyTypeImpl instance = new CustomFieldMoneyTypeImpl();
         return instance;
     }

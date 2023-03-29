@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -42,6 +43,36 @@ public interface CartDiscountValueDraft {
     @NotNull
     @JsonProperty("type")
     public String getType();
+
+    /**
+     * factory method to create a deep copy of CartDiscountValueDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartDiscountValueDraft deepCopy(@Nullable final CartDiscountValueDraft template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountValueFixedDraft) {
+            return com.commercetools.api.models.cart_discount.CartDiscountValueFixedDraft
+                    .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountValueFixedDraft) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItemDraft) {
+            return com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItemDraft
+                    .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItemDraft) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountValueRelativeDraft) {
+            return com.commercetools.api.models.cart_discount.CartDiscountValueRelativeDraft
+                    .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountValueRelativeDraft) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountValueAbsoluteDraft) {
+            return com.commercetools.api.models.cart_discount.CartDiscountValueAbsoluteDraft
+                    .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountValueAbsoluteDraft) template);
+        }
+        CartDiscountValueDraftImpl instance = new CartDiscountValueDraftImpl();
+        return instance;
+    }
 
     /**
      * builder for absolute subtype

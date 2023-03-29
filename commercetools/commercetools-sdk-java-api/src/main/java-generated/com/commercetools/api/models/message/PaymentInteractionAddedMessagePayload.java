@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -61,13 +62,29 @@ public interface PaymentInteractionAddedMessagePayload extends MessagePayload {
     }
 
     /**
-     * factory method to copy an instance of PaymentInteractionAddedMessagePayload
+     * factory method to create a shallow copy PaymentInteractionAddedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
     public static PaymentInteractionAddedMessagePayload of(final PaymentInteractionAddedMessagePayload template) {
         PaymentInteractionAddedMessagePayloadImpl instance = new PaymentInteractionAddedMessagePayloadImpl();
         instance.setInteraction(template.getInteraction());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of PaymentInteractionAddedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static PaymentInteractionAddedMessagePayload deepCopy(
+            @Nullable final PaymentInteractionAddedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        PaymentInteractionAddedMessagePayloadImpl instance = new PaymentInteractionAddedMessagePayloadImpl();
+        instance.setInteraction(com.commercetools.api.models.type.CustomFields.deepCopy(template.getInteraction()));
         return instance;
     }
 

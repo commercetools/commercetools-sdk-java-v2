@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -77,7 +78,7 @@ public interface PaymentAddInterfaceInteractionAction extends PaymentUpdateActio
     }
 
     /**
-     * factory method to copy an instance of PaymentAddInterfaceInteractionAction
+     * factory method to create a shallow copy PaymentAddInterfaceInteractionAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -85,6 +86,23 @@ public interface PaymentAddInterfaceInteractionAction extends PaymentUpdateActio
         PaymentAddInterfaceInteractionActionImpl instance = new PaymentAddInterfaceInteractionActionImpl();
         instance.setType(template.getType());
         instance.setFields(template.getFields());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of PaymentAddInterfaceInteractionAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static PaymentAddInterfaceInteractionAction deepCopy(
+            @Nullable final PaymentAddInterfaceInteractionAction template) {
+        if (template == null) {
+            return null;
+        }
+        PaymentAddInterfaceInteractionActionImpl instance = new PaymentAddInterfaceInteractionActionImpl();
+        instance.setType(com.commercetools.api.models.type.TypeResourceIdentifier.deepCopy(template.getType()));
+        instance.setFields(com.commercetools.api.models.type.FieldContainer.deepCopy(template.getFields()));
         return instance;
     }
 

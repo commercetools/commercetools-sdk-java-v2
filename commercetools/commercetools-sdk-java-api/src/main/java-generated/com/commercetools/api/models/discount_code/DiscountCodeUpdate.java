@@ -4,7 +4,9 @@ package com.commercetools.api.models.discount_code;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -80,7 +82,7 @@ public interface DiscountCodeUpdate extends
     }
 
     /**
-     * factory method to copy an instance of DiscountCodeUpdate
+     * factory method to create a shallow copy DiscountCodeUpdate
      * @param template instance to be copied
      * @return copy instance
      */
@@ -88,6 +90,26 @@ public interface DiscountCodeUpdate extends
         DiscountCodeUpdateImpl instance = new DiscountCodeUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(template.getActions());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of DiscountCodeUpdate
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static DiscountCodeUpdate deepCopy(@Nullable final DiscountCodeUpdate template) {
+        if (template == null) {
+            return null;
+        }
+        DiscountCodeUpdateImpl instance = new DiscountCodeUpdateImpl();
+        instance.setVersion(template.getVersion());
+        instance.setActions(Optional.ofNullable(template.getActions())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.discount_code.DiscountCodeUpdateAction::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

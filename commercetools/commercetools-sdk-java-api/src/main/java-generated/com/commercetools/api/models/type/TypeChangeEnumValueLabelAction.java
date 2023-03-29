@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -76,7 +77,7 @@ public interface TypeChangeEnumValueLabelAction extends TypeUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of TypeChangeEnumValueLabelAction
+     * factory method to create a shallow copy TypeChangeEnumValueLabelAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -84,6 +85,22 @@ public interface TypeChangeEnumValueLabelAction extends TypeUpdateAction {
         TypeChangeEnumValueLabelActionImpl instance = new TypeChangeEnumValueLabelActionImpl();
         instance.setFieldName(template.getFieldName());
         instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of TypeChangeEnumValueLabelAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static TypeChangeEnumValueLabelAction deepCopy(@Nullable final TypeChangeEnumValueLabelAction template) {
+        if (template == null) {
+            return null;
+        }
+        TypeChangeEnumValueLabelActionImpl instance = new TypeChangeEnumValueLabelActionImpl();
+        instance.setFieldName(template.getFieldName());
+        instance.setValue(com.commercetools.api.models.type.CustomFieldEnumValue.deepCopy(template.getValue()));
         return instance;
     }
 

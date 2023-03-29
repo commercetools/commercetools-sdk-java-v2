@@ -4,7 +4,9 @@ package com.commercetools.history.models.change_history;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -127,7 +129,7 @@ public interface RecordPagedQueryResponse {
     }
 
     /**
-     * factory method to copy an instance of RecordPagedQueryResponse
+     * factory method to create a shallow copy RecordPagedQueryResponse
      * @param template instance to be copied
      * @return copy instance
      */
@@ -138,6 +140,29 @@ public interface RecordPagedQueryResponse {
         instance.setTotal(template.getTotal());
         instance.setOffset(template.getOffset());
         instance.setResults(template.getResults());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of RecordPagedQueryResponse
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static RecordPagedQueryResponse deepCopy(@Nullable final RecordPagedQueryResponse template) {
+        if (template == null) {
+            return null;
+        }
+        RecordPagedQueryResponseImpl instance = new RecordPagedQueryResponseImpl();
+        instance.setLimit(template.getLimit());
+        instance.setCount(template.getCount());
+        instance.setTotal(template.getTotal());
+        instance.setOffset(template.getOffset());
+        instance.setResults(Optional.ofNullable(template.getResults())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.change_history.Record::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

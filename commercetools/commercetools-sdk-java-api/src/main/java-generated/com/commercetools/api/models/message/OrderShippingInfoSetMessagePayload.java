@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.cart.ShippingInfo;
@@ -73,7 +74,7 @@ public interface OrderShippingInfoSetMessagePayload extends OrderMessagePayload 
     }
 
     /**
-     * factory method to copy an instance of OrderShippingInfoSetMessagePayload
+     * factory method to create a shallow copy OrderShippingInfoSetMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -81,6 +82,24 @@ public interface OrderShippingInfoSetMessagePayload extends OrderMessagePayload 
         OrderShippingInfoSetMessagePayloadImpl instance = new OrderShippingInfoSetMessagePayloadImpl();
         instance.setShippingInfo(template.getShippingInfo());
         instance.setOldShippingInfo(template.getOldShippingInfo());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderShippingInfoSetMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderShippingInfoSetMessagePayload deepCopy(
+            @Nullable final OrderShippingInfoSetMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        OrderShippingInfoSetMessagePayloadImpl instance = new OrderShippingInfoSetMessagePayloadImpl();
+        instance.setShippingInfo(com.commercetools.api.models.cart.ShippingInfo.deepCopy(template.getShippingInfo()));
+        instance.setOldShippingInfo(
+            com.commercetools.api.models.cart.ShippingInfo.deepCopy(template.getOldShippingInfo()));
         return instance;
     }
 

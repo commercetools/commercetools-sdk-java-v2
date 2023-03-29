@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,26 @@ public interface CartChangeTaxRoundingModeAction extends CartUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of CartChangeTaxRoundingModeAction
+     * factory method to create a shallow copy CartChangeTaxRoundingModeAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static CartChangeTaxRoundingModeAction of(final CartChangeTaxRoundingModeAction template) {
+        CartChangeTaxRoundingModeActionImpl instance = new CartChangeTaxRoundingModeActionImpl();
+        instance.setTaxRoundingMode(template.getTaxRoundingMode());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartChangeTaxRoundingModeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartChangeTaxRoundingModeAction deepCopy(@Nullable final CartChangeTaxRoundingModeAction template) {
+        if (template == null) {
+            return null;
+        }
         CartChangeTaxRoundingModeActionImpl instance = new CartChangeTaxRoundingModeActionImpl();
         instance.setTaxRoundingMode(template.getTaxRoundingMode());
         return instance;

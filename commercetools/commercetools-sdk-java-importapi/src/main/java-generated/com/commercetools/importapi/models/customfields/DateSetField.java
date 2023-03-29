@@ -6,6 +6,7 @@ import java.time.LocalDate;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -67,13 +68,28 @@ public interface DateSetField extends CustomField {
     }
 
     /**
-     * factory method to copy an instance of DateSetField
+     * factory method to create a shallow copy DateSetField
      * @param template instance to be copied
      * @return copy instance
      */
     public static DateSetField of(final DateSetField template) {
         DateSetFieldImpl instance = new DateSetFieldImpl();
         instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of DateSetField
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static DateSetField deepCopy(@Nullable final DateSetField template) {
+        if (template == null) {
+            return null;
+        }
+        DateSetFieldImpl instance = new DateSetFieldImpl();
+        instance.setValue(Optional.ofNullable(template.getValue()).map(ArrayList::new).orElse(null));
         return instance;
     }
 

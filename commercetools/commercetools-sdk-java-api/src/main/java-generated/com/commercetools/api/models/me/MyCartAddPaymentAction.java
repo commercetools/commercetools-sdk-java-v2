@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -61,13 +62,29 @@ public interface MyCartAddPaymentAction extends MyCartUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of MyCartAddPaymentAction
+     * factory method to create a shallow copy MyCartAddPaymentAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static MyCartAddPaymentAction of(final MyCartAddPaymentAction template) {
         MyCartAddPaymentActionImpl instance = new MyCartAddPaymentActionImpl();
         instance.setPayment(template.getPayment());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MyCartAddPaymentAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MyCartAddPaymentAction deepCopy(@Nullable final MyCartAddPaymentAction template) {
+        if (template == null) {
+            return null;
+        }
+        MyCartAddPaymentActionImpl instance = new MyCartAddPaymentActionImpl();
+        instance.setPayment(
+            com.commercetools.api.models.payment.PaymentResourceIdentifier.deepCopy(template.getPayment()));
         return instance;
     }
 

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -47,6 +48,56 @@ public interface StateUpdateAction extends com.commercetools.api.models.Resource
     @NotNull
     @JsonProperty("action")
     public String getAction();
+
+    /**
+     * factory method to create a deep copy of StateUpdateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StateUpdateAction deepCopy(@Nullable final StateUpdateAction template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.state.StateAddRolesAction) {
+            return com.commercetools.api.models.state.StateAddRolesAction
+                    .deepCopy((com.commercetools.api.models.state.StateAddRolesAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.state.StateChangeInitialAction) {
+            return com.commercetools.api.models.state.StateChangeInitialAction
+                    .deepCopy((com.commercetools.api.models.state.StateChangeInitialAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.state.StateChangeKeyAction) {
+            return com.commercetools.api.models.state.StateChangeKeyAction
+                    .deepCopy((com.commercetools.api.models.state.StateChangeKeyAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.state.StateChangeTypeAction) {
+            return com.commercetools.api.models.state.StateChangeTypeAction
+                    .deepCopy((com.commercetools.api.models.state.StateChangeTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.state.StateRemoveRolesAction) {
+            return com.commercetools.api.models.state.StateRemoveRolesAction
+                    .deepCopy((com.commercetools.api.models.state.StateRemoveRolesAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.state.StateSetDescriptionAction) {
+            return com.commercetools.api.models.state.StateSetDescriptionAction
+                    .deepCopy((com.commercetools.api.models.state.StateSetDescriptionAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.state.StateSetNameAction) {
+            return com.commercetools.api.models.state.StateSetNameAction
+                    .deepCopy((com.commercetools.api.models.state.StateSetNameAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.state.StateSetRolesAction) {
+            return com.commercetools.api.models.state.StateSetRolesAction
+                    .deepCopy((com.commercetools.api.models.state.StateSetRolesAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.state.StateSetTransitionsAction) {
+            return com.commercetools.api.models.state.StateSetTransitionsAction
+                    .deepCopy((com.commercetools.api.models.state.StateSetTransitionsAction) template);
+        }
+        StateUpdateActionImpl instance = new StateUpdateActionImpl();
+        return instance;
+    }
 
     /**
      * builder for addRoles subtype

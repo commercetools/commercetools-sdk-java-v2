@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -67,14 +68,31 @@ public interface ShippingMethodDoesNotMatchCartError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of ShippingMethodDoesNotMatchCartError
+     * factory method to create a shallow copy ShippingMethodDoesNotMatchCartError
      * @param template instance to be copied
      * @return copy instance
      */
     public static ShippingMethodDoesNotMatchCartError of(final ShippingMethodDoesNotMatchCartError template) {
         ShippingMethodDoesNotMatchCartErrorImpl instance = new ShippingMethodDoesNotMatchCartErrorImpl();
         instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        return instance;
+    }
 
+    /**
+     * factory method to create a deep copy of ShippingMethodDoesNotMatchCartError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ShippingMethodDoesNotMatchCartError deepCopy(
+            @Nullable final ShippingMethodDoesNotMatchCartError template) {
+        if (template == null) {
+            return null;
+        }
+        ShippingMethodDoesNotMatchCartErrorImpl instance = new ShippingMethodDoesNotMatchCartErrorImpl();
+        instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
 

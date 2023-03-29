@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,26 @@ public interface AttributeReferenceType extends AttributeType {
     }
 
     /**
-     * factory method to copy an instance of AttributeReferenceType
+     * factory method to create a shallow copy AttributeReferenceType
      * @param template instance to be copied
      * @return copy instance
      */
     public static AttributeReferenceType of(final AttributeReferenceType template) {
+        AttributeReferenceTypeImpl instance = new AttributeReferenceTypeImpl();
+        instance.setReferenceTypeId(template.getReferenceTypeId());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of AttributeReferenceType
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AttributeReferenceType deepCopy(@Nullable final AttributeReferenceType template) {
+        if (template == null) {
+            return null;
+        }
         AttributeReferenceTypeImpl instance = new AttributeReferenceTypeImpl();
         instance.setReferenceTypeId(template.getReferenceTypeId());
         return instance;

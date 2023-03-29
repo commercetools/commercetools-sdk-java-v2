@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -134,7 +135,7 @@ public interface SetVariantAvailabilityChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetVariantAvailabilityChange
+     * factory method to create a shallow copy SetVariantAvailabilityChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -145,6 +146,27 @@ public interface SetVariantAvailabilityChange extends Change {
         instance.setVariant(template.getVariant());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetVariantAvailabilityChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetVariantAvailabilityChange deepCopy(@Nullable final SetVariantAvailabilityChange template) {
+        if (template == null) {
+            return null;
+        }
+        SetVariantAvailabilityChangeImpl instance = new SetVariantAvailabilityChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setCatalogData(template.getCatalogData());
+        instance.setVariant(template.getVariant());
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.ProductVariantAvailability.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(
+            com.commercetools.history.models.common.ProductVariantAvailability.deepCopy(template.getNextValue()));
         return instance;
     }
 

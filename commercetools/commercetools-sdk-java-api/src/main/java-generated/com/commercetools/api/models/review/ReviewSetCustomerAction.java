@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.customer.CustomerResourceIdentifier;
@@ -58,13 +59,29 @@ public interface ReviewSetCustomerAction extends ReviewUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ReviewSetCustomerAction
+     * factory method to create a shallow copy ReviewSetCustomerAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ReviewSetCustomerAction of(final ReviewSetCustomerAction template) {
         ReviewSetCustomerActionImpl instance = new ReviewSetCustomerActionImpl();
         instance.setCustomer(template.getCustomer());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ReviewSetCustomerAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ReviewSetCustomerAction deepCopy(@Nullable final ReviewSetCustomerAction template) {
+        if (template == null) {
+            return null;
+        }
+        ReviewSetCustomerActionImpl instance = new ReviewSetCustomerActionImpl();
+        instance.setCustomer(
+            com.commercetools.api.models.customer.CustomerResourceIdentifier.deepCopy(template.getCustomer()));
         return instance;
     }
 

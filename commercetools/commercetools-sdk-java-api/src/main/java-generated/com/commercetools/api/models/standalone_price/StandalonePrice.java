@@ -5,7 +5,9 @@ import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -353,7 +355,7 @@ public interface StandalonePrice
     }
 
     /**
-     * factory method to copy an instance of StandalonePrice
+     * factory method to create a shallow copy StandalonePrice
      * @param template instance to be copied
      * @return copy instance
      */
@@ -377,6 +379,46 @@ public interface StandalonePrice
         instance.setDiscounted(template.getDiscounted());
         instance.setCustom(template.getCustom());
         instance.setStaged(template.getStaged());
+        instance.setActive(template.getActive());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StandalonePrice
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StandalonePrice deepCopy(@Nullable final StandalonePrice template) {
+        if (template == null) {
+            return null;
+        }
+        StandalonePriceImpl instance = new StandalonePriceImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
+        instance.setKey(template.getKey());
+        instance.setSku(template.getSku());
+        instance.setValue(com.commercetools.api.models.common.TypedMoney.deepCopy(template.getValue()));
+        instance.setCountry(template.getCountry());
+        instance.setCustomerGroup(
+            com.commercetools.api.models.customer_group.CustomerGroupReference.deepCopy(template.getCustomerGroup()));
+        instance.setChannel(com.commercetools.api.models.channel.ChannelReference.deepCopy(template.getChannel()));
+        instance.setValidFrom(template.getValidFrom());
+        instance.setValidUntil(template.getValidUntil());
+        instance.setTiers(Optional.ofNullable(template.getTiers())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.common.PriceTier::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setDiscounted(com.commercetools.api.models.common.DiscountedPrice.deepCopy(template.getDiscounted()));
+        instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
+        instance.setStaged(
+            com.commercetools.api.models.standalone_price.StagedStandalonePrice.deepCopy(template.getStaged()));
         instance.setActive(template.getActive());
         return instance;
     }

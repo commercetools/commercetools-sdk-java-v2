@@ -6,6 +6,7 @@ import java.time.LocalTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -67,13 +68,28 @@ public interface TimeSetField extends CustomField {
     }
 
     /**
-     * factory method to copy an instance of TimeSetField
+     * factory method to create a shallow copy TimeSetField
      * @param template instance to be copied
      * @return copy instance
      */
     public static TimeSetField of(final TimeSetField template) {
         TimeSetFieldImpl instance = new TimeSetFieldImpl();
         instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of TimeSetField
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static TimeSetField deepCopy(@Nullable final TimeSetField template) {
+        if (template == null) {
+            return null;
+        }
+        TimeSetFieldImpl instance = new TimeSetFieldImpl();
+        instance.setValue(Optional.ofNullable(template.getValue()).map(ArrayList::new).orElse(null));
         return instance;
     }
 

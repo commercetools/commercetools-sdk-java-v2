@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -121,7 +122,7 @@ public interface ProductAddAssetAction extends ProductUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ProductAddAssetAction
+     * factory method to create a shallow copy ProductAddAssetAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -131,6 +132,25 @@ public interface ProductAddAssetAction extends ProductUpdateAction {
         instance.setSku(template.getSku());
         instance.setStaged(template.getStaged());
         instance.setAsset(template.getAsset());
+        instance.setPosition(template.getPosition());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductAddAssetAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductAddAssetAction deepCopy(@Nullable final ProductAddAssetAction template) {
+        if (template == null) {
+            return null;
+        }
+        ProductAddAssetActionImpl instance = new ProductAddAssetActionImpl();
+        instance.setVariantId(template.getVariantId());
+        instance.setSku(template.getSku());
+        instance.setStaged(template.getStaged());
+        instance.setAsset(com.commercetools.api.models.common.AssetDraft.deepCopy(template.getAsset()));
         instance.setPosition(template.getPosition());
         return instance;
     }

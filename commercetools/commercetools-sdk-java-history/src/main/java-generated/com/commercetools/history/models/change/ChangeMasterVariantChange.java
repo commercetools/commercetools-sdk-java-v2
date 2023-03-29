@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -118,7 +119,7 @@ public interface ChangeMasterVariantChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of ChangeMasterVariantChange
+     * factory method to create a shallow copy ChangeMasterVariantChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -128,6 +129,25 @@ public interface ChangeMasterVariantChange extends Change {
         instance.setCatalogData(template.getCatalogData());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChangeMasterVariantChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChangeMasterVariantChange deepCopy(@Nullable final ChangeMasterVariantChange template) {
+        if (template == null) {
+            return null;
+        }
+        ChangeMasterVariantChangeImpl instance = new ChangeMasterVariantChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setCatalogData(template.getCatalogData());
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.Variant.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.Variant.deepCopy(template.getNextValue()));
         return instance;
     }
 

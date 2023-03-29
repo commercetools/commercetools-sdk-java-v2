@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -114,11 +115,31 @@ public interface ProductVariantChannelAvailability {
     }
 
     /**
-     * factory method to copy an instance of ProductVariantChannelAvailability
+     * factory method to create a shallow copy ProductVariantChannelAvailability
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductVariantChannelAvailability of(final ProductVariantChannelAvailability template) {
+        ProductVariantChannelAvailabilityImpl instance = new ProductVariantChannelAvailabilityImpl();
+        instance.setIsOnStock(template.getIsOnStock());
+        instance.setRestockableInDays(template.getRestockableInDays());
+        instance.setAvailableQuantity(template.getAvailableQuantity());
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductVariantChannelAvailability
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductVariantChannelAvailability deepCopy(
+            @Nullable final ProductVariantChannelAvailability template) {
+        if (template == null) {
+            return null;
+        }
         ProductVariantChannelAvailabilityImpl instance = new ProductVariantChannelAvailabilityImpl();
         instance.setIsOnStock(template.getIsOnStock());
         instance.setRestockableInDays(template.getRestockableInDays());

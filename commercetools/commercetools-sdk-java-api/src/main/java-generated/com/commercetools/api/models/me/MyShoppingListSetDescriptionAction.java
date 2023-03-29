@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.common.LocalizedString;
@@ -58,13 +59,30 @@ public interface MyShoppingListSetDescriptionAction extends MyShoppingListUpdate
     }
 
     /**
-     * factory method to copy an instance of MyShoppingListSetDescriptionAction
+     * factory method to create a shallow copy MyShoppingListSetDescriptionAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static MyShoppingListSetDescriptionAction of(final MyShoppingListSetDescriptionAction template) {
         MyShoppingListSetDescriptionActionImpl instance = new MyShoppingListSetDescriptionActionImpl();
         instance.setDescription(template.getDescription());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MyShoppingListSetDescriptionAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MyShoppingListSetDescriptionAction deepCopy(
+            @Nullable final MyShoppingListSetDescriptionAction template) {
+        if (template == null) {
+            return null;
+        }
+        MyShoppingListSetDescriptionActionImpl instance = new MyShoppingListSetDescriptionActionImpl();
+        instance.setDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
         return instance;
     }
 

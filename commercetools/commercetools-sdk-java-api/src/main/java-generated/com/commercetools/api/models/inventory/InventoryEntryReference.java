@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -75,7 +76,7 @@ public interface InventoryEntryReference extends Reference, com.commercetools.ap
     }
 
     /**
-     * factory method to copy an instance of InventoryEntryReference
+     * factory method to create a shallow copy InventoryEntryReference
      * @param template instance to be copied
      * @return copy instance
      */
@@ -83,6 +84,22 @@ public interface InventoryEntryReference extends Reference, com.commercetools.ap
         InventoryEntryReferenceImpl instance = new InventoryEntryReferenceImpl();
         instance.setId(template.getId());
         instance.setObj(template.getObj());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of InventoryEntryReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static InventoryEntryReference deepCopy(@Nullable final InventoryEntryReference template) {
+        if (template == null) {
+            return null;
+        }
+        InventoryEntryReferenceImpl instance = new InventoryEntryReferenceImpl();
+        instance.setId(template.getId());
+        instance.setObj(com.commercetools.api.models.inventory.InventoryEntry.deepCopy(template.getObj()));
         return instance;
     }
 

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -72,7 +73,7 @@ public interface CustomFields extends CustomFieldsMixin {
     }
 
     /**
-     * factory method to copy an instance of CustomFields
+     * factory method to create a shallow copy CustomFields
      * @param template instance to be copied
      * @return copy instance
      */
@@ -80,6 +81,22 @@ public interface CustomFields extends CustomFieldsMixin {
         CustomFieldsImpl instance = new CustomFieldsImpl();
         instance.setType(template.getType());
         instance.setFields(template.getFields());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomFields
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomFields deepCopy(@Nullable final CustomFields template) {
+        if (template == null) {
+            return null;
+        }
+        CustomFieldsImpl instance = new CustomFieldsImpl();
+        instance.setType(com.commercetools.api.models.type.TypeReference.deepCopy(template.getType()));
+        instance.setFields(com.commercetools.api.models.type.FieldContainer.deepCopy(template.getFields()));
         return instance;
     }
 

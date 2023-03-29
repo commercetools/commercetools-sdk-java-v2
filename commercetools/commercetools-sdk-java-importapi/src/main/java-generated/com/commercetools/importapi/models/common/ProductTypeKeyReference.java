@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -41,11 +43,26 @@ public interface ProductTypeKeyReference extends KeyReference {
     }
 
     /**
-     * factory method to copy an instance of ProductTypeKeyReference
+     * factory method to create a shallow copy ProductTypeKeyReference
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductTypeKeyReference of(final ProductTypeKeyReference template) {
+        ProductTypeKeyReferenceImpl instance = new ProductTypeKeyReferenceImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductTypeKeyReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductTypeKeyReference deepCopy(@Nullable final ProductTypeKeyReference template) {
+        if (template == null) {
+            return null;
+        }
         ProductTypeKeyReferenceImpl instance = new ProductTypeKeyReferenceImpl();
         instance.setKey(template.getKey());
         return instance;

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,26 @@ public interface ZoneChangeNameAction extends ZoneUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ZoneChangeNameAction
+     * factory method to create a shallow copy ZoneChangeNameAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ZoneChangeNameAction of(final ZoneChangeNameAction template) {
+        ZoneChangeNameActionImpl instance = new ZoneChangeNameActionImpl();
+        instance.setName(template.getName());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ZoneChangeNameAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ZoneChangeNameAction deepCopy(@Nullable final ZoneChangeNameAction template) {
+        if (template == null) {
+            return null;
+        }
         ZoneChangeNameActionImpl instance = new ZoneChangeNameActionImpl();
         instance.setName(template.getName());
         return instance;

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -93,7 +94,7 @@ public interface StagedOrderAddShoppingListAction extends StagedOrderUpdateActio
     }
 
     /**
-     * factory method to copy an instance of StagedOrderAddShoppingListAction
+     * factory method to create a shallow copy StagedOrderAddShoppingListAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -102,6 +103,26 @@ public interface StagedOrderAddShoppingListAction extends StagedOrderUpdateActio
         instance.setShoppingList(template.getShoppingList());
         instance.setSupplyChannel(template.getSupplyChannel());
         instance.setDistributionChannel(template.getDistributionChannel());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedOrderAddShoppingListAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedOrderAddShoppingListAction deepCopy(@Nullable final StagedOrderAddShoppingListAction template) {
+        if (template == null) {
+            return null;
+        }
+        StagedOrderAddShoppingListActionImpl instance = new StagedOrderAddShoppingListActionImpl();
+        instance.setShoppingList(com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier
+                .deepCopy(template.getShoppingList()));
+        instance.setSupplyChannel(
+            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getSupplyChannel()));
+        instance.setDistributionChannel(
+            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getDistributionChannel()));
         return instance;
     }
 

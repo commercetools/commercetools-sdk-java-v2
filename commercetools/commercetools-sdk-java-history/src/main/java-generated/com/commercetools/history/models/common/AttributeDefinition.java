@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -169,7 +170,7 @@ public interface AttributeDefinition {
     }
 
     /**
-     * factory method to copy an instance of AttributeDefinition
+     * factory method to create a shallow copy AttributeDefinition
      * @param template instance to be copied
      * @return copy instance
      */
@@ -181,6 +182,28 @@ public interface AttributeDefinition {
         instance.setIsRequired(template.getIsRequired());
         instance.setAttributeConstraint(template.getAttributeConstraint());
         instance.setInputTip(template.getInputTip());
+        instance.setInputHint(template.getInputHint());
+        instance.setIsSearchable(template.getIsSearchable());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of AttributeDefinition
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AttributeDefinition deepCopy(@Nullable final AttributeDefinition template) {
+        if (template == null) {
+            return null;
+        }
+        AttributeDefinitionImpl instance = new AttributeDefinitionImpl();
+        instance.setType(com.commercetools.history.models.common.AttributeType.deepCopy(template.getType()));
+        instance.setName(template.getName());
+        instance.setLabel(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getLabel()));
+        instance.setIsRequired(template.getIsRequired());
+        instance.setAttributeConstraint(template.getAttributeConstraint());
+        instance.setInputTip(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getInputTip()));
         instance.setInputHint(template.getInputHint());
         instance.setIsSearchable(template.getIsSearchable());
         return instance;

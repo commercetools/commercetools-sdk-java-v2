@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -45,6 +46,48 @@ public interface StandalonePriceUpdateAction
     @NotNull
     @JsonProperty("action")
     public String getAction();
+
+    /**
+     * factory method to create a deep copy of StandalonePriceUpdateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StandalonePriceUpdateAction deepCopy(@Nullable final StandalonePriceUpdateAction template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceApplyStagedChangesAction) {
+            return com.commercetools.api.models.standalone_price.StandalonePriceApplyStagedChangesAction.deepCopy(
+                (com.commercetools.api.models.standalone_price.StandalonePriceApplyStagedChangesAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceChangeActiveAction) {
+            return com.commercetools.api.models.standalone_price.StandalonePriceChangeActiveAction.deepCopy(
+                (com.commercetools.api.models.standalone_price.StandalonePriceChangeActiveAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceChangeValueAction) {
+            return com.commercetools.api.models.standalone_price.StandalonePriceChangeValueAction.deepCopy(
+                (com.commercetools.api.models.standalone_price.StandalonePriceChangeValueAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceSetCustomFieldAction) {
+            return com.commercetools.api.models.standalone_price.StandalonePriceSetCustomFieldAction.deepCopy(
+                (com.commercetools.api.models.standalone_price.StandalonePriceSetCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceSetCustomTypeAction) {
+            return com.commercetools.api.models.standalone_price.StandalonePriceSetCustomTypeAction.deepCopy(
+                (com.commercetools.api.models.standalone_price.StandalonePriceSetCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceSetDiscountedPriceAction) {
+            return com.commercetools.api.models.standalone_price.StandalonePriceSetDiscountedPriceAction.deepCopy(
+                (com.commercetools.api.models.standalone_price.StandalonePriceSetDiscountedPriceAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceSetKeyAction) {
+            return com.commercetools.api.models.standalone_price.StandalonePriceSetKeyAction
+                    .deepCopy((com.commercetools.api.models.standalone_price.StandalonePriceSetKeyAction) template);
+        }
+        StandalonePriceUpdateActionImpl instance = new StandalonePriceUpdateActionImpl();
+        return instance;
+    }
 
     /**
      * builder for applyStagedChanges subtype

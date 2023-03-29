@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,26 @@ public interface AzureServiceBusDestination extends Destination {
     }
 
     /**
-     * factory method to copy an instance of AzureServiceBusDestination
+     * factory method to create a shallow copy AzureServiceBusDestination
      * @param template instance to be copied
      * @return copy instance
      */
     public static AzureServiceBusDestination of(final AzureServiceBusDestination template) {
+        AzureServiceBusDestinationImpl instance = new AzureServiceBusDestinationImpl();
+        instance.setConnectionString(template.getConnectionString());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of AzureServiceBusDestination
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AzureServiceBusDestination deepCopy(@Nullable final AzureServiceBusDestination template) {
+        if (template == null) {
+            return null;
+        }
         AzureServiceBusDestinationImpl instance = new AzureServiceBusDestinationImpl();
         instance.setConnectionString(template.getConnectionString());
         return instance;

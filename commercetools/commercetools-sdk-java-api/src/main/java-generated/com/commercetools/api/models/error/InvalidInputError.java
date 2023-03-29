@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -66,14 +67,30 @@ public interface InvalidInputError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of InvalidInputError
+     * factory method to create a shallow copy InvalidInputError
      * @param template instance to be copied
      * @return copy instance
      */
     public static InvalidInputError of(final InvalidInputError template) {
         InvalidInputErrorImpl instance = new InvalidInputErrorImpl();
         instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        return instance;
+    }
 
+    /**
+     * factory method to create a deep copy of InvalidInputError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static InvalidInputError deepCopy(@Nullable final InvalidInputError template) {
+        if (template == null) {
+            return null;
+        }
+        InvalidInputErrorImpl instance = new InvalidInputErrorImpl();
+        instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
 

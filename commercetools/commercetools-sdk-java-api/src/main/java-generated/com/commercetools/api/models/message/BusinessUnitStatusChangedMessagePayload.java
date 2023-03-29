@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.business_unit.BusinessUnitStatus;
@@ -59,11 +60,27 @@ public interface BusinessUnitStatusChangedMessagePayload extends MessagePayload 
     }
 
     /**
-     * factory method to copy an instance of BusinessUnitStatusChangedMessagePayload
+     * factory method to create a shallow copy BusinessUnitStatusChangedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
     public static BusinessUnitStatusChangedMessagePayload of(final BusinessUnitStatusChangedMessagePayload template) {
+        BusinessUnitStatusChangedMessagePayloadImpl instance = new BusinessUnitStatusChangedMessagePayloadImpl();
+        instance.setActive(template.getActive());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of BusinessUnitStatusChangedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static BusinessUnitStatusChangedMessagePayload deepCopy(
+            @Nullable final BusinessUnitStatusChangedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
         BusinessUnitStatusChangedMessagePayloadImpl instance = new BusinessUnitStatusChangedMessagePayloadImpl();
         instance.setActive(template.getActive());
         return instance;

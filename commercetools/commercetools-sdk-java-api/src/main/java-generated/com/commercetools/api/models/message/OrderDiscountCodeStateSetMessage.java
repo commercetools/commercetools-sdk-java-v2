@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -100,7 +101,7 @@ public interface OrderDiscountCodeStateSetMessage extends OrderMessage {
     }
 
     /**
-     * factory method to copy an instance of OrderDiscountCodeStateSetMessage
+     * factory method to create a shallow copy OrderDiscountCodeStateSetMessage
      * @param template instance to be copied
      * @return copy instance
      */
@@ -117,6 +118,36 @@ public interface OrderDiscountCodeStateSetMessage extends OrderMessage {
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setDiscountCode(template.getDiscountCode());
+        instance.setState(template.getState());
+        instance.setOldState(template.getOldState());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderDiscountCodeStateSetMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderDiscountCodeStateSetMessage deepCopy(@Nullable final OrderDiscountCodeStateSetMessage template) {
+        if (template == null) {
+            return null;
+        }
+        OrderDiscountCodeStateSetMessageImpl instance = new OrderDiscountCodeStateSetMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
+                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setDiscountCode(
+            com.commercetools.api.models.discount_code.DiscountCodeReference.deepCopy(template.getDiscountCode()));
         instance.setState(template.getState());
         instance.setOldState(template.getOldState());
         return instance;

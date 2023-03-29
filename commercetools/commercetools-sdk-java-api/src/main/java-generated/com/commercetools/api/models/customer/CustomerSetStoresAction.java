@@ -4,7 +4,9 @@ package com.commercetools.api.models.customer;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.store.StoreResourceIdentifier;
@@ -66,13 +68,32 @@ public interface CustomerSetStoresAction extends CustomerUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of CustomerSetStoresAction
+     * factory method to create a shallow copy CustomerSetStoresAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static CustomerSetStoresAction of(final CustomerSetStoresAction template) {
         CustomerSetStoresActionImpl instance = new CustomerSetStoresActionImpl();
         instance.setStores(template.getStores());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomerSetStoresAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomerSetStoresAction deepCopy(@Nullable final CustomerSetStoresAction template) {
+        if (template == null) {
+            return null;
+        }
+        CustomerSetStoresActionImpl instance = new CustomerSetStoresActionImpl();
+        instance.setStores(Optional.ofNullable(template.getStores())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.store.StoreResourceIdentifier::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

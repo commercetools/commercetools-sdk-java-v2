@@ -4,7 +4,9 @@ package com.commercetools.importapi.models.importrequests;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -69,13 +71,32 @@ public interface OrderImportRequest extends ImportRequest {
     }
 
     /**
-     * factory method to copy an instance of OrderImportRequest
+     * factory method to create a shallow copy OrderImportRequest
      * @param template instance to be copied
      * @return copy instance
      */
     public static OrderImportRequest of(final OrderImportRequest template) {
         OrderImportRequestImpl instance = new OrderImportRequestImpl();
         instance.setResources(template.getResources());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderImportRequest
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderImportRequest deepCopy(@Nullable final OrderImportRequest template) {
+        if (template == null) {
+            return null;
+        }
+        OrderImportRequestImpl instance = new OrderImportRequestImpl();
+        instance.setResources(Optional.ofNullable(template.getResources())
+                .map(t -> t.stream()
+                        .map(com.commercetools.importapi.models.orders.OrderImport::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

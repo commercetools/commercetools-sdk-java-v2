@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -95,11 +97,29 @@ public interface ParcelMeasurements {
     }
 
     /**
-     * factory method to copy an instance of ParcelMeasurements
+     * factory method to create a shallow copy ParcelMeasurements
      * @param template instance to be copied
      * @return copy instance
      */
     public static ParcelMeasurements of(final ParcelMeasurements template) {
+        ParcelMeasurementsImpl instance = new ParcelMeasurementsImpl();
+        instance.setHeightInMillimeter(template.getHeightInMillimeter());
+        instance.setLengthInMillimeter(template.getLengthInMillimeter());
+        instance.setWidthInMillimeter(template.getWidthInMillimeter());
+        instance.setWeightInGram(template.getWeightInGram());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ParcelMeasurements
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ParcelMeasurements deepCopy(@Nullable final ParcelMeasurements template) {
+        if (template == null) {
+            return null;
+        }
         ParcelMeasurementsImpl instance = new ParcelMeasurementsImpl();
         instance.setHeightInMillimeter(template.getHeightInMillimeter());
         instance.setLengthInMillimeter(template.getLengthInMillimeter());

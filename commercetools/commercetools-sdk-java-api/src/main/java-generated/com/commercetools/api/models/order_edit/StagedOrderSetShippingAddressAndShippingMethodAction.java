@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -94,7 +95,7 @@ public interface StagedOrderSetShippingAddressAndShippingMethodAction extends St
     }
 
     /**
-     * factory method to copy an instance of StagedOrderSetShippingAddressAndShippingMethodAction
+     * factory method to create a shallow copy StagedOrderSetShippingAddressAndShippingMethodAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -104,6 +105,26 @@ public interface StagedOrderSetShippingAddressAndShippingMethodAction extends St
         instance.setAddress(template.getAddress());
         instance.setShippingMethod(template.getShippingMethod());
         instance.setExternalTaxRate(template.getExternalTaxRate());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedOrderSetShippingAddressAndShippingMethodAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedOrderSetShippingAddressAndShippingMethodAction deepCopy(
+            @Nullable final StagedOrderSetShippingAddressAndShippingMethodAction template) {
+        if (template == null) {
+            return null;
+        }
+        StagedOrderSetShippingAddressAndShippingMethodActionImpl instance = new StagedOrderSetShippingAddressAndShippingMethodActionImpl();
+        instance.setAddress(com.commercetools.api.models.common.BaseAddress.deepCopy(template.getAddress()));
+        instance.setShippingMethod(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier
+                .deepCopy(template.getShippingMethod()));
+        instance.setExternalTaxRate(
+            com.commercetools.api.models.cart.ExternalTaxRateDraft.deepCopy(template.getExternalTaxRate()));
         return instance;
     }
 

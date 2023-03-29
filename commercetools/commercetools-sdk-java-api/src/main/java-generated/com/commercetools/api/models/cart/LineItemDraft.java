@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
@@ -241,7 +242,7 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
     }
 
     /**
-     * factory method to copy an instance of LineItemDraft
+     * factory method to create a shallow copy LineItemDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -260,6 +261,38 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
         instance.setInventoryMode(template.getInventoryMode());
         instance.setShippingDetails(template.getShippingDetails());
         instance.setCustom(template.getCustom());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of LineItemDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static LineItemDraft deepCopy(@Nullable final LineItemDraft template) {
+        if (template == null) {
+            return null;
+        }
+        LineItemDraftImpl instance = new LineItemDraftImpl();
+        instance.setProductId(template.getProductId());
+        instance.setVariantId(template.getVariantId());
+        instance.setSku(template.getSku());
+        instance.setQuantity(template.getQuantity());
+        instance.setAddedAt(template.getAddedAt());
+        instance.setDistributionChannel(
+            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getDistributionChannel()));
+        instance.setSupplyChannel(
+            com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getSupplyChannel()));
+        instance.setExternalPrice(com.commercetools.api.models.common.Money.deepCopy(template.getExternalPrice()));
+        instance.setExternalTotalPrice(
+            com.commercetools.api.models.cart.ExternalLineItemTotalPrice.deepCopy(template.getExternalTotalPrice()));
+        instance.setExternalTaxRate(
+            com.commercetools.api.models.cart.ExternalTaxRateDraft.deepCopy(template.getExternalTaxRate()));
+        instance.setInventoryMode(template.getInventoryMode());
+        instance.setShippingDetails(
+            com.commercetools.api.models.cart.ItemShippingDetailsDraft.deepCopy(template.getShippingDetails()));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;
     }
 

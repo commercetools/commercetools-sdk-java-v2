@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -86,7 +87,7 @@ public interface CustomerGroupDraft extends com.commercetools.api.models.Customi
     }
 
     /**
-     * factory method to copy an instance of CustomerGroupDraft
+     * factory method to create a shallow copy CustomerGroupDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -95,6 +96,23 @@ public interface CustomerGroupDraft extends com.commercetools.api.models.Customi
         instance.setKey(template.getKey());
         instance.setGroupName(template.getGroupName());
         instance.setCustom(template.getCustom());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomerGroupDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomerGroupDraft deepCopy(@Nullable final CustomerGroupDraft template) {
+        if (template == null) {
+            return null;
+        }
+        CustomerGroupDraftImpl instance = new CustomerGroupDraftImpl();
+        instance.setKey(template.getKey());
+        instance.setGroupName(template.getGroupName());
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;
     }
 

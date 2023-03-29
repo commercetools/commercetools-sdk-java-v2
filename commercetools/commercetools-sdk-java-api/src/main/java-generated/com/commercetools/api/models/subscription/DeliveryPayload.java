@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -98,6 +99,40 @@ public interface DeliveryPayload {
      */
 
     public void setResourceUserProvidedIdentifiers(final UserProvidedIdentifiers resourceUserProvidedIdentifiers);
+
+    /**
+     * factory method to create a deep copy of DeliveryPayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static DeliveryPayload deepCopy(@Nullable final DeliveryPayload template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.subscription.MessageDeliveryPayload) {
+            return com.commercetools.api.models.subscription.MessageDeliveryPayload
+                    .deepCopy((com.commercetools.api.models.subscription.MessageDeliveryPayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.subscription.ResourceCreatedDeliveryPayload) {
+            return com.commercetools.api.models.subscription.ResourceCreatedDeliveryPayload
+                    .deepCopy((com.commercetools.api.models.subscription.ResourceCreatedDeliveryPayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.subscription.ResourceDeletedDeliveryPayload) {
+            return com.commercetools.api.models.subscription.ResourceDeletedDeliveryPayload
+                    .deepCopy((com.commercetools.api.models.subscription.ResourceDeletedDeliveryPayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.subscription.ResourceUpdatedDeliveryPayload) {
+            return com.commercetools.api.models.subscription.ResourceUpdatedDeliveryPayload
+                    .deepCopy((com.commercetools.api.models.subscription.ResourceUpdatedDeliveryPayload) template);
+        }
+        DeliveryPayloadImpl instance = new DeliveryPayloadImpl();
+        instance.setProjectKey(template.getProjectKey());
+        instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
+                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        return instance;
+    }
 
     /**
      * builder for message subtype

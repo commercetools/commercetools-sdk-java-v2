@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -69,11 +70,27 @@ public interface UnresolvedReferences {
     }
 
     /**
-     * factory method to copy an instance of UnresolvedReferences
+     * factory method to create a shallow copy UnresolvedReferences
      * @param template instance to be copied
      * @return copy instance
      */
     public static UnresolvedReferences of(final UnresolvedReferences template) {
+        UnresolvedReferencesImpl instance = new UnresolvedReferencesImpl();
+        instance.setKey(template.getKey());
+        instance.setTypeId(template.getTypeId());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of UnresolvedReferences
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static UnresolvedReferences deepCopy(@Nullable final UnresolvedReferences template) {
+        if (template == null) {
+            return null;
+        }
         UnresolvedReferencesImpl instance = new UnresolvedReferencesImpl();
         instance.setKey(template.getKey());
         instance.setTypeId(template.getTypeId());

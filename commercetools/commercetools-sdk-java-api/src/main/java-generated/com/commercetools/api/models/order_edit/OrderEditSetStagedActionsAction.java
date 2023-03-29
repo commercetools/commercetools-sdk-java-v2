@@ -4,7 +4,9 @@ package com.commercetools.api.models.order_edit;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -69,13 +71,32 @@ public interface OrderEditSetStagedActionsAction extends OrderEditUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of OrderEditSetStagedActionsAction
+     * factory method to create a shallow copy OrderEditSetStagedActionsAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static OrderEditSetStagedActionsAction of(final OrderEditSetStagedActionsAction template) {
         OrderEditSetStagedActionsActionImpl instance = new OrderEditSetStagedActionsActionImpl();
         instance.setStagedActions(template.getStagedActions());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderEditSetStagedActionsAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderEditSetStagedActionsAction deepCopy(@Nullable final OrderEditSetStagedActionsAction template) {
+        if (template == null) {
+            return null;
+        }
+        OrderEditSetStagedActionsActionImpl instance = new OrderEditSetStagedActionsActionImpl();
+        instance.setStagedActions(Optional.ofNullable(template.getStagedActions())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.order.StagedOrderUpdateAction::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

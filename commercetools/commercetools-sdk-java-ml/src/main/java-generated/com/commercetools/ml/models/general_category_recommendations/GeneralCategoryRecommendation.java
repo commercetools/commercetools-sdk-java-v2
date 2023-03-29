@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -69,11 +70,27 @@ public interface GeneralCategoryRecommendation {
     }
 
     /**
-     * factory method to copy an instance of GeneralCategoryRecommendation
+     * factory method to create a shallow copy GeneralCategoryRecommendation
      * @param template instance to be copied
      * @return copy instance
      */
     public static GeneralCategoryRecommendation of(final GeneralCategoryRecommendation template) {
+        GeneralCategoryRecommendationImpl instance = new GeneralCategoryRecommendationImpl();
+        instance.setCategoryName(template.getCategoryName());
+        instance.setConfidence(template.getConfidence());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of GeneralCategoryRecommendation
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static GeneralCategoryRecommendation deepCopy(@Nullable final GeneralCategoryRecommendation template) {
+        if (template == null) {
+            return null;
+        }
         GeneralCategoryRecommendationImpl instance = new GeneralCategoryRecommendationImpl();
         instance.setCategoryName(template.getCategoryName());
         instance.setConfidence(template.getConfidence());

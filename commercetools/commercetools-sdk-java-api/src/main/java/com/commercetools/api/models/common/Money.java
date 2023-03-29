@@ -4,6 +4,7 @@ package com.commercetools.api.models.common;
 import java.util.Arrays;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.money.*;
 import javax.validation.constraints.NotNull;
 
@@ -62,6 +63,17 @@ public interface Money extends com.commercetools.api.models.common.MonetaryAmoun
     }
 
     public static Money of(final Money template) {
+        MoneyImpl instance = new MoneyImpl();
+        instance.setCentAmount(template.getCentAmount());
+        instance.setCurrencyCode(template.getCurrencyCode());
+        return instance;
+    }
+
+    @Nullable
+    public static Money deepCopy(@Nullable final Money template) {
+        if (template == null) {
+            return null;
+        }
         MoneyImpl instance = new MoneyImpl();
         instance.setCentAmount(template.getCentAmount());
         instance.setCurrencyCode(template.getCurrencyCode());

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -117,7 +118,7 @@ public interface AddLocalizedEnumValueChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of AddLocalizedEnumValueChange
+     * factory method to create a shallow copy AddLocalizedEnumValueChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -127,6 +128,25 @@ public interface AddLocalizedEnumValueChange extends Change {
         instance.setFieldName(template.getFieldName());
         instance.setAttributeName(template.getAttributeName());
         instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of AddLocalizedEnumValueChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AddLocalizedEnumValueChange deepCopy(@Nullable final AddLocalizedEnumValueChange template) {
+        if (template == null) {
+            return null;
+        }
+        AddLocalizedEnumValueChangeImpl instance = new AddLocalizedEnumValueChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setFieldName(template.getFieldName());
+        instance.setAttributeName(template.getAttributeName());
+        instance.setNextValue(
+            com.commercetools.history.models.change_value.LocalizedEnumValue.deepCopy(template.getNextValue()));
         return instance;
     }
 

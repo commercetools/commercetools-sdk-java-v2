@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -66,7 +67,7 @@ public interface ProductRevertedStagedChangesMessagePayload extends MessagePaylo
     }
 
     /**
-     * factory method to copy an instance of ProductRevertedStagedChangesMessagePayload
+     * factory method to create a shallow copy ProductRevertedStagedChangesMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -74,6 +75,23 @@ public interface ProductRevertedStagedChangesMessagePayload extends MessagePaylo
             final ProductRevertedStagedChangesMessagePayload template) {
         ProductRevertedStagedChangesMessagePayloadImpl instance = new ProductRevertedStagedChangesMessagePayloadImpl();
         instance.setRemovedImageUrls(template.getRemovedImageUrls());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductRevertedStagedChangesMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductRevertedStagedChangesMessagePayload deepCopy(
+            @Nullable final ProductRevertedStagedChangesMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        ProductRevertedStagedChangesMessagePayloadImpl instance = new ProductRevertedStagedChangesMessagePayloadImpl();
+        instance.setRemovedImageUrls(
+            Optional.ofNullable(template.getRemovedImageUrls()).map(ArrayList::new).orElse(null));
         return instance;
     }
 

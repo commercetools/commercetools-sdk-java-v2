@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -66,14 +67,30 @@ public interface SearchFacetPathNotFoundError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of SearchFacetPathNotFoundError
+     * factory method to create a shallow copy SearchFacetPathNotFoundError
      * @param template instance to be copied
      * @return copy instance
      */
     public static SearchFacetPathNotFoundError of(final SearchFacetPathNotFoundError template) {
         SearchFacetPathNotFoundErrorImpl instance = new SearchFacetPathNotFoundErrorImpl();
         instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        return instance;
+    }
 
+    /**
+     * factory method to create a deep copy of SearchFacetPathNotFoundError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SearchFacetPathNotFoundError deepCopy(@Nullable final SearchFacetPathNotFoundError template) {
+        if (template == null) {
+            return null;
+        }
+        SearchFacetPathNotFoundErrorImpl instance = new SearchFacetPathNotFoundErrorImpl();
+        instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
 

@@ -4,7 +4,9 @@ package com.commercetools.api.models.cart;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -77,13 +79,32 @@ public interface CartSetDirectDiscountsAction extends CartUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of CartSetDirectDiscountsAction
+     * factory method to create a shallow copy CartSetDirectDiscountsAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static CartSetDirectDiscountsAction of(final CartSetDirectDiscountsAction template) {
         CartSetDirectDiscountsActionImpl instance = new CartSetDirectDiscountsActionImpl();
         instance.setDiscounts(template.getDiscounts());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartSetDirectDiscountsAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartSetDirectDiscountsAction deepCopy(@Nullable final CartSetDirectDiscountsAction template) {
+        if (template == null) {
+            return null;
+        }
+        CartSetDirectDiscountsActionImpl instance = new CartSetDirectDiscountsActionImpl();
+        instance.setDiscounts(Optional.ofNullable(template.getDiscounts())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.cart.DirectDiscountDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

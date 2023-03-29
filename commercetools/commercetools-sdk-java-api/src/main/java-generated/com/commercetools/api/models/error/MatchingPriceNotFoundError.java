@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -168,20 +169,43 @@ public interface MatchingPriceNotFoundError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of MatchingPriceNotFoundError
+     * factory method to create a shallow copy MatchingPriceNotFoundError
      * @param template instance to be copied
      * @return copy instance
      */
     public static MatchingPriceNotFoundError of(final MatchingPriceNotFoundError template) {
         MatchingPriceNotFoundErrorImpl instance = new MatchingPriceNotFoundErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         instance.setProductId(template.getProductId());
         instance.setVariantId(template.getVariantId());
         instance.setCurrency(template.getCurrency());
         instance.setCountry(template.getCountry());
         instance.setCustomerGroup(template.getCustomerGroup());
         instance.setChannel(template.getChannel());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MatchingPriceNotFoundError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MatchingPriceNotFoundError deepCopy(@Nullable final MatchingPriceNotFoundError template) {
+        if (template == null) {
+            return null;
+        }
+        MatchingPriceNotFoundErrorImpl instance = new MatchingPriceNotFoundErrorImpl();
+        instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        instance.setProductId(template.getProductId());
+        instance.setVariantId(template.getVariantId());
+        instance.setCurrency(template.getCurrency());
+        instance.setCountry(template.getCountry());
+        instance.setCustomerGroup(
+            com.commercetools.api.models.customer_group.CustomerGroupReference.deepCopy(template.getCustomerGroup()));
+        instance.setChannel(com.commercetools.api.models.channel.ChannelReference.deepCopy(template.getChannel()));
         return instance;
     }
 

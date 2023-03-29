@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.commercetools.api.models.attribute_group.AttributeGroupResourceIdentifier;
 import com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier;
 import com.commercetools.api.models.cart.CartResourceIdentifier;
@@ -124,6 +126,138 @@ public interface ResourceIdentifier extends com.commercetools.api.models.WithKey
      */
 
     public void setKey(final String key);
+
+    /**
+     * factory method to create a deep copy of ResourceIdentifier
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ResourceIdentifier deepCopy(@Nullable final ResourceIdentifier template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier) {
+            return com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier
+                    .deepCopy((com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier) template);
+        }
+        if (template instanceof com.commercetools.api.models.customer.CustomerResourceIdentifier) {
+            return com.commercetools.api.models.customer.CustomerResourceIdentifier
+                    .deepCopy((com.commercetools.api.models.customer.CustomerResourceIdentifier) template);
+        }
+        if (template instanceof com.commercetools.api.models.discount_code.DiscountCodeResourceIdentifier) {
+            return com.commercetools.api.models.discount_code.DiscountCodeResourceIdentifier
+                    .deepCopy((com.commercetools.api.models.discount_code.DiscountCodeResourceIdentifier) template);
+        }
+        if (template instanceof com.commercetools.api.models.inventory.InventoryEntryResourceIdentifier) {
+            return com.commercetools.api.models.inventory.InventoryEntryResourceIdentifier
+                    .deepCopy((com.commercetools.api.models.inventory.InventoryEntryResourceIdentifier) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.OrderEditResourceIdentifier) {
+            return com.commercetools.api.models.order_edit.OrderEditResourceIdentifier
+                    .deepCopy((com.commercetools.api.models.order_edit.OrderEditResourceIdentifier) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderResourceIdentifier) {
+            return com.commercetools.api.models.order.OrderResourceIdentifier
+                    .deepCopy((com.commercetools.api.models.order.OrderResourceIdentifier) template);
+        }
+        if (template instanceof com.commercetools.api.models.payment.PaymentResourceIdentifier) {
+            return com.commercetools.api.models.payment.PaymentResourceIdentifier
+                    .deepCopy((com.commercetools.api.models.payment.PaymentResourceIdentifier) template);
+        }
+        if (template instanceof com.commercetools.api.models.product_discount.ProductDiscountResourceIdentifier) {
+            return com.commercetools.api.models.product_discount.ProductDiscountResourceIdentifier.deepCopy(
+                (com.commercetools.api.models.product_discount.ProductDiscountResourceIdentifier) template);
+        }
+        if (template instanceof com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier) {
+            return com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier.deepCopy(
+                (com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier) template);
+        }
+        if (template instanceof com.commercetools.api.models.product_type.ProductTypeResourceIdentifier) {
+            return com.commercetools.api.models.product_type.ProductTypeResourceIdentifier
+                    .deepCopy((com.commercetools.api.models.product_type.ProductTypeResourceIdentifier) template);
+        }
+        if (template instanceof com.commercetools.api.models.product.ProductResourceIdentifier) {
+            return com.commercetools.api.models.product.ProductResourceIdentifier
+                    .deepCopy((com.commercetools.api.models.product.ProductResourceIdentifier) template);
+        }
+        if (template instanceof com.commercetools.api.models.quote_request.QuoteRequestResourceIdentifier) {
+            return com.commercetools.api.models.quote_request.QuoteRequestResourceIdentifier
+                    .deepCopy((com.commercetools.api.models.quote_request.QuoteRequestResourceIdentifier) template);
+        }
+        if (template instanceof com.commercetools.api.models.quote.QuoteResourceIdentifier) {
+            return com.commercetools.api.models.quote.QuoteResourceIdentifier
+                    .deepCopy((com.commercetools.api.models.quote.QuoteResourceIdentifier) template);
+        }
+        if (template instanceof com.commercetools.api.models.review.ReviewResourceIdentifier) {
+            return com.commercetools.api.models.review.ReviewResourceIdentifier
+                    .deepCopy((com.commercetools.api.models.review.ReviewResourceIdentifier) template);
+        }
+        if (template instanceof com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier) {
+            return com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier
+                    .deepCopy((com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier) template);
+        }
+        if (template instanceof com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier) {
+            return com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier
+                    .deepCopy((com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier) template);
+        }
+        if (template instanceof com.commercetools.api.models.staged_quote.StagedQuoteResourceIdentifier) {
+            return com.commercetools.api.models.staged_quote.StagedQuoteResourceIdentifier
+                    .deepCopy((com.commercetools.api.models.staged_quote.StagedQuoteResourceIdentifier) template);
+        }
+        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceResourceIdentifier) {
+            return com.commercetools.api.models.standalone_price.StandalonePriceResourceIdentifier.deepCopy(
+                (com.commercetools.api.models.standalone_price.StandalonePriceResourceIdentifier) template);
+        }
+        if (template instanceof com.commercetools.api.models.state.StateResourceIdentifier) {
+            return com.commercetools.api.models.state.StateResourceIdentifier
+                    .deepCopy((com.commercetools.api.models.state.StateResourceIdentifier) template);
+        }
+        if (template instanceof com.commercetools.api.models.store.StoreResourceIdentifier) {
+            return com.commercetools.api.models.store.StoreResourceIdentifier
+                    .deepCopy((com.commercetools.api.models.store.StoreResourceIdentifier) template);
+        }
+        if (template instanceof com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier) {
+            return com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier
+                    .deepCopy((com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier) template);
+        }
+        if (template instanceof com.commercetools.api.models.type.TypeResourceIdentifier) {
+            return com.commercetools.api.models.type.TypeResourceIdentifier
+                    .deepCopy((com.commercetools.api.models.type.TypeResourceIdentifier) template);
+        }
+        if (template instanceof com.commercetools.api.models.zone.ZoneResourceIdentifier) {
+            return com.commercetools.api.models.zone.ZoneResourceIdentifier
+                    .deepCopy((com.commercetools.api.models.zone.ZoneResourceIdentifier) template);
+        }
+        if (template instanceof com.commercetools.api.models.attribute_group.AttributeGroupResourceIdentifier) {
+            return com.commercetools.api.models.attribute_group.AttributeGroupResourceIdentifier
+                    .deepCopy((com.commercetools.api.models.attribute_group.AttributeGroupResourceIdentifier) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier) {
+            return com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier
+                    .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier) template);
+        }
+        if (template instanceof com.commercetools.api.models.category.CategoryResourceIdentifier) {
+            return com.commercetools.api.models.category.CategoryResourceIdentifier
+                    .deepCopy((com.commercetools.api.models.category.CategoryResourceIdentifier) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartResourceIdentifier) {
+            return com.commercetools.api.models.cart.CartResourceIdentifier
+                    .deepCopy((com.commercetools.api.models.cart.CartResourceIdentifier) template);
+        }
+        if (template instanceof com.commercetools.api.models.channel.ChannelResourceIdentifier) {
+            return com.commercetools.api.models.channel.ChannelResourceIdentifier
+                    .deepCopy((com.commercetools.api.models.channel.ChannelResourceIdentifier) template);
+        }
+        if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier) {
+            return com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier
+                    .deepCopy((com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier) template);
+        }
+        ResourceIdentifierImpl instance = new ResourceIdentifierImpl();
+        instance.setId(template.getId());
+        instance.setKey(template.getKey());
+        return instance;
+    }
 
     /**
      * builder for attributeGroup subtype

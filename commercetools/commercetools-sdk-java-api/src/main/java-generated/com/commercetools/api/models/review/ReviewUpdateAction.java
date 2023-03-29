@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -48,6 +49,64 @@ public interface ReviewUpdateAction extends com.commercetools.api.models.Resourc
     @NotNull
     @JsonProperty("action")
     public String getAction();
+
+    /**
+     * factory method to create a deep copy of ReviewUpdateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ReviewUpdateAction deepCopy(@Nullable final ReviewUpdateAction template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.review.ReviewSetAuthorNameAction) {
+            return com.commercetools.api.models.review.ReviewSetAuthorNameAction
+                    .deepCopy((com.commercetools.api.models.review.ReviewSetAuthorNameAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.review.ReviewSetCustomFieldAction) {
+            return com.commercetools.api.models.review.ReviewSetCustomFieldAction
+                    .deepCopy((com.commercetools.api.models.review.ReviewSetCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.review.ReviewSetCustomTypeAction) {
+            return com.commercetools.api.models.review.ReviewSetCustomTypeAction
+                    .deepCopy((com.commercetools.api.models.review.ReviewSetCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.review.ReviewSetCustomerAction) {
+            return com.commercetools.api.models.review.ReviewSetCustomerAction
+                    .deepCopy((com.commercetools.api.models.review.ReviewSetCustomerAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.review.ReviewSetKeyAction) {
+            return com.commercetools.api.models.review.ReviewSetKeyAction
+                    .deepCopy((com.commercetools.api.models.review.ReviewSetKeyAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.review.ReviewSetLocaleAction) {
+            return com.commercetools.api.models.review.ReviewSetLocaleAction
+                    .deepCopy((com.commercetools.api.models.review.ReviewSetLocaleAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.review.ReviewSetRatingAction) {
+            return com.commercetools.api.models.review.ReviewSetRatingAction
+                    .deepCopy((com.commercetools.api.models.review.ReviewSetRatingAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.review.ReviewSetTargetAction) {
+            return com.commercetools.api.models.review.ReviewSetTargetAction
+                    .deepCopy((com.commercetools.api.models.review.ReviewSetTargetAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.review.ReviewSetTextAction) {
+            return com.commercetools.api.models.review.ReviewSetTextAction
+                    .deepCopy((com.commercetools.api.models.review.ReviewSetTextAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.review.ReviewSetTitleAction) {
+            return com.commercetools.api.models.review.ReviewSetTitleAction
+                    .deepCopy((com.commercetools.api.models.review.ReviewSetTitleAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.review.ReviewTransitionStateAction) {
+            return com.commercetools.api.models.review.ReviewTransitionStateAction
+                    .deepCopy((com.commercetools.api.models.review.ReviewTransitionStateAction) template);
+        }
+        ReviewUpdateActionImpl instance = new ReviewUpdateActionImpl();
+        return instance;
+    }
 
     /**
      * builder for setAuthorName subtype

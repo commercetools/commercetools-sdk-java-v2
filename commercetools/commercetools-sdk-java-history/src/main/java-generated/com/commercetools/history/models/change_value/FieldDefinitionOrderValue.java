@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -72,7 +73,7 @@ public interface FieldDefinitionOrderValue {
     }
 
     /**
-     * factory method to copy an instance of FieldDefinitionOrderValue
+     * factory method to create a shallow copy FieldDefinitionOrderValue
      * @param template instance to be copied
      * @return copy instance
      */
@@ -80,6 +81,22 @@ public interface FieldDefinitionOrderValue {
         FieldDefinitionOrderValueImpl instance = new FieldDefinitionOrderValueImpl();
         instance.setName(template.getName());
         instance.setLabel(template.getLabel());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of FieldDefinitionOrderValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static FieldDefinitionOrderValue deepCopy(@Nullable final FieldDefinitionOrderValue template) {
+        if (template == null) {
+            return null;
+        }
+        FieldDefinitionOrderValueImpl instance = new FieldDefinitionOrderValueImpl();
+        instance.setName(template.getName());
+        instance.setLabel(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getLabel()));
         return instance;
     }
 

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -53,11 +54,26 @@ public interface AttributeReference extends com.commercetools.api.models.WithKey
     }
 
     /**
-     * factory method to copy an instance of AttributeReference
+     * factory method to create a shallow copy AttributeReference
      * @param template instance to be copied
      * @return copy instance
      */
     public static AttributeReference of(final AttributeReference template) {
+        AttributeReferenceImpl instance = new AttributeReferenceImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of AttributeReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AttributeReference deepCopy(@Nullable final AttributeReference template) {
+        if (template == null) {
+            return null;
+        }
         AttributeReferenceImpl instance = new AttributeReferenceImpl();
         instance.setKey(template.getKey());
         return instance;

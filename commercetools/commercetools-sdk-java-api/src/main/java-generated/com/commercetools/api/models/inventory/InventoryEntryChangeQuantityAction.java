@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,27 @@ public interface InventoryEntryChangeQuantityAction extends InventoryEntryUpdate
     }
 
     /**
-     * factory method to copy an instance of InventoryEntryChangeQuantityAction
+     * factory method to create a shallow copy InventoryEntryChangeQuantityAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static InventoryEntryChangeQuantityAction of(final InventoryEntryChangeQuantityAction template) {
+        InventoryEntryChangeQuantityActionImpl instance = new InventoryEntryChangeQuantityActionImpl();
+        instance.setQuantity(template.getQuantity());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of InventoryEntryChangeQuantityAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static InventoryEntryChangeQuantityAction deepCopy(
+            @Nullable final InventoryEntryChangeQuantityAction template) {
+        if (template == null) {
+            return null;
+        }
         InventoryEntryChangeQuantityActionImpl instance = new InventoryEntryChangeQuantityActionImpl();
         instance.setQuantity(template.getQuantity());
         return instance;

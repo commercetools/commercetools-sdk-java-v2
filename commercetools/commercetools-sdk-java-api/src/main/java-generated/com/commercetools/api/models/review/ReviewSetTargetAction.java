@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
@@ -73,11 +74,26 @@ public interface ReviewSetTargetAction extends ReviewUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ReviewSetTargetAction
+     * factory method to create a shallow copy ReviewSetTargetAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ReviewSetTargetAction of(final ReviewSetTargetAction template) {
+        ReviewSetTargetActionImpl instance = new ReviewSetTargetActionImpl();
+        instance.setTarget(template.getTarget());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ReviewSetTargetAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ReviewSetTargetAction deepCopy(@Nullable final ReviewSetTargetAction template) {
+        if (template == null) {
+            return null;
+        }
         ReviewSetTargetActionImpl instance = new ReviewSetTargetActionImpl();
         instance.setTarget(template.getTarget());
         return instance;

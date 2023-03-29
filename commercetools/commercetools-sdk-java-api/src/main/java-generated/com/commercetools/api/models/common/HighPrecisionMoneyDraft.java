@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -95,11 +96,29 @@ public interface HighPrecisionMoneyDraft
     }
 
     /**
-     * factory method to copy an instance of HighPrecisionMoneyDraft
+     * factory method to create a shallow copy HighPrecisionMoneyDraft
      * @param template instance to be copied
      * @return copy instance
      */
     public static HighPrecisionMoneyDraft of(final HighPrecisionMoneyDraft template) {
+        HighPrecisionMoneyDraftImpl instance = new HighPrecisionMoneyDraftImpl();
+        instance.setCentAmount(template.getCentAmount());
+        instance.setCurrencyCode(template.getCurrencyCode());
+        instance.setFractionDigits(template.getFractionDigits());
+        instance.setPreciseAmount(template.getPreciseAmount());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of HighPrecisionMoneyDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static HighPrecisionMoneyDraft deepCopy(@Nullable final HighPrecisionMoneyDraft template) {
+        if (template == null) {
+            return null;
+        }
         HighPrecisionMoneyDraftImpl instance = new HighPrecisionMoneyDraftImpl();
         instance.setCentAmount(template.getCentAmount());
         instance.setCurrencyCode(template.getCurrencyCode());

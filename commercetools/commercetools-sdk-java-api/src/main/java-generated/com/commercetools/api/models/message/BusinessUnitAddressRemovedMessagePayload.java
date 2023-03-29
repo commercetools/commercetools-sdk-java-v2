@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -61,13 +62,29 @@ public interface BusinessUnitAddressRemovedMessagePayload extends MessagePayload
     }
 
     /**
-     * factory method to copy an instance of BusinessUnitAddressRemovedMessagePayload
+     * factory method to create a shallow copy BusinessUnitAddressRemovedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
     public static BusinessUnitAddressRemovedMessagePayload of(final BusinessUnitAddressRemovedMessagePayload template) {
         BusinessUnitAddressRemovedMessagePayloadImpl instance = new BusinessUnitAddressRemovedMessagePayloadImpl();
         instance.setAddress(template.getAddress());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of BusinessUnitAddressRemovedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static BusinessUnitAddressRemovedMessagePayload deepCopy(
+            @Nullable final BusinessUnitAddressRemovedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        BusinessUnitAddressRemovedMessagePayloadImpl instance = new BusinessUnitAddressRemovedMessagePayloadImpl();
+        instance.setAddress(com.commercetools.api.models.common.Address.deepCopy(template.getAddress()));
         return instance;
     }
 

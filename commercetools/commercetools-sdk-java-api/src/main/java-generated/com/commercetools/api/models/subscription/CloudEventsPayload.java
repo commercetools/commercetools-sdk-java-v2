@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -202,7 +203,7 @@ public interface CloudEventsPayload {
     }
 
     /**
-     * factory method to copy an instance of CloudEventsPayload
+     * factory method to create a shallow copy CloudEventsPayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -218,6 +219,30 @@ public interface CloudEventsPayload {
         instance.setSequencetype(template.getSequencetype());
         instance.setDataref(template.getDataref());
         instance.setData(template.getData());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CloudEventsPayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CloudEventsPayload deepCopy(@Nullable final CloudEventsPayload template) {
+        if (template == null) {
+            return null;
+        }
+        CloudEventsPayloadImpl instance = new CloudEventsPayloadImpl();
+        instance.setSpecversion(template.getSpecversion());
+        instance.setId(template.getId());
+        instance.setType(template.getType());
+        instance.setSource(template.getSource());
+        instance.setSubject(template.getSubject());
+        instance.setTime(template.getTime());
+        instance.setSequence(template.getSequence());
+        instance.setSequencetype(template.getSequencetype());
+        instance.setDataref(template.getDataref());
+        instance.setData(com.commercetools.api.models.subscription.DeliveryPayload.deepCopy(template.getData()));
         return instance;
     }
 

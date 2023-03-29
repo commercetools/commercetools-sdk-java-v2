@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.common.Reference;
@@ -59,7 +60,7 @@ public interface QuoteRequestReference extends Reference, com.commercetools.api.
     }
 
     /**
-     * factory method to copy an instance of QuoteRequestReference
+     * factory method to create a shallow copy QuoteRequestReference
      * @param template instance to be copied
      * @return copy instance
      */
@@ -67,6 +68,22 @@ public interface QuoteRequestReference extends Reference, com.commercetools.api.
         QuoteRequestReferenceImpl instance = new QuoteRequestReferenceImpl();
         instance.setId(template.getId());
         instance.setObj(template.getObj());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of QuoteRequestReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static QuoteRequestReference deepCopy(@Nullable final QuoteRequestReference template) {
+        if (template == null) {
+            return null;
+        }
+        QuoteRequestReferenceImpl instance = new QuoteRequestReferenceImpl();
+        instance.setId(template.getId());
+        instance.setObj(com.commercetools.api.models.quote_request.QuoteRequest.deepCopy(template.getObj()));
         return instance;
     }
 

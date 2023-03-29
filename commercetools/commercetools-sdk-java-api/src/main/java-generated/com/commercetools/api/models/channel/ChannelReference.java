@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -75,7 +76,7 @@ public interface ChannelReference extends Reference, com.commercetools.api.model
     }
 
     /**
-     * factory method to copy an instance of ChannelReference
+     * factory method to create a shallow copy ChannelReference
      * @param template instance to be copied
      * @return copy instance
      */
@@ -83,6 +84,22 @@ public interface ChannelReference extends Reference, com.commercetools.api.model
         ChannelReferenceImpl instance = new ChannelReferenceImpl();
         instance.setId(template.getId());
         instance.setObj(template.getObj());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChannelReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChannelReference deepCopy(@Nullable final ChannelReference template) {
+        if (template == null) {
+            return null;
+        }
+        ChannelReferenceImpl instance = new ChannelReferenceImpl();
+        instance.setId(template.getId());
+        instance.setObj(com.commercetools.api.models.channel.Channel.deepCopy(template.getObj()));
         return instance;
     }
 

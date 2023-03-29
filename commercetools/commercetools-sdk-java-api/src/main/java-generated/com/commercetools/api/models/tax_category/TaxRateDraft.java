@@ -4,7 +4,9 @@ package com.commercetools.api.models.tax_category;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -139,7 +141,7 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
     }
 
     /**
-     * factory method to copy an instance of TaxRateDraft
+     * factory method to create a shallow copy TaxRateDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -151,6 +153,30 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
         instance.setCountry(template.getCountry());
         instance.setState(template.getState());
         instance.setSubRates(template.getSubRates());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of TaxRateDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static TaxRateDraft deepCopy(@Nullable final TaxRateDraft template) {
+        if (template == null) {
+            return null;
+        }
+        TaxRateDraftImpl instance = new TaxRateDraftImpl();
+        instance.setName(template.getName());
+        instance.setAmount(template.getAmount());
+        instance.setIncludedInPrice(template.getIncludedInPrice());
+        instance.setCountry(template.getCountry());
+        instance.setState(template.getState());
+        instance.setSubRates(Optional.ofNullable(template.getSubRates())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.tax_category.SubRate::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

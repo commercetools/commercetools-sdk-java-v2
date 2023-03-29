@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -59,11 +60,27 @@ public interface ClassificationShippingRateInputDraft
     }
 
     /**
-     * factory method to copy an instance of ClassificationShippingRateInputDraft
+     * factory method to create a shallow copy ClassificationShippingRateInputDraft
      * @param template instance to be copied
      * @return copy instance
      */
     public static ClassificationShippingRateInputDraft of(final ClassificationShippingRateInputDraft template) {
+        ClassificationShippingRateInputDraftImpl instance = new ClassificationShippingRateInputDraftImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ClassificationShippingRateInputDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ClassificationShippingRateInputDraft deepCopy(
+            @Nullable final ClassificationShippingRateInputDraft template) {
+        if (template == null) {
+            return null;
+        }
         ClassificationShippingRateInputDraftImpl instance = new ClassificationShippingRateInputDraftImpl();
         instance.setKey(template.getKey());
         return instance;

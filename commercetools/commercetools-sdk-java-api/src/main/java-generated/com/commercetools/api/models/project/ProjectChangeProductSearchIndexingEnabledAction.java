@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -64,12 +65,28 @@ public interface ProjectChangeProductSearchIndexingEnabledAction extends Project
     }
 
     /**
-     * factory method to copy an instance of ProjectChangeProductSearchIndexingEnabledAction
+     * factory method to create a shallow copy ProjectChangeProductSearchIndexingEnabledAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProjectChangeProductSearchIndexingEnabledAction of(
             final ProjectChangeProductSearchIndexingEnabledAction template) {
+        ProjectChangeProductSearchIndexingEnabledActionImpl instance = new ProjectChangeProductSearchIndexingEnabledActionImpl();
+        instance.setEnabled(template.getEnabled());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProjectChangeProductSearchIndexingEnabledAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProjectChangeProductSearchIndexingEnabledAction deepCopy(
+            @Nullable final ProjectChangeProductSearchIndexingEnabledAction template) {
+        if (template == null) {
+            return null;
+        }
         ProjectChangeProductSearchIndexingEnabledActionImpl instance = new ProjectChangeProductSearchIndexingEnabledActionImpl();
         instance.setEnabled(template.getEnabled());
         return instance;

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -67,14 +68,30 @@ public interface QueryTimedOutError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of QueryTimedOutError
+     * factory method to create a shallow copy QueryTimedOutError
      * @param template instance to be copied
      * @return copy instance
      */
     public static QueryTimedOutError of(final QueryTimedOutError template) {
         QueryTimedOutErrorImpl instance = new QueryTimedOutErrorImpl();
         instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        return instance;
+    }
 
+    /**
+     * factory method to create a deep copy of QueryTimedOutError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static QueryTimedOutError deepCopy(@Nullable final QueryTimedOutError template) {
+        if (template == null) {
+            return null;
+        }
+        QueryTimedOutErrorImpl instance = new QueryTimedOutErrorImpl();
+        instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
 

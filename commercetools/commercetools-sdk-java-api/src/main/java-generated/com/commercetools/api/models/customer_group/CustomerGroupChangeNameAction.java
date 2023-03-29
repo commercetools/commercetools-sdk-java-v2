@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,26 @@ public interface CustomerGroupChangeNameAction extends CustomerGroupUpdateAction
     }
 
     /**
-     * factory method to copy an instance of CustomerGroupChangeNameAction
+     * factory method to create a shallow copy CustomerGroupChangeNameAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static CustomerGroupChangeNameAction of(final CustomerGroupChangeNameAction template) {
+        CustomerGroupChangeNameActionImpl instance = new CustomerGroupChangeNameActionImpl();
+        instance.setName(template.getName());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomerGroupChangeNameAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomerGroupChangeNameAction deepCopy(@Nullable final CustomerGroupChangeNameAction template) {
+        if (template == null) {
+            return null;
+        }
         CustomerGroupChangeNameActionImpl instance = new CustomerGroupChangeNameActionImpl();
         instance.setName(template.getName());
         return instance;

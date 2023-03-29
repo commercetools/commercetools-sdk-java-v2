@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -60,12 +61,28 @@ public interface LocalizedString {
     }
 
     /**
-     * factory method to copy an instance of LocalizedString
+     * factory method to create a shallow copy LocalizedString
      * @param template instance to be copied
      * @return copy instance
      */
     public static LocalizedString of(final LocalizedString template) {
         LocalizedStringImpl instance = new LocalizedStringImpl();
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of LocalizedString
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static LocalizedString deepCopy(@Nullable final LocalizedString template) {
+        if (template == null) {
+            return null;
+        }
+        LocalizedStringImpl instance = new LocalizedStringImpl();
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
 

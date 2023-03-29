@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -118,7 +119,7 @@ public interface SetImageLabelChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetImageLabelChange
+     * factory method to create a shallow copy SetImageLabelChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -128,6 +129,24 @@ public interface SetImageLabelChange extends Change {
         instance.setCatalogData(template.getCatalogData());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetImageLabelChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetImageLabelChange deepCopy(@Nullable final SetImageLabelChange template) {
+        if (template == null) {
+            return null;
+        }
+        SetImageLabelChangeImpl instance = new SetImageLabelChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setCatalogData(template.getCatalogData());
+        instance.setPreviousValue(com.commercetools.history.models.common.Image.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(com.commercetools.history.models.common.Image.deepCopy(template.getNextValue()));
         return instance;
     }
 

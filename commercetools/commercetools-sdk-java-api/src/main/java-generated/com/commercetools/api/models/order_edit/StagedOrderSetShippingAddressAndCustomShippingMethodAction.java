@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -128,7 +129,7 @@ public interface StagedOrderSetShippingAddressAndCustomShippingMethodAction exte
     }
 
     /**
-     * factory method to copy an instance of StagedOrderSetShippingAddressAndCustomShippingMethodAction
+     * factory method to create a shallow copy StagedOrderSetShippingAddressAndCustomShippingMethodAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -140,6 +141,29 @@ public interface StagedOrderSetShippingAddressAndCustomShippingMethodAction exte
         instance.setShippingRate(template.getShippingRate());
         instance.setTaxCategory(template.getTaxCategory());
         instance.setExternalTaxRate(template.getExternalTaxRate());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedOrderSetShippingAddressAndCustomShippingMethodAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedOrderSetShippingAddressAndCustomShippingMethodAction deepCopy(
+            @Nullable final StagedOrderSetShippingAddressAndCustomShippingMethodAction template) {
+        if (template == null) {
+            return null;
+        }
+        StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl instance = new StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl();
+        instance.setAddress(com.commercetools.api.models.common.BaseAddress.deepCopy(template.getAddress()));
+        instance.setShippingMethodName(template.getShippingMethodName());
+        instance.setShippingRate(
+            com.commercetools.api.models.shipping_method.ShippingRateDraft.deepCopy(template.getShippingRate()));
+        instance.setTaxCategory(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier
+                .deepCopy(template.getTaxCategory()));
+        instance.setExternalTaxRate(
+            com.commercetools.api.models.cart.ExternalTaxRateDraft.deepCopy(template.getExternalTaxRate()));
         return instance;
     }
 

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -88,13 +89,30 @@ public interface ProjectCategoryRecommendation {
     }
 
     /**
-     * factory method to copy an instance of ProjectCategoryRecommendation
+     * factory method to create a shallow copy ProjectCategoryRecommendation
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProjectCategoryRecommendation of(final ProjectCategoryRecommendation template) {
         ProjectCategoryRecommendationImpl instance = new ProjectCategoryRecommendationImpl();
         instance.setCategory(template.getCategory());
+        instance.setConfidence(template.getConfidence());
+        instance.setPath(template.getPath());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProjectCategoryRecommendation
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProjectCategoryRecommendation deepCopy(@Nullable final ProjectCategoryRecommendation template) {
+        if (template == null) {
+            return null;
+        }
+        ProjectCategoryRecommendationImpl instance = new ProjectCategoryRecommendationImpl();
+        instance.setCategory(com.commercetools.ml.models.common.CategoryReference.deepCopy(template.getCategory()));
         instance.setConfidence(template.getConfidence());
         instance.setPath(template.getPath());
         return instance;

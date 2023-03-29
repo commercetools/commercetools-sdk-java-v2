@@ -4,7 +4,9 @@ package com.commercetools.api.models.message;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -68,13 +70,33 @@ public interface ProductPriceDiscountsSetMessagePayload extends MessagePayload {
     }
 
     /**
-     * factory method to copy an instance of ProductPriceDiscountsSetMessagePayload
+     * factory method to create a shallow copy ProductPriceDiscountsSetMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductPriceDiscountsSetMessagePayload of(final ProductPriceDiscountsSetMessagePayload template) {
         ProductPriceDiscountsSetMessagePayloadImpl instance = new ProductPriceDiscountsSetMessagePayloadImpl();
         instance.setUpdatedPrices(template.getUpdatedPrices());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductPriceDiscountsSetMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductPriceDiscountsSetMessagePayload deepCopy(
+            @Nullable final ProductPriceDiscountsSetMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        ProductPriceDiscountsSetMessagePayloadImpl instance = new ProductPriceDiscountsSetMessagePayloadImpl();
+        instance.setUpdatedPrices(Optional.ofNullable(template.getUpdatedPrices())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

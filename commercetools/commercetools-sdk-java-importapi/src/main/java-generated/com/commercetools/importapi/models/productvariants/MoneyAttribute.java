@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -61,7 +62,7 @@ public interface MoneyAttribute extends Attribute {
     }
 
     /**
-     * factory method to copy an instance of MoneyAttribute
+     * factory method to create a shallow copy MoneyAttribute
      * @param template instance to be copied
      * @return copy instance
      */
@@ -69,6 +70,22 @@ public interface MoneyAttribute extends Attribute {
         MoneyAttributeImpl instance = new MoneyAttributeImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MoneyAttribute
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MoneyAttribute deepCopy(@Nullable final MoneyAttribute template) {
+        if (template == null) {
+            return null;
+        }
+        MoneyAttributeImpl instance = new MoneyAttributeImpl();
+        instance.setName(template.getName());
+        instance.setValue(com.commercetools.importapi.models.common.TypedMoney.deepCopy(template.getValue()));
         return instance;
     }
 

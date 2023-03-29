@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -90,15 +91,32 @@ public interface DuplicateEnumValuesError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of DuplicateEnumValuesError
+     * factory method to create a shallow copy DuplicateEnumValuesError
      * @param template instance to be copied
      * @return copy instance
      */
     public static DuplicateEnumValuesError of(final DuplicateEnumValuesError template) {
         DuplicateEnumValuesErrorImpl instance = new DuplicateEnumValuesErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         instance.setDuplicates(template.getDuplicates());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of DuplicateEnumValuesError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static DuplicateEnumValuesError deepCopy(@Nullable final DuplicateEnumValuesError template) {
+        if (template == null) {
+            return null;
+        }
+        DuplicateEnumValuesErrorImpl instance = new DuplicateEnumValuesErrorImpl();
+        instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        instance.setDuplicates(Optional.ofNullable(template.getDuplicates()).map(ArrayList::new).orElse(null));
         return instance;
     }
 

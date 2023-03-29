@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -99,14 +100,32 @@ public interface InvalidItemShippingDetailsError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of InvalidItemShippingDetailsError
+     * factory method to create a shallow copy InvalidItemShippingDetailsError
      * @param template instance to be copied
      * @return copy instance
      */
     public static InvalidItemShippingDetailsError of(final InvalidItemShippingDetailsError template) {
         InvalidItemShippingDetailsErrorImpl instance = new InvalidItemShippingDetailsErrorImpl();
         instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        instance.setSubject(template.getSubject());
+        instance.setItemId(template.getItemId());
+        return instance;
+    }
 
+    /**
+     * factory method to create a deep copy of InvalidItemShippingDetailsError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static InvalidItemShippingDetailsError deepCopy(@Nullable final InvalidItemShippingDetailsError template) {
+        if (template == null) {
+            return null;
+        }
+        InvalidItemShippingDetailsErrorImpl instance = new InvalidItemShippingDetailsErrorImpl();
+        instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         instance.setSubject(template.getSubject());
         instance.setItemId(template.getItemId());
         return instance;

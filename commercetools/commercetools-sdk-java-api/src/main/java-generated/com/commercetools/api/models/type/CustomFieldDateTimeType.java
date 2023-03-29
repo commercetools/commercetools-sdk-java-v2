@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -40,11 +42,25 @@ public interface CustomFieldDateTimeType extends FieldType {
     }
 
     /**
-     * factory method to copy an instance of CustomFieldDateTimeType
+     * factory method to create a shallow copy CustomFieldDateTimeType
      * @param template instance to be copied
      * @return copy instance
      */
     public static CustomFieldDateTimeType of(final CustomFieldDateTimeType template) {
+        CustomFieldDateTimeTypeImpl instance = new CustomFieldDateTimeTypeImpl();
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomFieldDateTimeType
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomFieldDateTimeType deepCopy(@Nullable final CustomFieldDateTimeType template) {
+        if (template == null) {
+            return null;
+        }
         CustomFieldDateTimeTypeImpl instance = new CustomFieldDateTimeTypeImpl();
         return instance;
     }

@@ -5,7 +5,9 @@ import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -101,7 +103,7 @@ public interface StagedOrderAddReturnInfoAction extends StagedOrderUpdateAction 
     }
 
     /**
-     * factory method to copy an instance of StagedOrderAddReturnInfoAction
+     * factory method to create a shallow copy StagedOrderAddReturnInfoAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -109,6 +111,27 @@ public interface StagedOrderAddReturnInfoAction extends StagedOrderUpdateAction 
         StagedOrderAddReturnInfoActionImpl instance = new StagedOrderAddReturnInfoActionImpl();
         instance.setReturnTrackingId(template.getReturnTrackingId());
         instance.setItems(template.getItems());
+        instance.setReturnDate(template.getReturnDate());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedOrderAddReturnInfoAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedOrderAddReturnInfoAction deepCopy(@Nullable final StagedOrderAddReturnInfoAction template) {
+        if (template == null) {
+            return null;
+        }
+        StagedOrderAddReturnInfoActionImpl instance = new StagedOrderAddReturnInfoActionImpl();
+        instance.setReturnTrackingId(template.getReturnTrackingId());
+        instance.setItems(Optional.ofNullable(template.getItems())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.order.ReturnItemDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setReturnDate(template.getReturnDate());
         return instance;
     }

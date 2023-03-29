@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -73,11 +74,28 @@ public interface MyPaymentSetTransactionCustomFieldAction extends MyPaymentUpdat
     }
 
     /**
-     * factory method to copy an instance of MyPaymentSetTransactionCustomFieldAction
+     * factory method to create a shallow copy MyPaymentSetTransactionCustomFieldAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static MyPaymentSetTransactionCustomFieldAction of(final MyPaymentSetTransactionCustomFieldAction template) {
+        MyPaymentSetTransactionCustomFieldActionImpl instance = new MyPaymentSetTransactionCustomFieldActionImpl();
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MyPaymentSetTransactionCustomFieldAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MyPaymentSetTransactionCustomFieldAction deepCopy(
+            @Nullable final MyPaymentSetTransactionCustomFieldAction template) {
+        if (template == null) {
+            return null;
+        }
         MyPaymentSetTransactionCustomFieldActionImpl instance = new MyPaymentSetTransactionCustomFieldActionImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,26 @@ public interface ProjectChangeNameAction extends ProjectUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ProjectChangeNameAction
+     * factory method to create a shallow copy ProjectChangeNameAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProjectChangeNameAction of(final ProjectChangeNameAction template) {
+        ProjectChangeNameActionImpl instance = new ProjectChangeNameActionImpl();
+        instance.setName(template.getName());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProjectChangeNameAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProjectChangeNameAction deepCopy(@Nullable final ProjectChangeNameAction template) {
+        if (template == null) {
+            return null;
+        }
         ProjectChangeNameActionImpl instance = new ProjectChangeNameActionImpl();
         instance.setName(template.getName());
         return instance;

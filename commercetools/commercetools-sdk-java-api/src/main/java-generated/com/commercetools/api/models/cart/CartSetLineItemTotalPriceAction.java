@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -74,7 +75,7 @@ public interface CartSetLineItemTotalPriceAction extends CartUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of CartSetLineItemTotalPriceAction
+     * factory method to create a shallow copy CartSetLineItemTotalPriceAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -82,6 +83,23 @@ public interface CartSetLineItemTotalPriceAction extends CartUpdateAction {
         CartSetLineItemTotalPriceActionImpl instance = new CartSetLineItemTotalPriceActionImpl();
         instance.setLineItemId(template.getLineItemId());
         instance.setExternalTotalPrice(template.getExternalTotalPrice());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartSetLineItemTotalPriceAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartSetLineItemTotalPriceAction deepCopy(@Nullable final CartSetLineItemTotalPriceAction template) {
+        if (template == null) {
+            return null;
+        }
+        CartSetLineItemTotalPriceActionImpl instance = new CartSetLineItemTotalPriceActionImpl();
+        instance.setLineItemId(template.getLineItemId());
+        instance.setExternalTotalPrice(
+            com.commercetools.api.models.cart.ExternalLineItemTotalPrice.deepCopy(template.getExternalTotalPrice()));
         return instance;
     }
 

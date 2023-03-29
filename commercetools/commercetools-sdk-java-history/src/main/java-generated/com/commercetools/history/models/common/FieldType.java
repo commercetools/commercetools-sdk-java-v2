@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -53,11 +54,26 @@ public interface FieldType {
     }
 
     /**
-     * factory method to copy an instance of FieldType
+     * factory method to create a shallow copy FieldType
      * @param template instance to be copied
      * @return copy instance
      */
     public static FieldType of(final FieldType template) {
+        FieldTypeImpl instance = new FieldTypeImpl();
+        instance.setName(template.getName());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of FieldType
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static FieldType deepCopy(@Nullable final FieldType template) {
+        if (template == null) {
+            return null;
+        }
         FieldTypeImpl instance = new FieldTypeImpl();
         instance.setName(template.getName());
         return instance;

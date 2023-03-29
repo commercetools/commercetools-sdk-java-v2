@@ -4,7 +4,9 @@ package com.commercetools.api.models.me;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -167,7 +169,7 @@ public interface MyShoppingListDraft extends com.commercetools.api.models.Custom
     }
 
     /**
-     * factory method to copy an instance of MyShoppingListDraft
+     * factory method to create a shallow copy MyShoppingListDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -180,6 +182,36 @@ public interface MyShoppingListDraft extends com.commercetools.api.models.Custom
         instance.setCustom(template.getCustom());
         instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
         instance.setStore(template.getStore());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MyShoppingListDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MyShoppingListDraft deepCopy(@Nullable final MyShoppingListDraft template) {
+        if (template == null) {
+            return null;
+        }
+        MyShoppingListDraftImpl instance = new MyShoppingListDraftImpl();
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setLineItems(Optional.ofNullable(template.getLineItems())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setTextLineItems(Optional.ofNullable(template.getTextLineItems())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.shopping_list.TextLineItemDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
+        instance.setStore(com.commercetools.api.models.store.StoreResourceIdentifier.deepCopy(template.getStore()));
         return instance;
     }
 

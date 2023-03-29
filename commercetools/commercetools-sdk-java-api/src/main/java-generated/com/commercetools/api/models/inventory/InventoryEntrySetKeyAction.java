@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -55,11 +57,26 @@ public interface InventoryEntrySetKeyAction extends InventoryEntryUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of InventoryEntrySetKeyAction
+     * factory method to create a shallow copy InventoryEntrySetKeyAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static InventoryEntrySetKeyAction of(final InventoryEntrySetKeyAction template) {
+        InventoryEntrySetKeyActionImpl instance = new InventoryEntrySetKeyActionImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of InventoryEntrySetKeyAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static InventoryEntrySetKeyAction deepCopy(@Nullable final InventoryEntrySetKeyAction template) {
+        if (template == null) {
+            return null;
+        }
         InventoryEntrySetKeyActionImpl instance = new InventoryEntrySetKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;

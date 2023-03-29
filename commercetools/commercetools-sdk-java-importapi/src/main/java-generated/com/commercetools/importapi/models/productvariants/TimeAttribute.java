@@ -6,6 +6,7 @@ import java.time.LocalTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -59,11 +60,27 @@ public interface TimeAttribute extends Attribute {
     }
 
     /**
-     * factory method to copy an instance of TimeAttribute
+     * factory method to create a shallow copy TimeAttribute
      * @param template instance to be copied
      * @return copy instance
      */
     public static TimeAttribute of(final TimeAttribute template) {
+        TimeAttributeImpl instance = new TimeAttributeImpl();
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of TimeAttribute
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static TimeAttribute deepCopy(@Nullable final TimeAttribute template) {
+        if (template == null) {
+            return null;
+        }
         TimeAttributeImpl instance = new TimeAttributeImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());

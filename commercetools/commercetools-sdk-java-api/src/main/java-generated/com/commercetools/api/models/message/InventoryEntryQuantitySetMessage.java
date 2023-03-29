@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -130,7 +131,7 @@ public interface InventoryEntryQuantitySetMessage extends Message {
     }
 
     /**
-     * factory method to copy an instance of InventoryEntryQuantitySetMessage
+     * factory method to create a shallow copy InventoryEntryQuantitySetMessage
      * @param template instance to be copied
      * @return copy instance
      */
@@ -151,6 +152,38 @@ public interface InventoryEntryQuantitySetMessage extends Message {
         instance.setOldAvailableQuantity(template.getOldAvailableQuantity());
         instance.setNewAvailableQuantity(template.getNewAvailableQuantity());
         instance.setSupplyChannel(template.getSupplyChannel());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of InventoryEntryQuantitySetMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static InventoryEntryQuantitySetMessage deepCopy(@Nullable final InventoryEntryQuantitySetMessage template) {
+        if (template == null) {
+            return null;
+        }
+        InventoryEntryQuantitySetMessageImpl instance = new InventoryEntryQuantitySetMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
+                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setOldQuantityOnStock(template.getOldQuantityOnStock());
+        instance.setNewQuantityOnStock(template.getNewQuantityOnStock());
+        instance.setOldAvailableQuantity(template.getOldAvailableQuantity());
+        instance.setNewAvailableQuantity(template.getNewAvailableQuantity());
+        instance.setSupplyChannel(
+            com.commercetools.api.models.channel.ChannelReference.deepCopy(template.getSupplyChannel()));
         return instance;
     }
 

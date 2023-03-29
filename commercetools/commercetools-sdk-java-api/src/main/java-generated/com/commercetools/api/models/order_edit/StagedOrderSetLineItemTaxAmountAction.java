@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -101,7 +102,7 @@ public interface StagedOrderSetLineItemTaxAmountAction extends StagedOrderUpdate
     }
 
     /**
-     * factory method to copy an instance of StagedOrderSetLineItemTaxAmountAction
+     * factory method to create a shallow copy StagedOrderSetLineItemTaxAmountAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -109,6 +110,25 @@ public interface StagedOrderSetLineItemTaxAmountAction extends StagedOrderUpdate
         StagedOrderSetLineItemTaxAmountActionImpl instance = new StagedOrderSetLineItemTaxAmountActionImpl();
         instance.setLineItemId(template.getLineItemId());
         instance.setExternalTaxAmount(template.getExternalTaxAmount());
+        instance.setShippingKey(template.getShippingKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedOrderSetLineItemTaxAmountAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedOrderSetLineItemTaxAmountAction deepCopy(
+            @Nullable final StagedOrderSetLineItemTaxAmountAction template) {
+        if (template == null) {
+            return null;
+        }
+        StagedOrderSetLineItemTaxAmountActionImpl instance = new StagedOrderSetLineItemTaxAmountActionImpl();
+        instance.setLineItemId(template.getLineItemId());
+        instance.setExternalTaxAmount(
+            com.commercetools.api.models.cart.ExternalTaxAmountDraft.deepCopy(template.getExternalTaxAmount()));
         instance.setShippingKey(template.getShippingKey());
         return instance;
     }

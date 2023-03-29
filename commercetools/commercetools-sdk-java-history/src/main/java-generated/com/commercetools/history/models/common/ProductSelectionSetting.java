@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -71,13 +72,30 @@ public interface ProductSelectionSetting {
     }
 
     /**
-     * factory method to copy an instance of ProductSelectionSetting
+     * factory method to create a shallow copy ProductSelectionSetting
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductSelectionSetting of(final ProductSelectionSetting template) {
         ProductSelectionSettingImpl instance = new ProductSelectionSettingImpl();
         instance.setProductSelection(template.getProductSelection());
+        instance.setActive(template.getActive());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductSelectionSetting
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductSelectionSetting deepCopy(@Nullable final ProductSelectionSetting template) {
+        if (template == null) {
+            return null;
+        }
+        ProductSelectionSettingImpl instance = new ProductSelectionSettingImpl();
+        instance.setProductSelection(
+            com.commercetools.history.models.common.Reference.deepCopy(template.getProductSelection()));
         instance.setActive(template.getActive());
         return instance;
     }

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -102,7 +103,7 @@ public interface SetOrderTotalPriceChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetOrderTotalPriceChange
+     * factory method to create a shallow copy SetOrderTotalPriceChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -111,6 +112,23 @@ public interface SetOrderTotalPriceChange extends Change {
         instance.setChange(template.getChange());
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetOrderTotalPriceChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetOrderTotalPriceChange deepCopy(@Nullable final SetOrderTotalPriceChange template) {
+        if (template == null) {
+            return null;
+        }
+        SetOrderTotalPriceChangeImpl instance = new SetOrderTotalPriceChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setNextValue(com.commercetools.history.models.common.Money.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(com.commercetools.history.models.common.Money.deepCopy(template.getPreviousValue()));
         return instance;
     }
 

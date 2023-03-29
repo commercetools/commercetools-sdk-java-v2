@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.fasterxml.jackson.annotation.*;
@@ -67,7 +68,7 @@ public interface SearchIndexingConfiguration {
     }
 
     /**
-     * factory method to copy an instance of SearchIndexingConfiguration
+     * factory method to create a shallow copy SearchIndexingConfiguration
      * @param template instance to be copied
      * @return copy instance
      */
@@ -75,6 +76,24 @@ public interface SearchIndexingConfiguration {
         SearchIndexingConfigurationImpl instance = new SearchIndexingConfigurationImpl();
         instance.setProducts(template.getProducts());
         instance.setOrders(template.getOrders());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SearchIndexingConfiguration
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SearchIndexingConfiguration deepCopy(@Nullable final SearchIndexingConfiguration template) {
+        if (template == null) {
+            return null;
+        }
+        SearchIndexingConfigurationImpl instance = new SearchIndexingConfigurationImpl();
+        instance.setProducts(
+            com.commercetools.api.models.project.SearchIndexingConfigurationValues.deepCopy(template.getProducts()));
+        instance.setOrders(
+            com.commercetools.api.models.project.SearchIndexingConfigurationValues.deepCopy(template.getOrders()));
         return instance;
     }
 

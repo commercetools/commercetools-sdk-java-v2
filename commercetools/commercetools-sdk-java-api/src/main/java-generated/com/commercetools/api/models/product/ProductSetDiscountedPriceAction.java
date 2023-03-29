@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -90,7 +91,7 @@ public interface ProductSetDiscountedPriceAction extends ProductUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ProductSetDiscountedPriceAction
+     * factory method to create a shallow copy ProductSetDiscountedPriceAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -99,6 +100,24 @@ public interface ProductSetDiscountedPriceAction extends ProductUpdateAction {
         instance.setPriceId(template.getPriceId());
         instance.setStaged(template.getStaged());
         instance.setDiscounted(template.getDiscounted());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductSetDiscountedPriceAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductSetDiscountedPriceAction deepCopy(@Nullable final ProductSetDiscountedPriceAction template) {
+        if (template == null) {
+            return null;
+        }
+        ProductSetDiscountedPriceActionImpl instance = new ProductSetDiscountedPriceActionImpl();
+        instance.setPriceId(template.getPriceId());
+        instance.setStaged(template.getStaged());
+        instance.setDiscounted(
+            com.commercetools.api.models.common.DiscountedPriceDraft.deepCopy(template.getDiscounted()));
         return instance;
     }
 

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -111,6 +112,305 @@ public interface CartUpdateAction extends com.commercetools.api.models.ResourceU
     @NotNull
     @JsonProperty("action")
     public String getAction();
+
+    /**
+     * factory method to create a deep copy of CartUpdateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartUpdateAction deepCopy(@Nullable final CartUpdateAction template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartAddCustomLineItemAction) {
+            return com.commercetools.api.models.cart.CartAddCustomLineItemAction
+                    .deepCopy((com.commercetools.api.models.cart.CartAddCustomLineItemAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartAddCustomShippingMethodAction) {
+            return com.commercetools.api.models.cart.CartAddCustomShippingMethodAction
+                    .deepCopy((com.commercetools.api.models.cart.CartAddCustomShippingMethodAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartAddDiscountCodeAction) {
+            return com.commercetools.api.models.cart.CartAddDiscountCodeAction
+                    .deepCopy((com.commercetools.api.models.cart.CartAddDiscountCodeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartAddItemShippingAddressAction) {
+            return com.commercetools.api.models.cart.CartAddItemShippingAddressAction
+                    .deepCopy((com.commercetools.api.models.cart.CartAddItemShippingAddressAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartAddLineItemAction) {
+            return com.commercetools.api.models.cart.CartAddLineItemAction
+                    .deepCopy((com.commercetools.api.models.cart.CartAddLineItemAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartAddPaymentAction) {
+            return com.commercetools.api.models.cart.CartAddPaymentAction
+                    .deepCopy((com.commercetools.api.models.cart.CartAddPaymentAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartAddShippingMethodAction) {
+            return com.commercetools.api.models.cart.CartAddShippingMethodAction
+                    .deepCopy((com.commercetools.api.models.cart.CartAddShippingMethodAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartAddShoppingListAction) {
+            return com.commercetools.api.models.cart.CartAddShoppingListAction
+                    .deepCopy((com.commercetools.api.models.cart.CartAddShoppingListAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction) {
+            return com.commercetools.api.models.cart.CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction
+                    .deepCopy(
+                        (com.commercetools.api.models.cart.CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartApplyDeltaToLineItemShippingDetailsTargetsAction) {
+            return com.commercetools.api.models.cart.CartApplyDeltaToLineItemShippingDetailsTargetsAction.deepCopy(
+                (com.commercetools.api.models.cart.CartApplyDeltaToLineItemShippingDetailsTargetsAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartChangeCustomLineItemMoneyAction) {
+            return com.commercetools.api.models.cart.CartChangeCustomLineItemMoneyAction
+                    .deepCopy((com.commercetools.api.models.cart.CartChangeCustomLineItemMoneyAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartChangeCustomLineItemPriceModeAction) {
+            return com.commercetools.api.models.cart.CartChangeCustomLineItemPriceModeAction
+                    .deepCopy((com.commercetools.api.models.cart.CartChangeCustomLineItemPriceModeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartChangeCustomLineItemQuantityAction) {
+            return com.commercetools.api.models.cart.CartChangeCustomLineItemQuantityAction
+                    .deepCopy((com.commercetools.api.models.cart.CartChangeCustomLineItemQuantityAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartChangeLineItemQuantityAction) {
+            return com.commercetools.api.models.cart.CartChangeLineItemQuantityAction
+                    .deepCopy((com.commercetools.api.models.cart.CartChangeLineItemQuantityAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartChangeTaxCalculationModeAction) {
+            return com.commercetools.api.models.cart.CartChangeTaxCalculationModeAction
+                    .deepCopy((com.commercetools.api.models.cart.CartChangeTaxCalculationModeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartChangeTaxModeAction) {
+            return com.commercetools.api.models.cart.CartChangeTaxModeAction
+                    .deepCopy((com.commercetools.api.models.cart.CartChangeTaxModeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartChangeTaxRoundingModeAction) {
+            return com.commercetools.api.models.cart.CartChangeTaxRoundingModeAction
+                    .deepCopy((com.commercetools.api.models.cart.CartChangeTaxRoundingModeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartFreezeCartAction) {
+            return com.commercetools.api.models.cart.CartFreezeCartAction
+                    .deepCopy((com.commercetools.api.models.cart.CartFreezeCartAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartRecalculateAction) {
+            return com.commercetools.api.models.cart.CartRecalculateAction
+                    .deepCopy((com.commercetools.api.models.cart.CartRecalculateAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartRemoveCustomLineItemAction) {
+            return com.commercetools.api.models.cart.CartRemoveCustomLineItemAction
+                    .deepCopy((com.commercetools.api.models.cart.CartRemoveCustomLineItemAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartRemoveDiscountCodeAction) {
+            return com.commercetools.api.models.cart.CartRemoveDiscountCodeAction
+                    .deepCopy((com.commercetools.api.models.cart.CartRemoveDiscountCodeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartRemoveItemShippingAddressAction) {
+            return com.commercetools.api.models.cart.CartRemoveItemShippingAddressAction
+                    .deepCopy((com.commercetools.api.models.cart.CartRemoveItemShippingAddressAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartRemoveLineItemAction) {
+            return com.commercetools.api.models.cart.CartRemoveLineItemAction
+                    .deepCopy((com.commercetools.api.models.cart.CartRemoveLineItemAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartRemovePaymentAction) {
+            return com.commercetools.api.models.cart.CartRemovePaymentAction
+                    .deepCopy((com.commercetools.api.models.cart.CartRemovePaymentAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartRemoveShippingMethodAction) {
+            return com.commercetools.api.models.cart.CartRemoveShippingMethodAction
+                    .deepCopy((com.commercetools.api.models.cart.CartRemoveShippingMethodAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetAnonymousIdAction) {
+            return com.commercetools.api.models.cart.CartSetAnonymousIdAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetAnonymousIdAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetBillingAddressAction) {
+            return com.commercetools.api.models.cart.CartSetBillingAddressAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetBillingAddressAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetBillingAddressCustomFieldAction) {
+            return com.commercetools.api.models.cart.CartSetBillingAddressCustomFieldAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetBillingAddressCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetBillingAddressCustomTypeAction) {
+            return com.commercetools.api.models.cart.CartSetBillingAddressCustomTypeAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetBillingAddressCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetBusinessUnitAction) {
+            return com.commercetools.api.models.cart.CartSetBusinessUnitAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetBusinessUnitAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetCartTotalTaxAction) {
+            return com.commercetools.api.models.cart.CartSetCartTotalTaxAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetCartTotalTaxAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetCountryAction) {
+            return com.commercetools.api.models.cart.CartSetCountryAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetCountryAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetCustomFieldAction) {
+            return com.commercetools.api.models.cart.CartSetCustomFieldAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetCustomLineItemCustomFieldAction) {
+            return com.commercetools.api.models.cart.CartSetCustomLineItemCustomFieldAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetCustomLineItemCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetCustomLineItemCustomTypeAction) {
+            return com.commercetools.api.models.cart.CartSetCustomLineItemCustomTypeAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetCustomLineItemCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetCustomLineItemShippingDetailsAction) {
+            return com.commercetools.api.models.cart.CartSetCustomLineItemShippingDetailsAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetCustomLineItemShippingDetailsAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetCustomLineItemTaxAmountAction) {
+            return com.commercetools.api.models.cart.CartSetCustomLineItemTaxAmountAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetCustomLineItemTaxAmountAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetCustomLineItemTaxRateAction) {
+            return com.commercetools.api.models.cart.CartSetCustomLineItemTaxRateAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetCustomLineItemTaxRateAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetCustomShippingMethodAction) {
+            return com.commercetools.api.models.cart.CartSetCustomShippingMethodAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetCustomShippingMethodAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetCustomTypeAction) {
+            return com.commercetools.api.models.cart.CartSetCustomTypeAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetCustomerEmailAction) {
+            return com.commercetools.api.models.cart.CartSetCustomerEmailAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetCustomerEmailAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetCustomerGroupAction) {
+            return com.commercetools.api.models.cart.CartSetCustomerGroupAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetCustomerGroupAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetCustomerIdAction) {
+            return com.commercetools.api.models.cart.CartSetCustomerIdAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetCustomerIdAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetDeleteDaysAfterLastModificationAction) {
+            return com.commercetools.api.models.cart.CartSetDeleteDaysAfterLastModificationAction.deepCopy(
+                (com.commercetools.api.models.cart.CartSetDeleteDaysAfterLastModificationAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetDeliveryAddressCustomFieldAction) {
+            return com.commercetools.api.models.cart.CartSetDeliveryAddressCustomFieldAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetDeliveryAddressCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetDeliveryAddressCustomTypeAction) {
+            return com.commercetools.api.models.cart.CartSetDeliveryAddressCustomTypeAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetDeliveryAddressCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetDirectDiscountsAction) {
+            return com.commercetools.api.models.cart.CartSetDirectDiscountsAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetDirectDiscountsAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetItemShippingAddressCustomFieldAction) {
+            return com.commercetools.api.models.cart.CartSetItemShippingAddressCustomFieldAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetItemShippingAddressCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetItemShippingAddressCustomTypeAction) {
+            return com.commercetools.api.models.cart.CartSetItemShippingAddressCustomTypeAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetItemShippingAddressCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetKeyAction) {
+            return com.commercetools.api.models.cart.CartSetKeyAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetKeyAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetLineItemCustomFieldAction) {
+            return com.commercetools.api.models.cart.CartSetLineItemCustomFieldAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetLineItemCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetLineItemCustomTypeAction) {
+            return com.commercetools.api.models.cart.CartSetLineItemCustomTypeAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetLineItemCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetLineItemDistributionChannelAction) {
+            return com.commercetools.api.models.cart.CartSetLineItemDistributionChannelAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetLineItemDistributionChannelAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetLineItemPriceAction) {
+            return com.commercetools.api.models.cart.CartSetLineItemPriceAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetLineItemPriceAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetLineItemShippingDetailsAction) {
+            return com.commercetools.api.models.cart.CartSetLineItemShippingDetailsAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetLineItemShippingDetailsAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetLineItemSupplyChannelAction) {
+            return com.commercetools.api.models.cart.CartSetLineItemSupplyChannelAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetLineItemSupplyChannelAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetLineItemTaxAmountAction) {
+            return com.commercetools.api.models.cart.CartSetLineItemTaxAmountAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetLineItemTaxAmountAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetLineItemTaxRateAction) {
+            return com.commercetools.api.models.cart.CartSetLineItemTaxRateAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetLineItemTaxRateAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetLineItemTotalPriceAction) {
+            return com.commercetools.api.models.cart.CartSetLineItemTotalPriceAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetLineItemTotalPriceAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetLocaleAction) {
+            return com.commercetools.api.models.cart.CartSetLocaleAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetLocaleAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetShippingAddressAction) {
+            return com.commercetools.api.models.cart.CartSetShippingAddressAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetShippingAddressAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetShippingAddressCustomFieldAction) {
+            return com.commercetools.api.models.cart.CartSetShippingAddressCustomFieldAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetShippingAddressCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetShippingAddressCustomTypeAction) {
+            return com.commercetools.api.models.cart.CartSetShippingAddressCustomTypeAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetShippingAddressCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetShippingCustomFieldAction) {
+            return com.commercetools.api.models.cart.CartSetShippingCustomFieldAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetShippingCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetShippingCustomTypeAction) {
+            return com.commercetools.api.models.cart.CartSetShippingCustomTypeAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetShippingCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetShippingMethodAction) {
+            return com.commercetools.api.models.cart.CartSetShippingMethodAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetShippingMethodAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetShippingMethodTaxAmountAction) {
+            return com.commercetools.api.models.cart.CartSetShippingMethodTaxAmountAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetShippingMethodTaxAmountAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetShippingMethodTaxRateAction) {
+            return com.commercetools.api.models.cart.CartSetShippingMethodTaxRateAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetShippingMethodTaxRateAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartSetShippingRateInputAction) {
+            return com.commercetools.api.models.cart.CartSetShippingRateInputAction
+                    .deepCopy((com.commercetools.api.models.cart.CartSetShippingRateInputAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartUnfreezeCartAction) {
+            return com.commercetools.api.models.cart.CartUnfreezeCartAction
+                    .deepCopy((com.commercetools.api.models.cart.CartUnfreezeCartAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartUpdateItemShippingAddressAction) {
+            return com.commercetools.api.models.cart.CartUpdateItemShippingAddressAction
+                    .deepCopy((com.commercetools.api.models.cart.CartUpdateItemShippingAddressAction) template);
+        }
+        CartUpdateActionImpl instance = new CartUpdateActionImpl();
+        return instance;
+    }
 
     /**
      * builder for addCustomLineItem subtype

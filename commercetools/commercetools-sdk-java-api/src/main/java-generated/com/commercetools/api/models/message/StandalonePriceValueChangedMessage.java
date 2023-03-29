@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -99,7 +100,7 @@ public interface StandalonePriceValueChangedMessage extends Message {
     }
 
     /**
-     * factory method to copy an instance of StandalonePriceValueChangedMessage
+     * factory method to create a shallow copy StandalonePriceValueChangedMessage
      * @param template instance to be copied
      * @return copy instance
      */
@@ -118,6 +119,36 @@ public interface StandalonePriceValueChangedMessage extends Message {
         instance.setValue(template.getValue());
         instance.setStaged(template.getStaged());
         instance.setOldValue(template.getOldValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StandalonePriceValueChangedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StandalonePriceValueChangedMessage deepCopy(
+            @Nullable final StandalonePriceValueChangedMessage template) {
+        if (template == null) {
+            return null;
+        }
+        StandalonePriceValueChangedMessageImpl instance = new StandalonePriceValueChangedMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
+                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setValue(com.commercetools.api.models.common.Money.deepCopy(template.getValue()));
+        instance.setStaged(template.getStaged());
+        instance.setOldValue(com.commercetools.api.models.common.Money.deepCopy(template.getOldValue()));
         return instance;
     }
 

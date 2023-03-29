@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -153,7 +154,7 @@ public interface SetLineItemTaxRateChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetLineItemTaxRateChange
+     * factory method to create a shallow copy SetLineItemTaxRateChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -165,6 +166,27 @@ public interface SetLineItemTaxRateChange extends Change {
         instance.setTaxMode(template.getTaxMode());
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetLineItemTaxRateChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetLineItemTaxRateChange deepCopy(@Nullable final SetLineItemTaxRateChange template) {
+        if (template == null) {
+            return null;
+        }
+        SetLineItemTaxRateChangeImpl instance = new SetLineItemTaxRateChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setLineItem(com.commercetools.history.models.common.LocalizedString.deepCopy(template.getLineItem()));
+        instance.setVariant(template.getVariant());
+        instance.setTaxMode(template.getTaxMode());
+        instance.setNextValue(com.commercetools.history.models.common.TaxRate.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.TaxRate.deepCopy(template.getPreviousValue()));
         return instance;
     }
 

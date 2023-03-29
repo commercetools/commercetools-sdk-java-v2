@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
@@ -59,11 +60,26 @@ public interface StagedOrderAddDiscountCodeAction extends StagedOrderUpdateActio
     }
 
     /**
-     * factory method to copy an instance of StagedOrderAddDiscountCodeAction
+     * factory method to create a shallow copy StagedOrderAddDiscountCodeAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static StagedOrderAddDiscountCodeAction of(final StagedOrderAddDiscountCodeAction template) {
+        StagedOrderAddDiscountCodeActionImpl instance = new StagedOrderAddDiscountCodeActionImpl();
+        instance.setCode(template.getCode());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedOrderAddDiscountCodeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedOrderAddDiscountCodeAction deepCopy(@Nullable final StagedOrderAddDiscountCodeAction template) {
+        if (template == null) {
+            return null;
+        }
         StagedOrderAddDiscountCodeActionImpl instance = new StagedOrderAddDiscountCodeActionImpl();
         instance.setCode(template.getCode());
         return instance;

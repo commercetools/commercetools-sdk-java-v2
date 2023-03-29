@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -73,11 +74,28 @@ public interface ShoppingListRemoveTextLineItemAction extends ShoppingListUpdate
     }
 
     /**
-     * factory method to copy an instance of ShoppingListRemoveTextLineItemAction
+     * factory method to create a shallow copy ShoppingListRemoveTextLineItemAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ShoppingListRemoveTextLineItemAction of(final ShoppingListRemoveTextLineItemAction template) {
+        ShoppingListRemoveTextLineItemActionImpl instance = new ShoppingListRemoveTextLineItemActionImpl();
+        instance.setTextLineItemId(template.getTextLineItemId());
+        instance.setQuantity(template.getQuantity());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ShoppingListRemoveTextLineItemAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ShoppingListRemoveTextLineItemAction deepCopy(
+            @Nullable final ShoppingListRemoveTextLineItemAction template) {
+        if (template == null) {
+            return null;
+        }
         ShoppingListRemoveTextLineItemActionImpl instance = new ShoppingListRemoveTextLineItemActionImpl();
         instance.setTextLineItemId(template.getTextLineItemId());
         instance.setQuantity(template.getQuantity());

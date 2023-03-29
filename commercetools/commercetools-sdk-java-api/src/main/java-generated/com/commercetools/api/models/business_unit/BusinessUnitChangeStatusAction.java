@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,26 @@ public interface BusinessUnitChangeStatusAction extends BusinessUnitUpdateAction
     }
 
     /**
-     * factory method to copy an instance of BusinessUnitChangeStatusAction
+     * factory method to create a shallow copy BusinessUnitChangeStatusAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static BusinessUnitChangeStatusAction of(final BusinessUnitChangeStatusAction template) {
+        BusinessUnitChangeStatusActionImpl instance = new BusinessUnitChangeStatusActionImpl();
+        instance.setStatus(template.getStatus());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of BusinessUnitChangeStatusAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static BusinessUnitChangeStatusAction deepCopy(@Nullable final BusinessUnitChangeStatusAction template) {
+        if (template == null) {
+            return null;
+        }
         BusinessUnitChangeStatusActionImpl instance = new BusinessUnitChangeStatusActionImpl();
         instance.setStatus(template.getStatus());
         return instance;

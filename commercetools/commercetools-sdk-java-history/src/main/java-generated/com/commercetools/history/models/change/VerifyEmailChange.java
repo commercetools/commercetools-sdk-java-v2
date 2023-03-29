@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -66,11 +67,26 @@ public interface VerifyEmailChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of VerifyEmailChange
+     * factory method to create a shallow copy VerifyEmailChange
      * @param template instance to be copied
      * @return copy instance
      */
     public static VerifyEmailChange of(final VerifyEmailChange template) {
+        VerifyEmailChangeImpl instance = new VerifyEmailChangeImpl();
+        instance.setChange(template.getChange());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of VerifyEmailChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static VerifyEmailChange deepCopy(@Nullable final VerifyEmailChange template) {
+        if (template == null) {
+            return null;
+        }
         VerifyEmailChangeImpl instance = new VerifyEmailChangeImpl();
         instance.setChange(template.getChange());
         return instance;

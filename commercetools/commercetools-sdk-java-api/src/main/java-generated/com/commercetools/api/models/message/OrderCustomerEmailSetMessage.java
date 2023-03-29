@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -77,7 +79,7 @@ public interface OrderCustomerEmailSetMessage extends OrderMessage {
     }
 
     /**
-     * factory method to copy an instance of OrderCustomerEmailSetMessage
+     * factory method to create a shallow copy OrderCustomerEmailSetMessage
      * @param template instance to be copied
      * @return copy instance
      */
@@ -93,6 +95,34 @@ public interface OrderCustomerEmailSetMessage extends OrderMessage {
         instance.setResource(template.getResource());
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+        instance.setEmail(template.getEmail());
+        instance.setOldEmail(template.getOldEmail());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderCustomerEmailSetMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderCustomerEmailSetMessage deepCopy(@Nullable final OrderCustomerEmailSetMessage template) {
+        if (template == null) {
+            return null;
+        }
+        OrderCustomerEmailSetMessageImpl instance = new OrderCustomerEmailSetMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
+                .deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setEmail(template.getEmail());
         instance.setOldEmail(template.getOldEmail());
         return instance;

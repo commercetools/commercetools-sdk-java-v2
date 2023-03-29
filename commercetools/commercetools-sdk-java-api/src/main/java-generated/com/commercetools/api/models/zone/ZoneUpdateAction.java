@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -43,6 +44,40 @@ public interface ZoneUpdateAction extends com.commercetools.api.models.ResourceU
     @NotNull
     @JsonProperty("action")
     public String getAction();
+
+    /**
+     * factory method to create a deep copy of ZoneUpdateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ZoneUpdateAction deepCopy(@Nullable final ZoneUpdateAction template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.zone.ZoneAddLocationAction) {
+            return com.commercetools.api.models.zone.ZoneAddLocationAction
+                    .deepCopy((com.commercetools.api.models.zone.ZoneAddLocationAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.zone.ZoneChangeNameAction) {
+            return com.commercetools.api.models.zone.ZoneChangeNameAction
+                    .deepCopy((com.commercetools.api.models.zone.ZoneChangeNameAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.zone.ZoneRemoveLocationAction) {
+            return com.commercetools.api.models.zone.ZoneRemoveLocationAction
+                    .deepCopy((com.commercetools.api.models.zone.ZoneRemoveLocationAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.zone.ZoneSetDescriptionAction) {
+            return com.commercetools.api.models.zone.ZoneSetDescriptionAction
+                    .deepCopy((com.commercetools.api.models.zone.ZoneSetDescriptionAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.zone.ZoneSetKeyAction) {
+            return com.commercetools.api.models.zone.ZoneSetKeyAction
+                    .deepCopy((com.commercetools.api.models.zone.ZoneSetKeyAction) template);
+        }
+        ZoneUpdateActionImpl instance = new ZoneUpdateActionImpl();
+        return instance;
+    }
 
     /**
      * builder for addLocation subtype

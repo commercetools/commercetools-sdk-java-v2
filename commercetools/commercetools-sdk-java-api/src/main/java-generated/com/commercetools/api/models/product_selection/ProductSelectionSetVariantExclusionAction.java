@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -77,7 +78,7 @@ public interface ProductSelectionSetVariantExclusionAction extends ProductSelect
     }
 
     /**
-     * factory method to copy an instance of ProductSelectionSetVariantExclusionAction
+     * factory method to create a shallow copy ProductSelectionSetVariantExclusionAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -86,6 +87,25 @@ public interface ProductSelectionSetVariantExclusionAction extends ProductSelect
         ProductSelectionSetVariantExclusionActionImpl instance = new ProductSelectionSetVariantExclusionActionImpl();
         instance.setProduct(template.getProduct());
         instance.setVariantExclusion(template.getVariantExclusion());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductSelectionSetVariantExclusionAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductSelectionSetVariantExclusionAction deepCopy(
+            @Nullable final ProductSelectionSetVariantExclusionAction template) {
+        if (template == null) {
+            return null;
+        }
+        ProductSelectionSetVariantExclusionActionImpl instance = new ProductSelectionSetVariantExclusionActionImpl();
+        instance.setProduct(
+            com.commercetools.api.models.product.ProductResourceIdentifier.deepCopy(template.getProduct()));
+        instance.setVariantExclusion(com.commercetools.api.models.product_selection.ProductVariantExclusion
+                .deepCopy(template.getVariantExclusion()));
         return instance;
     }
 

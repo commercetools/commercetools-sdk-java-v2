@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -55,11 +57,27 @@ public interface CustomerCompanyNameSetMessagePayload extends MessagePayload {
     }
 
     /**
-     * factory method to copy an instance of CustomerCompanyNameSetMessagePayload
+     * factory method to create a shallow copy CustomerCompanyNameSetMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
     public static CustomerCompanyNameSetMessagePayload of(final CustomerCompanyNameSetMessagePayload template) {
+        CustomerCompanyNameSetMessagePayloadImpl instance = new CustomerCompanyNameSetMessagePayloadImpl();
+        instance.setCompanyName(template.getCompanyName());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomerCompanyNameSetMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomerCompanyNameSetMessagePayload deepCopy(
+            @Nullable final CustomerCompanyNameSetMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
         CustomerCompanyNameSetMessagePayloadImpl instance = new CustomerCompanyNameSetMessagePayloadImpl();
         instance.setCompanyName(template.getCompanyName());
         return instance;

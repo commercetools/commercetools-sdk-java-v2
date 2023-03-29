@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.common.LocalizedString;
@@ -58,13 +59,28 @@ public interface MyPaymentSetMethodInfoNameAction extends MyPaymentUpdateAction 
     }
 
     /**
-     * factory method to copy an instance of MyPaymentSetMethodInfoNameAction
+     * factory method to create a shallow copy MyPaymentSetMethodInfoNameAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static MyPaymentSetMethodInfoNameAction of(final MyPaymentSetMethodInfoNameAction template) {
         MyPaymentSetMethodInfoNameActionImpl instance = new MyPaymentSetMethodInfoNameActionImpl();
         instance.setName(template.getName());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MyPaymentSetMethodInfoNameAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MyPaymentSetMethodInfoNameAction deepCopy(@Nullable final MyPaymentSetMethodInfoNameAction template) {
+        if (template == null) {
+            return null;
+        }
+        MyPaymentSetMethodInfoNameActionImpl instance = new MyPaymentSetMethodInfoNameActionImpl();
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
         return instance;
     }
 

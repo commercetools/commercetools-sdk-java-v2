@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,27 @@ public interface CartChangeTaxCalculationModeAction extends CartUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of CartChangeTaxCalculationModeAction
+     * factory method to create a shallow copy CartChangeTaxCalculationModeAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static CartChangeTaxCalculationModeAction of(final CartChangeTaxCalculationModeAction template) {
+        CartChangeTaxCalculationModeActionImpl instance = new CartChangeTaxCalculationModeActionImpl();
+        instance.setTaxCalculationMode(template.getTaxCalculationMode());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartChangeTaxCalculationModeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartChangeTaxCalculationModeAction deepCopy(
+            @Nullable final CartChangeTaxCalculationModeAction template) {
+        if (template == null) {
+            return null;
+        }
         CartChangeTaxCalculationModeActionImpl instance = new CartChangeTaxCalculationModeActionImpl();
         instance.setTaxCalculationMode(template.getTaxCalculationMode());
         return instance;

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -53,11 +54,26 @@ public interface BusinessUnitConfiguration {
     }
 
     /**
-     * factory method to copy an instance of BusinessUnitConfiguration
+     * factory method to create a shallow copy BusinessUnitConfiguration
      * @param template instance to be copied
      * @return copy instance
      */
     public static BusinessUnitConfiguration of(final BusinessUnitConfiguration template) {
+        BusinessUnitConfigurationImpl instance = new BusinessUnitConfigurationImpl();
+        instance.setMyBusinessUnitStatusOnCreation(template.getMyBusinessUnitStatusOnCreation());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of BusinessUnitConfiguration
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static BusinessUnitConfiguration deepCopy(@Nullable final BusinessUnitConfiguration template) {
+        if (template == null) {
+            return null;
+        }
         BusinessUnitConfigurationImpl instance = new BusinessUnitConfigurationImpl();
         instance.setMyBusinessUnitStatusOnCreation(template.getMyBusinessUnitStatusOnCreation());
         return instance;

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -117,7 +118,7 @@ public interface ChangeTransactionTimestampChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of ChangeTransactionTimestampChange
+     * factory method to create a shallow copy ChangeTransactionTimestampChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -125,6 +126,25 @@ public interface ChangeTransactionTimestampChange extends Change {
         ChangeTransactionTimestampChangeImpl instance = new ChangeTransactionTimestampChangeImpl();
         instance.setChange(template.getChange());
         instance.setTransaction(template.getTransaction());
+        instance.setNextValue(template.getNextValue());
+        instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChangeTransactionTimestampChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChangeTransactionTimestampChange deepCopy(@Nullable final ChangeTransactionTimestampChange template) {
+        if (template == null) {
+            return null;
+        }
+        ChangeTransactionTimestampChangeImpl instance = new ChangeTransactionTimestampChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setTransaction(
+            com.commercetools.history.models.change_value.TransactionChangeValue.deepCopy(template.getTransaction()));
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
         return instance;

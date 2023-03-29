@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -265,7 +266,7 @@ public interface InventoryEntry
     }
 
     /**
-     * factory method to copy an instance of InventoryEntry
+     * factory method to create a shallow copy InventoryEntry
      * @param template instance to be copied
      * @return copy instance
      */
@@ -285,6 +286,36 @@ public interface InventoryEntry
         instance.setRestockableInDays(template.getRestockableInDays());
         instance.setExpectedDelivery(template.getExpectedDelivery());
         instance.setCustom(template.getCustom());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of InventoryEntry
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static InventoryEntry deepCopy(@Nullable final InventoryEntry template) {
+        if (template == null) {
+            return null;
+        }
+        InventoryEntryImpl instance = new InventoryEntryImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
+        instance.setKey(template.getKey());
+        instance.setSku(template.getSku());
+        instance.setSupplyChannel(
+            com.commercetools.api.models.channel.ChannelReference.deepCopy(template.getSupplyChannel()));
+        instance.setQuantityOnStock(template.getQuantityOnStock());
+        instance.setAvailableQuantity(template.getAvailableQuantity());
+        instance.setRestockableInDays(template.getRestockableInDays());
+        instance.setExpectedDelivery(template.getExpectedDelivery());
+        instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         return instance;
     }
 

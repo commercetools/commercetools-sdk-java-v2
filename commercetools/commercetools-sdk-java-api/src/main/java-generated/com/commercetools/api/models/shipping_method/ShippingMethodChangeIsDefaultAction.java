@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,27 @@ public interface ShippingMethodChangeIsDefaultAction extends ShippingMethodUpdat
     }
 
     /**
-     * factory method to copy an instance of ShippingMethodChangeIsDefaultAction
+     * factory method to create a shallow copy ShippingMethodChangeIsDefaultAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ShippingMethodChangeIsDefaultAction of(final ShippingMethodChangeIsDefaultAction template) {
+        ShippingMethodChangeIsDefaultActionImpl instance = new ShippingMethodChangeIsDefaultActionImpl();
+        instance.setIsDefault(template.getIsDefault());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ShippingMethodChangeIsDefaultAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ShippingMethodChangeIsDefaultAction deepCopy(
+            @Nullable final ShippingMethodChangeIsDefaultAction template) {
+        if (template == null) {
+            return null;
+        }
         ShippingMethodChangeIsDefaultActionImpl instance = new ShippingMethodChangeIsDefaultActionImpl();
         instance.setIsDefault(template.getIsDefault());
         return instance;

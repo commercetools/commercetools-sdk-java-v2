@@ -4,7 +4,9 @@ package com.commercetools.api.models.cart;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -101,7 +103,7 @@ public interface TaxedPriceDraft extends io.vrap.rmf.base.client.Draft<TaxedPric
     }
 
     /**
-     * factory method to copy an instance of TaxedPriceDraft
+     * factory method to create a shallow copy TaxedPriceDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -110,6 +112,27 @@ public interface TaxedPriceDraft extends io.vrap.rmf.base.client.Draft<TaxedPric
         instance.setTotalNet(template.getTotalNet());
         instance.setTotalGross(template.getTotalGross());
         instance.setTaxPortions(template.getTaxPortions());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of TaxedPriceDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static TaxedPriceDraft deepCopy(@Nullable final TaxedPriceDraft template) {
+        if (template == null) {
+            return null;
+        }
+        TaxedPriceDraftImpl instance = new TaxedPriceDraftImpl();
+        instance.setTotalNet(com.commercetools.api.models.common.Money.deepCopy(template.getTotalNet()));
+        instance.setTotalGross(com.commercetools.api.models.common.Money.deepCopy(template.getTotalGross()));
+        instance.setTaxPortions(Optional.ofNullable(template.getTaxPortions())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.cart.TaxPortionDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

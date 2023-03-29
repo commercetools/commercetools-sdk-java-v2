@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -47,7 +49,7 @@ public interface CustomerEmailVerifiedMessage extends Message {
     }
 
     /**
-     * factory method to copy an instance of CustomerEmailVerifiedMessage
+     * factory method to create a shallow copy CustomerEmailVerifiedMessage
      * @param template instance to be copied
      * @return copy instance
      */
@@ -63,6 +65,32 @@ public interface CustomerEmailVerifiedMessage extends Message {
         instance.setResource(template.getResource());
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomerEmailVerifiedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomerEmailVerifiedMessage deepCopy(@Nullable final CustomerEmailVerifiedMessage template) {
+        if (template == null) {
+            return null;
+        }
+        CustomerEmailVerifiedMessageImpl instance = new CustomerEmailVerifiedMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
+                .deepCopy(template.getResourceUserProvidedIdentifiers()));
         return instance;
     }
 

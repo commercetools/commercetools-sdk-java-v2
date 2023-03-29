@@ -4,7 +4,9 @@ package com.commercetools.api.models.project;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -80,7 +82,7 @@ public interface ProjectUpdate
     }
 
     /**
-     * factory method to copy an instance of ProjectUpdate
+     * factory method to create a shallow copy ProjectUpdate
      * @param template instance to be copied
      * @return copy instance
      */
@@ -88,6 +90,26 @@ public interface ProjectUpdate
         ProjectUpdateImpl instance = new ProjectUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(template.getActions());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProjectUpdate
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProjectUpdate deepCopy(@Nullable final ProjectUpdate template) {
+        if (template == null) {
+            return null;
+        }
+        ProjectUpdateImpl instance = new ProjectUpdateImpl();
+        instance.setVersion(template.getVersion());
+        instance.setActions(Optional.ofNullable(template.getActions())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.project.ProjectUpdateAction::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

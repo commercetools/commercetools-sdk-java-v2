@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -97,14 +98,32 @@ public interface ExtensionNoResponseError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of ExtensionNoResponseError
+     * factory method to create a shallow copy ExtensionNoResponseError
      * @param template instance to be copied
      * @return copy instance
      */
     public static ExtensionNoResponseError of(final ExtensionNoResponseError template) {
         ExtensionNoResponseErrorImpl instance = new ExtensionNoResponseErrorImpl();
         instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        instance.setExtensionId(template.getExtensionId());
+        instance.setExtensionKey(template.getExtensionKey());
+        return instance;
+    }
 
+    /**
+     * factory method to create a deep copy of ExtensionNoResponseError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ExtensionNoResponseError deepCopy(@Nullable final ExtensionNoResponseError template) {
+        if (template == null) {
+            return null;
+        }
+        ExtensionNoResponseErrorImpl instance = new ExtensionNoResponseErrorImpl();
+        instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         instance.setExtensionId(template.getExtensionId());
         instance.setExtensionKey(template.getExtensionKey());
         return instance;

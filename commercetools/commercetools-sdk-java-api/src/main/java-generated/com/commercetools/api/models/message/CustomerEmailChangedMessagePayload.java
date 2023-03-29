@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,27 @@ public interface CustomerEmailChangedMessagePayload extends MessagePayload {
     }
 
     /**
-     * factory method to copy an instance of CustomerEmailChangedMessagePayload
+     * factory method to create a shallow copy CustomerEmailChangedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
     public static CustomerEmailChangedMessagePayload of(final CustomerEmailChangedMessagePayload template) {
+        CustomerEmailChangedMessagePayloadImpl instance = new CustomerEmailChangedMessagePayloadImpl();
+        instance.setEmail(template.getEmail());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomerEmailChangedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomerEmailChangedMessagePayload deepCopy(
+            @Nullable final CustomerEmailChangedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
         CustomerEmailChangedMessagePayloadImpl instance = new CustomerEmailChangedMessagePayloadImpl();
         instance.setEmail(template.getEmail());
         return instance;

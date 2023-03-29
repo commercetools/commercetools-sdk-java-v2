@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.customer.CustomerReference;
@@ -98,7 +99,7 @@ public interface CreatedBy extends ClientLogging {
     }
 
     /**
-     * factory method to copy an instance of CreatedBy
+     * factory method to create a shallow copy CreatedBy
      * @param template instance to be copied
      * @return copy instance
      */
@@ -107,6 +108,24 @@ public interface CreatedBy extends ClientLogging {
         instance.setClientId(template.getClientId());
         instance.setExternalUserId(template.getExternalUserId());
         instance.setCustomer(template.getCustomer());
+        instance.setAnonymousId(template.getAnonymousId());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CreatedBy
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CreatedBy deepCopy(@Nullable final CreatedBy template) {
+        if (template == null) {
+            return null;
+        }
+        CreatedByImpl instance = new CreatedByImpl();
+        instance.setClientId(template.getClientId());
+        instance.setExternalUserId(template.getExternalUserId());
+        instance.setCustomer(com.commercetools.api.models.customer.CustomerReference.deepCopy(template.getCustomer()));
         instance.setAnonymousId(template.getAnonymousId());
         return instance;
     }

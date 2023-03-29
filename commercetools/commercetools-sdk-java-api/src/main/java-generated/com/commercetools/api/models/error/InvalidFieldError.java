@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -120,17 +121,36 @@ public interface InvalidFieldError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of InvalidFieldError
+     * factory method to create a shallow copy InvalidFieldError
      * @param template instance to be copied
      * @return copy instance
      */
     public static InvalidFieldError of(final InvalidFieldError template) {
         InvalidFieldErrorImpl instance = new InvalidFieldErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         instance.setField(template.getField());
         instance.setInvalidValue(template.getInvalidValue());
         instance.setAllowedValues(template.getAllowedValues());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of InvalidFieldError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static InvalidFieldError deepCopy(@Nullable final InvalidFieldError template) {
+        if (template == null) {
+            return null;
+        }
+        InvalidFieldErrorImpl instance = new InvalidFieldErrorImpl();
+        instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        instance.setField(template.getField());
+        instance.setInvalidValue(template.getInvalidValue());
+        instance.setAllowedValues(Optional.ofNullable(template.getAllowedValues()).map(ArrayList::new).orElse(null));
         return instance;
     }
 

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.cart.ShippingRateInputDraft;
@@ -59,13 +60,30 @@ public interface StagedOrderSetShippingRateInputAction extends StagedOrderUpdate
     }
 
     /**
-     * factory method to copy an instance of StagedOrderSetShippingRateInputAction
+     * factory method to create a shallow copy StagedOrderSetShippingRateInputAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static StagedOrderSetShippingRateInputAction of(final StagedOrderSetShippingRateInputAction template) {
         StagedOrderSetShippingRateInputActionImpl instance = new StagedOrderSetShippingRateInputActionImpl();
         instance.setShippingRateInput(template.getShippingRateInput());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedOrderSetShippingRateInputAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedOrderSetShippingRateInputAction deepCopy(
+            @Nullable final StagedOrderSetShippingRateInputAction template) {
+        if (template == null) {
+            return null;
+        }
+        StagedOrderSetShippingRateInputActionImpl instance = new StagedOrderSetShippingRateInputActionImpl();
+        instance.setShippingRateInput(
+            com.commercetools.api.models.cart.ShippingRateInputDraft.deepCopy(template.getShippingRateInput()));
         return instance;
     }
 

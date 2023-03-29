@@ -4,7 +4,9 @@ package com.commercetools.api.models.message;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -75,7 +77,7 @@ public interface ProductPriceDiscountsSetMessage extends Message {
     }
 
     /**
-     * factory method to copy an instance of ProductPriceDiscountsSetMessage
+     * factory method to create a shallow copy ProductPriceDiscountsSetMessage
      * @param template instance to be copied
      * @return copy instance
      */
@@ -92,6 +94,37 @@ public interface ProductPriceDiscountsSetMessage extends Message {
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setUpdatedPrices(template.getUpdatedPrices());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductPriceDiscountsSetMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductPriceDiscountsSetMessage deepCopy(@Nullable final ProductPriceDiscountsSetMessage template) {
+        if (template == null) {
+            return null;
+        }
+        ProductPriceDiscountsSetMessageImpl instance = new ProductPriceDiscountsSetMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
+                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setUpdatedPrices(Optional.ofNullable(template.getUpdatedPrices())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

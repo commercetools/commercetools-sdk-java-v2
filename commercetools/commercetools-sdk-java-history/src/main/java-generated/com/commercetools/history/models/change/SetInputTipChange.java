@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -118,7 +119,7 @@ public interface SetInputTipChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetInputTipChange
+     * factory method to create a shallow copy SetInputTipChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -128,6 +129,26 @@ public interface SetInputTipChange extends Change {
         instance.setAttributeName(template.getAttributeName());
         instance.setNextValue(template.getNextValue());
         instance.setPreviousValue(template.getPreviousValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetInputTipChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetInputTipChange deepCopy(@Nullable final SetInputTipChange template) {
+        if (template == null) {
+            return null;
+        }
+        SetInputTipChangeImpl instance = new SetInputTipChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setAttributeName(template.getAttributeName());
+        instance.setNextValue(
+            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getNextValue()));
+        instance.setPreviousValue(
+            com.commercetools.history.models.common.LocalizedString.deepCopy(template.getPreviousValue()));
         return instance;
     }
 

@@ -4,7 +4,9 @@ package com.commercetools.history.models.common;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -79,13 +81,33 @@ public interface ItemShippingDetails {
     }
 
     /**
-     * factory method to copy an instance of ItemShippingDetails
+     * factory method to create a shallow copy ItemShippingDetails
      * @param template instance to be copied
      * @return copy instance
      */
     public static ItemShippingDetails of(final ItemShippingDetails template) {
         ItemShippingDetailsImpl instance = new ItemShippingDetailsImpl();
         instance.setTargets(template.getTargets());
+        instance.setValid(template.getValid());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ItemShippingDetails
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ItemShippingDetails deepCopy(@Nullable final ItemShippingDetails template) {
+        if (template == null) {
+            return null;
+        }
+        ItemShippingDetailsImpl instance = new ItemShippingDetailsImpl();
+        instance.setTargets(Optional.ofNullable(template.getTargets())
+                .map(t -> t.stream()
+                        .map(com.commercetools.history.models.common.ItemShippingTarget::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setValid(template.getValid());
         return instance;
     }

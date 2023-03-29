@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -61,13 +62,28 @@ public interface StoreRemoveCountryAction extends StoreUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of StoreRemoveCountryAction
+     * factory method to create a shallow copy StoreRemoveCountryAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static StoreRemoveCountryAction of(final StoreRemoveCountryAction template) {
         StoreRemoveCountryActionImpl instance = new StoreRemoveCountryActionImpl();
         instance.setCountry(template.getCountry());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StoreRemoveCountryAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StoreRemoveCountryAction deepCopy(@Nullable final StoreRemoveCountryAction template) {
+        if (template == null) {
+            return null;
+        }
+        StoreRemoveCountryActionImpl instance = new StoreRemoveCountryActionImpl();
+        instance.setCountry(com.commercetools.api.models.store_country.StoreCountry.deepCopy(template.getCountry()));
         return instance;
     }
 

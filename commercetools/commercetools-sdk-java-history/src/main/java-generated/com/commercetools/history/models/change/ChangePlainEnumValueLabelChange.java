@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -130,11 +131,30 @@ public interface ChangePlainEnumValueLabelChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of ChangePlainEnumValueLabelChange
+     * factory method to create a shallow copy ChangePlainEnumValueLabelChange
      * @param template instance to be copied
      * @return copy instance
      */
     public static ChangePlainEnumValueLabelChange of(final ChangePlainEnumValueLabelChange template) {
+        ChangePlainEnumValueLabelChangeImpl instance = new ChangePlainEnumValueLabelChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setAttributeName(template.getAttributeName());
+        instance.setValueKey(template.getValueKey());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChangePlainEnumValueLabelChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChangePlainEnumValueLabelChange deepCopy(@Nullable final ChangePlainEnumValueLabelChange template) {
+        if (template == null) {
+            return null;
+        }
         ChangePlainEnumValueLabelChangeImpl instance = new ChangePlainEnumValueLabelChangeImpl();
         instance.setChange(template.getChange());
         instance.setAttributeName(template.getAttributeName());

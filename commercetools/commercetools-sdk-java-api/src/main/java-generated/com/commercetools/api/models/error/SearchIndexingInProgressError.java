@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -66,14 +67,30 @@ public interface SearchIndexingInProgressError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of SearchIndexingInProgressError
+     * factory method to create a shallow copy SearchIndexingInProgressError
      * @param template instance to be copied
      * @return copy instance
      */
     public static SearchIndexingInProgressError of(final SearchIndexingInProgressError template) {
         SearchIndexingInProgressErrorImpl instance = new SearchIndexingInProgressErrorImpl();
         instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        return instance;
+    }
 
+    /**
+     * factory method to create a deep copy of SearchIndexingInProgressError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SearchIndexingInProgressError deepCopy(@Nullable final SearchIndexingInProgressError template) {
+        if (template == null) {
+            return null;
+        }
+        SearchIndexingInProgressErrorImpl instance = new SearchIndexingInProgressErrorImpl();
+        instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
 

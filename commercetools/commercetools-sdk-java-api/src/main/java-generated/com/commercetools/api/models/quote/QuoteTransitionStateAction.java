@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -76,13 +77,29 @@ public interface QuoteTransitionStateAction extends QuoteUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of QuoteTransitionStateAction
+     * factory method to create a shallow copy QuoteTransitionStateAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static QuoteTransitionStateAction of(final QuoteTransitionStateAction template) {
         QuoteTransitionStateActionImpl instance = new QuoteTransitionStateActionImpl();
         instance.setState(template.getState());
+        instance.setForce(template.getForce());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of QuoteTransitionStateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static QuoteTransitionStateAction deepCopy(@Nullable final QuoteTransitionStateAction template) {
+        if (template == null) {
+            return null;
+        }
+        QuoteTransitionStateActionImpl instance = new QuoteTransitionStateActionImpl();
+        instance.setState(com.commercetools.api.models.state.StateResourceIdentifier.deepCopy(template.getState()));
         instance.setForce(template.getForce());
         return instance;
     }

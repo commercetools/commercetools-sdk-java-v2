@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -88,7 +89,7 @@ public interface TaxPortionDraft extends io.vrap.rmf.base.client.Draft<TaxPortio
     }
 
     /**
-     * factory method to copy an instance of TaxPortionDraft
+     * factory method to create a shallow copy TaxPortionDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -97,6 +98,23 @@ public interface TaxPortionDraft extends io.vrap.rmf.base.client.Draft<TaxPortio
         instance.setName(template.getName());
         instance.setRate(template.getRate());
         instance.setAmount(template.getAmount());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of TaxPortionDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static TaxPortionDraft deepCopy(@Nullable final TaxPortionDraft template) {
+        if (template == null) {
+            return null;
+        }
+        TaxPortionDraftImpl instance = new TaxPortionDraftImpl();
+        instance.setName(template.getName());
+        instance.setRate(template.getRate());
+        instance.setAmount(com.commercetools.api.models.common.Money.deepCopy(template.getAmount()));
         return instance;
     }
 

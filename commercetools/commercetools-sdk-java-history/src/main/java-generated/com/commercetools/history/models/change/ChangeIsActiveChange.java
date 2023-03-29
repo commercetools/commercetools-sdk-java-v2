@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -98,11 +99,28 @@ public interface ChangeIsActiveChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of ChangeIsActiveChange
+     * factory method to create a shallow copy ChangeIsActiveChange
      * @param template instance to be copied
      * @return copy instance
      */
     public static ChangeIsActiveChange of(final ChangeIsActiveChange template) {
+        ChangeIsActiveChangeImpl instance = new ChangeIsActiveChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChangeIsActiveChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChangeIsActiveChange deepCopy(@Nullable final ChangeIsActiveChange template) {
+        if (template == null) {
+            return null;
+        }
         ChangeIsActiveChangeImpl instance = new ChangeIsActiveChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());

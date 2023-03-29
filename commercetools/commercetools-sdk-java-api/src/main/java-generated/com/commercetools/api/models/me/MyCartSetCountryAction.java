@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -57,11 +59,26 @@ public interface MyCartSetCountryAction extends MyCartUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of MyCartSetCountryAction
+     * factory method to create a shallow copy MyCartSetCountryAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static MyCartSetCountryAction of(final MyCartSetCountryAction template) {
+        MyCartSetCountryActionImpl instance = new MyCartSetCountryActionImpl();
+        instance.setCountry(template.getCountry());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MyCartSetCountryAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MyCartSetCountryAction deepCopy(@Nullable final MyCartSetCountryAction template) {
+        if (template == null) {
+            return null;
+        }
         MyCartSetCountryActionImpl instance = new MyCartSetCountryActionImpl();
         instance.setCountry(template.getCountry());
         return instance;

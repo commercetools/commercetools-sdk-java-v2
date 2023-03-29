@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.commercetools.api.models.common.ResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -41,11 +43,28 @@ public interface StandalonePriceResourceIdentifier extends ResourceIdentifier {
     }
 
     /**
-     * factory method to copy an instance of StandalonePriceResourceIdentifier
+     * factory method to create a shallow copy StandalonePriceResourceIdentifier
      * @param template instance to be copied
      * @return copy instance
      */
     public static StandalonePriceResourceIdentifier of(final StandalonePriceResourceIdentifier template) {
+        StandalonePriceResourceIdentifierImpl instance = new StandalonePriceResourceIdentifierImpl();
+        instance.setId(template.getId());
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StandalonePriceResourceIdentifier
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StandalonePriceResourceIdentifier deepCopy(
+            @Nullable final StandalonePriceResourceIdentifier template) {
+        if (template == null) {
+            return null;
+        }
         StandalonePriceResourceIdentifierImpl instance = new StandalonePriceResourceIdentifierImpl();
         instance.setId(template.getId());
         instance.setKey(template.getKey());

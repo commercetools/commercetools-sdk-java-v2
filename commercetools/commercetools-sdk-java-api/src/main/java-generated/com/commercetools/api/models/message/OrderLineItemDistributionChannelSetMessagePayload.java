@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -75,7 +76,7 @@ public interface OrderLineItemDistributionChannelSetMessagePayload extends Order
     }
 
     /**
-     * factory method to copy an instance of OrderLineItemDistributionChannelSetMessagePayload
+     * factory method to create a shallow copy OrderLineItemDistributionChannelSetMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -84,6 +85,24 @@ public interface OrderLineItemDistributionChannelSetMessagePayload extends Order
         OrderLineItemDistributionChannelSetMessagePayloadImpl instance = new OrderLineItemDistributionChannelSetMessagePayloadImpl();
         instance.setLineItemId(template.getLineItemId());
         instance.setDistributionChannel(template.getDistributionChannel());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderLineItemDistributionChannelSetMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderLineItemDistributionChannelSetMessagePayload deepCopy(
+            @Nullable final OrderLineItemDistributionChannelSetMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        OrderLineItemDistributionChannelSetMessagePayloadImpl instance = new OrderLineItemDistributionChannelSetMessagePayloadImpl();
+        instance.setLineItemId(template.getLineItemId());
+        instance.setDistributionChannel(
+            com.commercetools.api.models.channel.ChannelReference.deepCopy(template.getDistributionChannel()));
         return instance;
     }
 

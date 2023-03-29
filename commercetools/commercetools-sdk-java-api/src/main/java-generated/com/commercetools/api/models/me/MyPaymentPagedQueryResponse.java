@@ -4,7 +4,9 @@ package com.commercetools.api.models.me;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -127,7 +129,7 @@ public interface MyPaymentPagedQueryResponse
     }
 
     /**
-     * factory method to copy an instance of MyPaymentPagedQueryResponse
+     * factory method to create a shallow copy MyPaymentPagedQueryResponse
      * @param template instance to be copied
      * @return copy instance
      */
@@ -138,6 +140,29 @@ public interface MyPaymentPagedQueryResponse
         instance.setTotal(template.getTotal());
         instance.setOffset(template.getOffset());
         instance.setResults(template.getResults());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MyPaymentPagedQueryResponse
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MyPaymentPagedQueryResponse deepCopy(@Nullable final MyPaymentPagedQueryResponse template) {
+        if (template == null) {
+            return null;
+        }
+        MyPaymentPagedQueryResponseImpl instance = new MyPaymentPagedQueryResponseImpl();
+        instance.setLimit(template.getLimit());
+        instance.setCount(template.getCount());
+        instance.setTotal(template.getTotal());
+        instance.setOffset(template.getOffset());
+        instance.setResults(Optional.ofNullable(template.getResults())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.me.MyPayment::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

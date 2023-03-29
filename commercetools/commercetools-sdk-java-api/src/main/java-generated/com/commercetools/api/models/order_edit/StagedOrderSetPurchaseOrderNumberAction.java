@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -56,11 +58,27 @@ public interface StagedOrderSetPurchaseOrderNumberAction extends StagedOrderUpda
     }
 
     /**
-     * factory method to copy an instance of StagedOrderSetPurchaseOrderNumberAction
+     * factory method to create a shallow copy StagedOrderSetPurchaseOrderNumberAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static StagedOrderSetPurchaseOrderNumberAction of(final StagedOrderSetPurchaseOrderNumberAction template) {
+        StagedOrderSetPurchaseOrderNumberActionImpl instance = new StagedOrderSetPurchaseOrderNumberActionImpl();
+        instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedOrderSetPurchaseOrderNumberAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedOrderSetPurchaseOrderNumberAction deepCopy(
+            @Nullable final StagedOrderSetPurchaseOrderNumberAction template) {
+        if (template == null) {
+            return null;
+        }
         StagedOrderSetPurchaseOrderNumberActionImpl instance = new StagedOrderSetPurchaseOrderNumberActionImpl();
         instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
         return instance;

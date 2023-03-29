@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -41,6 +42,32 @@ public interface FacetResult {
     @NotNull
     @JsonProperty("type")
     public FacetTypes getType();
+
+    /**
+     * factory method to create a deep copy of FacetResult
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static FacetResult deepCopy(@Nullable final FacetResult template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.product.FilteredFacetResult) {
+            return com.commercetools.api.models.product.FilteredFacetResult
+                    .deepCopy((com.commercetools.api.models.product.FilteredFacetResult) template);
+        }
+        if (template instanceof com.commercetools.api.models.product.RangeFacetResult) {
+            return com.commercetools.api.models.product.RangeFacetResult
+                    .deepCopy((com.commercetools.api.models.product.RangeFacetResult) template);
+        }
+        if (template instanceof com.commercetools.api.models.product.TermFacetResult) {
+            return com.commercetools.api.models.product.TermFacetResult
+                    .deepCopy((com.commercetools.api.models.product.TermFacetResult) template);
+        }
+        FacetResultImpl instance = new FacetResultImpl();
+        return instance;
+    }
 
     /**
      * builder for filter subtype

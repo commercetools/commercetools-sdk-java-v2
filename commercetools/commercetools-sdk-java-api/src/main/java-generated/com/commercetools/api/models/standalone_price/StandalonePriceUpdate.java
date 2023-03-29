@@ -4,7 +4,9 @@ package com.commercetools.api.models.standalone_price;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -80,7 +82,7 @@ public interface StandalonePriceUpdate extends
     }
 
     /**
-     * factory method to copy an instance of StandalonePriceUpdate
+     * factory method to create a shallow copy StandalonePriceUpdate
      * @param template instance to be copied
      * @return copy instance
      */
@@ -88,6 +90,26 @@ public interface StandalonePriceUpdate extends
         StandalonePriceUpdateImpl instance = new StandalonePriceUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(template.getActions());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StandalonePriceUpdate
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StandalonePriceUpdate deepCopy(@Nullable final StandalonePriceUpdate template) {
+        if (template == null) {
+            return null;
+        }
+        StandalonePriceUpdateImpl instance = new StandalonePriceUpdateImpl();
+        instance.setVersion(template.getVersion());
+        instance.setActions(Optional.ofNullable(template.getActions())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.standalone_price.StandalonePriceUpdateAction::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -69,11 +70,27 @@ public interface ImageDimensions {
     }
 
     /**
-     * factory method to copy an instance of ImageDimensions
+     * factory method to create a shallow copy ImageDimensions
      * @param template instance to be copied
      * @return copy instance
      */
     public static ImageDimensions of(final ImageDimensions template) {
+        ImageDimensionsImpl instance = new ImageDimensionsImpl();
+        instance.setW(template.getW());
+        instance.setH(template.getH());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ImageDimensions
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ImageDimensions deepCopy(@Nullable final ImageDimensions template) {
+        if (template == null) {
+            return null;
+        }
         ImageDimensionsImpl instance = new ImageDimensionsImpl();
         instance.setW(template.getW());
         instance.setH(template.getH());

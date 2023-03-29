@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -157,7 +158,7 @@ public interface MessageDeliveryPayload extends DeliveryPayload {
     }
 
     /**
-     * factory method to copy an instance of MessageDeliveryPayload
+     * factory method to create a shallow copy MessageDeliveryPayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -173,6 +174,32 @@ public interface MessageDeliveryPayload extends DeliveryPayload {
         instance.setSequenceNumber(template.getSequenceNumber());
         instance.setResourceVersion(template.getResourceVersion());
         instance.setPayloadNotIncluded(template.getPayloadNotIncluded());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MessageDeliveryPayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MessageDeliveryPayload deepCopy(@Nullable final MessageDeliveryPayload template) {
+        if (template == null) {
+            return null;
+        }
+        MessageDeliveryPayloadImpl instance = new MessageDeliveryPayloadImpl();
+        instance.setProjectKey(template.getProjectKey());
+        instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
+                .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setPayloadNotIncluded(
+            com.commercetools.api.models.subscription.PayloadNotIncluded.deepCopy(template.getPayloadNotIncluded()));
         return instance;
     }
 

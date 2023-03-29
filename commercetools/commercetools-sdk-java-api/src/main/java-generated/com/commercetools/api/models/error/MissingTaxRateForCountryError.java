@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -117,14 +118,33 @@ public interface MissingTaxRateForCountryError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of MissingTaxRateForCountryError
+     * factory method to create a shallow copy MissingTaxRateForCountryError
      * @param template instance to be copied
      * @return copy instance
      */
     public static MissingTaxRateForCountryError of(final MissingTaxRateForCountryError template) {
         MissingTaxRateForCountryErrorImpl instance = new MissingTaxRateForCountryErrorImpl();
         instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        instance.setTaxCategoryId(template.getTaxCategoryId());
+        instance.setCountry(template.getCountry());
+        instance.setState(template.getState());
+        return instance;
+    }
 
+    /**
+     * factory method to create a deep copy of MissingTaxRateForCountryError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MissingTaxRateForCountryError deepCopy(@Nullable final MissingTaxRateForCountryError template) {
+        if (template == null) {
+            return null;
+        }
+        MissingTaxRateForCountryErrorImpl instance = new MissingTaxRateForCountryErrorImpl();
+        instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         instance.setTaxCategoryId(template.getTaxCategoryId());
         instance.setCountry(template.getCountry());
         instance.setState(template.getState());

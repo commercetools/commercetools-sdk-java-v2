@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -56,11 +58,27 @@ public interface ResourceUpdateError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of ResourceUpdateError
+     * factory method to create a shallow copy ResourceUpdateError
      * @param template instance to be copied
      * @return copy instance
      */
     public static ResourceUpdateError of(final ResourceUpdateError template) {
+        ResourceUpdateErrorImpl instance = new ResourceUpdateErrorImpl();
+        instance.setMessage(template.getMessage());
+        instance.setResource(template.getResource());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ResourceUpdateError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ResourceUpdateError deepCopy(@Nullable final ResourceUpdateError template) {
+        if (template == null) {
+            return null;
+        }
         ResourceUpdateErrorImpl instance = new ResourceUpdateErrorImpl();
         instance.setMessage(template.getMessage());
         instance.setResource(template.getResource());

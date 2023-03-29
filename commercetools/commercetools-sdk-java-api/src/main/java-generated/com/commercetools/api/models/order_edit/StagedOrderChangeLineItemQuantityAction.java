@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -110,7 +111,7 @@ public interface StagedOrderChangeLineItemQuantityAction extends StagedOrderUpda
     }
 
     /**
-     * factory method to copy an instance of StagedOrderChangeLineItemQuantityAction
+     * factory method to create a shallow copy StagedOrderChangeLineItemQuantityAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -120,6 +121,26 @@ public interface StagedOrderChangeLineItemQuantityAction extends StagedOrderUpda
         instance.setQuantity(template.getQuantity());
         instance.setExternalPrice(template.getExternalPrice());
         instance.setExternalTotalPrice(template.getExternalTotalPrice());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedOrderChangeLineItemQuantityAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedOrderChangeLineItemQuantityAction deepCopy(
+            @Nullable final StagedOrderChangeLineItemQuantityAction template) {
+        if (template == null) {
+            return null;
+        }
+        StagedOrderChangeLineItemQuantityActionImpl instance = new StagedOrderChangeLineItemQuantityActionImpl();
+        instance.setLineItemId(template.getLineItemId());
+        instance.setQuantity(template.getQuantity());
+        instance.setExternalPrice(com.commercetools.api.models.common.Money.deepCopy(template.getExternalPrice()));
+        instance.setExternalTotalPrice(
+            com.commercetools.api.models.cart.ExternalLineItemTotalPrice.deepCopy(template.getExternalTotalPrice()));
         return instance;
     }
 

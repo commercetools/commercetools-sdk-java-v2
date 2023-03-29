@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -89,11 +90,29 @@ public interface OrderSetCustomLineItemCustomFieldAction extends OrderUpdateActi
     }
 
     /**
-     * factory method to copy an instance of OrderSetCustomLineItemCustomFieldAction
+     * factory method to create a shallow copy OrderSetCustomLineItemCustomFieldAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static OrderSetCustomLineItemCustomFieldAction of(final OrderSetCustomLineItemCustomFieldAction template) {
+        OrderSetCustomLineItemCustomFieldActionImpl instance = new OrderSetCustomLineItemCustomFieldActionImpl();
+        instance.setCustomLineItemId(template.getCustomLineItemId());
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderSetCustomLineItemCustomFieldAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderSetCustomLineItemCustomFieldAction deepCopy(
+            @Nullable final OrderSetCustomLineItemCustomFieldAction template) {
+        if (template == null) {
+            return null;
+        }
         OrderSetCustomLineItemCustomFieldActionImpl instance = new OrderSetCustomLineItemCustomFieldActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setName(template.getName());

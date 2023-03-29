@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -73,11 +74,27 @@ public interface OrderEditSetCustomFieldAction extends OrderEditUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of OrderEditSetCustomFieldAction
+     * factory method to create a shallow copy OrderEditSetCustomFieldAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static OrderEditSetCustomFieldAction of(final OrderEditSetCustomFieldAction template) {
+        OrderEditSetCustomFieldActionImpl instance = new OrderEditSetCustomFieldActionImpl();
+        instance.setName(template.getName());
+        instance.setValue(template.getValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderEditSetCustomFieldAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderEditSetCustomFieldAction deepCopy(@Nullable final OrderEditSetCustomFieldAction template) {
+        if (template == null) {
+            return null;
+        }
         OrderEditSetCustomFieldActionImpl instance = new OrderEditSetCustomFieldActionImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());

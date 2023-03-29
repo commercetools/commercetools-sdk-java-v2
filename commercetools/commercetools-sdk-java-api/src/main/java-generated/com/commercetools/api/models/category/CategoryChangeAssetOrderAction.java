@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -66,13 +67,28 @@ public interface CategoryChangeAssetOrderAction extends CategoryUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of CategoryChangeAssetOrderAction
+     * factory method to create a shallow copy CategoryChangeAssetOrderAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static CategoryChangeAssetOrderAction of(final CategoryChangeAssetOrderAction template) {
         CategoryChangeAssetOrderActionImpl instance = new CategoryChangeAssetOrderActionImpl();
         instance.setAssetOrder(template.getAssetOrder());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CategoryChangeAssetOrderAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CategoryChangeAssetOrderAction deepCopy(@Nullable final CategoryChangeAssetOrderAction template) {
+        if (template == null) {
+            return null;
+        }
+        CategoryChangeAssetOrderActionImpl instance = new CategoryChangeAssetOrderActionImpl();
+        instance.setAssetOrder(Optional.ofNullable(template.getAssetOrder()).map(ArrayList::new).orElse(null));
         return instance;
     }
 

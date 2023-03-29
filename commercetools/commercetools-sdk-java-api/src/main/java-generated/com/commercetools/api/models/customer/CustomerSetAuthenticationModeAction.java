@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -73,11 +74,28 @@ public interface CustomerSetAuthenticationModeAction extends CustomerUpdateActio
     }
 
     /**
-     * factory method to copy an instance of CustomerSetAuthenticationModeAction
+     * factory method to create a shallow copy CustomerSetAuthenticationModeAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static CustomerSetAuthenticationModeAction of(final CustomerSetAuthenticationModeAction template) {
+        CustomerSetAuthenticationModeActionImpl instance = new CustomerSetAuthenticationModeActionImpl();
+        instance.setAuthMode(template.getAuthMode());
+        instance.setPassword(template.getPassword());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomerSetAuthenticationModeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomerSetAuthenticationModeAction deepCopy(
+            @Nullable final CustomerSetAuthenticationModeAction template) {
+        if (template == null) {
+            return null;
+        }
         CustomerSetAuthenticationModeActionImpl instance = new CustomerSetAuthenticationModeActionImpl();
         instance.setAuthMode(template.getAuthMode());
         instance.setPassword(template.getPassword());

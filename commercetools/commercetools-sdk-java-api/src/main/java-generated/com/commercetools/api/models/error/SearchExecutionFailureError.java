@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -66,14 +67,30 @@ public interface SearchExecutionFailureError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of SearchExecutionFailureError
+     * factory method to create a shallow copy SearchExecutionFailureError
      * @param template instance to be copied
      * @return copy instance
      */
     public static SearchExecutionFailureError of(final SearchExecutionFailureError template) {
         SearchExecutionFailureErrorImpl instance = new SearchExecutionFailureErrorImpl();
         instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        return instance;
+    }
 
+    /**
+     * factory method to create a deep copy of SearchExecutionFailureError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SearchExecutionFailureError deepCopy(@Nullable final SearchExecutionFailureError template) {
+        if (template == null) {
+            return null;
+        }
+        SearchExecutionFailureErrorImpl instance = new SearchExecutionFailureErrorImpl();
+        instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
 

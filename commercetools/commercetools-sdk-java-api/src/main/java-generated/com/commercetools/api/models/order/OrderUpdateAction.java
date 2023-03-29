@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -94,6 +95,248 @@ public interface OrderUpdateAction extends com.commercetools.api.models.Resource
     @NotNull
     @JsonProperty("action")
     public String getAction();
+
+    /**
+     * factory method to create a deep copy of OrderUpdateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderUpdateAction deepCopy(@Nullable final OrderUpdateAction template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderAddDeliveryAction) {
+            return com.commercetools.api.models.order.OrderAddDeliveryAction
+                    .deepCopy((com.commercetools.api.models.order.OrderAddDeliveryAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderAddItemShippingAddressAction) {
+            return com.commercetools.api.models.order.OrderAddItemShippingAddressAction
+                    .deepCopy((com.commercetools.api.models.order.OrderAddItemShippingAddressAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderAddParcelToDeliveryAction) {
+            return com.commercetools.api.models.order.OrderAddParcelToDeliveryAction
+                    .deepCopy((com.commercetools.api.models.order.OrderAddParcelToDeliveryAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderAddPaymentAction) {
+            return com.commercetools.api.models.order.OrderAddPaymentAction
+                    .deepCopy((com.commercetools.api.models.order.OrderAddPaymentAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderAddReturnInfoAction) {
+            return com.commercetools.api.models.order.OrderAddReturnInfoAction
+                    .deepCopy((com.commercetools.api.models.order.OrderAddReturnInfoAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderChangeOrderStateAction) {
+            return com.commercetools.api.models.order.OrderChangeOrderStateAction
+                    .deepCopy((com.commercetools.api.models.order.OrderChangeOrderStateAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderChangePaymentStateAction) {
+            return com.commercetools.api.models.order.OrderChangePaymentStateAction
+                    .deepCopy((com.commercetools.api.models.order.OrderChangePaymentStateAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderChangeShipmentStateAction) {
+            return com.commercetools.api.models.order.OrderChangeShipmentStateAction
+                    .deepCopy((com.commercetools.api.models.order.OrderChangeShipmentStateAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderImportCustomLineItemStateAction) {
+            return com.commercetools.api.models.order.OrderImportCustomLineItemStateAction
+                    .deepCopy((com.commercetools.api.models.order.OrderImportCustomLineItemStateAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderImportLineItemStateAction) {
+            return com.commercetools.api.models.order.OrderImportLineItemStateAction
+                    .deepCopy((com.commercetools.api.models.order.OrderImportLineItemStateAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderRemoveDeliveryAction) {
+            return com.commercetools.api.models.order.OrderRemoveDeliveryAction
+                    .deepCopy((com.commercetools.api.models.order.OrderRemoveDeliveryAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderRemoveItemShippingAddressAction) {
+            return com.commercetools.api.models.order.OrderRemoveItemShippingAddressAction
+                    .deepCopy((com.commercetools.api.models.order.OrderRemoveItemShippingAddressAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderRemoveParcelFromDeliveryAction) {
+            return com.commercetools.api.models.order.OrderRemoveParcelFromDeliveryAction
+                    .deepCopy((com.commercetools.api.models.order.OrderRemoveParcelFromDeliveryAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderRemovePaymentAction) {
+            return com.commercetools.api.models.order.OrderRemovePaymentAction
+                    .deepCopy((com.commercetools.api.models.order.OrderRemovePaymentAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderSetBillingAddressAction) {
+            return com.commercetools.api.models.order.OrderSetBillingAddressAction
+                    .deepCopy((com.commercetools.api.models.order.OrderSetBillingAddressAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderSetBillingAddressCustomFieldAction) {
+            return com.commercetools.api.models.order.OrderSetBillingAddressCustomFieldAction
+                    .deepCopy((com.commercetools.api.models.order.OrderSetBillingAddressCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderSetBillingAddressCustomTypeAction) {
+            return com.commercetools.api.models.order.OrderSetBillingAddressCustomTypeAction
+                    .deepCopy((com.commercetools.api.models.order.OrderSetBillingAddressCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderSetCustomFieldAction) {
+            return com.commercetools.api.models.order.OrderSetCustomFieldAction
+                    .deepCopy((com.commercetools.api.models.order.OrderSetCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderSetCustomLineItemCustomFieldAction) {
+            return com.commercetools.api.models.order.OrderSetCustomLineItemCustomFieldAction
+                    .deepCopy((com.commercetools.api.models.order.OrderSetCustomLineItemCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderSetCustomLineItemCustomTypeAction) {
+            return com.commercetools.api.models.order.OrderSetCustomLineItemCustomTypeAction
+                    .deepCopy((com.commercetools.api.models.order.OrderSetCustomLineItemCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderSetCustomLineItemShippingDetailsAction) {
+            return com.commercetools.api.models.order.OrderSetCustomLineItemShippingDetailsAction.deepCopy(
+                (com.commercetools.api.models.order.OrderSetCustomLineItemShippingDetailsAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderSetCustomTypeAction) {
+            return com.commercetools.api.models.order.OrderSetCustomTypeAction
+                    .deepCopy((com.commercetools.api.models.order.OrderSetCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderSetCustomerEmailAction) {
+            return com.commercetools.api.models.order.OrderSetCustomerEmailAction
+                    .deepCopy((com.commercetools.api.models.order.OrderSetCustomerEmailAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderSetCustomerIdAction) {
+            return com.commercetools.api.models.order.OrderSetCustomerIdAction
+                    .deepCopy((com.commercetools.api.models.order.OrderSetCustomerIdAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderSetDeliveryAddressAction) {
+            return com.commercetools.api.models.order.OrderSetDeliveryAddressAction
+                    .deepCopy((com.commercetools.api.models.order.OrderSetDeliveryAddressAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderSetDeliveryAddressCustomFieldAction) {
+            return com.commercetools.api.models.order.OrderSetDeliveryAddressCustomFieldAction
+                    .deepCopy((com.commercetools.api.models.order.OrderSetDeliveryAddressCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderSetDeliveryAddressCustomTypeAction) {
+            return com.commercetools.api.models.order.OrderSetDeliveryAddressCustomTypeAction
+                    .deepCopy((com.commercetools.api.models.order.OrderSetDeliveryAddressCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderSetDeliveryCustomFieldAction) {
+            return com.commercetools.api.models.order.OrderSetDeliveryCustomFieldAction
+                    .deepCopy((com.commercetools.api.models.order.OrderSetDeliveryCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderSetDeliveryCustomTypeAction) {
+            return com.commercetools.api.models.order.OrderSetDeliveryCustomTypeAction
+                    .deepCopy((com.commercetools.api.models.order.OrderSetDeliveryCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderSetDeliveryItemsAction) {
+            return com.commercetools.api.models.order.OrderSetDeliveryItemsAction
+                    .deepCopy((com.commercetools.api.models.order.OrderSetDeliveryItemsAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderSetItemShippingAddressCustomFieldAction) {
+            return com.commercetools.api.models.order.OrderSetItemShippingAddressCustomFieldAction.deepCopy(
+                (com.commercetools.api.models.order.OrderSetItemShippingAddressCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderSetItemShippingAddressCustomTypeAction) {
+            return com.commercetools.api.models.order.OrderSetItemShippingAddressCustomTypeAction.deepCopy(
+                (com.commercetools.api.models.order.OrderSetItemShippingAddressCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderSetLineItemCustomFieldAction) {
+            return com.commercetools.api.models.order.OrderSetLineItemCustomFieldAction
+                    .deepCopy((com.commercetools.api.models.order.OrderSetLineItemCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderSetLineItemCustomTypeAction) {
+            return com.commercetools.api.models.order.OrderSetLineItemCustomTypeAction
+                    .deepCopy((com.commercetools.api.models.order.OrderSetLineItemCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderSetLineItemShippingDetailsAction) {
+            return com.commercetools.api.models.order.OrderSetLineItemShippingDetailsAction
+                    .deepCopy((com.commercetools.api.models.order.OrderSetLineItemShippingDetailsAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderSetLocaleAction) {
+            return com.commercetools.api.models.order.OrderSetLocaleAction
+                    .deepCopy((com.commercetools.api.models.order.OrderSetLocaleAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderSetOrderNumberAction) {
+            return com.commercetools.api.models.order.OrderSetOrderNumberAction
+                    .deepCopy((com.commercetools.api.models.order.OrderSetOrderNumberAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderSetParcelCustomFieldAction) {
+            return com.commercetools.api.models.order.OrderSetParcelCustomFieldAction
+                    .deepCopy((com.commercetools.api.models.order.OrderSetParcelCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderSetParcelCustomTypeAction) {
+            return com.commercetools.api.models.order.OrderSetParcelCustomTypeAction
+                    .deepCopy((com.commercetools.api.models.order.OrderSetParcelCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderSetParcelItemsAction) {
+            return com.commercetools.api.models.order.OrderSetParcelItemsAction
+                    .deepCopy((com.commercetools.api.models.order.OrderSetParcelItemsAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderSetParcelMeasurementsAction) {
+            return com.commercetools.api.models.order.OrderSetParcelMeasurementsAction
+                    .deepCopy((com.commercetools.api.models.order.OrderSetParcelMeasurementsAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderSetParcelTrackingDataAction) {
+            return com.commercetools.api.models.order.OrderSetParcelTrackingDataAction
+                    .deepCopy((com.commercetools.api.models.order.OrderSetParcelTrackingDataAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderSetPurchaseOrderNumberAction) {
+            return com.commercetools.api.models.order.OrderSetPurchaseOrderNumberAction
+                    .deepCopy((com.commercetools.api.models.order.OrderSetPurchaseOrderNumberAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderSetReturnInfoAction) {
+            return com.commercetools.api.models.order.OrderSetReturnInfoAction
+                    .deepCopy((com.commercetools.api.models.order.OrderSetReturnInfoAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderSetReturnItemCustomFieldAction) {
+            return com.commercetools.api.models.order.OrderSetReturnItemCustomFieldAction
+                    .deepCopy((com.commercetools.api.models.order.OrderSetReturnItemCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderSetReturnItemCustomTypeAction) {
+            return com.commercetools.api.models.order.OrderSetReturnItemCustomTypeAction
+                    .deepCopy((com.commercetools.api.models.order.OrderSetReturnItemCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderSetReturnPaymentStateAction) {
+            return com.commercetools.api.models.order.OrderSetReturnPaymentStateAction
+                    .deepCopy((com.commercetools.api.models.order.OrderSetReturnPaymentStateAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderSetReturnShipmentStateAction) {
+            return com.commercetools.api.models.order.OrderSetReturnShipmentStateAction
+                    .deepCopy((com.commercetools.api.models.order.OrderSetReturnShipmentStateAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderSetShippingAddressAction) {
+            return com.commercetools.api.models.order.OrderSetShippingAddressAction
+                    .deepCopy((com.commercetools.api.models.order.OrderSetShippingAddressAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderSetShippingAddressCustomFieldAction) {
+            return com.commercetools.api.models.order.OrderSetShippingAddressCustomFieldAction
+                    .deepCopy((com.commercetools.api.models.order.OrderSetShippingAddressCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderSetShippingAddressCustomTypeAction) {
+            return com.commercetools.api.models.order.OrderSetShippingAddressCustomTypeAction
+                    .deepCopy((com.commercetools.api.models.order.OrderSetShippingAddressCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderSetStoreAction) {
+            return com.commercetools.api.models.order.OrderSetStoreAction
+                    .deepCopy((com.commercetools.api.models.order.OrderSetStoreAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderTransitionCustomLineItemStateAction) {
+            return com.commercetools.api.models.order.OrderTransitionCustomLineItemStateAction
+                    .deepCopy((com.commercetools.api.models.order.OrderTransitionCustomLineItemStateAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderTransitionLineItemStateAction) {
+            return com.commercetools.api.models.order.OrderTransitionLineItemStateAction
+                    .deepCopy((com.commercetools.api.models.order.OrderTransitionLineItemStateAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderTransitionStateAction) {
+            return com.commercetools.api.models.order.OrderTransitionStateAction
+                    .deepCopy((com.commercetools.api.models.order.OrderTransitionStateAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderUpdateItemShippingAddressAction) {
+            return com.commercetools.api.models.order.OrderUpdateItemShippingAddressAction
+                    .deepCopy((com.commercetools.api.models.order.OrderUpdateItemShippingAddressAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderUpdateSyncInfoAction) {
+            return com.commercetools.api.models.order.OrderUpdateSyncInfoAction
+                    .deepCopy((com.commercetools.api.models.order.OrderUpdateSyncInfoAction) template);
+        }
+        OrderUpdateActionImpl instance = new OrderUpdateActionImpl();
+        return instance;
+    }
 
     /**
      * builder for addDelivery subtype

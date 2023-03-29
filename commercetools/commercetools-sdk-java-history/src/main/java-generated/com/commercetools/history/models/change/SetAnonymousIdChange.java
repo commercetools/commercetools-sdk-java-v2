@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -98,11 +99,28 @@ public interface SetAnonymousIdChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetAnonymousIdChange
+     * factory method to create a shallow copy SetAnonymousIdChange
      * @param template instance to be copied
      * @return copy instance
      */
     public static SetAnonymousIdChange of(final SetAnonymousIdChange template) {
+        SetAnonymousIdChangeImpl instance = new SetAnonymousIdChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setPreviousValue(template.getPreviousValue());
+        instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetAnonymousIdChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetAnonymousIdChange deepCopy(@Nullable final SetAnonymousIdChange template) {
+        if (template == null) {
+            return null;
+        }
         SetAnonymousIdChangeImpl instance = new SetAnonymousIdChangeImpl();
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());

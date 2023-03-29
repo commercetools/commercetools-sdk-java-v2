@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -75,6 +76,109 @@ public interface Attribute {
      */
 
     public void setName(final String name);
+
+    /**
+     * factory method to create a deep copy of Attribute
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static Attribute deepCopy(@Nullable final Attribute template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.importapi.models.productvariants.BooleanAttribute) {
+            return com.commercetools.importapi.models.productvariants.BooleanAttribute
+                    .deepCopy((com.commercetools.importapi.models.productvariants.BooleanAttribute) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.productvariants.BooleanSetAttribute) {
+            return com.commercetools.importapi.models.productvariants.BooleanSetAttribute
+                    .deepCopy((com.commercetools.importapi.models.productvariants.BooleanSetAttribute) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.productvariants.DateAttribute) {
+            return com.commercetools.importapi.models.productvariants.DateAttribute
+                    .deepCopy((com.commercetools.importapi.models.productvariants.DateAttribute) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.productvariants.DateSetAttribute) {
+            return com.commercetools.importapi.models.productvariants.DateSetAttribute
+                    .deepCopy((com.commercetools.importapi.models.productvariants.DateSetAttribute) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.productvariants.DateTimeAttribute) {
+            return com.commercetools.importapi.models.productvariants.DateTimeAttribute
+                    .deepCopy((com.commercetools.importapi.models.productvariants.DateTimeAttribute) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.productvariants.DateTimeSetAttribute) {
+            return com.commercetools.importapi.models.productvariants.DateTimeSetAttribute
+                    .deepCopy((com.commercetools.importapi.models.productvariants.DateTimeSetAttribute) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.productvariants.EnumAttribute) {
+            return com.commercetools.importapi.models.productvariants.EnumAttribute
+                    .deepCopy((com.commercetools.importapi.models.productvariants.EnumAttribute) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.productvariants.EnumSetAttribute) {
+            return com.commercetools.importapi.models.productvariants.EnumSetAttribute
+                    .deepCopy((com.commercetools.importapi.models.productvariants.EnumSetAttribute) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.productvariants.LocalizableEnumAttribute) {
+            return com.commercetools.importapi.models.productvariants.LocalizableEnumAttribute
+                    .deepCopy((com.commercetools.importapi.models.productvariants.LocalizableEnumAttribute) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.productvariants.LocalizableEnumSetAttribute) {
+            return com.commercetools.importapi.models.productvariants.LocalizableEnumSetAttribute.deepCopy(
+                (com.commercetools.importapi.models.productvariants.LocalizableEnumSetAttribute) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.productvariants.LocalizableTextAttribute) {
+            return com.commercetools.importapi.models.productvariants.LocalizableTextAttribute
+                    .deepCopy((com.commercetools.importapi.models.productvariants.LocalizableTextAttribute) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.productvariants.LocalizableTextSetAttribute) {
+            return com.commercetools.importapi.models.productvariants.LocalizableTextSetAttribute.deepCopy(
+                (com.commercetools.importapi.models.productvariants.LocalizableTextSetAttribute) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.productvariants.MoneyAttribute) {
+            return com.commercetools.importapi.models.productvariants.MoneyAttribute
+                    .deepCopy((com.commercetools.importapi.models.productvariants.MoneyAttribute) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.productvariants.MoneySetAttribute) {
+            return com.commercetools.importapi.models.productvariants.MoneySetAttribute
+                    .deepCopy((com.commercetools.importapi.models.productvariants.MoneySetAttribute) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.productvariants.NumberAttribute) {
+            return com.commercetools.importapi.models.productvariants.NumberAttribute
+                    .deepCopy((com.commercetools.importapi.models.productvariants.NumberAttribute) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.productvariants.NumberSetAttribute) {
+            return com.commercetools.importapi.models.productvariants.NumberSetAttribute
+                    .deepCopy((com.commercetools.importapi.models.productvariants.NumberSetAttribute) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.productvariants.ReferenceAttribute) {
+            return com.commercetools.importapi.models.productvariants.ReferenceAttribute
+                    .deepCopy((com.commercetools.importapi.models.productvariants.ReferenceAttribute) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.productvariants.ReferenceSetAttribute) {
+            return com.commercetools.importapi.models.productvariants.ReferenceSetAttribute
+                    .deepCopy((com.commercetools.importapi.models.productvariants.ReferenceSetAttribute) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.productvariants.TextAttribute) {
+            return com.commercetools.importapi.models.productvariants.TextAttribute
+                    .deepCopy((com.commercetools.importapi.models.productvariants.TextAttribute) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.productvariants.TextSetAttribute) {
+            return com.commercetools.importapi.models.productvariants.TextSetAttribute
+                    .deepCopy((com.commercetools.importapi.models.productvariants.TextSetAttribute) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.productvariants.TimeAttribute) {
+            return com.commercetools.importapi.models.productvariants.TimeAttribute
+                    .deepCopy((com.commercetools.importapi.models.productvariants.TimeAttribute) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.productvariants.TimeSetAttribute) {
+            return com.commercetools.importapi.models.productvariants.TimeSetAttribute
+                    .deepCopy((com.commercetools.importapi.models.productvariants.TimeSetAttribute) template);
+        }
+        AttributeImpl instance = new AttributeImpl();
+        instance.setName(template.getName());
+        return instance;
+    }
 
     /**
      * builder for boolean subtype

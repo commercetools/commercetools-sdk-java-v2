@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -42,6 +43,32 @@ public interface ShippingRatePriceTier {
     @NotNull
     @JsonProperty("type")
     public ShippingRateTierType getType();
+
+    /**
+     * factory method to create a deep copy of ShippingRatePriceTier
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ShippingRatePriceTier deepCopy(@Nullable final ShippingRatePriceTier template) {
+        if (template == null) {
+            return null;
+        }
+        if (template instanceof com.commercetools.api.models.shipping_method.CartScoreTier) {
+            return com.commercetools.api.models.shipping_method.CartScoreTier
+                    .deepCopy((com.commercetools.api.models.shipping_method.CartScoreTier) template);
+        }
+        if (template instanceof com.commercetools.api.models.shipping_method.CartClassificationTier) {
+            return com.commercetools.api.models.shipping_method.CartClassificationTier
+                    .deepCopy((com.commercetools.api.models.shipping_method.CartClassificationTier) template);
+        }
+        if (template instanceof com.commercetools.api.models.shipping_method.CartValueTier) {
+            return com.commercetools.api.models.shipping_method.CartValueTier
+                    .deepCopy((com.commercetools.api.models.shipping_method.CartValueTier) template);
+        }
+        ShippingRatePriceTierImpl instance = new ShippingRatePriceTierImpl();
+        return instance;
+    }
 
     /**
      * builder for cartClassification subtype

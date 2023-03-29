@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -91,7 +92,7 @@ public interface BusinessUnitSetAddressCustomTypeAction extends BusinessUnitUpda
     }
 
     /**
-     * factory method to copy an instance of BusinessUnitSetAddressCustomTypeAction
+     * factory method to create a shallow copy BusinessUnitSetAddressCustomTypeAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -99,6 +100,24 @@ public interface BusinessUnitSetAddressCustomTypeAction extends BusinessUnitUpda
         BusinessUnitSetAddressCustomTypeActionImpl instance = new BusinessUnitSetAddressCustomTypeActionImpl();
         instance.setType(template.getType());
         instance.setFields(template.getFields());
+        instance.setAddressId(template.getAddressId());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of BusinessUnitSetAddressCustomTypeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static BusinessUnitSetAddressCustomTypeAction deepCopy(
+            @Nullable final BusinessUnitSetAddressCustomTypeAction template) {
+        if (template == null) {
+            return null;
+        }
+        BusinessUnitSetAddressCustomTypeActionImpl instance = new BusinessUnitSetAddressCustomTypeActionImpl();
+        instance.setType(com.commercetools.api.models.type.TypeResourceIdentifier.deepCopy(template.getType()));
+        instance.setFields(com.commercetools.api.models.type.FieldContainer.deepCopy(template.getFields()));
         instance.setAddressId(template.getAddressId());
         return instance;
     }

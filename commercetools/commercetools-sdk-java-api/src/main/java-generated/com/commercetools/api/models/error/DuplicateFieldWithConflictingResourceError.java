@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -116,7 +117,7 @@ public interface DuplicateFieldWithConflictingResourceError extends ErrorObject 
     }
 
     /**
-     * factory method to copy an instance of DuplicateFieldWithConflictingResourceError
+     * factory method to create a shallow copy DuplicateFieldWithConflictingResourceError
      * @param template instance to be copied
      * @return copy instance
      */
@@ -124,10 +125,31 @@ public interface DuplicateFieldWithConflictingResourceError extends ErrorObject 
             final DuplicateFieldWithConflictingResourceError template) {
         DuplicateFieldWithConflictingResourceErrorImpl instance = new DuplicateFieldWithConflictingResourceErrorImpl();
         instance.setMessage(template.getMessage());
-
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         instance.setField(template.getField());
         instance.setDuplicateValue(template.getDuplicateValue());
         instance.setConflictingResource(template.getConflictingResource());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of DuplicateFieldWithConflictingResourceError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static DuplicateFieldWithConflictingResourceError deepCopy(
+            @Nullable final DuplicateFieldWithConflictingResourceError template) {
+        if (template == null) {
+            return null;
+        }
+        DuplicateFieldWithConflictingResourceErrorImpl instance = new DuplicateFieldWithConflictingResourceErrorImpl();
+        instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        instance.setField(template.getField());
+        instance.setDuplicateValue(template.getDuplicateValue());
+        instance.setConflictingResource(
+            com.commercetools.api.models.common.Reference.deepCopy(template.getConflictingResource()));
         return instance;
     }
 

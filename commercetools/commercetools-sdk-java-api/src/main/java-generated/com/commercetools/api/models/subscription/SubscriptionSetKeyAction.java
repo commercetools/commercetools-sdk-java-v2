@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -55,11 +57,26 @@ public interface SubscriptionSetKeyAction extends SubscriptionUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of SubscriptionSetKeyAction
+     * factory method to create a shallow copy SubscriptionSetKeyAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static SubscriptionSetKeyAction of(final SubscriptionSetKeyAction template) {
+        SubscriptionSetKeyActionImpl instance = new SubscriptionSetKeyActionImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SubscriptionSetKeyAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SubscriptionSetKeyAction deepCopy(@Nullable final SubscriptionSetKeyAction template) {
+        if (template == null) {
+            return null;
+        }
         SubscriptionSetKeyActionImpl instance = new SubscriptionSetKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -61,13 +62,29 @@ public interface ChannelChangeDescriptionAction extends ChannelUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ChannelChangeDescriptionAction
+     * factory method to create a shallow copy ChannelChangeDescriptionAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ChannelChangeDescriptionAction of(final ChannelChangeDescriptionAction template) {
         ChannelChangeDescriptionActionImpl instance = new ChannelChangeDescriptionActionImpl();
         instance.setDescription(template.getDescription());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChannelChangeDescriptionAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChannelChangeDescriptionAction deepCopy(@Nullable final ChannelChangeDescriptionAction template) {
+        if (template == null) {
+            return null;
+        }
+        ChannelChangeDescriptionActionImpl instance = new ChannelChangeDescriptionActionImpl();
+        instance.setDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
         return instance;
     }
 

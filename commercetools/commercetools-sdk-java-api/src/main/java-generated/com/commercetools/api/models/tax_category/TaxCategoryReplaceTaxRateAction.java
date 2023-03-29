@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -76,7 +77,7 @@ public interface TaxCategoryReplaceTaxRateAction extends TaxCategoryUpdateAction
     }
 
     /**
-     * factory method to copy an instance of TaxCategoryReplaceTaxRateAction
+     * factory method to create a shallow copy TaxCategoryReplaceTaxRateAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -84,6 +85,22 @@ public interface TaxCategoryReplaceTaxRateAction extends TaxCategoryUpdateAction
         TaxCategoryReplaceTaxRateActionImpl instance = new TaxCategoryReplaceTaxRateActionImpl();
         instance.setTaxRateId(template.getTaxRateId());
         instance.setTaxRate(template.getTaxRate());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of TaxCategoryReplaceTaxRateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static TaxCategoryReplaceTaxRateAction deepCopy(@Nullable final TaxCategoryReplaceTaxRateAction template) {
+        if (template == null) {
+            return null;
+        }
+        TaxCategoryReplaceTaxRateActionImpl instance = new TaxCategoryReplaceTaxRateActionImpl();
+        instance.setTaxRateId(template.getTaxRateId());
+        instance.setTaxRate(com.commercetools.api.models.tax_category.TaxRateDraft.deepCopy(template.getTaxRate()));
         return instance;
     }
 

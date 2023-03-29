@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -91,7 +92,7 @@ public interface OrderSetReturnItemCustomTypeAction extends OrderUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of OrderSetReturnItemCustomTypeAction
+     * factory method to create a shallow copy OrderSetReturnItemCustomTypeAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -100,6 +101,24 @@ public interface OrderSetReturnItemCustomTypeAction extends OrderUpdateAction {
         instance.setReturnItemId(template.getReturnItemId());
         instance.setType(template.getType());
         instance.setFields(template.getFields());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderSetReturnItemCustomTypeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderSetReturnItemCustomTypeAction deepCopy(
+            @Nullable final OrderSetReturnItemCustomTypeAction template) {
+        if (template == null) {
+            return null;
+        }
+        OrderSetReturnItemCustomTypeActionImpl instance = new OrderSetReturnItemCustomTypeActionImpl();
+        instance.setReturnItemId(template.getReturnItemId());
+        instance.setType(com.commercetools.api.models.type.TypeResourceIdentifier.deepCopy(template.getType()));
+        instance.setFields(com.commercetools.api.models.type.FieldContainer.deepCopy(template.getFields()));
         return instance;
     }
 

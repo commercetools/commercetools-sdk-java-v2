@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -58,11 +59,27 @@ public interface StandalonePriceChangeActiveAction extends StandalonePriceUpdate
     }
 
     /**
-     * factory method to copy an instance of StandalonePriceChangeActiveAction
+     * factory method to create a shallow copy StandalonePriceChangeActiveAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static StandalonePriceChangeActiveAction of(final StandalonePriceChangeActiveAction template) {
+        StandalonePriceChangeActiveActionImpl instance = new StandalonePriceChangeActiveActionImpl();
+        instance.setActive(template.getActive());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StandalonePriceChangeActiveAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StandalonePriceChangeActiveAction deepCopy(
+            @Nullable final StandalonePriceChangeActiveAction template) {
+        if (template == null) {
+            return null;
+        }
         StandalonePriceChangeActiveActionImpl instance = new StandalonePriceChangeActiveActionImpl();
         instance.setActive(template.getActive());
         return instance;

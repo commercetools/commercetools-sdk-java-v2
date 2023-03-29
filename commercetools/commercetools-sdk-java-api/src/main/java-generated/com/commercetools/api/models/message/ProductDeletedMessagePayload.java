@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -83,7 +84,7 @@ public interface ProductDeletedMessagePayload extends MessagePayload {
     }
 
     /**
-     * factory method to copy an instance of ProductDeletedMessagePayload
+     * factory method to create a shallow copy ProductDeletedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -91,6 +92,24 @@ public interface ProductDeletedMessagePayload extends MessagePayload {
         ProductDeletedMessagePayloadImpl instance = new ProductDeletedMessagePayloadImpl();
         instance.setRemovedImageUrls(template.getRemovedImageUrls());
         instance.setCurrentProjection(template.getCurrentProjection());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductDeletedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductDeletedMessagePayload deepCopy(@Nullable final ProductDeletedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        ProductDeletedMessagePayloadImpl instance = new ProductDeletedMessagePayloadImpl();
+        instance.setRemovedImageUrls(
+            Optional.ofNullable(template.getRemovedImageUrls()).map(ArrayList::new).orElse(null));
+        instance.setCurrentProjection(
+            com.commercetools.api.models.product.ProductProjection.deepCopy(template.getCurrentProjection()));
         return instance;
     }
 

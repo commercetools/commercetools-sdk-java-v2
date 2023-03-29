@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -77,13 +78,29 @@ public interface PaymentTransitionStateAction extends PaymentUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of PaymentTransitionStateAction
+     * factory method to create a shallow copy PaymentTransitionStateAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static PaymentTransitionStateAction of(final PaymentTransitionStateAction template) {
         PaymentTransitionStateActionImpl instance = new PaymentTransitionStateActionImpl();
         instance.setState(template.getState());
+        instance.setForce(template.getForce());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of PaymentTransitionStateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static PaymentTransitionStateAction deepCopy(@Nullable final PaymentTransitionStateAction template) {
+        if (template == null) {
+            return null;
+        }
+        PaymentTransitionStateActionImpl instance = new PaymentTransitionStateActionImpl();
+        instance.setState(com.commercetools.api.models.state.StateResourceIdentifier.deepCopy(template.getState()));
         instance.setForce(template.getForce());
         return instance;
     }

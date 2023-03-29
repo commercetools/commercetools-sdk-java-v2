@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -55,11 +57,27 @@ public interface PaymentSetStatusInterfaceCodeAction extends PaymentUpdateAction
     }
 
     /**
-     * factory method to copy an instance of PaymentSetStatusInterfaceCodeAction
+     * factory method to create a shallow copy PaymentSetStatusInterfaceCodeAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static PaymentSetStatusInterfaceCodeAction of(final PaymentSetStatusInterfaceCodeAction template) {
+        PaymentSetStatusInterfaceCodeActionImpl instance = new PaymentSetStatusInterfaceCodeActionImpl();
+        instance.setInterfaceCode(template.getInterfaceCode());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of PaymentSetStatusInterfaceCodeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static PaymentSetStatusInterfaceCodeAction deepCopy(
+            @Nullable final PaymentSetStatusInterfaceCodeAction template) {
+        if (template == null) {
+            return null;
+        }
         PaymentSetStatusInterfaceCodeActionImpl instance = new PaymentSetStatusInterfaceCodeActionImpl();
         instance.setInterfaceCode(template.getInterfaceCode());
         return instance;

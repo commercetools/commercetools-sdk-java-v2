@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -60,13 +61,28 @@ public interface ZoneAddLocationAction extends ZoneUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ZoneAddLocationAction
+     * factory method to create a shallow copy ZoneAddLocationAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static ZoneAddLocationAction of(final ZoneAddLocationAction template) {
         ZoneAddLocationActionImpl instance = new ZoneAddLocationActionImpl();
         instance.setLocation(template.getLocation());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ZoneAddLocationAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ZoneAddLocationAction deepCopy(@Nullable final ZoneAddLocationAction template) {
+        if (template == null) {
+            return null;
+        }
+        ZoneAddLocationActionImpl instance = new ZoneAddLocationActionImpl();
+        instance.setLocation(com.commercetools.api.models.zone.Location.deepCopy(template.getLocation()));
         return instance;
     }
 

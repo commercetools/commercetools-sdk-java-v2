@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
@@ -59,12 +60,28 @@ public interface StagedOrderRemoveParcelFromDeliveryAction extends StagedOrderUp
     }
 
     /**
-     * factory method to copy an instance of StagedOrderRemoveParcelFromDeliveryAction
+     * factory method to create a shallow copy StagedOrderRemoveParcelFromDeliveryAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static StagedOrderRemoveParcelFromDeliveryAction of(
             final StagedOrderRemoveParcelFromDeliveryAction template) {
+        StagedOrderRemoveParcelFromDeliveryActionImpl instance = new StagedOrderRemoveParcelFromDeliveryActionImpl();
+        instance.setParcelId(template.getParcelId());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedOrderRemoveParcelFromDeliveryAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedOrderRemoveParcelFromDeliveryAction deepCopy(
+            @Nullable final StagedOrderRemoveParcelFromDeliveryAction template) {
+        if (template == null) {
+            return null;
+        }
         StagedOrderRemoveParcelFromDeliveryActionImpl instance = new StagedOrderRemoveParcelFromDeliveryActionImpl();
         instance.setParcelId(template.getParcelId());
         return instance;

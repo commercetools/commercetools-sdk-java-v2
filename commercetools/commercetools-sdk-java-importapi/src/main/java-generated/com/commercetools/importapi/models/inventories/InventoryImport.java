@@ -6,6 +6,7 @@ import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -135,7 +136,7 @@ public interface InventoryImport extends ImportResource {
     }
 
     /**
-     * factory method to copy an instance of InventoryImport
+     * factory method to create a shallow copy InventoryImport
      * @param template instance to be copied
      * @return copy instance
      */
@@ -148,6 +149,28 @@ public interface InventoryImport extends ImportResource {
         instance.setExpectedDelivery(template.getExpectedDelivery());
         instance.setSupplyChannel(template.getSupplyChannel());
         instance.setCustom(template.getCustom());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of InventoryImport
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static InventoryImport deepCopy(@Nullable final InventoryImport template) {
+        if (template == null) {
+            return null;
+        }
+        InventoryImportImpl instance = new InventoryImportImpl();
+        instance.setKey(template.getKey());
+        instance.setSku(template.getSku());
+        instance.setQuantityOnStock(template.getQuantityOnStock());
+        instance.setRestockableInDays(template.getRestockableInDays());
+        instance.setExpectedDelivery(template.getExpectedDelivery());
+        instance.setSupplyChannel(
+            com.commercetools.importapi.models.common.ChannelKeyReference.deepCopy(template.getSupplyChannel()));
+        instance.setCustom(com.commercetools.importapi.models.customfields.Custom.deepCopy(template.getCustom()));
         return instance;
     }
 

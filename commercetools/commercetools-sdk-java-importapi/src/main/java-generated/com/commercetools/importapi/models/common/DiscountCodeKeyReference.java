@@ -5,6 +5,8 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -41,11 +43,26 @@ public interface DiscountCodeKeyReference extends KeyReference {
     }
 
     /**
-     * factory method to copy an instance of DiscountCodeKeyReference
+     * factory method to create a shallow copy DiscountCodeKeyReference
      * @param template instance to be copied
      * @return copy instance
      */
     public static DiscountCodeKeyReference of(final DiscountCodeKeyReference template) {
+        DiscountCodeKeyReferenceImpl instance = new DiscountCodeKeyReferenceImpl();
+        instance.setKey(template.getKey());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of DiscountCodeKeyReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static DiscountCodeKeyReference deepCopy(@Nullable final DiscountCodeKeyReference template) {
+        if (template == null) {
+            return null;
+        }
         DiscountCodeKeyReferenceImpl instance = new DiscountCodeKeyReferenceImpl();
         instance.setKey(template.getKey());
         return instance;

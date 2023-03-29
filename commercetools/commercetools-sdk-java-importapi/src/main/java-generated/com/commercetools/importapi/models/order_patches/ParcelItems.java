@@ -4,7 +4,9 @@ package com.commercetools.importapi.models.order_patches;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -78,7 +80,7 @@ public interface ParcelItems {
     }
 
     /**
-     * factory method to copy an instance of ParcelItems
+     * factory method to create a shallow copy ParcelItems
      * @param template instance to be copied
      * @return copy instance
      */
@@ -86,6 +88,26 @@ public interface ParcelItems {
         ParcelItemsImpl instance = new ParcelItemsImpl();
         instance.setParcelId(template.getParcelId());
         instance.setItems(template.getItems());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ParcelItems
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ParcelItems deepCopy(@Nullable final ParcelItems template) {
+        if (template == null) {
+            return null;
+        }
+        ParcelItemsImpl instance = new ParcelItemsImpl();
+        instance.setParcelId(template.getParcelId());
+        instance.setItems(Optional.ofNullable(template.getItems())
+                .map(t -> t.stream()
+                        .map(com.commercetools.importapi.models.orders.DeliveryItem::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

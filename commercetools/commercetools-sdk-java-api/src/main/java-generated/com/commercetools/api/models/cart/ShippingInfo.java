@@ -4,7 +4,9 @@ package com.commercetools.api.models.cart;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -210,7 +212,7 @@ public interface ShippingInfo {
     }
 
     /**
-     * factory method to copy an instance of ShippingInfo
+     * factory method to create a shallow copy ShippingInfo
      * @param template instance to be copied
      * @return copy instance
      */
@@ -225,6 +227,38 @@ public interface ShippingInfo {
         instance.setShippingMethod(template.getShippingMethod());
         instance.setDeliveries(template.getDeliveries());
         instance.setDiscountedPrice(template.getDiscountedPrice());
+        instance.setShippingMethodState(template.getShippingMethodState());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ShippingInfo
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ShippingInfo deepCopy(@Nullable final ShippingInfo template) {
+        if (template == null) {
+            return null;
+        }
+        ShippingInfoImpl instance = new ShippingInfoImpl();
+        instance.setShippingMethodName(template.getShippingMethodName());
+        instance.setPrice(com.commercetools.api.models.common.CentPrecisionMoney.deepCopy(template.getPrice()));
+        instance.setShippingRate(
+            com.commercetools.api.models.shipping_method.ShippingRate.deepCopy(template.getShippingRate()));
+        instance.setTaxedPrice(com.commercetools.api.models.cart.TaxedItemPrice.deepCopy(template.getTaxedPrice()));
+        instance.setTaxRate(com.commercetools.api.models.tax_category.TaxRate.deepCopy(template.getTaxRate()));
+        instance.setTaxCategory(
+            com.commercetools.api.models.tax_category.TaxCategoryReference.deepCopy(template.getTaxCategory()));
+        instance.setShippingMethod(com.commercetools.api.models.shipping_method.ShippingMethodReference
+                .deepCopy(template.getShippingMethod()));
+        instance.setDeliveries(Optional.ofNullable(template.getDeliveries())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.order.Delivery::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setDiscountedPrice(
+            com.commercetools.api.models.cart.DiscountedLineItemPrice.deepCopy(template.getDiscountedPrice()));
         instance.setShippingMethodState(template.getShippingMethodState());
         return instance;
     }

@@ -4,7 +4,9 @@ package com.commercetools.api.models.order;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -84,7 +86,7 @@ public interface OrderSetParcelItemsAction extends OrderUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of OrderSetParcelItemsAction
+     * factory method to create a shallow copy OrderSetParcelItemsAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -92,6 +94,26 @@ public interface OrderSetParcelItemsAction extends OrderUpdateAction {
         OrderSetParcelItemsActionImpl instance = new OrderSetParcelItemsActionImpl();
         instance.setParcelId(template.getParcelId());
         instance.setItems(template.getItems());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderSetParcelItemsAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderSetParcelItemsAction deepCopy(@Nullable final OrderSetParcelItemsAction template) {
+        if (template == null) {
+            return null;
+        }
+        OrderSetParcelItemsActionImpl instance = new OrderSetParcelItemsActionImpl();
+        instance.setParcelId(template.getParcelId());
+        instance.setItems(Optional.ofNullable(template.getItems())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.order.DeliveryItem::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

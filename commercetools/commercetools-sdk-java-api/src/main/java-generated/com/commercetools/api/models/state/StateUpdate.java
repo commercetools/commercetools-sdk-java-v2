@@ -4,7 +4,9 @@ package com.commercetools.api.models.state;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -80,7 +82,7 @@ public interface StateUpdate
     }
 
     /**
-     * factory method to copy an instance of StateUpdate
+     * factory method to create a shallow copy StateUpdate
      * @param template instance to be copied
      * @return copy instance
      */
@@ -88,6 +90,26 @@ public interface StateUpdate
         StateUpdateImpl instance = new StateUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(template.getActions());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StateUpdate
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StateUpdate deepCopy(@Nullable final StateUpdate template) {
+        if (template == null) {
+            return null;
+        }
+        StateUpdateImpl instance = new StateUpdateImpl();
+        instance.setVersion(template.getVersion());
+        instance.setActions(Optional.ofNullable(template.getActions())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.state.StateUpdateAction::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

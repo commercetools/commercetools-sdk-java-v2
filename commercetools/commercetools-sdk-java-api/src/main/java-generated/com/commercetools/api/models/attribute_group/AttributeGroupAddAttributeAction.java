@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -60,13 +61,29 @@ public interface AttributeGroupAddAttributeAction extends AttributeGroupUpdateAc
     }
 
     /**
-     * factory method to copy an instance of AttributeGroupAddAttributeAction
+     * factory method to create a shallow copy AttributeGroupAddAttributeAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static AttributeGroupAddAttributeAction of(final AttributeGroupAddAttributeAction template) {
         AttributeGroupAddAttributeActionImpl instance = new AttributeGroupAddAttributeActionImpl();
         instance.setAttribute(template.getAttribute());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of AttributeGroupAddAttributeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AttributeGroupAddAttributeAction deepCopy(@Nullable final AttributeGroupAddAttributeAction template) {
+        if (template == null) {
+            return null;
+        }
+        AttributeGroupAddAttributeActionImpl instance = new AttributeGroupAddAttributeActionImpl();
+        instance.setAttribute(
+            com.commercetools.api.models.attribute_group.AttributeReference.deepCopy(template.getAttribute()));
         return instance;
     }
 

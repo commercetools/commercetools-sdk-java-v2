@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order.OrderState;
@@ -60,11 +61,27 @@ public interface StagedOrderChangeOrderStateAction extends StagedOrderUpdateActi
     }
 
     /**
-     * factory method to copy an instance of StagedOrderChangeOrderStateAction
+     * factory method to create a shallow copy StagedOrderChangeOrderStateAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static StagedOrderChangeOrderStateAction of(final StagedOrderChangeOrderStateAction template) {
+        StagedOrderChangeOrderStateActionImpl instance = new StagedOrderChangeOrderStateActionImpl();
+        instance.setOrderState(template.getOrderState());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of StagedOrderChangeOrderStateAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static StagedOrderChangeOrderStateAction deepCopy(
+            @Nullable final StagedOrderChangeOrderStateAction template) {
+        if (template == null) {
+            return null;
+        }
         StagedOrderChangeOrderStateActionImpl instance = new StagedOrderChangeOrderStateActionImpl();
         instance.setOrderState(template.getOrderState());
         return instance;

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -157,7 +158,7 @@ public interface ChannelDraft extends com.commercetools.api.models.CustomizableD
     }
 
     /**
-     * factory method to copy an instance of ChannelDraft
+     * factory method to create a shallow copy ChannelDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -170,6 +171,28 @@ public interface ChannelDraft extends com.commercetools.api.models.CustomizableD
         instance.setAddress(template.getAddress());
         instance.setCustom(template.getCustom());
         instance.setGeoLocation(template.getGeoLocation());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChannelDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChannelDraft deepCopy(@Nullable final ChannelDraft template) {
+        if (template == null) {
+            return null;
+        }
+        ChannelDraftImpl instance = new ChannelDraftImpl();
+        instance.setKey(template.getKey());
+        instance.setRoles(Optional.ofNullable(template.getRoles()).map(ArrayList::new).orElse(null));
+        instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
+        instance.setDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
+        instance.setAddress(com.commercetools.api.models.common.BaseAddress.deepCopy(template.getAddress()));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setGeoLocation(com.commercetools.api.models.common.GeoJson.deepCopy(template.getGeoLocation()));
         return instance;
     }
 

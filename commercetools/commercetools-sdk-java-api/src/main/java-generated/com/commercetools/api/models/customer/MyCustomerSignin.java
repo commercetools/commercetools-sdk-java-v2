@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -111,11 +112,29 @@ public interface MyCustomerSignin {
     }
 
     /**
-     * factory method to copy an instance of MyCustomerSignin
+     * factory method to create a shallow copy MyCustomerSignin
      * @param template instance to be copied
      * @return copy instance
      */
     public static MyCustomerSignin of(final MyCustomerSignin template) {
+        MyCustomerSigninImpl instance = new MyCustomerSigninImpl();
+        instance.setEmail(template.getEmail());
+        instance.setPassword(template.getPassword());
+        instance.setActiveCartSignInMode(template.getActiveCartSignInMode());
+        instance.setUpdateProductData(template.getUpdateProductData());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of MyCustomerSignin
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static MyCustomerSignin deepCopy(@Nullable final MyCustomerSignin template) {
+        if (template == null) {
+            return null;
+        }
         MyCustomerSigninImpl instance = new MyCustomerSigninImpl();
         instance.setEmail(template.getEmail());
         instance.setPassword(template.getPassword());

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order.ShipmentState;
@@ -82,7 +83,7 @@ public interface OrderShipmentStateChangedMessage extends OrderMessage {
     }
 
     /**
-     * factory method to copy an instance of OrderShipmentStateChangedMessage
+     * factory method to create a shallow copy OrderShipmentStateChangedMessage
      * @param template instance to be copied
      * @return copy instance
      */
@@ -98,6 +99,34 @@ public interface OrderShipmentStateChangedMessage extends OrderMessage {
         instance.setResource(template.getResource());
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+        instance.setShipmentState(template.getShipmentState());
+        instance.setOldShipmentState(template.getOldShipmentState());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of OrderShipmentStateChangedMessage
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static OrderShipmentStateChangedMessage deepCopy(@Nullable final OrderShipmentStateChangedMessage template) {
+        if (template == null) {
+            return null;
+        }
+        OrderShipmentStateChangedMessageImpl instance = new OrderShipmentStateChangedMessageImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
+        instance.setSequenceNumber(template.getSequenceNumber());
+        instance.setResource(com.commercetools.api.models.common.Reference.deepCopy(template.getResource()));
+        instance.setResourceVersion(template.getResourceVersion());
+        instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
+                .deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setShipmentState(template.getShipmentState());
         instance.setOldShipmentState(template.getOldShipmentState());
         return instance;

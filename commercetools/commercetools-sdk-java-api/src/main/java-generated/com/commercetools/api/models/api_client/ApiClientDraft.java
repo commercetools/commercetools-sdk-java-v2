@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -114,11 +115,30 @@ public interface ApiClientDraft extends io.vrap.rmf.base.client.Draft<ApiClientD
     }
 
     /**
-     * factory method to copy an instance of ApiClientDraft
+     * factory method to create a shallow copy ApiClientDraft
      * @param template instance to be copied
      * @return copy instance
      */
     public static ApiClientDraft of(final ApiClientDraft template) {
+        ApiClientDraftImpl instance = new ApiClientDraftImpl();
+        instance.setName(template.getName());
+        instance.setScope(template.getScope());
+        instance.setDeleteDaysAfterCreation(template.getDeleteDaysAfterCreation());
+        instance.setAccessTokenValiditySeconds(template.getAccessTokenValiditySeconds());
+        instance.setRefreshTokenValiditySeconds(template.getRefreshTokenValiditySeconds());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ApiClientDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ApiClientDraft deepCopy(@Nullable final ApiClientDraft template) {
+        if (template == null) {
+            return null;
+        }
         ApiClientDraftImpl instance = new ApiClientDraftImpl();
         instance.setName(template.getName());
         instance.setScope(template.getScope());

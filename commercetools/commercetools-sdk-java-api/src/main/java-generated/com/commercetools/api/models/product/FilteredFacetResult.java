@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -73,11 +74,27 @@ public interface FilteredFacetResult extends FacetResult {
     }
 
     /**
-     * factory method to copy an instance of FilteredFacetResult
+     * factory method to create a shallow copy FilteredFacetResult
      * @param template instance to be copied
      * @return copy instance
      */
     public static FilteredFacetResult of(final FilteredFacetResult template) {
+        FilteredFacetResultImpl instance = new FilteredFacetResultImpl();
+        instance.setCount(template.getCount());
+        instance.setProductCount(template.getProductCount());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of FilteredFacetResult
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static FilteredFacetResult deepCopy(@Nullable final FilteredFacetResult template) {
+        if (template == null) {
+            return null;
+        }
         FilteredFacetResultImpl instance = new FilteredFacetResultImpl();
         instance.setCount(template.getCount());
         instance.setProductCount(template.getProductCount());

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -117,7 +118,7 @@ public interface ChangeValueGiftLineItemChangeValue extends ChangeValueChangeVal
     }
 
     /**
-     * factory method to copy an instance of ChangeValueGiftLineItemChangeValue
+     * factory method to create a shallow copy ChangeValueGiftLineItemChangeValue
      * @param template instance to be copied
      * @return copy instance
      */
@@ -127,6 +128,27 @@ public interface ChangeValueGiftLineItemChangeValue extends ChangeValueChangeVal
         instance.setVariantId(template.getVariantId());
         instance.setSupplyChannel(template.getSupplyChannel());
         instance.setDistributionChannel(template.getDistributionChannel());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ChangeValueGiftLineItemChangeValue
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ChangeValueGiftLineItemChangeValue deepCopy(
+            @Nullable final ChangeValueGiftLineItemChangeValue template) {
+        if (template == null) {
+            return null;
+        }
+        ChangeValueGiftLineItemChangeValueImpl instance = new ChangeValueGiftLineItemChangeValueImpl();
+        instance.setProduct(com.commercetools.history.models.common.Reference.deepCopy(template.getProduct()));
+        instance.setVariantId(template.getVariantId());
+        instance.setSupplyChannel(
+            com.commercetools.history.models.common.Reference.deepCopy(template.getSupplyChannel()));
+        instance.setDistributionChannel(
+            com.commercetools.history.models.common.Reference.deepCopy(template.getDistributionChannel()));
         return instance;
     }
 

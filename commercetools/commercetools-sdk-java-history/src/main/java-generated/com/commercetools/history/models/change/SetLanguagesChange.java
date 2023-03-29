@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -114,7 +115,7 @@ public interface SetLanguagesChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetLanguagesChange
+     * factory method to create a shallow copy SetLanguagesChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -123,6 +124,23 @@ public interface SetLanguagesChange extends Change {
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetLanguagesChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetLanguagesChange deepCopy(@Nullable final SetLanguagesChange template) {
+        if (template == null) {
+            return null;
+        }
+        SetLanguagesChangeImpl instance = new SetLanguagesChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setPreviousValue(Optional.ofNullable(template.getPreviousValue()).map(ArrayList::new).orElse(null));
+        instance.setNextValue(Optional.ofNullable(template.getNextValue()).map(ArrayList::new).orElse(null));
         return instance;
     }
 

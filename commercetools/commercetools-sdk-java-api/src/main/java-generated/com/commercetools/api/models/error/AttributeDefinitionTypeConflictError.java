@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -115,14 +116,34 @@ public interface AttributeDefinitionTypeConflictError extends ErrorObject {
     }
 
     /**
-     * factory method to copy an instance of AttributeDefinitionTypeConflictError
+     * factory method to create a shallow copy AttributeDefinitionTypeConflictError
      * @param template instance to be copied
      * @return copy instance
      */
     public static AttributeDefinitionTypeConflictError of(final AttributeDefinitionTypeConflictError template) {
         AttributeDefinitionTypeConflictErrorImpl instance = new AttributeDefinitionTypeConflictErrorImpl();
         instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
+        instance.setConflictingProductTypeId(template.getConflictingProductTypeId());
+        instance.setConflictingProductTypeName(template.getConflictingProductTypeName());
+        instance.setConflictingAttributeName(template.getConflictingAttributeName());
+        return instance;
+    }
 
+    /**
+     * factory method to create a deep copy of AttributeDefinitionTypeConflictError
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static AttributeDefinitionTypeConflictError deepCopy(
+            @Nullable final AttributeDefinitionTypeConflictError template) {
+        if (template == null) {
+            return null;
+        }
+        AttributeDefinitionTypeConflictErrorImpl instance = new AttributeDefinitionTypeConflictErrorImpl();
+        instance.setMessage(template.getMessage());
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         instance.setConflictingProductTypeId(template.getConflictingProductTypeId());
         instance.setConflictingProductTypeName(template.getConflictingProductTypeName());
         instance.setConflictingAttributeName(template.getConflictingAttributeName());

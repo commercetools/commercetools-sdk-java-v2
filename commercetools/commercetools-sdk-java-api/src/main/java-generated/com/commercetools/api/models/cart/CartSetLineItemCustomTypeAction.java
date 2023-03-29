@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -91,7 +92,7 @@ public interface CartSetLineItemCustomTypeAction extends CartUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of CartSetLineItemCustomTypeAction
+     * factory method to create a shallow copy CartSetLineItemCustomTypeAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -100,6 +101,23 @@ public interface CartSetLineItemCustomTypeAction extends CartUpdateAction {
         instance.setLineItemId(template.getLineItemId());
         instance.setType(template.getType());
         instance.setFields(template.getFields());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartSetLineItemCustomTypeAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartSetLineItemCustomTypeAction deepCopy(@Nullable final CartSetLineItemCustomTypeAction template) {
+        if (template == null) {
+            return null;
+        }
+        CartSetLineItemCustomTypeActionImpl instance = new CartSetLineItemCustomTypeActionImpl();
+        instance.setLineItemId(template.getLineItemId());
+        instance.setType(com.commercetools.api.models.type.TypeResourceIdentifier.deepCopy(template.getType()));
+        instance.setFields(com.commercetools.api.models.type.FieldContainer.deepCopy(template.getFields()));
         return instance;
     }
 

@@ -5,7 +5,9 @@ import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -209,7 +211,7 @@ public interface Extension extends BaseResource, com.commercetools.api.models.Do
     }
 
     /**
-     * factory method to copy an instance of Extension
+     * factory method to create a shallow copy Extension
      * @param template instance to be copied
      * @return copy instance
      */
@@ -224,6 +226,36 @@ public interface Extension extends BaseResource, com.commercetools.api.models.Do
         instance.setKey(template.getKey());
         instance.setDestination(template.getDestination());
         instance.setTriggers(template.getTriggers());
+        instance.setTimeoutInMs(template.getTimeoutInMs());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of Extension
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static Extension deepCopy(@Nullable final Extension template) {
+        if (template == null) {
+            return null;
+        }
+        ExtensionImpl instance = new ExtensionImpl();
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
+        instance.setCreatedAt(template.getCreatedAt());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(
+            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
+        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
+        instance.setKey(template.getKey());
+        instance.setDestination(
+            com.commercetools.api.models.extension.ExtensionDestination.deepCopy(template.getDestination()));
+        instance.setTriggers(Optional.ofNullable(template.getTriggers())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.extension.ExtensionTrigger::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setTimeoutInMs(template.getTimeoutInMs());
         return instance;
     }

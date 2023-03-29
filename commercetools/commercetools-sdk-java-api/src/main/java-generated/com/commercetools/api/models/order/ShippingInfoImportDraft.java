@@ -4,7 +4,9 @@ package com.commercetools.api.models.order;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -192,7 +194,7 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
     }
 
     /**
-     * factory method to copy an instance of ShippingInfoImportDraft
+     * factory method to create a shallow copy ShippingInfoImportDraft
      * @param template instance to be copied
      * @return copy instance
      */
@@ -206,6 +208,37 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
         instance.setShippingMethod(template.getShippingMethod());
         instance.setDeliveries(template.getDeliveries());
         instance.setDiscountedPrice(template.getDiscountedPrice());
+        instance.setShippingMethodState(template.getShippingMethodState());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ShippingInfoImportDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ShippingInfoImportDraft deepCopy(@Nullable final ShippingInfoImportDraft template) {
+        if (template == null) {
+            return null;
+        }
+        ShippingInfoImportDraftImpl instance = new ShippingInfoImportDraftImpl();
+        instance.setShippingMethodName(template.getShippingMethodName());
+        instance.setPrice(com.commercetools.api.models.common.Money.deepCopy(template.getPrice()));
+        instance.setShippingRate(
+            com.commercetools.api.models.shipping_method.ShippingRateDraft.deepCopy(template.getShippingRate()));
+        instance.setTaxRate(com.commercetools.api.models.tax_category.TaxRate.deepCopy(template.getTaxRate()));
+        instance.setTaxCategory(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier
+                .deepCopy(template.getTaxCategory()));
+        instance.setShippingMethod(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier
+                .deepCopy(template.getShippingMethod()));
+        instance.setDeliveries(Optional.ofNullable(template.getDeliveries())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.order.DeliveryDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setDiscountedPrice(
+            com.commercetools.api.models.order.DiscountedLineItemPriceDraft.deepCopy(template.getDiscountedPrice()));
         instance.setShippingMethodState(template.getShippingMethodState());
         return instance;
     }

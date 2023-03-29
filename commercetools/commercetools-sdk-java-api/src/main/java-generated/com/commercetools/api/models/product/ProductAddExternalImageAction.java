@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -106,7 +107,7 @@ public interface ProductAddExternalImageAction extends ProductUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of ProductAddExternalImageAction
+     * factory method to create a shallow copy ProductAddExternalImageAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -115,6 +116,24 @@ public interface ProductAddExternalImageAction extends ProductUpdateAction {
         instance.setVariantId(template.getVariantId());
         instance.setSku(template.getSku());
         instance.setImage(template.getImage());
+        instance.setStaged(template.getStaged());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductAddExternalImageAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductAddExternalImageAction deepCopy(@Nullable final ProductAddExternalImageAction template) {
+        if (template == null) {
+            return null;
+        }
+        ProductAddExternalImageActionImpl instance = new ProductAddExternalImageActionImpl();
+        instance.setVariantId(template.getVariantId());
+        instance.setSku(template.getSku());
+        instance.setImage(com.commercetools.api.models.common.Image.deepCopy(template.getImage()));
         instance.setStaged(template.getStaged());
         return instance;
     }

@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -75,7 +76,7 @@ public interface TypeReference extends Reference, com.commercetools.api.models.I
     }
 
     /**
-     * factory method to copy an instance of TypeReference
+     * factory method to create a shallow copy TypeReference
      * @param template instance to be copied
      * @return copy instance
      */
@@ -83,6 +84,22 @@ public interface TypeReference extends Reference, com.commercetools.api.models.I
         TypeReferenceImpl instance = new TypeReferenceImpl();
         instance.setId(template.getId());
         instance.setObj(template.getObj());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of TypeReference
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static TypeReference deepCopy(@Nullable final TypeReference template) {
+        if (template == null) {
+            return null;
+        }
+        TypeReferenceImpl instance = new TypeReferenceImpl();
+        instance.setId(template.getId());
+        instance.setObj(com.commercetools.api.models.type.Type.deepCopy(template.getObj()));
         return instance;
     }
 

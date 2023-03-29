@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -60,13 +61,28 @@ public interface CustomFieldSetType extends FieldType {
     }
 
     /**
-     * factory method to copy an instance of CustomFieldSetType
+     * factory method to create a shallow copy CustomFieldSetType
      * @param template instance to be copied
      * @return copy instance
      */
     public static CustomFieldSetType of(final CustomFieldSetType template) {
         CustomFieldSetTypeImpl instance = new CustomFieldSetTypeImpl();
         instance.setElementType(template.getElementType());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomFieldSetType
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomFieldSetType deepCopy(@Nullable final CustomFieldSetType template) {
+        if (template == null) {
+            return null;
+        }
+        CustomFieldSetTypeImpl instance = new CustomFieldSetTypeImpl();
+        instance.setElementType(com.commercetools.api.models.type.FieldType.deepCopy(template.getElementType()));
         return instance;
     }
 

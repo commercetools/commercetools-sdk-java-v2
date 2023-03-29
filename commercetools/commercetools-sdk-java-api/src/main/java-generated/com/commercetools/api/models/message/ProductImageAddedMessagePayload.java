@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -93,7 +94,7 @@ public interface ProductImageAddedMessagePayload extends MessagePayload {
     }
 
     /**
-     * factory method to copy an instance of ProductImageAddedMessagePayload
+     * factory method to create a shallow copy ProductImageAddedMessagePayload
      * @param template instance to be copied
      * @return copy instance
      */
@@ -101,6 +102,23 @@ public interface ProductImageAddedMessagePayload extends MessagePayload {
         ProductImageAddedMessagePayloadImpl instance = new ProductImageAddedMessagePayloadImpl();
         instance.setVariantId(template.getVariantId());
         instance.setImage(template.getImage());
+        instance.setStaged(template.getStaged());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductImageAddedMessagePayload
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductImageAddedMessagePayload deepCopy(@Nullable final ProductImageAddedMessagePayload template) {
+        if (template == null) {
+            return null;
+        }
+        ProductImageAddedMessagePayloadImpl instance = new ProductImageAddedMessagePayloadImpl();
+        instance.setVariantId(template.getVariantId());
+        instance.setImage(com.commercetools.api.models.common.Image.deepCopy(template.getImage()));
         instance.setStaged(template.getStaged());
         return instance;
     }

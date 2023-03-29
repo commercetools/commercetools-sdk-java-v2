@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier;
@@ -58,13 +59,29 @@ public interface CustomerSetCustomerGroupAction extends CustomerUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of CustomerSetCustomerGroupAction
+     * factory method to create a shallow copy CustomerSetCustomerGroupAction
      * @param template instance to be copied
      * @return copy instance
      */
     public static CustomerSetCustomerGroupAction of(final CustomerSetCustomerGroupAction template) {
         CustomerSetCustomerGroupActionImpl instance = new CustomerSetCustomerGroupActionImpl();
         instance.setCustomerGroup(template.getCustomerGroup());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CustomerSetCustomerGroupAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CustomerSetCustomerGroupAction deepCopy(@Nullable final CustomerSetCustomerGroupAction template) {
+        if (template == null) {
+            return null;
+        }
+        CustomerSetCustomerGroupActionImpl instance = new CustomerSetCustomerGroupActionImpl();
+        instance.setCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier
+                .deepCopy(template.getCustomerGroup()));
         return instance;
     }
 

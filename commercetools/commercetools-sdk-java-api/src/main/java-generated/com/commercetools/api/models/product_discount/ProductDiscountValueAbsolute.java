@@ -4,7 +4,9 @@ package com.commercetools.api.models.product_discount;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -69,13 +71,32 @@ public interface ProductDiscountValueAbsolute extends ProductDiscountValue {
     }
 
     /**
-     * factory method to copy an instance of ProductDiscountValueAbsolute
+     * factory method to create a shallow copy ProductDiscountValueAbsolute
      * @param template instance to be copied
      * @return copy instance
      */
     public static ProductDiscountValueAbsolute of(final ProductDiscountValueAbsolute template) {
         ProductDiscountValueAbsoluteImpl instance = new ProductDiscountValueAbsoluteImpl();
         instance.setMoney(template.getMoney());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of ProductDiscountValueAbsolute
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static ProductDiscountValueAbsolute deepCopy(@Nullable final ProductDiscountValueAbsolute template) {
+        if (template == null) {
+            return null;
+        }
+        ProductDiscountValueAbsoluteImpl instance = new ProductDiscountValueAbsoluteImpl();
+        instance.setMoney(Optional.ofNullable(template.getMoney())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.common.CentPrecisionMoney::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

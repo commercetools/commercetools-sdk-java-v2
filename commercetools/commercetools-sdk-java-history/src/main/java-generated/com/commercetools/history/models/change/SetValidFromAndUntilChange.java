@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
@@ -102,7 +103,7 @@ public interface SetValidFromAndUntilChange extends Change {
     }
 
     /**
-     * factory method to copy an instance of SetValidFromAndUntilChange
+     * factory method to create a shallow copy SetValidFromAndUntilChange
      * @param template instance to be copied
      * @return copy instance
      */
@@ -111,6 +112,25 @@ public interface SetValidFromAndUntilChange extends Change {
         instance.setChange(template.getChange());
         instance.setPreviousValue(template.getPreviousValue());
         instance.setNextValue(template.getNextValue());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of SetValidFromAndUntilChange
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static SetValidFromAndUntilChange deepCopy(@Nullable final SetValidFromAndUntilChange template) {
+        if (template == null) {
+            return null;
+        }
+        SetValidFromAndUntilChangeImpl instance = new SetValidFromAndUntilChangeImpl();
+        instance.setChange(template.getChange());
+        instance.setPreviousValue(
+            com.commercetools.history.models.change_value.ValidFromAndUntilValue.deepCopy(template.getPreviousValue()));
+        instance.setNextValue(
+            com.commercetools.history.models.change_value.ValidFromAndUntilValue.deepCopy(template.getNextValue()));
         return instance;
     }
 

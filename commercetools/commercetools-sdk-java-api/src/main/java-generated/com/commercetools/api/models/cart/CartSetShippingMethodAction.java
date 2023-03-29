@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
 import javax.validation.Valid;
 
 import com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier;
@@ -75,7 +76,7 @@ public interface CartSetShippingMethodAction extends CartUpdateAction {
     }
 
     /**
-     * factory method to copy an instance of CartSetShippingMethodAction
+     * factory method to create a shallow copy CartSetShippingMethodAction
      * @param template instance to be copied
      * @return copy instance
      */
@@ -83,6 +84,24 @@ public interface CartSetShippingMethodAction extends CartUpdateAction {
         CartSetShippingMethodActionImpl instance = new CartSetShippingMethodActionImpl();
         instance.setShippingMethod(template.getShippingMethod());
         instance.setExternalTaxRate(template.getExternalTaxRate());
+        return instance;
+    }
+
+    /**
+     * factory method to create a deep copy of CartSetShippingMethodAction
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    @Nullable
+    public static CartSetShippingMethodAction deepCopy(@Nullable final CartSetShippingMethodAction template) {
+        if (template == null) {
+            return null;
+        }
+        CartSetShippingMethodActionImpl instance = new CartSetShippingMethodActionImpl();
+        instance.setShippingMethod(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier
+                .deepCopy(template.getShippingMethod()));
+        instance.setExternalTaxRate(
+            com.commercetools.api.models.cart.ExternalTaxRateDraft.deepCopy(template.getExternalTaxRate()));
         return instance;
     }
 

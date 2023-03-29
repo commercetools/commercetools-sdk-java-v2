@@ -43,6 +43,17 @@ public interface LocalizedString {
 
     public static LocalizedString of(final LocalizedString template) {
         LocalizedStringImpl instance = new LocalizedStringImpl();
+        Optional.ofNullable(template).ifPresent(t -> t.values().forEach(instance::setValue));
+        return instance;
+    }
+
+    @Nullable
+    public static LocalizedString deepCopy(@Nullable final LocalizedString template) {
+        if (template == null) {
+            return null;
+        }
+        LocalizedStringImpl instance = new LocalizedStringImpl();
+        Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
 

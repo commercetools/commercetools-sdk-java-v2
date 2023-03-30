@@ -62,7 +62,7 @@ public class InventoryIntegrationTests {
             InventoryPagedQueryResponse inventoryPagedQueryResponse = CommercetoolsTestUtils.getProjectApiRoot()
                     .inventory()
                     .get()
-                    .withWhere("sku=" + "\"" + inventoryEntry.getSku() + "\"")
+                    .withWhere("sku=:sku", "sku", inventoryEntry.getSku())
                     .executeBlocking()
                     .getBody();
             Assertions.assertNotNull(inventoryPagedQueryResponse);

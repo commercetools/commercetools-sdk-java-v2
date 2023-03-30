@@ -50,7 +50,7 @@ public class CustomerQueryTests {
                     .customers()
                     .get()
                     .withExpand("customerGroup")
-                    .withWhere("id=" + "\"" + customer.getId() + "\"")
+                    .withWhere("id=:customerId", "customerId", customer.getId())
                     .executeBlocking()
                     .getBody();
 

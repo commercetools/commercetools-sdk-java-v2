@@ -44,7 +44,7 @@ public class CategoryQueryTests {
         CategoryPagedQueryResponse response = CommercetoolsTestUtils.getProjectApiRoot()
                 .categories()
                 .get()
-                .withWhere("id=" + "\"" + category.getId() + "\"")
+                .withWhere("id=:categoryId", "categoryId", category.getId())
                 .executeBlocking()
                 .getBody();
         Assertions.assertEquals(response.getResults().size(), 1);

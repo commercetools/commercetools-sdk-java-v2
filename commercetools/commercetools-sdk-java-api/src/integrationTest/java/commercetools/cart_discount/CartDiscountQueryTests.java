@@ -48,7 +48,7 @@ public class CartDiscountQueryTests {
             CartDiscountPagedQueryResponse response = CommercetoolsTestUtils.getProjectApiRoot()
                     .cartDiscounts()
                     .get()
-                    .withWhere("id=" + "\"" + cartDiscount.getId() + "\"")
+                    .withWhere("id=:discountId", "discountId", cartDiscount.getId())
                     .executeBlocking()
                     .getBody();
 

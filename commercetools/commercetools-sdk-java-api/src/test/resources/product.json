@@ -13,7 +13,6 @@
                 "en": "Sample description"
             },
             "masterVariant": {
-                "attributes": [],
                 "id": 1,
                 "images": [
                     {
@@ -35,7 +34,35 @@
                         "id": "753472a3-ddff-4e0f-a93b-2eb29c90ba54"
                     }
                 ],
-                "sku": "sku_MB_PREMIUM_TECH_T_variant1_1369226795424"
+                "sku": "sku_MB_PREMIUM_TECH_T_variant1_1369226795424",
+                "attributes": [
+                    {
+                        "name": "foo",
+                        "value": "foo"
+                    },
+                    {
+                        "name": "bar",
+                        "value": {
+                            "label": "bar",
+                            "key": "bar"
+                        }
+                    },
+                    {
+                        "name": "baz",
+                        "value": {
+                            "typeId": "product-type",
+                            "id": "abc"
+                        }
+                    },
+                    {
+                        "name": "foobar",
+                        "value": {
+                            "typeId": "product",
+                            "id": "abc"
+                        }
+                    }
+
+                ]
             },
             "name": {
                 "en": "MB PREMIUM TECH T"

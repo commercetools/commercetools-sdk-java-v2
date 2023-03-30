@@ -73,13 +73,13 @@ public interface Destination {
             return com.commercetools.api.models.subscription.SqsDestination
                     .deepCopy((com.commercetools.api.models.subscription.SqsDestination) template);
         }
-        if (template instanceof com.commercetools.api.models.subscription.AzureEventGridDestination) {
-            return com.commercetools.api.models.subscription.AzureEventGridDestination
-                    .deepCopy((com.commercetools.api.models.subscription.AzureEventGridDestination) template);
-        }
         if (template instanceof com.commercetools.api.models.subscription.AzureServiceBusDestination) {
             return com.commercetools.api.models.subscription.AzureServiceBusDestination
                     .deepCopy((com.commercetools.api.models.subscription.AzureServiceBusDestination) template);
+        }
+        if (template instanceof com.commercetools.api.models.subscription.AzureEventGridDestination) {
+            return com.commercetools.api.models.subscription.AzureEventGridDestination
+                    .deepCopy((com.commercetools.api.models.subscription.AzureEventGridDestination) template);
         }
         DestinationImpl instance = new DestinationImpl();
         return instance;

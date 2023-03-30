@@ -225,17 +225,9 @@ public interface Reference extends ReferenceMixin {
             return com.commercetools.api.models.category.CategoryReference
                     .deepCopy((com.commercetools.api.models.category.CategoryReference) template);
         }
-        if (template instanceof com.commercetools.api.models.channel.ChannelReference) {
-            return com.commercetools.api.models.channel.ChannelReference
-                    .deepCopy((com.commercetools.api.models.channel.ChannelReference) template);
-        }
         if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountReference) {
             return com.commercetools.api.models.cart_discount.CartDiscountReference
                     .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountReference) template);
-        }
-        if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitReference) {
-            return com.commercetools.api.models.business_unit.BusinessUnitReference
-                    .deepCopy((com.commercetools.api.models.business_unit.BusinessUnitReference) template);
         }
         if (template instanceof com.commercetools.api.models.attribute_group.AttributeGroupReference) {
             return com.commercetools.api.models.attribute_group.AttributeGroupReference
@@ -244,6 +236,14 @@ public interface Reference extends ReferenceMixin {
         if (template instanceof com.commercetools.api.models.cart.CartReference) {
             return com.commercetools.api.models.cart.CartReference
                     .deepCopy((com.commercetools.api.models.cart.CartReference) template);
+        }
+        if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitReference) {
+            return com.commercetools.api.models.business_unit.BusinessUnitReference
+                    .deepCopy((com.commercetools.api.models.business_unit.BusinessUnitReference) template);
+        }
+        if (template instanceof com.commercetools.api.models.channel.ChannelReference) {
+            return com.commercetools.api.models.channel.ChannelReference
+                    .deepCopy((com.commercetools.api.models.channel.ChannelReference) template);
         }
         ReferenceImpl instance = new ReferenceImpl();
         instance.setId(template.getId());

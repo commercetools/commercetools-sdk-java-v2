@@ -26,16 +26,20 @@ public class GraphQLErrorImpl implements GraphQLError, ModelBase {
 
     private java.util.List<java.lang.Object> path;
 
+    private com.commercetools.api.models.error.GraphQLErrorObject extensions;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     GraphQLErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("locations") final java.util.List<com.commercetools.api.models.graph_ql.GraphQLErrorLocation> locations,
-            @JsonProperty("path") final java.util.List<java.lang.Object> path) {
+            @JsonProperty("path") final java.util.List<java.lang.Object> path,
+            @JsonProperty("extensions") final com.commercetools.api.models.error.GraphQLErrorObject extensions) {
         this.message = message;
         this.locations = locations;
         this.path = path;
+        this.extensions = extensions;
     }
 
     /**
@@ -68,6 +72,14 @@ public class GraphQLErrorImpl implements GraphQLError, ModelBase {
         return this.path;
     }
 
+    /**
+     *  <p>Represents a single error.</p>
+     */
+
+    public com.commercetools.api.models.error.GraphQLErrorObject getExtensions() {
+        return this.extensions;
+    }
+
     public void setMessage(final String message) {
         this.message = message;
     }
@@ -89,6 +101,10 @@ public class GraphQLErrorImpl implements GraphQLError, ModelBase {
         this.path = path;
     }
 
+    public void setExtensions(final com.commercetools.api.models.error.GraphQLErrorObject extensions) {
+        this.extensions = extensions;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -102,12 +118,17 @@ public class GraphQLErrorImpl implements GraphQLError, ModelBase {
         return new EqualsBuilder().append(message, that.message)
                 .append(locations, that.locations)
                 .append(path, that.path)
+                .append(extensions, that.extensions)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(message).append(locations).append(path).toHashCode();
+        return new HashCodeBuilder(17, 37).append(message)
+                .append(locations)
+                .append(path)
+                .append(extensions)
+                .toHashCode();
     }
 
 }

@@ -63,13 +63,13 @@ public interface CartDiscountTarget {
             return com.commercetools.api.models.cart_discount.MultiBuyLineItemsTarget
                     .deepCopy((com.commercetools.api.models.cart_discount.MultiBuyLineItemsTarget) template);
         }
-        if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountLineItemsTarget) {
-            return com.commercetools.api.models.cart_discount.CartDiscountLineItemsTarget
-                    .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountLineItemsTarget) template);
-        }
         if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountShippingCostTarget) {
             return com.commercetools.api.models.cart_discount.CartDiscountShippingCostTarget
                     .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountShippingCostTarget) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountLineItemsTarget) {
+            return com.commercetools.api.models.cart_discount.CartDiscountLineItemsTarget
+                    .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountLineItemsTarget) template);
         }
         if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountCustomLineItemsTarget) {
             return com.commercetools.api.models.cart_discount.CartDiscountCustomLineItemsTarget

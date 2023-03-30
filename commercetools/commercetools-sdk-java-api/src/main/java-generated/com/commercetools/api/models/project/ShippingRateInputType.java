@@ -54,17 +54,17 @@ public interface ShippingRateInputType {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.project.CartClassificationType) {
-            return com.commercetools.api.models.project.CartClassificationType
-                    .deepCopy((com.commercetools.api.models.project.CartClassificationType) template);
+        if (template instanceof com.commercetools.api.models.project.CartValueType) {
+            return com.commercetools.api.models.project.CartValueType
+                    .deepCopy((com.commercetools.api.models.project.CartValueType) template);
         }
         if (template instanceof com.commercetools.api.models.project.CartScoreType) {
             return com.commercetools.api.models.project.CartScoreType
                     .deepCopy((com.commercetools.api.models.project.CartScoreType) template);
         }
-        if (template instanceof com.commercetools.api.models.project.CartValueType) {
-            return com.commercetools.api.models.project.CartValueType
-                    .deepCopy((com.commercetools.api.models.project.CartValueType) template);
+        if (template instanceof com.commercetools.api.models.project.CartClassificationType) {
+            return com.commercetools.api.models.project.CartClassificationType
+                    .deepCopy((com.commercetools.api.models.project.CartClassificationType) template);
         }
         ShippingRateInputTypeImpl instance = new ShippingRateInputTypeImpl();
         return instance;

@@ -4,6 +4,8 @@ package com.commercetools.api.models.graph_ql;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,7 +18,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     GraphQLError graphQLError = GraphQLError.builder()
  *             .message("{message}")
  *             .plusLocations(locationsBuilder -> locationsBuilder)
- *             .plusPath(pathBuilder -> pathBuilder)
+ *             .extensions(extensionsBuilder -> extensionsBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -28,7 +30,10 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
 
     private java.util.List<com.commercetools.api.models.graph_ql.GraphQLErrorLocation> locations;
 
+    @Nullable
     private java.util.List<java.lang.Object> path;
+
+    private com.commercetools.api.models.error.GraphQLErrorObject extensions;
 
     /**
      * set the value to the message
@@ -116,7 +121,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
      * @return Builder
      */
 
-    public GraphQLErrorBuilder path(final java.lang.Object... path) {
+    public GraphQLErrorBuilder path(@Nullable final java.lang.Object... path) {
         this.path = new ArrayList<>(Arrays.asList(path));
         return this;
     }
@@ -127,7 +132,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
      * @return Builder
      */
 
-    public GraphQLErrorBuilder path(final java.util.List<java.lang.Object> path) {
+    public GraphQLErrorBuilder path(@Nullable final java.util.List<java.lang.Object> path) {
         this.path = path;
         return this;
     }
@@ -138,11 +143,34 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
      * @return Builder
      */
 
-    public GraphQLErrorBuilder plusPath(final java.lang.Object... path) {
+    public GraphQLErrorBuilder plusPath(@Nullable final java.lang.Object... path) {
         if (this.path == null) {
             this.path = new ArrayList<>();
         }
         this.path.addAll(Arrays.asList(path));
+        return this;
+    }
+
+    /**
+     *  <p>Represents a single error.</p>
+     * @param extensions value to be set
+     * @return Builder
+     */
+
+    public GraphQLErrorBuilder extensions(final com.commercetools.api.models.error.GraphQLErrorObject extensions) {
+        this.extensions = extensions;
+        return this;
+    }
+
+    /**
+     *  <p>Represents a single error.</p>
+     * @param builder function to build the extensions value
+     * @return Builder
+     */
+
+    public GraphQLErrorBuilder extensions(
+            Function<com.commercetools.api.models.error.GraphQLErrorObjectBuilder, Builder<? extends com.commercetools.api.models.error.GraphQLErrorObject>> builder) {
+        this.extensions = builder.apply(com.commercetools.api.models.error.GraphQLErrorObjectBuilder.of()).build();
         return this;
     }
 
@@ -169,8 +197,18 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
      * @return path
      */
 
+    @Nullable
     public java.util.List<java.lang.Object> getPath() {
         return this.path;
+    }
+
+    /**
+     *  <p>Represents a single error.</p>
+     * @return extensions
+     */
+
+    public com.commercetools.api.models.error.GraphQLErrorObject getExtensions() {
+        return this.extensions;
     }
 
     /**
@@ -180,8 +218,8 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
     public GraphQLError build() {
         Objects.requireNonNull(message, GraphQLError.class + ": message is missing");
         Objects.requireNonNull(locations, GraphQLError.class + ": locations is missing");
-        Objects.requireNonNull(path, GraphQLError.class + ": path is missing");
-        return new GraphQLErrorImpl(message, locations, path);
+        Objects.requireNonNull(extensions, GraphQLError.class + ": extensions is missing");
+        return new GraphQLErrorImpl(message, locations, path, extensions);
     }
 
     /**
@@ -189,7 +227,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
      * @return GraphQLError
      */
     public GraphQLError buildUnchecked() {
-        return new GraphQLErrorImpl(message, locations, path);
+        return new GraphQLErrorImpl(message, locations, path, extensions);
     }
 
     /**
@@ -210,6 +248,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
         builder.message = template.getMessage();
         builder.locations = template.getLocations();
         builder.path = template.getPath();
+        builder.extensions = template.getExtensions();
         return builder;
     }
 

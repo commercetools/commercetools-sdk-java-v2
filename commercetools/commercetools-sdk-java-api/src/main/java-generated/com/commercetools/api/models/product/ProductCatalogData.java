@@ -32,7 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductCatalogDataImpl.class)
-public interface ProductCatalogData {
+public interface ProductCatalogData extends ProductCatalogDataMixin {
 
     /**
      *  <p><code>true</code> if the Product is published.</p>

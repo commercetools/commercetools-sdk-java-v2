@@ -31,7 +31,7 @@ spotless {
 
 ext {
     versions = [
-        commercetools: "13.2.0-SNAPSHOT",
+        commercetools: "13.3.0-SNAPSHOT",
         newrelic: "7.7.0"
     ]
 }

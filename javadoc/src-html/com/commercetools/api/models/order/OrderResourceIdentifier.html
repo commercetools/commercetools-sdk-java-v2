@@ -18,93 +18,111 @@
 <span class="source-line-no">005</span><span id="line.5">import java.util.*;</span>
 <span class="source-line-no">006</span><span id="line.6">import java.util.function.Function;</span>
 <span class="source-line-no">007</span><span id="line.7"></span>
-<span class="source-line-no">008</span><span id="line.8">import com.commercetools.api.models.common.ResourceIdentifier;</span>
-<span class="source-line-no">009</span><span id="line.9">import com.fasterxml.jackson.annotation.*;</span>
-<span class="source-line-no">010</span><span id="line.10">import com.fasterxml.jackson.databind.annotation.*;</span>
-<span class="source-line-no">011</span><span id="line.11"></span>
-<span class="source-line-no">012</span><span id="line.12">import io.vrap.rmf.base.client.utils.Generated;</span>
+<span class="source-line-no">008</span><span id="line.8">import javax.annotation.Nullable;</span>
+<span class="source-line-no">009</span><span id="line.9"></span>
+<span class="source-line-no">010</span><span id="line.10">import com.commercetools.api.models.common.ResourceIdentifier;</span>
+<span class="source-line-no">011</span><span id="line.11">import com.fasterxml.jackson.annotation.*;</span>
+<span class="source-line-no">012</span><span id="line.12">import com.fasterxml.jackson.databind.annotation.*;</span>
 <span class="source-line-no">013</span><span id="line.13"></span>
-<span class="source-line-no">014</span><span id="line.14">/**</span>
-<span class="source-line-no">015</span><span id="line.15"> * OrderResourceIdentifier</span>
-<span class="source-line-no">016</span><span id="line.16"> *</span>
-<span class="source-line-no">017</span><span id="line.17"> * &lt;hr&gt;</span>
-<span class="source-line-no">018</span><span id="line.18"> * Example to create an instance using the builder pattern</span>
-<span class="source-line-no">019</span><span id="line.19"> * &lt;div class=code-example&gt;</span>
-<span class="source-line-no">020</span><span id="line.20"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
-<span class="source-line-no">021</span><span id="line.21"> *     OrderResourceIdentifier orderResourceIdentifier = OrderResourceIdentifier.builder()</span>
-<span class="source-line-no">022</span><span id="line.22"> *             .build()</span>
-<span class="source-line-no">023</span><span id="line.23"> * &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">024</span><span id="line.24"> * &lt;/div&gt;</span>
-<span class="source-line-no">025</span><span id="line.25"> */</span>
-<span class="source-line-no">026</span><span id="line.26">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">027</span><span id="line.27">@JsonDeserialize(as = OrderResourceIdentifierImpl.class)</span>
-<span class="source-line-no">028</span><span id="line.28">public interface OrderResourceIdentifier extends ResourceIdentifier, com.commercetools.api.models.Identifiable&lt;Order&gt; {</span>
-<span class="source-line-no">029</span><span id="line.29"></span>
-<span class="source-line-no">030</span><span id="line.30">    /**</span>
-<span class="source-line-no">031</span><span id="line.31">     * discriminator value for OrderResourceIdentifier</span>
-<span class="source-line-no">032</span><span id="line.32">     */</span>
-<span class="source-line-no">033</span><span id="line.33">    String ORDER = "order";</span>
-<span class="source-line-no">034</span><span id="line.34"></span>
-<span class="source-line-no">035</span><span id="line.35">    /**</span>
-<span class="source-line-no">036</span><span id="line.36">     * factory method</span>
-<span class="source-line-no">037</span><span id="line.37">     * @return instance of OrderResourceIdentifier</span>
-<span class="source-line-no">038</span><span id="line.38">     */</span>
-<span class="source-line-no">039</span><span id="line.39">    public static OrderResourceIdentifier of() {</span>
-<span class="source-line-no">040</span><span id="line.40">        return new OrderResourceIdentifierImpl();</span>
-<span class="source-line-no">041</span><span id="line.41">    }</span>
-<span class="source-line-no">042</span><span id="line.42"></span>
-<span class="source-line-no">043</span><span id="line.43">    /**</span>
-<span class="source-line-no">044</span><span id="line.44">     * factory method to copy an instance of OrderResourceIdentifier</span>
-<span class="source-line-no">045</span><span id="line.45">     * @param template instance to be copied</span>
-<span class="source-line-no">046</span><span id="line.46">     * @return copy instance</span>
-<span class="source-line-no">047</span><span id="line.47">     */</span>
-<span class="source-line-no">048</span><span id="line.48">    public static OrderResourceIdentifier of(final OrderResourceIdentifier template) {</span>
-<span class="source-line-no">049</span><span id="line.49">        OrderResourceIdentifierImpl instance = new OrderResourceIdentifierImpl();</span>
-<span class="source-line-no">050</span><span id="line.50">        instance.setId(template.getId());</span>
-<span class="source-line-no">051</span><span id="line.51">        instance.setKey(template.getKey());</span>
-<span class="source-line-no">052</span><span id="line.52">        return instance;</span>
-<span class="source-line-no">053</span><span id="line.53">    }</span>
-<span class="source-line-no">054</span><span id="line.54"></span>
-<span class="source-line-no">055</span><span id="line.55">    /**</span>
-<span class="source-line-no">056</span><span id="line.56">     * builder factory method for OrderResourceIdentifier</span>
-<span class="source-line-no">057</span><span id="line.57">     * @return builder</span>
-<span class="source-line-no">058</span><span id="line.58">     */</span>
-<span class="source-line-no">059</span><span id="line.59">    public static OrderResourceIdentifierBuilder builder() {</span>
-<span class="source-line-no">060</span><span id="line.60">        return OrderResourceIdentifierBuilder.of();</span>
-<span class="source-line-no">061</span><span id="line.61">    }</span>
-<span class="source-line-no">062</span><span id="line.62"></span>
-<span class="source-line-no">063</span><span id="line.63">    /**</span>
-<span class="source-line-no">064</span><span id="line.64">     * create builder for OrderResourceIdentifier instance</span>
-<span class="source-line-no">065</span><span id="line.65">     * @param template instance with prefilled values for the builder</span>
-<span class="source-line-no">066</span><span id="line.66">     * @return builder</span>
-<span class="source-line-no">067</span><span id="line.67">     */</span>
-<span class="source-line-no">068</span><span id="line.68">    public static OrderResourceIdentifierBuilder builder(final OrderResourceIdentifier template) {</span>
-<span class="source-line-no">069</span><span id="line.69">        return OrderResourceIdentifierBuilder.of(template);</span>
-<span class="source-line-no">070</span><span id="line.70">    }</span>
-<span class="source-line-no">071</span><span id="line.71"></span>
-<span class="source-line-no">072</span><span id="line.72">    /**</span>
-<span class="source-line-no">073</span><span id="line.73">     * accessor map function</span>
-<span class="source-line-no">074</span><span id="line.74">     * @param &lt;T&gt; mapped type</span>
-<span class="source-line-no">075</span><span id="line.75">     * @param helper function to map the object</span>
-<span class="source-line-no">076</span><span id="line.76">     * @return mapped value</span>
-<span class="source-line-no">077</span><span id="line.77">     */</span>
-<span class="source-line-no">078</span><span id="line.78">    default &lt;T&gt; T withOrderResourceIdentifier(Function&lt;OrderResourceIdentifier, T&gt; helper) {</span>
-<span class="source-line-no">079</span><span id="line.79">        return helper.apply(this);</span>
-<span class="source-line-no">080</span><span id="line.80">    }</span>
-<span class="source-line-no">081</span><span id="line.81"></span>
-<span class="source-line-no">082</span><span id="line.82">    /**</span>
-<span class="source-line-no">083</span><span id="line.83">     * gives a TypeReference for usage with Jackson DataBind</span>
-<span class="source-line-no">084</span><span id="line.84">     * @return TypeReference</span>
+<span class="source-line-no">014</span><span id="line.14">import io.vrap.rmf.base.client.utils.Generated;</span>
+<span class="source-line-no">015</span><span id="line.15"></span>
+<span class="source-line-no">016</span><span id="line.16">/**</span>
+<span class="source-line-no">017</span><span id="line.17"> * OrderResourceIdentifier</span>
+<span class="source-line-no">018</span><span id="line.18"> *</span>
+<span class="source-line-no">019</span><span id="line.19"> * &lt;hr&gt;</span>
+<span class="source-line-no">020</span><span id="line.20"> * Example to create an instance using the builder pattern</span>
+<span class="source-line-no">021</span><span id="line.21"> * &lt;div class=code-example&gt;</span>
+<span class="source-line-no">022</span><span id="line.22"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">023</span><span id="line.23"> *     OrderResourceIdentifier orderResourceIdentifier = OrderResourceIdentifier.builder()</span>
+<span class="source-line-no">024</span><span id="line.24"> *             .build()</span>
+<span class="source-line-no">025</span><span id="line.25"> * &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">026</span><span id="line.26"> * &lt;/div&gt;</span>
+<span class="source-line-no">027</span><span id="line.27"> */</span>
+<span class="source-line-no">028</span><span id="line.28">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">029</span><span id="line.29">@JsonDeserialize(as = OrderResourceIdentifierImpl.class)</span>
+<span class="source-line-no">030</span><span id="line.30">public interface OrderResourceIdentifier extends ResourceIdentifier, com.commercetools.api.models.Identifiable&lt;Order&gt; {</span>
+<span class="source-line-no">031</span><span id="line.31"></span>
+<span class="source-line-no">032</span><span id="line.32">    /**</span>
+<span class="source-line-no">033</span><span id="line.33">     * discriminator value for OrderResourceIdentifier</span>
+<span class="source-line-no">034</span><span id="line.34">     */</span>
+<span class="source-line-no">035</span><span id="line.35">    String ORDER = "order";</span>
+<span class="source-line-no">036</span><span id="line.36"></span>
+<span class="source-line-no">037</span><span id="line.37">    /**</span>
+<span class="source-line-no">038</span><span id="line.38">     * factory method</span>
+<span class="source-line-no">039</span><span id="line.39">     * @return instance of OrderResourceIdentifier</span>
+<span class="source-line-no">040</span><span id="line.40">     */</span>
+<span class="source-line-no">041</span><span id="line.41">    public static OrderResourceIdentifier of() {</span>
+<span class="source-line-no">042</span><span id="line.42">        return new OrderResourceIdentifierImpl();</span>
+<span class="source-line-no">043</span><span id="line.43">    }</span>
+<span class="source-line-no">044</span><span id="line.44"></span>
+<span class="source-line-no">045</span><span id="line.45">    /**</span>
+<span class="source-line-no">046</span><span id="line.46">     * factory method to create a shallow copy OrderResourceIdentifier</span>
+<span class="source-line-no">047</span><span id="line.47">     * @param template instance to be copied</span>
+<span class="source-line-no">048</span><span id="line.48">     * @return copy instance</span>
+<span class="source-line-no">049</span><span id="line.49">     */</span>
+<span class="source-line-no">050</span><span id="line.50">    public static OrderResourceIdentifier of(final OrderResourceIdentifier template) {</span>
+<span class="source-line-no">051</span><span id="line.51">        OrderResourceIdentifierImpl instance = new OrderResourceIdentifierImpl();</span>
+<span class="source-line-no">052</span><span id="line.52">        instance.setId(template.getId());</span>
+<span class="source-line-no">053</span><span id="line.53">        instance.setKey(template.getKey());</span>
+<span class="source-line-no">054</span><span id="line.54">        return instance;</span>
+<span class="source-line-no">055</span><span id="line.55">    }</span>
+<span class="source-line-no">056</span><span id="line.56"></span>
+<span class="source-line-no">057</span><span id="line.57">    /**</span>
+<span class="source-line-no">058</span><span id="line.58">     * factory method to create a deep copy of OrderResourceIdentifier</span>
+<span class="source-line-no">059</span><span id="line.59">     * @param template instance to be copied</span>
+<span class="source-line-no">060</span><span id="line.60">     * @return copy instance</span>
+<span class="source-line-no">061</span><span id="line.61">     */</span>
+<span class="source-line-no">062</span><span id="line.62">    @Nullable</span>
+<span class="source-line-no">063</span><span id="line.63">    public static OrderResourceIdentifier deepCopy(@Nullable final OrderResourceIdentifier template) {</span>
+<span class="source-line-no">064</span><span id="line.64">        if (template == null) {</span>
+<span class="source-line-no">065</span><span id="line.65">            return null;</span>
+<span class="source-line-no">066</span><span id="line.66">        }</span>
+<span class="source-line-no">067</span><span id="line.67">        OrderResourceIdentifierImpl instance = new OrderResourceIdentifierImpl();</span>
+<span class="source-line-no">068</span><span id="line.68">        instance.setId(template.getId());</span>
+<span class="source-line-no">069</span><span id="line.69">        instance.setKey(template.getKey());</span>
+<span class="source-line-no">070</span><span id="line.70">        return instance;</span>
+<span class="source-line-no">071</span><span id="line.71">    }</span>
+<span class="source-line-no">072</span><span id="line.72"></span>
+<span class="source-line-no">073</span><span id="line.73">    /**</span>
+<span class="source-line-no">074</span><span id="line.74">     * builder factory method for OrderResourceIdentifier</span>
+<span class="source-line-no">075</span><span id="line.75">     * @return builder</span>
+<span class="source-line-no">076</span><span id="line.76">     */</span>
+<span class="source-line-no">077</span><span id="line.77">    public static OrderResourceIdentifierBuilder builder() {</span>
+<span class="source-line-no">078</span><span id="line.78">        return OrderResourceIdentifierBuilder.of();</span>
+<span class="source-line-no">079</span><span id="line.79">    }</span>
+<span class="source-line-no">080</span><span id="line.80"></span>
+<span class="source-line-no">081</span><span id="line.81">    /**</span>
+<span class="source-line-no">082</span><span id="line.82">     * create builder for OrderResourceIdentifier instance</span>
+<span class="source-line-no">083</span><span id="line.83">     * @param template instance with prefilled values for the builder</span>
+<span class="source-line-no">084</span><span id="line.84">     * @return builder</span>
 <span class="source-line-no">085</span><span id="line.85">     */</span>
-<span class="source-line-no">086</span><span id="line.86">    public static com.fasterxml.jackson.core.type.TypeReference&lt;OrderResourceIdentifier&gt; typeReference() {</span>
-<span class="source-line-no">087</span><span id="line.87">        return new com.fasterxml.jackson.core.type.TypeReference&lt;OrderResourceIdentifier&gt;() {</span>
-<span class="source-line-no">088</span><span id="line.88">            @Override</span>
-<span class="source-line-no">089</span><span id="line.89">            public String toString() {</span>
-<span class="source-line-no">090</span><span id="line.90">                return "TypeReference&lt;OrderResourceIdentifier&gt;";</span>
-<span class="source-line-no">091</span><span id="line.91">            }</span>
-<span class="source-line-no">092</span><span id="line.92">        };</span>
-<span class="source-line-no">093</span><span id="line.93">    }</span>
-<span class="source-line-no">094</span><span id="line.94">}</span>
+<span class="source-line-no">086</span><span id="line.86">    public static OrderResourceIdentifierBuilder builder(final OrderResourceIdentifier template) {</span>
+<span class="source-line-no">087</span><span id="line.87">        return OrderResourceIdentifierBuilder.of(template);</span>
+<span class="source-line-no">088</span><span id="line.88">    }</span>
+<span class="source-line-no">089</span><span id="line.89"></span>
+<span class="source-line-no">090</span><span id="line.90">    /**</span>
+<span class="source-line-no">091</span><span id="line.91">     * accessor map function</span>
+<span class="source-line-no">092</span><span id="line.92">     * @param &lt;T&gt; mapped type</span>
+<span class="source-line-no">093</span><span id="line.93">     * @param helper function to map the object</span>
+<span class="source-line-no">094</span><span id="line.94">     * @return mapped value</span>
+<span class="source-line-no">095</span><span id="line.95">     */</span>
+<span class="source-line-no">096</span><span id="line.96">    default &lt;T&gt; T withOrderResourceIdentifier(Function&lt;OrderResourceIdentifier, T&gt; helper) {</span>
+<span class="source-line-no">097</span><span id="line.97">        return helper.apply(this);</span>
+<span class="source-line-no">098</span><span id="line.98">    }</span>
+<span class="source-line-no">099</span><span id="line.99"></span>
+<span class="source-line-no">100</span><span id="line.100">    /**</span>
+<span class="source-line-no">101</span><span id="line.101">     * gives a TypeReference for usage with Jackson DataBind</span>
+<span class="source-line-no">102</span><span id="line.102">     * @return TypeReference</span>
+<span class="source-line-no">103</span><span id="line.103">     */</span>
+<span class="source-line-no">104</span><span id="line.104">    public static com.fasterxml.jackson.core.type.TypeReference&lt;OrderResourceIdentifier&gt; typeReference() {</span>
+<span class="source-line-no">105</span><span id="line.105">        return new com.fasterxml.jackson.core.type.TypeReference&lt;OrderResourceIdentifier&gt;() {</span>
+<span class="source-line-no">106</span><span id="line.106">            @Override</span>
+<span class="source-line-no">107</span><span id="line.107">            public String toString() {</span>
+<span class="source-line-no">108</span><span id="line.108">                return "TypeReference&lt;OrderResourceIdentifier&gt;";</span>
+<span class="source-line-no">109</span><span id="line.109">            }</span>
+<span class="source-line-no">110</span><span id="line.110">        };</span>
+<span class="source-line-no">111</span><span id="line.111">    }</span>
+<span class="source-line-no">112</span><span id="line.112">}</span>
 
 
 

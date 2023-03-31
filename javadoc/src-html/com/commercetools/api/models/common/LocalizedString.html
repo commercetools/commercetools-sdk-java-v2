@@ -56,291 +56,302 @@
 <span class="source-line-no">043</span><span id="line.43"></span>
 <span class="source-line-no">044</span><span id="line.44">    public static LocalizedString of(final LocalizedString template) {</span>
 <span class="source-line-no">045</span><span id="line.45">        LocalizedStringImpl instance = new LocalizedStringImpl();</span>
-<span class="source-line-no">046</span><span id="line.46">        return instance;</span>
-<span class="source-line-no">047</span><span id="line.47">    }</span>
-<span class="source-line-no">048</span><span id="line.48"></span>
-<span class="source-line-no">049</span><span id="line.49">    public static LocalizedStringBuilder builder() {</span>
-<span class="source-line-no">050</span><span id="line.50">        return LocalizedStringBuilder.of();</span>
-<span class="source-line-no">051</span><span id="line.51">    }</span>
-<span class="source-line-no">052</span><span id="line.52"></span>
-<span class="source-line-no">053</span><span id="line.53">    public static LocalizedStringBuilder builder(final LocalizedString template) {</span>
-<span class="source-line-no">054</span><span id="line.54">        return LocalizedStringBuilder.of(template);</span>
-<span class="source-line-no">055</span><span id="line.55">    }</span>
-<span class="source-line-no">056</span><span id="line.56"></span>
-<span class="source-line-no">057</span><span id="line.57">    default &lt;T&gt; T withLocalizedString(Function&lt;LocalizedString, T&gt; helper) {</span>
-<span class="source-line-no">058</span><span id="line.58">        return helper.apply(this);</span>
-<span class="source-line-no">059</span><span id="line.59">    }</span>
-<span class="source-line-no">060</span><span id="line.60"></span>
-<span class="source-line-no">061</span><span id="line.61">    @NotNull</span>
-<span class="source-line-no">062</span><span id="line.62">    @JsonIgnore</span>
-<span class="source-line-no">063</span><span id="line.63">    default public Map&lt;Locale, String&gt; localeValues() {</span>
-<span class="source-line-no">064</span><span id="line.64">        return values().entrySet().stream().collect(Collectors.toMap(e -&gt; new Locale(e.getKey()), Map.Entry::getValue));</span>
-<span class="source-line-no">065</span><span id="line.65">    }</span>
-<span class="source-line-no">066</span><span id="line.66"></span>
-<span class="source-line-no">067</span><span id="line.67">    /**</span>
-<span class="source-line-no">068</span><span id="line.68">     * Creates an instance without any value.</span>
-<span class="source-line-no">069</span><span id="line.69">     *</span>
-<span class="source-line-no">070</span><span id="line.70">     * @return instance without any value</span>
-<span class="source-line-no">071</span><span id="line.71">     */</span>
-<span class="source-line-no">072</span><span id="line.72">    public static LocalizedString empty() {</span>
-<span class="source-line-no">073</span><span id="line.73">        return of();</span>
-<span class="source-line-no">074</span><span id="line.74">    }</span>
-<span class="source-line-no">075</span><span id="line.75"></span>
-<span class="source-line-no">076</span><span id="line.76">    /**</span>
-<span class="source-line-no">077</span><span id="line.77">     * Creates an instance with one locale translation pair.</span>
-<span class="source-line-no">078</span><span id="line.78">     *</span>
-<span class="source-line-no">079</span><span id="line.79">     * @param locale the locale for the one translation</span>
-<span class="source-line-no">080</span><span id="line.80">     * @param value the translation for the specified locale</span>
-<span class="source-line-no">081</span><span id="line.81">     * @return translation for one language</span>
+<span class="source-line-no">046</span><span id="line.46">        Optional.ofNullable(template).ifPresent(t -&gt; t.values().forEach(instance::setValue));</span>
+<span class="source-line-no">047</span><span id="line.47">        return instance;</span>
+<span class="source-line-no">048</span><span id="line.48">    }</span>
+<span class="source-line-no">049</span><span id="line.49"></span>
+<span class="source-line-no">050</span><span id="line.50">    @Nullable</span>
+<span class="source-line-no">051</span><span id="line.51">    public static LocalizedString deepCopy(@Nullable final LocalizedString template) {</span>
+<span class="source-line-no">052</span><span id="line.52">        if (template == null) {</span>
+<span class="source-line-no">053</span><span id="line.53">            return null;</span>
+<span class="source-line-no">054</span><span id="line.54">        }</span>
+<span class="source-line-no">055</span><span id="line.55">        LocalizedStringImpl instance = new LocalizedStringImpl();</span>
+<span class="source-line-no">056</span><span id="line.56">        Optional.ofNullable(template.values()).ifPresent(t -&gt; t.forEach(instance::setValue));</span>
+<span class="source-line-no">057</span><span id="line.57">        return instance;</span>
+<span class="source-line-no">058</span><span id="line.58">    }</span>
+<span class="source-line-no">059</span><span id="line.59"></span>
+<span class="source-line-no">060</span><span id="line.60">    public static LocalizedStringBuilder builder() {</span>
+<span class="source-line-no">061</span><span id="line.61">        return LocalizedStringBuilder.of();</span>
+<span class="source-line-no">062</span><span id="line.62">    }</span>
+<span class="source-line-no">063</span><span id="line.63"></span>
+<span class="source-line-no">064</span><span id="line.64">    public static LocalizedStringBuilder builder(final LocalizedString template) {</span>
+<span class="source-line-no">065</span><span id="line.65">        return LocalizedStringBuilder.of(template);</span>
+<span class="source-line-no">066</span><span id="line.66">    }</span>
+<span class="source-line-no">067</span><span id="line.67"></span>
+<span class="source-line-no">068</span><span id="line.68">    default &lt;T&gt; T withLocalizedString(Function&lt;LocalizedString, T&gt; helper) {</span>
+<span class="source-line-no">069</span><span id="line.69">        return helper.apply(this);</span>
+<span class="source-line-no">070</span><span id="line.70">    }</span>
+<span class="source-line-no">071</span><span id="line.71"></span>
+<span class="source-line-no">072</span><span id="line.72">    @NotNull</span>
+<span class="source-line-no">073</span><span id="line.73">    @JsonIgnore</span>
+<span class="source-line-no">074</span><span id="line.74">    default public Map&lt;Locale, String&gt; localeValues() {</span>
+<span class="source-line-no">075</span><span id="line.75">        return values().entrySet().stream().collect(Collectors.toMap(e -&gt; new Locale(e.getKey()), Map.Entry::getValue));</span>
+<span class="source-line-no">076</span><span id="line.76">    }</span>
+<span class="source-line-no">077</span><span id="line.77"></span>
+<span class="source-line-no">078</span><span id="line.78">    /**</span>
+<span class="source-line-no">079</span><span id="line.79">     * Creates an instance without any value.</span>
+<span class="source-line-no">080</span><span id="line.80">     *</span>
+<span class="source-line-no">081</span><span id="line.81">     * @return instance without any value</span>
 <span class="source-line-no">082</span><span id="line.82">     */</span>
-<span class="source-line-no">083</span><span id="line.83">    @JsonIgnore</span>
-<span class="source-line-no">084</span><span id="line.84">    public static LocalizedString of(final Locale locale, final String value) {</span>
-<span class="source-line-no">085</span><span id="line.85">        requireNonNull(locale);</span>
-<span class="source-line-no">086</span><span id="line.86">        requireNonNull(value);</span>
-<span class="source-line-no">087</span><span id="line.87">        return ofStringToStringMap(mapOf(locale.toLanguageTag(), value));</span>
-<span class="source-line-no">088</span><span id="line.88">    }</span>
-<span class="source-line-no">089</span><span id="line.89"></span>
-<span class="source-line-no">090</span><span id="line.90">    /**</span>
-<span class="source-line-no">091</span><span id="line.91">     * Creates an instance for two different locales.</span>
-<span class="source-line-no">092</span><span id="line.92">     *</span>
-<span class="source-line-no">093</span><span id="line.93">     * @param locale1 the first locale</span>
-<span class="source-line-no">094</span><span id="line.94">     * @param value1 the translation corresponding to {@code locale1}</span>
-<span class="source-line-no">095</span><span id="line.95">     * @param locale2 the second locale which differs from {@code locale1}</span>
-<span class="source-line-no">096</span><span id="line.96">     * @param value2 the translation corresponding to {@code locale2}</span>
-<span class="source-line-no">097</span><span id="line.97">     * @return new instance for two key value pairs</span>
-<span class="source-line-no">098</span><span id="line.98">     */</span>
-<span class="source-line-no">099</span><span id="line.99">    @JsonIgnore</span>
-<span class="source-line-no">100</span><span id="line.100">    public static LocalizedString of(final Locale locale1, final String value1, final Locale locale2,</span>
-<span class="source-line-no">101</span><span id="line.101">            final String value2) {</span>
-<span class="source-line-no">102</span><span id="line.102">        return ofStringToStringMap(mapOf(locale1.toLanguageTag(), value1, locale2.toLanguageTag(), value2));</span>
-<span class="source-line-no">103</span><span id="line.103">    }</span>
-<span class="source-line-no">104</span><span id="line.104"></span>
-<span class="source-line-no">105</span><span id="line.105">    /**</span>
-<span class="source-line-no">106</span><span id="line.106">     * Creates an instance by supplying a map of {@link Locale} and {@link String}. Changes to the map won't affect the instance.</span>
-<span class="source-line-no">107</span><span id="line.107">     *</span>
-<span class="source-line-no">108</span><span id="line.108">     * @param translations the key value pairs for the translation</span>
-<span class="source-line-no">109</span><span id="line.109">     * @return a new instance which has the same key value pairs as {@code translation} at creation time</span>
-<span class="source-line-no">110</span><span id="line.110">     */</span>
-<span class="source-line-no">111</span><span id="line.111">    @JsonIgnore</span>
-<span class="source-line-no">112</span><span id="line.112">    public static LocalizedString of(final Map&lt;Locale, String&gt; translations) {</span>
-<span class="source-line-no">113</span><span id="line.113">        requireNonNull(translations);</span>
-<span class="source-line-no">114</span><span id="line.114">        return LocalizedString.ofStringToStringMap(translations.entrySet()</span>
-<span class="source-line-no">115</span><span id="line.115">                .stream()</span>
-<span class="source-line-no">116</span><span id="line.116">                .collect(Collectors.toMap(e -&gt; e.getKey().toLanguageTag(), Map.Entry::getValue)));</span>
-<span class="source-line-no">117</span><span id="line.117">    }</span>
-<span class="source-line-no">118</span><span id="line.118"></span>
-<span class="source-line-no">119</span><span id="line.119">    /**</span>
-<span class="source-line-no">120</span><span id="line.120">     * Creates an instance by supplying a map of {@link String} the language tag and {@link String}. Changes to the map won't affect the instance.</span>
-<span class="source-line-no">121</span><span id="line.121">     *</span>
-<span class="source-line-no">122</span><span id="line.122">     * @param translations the key value pairs for the translation</span>
-<span class="source-line-no">123</span><span id="line.123">     * @return a new instance which has the same key value pairs as {@code translation} at creation time</span>
-<span class="source-line-no">124</span><span id="line.124">     */</span>
-<span class="source-line-no">125</span><span id="line.125">    @JsonIgnore</span>
-<span class="source-line-no">126</span><span id="line.126">    public static LocalizedString ofStringToStringMap(final Map&lt;String, String&gt; translations) {</span>
-<span class="source-line-no">127</span><span id="line.127">        requireNonNull(translations);</span>
-<span class="source-line-no">128</span><span id="line.128">        return LocalizedStringBuilder.of().values(translations).build();</span>
-<span class="source-line-no">129</span><span id="line.129">    }</span>
-<span class="source-line-no">130</span><span id="line.130"></span>
-<span class="source-line-no">131</span><span id="line.131">    /**</span>
-<span class="source-line-no">132</span><span id="line.132">     * Creates a new {@link LocalizedString} containing the given entries and the new one.</span>
-<span class="source-line-no">133</span><span id="line.133">     * It is not allowed to override existing entries.</span>
-<span class="source-line-no">134</span><span id="line.134">     *</span>
-<span class="source-line-no">135</span><span id="line.135">     * @param locale the additional locale of the new entry</span>
-<span class="source-line-no">136</span><span id="line.136">     * @param value the value for the &lt;code&gt;locale&lt;/code&gt;</span>
-<span class="source-line-no">137</span><span id="line.137">     * @return a LocalizedString containing this data and the from the parameters.</span>
-<span class="source-line-no">138</span><span id="line.138">     * @throws IllegalArgumentException if duplicate locales are provided</span>
-<span class="source-line-no">139</span><span id="line.139">     */</span>
-<span class="source-line-no">140</span><span id="line.140">    default public LocalizedString plus(final Locale locale, final String value) {</span>
-<span class="source-line-no">141</span><span id="line.141">        if (values().containsKey(locale.toLanguageTag())) {</span>
-<span class="source-line-no">142</span><span id="line.142">            throw new IllegalArgumentException(format("Duplicate keys (%s) for map creation.", locale));</span>
-<span class="source-line-no">143</span><span id="line.143">        }</span>
-<span class="source-line-no">144</span><span id="line.144">        final Map&lt;String, String&gt; newMap = new HashMap&lt;&gt;(values());</span>
-<span class="source-line-no">145</span><span id="line.145">        newMap.put(locale.toLanguageTag(), value);</span>
-<span class="source-line-no">146</span><span id="line.146">        return LocalizedStringBuilder.of().values(newMap).build();</span>
-<span class="source-line-no">147</span><span id="line.147">    }</span>
-<span class="source-line-no">148</span><span id="line.148"></span>
-<span class="source-line-no">149</span><span id="line.149">    /**</span>
-<span class="source-line-no">150</span><span id="line.150">     * Searches the translation for an exact locale and returning the result in an {@link Optional}.</span>
-<span class="source-line-no">151</span><span id="line.151">     *</span>
-<span class="source-line-no">152</span><span id="line.152">     * @param locale the locale which should be searched</span>
-<span class="source-line-no">153</span><span id="line.153">     * @return A filled optional with the translation belonging to {@code locale} or an empty optional if the locale is not present.</span>
-<span class="source-line-no">154</span><span id="line.154">     */</span>
-<span class="source-line-no">155</span><span id="line.155">    @Nonnull</span>
-<span class="source-line-no">156</span><span id="line.156">    default public Optional&lt;String&gt; find(final Locale locale) {</span>
-<span class="source-line-no">157</span><span id="line.157">        return Optional.ofNullable(get(locale));</span>
+<span class="source-line-no">083</span><span id="line.83">    public static LocalizedString empty() {</span>
+<span class="source-line-no">084</span><span id="line.84">        return of();</span>
+<span class="source-line-no">085</span><span id="line.85">    }</span>
+<span class="source-line-no">086</span><span id="line.86"></span>
+<span class="source-line-no">087</span><span id="line.87">    /**</span>
+<span class="source-line-no">088</span><span id="line.88">     * Creates an instance with one locale translation pair.</span>
+<span class="source-line-no">089</span><span id="line.89">     *</span>
+<span class="source-line-no">090</span><span id="line.90">     * @param locale the locale for the one translation</span>
+<span class="source-line-no">091</span><span id="line.91">     * @param value the translation for the specified locale</span>
+<span class="source-line-no">092</span><span id="line.92">     * @return translation for one language</span>
+<span class="source-line-no">093</span><span id="line.93">     */</span>
+<span class="source-line-no">094</span><span id="line.94">    @JsonIgnore</span>
+<span class="source-line-no">095</span><span id="line.95">    public static LocalizedString of(final Locale locale, final String value) {</span>
+<span class="source-line-no">096</span><span id="line.96">        requireNonNull(locale);</span>
+<span class="source-line-no">097</span><span id="line.97">        requireNonNull(value);</span>
+<span class="source-line-no">098</span><span id="line.98">        return ofStringToStringMap(mapOf(locale.toLanguageTag(), value));</span>
+<span class="source-line-no">099</span><span id="line.99">    }</span>
+<span class="source-line-no">100</span><span id="line.100"></span>
+<span class="source-line-no">101</span><span id="line.101">    /**</span>
+<span class="source-line-no">102</span><span id="line.102">     * Creates an instance for two different locales.</span>
+<span class="source-line-no">103</span><span id="line.103">     *</span>
+<span class="source-line-no">104</span><span id="line.104">     * @param locale1 the first locale</span>
+<span class="source-line-no">105</span><span id="line.105">     * @param value1 the translation corresponding to {@code locale1}</span>
+<span class="source-line-no">106</span><span id="line.106">     * @param locale2 the second locale which differs from {@code locale1}</span>
+<span class="source-line-no">107</span><span id="line.107">     * @param value2 the translation corresponding to {@code locale2}</span>
+<span class="source-line-no">108</span><span id="line.108">     * @return new instance for two key value pairs</span>
+<span class="source-line-no">109</span><span id="line.109">     */</span>
+<span class="source-line-no">110</span><span id="line.110">    @JsonIgnore</span>
+<span class="source-line-no">111</span><span id="line.111">    public static LocalizedString of(final Locale locale1, final String value1, final Locale locale2,</span>
+<span class="source-line-no">112</span><span id="line.112">            final String value2) {</span>
+<span class="source-line-no">113</span><span id="line.113">        return ofStringToStringMap(mapOf(locale1.toLanguageTag(), value1, locale2.toLanguageTag(), value2));</span>
+<span class="source-line-no">114</span><span id="line.114">    }</span>
+<span class="source-line-no">115</span><span id="line.115"></span>
+<span class="source-line-no">116</span><span id="line.116">    /**</span>
+<span class="source-line-no">117</span><span id="line.117">     * Creates an instance by supplying a map of {@link Locale} and {@link String}. Changes to the map won't affect the instance.</span>
+<span class="source-line-no">118</span><span id="line.118">     *</span>
+<span class="source-line-no">119</span><span id="line.119">     * @param translations the key value pairs for the translation</span>
+<span class="source-line-no">120</span><span id="line.120">     * @return a new instance which has the same key value pairs as {@code translation} at creation time</span>
+<span class="source-line-no">121</span><span id="line.121">     */</span>
+<span class="source-line-no">122</span><span id="line.122">    @JsonIgnore</span>
+<span class="source-line-no">123</span><span id="line.123">    public static LocalizedString of(final Map&lt;Locale, String&gt; translations) {</span>
+<span class="source-line-no">124</span><span id="line.124">        requireNonNull(translations);</span>
+<span class="source-line-no">125</span><span id="line.125">        return LocalizedString.ofStringToStringMap(translations.entrySet()</span>
+<span class="source-line-no">126</span><span id="line.126">                .stream()</span>
+<span class="source-line-no">127</span><span id="line.127">                .collect(Collectors.toMap(e -&gt; e.getKey().toLanguageTag(), Map.Entry::getValue)));</span>
+<span class="source-line-no">128</span><span id="line.128">    }</span>
+<span class="source-line-no">129</span><span id="line.129"></span>
+<span class="source-line-no">130</span><span id="line.130">    /**</span>
+<span class="source-line-no">131</span><span id="line.131">     * Creates an instance by supplying a map of {@link String} the language tag and {@link String}. Changes to the map won't affect the instance.</span>
+<span class="source-line-no">132</span><span id="line.132">     *</span>
+<span class="source-line-no">133</span><span id="line.133">     * @param translations the key value pairs for the translation</span>
+<span class="source-line-no">134</span><span id="line.134">     * @return a new instance which has the same key value pairs as {@code translation} at creation time</span>
+<span class="source-line-no">135</span><span id="line.135">     */</span>
+<span class="source-line-no">136</span><span id="line.136">    @JsonIgnore</span>
+<span class="source-line-no">137</span><span id="line.137">    public static LocalizedString ofStringToStringMap(final Map&lt;String, String&gt; translations) {</span>
+<span class="source-line-no">138</span><span id="line.138">        requireNonNull(translations);</span>
+<span class="source-line-no">139</span><span id="line.139">        return LocalizedStringBuilder.of().values(translations).build();</span>
+<span class="source-line-no">140</span><span id="line.140">    }</span>
+<span class="source-line-no">141</span><span id="line.141"></span>
+<span class="source-line-no">142</span><span id="line.142">    /**</span>
+<span class="source-line-no">143</span><span id="line.143">     * Creates a new {@link LocalizedString} containing the given entries and the new one.</span>
+<span class="source-line-no">144</span><span id="line.144">     * It is not allowed to override existing entries.</span>
+<span class="source-line-no">145</span><span id="line.145">     *</span>
+<span class="source-line-no">146</span><span id="line.146">     * @param locale the additional locale of the new entry</span>
+<span class="source-line-no">147</span><span id="line.147">     * @param value the value for the &lt;code&gt;locale&lt;/code&gt;</span>
+<span class="source-line-no">148</span><span id="line.148">     * @return a LocalizedString containing this data and the from the parameters.</span>
+<span class="source-line-no">149</span><span id="line.149">     * @throws IllegalArgumentException if duplicate locales are provided</span>
+<span class="source-line-no">150</span><span id="line.150">     */</span>
+<span class="source-line-no">151</span><span id="line.151">    default public LocalizedString plus(final Locale locale, final String value) {</span>
+<span class="source-line-no">152</span><span id="line.152">        if (values().containsKey(locale.toLanguageTag())) {</span>
+<span class="source-line-no">153</span><span id="line.153">            throw new IllegalArgumentException(format("Duplicate keys (%s) for map creation.", locale));</span>
+<span class="source-line-no">154</span><span id="line.154">        }</span>
+<span class="source-line-no">155</span><span id="line.155">        final Map&lt;String, String&gt; newMap = new HashMap&lt;&gt;(values());</span>
+<span class="source-line-no">156</span><span id="line.156">        newMap.put(locale.toLanguageTag(), value);</span>
+<span class="source-line-no">157</span><span id="line.157">        return LocalizedStringBuilder.of().values(newMap).build();</span>
 <span class="source-line-no">158</span><span id="line.158">    }</span>
 <span class="source-line-no">159</span><span id="line.159"></span>
 <span class="source-line-no">160</span><span id="line.160">    /**</span>
-<span class="source-line-no">161</span><span id="line.161">     * Searches the translation for an exact locale by using {@code null} in the case the locale ist not present.</span>
+<span class="source-line-no">161</span><span id="line.161">     * Searches the translation for an exact locale and returning the result in an {@link Optional}.</span>
 <span class="source-line-no">162</span><span id="line.162">     *</span>
 <span class="source-line-no">163</span><span id="line.163">     * @param locale the locale which should be searched</span>
-<span class="source-line-no">164</span><span id="line.164">     * @return the translation belonging to {@code locale} or null if the locale is not present.</span>
+<span class="source-line-no">164</span><span id="line.164">     * @return A filled optional with the translation belonging to {@code locale} or an empty optional if the locale is not present.</span>
 <span class="source-line-no">165</span><span id="line.165">     */</span>
-<span class="source-line-no">166</span><span id="line.166">    @Nullable</span>
-<span class="source-line-no">167</span><span id="line.167">    default public String get(final Locale locale) {</span>
-<span class="source-line-no">168</span><span id="line.168">        return values().get(locale.toLanguageTag());</span>
+<span class="source-line-no">166</span><span id="line.166">    @Nonnull</span>
+<span class="source-line-no">167</span><span id="line.167">    default public Optional&lt;String&gt; find(final Locale locale) {</span>
+<span class="source-line-no">168</span><span id="line.168">        return Optional.ofNullable(get(locale));</span>
 <span class="source-line-no">169</span><span id="line.169">    }</span>
 <span class="source-line-no">170</span><span id="line.170"></span>
 <span class="source-line-no">171</span><span id="line.171">    /**</span>
-<span class="source-line-no">172</span><span id="line.172">     * Searches the translation for a locale specified in IETF BCP 47 by language tag string.</span>
-<span class="source-line-no">173</span><span id="line.173">     * If the specified language tag contains any ill-formed subtags, the first such subtag and all following subtags are ignored.</span>
-<span class="source-line-no">174</span><span id="line.174">     *</span>
-<span class="source-line-no">175</span><span id="line.175">     * @param languageTag the IETF language tag corresponding to an {@code Locale}</span>
-<span class="source-line-no">176</span><span id="line.176">     * @return the translation belonging to {@code languageTag} or {@code null} if the locale is not present.</span>
-<span class="source-line-no">177</span><span id="line.177">     */</span>
-<span class="source-line-no">178</span><span id="line.178">    @Nullable</span>
-<span class="source-line-no">179</span><span id="line.179">    default public String get(final String languageTag) {</span>
-<span class="source-line-no">180</span><span id="line.180">        final Locale locale = Locale.forLanguageTag(languageTag);</span>
-<span class="source-line-no">181</span><span id="line.181">        return get(locale);</span>
-<span class="source-line-no">182</span><span id="line.182">    }</span>
-<span class="source-line-no">183</span><span id="line.183"></span>
-<span class="source-line-no">184</span><span id="line.184">    /**</span>
-<span class="source-line-no">185</span><span id="line.185">     * Searches the translation for some exact locales in the order they appear and returning the result in an {@link Optional}.</span>
-<span class="source-line-no">186</span><span id="line.186">     *</span>
-<span class="source-line-no">187</span><span id="line.187">     * @param locales the locale which should be searched, the first exact match wins</span>
-<span class="source-line-no">188</span><span id="line.188">     * @return A filled optional with the translation belonging to one of the {@code locales} or an empty optional if none of the locales is not present.</span>
-<span class="source-line-no">189</span><span id="line.189">     */</span>
-<span class="source-line-no">190</span><span id="line.190">    @Nonnull</span>
-<span class="source-line-no">191</span><span id="line.191">    default public Optional&lt;String&gt; find(final Iterable&lt;Locale&gt; locales) {</span>
-<span class="source-line-no">192</span><span id="line.192">        final Optional&lt;Locale&gt; firstFoundLocale = toStream(locales)</span>
-<span class="source-line-no">193</span><span id="line.193">                .filter(locale -&gt; values().containsKey(locale.toLanguageTag()))</span>
-<span class="source-line-no">194</span><span id="line.194">                .findFirst();</span>
-<span class="source-line-no">195</span><span id="line.195">        return firstFoundLocale.map(foundLocale -&gt; get(foundLocale.toLanguageTag()));</span>
-<span class="source-line-no">196</span><span id="line.196">    }</span>
-<span class="source-line-no">197</span><span id="line.197"></span>
-<span class="source-line-no">198</span><span id="line.198">    /**</span>
-<span class="source-line-no">199</span><span id="line.199">     * Searches the translation for some exact locales in the order they appear and using null as result if no match could be found.</span>
-<span class="source-line-no">200</span><span id="line.200">     *</span>
-<span class="source-line-no">201</span><span id="line.201">     * @param locales the locale which should be searched, the first exact match wins</span>
-<span class="source-line-no">202</span><span id="line.202">     * @return the translation belonging to one of the {@code locales} or null if none of the locales is not present.</span>
-<span class="source-line-no">203</span><span id="line.203">     */</span>
-<span class="source-line-no">204</span><span id="line.204">    @Nullable</span>
-<span class="source-line-no">205</span><span id="line.205">    default public String get(final Iterable&lt;Locale&gt; locales) {</span>
-<span class="source-line-no">206</span><span id="line.206">        return find(locales).orElse(null);</span>
+<span class="source-line-no">172</span><span id="line.172">     * Searches the translation for an exact locale by using {@code null} in the case the locale ist not present.</span>
+<span class="source-line-no">173</span><span id="line.173">     *</span>
+<span class="source-line-no">174</span><span id="line.174">     * @param locale the locale which should be searched</span>
+<span class="source-line-no">175</span><span id="line.175">     * @return the translation belonging to {@code locale} or null if the locale is not present.</span>
+<span class="source-line-no">176</span><span id="line.176">     */</span>
+<span class="source-line-no">177</span><span id="line.177">    @Nullable</span>
+<span class="source-line-no">178</span><span id="line.178">    default public String get(final Locale locale) {</span>
+<span class="source-line-no">179</span><span id="line.179">        return values().get(locale.toLanguageTag());</span>
+<span class="source-line-no">180</span><span id="line.180">    }</span>
+<span class="source-line-no">181</span><span id="line.181"></span>
+<span class="source-line-no">182</span><span id="line.182">    /**</span>
+<span class="source-line-no">183</span><span id="line.183">     * Searches the translation for a locale specified in IETF BCP 47 by language tag string.</span>
+<span class="source-line-no">184</span><span id="line.184">     * If the specified language tag contains any ill-formed subtags, the first such subtag and all following subtags are ignored.</span>
+<span class="source-line-no">185</span><span id="line.185">     *</span>
+<span class="source-line-no">186</span><span id="line.186">     * @param languageTag the IETF language tag corresponding to an {@code Locale}</span>
+<span class="source-line-no">187</span><span id="line.187">     * @return the translation belonging to {@code languageTag} or {@code null} if the locale is not present.</span>
+<span class="source-line-no">188</span><span id="line.188">     */</span>
+<span class="source-line-no">189</span><span id="line.189">    @Nullable</span>
+<span class="source-line-no">190</span><span id="line.190">    default public String get(final String languageTag) {</span>
+<span class="source-line-no">191</span><span id="line.191">        final Locale locale = Locale.forLanguageTag(languageTag);</span>
+<span class="source-line-no">192</span><span id="line.192">        return get(locale);</span>
+<span class="source-line-no">193</span><span id="line.193">    }</span>
+<span class="source-line-no">194</span><span id="line.194"></span>
+<span class="source-line-no">195</span><span id="line.195">    /**</span>
+<span class="source-line-no">196</span><span id="line.196">     * Searches the translation for some exact locales in the order they appear and returning the result in an {@link Optional}.</span>
+<span class="source-line-no">197</span><span id="line.197">     *</span>
+<span class="source-line-no">198</span><span id="line.198">     * @param locales the locale which should be searched, the first exact match wins</span>
+<span class="source-line-no">199</span><span id="line.199">     * @return A filled optional with the translation belonging to one of the {@code locales} or an empty optional if none of the locales is not present.</span>
+<span class="source-line-no">200</span><span id="line.200">     */</span>
+<span class="source-line-no">201</span><span id="line.201">    @Nonnull</span>
+<span class="source-line-no">202</span><span id="line.202">    default public Optional&lt;String&gt; find(final Iterable&lt;Locale&gt; locales) {</span>
+<span class="source-line-no">203</span><span id="line.203">        final Optional&lt;Locale&gt; firstFoundLocale = toStream(locales)</span>
+<span class="source-line-no">204</span><span id="line.204">                .filter(locale -&gt; values().containsKey(locale.toLanguageTag()))</span>
+<span class="source-line-no">205</span><span id="line.205">                .findFirst();</span>
+<span class="source-line-no">206</span><span id="line.206">        return firstFoundLocale.map(foundLocale -&gt; get(foundLocale.toLanguageTag()));</span>
 <span class="source-line-no">207</span><span id="line.207">    }</span>
 <span class="source-line-no">208</span><span id="line.208"></span>
 <span class="source-line-no">209</span><span id="line.209">    /**</span>
-<span class="source-line-no">210</span><span id="line.210">     * Searches a translation which matches a locale in {@code locales} and uses language fallbackes.</span>
-<span class="source-line-no">211</span><span id="line.211">     * If locales which countries are used then the algorithm searches also for the pure language locale.</span>
-<span class="source-line-no">212</span><span id="line.212">     * So if "en_US" could not be found then "en" will be tried.</span>
-<span class="source-line-no">213</span><span id="line.213">     *</span>
-<span class="source-line-no">214</span><span id="line.214">     * @param locales the locales to try out</span>
-<span class="source-line-no">215</span><span id="line.215">     * @return a translation matching one of the locales or null</span>
-<span class="source-line-no">216</span><span id="line.216">     */</span>
-<span class="source-line-no">217</span><span id="line.217">    @Nullable</span>
-<span class="source-line-no">218</span><span id="line.218">    @JsonIgnore</span>
-<span class="source-line-no">219</span><span id="line.219">    default public String getTranslation(final Iterable&lt;Locale&gt; locales) {</span>
-<span class="source-line-no">220</span><span id="line.220">        return StreamSupport.stream(locales.spliterator(), false).map(localeToFind -&gt; {</span>
-<span class="source-line-no">221</span><span id="line.221">            String match = get(localeToFind);</span>
-<span class="source-line-no">222</span><span id="line.222">            if (match == null) {</span>
-<span class="source-line-no">223</span><span id="line.223">                final Locale pureLanguageLocale = new Locale(localeToFind.getLanguage());</span>
-<span class="source-line-no">224</span><span id="line.224">                match = get(pureLanguageLocale);</span>
-<span class="source-line-no">225</span><span id="line.225">            }</span>
-<span class="source-line-no">226</span><span id="line.226">            return match;</span>
-<span class="source-line-no">227</span><span id="line.227">        }).filter(Objects::nonNull).findFirst().orElse(null);</span>
-<span class="source-line-no">228</span><span id="line.228">    }</span>
-<span class="source-line-no">229</span><span id="line.229"></span>
-<span class="source-line-no">230</span><span id="line.230">    /**</span>
-<span class="source-line-no">231</span><span id="line.231">     * Creates a new instance where each translation value is transformed with {@code function}.</span>
-<span class="source-line-no">232</span><span id="line.232">     *</span>
-<span class="source-line-no">233</span><span id="line.233">     * @param function transforms a value for a locale into a new value</span>
-<span class="source-line-no">234</span><span id="line.234">     * @return a new {@link LocalizedString} which consist all elements for this transformed with {@code function}</span>
-<span class="source-line-no">235</span><span id="line.235">     */</span>
-<span class="source-line-no">236</span><span id="line.236">    default public LocalizedString mapValue(final BiFunction&lt;Locale, String, String&gt; function) {</span>
-<span class="source-line-no">237</span><span id="line.237">        return stream().map(entry -&gt; {</span>
-<span class="source-line-no">238</span><span id="line.238">            final String newValue = function.apply(entry.getLocale(), entry.getValue());</span>
-<span class="source-line-no">239</span><span id="line.239">            return LocalizedStringEntry.of(entry.getLocale(), newValue);</span>
-<span class="source-line-no">240</span><span id="line.240">        }).collect(streamCollector());</span>
-<span class="source-line-no">241</span><span id="line.241">    }</span>
-<span class="source-line-no">242</span><span id="line.242"></span>
-<span class="source-line-no">243</span><span id="line.243">    /**</span>
-<span class="source-line-no">244</span><span id="line.244">     * Creates a new Stream of entries.</span>
-<span class="source-line-no">245</span><span id="line.245">     *</span>
-<span class="source-line-no">246</span><span id="line.246">     * @return stream of all entries</span>
-<span class="source-line-no">247</span><span id="line.247">     */</span>
-<span class="source-line-no">248</span><span id="line.248">    default public Stream&lt;LocalizedStringEntry&gt; stream() {</span>
-<span class="source-line-no">249</span><span id="line.249">        return values().entrySet().stream().map(entry -&gt; LocalizedStringEntry.of(entry.getKey(), entry.getValue()));</span>
-<span class="source-line-no">250</span><span id="line.250">    }</span>
-<span class="source-line-no">251</span><span id="line.251"></span>
-<span class="source-line-no">252</span><span id="line.252">    /**</span>
-<span class="source-line-no">253</span><span id="line.253">     * Collector to collect a stream of {@link LocalizedStringEntry}s to one {@link LocalizedString}.</span>
-<span class="source-line-no">254</span><span id="line.254">     *</span>
-<span class="source-line-no">255</span><span id="line.255">     * @return collector</span>
-<span class="source-line-no">256</span><span id="line.256">     */</span>
-<span class="source-line-no">257</span><span id="line.257">    public static Collector&lt;LocalizedStringEntry, ?, LocalizedString&gt; streamCollector() {</span>
-<span class="source-line-no">258</span><span id="line.258">        final Collector&lt;LocalizedStringEntry, Map&lt;String, String&gt;, LocalizedString&gt; result = Collector.of(</span>
-<span class="source-line-no">259</span><span id="line.259">            HashMap::new, (Map&lt;String, String&gt; tmpMap, LocalizedStringEntry entry) -&gt; tmpMap</span>
-<span class="source-line-no">260</span><span id="line.260">                    .put(entry.getLocale().toLanguageTag(), entry.getValue()),</span>
-<span class="source-line-no">261</span><span id="line.261">            (Map&lt;String, String&gt; left, Map&lt;String, String&gt; right) -&gt; {</span>
-<span class="source-line-no">262</span><span id="line.262">                left.putAll(right);</span>
-<span class="source-line-no">263</span><span id="line.263">                return left;</span>
-<span class="source-line-no">264</span><span id="line.264">            }, (Map&lt;String, String&gt; entryMap) -&gt; LocalizedStringBuilder.of().values(entryMap).build());</span>
-<span class="source-line-no">265</span><span id="line.265">        return result;</span>
-<span class="source-line-no">266</span><span id="line.266">    }</span>
-<span class="source-line-no">267</span><span id="line.267"></span>
-<span class="source-line-no">268</span><span id="line.268">    /**</span>
-<span class="source-line-no">269</span><span id="line.269">     * Creates a new {@link LocalizedString} where all translations are slugified (remove whitespace, etc.).</span>
-<span class="source-line-no">270</span><span id="line.270">     *</span>
-<span class="source-line-no">271</span><span id="line.271">     * @return new instance</span>
-<span class="source-line-no">272</span><span id="line.272">     */</span>
-<span class="source-line-no">273</span><span id="line.273">    default public LocalizedString slugified() {</span>
-<span class="source-line-no">274</span><span id="line.274">        return mapValue((locale, value) -&gt; slugify(value));</span>
-<span class="source-line-no">275</span><span id="line.275">    }</span>
-<span class="source-line-no">276</span><span id="line.276"></span>
-<span class="source-line-no">277</span><span id="line.277">    /**</span>
-<span class="source-line-no">278</span><span id="line.278">     * Creates a new {@link LocalizedString} where all translations are slugified (remove whitespace, etc.) and a random supplement is added.</span>
-<span class="source-line-no">279</span><span id="line.279">     * This slugify methods appends a random string for a little uniqueness.</span>
-<span class="source-line-no">280</span><span id="line.280">     *</span>
-<span class="source-line-no">281</span><span id="line.281">     * @return new instance</span>
-<span class="source-line-no">282</span><span id="line.282">     */</span>
-<span class="source-line-no">283</span><span id="line.283">    default public LocalizedString slugifiedUnique() {</span>
-<span class="source-line-no">284</span><span id="line.284">        return mapValue((locale, value) -&gt; slugifyUnique(value));</span>
-<span class="source-line-no">285</span><span id="line.285">    }</span>
-<span class="source-line-no">286</span><span id="line.286"></span>
-<span class="source-line-no">287</span><span id="line.287">    /**</span>
-<span class="source-line-no">288</span><span id="line.288">     * Returns all locales included in this instance.</span>
-<span class="source-line-no">289</span><span id="line.289">     *</span>
-<span class="source-line-no">290</span><span id="line.290">     * @return locales</span>
-<span class="source-line-no">291</span><span id="line.291">     */</span>
-<span class="source-line-no">292</span><span id="line.292">    @JsonIgnore</span>
-<span class="source-line-no">293</span><span id="line.293">    @Nonnull</span>
-<span class="source-line-no">294</span><span id="line.294">    default public Set&lt;Locale&gt; getLocales() {</span>
-<span class="source-line-no">295</span><span id="line.295">        return localeValues().keySet();</span>
+<span class="source-line-no">210</span><span id="line.210">     * Searches the translation for some exact locales in the order they appear and using null as result if no match could be found.</span>
+<span class="source-line-no">211</span><span id="line.211">     *</span>
+<span class="source-line-no">212</span><span id="line.212">     * @param locales the locale which should be searched, the first exact match wins</span>
+<span class="source-line-no">213</span><span id="line.213">     * @return the translation belonging to one of the {@code locales} or null if none of the locales is not present.</span>
+<span class="source-line-no">214</span><span id="line.214">     */</span>
+<span class="source-line-no">215</span><span id="line.215">    @Nullable</span>
+<span class="source-line-no">216</span><span id="line.216">    default public String get(final Iterable&lt;Locale&gt; locales) {</span>
+<span class="source-line-no">217</span><span id="line.217">        return find(locales).orElse(null);</span>
+<span class="source-line-no">218</span><span id="line.218">    }</span>
+<span class="source-line-no">219</span><span id="line.219"></span>
+<span class="source-line-no">220</span><span id="line.220">    /**</span>
+<span class="source-line-no">221</span><span id="line.221">     * Searches a translation which matches a locale in {@code locales} and uses language fallbackes.</span>
+<span class="source-line-no">222</span><span id="line.222">     * If locales which countries are used then the algorithm searches also for the pure language locale.</span>
+<span class="source-line-no">223</span><span id="line.223">     * So if "en_US" could not be found then "en" will be tried.</span>
+<span class="source-line-no">224</span><span id="line.224">     *</span>
+<span class="source-line-no">225</span><span id="line.225">     * @param locales the locales to try out</span>
+<span class="source-line-no">226</span><span id="line.226">     * @return a translation matching one of the locales or null</span>
+<span class="source-line-no">227</span><span id="line.227">     */</span>
+<span class="source-line-no">228</span><span id="line.228">    @Nullable</span>
+<span class="source-line-no">229</span><span id="line.229">    @JsonIgnore</span>
+<span class="source-line-no">230</span><span id="line.230">    default public String getTranslation(final Iterable&lt;Locale&gt; locales) {</span>
+<span class="source-line-no">231</span><span id="line.231">        return StreamSupport.stream(locales.spliterator(), false).map(localeToFind -&gt; {</span>
+<span class="source-line-no">232</span><span id="line.232">            String match = get(localeToFind);</span>
+<span class="source-line-no">233</span><span id="line.233">            if (match == null) {</span>
+<span class="source-line-no">234</span><span id="line.234">                final Locale pureLanguageLocale = new Locale(localeToFind.getLanguage());</span>
+<span class="source-line-no">235</span><span id="line.235">                match = get(pureLanguageLocale);</span>
+<span class="source-line-no">236</span><span id="line.236">            }</span>
+<span class="source-line-no">237</span><span id="line.237">            return match;</span>
+<span class="source-line-no">238</span><span id="line.238">        }).filter(Objects::nonNull).findFirst().orElse(null);</span>
+<span class="source-line-no">239</span><span id="line.239">    }</span>
+<span class="source-line-no">240</span><span id="line.240"></span>
+<span class="source-line-no">241</span><span id="line.241">    /**</span>
+<span class="source-line-no">242</span><span id="line.242">     * Creates a new instance where each translation value is transformed with {@code function}.</span>
+<span class="source-line-no">243</span><span id="line.243">     *</span>
+<span class="source-line-no">244</span><span id="line.244">     * @param function transforms a value for a locale into a new value</span>
+<span class="source-line-no">245</span><span id="line.245">     * @return a new {@link LocalizedString} which consist all elements for this transformed with {@code function}</span>
+<span class="source-line-no">246</span><span id="line.246">     */</span>
+<span class="source-line-no">247</span><span id="line.247">    default public LocalizedString mapValue(final BiFunction&lt;Locale, String, String&gt; function) {</span>
+<span class="source-line-no">248</span><span id="line.248">        return stream().map(entry -&gt; {</span>
+<span class="source-line-no">249</span><span id="line.249">            final String newValue = function.apply(entry.getLocale(), entry.getValue());</span>
+<span class="source-line-no">250</span><span id="line.250">            return LocalizedStringEntry.of(entry.getLocale(), newValue);</span>
+<span class="source-line-no">251</span><span id="line.251">        }).collect(streamCollector());</span>
+<span class="source-line-no">252</span><span id="line.252">    }</span>
+<span class="source-line-no">253</span><span id="line.253"></span>
+<span class="source-line-no">254</span><span id="line.254">    /**</span>
+<span class="source-line-no">255</span><span id="line.255">     * Creates a new Stream of entries.</span>
+<span class="source-line-no">256</span><span id="line.256">     *</span>
+<span class="source-line-no">257</span><span id="line.257">     * @return stream of all entries</span>
+<span class="source-line-no">258</span><span id="line.258">     */</span>
+<span class="source-line-no">259</span><span id="line.259">    default public Stream&lt;LocalizedStringEntry&gt; stream() {</span>
+<span class="source-line-no">260</span><span id="line.260">        return values().entrySet().stream().map(entry -&gt; LocalizedStringEntry.of(entry.getKey(), entry.getValue()));</span>
+<span class="source-line-no">261</span><span id="line.261">    }</span>
+<span class="source-line-no">262</span><span id="line.262"></span>
+<span class="source-line-no">263</span><span id="line.263">    /**</span>
+<span class="source-line-no">264</span><span id="line.264">     * Collector to collect a stream of {@link LocalizedStringEntry}s to one {@link LocalizedString}.</span>
+<span class="source-line-no">265</span><span id="line.265">     *</span>
+<span class="source-line-no">266</span><span id="line.266">     * @return collector</span>
+<span class="source-line-no">267</span><span id="line.267">     */</span>
+<span class="source-line-no">268</span><span id="line.268">    public static Collector&lt;LocalizedStringEntry, ?, LocalizedString&gt; streamCollector() {</span>
+<span class="source-line-no">269</span><span id="line.269">        final Collector&lt;LocalizedStringEntry, Map&lt;String, String&gt;, LocalizedString&gt; result = Collector.of(</span>
+<span class="source-line-no">270</span><span id="line.270">            HashMap::new, (Map&lt;String, String&gt; tmpMap, LocalizedStringEntry entry) -&gt; tmpMap</span>
+<span class="source-line-no">271</span><span id="line.271">                    .put(entry.getLocale().toLanguageTag(), entry.getValue()),</span>
+<span class="source-line-no">272</span><span id="line.272">            (Map&lt;String, String&gt; left, Map&lt;String, String&gt; right) -&gt; {</span>
+<span class="source-line-no">273</span><span id="line.273">                left.putAll(right);</span>
+<span class="source-line-no">274</span><span id="line.274">                return left;</span>
+<span class="source-line-no">275</span><span id="line.275">            }, (Map&lt;String, String&gt; entryMap) -&gt; LocalizedStringBuilder.of().values(entryMap).build());</span>
+<span class="source-line-no">276</span><span id="line.276">        return result;</span>
+<span class="source-line-no">277</span><span id="line.277">    }</span>
+<span class="source-line-no">278</span><span id="line.278"></span>
+<span class="source-line-no">279</span><span id="line.279">    /**</span>
+<span class="source-line-no">280</span><span id="line.280">     * Creates a new {@link LocalizedString} where all translations are slugified (remove whitespace, etc.).</span>
+<span class="source-line-no">281</span><span id="line.281">     *</span>
+<span class="source-line-no">282</span><span id="line.282">     * @return new instance</span>
+<span class="source-line-no">283</span><span id="line.283">     */</span>
+<span class="source-line-no">284</span><span id="line.284">    default public LocalizedString slugified() {</span>
+<span class="source-line-no">285</span><span id="line.285">        return mapValue((locale, value) -&gt; slugify(value));</span>
+<span class="source-line-no">286</span><span id="line.286">    }</span>
+<span class="source-line-no">287</span><span id="line.287"></span>
+<span class="source-line-no">288</span><span id="line.288">    /**</span>
+<span class="source-line-no">289</span><span id="line.289">     * Creates a new {@link LocalizedString} where all translations are slugified (remove whitespace, etc.) and a random supplement is added.</span>
+<span class="source-line-no">290</span><span id="line.290">     * This slugify methods appends a random string for a little uniqueness.</span>
+<span class="source-line-no">291</span><span id="line.291">     *</span>
+<span class="source-line-no">292</span><span id="line.292">     * @return new instance</span>
+<span class="source-line-no">293</span><span id="line.293">     */</span>
+<span class="source-line-no">294</span><span id="line.294">    default public LocalizedString slugifiedUnique() {</span>
+<span class="source-line-no">295</span><span id="line.295">        return mapValue((locale, value) -&gt; slugifyUnique(value));</span>
 <span class="source-line-no">296</span><span id="line.296">    }</span>
 <span class="source-line-no">297</span><span id="line.297"></span>
 <span class="source-line-no">298</span><span id="line.298">    /**</span>
-<span class="source-line-no">299</span><span id="line.299">     * Delivers an immutable map of the translation.</span>
+<span class="source-line-no">299</span><span id="line.299">     * Returns all locales included in this instance.</span>
 <span class="source-line-no">300</span><span id="line.300">     *</span>
-<span class="source-line-no">301</span><span id="line.301">     * @return the key-value pairs for the translation</span>
+<span class="source-line-no">301</span><span id="line.301">     * @return locales</span>
 <span class="source-line-no">302</span><span id="line.302">     */</span>
 <span class="source-line-no">303</span><span id="line.303">    @JsonIgnore</span>
-<span class="source-line-no">304</span><span id="line.304">    default Map&lt;Locale, String&gt; getTranslations() {</span>
-<span class="source-line-no">305</span><span id="line.305">        return immutableCopyOf(localeValues());</span>
-<span class="source-line-no">306</span><span id="line.306">    }</span>
-<span class="source-line-no">307</span><span id="line.307"></span>
-<span class="source-line-no">308</span><span id="line.308">    default void set(final Locale languageTag, final String value) {</span>
-<span class="source-line-no">309</span><span id="line.309">        setValue(languageTag.toLanguageTag(), value);</span>
-<span class="source-line-no">310</span><span id="line.310">    }</span>
-<span class="source-line-no">311</span><span id="line.311"></span>
-<span class="source-line-no">312</span><span id="line.312">    /**</span>
-<span class="source-line-no">313</span><span id="line.313">     * Creates a container which contains the full Java type information to deserialize this class from JSON.</span>
-<span class="source-line-no">314</span><span id="line.314">     *</span>
-<span class="source-line-no">315</span><span id="line.315">     * @return type reference</span>
-<span class="source-line-no">316</span><span id="line.316">     */</span>
-<span class="source-line-no">317</span><span id="line.317">    public static TypeReference&lt;LocalizedString&gt; typeReference() {</span>
-<span class="source-line-no">318</span><span id="line.318">        return new TypeReference&lt;LocalizedString&gt;() {</span>
-<span class="source-line-no">319</span><span id="line.319">            @Override</span>
-<span class="source-line-no">320</span><span id="line.320">            public String toString() {</span>
-<span class="source-line-no">321</span><span id="line.321">                return "TypeReference&lt;LocalizedString&gt;";</span>
-<span class="source-line-no">322</span><span id="line.322">            }</span>
-<span class="source-line-no">323</span><span id="line.323">        };</span>
-<span class="source-line-no">324</span><span id="line.324">    }</span>
-<span class="source-line-no">325</span><span id="line.325"></span>
-<span class="source-line-no">326</span><span id="line.326">    public static LocalizedString ofEnglish(final String translationForEnglish) {</span>
-<span class="source-line-no">327</span><span id="line.327">        requireNonNull(translationForEnglish);</span>
-<span class="source-line-no">328</span><span id="line.328">        return of(Locale.ENGLISH, translationForEnglish);</span>
-<span class="source-line-no">329</span><span id="line.329">    }</span>
-<span class="source-line-no">330</span><span id="line.330">}</span>
+<span class="source-line-no">304</span><span id="line.304">    @Nonnull</span>
+<span class="source-line-no">305</span><span id="line.305">    default public Set&lt;Locale&gt; getLocales() {</span>
+<span class="source-line-no">306</span><span id="line.306">        return localeValues().keySet();</span>
+<span class="source-line-no">307</span><span id="line.307">    }</span>
+<span class="source-line-no">308</span><span id="line.308"></span>
+<span class="source-line-no">309</span><span id="line.309">    /**</span>
+<span class="source-line-no">310</span><span id="line.310">     * Delivers an immutable map of the translation.</span>
+<span class="source-line-no">311</span><span id="line.311">     *</span>
+<span class="source-line-no">312</span><span id="line.312">     * @return the key-value pairs for the translation</span>
+<span class="source-line-no">313</span><span id="line.313">     */</span>
+<span class="source-line-no">314</span><span id="line.314">    @JsonIgnore</span>
+<span class="source-line-no">315</span><span id="line.315">    default Map&lt;Locale, String&gt; getTranslations() {</span>
+<span class="source-line-no">316</span><span id="line.316">        return immutableCopyOf(localeValues());</span>
+<span class="source-line-no">317</span><span id="line.317">    }</span>
+<span class="source-line-no">318</span><span id="line.318"></span>
+<span class="source-line-no">319</span><span id="line.319">    default void set(final Locale languageTag, final String value) {</span>
+<span class="source-line-no">320</span><span id="line.320">        setValue(languageTag.toLanguageTag(), value);</span>
+<span class="source-line-no">321</span><span id="line.321">    }</span>
+<span class="source-line-no">322</span><span id="line.322"></span>
+<span class="source-line-no">323</span><span id="line.323">    /**</span>
+<span class="source-line-no">324</span><span id="line.324">     * Creates a container which contains the full Java type information to deserialize this class from JSON.</span>
+<span class="source-line-no">325</span><span id="line.325">     *</span>
+<span class="source-line-no">326</span><span id="line.326">     * @return type reference</span>
+<span class="source-line-no">327</span><span id="line.327">     */</span>
+<span class="source-line-no">328</span><span id="line.328">    public static TypeReference&lt;LocalizedString&gt; typeReference() {</span>
+<span class="source-line-no">329</span><span id="line.329">        return new TypeReference&lt;LocalizedString&gt;() {</span>
+<span class="source-line-no">330</span><span id="line.330">            @Override</span>
+<span class="source-line-no">331</span><span id="line.331">            public String toString() {</span>
+<span class="source-line-no">332</span><span id="line.332">                return "TypeReference&lt;LocalizedString&gt;";</span>
+<span class="source-line-no">333</span><span id="line.333">            }</span>
+<span class="source-line-no">334</span><span id="line.334">        };</span>
+<span class="source-line-no">335</span><span id="line.335">    }</span>
+<span class="source-line-no">336</span><span id="line.336"></span>
+<span class="source-line-no">337</span><span id="line.337">    public static LocalizedString ofEnglish(final String translationForEnglish) {</span>
+<span class="source-line-no">338</span><span id="line.338">        requireNonNull(translationForEnglish);</span>
+<span class="source-line-no">339</span><span id="line.339">        return of(Locale.ENGLISH, translationForEnglish);</span>
+<span class="source-line-no">340</span><span id="line.340">    }</span>
+<span class="source-line-no">341</span><span id="line.341">}</span>
 
 
 

@@ -18,167 +18,186 @@
 <span class="source-line-no">005</span><span id="line.5">import java.util.*;</span>
 <span class="source-line-no">006</span><span id="line.6">import java.util.function.Function;</span>
 <span class="source-line-no">007</span><span id="line.7"></span>
-<span class="source-line-no">008</span><span id="line.8">import javax.validation.constraints.NotNull;</span>
-<span class="source-line-no">009</span><span id="line.9"></span>
-<span class="source-line-no">010</span><span id="line.10">import com.fasterxml.jackson.annotation.*;</span>
-<span class="source-line-no">011</span><span id="line.11">import com.fasterxml.jackson.databind.annotation.*;</span>
-<span class="source-line-no">012</span><span id="line.12"></span>
-<span class="source-line-no">013</span><span id="line.13">import io.vrap.rmf.base.client.utils.Generated;</span>
-<span class="source-line-no">014</span><span id="line.14"></span>
-<span class="source-line-no">015</span><span id="line.15">/**</span>
-<span class="source-line-no">016</span><span id="line.16"> *  &lt;p&gt;Money draft object to store an amount of a fraction of the smallest indivisible unit of the specified currency.&lt;/p&gt;</span>
-<span class="source-line-no">017</span><span id="line.17"> *</span>
-<span class="source-line-no">018</span><span id="line.18"> * &lt;hr&gt;</span>
-<span class="source-line-no">019</span><span id="line.19"> * Example to create an instance using the builder pattern</span>
-<span class="source-line-no">020</span><span id="line.20"> * &lt;div class=code-example&gt;</span>
-<span class="source-line-no">021</span><span id="line.21"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
-<span class="source-line-no">022</span><span id="line.22"> *     HighPrecisionMoneyDraft highPrecisionMoneyDraft = HighPrecisionMoneyDraft.builder()</span>
-<span class="source-line-no">023</span><span id="line.23"> *             .currencyCode("{currencyCode}")</span>
-<span class="source-line-no">024</span><span id="line.24"> *             .fractionDigits(0.3)</span>
-<span class="source-line-no">025</span><span id="line.25"> *             .preciseAmount(0.3)</span>
-<span class="source-line-no">026</span><span id="line.26"> *             .build()</span>
-<span class="source-line-no">027</span><span id="line.27"> * &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">028</span><span id="line.28"> * &lt;/div&gt;</span>
-<span class="source-line-no">029</span><span id="line.29"> */</span>
-<span class="source-line-no">030</span><span id="line.30">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">031</span><span id="line.31">@JsonDeserialize(as = HighPrecisionMoneyDraftImpl.class)</span>
-<span class="source-line-no">032</span><span id="line.32">public interface HighPrecisionMoneyDraft</span>
-<span class="source-line-no">033</span><span id="line.33">        extends TypedMoneyDraft, io.vrap.rmf.base.client.Draft&lt;HighPrecisionMoneyDraft&gt; {</span>
-<span class="source-line-no">034</span><span id="line.34"></span>
-<span class="source-line-no">035</span><span id="line.35">    /**</span>
-<span class="source-line-no">036</span><span id="line.36">     * discriminator value for HighPrecisionMoneyDraft</span>
-<span class="source-line-no">037</span><span id="line.37">     */</span>
-<span class="source-line-no">038</span><span id="line.38">    String HIGH_PRECISION = "highPrecision";</span>
-<span class="source-line-no">039</span><span id="line.39"></span>
-<span class="source-line-no">040</span><span id="line.40">    /**</span>
-<span class="source-line-no">041</span><span id="line.41">     *  &lt;p&gt;Number of fraction digits for a specified high precision money. It must be greater than the default number of fraction digits for the specified currency.&lt;/p&gt;</span>
-<span class="source-line-no">042</span><span id="line.42">     * @return fractionDigits</span>
-<span class="source-line-no">043</span><span id="line.43">     */</span>
-<span class="source-line-no">044</span><span id="line.44">    @NotNull</span>
-<span class="source-line-no">045</span><span id="line.45">    @JsonProperty("fractionDigits")</span>
-<span class="source-line-no">046</span><span id="line.46">    public Integer getFractionDigits();</span>
-<span class="source-line-no">047</span><span id="line.47"></span>
-<span class="source-line-no">048</span><span id="line.48">    /**</span>
-<span class="source-line-no">049</span><span id="line.49">     *  &lt;p&gt;Amount in 1 / (10 ^ &lt;code&gt;fractionDigits&lt;/code&gt;) of a currency.&lt;/p&gt;</span>
-<span class="source-line-no">050</span><span id="line.50">     * @return preciseAmount</span>
-<span class="source-line-no">051</span><span id="line.51">     */</span>
-<span class="source-line-no">052</span><span id="line.52">    @NotNull</span>
-<span class="source-line-no">053</span><span id="line.53">    @JsonProperty("preciseAmount")</span>
-<span class="source-line-no">054</span><span id="line.54">    public Long getPreciseAmount();</span>
-<span class="source-line-no">055</span><span id="line.55"></span>
-<span class="source-line-no">056</span><span id="line.56">    /**</span>
-<span class="source-line-no">057</span><span id="line.57">     *  &lt;p&gt;Amount in the smallest indivisible unit of a currency. This field is optional for high precision. If provided, it is checked for validity. Example:&lt;/p&gt;</span>
-<span class="source-line-no">058</span><span id="line.58">     *  &lt;p&gt;A Price of 1.015 USD can be rounded either to 1.01 USD or 1.02 USD. If it lies outside of this range, an error message stating that centAmount must be rounded correctly will be returned.&lt;/p&gt;</span>
-<span class="source-line-no">059</span><span id="line.59">     *  &lt;p&gt;If &lt;code&gt;centAmount&lt;/code&gt; is not provided, the API calculates the value automatically using the default rounding mode half even.&lt;/p&gt;</span>
-<span class="source-line-no">060</span><span id="line.60">     * @return centAmount</span>
-<span class="source-line-no">061</span><span id="line.61">     */</span>
-<span class="source-line-no">062</span><span id="line.62"></span>
-<span class="source-line-no">063</span><span id="line.63">    @JsonProperty("centAmount")</span>
-<span class="source-line-no">064</span><span id="line.64">    public Long getCentAmount();</span>
-<span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    /**</span>
-<span class="source-line-no">067</span><span id="line.67">     *  &lt;p&gt;Number of fraction digits for a specified high precision money. It must be greater than the default number of fraction digits for the specified currency.&lt;/p&gt;</span>
-<span class="source-line-no">068</span><span id="line.68">     * @param fractionDigits value to be set</span>
-<span class="source-line-no">069</span><span id="line.69">     */</span>
-<span class="source-line-no">070</span><span id="line.70"></span>
-<span class="source-line-no">071</span><span id="line.71">    public void setFractionDigits(final Integer fractionDigits);</span>
-<span class="source-line-no">072</span><span id="line.72"></span>
-<span class="source-line-no">073</span><span id="line.73">    /**</span>
-<span class="source-line-no">074</span><span id="line.74">     *  &lt;p&gt;Amount in 1 / (10 ^ &lt;code&gt;fractionDigits&lt;/code&gt;) of a currency.&lt;/p&gt;</span>
-<span class="source-line-no">075</span><span id="line.75">     * @param preciseAmount value to be set</span>
-<span class="source-line-no">076</span><span id="line.76">     */</span>
-<span class="source-line-no">077</span><span id="line.77"></span>
-<span class="source-line-no">078</span><span id="line.78">    public void setPreciseAmount(final Long preciseAmount);</span>
-<span class="source-line-no">079</span><span id="line.79"></span>
-<span class="source-line-no">080</span><span id="line.80">    /**</span>
-<span class="source-line-no">081</span><span id="line.81">     *  &lt;p&gt;Amount in the smallest indivisible unit of a currency. This field is optional for high precision. If provided, it is checked for validity. Example:&lt;/p&gt;</span>
-<span class="source-line-no">082</span><span id="line.82">     *  &lt;p&gt;A Price of 1.015 USD can be rounded either to 1.01 USD or 1.02 USD. If it lies outside of this range, an error message stating that centAmount must be rounded correctly will be returned.&lt;/p&gt;</span>
-<span class="source-line-no">083</span><span id="line.83">     *  &lt;p&gt;If &lt;code&gt;centAmount&lt;/code&gt; is not provided, the API calculates the value automatically using the default rounding mode half even.&lt;/p&gt;</span>
-<span class="source-line-no">084</span><span id="line.84">     * @param centAmount value to be set</span>
-<span class="source-line-no">085</span><span id="line.85">     */</span>
-<span class="source-line-no">086</span><span id="line.86"></span>
-<span class="source-line-no">087</span><span id="line.87">    public void setCentAmount(final Long centAmount);</span>
-<span class="source-line-no">088</span><span id="line.88"></span>
-<span class="source-line-no">089</span><span id="line.89">    /**</span>
-<span class="source-line-no">090</span><span id="line.90">     * factory method</span>
-<span class="source-line-no">091</span><span id="line.91">     * @return instance of HighPrecisionMoneyDraft</span>
-<span class="source-line-no">092</span><span id="line.92">     */</span>
-<span class="source-line-no">093</span><span id="line.93">    public static HighPrecisionMoneyDraft of() {</span>
-<span class="source-line-no">094</span><span id="line.94">        return new HighPrecisionMoneyDraftImpl();</span>
-<span class="source-line-no">095</span><span id="line.95">    }</span>
-<span class="source-line-no">096</span><span id="line.96"></span>
-<span class="source-line-no">097</span><span id="line.97">    /**</span>
-<span class="source-line-no">098</span><span id="line.98">     * factory method to copy an instance of HighPrecisionMoneyDraft</span>
-<span class="source-line-no">099</span><span id="line.99">     * @param template instance to be copied</span>
-<span class="source-line-no">100</span><span id="line.100">     * @return copy instance</span>
-<span class="source-line-no">101</span><span id="line.101">     */</span>
-<span class="source-line-no">102</span><span id="line.102">    public static HighPrecisionMoneyDraft of(final HighPrecisionMoneyDraft template) {</span>
-<span class="source-line-no">103</span><span id="line.103">        HighPrecisionMoneyDraftImpl instance = new HighPrecisionMoneyDraftImpl();</span>
-<span class="source-line-no">104</span><span id="line.104">        instance.setCentAmount(template.getCentAmount());</span>
-<span class="source-line-no">105</span><span id="line.105">        instance.setCurrencyCode(template.getCurrencyCode());</span>
-<span class="source-line-no">106</span><span id="line.106">        instance.setFractionDigits(template.getFractionDigits());</span>
-<span class="source-line-no">107</span><span id="line.107">        instance.setPreciseAmount(template.getPreciseAmount());</span>
-<span class="source-line-no">108</span><span id="line.108">        return instance;</span>
-<span class="source-line-no">109</span><span id="line.109">    }</span>
-<span class="source-line-no">110</span><span id="line.110"></span>
-<span class="source-line-no">111</span><span id="line.111">    /**</span>
-<span class="source-line-no">112</span><span id="line.112">     * builder factory method for HighPrecisionMoneyDraft</span>
-<span class="source-line-no">113</span><span id="line.113">     * @return builder</span>
-<span class="source-line-no">114</span><span id="line.114">     */</span>
-<span class="source-line-no">115</span><span id="line.115">    public static HighPrecisionMoneyDraftBuilder builder() {</span>
-<span class="source-line-no">116</span><span id="line.116">        return HighPrecisionMoneyDraftBuilder.of();</span>
-<span class="source-line-no">117</span><span id="line.117">    }</span>
-<span class="source-line-no">118</span><span id="line.118"></span>
-<span class="source-line-no">119</span><span id="line.119">    /**</span>
-<span class="source-line-no">120</span><span id="line.120">     * create builder for HighPrecisionMoneyDraft instance</span>
-<span class="source-line-no">121</span><span id="line.121">     * @param template instance with prefilled values for the builder</span>
-<span class="source-line-no">122</span><span id="line.122">     * @return builder</span>
-<span class="source-line-no">123</span><span id="line.123">     */</span>
-<span class="source-line-no">124</span><span id="line.124">    public static HighPrecisionMoneyDraftBuilder builder(final HighPrecisionMoneyDraft template) {</span>
-<span class="source-line-no">125</span><span id="line.125">        return HighPrecisionMoneyDraftBuilder.of(template);</span>
-<span class="source-line-no">126</span><span id="line.126">    }</span>
-<span class="source-line-no">127</span><span id="line.127"></span>
-<span class="source-line-no">128</span><span id="line.128">    /**</span>
-<span class="source-line-no">129</span><span id="line.129">     * accessor map function</span>
-<span class="source-line-no">130</span><span id="line.130">     * @param &lt;T&gt; mapped type</span>
-<span class="source-line-no">131</span><span id="line.131">     * @param helper function to map the object</span>
-<span class="source-line-no">132</span><span id="line.132">     * @return mapped value</span>
+<span class="source-line-no">008</span><span id="line.8">import javax.annotation.Nullable;</span>
+<span class="source-line-no">009</span><span id="line.9">import javax.validation.constraints.NotNull;</span>
+<span class="source-line-no">010</span><span id="line.10"></span>
+<span class="source-line-no">011</span><span id="line.11">import com.fasterxml.jackson.annotation.*;</span>
+<span class="source-line-no">012</span><span id="line.12">import com.fasterxml.jackson.databind.annotation.*;</span>
+<span class="source-line-no">013</span><span id="line.13"></span>
+<span class="source-line-no">014</span><span id="line.14">import io.vrap.rmf.base.client.utils.Generated;</span>
+<span class="source-line-no">015</span><span id="line.15"></span>
+<span class="source-line-no">016</span><span id="line.16">/**</span>
+<span class="source-line-no">017</span><span id="line.17"> *  &lt;p&gt;Money draft object to store an amount of a fraction of the smallest indivisible unit of the specified currency.&lt;/p&gt;</span>
+<span class="source-line-no">018</span><span id="line.18"> *</span>
+<span class="source-line-no">019</span><span id="line.19"> * &lt;hr&gt;</span>
+<span class="source-line-no">020</span><span id="line.20"> * Example to create an instance using the builder pattern</span>
+<span class="source-line-no">021</span><span id="line.21"> * &lt;div class=code-example&gt;</span>
+<span class="source-line-no">022</span><span id="line.22"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">023</span><span id="line.23"> *     HighPrecisionMoneyDraft highPrecisionMoneyDraft = HighPrecisionMoneyDraft.builder()</span>
+<span class="source-line-no">024</span><span id="line.24"> *             .currencyCode("{currencyCode}")</span>
+<span class="source-line-no">025</span><span id="line.25"> *             .fractionDigits(0.3)</span>
+<span class="source-line-no">026</span><span id="line.26"> *             .preciseAmount(0.3)</span>
+<span class="source-line-no">027</span><span id="line.27"> *             .build()</span>
+<span class="source-line-no">028</span><span id="line.28"> * &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">029</span><span id="line.29"> * &lt;/div&gt;</span>
+<span class="source-line-no">030</span><span id="line.30"> */</span>
+<span class="source-line-no">031</span><span id="line.31">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">032</span><span id="line.32">@JsonDeserialize(as = HighPrecisionMoneyDraftImpl.class)</span>
+<span class="source-line-no">033</span><span id="line.33">public interface HighPrecisionMoneyDraft</span>
+<span class="source-line-no">034</span><span id="line.34">        extends TypedMoneyDraft, io.vrap.rmf.base.client.Draft&lt;HighPrecisionMoneyDraft&gt; {</span>
+<span class="source-line-no">035</span><span id="line.35"></span>
+<span class="source-line-no">036</span><span id="line.36">    /**</span>
+<span class="source-line-no">037</span><span id="line.37">     * discriminator value for HighPrecisionMoneyDraft</span>
+<span class="source-line-no">038</span><span id="line.38">     */</span>
+<span class="source-line-no">039</span><span id="line.39">    String HIGH_PRECISION = "highPrecision";</span>
+<span class="source-line-no">040</span><span id="line.40"></span>
+<span class="source-line-no">041</span><span id="line.41">    /**</span>
+<span class="source-line-no">042</span><span id="line.42">     *  &lt;p&gt;Number of fraction digits for a specified high precision money. It must be greater than the default number of fraction digits for the specified currency.&lt;/p&gt;</span>
+<span class="source-line-no">043</span><span id="line.43">     * @return fractionDigits</span>
+<span class="source-line-no">044</span><span id="line.44">     */</span>
+<span class="source-line-no">045</span><span id="line.45">    @NotNull</span>
+<span class="source-line-no">046</span><span id="line.46">    @JsonProperty("fractionDigits")</span>
+<span class="source-line-no">047</span><span id="line.47">    public Integer getFractionDigits();</span>
+<span class="source-line-no">048</span><span id="line.48"></span>
+<span class="source-line-no">049</span><span id="line.49">    /**</span>
+<span class="source-line-no">050</span><span id="line.50">     *  &lt;p&gt;Amount in 1 / (10 ^ &lt;code&gt;fractionDigits&lt;/code&gt;) of a currency.&lt;/p&gt;</span>
+<span class="source-line-no">051</span><span id="line.51">     * @return preciseAmount</span>
+<span class="source-line-no">052</span><span id="line.52">     */</span>
+<span class="source-line-no">053</span><span id="line.53">    @NotNull</span>
+<span class="source-line-no">054</span><span id="line.54">    @JsonProperty("preciseAmount")</span>
+<span class="source-line-no">055</span><span id="line.55">    public Long getPreciseAmount();</span>
+<span class="source-line-no">056</span><span id="line.56"></span>
+<span class="source-line-no">057</span><span id="line.57">    /**</span>
+<span class="source-line-no">058</span><span id="line.58">     *  &lt;p&gt;Amount in the smallest indivisible unit of a currency. This field is optional for high precision. If provided, it is checked for validity. Example:&lt;/p&gt;</span>
+<span class="source-line-no">059</span><span id="line.59">     *  &lt;p&gt;A Price of 1.015 USD can be rounded either to 1.01 USD or 1.02 USD. If it lies outside of this range, an error message stating that centAmount must be rounded correctly will be returned.&lt;/p&gt;</span>
+<span class="source-line-no">060</span><span id="line.60">     *  &lt;p&gt;If &lt;code&gt;centAmount&lt;/code&gt; is not provided, the API calculates the value automatically using the default rounding mode half even.&lt;/p&gt;</span>
+<span class="source-line-no">061</span><span id="line.61">     * @return centAmount</span>
+<span class="source-line-no">062</span><span id="line.62">     */</span>
+<span class="source-line-no">063</span><span id="line.63"></span>
+<span class="source-line-no">064</span><span id="line.64">    @JsonProperty("centAmount")</span>
+<span class="source-line-no">065</span><span id="line.65">    public Long getCentAmount();</span>
+<span class="source-line-no">066</span><span id="line.66"></span>
+<span class="source-line-no">067</span><span id="line.67">    /**</span>
+<span class="source-line-no">068</span><span id="line.68">     *  &lt;p&gt;Number of fraction digits for a specified high precision money. It must be greater than the default number of fraction digits for the specified currency.&lt;/p&gt;</span>
+<span class="source-line-no">069</span><span id="line.69">     * @param fractionDigits value to be set</span>
+<span class="source-line-no">070</span><span id="line.70">     */</span>
+<span class="source-line-no">071</span><span id="line.71"></span>
+<span class="source-line-no">072</span><span id="line.72">    public void setFractionDigits(final Integer fractionDigits);</span>
+<span class="source-line-no">073</span><span id="line.73"></span>
+<span class="source-line-no">074</span><span id="line.74">    /**</span>
+<span class="source-line-no">075</span><span id="line.75">     *  &lt;p&gt;Amount in 1 / (10 ^ &lt;code&gt;fractionDigits&lt;/code&gt;) of a currency.&lt;/p&gt;</span>
+<span class="source-line-no">076</span><span id="line.76">     * @param preciseAmount value to be set</span>
+<span class="source-line-no">077</span><span id="line.77">     */</span>
+<span class="source-line-no">078</span><span id="line.78"></span>
+<span class="source-line-no">079</span><span id="line.79">    public void setPreciseAmount(final Long preciseAmount);</span>
+<span class="source-line-no">080</span><span id="line.80"></span>
+<span class="source-line-no">081</span><span id="line.81">    /**</span>
+<span class="source-line-no">082</span><span id="line.82">     *  &lt;p&gt;Amount in the smallest indivisible unit of a currency. This field is optional for high precision. If provided, it is checked for validity. Example:&lt;/p&gt;</span>
+<span class="source-line-no">083</span><span id="line.83">     *  &lt;p&gt;A Price of 1.015 USD can be rounded either to 1.01 USD or 1.02 USD. If it lies outside of this range, an error message stating that centAmount must be rounded correctly will be returned.&lt;/p&gt;</span>
+<span class="source-line-no">084</span><span id="line.84">     *  &lt;p&gt;If &lt;code&gt;centAmount&lt;/code&gt; is not provided, the API calculates the value automatically using the default rounding mode half even.&lt;/p&gt;</span>
+<span class="source-line-no">085</span><span id="line.85">     * @param centAmount value to be set</span>
+<span class="source-line-no">086</span><span id="line.86">     */</span>
+<span class="source-line-no">087</span><span id="line.87"></span>
+<span class="source-line-no">088</span><span id="line.88">    public void setCentAmount(final Long centAmount);</span>
+<span class="source-line-no">089</span><span id="line.89"></span>
+<span class="source-line-no">090</span><span id="line.90">    /**</span>
+<span class="source-line-no">091</span><span id="line.91">     * factory method</span>
+<span class="source-line-no">092</span><span id="line.92">     * @return instance of HighPrecisionMoneyDraft</span>
+<span class="source-line-no">093</span><span id="line.93">     */</span>
+<span class="source-line-no">094</span><span id="line.94">    public static HighPrecisionMoneyDraft of() {</span>
+<span class="source-line-no">095</span><span id="line.95">        return new HighPrecisionMoneyDraftImpl();</span>
+<span class="source-line-no">096</span><span id="line.96">    }</span>
+<span class="source-line-no">097</span><span id="line.97"></span>
+<span class="source-line-no">098</span><span id="line.98">    /**</span>
+<span class="source-line-no">099</span><span id="line.99">     * factory method to create a shallow copy HighPrecisionMoneyDraft</span>
+<span class="source-line-no">100</span><span id="line.100">     * @param template instance to be copied</span>
+<span class="source-line-no">101</span><span id="line.101">     * @return copy instance</span>
+<span class="source-line-no">102</span><span id="line.102">     */</span>
+<span class="source-line-no">103</span><span id="line.103">    public static HighPrecisionMoneyDraft of(final HighPrecisionMoneyDraft template) {</span>
+<span class="source-line-no">104</span><span id="line.104">        HighPrecisionMoneyDraftImpl instance = new HighPrecisionMoneyDraftImpl();</span>
+<span class="source-line-no">105</span><span id="line.105">        instance.setCentAmount(template.getCentAmount());</span>
+<span class="source-line-no">106</span><span id="line.106">        instance.setCurrencyCode(template.getCurrencyCode());</span>
+<span class="source-line-no">107</span><span id="line.107">        instance.setFractionDigits(template.getFractionDigits());</span>
+<span class="source-line-no">108</span><span id="line.108">        instance.setPreciseAmount(template.getPreciseAmount());</span>
+<span class="source-line-no">109</span><span id="line.109">        return instance;</span>
+<span class="source-line-no">110</span><span id="line.110">    }</span>
+<span class="source-line-no">111</span><span id="line.111"></span>
+<span class="source-line-no">112</span><span id="line.112">    /**</span>
+<span class="source-line-no">113</span><span id="line.113">     * factory method to create a deep copy of HighPrecisionMoneyDraft</span>
+<span class="source-line-no">114</span><span id="line.114">     * @param template instance to be copied</span>
+<span class="source-line-no">115</span><span id="line.115">     * @return copy instance</span>
+<span class="source-line-no">116</span><span id="line.116">     */</span>
+<span class="source-line-no">117</span><span id="line.117">    @Nullable</span>
+<span class="source-line-no">118</span><span id="line.118">    public static HighPrecisionMoneyDraft deepCopy(@Nullable final HighPrecisionMoneyDraft template) {</span>
+<span class="source-line-no">119</span><span id="line.119">        if (template == null) {</span>
+<span class="source-line-no">120</span><span id="line.120">            return null;</span>
+<span class="source-line-no">121</span><span id="line.121">        }</span>
+<span class="source-line-no">122</span><span id="line.122">        HighPrecisionMoneyDraftImpl instance = new HighPrecisionMoneyDraftImpl();</span>
+<span class="source-line-no">123</span><span id="line.123">        instance.setCentAmount(template.getCentAmount());</span>
+<span class="source-line-no">124</span><span id="line.124">        instance.setCurrencyCode(template.getCurrencyCode());</span>
+<span class="source-line-no">125</span><span id="line.125">        instance.setFractionDigits(template.getFractionDigits());</span>
+<span class="source-line-no">126</span><span id="line.126">        instance.setPreciseAmount(template.getPreciseAmount());</span>
+<span class="source-line-no">127</span><span id="line.127">        return instance;</span>
+<span class="source-line-no">128</span><span id="line.128">    }</span>
+<span class="source-line-no">129</span><span id="line.129"></span>
+<span class="source-line-no">130</span><span id="line.130">    /**</span>
+<span class="source-line-no">131</span><span id="line.131">     * builder factory method for HighPrecisionMoneyDraft</span>
+<span class="source-line-no">132</span><span id="line.132">     * @return builder</span>
 <span class="source-line-no">133</span><span id="line.133">     */</span>
-<span class="source-line-no">134</span><span id="line.134">    default &lt;T&gt; T withHighPrecisionMoneyDraft(Function&lt;HighPrecisionMoneyDraft, T&gt; helper) {</span>
-<span class="source-line-no">135</span><span id="line.135">        return helper.apply(this);</span>
+<span class="source-line-no">134</span><span id="line.134">    public static HighPrecisionMoneyDraftBuilder builder() {</span>
+<span class="source-line-no">135</span><span id="line.135">        return HighPrecisionMoneyDraftBuilder.of();</span>
 <span class="source-line-no">136</span><span id="line.136">    }</span>
 <span class="source-line-no">137</span><span id="line.137"></span>
-<span class="source-line-no">138</span><span id="line.138">    public static HighPrecisionMoneyDraft of(javax.money.MonetaryAmount monetaryAmount, final int fractionDigits) {</span>
-<span class="source-line-no">139</span><span id="line.139">        return MoneyUtil.draftOf(monetaryAmount, fractionDigits);</span>
-<span class="source-line-no">140</span><span id="line.140">    }</span>
-<span class="source-line-no">141</span><span id="line.141"></span>
-<span class="source-line-no">142</span><span id="line.142">    public static HighPrecisionMoneyDraft of(final HighPrecisionMoney template) {</span>
-<span class="source-line-no">143</span><span id="line.143">        HighPrecisionMoneyDraftImpl instance = new HighPrecisionMoneyDraftImpl();</span>
-<span class="source-line-no">144</span><span id="line.144">        instance.setCentAmount(template.getCentAmount());</span>
-<span class="source-line-no">145</span><span id="line.145">        instance.setCurrencyCode(template.getCurrencyCode());</span>
-<span class="source-line-no">146</span><span id="line.146">        instance.setFractionDigits(template.getFractionDigits());</span>
-<span class="source-line-no">147</span><span id="line.147">        instance.setPreciseAmount(template.getPreciseAmount());</span>
-<span class="source-line-no">148</span><span id="line.148">        return instance;</span>
-<span class="source-line-no">149</span><span id="line.149">    }</span>
-<span class="source-line-no">150</span><span id="line.150"></span>
-<span class="source-line-no">151</span><span id="line.151">    @Override</span>
-<span class="source-line-no">152</span><span id="line.152">    default javax.money.MonetaryOperator createMoneyOperator() {</span>
-<span class="source-line-no">153</span><span id="line.153">        return amount -&gt; MoneyUtil.draftOf(amount, getFractionDigits());</span>
-<span class="source-line-no">154</span><span id="line.154">    }</span>
-<span class="source-line-no">155</span><span id="line.155"></span>
-<span class="source-line-no">156</span><span id="line.156">    /**</span>
-<span class="source-line-no">157</span><span id="line.157">     * gives a TypeReference for usage with Jackson DataBind</span>
-<span class="source-line-no">158</span><span id="line.158">     * @return TypeReference</span>
-<span class="source-line-no">159</span><span id="line.159">     */</span>
-<span class="source-line-no">160</span><span id="line.160">    public static com.fasterxml.jackson.core.type.TypeReference&lt;HighPrecisionMoneyDraft&gt; typeReference() {</span>
-<span class="source-line-no">161</span><span id="line.161">        return new com.fasterxml.jackson.core.type.TypeReference&lt;HighPrecisionMoneyDraft&gt;() {</span>
-<span class="source-line-no">162</span><span id="line.162">            @Override</span>
-<span class="source-line-no">163</span><span id="line.163">            public String toString() {</span>
-<span class="source-line-no">164</span><span id="line.164">                return "TypeReference&lt;HighPrecisionMoneyDraft&gt;";</span>
-<span class="source-line-no">165</span><span id="line.165">            }</span>
-<span class="source-line-no">166</span><span id="line.166">        };</span>
-<span class="source-line-no">167</span><span id="line.167">    }</span>
-<span class="source-line-no">168</span><span id="line.168">}</span>
+<span class="source-line-no">138</span><span id="line.138">    /**</span>
+<span class="source-line-no">139</span><span id="line.139">     * create builder for HighPrecisionMoneyDraft instance</span>
+<span class="source-line-no">140</span><span id="line.140">     * @param template instance with prefilled values for the builder</span>
+<span class="source-line-no">141</span><span id="line.141">     * @return builder</span>
+<span class="source-line-no">142</span><span id="line.142">     */</span>
+<span class="source-line-no">143</span><span id="line.143">    public static HighPrecisionMoneyDraftBuilder builder(final HighPrecisionMoneyDraft template) {</span>
+<span class="source-line-no">144</span><span id="line.144">        return HighPrecisionMoneyDraftBuilder.of(template);</span>
+<span class="source-line-no">145</span><span id="line.145">    }</span>
+<span class="source-line-no">146</span><span id="line.146"></span>
+<span class="source-line-no">147</span><span id="line.147">    /**</span>
+<span class="source-line-no">148</span><span id="line.148">     * accessor map function</span>
+<span class="source-line-no">149</span><span id="line.149">     * @param &lt;T&gt; mapped type</span>
+<span class="source-line-no">150</span><span id="line.150">     * @param helper function to map the object</span>
+<span class="source-line-no">151</span><span id="line.151">     * @return mapped value</span>
+<span class="source-line-no">152</span><span id="line.152">     */</span>
+<span class="source-line-no">153</span><span id="line.153">    default &lt;T&gt; T withHighPrecisionMoneyDraft(Function&lt;HighPrecisionMoneyDraft, T&gt; helper) {</span>
+<span class="source-line-no">154</span><span id="line.154">        return helper.apply(this);</span>
+<span class="source-line-no">155</span><span id="line.155">    }</span>
+<span class="source-line-no">156</span><span id="line.156"></span>
+<span class="source-line-no">157</span><span id="line.157">    public static HighPrecisionMoneyDraft of(javax.money.MonetaryAmount monetaryAmount, final int fractionDigits) {</span>
+<span class="source-line-no">158</span><span id="line.158">        return MoneyUtil.draftOf(monetaryAmount, fractionDigits);</span>
+<span class="source-line-no">159</span><span id="line.159">    }</span>
+<span class="source-line-no">160</span><span id="line.160"></span>
+<span class="source-line-no">161</span><span id="line.161">    public static HighPrecisionMoneyDraft of(final HighPrecisionMoney template) {</span>
+<span class="source-line-no">162</span><span id="line.162">        HighPrecisionMoneyDraftImpl instance = new HighPrecisionMoneyDraftImpl();</span>
+<span class="source-line-no">163</span><span id="line.163">        instance.setCentAmount(template.getCentAmount());</span>
+<span class="source-line-no">164</span><span id="line.164">        instance.setCurrencyCode(template.getCurrencyCode());</span>
+<span class="source-line-no">165</span><span id="line.165">        instance.setFractionDigits(template.getFractionDigits());</span>
+<span class="source-line-no">166</span><span id="line.166">        instance.setPreciseAmount(template.getPreciseAmount());</span>
+<span class="source-line-no">167</span><span id="line.167">        return instance;</span>
+<span class="source-line-no">168</span><span id="line.168">    }</span>
+<span class="source-line-no">169</span><span id="line.169"></span>
+<span class="source-line-no">170</span><span id="line.170">    @Override</span>
+<span class="source-line-no">171</span><span id="line.171">    default javax.money.MonetaryOperator createMoneyOperator() {</span>
+<span class="source-line-no">172</span><span id="line.172">        return amount -&gt; MoneyUtil.draftOf(amount, getFractionDigits());</span>
+<span class="source-line-no">173</span><span id="line.173">    }</span>
+<span class="source-line-no">174</span><span id="line.174"></span>
+<span class="source-line-no">175</span><span id="line.175">    /**</span>
+<span class="source-line-no">176</span><span id="line.176">     * gives a TypeReference for usage with Jackson DataBind</span>
+<span class="source-line-no">177</span><span id="line.177">     * @return TypeReference</span>
+<span class="source-line-no">178</span><span id="line.178">     */</span>
+<span class="source-line-no">179</span><span id="line.179">    public static com.fasterxml.jackson.core.type.TypeReference&lt;HighPrecisionMoneyDraft&gt; typeReference() {</span>
+<span class="source-line-no">180</span><span id="line.180">        return new com.fasterxml.jackson.core.type.TypeReference&lt;HighPrecisionMoneyDraft&gt;() {</span>
+<span class="source-line-no">181</span><span id="line.181">            @Override</span>
+<span class="source-line-no">182</span><span id="line.182">            public String toString() {</span>
+<span class="source-line-no">183</span><span id="line.183">                return "TypeReference&lt;HighPrecisionMoneyDraft&gt;";</span>
+<span class="source-line-no">184</span><span id="line.184">            }</span>
+<span class="source-line-no">185</span><span id="line.185">        };</span>
+<span class="source-line-no">186</span><span id="line.186">    }</span>
+<span class="source-line-no">187</span><span id="line.187">}</span>
 
 
 

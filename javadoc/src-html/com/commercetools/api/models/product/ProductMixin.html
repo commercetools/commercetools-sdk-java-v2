@@ -14,20 +14,63 @@
 <pre><span class="source-line-no">001</span><span id="line.1"></span>
 <span class="source-line-no">002</span><span id="line.2">package com.commercetools.api.models.product;</span>
 <span class="source-line-no">003</span><span id="line.3"></span>
-<span class="source-line-no">004</span><span id="line.4">import com.commercetools.api.models.Referencable;</span>
-<span class="source-line-no">005</span><span id="line.5">import com.commercetools.api.models.ResourceIdentifiable;</span>
+<span class="source-line-no">004</span><span id="line.4">import java.util.Optional;</span>
+<span class="source-line-no">005</span><span id="line.5">import java.util.stream.Collectors;</span>
 <span class="source-line-no">006</span><span id="line.6"></span>
-<span class="source-line-no">007</span><span id="line.7">public interface ProductMixin extends Referencable&lt;Product&gt;, ResourceIdentifiable&lt;Product&gt; {</span>
-<span class="source-line-no">008</span><span id="line.8">    @Override</span>
-<span class="source-line-no">009</span><span id="line.9">    public default ProductResourceIdentifier toResourceIdentifier() {</span>
-<span class="source-line-no">010</span><span id="line.10">        return ProductResourceIdentifier.builder().id(getId()).build();</span>
-<span class="source-line-no">011</span><span id="line.11">    }</span>
-<span class="source-line-no">012</span><span id="line.12"></span>
-<span class="source-line-no">013</span><span id="line.13">    @Override</span>
-<span class="source-line-no">014</span><span id="line.14">    public default ProductReference toReference() {</span>
-<span class="source-line-no">015</span><span id="line.15">        return ProductReference.builder().id(getId()).build();</span>
-<span class="source-line-no">016</span><span id="line.16">    }</span>
-<span class="source-line-no">017</span><span id="line.17">}</span>
+<span class="source-line-no">007</span><span id="line.7">import com.commercetools.api.models.Referencable;</span>
+<span class="source-line-no">008</span><span id="line.8">import com.commercetools.api.models.ResourceIdentifiable;</span>
+<span class="source-line-no">009</span><span id="line.9">import com.commercetools.api.models.category.CategoryReference;</span>
+<span class="source-line-no">010</span><span id="line.10">import com.commercetools.api.models.common.LocalizedString;</span>
+<span class="source-line-no">011</span><span id="line.11">import com.commercetools.api.models.product_type.ProductTypeReference;</span>
+<span class="source-line-no">012</span><span id="line.12">import com.commercetools.api.models.review.ReviewRatingStatistics;</span>
+<span class="source-line-no">013</span><span id="line.13">import com.commercetools.api.models.state.StateReference;</span>
+<span class="source-line-no">014</span><span id="line.14">import com.commercetools.api.models.tax_category.TaxCategoryReference;</span>
+<span class="source-line-no">015</span><span id="line.15"></span>
+<span class="source-line-no">016</span><span id="line.16">public interface ProductMixin extends Referencable&lt;Product&gt;, ResourceIdentifiable&lt;Product&gt; {</span>
+<span class="source-line-no">017</span><span id="line.17">    @Override</span>
+<span class="source-line-no">018</span><span id="line.18">    public default ProductResourceIdentifier toResourceIdentifier() {</span>
+<span class="source-line-no">019</span><span id="line.19">        return ProductResourceIdentifier.builder().id(getId()).build();</span>
+<span class="source-line-no">020</span><span id="line.20">    }</span>
+<span class="source-line-no">021</span><span id="line.21"></span>
+<span class="source-line-no">022</span><span id="line.22">    @Override</span>
+<span class="source-line-no">023</span><span id="line.23">    public default ProductReference toReference() {</span>
+<span class="source-line-no">024</span><span id="line.24">        return ProductReference.builder().id(getId()).build();</span>
+<span class="source-line-no">025</span><span id="line.25">    }</span>
+<span class="source-line-no">026</span><span id="line.26"></span>
+<span class="source-line-no">027</span><span id="line.27">    public static ProductProjection toProjection(final Product template,</span>
+<span class="source-line-no">028</span><span id="line.28">            final ProductProjectionType productProjectionType) {</span>
+<span class="source-line-no">029</span><span id="line.29">        ProductDataLike productDataLike = template.getMasterData().get(productProjectionType);</span>
+<span class="source-line-no">030</span><span id="line.30">        return ProductProjection.builder()</span>
+<span class="source-line-no">031</span><span id="line.31">                .id(template.getId())</span>
+<span class="source-line-no">032</span><span id="line.32">                .version(template.getVersion())</span>
+<span class="source-line-no">033</span><span id="line.33">                .createdAt(template.getCreatedAt())</span>
+<span class="source-line-no">034</span><span id="line.34">                .lastModifiedAt(template.getLastModifiedAt())</span>
+<span class="source-line-no">035</span><span id="line.35">                .key(template.getKey())</span>
+<span class="source-line-no">036</span><span id="line.36">                .productType(ProductTypeReference.deepCopy(template.getProductType()))</span>
+<span class="source-line-no">037</span><span id="line.37">                .name(LocalizedString.deepCopy(productDataLike.getName()))</span>
+<span class="source-line-no">038</span><span id="line.38">                .description(LocalizedString.deepCopy(productDataLike.getDescription()))</span>
+<span class="source-line-no">039</span><span id="line.39">                .slug(LocalizedString.deepCopy(productDataLike.getSlug()))</span>
+<span class="source-line-no">040</span><span id="line.40">                .categories(Optional.ofNullable(productDataLike.getCategories())</span>
+<span class="source-line-no">041</span><span id="line.41">                        .map(c -&gt; c.stream().map(CategoryReference::deepCopy).collect(Collectors.toList()))</span>
+<span class="source-line-no">042</span><span id="line.42">                        .orElse(null))</span>
+<span class="source-line-no">043</span><span id="line.43">                .categoryOrderHints(CategoryOrderHints.deepCopy(productDataLike.getCategoryOrderHints()))</span>
+<span class="source-line-no">044</span><span id="line.44">                .metaTitle(LocalizedString.deepCopy(productDataLike.getMetaTitle()))</span>
+<span class="source-line-no">045</span><span id="line.45">                .metaDescription(LocalizedString.deepCopy(productDataLike.getMetaDescription()))</span>
+<span class="source-line-no">046</span><span id="line.46">                .metaKeywords(LocalizedString.deepCopy(productDataLike.getMetaKeywords()))</span>
+<span class="source-line-no">047</span><span id="line.47">                .searchKeywords(SearchKeywords.deepCopy(productDataLike.getSearchKeywords()))</span>
+<span class="source-line-no">048</span><span id="line.48">                .hasStagedChanges(template.getMasterData().getHasStagedChanges())</span>
+<span class="source-line-no">049</span><span id="line.49">                .published(template.getMasterData().getPublished())</span>
+<span class="source-line-no">050</span><span id="line.50">                .masterVariant(ProductVariant.deepCopy(productDataLike.getMasterVariant()))</span>
+<span class="source-line-no">051</span><span id="line.51">                .variants(Optional.ofNullable(productDataLike.getVariants())</span>
+<span class="source-line-no">052</span><span id="line.52">                        .map(v -&gt; v.stream().map(ProductVariant::deepCopy).collect(Collectors.toList()))</span>
+<span class="source-line-no">053</span><span id="line.53">                        .orElse(null))</span>
+<span class="source-line-no">054</span><span id="line.54">                .taxCategory(TaxCategoryReference.deepCopy(template.getTaxCategory()))</span>
+<span class="source-line-no">055</span><span id="line.55">                .state(StateReference.deepCopy(template.getState()))</span>
+<span class="source-line-no">056</span><span id="line.56">                .reviewRatingStatistics(ReviewRatingStatistics.deepCopy(template.getReviewRatingStatistics()))</span>
+<span class="source-line-no">057</span><span id="line.57">                .priceMode(template.getPriceMode())</span>
+<span class="source-line-no">058</span><span id="line.58">                .build();</span>
+<span class="source-line-no">059</span><span id="line.59">    }</span>
+<span class="source-line-no">060</span><span id="line.60">}</span>
 
 
 

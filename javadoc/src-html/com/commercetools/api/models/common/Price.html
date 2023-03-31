@@ -18,279 +18,311 @@
 <span class="source-line-no">005</span><span id="line.5">import java.time.ZonedDateTime;</span>
 <span class="source-line-no">006</span><span id="line.6">import java.util.*;</span>
 <span class="source-line-no">007</span><span id="line.7">import java.util.function.Function;</span>
-<span class="source-line-no">008</span><span id="line.8"></span>
-<span class="source-line-no">009</span><span id="line.9">import javax.validation.Valid;</span>
-<span class="source-line-no">010</span><span id="line.10">import javax.validation.constraints.NotNull;</span>
-<span class="source-line-no">011</span><span id="line.11"></span>
-<span class="source-line-no">012</span><span id="line.12">import com.commercetools.api.models.channel.ChannelReference;</span>
-<span class="source-line-no">013</span><span id="line.13">import com.commercetools.api.models.customer_group.CustomerGroupReference;</span>
-<span class="source-line-no">014</span><span id="line.14">import com.commercetools.api.models.type.CustomFields;</span>
-<span class="source-line-no">015</span><span id="line.15">import com.fasterxml.jackson.annotation.*;</span>
-<span class="source-line-no">016</span><span id="line.16">import com.fasterxml.jackson.databind.annotation.*;</span>
-<span class="source-line-no">017</span><span id="line.17"></span>
-<span class="source-line-no">018</span><span id="line.18">import io.vrap.rmf.base.client.utils.Generated;</span>
+<span class="source-line-no">008</span><span id="line.8">import java.util.stream.Collectors;</span>
+<span class="source-line-no">009</span><span id="line.9"></span>
+<span class="source-line-no">010</span><span id="line.10">import javax.annotation.Nullable;</span>
+<span class="source-line-no">011</span><span id="line.11">import javax.validation.Valid;</span>
+<span class="source-line-no">012</span><span id="line.12">import javax.validation.constraints.NotNull;</span>
+<span class="source-line-no">013</span><span id="line.13"></span>
+<span class="source-line-no">014</span><span id="line.14">import com.commercetools.api.models.channel.ChannelReference;</span>
+<span class="source-line-no">015</span><span id="line.15">import com.commercetools.api.models.customer_group.CustomerGroupReference;</span>
+<span class="source-line-no">016</span><span id="line.16">import com.commercetools.api.models.type.CustomFields;</span>
+<span class="source-line-no">017</span><span id="line.17">import com.fasterxml.jackson.annotation.*;</span>
+<span class="source-line-no">018</span><span id="line.18">import com.fasterxml.jackson.databind.annotation.*;</span>
 <span class="source-line-no">019</span><span id="line.19"></span>
-<span class="source-line-no">020</span><span id="line.20">/**</span>
-<span class="source-line-no">021</span><span id="line.21"> *  &lt;p&gt;The representation for prices embedded in LineItems and in ProductVariants when the ProductPriceMode is &lt;code&gt;Embedded&lt;/code&gt;. For the &lt;code&gt;Standalone&lt;/code&gt; ProductPriceMode refer to StandalonePrice.&lt;/p&gt;</span>
-<span class="source-line-no">022</span><span id="line.22"> *</span>
-<span class="source-line-no">023</span><span id="line.23"> * &lt;hr&gt;</span>
-<span class="source-line-no">024</span><span id="line.24"> * Example to create an instance using the builder pattern</span>
-<span class="source-line-no">025</span><span id="line.25"> * &lt;div class=code-example&gt;</span>
-<span class="source-line-no">026</span><span id="line.26"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
-<span class="source-line-no">027</span><span id="line.27"> *     Price price = Price.builder()</span>
-<span class="source-line-no">028</span><span id="line.28"> *             .id("{id}")</span>
-<span class="source-line-no">029</span><span id="line.29"> *             .value(valueBuilder -&gt; valueBuilder)</span>
-<span class="source-line-no">030</span><span id="line.30"> *             .build()</span>
-<span class="source-line-no">031</span><span id="line.31"> * &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">032</span><span id="line.32"> * &lt;/div&gt;</span>
-<span class="source-line-no">033</span><span id="line.33"> */</span>
-<span class="source-line-no">034</span><span id="line.34">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">035</span><span id="line.35">@JsonDeserialize(as = PriceImpl.class)</span>
-<span class="source-line-no">036</span><span id="line.36">public interface Price extends com.commercetools.api.models.Customizable&lt;Price&gt;, com.commercetools.api.models.WithKey {</span>
-<span class="source-line-no">037</span><span id="line.37"></span>
-<span class="source-line-no">038</span><span id="line.38">    /**</span>
-<span class="source-line-no">039</span><span id="line.39">     *  &lt;p&gt;Unique identifier of this Price.&lt;/p&gt;</span>
-<span class="source-line-no">040</span><span id="line.40">     * @return id</span>
-<span class="source-line-no">041</span><span id="line.41">     */</span>
-<span class="source-line-no">042</span><span id="line.42">    @NotNull</span>
-<span class="source-line-no">043</span><span id="line.43">    @JsonProperty("id")</span>
-<span class="source-line-no">044</span><span id="line.44">    public String getId();</span>
-<span class="source-line-no">045</span><span id="line.45"></span>
-<span class="source-line-no">046</span><span id="line.46">    /**</span>
-<span class="source-line-no">047</span><span id="line.47">     *  &lt;p&gt;User-defined identifier of the Price. It is unique per ProductVariant.&lt;/p&gt;</span>
-<span class="source-line-no">048</span><span id="line.48">     * @return key</span>
-<span class="source-line-no">049</span><span id="line.49">     */</span>
-<span class="source-line-no">050</span><span id="line.50"></span>
-<span class="source-line-no">051</span><span id="line.51">    @JsonProperty("key")</span>
-<span class="source-line-no">052</span><span id="line.52">    public String getKey();</span>
-<span class="source-line-no">053</span><span id="line.53"></span>
-<span class="source-line-no">054</span><span id="line.54">    /**</span>
-<span class="source-line-no">055</span><span id="line.55">     *  &lt;p&gt;Money value of this Price.&lt;/p&gt;</span>
-<span class="source-line-no">056</span><span id="line.56">     * @return value</span>
-<span class="source-line-no">057</span><span id="line.57">     */</span>
-<span class="source-line-no">058</span><span id="line.58">    @NotNull</span>
-<span class="source-line-no">059</span><span id="line.59">    @Valid</span>
-<span class="source-line-no">060</span><span id="line.60">    @JsonProperty("value")</span>
-<span class="source-line-no">061</span><span id="line.61">    public TypedMoney getValue();</span>
-<span class="source-line-no">062</span><span id="line.62"></span>
-<span class="source-line-no">063</span><span id="line.63">    /**</span>
-<span class="source-line-no">064</span><span id="line.64">     *  &lt;p&gt;Country for which this Price is valid.&lt;/p&gt;</span>
-<span class="source-line-no">065</span><span id="line.65">     * @return country</span>
-<span class="source-line-no">066</span><span id="line.66">     */</span>
-<span class="source-line-no">067</span><span id="line.67"></span>
-<span class="source-line-no">068</span><span id="line.68">    @JsonProperty("country")</span>
-<span class="source-line-no">069</span><span id="line.69">    public String getCountry();</span>
-<span class="source-line-no">070</span><span id="line.70"></span>
-<span class="source-line-no">071</span><span id="line.71">    /**</span>
-<span class="source-line-no">072</span><span id="line.72">     *  &lt;p&gt;CustomerGroup for which this Price is valid.&lt;/p&gt;</span>
-<span class="source-line-no">073</span><span id="line.73">     * @return customerGroup</span>
-<span class="source-line-no">074</span><span id="line.74">     */</span>
-<span class="source-line-no">075</span><span id="line.75">    @Valid</span>
-<span class="source-line-no">076</span><span id="line.76">    @JsonProperty("customerGroup")</span>
-<span class="source-line-no">077</span><span id="line.77">    public CustomerGroupReference getCustomerGroup();</span>
-<span class="source-line-no">078</span><span id="line.78"></span>
-<span class="source-line-no">079</span><span id="line.79">    /**</span>
-<span class="source-line-no">080</span><span id="line.80">     *  &lt;p&gt;&lt;code&gt;ProductDistribution&lt;/code&gt; Channel for which this Price is valid.&lt;/p&gt;</span>
-<span class="source-line-no">081</span><span id="line.81">     * @return channel</span>
-<span class="source-line-no">082</span><span id="line.82">     */</span>
-<span class="source-line-no">083</span><span id="line.83">    @Valid</span>
-<span class="source-line-no">084</span><span id="line.84">    @JsonProperty("channel")</span>
-<span class="source-line-no">085</span><span id="line.85">    public ChannelReference getChannel();</span>
-<span class="source-line-no">086</span><span id="line.86"></span>
-<span class="source-line-no">087</span><span id="line.87">    /**</span>
-<span class="source-line-no">088</span><span id="line.88">     *  &lt;p&gt;Date and time from which this Price is valid.&lt;/p&gt;</span>
-<span class="source-line-no">089</span><span id="line.89">     * @return validFrom</span>
-<span class="source-line-no">090</span><span id="line.90">     */</span>
-<span class="source-line-no">091</span><span id="line.91"></span>
-<span class="source-line-no">092</span><span id="line.92">    @JsonProperty("validFrom")</span>
-<span class="source-line-no">093</span><span id="line.93">    public ZonedDateTime getValidFrom();</span>
-<span class="source-line-no">094</span><span id="line.94"></span>
-<span class="source-line-no">095</span><span id="line.95">    /**</span>
-<span class="source-line-no">096</span><span id="line.96">     *  &lt;p&gt;Date and time until this Price is valid. Prices that are no longer valid are not automatically removed, but they can be removed if necessary.&lt;/p&gt;</span>
-<span class="source-line-no">097</span><span id="line.97">     * @return validUntil</span>
-<span class="source-line-no">098</span><span id="line.98">     */</span>
-<span class="source-line-no">099</span><span id="line.99"></span>
-<span class="source-line-no">100</span><span id="line.100">    @JsonProperty("validUntil")</span>
-<span class="source-line-no">101</span><span id="line.101">    public ZonedDateTime getValidUntil();</span>
-<span class="source-line-no">102</span><span id="line.102"></span>
-<span class="source-line-no">103</span><span id="line.103">    /**</span>
-<span class="source-line-no">104</span><span id="line.104">     *  &lt;p&gt;Is set if a ProductDiscount has been applied. If set, the API uses the DiscountedPrice value for the Line Item Price selection. When a relative discount has been applied and the fraction part of the DiscountedPrice &lt;code&gt;value&lt;/code&gt; is 0.5, the &lt;code&gt;value&lt;/code&gt; is rounded in favor of the customer with half-down rounding.&lt;/p&gt;</span>
-<span class="source-line-no">105</span><span id="line.105">     * @return discounted</span>
-<span class="source-line-no">106</span><span id="line.106">     */</span>
-<span class="source-line-no">107</span><span id="line.107">    @Valid</span>
-<span class="source-line-no">108</span><span id="line.108">    @JsonProperty("discounted")</span>
-<span class="source-line-no">109</span><span id="line.109">    public DiscountedPrice getDiscounted();</span>
-<span class="source-line-no">110</span><span id="line.110"></span>
-<span class="source-line-no">111</span><span id="line.111">    /**</span>
-<span class="source-line-no">112</span><span id="line.112">     *  &lt;p&gt;Present if different Prices for certain LineItem quantities have been specified.&lt;/p&gt;</span>
-<span class="source-line-no">113</span><span id="line.113">     * @return tiers</span>
-<span class="source-line-no">114</span><span id="line.114">     */</span>
-<span class="source-line-no">115</span><span id="line.115">    @Valid</span>
-<span class="source-line-no">116</span><span id="line.116">    @JsonProperty("tiers")</span>
-<span class="source-line-no">117</span><span id="line.117">    public List&lt;PriceTier&gt; getTiers();</span>
-<span class="source-line-no">118</span><span id="line.118"></span>
-<span class="source-line-no">119</span><span id="line.119">    /**</span>
-<span class="source-line-no">120</span><span id="line.120">     *  &lt;p&gt;Custom Fields defined for the Price.&lt;/p&gt;</span>
-<span class="source-line-no">121</span><span id="line.121">     * @return custom</span>
-<span class="source-line-no">122</span><span id="line.122">     */</span>
-<span class="source-line-no">123</span><span id="line.123">    @Valid</span>
-<span class="source-line-no">124</span><span id="line.124">    @JsonProperty("custom")</span>
-<span class="source-line-no">125</span><span id="line.125">    public CustomFields getCustom();</span>
-<span class="source-line-no">126</span><span id="line.126"></span>
-<span class="source-line-no">127</span><span id="line.127">    /**</span>
-<span class="source-line-no">128</span><span id="line.128">     *  &lt;p&gt;Unique identifier of this Price.&lt;/p&gt;</span>
-<span class="source-line-no">129</span><span id="line.129">     * @param id value to be set</span>
-<span class="source-line-no">130</span><span id="line.130">     */</span>
-<span class="source-line-no">131</span><span id="line.131"></span>
-<span class="source-line-no">132</span><span id="line.132">    public void setId(final String id);</span>
+<span class="source-line-no">020</span><span id="line.20">import io.vrap.rmf.base.client.utils.Generated;</span>
+<span class="source-line-no">021</span><span id="line.21"></span>
+<span class="source-line-no">022</span><span id="line.22">/**</span>
+<span class="source-line-no">023</span><span id="line.23"> *  &lt;p&gt;The representation for prices embedded in LineItems and in ProductVariants when the ProductPriceMode is &lt;code&gt;Embedded&lt;/code&gt;. For the &lt;code&gt;Standalone&lt;/code&gt; ProductPriceMode refer to StandalonePrice.&lt;/p&gt;</span>
+<span class="source-line-no">024</span><span id="line.24"> *</span>
+<span class="source-line-no">025</span><span id="line.25"> * &lt;hr&gt;</span>
+<span class="source-line-no">026</span><span id="line.26"> * Example to create an instance using the builder pattern</span>
+<span class="source-line-no">027</span><span id="line.27"> * &lt;div class=code-example&gt;</span>
+<span class="source-line-no">028</span><span id="line.28"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">029</span><span id="line.29"> *     Price price = Price.builder()</span>
+<span class="source-line-no">030</span><span id="line.30"> *             .id("{id}")</span>
+<span class="source-line-no">031</span><span id="line.31"> *             .value(valueBuilder -&gt; valueBuilder)</span>
+<span class="source-line-no">032</span><span id="line.32"> *             .build()</span>
+<span class="source-line-no">033</span><span id="line.33"> * &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">034</span><span id="line.34"> * &lt;/div&gt;</span>
+<span class="source-line-no">035</span><span id="line.35"> */</span>
+<span class="source-line-no">036</span><span id="line.36">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">037</span><span id="line.37">@JsonDeserialize(as = PriceImpl.class)</span>
+<span class="source-line-no">038</span><span id="line.38">public interface Price extends com.commercetools.api.models.Customizable&lt;Price&gt;, com.commercetools.api.models.WithKey {</span>
+<span class="source-line-no">039</span><span id="line.39"></span>
+<span class="source-line-no">040</span><span id="line.40">    /**</span>
+<span class="source-line-no">041</span><span id="line.41">     *  &lt;p&gt;Unique identifier of this Price.&lt;/p&gt;</span>
+<span class="source-line-no">042</span><span id="line.42">     * @return id</span>
+<span class="source-line-no">043</span><span id="line.43">     */</span>
+<span class="source-line-no">044</span><span id="line.44">    @NotNull</span>
+<span class="source-line-no">045</span><span id="line.45">    @JsonProperty("id")</span>
+<span class="source-line-no">046</span><span id="line.46">    public String getId();</span>
+<span class="source-line-no">047</span><span id="line.47"></span>
+<span class="source-line-no">048</span><span id="line.48">    /**</span>
+<span class="source-line-no">049</span><span id="line.49">     *  &lt;p&gt;User-defined identifier of the Price. It is unique per ProductVariant.&lt;/p&gt;</span>
+<span class="source-line-no">050</span><span id="line.50">     * @return key</span>
+<span class="source-line-no">051</span><span id="line.51">     */</span>
+<span class="source-line-no">052</span><span id="line.52"></span>
+<span class="source-line-no">053</span><span id="line.53">    @JsonProperty("key")</span>
+<span class="source-line-no">054</span><span id="line.54">    public String getKey();</span>
+<span class="source-line-no">055</span><span id="line.55"></span>
+<span class="source-line-no">056</span><span id="line.56">    /**</span>
+<span class="source-line-no">057</span><span id="line.57">     *  &lt;p&gt;Money value of this Price.&lt;/p&gt;</span>
+<span class="source-line-no">058</span><span id="line.58">     * @return value</span>
+<span class="source-line-no">059</span><span id="line.59">     */</span>
+<span class="source-line-no">060</span><span id="line.60">    @NotNull</span>
+<span class="source-line-no">061</span><span id="line.61">    @Valid</span>
+<span class="source-line-no">062</span><span id="line.62">    @JsonProperty("value")</span>
+<span class="source-line-no">063</span><span id="line.63">    public TypedMoney getValue();</span>
+<span class="source-line-no">064</span><span id="line.64"></span>
+<span class="source-line-no">065</span><span id="line.65">    /**</span>
+<span class="source-line-no">066</span><span id="line.66">     *  &lt;p&gt;Country for which this Price is valid.&lt;/p&gt;</span>
+<span class="source-line-no">067</span><span id="line.67">     * @return country</span>
+<span class="source-line-no">068</span><span id="line.68">     */</span>
+<span class="source-line-no">069</span><span id="line.69"></span>
+<span class="source-line-no">070</span><span id="line.70">    @JsonProperty("country")</span>
+<span class="source-line-no">071</span><span id="line.71">    public String getCountry();</span>
+<span class="source-line-no">072</span><span id="line.72"></span>
+<span class="source-line-no">073</span><span id="line.73">    /**</span>
+<span class="source-line-no">074</span><span id="line.74">     *  &lt;p&gt;CustomerGroup for which this Price is valid.&lt;/p&gt;</span>
+<span class="source-line-no">075</span><span id="line.75">     * @return customerGroup</span>
+<span class="source-line-no">076</span><span id="line.76">     */</span>
+<span class="source-line-no">077</span><span id="line.77">    @Valid</span>
+<span class="source-line-no">078</span><span id="line.78">    @JsonProperty("customerGroup")</span>
+<span class="source-line-no">079</span><span id="line.79">    public CustomerGroupReference getCustomerGroup();</span>
+<span class="source-line-no">080</span><span id="line.80"></span>
+<span class="source-line-no">081</span><span id="line.81">    /**</span>
+<span class="source-line-no">082</span><span id="line.82">     *  &lt;p&gt;&lt;code&gt;ProductDistribution&lt;/code&gt; Channel for which this Price is valid.&lt;/p&gt;</span>
+<span class="source-line-no">083</span><span id="line.83">     * @return channel</span>
+<span class="source-line-no">084</span><span id="line.84">     */</span>
+<span class="source-line-no">085</span><span id="line.85">    @Valid</span>
+<span class="source-line-no">086</span><span id="line.86">    @JsonProperty("channel")</span>
+<span class="source-line-no">087</span><span id="line.87">    public ChannelReference getChannel();</span>
+<span class="source-line-no">088</span><span id="line.88"></span>
+<span class="source-line-no">089</span><span id="line.89">    /**</span>
+<span class="source-line-no">090</span><span id="line.90">     *  &lt;p&gt;Date and time from which this Price is valid.&lt;/p&gt;</span>
+<span class="source-line-no">091</span><span id="line.91">     * @return validFrom</span>
+<span class="source-line-no">092</span><span id="line.92">     */</span>
+<span class="source-line-no">093</span><span id="line.93"></span>
+<span class="source-line-no">094</span><span id="line.94">    @JsonProperty("validFrom")</span>
+<span class="source-line-no">095</span><span id="line.95">    public ZonedDateTime getValidFrom();</span>
+<span class="source-line-no">096</span><span id="line.96"></span>
+<span class="source-line-no">097</span><span id="line.97">    /**</span>
+<span class="source-line-no">098</span><span id="line.98">     *  &lt;p&gt;Date and time until this Price is valid. Prices that are no longer valid are not automatically removed, but they can be removed if necessary.&lt;/p&gt;</span>
+<span class="source-line-no">099</span><span id="line.99">     * @return validUntil</span>
+<span class="source-line-no">100</span><span id="line.100">     */</span>
+<span class="source-line-no">101</span><span id="line.101"></span>
+<span class="source-line-no">102</span><span id="line.102">    @JsonProperty("validUntil")</span>
+<span class="source-line-no">103</span><span id="line.103">    public ZonedDateTime getValidUntil();</span>
+<span class="source-line-no">104</span><span id="line.104"></span>
+<span class="source-line-no">105</span><span id="line.105">    /**</span>
+<span class="source-line-no">106</span><span id="line.106">     *  &lt;p&gt;Is set if a ProductDiscount has been applied. If set, the API uses the DiscountedPrice value for the Line Item Price selection. When a relative discount has been applied and the fraction part of the DiscountedPrice &lt;code&gt;value&lt;/code&gt; is 0.5, the &lt;code&gt;value&lt;/code&gt; is rounded in favor of the customer with half-down rounding.&lt;/p&gt;</span>
+<span class="source-line-no">107</span><span id="line.107">     * @return discounted</span>
+<span class="source-line-no">108</span><span id="line.108">     */</span>
+<span class="source-line-no">109</span><span id="line.109">    @Valid</span>
+<span class="source-line-no">110</span><span id="line.110">    @JsonProperty("discounted")</span>
+<span class="source-line-no">111</span><span id="line.111">    public DiscountedPrice getDiscounted();</span>
+<span class="source-line-no">112</span><span id="line.112"></span>
+<span class="source-line-no">113</span><span id="line.113">    /**</span>
+<span class="source-line-no">114</span><span id="line.114">     *  &lt;p&gt;Present if different Prices for certain LineItem quantities have been specified.&lt;/p&gt;</span>
+<span class="source-line-no">115</span><span id="line.115">     * @return tiers</span>
+<span class="source-line-no">116</span><span id="line.116">     */</span>
+<span class="source-line-no">117</span><span id="line.117">    @Valid</span>
+<span class="source-line-no">118</span><span id="line.118">    @JsonProperty("tiers")</span>
+<span class="source-line-no">119</span><span id="line.119">    public List&lt;PriceTier&gt; getTiers();</span>
+<span class="source-line-no">120</span><span id="line.120"></span>
+<span class="source-line-no">121</span><span id="line.121">    /**</span>
+<span class="source-line-no">122</span><span id="line.122">     *  &lt;p&gt;Custom Fields defined for the Price.&lt;/p&gt;</span>
+<span class="source-line-no">123</span><span id="line.123">     * @return custom</span>
+<span class="source-line-no">124</span><span id="line.124">     */</span>
+<span class="source-line-no">125</span><span id="line.125">    @Valid</span>
+<span class="source-line-no">126</span><span id="line.126">    @JsonProperty("custom")</span>
+<span class="source-line-no">127</span><span id="line.127">    public CustomFields getCustom();</span>
+<span class="source-line-no">128</span><span id="line.128"></span>
+<span class="source-line-no">129</span><span id="line.129">    /**</span>
+<span class="source-line-no">130</span><span id="line.130">     *  &lt;p&gt;Unique identifier of this Price.&lt;/p&gt;</span>
+<span class="source-line-no">131</span><span id="line.131">     * @param id value to be set</span>
+<span class="source-line-no">132</span><span id="line.132">     */</span>
 <span class="source-line-no">133</span><span id="line.133"></span>
-<span class="source-line-no">134</span><span id="line.134">    /**</span>
-<span class="source-line-no">135</span><span id="line.135">     *  &lt;p&gt;User-defined identifier of the Price. It is unique per ProductVariant.&lt;/p&gt;</span>
-<span class="source-line-no">136</span><span id="line.136">     * @param key value to be set</span>
-<span class="source-line-no">137</span><span id="line.137">     */</span>
-<span class="source-line-no">138</span><span id="line.138"></span>
-<span class="source-line-no">139</span><span id="line.139">    public void setKey(final String key);</span>
+<span class="source-line-no">134</span><span id="line.134">    public void setId(final String id);</span>
+<span class="source-line-no">135</span><span id="line.135"></span>
+<span class="source-line-no">136</span><span id="line.136">    /**</span>
+<span class="source-line-no">137</span><span id="line.137">     *  &lt;p&gt;User-defined identifier of the Price. It is unique per ProductVariant.&lt;/p&gt;</span>
+<span class="source-line-no">138</span><span id="line.138">     * @param key value to be set</span>
+<span class="source-line-no">139</span><span id="line.139">     */</span>
 <span class="source-line-no">140</span><span id="line.140"></span>
-<span class="source-line-no">141</span><span id="line.141">    /**</span>
-<span class="source-line-no">142</span><span id="line.142">     *  &lt;p&gt;Money value of this Price.&lt;/p&gt;</span>
-<span class="source-line-no">143</span><span id="line.143">     * @param value value to be set</span>
-<span class="source-line-no">144</span><span id="line.144">     */</span>
-<span class="source-line-no">145</span><span id="line.145"></span>
-<span class="source-line-no">146</span><span id="line.146">    public void setValue(final TypedMoney value);</span>
+<span class="source-line-no">141</span><span id="line.141">    public void setKey(final String key);</span>
+<span class="source-line-no">142</span><span id="line.142"></span>
+<span class="source-line-no">143</span><span id="line.143">    /**</span>
+<span class="source-line-no">144</span><span id="line.144">     *  &lt;p&gt;Money value of this Price.&lt;/p&gt;</span>
+<span class="source-line-no">145</span><span id="line.145">     * @param value value to be set</span>
+<span class="source-line-no">146</span><span id="line.146">     */</span>
 <span class="source-line-no">147</span><span id="line.147"></span>
-<span class="source-line-no">148</span><span id="line.148">    /**</span>
-<span class="source-line-no">149</span><span id="line.149">     *  &lt;p&gt;Country for which this Price is valid.&lt;/p&gt;</span>
-<span class="source-line-no">150</span><span id="line.150">     * @param country value to be set</span>
-<span class="source-line-no">151</span><span id="line.151">     */</span>
-<span class="source-line-no">152</span><span id="line.152"></span>
-<span class="source-line-no">153</span><span id="line.153">    public void setCountry(final String country);</span>
+<span class="source-line-no">148</span><span id="line.148">    public void setValue(final TypedMoney value);</span>
+<span class="source-line-no">149</span><span id="line.149"></span>
+<span class="source-line-no">150</span><span id="line.150">    /**</span>
+<span class="source-line-no">151</span><span id="line.151">     *  &lt;p&gt;Country for which this Price is valid.&lt;/p&gt;</span>
+<span class="source-line-no">152</span><span id="line.152">     * @param country value to be set</span>
+<span class="source-line-no">153</span><span id="line.153">     */</span>
 <span class="source-line-no">154</span><span id="line.154"></span>
-<span class="source-line-no">155</span><span id="line.155">    /**</span>
-<span class="source-line-no">156</span><span id="line.156">     *  &lt;p&gt;CustomerGroup for which this Price is valid.&lt;/p&gt;</span>
-<span class="source-line-no">157</span><span id="line.157">     * @param customerGroup value to be set</span>
-<span class="source-line-no">158</span><span id="line.158">     */</span>
-<span class="source-line-no">159</span><span id="line.159"></span>
-<span class="source-line-no">160</span><span id="line.160">    public void setCustomerGroup(final CustomerGroupReference customerGroup);</span>
+<span class="source-line-no">155</span><span id="line.155">    public void setCountry(final String country);</span>
+<span class="source-line-no">156</span><span id="line.156"></span>
+<span class="source-line-no">157</span><span id="line.157">    /**</span>
+<span class="source-line-no">158</span><span id="line.158">     *  &lt;p&gt;CustomerGroup for which this Price is valid.&lt;/p&gt;</span>
+<span class="source-line-no">159</span><span id="line.159">     * @param customerGroup value to be set</span>
+<span class="source-line-no">160</span><span id="line.160">     */</span>
 <span class="source-line-no">161</span><span id="line.161"></span>
-<span class="source-line-no">162</span><span id="line.162">    /**</span>
-<span class="source-line-no">163</span><span id="line.163">     *  &lt;p&gt;&lt;code&gt;ProductDistribution&lt;/code&gt; Channel for which this Price is valid.&lt;/p&gt;</span>
-<span class="source-line-no">164</span><span id="line.164">     * @param channel value to be set</span>
-<span class="source-line-no">165</span><span id="line.165">     */</span>
-<span class="source-line-no">166</span><span id="line.166"></span>
-<span class="source-line-no">167</span><span id="line.167">    public void setChannel(final ChannelReference channel);</span>
+<span class="source-line-no">162</span><span id="line.162">    public void setCustomerGroup(final CustomerGroupReference customerGroup);</span>
+<span class="source-line-no">163</span><span id="line.163"></span>
+<span class="source-line-no">164</span><span id="line.164">    /**</span>
+<span class="source-line-no">165</span><span id="line.165">     *  &lt;p&gt;&lt;code&gt;ProductDistribution&lt;/code&gt; Channel for which this Price is valid.&lt;/p&gt;</span>
+<span class="source-line-no">166</span><span id="line.166">     * @param channel value to be set</span>
+<span class="source-line-no">167</span><span id="line.167">     */</span>
 <span class="source-line-no">168</span><span id="line.168"></span>
-<span class="source-line-no">169</span><span id="line.169">    /**</span>
-<span class="source-line-no">170</span><span id="line.170">     *  &lt;p&gt;Date and time from which this Price is valid.&lt;/p&gt;</span>
-<span class="source-line-no">171</span><span id="line.171">     * @param validFrom value to be set</span>
-<span class="source-line-no">172</span><span id="line.172">     */</span>
-<span class="source-line-no">173</span><span id="line.173"></span>
-<span class="source-line-no">174</span><span id="line.174">    public void setValidFrom(final ZonedDateTime validFrom);</span>
+<span class="source-line-no">169</span><span id="line.169">    public void setChannel(final ChannelReference channel);</span>
+<span class="source-line-no">170</span><span id="line.170"></span>
+<span class="source-line-no">171</span><span id="line.171">    /**</span>
+<span class="source-line-no">172</span><span id="line.172">     *  &lt;p&gt;Date and time from which this Price is valid.&lt;/p&gt;</span>
+<span class="source-line-no">173</span><span id="line.173">     * @param validFrom value to be set</span>
+<span class="source-line-no">174</span><span id="line.174">     */</span>
 <span class="source-line-no">175</span><span id="line.175"></span>
-<span class="source-line-no">176</span><span id="line.176">    /**</span>
-<span class="source-line-no">177</span><span id="line.177">     *  &lt;p&gt;Date and time until this Price is valid. Prices that are no longer valid are not automatically removed, but they can be removed if necessary.&lt;/p&gt;</span>
-<span class="source-line-no">178</span><span id="line.178">     * @param validUntil value to be set</span>
-<span class="source-line-no">179</span><span id="line.179">     */</span>
-<span class="source-line-no">180</span><span id="line.180"></span>
-<span class="source-line-no">181</span><span id="line.181">    public void setValidUntil(final ZonedDateTime validUntil);</span>
+<span class="source-line-no">176</span><span id="line.176">    public void setValidFrom(final ZonedDateTime validFrom);</span>
+<span class="source-line-no">177</span><span id="line.177"></span>
+<span class="source-line-no">178</span><span id="line.178">    /**</span>
+<span class="source-line-no">179</span><span id="line.179">     *  &lt;p&gt;Date and time until this Price is valid. Prices that are no longer valid are not automatically removed, but they can be removed if necessary.&lt;/p&gt;</span>
+<span class="source-line-no">180</span><span id="line.180">     * @param validUntil value to be set</span>
+<span class="source-line-no">181</span><span id="line.181">     */</span>
 <span class="source-line-no">182</span><span id="line.182"></span>
-<span class="source-line-no">183</span><span id="line.183">    /**</span>
-<span class="source-line-no">184</span><span id="line.184">     *  &lt;p&gt;Is set if a ProductDiscount has been applied. If set, the API uses the DiscountedPrice value for the Line Item Price selection. When a relative discount has been applied and the fraction part of the DiscountedPrice &lt;code&gt;value&lt;/code&gt; is 0.5, the &lt;code&gt;value&lt;/code&gt; is rounded in favor of the customer with half-down rounding.&lt;/p&gt;</span>
-<span class="source-line-no">185</span><span id="line.185">     * @param discounted value to be set</span>
-<span class="source-line-no">186</span><span id="line.186">     */</span>
-<span class="source-line-no">187</span><span id="line.187"></span>
-<span class="source-line-no">188</span><span id="line.188">    public void setDiscounted(final DiscountedPrice discounted);</span>
+<span class="source-line-no">183</span><span id="line.183">    public void setValidUntil(final ZonedDateTime validUntil);</span>
+<span class="source-line-no">184</span><span id="line.184"></span>
+<span class="source-line-no">185</span><span id="line.185">    /**</span>
+<span class="source-line-no">186</span><span id="line.186">     *  &lt;p&gt;Is set if a ProductDiscount has been applied. If set, the API uses the DiscountedPrice value for the Line Item Price selection. When a relative discount has been applied and the fraction part of the DiscountedPrice &lt;code&gt;value&lt;/code&gt; is 0.5, the &lt;code&gt;value&lt;/code&gt; is rounded in favor of the customer with half-down rounding.&lt;/p&gt;</span>
+<span class="source-line-no">187</span><span id="line.187">     * @param discounted value to be set</span>
+<span class="source-line-no">188</span><span id="line.188">     */</span>
 <span class="source-line-no">189</span><span id="line.189"></span>
-<span class="source-line-no">190</span><span id="line.190">    /**</span>
-<span class="source-line-no">191</span><span id="line.191">     *  &lt;p&gt;Present if different Prices for certain LineItem quantities have been specified.&lt;/p&gt;</span>
-<span class="source-line-no">192</span><span id="line.192">     * @param tiers values to be set</span>
-<span class="source-line-no">193</span><span id="line.193">     */</span>
-<span class="source-line-no">194</span><span id="line.194"></span>
-<span class="source-line-no">195</span><span id="line.195">    @JsonIgnore</span>
-<span class="source-line-no">196</span><span id="line.196">    public void setTiers(final PriceTier... tiers);</span>
-<span class="source-line-no">197</span><span id="line.197"></span>
-<span class="source-line-no">198</span><span id="line.198">    /**</span>
-<span class="source-line-no">199</span><span id="line.199">     *  &lt;p&gt;Present if different Prices for certain LineItem quantities have been specified.&lt;/p&gt;</span>
-<span class="source-line-no">200</span><span id="line.200">     * @param tiers values to be set</span>
-<span class="source-line-no">201</span><span id="line.201">     */</span>
-<span class="source-line-no">202</span><span id="line.202"></span>
-<span class="source-line-no">203</span><span id="line.203">    public void setTiers(final List&lt;PriceTier&gt; tiers);</span>
+<span class="source-line-no">190</span><span id="line.190">    public void setDiscounted(final DiscountedPrice discounted);</span>
+<span class="source-line-no">191</span><span id="line.191"></span>
+<span class="source-line-no">192</span><span id="line.192">    /**</span>
+<span class="source-line-no">193</span><span id="line.193">     *  &lt;p&gt;Present if different Prices for certain LineItem quantities have been specified.&lt;/p&gt;</span>
+<span class="source-line-no">194</span><span id="line.194">     * @param tiers values to be set</span>
+<span class="source-line-no">195</span><span id="line.195">     */</span>
+<span class="source-line-no">196</span><span id="line.196"></span>
+<span class="source-line-no">197</span><span id="line.197">    @JsonIgnore</span>
+<span class="source-line-no">198</span><span id="line.198">    public void setTiers(final PriceTier... tiers);</span>
+<span class="source-line-no">199</span><span id="line.199"></span>
+<span class="source-line-no">200</span><span id="line.200">    /**</span>
+<span class="source-line-no">201</span><span id="line.201">     *  &lt;p&gt;Present if different Prices for certain LineItem quantities have been specified.&lt;/p&gt;</span>
+<span class="source-line-no">202</span><span id="line.202">     * @param tiers values to be set</span>
+<span class="source-line-no">203</span><span id="line.203">     */</span>
 <span class="source-line-no">204</span><span id="line.204"></span>
-<span class="source-line-no">205</span><span id="line.205">    /**</span>
-<span class="source-line-no">206</span><span id="line.206">     *  &lt;p&gt;Custom Fields defined for the Price.&lt;/p&gt;</span>
-<span class="source-line-no">207</span><span id="line.207">     * @param custom value to be set</span>
-<span class="source-line-no">208</span><span id="line.208">     */</span>
-<span class="source-line-no">209</span><span id="line.209"></span>
-<span class="source-line-no">210</span><span id="line.210">    public void setCustom(final CustomFields custom);</span>
+<span class="source-line-no">205</span><span id="line.205">    public void setTiers(final List&lt;PriceTier&gt; tiers);</span>
+<span class="source-line-no">206</span><span id="line.206"></span>
+<span class="source-line-no">207</span><span id="line.207">    /**</span>
+<span class="source-line-no">208</span><span id="line.208">     *  &lt;p&gt;Custom Fields defined for the Price.&lt;/p&gt;</span>
+<span class="source-line-no">209</span><span id="line.209">     * @param custom value to be set</span>
+<span class="source-line-no">210</span><span id="line.210">     */</span>
 <span class="source-line-no">211</span><span id="line.211"></span>
-<span class="source-line-no">212</span><span id="line.212">    /**</span>
-<span class="source-line-no">213</span><span id="line.213">     * factory method</span>
-<span class="source-line-no">214</span><span id="line.214">     * @return instance of Price</span>
-<span class="source-line-no">215</span><span id="line.215">     */</span>
-<span class="source-line-no">216</span><span id="line.216">    public static Price of() {</span>
-<span class="source-line-no">217</span><span id="line.217">        return new PriceImpl();</span>
-<span class="source-line-no">218</span><span id="line.218">    }</span>
-<span class="source-line-no">219</span><span id="line.219"></span>
-<span class="source-line-no">220</span><span id="line.220">    /**</span>
-<span class="source-line-no">221</span><span id="line.221">     * factory method to copy an instance of Price</span>
-<span class="source-line-no">222</span><span id="line.222">     * @param template instance to be copied</span>
-<span class="source-line-no">223</span><span id="line.223">     * @return copy instance</span>
-<span class="source-line-no">224</span><span id="line.224">     */</span>
-<span class="source-line-no">225</span><span id="line.225">    public static Price of(final Price template) {</span>
-<span class="source-line-no">226</span><span id="line.226">        PriceImpl instance = new PriceImpl();</span>
-<span class="source-line-no">227</span><span id="line.227">        instance.setId(template.getId());</span>
-<span class="source-line-no">228</span><span id="line.228">        instance.setKey(template.getKey());</span>
-<span class="source-line-no">229</span><span id="line.229">        instance.setValue(template.getValue());</span>
-<span class="source-line-no">230</span><span id="line.230">        instance.setCountry(template.getCountry());</span>
-<span class="source-line-no">231</span><span id="line.231">        instance.setCustomerGroup(template.getCustomerGroup());</span>
-<span class="source-line-no">232</span><span id="line.232">        instance.setChannel(template.getChannel());</span>
-<span class="source-line-no">233</span><span id="line.233">        instance.setValidFrom(template.getValidFrom());</span>
-<span class="source-line-no">234</span><span id="line.234">        instance.setValidUntil(template.getValidUntil());</span>
-<span class="source-line-no">235</span><span id="line.235">        instance.setDiscounted(template.getDiscounted());</span>
-<span class="source-line-no">236</span><span id="line.236">        instance.setTiers(template.getTiers());</span>
-<span class="source-line-no">237</span><span id="line.237">        instance.setCustom(template.getCustom());</span>
-<span class="source-line-no">238</span><span id="line.238">        return instance;</span>
-<span class="source-line-no">239</span><span id="line.239">    }</span>
-<span class="source-line-no">240</span><span id="line.240"></span>
-<span class="source-line-no">241</span><span id="line.241">    /**</span>
-<span class="source-line-no">242</span><span id="line.242">     * builder factory method for Price</span>
-<span class="source-line-no">243</span><span id="line.243">     * @return builder</span>
-<span class="source-line-no">244</span><span id="line.244">     */</span>
-<span class="source-line-no">245</span><span id="line.245">    public static PriceBuilder builder() {</span>
-<span class="source-line-no">246</span><span id="line.246">        return PriceBuilder.of();</span>
-<span class="source-line-no">247</span><span id="line.247">    }</span>
-<span class="source-line-no">248</span><span id="line.248"></span>
-<span class="source-line-no">249</span><span id="line.249">    /**</span>
-<span class="source-line-no">250</span><span id="line.250">     * create builder for Price instance</span>
-<span class="source-line-no">251</span><span id="line.251">     * @param template instance with prefilled values for the builder</span>
-<span class="source-line-no">252</span><span id="line.252">     * @return builder</span>
-<span class="source-line-no">253</span><span id="line.253">     */</span>
-<span class="source-line-no">254</span><span id="line.254">    public static PriceBuilder builder(final Price template) {</span>
-<span class="source-line-no">255</span><span id="line.255">        return PriceBuilder.of(template);</span>
-<span class="source-line-no">256</span><span id="line.256">    }</span>
-<span class="source-line-no">257</span><span id="line.257"></span>
-<span class="source-line-no">258</span><span id="line.258">    /**</span>
-<span class="source-line-no">259</span><span id="line.259">     * accessor map function</span>
-<span class="source-line-no">260</span><span id="line.260">     * @param &lt;T&gt; mapped type</span>
-<span class="source-line-no">261</span><span id="line.261">     * @param helper function to map the object</span>
-<span class="source-line-no">262</span><span id="line.262">     * @return mapped value</span>
-<span class="source-line-no">263</span><span id="line.263">     */</span>
-<span class="source-line-no">264</span><span id="line.264">    default &lt;T&gt; T withPrice(Function&lt;Price, T&gt; helper) {</span>
-<span class="source-line-no">265</span><span id="line.265">        return helper.apply(this);</span>
-<span class="source-line-no">266</span><span id="line.266">    }</span>
-<span class="source-line-no">267</span><span id="line.267"></span>
-<span class="source-line-no">268</span><span id="line.268">    /**</span>
-<span class="source-line-no">269</span><span id="line.269">     * gives a TypeReference for usage with Jackson DataBind</span>
-<span class="source-line-no">270</span><span id="line.270">     * @return TypeReference</span>
-<span class="source-line-no">271</span><span id="line.271">     */</span>
-<span class="source-line-no">272</span><span id="line.272">    public static com.fasterxml.jackson.core.type.TypeReference&lt;Price&gt; typeReference() {</span>
-<span class="source-line-no">273</span><span id="line.273">        return new com.fasterxml.jackson.core.type.TypeReference&lt;Price&gt;() {</span>
-<span class="source-line-no">274</span><span id="line.274">            @Override</span>
-<span class="source-line-no">275</span><span id="line.275">            public String toString() {</span>
-<span class="source-line-no">276</span><span id="line.276">                return "TypeReference&lt;Price&gt;";</span>
-<span class="source-line-no">277</span><span id="line.277">            }</span>
-<span class="source-line-no">278</span><span id="line.278">        };</span>
+<span class="source-line-no">212</span><span id="line.212">    public void setCustom(final CustomFields custom);</span>
+<span class="source-line-no">213</span><span id="line.213"></span>
+<span class="source-line-no">214</span><span id="line.214">    /**</span>
+<span class="source-line-no">215</span><span id="line.215">     * factory method</span>
+<span class="source-line-no">216</span><span id="line.216">     * @return instance of Price</span>
+<span class="source-line-no">217</span><span id="line.217">     */</span>
+<span class="source-line-no">218</span><span id="line.218">    public static Price of() {</span>
+<span class="source-line-no">219</span><span id="line.219">        return new PriceImpl();</span>
+<span class="source-line-no">220</span><span id="line.220">    }</span>
+<span class="source-line-no">221</span><span id="line.221"></span>
+<span class="source-line-no">222</span><span id="line.222">    /**</span>
+<span class="source-line-no">223</span><span id="line.223">     * factory method to create a shallow copy Price</span>
+<span class="source-line-no">224</span><span id="line.224">     * @param template instance to be copied</span>
+<span class="source-line-no">225</span><span id="line.225">     * @return copy instance</span>
+<span class="source-line-no">226</span><span id="line.226">     */</span>
+<span class="source-line-no">227</span><span id="line.227">    public static Price of(final Price template) {</span>
+<span class="source-line-no">228</span><span id="line.228">        PriceImpl instance = new PriceImpl();</span>
+<span class="source-line-no">229</span><span id="line.229">        instance.setId(template.getId());</span>
+<span class="source-line-no">230</span><span id="line.230">        instance.setKey(template.getKey());</span>
+<span class="source-line-no">231</span><span id="line.231">        instance.setValue(template.getValue());</span>
+<span class="source-line-no">232</span><span id="line.232">        instance.setCountry(template.getCountry());</span>
+<span class="source-line-no">233</span><span id="line.233">        instance.setCustomerGroup(template.getCustomerGroup());</span>
+<span class="source-line-no">234</span><span id="line.234">        instance.setChannel(template.getChannel());</span>
+<span class="source-line-no">235</span><span id="line.235">        instance.setValidFrom(template.getValidFrom());</span>
+<span class="source-line-no">236</span><span id="line.236">        instance.setValidUntil(template.getValidUntil());</span>
+<span class="source-line-no">237</span><span id="line.237">        instance.setDiscounted(template.getDiscounted());</span>
+<span class="source-line-no">238</span><span id="line.238">        instance.setTiers(template.getTiers());</span>
+<span class="source-line-no">239</span><span id="line.239">        instance.setCustom(template.getCustom());</span>
+<span class="source-line-no">240</span><span id="line.240">        return instance;</span>
+<span class="source-line-no">241</span><span id="line.241">    }</span>
+<span class="source-line-no">242</span><span id="line.242"></span>
+<span class="source-line-no">243</span><span id="line.243">    /**</span>
+<span class="source-line-no">244</span><span id="line.244">     * factory method to create a deep copy of Price</span>
+<span class="source-line-no">245</span><span id="line.245">     * @param template instance to be copied</span>
+<span class="source-line-no">246</span><span id="line.246">     * @return copy instance</span>
+<span class="source-line-no">247</span><span id="line.247">     */</span>
+<span class="source-line-no">248</span><span id="line.248">    @Nullable</span>
+<span class="source-line-no">249</span><span id="line.249">    public static Price deepCopy(@Nullable final Price template) {</span>
+<span class="source-line-no">250</span><span id="line.250">        if (template == null) {</span>
+<span class="source-line-no">251</span><span id="line.251">            return null;</span>
+<span class="source-line-no">252</span><span id="line.252">        }</span>
+<span class="source-line-no">253</span><span id="line.253">        PriceImpl instance = new PriceImpl();</span>
+<span class="source-line-no">254</span><span id="line.254">        instance.setId(template.getId());</span>
+<span class="source-line-no">255</span><span id="line.255">        instance.setKey(template.getKey());</span>
+<span class="source-line-no">256</span><span id="line.256">        instance.setValue(com.commercetools.api.models.common.TypedMoney.deepCopy(template.getValue()));</span>
+<span class="source-line-no">257</span><span id="line.257">        instance.setCountry(template.getCountry());</span>
+<span class="source-line-no">258</span><span id="line.258">        instance.setCustomerGroup(</span>
+<span class="source-line-no">259</span><span id="line.259">            com.commercetools.api.models.customer_group.CustomerGroupReference.deepCopy(template.getCustomerGroup()));</span>
+<span class="source-line-no">260</span><span id="line.260">        instance.setChannel(com.commercetools.api.models.channel.ChannelReference.deepCopy(template.getChannel()));</span>
+<span class="source-line-no">261</span><span id="line.261">        instance.setValidFrom(template.getValidFrom());</span>
+<span class="source-line-no">262</span><span id="line.262">        instance.setValidUntil(template.getValidUntil());</span>
+<span class="source-line-no">263</span><span id="line.263">        instance.setDiscounted(com.commercetools.api.models.common.DiscountedPrice.deepCopy(template.getDiscounted()));</span>
+<span class="source-line-no">264</span><span id="line.264">        instance.setTiers(Optional.ofNullable(template.getTiers())</span>
+<span class="source-line-no">265</span><span id="line.265">                .map(t -&gt; t.stream()</span>
+<span class="source-line-no">266</span><span id="line.266">                        .map(com.commercetools.api.models.common.PriceTier::deepCopy)</span>
+<span class="source-line-no">267</span><span id="line.267">                        .collect(Collectors.toList()))</span>
+<span class="source-line-no">268</span><span id="line.268">                .orElse(null));</span>
+<span class="source-line-no">269</span><span id="line.269">        instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));</span>
+<span class="source-line-no">270</span><span id="line.270">        return instance;</span>
+<span class="source-line-no">271</span><span id="line.271">    }</span>
+<span class="source-line-no">272</span><span id="line.272"></span>
+<span class="source-line-no">273</span><span id="line.273">    /**</span>
+<span class="source-line-no">274</span><span id="line.274">     * builder factory method for Price</span>
+<span class="source-line-no">275</span><span id="line.275">     * @return builder</span>
+<span class="source-line-no">276</span><span id="line.276">     */</span>
+<span class="source-line-no">277</span><span id="line.277">    public static PriceBuilder builder() {</span>
+<span class="source-line-no">278</span><span id="line.278">        return PriceBuilder.of();</span>
 <span class="source-line-no">279</span><span id="line.279">    }</span>
-<span class="source-line-no">280</span><span id="line.280">}</span>
+<span class="source-line-no">280</span><span id="line.280"></span>
+<span class="source-line-no">281</span><span id="line.281">    /**</span>
+<span class="source-line-no">282</span><span id="line.282">     * create builder for Price instance</span>
+<span class="source-line-no">283</span><span id="line.283">     * @param template instance with prefilled values for the builder</span>
+<span class="source-line-no">284</span><span id="line.284">     * @return builder</span>
+<span class="source-line-no">285</span><span id="line.285">     */</span>
+<span class="source-line-no">286</span><span id="line.286">    public static PriceBuilder builder(final Price template) {</span>
+<span class="source-line-no">287</span><span id="line.287">        return PriceBuilder.of(template);</span>
+<span class="source-line-no">288</span><span id="line.288">    }</span>
+<span class="source-line-no">289</span><span id="line.289"></span>
+<span class="source-line-no">290</span><span id="line.290">    /**</span>
+<span class="source-line-no">291</span><span id="line.291">     * accessor map function</span>
+<span class="source-line-no">292</span><span id="line.292">     * @param &lt;T&gt; mapped type</span>
+<span class="source-line-no">293</span><span id="line.293">     * @param helper function to map the object</span>
+<span class="source-line-no">294</span><span id="line.294">     * @return mapped value</span>
+<span class="source-line-no">295</span><span id="line.295">     */</span>
+<span class="source-line-no">296</span><span id="line.296">    default &lt;T&gt; T withPrice(Function&lt;Price, T&gt; helper) {</span>
+<span class="source-line-no">297</span><span id="line.297">        return helper.apply(this);</span>
+<span class="source-line-no">298</span><span id="line.298">    }</span>
+<span class="source-line-no">299</span><span id="line.299"></span>
+<span class="source-line-no">300</span><span id="line.300">    /**</span>
+<span class="source-line-no">301</span><span id="line.301">     * gives a TypeReference for usage with Jackson DataBind</span>
+<span class="source-line-no">302</span><span id="line.302">     * @return TypeReference</span>
+<span class="source-line-no">303</span><span id="line.303">     */</span>
+<span class="source-line-no">304</span><span id="line.304">    public static com.fasterxml.jackson.core.type.TypeReference&lt;Price&gt; typeReference() {</span>
+<span class="source-line-no">305</span><span id="line.305">        return new com.fasterxml.jackson.core.type.TypeReference&lt;Price&gt;() {</span>
+<span class="source-line-no">306</span><span id="line.306">            @Override</span>
+<span class="source-line-no">307</span><span id="line.307">            public String toString() {</span>
+<span class="source-line-no">308</span><span id="line.308">                return "TypeReference&lt;Price&gt;";</span>
+<span class="source-line-no">309</span><span id="line.309">            }</span>
+<span class="source-line-no">310</span><span id="line.310">        };</span>
+<span class="source-line-no">311</span><span id="line.311">    }</span>
+<span class="source-line-no">312</span><span id="line.312">}</span>
 
 
 

@@ -18,847 +18,938 @@
 <span class="source-line-no">005</span><span id="line.5">import java.time.ZonedDateTime;</span>
 <span class="source-line-no">006</span><span id="line.6">import java.util.*;</span>
 <span class="source-line-no">007</span><span id="line.7">import java.util.function.Function;</span>
-<span class="source-line-no">008</span><span id="line.8"></span>
-<span class="source-line-no">009</span><span id="line.9">import javax.validation.Valid;</span>
-<span class="source-line-no">010</span><span id="line.10">import javax.validation.constraints.NotNull;</span>
-<span class="source-line-no">011</span><span id="line.11"></span>
-<span class="source-line-no">012</span><span id="line.12">import com.commercetools.api.models.business_unit.BusinessUnitKeyReference;</span>
-<span class="source-line-no">013</span><span id="line.13">import com.commercetools.api.models.cart_discount.CartDiscountReference;</span>
-<span class="source-line-no">014</span><span id="line.14">import com.commercetools.api.models.common.Address;</span>
-<span class="source-line-no">015</span><span id="line.15">import com.commercetools.api.models.common.BaseResource;</span>
-<span class="source-line-no">016</span><span id="line.16">import com.commercetools.api.models.common.CentPrecisionMoney;</span>
-<span class="source-line-no">017</span><span id="line.17">import com.commercetools.api.models.common.CreatedBy;</span>
-<span class="source-line-no">018</span><span id="line.18">import com.commercetools.api.models.common.LastModifiedBy;</span>
-<span class="source-line-no">019</span><span id="line.19">import com.commercetools.api.models.customer_group.CustomerGroupReference;</span>
-<span class="source-line-no">020</span><span id="line.20">import com.commercetools.api.models.order.PaymentInfo;</span>
-<span class="source-line-no">021</span><span id="line.21">import com.commercetools.api.models.store.StoreKeyReference;</span>
-<span class="source-line-no">022</span><span id="line.22">import com.commercetools.api.models.type.CustomFields;</span>
-<span class="source-line-no">023</span><span id="line.23">import com.fasterxml.jackson.annotation.*;</span>
-<span class="source-line-no">024</span><span id="line.24">import com.fasterxml.jackson.databind.annotation.*;</span>
-<span class="source-line-no">025</span><span id="line.25"></span>
-<span class="source-line-no">026</span><span id="line.26">import io.vrap.rmf.base.client.utils.Generated;</span>
+<span class="source-line-no">008</span><span id="line.8">import java.util.stream.Collectors;</span>
+<span class="source-line-no">009</span><span id="line.9"></span>
+<span class="source-line-no">010</span><span id="line.10">import javax.annotation.Nullable;</span>
+<span class="source-line-no">011</span><span id="line.11">import javax.validation.Valid;</span>
+<span class="source-line-no">012</span><span id="line.12">import javax.validation.constraints.NotNull;</span>
+<span class="source-line-no">013</span><span id="line.13"></span>
+<span class="source-line-no">014</span><span id="line.14">import com.commercetools.api.models.business_unit.BusinessUnitKeyReference;</span>
+<span class="source-line-no">015</span><span id="line.15">import com.commercetools.api.models.cart_discount.CartDiscountReference;</span>
+<span class="source-line-no">016</span><span id="line.16">import com.commercetools.api.models.common.Address;</span>
+<span class="source-line-no">017</span><span id="line.17">import com.commercetools.api.models.common.BaseResource;</span>
+<span class="source-line-no">018</span><span id="line.18">import com.commercetools.api.models.common.CentPrecisionMoney;</span>
+<span class="source-line-no">019</span><span id="line.19">import com.commercetools.api.models.common.CreatedBy;</span>
+<span class="source-line-no">020</span><span id="line.20">import com.commercetools.api.models.common.LastModifiedBy;</span>
+<span class="source-line-no">021</span><span id="line.21">import com.commercetools.api.models.customer_group.CustomerGroupReference;</span>
+<span class="source-line-no">022</span><span id="line.22">import com.commercetools.api.models.order.PaymentInfo;</span>
+<span class="source-line-no">023</span><span id="line.23">import com.commercetools.api.models.store.StoreKeyReference;</span>
+<span class="source-line-no">024</span><span id="line.24">import com.commercetools.api.models.type.CustomFields;</span>
+<span class="source-line-no">025</span><span id="line.25">import com.fasterxml.jackson.annotation.*;</span>
+<span class="source-line-no">026</span><span id="line.26">import com.fasterxml.jackson.databind.annotation.*;</span>
 <span class="source-line-no">027</span><span id="line.27"></span>
-<span class="source-line-no">028</span><span id="line.28">/**</span>
-<span class="source-line-no">029</span><span id="line.29"> * Cart</span>
-<span class="source-line-no">030</span><span id="line.30"> *</span>
-<span class="source-line-no">031</span><span id="line.31"> * &lt;hr&gt;</span>
-<span class="source-line-no">032</span><span id="line.32"> * Example to create an instance using the builder pattern</span>
-<span class="source-line-no">033</span><span id="line.33"> * &lt;div class=code-example&gt;</span>
-<span class="source-line-no">034</span><span id="line.34"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
-<span class="source-line-no">035</span><span id="line.35"> *     Cart cart = Cart.builder()</span>
-<span class="source-line-no">036</span><span id="line.36"> *             .id("{id}")</span>
-<span class="source-line-no">037</span><span id="line.37"> *             .version(0.3)</span>
-<span class="source-line-no">038</span><span id="line.38"> *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))</span>
-<span class="source-line-no">039</span><span id="line.39"> *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))</span>
-<span class="source-line-no">040</span><span id="line.40"> *             .plusLineItems(lineItemsBuilder -&gt; lineItemsBuilder)</span>
-<span class="source-line-no">041</span><span id="line.41"> *             .plusCustomLineItems(customLineItemsBuilder -&gt; customLineItemsBuilder)</span>
-<span class="source-line-no">042</span><span id="line.42"> *             .totalPrice(totalPriceBuilder -&gt; totalPriceBuilder)</span>
-<span class="source-line-no">043</span><span id="line.43"> *             .taxMode(TaxMode.PLATFORM)</span>
-<span class="source-line-no">044</span><span id="line.44"> *             .taxRoundingMode(RoundingMode.HALF_EVEN)</span>
-<span class="source-line-no">045</span><span id="line.45"> *             .taxCalculationMode(TaxCalculationMode.LINE_ITEM_LEVEL)</span>
-<span class="source-line-no">046</span><span id="line.46"> *             .inventoryMode(InventoryMode.NONE)</span>
-<span class="source-line-no">047</span><span id="line.47"> *             .cartState(CartState.ACTIVE)</span>
-<span class="source-line-no">048</span><span id="line.48"> *             .shippingMode(ShippingMode.SINGLE)</span>
-<span class="source-line-no">049</span><span id="line.49"> *             .plusShipping(shippingBuilder -&gt; shippingBuilder)</span>
-<span class="source-line-no">050</span><span id="line.50"> *             .plusItemShippingAddresses(itemShippingAddressesBuilder -&gt; itemShippingAddressesBuilder)</span>
-<span class="source-line-no">051</span><span id="line.51"> *             .plusDiscountCodes(discountCodesBuilder -&gt; discountCodesBuilder)</span>
-<span class="source-line-no">052</span><span id="line.52"> *             .plusDirectDiscounts(directDiscountsBuilder -&gt; directDiscountsBuilder)</span>
-<span class="source-line-no">053</span><span id="line.53"> *             .plusRefusedGifts(refusedGiftsBuilder -&gt; refusedGiftsBuilder)</span>
-<span class="source-line-no">054</span><span id="line.54"> *             .origin(CartOrigin.CUSTOMER)</span>
-<span class="source-line-no">055</span><span id="line.55"> *             .build()</span>
-<span class="source-line-no">056</span><span id="line.56"> * &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">057</span><span id="line.57"> * &lt;/div&gt;</span>
-<span class="source-line-no">058</span><span id="line.58"> */</span>
-<span class="source-line-no">059</span><span id="line.59">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">060</span><span id="line.60">@JsonDeserialize(as = CartImpl.class)</span>
-<span class="source-line-no">061</span><span id="line.61">public interface Cart extends BaseResource, CartMixin, com.commercetools.api.models.DomainResource&lt;Cart&gt;,</span>
-<span class="source-line-no">062</span><span id="line.62">        com.commercetools.api.models.Referencable&lt;Cart&gt;, com.commercetools.api.models.ResourceIdentifiable&lt;Cart&gt;,</span>
-<span class="source-line-no">063</span><span id="line.63">        com.commercetools.api.models.Customizable&lt;Cart&gt;, com.commercetools.api.models.order.OrderLike&lt;Cart&gt;,</span>
-<span class="source-line-no">064</span><span id="line.64">        com.commercetools.api.models.WithKey {</span>
-<span class="source-line-no">065</span><span id="line.65"></span>
-<span class="source-line-no">066</span><span id="line.66">    /**</span>
-<span class="source-line-no">067</span><span id="line.67">     *  &lt;p&gt;Unique identifier of the Cart.&lt;/p&gt;</span>
-<span class="source-line-no">068</span><span id="line.68">     * @return id</span>
-<span class="source-line-no">069</span><span id="line.69">     */</span>
-<span class="source-line-no">070</span><span id="line.70">    @NotNull</span>
-<span class="source-line-no">071</span><span id="line.71">    @JsonProperty("id")</span>
-<span class="source-line-no">072</span><span id="line.72">    public String getId();</span>
-<span class="source-line-no">073</span><span id="line.73"></span>
-<span class="source-line-no">074</span><span id="line.74">    /**</span>
-<span class="source-line-no">075</span><span id="line.75">     *  &lt;p&gt;Current version of the Cart.&lt;/p&gt;</span>
-<span class="source-line-no">076</span><span id="line.76">     * @return version</span>
-<span class="source-line-no">077</span><span id="line.77">     */</span>
-<span class="source-line-no">078</span><span id="line.78">    @NotNull</span>
-<span class="source-line-no">079</span><span id="line.79">    @JsonProperty("version")</span>
-<span class="source-line-no">080</span><span id="line.80">    public Long getVersion();</span>
-<span class="source-line-no">081</span><span id="line.81"></span>
-<span class="source-line-no">082</span><span id="line.82">    /**</span>
-<span class="source-line-no">083</span><span id="line.83">     *  &lt;p&gt;User-defined unique identifier of the Cart.&lt;/p&gt;</span>
-<span class="source-line-no">084</span><span id="line.84">     * @return key</span>
-<span class="source-line-no">085</span><span id="line.85">     */</span>
-<span class="source-line-no">086</span><span id="line.86"></span>
-<span class="source-line-no">087</span><span id="line.87">    @JsonProperty("key")</span>
-<span class="source-line-no">088</span><span id="line.88">    public String getKey();</span>
-<span class="source-line-no">089</span><span id="line.89"></span>
-<span class="source-line-no">090</span><span id="line.90">    /**</span>
-<span class="source-line-no">091</span><span id="line.91">     *  &lt;p&gt;&lt;code&gt;id&lt;/code&gt; of the Customer that the Cart belongs to.&lt;/p&gt;</span>
-<span class="source-line-no">092</span><span id="line.92">     * @return customerId</span>
-<span class="source-line-no">093</span><span id="line.93">     */</span>
-<span class="source-line-no">094</span><span id="line.94"></span>
-<span class="source-line-no">095</span><span id="line.95">    @JsonProperty("customerId")</span>
-<span class="source-line-no">096</span><span id="line.96">    public String getCustomerId();</span>
-<span class="source-line-no">097</span><span id="line.97"></span>
-<span class="source-line-no">098</span><span id="line.98">    /**</span>
-<span class="source-line-no">099</span><span id="line.99">     *  &lt;p&gt;Email address of the Customer that the Cart belongs to.&lt;/p&gt;</span>
-<span class="source-line-no">100</span><span id="line.100">     * @return customerEmail</span>
-<span class="source-line-no">101</span><span id="line.101">     */</span>
-<span class="source-line-no">102</span><span id="line.102"></span>
-<span class="source-line-no">103</span><span id="line.103">    @JsonProperty("customerEmail")</span>
-<span class="source-line-no">104</span><span id="line.104">    public String getCustomerEmail();</span>
-<span class="source-line-no">105</span><span id="line.105"></span>
-<span class="source-line-no">106</span><span id="line.106">    /**</span>
-<span class="source-line-no">107</span><span id="line.107">     *  &lt;p&gt;Reference to the Customer Group of the Customer that the Cart belongs to. Used for LineItem Price selection.&lt;/p&gt;</span>
-<span class="source-line-no">108</span><span id="line.108">     * @return customerGroup</span>
-<span class="source-line-no">109</span><span id="line.109">     */</span>
-<span class="source-line-no">110</span><span id="line.110">    @Valid</span>
-<span class="source-line-no">111</span><span id="line.111">    @JsonProperty("customerGroup")</span>
-<span class="source-line-no">112</span><span id="line.112">    public CustomerGroupReference getCustomerGroup();</span>
-<span class="source-line-no">113</span><span id="line.113"></span>
-<span class="source-line-no">114</span><span id="line.114">    /**</span>
-<span class="source-line-no">115</span><span id="line.115">     *  &lt;p&gt;Anonymous session associated with the Cart.&lt;/p&gt;</span>
-<span class="source-line-no">116</span><span id="line.116">     * @return anonymousId</span>
-<span class="source-line-no">117</span><span id="line.117">     */</span>
-<span class="source-line-no">118</span><span id="line.118"></span>
-<span class="source-line-no">119</span><span id="line.119">    @JsonProperty("anonymousId")</span>
-<span class="source-line-no">120</span><span id="line.120">    public String getAnonymousId();</span>
-<span class="source-line-no">121</span><span id="line.121"></span>
-<span class="source-line-no">122</span><span id="line.122">    /**</span>
-<span class="source-line-no">123</span><span id="line.123">     *  &lt;p&gt;Reference to a Business Unit the Cart belongs to.&lt;/p&gt;</span>
-<span class="source-line-no">124</span><span id="line.124">     * @return businessUnit</span>
-<span class="source-line-no">125</span><span id="line.125">     */</span>
-<span class="source-line-no">126</span><span id="line.126">    @Valid</span>
-<span class="source-line-no">127</span><span id="line.127">    @JsonProperty("businessUnit")</span>
-<span class="source-line-no">128</span><span id="line.128">    public BusinessUnitKeyReference getBusinessUnit();</span>
-<span class="source-line-no">129</span><span id="line.129"></span>
-<span class="source-line-no">130</span><span id="line.130">    /**</span>
-<span class="source-line-no">131</span><span id="line.131">     *  &lt;p&gt;Reference to a Store the Cart belongs to.&lt;/p&gt;</span>
-<span class="source-line-no">132</span><span id="line.132">     * @return store</span>
-<span class="source-line-no">133</span><span id="line.133">     */</span>
-<span class="source-line-no">134</span><span id="line.134">    @Valid</span>
-<span class="source-line-no">135</span><span id="line.135">    @JsonProperty("store")</span>
-<span class="source-line-no">136</span><span id="line.136">    public StoreKeyReference getStore();</span>
-<span class="source-line-no">137</span><span id="line.137"></span>
-<span class="source-line-no">138</span><span id="line.138">    /**</span>
-<span class="source-line-no">139</span><span id="line.139">     *  &lt;p&gt;Line Items added to the Cart.&lt;/p&gt;</span>
-<span class="source-line-no">140</span><span id="line.140">     * @return lineItems</span>
-<span class="source-line-no">141</span><span id="line.141">     */</span>
-<span class="source-line-no">142</span><span id="line.142">    @NotNull</span>
-<span class="source-line-no">143</span><span id="line.143">    @Valid</span>
-<span class="source-line-no">144</span><span id="line.144">    @JsonProperty("lineItems")</span>
-<span class="source-line-no">145</span><span id="line.145">    public List&lt;LineItem&gt; getLineItems();</span>
-<span class="source-line-no">146</span><span id="line.146"></span>
-<span class="source-line-no">147</span><span id="line.147">    /**</span>
-<span class="source-line-no">148</span><span id="line.148">     *  &lt;p&gt;Custom Line Items added to the Cart.&lt;/p&gt;</span>
-<span class="source-line-no">149</span><span id="line.149">     * @return customLineItems</span>
-<span class="source-line-no">150</span><span id="line.150">     */</span>
-<span class="source-line-no">151</span><span id="line.151">    @NotNull</span>
-<span class="source-line-no">152</span><span id="line.152">    @Valid</span>
-<span class="source-line-no">153</span><span id="line.153">    @JsonProperty("customLineItems")</span>
-<span class="source-line-no">154</span><span id="line.154">    public List&lt;CustomLineItem&gt; getCustomLineItems();</span>
-<span class="source-line-no">155</span><span id="line.155"></span>
-<span class="source-line-no">156</span><span id="line.156">    /**</span>
-<span class="source-line-no">157</span><span id="line.157">     *  &lt;p&gt;Sum of all LineItem quantities, excluding CustomLineItems. Only present when the Cart has at least one LineItem.&lt;/p&gt;</span>
-<span class="source-line-no">158</span><span id="line.158">     * @return totalLineItemQuantity</span>
-<span class="source-line-no">159</span><span id="line.159">     */</span>
-<span class="source-line-no">160</span><span id="line.160"></span>
-<span class="source-line-no">161</span><span id="line.161">    @JsonProperty("totalLineItemQuantity")</span>
-<span class="source-line-no">162</span><span id="line.162">    public Long getTotalLineItemQuantity();</span>
-<span class="source-line-no">163</span><span id="line.163"></span>
-<span class="source-line-no">164</span><span id="line.164">    /**</span>
-<span class="source-line-no">165</span><span id="line.165">     *  &lt;p&gt;Sum of the &lt;code&gt;totalPrice&lt;/code&gt; field of all LineItems and CustomLineItems, and if available, the &lt;code&gt;price&lt;/code&gt; field of ShippingInfo.&lt;/p&gt;</span>
-<span class="source-line-no">166</span><span id="line.166">     *  &lt;p&gt;Taxes are included if TaxRate &lt;code&gt;includedInPrice&lt;/code&gt; is &lt;code&gt;true&lt;/code&gt; for each price.&lt;/p&gt;</span>
-<span class="source-line-no">167</span><span id="line.167">     * @return totalPrice</span>
-<span class="source-line-no">168</span><span id="line.168">     */</span>
-<span class="source-line-no">169</span><span id="line.169">    @NotNull</span>
-<span class="source-line-no">170</span><span id="line.170">    @Valid</span>
-<span class="source-line-no">171</span><span id="line.171">    @JsonProperty("totalPrice")</span>
-<span class="source-line-no">172</span><span id="line.172">    public CentPrecisionMoney getTotalPrice();</span>
-<span class="source-line-no">173</span><span id="line.173"></span>
-<span class="source-line-no">174</span><span id="line.174">    /**</span>
-<span class="source-line-no">175</span><span id="line.175">     *  &lt;ul&gt;</span>
-<span class="source-line-no">176</span><span id="line.176">     *   &lt;li&gt;For a Cart with &lt;code&gt;Platform&lt;/code&gt; TaxMode, it is automatically set when a shipping address is set.&lt;/li&gt;</span>
-<span class="source-line-no">177</span><span id="line.177">     *   &lt;li&gt;For a Cart with &lt;code&gt;External&lt;/code&gt; TaxMode, it is automatically set when the external Tax Rate for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.&lt;/li&gt;</span>
-<span class="source-line-no">178</span><span id="line.178">     *  &lt;/ul&gt;</span>
-<span class="source-line-no">179</span><span id="line.179">     * @return taxedPrice</span>
-<span class="source-line-no">180</span><span id="line.180">     */</span>
-<span class="source-line-no">181</span><span id="line.181">    @Valid</span>
-<span class="source-line-no">182</span><span id="line.182">    @JsonProperty("taxedPrice")</span>
-<span class="source-line-no">183</span><span id="line.183">    public TaxedPrice getTaxedPrice();</span>
-<span class="source-line-no">184</span><span id="line.184"></span>
-<span class="source-line-no">185</span><span id="line.185">    /**</span>
-<span class="source-line-no">186</span><span id="line.186">     *  &lt;p&gt;Sum of the &lt;code&gt;taxedPrice&lt;/code&gt; field of ShippingInfo across all Shipping Methods.&lt;/p&gt;</span>
-<span class="source-line-no">187</span><span id="line.187">     * @return taxedShippingPrice</span>
-<span class="source-line-no">188</span><span id="line.188">     */</span>
-<span class="source-line-no">189</span><span id="line.189">    @Valid</span>
-<span class="source-line-no">190</span><span id="line.190">    @JsonProperty("taxedShippingPrice")</span>
-<span class="source-line-no">191</span><span id="line.191">    public TaxedPrice getTaxedShippingPrice();</span>
-<span class="source-line-no">192</span><span id="line.192"></span>
-<span class="source-line-no">193</span><span id="line.193">    /**</span>
-<span class="source-line-no">194</span><span id="line.194">     *  &lt;p&gt;Indicates how Tax Rates are set.&lt;/p&gt;</span>
-<span class="source-line-no">195</span><span id="line.195">     * @return taxMode</span>
-<span class="source-line-no">196</span><span id="line.196">     */</span>
-<span class="source-line-no">197</span><span id="line.197">    @NotNull</span>
-<span class="source-line-no">198</span><span id="line.198">    @JsonProperty("taxMode")</span>
-<span class="source-line-no">199</span><span id="line.199">    public TaxMode getTaxMode();</span>
-<span class="source-line-no">200</span><span id="line.200"></span>
-<span class="source-line-no">201</span><span id="line.201">    /**</span>
-<span class="source-line-no">202</span><span id="line.202">     *  &lt;p&gt;Indicates how monetary values are rounded when calculating taxes for &lt;code&gt;taxedPrice&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">203</span><span id="line.203">     * @return taxRoundingMode</span>
-<span class="source-line-no">204</span><span id="line.204">     */</span>
-<span class="source-line-no">205</span><span id="line.205">    @NotNull</span>
-<span class="source-line-no">206</span><span id="line.206">    @JsonProperty("taxRoundingMode")</span>
-<span class="source-line-no">207</span><span id="line.207">    public RoundingMode getTaxRoundingMode();</span>
-<span class="source-line-no">208</span><span id="line.208"></span>
-<span class="source-line-no">209</span><span id="line.209">    /**</span>
-<span class="source-line-no">210</span><span id="line.210">     *  &lt;p&gt;Indicates how taxes are calculated when calculating taxes for &lt;code&gt;taxedPrice&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">211</span><span id="line.211">     * @return taxCalculationMode</span>
-<span class="source-line-no">212</span><span id="line.212">     */</span>
-<span class="source-line-no">213</span><span id="line.213">    @NotNull</span>
-<span class="source-line-no">214</span><span id="line.214">    @JsonProperty("taxCalculationMode")</span>
-<span class="source-line-no">215</span><span id="line.215">    public TaxCalculationMode getTaxCalculationMode();</span>
-<span class="source-line-no">216</span><span id="line.216"></span>
-<span class="source-line-no">217</span><span id="line.217">    /**</span>
-<span class="source-line-no">218</span><span id="line.218">     *  &lt;p&gt;Indicates how stock quantities are tracked for Line Items in the Cart.&lt;/p&gt;</span>
-<span class="source-line-no">219</span><span id="line.219">     * @return inventoryMode</span>
-<span class="source-line-no">220</span><span id="line.220">     */</span>
-<span class="source-line-no">221</span><span id="line.221">    @NotNull</span>
-<span class="source-line-no">222</span><span id="line.222">    @JsonProperty("inventoryMode")</span>
-<span class="source-line-no">223</span><span id="line.223">    public InventoryMode getInventoryMode();</span>
-<span class="source-line-no">224</span><span id="line.224"></span>
-<span class="source-line-no">225</span><span id="line.225">    /**</span>
-<span class="source-line-no">226</span><span id="line.226">     *  &lt;p&gt;Current status of the Cart.&lt;/p&gt;</span>
-<span class="source-line-no">227</span><span id="line.227">     * @return cartState</span>
-<span class="source-line-no">228</span><span id="line.228">     */</span>
-<span class="source-line-no">229</span><span id="line.229">    @NotNull</span>
-<span class="source-line-no">230</span><span id="line.230">    @JsonProperty("cartState")</span>
-<span class="source-line-no">231</span><span id="line.231">    public CartState getCartState();</span>
-<span class="source-line-no">232</span><span id="line.232"></span>
-<span class="source-line-no">233</span><span id="line.233">    /**</span>
-<span class="source-line-no">234</span><span id="line.234">     *  &lt;p&gt;Billing address associated with the Cart.&lt;/p&gt;</span>
-<span class="source-line-no">235</span><span id="line.235">     * @return billingAddress</span>
-<span class="source-line-no">236</span><span id="line.236">     */</span>
-<span class="source-line-no">237</span><span id="line.237">    @Valid</span>
-<span class="source-line-no">238</span><span id="line.238">    @JsonProperty("billingAddress")</span>
-<span class="source-line-no">239</span><span id="line.239">    public Address getBillingAddress();</span>
-<span class="source-line-no">240</span><span id="line.240"></span>
-<span class="source-line-no">241</span><span id="line.241">    /**</span>
-<span class="source-line-no">242</span><span id="line.242">     *  &lt;p&gt;Shipping address associated with the Cart. Determines eligible ShippingMethod rates and Tax Rates of Line Items.&lt;/p&gt;</span>
-<span class="source-line-no">243</span><span id="line.243">     * @return shippingAddress</span>
-<span class="source-line-no">244</span><span id="line.244">     */</span>
-<span class="source-line-no">245</span><span id="line.245">    @Valid</span>
-<span class="source-line-no">246</span><span id="line.246">    @JsonProperty("shippingAddress")</span>
-<span class="source-line-no">247</span><span id="line.247">    public Address getShippingAddress();</span>
-<span class="source-line-no">248</span><span id="line.248"></span>
-<span class="source-line-no">249</span><span id="line.249">    /**</span>
-<span class="source-line-no">250</span><span id="line.250">     *  &lt;p&gt;Indicates whether the Cart has one or multiple Shipping Methods.&lt;/p&gt;</span>
-<span class="source-line-no">251</span><span id="line.251">     * @return shippingMode</span>
-<span class="source-line-no">252</span><span id="line.252">     */</span>
-<span class="source-line-no">253</span><span id="line.253">    @NotNull</span>
-<span class="source-line-no">254</span><span id="line.254">    @JsonProperty("shippingMode")</span>
-<span class="source-line-no">255</span><span id="line.255">    public ShippingMode getShippingMode();</span>
-<span class="source-line-no">256</span><span id="line.256"></span>
-<span class="source-line-no">257</span><span id="line.257">    /**</span>
-<span class="source-line-no">258</span><span id="line.258">     *  &lt;p&gt;Shipping-related information of a Cart with &lt;code&gt;Single&lt;/code&gt; ShippingMode. Automatically set when a Shipping Method is set.&lt;/p&gt;</span>
-<span class="source-line-no">259</span><span id="line.259">     * @return shippingInfo</span>
-<span class="source-line-no">260</span><span id="line.260">     */</span>
-<span class="source-line-no">261</span><span id="line.261">    @Valid</span>
-<span class="source-line-no">262</span><span id="line.262">    @JsonProperty("shippingInfo")</span>
-<span class="source-line-no">263</span><span id="line.263">    public ShippingInfo getShippingInfo();</span>
-<span class="source-line-no">264</span><span id="line.264"></span>
-<span class="source-line-no">265</span><span id="line.265">    /**</span>
-<span class="source-line-no">266</span><span id="line.266">     *  &lt;p&gt;Shipping-related information of a Cart with &lt;code&gt;Multiple&lt;/code&gt; ShippingMode. Updated automatically each time a new Shipping Method is added.&lt;/p&gt;</span>
-<span class="source-line-no">267</span><span id="line.267">     * @return shipping</span>
-<span class="source-line-no">268</span><span id="line.268">     */</span>
-<span class="source-line-no">269</span><span id="line.269">    @NotNull</span>
-<span class="source-line-no">270</span><span id="line.270">    @Valid</span>
-<span class="source-line-no">271</span><span id="line.271">    @JsonProperty("shipping")</span>
-<span class="source-line-no">272</span><span id="line.272">    public List&lt;Shipping&gt; getShipping();</span>
-<span class="source-line-no">273</span><span id="line.273"></span>
-<span class="source-line-no">274</span><span id="line.274">    /**</span>
-<span class="source-line-no">275</span><span id="line.275">     *  &lt;p&gt;Input used to select a ShippingRatePriceTier. The data type of this field depends on the &lt;code&gt;shippingRateInputType.type&lt;/code&gt; configured in the Project:&lt;/p&gt;</span>
-<span class="source-line-no">276</span><span id="line.276">     *  &lt;ul&gt;</span>
-<span class="source-line-no">277</span><span id="line.277">     *   &lt;li&gt;If &lt;code&gt;CartClassification&lt;/code&gt;, it is ClassificationShippingRateInput.&lt;/li&gt;</span>
-<span class="source-line-no">278</span><span id="line.278">     *   &lt;li&gt;If &lt;code&gt;CartScore&lt;/code&gt;, it is ScoreShippingRateInput.&lt;/li&gt;</span>
-<span class="source-line-no">279</span><span id="line.279">     *   &lt;li&gt;If &lt;code&gt;CartValue&lt;/code&gt;, it cannot be used.&lt;/li&gt;</span>
-<span class="source-line-no">280</span><span id="line.280">     *  &lt;/ul&gt;</span>
-<span class="source-line-no">281</span><span id="line.281">     * @return shippingRateInput</span>
-<span class="source-line-no">282</span><span id="line.282">     */</span>
-<span class="source-line-no">283</span><span id="line.283">    @Valid</span>
-<span class="source-line-no">284</span><span id="line.284">    @JsonProperty("shippingRateInput")</span>
-<span class="source-line-no">285</span><span id="line.285">    public ShippingRateInput getShippingRateInput();</span>
-<span class="source-line-no">286</span><span id="line.286"></span>
-<span class="source-line-no">287</span><span id="line.287">    /**</span>
-<span class="source-line-no">288</span><span id="line.288">     *  &lt;p&gt;Additional shipping addresses of the Cart as specified by LineItems using the &lt;code&gt;shippingDetails&lt;/code&gt; field.&lt;/p&gt;</span>
-<span class="source-line-no">289</span><span id="line.289">     *  &lt;p&gt;Eligible Shipping Methods or applicable Tax Rates are determined by the address in &lt;code&gt;shippingAddress&lt;/code&gt;, and not &lt;code&gt;itemShippingAddresses&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">290</span><span id="line.290">     * @return itemShippingAddresses</span>
-<span class="source-line-no">291</span><span id="line.291">     */</span>
-<span class="source-line-no">292</span><span id="line.292">    @NotNull</span>
-<span class="source-line-no">293</span><span id="line.293">    @Valid</span>
-<span class="source-line-no">294</span><span id="line.294">    @JsonProperty("itemShippingAddresses")</span>
-<span class="source-line-no">295</span><span id="line.295">    public List&lt;Address&gt; getItemShippingAddresses();</span>
-<span class="source-line-no">296</span><span id="line.296"></span>
-<span class="source-line-no">297</span><span id="line.297">    /**</span>
-<span class="source-line-no">298</span><span id="line.298">     *  &lt;p&gt;Discount Codes applied to the Cart. A Cart that has &lt;code&gt;directDiscounts&lt;/code&gt; cannot have &lt;code&gt;discountCodes&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">299</span><span id="line.299">     * @return discountCodes</span>
-<span class="source-line-no">300</span><span id="line.300">     */</span>
-<span class="source-line-no">301</span><span id="line.301">    @NotNull</span>
-<span class="source-line-no">302</span><span id="line.302">    @Valid</span>
-<span class="source-line-no">303</span><span id="line.303">    @JsonProperty("discountCodes")</span>
-<span class="source-line-no">304</span><span id="line.304">    public List&lt;DiscountCodeInfo&gt; getDiscountCodes();</span>
-<span class="source-line-no">305</span><span id="line.305"></span>
-<span class="source-line-no">306</span><span id="line.306">    /**</span>
-<span class="source-line-no">307</span><span id="line.307">     *  &lt;p&gt;Direct Discounts added to the Cart. A Cart that has &lt;code&gt;discountCodes&lt;/code&gt; cannot have &lt;code&gt;directDiscounts&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">308</span><span id="line.308">     * @return directDiscounts</span>
-<span class="source-line-no">309</span><span id="line.309">     */</span>
-<span class="source-line-no">310</span><span id="line.310">    @NotNull</span>
-<span class="source-line-no">311</span><span id="line.311">    @Valid</span>
-<span class="source-line-no">312</span><span id="line.312">    @JsonProperty("directDiscounts")</span>
-<span class="source-line-no">313</span><span id="line.313">    public List&lt;DirectDiscount&gt; getDirectDiscounts();</span>
-<span class="source-line-no">314</span><span id="line.314"></span>
-<span class="source-line-no">315</span><span id="line.315">    /**</span>
-<span class="source-line-no">316</span><span id="line.316">     *  &lt;p&gt;Automatically set when a Line Item with &lt;code&gt;GiftLineItem&lt;/code&gt; LineItemMode is removed from the Cart.&lt;/p&gt;</span>
-<span class="source-line-no">317</span><span id="line.317">     * @return refusedGifts</span>
-<span class="source-line-no">318</span><span id="line.318">     */</span>
-<span class="source-line-no">319</span><span id="line.319">    @NotNull</span>
-<span class="source-line-no">320</span><span id="line.320">    @Valid</span>
-<span class="source-line-no">321</span><span id="line.321">    @JsonProperty("refusedGifts")</span>
-<span class="source-line-no">322</span><span id="line.322">    public List&lt;CartDiscountReference&gt; getRefusedGifts();</span>
-<span class="source-line-no">323</span><span id="line.323"></span>
-<span class="source-line-no">324</span><span id="line.324">    /**</span>
-<span class="source-line-no">325</span><span id="line.325">     *  &lt;p&gt;Payment information related to the Cart.&lt;/p&gt;</span>
-<span class="source-line-no">326</span><span id="line.326">     * @return paymentInfo</span>
-<span class="source-line-no">327</span><span id="line.327">     */</span>
-<span class="source-line-no">328</span><span id="line.328">    @Valid</span>
-<span class="source-line-no">329</span><span id="line.329">    @JsonProperty("paymentInfo")</span>
-<span class="source-line-no">330</span><span id="line.330">    public PaymentInfo getPaymentInfo();</span>
-<span class="source-line-no">331</span><span id="line.331"></span>
-<span class="source-line-no">332</span><span id="line.332">    /**</span>
-<span class="source-line-no">333</span><span id="line.333">     *  &lt;p&gt;Used for LineItem Price selection.&lt;/p&gt;</span>
-<span class="source-line-no">334</span><span id="line.334">     * @return country</span>
-<span class="source-line-no">335</span><span id="line.335">     */</span>
-<span class="source-line-no">336</span><span id="line.336"></span>
-<span class="source-line-no">337</span><span id="line.337">    @JsonProperty("country")</span>
-<span class="source-line-no">338</span><span id="line.338">    public String getCountry();</span>
-<span class="source-line-no">339</span><span id="line.339"></span>
-<span class="source-line-no">340</span><span id="line.340">    /**</span>
-<span class="source-line-no">341</span><span id="line.341">     *  &lt;p&gt;Languages of the Cart. Can only contain languages supported by the Project.&lt;/p&gt;</span>
-<span class="source-line-no">342</span><span id="line.342">     * @return locale</span>
-<span class="source-line-no">343</span><span id="line.343">     */</span>
-<span class="source-line-no">344</span><span id="line.344"></span>
-<span class="source-line-no">345</span><span id="line.345">    @JsonProperty("locale")</span>
-<span class="source-line-no">346</span><span id="line.346">    public String getLocale();</span>
-<span class="source-line-no">347</span><span id="line.347"></span>
-<span class="source-line-no">348</span><span id="line.348">    /**</span>
-<span class="source-line-no">349</span><span id="line.349">     *  &lt;p&gt;Indicates how the Cart was created.&lt;/p&gt;</span>
-<span class="source-line-no">350</span><span id="line.350">     * @return origin</span>
-<span class="source-line-no">351</span><span id="line.351">     */</span>
-<span class="source-line-no">352</span><span id="line.352">    @NotNull</span>
-<span class="source-line-no">353</span><span id="line.353">    @JsonProperty("origin")</span>
-<span class="source-line-no">354</span><span id="line.354">    public CartOrigin getOrigin();</span>
-<span class="source-line-no">355</span><span id="line.355"></span>
-<span class="source-line-no">356</span><span id="line.356">    /**</span>
-<span class="source-line-no">357</span><span id="line.357">     *  &lt;p&gt;Custom Fields of the Cart.&lt;/p&gt;</span>
-<span class="source-line-no">358</span><span id="line.358">     * @return custom</span>
-<span class="source-line-no">359</span><span id="line.359">     */</span>
-<span class="source-line-no">360</span><span id="line.360">    @Valid</span>
-<span class="source-line-no">361</span><span id="line.361">    @JsonProperty("custom")</span>
-<span class="source-line-no">362</span><span id="line.362">    public CustomFields getCustom();</span>
-<span class="source-line-no">363</span><span id="line.363"></span>
-<span class="source-line-no">364</span><span id="line.364">    /**</span>
-<span class="source-line-no">365</span><span id="line.365">     *  &lt;p&gt;Number of days after which an active Cart is deleted since its last modification. Configured in Project settings.&lt;/p&gt;</span>
-<span class="source-line-no">366</span><span id="line.366">     * @return deleteDaysAfterLastModification</span>
-<span class="source-line-no">367</span><span id="line.367">     */</span>
-<span class="source-line-no">368</span><span id="line.368"></span>
-<span class="source-line-no">369</span><span id="line.369">    @JsonProperty("deleteDaysAfterLastModification")</span>
-<span class="source-line-no">370</span><span id="line.370">    public Integer getDeleteDaysAfterLastModification();</span>
-<span class="source-line-no">371</span><span id="line.371"></span>
-<span class="source-line-no">372</span><span id="line.372">    /**</span>
-<span class="source-line-no">373</span><span id="line.373">     *  &lt;p&gt;Date and time (UTC) the Cart was initially created.&lt;/p&gt;</span>
-<span class="source-line-no">374</span><span id="line.374">     * @return createdAt</span>
-<span class="source-line-no">375</span><span id="line.375">     */</span>
-<span class="source-line-no">376</span><span id="line.376">    @NotNull</span>
-<span class="source-line-no">377</span><span id="line.377">    @JsonProperty("createdAt")</span>
-<span class="source-line-no">378</span><span id="line.378">    public ZonedDateTime getCreatedAt();</span>
-<span class="source-line-no">379</span><span id="line.379"></span>
-<span class="source-line-no">380</span><span id="line.380">    /**</span>
-<span class="source-line-no">381</span><span id="line.381">     *  &lt;p&gt;Date and time (UTC) the Cart was last updated.&lt;/p&gt;</span>
-<span class="source-line-no">382</span><span id="line.382">     * @return lastModifiedAt</span>
-<span class="source-line-no">383</span><span id="line.383">     */</span>
-<span class="source-line-no">384</span><span id="line.384">    @NotNull</span>
-<span class="source-line-no">385</span><span id="line.385">    @JsonProperty("lastModifiedAt")</span>
-<span class="source-line-no">386</span><span id="line.386">    public ZonedDateTime getLastModifiedAt();</span>
-<span class="source-line-no">387</span><span id="line.387"></span>
-<span class="source-line-no">388</span><span id="line.388">    /**</span>
-<span class="source-line-no">389</span><span id="line.389">     *  &lt;p&gt;Present on resources updated after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
-<span class="source-line-no">390</span><span id="line.390">     * @return lastModifiedBy</span>
-<span class="source-line-no">391</span><span id="line.391">     */</span>
-<span class="source-line-no">392</span><span id="line.392">    @Valid</span>
-<span class="source-line-no">393</span><span id="line.393">    @JsonProperty("lastModifiedBy")</span>
-<span class="source-line-no">394</span><span id="line.394">    public LastModifiedBy getLastModifiedBy();</span>
-<span class="source-line-no">395</span><span id="line.395"></span>
-<span class="source-line-no">396</span><span id="line.396">    /**</span>
-<span class="source-line-no">397</span><span id="line.397">     *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
-<span class="source-line-no">398</span><span id="line.398">     * @return createdBy</span>
-<span class="source-line-no">399</span><span id="line.399">     */</span>
-<span class="source-line-no">400</span><span id="line.400">    @Valid</span>
-<span class="source-line-no">401</span><span id="line.401">    @JsonProperty("createdBy")</span>
-<span class="source-line-no">402</span><span id="line.402">    public CreatedBy getCreatedBy();</span>
-<span class="source-line-no">403</span><span id="line.403"></span>
-<span class="source-line-no">404</span><span id="line.404">    /**</span>
-<span class="source-line-no">405</span><span id="line.405">     *  &lt;p&gt;Unique identifier of the Cart.&lt;/p&gt;</span>
-<span class="source-line-no">406</span><span id="line.406">     * @param id value to be set</span>
-<span class="source-line-no">407</span><span id="line.407">     */</span>
-<span class="source-line-no">408</span><span id="line.408"></span>
-<span class="source-line-no">409</span><span id="line.409">    public void setId(final String id);</span>
+<span class="source-line-no">028</span><span id="line.28">import io.vrap.rmf.base.client.utils.Generated;</span>
+<span class="source-line-no">029</span><span id="line.29"></span>
+<span class="source-line-no">030</span><span id="line.30">/**</span>
+<span class="source-line-no">031</span><span id="line.31"> * Cart</span>
+<span class="source-line-no">032</span><span id="line.32"> *</span>
+<span class="source-line-no">033</span><span id="line.33"> * &lt;hr&gt;</span>
+<span class="source-line-no">034</span><span id="line.34"> * Example to create an instance using the builder pattern</span>
+<span class="source-line-no">035</span><span id="line.35"> * &lt;div class=code-example&gt;</span>
+<span class="source-line-no">036</span><span id="line.36"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">037</span><span id="line.37"> *     Cart cart = Cart.builder()</span>
+<span class="source-line-no">038</span><span id="line.38"> *             .id("{id}")</span>
+<span class="source-line-no">039</span><span id="line.39"> *             .version(0.3)</span>
+<span class="source-line-no">040</span><span id="line.40"> *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))</span>
+<span class="source-line-no">041</span><span id="line.41"> *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))</span>
+<span class="source-line-no">042</span><span id="line.42"> *             .plusLineItems(lineItemsBuilder -&gt; lineItemsBuilder)</span>
+<span class="source-line-no">043</span><span id="line.43"> *             .plusCustomLineItems(customLineItemsBuilder -&gt; customLineItemsBuilder)</span>
+<span class="source-line-no">044</span><span id="line.44"> *             .totalPrice(totalPriceBuilder -&gt; totalPriceBuilder)</span>
+<span class="source-line-no">045</span><span id="line.45"> *             .taxMode(TaxMode.PLATFORM)</span>
+<span class="source-line-no">046</span><span id="line.46"> *             .taxRoundingMode(RoundingMode.HALF_EVEN)</span>
+<span class="source-line-no">047</span><span id="line.47"> *             .taxCalculationMode(TaxCalculationMode.LINE_ITEM_LEVEL)</span>
+<span class="source-line-no">048</span><span id="line.48"> *             .inventoryMode(InventoryMode.NONE)</span>
+<span class="source-line-no">049</span><span id="line.49"> *             .cartState(CartState.ACTIVE)</span>
+<span class="source-line-no">050</span><span id="line.50"> *             .shippingMode(ShippingMode.SINGLE)</span>
+<span class="source-line-no">051</span><span id="line.51"> *             .plusShipping(shippingBuilder -&gt; shippingBuilder)</span>
+<span class="source-line-no">052</span><span id="line.52"> *             .plusItemShippingAddresses(itemShippingAddressesBuilder -&gt; itemShippingAddressesBuilder)</span>
+<span class="source-line-no">053</span><span id="line.53"> *             .plusDiscountCodes(discountCodesBuilder -&gt; discountCodesBuilder)</span>
+<span class="source-line-no">054</span><span id="line.54"> *             .plusDirectDiscounts(directDiscountsBuilder -&gt; directDiscountsBuilder)</span>
+<span class="source-line-no">055</span><span id="line.55"> *             .plusRefusedGifts(refusedGiftsBuilder -&gt; refusedGiftsBuilder)</span>
+<span class="source-line-no">056</span><span id="line.56"> *             .origin(CartOrigin.CUSTOMER)</span>
+<span class="source-line-no">057</span><span id="line.57"> *             .build()</span>
+<span class="source-line-no">058</span><span id="line.58"> * &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">059</span><span id="line.59"> * &lt;/div&gt;</span>
+<span class="source-line-no">060</span><span id="line.60"> */</span>
+<span class="source-line-no">061</span><span id="line.61">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">062</span><span id="line.62">@JsonDeserialize(as = CartImpl.class)</span>
+<span class="source-line-no">063</span><span id="line.63">public interface Cart extends BaseResource, CartMixin, com.commercetools.api.models.DomainResource&lt;Cart&gt;,</span>
+<span class="source-line-no">064</span><span id="line.64">        com.commercetools.api.models.Referencable&lt;Cart&gt;, com.commercetools.api.models.ResourceIdentifiable&lt;Cart&gt;,</span>
+<span class="source-line-no">065</span><span id="line.65">        com.commercetools.api.models.Customizable&lt;Cart&gt;, com.commercetools.api.models.order.OrderLike&lt;Cart&gt;,</span>
+<span class="source-line-no">066</span><span id="line.66">        com.commercetools.api.models.WithKey {</span>
+<span class="source-line-no">067</span><span id="line.67"></span>
+<span class="source-line-no">068</span><span id="line.68">    /**</span>
+<span class="source-line-no">069</span><span id="line.69">     *  &lt;p&gt;Unique identifier of the Cart.&lt;/p&gt;</span>
+<span class="source-line-no">070</span><span id="line.70">     * @return id</span>
+<span class="source-line-no">071</span><span id="line.71">     */</span>
+<span class="source-line-no">072</span><span id="line.72">    @NotNull</span>
+<span class="source-line-no">073</span><span id="line.73">    @JsonProperty("id")</span>
+<span class="source-line-no">074</span><span id="line.74">    public String getId();</span>
+<span class="source-line-no">075</span><span id="line.75"></span>
+<span class="source-line-no">076</span><span id="line.76">    /**</span>
+<span class="source-line-no">077</span><span id="line.77">     *  &lt;p&gt;Current version of the Cart.&lt;/p&gt;</span>
+<span class="source-line-no">078</span><span id="line.78">     * @return version</span>
+<span class="source-line-no">079</span><span id="line.79">     */</span>
+<span class="source-line-no">080</span><span id="line.80">    @NotNull</span>
+<span class="source-line-no">081</span><span id="line.81">    @JsonProperty("version")</span>
+<span class="source-line-no">082</span><span id="line.82">    public Long getVersion();</span>
+<span class="source-line-no">083</span><span id="line.83"></span>
+<span class="source-line-no">084</span><span id="line.84">    /**</span>
+<span class="source-line-no">085</span><span id="line.85">     *  &lt;p&gt;User-defined unique identifier of the Cart.&lt;/p&gt;</span>
+<span class="source-line-no">086</span><span id="line.86">     * @return key</span>
+<span class="source-line-no">087</span><span id="line.87">     */</span>
+<span class="source-line-no">088</span><span id="line.88"></span>
+<span class="source-line-no">089</span><span id="line.89">    @JsonProperty("key")</span>
+<span class="source-line-no">090</span><span id="line.90">    public String getKey();</span>
+<span class="source-line-no">091</span><span id="line.91"></span>
+<span class="source-line-no">092</span><span id="line.92">    /**</span>
+<span class="source-line-no">093</span><span id="line.93">     *  &lt;p&gt;&lt;code&gt;id&lt;/code&gt; of the Customer that the Cart belongs to.&lt;/p&gt;</span>
+<span class="source-line-no">094</span><span id="line.94">     * @return customerId</span>
+<span class="source-line-no">095</span><span id="line.95">     */</span>
+<span class="source-line-no">096</span><span id="line.96"></span>
+<span class="source-line-no">097</span><span id="line.97">    @JsonProperty("customerId")</span>
+<span class="source-line-no">098</span><span id="line.98">    public String getCustomerId();</span>
+<span class="source-line-no">099</span><span id="line.99"></span>
+<span class="source-line-no">100</span><span id="line.100">    /**</span>
+<span class="source-line-no">101</span><span id="line.101">     *  &lt;p&gt;Email address of the Customer that the Cart belongs to.&lt;/p&gt;</span>
+<span class="source-line-no">102</span><span id="line.102">     * @return customerEmail</span>
+<span class="source-line-no">103</span><span id="line.103">     */</span>
+<span class="source-line-no">104</span><span id="line.104"></span>
+<span class="source-line-no">105</span><span id="line.105">    @JsonProperty("customerEmail")</span>
+<span class="source-line-no">106</span><span id="line.106">    public String getCustomerEmail();</span>
+<span class="source-line-no">107</span><span id="line.107"></span>
+<span class="source-line-no">108</span><span id="line.108">    /**</span>
+<span class="source-line-no">109</span><span id="line.109">     *  &lt;p&gt;Reference to the Customer Group of the Customer that the Cart belongs to. Used for LineItem Price selection.&lt;/p&gt;</span>
+<span class="source-line-no">110</span><span id="line.110">     * @return customerGroup</span>
+<span class="source-line-no">111</span><span id="line.111">     */</span>
+<span class="source-line-no">112</span><span id="line.112">    @Valid</span>
+<span class="source-line-no">113</span><span id="line.113">    @JsonProperty("customerGroup")</span>
+<span class="source-line-no">114</span><span id="line.114">    public CustomerGroupReference getCustomerGroup();</span>
+<span class="source-line-no">115</span><span id="line.115"></span>
+<span class="source-line-no">116</span><span id="line.116">    /**</span>
+<span class="source-line-no">117</span><span id="line.117">     *  &lt;p&gt;Anonymous session associated with the Cart.&lt;/p&gt;</span>
+<span class="source-line-no">118</span><span id="line.118">     * @return anonymousId</span>
+<span class="source-line-no">119</span><span id="line.119">     */</span>
+<span class="source-line-no">120</span><span id="line.120"></span>
+<span class="source-line-no">121</span><span id="line.121">    @JsonProperty("anonymousId")</span>
+<span class="source-line-no">122</span><span id="line.122">    public String getAnonymousId();</span>
+<span class="source-line-no">123</span><span id="line.123"></span>
+<span class="source-line-no">124</span><span id="line.124">    /**</span>
+<span class="source-line-no">125</span><span id="line.125">     *  &lt;p&gt;Reference to a Business Unit the Cart belongs to.&lt;/p&gt;</span>
+<span class="source-line-no">126</span><span id="line.126">     * @return businessUnit</span>
+<span class="source-line-no">127</span><span id="line.127">     */</span>
+<span class="source-line-no">128</span><span id="line.128">    @Valid</span>
+<span class="source-line-no">129</span><span id="line.129">    @JsonProperty("businessUnit")</span>
+<span class="source-line-no">130</span><span id="line.130">    public BusinessUnitKeyReference getBusinessUnit();</span>
+<span class="source-line-no">131</span><span id="line.131"></span>
+<span class="source-line-no">132</span><span id="line.132">    /**</span>
+<span class="source-line-no">133</span><span id="line.133">     *  &lt;p&gt;Reference to a Store the Cart belongs to.&lt;/p&gt;</span>
+<span class="source-line-no">134</span><span id="line.134">     * @return store</span>
+<span class="source-line-no">135</span><span id="line.135">     */</span>
+<span class="source-line-no">136</span><span id="line.136">    @Valid</span>
+<span class="source-line-no">137</span><span id="line.137">    @JsonProperty("store")</span>
+<span class="source-line-no">138</span><span id="line.138">    public StoreKeyReference getStore();</span>
+<span class="source-line-no">139</span><span id="line.139"></span>
+<span class="source-line-no">140</span><span id="line.140">    /**</span>
+<span class="source-line-no">141</span><span id="line.141">     *  &lt;p&gt;Line Items added to the Cart.&lt;/p&gt;</span>
+<span class="source-line-no">142</span><span id="line.142">     * @return lineItems</span>
+<span class="source-line-no">143</span><span id="line.143">     */</span>
+<span class="source-line-no">144</span><span id="line.144">    @NotNull</span>
+<span class="source-line-no">145</span><span id="line.145">    @Valid</span>
+<span class="source-line-no">146</span><span id="line.146">    @JsonProperty("lineItems")</span>
+<span class="source-line-no">147</span><span id="line.147">    public List&lt;LineItem&gt; getLineItems();</span>
+<span class="source-line-no">148</span><span id="line.148"></span>
+<span class="source-line-no">149</span><span id="line.149">    /**</span>
+<span class="source-line-no">150</span><span id="line.150">     *  &lt;p&gt;Custom Line Items added to the Cart.&lt;/p&gt;</span>
+<span class="source-line-no">151</span><span id="line.151">     * @return customLineItems</span>
+<span class="source-line-no">152</span><span id="line.152">     */</span>
+<span class="source-line-no">153</span><span id="line.153">    @NotNull</span>
+<span class="source-line-no">154</span><span id="line.154">    @Valid</span>
+<span class="source-line-no">155</span><span id="line.155">    @JsonProperty("customLineItems")</span>
+<span class="source-line-no">156</span><span id="line.156">    public List&lt;CustomLineItem&gt; getCustomLineItems();</span>
+<span class="source-line-no">157</span><span id="line.157"></span>
+<span class="source-line-no">158</span><span id="line.158">    /**</span>
+<span class="source-line-no">159</span><span id="line.159">     *  &lt;p&gt;Sum of all LineItem quantities, excluding CustomLineItems. Only present when the Cart has at least one LineItem.&lt;/p&gt;</span>
+<span class="source-line-no">160</span><span id="line.160">     * @return totalLineItemQuantity</span>
+<span class="source-line-no">161</span><span id="line.161">     */</span>
+<span class="source-line-no">162</span><span id="line.162"></span>
+<span class="source-line-no">163</span><span id="line.163">    @JsonProperty("totalLineItemQuantity")</span>
+<span class="source-line-no">164</span><span id="line.164">    public Long getTotalLineItemQuantity();</span>
+<span class="source-line-no">165</span><span id="line.165"></span>
+<span class="source-line-no">166</span><span id="line.166">    /**</span>
+<span class="source-line-no">167</span><span id="line.167">     *  &lt;p&gt;Sum of the &lt;code&gt;totalPrice&lt;/code&gt; field of all LineItems and CustomLineItems, and if available, the &lt;code&gt;price&lt;/code&gt; field of ShippingInfo.&lt;/p&gt;</span>
+<span class="source-line-no">168</span><span id="line.168">     *  &lt;p&gt;Taxes are included if TaxRate &lt;code&gt;includedInPrice&lt;/code&gt; is &lt;code&gt;true&lt;/code&gt; for each price.&lt;/p&gt;</span>
+<span class="source-line-no">169</span><span id="line.169">     * @return totalPrice</span>
+<span class="source-line-no">170</span><span id="line.170">     */</span>
+<span class="source-line-no">171</span><span id="line.171">    @NotNull</span>
+<span class="source-line-no">172</span><span id="line.172">    @Valid</span>
+<span class="source-line-no">173</span><span id="line.173">    @JsonProperty("totalPrice")</span>
+<span class="source-line-no">174</span><span id="line.174">    public CentPrecisionMoney getTotalPrice();</span>
+<span class="source-line-no">175</span><span id="line.175"></span>
+<span class="source-line-no">176</span><span id="line.176">    /**</span>
+<span class="source-line-no">177</span><span id="line.177">     *  &lt;ul&gt;</span>
+<span class="source-line-no">178</span><span id="line.178">     *   &lt;li&gt;For a Cart with &lt;code&gt;Platform&lt;/code&gt; TaxMode, it is automatically set when a shipping address is set.&lt;/li&gt;</span>
+<span class="source-line-no">179</span><span id="line.179">     *   &lt;li&gt;For a Cart with &lt;code&gt;External&lt;/code&gt; TaxMode, it is automatically set when the external Tax Rate for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.&lt;/li&gt;</span>
+<span class="source-line-no">180</span><span id="line.180">     *  &lt;/ul&gt;</span>
+<span class="source-line-no">181</span><span id="line.181">     * @return taxedPrice</span>
+<span class="source-line-no">182</span><span id="line.182">     */</span>
+<span class="source-line-no">183</span><span id="line.183">    @Valid</span>
+<span class="source-line-no">184</span><span id="line.184">    @JsonProperty("taxedPrice")</span>
+<span class="source-line-no">185</span><span id="line.185">    public TaxedPrice getTaxedPrice();</span>
+<span class="source-line-no">186</span><span id="line.186"></span>
+<span class="source-line-no">187</span><span id="line.187">    /**</span>
+<span class="source-line-no">188</span><span id="line.188">     *  &lt;p&gt;Sum of the &lt;code&gt;taxedPrice&lt;/code&gt; field of ShippingInfo across all Shipping Methods.&lt;/p&gt;</span>
+<span class="source-line-no">189</span><span id="line.189">     * @return taxedShippingPrice</span>
+<span class="source-line-no">190</span><span id="line.190">     */</span>
+<span class="source-line-no">191</span><span id="line.191">    @Valid</span>
+<span class="source-line-no">192</span><span id="line.192">    @JsonProperty("taxedShippingPrice")</span>
+<span class="source-line-no">193</span><span id="line.193">    public TaxedPrice getTaxedShippingPrice();</span>
+<span class="source-line-no">194</span><span id="line.194"></span>
+<span class="source-line-no">195</span><span id="line.195">    /**</span>
+<span class="source-line-no">196</span><span id="line.196">     *  &lt;p&gt;Indicates how Tax Rates are set.&lt;/p&gt;</span>
+<span class="source-line-no">197</span><span id="line.197">     * @return taxMode</span>
+<span class="source-line-no">198</span><span id="line.198">     */</span>
+<span class="source-line-no">199</span><span id="line.199">    @NotNull</span>
+<span class="source-line-no">200</span><span id="line.200">    @JsonProperty("taxMode")</span>
+<span class="source-line-no">201</span><span id="line.201">    public TaxMode getTaxMode();</span>
+<span class="source-line-no">202</span><span id="line.202"></span>
+<span class="source-line-no">203</span><span id="line.203">    /**</span>
+<span class="source-line-no">204</span><span id="line.204">     *  &lt;p&gt;Indicates how monetary values are rounded when calculating taxes for &lt;code&gt;taxedPrice&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">205</span><span id="line.205">     * @return taxRoundingMode</span>
+<span class="source-line-no">206</span><span id="line.206">     */</span>
+<span class="source-line-no">207</span><span id="line.207">    @NotNull</span>
+<span class="source-line-no">208</span><span id="line.208">    @JsonProperty("taxRoundingMode")</span>
+<span class="source-line-no">209</span><span id="line.209">    public RoundingMode getTaxRoundingMode();</span>
+<span class="source-line-no">210</span><span id="line.210"></span>
+<span class="source-line-no">211</span><span id="line.211">    /**</span>
+<span class="source-line-no">212</span><span id="line.212">     *  &lt;p&gt;Indicates how taxes are calculated when calculating taxes for &lt;code&gt;taxedPrice&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">213</span><span id="line.213">     * @return taxCalculationMode</span>
+<span class="source-line-no">214</span><span id="line.214">     */</span>
+<span class="source-line-no">215</span><span id="line.215">    @NotNull</span>
+<span class="source-line-no">216</span><span id="line.216">    @JsonProperty("taxCalculationMode")</span>
+<span class="source-line-no">217</span><span id="line.217">    public TaxCalculationMode getTaxCalculationMode();</span>
+<span class="source-line-no">218</span><span id="line.218"></span>
+<span class="source-line-no">219</span><span id="line.219">    /**</span>
+<span class="source-line-no">220</span><span id="line.220">     *  &lt;p&gt;Indicates how stock quantities are tracked for Line Items in the Cart.&lt;/p&gt;</span>
+<span class="source-line-no">221</span><span id="line.221">     * @return inventoryMode</span>
+<span class="source-line-no">222</span><span id="line.222">     */</span>
+<span class="source-line-no">223</span><span id="line.223">    @NotNull</span>
+<span class="source-line-no">224</span><span id="line.224">    @JsonProperty("inventoryMode")</span>
+<span class="source-line-no">225</span><span id="line.225">    public InventoryMode getInventoryMode();</span>
+<span class="source-line-no">226</span><span id="line.226"></span>
+<span class="source-line-no">227</span><span id="line.227">    /**</span>
+<span class="source-line-no">228</span><span id="line.228">     *  &lt;p&gt;Current status of the Cart.&lt;/p&gt;</span>
+<span class="source-line-no">229</span><span id="line.229">     * @return cartState</span>
+<span class="source-line-no">230</span><span id="line.230">     */</span>
+<span class="source-line-no">231</span><span id="line.231">    @NotNull</span>
+<span class="source-line-no">232</span><span id="line.232">    @JsonProperty("cartState")</span>
+<span class="source-line-no">233</span><span id="line.233">    public CartState getCartState();</span>
+<span class="source-line-no">234</span><span id="line.234"></span>
+<span class="source-line-no">235</span><span id="line.235">    /**</span>
+<span class="source-line-no">236</span><span id="line.236">     *  &lt;p&gt;Billing address associated with the Cart.&lt;/p&gt;</span>
+<span class="source-line-no">237</span><span id="line.237">     * @return billingAddress</span>
+<span class="source-line-no">238</span><span id="line.238">     */</span>
+<span class="source-line-no">239</span><span id="line.239">    @Valid</span>
+<span class="source-line-no">240</span><span id="line.240">    @JsonProperty("billingAddress")</span>
+<span class="source-line-no">241</span><span id="line.241">    public Address getBillingAddress();</span>
+<span class="source-line-no">242</span><span id="line.242"></span>
+<span class="source-line-no">243</span><span id="line.243">    /**</span>
+<span class="source-line-no">244</span><span id="line.244">     *  &lt;p&gt;Shipping address associated with the Cart. Determines eligible ShippingMethod rates and Tax Rates of Line Items.&lt;/p&gt;</span>
+<span class="source-line-no">245</span><span id="line.245">     * @return shippingAddress</span>
+<span class="source-line-no">246</span><span id="line.246">     */</span>
+<span class="source-line-no">247</span><span id="line.247">    @Valid</span>
+<span class="source-line-no">248</span><span id="line.248">    @JsonProperty("shippingAddress")</span>
+<span class="source-line-no">249</span><span id="line.249">    public Address getShippingAddress();</span>
+<span class="source-line-no">250</span><span id="line.250"></span>
+<span class="source-line-no">251</span><span id="line.251">    /**</span>
+<span class="source-line-no">252</span><span id="line.252">     *  &lt;p&gt;Indicates whether the Cart has one or multiple Shipping Methods.&lt;/p&gt;</span>
+<span class="source-line-no">253</span><span id="line.253">     * @return shippingMode</span>
+<span class="source-line-no">254</span><span id="line.254">     */</span>
+<span class="source-line-no">255</span><span id="line.255">    @NotNull</span>
+<span class="source-line-no">256</span><span id="line.256">    @JsonProperty("shippingMode")</span>
+<span class="source-line-no">257</span><span id="line.257">    public ShippingMode getShippingMode();</span>
+<span class="source-line-no">258</span><span id="line.258"></span>
+<span class="source-line-no">259</span><span id="line.259">    /**</span>
+<span class="source-line-no">260</span><span id="line.260">     *  &lt;p&gt;Shipping-related information of a Cart with &lt;code&gt;Single&lt;/code&gt; ShippingMode. Automatically set when a Shipping Method is set.&lt;/p&gt;</span>
+<span class="source-line-no">261</span><span id="line.261">     * @return shippingInfo</span>
+<span class="source-line-no">262</span><span id="line.262">     */</span>
+<span class="source-line-no">263</span><span id="line.263">    @Valid</span>
+<span class="source-line-no">264</span><span id="line.264">    @JsonProperty("shippingInfo")</span>
+<span class="source-line-no">265</span><span id="line.265">    public ShippingInfo getShippingInfo();</span>
+<span class="source-line-no">266</span><span id="line.266"></span>
+<span class="source-line-no">267</span><span id="line.267">    /**</span>
+<span class="source-line-no">268</span><span id="line.268">     *  &lt;p&gt;Shipping-related information of a Cart with &lt;code&gt;Multiple&lt;/code&gt; ShippingMode. Updated automatically each time a new Shipping Method is added.&lt;/p&gt;</span>
+<span class="source-line-no">269</span><span id="line.269">     * @return shipping</span>
+<span class="source-line-no">270</span><span id="line.270">     */</span>
+<span class="source-line-no">271</span><span id="line.271">    @NotNull</span>
+<span class="source-line-no">272</span><span id="line.272">    @Valid</span>
+<span class="source-line-no">273</span><span id="line.273">    @JsonProperty("shipping")</span>
+<span class="source-line-no">274</span><span id="line.274">    public List&lt;Shipping&gt; getShipping();</span>
+<span class="source-line-no">275</span><span id="line.275"></span>
+<span class="source-line-no">276</span><span id="line.276">    /**</span>
+<span class="source-line-no">277</span><span id="line.277">     *  &lt;p&gt;Input used to select a ShippingRatePriceTier. The data type of this field depends on the &lt;code&gt;shippingRateInputType.type&lt;/code&gt; configured in the Project:&lt;/p&gt;</span>
+<span class="source-line-no">278</span><span id="line.278">     *  &lt;ul&gt;</span>
+<span class="source-line-no">279</span><span id="line.279">     *   &lt;li&gt;If &lt;code&gt;CartClassification&lt;/code&gt;, it is ClassificationShippingRateInput.&lt;/li&gt;</span>
+<span class="source-line-no">280</span><span id="line.280">     *   &lt;li&gt;If &lt;code&gt;CartScore&lt;/code&gt;, it is ScoreShippingRateInput.&lt;/li&gt;</span>
+<span class="source-line-no">281</span><span id="line.281">     *   &lt;li&gt;If &lt;code&gt;CartValue&lt;/code&gt;, it cannot be used.&lt;/li&gt;</span>
+<span class="source-line-no">282</span><span id="line.282">     *  &lt;/ul&gt;</span>
+<span class="source-line-no">283</span><span id="line.283">     * @return shippingRateInput</span>
+<span class="source-line-no">284</span><span id="line.284">     */</span>
+<span class="source-line-no">285</span><span id="line.285">    @Valid</span>
+<span class="source-line-no">286</span><span id="line.286">    @JsonProperty("shippingRateInput")</span>
+<span class="source-line-no">287</span><span id="line.287">    public ShippingRateInput getShippingRateInput();</span>
+<span class="source-line-no">288</span><span id="line.288"></span>
+<span class="source-line-no">289</span><span id="line.289">    /**</span>
+<span class="source-line-no">290</span><span id="line.290">     *  &lt;p&gt;Additional shipping addresses of the Cart as specified by LineItems using the &lt;code&gt;shippingDetails&lt;/code&gt; field.&lt;/p&gt;</span>
+<span class="source-line-no">291</span><span id="line.291">     *  &lt;p&gt;Eligible Shipping Methods or applicable Tax Rates are determined by the address in &lt;code&gt;shippingAddress&lt;/code&gt;, and not &lt;code&gt;itemShippingAddresses&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">292</span><span id="line.292">     * @return itemShippingAddresses</span>
+<span class="source-line-no">293</span><span id="line.293">     */</span>
+<span class="source-line-no">294</span><span id="line.294">    @NotNull</span>
+<span class="source-line-no">295</span><span id="line.295">    @Valid</span>
+<span class="source-line-no">296</span><span id="line.296">    @JsonProperty("itemShippingAddresses")</span>
+<span class="source-line-no">297</span><span id="line.297">    public List&lt;Address&gt; getItemShippingAddresses();</span>
+<span class="source-line-no">298</span><span id="line.298"></span>
+<span class="source-line-no">299</span><span id="line.299">    /**</span>
+<span class="source-line-no">300</span><span id="line.300">     *  &lt;p&gt;Discount Codes applied to the Cart. A Cart that has &lt;code&gt;directDiscounts&lt;/code&gt; cannot have &lt;code&gt;discountCodes&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">301</span><span id="line.301">     * @return discountCodes</span>
+<span class="source-line-no">302</span><span id="line.302">     */</span>
+<span class="source-line-no">303</span><span id="line.303">    @NotNull</span>
+<span class="source-line-no">304</span><span id="line.304">    @Valid</span>
+<span class="source-line-no">305</span><span id="line.305">    @JsonProperty("discountCodes")</span>
+<span class="source-line-no">306</span><span id="line.306">    public List&lt;DiscountCodeInfo&gt; getDiscountCodes();</span>
+<span class="source-line-no">307</span><span id="line.307"></span>
+<span class="source-line-no">308</span><span id="line.308">    /**</span>
+<span class="source-line-no">309</span><span id="line.309">     *  &lt;p&gt;Direct Discounts added to the Cart. A Cart that has &lt;code&gt;discountCodes&lt;/code&gt; cannot have &lt;code&gt;directDiscounts&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">310</span><span id="line.310">     * @return directDiscounts</span>
+<span class="source-line-no">311</span><span id="line.311">     */</span>
+<span class="source-line-no">312</span><span id="line.312">    @NotNull</span>
+<span class="source-line-no">313</span><span id="line.313">    @Valid</span>
+<span class="source-line-no">314</span><span id="line.314">    @JsonProperty("directDiscounts")</span>
+<span class="source-line-no">315</span><span id="line.315">    public List&lt;DirectDiscount&gt; getDirectDiscounts();</span>
+<span class="source-line-no">316</span><span id="line.316"></span>
+<span class="source-line-no">317</span><span id="line.317">    /**</span>
+<span class="source-line-no">318</span><span id="line.318">     *  &lt;p&gt;Automatically set when a Line Item with &lt;code&gt;GiftLineItem&lt;/code&gt; LineItemMode is removed from the Cart.&lt;/p&gt;</span>
+<span class="source-line-no">319</span><span id="line.319">     * @return refusedGifts</span>
+<span class="source-line-no">320</span><span id="line.320">     */</span>
+<span class="source-line-no">321</span><span id="line.321">    @NotNull</span>
+<span class="source-line-no">322</span><span id="line.322">    @Valid</span>
+<span class="source-line-no">323</span><span id="line.323">    @JsonProperty("refusedGifts")</span>
+<span class="source-line-no">324</span><span id="line.324">    public List&lt;CartDiscountReference&gt; getRefusedGifts();</span>
+<span class="source-line-no">325</span><span id="line.325"></span>
+<span class="source-line-no">326</span><span id="line.326">    /**</span>
+<span class="source-line-no">327</span><span id="line.327">     *  &lt;p&gt;Payment information related to the Cart.&lt;/p&gt;</span>
+<span class="source-line-no">328</span><span id="line.328">     * @return paymentInfo</span>
+<span class="source-line-no">329</span><span id="line.329">     */</span>
+<span class="source-line-no">330</span><span id="line.330">    @Valid</span>
+<span class="source-line-no">331</span><span id="line.331">    @JsonProperty("paymentInfo")</span>
+<span class="source-line-no">332</span><span id="line.332">    public PaymentInfo getPaymentInfo();</span>
+<span class="source-line-no">333</span><span id="line.333"></span>
+<span class="source-line-no">334</span><span id="line.334">    /**</span>
+<span class="source-line-no">335</span><span id="line.335">     *  &lt;p&gt;Used for LineItem Price selection.&lt;/p&gt;</span>
+<span class="source-line-no">336</span><span id="line.336">     * @return country</span>
+<span class="source-line-no">337</span><span id="line.337">     */</span>
+<span class="source-line-no">338</span><span id="line.338"></span>
+<span class="source-line-no">339</span><span id="line.339">    @JsonProperty("country")</span>
+<span class="source-line-no">340</span><span id="line.340">    public String getCountry();</span>
+<span class="source-line-no">341</span><span id="line.341"></span>
+<span class="source-line-no">342</span><span id="line.342">    /**</span>
+<span class="source-line-no">343</span><span id="line.343">     *  &lt;p&gt;Languages of the Cart. Can only contain languages supported by the Project.&lt;/p&gt;</span>
+<span class="source-line-no">344</span><span id="line.344">     * @return locale</span>
+<span class="source-line-no">345</span><span id="line.345">     */</span>
+<span class="source-line-no">346</span><span id="line.346"></span>
+<span class="source-line-no">347</span><span id="line.347">    @JsonProperty("locale")</span>
+<span class="source-line-no">348</span><span id="line.348">    public String getLocale();</span>
+<span class="source-line-no">349</span><span id="line.349"></span>
+<span class="source-line-no">350</span><span id="line.350">    /**</span>
+<span class="source-line-no">351</span><span id="line.351">     *  &lt;p&gt;Indicates how the Cart was created.&lt;/p&gt;</span>
+<span class="source-line-no">352</span><span id="line.352">     * @return origin</span>
+<span class="source-line-no">353</span><span id="line.353">     */</span>
+<span class="source-line-no">354</span><span id="line.354">    @NotNull</span>
+<span class="source-line-no">355</span><span id="line.355">    @JsonProperty("origin")</span>
+<span class="source-line-no">356</span><span id="line.356">    public CartOrigin getOrigin();</span>
+<span class="source-line-no">357</span><span id="line.357"></span>
+<span class="source-line-no">358</span><span id="line.358">    /**</span>
+<span class="source-line-no">359</span><span id="line.359">     *  &lt;p&gt;Custom Fields of the Cart.&lt;/p&gt;</span>
+<span class="source-line-no">360</span><span id="line.360">     * @return custom</span>
+<span class="source-line-no">361</span><span id="line.361">     */</span>
+<span class="source-line-no">362</span><span id="line.362">    @Valid</span>
+<span class="source-line-no">363</span><span id="line.363">    @JsonProperty("custom")</span>
+<span class="source-line-no">364</span><span id="line.364">    public CustomFields getCustom();</span>
+<span class="source-line-no">365</span><span id="line.365"></span>
+<span class="source-line-no">366</span><span id="line.366">    /**</span>
+<span class="source-line-no">367</span><span id="line.367">     *  &lt;p&gt;Number of days after which an active Cart is deleted since its last modification. Configured in Project settings.&lt;/p&gt;</span>
+<span class="source-line-no">368</span><span id="line.368">     * @return deleteDaysAfterLastModification</span>
+<span class="source-line-no">369</span><span id="line.369">     */</span>
+<span class="source-line-no">370</span><span id="line.370"></span>
+<span class="source-line-no">371</span><span id="line.371">    @JsonProperty("deleteDaysAfterLastModification")</span>
+<span class="source-line-no">372</span><span id="line.372">    public Integer getDeleteDaysAfterLastModification();</span>
+<span class="source-line-no">373</span><span id="line.373"></span>
+<span class="source-line-no">374</span><span id="line.374">    /**</span>
+<span class="source-line-no">375</span><span id="line.375">     *  &lt;p&gt;Date and time (UTC) the Cart was initially created.&lt;/p&gt;</span>
+<span class="source-line-no">376</span><span id="line.376">     * @return createdAt</span>
+<span class="source-line-no">377</span><span id="line.377">     */</span>
+<span class="source-line-no">378</span><span id="line.378">    @NotNull</span>
+<span class="source-line-no">379</span><span id="line.379">    @JsonProperty("createdAt")</span>
+<span class="source-line-no">380</span><span id="line.380">    public ZonedDateTime getCreatedAt();</span>
+<span class="source-line-no">381</span><span id="line.381"></span>
+<span class="source-line-no">382</span><span id="line.382">    /**</span>
+<span class="source-line-no">383</span><span id="line.383">     *  &lt;p&gt;Date and time (UTC) the Cart was last updated.&lt;/p&gt;</span>
+<span class="source-line-no">384</span><span id="line.384">     * @return lastModifiedAt</span>
+<span class="source-line-no">385</span><span id="line.385">     */</span>
+<span class="source-line-no">386</span><span id="line.386">    @NotNull</span>
+<span class="source-line-no">387</span><span id="line.387">    @JsonProperty("lastModifiedAt")</span>
+<span class="source-line-no">388</span><span id="line.388">    public ZonedDateTime getLastModifiedAt();</span>
+<span class="source-line-no">389</span><span id="line.389"></span>
+<span class="source-line-no">390</span><span id="line.390">    /**</span>
+<span class="source-line-no">391</span><span id="line.391">     *  &lt;p&gt;Present on resources updated after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
+<span class="source-line-no">392</span><span id="line.392">     * @return lastModifiedBy</span>
+<span class="source-line-no">393</span><span id="line.393">     */</span>
+<span class="source-line-no">394</span><span id="line.394">    @Valid</span>
+<span class="source-line-no">395</span><span id="line.395">    @JsonProperty("lastModifiedBy")</span>
+<span class="source-line-no">396</span><span id="line.396">    public LastModifiedBy getLastModifiedBy();</span>
+<span class="source-line-no">397</span><span id="line.397"></span>
+<span class="source-line-no">398</span><span id="line.398">    /**</span>
+<span class="source-line-no">399</span><span id="line.399">     *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
+<span class="source-line-no">400</span><span id="line.400">     * @return createdBy</span>
+<span class="source-line-no">401</span><span id="line.401">     */</span>
+<span class="source-line-no">402</span><span id="line.402">    @Valid</span>
+<span class="source-line-no">403</span><span id="line.403">    @JsonProperty("createdBy")</span>
+<span class="source-line-no">404</span><span id="line.404">    public CreatedBy getCreatedBy();</span>
+<span class="source-line-no">405</span><span id="line.405"></span>
+<span class="source-line-no">406</span><span id="line.406">    /**</span>
+<span class="source-line-no">407</span><span id="line.407">     *  &lt;p&gt;Unique identifier of the Cart.&lt;/p&gt;</span>
+<span class="source-line-no">408</span><span id="line.408">     * @param id value to be set</span>
+<span class="source-line-no">409</span><span id="line.409">     */</span>
 <span class="source-line-no">410</span><span id="line.410"></span>
-<span class="source-line-no">411</span><span id="line.411">    /**</span>
-<span class="source-line-no">412</span><span id="line.412">     *  &lt;p&gt;Current version of the Cart.&lt;/p&gt;</span>
-<span class="source-line-no">413</span><span id="line.413">     * @param version value to be set</span>
-<span class="source-line-no">414</span><span id="line.414">     */</span>
-<span class="source-line-no">415</span><span id="line.415"></span>
-<span class="source-line-no">416</span><span id="line.416">    public void setVersion(final Long version);</span>
+<span class="source-line-no">411</span><span id="line.411">    public void setId(final String id);</span>
+<span class="source-line-no">412</span><span id="line.412"></span>
+<span class="source-line-no">413</span><span id="line.413">    /**</span>
+<span class="source-line-no">414</span><span id="line.414">     *  &lt;p&gt;Current version of the Cart.&lt;/p&gt;</span>
+<span class="source-line-no">415</span><span id="line.415">     * @param version value to be set</span>
+<span class="source-line-no">416</span><span id="line.416">     */</span>
 <span class="source-line-no">417</span><span id="line.417"></span>
-<span class="source-line-no">418</span><span id="line.418">    /**</span>
-<span class="source-line-no">419</span><span id="line.419">     *  &lt;p&gt;User-defined unique identifier of the Cart.&lt;/p&gt;</span>
-<span class="source-line-no">420</span><span id="line.420">     * @param key value to be set</span>
-<span class="source-line-no">421</span><span id="line.421">     */</span>
-<span class="source-line-no">422</span><span id="line.422"></span>
-<span class="source-line-no">423</span><span id="line.423">    public void setKey(final String key);</span>
+<span class="source-line-no">418</span><span id="line.418">    public void setVersion(final Long version);</span>
+<span class="source-line-no">419</span><span id="line.419"></span>
+<span class="source-line-no">420</span><span id="line.420">    /**</span>
+<span class="source-line-no">421</span><span id="line.421">     *  &lt;p&gt;User-defined unique identifier of the Cart.&lt;/p&gt;</span>
+<span class="source-line-no">422</span><span id="line.422">     * @param key value to be set</span>
+<span class="source-line-no">423</span><span id="line.423">     */</span>
 <span class="source-line-no">424</span><span id="line.424"></span>
-<span class="source-line-no">425</span><span id="line.425">    /**</span>
-<span class="source-line-no">426</span><span id="line.426">     *  &lt;p&gt;&lt;code&gt;id&lt;/code&gt; of the Customer that the Cart belongs to.&lt;/p&gt;</span>
-<span class="source-line-no">427</span><span id="line.427">     * @param customerId value to be set</span>
-<span class="source-line-no">428</span><span id="line.428">     */</span>
-<span class="source-line-no">429</span><span id="line.429"></span>
-<span class="source-line-no">430</span><span id="line.430">    public void setCustomerId(final String customerId);</span>
+<span class="source-line-no">425</span><span id="line.425">    public void setKey(final String key);</span>
+<span class="source-line-no">426</span><span id="line.426"></span>
+<span class="source-line-no">427</span><span id="line.427">    /**</span>
+<span class="source-line-no">428</span><span id="line.428">     *  &lt;p&gt;&lt;code&gt;id&lt;/code&gt; of the Customer that the Cart belongs to.&lt;/p&gt;</span>
+<span class="source-line-no">429</span><span id="line.429">     * @param customerId value to be set</span>
+<span class="source-line-no">430</span><span id="line.430">     */</span>
 <span class="source-line-no">431</span><span id="line.431"></span>
-<span class="source-line-no">432</span><span id="line.432">    /**</span>
-<span class="source-line-no">433</span><span id="line.433">     *  &lt;p&gt;Email address of the Customer that the Cart belongs to.&lt;/p&gt;</span>
-<span class="source-line-no">434</span><span id="line.434">     * @param customerEmail value to be set</span>
-<span class="source-line-no">435</span><span id="line.435">     */</span>
-<span class="source-line-no">436</span><span id="line.436"></span>
-<span class="source-line-no">437</span><span id="line.437">    public void setCustomerEmail(final String customerEmail);</span>
+<span class="source-line-no">432</span><span id="line.432">    public void setCustomerId(final String customerId);</span>
+<span class="source-line-no">433</span><span id="line.433"></span>
+<span class="source-line-no">434</span><span id="line.434">    /**</span>
+<span class="source-line-no">435</span><span id="line.435">     *  &lt;p&gt;Email address of the Customer that the Cart belongs to.&lt;/p&gt;</span>
+<span class="source-line-no">436</span><span id="line.436">     * @param customerEmail value to be set</span>
+<span class="source-line-no">437</span><span id="line.437">     */</span>
 <span class="source-line-no">438</span><span id="line.438"></span>
-<span class="source-line-no">439</span><span id="line.439">    /**</span>
-<span class="source-line-no">440</span><span id="line.440">     *  &lt;p&gt;Reference to the Customer Group of the Customer that the Cart belongs to. Used for LineItem Price selection.&lt;/p&gt;</span>
-<span class="source-line-no">441</span><span id="line.441">     * @param customerGroup value to be set</span>
-<span class="source-line-no">442</span><span id="line.442">     */</span>
-<span class="source-line-no">443</span><span id="line.443"></span>
-<span class="source-line-no">444</span><span id="line.444">    public void setCustomerGroup(final CustomerGroupReference customerGroup);</span>
+<span class="source-line-no">439</span><span id="line.439">    public void setCustomerEmail(final String customerEmail);</span>
+<span class="source-line-no">440</span><span id="line.440"></span>
+<span class="source-line-no">441</span><span id="line.441">    /**</span>
+<span class="source-line-no">442</span><span id="line.442">     *  &lt;p&gt;Reference to the Customer Group of the Customer that the Cart belongs to. Used for LineItem Price selection.&lt;/p&gt;</span>
+<span class="source-line-no">443</span><span id="line.443">     * @param customerGroup value to be set</span>
+<span class="source-line-no">444</span><span id="line.444">     */</span>
 <span class="source-line-no">445</span><span id="line.445"></span>
-<span class="source-line-no">446</span><span id="line.446">    /**</span>
-<span class="source-line-no">447</span><span id="line.447">     *  &lt;p&gt;Anonymous session associated with the Cart.&lt;/p&gt;</span>
-<span class="source-line-no">448</span><span id="line.448">     * @param anonymousId value to be set</span>
-<span class="source-line-no">449</span><span id="line.449">     */</span>
-<span class="source-line-no">450</span><span id="line.450"></span>
-<span class="source-line-no">451</span><span id="line.451">    public void setAnonymousId(final String anonymousId);</span>
+<span class="source-line-no">446</span><span id="line.446">    public void setCustomerGroup(final CustomerGroupReference customerGroup);</span>
+<span class="source-line-no">447</span><span id="line.447"></span>
+<span class="source-line-no">448</span><span id="line.448">    /**</span>
+<span class="source-line-no">449</span><span id="line.449">     *  &lt;p&gt;Anonymous session associated with the Cart.&lt;/p&gt;</span>
+<span class="source-line-no">450</span><span id="line.450">     * @param anonymousId value to be set</span>
+<span class="source-line-no">451</span><span id="line.451">     */</span>
 <span class="source-line-no">452</span><span id="line.452"></span>
-<span class="source-line-no">453</span><span id="line.453">    /**</span>
-<span class="source-line-no">454</span><span id="line.454">     *  &lt;p&gt;Reference to a Business Unit the Cart belongs to.&lt;/p&gt;</span>
-<span class="source-line-no">455</span><span id="line.455">     * @param businessUnit value to be set</span>
-<span class="source-line-no">456</span><span id="line.456">     */</span>
-<span class="source-line-no">457</span><span id="line.457"></span>
-<span class="source-line-no">458</span><span id="line.458">    public void setBusinessUnit(final BusinessUnitKeyReference businessUnit);</span>
+<span class="source-line-no">453</span><span id="line.453">    public void setAnonymousId(final String anonymousId);</span>
+<span class="source-line-no">454</span><span id="line.454"></span>
+<span class="source-line-no">455</span><span id="line.455">    /**</span>
+<span class="source-line-no">456</span><span id="line.456">     *  &lt;p&gt;Reference to a Business Unit the Cart belongs to.&lt;/p&gt;</span>
+<span class="source-line-no">457</span><span id="line.457">     * @param businessUnit value to be set</span>
+<span class="source-line-no">458</span><span id="line.458">     */</span>
 <span class="source-line-no">459</span><span id="line.459"></span>
-<span class="source-line-no">460</span><span id="line.460">    /**</span>
-<span class="source-line-no">461</span><span id="line.461">     *  &lt;p&gt;Reference to a Store the Cart belongs to.&lt;/p&gt;</span>
-<span class="source-line-no">462</span><span id="line.462">     * @param store value to be set</span>
-<span class="source-line-no">463</span><span id="line.463">     */</span>
-<span class="source-line-no">464</span><span id="line.464"></span>
-<span class="source-line-no">465</span><span id="line.465">    public void setStore(final StoreKeyReference store);</span>
+<span class="source-line-no">460</span><span id="line.460">    public void setBusinessUnit(final BusinessUnitKeyReference businessUnit);</span>
+<span class="source-line-no">461</span><span id="line.461"></span>
+<span class="source-line-no">462</span><span id="line.462">    /**</span>
+<span class="source-line-no">463</span><span id="line.463">     *  &lt;p&gt;Reference to a Store the Cart belongs to.&lt;/p&gt;</span>
+<span class="source-line-no">464</span><span id="line.464">     * @param store value to be set</span>
+<span class="source-line-no">465</span><span id="line.465">     */</span>
 <span class="source-line-no">466</span><span id="line.466"></span>
-<span class="source-line-no">467</span><span id="line.467">    /**</span>
-<span class="source-line-no">468</span><span id="line.468">     *  &lt;p&gt;Line Items added to the Cart.&lt;/p&gt;</span>
-<span class="source-line-no">469</span><span id="line.469">     * @param lineItems values to be set</span>
-<span class="source-line-no">470</span><span id="line.470">     */</span>
-<span class="source-line-no">471</span><span id="line.471"></span>
-<span class="source-line-no">472</span><span id="line.472">    @JsonIgnore</span>
-<span class="source-line-no">473</span><span id="line.473">    public void setLineItems(final LineItem... lineItems);</span>
-<span class="source-line-no">474</span><span id="line.474"></span>
-<span class="source-line-no">475</span><span id="line.475">    /**</span>
-<span class="source-line-no">476</span><span id="line.476">     *  &lt;p&gt;Line Items added to the Cart.&lt;/p&gt;</span>
-<span class="source-line-no">477</span><span id="line.477">     * @param lineItems values to be set</span>
-<span class="source-line-no">478</span><span id="line.478">     */</span>
-<span class="source-line-no">479</span><span id="line.479"></span>
-<span class="source-line-no">480</span><span id="line.480">    public void setLineItems(final List&lt;LineItem&gt; lineItems);</span>
+<span class="source-line-no">467</span><span id="line.467">    public void setStore(final StoreKeyReference store);</span>
+<span class="source-line-no">468</span><span id="line.468"></span>
+<span class="source-line-no">469</span><span id="line.469">    /**</span>
+<span class="source-line-no">470</span><span id="line.470">     *  &lt;p&gt;Line Items added to the Cart.&lt;/p&gt;</span>
+<span class="source-line-no">471</span><span id="line.471">     * @param lineItems values to be set</span>
+<span class="source-line-no">472</span><span id="line.472">     */</span>
+<span class="source-line-no">473</span><span id="line.473"></span>
+<span class="source-line-no">474</span><span id="line.474">    @JsonIgnore</span>
+<span class="source-line-no">475</span><span id="line.475">    public void setLineItems(final LineItem... lineItems);</span>
+<span class="source-line-no">476</span><span id="line.476"></span>
+<span class="source-line-no">477</span><span id="line.477">    /**</span>
+<span class="source-line-no">478</span><span id="line.478">     *  &lt;p&gt;Line Items added to the Cart.&lt;/p&gt;</span>
+<span class="source-line-no">479</span><span id="line.479">     * @param lineItems values to be set</span>
+<span class="source-line-no">480</span><span id="line.480">     */</span>
 <span class="source-line-no">481</span><span id="line.481"></span>
-<span class="source-line-no">482</span><span id="line.482">    /**</span>
-<span class="source-line-no">483</span><span id="line.483">     *  &lt;p&gt;Custom Line Items added to the Cart.&lt;/p&gt;</span>
-<span class="source-line-no">484</span><span id="line.484">     * @param customLineItems values to be set</span>
-<span class="source-line-no">485</span><span id="line.485">     */</span>
-<span class="source-line-no">486</span><span id="line.486"></span>
-<span class="source-line-no">487</span><span id="line.487">    @JsonIgnore</span>
-<span class="source-line-no">488</span><span id="line.488">    public void setCustomLineItems(final CustomLineItem... customLineItems);</span>
-<span class="source-line-no">489</span><span id="line.489"></span>
-<span class="source-line-no">490</span><span id="line.490">    /**</span>
-<span class="source-line-no">491</span><span id="line.491">     *  &lt;p&gt;Custom Line Items added to the Cart.&lt;/p&gt;</span>
-<span class="source-line-no">492</span><span id="line.492">     * @param customLineItems values to be set</span>
-<span class="source-line-no">493</span><span id="line.493">     */</span>
-<span class="source-line-no">494</span><span id="line.494"></span>
-<span class="source-line-no">495</span><span id="line.495">    public void setCustomLineItems(final List&lt;CustomLineItem&gt; customLineItems);</span>
+<span class="source-line-no">482</span><span id="line.482">    public void setLineItems(final List&lt;LineItem&gt; lineItems);</span>
+<span class="source-line-no">483</span><span id="line.483"></span>
+<span class="source-line-no">484</span><span id="line.484">    /**</span>
+<span class="source-line-no">485</span><span id="line.485">     *  &lt;p&gt;Custom Line Items added to the Cart.&lt;/p&gt;</span>
+<span class="source-line-no">486</span><span id="line.486">     * @param customLineItems values to be set</span>
+<span class="source-line-no">487</span><span id="line.487">     */</span>
+<span class="source-line-no">488</span><span id="line.488"></span>
+<span class="source-line-no">489</span><span id="line.489">    @JsonIgnore</span>
+<span class="source-line-no">490</span><span id="line.490">    public void setCustomLineItems(final CustomLineItem... customLineItems);</span>
+<span class="source-line-no">491</span><span id="line.491"></span>
+<span class="source-line-no">492</span><span id="line.492">    /**</span>
+<span class="source-line-no">493</span><span id="line.493">     *  &lt;p&gt;Custom Line Items added to the Cart.&lt;/p&gt;</span>
+<span class="source-line-no">494</span><span id="line.494">     * @param customLineItems values to be set</span>
+<span class="source-line-no">495</span><span id="line.495">     */</span>
 <span class="source-line-no">496</span><span id="line.496"></span>
-<span class="source-line-no">497</span><span id="line.497">    /**</span>
-<span class="source-line-no">498</span><span id="line.498">     *  &lt;p&gt;Sum of all LineItem quantities, excluding CustomLineItems. Only present when the Cart has at least one LineItem.&lt;/p&gt;</span>
-<span class="source-line-no">499</span><span id="line.499">     * @param totalLineItemQuantity value to be set</span>
-<span class="source-line-no">500</span><span id="line.500">     */</span>
-<span class="source-line-no">501</span><span id="line.501"></span>
-<span class="source-line-no">502</span><span id="line.502">    public void setTotalLineItemQuantity(final Long totalLineItemQuantity);</span>
+<span class="source-line-no">497</span><span id="line.497">    public void setCustomLineItems(final List&lt;CustomLineItem&gt; customLineItems);</span>
+<span class="source-line-no">498</span><span id="line.498"></span>
+<span class="source-line-no">499</span><span id="line.499">    /**</span>
+<span class="source-line-no">500</span><span id="line.500">     *  &lt;p&gt;Sum of all LineItem quantities, excluding CustomLineItems. Only present when the Cart has at least one LineItem.&lt;/p&gt;</span>
+<span class="source-line-no">501</span><span id="line.501">     * @param totalLineItemQuantity value to be set</span>
+<span class="source-line-no">502</span><span id="line.502">     */</span>
 <span class="source-line-no">503</span><span id="line.503"></span>
-<span class="source-line-no">504</span><span id="line.504">    /**</span>
-<span class="source-line-no">505</span><span id="line.505">     *  &lt;p&gt;Sum of the &lt;code&gt;totalPrice&lt;/code&gt; field of all LineItems and CustomLineItems, and if available, the &lt;code&gt;price&lt;/code&gt; field of ShippingInfo.&lt;/p&gt;</span>
-<span class="source-line-no">506</span><span id="line.506">     *  &lt;p&gt;Taxes are included if TaxRate &lt;code&gt;includedInPrice&lt;/code&gt; is &lt;code&gt;true&lt;/code&gt; for each price.&lt;/p&gt;</span>
-<span class="source-line-no">507</span><span id="line.507">     * @param totalPrice value to be set</span>
-<span class="source-line-no">508</span><span id="line.508">     */</span>
-<span class="source-line-no">509</span><span id="line.509"></span>
-<span class="source-line-no">510</span><span id="line.510">    public void setTotalPrice(final CentPrecisionMoney totalPrice);</span>
+<span class="source-line-no">504</span><span id="line.504">    public void setTotalLineItemQuantity(final Long totalLineItemQuantity);</span>
+<span class="source-line-no">505</span><span id="line.505"></span>
+<span class="source-line-no">506</span><span id="line.506">    /**</span>
+<span class="source-line-no">507</span><span id="line.507">     *  &lt;p&gt;Sum of the &lt;code&gt;totalPrice&lt;/code&gt; field of all LineItems and CustomLineItems, and if available, the &lt;code&gt;price&lt;/code&gt; field of ShippingInfo.&lt;/p&gt;</span>
+<span class="source-line-no">508</span><span id="line.508">     *  &lt;p&gt;Taxes are included if TaxRate &lt;code&gt;includedInPrice&lt;/code&gt; is &lt;code&gt;true&lt;/code&gt; for each price.&lt;/p&gt;</span>
+<span class="source-line-no">509</span><span id="line.509">     * @param totalPrice value to be set</span>
+<span class="source-line-no">510</span><span id="line.510">     */</span>
 <span class="source-line-no">511</span><span id="line.511"></span>
-<span class="source-line-no">512</span><span id="line.512">    /**</span>
-<span class="source-line-no">513</span><span id="line.513">     *  &lt;ul&gt;</span>
-<span class="source-line-no">514</span><span id="line.514">     *   &lt;li&gt;For a Cart with &lt;code&gt;Platform&lt;/code&gt; TaxMode, it is automatically set when a shipping address is set.&lt;/li&gt;</span>
-<span class="source-line-no">515</span><span id="line.515">     *   &lt;li&gt;For a Cart with &lt;code&gt;External&lt;/code&gt; TaxMode, it is automatically set when the external Tax Rate for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.&lt;/li&gt;</span>
-<span class="source-line-no">516</span><span id="line.516">     *  &lt;/ul&gt;</span>
-<span class="source-line-no">517</span><span id="line.517">     * @param taxedPrice value to be set</span>
-<span class="source-line-no">518</span><span id="line.518">     */</span>
-<span class="source-line-no">519</span><span id="line.519"></span>
-<span class="source-line-no">520</span><span id="line.520">    public void setTaxedPrice(final TaxedPrice taxedPrice);</span>
+<span class="source-line-no">512</span><span id="line.512">    public void setTotalPrice(final CentPrecisionMoney totalPrice);</span>
+<span class="source-line-no">513</span><span id="line.513"></span>
+<span class="source-line-no">514</span><span id="line.514">    /**</span>
+<span class="source-line-no">515</span><span id="line.515">     *  &lt;ul&gt;</span>
+<span class="source-line-no">516</span><span id="line.516">     *   &lt;li&gt;For a Cart with &lt;code&gt;Platform&lt;/code&gt; TaxMode, it is automatically set when a shipping address is set.&lt;/li&gt;</span>
+<span class="source-line-no">517</span><span id="line.517">     *   &lt;li&gt;For a Cart with &lt;code&gt;External&lt;/code&gt; TaxMode, it is automatically set when the external Tax Rate for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.&lt;/li&gt;</span>
+<span class="source-line-no">518</span><span id="line.518">     *  &lt;/ul&gt;</span>
+<span class="source-line-no">519</span><span id="line.519">     * @param taxedPrice value to be set</span>
+<span class="source-line-no">520</span><span id="line.520">     */</span>
 <span class="source-line-no">521</span><span id="line.521"></span>
-<span class="source-line-no">522</span><span id="line.522">    /**</span>
-<span class="source-line-no">523</span><span id="line.523">     *  &lt;p&gt;Sum of the &lt;code&gt;taxedPrice&lt;/code&gt; field of ShippingInfo across all Shipping Methods.&lt;/p&gt;</span>
-<span class="source-line-no">524</span><span id="line.524">     * @param taxedShippingPrice value to be set</span>
-<span class="source-line-no">525</span><span id="line.525">     */</span>
-<span class="source-line-no">526</span><span id="line.526"></span>
-<span class="source-line-no">527</span><span id="line.527">    public void setTaxedShippingPrice(final TaxedPrice taxedShippingPrice);</span>
+<span class="source-line-no">522</span><span id="line.522">    public void setTaxedPrice(final TaxedPrice taxedPrice);</span>
+<span class="source-line-no">523</span><span id="line.523"></span>
+<span class="source-line-no">524</span><span id="line.524">    /**</span>
+<span class="source-line-no">525</span><span id="line.525">     *  &lt;p&gt;Sum of the &lt;code&gt;taxedPrice&lt;/code&gt; field of ShippingInfo across all Shipping Methods.&lt;/p&gt;</span>
+<span class="source-line-no">526</span><span id="line.526">     * @param taxedShippingPrice value to be set</span>
+<span class="source-line-no">527</span><span id="line.527">     */</span>
 <span class="source-line-no">528</span><span id="line.528"></span>
-<span class="source-line-no">529</span><span id="line.529">    /**</span>
-<span class="source-line-no">530</span><span id="line.530">     *  &lt;p&gt;Indicates how Tax Rates are set.&lt;/p&gt;</span>
-<span class="source-line-no">531</span><span id="line.531">     * @param taxMode value to be set</span>
-<span class="source-line-no">532</span><span id="line.532">     */</span>
-<span class="source-line-no">533</span><span id="line.533"></span>
-<span class="source-line-no">534</span><span id="line.534">    public void setTaxMode(final TaxMode taxMode);</span>
+<span class="source-line-no">529</span><span id="line.529">    public void setTaxedShippingPrice(final TaxedPrice taxedShippingPrice);</span>
+<span class="source-line-no">530</span><span id="line.530"></span>
+<span class="source-line-no">531</span><span id="line.531">    /**</span>
+<span class="source-line-no">532</span><span id="line.532">     *  &lt;p&gt;Indicates how Tax Rates are set.&lt;/p&gt;</span>
+<span class="source-line-no">533</span><span id="line.533">     * @param taxMode value to be set</span>
+<span class="source-line-no">534</span><span id="line.534">     */</span>
 <span class="source-line-no">535</span><span id="line.535"></span>
-<span class="source-line-no">536</span><span id="line.536">    /**</span>
-<span class="source-line-no">537</span><span id="line.537">     *  &lt;p&gt;Indicates how monetary values are rounded when calculating taxes for &lt;code&gt;taxedPrice&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">538</span><span id="line.538">     * @param taxRoundingMode value to be set</span>
-<span class="source-line-no">539</span><span id="line.539">     */</span>
-<span class="source-line-no">540</span><span id="line.540"></span>
-<span class="source-line-no">541</span><span id="line.541">    public void setTaxRoundingMode(final RoundingMode taxRoundingMode);</span>
+<span class="source-line-no">536</span><span id="line.536">    public void setTaxMode(final TaxMode taxMode);</span>
+<span class="source-line-no">537</span><span id="line.537"></span>
+<span class="source-line-no">538</span><span id="line.538">    /**</span>
+<span class="source-line-no">539</span><span id="line.539">     *  &lt;p&gt;Indicates how monetary values are rounded when calculating taxes for &lt;code&gt;taxedPrice&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">540</span><span id="line.540">     * @param taxRoundingMode value to be set</span>
+<span class="source-line-no">541</span><span id="line.541">     */</span>
 <span class="source-line-no">542</span><span id="line.542"></span>
-<span class="source-line-no">543</span><span id="line.543">    /**</span>
-<span class="source-line-no">544</span><span id="line.544">     *  &lt;p&gt;Indicates how taxes are calculated when calculating taxes for &lt;code&gt;taxedPrice&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">545</span><span id="line.545">     * @param taxCalculationMode value to be set</span>
-<span class="source-line-no">546</span><span id="line.546">     */</span>
-<span class="source-line-no">547</span><span id="line.547"></span>
-<span class="source-line-no">548</span><span id="line.548">    public void setTaxCalculationMode(final TaxCalculationMode taxCalculationMode);</span>
+<span class="source-line-no">543</span><span id="line.543">    public void setTaxRoundingMode(final RoundingMode taxRoundingMode);</span>
+<span class="source-line-no">544</span><span id="line.544"></span>
+<span class="source-line-no">545</span><span id="line.545">    /**</span>
+<span class="source-line-no">546</span><span id="line.546">     *  &lt;p&gt;Indicates how taxes are calculated when calculating taxes for &lt;code&gt;taxedPrice&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">547</span><span id="line.547">     * @param taxCalculationMode value to be set</span>
+<span class="source-line-no">548</span><span id="line.548">     */</span>
 <span class="source-line-no">549</span><span id="line.549"></span>
-<span class="source-line-no">550</span><span id="line.550">    /**</span>
-<span class="source-line-no">551</span><span id="line.551">     *  &lt;p&gt;Indicates how stock quantities are tracked for Line Items in the Cart.&lt;/p&gt;</span>
-<span class="source-line-no">552</span><span id="line.552">     * @param inventoryMode value to be set</span>
-<span class="source-line-no">553</span><span id="line.553">     */</span>
-<span class="source-line-no">554</span><span id="line.554"></span>
-<span class="source-line-no">555</span><span id="line.555">    public void setInventoryMode(final InventoryMode inventoryMode);</span>
+<span class="source-line-no">550</span><span id="line.550">    public void setTaxCalculationMode(final TaxCalculationMode taxCalculationMode);</span>
+<span class="source-line-no">551</span><span id="line.551"></span>
+<span class="source-line-no">552</span><span id="line.552">    /**</span>
+<span class="source-line-no">553</span><span id="line.553">     *  &lt;p&gt;Indicates how stock quantities are tracked for Line Items in the Cart.&lt;/p&gt;</span>
+<span class="source-line-no">554</span><span id="line.554">     * @param inventoryMode value to be set</span>
+<span class="source-line-no">555</span><span id="line.555">     */</span>
 <span class="source-line-no">556</span><span id="line.556"></span>
-<span class="source-line-no">557</span><span id="line.557">    /**</span>
-<span class="source-line-no">558</span><span id="line.558">     *  &lt;p&gt;Current status of the Cart.&lt;/p&gt;</span>
-<span class="source-line-no">559</span><span id="line.559">     * @param cartState value to be set</span>
-<span class="source-line-no">560</span><span id="line.560">     */</span>
-<span class="source-line-no">561</span><span id="line.561"></span>
-<span class="source-line-no">562</span><span id="line.562">    public void setCartState(final CartState cartState);</span>
+<span class="source-line-no">557</span><span id="line.557">    public void setInventoryMode(final InventoryMode inventoryMode);</span>
+<span class="source-line-no">558</span><span id="line.558"></span>
+<span class="source-line-no">559</span><span id="line.559">    /**</span>
+<span class="source-line-no">560</span><span id="line.560">     *  &lt;p&gt;Current status of the Cart.&lt;/p&gt;</span>
+<span class="source-line-no">561</span><span id="line.561">     * @param cartState value to be set</span>
+<span class="source-line-no">562</span><span id="line.562">     */</span>
 <span class="source-line-no">563</span><span id="line.563"></span>
-<span class="source-line-no">564</span><span id="line.564">    /**</span>
-<span class="source-line-no">565</span><span id="line.565">     *  &lt;p&gt;Billing address associated with the Cart.&lt;/p&gt;</span>
-<span class="source-line-no">566</span><span id="line.566">     * @param billingAddress value to be set</span>
-<span class="source-line-no">567</span><span id="line.567">     */</span>
-<span class="source-line-no">568</span><span id="line.568"></span>
-<span class="source-line-no">569</span><span id="line.569">    public void setBillingAddress(final Address billingAddress);</span>
+<span class="source-line-no">564</span><span id="line.564">    public void setCartState(final CartState cartState);</span>
+<span class="source-line-no">565</span><span id="line.565"></span>
+<span class="source-line-no">566</span><span id="line.566">    /**</span>
+<span class="source-line-no">567</span><span id="line.567">     *  &lt;p&gt;Billing address associated with the Cart.&lt;/p&gt;</span>
+<span class="source-line-no">568</span><span id="line.568">     * @param billingAddress value to be set</span>
+<span class="source-line-no">569</span><span id="line.569">     */</span>
 <span class="source-line-no">570</span><span id="line.570"></span>
-<span class="source-line-no">571</span><span id="line.571">    /**</span>
-<span class="source-line-no">572</span><span id="line.572">     *  &lt;p&gt;Shipping address associated with the Cart. Determines eligible ShippingMethod rates and Tax Rates of Line Items.&lt;/p&gt;</span>
-<span class="source-line-no">573</span><span id="line.573">     * @param shippingAddress value to be set</span>
-<span class="source-line-no">574</span><span id="line.574">     */</span>
-<span class="source-line-no">575</span><span id="line.575"></span>
-<span class="source-line-no">576</span><span id="line.576">    public void setShippingAddress(final Address shippingAddress);</span>
+<span class="source-line-no">571</span><span id="line.571">    public void setBillingAddress(final Address billingAddress);</span>
+<span class="source-line-no">572</span><span id="line.572"></span>
+<span class="source-line-no">573</span><span id="line.573">    /**</span>
+<span class="source-line-no">574</span><span id="line.574">     *  &lt;p&gt;Shipping address associated with the Cart. Determines eligible ShippingMethod rates and Tax Rates of Line Items.&lt;/p&gt;</span>
+<span class="source-line-no">575</span><span id="line.575">     * @param shippingAddress value to be set</span>
+<span class="source-line-no">576</span><span id="line.576">     */</span>
 <span class="source-line-no">577</span><span id="line.577"></span>
-<span class="source-line-no">578</span><span id="line.578">    /**</span>
-<span class="source-line-no">579</span><span id="line.579">     *  &lt;p&gt;Indicates whether the Cart has one or multiple Shipping Methods.&lt;/p&gt;</span>
-<span class="source-line-no">580</span><span id="line.580">     * @param shippingMode value to be set</span>
-<span class="source-line-no">581</span><span id="line.581">     */</span>
-<span class="source-line-no">582</span><span id="line.582"></span>
-<span class="source-line-no">583</span><span id="line.583">    public void setShippingMode(final ShippingMode shippingMode);</span>
+<span class="source-line-no">578</span><span id="line.578">    public void setShippingAddress(final Address shippingAddress);</span>
+<span class="source-line-no">579</span><span id="line.579"></span>
+<span class="source-line-no">580</span><span id="line.580">    /**</span>
+<span class="source-line-no">581</span><span id="line.581">     *  &lt;p&gt;Indicates whether the Cart has one or multiple Shipping Methods.&lt;/p&gt;</span>
+<span class="source-line-no">582</span><span id="line.582">     * @param shippingMode value to be set</span>
+<span class="source-line-no">583</span><span id="line.583">     */</span>
 <span class="source-line-no">584</span><span id="line.584"></span>
-<span class="source-line-no">585</span><span id="line.585">    /**</span>
-<span class="source-line-no">586</span><span id="line.586">     *  &lt;p&gt;Shipping-related information of a Cart with &lt;code&gt;Single&lt;/code&gt; ShippingMode. Automatically set when a Shipping Method is set.&lt;/p&gt;</span>
-<span class="source-line-no">587</span><span id="line.587">     * @param shippingInfo value to be set</span>
-<span class="source-line-no">588</span><span id="line.588">     */</span>
-<span class="source-line-no">589</span><span id="line.589"></span>
-<span class="source-line-no">590</span><span id="line.590">    public void setShippingInfo(final ShippingInfo shippingInfo);</span>
+<span class="source-line-no">585</span><span id="line.585">    public void setShippingMode(final ShippingMode shippingMode);</span>
+<span class="source-line-no">586</span><span id="line.586"></span>
+<span class="source-line-no">587</span><span id="line.587">    /**</span>
+<span class="source-line-no">588</span><span id="line.588">     *  &lt;p&gt;Shipping-related information of a Cart with &lt;code&gt;Single&lt;/code&gt; ShippingMode. Automatically set when a Shipping Method is set.&lt;/p&gt;</span>
+<span class="source-line-no">589</span><span id="line.589">     * @param shippingInfo value to be set</span>
+<span class="source-line-no">590</span><span id="line.590">     */</span>
 <span class="source-line-no">591</span><span id="line.591"></span>
-<span class="source-line-no">592</span><span id="line.592">    /**</span>
-<span class="source-line-no">593</span><span id="line.593">     *  &lt;p&gt;Shipping-related information of a Cart with &lt;code&gt;Multiple&lt;/code&gt; ShippingMode. Updated automatically each time a new Shipping Method is added.&lt;/p&gt;</span>
-<span class="source-line-no">594</span><span id="line.594">     * @param shipping values to be set</span>
-<span class="source-line-no">595</span><span id="line.595">     */</span>
-<span class="source-line-no">596</span><span id="line.596"></span>
-<span class="source-line-no">597</span><span id="line.597">    @JsonIgnore</span>
-<span class="source-line-no">598</span><span id="line.598">    public void setShipping(final Shipping... shipping);</span>
-<span class="source-line-no">599</span><span id="line.599"></span>
-<span class="source-line-no">600</span><span id="line.600">    /**</span>
-<span class="source-line-no">601</span><span id="line.601">     *  &lt;p&gt;Shipping-related information of a Cart with &lt;code&gt;Multiple&lt;/code&gt; ShippingMode. Updated automatically each time a new Shipping Method is added.&lt;/p&gt;</span>
-<span class="source-line-no">602</span><span id="line.602">     * @param shipping values to be set</span>
-<span class="source-line-no">603</span><span id="line.603">     */</span>
-<span class="source-line-no">604</span><span id="line.604"></span>
-<span class="source-line-no">605</span><span id="line.605">    public void setShipping(final List&lt;Shipping&gt; shipping);</span>
+<span class="source-line-no">592</span><span id="line.592">    public void setShippingInfo(final ShippingInfo shippingInfo);</span>
+<span class="source-line-no">593</span><span id="line.593"></span>
+<span class="source-line-no">594</span><span id="line.594">    /**</span>
+<span class="source-line-no">595</span><span id="line.595">     *  &lt;p&gt;Shipping-related information of a Cart with &lt;code&gt;Multiple&lt;/code&gt; ShippingMode. Updated automatically each time a new Shipping Method is added.&lt;/p&gt;</span>
+<span class="source-line-no">596</span><span id="line.596">     * @param shipping values to be set</span>
+<span class="source-line-no">597</span><span id="line.597">     */</span>
+<span class="source-line-no">598</span><span id="line.598"></span>
+<span class="source-line-no">599</span><span id="line.599">    @JsonIgnore</span>
+<span class="source-line-no">600</span><span id="line.600">    public void setShipping(final Shipping... shipping);</span>
+<span class="source-line-no">601</span><span id="line.601"></span>
+<span class="source-line-no">602</span><span id="line.602">    /**</span>
+<span class="source-line-no">603</span><span id="line.603">     *  &lt;p&gt;Shipping-related information of a Cart with &lt;code&gt;Multiple&lt;/code&gt; ShippingMode. Updated automatically each time a new Shipping Method is added.&lt;/p&gt;</span>
+<span class="source-line-no">604</span><span id="line.604">     * @param shipping values to be set</span>
+<span class="source-line-no">605</span><span id="line.605">     */</span>
 <span class="source-line-no">606</span><span id="line.606"></span>
-<span class="source-line-no">607</span><span id="line.607">    /**</span>
-<span class="source-line-no">608</span><span id="line.608">     *  &lt;p&gt;Input used to select a ShippingRatePriceTier. The data type of this field depends on the &lt;code&gt;shippingRateInputType.type&lt;/code&gt; configured in the Project:&lt;/p&gt;</span>
-<span class="source-line-no">609</span><span id="line.609">     *  &lt;ul&gt;</span>
-<span class="source-line-no">610</span><span id="line.610">     *   &lt;li&gt;If &lt;code&gt;CartClassification&lt;/code&gt;, it is ClassificationShippingRateInput.&lt;/li&gt;</span>
-<span class="source-line-no">611</span><span id="line.611">     *   &lt;li&gt;If &lt;code&gt;CartScore&lt;/code&gt;, it is ScoreShippingRateInput.&lt;/li&gt;</span>
-<span class="source-line-no">612</span><span id="line.612">     *   &lt;li&gt;If &lt;code&gt;CartValue&lt;/code&gt;, it cannot be used.&lt;/li&gt;</span>
-<span class="source-line-no">613</span><span id="line.613">     *  &lt;/ul&gt;</span>
-<span class="source-line-no">614</span><span id="line.614">     * @param shippingRateInput value to be set</span>
-<span class="source-line-no">615</span><span id="line.615">     */</span>
-<span class="source-line-no">616</span><span id="line.616"></span>
-<span class="source-line-no">617</span><span id="line.617">    public void setShippingRateInput(final ShippingRateInput shippingRateInput);</span>
+<span class="source-line-no">607</span><span id="line.607">    public void setShipping(final List&lt;Shipping&gt; shipping);</span>
+<span class="source-line-no">608</span><span id="line.608"></span>
+<span class="source-line-no">609</span><span id="line.609">    /**</span>
+<span class="source-line-no">610</span><span id="line.610">     *  &lt;p&gt;Input used to select a ShippingRatePriceTier. The data type of this field depends on the &lt;code&gt;shippingRateInputType.type&lt;/code&gt; configured in the Project:&lt;/p&gt;</span>
+<span class="source-line-no">611</span><span id="line.611">     *  &lt;ul&gt;</span>
+<span class="source-line-no">612</span><span id="line.612">     *   &lt;li&gt;If &lt;code&gt;CartClassification&lt;/code&gt;, it is ClassificationShippingRateInput.&lt;/li&gt;</span>
+<span class="source-line-no">613</span><span id="line.613">     *   &lt;li&gt;If &lt;code&gt;CartScore&lt;/code&gt;, it is ScoreShippingRateInput.&lt;/li&gt;</span>
+<span class="source-line-no">614</span><span id="line.614">     *   &lt;li&gt;If &lt;code&gt;CartValue&lt;/code&gt;, it cannot be used.&lt;/li&gt;</span>
+<span class="source-line-no">615</span><span id="line.615">     *  &lt;/ul&gt;</span>
+<span class="source-line-no">616</span><span id="line.616">     * @param shippingRateInput value to be set</span>
+<span class="source-line-no">617</span><span id="line.617">     */</span>
 <span class="source-line-no">618</span><span id="line.618"></span>
-<span class="source-line-no">619</span><span id="line.619">    /**</span>
-<span class="source-line-no">620</span><span id="line.620">     *  &lt;p&gt;Additional shipping addresses of the Cart as specified by LineItems using the &lt;code&gt;shippingDetails&lt;/code&gt; field.&lt;/p&gt;</span>
-<span class="source-line-no">621</span><span id="line.621">     *  &lt;p&gt;Eligible Shipping Methods or applicable Tax Rates are determined by the address in &lt;code&gt;shippingAddress&lt;/code&gt;, and not &lt;code&gt;itemShippingAddresses&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">622</span><span id="line.622">     * @param itemShippingAddresses values to be set</span>
-<span class="source-line-no">623</span><span id="line.623">     */</span>
-<span class="source-line-no">624</span><span id="line.624"></span>
-<span class="source-line-no">625</span><span id="line.625">    @JsonIgnore</span>
-<span class="source-line-no">626</span><span id="line.626">    public void setItemShippingAddresses(final Address... itemShippingAddresses);</span>
-<span class="source-line-no">627</span><span id="line.627"></span>
-<span class="source-line-no">628</span><span id="line.628">    /**</span>
-<span class="source-line-no">629</span><span id="line.629">     *  &lt;p&gt;Additional shipping addresses of the Cart as specified by LineItems using the &lt;code&gt;shippingDetails&lt;/code&gt; field.&lt;/p&gt;</span>
-<span class="source-line-no">630</span><span id="line.630">     *  &lt;p&gt;Eligible Shipping Methods or applicable Tax Rates are determined by the address in &lt;code&gt;shippingAddress&lt;/code&gt;, and not &lt;code&gt;itemShippingAddresses&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">631</span><span id="line.631">     * @param itemShippingAddresses values to be set</span>
-<span class="source-line-no">632</span><span id="line.632">     */</span>
-<span class="source-line-no">633</span><span id="line.633"></span>
-<span class="source-line-no">634</span><span id="line.634">    public void setItemShippingAddresses(final List&lt;Address&gt; itemShippingAddresses);</span>
+<span class="source-line-no">619</span><span id="line.619">    public void setShippingRateInput(final ShippingRateInput shippingRateInput);</span>
+<span class="source-line-no">620</span><span id="line.620"></span>
+<span class="source-line-no">621</span><span id="line.621">    /**</span>
+<span class="source-line-no">622</span><span id="line.622">     *  &lt;p&gt;Additional shipping addresses of the Cart as specified by LineItems using the &lt;code&gt;shippingDetails&lt;/code&gt; field.&lt;/p&gt;</span>
+<span class="source-line-no">623</span><span id="line.623">     *  &lt;p&gt;Eligible Shipping Methods or applicable Tax Rates are determined by the address in &lt;code&gt;shippingAddress&lt;/code&gt;, and not &lt;code&gt;itemShippingAddresses&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">624</span><span id="line.624">     * @param itemShippingAddresses values to be set</span>
+<span class="source-line-no">625</span><span id="line.625">     */</span>
+<span class="source-line-no">626</span><span id="line.626"></span>
+<span class="source-line-no">627</span><span id="line.627">    @JsonIgnore</span>
+<span class="source-line-no">628</span><span id="line.628">    public void setItemShippingAddresses(final Address... itemShippingAddresses);</span>
+<span class="source-line-no">629</span><span id="line.629"></span>
+<span class="source-line-no">630</span><span id="line.630">    /**</span>
+<span class="source-line-no">631</span><span id="line.631">     *  &lt;p&gt;Additional shipping addresses of the Cart as specified by LineItems using the &lt;code&gt;shippingDetails&lt;/code&gt; field.&lt;/p&gt;</span>
+<span class="source-line-no">632</span><span id="line.632">     *  &lt;p&gt;Eligible Shipping Methods or applicable Tax Rates are determined by the address in &lt;code&gt;shippingAddress&lt;/code&gt;, and not &lt;code&gt;itemShippingAddresses&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">633</span><span id="line.633">     * @param itemShippingAddresses values to be set</span>
+<span class="source-line-no">634</span><span id="line.634">     */</span>
 <span class="source-line-no">635</span><span id="line.635"></span>
-<span class="source-line-no">636</span><span id="line.636">    /**</span>
-<span class="source-line-no">637</span><span id="line.637">     *  &lt;p&gt;Discount Codes applied to the Cart. A Cart that has &lt;code&gt;directDiscounts&lt;/code&gt; cannot have &lt;code&gt;discountCodes&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">638</span><span id="line.638">     * @param discountCodes values to be set</span>
-<span class="source-line-no">639</span><span id="line.639">     */</span>
-<span class="source-line-no">640</span><span id="line.640"></span>
-<span class="source-line-no">641</span><span id="line.641">    @JsonIgnore</span>
-<span class="source-line-no">642</span><span id="line.642">    public void setDiscountCodes(final DiscountCodeInfo... discountCodes);</span>
-<span class="source-line-no">643</span><span id="line.643"></span>
-<span class="source-line-no">644</span><span id="line.644">    /**</span>
-<span class="source-line-no">645</span><span id="line.645">     *  &lt;p&gt;Discount Codes applied to the Cart. A Cart that has &lt;code&gt;directDiscounts&lt;/code&gt; cannot have &lt;code&gt;discountCodes&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">646</span><span id="line.646">     * @param discountCodes values to be set</span>
-<span class="source-line-no">647</span><span id="line.647">     */</span>
-<span class="source-line-no">648</span><span id="line.648"></span>
-<span class="source-line-no">649</span><span id="line.649">    public void setDiscountCodes(final List&lt;DiscountCodeInfo&gt; discountCodes);</span>
+<span class="source-line-no">636</span><span id="line.636">    public void setItemShippingAddresses(final List&lt;Address&gt; itemShippingAddresses);</span>
+<span class="source-line-no">637</span><span id="line.637"></span>
+<span class="source-line-no">638</span><span id="line.638">    /**</span>
+<span class="source-line-no">639</span><span id="line.639">     *  &lt;p&gt;Discount Codes applied to the Cart. A Cart that has &lt;code&gt;directDiscounts&lt;/code&gt; cannot have &lt;code&gt;discountCodes&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">640</span><span id="line.640">     * @param discountCodes values to be set</span>
+<span class="source-line-no">641</span><span id="line.641">     */</span>
+<span class="source-line-no">642</span><span id="line.642"></span>
+<span class="source-line-no">643</span><span id="line.643">    @JsonIgnore</span>
+<span class="source-line-no">644</span><span id="line.644">    public void setDiscountCodes(final DiscountCodeInfo... discountCodes);</span>
+<span class="source-line-no">645</span><span id="line.645"></span>
+<span class="source-line-no">646</span><span id="line.646">    /**</span>
+<span class="source-line-no">647</span><span id="line.647">     *  &lt;p&gt;Discount Codes applied to the Cart. A Cart that has &lt;code&gt;directDiscounts&lt;/code&gt; cannot have &lt;code&gt;discountCodes&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">648</span><span id="line.648">     * @param discountCodes values to be set</span>
+<span class="source-line-no">649</span><span id="line.649">     */</span>
 <span class="source-line-no">650</span><span id="line.650"></span>
-<span class="source-line-no">651</span><span id="line.651">    /**</span>
-<span class="source-line-no">652</span><span id="line.652">     *  &lt;p&gt;Direct Discounts added to the Cart. A Cart that has &lt;code&gt;discountCodes&lt;/code&gt; cannot have &lt;code&gt;directDiscounts&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">653</span><span id="line.653">     * @param directDiscounts values to be set</span>
-<span class="source-line-no">654</span><span id="line.654">     */</span>
-<span class="source-line-no">655</span><span id="line.655"></span>
-<span class="source-line-no">656</span><span id="line.656">    @JsonIgnore</span>
-<span class="source-line-no">657</span><span id="line.657">    public void setDirectDiscounts(final DirectDiscount... directDiscounts);</span>
-<span class="source-line-no">658</span><span id="line.658"></span>
-<span class="source-line-no">659</span><span id="line.659">    /**</span>
-<span class="source-line-no">660</span><span id="line.660">     *  &lt;p&gt;Direct Discounts added to the Cart. A Cart that has &lt;code&gt;discountCodes&lt;/code&gt; cannot have &lt;code&gt;directDiscounts&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">661</span><span id="line.661">     * @param directDiscounts values to be set</span>
-<span class="source-line-no">662</span><span id="line.662">     */</span>
-<span class="source-line-no">663</span><span id="line.663"></span>
-<span class="source-line-no">664</span><span id="line.664">    public void setDirectDiscounts(final List&lt;DirectDiscount&gt; directDiscounts);</span>
+<span class="source-line-no">651</span><span id="line.651">    public void setDiscountCodes(final List&lt;DiscountCodeInfo&gt; discountCodes);</span>
+<span class="source-line-no">652</span><span id="line.652"></span>
+<span class="source-line-no">653</span><span id="line.653">    /**</span>
+<span class="source-line-no">654</span><span id="line.654">     *  &lt;p&gt;Direct Discounts added to the Cart. A Cart that has &lt;code&gt;discountCodes&lt;/code&gt; cannot have &lt;code&gt;directDiscounts&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">655</span><span id="line.655">     * @param directDiscounts values to be set</span>
+<span class="source-line-no">656</span><span id="line.656">     */</span>
+<span class="source-line-no">657</span><span id="line.657"></span>
+<span class="source-line-no">658</span><span id="line.658">    @JsonIgnore</span>
+<span class="source-line-no">659</span><span id="line.659">    public void setDirectDiscounts(final DirectDiscount... directDiscounts);</span>
+<span class="source-line-no">660</span><span id="line.660"></span>
+<span class="source-line-no">661</span><span id="line.661">    /**</span>
+<span class="source-line-no">662</span><span id="line.662">     *  &lt;p&gt;Direct Discounts added to the Cart. A Cart that has &lt;code&gt;discountCodes&lt;/code&gt; cannot have &lt;code&gt;directDiscounts&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">663</span><span id="line.663">     * @param directDiscounts values to be set</span>
+<span class="source-line-no">664</span><span id="line.664">     */</span>
 <span class="source-line-no">665</span><span id="line.665"></span>
-<span class="source-line-no">666</span><span id="line.666">    /**</span>
-<span class="source-line-no">667</span><span id="line.667">     *  &lt;p&gt;Automatically set when a Line Item with &lt;code&gt;GiftLineItem&lt;/code&gt; LineItemMode is removed from the Cart.&lt;/p&gt;</span>
-<span class="source-line-no">668</span><span id="line.668">     * @param refusedGifts values to be set</span>
-<span class="source-line-no">669</span><span id="line.669">     */</span>
-<span class="source-line-no">670</span><span id="line.670"></span>
-<span class="source-line-no">671</span><span id="line.671">    @JsonIgnore</span>
-<span class="source-line-no">672</span><span id="line.672">    public void setRefusedGifts(final CartDiscountReference... refusedGifts);</span>
-<span class="source-line-no">673</span><span id="line.673"></span>
-<span class="source-line-no">674</span><span id="line.674">    /**</span>
-<span class="source-line-no">675</span><span id="line.675">     *  &lt;p&gt;Automatically set when a Line Item with &lt;code&gt;GiftLineItem&lt;/code&gt; LineItemMode is removed from the Cart.&lt;/p&gt;</span>
-<span class="source-line-no">676</span><span id="line.676">     * @param refusedGifts values to be set</span>
-<span class="source-line-no">677</span><span id="line.677">     */</span>
-<span class="source-line-no">678</span><span id="line.678"></span>
-<span class="source-line-no">679</span><span id="line.679">    public void setRefusedGifts(final List&lt;CartDiscountReference&gt; refusedGifts);</span>
+<span class="source-line-no">666</span><span id="line.666">    public void setDirectDiscounts(final List&lt;DirectDiscount&gt; directDiscounts);</span>
+<span class="source-line-no">667</span><span id="line.667"></span>
+<span class="source-line-no">668</span><span id="line.668">    /**</span>
+<span class="source-line-no">669</span><span id="line.669">     *  &lt;p&gt;Automatically set when a Line Item with &lt;code&gt;GiftLineItem&lt;/code&gt; LineItemMode is removed from the Cart.&lt;/p&gt;</span>
+<span class="source-line-no">670</span><span id="line.670">     * @param refusedGifts values to be set</span>
+<span class="source-line-no">671</span><span id="line.671">     */</span>
+<span class="source-line-no">672</span><span id="line.672"></span>
+<span class="source-line-no">673</span><span id="line.673">    @JsonIgnore</span>
+<span class="source-line-no">674</span><span id="line.674">    public void setRefusedGifts(final CartDiscountReference... refusedGifts);</span>
+<span class="source-line-no">675</span><span id="line.675"></span>
+<span class="source-line-no">676</span><span id="line.676">    /**</span>
+<span class="source-line-no">677</span><span id="line.677">     *  &lt;p&gt;Automatically set when a Line Item with &lt;code&gt;GiftLineItem&lt;/code&gt; LineItemMode is removed from the Cart.&lt;/p&gt;</span>
+<span class="source-line-no">678</span><span id="line.678">     * @param refusedGifts values to be set</span>
+<span class="source-line-no">679</span><span id="line.679">     */</span>
 <span class="source-line-no">680</span><span id="line.680"></span>
-<span class="source-line-no">681</span><span id="line.681">    /**</span>
-<span class="source-line-no">682</span><span id="line.682">     *  &lt;p&gt;Payment information related to the Cart.&lt;/p&gt;</span>
-<span class="source-line-no">683</span><span id="line.683">     * @param paymentInfo value to be set</span>
-<span class="source-line-no">684</span><span id="line.684">     */</span>
-<span class="source-line-no">685</span><span id="line.685"></span>
-<span class="source-line-no">686</span><span id="line.686">    public void setPaymentInfo(final PaymentInfo paymentInfo);</span>
+<span class="source-line-no">681</span><span id="line.681">    public void setRefusedGifts(final List&lt;CartDiscountReference&gt; refusedGifts);</span>
+<span class="source-line-no">682</span><span id="line.682"></span>
+<span class="source-line-no">683</span><span id="line.683">    /**</span>
+<span class="source-line-no">684</span><span id="line.684">     *  &lt;p&gt;Payment information related to the Cart.&lt;/p&gt;</span>
+<span class="source-line-no">685</span><span id="line.685">     * @param paymentInfo value to be set</span>
+<span class="source-line-no">686</span><span id="line.686">     */</span>
 <span class="source-line-no">687</span><span id="line.687"></span>
-<span class="source-line-no">688</span><span id="line.688">    /**</span>
-<span class="source-line-no">689</span><span id="line.689">     *  &lt;p&gt;Used for LineItem Price selection.&lt;/p&gt;</span>
-<span class="source-line-no">690</span><span id="line.690">     * @param country value to be set</span>
-<span class="source-line-no">691</span><span id="line.691">     */</span>
-<span class="source-line-no">692</span><span id="line.692"></span>
-<span class="source-line-no">693</span><span id="line.693">    public void setCountry(final String country);</span>
+<span class="source-line-no">688</span><span id="line.688">    public void setPaymentInfo(final PaymentInfo paymentInfo);</span>
+<span class="source-line-no">689</span><span id="line.689"></span>
+<span class="source-line-no">690</span><span id="line.690">    /**</span>
+<span class="source-line-no">691</span><span id="line.691">     *  &lt;p&gt;Used for LineItem Price selection.&lt;/p&gt;</span>
+<span class="source-line-no">692</span><span id="line.692">     * @param country value to be set</span>
+<span class="source-line-no">693</span><span id="line.693">     */</span>
 <span class="source-line-no">694</span><span id="line.694"></span>
-<span class="source-line-no">695</span><span id="line.695">    /**</span>
-<span class="source-line-no">696</span><span id="line.696">     *  &lt;p&gt;Languages of the Cart. Can only contain languages supported by the Project.&lt;/p&gt;</span>
-<span class="source-line-no">697</span><span id="line.697">     * @param locale value to be set</span>
-<span class="source-line-no">698</span><span id="line.698">     */</span>
-<span class="source-line-no">699</span><span id="line.699"></span>
-<span class="source-line-no">700</span><span id="line.700">    public void setLocale(final String locale);</span>
+<span class="source-line-no">695</span><span id="line.695">    public void setCountry(final String country);</span>
+<span class="source-line-no">696</span><span id="line.696"></span>
+<span class="source-line-no">697</span><span id="line.697">    /**</span>
+<span class="source-line-no">698</span><span id="line.698">     *  &lt;p&gt;Languages of the Cart. Can only contain languages supported by the Project.&lt;/p&gt;</span>
+<span class="source-line-no">699</span><span id="line.699">     * @param locale value to be set</span>
+<span class="source-line-no">700</span><span id="line.700">     */</span>
 <span class="source-line-no">701</span><span id="line.701"></span>
-<span class="source-line-no">702</span><span id="line.702">    /**</span>
-<span class="source-line-no">703</span><span id="line.703">     *  &lt;p&gt;Indicates how the Cart was created.&lt;/p&gt;</span>
-<span class="source-line-no">704</span><span id="line.704">     * @param origin value to be set</span>
-<span class="source-line-no">705</span><span id="line.705">     */</span>
-<span class="source-line-no">706</span><span id="line.706"></span>
-<span class="source-line-no">707</span><span id="line.707">    public void setOrigin(final CartOrigin origin);</span>
+<span class="source-line-no">702</span><span id="line.702">    public void setLocale(final String locale);</span>
+<span class="source-line-no">703</span><span id="line.703"></span>
+<span class="source-line-no">704</span><span id="line.704">    /**</span>
+<span class="source-line-no">705</span><span id="line.705">     *  &lt;p&gt;Indicates how the Cart was created.&lt;/p&gt;</span>
+<span class="source-line-no">706</span><span id="line.706">     * @param origin value to be set</span>
+<span class="source-line-no">707</span><span id="line.707">     */</span>
 <span class="source-line-no">708</span><span id="line.708"></span>
-<span class="source-line-no">709</span><span id="line.709">    /**</span>
-<span class="source-line-no">710</span><span id="line.710">     *  &lt;p&gt;Custom Fields of the Cart.&lt;/p&gt;</span>
-<span class="source-line-no">711</span><span id="line.711">     * @param custom value to be set</span>
-<span class="source-line-no">712</span><span id="line.712">     */</span>
-<span class="source-line-no">713</span><span id="line.713"></span>
-<span class="source-line-no">714</span><span id="line.714">    public void setCustom(final CustomFields custom);</span>
+<span class="source-line-no">709</span><span id="line.709">    public void setOrigin(final CartOrigin origin);</span>
+<span class="source-line-no">710</span><span id="line.710"></span>
+<span class="source-line-no">711</span><span id="line.711">    /**</span>
+<span class="source-line-no">712</span><span id="line.712">     *  &lt;p&gt;Custom Fields of the Cart.&lt;/p&gt;</span>
+<span class="source-line-no">713</span><span id="line.713">     * @param custom value to be set</span>
+<span class="source-line-no">714</span><span id="line.714">     */</span>
 <span class="source-line-no">715</span><span id="line.715"></span>
-<span class="source-line-no">716</span><span id="line.716">    /**</span>
-<span class="source-line-no">717</span><span id="line.717">     *  &lt;p&gt;Number of days after which an active Cart is deleted since its last modification. Configured in Project settings.&lt;/p&gt;</span>
-<span class="source-line-no">718</span><span id="line.718">     * @param deleteDaysAfterLastModification value to be set</span>
-<span class="source-line-no">719</span><span id="line.719">     */</span>
-<span class="source-line-no">720</span><span id="line.720"></span>
-<span class="source-line-no">721</span><span id="line.721">    public void setDeleteDaysAfterLastModification(final Integer deleteDaysAfterLastModification);</span>
+<span class="source-line-no">716</span><span id="line.716">    public void setCustom(final CustomFields custom);</span>
+<span class="source-line-no">717</span><span id="line.717"></span>
+<span class="source-line-no">718</span><span id="line.718">    /**</span>
+<span class="source-line-no">719</span><span id="line.719">     *  &lt;p&gt;Number of days after which an active Cart is deleted since its last modification. Configured in Project settings.&lt;/p&gt;</span>
+<span class="source-line-no">720</span><span id="line.720">     * @param deleteDaysAfterLastModification value to be set</span>
+<span class="source-line-no">721</span><span id="line.721">     */</span>
 <span class="source-line-no">722</span><span id="line.722"></span>
-<span class="source-line-no">723</span><span id="line.723">    /**</span>
-<span class="source-line-no">724</span><span id="line.724">     *  &lt;p&gt;Date and time (UTC) the Cart was initially created.&lt;/p&gt;</span>
-<span class="source-line-no">725</span><span id="line.725">     * @param createdAt value to be set</span>
-<span class="source-line-no">726</span><span id="line.726">     */</span>
-<span class="source-line-no">727</span><span id="line.727"></span>
-<span class="source-line-no">728</span><span id="line.728">    public void setCreatedAt(final ZonedDateTime createdAt);</span>
+<span class="source-line-no">723</span><span id="line.723">    public void setDeleteDaysAfterLastModification(final Integer deleteDaysAfterLastModification);</span>
+<span class="source-line-no">724</span><span id="line.724"></span>
+<span class="source-line-no">725</span><span id="line.725">    /**</span>
+<span class="source-line-no">726</span><span id="line.726">     *  &lt;p&gt;Date and time (UTC) the Cart was initially created.&lt;/p&gt;</span>
+<span class="source-line-no">727</span><span id="line.727">     * @param createdAt value to be set</span>
+<span class="source-line-no">728</span><span id="line.728">     */</span>
 <span class="source-line-no">729</span><span id="line.729"></span>
-<span class="source-line-no">730</span><span id="line.730">    /**</span>
-<span class="source-line-no">731</span><span id="line.731">     *  &lt;p&gt;Date and time (UTC) the Cart was last updated.&lt;/p&gt;</span>
-<span class="source-line-no">732</span><span id="line.732">     * @param lastModifiedAt value to be set</span>
-<span class="source-line-no">733</span><span id="line.733">     */</span>
-<span class="source-line-no">734</span><span id="line.734"></span>
-<span class="source-line-no">735</span><span id="line.735">    public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);</span>
+<span class="source-line-no">730</span><span id="line.730">    public void setCreatedAt(final ZonedDateTime createdAt);</span>
+<span class="source-line-no">731</span><span id="line.731"></span>
+<span class="source-line-no">732</span><span id="line.732">    /**</span>
+<span class="source-line-no">733</span><span id="line.733">     *  &lt;p&gt;Date and time (UTC) the Cart was last updated.&lt;/p&gt;</span>
+<span class="source-line-no">734</span><span id="line.734">     * @param lastModifiedAt value to be set</span>
+<span class="source-line-no">735</span><span id="line.735">     */</span>
 <span class="source-line-no">736</span><span id="line.736"></span>
-<span class="source-line-no">737</span><span id="line.737">    /**</span>
-<span class="source-line-no">738</span><span id="line.738">     *  &lt;p&gt;Present on resources updated after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
-<span class="source-line-no">739</span><span id="line.739">     * @param lastModifiedBy value to be set</span>
-<span class="source-line-no">740</span><span id="line.740">     */</span>
-<span class="source-line-no">741</span><span id="line.741"></span>
-<span class="source-line-no">742</span><span id="line.742">    public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);</span>
+<span class="source-line-no">737</span><span id="line.737">    public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);</span>
+<span class="source-line-no">738</span><span id="line.738"></span>
+<span class="source-line-no">739</span><span id="line.739">    /**</span>
+<span class="source-line-no">740</span><span id="line.740">     *  &lt;p&gt;Present on resources updated after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
+<span class="source-line-no">741</span><span id="line.741">     * @param lastModifiedBy value to be set</span>
+<span class="source-line-no">742</span><span id="line.742">     */</span>
 <span class="source-line-no">743</span><span id="line.743"></span>
-<span class="source-line-no">744</span><span id="line.744">    /**</span>
-<span class="source-line-no">745</span><span id="line.745">     *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
-<span class="source-line-no">746</span><span id="line.746">     * @param createdBy value to be set</span>
-<span class="source-line-no">747</span><span id="line.747">     */</span>
-<span class="source-line-no">748</span><span id="line.748"></span>
-<span class="source-line-no">749</span><span id="line.749">    public void setCreatedBy(final CreatedBy createdBy);</span>
+<span class="source-line-no">744</span><span id="line.744">    public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);</span>
+<span class="source-line-no">745</span><span id="line.745"></span>
+<span class="source-line-no">746</span><span id="line.746">    /**</span>
+<span class="source-line-no">747</span><span id="line.747">     *  &lt;p&gt;Present on resources created after 1 February 2019 except for events not tracked.&lt;/p&gt;</span>
+<span class="source-line-no">748</span><span id="line.748">     * @param createdBy value to be set</span>
+<span class="source-line-no">749</span><span id="line.749">     */</span>
 <span class="source-line-no">750</span><span id="line.750"></span>
-<span class="source-line-no">751</span><span id="line.751">    /**</span>
-<span class="source-line-no">752</span><span id="line.752">     * factory method</span>
-<span class="source-line-no">753</span><span id="line.753">     * @return instance of Cart</span>
-<span class="source-line-no">754</span><span id="line.754">     */</span>
-<span class="source-line-no">755</span><span id="line.755">    public static Cart of() {</span>
-<span class="source-line-no">756</span><span id="line.756">        return new CartImpl();</span>
-<span class="source-line-no">757</span><span id="line.757">    }</span>
-<span class="source-line-no">758</span><span id="line.758"></span>
-<span class="source-line-no">759</span><span id="line.759">    /**</span>
-<span class="source-line-no">760</span><span id="line.760">     * factory method to copy an instance of Cart</span>
-<span class="source-line-no">761</span><span id="line.761">     * @param template instance to be copied</span>
-<span class="source-line-no">762</span><span id="line.762">     * @return copy instance</span>
-<span class="source-line-no">763</span><span id="line.763">     */</span>
-<span class="source-line-no">764</span><span id="line.764">    public static Cart of(final Cart template) {</span>
-<span class="source-line-no">765</span><span id="line.765">        CartImpl instance = new CartImpl();</span>
-<span class="source-line-no">766</span><span id="line.766">        instance.setId(template.getId());</span>
-<span class="source-line-no">767</span><span id="line.767">        instance.setVersion(template.getVersion());</span>
-<span class="source-line-no">768</span><span id="line.768">        instance.setCreatedAt(template.getCreatedAt());</span>
-<span class="source-line-no">769</span><span id="line.769">        instance.setLastModifiedAt(template.getLastModifiedAt());</span>
-<span class="source-line-no">770</span><span id="line.770">        instance.setKey(template.getKey());</span>
-<span class="source-line-no">771</span><span id="line.771">        instance.setCustomerId(template.getCustomerId());</span>
-<span class="source-line-no">772</span><span id="line.772">        instance.setCustomerEmail(template.getCustomerEmail());</span>
-<span class="source-line-no">773</span><span id="line.773">        instance.setCustomerGroup(template.getCustomerGroup());</span>
-<span class="source-line-no">774</span><span id="line.774">        instance.setAnonymousId(template.getAnonymousId());</span>
-<span class="source-line-no">775</span><span id="line.775">        instance.setBusinessUnit(template.getBusinessUnit());</span>
-<span class="source-line-no">776</span><span id="line.776">        instance.setStore(template.getStore());</span>
-<span class="source-line-no">777</span><span id="line.777">        instance.setLineItems(template.getLineItems());</span>
-<span class="source-line-no">778</span><span id="line.778">        instance.setCustomLineItems(template.getCustomLineItems());</span>
-<span class="source-line-no">779</span><span id="line.779">        instance.setTotalLineItemQuantity(template.getTotalLineItemQuantity());</span>
-<span class="source-line-no">780</span><span id="line.780">        instance.setTotalPrice(template.getTotalPrice());</span>
-<span class="source-line-no">781</span><span id="line.781">        instance.setTaxedPrice(template.getTaxedPrice());</span>
-<span class="source-line-no">782</span><span id="line.782">        instance.setTaxedShippingPrice(template.getTaxedShippingPrice());</span>
-<span class="source-line-no">783</span><span id="line.783">        instance.setTaxMode(template.getTaxMode());</span>
-<span class="source-line-no">784</span><span id="line.784">        instance.setTaxRoundingMode(template.getTaxRoundingMode());</span>
-<span class="source-line-no">785</span><span id="line.785">        instance.setTaxCalculationMode(template.getTaxCalculationMode());</span>
-<span class="source-line-no">786</span><span id="line.786">        instance.setInventoryMode(template.getInventoryMode());</span>
-<span class="source-line-no">787</span><span id="line.787">        instance.setCartState(template.getCartState());</span>
-<span class="source-line-no">788</span><span id="line.788">        instance.setBillingAddress(template.getBillingAddress());</span>
-<span class="source-line-no">789</span><span id="line.789">        instance.setShippingAddress(template.getShippingAddress());</span>
-<span class="source-line-no">790</span><span id="line.790">        instance.setShippingMode(template.getShippingMode());</span>
-<span class="source-line-no">791</span><span id="line.791">        instance.setShippingInfo(template.getShippingInfo());</span>
-<span class="source-line-no">792</span><span id="line.792">        instance.setShipping(template.getShipping());</span>
-<span class="source-line-no">793</span><span id="line.793">        instance.setShippingRateInput(template.getShippingRateInput());</span>
-<span class="source-line-no">794</span><span id="line.794">        instance.setItemShippingAddresses(template.getItemShippingAddresses());</span>
-<span class="source-line-no">795</span><span id="line.795">        instance.setDiscountCodes(template.getDiscountCodes());</span>
-<span class="source-line-no">796</span><span id="line.796">        instance.setDirectDiscounts(template.getDirectDiscounts());</span>
-<span class="source-line-no">797</span><span id="line.797">        instance.setRefusedGifts(template.getRefusedGifts());</span>
-<span class="source-line-no">798</span><span id="line.798">        instance.setPaymentInfo(template.getPaymentInfo());</span>
-<span class="source-line-no">799</span><span id="line.799">        instance.setCountry(template.getCountry());</span>
-<span class="source-line-no">800</span><span id="line.800">        instance.setLocale(template.getLocale());</span>
-<span class="source-line-no">801</span><span id="line.801">        instance.setOrigin(template.getOrigin());</span>
-<span class="source-line-no">802</span><span id="line.802">        instance.setCustom(template.getCustom());</span>
-<span class="source-line-no">803</span><span id="line.803">        instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());</span>
-<span class="source-line-no">804</span><span id="line.804">        instance.setLastModifiedBy(template.getLastModifiedBy());</span>
-<span class="source-line-no">805</span><span id="line.805">        instance.setCreatedBy(template.getCreatedBy());</span>
-<span class="source-line-no">806</span><span id="line.806">        return instance;</span>
-<span class="source-line-no">807</span><span id="line.807">    }</span>
-<span class="source-line-no">808</span><span id="line.808"></span>
-<span class="source-line-no">809</span><span id="line.809">    /**</span>
-<span class="source-line-no">810</span><span id="line.810">     * builder factory method for Cart</span>
-<span class="source-line-no">811</span><span id="line.811">     * @return builder</span>
-<span class="source-line-no">812</span><span id="line.812">     */</span>
-<span class="source-line-no">813</span><span id="line.813">    public static CartBuilder builder() {</span>
-<span class="source-line-no">814</span><span id="line.814">        return CartBuilder.of();</span>
-<span class="source-line-no">815</span><span id="line.815">    }</span>
-<span class="source-line-no">816</span><span id="line.816"></span>
-<span class="source-line-no">817</span><span id="line.817">    /**</span>
-<span class="source-line-no">818</span><span id="line.818">     * create builder for Cart instance</span>
-<span class="source-line-no">819</span><span id="line.819">     * @param template instance with prefilled values for the builder</span>
-<span class="source-line-no">820</span><span id="line.820">     * @return builder</span>
-<span class="source-line-no">821</span><span id="line.821">     */</span>
-<span class="source-line-no">822</span><span id="line.822">    public static CartBuilder builder(final Cart template) {</span>
-<span class="source-line-no">823</span><span id="line.823">        return CartBuilder.of(template);</span>
-<span class="source-line-no">824</span><span id="line.824">    }</span>
-<span class="source-line-no">825</span><span id="line.825"></span>
-<span class="source-line-no">826</span><span id="line.826">    /**</span>
-<span class="source-line-no">827</span><span id="line.827">     * accessor map function</span>
-<span class="source-line-no">828</span><span id="line.828">     * @param &lt;T&gt; mapped type</span>
-<span class="source-line-no">829</span><span id="line.829">     * @param helper function to map the object</span>
-<span class="source-line-no">830</span><span id="line.830">     * @return mapped value</span>
-<span class="source-line-no">831</span><span id="line.831">     */</span>
-<span class="source-line-no">832</span><span id="line.832">    default &lt;T&gt; T withCart(Function&lt;Cart, T&gt; helper) {</span>
-<span class="source-line-no">833</span><span id="line.833">        return helper.apply(this);</span>
-<span class="source-line-no">834</span><span id="line.834">    }</span>
-<span class="source-line-no">835</span><span id="line.835"></span>
-<span class="source-line-no">836</span><span id="line.836">    /**</span>
-<span class="source-line-no">837</span><span id="line.837">     * gives a TypeReference for usage with Jackson DataBind</span>
-<span class="source-line-no">838</span><span id="line.838">     * @return TypeReference</span>
-<span class="source-line-no">839</span><span id="line.839">     */</span>
-<span class="source-line-no">840</span><span id="line.840">    public static com.fasterxml.jackson.core.type.TypeReference&lt;Cart&gt; typeReference() {</span>
-<span class="source-line-no">841</span><span id="line.841">        return new com.fasterxml.jackson.core.type.TypeReference&lt;Cart&gt;() {</span>
-<span class="source-line-no">842</span><span id="line.842">            @Override</span>
-<span class="source-line-no">843</span><span id="line.843">            public String toString() {</span>
-<span class="source-line-no">844</span><span id="line.844">                return "TypeReference&lt;Cart&gt;";</span>
-<span class="source-line-no">845</span><span id="line.845">            }</span>
-<span class="source-line-no">846</span><span id="line.846">        };</span>
-<span class="source-line-no">847</span><span id="line.847">    }</span>
-<span class="source-line-no">848</span><span id="line.848">}</span>
+<span class="source-line-no">751</span><span id="line.751">    public void setCreatedBy(final CreatedBy createdBy);</span>
+<span class="source-line-no">752</span><span id="line.752"></span>
+<span class="source-line-no">753</span><span id="line.753">    /**</span>
+<span class="source-line-no">754</span><span id="line.754">     * factory method</span>
+<span class="source-line-no">755</span><span id="line.755">     * @return instance of Cart</span>
+<span class="source-line-no">756</span><span id="line.756">     */</span>
+<span class="source-line-no">757</span><span id="line.757">    public static Cart of() {</span>
+<span class="source-line-no">758</span><span id="line.758">        return new CartImpl();</span>
+<span class="source-line-no">759</span><span id="line.759">    }</span>
+<span class="source-line-no">760</span><span id="line.760"></span>
+<span class="source-line-no">761</span><span id="line.761">    /**</span>
+<span class="source-line-no">762</span><span id="line.762">     * factory method to create a shallow copy Cart</span>
+<span class="source-line-no">763</span><span id="line.763">     * @param template instance to be copied</span>
+<span class="source-line-no">764</span><span id="line.764">     * @return copy instance</span>
+<span class="source-line-no">765</span><span id="line.765">     */</span>
+<span class="source-line-no">766</span><span id="line.766">    public static Cart of(final Cart template) {</span>
+<span class="source-line-no">767</span><span id="line.767">        CartImpl instance = new CartImpl();</span>
+<span class="source-line-no">768</span><span id="line.768">        instance.setId(template.getId());</span>
+<span class="source-line-no">769</span><span id="line.769">        instance.setVersion(template.getVersion());</span>
+<span class="source-line-no">770</span><span id="line.770">        instance.setCreatedAt(template.getCreatedAt());</span>
+<span class="source-line-no">771</span><span id="line.771">        instance.setLastModifiedAt(template.getLastModifiedAt());</span>
+<span class="source-line-no">772</span><span id="line.772">        instance.setKey(template.getKey());</span>
+<span class="source-line-no">773</span><span id="line.773">        instance.setCustomerId(template.getCustomerId());</span>
+<span class="source-line-no">774</span><span id="line.774">        instance.setCustomerEmail(template.getCustomerEmail());</span>
+<span class="source-line-no">775</span><span id="line.775">        instance.setCustomerGroup(template.getCustomerGroup());</span>
+<span class="source-line-no">776</span><span id="line.776">        instance.setAnonymousId(template.getAnonymousId());</span>
+<span class="source-line-no">777</span><span id="line.777">        instance.setBusinessUnit(template.getBusinessUnit());</span>
+<span class="source-line-no">778</span><span id="line.778">        instance.setStore(template.getStore());</span>
+<span class="source-line-no">779</span><span id="line.779">        instance.setLineItems(template.getLineItems());</span>
+<span class="source-line-no">780</span><span id="line.780">        instance.setCustomLineItems(template.getCustomLineItems());</span>
+<span class="source-line-no">781</span><span id="line.781">        instance.setTotalLineItemQuantity(template.getTotalLineItemQuantity());</span>
+<span class="source-line-no">782</span><span id="line.782">        instance.setTotalPrice(template.getTotalPrice());</span>
+<span class="source-line-no">783</span><span id="line.783">        instance.setTaxedPrice(template.getTaxedPrice());</span>
+<span class="source-line-no">784</span><span id="line.784">        instance.setTaxedShippingPrice(template.getTaxedShippingPrice());</span>
+<span class="source-line-no">785</span><span id="line.785">        instance.setTaxMode(template.getTaxMode());</span>
+<span class="source-line-no">786</span><span id="line.786">        instance.setTaxRoundingMode(template.getTaxRoundingMode());</span>
+<span class="source-line-no">787</span><span id="line.787">        instance.setTaxCalculationMode(template.getTaxCalculationMode());</span>
+<span class="source-line-no">788</span><span id="line.788">        instance.setInventoryMode(template.getInventoryMode());</span>
+<span class="source-line-no">789</span><span id="line.789">        instance.setCartState(template.getCartState());</span>
+<span class="source-line-no">790</span><span id="line.790">        instance.setBillingAddress(template.getBillingAddress());</span>
+<span class="source-line-no">791</span><span id="line.791">        instance.setShippingAddress(template.getShippingAddress());</span>
+<span class="source-line-no">792</span><span id="line.792">        instance.setShippingMode(template.getShippingMode());</span>
+<span class="source-line-no">793</span><span id="line.793">        instance.setShippingInfo(template.getShippingInfo());</span>
+<span class="source-line-no">794</span><span id="line.794">        instance.setShipping(template.getShipping());</span>
+<span class="source-line-no">795</span><span id="line.795">        instance.setShippingRateInput(template.getShippingRateInput());</span>
+<span class="source-line-no">796</span><span id="line.796">        instance.setItemShippingAddresses(template.getItemShippingAddresses());</span>
+<span class="source-line-no">797</span><span id="line.797">        instance.setDiscountCodes(template.getDiscountCodes());</span>
+<span class="source-line-no">798</span><span id="line.798">        instance.setDirectDiscounts(template.getDirectDiscounts());</span>
+<span class="source-line-no">799</span><span id="line.799">        instance.setRefusedGifts(template.getRefusedGifts());</span>
+<span class="source-line-no">800</span><span id="line.800">        instance.setPaymentInfo(template.getPaymentInfo());</span>
+<span class="source-line-no">801</span><span id="line.801">        instance.setCountry(template.getCountry());</span>
+<span class="source-line-no">802</span><span id="line.802">        instance.setLocale(template.getLocale());</span>
+<span class="source-line-no">803</span><span id="line.803">        instance.setOrigin(template.getOrigin());</span>
+<span class="source-line-no">804</span><span id="line.804">        instance.setCustom(template.getCustom());</span>
+<span class="source-line-no">805</span><span id="line.805">        instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());</span>
+<span class="source-line-no">806</span><span id="line.806">        instance.setLastModifiedBy(template.getLastModifiedBy());</span>
+<span class="source-line-no">807</span><span id="line.807">        instance.setCreatedBy(template.getCreatedBy());</span>
+<span class="source-line-no">808</span><span id="line.808">        return instance;</span>
+<span class="source-line-no">809</span><span id="line.809">    }</span>
+<span class="source-line-no">810</span><span id="line.810"></span>
+<span class="source-line-no">811</span><span id="line.811">    /**</span>
+<span class="source-line-no">812</span><span id="line.812">     * factory method to create a deep copy of Cart</span>
+<span class="source-line-no">813</span><span id="line.813">     * @param template instance to be copied</span>
+<span class="source-line-no">814</span><span id="line.814">     * @return copy instance</span>
+<span class="source-line-no">815</span><span id="line.815">     */</span>
+<span class="source-line-no">816</span><span id="line.816">    @Nullable</span>
+<span class="source-line-no">817</span><span id="line.817">    public static Cart deepCopy(@Nullable final Cart template) {</span>
+<span class="source-line-no">818</span><span id="line.818">        if (template == null) {</span>
+<span class="source-line-no">819</span><span id="line.819">            return null;</span>
+<span class="source-line-no">820</span><span id="line.820">        }</span>
+<span class="source-line-no">821</span><span id="line.821">        CartImpl instance = new CartImpl();</span>
+<span class="source-line-no">822</span><span id="line.822">        instance.setId(template.getId());</span>
+<span class="source-line-no">823</span><span id="line.823">        instance.setVersion(template.getVersion());</span>
+<span class="source-line-no">824</span><span id="line.824">        instance.setCreatedAt(template.getCreatedAt());</span>
+<span class="source-line-no">825</span><span id="line.825">        instance.setLastModifiedAt(template.getLastModifiedAt());</span>
+<span class="source-line-no">826</span><span id="line.826">        instance.setKey(template.getKey());</span>
+<span class="source-line-no">827</span><span id="line.827">        instance.setCustomerId(template.getCustomerId());</span>
+<span class="source-line-no">828</span><span id="line.828">        instance.setCustomerEmail(template.getCustomerEmail());</span>
+<span class="source-line-no">829</span><span id="line.829">        instance.setCustomerGroup(</span>
+<span class="source-line-no">830</span><span id="line.830">            com.commercetools.api.models.customer_group.CustomerGroupReference.deepCopy(template.getCustomerGroup()));</span>
+<span class="source-line-no">831</span><span id="line.831">        instance.setAnonymousId(template.getAnonymousId());</span>
+<span class="source-line-no">832</span><span id="line.832">        instance.setBusinessUnit(</span>
+<span class="source-line-no">833</span><span id="line.833">            com.commercetools.api.models.business_unit.BusinessUnitKeyReference.deepCopy(template.getBusinessUnit()));</span>
+<span class="source-line-no">834</span><span id="line.834">        instance.setStore(com.commercetools.api.models.store.StoreKeyReference.deepCopy(template.getStore()));</span>
+<span class="source-line-no">835</span><span id="line.835">        instance.setLineItems(Optional.ofNullable(template.getLineItems())</span>
+<span class="source-line-no">836</span><span id="line.836">                .map(t -&gt; t.stream()</span>
+<span class="source-line-no">837</span><span id="line.837">                        .map(com.commercetools.api.models.cart.LineItem::deepCopy)</span>
+<span class="source-line-no">838</span><span id="line.838">                        .collect(Collectors.toList()))</span>
+<span class="source-line-no">839</span><span id="line.839">                .orElse(null));</span>
+<span class="source-line-no">840</span><span id="line.840">        instance.setCustomLineItems(Optional.ofNullable(template.getCustomLineItems())</span>
+<span class="source-line-no">841</span><span id="line.841">                .map(t -&gt; t.stream()</span>
+<span class="source-line-no">842</span><span id="line.842">                        .map(com.commercetools.api.models.cart.CustomLineItem::deepCopy)</span>
+<span class="source-line-no">843</span><span id="line.843">                        .collect(Collectors.toList()))</span>
+<span class="source-line-no">844</span><span id="line.844">                .orElse(null));</span>
+<span class="source-line-no">845</span><span id="line.845">        instance.setTotalLineItemQuantity(template.getTotalLineItemQuantity());</span>
+<span class="source-line-no">846</span><span id="line.846">        instance.setTotalPrice(</span>
+<span class="source-line-no">847</span><span id="line.847">            com.commercetools.api.models.common.CentPrecisionMoney.deepCopy(template.getTotalPrice()));</span>
+<span class="source-line-no">848</span><span id="line.848">        instance.setTaxedPrice(com.commercetools.api.models.cart.TaxedPrice.deepCopy(template.getTaxedPrice()));</span>
+<span class="source-line-no">849</span><span id="line.849">        instance.setTaxedShippingPrice(</span>
+<span class="source-line-no">850</span><span id="line.850">            com.commercetools.api.models.cart.TaxedPrice.deepCopy(template.getTaxedShippingPrice()));</span>
+<span class="source-line-no">851</span><span id="line.851">        instance.setTaxMode(template.getTaxMode());</span>
+<span class="source-line-no">852</span><span id="line.852">        instance.setTaxRoundingMode(template.getTaxRoundingMode());</span>
+<span class="source-line-no">853</span><span id="line.853">        instance.setTaxCalculationMode(template.getTaxCalculationMode());</span>
+<span class="source-line-no">854</span><span id="line.854">        instance.setInventoryMode(template.getInventoryMode());</span>
+<span class="source-line-no">855</span><span id="line.855">        instance.setCartState(template.getCartState());</span>
+<span class="source-line-no">856</span><span id="line.856">        instance.setBillingAddress(com.commercetools.api.models.common.Address.deepCopy(template.getBillingAddress()));</span>
+<span class="source-line-no">857</span><span id="line.857">        instance.setShippingAddress(</span>
+<span class="source-line-no">858</span><span id="line.858">            com.commercetools.api.models.common.Address.deepCopy(template.getShippingAddress()));</span>
+<span class="source-line-no">859</span><span id="line.859">        instance.setShippingMode(template.getShippingMode());</span>
+<span class="source-line-no">860</span><span id="line.860">        instance.setShippingInfo(com.commercetools.api.models.cart.ShippingInfo.deepCopy(template.getShippingInfo()));</span>
+<span class="source-line-no">861</span><span id="line.861">        instance.setShipping(Optional.ofNullable(template.getShipping())</span>
+<span class="source-line-no">862</span><span id="line.862">                .map(t -&gt; t.stream()</span>
+<span class="source-line-no">863</span><span id="line.863">                        .map(com.commercetools.api.models.cart.Shipping::deepCopy)</span>
+<span class="source-line-no">864</span><span id="line.864">                        .collect(Collectors.toList()))</span>
+<span class="source-line-no">865</span><span id="line.865">                .orElse(null));</span>
+<span class="source-line-no">866</span><span id="line.866">        instance.setShippingRateInput(</span>
+<span class="source-line-no">867</span><span id="line.867">            com.commercetools.api.models.cart.ShippingRateInput.deepCopy(template.getShippingRateInput()));</span>
+<span class="source-line-no">868</span><span id="line.868">        instance.setItemShippingAddresses(Optional.ofNullable(template.getItemShippingAddresses())</span>
+<span class="source-line-no">869</span><span id="line.869">                .map(t -&gt; t.stream()</span>
+<span class="source-line-no">870</span><span id="line.870">                        .map(com.commercetools.api.models.common.Address::deepCopy)</span>
+<span class="source-line-no">871</span><span id="line.871">                        .collect(Collectors.toList()))</span>
+<span class="source-line-no">872</span><span id="line.872">                .orElse(null));</span>
+<span class="source-line-no">873</span><span id="line.873">        instance.setDiscountCodes(Optional.ofNullable(template.getDiscountCodes())</span>
+<span class="source-line-no">874</span><span id="line.874">                .map(t -&gt; t.stream()</span>
+<span class="source-line-no">875</span><span id="line.875">                        .map(com.commercetools.api.models.cart.DiscountCodeInfo::deepCopy)</span>
+<span class="source-line-no">876</span><span id="line.876">                        .collect(Collectors.toList()))</span>
+<span class="source-line-no">877</span><span id="line.877">                .orElse(null));</span>
+<span class="source-line-no">878</span><span id="line.878">        instance.setDirectDiscounts(Optional.ofNullable(template.getDirectDiscounts())</span>
+<span class="source-line-no">879</span><span id="line.879">                .map(t -&gt; t.stream()</span>
+<span class="source-line-no">880</span><span id="line.880">                        .map(com.commercetools.api.models.cart.DirectDiscount::deepCopy)</span>
+<span class="source-line-no">881</span><span id="line.881">                        .collect(Collectors.toList()))</span>
+<span class="source-line-no">882</span><span id="line.882">                .orElse(null));</span>
+<span class="source-line-no">883</span><span id="line.883">        instance.setRefusedGifts(Optional.ofNullable(template.getRefusedGifts())</span>
+<span class="source-line-no">884</span><span id="line.884">                .map(t -&gt; t.stream()</span>
+<span class="source-line-no">885</span><span id="line.885">                        .map(com.commercetools.api.models.cart_discount.CartDiscountReference::deepCopy)</span>
+<span class="source-line-no">886</span><span id="line.886">                        .collect(Collectors.toList()))</span>
+<span class="source-line-no">887</span><span id="line.887">                .orElse(null));</span>
+<span class="source-line-no">888</span><span id="line.888">        instance.setPaymentInfo(com.commercetools.api.models.order.PaymentInfo.deepCopy(template.getPaymentInfo()));</span>
+<span class="source-line-no">889</span><span id="line.889">        instance.setCountry(template.getCountry());</span>
+<span class="source-line-no">890</span><span id="line.890">        instance.setLocale(template.getLocale());</span>
+<span class="source-line-no">891</span><span id="line.891">        instance.setOrigin(template.getOrigin());</span>
+<span class="source-line-no">892</span><span id="line.892">        instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));</span>
+<span class="source-line-no">893</span><span id="line.893">        instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());</span>
+<span class="source-line-no">894</span><span id="line.894">        instance.setLastModifiedBy(</span>
+<span class="source-line-no">895</span><span id="line.895">            com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));</span>
+<span class="source-line-no">896</span><span id="line.896">        instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));</span>
+<span class="source-line-no">897</span><span id="line.897">        return instance;</span>
+<span class="source-line-no">898</span><span id="line.898">    }</span>
+<span class="source-line-no">899</span><span id="line.899"></span>
+<span class="source-line-no">900</span><span id="line.900">    /**</span>
+<span class="source-line-no">901</span><span id="line.901">     * builder factory method for Cart</span>
+<span class="source-line-no">902</span><span id="line.902">     * @return builder</span>
+<span class="source-line-no">903</span><span id="line.903">     */</span>
+<span class="source-line-no">904</span><span id="line.904">    public static CartBuilder builder() {</span>
+<span class="source-line-no">905</span><span id="line.905">        return CartBuilder.of();</span>
+<span class="source-line-no">906</span><span id="line.906">    }</span>
+<span class="source-line-no">907</span><span id="line.907"></span>
+<span class="source-line-no">908</span><span id="line.908">    /**</span>
+<span class="source-line-no">909</span><span id="line.909">     * create builder for Cart instance</span>
+<span class="source-line-no">910</span><span id="line.910">     * @param template instance with prefilled values for the builder</span>
+<span class="source-line-no">911</span><span id="line.911">     * @return builder</span>
+<span class="source-line-no">912</span><span id="line.912">     */</span>
+<span class="source-line-no">913</span><span id="line.913">    public static CartBuilder builder(final Cart template) {</span>
+<span class="source-line-no">914</span><span id="line.914">        return CartBuilder.of(template);</span>
+<span class="source-line-no">915</span><span id="line.915">    }</span>
+<span class="source-line-no">916</span><span id="line.916"></span>
+<span class="source-line-no">917</span><span id="line.917">    /**</span>
+<span class="source-line-no">918</span><span id="line.918">     * accessor map function</span>
+<span class="source-line-no">919</span><span id="line.919">     * @param &lt;T&gt; mapped type</span>
+<span class="source-line-no">920</span><span id="line.920">     * @param helper function to map the object</span>
+<span class="source-line-no">921</span><span id="line.921">     * @return mapped value</span>
+<span class="source-line-no">922</span><span id="line.922">     */</span>
+<span class="source-line-no">923</span><span id="line.923">    default &lt;T&gt; T withCart(Function&lt;Cart, T&gt; helper) {</span>
+<span class="source-line-no">924</span><span id="line.924">        return helper.apply(this);</span>
+<span class="source-line-no">925</span><span id="line.925">    }</span>
+<span class="source-line-no">926</span><span id="line.926"></span>
+<span class="source-line-no">927</span><span id="line.927">    /**</span>
+<span class="source-line-no">928</span><span id="line.928">     * gives a TypeReference for usage with Jackson DataBind</span>
+<span class="source-line-no">929</span><span id="line.929">     * @return TypeReference</span>
+<span class="source-line-no">930</span><span id="line.930">     */</span>
+<span class="source-line-no">931</span><span id="line.931">    public static com.fasterxml.jackson.core.type.TypeReference&lt;Cart&gt; typeReference() {</span>
+<span class="source-line-no">932</span><span id="line.932">        return new com.fasterxml.jackson.core.type.TypeReference&lt;Cart&gt;() {</span>
+<span class="source-line-no">933</span><span id="line.933">            @Override</span>
+<span class="source-line-no">934</span><span id="line.934">            public String toString() {</span>
+<span class="source-line-no">935</span><span id="line.935">                return "TypeReference&lt;Cart&gt;";</span>
+<span class="source-line-no">936</span><span id="line.936">            }</span>
+<span class="source-line-no">937</span><span id="line.937">        };</span>
+<span class="source-line-no">938</span><span id="line.938">    }</span>
+<span class="source-line-no">939</span><span id="line.939">}</span>
 
 
 

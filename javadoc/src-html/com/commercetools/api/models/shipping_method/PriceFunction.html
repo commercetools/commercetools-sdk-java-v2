@@ -18,123 +18,140 @@
 <span class="source-line-no">005</span><span id="line.5">import java.util.*;</span>
 <span class="source-line-no">006</span><span id="line.6">import java.util.function.Function;</span>
 <span class="source-line-no">007</span><span id="line.7"></span>
-<span class="source-line-no">008</span><span id="line.8">import javax.validation.constraints.NotNull;</span>
-<span class="source-line-no">009</span><span id="line.9"></span>
-<span class="source-line-no">010</span><span id="line.10">import com.fasterxml.jackson.annotation.*;</span>
-<span class="source-line-no">011</span><span id="line.11">import com.fasterxml.jackson.databind.annotation.*;</span>
-<span class="source-line-no">012</span><span id="line.12"></span>
-<span class="source-line-no">013</span><span id="line.13">import io.vrap.rmf.base.client.utils.Generated;</span>
-<span class="source-line-no">014</span><span id="line.14"></span>
-<span class="source-line-no">015</span><span id="line.15">/**</span>
-<span class="source-line-no">016</span><span id="line.16"> * PriceFunction</span>
-<span class="source-line-no">017</span><span id="line.17"> *</span>
-<span class="source-line-no">018</span><span id="line.18"> * &lt;hr&gt;</span>
-<span class="source-line-no">019</span><span id="line.19"> * Example to create an instance using the builder pattern</span>
-<span class="source-line-no">020</span><span id="line.20"> * &lt;div class=code-example&gt;</span>
-<span class="source-line-no">021</span><span id="line.21"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
-<span class="source-line-no">022</span><span id="line.22"> *     PriceFunction priceFunction = PriceFunction.builder()</span>
-<span class="source-line-no">023</span><span id="line.23"> *             .currencyCode("{currencyCode}")</span>
-<span class="source-line-no">024</span><span id="line.24"> *             .function("{function}")</span>
-<span class="source-line-no">025</span><span id="line.25"> *             .build()</span>
-<span class="source-line-no">026</span><span id="line.26"> * &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">027</span><span id="line.27"> * &lt;/div&gt;</span>
-<span class="source-line-no">028</span><span id="line.28"> */</span>
-<span class="source-line-no">029</span><span id="line.29">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">030</span><span id="line.30">@JsonDeserialize(as = PriceFunctionImpl.class)</span>
-<span class="source-line-no">031</span><span id="line.31">public interface PriceFunction {</span>
-<span class="source-line-no">032</span><span id="line.32"></span>
-<span class="source-line-no">033</span><span id="line.33">    /**</span>
-<span class="source-line-no">034</span><span id="line.34">     *  &lt;p&gt;Currency code compliant to ISO 4217.&lt;/p&gt;</span>
-<span class="source-line-no">035</span><span id="line.35">     * @return currencyCode</span>
-<span class="source-line-no">036</span><span id="line.36">     */</span>
-<span class="source-line-no">037</span><span id="line.37">    @NotNull</span>
-<span class="source-line-no">038</span><span id="line.38">    @JsonProperty("currencyCode")</span>
-<span class="source-line-no">039</span><span id="line.39">    public String getCurrencyCode();</span>
-<span class="source-line-no">040</span><span id="line.40"></span>
-<span class="source-line-no">041</span><span id="line.41">    /**</span>
-<span class="source-line-no">042</span><span id="line.42">     *  &lt;p&gt;To calculate a Price based on the score, use &lt;code&gt;+&lt;/code&gt;, &lt;code&gt;-&lt;/code&gt;, &lt;code&gt;*&lt;/code&gt; and parentheses. The score is inserted with &lt;code&gt;x&lt;/code&gt;. The function returns the cent amount.&lt;/p&gt;</span>
-<span class="source-line-no">043</span><span id="line.43">     *  &lt;p&gt;For example, to charge $1.99 for a score of &lt;code&gt;1&lt;/code&gt;, $3.99 for a score of &lt;code&gt;2&lt;/code&gt;, $5.99 for a score of &lt;code&gt;3&lt;/code&gt; and onwards, the function is: &lt;code&gt;(200 * x) - 1)&lt;/code&gt;. To charge $4.50, $6.00, and $7.50 for express shipping, the function is: &lt;code&gt;(150 * x) + 300&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">044</span><span id="line.44">     * @return function</span>
-<span class="source-line-no">045</span><span id="line.45">     */</span>
-<span class="source-line-no">046</span><span id="line.46">    @NotNull</span>
-<span class="source-line-no">047</span><span id="line.47">    @JsonProperty("function")</span>
-<span class="source-line-no">048</span><span id="line.48">    public String getFunction();</span>
-<span class="source-line-no">049</span><span id="line.49"></span>
-<span class="source-line-no">050</span><span id="line.50">    /**</span>
-<span class="source-line-no">051</span><span id="line.51">     *  &lt;p&gt;Currency code compliant to ISO 4217.&lt;/p&gt;</span>
-<span class="source-line-no">052</span><span id="line.52">     * @param currencyCode value to be set</span>
-<span class="source-line-no">053</span><span id="line.53">     */</span>
-<span class="source-line-no">054</span><span id="line.54"></span>
-<span class="source-line-no">055</span><span id="line.55">    public void setCurrencyCode(final String currencyCode);</span>
-<span class="source-line-no">056</span><span id="line.56"></span>
-<span class="source-line-no">057</span><span id="line.57">    /**</span>
-<span class="source-line-no">058</span><span id="line.58">     *  &lt;p&gt;To calculate a Price based on the score, use &lt;code&gt;+&lt;/code&gt;, &lt;code&gt;-&lt;/code&gt;, &lt;code&gt;*&lt;/code&gt; and parentheses. The score is inserted with &lt;code&gt;x&lt;/code&gt;. The function returns the cent amount.&lt;/p&gt;</span>
-<span class="source-line-no">059</span><span id="line.59">     *  &lt;p&gt;For example, to charge $1.99 for a score of &lt;code&gt;1&lt;/code&gt;, $3.99 for a score of &lt;code&gt;2&lt;/code&gt;, $5.99 for a score of &lt;code&gt;3&lt;/code&gt; and onwards, the function is: &lt;code&gt;(200 * x) - 1)&lt;/code&gt;. To charge $4.50, $6.00, and $7.50 for express shipping, the function is: &lt;code&gt;(150 * x) + 300&lt;/code&gt;.&lt;/p&gt;</span>
-<span class="source-line-no">060</span><span id="line.60">     * @param function value to be set</span>
-<span class="source-line-no">061</span><span id="line.61">     */</span>
-<span class="source-line-no">062</span><span id="line.62"></span>
-<span class="source-line-no">063</span><span id="line.63">    public void setFunction(final String function);</span>
-<span class="source-line-no">064</span><span id="line.64"></span>
-<span class="source-line-no">065</span><span id="line.65">    /**</span>
-<span class="source-line-no">066</span><span id="line.66">     * factory method</span>
-<span class="source-line-no">067</span><span id="line.67">     * @return instance of PriceFunction</span>
-<span class="source-line-no">068</span><span id="line.68">     */</span>
-<span class="source-line-no">069</span><span id="line.69">    public static PriceFunction of() {</span>
-<span class="source-line-no">070</span><span id="line.70">        return new PriceFunctionImpl();</span>
-<span class="source-line-no">071</span><span id="line.71">    }</span>
-<span class="source-line-no">072</span><span id="line.72"></span>
-<span class="source-line-no">073</span><span id="line.73">    /**</span>
-<span class="source-line-no">074</span><span id="line.74">     * factory method to copy an instance of PriceFunction</span>
-<span class="source-line-no">075</span><span id="line.75">     * @param template instance to be copied</span>
-<span class="source-line-no">076</span><span id="line.76">     * @return copy instance</span>
-<span class="source-line-no">077</span><span id="line.77">     */</span>
-<span class="source-line-no">078</span><span id="line.78">    public static PriceFunction of(final PriceFunction template) {</span>
-<span class="source-line-no">079</span><span id="line.79">        PriceFunctionImpl instance = new PriceFunctionImpl();</span>
-<span class="source-line-no">080</span><span id="line.80">        instance.setCurrencyCode(template.getCurrencyCode());</span>
-<span class="source-line-no">081</span><span id="line.81">        instance.setFunction(template.getFunction());</span>
-<span class="source-line-no">082</span><span id="line.82">        return instance;</span>
-<span class="source-line-no">083</span><span id="line.83">    }</span>
-<span class="source-line-no">084</span><span id="line.84"></span>
-<span class="source-line-no">085</span><span id="line.85">    /**</span>
-<span class="source-line-no">086</span><span id="line.86">     * builder factory method for PriceFunction</span>
-<span class="source-line-no">087</span><span id="line.87">     * @return builder</span>
-<span class="source-line-no">088</span><span id="line.88">     */</span>
-<span class="source-line-no">089</span><span id="line.89">    public static PriceFunctionBuilder builder() {</span>
-<span class="source-line-no">090</span><span id="line.90">        return PriceFunctionBuilder.of();</span>
-<span class="source-line-no">091</span><span id="line.91">    }</span>
-<span class="source-line-no">092</span><span id="line.92"></span>
-<span class="source-line-no">093</span><span id="line.93">    /**</span>
-<span class="source-line-no">094</span><span id="line.94">     * create builder for PriceFunction instance</span>
-<span class="source-line-no">095</span><span id="line.95">     * @param template instance with prefilled values for the builder</span>
-<span class="source-line-no">096</span><span id="line.96">     * @return builder</span>
-<span class="source-line-no">097</span><span id="line.97">     */</span>
-<span class="source-line-no">098</span><span id="line.98">    public static PriceFunctionBuilder builder(final PriceFunction template) {</span>
-<span class="source-line-no">099</span><span id="line.99">        return PriceFunctionBuilder.of(template);</span>
+<span class="source-line-no">008</span><span id="line.8">import javax.annotation.Nullable;</span>
+<span class="source-line-no">009</span><span id="line.9">import javax.validation.constraints.NotNull;</span>
+<span class="source-line-no">010</span><span id="line.10"></span>
+<span class="source-line-no">011</span><span id="line.11">import com.fasterxml.jackson.annotation.*;</span>
+<span class="source-line-no">012</span><span id="line.12">import com.fasterxml.jackson.databind.annotation.*;</span>
+<span class="source-line-no">013</span><span id="line.13"></span>
+<span class="source-line-no">014</span><span id="line.14">import io.vrap.rmf.base.client.utils.Generated;</span>
+<span class="source-line-no">015</span><span id="line.15"></span>
+<span class="source-line-no">016</span><span id="line.16">/**</span>
+<span class="source-line-no">017</span><span id="line.17"> * PriceFunction</span>
+<span class="source-line-no">018</span><span id="line.18"> *</span>
+<span class="source-line-no">019</span><span id="line.19"> * &lt;hr&gt;</span>
+<span class="source-line-no">020</span><span id="line.20"> * Example to create an instance using the builder pattern</span>
+<span class="source-line-no">021</span><span id="line.21"> * &lt;div class=code-example&gt;</span>
+<span class="source-line-no">022</span><span id="line.22"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
+<span class="source-line-no">023</span><span id="line.23"> *     PriceFunction priceFunction = PriceFunction.builder()</span>
+<span class="source-line-no">024</span><span id="line.24"> *             .currencyCode("{currencyCode}")</span>
+<span class="source-line-no">025</span><span id="line.25"> *             .function("{function}")</span>
+<span class="source-line-no">026</span><span id="line.26"> *             .build()</span>
+<span class="source-line-no">027</span><span id="line.27"> * &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">028</span><span id="line.28"> * &lt;/div&gt;</span>
+<span class="source-line-no">029</span><span id="line.29"> */</span>
+<span class="source-line-no">030</span><span id="line.30">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">031</span><span id="line.31">@JsonDeserialize(as = PriceFunctionImpl.class)</span>
+<span class="source-line-no">032</span><span id="line.32">public interface PriceFunction {</span>
+<span class="source-line-no">033</span><span id="line.33"></span>
+<span class="source-line-no">034</span><span id="line.34">    /**</span>
+<span class="source-line-no">035</span><span id="line.35">     *  &lt;p&gt;Currency code compliant to ISO 4217.&lt;/p&gt;</span>
+<span class="source-line-no">036</span><span id="line.36">     * @return currencyCode</span>
+<span class="source-line-no">037</span><span id="line.37">     */</span>
+<span class="source-line-no">038</span><span id="line.38">    @NotNull</span>
+<span class="source-line-no">039</span><span id="line.39">    @JsonProperty("currencyCode")</span>
+<span class="source-line-no">040</span><span id="line.40">    public String getCurrencyCode();</span>
+<span class="source-line-no">041</span><span id="line.41"></span>
+<span class="source-line-no">042</span><span id="line.42">    /**</span>
+<span class="source-line-no">043</span><span id="line.43">     *  &lt;p&gt;To calculate a Price based on the score, use &lt;code&gt;+&lt;/code&gt;, &lt;code&gt;-&lt;/code&gt;, &lt;code&gt;*&lt;/code&gt; and parentheses. The score is inserted with &lt;code&gt;x&lt;/code&gt;. The function returns the cent amount.&lt;/p&gt;</span>
+<span class="source-line-no">044</span><span id="line.44">     *  &lt;p&gt;For example, to charge $1.99 for a score of &lt;code&gt;1&lt;/code&gt;, $3.99 for a score of &lt;code&gt;2&lt;/code&gt;, $5.99 for a score of &lt;code&gt;3&lt;/code&gt; and onwards, the function is: &lt;code&gt;(200 * x) - 1)&lt;/code&gt;. To charge $4.50, $6.00, and $7.50 for express shipping, the function is: &lt;code&gt;(150 * x) + 300&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">045</span><span id="line.45">     * @return function</span>
+<span class="source-line-no">046</span><span id="line.46">     */</span>
+<span class="source-line-no">047</span><span id="line.47">    @NotNull</span>
+<span class="source-line-no">048</span><span id="line.48">    @JsonProperty("function")</span>
+<span class="source-line-no">049</span><span id="line.49">    public String getFunction();</span>
+<span class="source-line-no">050</span><span id="line.50"></span>
+<span class="source-line-no">051</span><span id="line.51">    /**</span>
+<span class="source-line-no">052</span><span id="line.52">     *  &lt;p&gt;Currency code compliant to ISO 4217.&lt;/p&gt;</span>
+<span class="source-line-no">053</span><span id="line.53">     * @param currencyCode value to be set</span>
+<span class="source-line-no">054</span><span id="line.54">     */</span>
+<span class="source-line-no">055</span><span id="line.55"></span>
+<span class="source-line-no">056</span><span id="line.56">    public void setCurrencyCode(final String currencyCode);</span>
+<span class="source-line-no">057</span><span id="line.57"></span>
+<span class="source-line-no">058</span><span id="line.58">    /**</span>
+<span class="source-line-no">059</span><span id="line.59">     *  &lt;p&gt;To calculate a Price based on the score, use &lt;code&gt;+&lt;/code&gt;, &lt;code&gt;-&lt;/code&gt;, &lt;code&gt;*&lt;/code&gt; and parentheses. The score is inserted with &lt;code&gt;x&lt;/code&gt;. The function returns the cent amount.&lt;/p&gt;</span>
+<span class="source-line-no">060</span><span id="line.60">     *  &lt;p&gt;For example, to charge $1.99 for a score of &lt;code&gt;1&lt;/code&gt;, $3.99 for a score of &lt;code&gt;2&lt;/code&gt;, $5.99 for a score of &lt;code&gt;3&lt;/code&gt; and onwards, the function is: &lt;code&gt;(200 * x) - 1)&lt;/code&gt;. To charge $4.50, $6.00, and $7.50 for express shipping, the function is: &lt;code&gt;(150 * x) + 300&lt;/code&gt;.&lt;/p&gt;</span>
+<span class="source-line-no">061</span><span id="line.61">     * @param function value to be set</span>
+<span class="source-line-no">062</span><span id="line.62">     */</span>
+<span class="source-line-no">063</span><span id="line.63"></span>
+<span class="source-line-no">064</span><span id="line.64">    public void setFunction(final String function);</span>
+<span class="source-line-no">065</span><span id="line.65"></span>
+<span class="source-line-no">066</span><span id="line.66">    /**</span>
+<span class="source-line-no">067</span><span id="line.67">     * factory method</span>
+<span class="source-line-no">068</span><span id="line.68">     * @return instance of PriceFunction</span>
+<span class="source-line-no">069</span><span id="line.69">     */</span>
+<span class="source-line-no">070</span><span id="line.70">    public static PriceFunction of() {</span>
+<span class="source-line-no">071</span><span id="line.71">        return new PriceFunctionImpl();</span>
+<span class="source-line-no">072</span><span id="line.72">    }</span>
+<span class="source-line-no">073</span><span id="line.73"></span>
+<span class="source-line-no">074</span><span id="line.74">    /**</span>
+<span class="source-line-no">075</span><span id="line.75">     * factory method to create a shallow copy PriceFunction</span>
+<span class="source-line-no">076</span><span id="line.76">     * @param template instance to be copied</span>
+<span class="source-line-no">077</span><span id="line.77">     * @return copy instance</span>
+<span class="source-line-no">078</span><span id="line.78">     */</span>
+<span class="source-line-no">079</span><span id="line.79">    public static PriceFunction of(final PriceFunction template) {</span>
+<span class="source-line-no">080</span><span id="line.80">        PriceFunctionImpl instance = new PriceFunctionImpl();</span>
+<span class="source-line-no">081</span><span id="line.81">        instance.setCurrencyCode(template.getCurrencyCode());</span>
+<span class="source-line-no">082</span><span id="line.82">        instance.setFunction(template.getFunction());</span>
+<span class="source-line-no">083</span><span id="line.83">        return instance;</span>
+<span class="source-line-no">084</span><span id="line.84">    }</span>
+<span class="source-line-no">085</span><span id="line.85"></span>
+<span class="source-line-no">086</span><span id="line.86">    /**</span>
+<span class="source-line-no">087</span><span id="line.87">     * factory method to create a deep copy of PriceFunction</span>
+<span class="source-line-no">088</span><span id="line.88">     * @param template instance to be copied</span>
+<span class="source-line-no">089</span><span id="line.89">     * @return copy instance</span>
+<span class="source-line-no">090</span><span id="line.90">     */</span>
+<span class="source-line-no">091</span><span id="line.91">    @Nullable</span>
+<span class="source-line-no">092</span><span id="line.92">    public static PriceFunction deepCopy(@Nullable final PriceFunction template) {</span>
+<span class="source-line-no">093</span><span id="line.93">        if (template == null) {</span>
+<span class="source-line-no">094</span><span id="line.94">            return null;</span>
+<span class="source-line-no">095</span><span id="line.95">        }</span>
+<span class="source-line-no">096</span><span id="line.96">        PriceFunctionImpl instance = new PriceFunctionImpl();</span>
+<span class="source-line-no">097</span><span id="line.97">        instance.setCurrencyCode(template.getCurrencyCode());</span>
+<span class="source-line-no">098</span><span id="line.98">        instance.setFunction(template.getFunction());</span>
+<span class="source-line-no">099</span><span id="line.99">        return instance;</span>
 <span class="source-line-no">100</span><span id="line.100">    }</span>
 <span class="source-line-no">101</span><span id="line.101"></span>
 <span class="source-line-no">102</span><span id="line.102">    /**</span>
-<span class="source-line-no">103</span><span id="line.103">     * accessor map function</span>
-<span class="source-line-no">104</span><span id="line.104">     * @param &lt;T&gt; mapped type</span>
-<span class="source-line-no">105</span><span id="line.105">     * @param helper function to map the object</span>
-<span class="source-line-no">106</span><span id="line.106">     * @return mapped value</span>
-<span class="source-line-no">107</span><span id="line.107">     */</span>
-<span class="source-line-no">108</span><span id="line.108">    default &lt;T&gt; T withPriceFunction(Function&lt;PriceFunction, T&gt; helper) {</span>
-<span class="source-line-no">109</span><span id="line.109">        return helper.apply(this);</span>
-<span class="source-line-no">110</span><span id="line.110">    }</span>
-<span class="source-line-no">111</span><span id="line.111"></span>
-<span class="source-line-no">112</span><span id="line.112">    /**</span>
-<span class="source-line-no">113</span><span id="line.113">     * gives a TypeReference for usage with Jackson DataBind</span>
-<span class="source-line-no">114</span><span id="line.114">     * @return TypeReference</span>
-<span class="source-line-no">115</span><span id="line.115">     */</span>
-<span class="source-line-no">116</span><span id="line.116">    public static com.fasterxml.jackson.core.type.TypeReference&lt;PriceFunction&gt; typeReference() {</span>
-<span class="source-line-no">117</span><span id="line.117">        return new com.fasterxml.jackson.core.type.TypeReference&lt;PriceFunction&gt;() {</span>
-<span class="source-line-no">118</span><span id="line.118">            @Override</span>
-<span class="source-line-no">119</span><span id="line.119">            public String toString() {</span>
-<span class="source-line-no">120</span><span id="line.120">                return "TypeReference&lt;PriceFunction&gt;";</span>
-<span class="source-line-no">121</span><span id="line.121">            }</span>
-<span class="source-line-no">122</span><span id="line.122">        };</span>
-<span class="source-line-no">123</span><span id="line.123">    }</span>
-<span class="source-line-no">124</span><span id="line.124">}</span>
+<span class="source-line-no">103</span><span id="line.103">     * builder factory method for PriceFunction</span>
+<span class="source-line-no">104</span><span id="line.104">     * @return builder</span>
+<span class="source-line-no">105</span><span id="line.105">     */</span>
+<span class="source-line-no">106</span><span id="line.106">    public static PriceFunctionBuilder builder() {</span>
+<span class="source-line-no">107</span><span id="line.107">        return PriceFunctionBuilder.of();</span>
+<span class="source-line-no">108</span><span id="line.108">    }</span>
+<span class="source-line-no">109</span><span id="line.109"></span>
+<span class="source-line-no">110</span><span id="line.110">    /**</span>
+<span class="source-line-no">111</span><span id="line.111">     * create builder for PriceFunction instance</span>
+<span class="source-line-no">112</span><span id="line.112">     * @param template instance with prefilled values for the builder</span>
+<span class="source-line-no">113</span><span id="line.113">     * @return builder</span>
+<span class="source-line-no">114</span><span id="line.114">     */</span>
+<span class="source-line-no">115</span><span id="line.115">    public static PriceFunctionBuilder builder(final PriceFunction template) {</span>
+<span class="source-line-no">116</span><span id="line.116">        return PriceFunctionBuilder.of(template);</span>
+<span class="source-line-no">117</span><span id="line.117">    }</span>
+<span class="source-line-no">118</span><span id="line.118"></span>
+<span class="source-line-no">119</span><span id="line.119">    /**</span>
+<span class="source-line-no">120</span><span id="line.120">     * accessor map function</span>
+<span class="source-line-no">121</span><span id="line.121">     * @param &lt;T&gt; mapped type</span>
+<span class="source-line-no">122</span><span id="line.122">     * @param helper function to map the object</span>
+<span class="source-line-no">123</span><span id="line.123">     * @return mapped value</span>
+<span class="source-line-no">124</span><span id="line.124">     */</span>
+<span class="source-line-no">125</span><span id="line.125">    default &lt;T&gt; T withPriceFunction(Function&lt;PriceFunction, T&gt; helper) {</span>
+<span class="source-line-no">126</span><span id="line.126">        return helper.apply(this);</span>
+<span class="source-line-no">127</span><span id="line.127">    }</span>
+<span class="source-line-no">128</span><span id="line.128"></span>
+<span class="source-line-no">129</span><span id="line.129">    /**</span>
+<span class="source-line-no">130</span><span id="line.130">     * gives a TypeReference for usage with Jackson DataBind</span>
+<span class="source-line-no">131</span><span id="line.131">     * @return TypeReference</span>
+<span class="source-line-no">132</span><span id="line.132">     */</span>
+<span class="source-line-no">133</span><span id="line.133">    public static com.fasterxml.jackson.core.type.TypeReference&lt;PriceFunction&gt; typeReference() {</span>
+<span class="source-line-no">134</span><span id="line.134">        return new com.fasterxml.jackson.core.type.TypeReference&lt;PriceFunction&gt;() {</span>
+<span class="source-line-no">135</span><span id="line.135">            @Override</span>
+<span class="source-line-no">136</span><span id="line.136">            public String toString() {</span>
+<span class="source-line-no">137</span><span id="line.137">                return "TypeReference&lt;PriceFunction&gt;";</span>
+<span class="source-line-no">138</span><span id="line.138">            }</span>
+<span class="source-line-no">139</span><span id="line.139">        };</span>
+<span class="source-line-no">140</span><span id="line.140">    }</span>
+<span class="source-line-no">141</span><span id="line.141">}</span>
 
 
 

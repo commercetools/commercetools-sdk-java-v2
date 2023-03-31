@@ -460,13 +460,13 @@ public interface BaseAddress extends com.commercetools.api.models.WithKey, BaseA
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.common.AddressDraft) {
-            return com.commercetools.api.models.common.AddressDraft
-                    .deepCopy((com.commercetools.api.models.common.AddressDraft) template);
-        }
         if (template instanceof com.commercetools.api.models.common.Address) {
             return com.commercetools.api.models.common.Address
                     .deepCopy((com.commercetools.api.models.common.Address) template);
+        }
+        if (template instanceof com.commercetools.api.models.common.AddressDraft) {
+            return com.commercetools.api.models.common.AddressDraft
+                    .deepCopy((com.commercetools.api.models.common.AddressDraft) template);
         }
         BaseAddressImpl instance = new BaseAddressImpl();
         instance.setId(template.getId());

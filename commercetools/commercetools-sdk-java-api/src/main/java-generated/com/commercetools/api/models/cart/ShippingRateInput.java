@@ -53,13 +53,13 @@ public interface ShippingRateInput {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.cart.ClassificationShippingRateInput) {
-            return com.commercetools.api.models.cart.ClassificationShippingRateInput
-                    .deepCopy((com.commercetools.api.models.cart.ClassificationShippingRateInput) template);
-        }
         if (template instanceof com.commercetools.api.models.cart.ScoreShippingRateInput) {
             return com.commercetools.api.models.cart.ScoreShippingRateInput
                     .deepCopy((com.commercetools.api.models.cart.ScoreShippingRateInput) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.ClassificationShippingRateInput) {
+            return com.commercetools.api.models.cart.ClassificationShippingRateInput
+                    .deepCopy((com.commercetools.api.models.cart.ClassificationShippingRateInput) template);
         }
         ShippingRateInputImpl instance = new ShippingRateInputImpl();
         return instance;

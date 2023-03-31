@@ -52,13 +52,13 @@ public interface ProductSelectionType {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.product_selection.IndividualProductSelectionType) {
-            return com.commercetools.api.models.product_selection.IndividualProductSelectionType
-                    .deepCopy((com.commercetools.api.models.product_selection.IndividualProductSelectionType) template);
-        }
         if (template instanceof com.commercetools.api.models.product_selection.IndividualExclusionProductSelectionType) {
             return com.commercetools.api.models.product_selection.IndividualExclusionProductSelectionType.deepCopy(
                 (com.commercetools.api.models.product_selection.IndividualExclusionProductSelectionType) template);
+        }
+        if (template instanceof com.commercetools.api.models.product_selection.IndividualProductSelectionType) {
+            return com.commercetools.api.models.product_selection.IndividualProductSelectionType
+                    .deepCopy((com.commercetools.api.models.product_selection.IndividualProductSelectionType) template);
         }
         ProductSelectionTypeImpl instance = new ProductSelectionTypeImpl();
         return instance;

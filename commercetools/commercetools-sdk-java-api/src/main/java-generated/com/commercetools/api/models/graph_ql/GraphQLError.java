@@ -10,6 +10,7 @@ import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.api.models.error.GraphQLErrorObject;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -25,7 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     GraphQLError graphQLError = GraphQLError.builder()
  *             .message("{message}")
  *             .plusLocations(locationsBuilder -> locationsBuilder)
- *             .plusPath(pathBuilder -> pathBuilder)
+ *             .extensions(extensionsBuilder -> extensionsBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -55,9 +56,18 @@ public interface GraphQLError {
      *
      * @return path
      */
-    @NotNull
+
     @JsonProperty("path")
     public List<Object> getPath();
+
+    /**
+     *  <p>Represents a single error.</p>
+     * @return extensions
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("extensions")
+    public GraphQLErrorObject getExtensions();
 
     /**
      * set message
@@ -97,6 +107,13 @@ public interface GraphQLError {
     public void setPath(final List<Object> path);
 
     /**
+     *  <p>Represents a single error.</p>
+     * @param extensions value to be set
+     */
+
+    public void setExtensions(final GraphQLErrorObject extensions);
+
+    /**
      * factory method
      * @return instance of GraphQLError
      */
@@ -114,6 +131,7 @@ public interface GraphQLError {
         instance.setMessage(template.getMessage());
         instance.setLocations(template.getLocations());
         instance.setPath(template.getPath());
+        instance.setExtensions(template.getExtensions());
         return instance;
     }
 
@@ -135,6 +153,8 @@ public interface GraphQLError {
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setPath(Optional.ofNullable(template.getPath()).map(ArrayList::new).orElse(null));
+        instance.setExtensions(
+            com.commercetools.api.models.error.GraphQLErrorObject.deepCopy(template.getExtensions()));
         return instance;
     }
 

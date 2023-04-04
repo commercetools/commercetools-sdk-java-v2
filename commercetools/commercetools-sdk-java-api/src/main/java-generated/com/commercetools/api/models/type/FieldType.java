@@ -61,53 +61,53 @@ public interface FieldType {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.type.CustomFieldTimeType) {
-            return com.commercetools.api.models.type.CustomFieldTimeType
-                    .deepCopy((com.commercetools.api.models.type.CustomFieldTimeType) template);
-        }
-        if (template instanceof com.commercetools.api.models.type.CustomFieldDateTimeType) {
-            return com.commercetools.api.models.type.CustomFieldDateTimeType
-                    .deepCopy((com.commercetools.api.models.type.CustomFieldDateTimeType) template);
-        }
-        if (template instanceof com.commercetools.api.models.type.CustomFieldMoneyType) {
-            return com.commercetools.api.models.type.CustomFieldMoneyType
-                    .deepCopy((com.commercetools.api.models.type.CustomFieldMoneyType) template);
-        }
-        if (template instanceof com.commercetools.api.models.type.CustomFieldDateType) {
-            return com.commercetools.api.models.type.CustomFieldDateType
-                    .deepCopy((com.commercetools.api.models.type.CustomFieldDateType) template);
-        }
-        if (template instanceof com.commercetools.api.models.type.CustomFieldSetType) {
-            return com.commercetools.api.models.type.CustomFieldSetType
-                    .deepCopy((com.commercetools.api.models.type.CustomFieldSetType) template);
+        if (template instanceof com.commercetools.api.models.type.CustomFieldReferenceType) {
+            return com.commercetools.api.models.type.CustomFieldReferenceType
+                    .deepCopy((com.commercetools.api.models.type.CustomFieldReferenceType) template);
         }
         if (template instanceof com.commercetools.api.models.type.CustomFieldStringType) {
             return com.commercetools.api.models.type.CustomFieldStringType
                     .deepCopy((com.commercetools.api.models.type.CustomFieldStringType) template);
         }
-        if (template instanceof com.commercetools.api.models.type.CustomFieldLocalizedStringType) {
-            return com.commercetools.api.models.type.CustomFieldLocalizedStringType
-                    .deepCopy((com.commercetools.api.models.type.CustomFieldLocalizedStringType) template);
-        }
         if (template instanceof com.commercetools.api.models.type.CustomFieldLocalizedEnumType) {
             return com.commercetools.api.models.type.CustomFieldLocalizedEnumType
                     .deepCopy((com.commercetools.api.models.type.CustomFieldLocalizedEnumType) template);
-        }
-        if (template instanceof com.commercetools.api.models.type.CustomFieldReferenceType) {
-            return com.commercetools.api.models.type.CustomFieldReferenceType
-                    .deepCopy((com.commercetools.api.models.type.CustomFieldReferenceType) template);
-        }
-        if (template instanceof com.commercetools.api.models.type.CustomFieldEnumType) {
-            return com.commercetools.api.models.type.CustomFieldEnumType
-                    .deepCopy((com.commercetools.api.models.type.CustomFieldEnumType) template);
         }
         if (template instanceof com.commercetools.api.models.type.CustomFieldBooleanType) {
             return com.commercetools.api.models.type.CustomFieldBooleanType
                     .deepCopy((com.commercetools.api.models.type.CustomFieldBooleanType) template);
         }
+        if (template instanceof com.commercetools.api.models.type.CustomFieldLocalizedStringType) {
+            return com.commercetools.api.models.type.CustomFieldLocalizedStringType
+                    .deepCopy((com.commercetools.api.models.type.CustomFieldLocalizedStringType) template);
+        }
+        if (template instanceof com.commercetools.api.models.type.CustomFieldDateTimeType) {
+            return com.commercetools.api.models.type.CustomFieldDateTimeType
+                    .deepCopy((com.commercetools.api.models.type.CustomFieldDateTimeType) template);
+        }
+        if (template instanceof com.commercetools.api.models.type.CustomFieldEnumType) {
+            return com.commercetools.api.models.type.CustomFieldEnumType
+                    .deepCopy((com.commercetools.api.models.type.CustomFieldEnumType) template);
+        }
+        if (template instanceof com.commercetools.api.models.type.CustomFieldSetType) {
+            return com.commercetools.api.models.type.CustomFieldSetType
+                    .deepCopy((com.commercetools.api.models.type.CustomFieldSetType) template);
+        }
         if (template instanceof com.commercetools.api.models.type.CustomFieldNumberType) {
             return com.commercetools.api.models.type.CustomFieldNumberType
                     .deepCopy((com.commercetools.api.models.type.CustomFieldNumberType) template);
+        }
+        if (template instanceof com.commercetools.api.models.type.CustomFieldDateType) {
+            return com.commercetools.api.models.type.CustomFieldDateType
+                    .deepCopy((com.commercetools.api.models.type.CustomFieldDateType) template);
+        }
+        if (template instanceof com.commercetools.api.models.type.CustomFieldMoneyType) {
+            return com.commercetools.api.models.type.CustomFieldMoneyType
+                    .deepCopy((com.commercetools.api.models.type.CustomFieldMoneyType) template);
+        }
+        if (template instanceof com.commercetools.api.models.type.CustomFieldTimeType) {
+            return com.commercetools.api.models.type.CustomFieldTimeType
+                    .deepCopy((com.commercetools.api.models.type.CustomFieldTimeType) template);
         }
         FieldTypeImpl instance = new FieldTypeImpl();
         return instance;

@@ -233,25 +233,25 @@ public interface ResourceIdentifier extends com.commercetools.api.models.WithKey
             return com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier
                     .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier) template);
         }
+        if (template instanceof com.commercetools.api.models.attribute_group.AttributeGroupResourceIdentifier) {
+            return com.commercetools.api.models.attribute_group.AttributeGroupResourceIdentifier
+                    .deepCopy((com.commercetools.api.models.attribute_group.AttributeGroupResourceIdentifier) template);
+        }
         if (template instanceof com.commercetools.api.models.category.CategoryResourceIdentifier) {
             return com.commercetools.api.models.category.CategoryResourceIdentifier
                     .deepCopy((com.commercetools.api.models.category.CategoryResourceIdentifier) template);
-        }
-        if (template instanceof com.commercetools.api.models.channel.ChannelResourceIdentifier) {
-            return com.commercetools.api.models.channel.ChannelResourceIdentifier
-                    .deepCopy((com.commercetools.api.models.channel.ChannelResourceIdentifier) template);
         }
         if (template instanceof com.commercetools.api.models.cart.CartResourceIdentifier) {
             return com.commercetools.api.models.cart.CartResourceIdentifier
                     .deepCopy((com.commercetools.api.models.cart.CartResourceIdentifier) template);
         }
+        if (template instanceof com.commercetools.api.models.channel.ChannelResourceIdentifier) {
+            return com.commercetools.api.models.channel.ChannelResourceIdentifier
+                    .deepCopy((com.commercetools.api.models.channel.ChannelResourceIdentifier) template);
+        }
         if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier) {
             return com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier
                     .deepCopy((com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier) template);
-        }
-        if (template instanceof com.commercetools.api.models.attribute_group.AttributeGroupResourceIdentifier) {
-            return com.commercetools.api.models.attribute_group.AttributeGroupResourceIdentifier
-                    .deepCopy((com.commercetools.api.models.attribute_group.AttributeGroupResourceIdentifier) template);
         }
         ResourceIdentifierImpl instance = new ResourceIdentifierImpl();
         instance.setId(template.getId());

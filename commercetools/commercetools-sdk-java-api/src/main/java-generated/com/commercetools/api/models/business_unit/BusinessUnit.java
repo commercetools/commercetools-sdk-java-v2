@@ -435,13 +435,13 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.business_unit.Company) {
-            return com.commercetools.api.models.business_unit.Company
-                    .deepCopy((com.commercetools.api.models.business_unit.Company) template);
-        }
         if (template instanceof com.commercetools.api.models.business_unit.Division) {
             return com.commercetools.api.models.business_unit.Division
                     .deepCopy((com.commercetools.api.models.business_unit.Division) template);
+        }
+        if (template instanceof com.commercetools.api.models.business_unit.Company) {
+            return com.commercetools.api.models.business_unit.Company
+                    .deepCopy((com.commercetools.api.models.business_unit.Company) template);
         }
         BusinessUnitImpl instance = new BusinessUnitImpl();
         instance.setId(template.getId());

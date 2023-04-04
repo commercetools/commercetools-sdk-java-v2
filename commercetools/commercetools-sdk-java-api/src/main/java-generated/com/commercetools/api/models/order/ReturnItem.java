@@ -181,13 +181,13 @@ public interface ReturnItem extends com.commercetools.api.models.Customizable<Re
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.order.LineItemReturnItem) {
-            return com.commercetools.api.models.order.LineItemReturnItem
-                    .deepCopy((com.commercetools.api.models.order.LineItemReturnItem) template);
-        }
         if (template instanceof com.commercetools.api.models.order.CustomLineItemReturnItem) {
             return com.commercetools.api.models.order.CustomLineItemReturnItem
                     .deepCopy((com.commercetools.api.models.order.CustomLineItemReturnItem) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.LineItemReturnItem) {
+            return com.commercetools.api.models.order.LineItemReturnItem
+                    .deepCopy((com.commercetools.api.models.order.LineItemReturnItem) template);
         }
         ReturnItemImpl instance = new ReturnItemImpl();
         instance.setId(template.getId());

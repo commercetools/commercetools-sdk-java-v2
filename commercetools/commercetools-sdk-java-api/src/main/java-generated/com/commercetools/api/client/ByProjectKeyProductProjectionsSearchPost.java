@@ -95,7 +95,7 @@ public class ByProjectKeyProductProjectionsSearchPost extends
      * @param key form parameter name
      * @param value form parameter value
      * @param <V> value type
-     * @return T
+     * @return ByProjectKeyProductProjectionsSearchPost
      */
     public <V> ByProjectKeyProductProjectionsSearchPost addFormParam(final String key, final V value) {
         ByProjectKeyProductProjectionsSearchPost c = copy();
@@ -108,7 +108,7 @@ public class ByProjectKeyProductProjectionsSearchPost extends
      * @param key form parameter name
      * @param value form parameter value
      * @param <V> value type
-     * @return T
+     * @return ByProjectKeyProductProjectionsSearchPost
      */
     public <V> ByProjectKeyProductProjectionsSearchPost withFormParam(final String key, final V value) {
         return withoutFormParam(key).addFormParam(key, value);
@@ -117,7 +117,7 @@ public class ByProjectKeyProductProjectionsSearchPost extends
     /**
      * removes the specified form parameter
      * @param key form parameter name
-     * @return T
+     * @return ByProjectKeyProductProjectionsSearchPost
      */
     public ByProjectKeyProductProjectionsSearchPost withoutFormParam(final String key) {
         ByProjectKeyProductProjectionsSearchPost c = copy();
@@ -130,11 +130,23 @@ public class ByProjectKeyProductProjectionsSearchPost extends
     /**
      * set the form parameters
      * @param formParams list of form parameters
-     * @return T
+     * @return ByProjectKeyProductProjectionsSearchPost
      */
     public ByProjectKeyProductProjectionsSearchPost withFormParams(final List<ParamEntry<String, String>> formParams) {
         ByProjectKeyProductProjectionsSearchPost c = copy();
         c.formParams = formParams;
+        return c;
+    }
+
+    /**
+     * add the form parameters
+     * @param formParams list of form parameters
+     * @return ByProjectKeyProductProjectionsSearchPost
+     */
+    public ByProjectKeyProductProjectionsSearchPost addFormParams(final List<ParamEntry<String, String>> formParams) {
+        final ByProjectKeyProductProjectionsSearchPost c = copy();
+
+        c.formParams.addAll(formParams);
         return c;
     }
 

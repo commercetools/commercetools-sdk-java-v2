@@ -22,6 +22,8 @@ public class TaxRateImpl implements TaxRate, ModelBase {
 
     private String id;
 
+    private String key;
+
     private String name;
 
     private Double amount;
@@ -38,11 +40,13 @@ public class TaxRateImpl implements TaxRate, ModelBase {
      * create instance with all properties
      */
     @JsonCreator
-    TaxRateImpl(@JsonProperty("id") final String id, @JsonProperty("name") final String name,
-            @JsonProperty("amount") final Double amount, @JsonProperty("includedInPrice") final Boolean includedInPrice,
+    TaxRateImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key,
+            @JsonProperty("name") final String name, @JsonProperty("amount") final Double amount,
+            @JsonProperty("includedInPrice") final Boolean includedInPrice,
             @JsonProperty("country") final String country, @JsonProperty("state") final String state,
             @JsonProperty("subRates") final java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates) {
         this.id = id;
+        this.key = key;
         this.name = name;
         this.amount = amount;
         this.includedInPrice = includedInPrice;
@@ -63,6 +67,14 @@ public class TaxRateImpl implements TaxRate, ModelBase {
 
     public String getId() {
         return this.id;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the TaxRate. Present when set using TaxRateDraft. Not available for external TaxRates created using ExternalTaxRateDraft.</p>
+     */
+
+    public String getKey() {
+        return this.key;
     }
 
     /**
@@ -117,6 +129,10 @@ public class TaxRateImpl implements TaxRate, ModelBase {
         this.id = id;
     }
 
+    public void setKey(final String key) {
+        this.key = key;
+    }
+
     public void setName(final String name) {
         this.name = name;
     }
@@ -156,6 +172,7 @@ public class TaxRateImpl implements TaxRate, ModelBase {
         TaxRateImpl that = (TaxRateImpl) o;
 
         return new EqualsBuilder().append(id, that.id)
+                .append(key, that.key)
                 .append(name, that.name)
                 .append(amount, that.amount)
                 .append(includedInPrice, that.includedInPrice)
@@ -168,6 +185,7 @@ public class TaxRateImpl implements TaxRate, ModelBase {
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(id)
+                .append(key)
                 .append(name)
                 .append(amount)
                 .append(includedInPrice)

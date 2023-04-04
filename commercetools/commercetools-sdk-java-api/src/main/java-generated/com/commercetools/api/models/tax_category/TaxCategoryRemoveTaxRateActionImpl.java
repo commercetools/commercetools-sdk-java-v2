@@ -24,12 +24,16 @@ public class TaxCategoryRemoveTaxRateActionImpl implements TaxCategoryRemoveTaxR
 
     private String taxRateId;
 
+    private String taxRateKey;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
-    TaxCategoryRemoveTaxRateActionImpl(@JsonProperty("taxRateId") final String taxRateId) {
+    TaxCategoryRemoveTaxRateActionImpl(@JsonProperty("taxRateId") final String taxRateId,
+            @JsonProperty("taxRateKey") final String taxRateKey) {
         this.taxRateId = taxRateId;
+        this.taxRateKey = taxRateKey;
         this.action = REMOVE_TAX_RATE;
     }
 
@@ -49,15 +53,27 @@ public class TaxCategoryRemoveTaxRateActionImpl implements TaxCategoryRemoveTaxR
     }
 
     /**
-     *  <p>ID of the TaxRate to remove.</p>
+     *  <p>ID of the TaxRate to remove. Either <code>taxRateId</code> or <code>taxRateKey</code> is required for this update action.</p>
      */
 
     public String getTaxRateId() {
         return this.taxRateId;
     }
 
+    /**
+     *  <p>Key of the TaxRate to remove. Either <code>taxRateId</code> or <code>taxRateKey</code> is required for this update action.</p>
+     */
+
+    public String getTaxRateKey() {
+        return this.taxRateKey;
+    }
+
     public void setTaxRateId(final String taxRateId) {
         this.taxRateId = taxRateId;
+    }
+
+    public void setTaxRateKey(final String taxRateKey) {
+        this.taxRateKey = taxRateKey;
     }
 
     @Override
@@ -70,12 +86,15 @@ public class TaxCategoryRemoveTaxRateActionImpl implements TaxCategoryRemoveTaxR
 
         TaxCategoryRemoveTaxRateActionImpl that = (TaxCategoryRemoveTaxRateActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(taxRateId, that.taxRateId).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(taxRateId, that.taxRateId)
+                .append(taxRateKey, that.taxRateKey)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(taxRateId).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action).append(taxRateId).append(taxRateKey).toHashCode();
     }
 
 }

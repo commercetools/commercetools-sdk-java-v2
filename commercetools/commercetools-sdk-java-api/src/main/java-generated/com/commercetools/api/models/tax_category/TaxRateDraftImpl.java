@@ -32,6 +32,8 @@ public class TaxRateDraftImpl implements TaxRateDraft, ModelBase {
 
     private java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates;
 
+    private String key;
+
     /**
      * create instance with all properties
      */
@@ -39,13 +41,15 @@ public class TaxRateDraftImpl implements TaxRateDraft, ModelBase {
     TaxRateDraftImpl(@JsonProperty("name") final String name, @JsonProperty("amount") final Double amount,
             @JsonProperty("includedInPrice") final Boolean includedInPrice,
             @JsonProperty("country") final String country, @JsonProperty("state") final String state,
-            @JsonProperty("subRates") final java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates) {
+            @JsonProperty("subRates") final java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates,
+            @JsonProperty("key") final String key) {
         this.name = name;
         this.amount = amount;
         this.includedInPrice = includedInPrice;
         this.country = country;
         this.state = state;
         this.subRates = subRates;
+        this.key = key;
     }
 
     /**
@@ -102,6 +106,14 @@ public class TaxRateDraftImpl implements TaxRateDraft, ModelBase {
         return this.subRates;
     }
 
+    /**
+     *  <p>User-defined unique identifier of the TaxRate.</p>
+     */
+
+    public String getKey() {
+        return this.key;
+    }
+
     public void setName(final String name) {
         this.name = name;
     }
@@ -130,6 +142,10 @@ public class TaxRateDraftImpl implements TaxRateDraft, ModelBase {
         this.subRates = subRates;
     }
 
+    public void setKey(final String key) {
+        this.key = key;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -146,6 +162,7 @@ public class TaxRateDraftImpl implements TaxRateDraft, ModelBase {
                 .append(country, that.country)
                 .append(state, that.state)
                 .append(subRates, that.subRates)
+                .append(key, that.key)
                 .isEquals();
     }
 
@@ -157,6 +174,7 @@ public class TaxRateDraftImpl implements TaxRateDraft, ModelBase {
                 .append(country)
                 .append(state)
                 .append(subRates)
+                .append(key)
                 .toHashCode();
     }
 

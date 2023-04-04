@@ -41,6 +41,9 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     @Nullable
     private java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates;
 
+    @Nullable
+    private String key;
+
     /**
      *  <p>Name of the TaxRate.</p>
      * @param name value to be set
@@ -163,6 +166,17 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     }
 
     /**
+     *  <p>User-defined unique identifier of the TaxRate.</p>
+     * @param key value to be set
+     * @return Builder
+     */
+
+    public TaxRateDraftBuilder key(@Nullable final String key) {
+        this.key = key;
+        return this;
+    }
+
+    /**
      *  <p>Name of the TaxRate.</p>
      * @return name
      */
@@ -220,6 +234,16 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     }
 
     /**
+     *  <p>User-defined unique identifier of the TaxRate.</p>
+     * @return key
+     */
+
+    @Nullable
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
      * builds TaxRateDraft with checking for non-null required values
      * @return TaxRateDraft
      */
@@ -227,7 +251,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
         Objects.requireNonNull(name, TaxRateDraft.class + ": name is missing");
         Objects.requireNonNull(includedInPrice, TaxRateDraft.class + ": includedInPrice is missing");
         Objects.requireNonNull(country, TaxRateDraft.class + ": country is missing");
-        return new TaxRateDraftImpl(name, amount, includedInPrice, country, state, subRates);
+        return new TaxRateDraftImpl(name, amount, includedInPrice, country, state, subRates, key);
     }
 
     /**
@@ -235,7 +259,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
      * @return TaxRateDraft
      */
     public TaxRateDraft buildUnchecked() {
-        return new TaxRateDraftImpl(name, amount, includedInPrice, country, state, subRates);
+        return new TaxRateDraftImpl(name, amount, includedInPrice, country, state, subRates, key);
     }
 
     /**
@@ -259,6 +283,7 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
         builder.country = template.getCountry();
         builder.state = template.getState();
         builder.subRates = template.getSubRates();
+        builder.key = template.getKey();
         return builder;
     }
 

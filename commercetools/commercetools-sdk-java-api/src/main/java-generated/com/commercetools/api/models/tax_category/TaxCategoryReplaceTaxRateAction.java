@@ -22,7 +22,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     TaxCategoryReplaceTaxRateAction taxCategoryReplaceTaxRateAction = TaxCategoryReplaceTaxRateAction.builder()
- *             .taxRateId("{taxRateId}")
  *             .taxRate(taxRateBuilder -> taxRateBuilder)
  *             .build()
  * </code></pre>
@@ -38,12 +37,20 @@ public interface TaxCategoryReplaceTaxRateAction extends TaxCategoryUpdateAction
     String REPLACE_TAX_RATE = "replaceTaxRate";
 
     /**
-     *  <p>ID of the TaxRate to replace.</p>
+     *  <p>ID of the TaxRate to replace. Either <code>taxRateId</code> or <code>taxRateKey</code> is required for this update action.</p>
      * @return taxRateId
      */
-    @NotNull
+
     @JsonProperty("taxRateId")
     public String getTaxRateId();
+
+    /**
+     *  <p>Key of the TaxRate to replace. Either <code>taxRateId</code> or <code>taxRateKey</code> is required for this update action.</p>
+     * @return taxRateKey
+     */
+
+    @JsonProperty("taxRateKey")
+    public String getTaxRateKey();
 
     /**
      *  <p>New TaxRate to replace with.</p>
@@ -55,11 +62,18 @@ public interface TaxCategoryReplaceTaxRateAction extends TaxCategoryUpdateAction
     public TaxRateDraft getTaxRate();
 
     /**
-     *  <p>ID of the TaxRate to replace.</p>
+     *  <p>ID of the TaxRate to replace. Either <code>taxRateId</code> or <code>taxRateKey</code> is required for this update action.</p>
      * @param taxRateId value to be set
      */
 
     public void setTaxRateId(final String taxRateId);
+
+    /**
+     *  <p>Key of the TaxRate to replace. Either <code>taxRateId</code> or <code>taxRateKey</code> is required for this update action.</p>
+     * @param taxRateKey value to be set
+     */
+
+    public void setTaxRateKey(final String taxRateKey);
 
     /**
      *  <p>New TaxRate to replace with.</p>
@@ -84,6 +98,7 @@ public interface TaxCategoryReplaceTaxRateAction extends TaxCategoryUpdateAction
     public static TaxCategoryReplaceTaxRateAction of(final TaxCategoryReplaceTaxRateAction template) {
         TaxCategoryReplaceTaxRateActionImpl instance = new TaxCategoryReplaceTaxRateActionImpl();
         instance.setTaxRateId(template.getTaxRateId());
+        instance.setTaxRateKey(template.getTaxRateKey());
         instance.setTaxRate(template.getTaxRate());
         return instance;
     }
@@ -100,6 +115,7 @@ public interface TaxCategoryReplaceTaxRateAction extends TaxCategoryUpdateAction
         }
         TaxCategoryReplaceTaxRateActionImpl instance = new TaxCategoryReplaceTaxRateActionImpl();
         instance.setTaxRateId(template.getTaxRateId());
+        instance.setTaxRateKey(template.getTaxRateKey());
         instance.setTaxRate(com.commercetools.api.models.tax_category.TaxRateDraft.deepCopy(template.getTaxRate()));
         return instance;
     }

@@ -167,6 +167,18 @@ public class JsonUtils {
     }
 
     /**
+     * deserializes the given json string to the given class
+     * @param typeReference the full generic type information about the object to create
+     * @param content json as inputstream
+     * @return deserialized object
+     * @throws JsonException deserialization errors
+     * @param <T> type of the result
+     */
+    public static <T> T fromInputStream(final InputStream content, final TypeReference<T> typeReference) {
+        return executing(() -> OBJECT_MAPPER.readValue(content, typeReference));
+    }
+
+    /**
      * default {@link ObjectMapper}
      * @return ObjectMapper
      */

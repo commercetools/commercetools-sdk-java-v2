@@ -36,7 +36,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyProductProjectionsSearchPost extends
         ApiMethod<ByProjectKeyProductProjectionsSearchPost, com.commercetools.api.models.product.ProductProjectionPagedSearchResponse>
-        implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductProjectionsSearchPost> {
+        implements ByProjectKeyProductProjectionsSearchPostMixin,
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductProjectionsSearchPost> {
 
     private String projectKey;
 
@@ -91,7 +92,7 @@ public class ByProjectKeyProductProjectionsSearchPost extends
     }
 
     /**
-     * add an additional form parameter
+     * add a form parameter
      * @param key form parameter name
      * @param value form parameter value
      * @param <V> value type

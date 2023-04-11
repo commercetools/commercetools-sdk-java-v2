@@ -4,6 +4,8 @@ package com.commercetools.api.models.tax_category;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -14,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     TaxCategoryReplaceTaxRateAction taxCategoryReplaceTaxRateAction = TaxCategoryReplaceTaxRateAction.builder()
- *             .taxRateId("{taxRateId}")
  *             .taxRate(taxRateBuilder -> taxRateBuilder)
  *             .build()
  * </code></pre>
@@ -23,18 +24,33 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class TaxCategoryReplaceTaxRateActionBuilder implements Builder<TaxCategoryReplaceTaxRateAction> {
 
+    @Nullable
     private String taxRateId;
+
+    @Nullable
+    private String taxRateKey;
 
     private com.commercetools.api.models.tax_category.TaxRateDraft taxRate;
 
     /**
-     *  <p>ID of the TaxRate to replace.</p>
+     *  <p>ID of the TaxRate to replace. Either <code>taxRateId</code> or <code>taxRateKey</code> is required for this update action.</p>
      * @param taxRateId value to be set
      * @return Builder
      */
 
-    public TaxCategoryReplaceTaxRateActionBuilder taxRateId(final String taxRateId) {
+    public TaxCategoryReplaceTaxRateActionBuilder taxRateId(@Nullable final String taxRateId) {
         this.taxRateId = taxRateId;
+        return this;
+    }
+
+    /**
+     *  <p>Key of the TaxRate to replace. Either <code>taxRateId</code> or <code>taxRateKey</code> is required for this update action.</p>
+     * @param taxRateKey value to be set
+     * @return Builder
+     */
+
+    public TaxCategoryReplaceTaxRateActionBuilder taxRateKey(@Nullable final String taxRateKey) {
+        this.taxRateKey = taxRateKey;
         return this;
     }
 
@@ -63,12 +79,23 @@ public class TaxCategoryReplaceTaxRateActionBuilder implements Builder<TaxCatego
     }
 
     /**
-     *  <p>ID of the TaxRate to replace.</p>
+     *  <p>ID of the TaxRate to replace. Either <code>taxRateId</code> or <code>taxRateKey</code> is required for this update action.</p>
      * @return taxRateId
      */
 
+    @Nullable
     public String getTaxRateId() {
         return this.taxRateId;
+    }
+
+    /**
+     *  <p>Key of the TaxRate to replace. Either <code>taxRateId</code> or <code>taxRateKey</code> is required for this update action.</p>
+     * @return taxRateKey
+     */
+
+    @Nullable
+    public String getTaxRateKey() {
+        return this.taxRateKey;
     }
 
     /**
@@ -85,9 +112,8 @@ public class TaxCategoryReplaceTaxRateActionBuilder implements Builder<TaxCatego
      * @return TaxCategoryReplaceTaxRateAction
      */
     public TaxCategoryReplaceTaxRateAction build() {
-        Objects.requireNonNull(taxRateId, TaxCategoryReplaceTaxRateAction.class + ": taxRateId is missing");
         Objects.requireNonNull(taxRate, TaxCategoryReplaceTaxRateAction.class + ": taxRate is missing");
-        return new TaxCategoryReplaceTaxRateActionImpl(taxRateId, taxRate);
+        return new TaxCategoryReplaceTaxRateActionImpl(taxRateId, taxRateKey, taxRate);
     }
 
     /**
@@ -95,7 +121,7 @@ public class TaxCategoryReplaceTaxRateActionBuilder implements Builder<TaxCatego
      * @return TaxCategoryReplaceTaxRateAction
      */
     public TaxCategoryReplaceTaxRateAction buildUnchecked() {
-        return new TaxCategoryReplaceTaxRateActionImpl(taxRateId, taxRate);
+        return new TaxCategoryReplaceTaxRateActionImpl(taxRateId, taxRateKey, taxRate);
     }
 
     /**
@@ -114,6 +140,7 @@ public class TaxCategoryReplaceTaxRateActionBuilder implements Builder<TaxCatego
     public static TaxCategoryReplaceTaxRateActionBuilder of(final TaxCategoryReplaceTaxRateAction template) {
         TaxCategoryReplaceTaxRateActionBuilder builder = new TaxCategoryReplaceTaxRateActionBuilder();
         builder.taxRateId = template.getTaxRateId();
+        builder.taxRateKey = template.getTaxRateKey();
         builder.taxRate = template.getTaxRate();
         return builder;
     }

@@ -83,6 +83,14 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
     public List<SubRate> getSubRates();
 
     /**
+     *  <p>User-defined unique identifier of the TaxRate.</p>
+     * @return key
+     */
+
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
      *  <p>Name of the TaxRate.</p>
      * @param name value to be set
      */
@@ -133,6 +141,13 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
     public void setSubRates(final List<SubRate> subRates);
 
     /**
+     *  <p>User-defined unique identifier of the TaxRate.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
+
+    /**
      * factory method
      * @return instance of TaxRateDraft
      */
@@ -153,6 +168,7 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
         instance.setCountry(template.getCountry());
         instance.setState(template.getState());
         instance.setSubRates(template.getSubRates());
+        instance.setKey(template.getKey());
         return instance;
     }
 
@@ -177,6 +193,7 @@ public interface TaxRateDraft extends io.vrap.rmf.base.client.Draft<TaxRateDraft
                         .map(com.commercetools.api.models.tax_category.SubRate::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setKey(template.getKey());
         return instance;
     }
 

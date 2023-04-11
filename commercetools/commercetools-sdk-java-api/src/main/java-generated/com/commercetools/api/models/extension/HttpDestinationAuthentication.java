@@ -52,13 +52,13 @@ public interface HttpDestinationAuthentication {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.extension.AuthorizationHeaderAuthentication) {
-            return com.commercetools.api.models.extension.AuthorizationHeaderAuthentication
-                    .deepCopy((com.commercetools.api.models.extension.AuthorizationHeaderAuthentication) template);
-        }
         if (template instanceof com.commercetools.api.models.extension.AzureFunctionsAuthentication) {
             return com.commercetools.api.models.extension.AzureFunctionsAuthentication
                     .deepCopy((com.commercetools.api.models.extension.AzureFunctionsAuthentication) template);
+        }
+        if (template instanceof com.commercetools.api.models.extension.AuthorizationHeaderAuthentication) {
+            return com.commercetools.api.models.extension.AuthorizationHeaderAuthentication
+                    .deepCopy((com.commercetools.api.models.extension.AuthorizationHeaderAuthentication) template);
         }
         HttpDestinationAuthenticationImpl instance = new HttpDestinationAuthenticationImpl();
         return instance;

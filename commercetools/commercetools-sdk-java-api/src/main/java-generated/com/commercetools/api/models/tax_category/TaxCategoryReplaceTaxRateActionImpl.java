@@ -24,6 +24,8 @@ public class TaxCategoryReplaceTaxRateActionImpl implements TaxCategoryReplaceTa
 
     private String taxRateId;
 
+    private String taxRateKey;
+
     private com.commercetools.api.models.tax_category.TaxRateDraft taxRate;
 
     /**
@@ -31,8 +33,10 @@ public class TaxCategoryReplaceTaxRateActionImpl implements TaxCategoryReplaceTa
      */
     @JsonCreator
     TaxCategoryReplaceTaxRateActionImpl(@JsonProperty("taxRateId") final String taxRateId,
+            @JsonProperty("taxRateKey") final String taxRateKey,
             @JsonProperty("taxRate") final com.commercetools.api.models.tax_category.TaxRateDraft taxRate) {
         this.taxRateId = taxRateId;
+        this.taxRateKey = taxRateKey;
         this.taxRate = taxRate;
         this.action = REPLACE_TAX_RATE;
     }
@@ -53,11 +57,19 @@ public class TaxCategoryReplaceTaxRateActionImpl implements TaxCategoryReplaceTa
     }
 
     /**
-     *  <p>ID of the TaxRate to replace.</p>
+     *  <p>ID of the TaxRate to replace. Either <code>taxRateId</code> or <code>taxRateKey</code> is required for this update action.</p>
      */
 
     public String getTaxRateId() {
         return this.taxRateId;
+    }
+
+    /**
+     *  <p>Key of the TaxRate to replace. Either <code>taxRateId</code> or <code>taxRateKey</code> is required for this update action.</p>
+     */
+
+    public String getTaxRateKey() {
+        return this.taxRateKey;
     }
 
     /**
@@ -70,6 +82,10 @@ public class TaxCategoryReplaceTaxRateActionImpl implements TaxCategoryReplaceTa
 
     public void setTaxRateId(final String taxRateId) {
         this.taxRateId = taxRateId;
+    }
+
+    public void setTaxRateKey(final String taxRateKey) {
+        this.taxRateKey = taxRateKey;
     }
 
     public void setTaxRate(final com.commercetools.api.models.tax_category.TaxRateDraft taxRate) {
@@ -88,13 +104,18 @@ public class TaxCategoryReplaceTaxRateActionImpl implements TaxCategoryReplaceTa
 
         return new EqualsBuilder().append(action, that.action)
                 .append(taxRateId, that.taxRateId)
+                .append(taxRateKey, that.taxRateKey)
                 .append(taxRate, that.taxRate)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(taxRateId).append(taxRate).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(taxRateId)
+                .append(taxRateKey)
+                .append(taxRate)
+                .toHashCode();
     }
 
 }

@@ -105,18 +105,6 @@ public class ByProjectKeyProductProjectionsSearchPost extends
     }
 
     /**
-     * add the form parameters
-     * @param formParams list of form parameters
-     * @return T
-     */
-    public ByProjectKeyProductProjectionsSearchPost addFormParams(final List<ParamEntry<String, String>> formParams) {
-        final ByProjectKeyProductProjectionsSearchPost c = copy();
-
-        c.formParams.addAll(formParams);
-        return c;
-    }
-
-    /**
      * set the form parameter with the specified value
      * @param key form parameter name
      * @param value form parameter value

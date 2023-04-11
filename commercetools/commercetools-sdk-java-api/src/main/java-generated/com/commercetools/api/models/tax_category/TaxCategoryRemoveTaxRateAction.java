@@ -6,7 +6,6 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -21,7 +20,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     TaxCategoryRemoveTaxRateAction taxCategoryRemoveTaxRateAction = TaxCategoryRemoveTaxRateAction.builder()
- *             .taxRateId("{taxRateId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -36,19 +34,34 @@ public interface TaxCategoryRemoveTaxRateAction extends TaxCategoryUpdateAction 
     String REMOVE_TAX_RATE = "removeTaxRate";
 
     /**
-     *  <p>ID of the TaxRate to remove.</p>
+     *  <p>ID of the TaxRate to remove. Either <code>taxRateId</code> or <code>taxRateKey</code> is required for this update action.</p>
      * @return taxRateId
      */
-    @NotNull
+
     @JsonProperty("taxRateId")
     public String getTaxRateId();
 
     /**
-     *  <p>ID of the TaxRate to remove.</p>
+     *  <p>Key of the TaxRate to remove. Either <code>taxRateId</code> or <code>taxRateKey</code> is required for this update action.</p>
+     * @return taxRateKey
+     */
+
+    @JsonProperty("taxRateKey")
+    public String getTaxRateKey();
+
+    /**
+     *  <p>ID of the TaxRate to remove. Either <code>taxRateId</code> or <code>taxRateKey</code> is required for this update action.</p>
      * @param taxRateId value to be set
      */
 
     public void setTaxRateId(final String taxRateId);
+
+    /**
+     *  <p>Key of the TaxRate to remove. Either <code>taxRateId</code> or <code>taxRateKey</code> is required for this update action.</p>
+     * @param taxRateKey value to be set
+     */
+
+    public void setTaxRateKey(final String taxRateKey);
 
     /**
      * factory method
@@ -66,6 +79,7 @@ public interface TaxCategoryRemoveTaxRateAction extends TaxCategoryUpdateAction 
     public static TaxCategoryRemoveTaxRateAction of(final TaxCategoryRemoveTaxRateAction template) {
         TaxCategoryRemoveTaxRateActionImpl instance = new TaxCategoryRemoveTaxRateActionImpl();
         instance.setTaxRateId(template.getTaxRateId());
+        instance.setTaxRateKey(template.getTaxRateKey());
         return instance;
     }
 
@@ -81,6 +95,7 @@ public interface TaxCategoryRemoveTaxRateAction extends TaxCategoryUpdateAction 
         }
         TaxCategoryRemoveTaxRateActionImpl instance = new TaxCategoryRemoveTaxRateActionImpl();
         instance.setTaxRateId(template.getTaxRateId());
+        instance.setTaxRateKey(template.getTaxRateKey());
         return instance;
     }
 

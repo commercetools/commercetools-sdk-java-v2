@@ -345,21 +345,45 @@ public interface ErrorObject {
             return com.commercetools.api.models.error.SyntaxErrorError
                     .deepCopy((com.commercetools.api.models.error.SyntaxErrorError) template);
         }
-        if (template instanceof com.commercetools.api.models.error.CountryNotConfiguredInStoreError) {
-            return com.commercetools.api.models.error.CountryNotConfiguredInStoreError
-                    .deepCopy((com.commercetools.api.models.error.CountryNotConfiguredInStoreError) template);
+        if (template instanceof com.commercetools.api.models.error.ConcurrentModificationError) {
+            return com.commercetools.api.models.error.ConcurrentModificationError
+                    .deepCopy((com.commercetools.api.models.error.ConcurrentModificationError) template);
         }
-        if (template instanceof com.commercetools.api.models.error.DuplicatePriceScopeError) {
-            return com.commercetools.api.models.error.DuplicatePriceScopeError
-                    .deepCopy((com.commercetools.api.models.error.DuplicatePriceScopeError) template);
+        if (template instanceof com.commercetools.api.models.error.DuplicatePriceKeyError) {
+            return com.commercetools.api.models.error.DuplicatePriceKeyError
+                    .deepCopy((com.commercetools.api.models.error.DuplicatePriceKeyError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.DuplicateAttributeValueError) {
+            return com.commercetools.api.models.error.DuplicateAttributeValueError
+                    .deepCopy((com.commercetools.api.models.error.DuplicateAttributeValueError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.AttributeDefinitionAlreadyExistsError) {
+            return com.commercetools.api.models.error.AttributeDefinitionAlreadyExistsError
+                    .deepCopy((com.commercetools.api.models.error.AttributeDefinitionAlreadyExistsError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.EnumValuesMustMatchError) {
+            return com.commercetools.api.models.error.EnumValuesMustMatchError
+                    .deepCopy((com.commercetools.api.models.error.EnumValuesMustMatchError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.AttributeDefinitionTypeConflictError) {
+            return com.commercetools.api.models.error.AttributeDefinitionTypeConflictError
+                    .deepCopy((com.commercetools.api.models.error.AttributeDefinitionTypeConflictError) template);
         }
         if (template instanceof com.commercetools.api.models.error.DuplicateAttributeValuesError) {
             return com.commercetools.api.models.error.DuplicateAttributeValuesError
                     .deepCopy((com.commercetools.api.models.error.DuplicateAttributeValuesError) template);
         }
-        if (template instanceof com.commercetools.api.models.error.AttributeDefinitionTypeConflictError) {
-            return com.commercetools.api.models.error.AttributeDefinitionTypeConflictError
-                    .deepCopy((com.commercetools.api.models.error.AttributeDefinitionTypeConflictError) template);
+        if (template instanceof com.commercetools.api.models.error.DuplicateFieldError) {
+            return com.commercetools.api.models.error.DuplicateFieldError
+                    .deepCopy((com.commercetools.api.models.error.DuplicateFieldError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.EditPreviewFailedError) {
+            return com.commercetools.api.models.error.EditPreviewFailedError
+                    .deepCopy((com.commercetools.api.models.error.EditPreviewFailedError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.EnumKeyAlreadyExistsError) {
+            return com.commercetools.api.models.error.EnumKeyAlreadyExistsError
+                    .deepCopy((com.commercetools.api.models.error.EnumKeyAlreadyExistsError) template);
         }
         if (template instanceof com.commercetools.api.models.error.AttributeNameDoesNotExistError) {
             return com.commercetools.api.models.error.AttributeNameDoesNotExistError
@@ -369,37 +393,25 @@ public interface ErrorObject {
             return com.commercetools.api.models.error.DuplicateEnumValuesError
                     .deepCopy((com.commercetools.api.models.error.DuplicateEnumValuesError) template);
         }
-        if (template instanceof com.commercetools.api.models.error.DuplicateFieldWithConflictingResourceError) {
-            return com.commercetools.api.models.error.DuplicateFieldWithConflictingResourceError
-                    .deepCopy((com.commercetools.api.models.error.DuplicateFieldWithConflictingResourceError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.EnumKeyAlreadyExistsError) {
-            return com.commercetools.api.models.error.EnumKeyAlreadyExistsError
-                    .deepCopy((com.commercetools.api.models.error.EnumKeyAlreadyExistsError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.EnumKeyDoesNotExistError) {
-            return com.commercetools.api.models.error.EnumKeyDoesNotExistError
-                    .deepCopy((com.commercetools.api.models.error.EnumKeyDoesNotExistError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.DuplicateFieldError) {
-            return com.commercetools.api.models.error.DuplicateFieldError
-                    .deepCopy((com.commercetools.api.models.error.DuplicateFieldError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.DuplicateAttributeValueError) {
-            return com.commercetools.api.models.error.DuplicateAttributeValueError
-                    .deepCopy((com.commercetools.api.models.error.DuplicateAttributeValueError) template);
-        }
         if (template instanceof com.commercetools.api.models.error.DiscountCodeNonApplicableError) {
             return com.commercetools.api.models.error.DiscountCodeNonApplicableError
                     .deepCopy((com.commercetools.api.models.error.DiscountCodeNonApplicableError) template);
         }
+        if (template instanceof com.commercetools.api.models.error.CountryNotConfiguredInStoreError) {
+            return com.commercetools.api.models.error.CountryNotConfiguredInStoreError
+                    .deepCopy((com.commercetools.api.models.error.CountryNotConfiguredInStoreError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.DuplicatePriceScopeError) {
+            return com.commercetools.api.models.error.DuplicatePriceScopeError
+                    .deepCopy((com.commercetools.api.models.error.DuplicatePriceScopeError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.AnonymousIdAlreadyInUseError) {
+            return com.commercetools.api.models.error.AnonymousIdAlreadyInUseError
+                    .deepCopy((com.commercetools.api.models.error.AnonymousIdAlreadyInUseError) template);
+        }
         if (template instanceof com.commercetools.api.models.error.DuplicateStandalonePriceScopeError) {
             return com.commercetools.api.models.error.DuplicateStandalonePriceScopeError
                     .deepCopy((com.commercetools.api.models.error.DuplicateStandalonePriceScopeError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.AttributeDefinitionAlreadyExistsError) {
-            return com.commercetools.api.models.error.AttributeDefinitionAlreadyExistsError
-                    .deepCopy((com.commercetools.api.models.error.AttributeDefinitionAlreadyExistsError) template);
         }
         if (template instanceof com.commercetools.api.models.error.BadGatewayError) {
             return com.commercetools.api.models.error.BadGatewayError
@@ -409,29 +421,17 @@ public interface ErrorObject {
             return com.commercetools.api.models.error.DuplicateVariantValuesError
                     .deepCopy((com.commercetools.api.models.error.DuplicateVariantValuesError) template);
         }
-        if (template instanceof com.commercetools.api.models.error.ConcurrentModificationError) {
-            return com.commercetools.api.models.error.ConcurrentModificationError
-                    .deepCopy((com.commercetools.api.models.error.ConcurrentModificationError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.AnonymousIdAlreadyInUseError) {
-            return com.commercetools.api.models.error.AnonymousIdAlreadyInUseError
-                    .deepCopy((com.commercetools.api.models.error.AnonymousIdAlreadyInUseError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.EditPreviewFailedError) {
-            return com.commercetools.api.models.error.EditPreviewFailedError
-                    .deepCopy((com.commercetools.api.models.error.EditPreviewFailedError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.EnumValuesMustMatchError) {
-            return com.commercetools.api.models.error.EnumValuesMustMatchError
-                    .deepCopy((com.commercetools.api.models.error.EnumValuesMustMatchError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.DuplicatePriceKeyError) {
-            return com.commercetools.api.models.error.DuplicatePriceKeyError
-                    .deepCopy((com.commercetools.api.models.error.DuplicatePriceKeyError) template);
-        }
         if (template instanceof com.commercetools.api.models.error.EnumValueIsUsedError) {
             return com.commercetools.api.models.error.EnumValueIsUsedError
                     .deepCopy((com.commercetools.api.models.error.EnumValueIsUsedError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.DuplicateFieldWithConflictingResourceError) {
+            return com.commercetools.api.models.error.DuplicateFieldWithConflictingResourceError
+                    .deepCopy((com.commercetools.api.models.error.DuplicateFieldWithConflictingResourceError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.EnumKeyDoesNotExistError) {
+            return com.commercetools.api.models.error.EnumKeyDoesNotExistError
+                    .deepCopy((com.commercetools.api.models.error.EnumKeyDoesNotExistError) template);
         }
         ErrorObjectImpl instance = new ErrorObjectImpl();
         instance.setMessage(template.getMessage());

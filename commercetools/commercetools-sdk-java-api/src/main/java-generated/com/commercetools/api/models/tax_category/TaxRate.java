@@ -44,6 +44,14 @@ public interface TaxRate {
     public String getId();
 
     /**
+     *  <p>User-defined unique identifier of the TaxRate. Present when set using TaxRateDraft. Not available for external TaxRates created using ExternalTaxRateDraft.</p>
+     * @return key
+     */
+
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
      *  <p>Name of the TaxRate.</p>
      * @return name
      */
@@ -97,6 +105,13 @@ public interface TaxRate {
      */
 
     public void setId(final String id);
+
+    /**
+     *  <p>User-defined unique identifier of the TaxRate. Present when set using TaxRateDraft. Not available for external TaxRates created using ExternalTaxRateDraft.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
 
     /**
      *  <p>Name of the TaxRate.</p>
@@ -164,6 +179,7 @@ public interface TaxRate {
     public static TaxRate of(final TaxRate template) {
         TaxRateImpl instance = new TaxRateImpl();
         instance.setId(template.getId());
+        instance.setKey(template.getKey());
         instance.setName(template.getName());
         instance.setAmount(template.getAmount());
         instance.setIncludedInPrice(template.getIncludedInPrice());
@@ -185,6 +201,7 @@ public interface TaxRate {
         }
         TaxRateImpl instance = new TaxRateImpl();
         instance.setId(template.getId());
+        instance.setKey(template.getKey());
         instance.setName(template.getName());
         instance.setAmount(template.getAmount());
         instance.setIncludedInPrice(template.getIncludedInPrice());

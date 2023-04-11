@@ -30,6 +30,9 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     @Nullable
     private String id;
 
+    @Nullable
+    private String key;
+
     private String name;
 
     private Double amount;
@@ -52,6 +55,17 @@ public class TaxRateBuilder implements Builder<TaxRate> {
 
     public TaxRateBuilder id(@Nullable final String id) {
         this.id = id;
+        return this;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the TaxRate. Present when set using TaxRateDraft. Not available for external TaxRates created using ExternalTaxRateDraft.</p>
+     * @param key value to be set
+     * @return Builder
+     */
+
+    public TaxRateBuilder key(@Nullable final String key) {
+        this.key = key;
         return this;
     }
 
@@ -186,6 +200,16 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
+     *  <p>User-defined unique identifier of the TaxRate. Present when set using TaxRateDraft. Not available for external TaxRates created using ExternalTaxRateDraft.</p>
+     * @return key
+     */
+
+    @Nullable
+    public String getKey() {
+        return this.key;
+    }
+
+    /**
      *  <p>Name of the TaxRate.</p>
      * @return name
      */
@@ -250,7 +274,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
         Objects.requireNonNull(amount, TaxRate.class + ": amount is missing");
         Objects.requireNonNull(includedInPrice, TaxRate.class + ": includedInPrice is missing");
         Objects.requireNonNull(country, TaxRate.class + ": country is missing");
-        return new TaxRateImpl(id, name, amount, includedInPrice, country, state, subRates);
+        return new TaxRateImpl(id, key, name, amount, includedInPrice, country, state, subRates);
     }
 
     /**
@@ -258,7 +282,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
      * @return TaxRate
      */
     public TaxRate buildUnchecked() {
-        return new TaxRateImpl(id, name, amount, includedInPrice, country, state, subRates);
+        return new TaxRateImpl(id, key, name, amount, includedInPrice, country, state, subRates);
     }
 
     /**
@@ -277,6 +301,7 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     public static TaxRateBuilder of(final TaxRate template) {
         TaxRateBuilder builder = new TaxRateBuilder();
         builder.id = template.getId();
+        builder.key = template.getKey();
         builder.name = template.getName();
         builder.amount = template.getAmount();
         builder.includedInPrice = template.getIncludedInPrice();

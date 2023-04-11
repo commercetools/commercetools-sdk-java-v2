@@ -57,12 +57,12 @@ public class InventoryIntegrationTests {
     }
 
     @Test
-    public void query() {
+    public void queryBySku() {
         withInventoryEntry(inventoryEntry -> {
             InventoryPagedQueryResponse inventoryPagedQueryResponse = CommercetoolsTestUtils.getProjectApiRoot()
                     .inventory()
                     .get()
-                    .withWhere("id=" + "\"" + inventoryEntry.getId() + "\"")
+                    .withWhere("sku=:sku", "sku", inventoryEntry.getSku())
                     .executeBlocking()
                     .getBody();
             Assertions.assertNotNull(inventoryPagedQueryResponse);

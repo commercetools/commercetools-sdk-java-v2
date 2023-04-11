@@ -64,8 +64,9 @@ public class OrdersFixtures {
                         .getBody();
 
                 OrderFromCartDraft orderDraft = OrderFromCartDraft.builder()
-                        .cart((CartResourceIdentifier) updatedCart.toResourceIdentifier())
+                        .cart(updatedCart.toResourceIdentifier())
                         .version(updatedCart.getVersion())
+                        .orderNumber(CommercetoolsTestUtils.randomString())
                         .build();
 
                 Order order = createOrder(orderDraft);

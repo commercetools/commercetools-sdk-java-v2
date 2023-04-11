@@ -58,13 +58,13 @@ public interface ShippingRatePriceTier {
             return com.commercetools.api.models.shipping_method.CartValueTier
                     .deepCopy((com.commercetools.api.models.shipping_method.CartValueTier) template);
         }
-        if (template instanceof com.commercetools.api.models.shipping_method.CartClassificationTier) {
-            return com.commercetools.api.models.shipping_method.CartClassificationTier
-                    .deepCopy((com.commercetools.api.models.shipping_method.CartClassificationTier) template);
-        }
         if (template instanceof com.commercetools.api.models.shipping_method.CartScoreTier) {
             return com.commercetools.api.models.shipping_method.CartScoreTier
                     .deepCopy((com.commercetools.api.models.shipping_method.CartScoreTier) template);
+        }
+        if (template instanceof com.commercetools.api.models.shipping_method.CartClassificationTier) {
+            return com.commercetools.api.models.shipping_method.CartClassificationTier
+                    .deepCopy((com.commercetools.api.models.shipping_method.CartClassificationTier) template);
         }
         ShippingRatePriceTierImpl instance = new ShippingRatePriceTierImpl();
         return instance;

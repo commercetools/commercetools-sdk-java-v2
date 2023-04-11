@@ -14,6 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Removes the current projection of the Product. The staged projection is unaffected. Unpublished Products only appear in query/search results with <code>staged=false</code>. Produces the ProductUnpublished Message.</p>
+ *  <p>Unpublished Products cannot be added to a Cart. However, if a Cart contains Line Items for Products that were added before the Product was unpublished, the Cart is unaffected and can still be used to create an Order. To prevent this, in addition to unpublishing the Product you should remove the Prices from the Product using Remove Price for Embedded Prices or Delete StandalonePrice for Standalone Prices.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

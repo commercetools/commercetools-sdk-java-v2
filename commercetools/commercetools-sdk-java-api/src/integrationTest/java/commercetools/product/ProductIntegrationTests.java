@@ -102,6 +102,42 @@ public class ProductIntegrationTests {
     }
 
     @Test
+    public void searchBySKU() {
+        withProduct(product -> {
+            List<ProductProjection> queriedProduct = CommercetoolsTestUtils.getProjectApiRoot()
+                    .productProjections()
+                    .get()
+                    .withWhere("masterVariant(sku in :sku) or variants(sku in :sku)", "sku",
+                        product.getMasterData().getCurrent().getMasterVariant().getSku())
+                    .withLimit(1)
+                    .withStaged(true)
+                    .executeBlocking()
+                    .getBody()
+                    .getResults();
+            Assertions.assertNotNull(queriedProduct);
+            Assertions.assertEquals(1, queriedProduct.size());
+            Assertions.assertEquals(product.getKey(), queriedProduct.get(0).getKey());
+
+            assertEventually(Duration.ofSeconds(60), Duration.ofMillis(500), () -> {
+                List<ProductProjection> searchProduct = CommercetoolsTestUtils.getProjectApiRoot()
+                        .productProjections()
+                        .search()
+                        .post()
+                        .withFilterQuery(
+                            "variants.sku:\"" + product.getMasterData().getCurrent().getMasterVariant().getSku() + "\"")
+                        .withLimit(1)
+                        .withStaged(true)
+                        .executeBlocking()
+                        .getBody()
+                        .getResults();
+                Assertions.assertNotNull(searchProduct);
+                Assertions.assertEquals(1, searchProduct.size());
+                Assertions.assertEquals(product.getKey(), searchProduct.get(0).getKey());
+            });
+        });
+    }
+
+    @Test
     public void updateById() {
         withUpdateableProduct(product -> {
             List<ProductUpdateAction> updateActions = new ArrayList<>();

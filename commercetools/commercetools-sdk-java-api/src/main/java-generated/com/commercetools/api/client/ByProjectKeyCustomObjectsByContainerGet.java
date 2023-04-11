@@ -35,7 +35,9 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyCustomObjectsByContainerGet extends
         ApiMethod<ByProjectKeyCustomObjectsByContainerGet, com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse>
-        implements com.commercetools.api.client.QueryTrait<ByProjectKeyCustomObjectsByContainerGet>,
+        implements
+        com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyCustomObjectsByContainerGet, com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse>,
+        com.commercetools.api.client.QueryTrait<ByProjectKeyCustomObjectsByContainerGet>,
         com.commercetools.api.client.PagingTrait<ByProjectKeyCustomObjectsByContainerGet>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyCustomObjectsByContainerGet>,
         com.commercetools.api.client.SortableTrait<ByProjectKeyCustomObjectsByContainerGet>,

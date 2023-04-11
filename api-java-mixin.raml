@@ -1426,6 +1426,10 @@ types:
       (java-implements):
         'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyCustomObjectsGet,
         com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse>'
+    /{container}:
+      get:
+        (java-implements):
+          'com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyCustomObjectsByContainerGet, com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse>'
   /customer-groups:
     (java-implements): 'ByProjectKeyCustomerGroupsRequestBuilderMixin'
     get:

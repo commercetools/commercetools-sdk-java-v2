@@ -35,10 +35,6 @@ public class CartDiscountFixtures {
     }
 
     public static CartDiscount createCartDiscount() {
-        CartDiscountValueDraft cartDiscountValueDraft = CartDiscountValueRelativeDraftBuilder.of()
-                .permyriad(10L)
-                .build();
-
         List<CartDiscount> cartDiscounts = CommercetoolsTestUtils.getProjectApiRoot()
                 .cartDiscounts()
                 .get()
@@ -51,20 +47,7 @@ public class CartDiscountFixtures {
             deleteCartDiscount(cartDiscounts.get(0).getId(), cartDiscounts.get(0).getVersion());
         }
 
-        CartDiscountDraft cartDiscountDraft = CartDiscountDraftBuilder.of()
-                .name(CommercetoolsTestUtils.randomLocalizedString())
-                .key(CommercetoolsTestUtils.randomKey())
-                .description(CommercetoolsTestUtils.randomLocalizedString())
-                .value(cartDiscountValueDraft)
-                .cartPredicate("country=\"DE\"")
-                .target(CartDiscountShippingCostTargetBuilder.of().build())
-                .sortOrder("0.41")
-                .isActive(false)
-                .validFrom(ZonedDateTime.now().plus(1, ChronoUnit.HOURS))
-                .validUntil(ZonedDateTime.now().plus(3, ChronoUnit.HOURS))
-                .requiresDiscountCode(true)
-                .stackingMode(StackingMode.STACKING)
-                .build();
+        CartDiscountDraft cartDiscountDraft = createDiscountCodeBuilder().build();
 
         CartDiscount cartDiscount = CommercetoolsTestUtils.getProjectApiRoot()
                 .cartDiscounts()
@@ -90,6 +73,48 @@ public class CartDiscountFixtures {
         Assertions.assertNotNull(deletedCartDiscount);
 
         return deletedCartDiscount;
+    }
+
+    public static void withCartDiscount(final UnaryOperator<CartDiscountDraftBuilder> builder,
+            final Consumer<CartDiscount> fn) {
+        CartDiscount cartDiscount = createCartDiscount(builder.apply(createDiscountCodeBuilder()));
+        try {
+            fn.accept(cartDiscount);
+        }
+        finally {
+            deleteCartDiscount(cartDiscount.getId(), cartDiscount.getVersion());
+        }
+    }
+
+    private static CartDiscountDraftBuilder createDiscountCodeBuilder() {
+        CartDiscountValueDraft cartDiscountValueDraft = CartDiscountValueRelativeDraftBuilder.of()
+                .permyriad(10L)
+                .build();
+
+        return CartDiscountDraftBuilder.of()
+                .name(CommercetoolsTestUtils.randomLocalizedString())
+                .key(CommercetoolsTestUtils.randomKey())
+                .description(CommercetoolsTestUtils.randomLocalizedString())
+                .value(cartDiscountValueDraft)
+                .cartPredicate("country=\"DE\"")
+                .target(CartDiscountShippingCostTargetBuilder.of().build())
+                .sortOrder("0.41")
+                .isActive(false)
+                .validFrom(ZonedDateTime.now().plus(1, ChronoUnit.HOURS))
+                .validUntil(ZonedDateTime.now().plus(3, ChronoUnit.HOURS))
+                .requiresDiscountCode(true)
+                .stackingMode(StackingMode.STACKING);
+    }
+
+    private static CartDiscount createCartDiscount(CartDiscountDraftBuilder cartDiscountDraftBuilder) {
+
+        CartDiscountDraft cartDiscountDraft = cartDiscountDraftBuilder.build();
+
+        return CommercetoolsTestUtils.getProjectApiRoot()
+                .cartDiscounts()
+                .post(cartDiscountDraft)
+                .executeBlocking()
+                .getBody();
     }
 
 }

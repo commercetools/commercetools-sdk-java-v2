@@ -5,7 +5,7 @@ import static commercetools.cart_discount.CartDiscountFixtures.*;
 
 import java.time.ZonedDateTime;
 import java.time.temporal.ChronoUnit;
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.function.Consumer;
 import java.util.function.UnaryOperator;
 
@@ -46,23 +46,7 @@ public class DiscountCodeFixtures {
     }
 
     public static DiscountCode createDiscountCode(CartDiscount cartDiscount) {
-        CartDiscountResourceIdentifier cartDiscountReference = CartDiscountResourceIdentifierBuilder.of()
-                .id(cartDiscount.getId())
-                .build();
-
-        DiscountCodeDraft discountCodeDraft = DiscountCodeDraftBuilder.of()
-                .name(CommercetoolsTestUtils.randomLocalizedString())
-                .description(CommercetoolsTestUtils.randomLocalizedString())
-                .code(CommercetoolsTestUtils.randomString())
-                .cartDiscounts(Arrays.asList(cartDiscountReference))
-                .cartPredicate("country=\"DE\"")
-                .groups(Arrays.asList("group-one"))
-                .isActive(false)
-                .validFrom(ZonedDateTime.now().plus(1, ChronoUnit.HOURS))
-                .validUntil(ZonedDateTime.now().plus(3, ChronoUnit.HOURS))
-                .maxApplications(2L)
-                .maxApplicationsPerCustomer(1L)
-                .build();
+        DiscountCodeDraft discountCodeDraft = createDiscountCodeBuilder(cartDiscount).build();
 
         DiscountCode discountCode = CommercetoolsTestUtils.getProjectApiRoot()
                 .discountCodes()
@@ -90,5 +74,50 @@ public class DiscountCodeFixtures {
         Assertions.assertEquals(discountCode.getId(), id);
 
         return discountCode;
+    }
+
+    public static void withUpdateableDiscountCode(final UnaryOperator<DiscountCodeDraftBuilder> fn,
+            final UnaryOperator<DiscountCode> consumer) {
+        withCartDiscount(cartDiscountDraftBuilder -> cartDiscountDraftBuilder.isActive(true)
+                .validFrom(ZonedDateTime.now().minus(1, ChronoUnit.HOURS)),
+            cartDiscount -> {
+                DiscountCode discountCode = createDiscountCode(fn.apply(createDiscountCodeBuilder(cartDiscount)));
+                try {
+                    discountCode = consumer.apply(discountCode);
+                }
+                finally {
+                    deleteDiscountCode(discountCode.getId(), discountCode.getVersion());
+                }
+            });
+    }
+
+    private static DiscountCodeDraftBuilder createDiscountCodeBuilder(CartDiscount cartDiscount) {
+        CartDiscountResourceIdentifier cartDiscountReference = CartDiscountResourceIdentifierBuilder.of()
+                .id(cartDiscount.getId())
+                .build();
+
+        return DiscountCodeDraftBuilder.of()
+                .name(CommercetoolsTestUtils.randomLocalizedString())
+                .description(CommercetoolsTestUtils.randomLocalizedString())
+                .code(CommercetoolsTestUtils.randomString())
+                .cartDiscounts(Collections.singletonList(cartDiscountReference))
+                .cartPredicate("country=\"DE\"")
+                .groups(Collections.singletonList("group-one"))
+                .isActive(false)
+                .validFrom(ZonedDateTime.now().plus(1, ChronoUnit.HOURS))
+                .validUntil(ZonedDateTime.now().plus(3, ChronoUnit.HOURS))
+                .maxApplications(2L)
+                .maxApplicationsPerCustomer(1L);
+    }
+
+    private static DiscountCode createDiscountCode(DiscountCodeDraftBuilder discountCodeDraftBuilder) {
+
+        DiscountCodeDraft discountCodeDraft = discountCodeDraftBuilder.build();
+
+        return CommercetoolsTestUtils.getProjectApiRoot()
+                .discountCodes()
+                .post(discountCodeDraft)
+                .executeBlocking()
+                .getBody();
     }
 }

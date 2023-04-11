@@ -36,7 +36,8 @@ public class TypeFixtures {
         TypeDraft typeDraft = TypeDraftBuilder.of()
                 .key(CommercetoolsTestUtils.randomKey())
                 .name(CommercetoolsTestUtils.randomLocalizedString())
-                .resourceTypeIds(Arrays.asList(ResourceTypeId.ASSET, ResourceTypeId.CATEGORY))
+                .resourceTypeIds(Arrays.asList(ResourceTypeId.ASSET, ResourceTypeId.CATEGORY, ResourceTypeId.ORDER,
+                    ResourceTypeId.CART_DISCOUNT, ResourceTypeId.PAYMENT_INTERFACE_INTERACTION, ResourceTypeId.PAYMENT))
                 .withFieldDefinitions(
                     fieldDefinitionBuilder -> fieldDefinitionBuilder.type(CustomFieldStringTypeBuilder.of().build())
                             .name("string-field")
@@ -89,5 +90,14 @@ public class TypeFixtures {
         Assertions.assertEquals(type.getId(), id);
 
         return type;
+    }
+
+    public static String getFieldName(Type type) {
+        return type.getFieldDefinitions()
+                .stream()
+                .filter(fieldDefinition -> fieldDefinition.getType().equals(CustomFieldStringTypeBuilder.of().build()))
+                .map(FieldDefinition::getName)
+                .findFirst()
+                .orElse(null);
     }
 }

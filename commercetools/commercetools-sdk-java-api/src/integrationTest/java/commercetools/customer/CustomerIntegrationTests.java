@@ -2,19 +2,22 @@
 package commercetools.customer;
 
 import static commercetools.customer.CustomerFixtures.*;
-import static commercetools.customer_group.CustomerGroupFixtures.*;
+import static commercetools.customer_group.CustomerGroupFixtures.withCustomerGroup;
+import static commercetools.store.StoreFixtures.withStore;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
 import com.commercetools.api.models.common.Address;
+import com.commercetools.api.models.common.BaseAddress;
+import com.commercetools.api.models.common.BaseAddressBuilder;
 import com.commercetools.api.models.customer.*;
 import commercetools.utils.CommercetoolsTestUtils;
 import commercetools.utils.TestUtils;
 
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
-import org.junit.jupiter.api.Assertions;
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class CustomerIntegrationTests {
@@ -24,52 +27,7 @@ public class CustomerIntegrationTests {
         withCustomerGroup(customerGroup -> {
             Customer customer = createCustomer(customerGroup);
             Customer deletedCustomer = deleteCustomer(customer.getId(), customer.getVersion());
-            Assertions.assertEquals(customer.getId(), deletedCustomer.getId());
-        });
-    }
-
-    @Test
-    public void getById() {
-        withCustomer(customer -> {
-            Customer queriedCustomer = CommercetoolsTestUtils.getProjectApiRoot()
-                    .customers()
-                    .withId(customer.getId())
-                    .get()
-                    .executeBlocking()
-                    .getBody();
-
-            Assertions.assertNotNull(queriedCustomer);
-            Assertions.assertEquals(queriedCustomer.getId(), customer.getId());
-        });
-    }
-
-    @Test
-    public void getByKey() {
-        withCustomer(customer -> {
-            Customer queriedCustomer = CommercetoolsTestUtils.getProjectApiRoot()
-                    .customers()
-                    .withKey(customer.getKey())
-                    .get()
-                    .executeBlocking()
-                    .getBody();
-
-            Assertions.assertNotNull(queriedCustomer);
-            Assertions.assertEquals(queriedCustomer.getId(), customer.getId());
-        });
-    }
-
-    @Test
-    public void query() {
-        withCustomer(customer -> {
-            CustomerPagedQueryResponse response = CommercetoolsTestUtils.getProjectApiRoot()
-                    .customers()
-                    .get()
-                    .withWhere("id=" + "\"" + customer.getId() + "\"")
-                    .executeBlocking()
-                    .getBody();
-
-            Assertions.assertNotNull(response);
-            Assertions.assertEquals(response.getResults().get(0).getId(), customer.getId());
+            Assertions.assertThat(customer.getId()).isEqualTo(deletedCustomer.getId());
         });
     }
 
@@ -87,8 +45,8 @@ public class CustomerIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assertions.assertNotNull(updatedCustomer);
-            Assertions.assertEquals(updatedCustomer.getKey(), newKey);
+            Assertions.assertThat(updatedCustomer).isNotNull();
+            Assertions.assertThat(updatedCustomer.getKey()).isEqualTo(newKey);
 
             return updatedCustomer;
         });
@@ -108,10 +66,65 @@ public class CustomerIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assertions.assertNotNull(updatedCustomer);
-            Assertions.assertEquals(updatedCustomer.getKey(), newKey);
+            Assertions.assertThat(updatedCustomer).isNotNull();
+            Assertions.assertThat(updatedCustomer.getKey()).isEqualTo(newKey);
 
             return updatedCustomer;
+        });
+    }
+
+    @Test
+    public void addNewAddress() {
+        withUpdateableCustomer(customer -> {
+            final String newAddressKey = CommercetoolsTestUtils.randomKey();
+            final BaseAddress address1 = BaseAddressBuilder.of()
+                    .country(Locale.GERMANY.getCountry())
+                    .key(newAddressKey)
+                    .build();
+
+            final CustomerAddAddressAction addAddressAction = CustomerAddAddressActionBuilder.of()
+                    .address(address1)
+                    .build();
+
+            final Customer updatedCustomer = CommercetoolsTestUtils.getProjectApiRoot()
+                    .customers()
+                    .update(customer)
+                    .with(builder -> builder.plus(addAddressAction))
+                    .executeBlocking()
+                    .getBody();
+
+            final Optional<Address> newAddress = updatedCustomer.getAddresses()
+                    .stream()
+                    .filter(address -> address.getKey() != null && address.getKey().equals(newAddressKey))
+                    .findAny();
+            Assertions.assertThat(newAddress).isPresent();
+
+            return updatedCustomer;
+        });
+    }
+
+    @Test
+    public void setCustomerToStore() {
+        withStore(store -> {
+            withUpdateableCustomer(customer -> {
+                Assertions.assertThat(customer.getStores()).isEmpty();
+
+                final CustomerSetStoresAction customerSetStoresAction = CustomerSetStoresActionBuilder.of()
+                        .plusStores(store.toResourceIdentifier())
+                        .build();
+                final Customer updatedCustomer = CommercetoolsTestUtils.getProjectApiRoot()
+                        .customers()
+                        .update(customer)
+                        .with(
+                            customerUpdateActionCustomerUpdateActionBuilderUpdateActionBuilder -> customerUpdateActionCustomerUpdateActionBuilderUpdateActionBuilder
+                                    .plus(customerSetStoresAction))
+                        .executeBlocking()
+                        .getBody();
+
+                Assertions.assertThat(updatedCustomer.getStores()).isNotEmpty();
+
+                return updatedCustomer;
+            });
         });
     }
 
@@ -127,8 +140,8 @@ public class CustomerIntegrationTests {
                     .executeBlocking()
                     .getBody();
 
-            Assertions.assertNotNull(deletedCustomer);
-            Assertions.assertEquals(customer.getId(), deletedCustomer.getId());
+            Assertions.assertThat(deletedCustomer).isNotNull();
+            Assertions.assertThat(customer.getId()).isEqualTo(deletedCustomer.getId());
         });
     }
 
@@ -141,8 +154,8 @@ public class CustomerIntegrationTests {
                 .password("weak-new-password")
                 .build();
 
-        Assertions.assertEquals(4, draft.getDefaultBillingAddress());
-        Assertions.assertEquals(3, draft.getDefaultShippingAddress());
+        Assertions.assertThat(4).isEqualTo(draft.getDefaultBillingAddress());
+        Assertions.assertThat(3).isEqualTo(draft.getDefaultShippingAddress());
 
         Customer newCustomer = CommercetoolsTestUtils.getProjectApiRoot()
                 .customers()
@@ -152,32 +165,32 @@ public class CustomerIntegrationTests {
                 .getCustomer();
 
         try {
-            Assertions.assertEquals("FR",
-                newCustomer.getAddresses()
-                        .stream()
-                        .filter(address -> address.getId().equals(newCustomer.getDefaultBillingAddressId()))
-                        .findFirst()
-                        .get()
-                        .getCountry());
-            Assertions.assertEquals("JP",
-                newCustomer.getAddresses()
-                        .stream()
-                        .filter(address -> address.getId().equals(newCustomer.getDefaultShippingAddressId()))
-                        .findFirst()
-                        .get()
-                        .getCountry());
-            Assertions.assertEquals(Arrays.asList("UK", "JP"),
-                newCustomer.getAddresses()
-                        .stream()
-                        .filter(address -> newCustomer.getShippingAddressIds().contains(address.getId()))
-                        .map(Address::getCountry)
-                        .collect(Collectors.toList()));
-            Assertions.assertEquals(Arrays.asList("US", "FR"),
-                newCustomer.getAddresses()
-                        .stream()
-                        .filter(address -> newCustomer.getBillingAddressIds().contains(address.getId()))
-                        .map(Address::getCountry)
-                        .collect(Collectors.toList()));
+            Assertions.assertThat("FR")
+                    .isEqualTo(newCustomer.getAddresses()
+                            .stream()
+                            .filter(address -> address.getId().equals(newCustomer.getDefaultBillingAddressId()))
+                            .findFirst()
+                            .get()
+                            .getCountry());
+            Assertions.assertThat("JP")
+                    .isEqualTo(newCustomer.getAddresses()
+                            .stream()
+                            .filter(address -> address.getId().equals(newCustomer.getDefaultShippingAddressId()))
+                            .findFirst()
+                            .get()
+                            .getCountry());
+            Assertions.assertThat(Arrays.asList("UK", "JP"))
+                    .isEqualTo(newCustomer.getAddresses()
+                            .stream()
+                            .filter(address -> newCustomer.getShippingAddressIds().contains(address.getId()))
+                            .map(Address::getCountry)
+                            .collect(Collectors.toList()));
+            Assertions.assertThat(Arrays.asList("US", "FR"))
+                    .isEqualTo(newCustomer.getAddresses()
+                            .stream()
+                            .filter(address -> newCustomer.getBillingAddressIds().contains(address.getId()))
+                            .map(Address::getCountry)
+                            .collect(Collectors.toList()));
         }
         finally {
             CommercetoolsTestUtils.getProjectApiRoot().customers().delete(newCustomer).executeBlocking();

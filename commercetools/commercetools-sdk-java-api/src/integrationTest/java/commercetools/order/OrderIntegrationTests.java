@@ -1,6 +1,7 @@
 
 package commercetools.order;
 
+import com.commercetools.api.models.cart.*;
 import com.commercetools.api.models.order.Order;
 import com.commercetools.api.models.order.OrderState;
 import com.commercetools.api.models.order.OrderUpdate;

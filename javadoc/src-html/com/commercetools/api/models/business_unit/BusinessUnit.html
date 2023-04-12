@@ -448,13 +448,13 @@
 <span class="source-line-no">435</span><span id="line.435">        if (template == null) {</span>
 <span class="source-line-no">436</span><span id="line.436">            return null;</span>
 <span class="source-line-no">437</span><span id="line.437">        }</span>
-<span class="source-line-no">438</span><span id="line.438">        if (template instanceof com.commercetools.api.models.business_unit.Company) {</span>
-<span class="source-line-no">439</span><span id="line.439">            return com.commercetools.api.models.business_unit.Company</span>
-<span class="source-line-no">440</span><span id="line.440">                    .deepCopy((com.commercetools.api.models.business_unit.Company) template);</span>
+<span class="source-line-no">438</span><span id="line.438">        if (template instanceof com.commercetools.api.models.business_unit.Division) {</span>
+<span class="source-line-no">439</span><span id="line.439">            return com.commercetools.api.models.business_unit.Division</span>
+<span class="source-line-no">440</span><span id="line.440">                    .deepCopy((com.commercetools.api.models.business_unit.Division) template);</span>
 <span class="source-line-no">441</span><span id="line.441">        }</span>
-<span class="source-line-no">442</span><span id="line.442">        if (template instanceof com.commercetools.api.models.business_unit.Division) {</span>
-<span class="source-line-no">443</span><span id="line.443">            return com.commercetools.api.models.business_unit.Division</span>
-<span class="source-line-no">444</span><span id="line.444">                    .deepCopy((com.commercetools.api.models.business_unit.Division) template);</span>
+<span class="source-line-no">442</span><span id="line.442">        if (template instanceof com.commercetools.api.models.business_unit.Company) {</span>
+<span class="source-line-no">443</span><span id="line.443">            return com.commercetools.api.models.business_unit.Company</span>
+<span class="source-line-no">444</span><span id="line.444">                    .deepCopy((com.commercetools.api.models.business_unit.Company) template);</span>
 <span class="source-line-no">445</span><span id="line.445">        }</span>
 <span class="source-line-no">446</span><span id="line.446">        BusinessUnitImpl instance = new BusinessUnitImpl();</span>
 <span class="source-line-no">447</span><span id="line.447">        instance.setId(template.getId());</span>

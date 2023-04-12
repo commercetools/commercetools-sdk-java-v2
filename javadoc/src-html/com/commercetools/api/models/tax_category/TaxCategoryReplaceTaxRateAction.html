@@ -35,128 +35,144 @@
 <span class="source-line-no">022</span><span id="line.22"> * &lt;div class=code-example&gt;</span>
 <span class="source-line-no">023</span><span id="line.23"> * &lt;pre&gt;&lt;code class='java'&gt;</span>
 <span class="source-line-no">024</span><span id="line.24"> *     TaxCategoryReplaceTaxRateAction taxCategoryReplaceTaxRateAction = TaxCategoryReplaceTaxRateAction.builder()</span>
-<span class="source-line-no">025</span><span id="line.25"> *             .taxRateId("{taxRateId}")</span>
-<span class="source-line-no">026</span><span id="line.26"> *             .taxRate(taxRateBuilder -&gt; taxRateBuilder)</span>
-<span class="source-line-no">027</span><span id="line.27"> *             .build()</span>
-<span class="source-line-no">028</span><span id="line.28"> * &lt;/code&gt;&lt;/pre&gt;</span>
-<span class="source-line-no">029</span><span id="line.29"> * &lt;/div&gt;</span>
-<span class="source-line-no">030</span><span id="line.30"> */</span>
-<span class="source-line-no">031</span><span id="line.31">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
-<span class="source-line-no">032</span><span id="line.32">@JsonDeserialize(as = TaxCategoryReplaceTaxRateActionImpl.class)</span>
-<span class="source-line-no">033</span><span id="line.33">public interface TaxCategoryReplaceTaxRateAction extends TaxCategoryUpdateAction {</span>
-<span class="source-line-no">034</span><span id="line.34"></span>
-<span class="source-line-no">035</span><span id="line.35">    /**</span>
-<span class="source-line-no">036</span><span id="line.36">     * discriminator value for TaxCategoryReplaceTaxRateAction</span>
-<span class="source-line-no">037</span><span id="line.37">     */</span>
-<span class="source-line-no">038</span><span id="line.38">    String REPLACE_TAX_RATE = "replaceTaxRate";</span>
-<span class="source-line-no">039</span><span id="line.39"></span>
-<span class="source-line-no">040</span><span id="line.40">    /**</span>
-<span class="source-line-no">041</span><span id="line.41">     *  &lt;p&gt;ID of the TaxRate to replace.&lt;/p&gt;</span>
-<span class="source-line-no">042</span><span id="line.42">     * @return taxRateId</span>
-<span class="source-line-no">043</span><span id="line.43">     */</span>
-<span class="source-line-no">044</span><span id="line.44">    @NotNull</span>
-<span class="source-line-no">045</span><span id="line.45">    @JsonProperty("taxRateId")</span>
-<span class="source-line-no">046</span><span id="line.46">    public String getTaxRateId();</span>
-<span class="source-line-no">047</span><span id="line.47"></span>
-<span class="source-line-no">048</span><span id="line.48">    /**</span>
-<span class="source-line-no">049</span><span id="line.49">     *  &lt;p&gt;New TaxRate to replace with.&lt;/p&gt;</span>
-<span class="source-line-no">050</span><span id="line.50">     * @return taxRate</span>
-<span class="source-line-no">051</span><span id="line.51">     */</span>
-<span class="source-line-no">052</span><span id="line.52">    @NotNull</span>
-<span class="source-line-no">053</span><span id="line.53">    @Valid</span>
-<span class="source-line-no">054</span><span id="line.54">    @JsonProperty("taxRate")</span>
-<span class="source-line-no">055</span><span id="line.55">    public TaxRateDraft getTaxRate();</span>
-<span class="source-line-no">056</span><span id="line.56"></span>
-<span class="source-line-no">057</span><span id="line.57">    /**</span>
-<span class="source-line-no">058</span><span id="line.58">     *  &lt;p&gt;ID of the TaxRate to replace.&lt;/p&gt;</span>
-<span class="source-line-no">059</span><span id="line.59">     * @param taxRateId value to be set</span>
-<span class="source-line-no">060</span><span id="line.60">     */</span>
-<span class="source-line-no">061</span><span id="line.61"></span>
-<span class="source-line-no">062</span><span id="line.62">    public void setTaxRateId(final String taxRateId);</span>
+<span class="source-line-no">025</span><span id="line.25"> *             .taxRate(taxRateBuilder -&gt; taxRateBuilder)</span>
+<span class="source-line-no">026</span><span id="line.26"> *             .build()</span>
+<span class="source-line-no">027</span><span id="line.27"> * &lt;/code&gt;&lt;/pre&gt;</span>
+<span class="source-line-no">028</span><span id="line.28"> * &lt;/div&gt;</span>
+<span class="source-line-no">029</span><span id="line.29"> */</span>
+<span class="source-line-no">030</span><span id="line.30">@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")</span>
+<span class="source-line-no">031</span><span id="line.31">@JsonDeserialize(as = TaxCategoryReplaceTaxRateActionImpl.class)</span>
+<span class="source-line-no">032</span><span id="line.32">public interface TaxCategoryReplaceTaxRateAction extends TaxCategoryUpdateAction {</span>
+<span class="source-line-no">033</span><span id="line.33"></span>
+<span class="source-line-no">034</span><span id="line.34">    /**</span>
+<span class="source-line-no">035</span><span id="line.35">     * discriminator value for TaxCategoryReplaceTaxRateAction</span>
+<span class="source-line-no">036</span><span id="line.36">     */</span>
+<span class="source-line-no">037</span><span id="line.37">    String REPLACE_TAX_RATE = "replaceTaxRate";</span>
+<span class="source-line-no">038</span><span id="line.38"></span>
+<span class="source-line-no">039</span><span id="line.39">    /**</span>
+<span class="source-line-no">040</span><span id="line.40">     *  &lt;p&gt;ID of the TaxRate to replace. Either &lt;code&gt;taxRateId&lt;/code&gt; or &lt;code&gt;taxRateKey&lt;/code&gt; is required for this update action.&lt;/p&gt;</span>
+<span class="source-line-no">041</span><span id="line.41">     * @return taxRateId</span>
+<span class="source-line-no">042</span><span id="line.42">     */</span>
+<span class="source-line-no">043</span><span id="line.43"></span>
+<span class="source-line-no">044</span><span id="line.44">    @JsonProperty("taxRateId")</span>
+<span class="source-line-no">045</span><span id="line.45">    public String getTaxRateId();</span>
+<span class="source-line-no">046</span><span id="line.46"></span>
+<span class="source-line-no">047</span><span id="line.47">    /**</span>
+<span class="source-line-no">048</span><span id="line.48">     *  &lt;p&gt;Key of the TaxRate to replace. Either &lt;code&gt;taxRateId&lt;/code&gt; or &lt;code&gt;taxRateKey&lt;/code&gt; is required for this update action.&lt;/p&gt;</span>
+<span class="source-line-no">049</span><span id="line.49">     * @return taxRateKey</span>
+<span class="source-line-no">050</span><span id="line.50">     */</span>
+<span class="source-line-no">051</span><span id="line.51"></span>
+<span class="source-line-no">052</span><span id="line.52">    @JsonProperty("taxRateKey")</span>
+<span class="source-line-no">053</span><span id="line.53">    public String getTaxRateKey();</span>
+<span class="source-line-no">054</span><span id="line.54"></span>
+<span class="source-line-no">055</span><span id="line.55">    /**</span>
+<span class="source-line-no">056</span><span id="line.56">     *  &lt;p&gt;New TaxRate to replace with.&lt;/p&gt;</span>
+<span class="source-line-no">057</span><span id="line.57">     * @return taxRate</span>
+<span class="source-line-no">058</span><span id="line.58">     */</span>
+<span class="source-line-no">059</span><span id="line.59">    @NotNull</span>
+<span class="source-line-no">060</span><span id="line.60">    @Valid</span>
+<span class="source-line-no">061</span><span id="line.61">    @JsonProperty("taxRate")</span>
+<span class="source-line-no">062</span><span id="line.62">    public TaxRateDraft getTaxRate();</span>
 <span class="source-line-no">063</span><span id="line.63"></span>
 <span class="source-line-no">064</span><span id="line.64">    /**</span>
-<span class="source-line-no">065</span><span id="line.65">     *  &lt;p&gt;New TaxRate to replace with.&lt;/p&gt;</span>
-<span class="source-line-no">066</span><span id="line.66">     * @param taxRate value to be set</span>
+<span class="source-line-no">065</span><span id="line.65">     *  &lt;p&gt;ID of the TaxRate to replace. Either &lt;code&gt;taxRateId&lt;/code&gt; or &lt;code&gt;taxRateKey&lt;/code&gt; is required for this update action.&lt;/p&gt;</span>
+<span class="source-line-no">066</span><span id="line.66">     * @param taxRateId value to be set</span>
 <span class="source-line-no">067</span><span id="line.67">     */</span>
 <span class="source-line-no">068</span><span id="line.68"></span>
-<span class="source-line-no">069</span><span id="line.69">    public void setTaxRate(final TaxRateDraft taxRate);</span>
+<span class="source-line-no">069</span><span id="line.69">    public void setTaxRateId(final String taxRateId);</span>
 <span class="source-line-no">070</span><span id="line.70"></span>
 <span class="source-line-no">071</span><span id="line.71">    /**</span>
-<span class="source-line-no">072</span><span id="line.72">     * factory method</span>
-<span class="source-line-no">073</span><span id="line.73">     * @return instance of TaxCategoryReplaceTaxRateAction</span>
+<span class="source-line-no">072</span><span id="line.72">     *  &lt;p&gt;Key of the TaxRate to replace. Either &lt;code&gt;taxRateId&lt;/code&gt; or &lt;code&gt;taxRateKey&lt;/code&gt; is required for this update action.&lt;/p&gt;</span>
+<span class="source-line-no">073</span><span id="line.73">     * @param taxRateKey value to be set</span>
 <span class="source-line-no">074</span><span id="line.74">     */</span>
-<span class="source-line-no">075</span><span id="line.75">    public static TaxCategoryReplaceTaxRateAction of() {</span>
-<span class="source-line-no">076</span><span id="line.76">        return new TaxCategoryReplaceTaxRateActionImpl();</span>
-<span class="source-line-no">077</span><span id="line.77">    }</span>
-<span class="source-line-no">078</span><span id="line.78"></span>
-<span class="source-line-no">079</span><span id="line.79">    /**</span>
-<span class="source-line-no">080</span><span id="line.80">     * factory method to create a shallow copy TaxCategoryReplaceTaxRateAction</span>
-<span class="source-line-no">081</span><span id="line.81">     * @param template instance to be copied</span>
-<span class="source-line-no">082</span><span id="line.82">     * @return copy instance</span>
-<span class="source-line-no">083</span><span id="line.83">     */</span>
-<span class="source-line-no">084</span><span id="line.84">    public static TaxCategoryReplaceTaxRateAction of(final TaxCategoryReplaceTaxRateAction template) {</span>
-<span class="source-line-no">085</span><span id="line.85">        TaxCategoryReplaceTaxRateActionImpl instance = new TaxCategoryReplaceTaxRateActionImpl();</span>
-<span class="source-line-no">086</span><span id="line.86">        instance.setTaxRateId(template.getTaxRateId());</span>
-<span class="source-line-no">087</span><span id="line.87">        instance.setTaxRate(template.getTaxRate());</span>
-<span class="source-line-no">088</span><span id="line.88">        return instance;</span>
-<span class="source-line-no">089</span><span id="line.89">    }</span>
-<span class="source-line-no">090</span><span id="line.90"></span>
-<span class="source-line-no">091</span><span id="line.91">    /**</span>
-<span class="source-line-no">092</span><span id="line.92">     * factory method to create a deep copy of TaxCategoryReplaceTaxRateAction</span>
-<span class="source-line-no">093</span><span id="line.93">     * @param template instance to be copied</span>
-<span class="source-line-no">094</span><span id="line.94">     * @return copy instance</span>
-<span class="source-line-no">095</span><span id="line.95">     */</span>
-<span class="source-line-no">096</span><span id="line.96">    @Nullable</span>
-<span class="source-line-no">097</span><span id="line.97">    public static TaxCategoryReplaceTaxRateAction deepCopy(@Nullable final TaxCategoryReplaceTaxRateAction template) {</span>
-<span class="source-line-no">098</span><span id="line.98">        if (template == null) {</span>
-<span class="source-line-no">099</span><span id="line.99">            return null;</span>
-<span class="source-line-no">100</span><span id="line.100">        }</span>
-<span class="source-line-no">101</span><span id="line.101">        TaxCategoryReplaceTaxRateActionImpl instance = new TaxCategoryReplaceTaxRateActionImpl();</span>
-<span class="source-line-no">102</span><span id="line.102">        instance.setTaxRateId(template.getTaxRateId());</span>
-<span class="source-line-no">103</span><span id="line.103">        instance.setTaxRate(com.commercetools.api.models.tax_category.TaxRateDraft.deepCopy(template.getTaxRate()));</span>
-<span class="source-line-no">104</span><span id="line.104">        return instance;</span>
-<span class="source-line-no">105</span><span id="line.105">    }</span>
-<span class="source-line-no">106</span><span id="line.106"></span>
-<span class="source-line-no">107</span><span id="line.107">    /**</span>
-<span class="source-line-no">108</span><span id="line.108">     * builder factory method for TaxCategoryReplaceTaxRateAction</span>
-<span class="source-line-no">109</span><span id="line.109">     * @return builder</span>
+<span class="source-line-no">075</span><span id="line.75"></span>
+<span class="source-line-no">076</span><span id="line.76">    public void setTaxRateKey(final String taxRateKey);</span>
+<span class="source-line-no">077</span><span id="line.77"></span>
+<span class="source-line-no">078</span><span id="line.78">    /**</span>
+<span class="source-line-no">079</span><span id="line.79">     *  &lt;p&gt;New TaxRate to replace with.&lt;/p&gt;</span>
+<span class="source-line-no">080</span><span id="line.80">     * @param taxRate value to be set</span>
+<span class="source-line-no">081</span><span id="line.81">     */</span>
+<span class="source-line-no">082</span><span id="line.82"></span>
+<span class="source-line-no">083</span><span id="line.83">    public void setTaxRate(final TaxRateDraft taxRate);</span>
+<span class="source-line-no">084</span><span id="line.84"></span>
+<span class="source-line-no">085</span><span id="line.85">    /**</span>
+<span class="source-line-no">086</span><span id="line.86">     * factory method</span>
+<span class="source-line-no">087</span><span id="line.87">     * @return instance of TaxCategoryReplaceTaxRateAction</span>
+<span class="source-line-no">088</span><span id="line.88">     */</span>
+<span class="source-line-no">089</span><span id="line.89">    public static TaxCategoryReplaceTaxRateAction of() {</span>
+<span class="source-line-no">090</span><span id="line.90">        return new TaxCategoryReplaceTaxRateActionImpl();</span>
+<span class="source-line-no">091</span><span id="line.91">    }</span>
+<span class="source-line-no">092</span><span id="line.92"></span>
+<span class="source-line-no">093</span><span id="line.93">    /**</span>
+<span class="source-line-no">094</span><span id="line.94">     * factory method to create a shallow copy TaxCategoryReplaceTaxRateAction</span>
+<span class="source-line-no">095</span><span id="line.95">     * @param template instance to be copied</span>
+<span class="source-line-no">096</span><span id="line.96">     * @return copy instance</span>
+<span class="source-line-no">097</span><span id="line.97">     */</span>
+<span class="source-line-no">098</span><span id="line.98">    public static TaxCategoryReplaceTaxRateAction of(final TaxCategoryReplaceTaxRateAction template) {</span>
+<span class="source-line-no">099</span><span id="line.99">        TaxCategoryReplaceTaxRateActionImpl instance = new TaxCategoryReplaceTaxRateActionImpl();</span>
+<span class="source-line-no">100</span><span id="line.100">        instance.setTaxRateId(template.getTaxRateId());</span>
+<span class="source-line-no">101</span><span id="line.101">        instance.setTaxRateKey(template.getTaxRateKey());</span>
+<span class="source-line-no">102</span><span id="line.102">        instance.setTaxRate(template.getTaxRate());</span>
+<span class="source-line-no">103</span><span id="line.103">        return instance;</span>
+<span class="source-line-no">104</span><span id="line.104">    }</span>
+<span class="source-line-no">105</span><span id="line.105"></span>
+<span class="source-line-no">106</span><span id="line.106">    /**</span>
+<span class="source-line-no">107</span><span id="line.107">     * factory method to create a deep copy of TaxCategoryReplaceTaxRateAction</span>
+<span class="source-line-no">108</span><span id="line.108">     * @param template instance to be copied</span>
+<span class="source-line-no">109</span><span id="line.109">     * @return copy instance</span>
 <span class="source-line-no">110</span><span id="line.110">     */</span>
-<span class="source-line-no">111</span><span id="line.111">    public static TaxCategoryReplaceTaxRateActionBuilder builder() {</span>
-<span class="source-line-no">112</span><span id="line.112">        return TaxCategoryReplaceTaxRateActionBuilder.of();</span>
-<span class="source-line-no">113</span><span id="line.113">    }</span>
-<span class="source-line-no">114</span><span id="line.114"></span>
-<span class="source-line-no">115</span><span id="line.115">    /**</span>
-<span class="source-line-no">116</span><span id="line.116">     * create builder for TaxCategoryReplaceTaxRateAction instance</span>
-<span class="source-line-no">117</span><span id="line.117">     * @param template instance with prefilled values for the builder</span>
-<span class="source-line-no">118</span><span id="line.118">     * @return builder</span>
-<span class="source-line-no">119</span><span id="line.119">     */</span>
-<span class="source-line-no">120</span><span id="line.120">    public static TaxCategoryReplaceTaxRateActionBuilder builder(final TaxCategoryReplaceTaxRateAction template) {</span>
-<span class="source-line-no">121</span><span id="line.121">        return TaxCategoryReplaceTaxRateActionBuilder.of(template);</span>
-<span class="source-line-no">122</span><span id="line.122">    }</span>
-<span class="source-line-no">123</span><span id="line.123"></span>
-<span class="source-line-no">124</span><span id="line.124">    /**</span>
-<span class="source-line-no">125</span><span id="line.125">     * accessor map function</span>
-<span class="source-line-no">126</span><span id="line.126">     * @param &lt;T&gt; mapped type</span>
-<span class="source-line-no">127</span><span id="line.127">     * @param helper function to map the object</span>
-<span class="source-line-no">128</span><span id="line.128">     * @return mapped value</span>
-<span class="source-line-no">129</span><span id="line.129">     */</span>
-<span class="source-line-no">130</span><span id="line.130">    default &lt;T&gt; T withTaxCategoryReplaceTaxRateAction(Function&lt;TaxCategoryReplaceTaxRateAction, T&gt; helper) {</span>
-<span class="source-line-no">131</span><span id="line.131">        return helper.apply(this);</span>
-<span class="source-line-no">132</span><span id="line.132">    }</span>
-<span class="source-line-no">133</span><span id="line.133"></span>
-<span class="source-line-no">134</span><span id="line.134">    /**</span>
-<span class="source-line-no">135</span><span id="line.135">     * gives a TypeReference for usage with Jackson DataBind</span>
-<span class="source-line-no">136</span><span id="line.136">     * @return TypeReference</span>
-<span class="source-line-no">137</span><span id="line.137">     */</span>
-<span class="source-line-no">138</span><span id="line.138">    public static com.fasterxml.jackson.core.type.TypeReference&lt;TaxCategoryReplaceTaxRateAction&gt; typeReference() {</span>
-<span class="source-line-no">139</span><span id="line.139">        return new com.fasterxml.jackson.core.type.TypeReference&lt;TaxCategoryReplaceTaxRateAction&gt;() {</span>
-<span class="source-line-no">140</span><span id="line.140">            @Override</span>
-<span class="source-line-no">141</span><span id="line.141">            public String toString() {</span>
-<span class="source-line-no">142</span><span id="line.142">                return "TypeReference&lt;TaxCategoryReplaceTaxRateAction&gt;";</span>
-<span class="source-line-no">143</span><span id="line.143">            }</span>
-<span class="source-line-no">144</span><span id="line.144">        };</span>
-<span class="source-line-no">145</span><span id="line.145">    }</span>
-<span class="source-line-no">146</span><span id="line.146">}</span>
+<span class="source-line-no">111</span><span id="line.111">    @Nullable</span>
+<span class="source-line-no">112</span><span id="line.112">    public static TaxCategoryReplaceTaxRateAction deepCopy(@Nullable final TaxCategoryReplaceTaxRateAction template) {</span>
+<span class="source-line-no">113</span><span id="line.113">        if (template == null) {</span>
+<span class="source-line-no">114</span><span id="line.114">            return null;</span>
+<span class="source-line-no">115</span><span id="line.115">        }</span>
+<span class="source-line-no">116</span><span id="line.116">        TaxCategoryReplaceTaxRateActionImpl instance = new TaxCategoryReplaceTaxRateActionImpl();</span>
+<span class="source-line-no">117</span><span id="line.117">        instance.setTaxRateId(template.getTaxRateId());</span>
+<span class="source-line-no">118</span><span id="line.118">        instance.setTaxRateKey(template.getTaxRateKey());</span>
+<span class="source-line-no">119</span><span id="line.119">        instance.setTaxRate(com.commercetools.api.models.tax_category.TaxRateDraft.deepCopy(template.getTaxRate()));</span>
+<span class="source-line-no">120</span><span id="line.120">        return instance;</span>
+<span class="source-line-no">121</span><span id="line.121">    }</span>
+<span class="source-line-no">122</span><span id="line.122"></span>
+<span class="source-line-no">123</span><span id="line.123">    /**</span>
+<span class="source-line-no">124</span><span id="line.124">     * builder factory method for TaxCategoryReplaceTaxRateAction</span>
+<span class="source-line-no">125</span><span id="line.125">     * @return builder</span>
+<span class="source-line-no">126</span><span id="line.126">     */</span>
+<span class="source-line-no">127</span><span id="line.127">    public static TaxCategoryReplaceTaxRateActionBuilder builder() {</span>
+<span class="source-line-no">128</span><span id="line.128">        return TaxCategoryReplaceTaxRateActionBuilder.of();</span>
+<span class="source-line-no">129</span><span id="line.129">    }</span>
+<span class="source-line-no">130</span><span id="line.130"></span>
+<span class="source-line-no">131</span><span id="line.131">    /**</span>
+<span class="source-line-no">132</span><span id="line.132">     * create builder for TaxCategoryReplaceTaxRateAction instance</span>
+<span class="source-line-no">133</span><span id="line.133">     * @param template instance with prefilled values for the builder</span>
+<span class="source-line-no">134</span><span id="line.134">     * @return builder</span>
+<span class="source-line-no">135</span><span id="line.135">     */</span>
+<span class="source-line-no">136</span><span id="line.136">    public static TaxCategoryReplaceTaxRateActionBuilder builder(final TaxCategoryReplaceTaxRateAction template) {</span>
+<span class="source-line-no">137</span><span id="line.137">        return TaxCategoryReplaceTaxRateActionBuilder.of(template);</span>
+<span class="source-line-no">138</span><span id="line.138">    }</span>
+<span class="source-line-no">139</span><span id="line.139"></span>
+<span class="source-line-no">140</span><span id="line.140">    /**</span>
+<span class="source-line-no">141</span><span id="line.141">     * accessor map function</span>
+<span class="source-line-no">142</span><span id="line.142">     * @param &lt;T&gt; mapped type</span>
+<span class="source-line-no">143</span><span id="line.143">     * @param helper function to map the object</span>
+<span class="source-line-no">144</span><span id="line.144">     * @return mapped value</span>
+<span class="source-line-no">145</span><span id="line.145">     */</span>
+<span class="source-line-no">146</span><span id="line.146">    default &lt;T&gt; T withTaxCategoryReplaceTaxRateAction(Function&lt;TaxCategoryReplaceTaxRateAction, T&gt; helper) {</span>
+<span class="source-line-no">147</span><span id="line.147">        return helper.apply(this);</span>
+<span class="source-line-no">148</span><span id="line.148">    }</span>
+<span class="source-line-no">149</span><span id="line.149"></span>
+<span class="source-line-no">150</span><span id="line.150">    /**</span>
+<span class="source-line-no">151</span><span id="line.151">     * gives a TypeReference for usage with Jackson DataBind</span>
+<span class="source-line-no">152</span><span id="line.152">     * @return TypeReference</span>
+<span class="source-line-no">153</span><span id="line.153">     */</span>
+<span class="source-line-no">154</span><span id="line.154">    public static com.fasterxml.jackson.core.type.TypeReference&lt;TaxCategoryReplaceTaxRateAction&gt; typeReference() {</span>
+<span class="source-line-no">155</span><span id="line.155">        return new com.fasterxml.jackson.core.type.TypeReference&lt;TaxCategoryReplaceTaxRateAction&gt;() {</span>
+<span class="source-line-no">156</span><span id="line.156">            @Override</span>
+<span class="source-line-no">157</span><span id="line.157">            public String toString() {</span>
+<span class="source-line-no">158</span><span id="line.158">                return "TypeReference&lt;TaxCategoryReplaceTaxRateAction&gt;";</span>
+<span class="source-line-no">159</span><span id="line.159">            }</span>
+<span class="source-line-no">160</span><span id="line.160">        };</span>
+<span class="source-line-no">161</span><span id="line.161">    }</span>
+<span class="source-line-no">162</span><span id="line.162">}</span>
 
 
 

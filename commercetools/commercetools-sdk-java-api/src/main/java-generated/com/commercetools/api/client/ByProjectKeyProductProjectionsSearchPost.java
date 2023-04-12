@@ -92,7 +92,7 @@ public class ByProjectKeyProductProjectionsSearchPost extends
     }
 
     /**
-     * add a form parameter
+     * add an additional form parameter
      * @param key form parameter name
      * @param value form parameter value
      * @param <V> value type

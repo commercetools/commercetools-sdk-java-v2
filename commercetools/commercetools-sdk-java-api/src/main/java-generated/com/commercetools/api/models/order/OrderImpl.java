@@ -62,6 +62,10 @@ public class OrderImpl implements Order, ModelBase {
 
     private com.commercetools.api.models.cart.ShippingMode shippingMode;
 
+    private String shippingKey;
+
+    private com.commercetools.api.models.type.CustomFields shippingCustomFields;
+
     private java.util.List<com.commercetools.api.models.cart.Shipping> shipping;
 
     private com.commercetools.api.models.cart.TaxMode taxMode;
@@ -138,6 +142,8 @@ public class OrderImpl implements Order, ModelBase {
             @JsonProperty("shippingAddress") final com.commercetools.api.models.common.Address shippingAddress,
             @JsonProperty("billingAddress") final com.commercetools.api.models.common.Address billingAddress,
             @JsonProperty("shippingMode") final com.commercetools.api.models.cart.ShippingMode shippingMode,
+            @JsonProperty("shippingKey") final String shippingKey,
+            @JsonProperty("shippingCustomFields") final com.commercetools.api.models.type.CustomFields shippingCustomFields,
             @JsonProperty("shipping") final java.util.List<com.commercetools.api.models.cart.Shipping> shipping,
             @JsonProperty("taxMode") final com.commercetools.api.models.cart.TaxMode taxMode,
             @JsonProperty("taxRoundingMode") final com.commercetools.api.models.cart.RoundingMode taxRoundingMode,
@@ -185,6 +191,8 @@ public class OrderImpl implements Order, ModelBase {
         this.shippingAddress = shippingAddress;
         this.billingAddress = billingAddress;
         this.shippingMode = shippingMode;
+        this.shippingKey = shippingKey;
+        this.shippingCustomFields = shippingCustomFields;
         this.shipping = shipping;
         this.taxMode = taxMode;
         this.taxRoundingMode = taxRoundingMode;
@@ -386,6 +394,22 @@ public class OrderImpl implements Order, ModelBase {
 
     public com.commercetools.api.models.cart.ShippingMode getShippingMode() {
         return this.shippingMode;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method with <code>Single</code> ShippingMode.</p>
+     */
+
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
+    /**
+     *  <p>Custom Fields of the Shipping Method for <code>Single</code> ShippingMode.</p>
+     */
+
+    public com.commercetools.api.models.type.CustomFields getShippingCustomFields() {
+        return this.shippingCustomFields;
     }
 
     /**
@@ -696,6 +720,14 @@ public class OrderImpl implements Order, ModelBase {
         this.shippingMode = shippingMode;
     }
 
+    public void setShippingKey(final String shippingKey) {
+        this.shippingKey = shippingKey;
+    }
+
+    public void setShippingCustomFields(final com.commercetools.api.models.type.CustomFields shippingCustomFields) {
+        this.shippingCustomFields = shippingCustomFields;
+    }
+
     public void setShipping(final com.commercetools.api.models.cart.Shipping... shipping) {
         this.shipping = new ArrayList<>(Arrays.asList(shipping));
     }
@@ -861,6 +893,8 @@ public class OrderImpl implements Order, ModelBase {
                 .append(shippingAddress, that.shippingAddress)
                 .append(billingAddress, that.billingAddress)
                 .append(shippingMode, that.shippingMode)
+                .append(shippingKey, that.shippingKey)
+                .append(shippingCustomFields, that.shippingCustomFields)
                 .append(shipping, that.shipping)
                 .append(taxMode, that.taxMode)
                 .append(taxRoundingMode, that.taxRoundingMode)
@@ -913,6 +947,8 @@ public class OrderImpl implements Order, ModelBase {
                 .append(shippingAddress)
                 .append(billingAddress)
                 .append(shippingMode)
+                .append(shippingKey)
+                .append(shippingCustomFields)
                 .append(shipping)
                 .append(taxMode)
                 .append(taxRoundingMode)

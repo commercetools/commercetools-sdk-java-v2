@@ -246,6 +246,22 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public ShippingMode getShippingMode();
 
     /**
+     *  <p>User-defined unique identifier of the Shipping Method with <code>Single</code> ShippingMode.</p>
+     * @return shippingKey
+     */
+
+    @JsonProperty("shippingKey")
+    public String getShippingKey();
+
+    /**
+     *  <p>Custom Fields of the Shipping Method for <code>Single</code> ShippingMode.</p>
+     * @return shippingCustomFields
+     */
+    @Valid
+    @JsonProperty("shippingCustomFields")
+    public CustomFields getShippingCustomFields();
+
+    /**
      *  <p>Holds all shipping-related information per Shipping Method for <code>Multi</code> ShippingMode.</p>
      *  <p>It is updated automatically after the Shipping Method is added.</p>
      * @return shipping
@@ -627,6 +643,20 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public void setShippingMode(final ShippingMode shippingMode);
 
     /**
+     *  <p>User-defined unique identifier of the Shipping Method with <code>Single</code> ShippingMode.</p>
+     * @param shippingKey value to be set
+     */
+
+    public void setShippingKey(final String shippingKey);
+
+    /**
+     *  <p>Custom Fields of the Shipping Method for <code>Single</code> ShippingMode.</p>
+     * @param shippingCustomFields value to be set
+     */
+
+    public void setShippingCustomFields(final CustomFields shippingCustomFields);
+
+    /**
      *  <p>Holds all shipping-related information per Shipping Method for <code>Multi</code> ShippingMode.</p>
      *  <p>It is updated automatically after the Shipping Method is added.</p>
      * @param shipping values to be set
@@ -899,6 +929,8 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
         instance.setShippingAddress(template.getShippingAddress());
         instance.setBillingAddress(template.getBillingAddress());
         instance.setShippingMode(template.getShippingMode());
+        instance.setShippingKey(template.getShippingKey());
+        instance.setShippingCustomFields(template.getShippingCustomFields());
         instance.setShipping(template.getShipping());
         instance.setTaxMode(template.getTaxMode());
         instance.setTaxRoundingMode(template.getTaxRoundingMode());
@@ -976,6 +1008,9 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
             com.commercetools.api.models.common.Address.deepCopy(template.getShippingAddress()));
         instance.setBillingAddress(com.commercetools.api.models.common.Address.deepCopy(template.getBillingAddress()));
         instance.setShippingMode(template.getShippingMode());
+        instance.setShippingKey(template.getShippingKey());
+        instance.setShippingCustomFields(
+            com.commercetools.api.models.type.CustomFields.deepCopy(template.getShippingCustomFields()));
         instance.setShipping(Optional.ofNullable(template.getShipping())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.cart.Shipping::deepCopy)

@@ -91,6 +91,12 @@ public class OrderBuilder implements Builder<Order> {
 
     private com.commercetools.api.models.cart.ShippingMode shippingMode;
 
+    @Nullable
+    private String shippingKey;
+
+    @Nullable
+    private com.commercetools.api.models.type.CustomFields shippingCustomFields;
+
     private java.util.List<com.commercetools.api.models.cart.Shipping> shipping;
 
     @Nullable
@@ -615,6 +621,41 @@ public class OrderBuilder implements Builder<Order> {
 
     public OrderBuilder shippingMode(final com.commercetools.api.models.cart.ShippingMode shippingMode) {
         this.shippingMode = shippingMode;
+        return this;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Shipping Method with <code>Single</code> ShippingMode.</p>
+     * @param shippingKey value to be set
+     * @return Builder
+     */
+
+    public OrderBuilder shippingKey(@Nullable final String shippingKey) {
+        this.shippingKey = shippingKey;
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields of the Shipping Method for <code>Single</code> ShippingMode.</p>
+     * @param builder function to build the shippingCustomFields value
+     * @return Builder
+     */
+
+    public OrderBuilder shippingCustomFields(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        this.shippingCustomFields = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields of the Shipping Method for <code>Single</code> ShippingMode.</p>
+     * @param shippingCustomFields value to be set
+     * @return Builder
+     */
+
+    public OrderBuilder shippingCustomFields(
+            @Nullable final com.commercetools.api.models.type.CustomFields shippingCustomFields) {
+        this.shippingCustomFields = shippingCustomFields;
         return this;
     }
 
@@ -1555,6 +1596,26 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
+     *  <p>User-defined unique identifier of the Shipping Method with <code>Single</code> ShippingMode.</p>
+     * @return shippingKey
+     */
+
+    @Nullable
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
+    /**
+     *  <p>Custom Fields of the Shipping Method for <code>Single</code> ShippingMode.</p>
+     * @return shippingCustomFields
+     */
+
+    @Nullable
+    public com.commercetools.api.models.type.CustomFields getShippingCustomFields() {
+        return this.shippingCustomFields;
+    }
+
+    /**
      *  <p>Holds all shipping-related information per Shipping Method for <code>Multi</code> ShippingMode.</p>
      *  <p>It is updated automatically after the Shipping Method is added.</p>
      * @return shipping
@@ -1835,11 +1896,11 @@ public class OrderBuilder implements Builder<Order> {
         Objects.requireNonNull(refusedGifts, Order.class + ": refusedGifts is missing");
         return new OrderImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, completedAt,
             orderNumber, customerId, customerEmail, anonymousId, businessUnit, store, lineItems, customLineItems,
-            totalPrice, taxedPrice, taxedShippingPrice, shippingAddress, billingAddress, shippingMode, shipping,
-            taxMode, taxRoundingMode, customerGroup, country, orderState, state, shipmentState, paymentState,
-            shippingInfo, syncInfo, returnInfo, purchaseOrderNumber, discountCodes, lastMessageSequenceNumber, cart,
-            quote, custom, paymentInfo, locale, inventoryMode, origin, taxCalculationMode, shippingRateInput,
-            itemShippingAddresses, refusedGifts);
+            totalPrice, taxedPrice, taxedShippingPrice, shippingAddress, billingAddress, shippingMode, shippingKey,
+            shippingCustomFields, shipping, taxMode, taxRoundingMode, customerGroup, country, orderState, state,
+            shipmentState, paymentState, shippingInfo, syncInfo, returnInfo, purchaseOrderNumber, discountCodes,
+            lastMessageSequenceNumber, cart, quote, custom, paymentInfo, locale, inventoryMode, origin,
+            taxCalculationMode, shippingRateInput, itemShippingAddresses, refusedGifts);
     }
 
     /**
@@ -1849,11 +1910,11 @@ public class OrderBuilder implements Builder<Order> {
     public Order buildUnchecked() {
         return new OrderImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, completedAt,
             orderNumber, customerId, customerEmail, anonymousId, businessUnit, store, lineItems, customLineItems,
-            totalPrice, taxedPrice, taxedShippingPrice, shippingAddress, billingAddress, shippingMode, shipping,
-            taxMode, taxRoundingMode, customerGroup, country, orderState, state, shipmentState, paymentState,
-            shippingInfo, syncInfo, returnInfo, purchaseOrderNumber, discountCodes, lastMessageSequenceNumber, cart,
-            quote, custom, paymentInfo, locale, inventoryMode, origin, taxCalculationMode, shippingRateInput,
-            itemShippingAddresses, refusedGifts);
+            totalPrice, taxedPrice, taxedShippingPrice, shippingAddress, billingAddress, shippingMode, shippingKey,
+            shippingCustomFields, shipping, taxMode, taxRoundingMode, customerGroup, country, orderState, state,
+            shipmentState, paymentState, shippingInfo, syncInfo, returnInfo, purchaseOrderNumber, discountCodes,
+            lastMessageSequenceNumber, cart, quote, custom, paymentInfo, locale, inventoryMode, origin,
+            taxCalculationMode, shippingRateInput, itemShippingAddresses, refusedGifts);
     }
 
     /**
@@ -1892,6 +1953,8 @@ public class OrderBuilder implements Builder<Order> {
         builder.shippingAddress = template.getShippingAddress();
         builder.billingAddress = template.getBillingAddress();
         builder.shippingMode = template.getShippingMode();
+        builder.shippingKey = template.getShippingKey();
+        builder.shippingCustomFields = template.getShippingCustomFields();
         builder.shipping = template.getShipping();
         builder.taxMode = template.getTaxMode();
         builder.taxRoundingMode = template.getTaxRoundingMode();

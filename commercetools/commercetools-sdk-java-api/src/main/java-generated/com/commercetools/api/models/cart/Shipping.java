@@ -75,7 +75,7 @@ public interface Shipping {
     public ShippingRateInput getShippingRateInput();
 
     /**
-     *  <p>Custom Fields of Shipping.</p>
+     *  <p>Custom Fields of Shipping with <code>Multiple</code> ShippingMode.</p>
      * @return shippingCustomFields
      */
     @Valid
@@ -116,7 +116,7 @@ public interface Shipping {
     public void setShippingRateInput(final ShippingRateInput shippingRateInput);
 
     /**
-     *  <p>Custom Fields of Shipping.</p>
+     *  <p>Custom Fields of Shipping with <code>Multiple</code> ShippingMode.</p>
      * @param shippingCustomFields value to be set
      */
 

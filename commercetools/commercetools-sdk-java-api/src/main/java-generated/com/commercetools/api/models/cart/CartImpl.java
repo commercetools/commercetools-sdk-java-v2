@@ -70,11 +70,15 @@ public class CartImpl implements Cart, ModelBase {
 
     private com.commercetools.api.models.cart.ShippingMode shippingMode;
 
+    private String shippingKey;
+
     private com.commercetools.api.models.cart.ShippingInfo shippingInfo;
 
-    private java.util.List<com.commercetools.api.models.cart.Shipping> shipping;
-
     private com.commercetools.api.models.cart.ShippingRateInput shippingRateInput;
+
+    private com.commercetools.api.models.type.CustomFields shippingCustomFields;
+
+    private java.util.List<com.commercetools.api.models.cart.Shipping> shipping;
 
     private java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses;
 
@@ -127,9 +131,11 @@ public class CartImpl implements Cart, ModelBase {
             @JsonProperty("billingAddress") final com.commercetools.api.models.common.Address billingAddress,
             @JsonProperty("shippingAddress") final com.commercetools.api.models.common.Address shippingAddress,
             @JsonProperty("shippingMode") final com.commercetools.api.models.cart.ShippingMode shippingMode,
+            @JsonProperty("shippingKey") final String shippingKey,
             @JsonProperty("shippingInfo") final com.commercetools.api.models.cart.ShippingInfo shippingInfo,
-            @JsonProperty("shipping") final java.util.List<com.commercetools.api.models.cart.Shipping> shipping,
             @JsonProperty("shippingRateInput") final com.commercetools.api.models.cart.ShippingRateInput shippingRateInput,
+            @JsonProperty("shippingCustomFields") final com.commercetools.api.models.type.CustomFields shippingCustomFields,
+            @JsonProperty("shipping") final java.util.List<com.commercetools.api.models.cart.Shipping> shipping,
             @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses,
             @JsonProperty("discountCodes") final java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes,
             @JsonProperty("directDiscounts") final java.util.List<com.commercetools.api.models.cart.DirectDiscount> directDiscounts,
@@ -166,9 +172,11 @@ public class CartImpl implements Cart, ModelBase {
         this.billingAddress = billingAddress;
         this.shippingAddress = shippingAddress;
         this.shippingMode = shippingMode;
+        this.shippingKey = shippingKey;
         this.shippingInfo = shippingInfo;
-        this.shipping = shipping;
         this.shippingRateInput = shippingRateInput;
+        this.shippingCustomFields = shippingCustomFields;
+        this.shipping = shipping;
         this.itemShippingAddresses = itemShippingAddresses;
         this.discountCodes = discountCodes;
         this.directDiscounts = directDiscounts;
@@ -394,19 +402,19 @@ public class CartImpl implements Cart, ModelBase {
     }
 
     /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Single</code> ShippingMode.</p>
+     */
+
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
+    /**
      *  <p>Shipping-related information of a Cart with <code>Single</code> ShippingMode. Automatically set when a Shipping Method is set.</p>
      */
 
     public com.commercetools.api.models.cart.ShippingInfo getShippingInfo() {
         return this.shippingInfo;
-    }
-
-    /**
-     *  <p>Shipping-related information of a Cart with <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
-     */
-
-    public java.util.List<com.commercetools.api.models.cart.Shipping> getShipping() {
-        return this.shipping;
     }
 
     /**
@@ -420,6 +428,22 @@ public class CartImpl implements Cart, ModelBase {
 
     public com.commercetools.api.models.cart.ShippingRateInput getShippingRateInput() {
         return this.shippingRateInput;
+    }
+
+    /**
+     *  <p>Custom Fields of the Shipping Method in a Cart with <code>Single</code> ShippingMode.</p>
+     */
+
+    public com.commercetools.api.models.type.CustomFields getShippingCustomFields() {
+        return this.shippingCustomFields;
+    }
+
+    /**
+     *  <p>Shipping-related information of a Cart with <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.cart.Shipping> getShipping() {
+        return this.shipping;
     }
 
     /**
@@ -630,8 +654,20 @@ public class CartImpl implements Cart, ModelBase {
         this.shippingMode = shippingMode;
     }
 
+    public void setShippingKey(final String shippingKey) {
+        this.shippingKey = shippingKey;
+    }
+
     public void setShippingInfo(final com.commercetools.api.models.cart.ShippingInfo shippingInfo) {
         this.shippingInfo = shippingInfo;
+    }
+
+    public void setShippingRateInput(final com.commercetools.api.models.cart.ShippingRateInput shippingRateInput) {
+        this.shippingRateInput = shippingRateInput;
+    }
+
+    public void setShippingCustomFields(final com.commercetools.api.models.type.CustomFields shippingCustomFields) {
+        this.shippingCustomFields = shippingCustomFields;
     }
 
     public void setShipping(final com.commercetools.api.models.cart.Shipping... shipping) {
@@ -640,10 +676,6 @@ public class CartImpl implements Cart, ModelBase {
 
     public void setShipping(final java.util.List<com.commercetools.api.models.cart.Shipping> shipping) {
         this.shipping = shipping;
-    }
-
-    public void setShippingRateInput(final com.commercetools.api.models.cart.ShippingRateInput shippingRateInput) {
-        this.shippingRateInput = shippingRateInput;
     }
 
     public void setItemShippingAddresses(final com.commercetools.api.models.common.Address... itemShippingAddresses) {
@@ -750,9 +782,11 @@ public class CartImpl implements Cart, ModelBase {
                 .append(billingAddress, that.billingAddress)
                 .append(shippingAddress, that.shippingAddress)
                 .append(shippingMode, that.shippingMode)
+                .append(shippingKey, that.shippingKey)
                 .append(shippingInfo, that.shippingInfo)
-                .append(shipping, that.shipping)
                 .append(shippingRateInput, that.shippingRateInput)
+                .append(shippingCustomFields, that.shippingCustomFields)
+                .append(shipping, that.shipping)
                 .append(itemShippingAddresses, that.itemShippingAddresses)
                 .append(discountCodes, that.discountCodes)
                 .append(directDiscounts, that.directDiscounts)
@@ -795,9 +829,11 @@ public class CartImpl implements Cart, ModelBase {
                 .append(billingAddress)
                 .append(shippingAddress)
                 .append(shippingMode)
+                .append(shippingKey)
                 .append(shippingInfo)
-                .append(shipping)
                 .append(shippingRateInput)
+                .append(shippingCustomFields)
+                .append(shipping)
                 .append(itemShippingAddresses)
                 .append(discountCodes)
                 .append(directDiscounts)

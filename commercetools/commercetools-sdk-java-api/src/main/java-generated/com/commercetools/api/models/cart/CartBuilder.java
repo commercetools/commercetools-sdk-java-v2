@@ -105,12 +105,18 @@ public class CartBuilder implements Builder<Cart> {
     private com.commercetools.api.models.cart.ShippingMode shippingMode;
 
     @Nullable
-    private com.commercetools.api.models.cart.ShippingInfo shippingInfo;
+    private String shippingKey;
 
-    private java.util.List<com.commercetools.api.models.cart.Shipping> shipping;
+    @Nullable
+    private com.commercetools.api.models.cart.ShippingInfo shippingInfo;
 
     @Nullable
     private com.commercetools.api.models.cart.ShippingRateInput shippingRateInput;
+
+    @Nullable
+    private com.commercetools.api.models.type.CustomFields shippingCustomFields;
+
+    private java.util.List<com.commercetools.api.models.cart.Shipping> shipping;
 
     private java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses;
 
@@ -638,6 +644,17 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Single</code> ShippingMode.</p>
+     * @param shippingKey value to be set
+     * @return Builder
+     */
+
+    public CartBuilder shippingKey(@Nullable final String shippingKey) {
+        this.shippingKey = shippingKey;
+        return this;
+    }
+
+    /**
      *  <p>Shipping-related information of a Cart with <code>Single</code> ShippingMode. Automatically set when a Shipping Method is set.</p>
      * @param builder function to build the shippingInfo value
      * @return Builder
@@ -657,6 +674,64 @@ public class CartBuilder implements Builder<Cart> {
 
     public CartBuilder shippingInfo(@Nullable final com.commercetools.api.models.cart.ShippingInfo shippingInfo) {
         this.shippingInfo = shippingInfo;
+        return this;
+    }
+
+    /**
+     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <ul>
+     *   <li>If <code>CartClassification</code>, it is ClassificationShippingRateInput.</li>
+     *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
+     *   <li>If <code>CartValue</code>, it cannot be used.</li>
+     *  </ul>
+     * @param shippingRateInput value to be set
+     * @return Builder
+     */
+
+    public CartBuilder shippingRateInput(
+            @Nullable final com.commercetools.api.models.cart.ShippingRateInput shippingRateInput) {
+        this.shippingRateInput = shippingRateInput;
+        return this;
+    }
+
+    /**
+     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <ul>
+     *   <li>If <code>CartClassification</code>, it is ClassificationShippingRateInput.</li>
+     *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
+     *   <li>If <code>CartValue</code>, it cannot be used.</li>
+     *  </ul>
+     * @param builder function to build the shippingRateInput value
+     * @return Builder
+     */
+
+    public CartBuilder shippingRateInput(
+            Function<com.commercetools.api.models.cart.ShippingRateInputBuilder, Builder<? extends com.commercetools.api.models.cart.ShippingRateInput>> builder) {
+        this.shippingRateInput = builder.apply(com.commercetools.api.models.cart.ShippingRateInputBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields of the Shipping Method in a Cart with <code>Single</code> ShippingMode.</p>
+     * @param builder function to build the shippingCustomFields value
+     * @return Builder
+     */
+
+    public CartBuilder shippingCustomFields(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        this.shippingCustomFields = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields of the Shipping Method in a Cart with <code>Single</code> ShippingMode.</p>
+     * @param shippingCustomFields value to be set
+     * @return Builder
+     */
+
+    public CartBuilder shippingCustomFields(
+            @Nullable final com.commercetools.api.models.type.CustomFields shippingCustomFields) {
+        this.shippingCustomFields = shippingCustomFields;
         return this;
     }
 
@@ -721,40 +796,6 @@ public class CartBuilder implements Builder<Cart> {
             Function<com.commercetools.api.models.cart.ShippingBuilder, com.commercetools.api.models.cart.ShippingBuilder> builder) {
         this.shipping = new ArrayList<>();
         this.shipping.add(builder.apply(com.commercetools.api.models.cart.ShippingBuilder.of()).build());
-        return this;
-    }
-
-    /**
-     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
-     *  <ul>
-     *   <li>If <code>CartClassification</code>, it is ClassificationShippingRateInput.</li>
-     *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
-     *   <li>If <code>CartValue</code>, it cannot be used.</li>
-     *  </ul>
-     * @param shippingRateInput value to be set
-     * @return Builder
-     */
-
-    public CartBuilder shippingRateInput(
-            @Nullable final com.commercetools.api.models.cart.ShippingRateInput shippingRateInput) {
-        this.shippingRateInput = shippingRateInput;
-        return this;
-    }
-
-    /**
-     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
-     *  <ul>
-     *   <li>If <code>CartClassification</code>, it is ClassificationShippingRateInput.</li>
-     *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
-     *   <li>If <code>CartValue</code>, it cannot be used.</li>
-     *  </ul>
-     * @param builder function to build the shippingRateInput value
-     * @return Builder
-     */
-
-    public CartBuilder shippingRateInput(
-            Function<com.commercetools.api.models.cart.ShippingRateInputBuilder, Builder<? extends com.commercetools.api.models.cart.ShippingRateInput>> builder) {
-        this.shippingRateInput = builder.apply(com.commercetools.api.models.cart.ShippingRateInputBuilder.of()).build();
         return this;
     }
 
@@ -1408,6 +1449,16 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Single</code> ShippingMode.</p>
+     * @return shippingKey
+     */
+
+    @Nullable
+    public String getShippingKey() {
+        return this.shippingKey;
+    }
+
+    /**
      *  <p>Shipping-related information of a Cart with <code>Single</code> ShippingMode. Automatically set when a Shipping Method is set.</p>
      * @return shippingInfo
      */
@@ -1415,15 +1466,6 @@ public class CartBuilder implements Builder<Cart> {
     @Nullable
     public com.commercetools.api.models.cart.ShippingInfo getShippingInfo() {
         return this.shippingInfo;
-    }
-
-    /**
-     *  <p>Shipping-related information of a Cart with <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
-     * @return shipping
-     */
-
-    public java.util.List<com.commercetools.api.models.cart.Shipping> getShipping() {
-        return this.shipping;
     }
 
     /**
@@ -1439,6 +1481,25 @@ public class CartBuilder implements Builder<Cart> {
     @Nullable
     public com.commercetools.api.models.cart.ShippingRateInput getShippingRateInput() {
         return this.shippingRateInput;
+    }
+
+    /**
+     *  <p>Custom Fields of the Shipping Method in a Cart with <code>Single</code> ShippingMode.</p>
+     * @return shippingCustomFields
+     */
+
+    @Nullable
+    public com.commercetools.api.models.type.CustomFields getShippingCustomFields() {
+        return this.shippingCustomFields;
+    }
+
+    /**
+     *  <p>Shipping-related information of a Cart with <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     * @return shipping
+     */
+
+    public java.util.List<com.commercetools.api.models.cart.Shipping> getShipping() {
+        return this.shipping;
     }
 
     /**
@@ -1584,9 +1645,9 @@ public class CartBuilder implements Builder<Cart> {
         return new CartImpl(id, version, createdAt, lastModifiedAt, key, customerId, customerEmail, customerGroup,
             anonymousId, businessUnit, store, lineItems, customLineItems, totalLineItemQuantity, totalPrice, taxedPrice,
             taxedShippingPrice, taxMode, taxRoundingMode, taxCalculationMode, inventoryMode, cartState, billingAddress,
-            shippingAddress, shippingMode, shippingInfo, shipping, shippingRateInput, itemShippingAddresses,
-            discountCodes, directDiscounts, refusedGifts, paymentInfo, country, locale, origin, custom,
-            deleteDaysAfterLastModification, lastModifiedBy, createdBy);
+            shippingAddress, shippingMode, shippingKey, shippingInfo, shippingRateInput, shippingCustomFields, shipping,
+            itemShippingAddresses, discountCodes, directDiscounts, refusedGifts, paymentInfo, country, locale, origin,
+            custom, deleteDaysAfterLastModification, lastModifiedBy, createdBy);
     }
 
     /**
@@ -1597,9 +1658,9 @@ public class CartBuilder implements Builder<Cart> {
         return new CartImpl(id, version, createdAt, lastModifiedAt, key, customerId, customerEmail, customerGroup,
             anonymousId, businessUnit, store, lineItems, customLineItems, totalLineItemQuantity, totalPrice, taxedPrice,
             taxedShippingPrice, taxMode, taxRoundingMode, taxCalculationMode, inventoryMode, cartState, billingAddress,
-            shippingAddress, shippingMode, shippingInfo, shipping, shippingRateInput, itemShippingAddresses,
-            discountCodes, directDiscounts, refusedGifts, paymentInfo, country, locale, origin, custom,
-            deleteDaysAfterLastModification, lastModifiedBy, createdBy);
+            shippingAddress, shippingMode, shippingKey, shippingInfo, shippingRateInput, shippingCustomFields, shipping,
+            itemShippingAddresses, discountCodes, directDiscounts, refusedGifts, paymentInfo, country, locale, origin,
+            custom, deleteDaysAfterLastModification, lastModifiedBy, createdBy);
     }
 
     /**
@@ -1642,9 +1703,11 @@ public class CartBuilder implements Builder<Cart> {
         builder.billingAddress = template.getBillingAddress();
         builder.shippingAddress = template.getShippingAddress();
         builder.shippingMode = template.getShippingMode();
+        builder.shippingKey = template.getShippingKey();
         builder.shippingInfo = template.getShippingInfo();
-        builder.shipping = template.getShipping();
         builder.shippingRateInput = template.getShippingRateInput();
+        builder.shippingCustomFields = template.getShippingCustomFields();
+        builder.shipping = template.getShipping();
         builder.itemShippingAddresses = template.getItemShippingAddresses();
         builder.discountCodes = template.getDiscountCodes();
         builder.directDiscounts = template.getDirectDiscounts();

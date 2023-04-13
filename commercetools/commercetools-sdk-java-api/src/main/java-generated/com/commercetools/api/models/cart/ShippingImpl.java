@@ -90,7 +90,7 @@ public class ShippingImpl implements Shipping, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields of Shipping.</p>
+     *  <p>Custom Fields of Shipping with <code>Multiple</code> ShippingMode.</p>
      */
 
     public com.commercetools.api.models.type.CustomFields getShippingCustomFields() {

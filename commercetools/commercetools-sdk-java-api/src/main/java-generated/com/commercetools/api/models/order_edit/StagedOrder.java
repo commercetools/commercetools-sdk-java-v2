@@ -79,6 +79,8 @@ public interface StagedOrder extends Order {
         instance.setShippingAddress(template.getShippingAddress());
         instance.setBillingAddress(template.getBillingAddress());
         instance.setShippingMode(template.getShippingMode());
+        instance.setShippingKey(template.getShippingKey());
+        instance.setShippingCustomFields(template.getShippingCustomFields());
         instance.setShipping(template.getShipping());
         instance.setTaxMode(template.getTaxMode());
         instance.setTaxRoundingMode(template.getTaxRoundingMode());
@@ -152,6 +154,9 @@ public interface StagedOrder extends Order {
             com.commercetools.api.models.common.Address.deepCopy(template.getShippingAddress()));
         instance.setBillingAddress(com.commercetools.api.models.common.Address.deepCopy(template.getBillingAddress()));
         instance.setShippingMode(template.getShippingMode());
+        instance.setShippingKey(template.getShippingKey());
+        instance.setShippingCustomFields(
+            com.commercetools.api.models.type.CustomFields.deepCopy(template.getShippingCustomFields()));
         instance.setShipping(Optional.ofNullable(template.getShipping())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.cart.Shipping::deepCopy)

@@ -3,17 +3,11 @@
 <details>
 <summary>Added Property(s)</summary>
 
-- added property `key` to type `TaxRate`
-- added property `key` to type `TaxRateDraft`
-- added property `taxRateKey` to type `TaxCategoryRemoveTaxRateAction`
-- added property `taxRateKey` to type `TaxCategoryReplaceTaxRateAction`
-</details>
-
-
-<details>
-<summary>Required Property(s)</summary>
-
-- changed property `taxRateId` of type `TaxCategoryRemoveTaxRateAction` to be optional
-- changed property `taxRateId` of type `TaxCategoryReplaceTaxRateAction` to be optional
+- added property `shippingKey` to type `Cart`
+- added property `shippingCustomFields` to type `Cart`
+- added property `shippingKey` to type `StagedOrder`
+- added property `shippingCustomFields` to type `StagedOrder`
+- added property `shippingKey` to type `Order`
+- added property `shippingCustomFields` to type `Order`
 </details>
 

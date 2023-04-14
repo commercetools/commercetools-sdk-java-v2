@@ -257,21 +257,20 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public ShippingMode getShippingMode();
 
     /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Single</code> ShippingMode.</p>
+     * @return shippingKey
+     */
+
+    @JsonProperty("shippingKey")
+    public String getShippingKey();
+
+    /**
      *  <p>Shipping-related information of a Cart with <code>Single</code> ShippingMode. Automatically set when a Shipping Method is set.</p>
      * @return shippingInfo
      */
     @Valid
     @JsonProperty("shippingInfo")
     public ShippingInfo getShippingInfo();
-
-    /**
-     *  <p>Shipping-related information of a Cart with <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
-     * @return shipping
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("shipping")
-    public List<Shipping> getShipping();
 
     /**
      *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
@@ -285,6 +284,23 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     @Valid
     @JsonProperty("shippingRateInput")
     public ShippingRateInput getShippingRateInput();
+
+    /**
+     *  <p>Custom Fields of the Shipping Method in a Cart with <code>Single</code> ShippingMode.</p>
+     * @return shippingCustomFields
+     */
+    @Valid
+    @JsonProperty("shippingCustomFields")
+    public CustomFields getShippingCustomFields();
+
+    /**
+     *  <p>Shipping-related information of a Cart with <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     * @return shipping
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("shipping")
+    public List<Shipping> getShipping();
 
     /**
      *  <p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
@@ -585,11 +601,37 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public void setShippingMode(final ShippingMode shippingMode);
 
     /**
+     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Single</code> ShippingMode.</p>
+     * @param shippingKey value to be set
+     */
+
+    public void setShippingKey(final String shippingKey);
+
+    /**
      *  <p>Shipping-related information of a Cart with <code>Single</code> ShippingMode. Automatically set when a Shipping Method is set.</p>
      * @param shippingInfo value to be set
      */
 
     public void setShippingInfo(final ShippingInfo shippingInfo);
+
+    /**
+     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
+     *  <ul>
+     *   <li>If <code>CartClassification</code>, it is ClassificationShippingRateInput.</li>
+     *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
+     *   <li>If <code>CartValue</code>, it cannot be used.</li>
+     *  </ul>
+     * @param shippingRateInput value to be set
+     */
+
+    public void setShippingRateInput(final ShippingRateInput shippingRateInput);
+
+    /**
+     *  <p>Custom Fields of the Shipping Method in a Cart with <code>Single</code> ShippingMode.</p>
+     * @param shippingCustomFields value to be set
+     */
+
+    public void setShippingCustomFields(final CustomFields shippingCustomFields);
 
     /**
      *  <p>Shipping-related information of a Cart with <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
@@ -605,18 +647,6 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
      */
 
     public void setShipping(final List<Shipping> shipping);
-
-    /**
-     *  <p>Input used to select a ShippingRatePriceTier. The data type of this field depends on the <code>shippingRateInputType.type</code> configured in the Project:</p>
-     *  <ul>
-     *   <li>If <code>CartClassification</code>, it is ClassificationShippingRateInput.</li>
-     *   <li>If <code>CartScore</code>, it is ScoreShippingRateInput.</li>
-     *   <li>If <code>CartValue</code>, it cannot be used.</li>
-     *  </ul>
-     * @param shippingRateInput value to be set
-     */
-
-    public void setShippingRateInput(final ShippingRateInput shippingRateInput);
 
     /**
      *  <p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
@@ -790,9 +820,11 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
         instance.setBillingAddress(template.getBillingAddress());
         instance.setShippingAddress(template.getShippingAddress());
         instance.setShippingMode(template.getShippingMode());
+        instance.setShippingKey(template.getShippingKey());
         instance.setShippingInfo(template.getShippingInfo());
-        instance.setShipping(template.getShipping());
         instance.setShippingRateInput(template.getShippingRateInput());
+        instance.setShippingCustomFields(template.getShippingCustomFields());
+        instance.setShipping(template.getShipping());
         instance.setItemShippingAddresses(template.getItemShippingAddresses());
         instance.setDiscountCodes(template.getDiscountCodes());
         instance.setDirectDiscounts(template.getDirectDiscounts());
@@ -857,14 +889,17 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
         instance.setShippingAddress(
             com.commercetools.api.models.common.Address.deepCopy(template.getShippingAddress()));
         instance.setShippingMode(template.getShippingMode());
+        instance.setShippingKey(template.getShippingKey());
         instance.setShippingInfo(com.commercetools.api.models.cart.ShippingInfo.deepCopy(template.getShippingInfo()));
+        instance.setShippingRateInput(
+            com.commercetools.api.models.cart.ShippingRateInput.deepCopy(template.getShippingRateInput()));
+        instance.setShippingCustomFields(
+            com.commercetools.api.models.type.CustomFields.deepCopy(template.getShippingCustomFields()));
         instance.setShipping(Optional.ofNullable(template.getShipping())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.cart.Shipping::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setShippingRateInput(
-            com.commercetools.api.models.cart.ShippingRateInput.deepCopy(template.getShippingRateInput()));
         instance.setItemShippingAddresses(Optional.ofNullable(template.getItemShippingAddresses())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.common.Address::deepCopy)

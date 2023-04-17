@@ -27,5 +27,5 @@
   "labels": [
     "Type: Maintenance"
   ],
-  "ignoreDeps": ["com.github.jk1.dependency-license-report", "ch.qos.logback:logback-classic"]
+  "ignoreDeps": ["com.github.jk1.dependency-license-report", "ch.qos.logback:logback-classic", "com.diffplug.spotless"]
 }

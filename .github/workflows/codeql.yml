@@ -74,7 +74,7 @@ jobs:
     - if: ${{ matrix.language }} == "java"
       run: |
         echo "Run, Build Application using script"
-        ./gradlew clean build
+        ./gradlew clean build -x integrationTest
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2

@@ -31,15 +31,15 @@ ext {
     ]
 
     jackson_core = [
-            annotations: 'com.fasterxml.jackson.core:jackson-annotations:2.14.1',
-            databind: 'com.fasterxml.jackson.core:jackson-databind:2.14.1',
-            core: 'com.fasterxml.jackson.core:jackson-core:2.14.1',
-            datatype: 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.14.1',
+            annotations: 'com.fasterxml.jackson.core:jackson-annotations:2.14.2',
+            databind: 'com.fasterxml.jackson.core:jackson-databind:2.14.2',
+            core: 'com.fasterxml.jackson.core:jackson-core:2.14.2',
+            datatype: 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.14.2',
     ]
 
     google = [
             findbugs: 'com.google.code.findbugs:jsr305:3.0.2',
-            gson: 'com.google.code.gson:gson:2.10',
+            gson: 'com.google.code.gson:gson:2.10.1',
     ]
 
     awaitility = [
@@ -51,19 +51,19 @@ ext {
     ]
 
     junit = [
-            junit: 'org.junit.jupiter:junit-jupiter:5.9.1',
+            junit: 'org.junit.jupiter:junit-jupiter:5.9.2',
             dataprovider: 'com.tngtech.junit.dataprovider:junit-jupiter-dataprovider:2.10',
             jsonassert: 'org.skyscreamer:jsonassert:1.5.1',
-            assertj: 'org.assertj:assertj-core:3.23.1'
+            assertj: 'org.assertj:assertj-core:3.24.2'
     ]
 
     mockito = [
-            inline: 'org.mockito:mockito-inline:4.9.0',
-            junit: 'org.mockito:mockito-junit-jupiter:4.9.0',
+            inline: 'org.mockito:mockito-inline:4.11.0',
+            junit: 'org.mockito:mockito-junit-jupiter:4.11.0',
     ]
 
     failsafe = [
-            failsafe: 'dev.failsafe:failsafe:3.2.4',
+            failsafe: 'dev.failsafe:failsafe:3.3.1',
     ]
 
     spotify = [

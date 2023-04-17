@@ -76,89 +76,89 @@ public interface CustomField {
             return com.commercetools.importapi.models.customfields.BooleanField
                     .deepCopy((com.commercetools.importapi.models.customfields.BooleanField) template);
         }
-        if (template instanceof com.commercetools.importapi.models.customfields.StringField) {
-            return com.commercetools.importapi.models.customfields.StringField
-                    .deepCopy((com.commercetools.importapi.models.customfields.StringField) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.customfields.LocalizedStringField) {
-            return com.commercetools.importapi.models.customfields.LocalizedStringField
-                    .deepCopy((com.commercetools.importapi.models.customfields.LocalizedStringField) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.customfields.EnumField) {
-            return com.commercetools.importapi.models.customfields.EnumField
-                    .deepCopy((com.commercetools.importapi.models.customfields.EnumField) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.customfields.LocalizedEnumField) {
-            return com.commercetools.importapi.models.customfields.LocalizedEnumField
-                    .deepCopy((com.commercetools.importapi.models.customfields.LocalizedEnumField) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.customfields.NumberField) {
-            return com.commercetools.importapi.models.customfields.NumberField
-                    .deepCopy((com.commercetools.importapi.models.customfields.NumberField) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.customfields.MoneyField) {
-            return com.commercetools.importapi.models.customfields.MoneyField
-                    .deepCopy((com.commercetools.importapi.models.customfields.MoneyField) template);
+        if (template instanceof com.commercetools.importapi.models.customfields.BooleanSetField) {
+            return com.commercetools.importapi.models.customfields.BooleanSetField
+                    .deepCopy((com.commercetools.importapi.models.customfields.BooleanSetField) template);
         }
         if (template instanceof com.commercetools.importapi.models.customfields.DateField) {
             return com.commercetools.importapi.models.customfields.DateField
                     .deepCopy((com.commercetools.importapi.models.customfields.DateField) template);
         }
-        if (template instanceof com.commercetools.importapi.models.customfields.TimeField) {
-            return com.commercetools.importapi.models.customfields.TimeField
-                    .deepCopy((com.commercetools.importapi.models.customfields.TimeField) template);
+        if (template instanceof com.commercetools.importapi.models.customfields.DateSetField) {
+            return com.commercetools.importapi.models.customfields.DateSetField
+                    .deepCopy((com.commercetools.importapi.models.customfields.DateSetField) template);
         }
         if (template instanceof com.commercetools.importapi.models.customfields.DateTimeField) {
             return com.commercetools.importapi.models.customfields.DateTimeField
                     .deepCopy((com.commercetools.importapi.models.customfields.DateTimeField) template);
         }
-        if (template instanceof com.commercetools.importapi.models.customfields.ReferenceField) {
-            return com.commercetools.importapi.models.customfields.ReferenceField
-                    .deepCopy((com.commercetools.importapi.models.customfields.ReferenceField) template);
+        if (template instanceof com.commercetools.importapi.models.customfields.DateTimeSetField) {
+            return com.commercetools.importapi.models.customfields.DateTimeSetField
+                    .deepCopy((com.commercetools.importapi.models.customfields.DateTimeSetField) template);
         }
-        if (template instanceof com.commercetools.importapi.models.customfields.BooleanSetField) {
-            return com.commercetools.importapi.models.customfields.BooleanSetField
-                    .deepCopy((com.commercetools.importapi.models.customfields.BooleanSetField) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.customfields.StringSetField) {
-            return com.commercetools.importapi.models.customfields.StringSetField
-                    .deepCopy((com.commercetools.importapi.models.customfields.StringSetField) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.customfields.LocalizedStringSetField) {
-            return com.commercetools.importapi.models.customfields.LocalizedStringSetField
-                    .deepCopy((com.commercetools.importapi.models.customfields.LocalizedStringSetField) template);
+        if (template instanceof com.commercetools.importapi.models.customfields.EnumField) {
+            return com.commercetools.importapi.models.customfields.EnumField
+                    .deepCopy((com.commercetools.importapi.models.customfields.EnumField) template);
         }
         if (template instanceof com.commercetools.importapi.models.customfields.EnumSetField) {
             return com.commercetools.importapi.models.customfields.EnumSetField
                     .deepCopy((com.commercetools.importapi.models.customfields.EnumSetField) template);
         }
+        if (template instanceof com.commercetools.importapi.models.customfields.LocalizedEnumField) {
+            return com.commercetools.importapi.models.customfields.LocalizedEnumField
+                    .deepCopy((com.commercetools.importapi.models.customfields.LocalizedEnumField) template);
+        }
         if (template instanceof com.commercetools.importapi.models.customfields.LocalizedEnumSetField) {
             return com.commercetools.importapi.models.customfields.LocalizedEnumSetField
                     .deepCopy((com.commercetools.importapi.models.customfields.LocalizedEnumSetField) template);
         }
-        if (template instanceof com.commercetools.importapi.models.customfields.NumberSetField) {
-            return com.commercetools.importapi.models.customfields.NumberSetField
-                    .deepCopy((com.commercetools.importapi.models.customfields.NumberSetField) template);
+        if (template instanceof com.commercetools.importapi.models.customfields.LocalizedStringField) {
+            return com.commercetools.importapi.models.customfields.LocalizedStringField
+                    .deepCopy((com.commercetools.importapi.models.customfields.LocalizedStringField) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.customfields.LocalizedStringSetField) {
+            return com.commercetools.importapi.models.customfields.LocalizedStringSetField
+                    .deepCopy((com.commercetools.importapi.models.customfields.LocalizedStringSetField) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.customfields.MoneyField) {
+            return com.commercetools.importapi.models.customfields.MoneyField
+                    .deepCopy((com.commercetools.importapi.models.customfields.MoneyField) template);
         }
         if (template instanceof com.commercetools.importapi.models.customfields.MoneySetField) {
             return com.commercetools.importapi.models.customfields.MoneySetField
                     .deepCopy((com.commercetools.importapi.models.customfields.MoneySetField) template);
         }
-        if (template instanceof com.commercetools.importapi.models.customfields.DateSetField) {
-            return com.commercetools.importapi.models.customfields.DateSetField
-                    .deepCopy((com.commercetools.importapi.models.customfields.DateSetField) template);
+        if (template instanceof com.commercetools.importapi.models.customfields.NumberField) {
+            return com.commercetools.importapi.models.customfields.NumberField
+                    .deepCopy((com.commercetools.importapi.models.customfields.NumberField) template);
         }
-        if (template instanceof com.commercetools.importapi.models.customfields.TimeSetField) {
-            return com.commercetools.importapi.models.customfields.TimeSetField
-                    .deepCopy((com.commercetools.importapi.models.customfields.TimeSetField) template);
+        if (template instanceof com.commercetools.importapi.models.customfields.NumberSetField) {
+            return com.commercetools.importapi.models.customfields.NumberSetField
+                    .deepCopy((com.commercetools.importapi.models.customfields.NumberSetField) template);
         }
-        if (template instanceof com.commercetools.importapi.models.customfields.DateTimeSetField) {
-            return com.commercetools.importapi.models.customfields.DateTimeSetField
-                    .deepCopy((com.commercetools.importapi.models.customfields.DateTimeSetField) template);
+        if (template instanceof com.commercetools.importapi.models.customfields.ReferenceField) {
+            return com.commercetools.importapi.models.customfields.ReferenceField
+                    .deepCopy((com.commercetools.importapi.models.customfields.ReferenceField) template);
         }
         if (template instanceof com.commercetools.importapi.models.customfields.ReferenceSetField) {
             return com.commercetools.importapi.models.customfields.ReferenceSetField
                     .deepCopy((com.commercetools.importapi.models.customfields.ReferenceSetField) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.customfields.StringField) {
+            return com.commercetools.importapi.models.customfields.StringField
+                    .deepCopy((com.commercetools.importapi.models.customfields.StringField) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.customfields.StringSetField) {
+            return com.commercetools.importapi.models.customfields.StringSetField
+                    .deepCopy((com.commercetools.importapi.models.customfields.StringSetField) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.customfields.TimeField) {
+            return com.commercetools.importapi.models.customfields.TimeField
+                    .deepCopy((com.commercetools.importapi.models.customfields.TimeField) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.customfields.TimeSetField) {
+            return com.commercetools.importapi.models.customfields.TimeSetField
+                    .deepCopy((com.commercetools.importapi.models.customfields.TimeSetField) template);
         }
         CustomFieldImpl instance = new CustomFieldImpl();
         return instance;

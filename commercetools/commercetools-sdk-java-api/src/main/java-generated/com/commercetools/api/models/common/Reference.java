@@ -125,6 +125,30 @@ public interface Reference extends ReferenceMixin {
         if (template == null) {
             return null;
         }
+        if (template instanceof com.commercetools.api.models.attribute_group.AttributeGroupReference) {
+            return com.commercetools.api.models.attribute_group.AttributeGroupReference
+                    .deepCopy((com.commercetools.api.models.attribute_group.AttributeGroupReference) template);
+        }
+        if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitReference) {
+            return com.commercetools.api.models.business_unit.BusinessUnitReference
+                    .deepCopy((com.commercetools.api.models.business_unit.BusinessUnitReference) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountReference) {
+            return com.commercetools.api.models.cart_discount.CartDiscountReference
+                    .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountReference) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartReference) {
+            return com.commercetools.api.models.cart.CartReference
+                    .deepCopy((com.commercetools.api.models.cart.CartReference) template);
+        }
+        if (template instanceof com.commercetools.api.models.category.CategoryReference) {
+            return com.commercetools.api.models.category.CategoryReference
+                    .deepCopy((com.commercetools.api.models.category.CategoryReference) template);
+        }
+        if (template instanceof com.commercetools.api.models.channel.ChannelReference) {
+            return com.commercetools.api.models.channel.ChannelReference
+                    .deepCopy((com.commercetools.api.models.channel.ChannelReference) template);
+        }
         if (template instanceof com.commercetools.api.models.custom_object.CustomObjectReference) {
             return com.commercetools.api.models.custom_object.CustomObjectReference
                     .deepCopy((com.commercetools.api.models.custom_object.CustomObjectReference) template);
@@ -161,6 +185,10 @@ public interface Reference extends ReferenceMixin {
             return com.commercetools.api.models.product_discount.ProductDiscountReference
                     .deepCopy((com.commercetools.api.models.product_discount.ProductDiscountReference) template);
         }
+        if (template instanceof com.commercetools.api.models.product.ProductReference) {
+            return com.commercetools.api.models.product.ProductReference
+                    .deepCopy((com.commercetools.api.models.product.ProductReference) template);
+        }
         if (template instanceof com.commercetools.api.models.product_selection.ProductSelectionReference) {
             return com.commercetools.api.models.product_selection.ProductSelectionReference
                     .deepCopy((com.commercetools.api.models.product_selection.ProductSelectionReference) template);
@@ -169,17 +197,13 @@ public interface Reference extends ReferenceMixin {
             return com.commercetools.api.models.product_type.ProductTypeReference
                     .deepCopy((com.commercetools.api.models.product_type.ProductTypeReference) template);
         }
-        if (template instanceof com.commercetools.api.models.product.ProductReference) {
-            return com.commercetools.api.models.product.ProductReference
-                    .deepCopy((com.commercetools.api.models.product.ProductReference) template);
+        if (template instanceof com.commercetools.api.models.quote.QuoteReference) {
+            return com.commercetools.api.models.quote.QuoteReference
+                    .deepCopy((com.commercetools.api.models.quote.QuoteReference) template);
         }
         if (template instanceof com.commercetools.api.models.quote_request.QuoteRequestReference) {
             return com.commercetools.api.models.quote_request.QuoteRequestReference
                     .deepCopy((com.commercetools.api.models.quote_request.QuoteRequestReference) template);
-        }
-        if (template instanceof com.commercetools.api.models.quote.QuoteReference) {
-            return com.commercetools.api.models.quote.QuoteReference
-                    .deepCopy((com.commercetools.api.models.quote.QuoteReference) template);
         }
         if (template instanceof com.commercetools.api.models.review.ReviewReference) {
             return com.commercetools.api.models.review.ReviewReference
@@ -220,30 +244,6 @@ public interface Reference extends ReferenceMixin {
         if (template instanceof com.commercetools.api.models.zone.ZoneReference) {
             return com.commercetools.api.models.zone.ZoneReference
                     .deepCopy((com.commercetools.api.models.zone.ZoneReference) template);
-        }
-        if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountReference) {
-            return com.commercetools.api.models.cart_discount.CartDiscountReference
-                    .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountReference) template);
-        }
-        if (template instanceof com.commercetools.api.models.category.CategoryReference) {
-            return com.commercetools.api.models.category.CategoryReference
-                    .deepCopy((com.commercetools.api.models.category.CategoryReference) template);
-        }
-        if (template instanceof com.commercetools.api.models.channel.ChannelReference) {
-            return com.commercetools.api.models.channel.ChannelReference
-                    .deepCopy((com.commercetools.api.models.channel.ChannelReference) template);
-        }
-        if (template instanceof com.commercetools.api.models.cart.CartReference) {
-            return com.commercetools.api.models.cart.CartReference
-                    .deepCopy((com.commercetools.api.models.cart.CartReference) template);
-        }
-        if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitReference) {
-            return com.commercetools.api.models.business_unit.BusinessUnitReference
-                    .deepCopy((com.commercetools.api.models.business_unit.BusinessUnitReference) template);
-        }
-        if (template instanceof com.commercetools.api.models.attribute_group.AttributeGroupReference) {
-            return com.commercetools.api.models.attribute_group.AttributeGroupReference
-                    .deepCopy((com.commercetools.api.models.attribute_group.AttributeGroupReference) template);
         }
         ReferenceImpl instance = new ReferenceImpl();
         instance.setId(template.getId());

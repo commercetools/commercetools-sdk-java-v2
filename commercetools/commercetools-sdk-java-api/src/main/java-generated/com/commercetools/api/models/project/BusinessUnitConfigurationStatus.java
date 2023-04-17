@@ -7,13 +7,14 @@ import java.util.Optional;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
+import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Default value for Business Unit Status configured though Project settings.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface BusinessUnitConfigurationStatus {
+public interface BusinessUnitConfigurationStatus extends JsonEnum {
 
     /**
     	<p>The <a href="ctp:api:type:BusinessUnit">Business Unit</a> can be used in <a href="ctp:api:type:Order">Orders</a>, <a href="ctp:api:type:Cart">Carts</a>, and <a href="/../api/quotes-overview">Quotes</a> and can be updated using the <a href="/../api/projects/me-business-units#update-businessunit">My Business Unit endpoint</a>.</p>

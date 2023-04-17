@@ -7,13 +7,14 @@ import java.util.Optional;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
+import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Predefined states tracking the status of the Staged Quote.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface StagedQuoteState {
+public interface StagedQuoteState extends JsonEnum {
 
     /**
     	<p>Initial state after creating the StagedQuote indicating that the <a href="/../api/quotes-overview#seller">Seller</a> is preparing the Quote.</p>

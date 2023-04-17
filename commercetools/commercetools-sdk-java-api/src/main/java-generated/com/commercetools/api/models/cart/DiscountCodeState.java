@@ -7,6 +7,7 @@ import java.util.Optional;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
+import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
@@ -14,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *  <p>If an Order is created from a Cart with a state other than <code>MatchesCart</code>, a DiscountCodeNonApplicable error is returned.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface DiscountCodeState {
+public interface DiscountCodeState extends JsonEnum {
 
     /**
     	<p>The Discount Code is not active or does not contain any active Cart Discounts.</p>

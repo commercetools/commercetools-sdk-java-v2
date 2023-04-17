@@ -55,6 +55,10 @@ public interface ExtensionDestination {
         if (template == null) {
             return null;
         }
+        if (template instanceof com.commercetools.api.models.extension.AWSLambdaDestination) {
+            return com.commercetools.api.models.extension.AWSLambdaDestination
+                    .deepCopy((com.commercetools.api.models.extension.AWSLambdaDestination) template);
+        }
         if (template instanceof com.commercetools.api.models.extension.GoogleCloudFunctionDestination) {
             return com.commercetools.api.models.extension.GoogleCloudFunctionDestination
                     .deepCopy((com.commercetools.api.models.extension.GoogleCloudFunctionDestination) template);
@@ -62,10 +66,6 @@ public interface ExtensionDestination {
         if (template instanceof com.commercetools.api.models.extension.HttpDestination) {
             return com.commercetools.api.models.extension.HttpDestination
                     .deepCopy((com.commercetools.api.models.extension.HttpDestination) template);
-        }
-        if (template instanceof com.commercetools.api.models.extension.AWSLambdaDestination) {
-            return com.commercetools.api.models.extension.AWSLambdaDestination
-                    .deepCopy((com.commercetools.api.models.extension.AWSLambdaDestination) template);
         }
         ExtensionDestinationImpl instance = new ExtensionDestinationImpl();
         return instance;

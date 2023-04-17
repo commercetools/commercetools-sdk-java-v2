@@ -136,6 +136,94 @@ public interface GraphQLErrorObject {
         if (template == null) {
             return null;
         }
+        if (template instanceof com.commercetools.api.models.error.GraphQLAnonymousIdAlreadyInUseError) {
+            return com.commercetools.api.models.error.GraphQLAnonymousIdAlreadyInUseError
+                    .deepCopy((com.commercetools.api.models.error.GraphQLAnonymousIdAlreadyInUseError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.GraphQLAttributeDefinitionAlreadyExistsError) {
+            return com.commercetools.api.models.error.GraphQLAttributeDefinitionAlreadyExistsError.deepCopy(
+                (com.commercetools.api.models.error.GraphQLAttributeDefinitionAlreadyExistsError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.GraphQLAttributeDefinitionTypeConflictError) {
+            return com.commercetools.api.models.error.GraphQLAttributeDefinitionTypeConflictError.deepCopy(
+                (com.commercetools.api.models.error.GraphQLAttributeDefinitionTypeConflictError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.GraphQLAttributeNameDoesNotExistError) {
+            return com.commercetools.api.models.error.GraphQLAttributeNameDoesNotExistError
+                    .deepCopy((com.commercetools.api.models.error.GraphQLAttributeNameDoesNotExistError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.GraphQLBadGatewayError) {
+            return com.commercetools.api.models.error.GraphQLBadGatewayError
+                    .deepCopy((com.commercetools.api.models.error.GraphQLBadGatewayError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.GraphQLConcurrentModificationError) {
+            return com.commercetools.api.models.error.GraphQLConcurrentModificationError
+                    .deepCopy((com.commercetools.api.models.error.GraphQLConcurrentModificationError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.GraphQLCountryNotConfiguredInStoreError) {
+            return com.commercetools.api.models.error.GraphQLCountryNotConfiguredInStoreError
+                    .deepCopy((com.commercetools.api.models.error.GraphQLCountryNotConfiguredInStoreError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.GraphQLDiscountCodeNonApplicableError) {
+            return com.commercetools.api.models.error.GraphQLDiscountCodeNonApplicableError
+                    .deepCopy((com.commercetools.api.models.error.GraphQLDiscountCodeNonApplicableError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.GraphQLDuplicateAttributeValueError) {
+            return com.commercetools.api.models.error.GraphQLDuplicateAttributeValueError
+                    .deepCopy((com.commercetools.api.models.error.GraphQLDuplicateAttributeValueError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.GraphQLDuplicateAttributeValuesError) {
+            return com.commercetools.api.models.error.GraphQLDuplicateAttributeValuesError
+                    .deepCopy((com.commercetools.api.models.error.GraphQLDuplicateAttributeValuesError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.GraphQLDuplicateEnumValuesError) {
+            return com.commercetools.api.models.error.GraphQLDuplicateEnumValuesError
+                    .deepCopy((com.commercetools.api.models.error.GraphQLDuplicateEnumValuesError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.GraphQLDuplicateFieldError) {
+            return com.commercetools.api.models.error.GraphQLDuplicateFieldError
+                    .deepCopy((com.commercetools.api.models.error.GraphQLDuplicateFieldError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.GraphQLDuplicateFieldWithConflictingResourceError) {
+            return com.commercetools.api.models.error.GraphQLDuplicateFieldWithConflictingResourceError.deepCopy(
+                (com.commercetools.api.models.error.GraphQLDuplicateFieldWithConflictingResourceError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.GraphQLDuplicatePriceKeyError) {
+            return com.commercetools.api.models.error.GraphQLDuplicatePriceKeyError
+                    .deepCopy((com.commercetools.api.models.error.GraphQLDuplicatePriceKeyError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.GraphQLDuplicatePriceScopeError) {
+            return com.commercetools.api.models.error.GraphQLDuplicatePriceScopeError
+                    .deepCopy((com.commercetools.api.models.error.GraphQLDuplicatePriceScopeError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.GraphQLDuplicateStandalonePriceScopeError) {
+            return com.commercetools.api.models.error.GraphQLDuplicateStandalonePriceScopeError
+                    .deepCopy((com.commercetools.api.models.error.GraphQLDuplicateStandalonePriceScopeError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.GraphQLDuplicateVariantValuesError) {
+            return com.commercetools.api.models.error.GraphQLDuplicateVariantValuesError
+                    .deepCopy((com.commercetools.api.models.error.GraphQLDuplicateVariantValuesError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.GraphQLEditPreviewFailedError) {
+            return com.commercetools.api.models.error.GraphQLEditPreviewFailedError
+                    .deepCopy((com.commercetools.api.models.error.GraphQLEditPreviewFailedError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.GraphQLEnumKeyAlreadyExistsError) {
+            return com.commercetools.api.models.error.GraphQLEnumKeyAlreadyExistsError
+                    .deepCopy((com.commercetools.api.models.error.GraphQLEnumKeyAlreadyExistsError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.GraphQLEnumKeyDoesNotExistError) {
+            return com.commercetools.api.models.error.GraphQLEnumKeyDoesNotExistError
+                    .deepCopy((com.commercetools.api.models.error.GraphQLEnumKeyDoesNotExistError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.GraphQLEnumValueIsUsedError) {
+            return com.commercetools.api.models.error.GraphQLEnumValueIsUsedError
+                    .deepCopy((com.commercetools.api.models.error.GraphQLEnumValueIsUsedError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.GraphQLEnumValuesMustMatchError) {
+            return com.commercetools.api.models.error.GraphQLEnumValuesMustMatchError
+                    .deepCopy((com.commercetools.api.models.error.GraphQLEnumValuesMustMatchError) template);
+        }
         if (template instanceof com.commercetools.api.models.error.GraphQLExtensionBadResponseError) {
             return com.commercetools.api.models.error.GraphQLExtensionBadResponseError
                     .deepCopy((com.commercetools.api.models.error.GraphQLExtensionBadResponseError) template);
@@ -327,94 +415,6 @@ public interface GraphQLErrorObject {
         if (template instanceof com.commercetools.api.models.error.GraphQLSyntaxErrorError) {
             return com.commercetools.api.models.error.GraphQLSyntaxErrorError
                     .deepCopy((com.commercetools.api.models.error.GraphQLSyntaxErrorError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.GraphQLDuplicateFieldError) {
-            return com.commercetools.api.models.error.GraphQLDuplicateFieldError
-                    .deepCopy((com.commercetools.api.models.error.GraphQLDuplicateFieldError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.GraphQLEditPreviewFailedError) {
-            return com.commercetools.api.models.error.GraphQLEditPreviewFailedError
-                    .deepCopy((com.commercetools.api.models.error.GraphQLEditPreviewFailedError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.GraphQLAttributeNameDoesNotExistError) {
-            return com.commercetools.api.models.error.GraphQLAttributeNameDoesNotExistError
-                    .deepCopy((com.commercetools.api.models.error.GraphQLAttributeNameDoesNotExistError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.GraphQLEnumValueIsUsedError) {
-            return com.commercetools.api.models.error.GraphQLEnumValueIsUsedError
-                    .deepCopy((com.commercetools.api.models.error.GraphQLEnumValueIsUsedError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.GraphQLAnonymousIdAlreadyInUseError) {
-            return com.commercetools.api.models.error.GraphQLAnonymousIdAlreadyInUseError
-                    .deepCopy((com.commercetools.api.models.error.GraphQLAnonymousIdAlreadyInUseError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.GraphQLDiscountCodeNonApplicableError) {
-            return com.commercetools.api.models.error.GraphQLDiscountCodeNonApplicableError
-                    .deepCopy((com.commercetools.api.models.error.GraphQLDiscountCodeNonApplicableError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.GraphQLDuplicateVariantValuesError) {
-            return com.commercetools.api.models.error.GraphQLDuplicateVariantValuesError
-                    .deepCopy((com.commercetools.api.models.error.GraphQLDuplicateVariantValuesError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.GraphQLDuplicateFieldWithConflictingResourceError) {
-            return com.commercetools.api.models.error.GraphQLDuplicateFieldWithConflictingResourceError.deepCopy(
-                (com.commercetools.api.models.error.GraphQLDuplicateFieldWithConflictingResourceError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.GraphQLCountryNotConfiguredInStoreError) {
-            return com.commercetools.api.models.error.GraphQLCountryNotConfiguredInStoreError
-                    .deepCopy((com.commercetools.api.models.error.GraphQLCountryNotConfiguredInStoreError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.GraphQLDuplicateAttributeValuesError) {
-            return com.commercetools.api.models.error.GraphQLDuplicateAttributeValuesError
-                    .deepCopy((com.commercetools.api.models.error.GraphQLDuplicateAttributeValuesError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.GraphQLEnumKeyAlreadyExistsError) {
-            return com.commercetools.api.models.error.GraphQLEnumKeyAlreadyExistsError
-                    .deepCopy((com.commercetools.api.models.error.GraphQLEnumKeyAlreadyExistsError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.GraphQLDuplicatePriceScopeError) {
-            return com.commercetools.api.models.error.GraphQLDuplicatePriceScopeError
-                    .deepCopy((com.commercetools.api.models.error.GraphQLDuplicatePriceScopeError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.GraphQLEnumKeyDoesNotExistError) {
-            return com.commercetools.api.models.error.GraphQLEnumKeyDoesNotExistError
-                    .deepCopy((com.commercetools.api.models.error.GraphQLEnumKeyDoesNotExistError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.GraphQLConcurrentModificationError) {
-            return com.commercetools.api.models.error.GraphQLConcurrentModificationError
-                    .deepCopy((com.commercetools.api.models.error.GraphQLConcurrentModificationError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.GraphQLDuplicatePriceKeyError) {
-            return com.commercetools.api.models.error.GraphQLDuplicatePriceKeyError
-                    .deepCopy((com.commercetools.api.models.error.GraphQLDuplicatePriceKeyError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.GraphQLDuplicateAttributeValueError) {
-            return com.commercetools.api.models.error.GraphQLDuplicateAttributeValueError
-                    .deepCopy((com.commercetools.api.models.error.GraphQLDuplicateAttributeValueError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.GraphQLAttributeDefinitionAlreadyExistsError) {
-            return com.commercetools.api.models.error.GraphQLAttributeDefinitionAlreadyExistsError.deepCopy(
-                (com.commercetools.api.models.error.GraphQLAttributeDefinitionAlreadyExistsError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.GraphQLAttributeDefinitionTypeConflictError) {
-            return com.commercetools.api.models.error.GraphQLAttributeDefinitionTypeConflictError.deepCopy(
-                (com.commercetools.api.models.error.GraphQLAttributeDefinitionTypeConflictError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.GraphQLDuplicateEnumValuesError) {
-            return com.commercetools.api.models.error.GraphQLDuplicateEnumValuesError
-                    .deepCopy((com.commercetools.api.models.error.GraphQLDuplicateEnumValuesError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.GraphQLBadGatewayError) {
-            return com.commercetools.api.models.error.GraphQLBadGatewayError
-                    .deepCopy((com.commercetools.api.models.error.GraphQLBadGatewayError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.GraphQLDuplicateStandalonePriceScopeError) {
-            return com.commercetools.api.models.error.GraphQLDuplicateStandalonePriceScopeError
-                    .deepCopy((com.commercetools.api.models.error.GraphQLDuplicateStandalonePriceScopeError) template);
-        }
-        if (template instanceof com.commercetools.api.models.error.GraphQLEnumValuesMustMatchError) {
-            return com.commercetools.api.models.error.GraphQLEnumValuesMustMatchError
-                    .deepCopy((com.commercetools.api.models.error.GraphQLEnumValuesMustMatchError) template);
         }
         GraphQLErrorObjectImpl instance = new GraphQLErrorObjectImpl();
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));

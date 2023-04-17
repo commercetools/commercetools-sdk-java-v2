@@ -7,13 +7,14 @@ import java.util.Optional;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
+import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Determines in which Tax calculation mode taxed prices are calculated.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface TaxCalculationMode {
+public interface TaxCalculationMode extends JsonEnum {
 
     /**
     	<p>Taxes are calculated <strong>after</strong> the unit price is multiplied by the quantity. This is the default mode.</p>

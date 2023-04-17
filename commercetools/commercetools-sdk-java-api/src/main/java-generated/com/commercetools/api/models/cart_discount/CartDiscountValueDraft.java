@@ -54,6 +54,10 @@ public interface CartDiscountValueDraft {
         if (template == null) {
             return null;
         }
+        if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountValueAbsoluteDraft) {
+            return com.commercetools.api.models.cart_discount.CartDiscountValueAbsoluteDraft
+                    .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountValueAbsoluteDraft) template);
+        }
         if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountValueFixedDraft) {
             return com.commercetools.api.models.cart_discount.CartDiscountValueFixedDraft
                     .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountValueFixedDraft) template);
@@ -65,10 +69,6 @@ public interface CartDiscountValueDraft {
         if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountValueRelativeDraft) {
             return com.commercetools.api.models.cart_discount.CartDiscountValueRelativeDraft
                     .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountValueRelativeDraft) template);
-        }
-        if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountValueAbsoluteDraft) {
-            return com.commercetools.api.models.cart_discount.CartDiscountValueAbsoluteDraft
-                    .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountValueAbsoluteDraft) template);
         }
         CartDiscountValueDraftImpl instance = new CartDiscountValueDraftImpl();
         return instance;

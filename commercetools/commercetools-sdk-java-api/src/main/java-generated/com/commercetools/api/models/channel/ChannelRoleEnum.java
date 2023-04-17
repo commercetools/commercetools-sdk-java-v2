@@ -7,13 +7,14 @@ import java.util.Optional;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
+import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Describes the purpose and type of the Channel. A Channel can have one or more roles.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface ChannelRoleEnum {
+public interface ChannelRoleEnum extends JsonEnum {
 
     /**
     	<p>Channel can be used to track inventory entries (for example, Channels with this role can be treated as warehouses).</p>

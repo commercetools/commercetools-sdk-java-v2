@@ -7,13 +7,14 @@ import java.util.Optional;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
+import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  * AuthenticationMode
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface AuthenticationMode {
+public interface AuthenticationMode extends JsonEnum {
 
     /**
     	<p>This is the default value. If set, the <code>password</code> field is required on <a href="ctp:api:type:CustomerDraft">CustomerDraft</a> and is present on <a href="ctp:api:type:Customer">Customer</a>.</p>

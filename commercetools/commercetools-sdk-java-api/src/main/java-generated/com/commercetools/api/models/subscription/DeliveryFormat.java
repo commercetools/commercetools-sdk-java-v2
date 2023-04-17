@@ -52,13 +52,13 @@ public interface DeliveryFormat {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.subscription.PlatformFormat) {
-            return com.commercetools.api.models.subscription.PlatformFormat
-                    .deepCopy((com.commercetools.api.models.subscription.PlatformFormat) template);
-        }
         if (template instanceof com.commercetools.api.models.subscription.CloudEventsFormat) {
             return com.commercetools.api.models.subscription.CloudEventsFormat
                     .deepCopy((com.commercetools.api.models.subscription.CloudEventsFormat) template);
+        }
+        if (template instanceof com.commercetools.api.models.subscription.PlatformFormat) {
+            return com.commercetools.api.models.subscription.PlatformFormat
+                    .deepCopy((com.commercetools.api.models.subscription.PlatformFormat) template);
         }
         DeliveryFormatImpl instance = new DeliveryFormatImpl();
         return instance;

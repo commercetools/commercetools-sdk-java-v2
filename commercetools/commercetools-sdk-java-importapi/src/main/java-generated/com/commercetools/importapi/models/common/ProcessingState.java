@@ -7,13 +7,14 @@ import java.util.Optional;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
+import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Every Import Operation is assigned with one of the following states.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface ProcessingState {
+public interface ProcessingState extends JsonEnum {
 
     /**
     	<p>Initial state assigned if the format (JSON structure and fields) meets the Import API's specification. The resource import is in progress.</p>

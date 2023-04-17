@@ -7,13 +7,14 @@ import java.util.Optional;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
+import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Determines if Cart Discounts can be applied to a Custom Line Item in the Cart.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface CustomLineItemPriceMode {
+public interface CustomLineItemPriceMode extends JsonEnum {
 
     /**
     	<p>Allows application of <a href="/../api/projects/cartDiscounts">Cart Discounts</a> for the Custom Line Item.</p>

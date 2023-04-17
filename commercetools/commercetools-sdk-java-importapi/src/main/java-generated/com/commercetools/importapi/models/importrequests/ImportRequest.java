@@ -67,29 +67,13 @@ public interface ImportRequest {
             return com.commercetools.importapi.models.importrequests.CategoryImportRequest
                     .deepCopy((com.commercetools.importapi.models.importrequests.CategoryImportRequest) template);
         }
-        if (template instanceof com.commercetools.importapi.models.importrequests.ProductImportRequest) {
-            return com.commercetools.importapi.models.importrequests.ProductImportRequest
-                    .deepCopy((com.commercetools.importapi.models.importrequests.ProductImportRequest) template);
+        if (template instanceof com.commercetools.importapi.models.importrequests.CustomerImportRequest) {
+            return com.commercetools.importapi.models.importrequests.CustomerImportRequest
+                    .deepCopy((com.commercetools.importapi.models.importrequests.CustomerImportRequest) template);
         }
-        if (template instanceof com.commercetools.importapi.models.importrequests.ProductDraftImportRequest) {
-            return com.commercetools.importapi.models.importrequests.ProductDraftImportRequest
-                    .deepCopy((com.commercetools.importapi.models.importrequests.ProductDraftImportRequest) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.importrequests.ProductTypeImportRequest) {
-            return com.commercetools.importapi.models.importrequests.ProductTypeImportRequest
-                    .deepCopy((com.commercetools.importapi.models.importrequests.ProductTypeImportRequest) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.importrequests.ProductVariantImportRequest) {
-            return com.commercetools.importapi.models.importrequests.ProductVariantImportRequest
-                    .deepCopy((com.commercetools.importapi.models.importrequests.ProductVariantImportRequest) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.importrequests.PriceImportRequest) {
-            return com.commercetools.importapi.models.importrequests.PriceImportRequest
-                    .deepCopy((com.commercetools.importapi.models.importrequests.PriceImportRequest) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.importrequests.StandalonePriceImportRequest) {
-            return com.commercetools.importapi.models.importrequests.StandalonePriceImportRequest.deepCopy(
-                (com.commercetools.importapi.models.importrequests.StandalonePriceImportRequest) template);
+        if (template instanceof com.commercetools.importapi.models.importrequests.InventoryImportRequest) {
+            return com.commercetools.importapi.models.importrequests.InventoryImportRequest
+                    .deepCopy((com.commercetools.importapi.models.importrequests.InventoryImportRequest) template);
         }
         if (template instanceof com.commercetools.importapi.models.importrequests.OrderImportRequest) {
             return com.commercetools.importapi.models.importrequests.OrderImportRequest
@@ -99,17 +83,33 @@ public interface ImportRequest {
             return com.commercetools.importapi.models.importrequests.OrderPatchImportRequest
                     .deepCopy((com.commercetools.importapi.models.importrequests.OrderPatchImportRequest) template);
         }
+        if (template instanceof com.commercetools.importapi.models.importrequests.PriceImportRequest) {
+            return com.commercetools.importapi.models.importrequests.PriceImportRequest
+                    .deepCopy((com.commercetools.importapi.models.importrequests.PriceImportRequest) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.importrequests.ProductDraftImportRequest) {
+            return com.commercetools.importapi.models.importrequests.ProductDraftImportRequest
+                    .deepCopy((com.commercetools.importapi.models.importrequests.ProductDraftImportRequest) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.importrequests.ProductImportRequest) {
+            return com.commercetools.importapi.models.importrequests.ProductImportRequest
+                    .deepCopy((com.commercetools.importapi.models.importrequests.ProductImportRequest) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.importrequests.ProductTypeImportRequest) {
+            return com.commercetools.importapi.models.importrequests.ProductTypeImportRequest
+                    .deepCopy((com.commercetools.importapi.models.importrequests.ProductTypeImportRequest) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.importrequests.ProductVariantImportRequest) {
+            return com.commercetools.importapi.models.importrequests.ProductVariantImportRequest
+                    .deepCopy((com.commercetools.importapi.models.importrequests.ProductVariantImportRequest) template);
+        }
         if (template instanceof com.commercetools.importapi.models.importrequests.ProductVariantPatchRequest) {
             return com.commercetools.importapi.models.importrequests.ProductVariantPatchRequest
                     .deepCopy((com.commercetools.importapi.models.importrequests.ProductVariantPatchRequest) template);
         }
-        if (template instanceof com.commercetools.importapi.models.importrequests.CustomerImportRequest) {
-            return com.commercetools.importapi.models.importrequests.CustomerImportRequest
-                    .deepCopy((com.commercetools.importapi.models.importrequests.CustomerImportRequest) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.importrequests.InventoryImportRequest) {
-            return com.commercetools.importapi.models.importrequests.InventoryImportRequest
-                    .deepCopy((com.commercetools.importapi.models.importrequests.InventoryImportRequest) template);
+        if (template instanceof com.commercetools.importapi.models.importrequests.StandalonePriceImportRequest) {
+            return com.commercetools.importapi.models.importrequests.StandalonePriceImportRequest.deepCopy(
+                (com.commercetools.importapi.models.importrequests.StandalonePriceImportRequest) template);
         }
         ImportRequestImpl instance = new ImportRequestImpl();
         return instance;

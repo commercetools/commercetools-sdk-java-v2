@@ -57,6 +57,14 @@ public interface Destination {
         if (template == null) {
             return null;
         }
+        if (template instanceof com.commercetools.api.models.subscription.AzureEventGridDestination) {
+            return com.commercetools.api.models.subscription.AzureEventGridDestination
+                    .deepCopy((com.commercetools.api.models.subscription.AzureEventGridDestination) template);
+        }
+        if (template instanceof com.commercetools.api.models.subscription.AzureServiceBusDestination) {
+            return com.commercetools.api.models.subscription.AzureServiceBusDestination
+                    .deepCopy((com.commercetools.api.models.subscription.AzureServiceBusDestination) template);
+        }
         if (template instanceof com.commercetools.api.models.subscription.EventBridgeDestination) {
             return com.commercetools.api.models.subscription.EventBridgeDestination
                     .deepCopy((com.commercetools.api.models.subscription.EventBridgeDestination) template);
@@ -72,14 +80,6 @@ public interface Destination {
         if (template instanceof com.commercetools.api.models.subscription.SqsDestination) {
             return com.commercetools.api.models.subscription.SqsDestination
                     .deepCopy((com.commercetools.api.models.subscription.SqsDestination) template);
-        }
-        if (template instanceof com.commercetools.api.models.subscription.AzureEventGridDestination) {
-            return com.commercetools.api.models.subscription.AzureEventGridDestination
-                    .deepCopy((com.commercetools.api.models.subscription.AzureEventGridDestination) template);
-        }
-        if (template instanceof com.commercetools.api.models.subscription.AzureServiceBusDestination) {
-            return com.commercetools.api.models.subscription.AzureServiceBusDestination
-                    .deepCopy((com.commercetools.api.models.subscription.AzureServiceBusDestination) template);
         }
         DestinationImpl instance = new DestinationImpl();
         return instance;

@@ -7,13 +7,14 @@ import java.util.Optional;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
+import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Indicates whether the Business Unit can be edited and used in Orders, Carts, or Quotes.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface BusinessUnitStatus {
+public interface BusinessUnitStatus extends JsonEnum {
 
     /**
     	<p>The Business Unit can be used in Orders, Carts, and Quotes and can be edited.</p>

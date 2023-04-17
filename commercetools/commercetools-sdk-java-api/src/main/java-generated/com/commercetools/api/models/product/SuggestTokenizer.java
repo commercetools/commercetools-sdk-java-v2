@@ -52,13 +52,13 @@ public interface SuggestTokenizer {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.product.WhitespaceTokenizer) {
-            return com.commercetools.api.models.product.WhitespaceTokenizer
-                    .deepCopy((com.commercetools.api.models.product.WhitespaceTokenizer) template);
-        }
         if (template instanceof com.commercetools.api.models.product.CustomTokenizer) {
             return com.commercetools.api.models.product.CustomTokenizer
                     .deepCopy((com.commercetools.api.models.product.CustomTokenizer) template);
+        }
+        if (template instanceof com.commercetools.api.models.product.WhitespaceTokenizer) {
+            return com.commercetools.api.models.product.WhitespaceTokenizer
+                    .deepCopy((com.commercetools.api.models.product.WhitespaceTokenizer) template);
         }
         SuggestTokenizerImpl instance = new SuggestTokenizerImpl();
         return instance;

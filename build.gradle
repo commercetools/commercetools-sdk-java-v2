@@ -104,6 +104,10 @@ tasks.withType(JavadocTool).configureEach {
     }
 }
 
+tasks.withType(JavaCompile).configureEach {
+    options.compilerArgs += ['-Xmx2048m']
+}
+
 apply from: "$rootDir/gradle-scripts/publishing.gradle"
 
 

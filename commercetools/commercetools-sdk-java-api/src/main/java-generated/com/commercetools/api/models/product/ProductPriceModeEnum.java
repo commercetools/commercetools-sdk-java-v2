@@ -7,13 +7,14 @@ import java.util.Optional;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
+import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>This mode determines the type of Prices used for Product Price Selection and for LineItem Price selection.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface ProductPriceModeEnum {
+public interface ProductPriceModeEnum extends JsonEnum {
 
     /**
     	<p>Composable Commerce uses the <a href="ctp:api:type:Price">Embedded Prices</a> located inside the <code>prices</code> field in <a href="ctp:api:type:ProductVariant">ProductVariant</a>.</p>

@@ -7,13 +7,14 @@ import java.util.Optional;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
+import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Resource or object type the State can be assigned to.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface StateTypeEnum {
+public interface StateTypeEnum extends JsonEnum {
 
     /**
     	<p>Used by <a href="ctp:api:type:Order">Orders</a>.</p>

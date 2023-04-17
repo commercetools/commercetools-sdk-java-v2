@@ -55,13 +55,9 @@ public interface CartDiscountTarget {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.cart_discount.MultiBuyCustomLineItemsTarget) {
-            return com.commercetools.api.models.cart_discount.MultiBuyCustomLineItemsTarget
-                    .deepCopy((com.commercetools.api.models.cart_discount.MultiBuyCustomLineItemsTarget) template);
-        }
-        if (template instanceof com.commercetools.api.models.cart_discount.MultiBuyLineItemsTarget) {
-            return com.commercetools.api.models.cart_discount.MultiBuyLineItemsTarget
-                    .deepCopy((com.commercetools.api.models.cart_discount.MultiBuyLineItemsTarget) template);
+        if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountCustomLineItemsTarget) {
+            return com.commercetools.api.models.cart_discount.CartDiscountCustomLineItemsTarget
+                    .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountCustomLineItemsTarget) template);
         }
         if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountLineItemsTarget) {
             return com.commercetools.api.models.cart_discount.CartDiscountLineItemsTarget
@@ -71,9 +67,13 @@ public interface CartDiscountTarget {
             return com.commercetools.api.models.cart_discount.CartDiscountShippingCostTarget
                     .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountShippingCostTarget) template);
         }
-        if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountCustomLineItemsTarget) {
-            return com.commercetools.api.models.cart_discount.CartDiscountCustomLineItemsTarget
-                    .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountCustomLineItemsTarget) template);
+        if (template instanceof com.commercetools.api.models.cart_discount.MultiBuyCustomLineItemsTarget) {
+            return com.commercetools.api.models.cart_discount.MultiBuyCustomLineItemsTarget
+                    .deepCopy((com.commercetools.api.models.cart_discount.MultiBuyCustomLineItemsTarget) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart_discount.MultiBuyLineItemsTarget) {
+            return com.commercetools.api.models.cart_discount.MultiBuyLineItemsTarget
+                    .deepCopy((com.commercetools.api.models.cart_discount.MultiBuyLineItemsTarget) template);
         }
         CartDiscountTargetImpl instance = new CartDiscountTargetImpl();
         return instance;

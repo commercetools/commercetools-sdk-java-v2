@@ -53,6 +53,10 @@ public interface ProductDiscountValueDraft {
         if (template == null) {
             return null;
         }
+        if (template instanceof com.commercetools.api.models.product_discount.ProductDiscountValueAbsoluteDraft) {
+            return com.commercetools.api.models.product_discount.ProductDiscountValueAbsoluteDraft.deepCopy(
+                (com.commercetools.api.models.product_discount.ProductDiscountValueAbsoluteDraft) template);
+        }
         if (template instanceof com.commercetools.api.models.product_discount.ProductDiscountValueExternalDraft) {
             return com.commercetools.api.models.product_discount.ProductDiscountValueExternalDraft.deepCopy(
                 (com.commercetools.api.models.product_discount.ProductDiscountValueExternalDraft) template);
@@ -60,10 +64,6 @@ public interface ProductDiscountValueDraft {
         if (template instanceof com.commercetools.api.models.product_discount.ProductDiscountValueRelativeDraft) {
             return com.commercetools.api.models.product_discount.ProductDiscountValueRelativeDraft.deepCopy(
                 (com.commercetools.api.models.product_discount.ProductDiscountValueRelativeDraft) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_discount.ProductDiscountValueAbsoluteDraft) {
-            return com.commercetools.api.models.product_discount.ProductDiscountValueAbsoluteDraft.deepCopy(
-                (com.commercetools.api.models.product_discount.ProductDiscountValueAbsoluteDraft) template);
         }
         ProductDiscountValueDraftImpl instance = new ProductDiscountValueDraftImpl();
         return instance;

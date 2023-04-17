@@ -7,13 +7,14 @@ import java.util.Optional;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
+import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Maps to <code>ReturnItem.shipmentState</code></p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface ReturnShipmentState {
+public interface ReturnShipmentState extends JsonEnum {
 
     ReturnShipmentState ADVISED = ReturnShipmentStateEnum.ADVISED;
 

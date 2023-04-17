@@ -7,13 +7,14 @@ import java.util.Optional;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
+import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>IDs indicating the customizable resources and data types.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface ResourceTypeId {
+public interface ResourceTypeId extends JsonEnum {
 
     /**
     	<p><a href="ctp:api:type:Address">Address</a> on <a href="ctp:api:type:BusinessUnit">BusinessUnit</a>, <a href="ctp:api:type:Cart">Cart</a>, <a href="ctp:api:type:Order">Order</a>, <a href="ctp:api:type:OrderEdit">OrderEdit</a>, <a href="ctp:api:type:Customer">Customer</a>, and <a href="ctp:api:type:Channel">Channel</a></p>

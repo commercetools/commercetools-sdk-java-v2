@@ -137,6 +137,30 @@ public interface ResourceIdentifier extends com.commercetools.api.models.WithKey
         if (template == null) {
             return null;
         }
+        if (template instanceof com.commercetools.api.models.attribute_group.AttributeGroupResourceIdentifier) {
+            return com.commercetools.api.models.attribute_group.AttributeGroupResourceIdentifier
+                    .deepCopy((com.commercetools.api.models.attribute_group.AttributeGroupResourceIdentifier) template);
+        }
+        if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier) {
+            return com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier
+                    .deepCopy((com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier) {
+            return com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier
+                    .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartResourceIdentifier) {
+            return com.commercetools.api.models.cart.CartResourceIdentifier
+                    .deepCopy((com.commercetools.api.models.cart.CartResourceIdentifier) template);
+        }
+        if (template instanceof com.commercetools.api.models.category.CategoryResourceIdentifier) {
+            return com.commercetools.api.models.category.CategoryResourceIdentifier
+                    .deepCopy((com.commercetools.api.models.category.CategoryResourceIdentifier) template);
+        }
+        if (template instanceof com.commercetools.api.models.channel.ChannelResourceIdentifier) {
+            return com.commercetools.api.models.channel.ChannelResourceIdentifier
+                    .deepCopy((com.commercetools.api.models.channel.ChannelResourceIdentifier) template);
+        }
         if (template instanceof com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier) {
             return com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier
                     .deepCopy((com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier) template);
@@ -169,6 +193,10 @@ public interface ResourceIdentifier extends com.commercetools.api.models.WithKey
             return com.commercetools.api.models.product_discount.ProductDiscountResourceIdentifier.deepCopy(
                 (com.commercetools.api.models.product_discount.ProductDiscountResourceIdentifier) template);
         }
+        if (template instanceof com.commercetools.api.models.product.ProductResourceIdentifier) {
+            return com.commercetools.api.models.product.ProductResourceIdentifier
+                    .deepCopy((com.commercetools.api.models.product.ProductResourceIdentifier) template);
+        }
         if (template instanceof com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier) {
             return com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier.deepCopy(
                 (com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier) template);
@@ -176,10 +204,6 @@ public interface ResourceIdentifier extends com.commercetools.api.models.WithKey
         if (template instanceof com.commercetools.api.models.product_type.ProductTypeResourceIdentifier) {
             return com.commercetools.api.models.product_type.ProductTypeResourceIdentifier
                     .deepCopy((com.commercetools.api.models.product_type.ProductTypeResourceIdentifier) template);
-        }
-        if (template instanceof com.commercetools.api.models.product.ProductResourceIdentifier) {
-            return com.commercetools.api.models.product.ProductResourceIdentifier
-                    .deepCopy((com.commercetools.api.models.product.ProductResourceIdentifier) template);
         }
         if (template instanceof com.commercetools.api.models.quote_request.QuoteRequestResourceIdentifier) {
             return com.commercetools.api.models.quote_request.QuoteRequestResourceIdentifier
@@ -228,30 +252,6 @@ public interface ResourceIdentifier extends com.commercetools.api.models.WithKey
         if (template instanceof com.commercetools.api.models.zone.ZoneResourceIdentifier) {
             return com.commercetools.api.models.zone.ZoneResourceIdentifier
                     .deepCopy((com.commercetools.api.models.zone.ZoneResourceIdentifier) template);
-        }
-        if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier) {
-            return com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier
-                    .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier) template);
-        }
-        if (template instanceof com.commercetools.api.models.attribute_group.AttributeGroupResourceIdentifier) {
-            return com.commercetools.api.models.attribute_group.AttributeGroupResourceIdentifier
-                    .deepCopy((com.commercetools.api.models.attribute_group.AttributeGroupResourceIdentifier) template);
-        }
-        if (template instanceof com.commercetools.api.models.category.CategoryResourceIdentifier) {
-            return com.commercetools.api.models.category.CategoryResourceIdentifier
-                    .deepCopy((com.commercetools.api.models.category.CategoryResourceIdentifier) template);
-        }
-        if (template instanceof com.commercetools.api.models.cart.CartResourceIdentifier) {
-            return com.commercetools.api.models.cart.CartResourceIdentifier
-                    .deepCopy((com.commercetools.api.models.cart.CartResourceIdentifier) template);
-        }
-        if (template instanceof com.commercetools.api.models.channel.ChannelResourceIdentifier) {
-            return com.commercetools.api.models.channel.ChannelResourceIdentifier
-                    .deepCopy((com.commercetools.api.models.channel.ChannelResourceIdentifier) template);
-        }
-        if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier) {
-            return com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier
-                    .deepCopy((com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier) template);
         }
         ResourceIdentifierImpl instance = new ResourceIdentifierImpl();
         instance.setId(template.getId());

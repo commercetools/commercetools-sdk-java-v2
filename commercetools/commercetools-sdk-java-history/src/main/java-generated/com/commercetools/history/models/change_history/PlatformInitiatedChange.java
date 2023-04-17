@@ -7,13 +7,14 @@ import java.util.Optional;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
+import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  * PlatformInitiatedChange
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface PlatformInitiatedChange {
+public interface PlatformInitiatedChange extends JsonEnum {
 
     PlatformInitiatedChange EXCLUDE_ALL = PlatformInitiatedChangeEnum.EXCLUDE_ALL;
 

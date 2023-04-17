@@ -7,13 +7,14 @@ import java.util.Optional;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
+import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>For some resource types, a State can fulfill the following predefined roles:</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface StateRoleEnum {
+public interface StateRoleEnum extends JsonEnum {
 
     /**
     	<p>If a <a href="ctp:api:type:Review">Review's</a> <code>state</code> has this role its <code>rating</code> is taken into account for <a href="ctp:api:type:ReviewRatingStatistics">ReviewRatingStatistics</a>. This role only applies for the <code>ReviewState</code> <a href="ctp:api:type:StateTypeEnum">StateTypeEnum</a>.</p>

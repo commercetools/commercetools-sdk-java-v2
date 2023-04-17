@@ -7,13 +7,14 @@ import java.util.Optional;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
+import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Defines which resource type a CustomFieldReferenceType can reference.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface CustomFieldReferenceValue {
+public interface CustomFieldReferenceValue extends JsonEnum {
 
     /**
     	<p><a href="ctp:api:type:Cart">Cart</a></p>

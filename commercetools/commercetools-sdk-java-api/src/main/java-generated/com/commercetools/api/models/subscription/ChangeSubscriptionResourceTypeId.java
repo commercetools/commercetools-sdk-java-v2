@@ -7,13 +7,14 @@ import java.util.Optional;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
+import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Resource types supported by ChangeSubscriptions:</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface ChangeSubscriptionResourceTypeId {
+public interface ChangeSubscriptionResourceTypeId extends JsonEnum {
 
     /**
     	<p>Changes to <a href="ctp:api:type:BusinessUnit">Business Units</a>.</p>

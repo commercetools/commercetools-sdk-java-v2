@@ -7,13 +7,14 @@ import java.util.Optional;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
+import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  * StateRole
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface StateRole {
+public interface StateRole extends JsonEnum {
 
     StateRole REVIEW_INCLUDED_IN_STATISTICS = StateRoleEnum.REVIEW_INCLUDED_IN_STATISTICS;
 

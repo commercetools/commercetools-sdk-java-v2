@@ -7,13 +7,14 @@ import java.util.Optional;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
+import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Indicates how taxes are set on the Cart.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface TaxMode {
+public interface TaxMode extends JsonEnum {
 
     /**
     	<p>Tax Rates are selected automatically from the <a href="ctp:api:type:TaxCategory">TaxCategories</a> based on the <a href="ctp:api:type:Cart">Cart</a> <code>shippingAddress</code>.

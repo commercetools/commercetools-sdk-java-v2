@@ -7,13 +7,14 @@ import java.util.Optional;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
+import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>The following types of Product Selections are supported:</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface ProductSelectionTypeEnum {
+public interface ProductSelectionTypeEnum extends JsonEnum {
 
     /**
     	<p>For this type of Product Selection, the Products are to be assigned individually by using the <a href="/projects/product-selections#add-product">Add Product</a> update action.</p>

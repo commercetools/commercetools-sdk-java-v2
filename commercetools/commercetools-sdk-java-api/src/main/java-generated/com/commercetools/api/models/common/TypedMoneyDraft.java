@@ -67,13 +67,13 @@ public interface TypedMoneyDraft extends Money {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.common.HighPrecisionMoneyDraft) {
-            return com.commercetools.api.models.common.HighPrecisionMoneyDraft
-                    .deepCopy((com.commercetools.api.models.common.HighPrecisionMoneyDraft) template);
-        }
         if (template instanceof com.commercetools.api.models.common.CentPrecisionMoneyDraft) {
             return com.commercetools.api.models.common.CentPrecisionMoneyDraft
                     .deepCopy((com.commercetools.api.models.common.CentPrecisionMoneyDraft) template);
+        }
+        if (template instanceof com.commercetools.api.models.common.HighPrecisionMoneyDraft) {
+            return com.commercetools.api.models.common.HighPrecisionMoneyDraft
+                    .deepCopy((com.commercetools.api.models.common.HighPrecisionMoneyDraft) template);
         }
         TypedMoneyDraftImpl instance = new TypedMoneyDraftImpl();
         instance.setCentAmount(template.getCentAmount());

@@ -7,13 +7,14 @@ import java.util.Optional;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
+import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>This mode indicates how the price is set for the Line Item.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface LineItemPriceMode {
+public interface LineItemPriceMode extends JsonEnum {
 
     /**
     	<p>The <a href="ctp:api:type:LineItemPriceSelection">price is selected</a> from the Product Variant.

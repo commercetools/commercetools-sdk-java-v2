@@ -7,13 +7,14 @@ import java.util.Optional;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
+import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>The scope controls which part of the product information is published.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface ProductPublishScope {
+public interface ProductPublishScope extends JsonEnum {
 
     /**
     	<p>Publishes a Product that causes the <em>staged</em> projection of the Product to override the <em>current</em> projection. If the Product is published for the first time, the <em>current</em> projection is created. This is the default scope.</p>

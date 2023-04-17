@@ -7,13 +7,14 @@ import java.util.Optional;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
+import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Determines how monetary values are rounded.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface RoundingMode {
+public interface RoundingMode extends JsonEnum {
 
     /**
     	<p><a href="https://en.wikipedia.org/wiki/Rounding#Round_half_to_even">Round half to even</a></p>

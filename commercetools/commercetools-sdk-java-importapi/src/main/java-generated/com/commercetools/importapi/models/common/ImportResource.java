@@ -74,33 +74,9 @@ public interface ImportResource {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.importapi.models.productvariants.ProductVariantImport) {
-            return com.commercetools.importapi.models.productvariants.ProductVariantImport
-                    .deepCopy((com.commercetools.importapi.models.productvariants.ProductVariantImport) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.prices.PriceImport) {
-            return com.commercetools.importapi.models.prices.PriceImport
-                    .deepCopy((com.commercetools.importapi.models.prices.PriceImport) template);
-        }
         if (template instanceof com.commercetools.importapi.models.categories.CategoryImport) {
             return com.commercetools.importapi.models.categories.CategoryImport
                     .deepCopy((com.commercetools.importapi.models.categories.CategoryImport) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.standalone_prices.StandalonePriceImport) {
-            return com.commercetools.importapi.models.standalone_prices.StandalonePriceImport
-                    .deepCopy((com.commercetools.importapi.models.standalone_prices.StandalonePriceImport) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.products.ProductImport) {
-            return com.commercetools.importapi.models.products.ProductImport
-                    .deepCopy((com.commercetools.importapi.models.products.ProductImport) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.productdrafts.ProductDraftImport) {
-            return com.commercetools.importapi.models.productdrafts.ProductDraftImport
-                    .deepCopy((com.commercetools.importapi.models.productdrafts.ProductDraftImport) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.producttypes.ProductTypeImport) {
-            return com.commercetools.importapi.models.producttypes.ProductTypeImport
-                    .deepCopy((com.commercetools.importapi.models.producttypes.ProductTypeImport) template);
         }
         if (template instanceof com.commercetools.importapi.models.customers.CustomerImport) {
             return com.commercetools.importapi.models.customers.CustomerImport
@@ -109,6 +85,30 @@ public interface ImportResource {
         if (template instanceof com.commercetools.importapi.models.inventories.InventoryImport) {
             return com.commercetools.importapi.models.inventories.InventoryImport
                     .deepCopy((com.commercetools.importapi.models.inventories.InventoryImport) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.prices.PriceImport) {
+            return com.commercetools.importapi.models.prices.PriceImport
+                    .deepCopy((com.commercetools.importapi.models.prices.PriceImport) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.productdrafts.ProductDraftImport) {
+            return com.commercetools.importapi.models.productdrafts.ProductDraftImport
+                    .deepCopy((com.commercetools.importapi.models.productdrafts.ProductDraftImport) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.products.ProductImport) {
+            return com.commercetools.importapi.models.products.ProductImport
+                    .deepCopy((com.commercetools.importapi.models.products.ProductImport) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.producttypes.ProductTypeImport) {
+            return com.commercetools.importapi.models.producttypes.ProductTypeImport
+                    .deepCopy((com.commercetools.importapi.models.producttypes.ProductTypeImport) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.productvariants.ProductVariantImport) {
+            return com.commercetools.importapi.models.productvariants.ProductVariantImport
+                    .deepCopy((com.commercetools.importapi.models.productvariants.ProductVariantImport) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.standalone_prices.StandalonePriceImport) {
+            return com.commercetools.importapi.models.standalone_prices.StandalonePriceImport
+                    .deepCopy((com.commercetools.importapi.models.standalone_prices.StandalonePriceImport) template);
         }
         ImportResourceImpl instance = new ImportResourceImpl();
         instance.setKey(template.getKey());

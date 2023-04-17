@@ -7,13 +7,14 @@ import java.util.Optional;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
+import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Indicates how Line Items in a Cart are tracked.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface InventoryMode {
+public interface InventoryMode extends JsonEnum {
 
     /**
     	<p>Adding and ordering items from a Cart are independent of the Inventory with no inventory checks or modifications.</p>

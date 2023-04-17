@@ -69,13 +69,13 @@ public interface KeyReference extends com.commercetools.api.models.WithKey {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.store.StoreKeyReference) {
-            return com.commercetools.api.models.store.StoreKeyReference
-                    .deepCopy((com.commercetools.api.models.store.StoreKeyReference) template);
-        }
         if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitKeyReference) {
             return com.commercetools.api.models.business_unit.BusinessUnitKeyReference
                     .deepCopy((com.commercetools.api.models.business_unit.BusinessUnitKeyReference) template);
+        }
+        if (template instanceof com.commercetools.api.models.store.StoreKeyReference) {
+            return com.commercetools.api.models.store.StoreKeyReference
+                    .deepCopy((com.commercetools.api.models.store.StoreKeyReference) template);
         }
         KeyReferenceImpl instance = new KeyReferenceImpl();
         instance.setKey(template.getKey());

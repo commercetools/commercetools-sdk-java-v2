@@ -7,13 +7,14 @@ import java.util.Optional;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
+import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>QuoteStates that can be set using the Change My Quote State update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface MyQuoteState {
+public interface MyQuoteState extends JsonEnum {
 
     /**
     	<p>A state indicating that the <a href="/../api/quotes-overview#buyer">Buyer</a> has declined the <a href="ctp:api:type:Quote">Quote</a>.</p>

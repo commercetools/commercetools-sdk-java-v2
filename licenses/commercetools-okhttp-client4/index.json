@@ -2,7 +2,7 @@
     "dependencies": [
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-annotations",
-            "moduleVersion": "2.14.1",
+            "moduleVersion": "2.14.2",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
             ],
@@ -15,7 +15,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-core",
-            "moduleVersion": "2.14.1",
+            "moduleVersion": "2.14.2",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-core"
             ],
@@ -28,7 +28,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-databind",
-            "moduleVersion": "2.14.1",
+            "moduleVersion": "2.14.2",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
             ],
@@ -41,7 +41,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.datatype:jackson-datatype-jsr310",
-            "moduleVersion": "2.14.1",
+            "moduleVersion": "2.14.2",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-modules-java8/jackson-datatype-jsr310"
             ],
@@ -93,11 +93,11 @@
         },
         {
             "moduleName": "com.squareup.okio:okio",
-            "moduleVersion": "3.2.0"
+            "moduleVersion": "3.3.0"
         },
         {
             "moduleName": "com.squareup.okio:okio-jvm",
-            "moduleVersion": "3.2.0",
+            "moduleVersion": "3.3.0",
             "moduleUrls": [
                 "https://github.com/square/okio/"
             ],
@@ -110,7 +110,7 @@
         },
         {
             "moduleName": "dev.failsafe:failsafe",
-            "moduleVersion": "3.2.4",
+            "moduleVersion": "3.3.1",
             "moduleLicenses": [
                 {
                     "moduleLicense": null,
@@ -150,7 +150,7 @@
         },
         {
             "moduleName": "org.jetbrains.kotlin:kotlin-stdlib",
-            "moduleVersion": "1.6.20",
+            "moduleVersion": "1.8.0",
             "moduleUrls": [
                 "https://kotlinlang.org/"
             ],
@@ -163,7 +163,7 @@
         },
         {
             "moduleName": "org.jetbrains.kotlin:kotlin-stdlib-common",
-            "moduleVersion": "1.6.20",
+            "moduleVersion": "1.8.0",
             "moduleUrls": [
                 "https://kotlinlang.org/"
             ],
@@ -176,7 +176,7 @@
         },
         {
             "moduleName": "org.jetbrains.kotlin:kotlin-stdlib-jdk7",
-            "moduleVersion": "1.6.20",
+            "moduleVersion": "1.8.0",
             "moduleUrls": [
                 "https://kotlinlang.org/"
             ],
@@ -189,7 +189,7 @@
         },
         {
             "moduleName": "org.jetbrains.kotlin:kotlin-stdlib-jdk8",
-            "moduleVersion": "1.6.20",
+            "moduleVersion": "1.8.0",
             "moduleUrls": [
                 "https://kotlinlang.org/"
             ],

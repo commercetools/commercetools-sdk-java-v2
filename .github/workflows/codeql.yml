@@ -63,7 +63,7 @@ jobs:
     # Autobuild attempts to build any compiled languages  (C/C++, C#, Go, or Java).
     # If this step fails, then you should remove it and run the build manually (see below)
     - name: Autobuild
-      if: matrix.language != "java"
+      if: matrix.language != 'java'
       uses: github/codeql-action/autobuild@v2
     # ℹ️ Command-line programs to run using the OS shell.
     # 📚 See https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsrun
@@ -71,10 +71,9 @@ jobs:
     #   If the Autobuild fails above, remove it and uncomment the following three lines.
     #   modify them (or add more) to build your code if your project, please refer to the EXAMPLE below for guidance.
 
-    - if: matrix.language == "java"
-      run: |
-        echo "Run, Build Application using script"
-        ./gradlew clean build -x integrationTest
+    - if: matrix.language == 'java'
+      name: "Build Java"
+      run: ./gradlew clean build -x integrationTest
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2

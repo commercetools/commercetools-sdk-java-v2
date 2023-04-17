@@ -91,21 +91,8 @@ subprojects { project ->
 
     check.dependsOn(integrationTest)
 
-    java {
-        toolchain {
-            languageVersion = JavaLanguageVersion.of(8)
-        }
-    }
-}
-
-tasks.withType(JavadocTool).configureEach {
-    javaExecutable = javaToolchains.launcherFor {
-        languageVersion = JavaLanguageVersion.of(16)
-    }
-}
-
-tasks.withType(JavaCompile).configureEach {
-    options.compilerArgs += ['-Xmx2048m']
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
 }
 
 apply from: "$rootDir/gradle-scripts/publishing.gradle"

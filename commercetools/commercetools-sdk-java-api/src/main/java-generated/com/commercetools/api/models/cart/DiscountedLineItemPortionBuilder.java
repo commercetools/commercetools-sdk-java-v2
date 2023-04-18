@@ -23,32 +23,30 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineItemPortion> {
 
-    private com.commercetools.api.models.cart_discount.CartDiscountReference discount;
+    private com.commercetools.api.models.common.Reference discount;
 
     private com.commercetools.api.models.common.TypedMoney discountedAmount;
 
     /**
-     *  <p>Cart Discount applicable on the Line Item.</p>
+     *  <p>A CartDiscountReference or DirectDiscountReference for the applicable discount on the Line Item.</p>
+     * @param discount value to be set
+     * @return Builder
+     */
+
+    public DiscountedLineItemPortionBuilder discount(final com.commercetools.api.models.common.Reference discount) {
+        this.discount = discount;
+        return this;
+    }
+
+    /**
+     *  <p>A CartDiscountReference or DirectDiscountReference for the applicable discount on the Line Item.</p>
      * @param builder function to build the discount value
      * @return Builder
      */
 
     public DiscountedLineItemPortionBuilder discount(
-            Function<com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder, com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder> builder) {
-        this.discount = builder.apply(com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder.of())
-                .build();
-        return this;
-    }
-
-    /**
-     *  <p>Cart Discount applicable on the Line Item.</p>
-     * @param discount value to be set
-     * @return Builder
-     */
-
-    public DiscountedLineItemPortionBuilder discount(
-            final com.commercetools.api.models.cart_discount.CartDiscountReference discount) {
-        this.discount = discount;
+            Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
+        this.discount = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
         return this;
     }
 
@@ -77,11 +75,11 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
     }
 
     /**
-     *  <p>Cart Discount applicable on the Line Item.</p>
+     *  <p>A CartDiscountReference or DirectDiscountReference for the applicable discount on the Line Item.</p>
      * @return discount
      */
 
-    public com.commercetools.api.models.cart_discount.CartDiscountReference getDiscount() {
+    public com.commercetools.api.models.common.Reference getDiscount() {
         return this.discount;
     }
 

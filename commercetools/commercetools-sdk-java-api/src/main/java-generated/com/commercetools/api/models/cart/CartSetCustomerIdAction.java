@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Setting the Cart's <code>customerId</code> can lead to updates on all its LineItem <code>prices</code>.</p>
- *  <p>If the Customer with the specified <code>id</code> cannot be found, this update action returns a MissingTaxRateForCountry error.</p>
+ *  <p>If the Customer with the specified <code>id</code> cannot be found, this update action returns a ReferencedResourceNotFound error.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

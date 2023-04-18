@@ -1,0 +1,28 @@
+{
+    "includedDiscounts": [
+        {
+            "discount": {
+                "typeId": "direct-discount",
+                "id": "direct"
+            },
+            "discountedAmount": {
+                "type": "centPrecision",
+                "currencyCode": "EUR",
+                "centAmount": 100,
+                "fractionDigits": 2
+            }
+        },
+        {
+            "discount": {
+                "typeId": "cart-discount",
+                "id": "cart"
+            },
+            "discountedAmount": {
+                "type": "centPrecision",
+                "currencyCode": "EUR",
+                "centAmount": 100,
+                "fractionDigits": 2
+            }
+        }
+    ]
+}

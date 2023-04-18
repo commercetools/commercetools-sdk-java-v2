@@ -47,6 +47,10 @@ public class ReferenceBuilder {
         return com.commercetools.api.models.customer.CustomerReferenceBuilder.of();
     }
 
+    public com.commercetools.api.models.cart.DirectDiscountReferenceBuilder directDiscountBuilder() {
+        return com.commercetools.api.models.cart.DirectDiscountReferenceBuilder.of();
+    }
+
     public com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder discountCodeBuilder() {
         return com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder.of();
     }

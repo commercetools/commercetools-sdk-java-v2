@@ -11,6 +11,7 @@ import javax.validation.constraints.NotNull;
 import com.commercetools.api.models.attribute_group.AttributeGroupReference;
 import com.commercetools.api.models.business_unit.BusinessUnitReference;
 import com.commercetools.api.models.cart.CartReference;
+import com.commercetools.api.models.cart.DirectDiscountReference;
 import com.commercetools.api.models.cart_discount.CartDiscountReference;
 import com.commercetools.api.models.category.CategoryReference;
 import com.commercetools.api.models.channel.ChannelReference;
@@ -66,6 +67,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.custom_object.CustomObjectReferenceImpl.class, name = CustomObjectReference.KEY_VALUE_DOCUMENT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.customer_group.CustomerGroupReferenceImpl.class, name = CustomerGroupReference.CUSTOMER_GROUP),
         @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerReferenceImpl.class, name = CustomerReference.CUSTOMER),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.cart.DirectDiscountReferenceImpl.class, name = DirectDiscountReference.DIRECT_DISCOUNT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeReferenceImpl.class, name = DiscountCodeReference.DISCOUNT_CODE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.inventory.InventoryEntryReferenceImpl.class, name = InventoryEntryReference.INVENTORY_ENTRY),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.OrderEditReferenceImpl.class, name = OrderEditReference.ORDER_EDIT),
@@ -160,6 +162,10 @@ public interface Reference extends ReferenceMixin {
         if (template instanceof com.commercetools.api.models.customer.CustomerReference) {
             return com.commercetools.api.models.customer.CustomerReference
                     .deepCopy((com.commercetools.api.models.customer.CustomerReference) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.DirectDiscountReference) {
+            return com.commercetools.api.models.cart.DirectDiscountReference
+                    .deepCopy((com.commercetools.api.models.cart.DirectDiscountReference) template);
         }
         if (template instanceof com.commercetools.api.models.discount_code.DiscountCodeReference) {
             return com.commercetools.api.models.discount_code.DiscountCodeReference
@@ -320,6 +326,14 @@ public interface Reference extends ReferenceMixin {
      */
     public static com.commercetools.api.models.customer.CustomerReferenceBuilder customerBuilder() {
         return com.commercetools.api.models.customer.CustomerReferenceBuilder.of();
+    }
+
+    /**
+     * builder for directDiscount subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.cart.DirectDiscountReferenceBuilder directDiscountBuilder() {
+        return com.commercetools.api.models.cart.DirectDiscountReferenceBuilder.of();
     }
 
     /**

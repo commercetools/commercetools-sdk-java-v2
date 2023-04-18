@@ -57,6 +57,11 @@ public interface ReferenceTypeId extends JsonEnum {
     */
     ReferenceTypeId CUSTOMER_GROUP = ReferenceTypeIdEnum.CUSTOMER_GROUP;
     /**
+    	<p>References a <a href="ctp:api:type:DirectDiscount">DirectDiscount</a>.</p>
+
+    */
+    ReferenceTypeId DIRECT_DISCOUNT = ReferenceTypeIdEnum.DIRECT_DISCOUNT;
+    /**
     	<p>References a <a href="ctp:api:type:DiscountCode">DiscountCode</a>.</p>
 
     */
@@ -225,6 +230,11 @@ public interface ReferenceTypeId extends JsonEnum {
          * customer-group
          */
         CUSTOMER_GROUP("customer-group"),
+
+        /**
+         * direct-discount
+         */
+        DIRECT_DISCOUNT("direct-discount"),
 
         /**
          * discount-code

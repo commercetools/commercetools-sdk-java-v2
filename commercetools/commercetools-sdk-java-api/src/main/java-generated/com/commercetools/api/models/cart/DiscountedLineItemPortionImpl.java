@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountedLineItemPortionImpl implements DiscountedLineItemPortion, ModelBase {
 
-    private com.commercetools.api.models.cart_discount.CartDiscountReference discount;
+    private com.commercetools.api.models.common.Reference discount;
 
     private com.commercetools.api.models.common.TypedMoney discountedAmount;
 
@@ -29,7 +29,7 @@ public class DiscountedLineItemPortionImpl implements DiscountedLineItemPortion,
      */
     @JsonCreator
     DiscountedLineItemPortionImpl(
-            @JsonProperty("discount") final com.commercetools.api.models.cart_discount.CartDiscountReference discount,
+            @JsonProperty("discount") final com.commercetools.api.models.common.Reference discount,
             @JsonProperty("discountedAmount") final com.commercetools.api.models.common.TypedMoney discountedAmount) {
         this.discount = discount;
         this.discountedAmount = discountedAmount;
@@ -42,10 +42,10 @@ public class DiscountedLineItemPortionImpl implements DiscountedLineItemPortion,
     }
 
     /**
-     *  <p>Cart Discount applicable on the Line Item.</p>
+     *  <p>A CartDiscountReference or DirectDiscountReference for the applicable discount on the Line Item.</p>
      */
 
-    public com.commercetools.api.models.cart_discount.CartDiscountReference getDiscount() {
+    public com.commercetools.api.models.common.Reference getDiscount() {
         return this.discount;
     }
 
@@ -57,7 +57,7 @@ public class DiscountedLineItemPortionImpl implements DiscountedLineItemPortion,
         return this.discountedAmount;
     }
 
-    public void setDiscount(final com.commercetools.api.models.cart_discount.CartDiscountReference discount) {
+    public void setDiscount(final com.commercetools.api.models.common.Reference discount) {
         this.discount = discount;
     }
 

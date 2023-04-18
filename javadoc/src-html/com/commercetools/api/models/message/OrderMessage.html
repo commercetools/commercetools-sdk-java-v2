@@ -57,173 +57,173 @@
 <span class="source-line-no">044</span><span id="line.44">        if (template == null) {</span>
 <span class="source-line-no">045</span><span id="line.45">            return null;</span>
 <span class="source-line-no">046</span><span id="line.46">        }</span>
-<span class="source-line-no">047</span><span id="line.47">        if (template instanceof com.commercetools.api.models.message.OrderPaymentStateChangedMessage) {</span>
-<span class="source-line-no">048</span><span id="line.48">            return com.commercetools.api.models.message.OrderPaymentStateChangedMessage</span>
-<span class="source-line-no">049</span><span id="line.49">                    .deepCopy((com.commercetools.api.models.message.OrderPaymentStateChangedMessage) template);</span>
+<span class="source-line-no">047</span><span id="line.47">        if (template instanceof com.commercetools.api.models.message.CustomLineItemStateTransitionMessage) {</span>
+<span class="source-line-no">048</span><span id="line.48">            return com.commercetools.api.models.message.CustomLineItemStateTransitionMessage</span>
+<span class="source-line-no">049</span><span id="line.49">                    .deepCopy((com.commercetools.api.models.message.CustomLineItemStateTransitionMessage) template);</span>
 <span class="source-line-no">050</span><span id="line.50">        }</span>
-<span class="source-line-no">051</span><span id="line.51">        if (template instanceof com.commercetools.api.models.message.OrderPurchaseOrderNumberSetMessage) {</span>
-<span class="source-line-no">052</span><span id="line.52">            return com.commercetools.api.models.message.OrderPurchaseOrderNumberSetMessage</span>
-<span class="source-line-no">053</span><span id="line.53">                    .deepCopy((com.commercetools.api.models.message.OrderPurchaseOrderNumberSetMessage) template);</span>
+<span class="source-line-no">051</span><span id="line.51">        if (template instanceof com.commercetools.api.models.message.DeliveryAddedMessage) {</span>
+<span class="source-line-no">052</span><span id="line.52">            return com.commercetools.api.models.message.DeliveryAddedMessage</span>
+<span class="source-line-no">053</span><span id="line.53">                    .deepCopy((com.commercetools.api.models.message.DeliveryAddedMessage) template);</span>
 <span class="source-line-no">054</span><span id="line.54">        }</span>
-<span class="source-line-no">055</span><span id="line.55">        if (template instanceof com.commercetools.api.models.message.OrderReturnShipmentStateChangedMessage) {</span>
-<span class="source-line-no">056</span><span id="line.56">            return com.commercetools.api.models.message.OrderReturnShipmentStateChangedMessage</span>
-<span class="source-line-no">057</span><span id="line.57">                    .deepCopy((com.commercetools.api.models.message.OrderReturnShipmentStateChangedMessage) template);</span>
+<span class="source-line-no">055</span><span id="line.55">        if (template instanceof com.commercetools.api.models.message.DeliveryAddressSetMessage) {</span>
+<span class="source-line-no">056</span><span id="line.56">            return com.commercetools.api.models.message.DeliveryAddressSetMessage</span>
+<span class="source-line-no">057</span><span id="line.57">                    .deepCopy((com.commercetools.api.models.message.DeliveryAddressSetMessage) template);</span>
 <span class="source-line-no">058</span><span id="line.58">        }</span>
-<span class="source-line-no">059</span><span id="line.59">        if (template instanceof com.commercetools.api.models.message.OrderShipmentStateChangedMessage) {</span>
-<span class="source-line-no">060</span><span id="line.60">            return com.commercetools.api.models.message.OrderShipmentStateChangedMessage</span>
-<span class="source-line-no">061</span><span id="line.61">                    .deepCopy((com.commercetools.api.models.message.OrderShipmentStateChangedMessage) template);</span>
+<span class="source-line-no">059</span><span id="line.59">        if (template instanceof com.commercetools.api.models.message.DeliveryItemsUpdatedMessage) {</span>
+<span class="source-line-no">060</span><span id="line.60">            return com.commercetools.api.models.message.DeliveryItemsUpdatedMessage</span>
+<span class="source-line-no">061</span><span id="line.61">                    .deepCopy((com.commercetools.api.models.message.DeliveryItemsUpdatedMessage) template);</span>
 <span class="source-line-no">062</span><span id="line.62">        }</span>
-<span class="source-line-no">063</span><span id="line.63">        if (template instanceof com.commercetools.api.models.message.OrderShippingAddressSetMessage) {</span>
-<span class="source-line-no">064</span><span id="line.64">            return com.commercetools.api.models.message.OrderShippingAddressSetMessage</span>
-<span class="source-line-no">065</span><span id="line.65">                    .deepCopy((com.commercetools.api.models.message.OrderShippingAddressSetMessage) template);</span>
+<span class="source-line-no">063</span><span id="line.63">        if (template instanceof com.commercetools.api.models.message.DeliveryRemovedMessage) {</span>
+<span class="source-line-no">064</span><span id="line.64">            return com.commercetools.api.models.message.DeliveryRemovedMessage</span>
+<span class="source-line-no">065</span><span id="line.65">                    .deepCopy((com.commercetools.api.models.message.DeliveryRemovedMessage) template);</span>
 <span class="source-line-no">066</span><span id="line.66">        }</span>
-<span class="source-line-no">067</span><span id="line.67">        if (template instanceof com.commercetools.api.models.message.OrderShippingInfoSetMessage) {</span>
-<span class="source-line-no">068</span><span id="line.68">            return com.commercetools.api.models.message.OrderShippingInfoSetMessage</span>
-<span class="source-line-no">069</span><span id="line.69">                    .deepCopy((com.commercetools.api.models.message.OrderShippingInfoSetMessage) template);</span>
+<span class="source-line-no">067</span><span id="line.67">        if (template instanceof com.commercetools.api.models.message.LineItemStateTransitionMessage) {</span>
+<span class="source-line-no">068</span><span id="line.68">            return com.commercetools.api.models.message.LineItemStateTransitionMessage</span>
+<span class="source-line-no">069</span><span id="line.69">                    .deepCopy((com.commercetools.api.models.message.LineItemStateTransitionMessage) template);</span>
 <span class="source-line-no">070</span><span id="line.70">        }</span>
-<span class="source-line-no">071</span><span id="line.71">        if (template instanceof com.commercetools.api.models.message.OrderShippingRateInputSetMessage) {</span>
-<span class="source-line-no">072</span><span id="line.72">            return com.commercetools.api.models.message.OrderShippingRateInputSetMessage</span>
-<span class="source-line-no">073</span><span id="line.73">                    .deepCopy((com.commercetools.api.models.message.OrderShippingRateInputSetMessage) template);</span>
+<span class="source-line-no">071</span><span id="line.71">        if (template instanceof com.commercetools.api.models.message.OrderBillingAddressSetMessage) {</span>
+<span class="source-line-no">072</span><span id="line.72">            return com.commercetools.api.models.message.OrderBillingAddressSetMessage</span>
+<span class="source-line-no">073</span><span id="line.73">                    .deepCopy((com.commercetools.api.models.message.OrderBillingAddressSetMessage) template);</span>
 <span class="source-line-no">074</span><span id="line.74">        }</span>
-<span class="source-line-no">075</span><span id="line.75">        if (template instanceof com.commercetools.api.models.message.OrderStateChangedMessage) {</span>
-<span class="source-line-no">076</span><span id="line.76">            return com.commercetools.api.models.message.OrderStateChangedMessage</span>
-<span class="source-line-no">077</span><span id="line.77">                    .deepCopy((com.commercetools.api.models.message.OrderStateChangedMessage) template);</span>
+<span class="source-line-no">075</span><span id="line.75">        if (template instanceof com.commercetools.api.models.message.OrderCreatedMessage) {</span>
+<span class="source-line-no">076</span><span id="line.76">            return com.commercetools.api.models.message.OrderCreatedMessage</span>
+<span class="source-line-no">077</span><span id="line.77">                    .deepCopy((com.commercetools.api.models.message.OrderCreatedMessage) template);</span>
 <span class="source-line-no">078</span><span id="line.78">        }</span>
-<span class="source-line-no">079</span><span id="line.79">        if (template instanceof com.commercetools.api.models.message.OrderStateTransitionMessage) {</span>
-<span class="source-line-no">080</span><span id="line.80">            return com.commercetools.api.models.message.OrderStateTransitionMessage</span>
-<span class="source-line-no">081</span><span id="line.81">                    .deepCopy((com.commercetools.api.models.message.OrderStateTransitionMessage) template);</span>
+<span class="source-line-no">079</span><span id="line.79">        if (template instanceof com.commercetools.api.models.message.OrderCustomLineItemAddedMessage) {</span>
+<span class="source-line-no">080</span><span id="line.80">            return com.commercetools.api.models.message.OrderCustomLineItemAddedMessage</span>
+<span class="source-line-no">081</span><span id="line.81">                    .deepCopy((com.commercetools.api.models.message.OrderCustomLineItemAddedMessage) template);</span>
 <span class="source-line-no">082</span><span id="line.82">        }</span>
-<span class="source-line-no">083</span><span id="line.83">        if (template instanceof com.commercetools.api.models.message.OrderStoreSetMessage) {</span>
-<span class="source-line-no">084</span><span id="line.84">            return com.commercetools.api.models.message.OrderStoreSetMessage</span>
-<span class="source-line-no">085</span><span id="line.85">                    .deepCopy((com.commercetools.api.models.message.OrderStoreSetMessage) template);</span>
+<span class="source-line-no">083</span><span id="line.83">        if (template instanceof com.commercetools.api.models.message.OrderCustomLineItemDiscountSetMessage) {</span>
+<span class="source-line-no">084</span><span id="line.84">            return com.commercetools.api.models.message.OrderCustomLineItemDiscountSetMessage</span>
+<span class="source-line-no">085</span><span id="line.85">                    .deepCopy((com.commercetools.api.models.message.OrderCustomLineItemDiscountSetMessage) template);</span>
 <span class="source-line-no">086</span><span id="line.86">        }</span>
-<span class="source-line-no">087</span><span id="line.87">        if (template instanceof com.commercetools.api.models.message.ParcelAddedToDeliveryMessage) {</span>
-<span class="source-line-no">088</span><span id="line.88">            return com.commercetools.api.models.message.ParcelAddedToDeliveryMessage</span>
-<span class="source-line-no">089</span><span id="line.89">                    .deepCopy((com.commercetools.api.models.message.ParcelAddedToDeliveryMessage) template);</span>
+<span class="source-line-no">087</span><span id="line.87">        if (template instanceof com.commercetools.api.models.message.OrderCustomLineItemQuantityChangedMessage) {</span>
+<span class="source-line-no">088</span><span id="line.88">            return com.commercetools.api.models.message.OrderCustomLineItemQuantityChangedMessage.deepCopy(</span>
+<span class="source-line-no">089</span><span id="line.89">                (com.commercetools.api.models.message.OrderCustomLineItemQuantityChangedMessage) template);</span>
 <span class="source-line-no">090</span><span id="line.90">        }</span>
-<span class="source-line-no">091</span><span id="line.91">        if (template instanceof com.commercetools.api.models.message.ParcelItemsUpdatedMessage) {</span>
-<span class="source-line-no">092</span><span id="line.92">            return com.commercetools.api.models.message.ParcelItemsUpdatedMessage</span>
-<span class="source-line-no">093</span><span id="line.93">                    .deepCopy((com.commercetools.api.models.message.ParcelItemsUpdatedMessage) template);</span>
+<span class="source-line-no">091</span><span id="line.91">        if (template instanceof com.commercetools.api.models.message.OrderCustomLineItemRemovedMessage) {</span>
+<span class="source-line-no">092</span><span id="line.92">            return com.commercetools.api.models.message.OrderCustomLineItemRemovedMessage</span>
+<span class="source-line-no">093</span><span id="line.93">                    .deepCopy((com.commercetools.api.models.message.OrderCustomLineItemRemovedMessage) template);</span>
 <span class="source-line-no">094</span><span id="line.94">        }</span>
-<span class="source-line-no">095</span><span id="line.95">        if (template instanceof com.commercetools.api.models.message.ParcelMeasurementsUpdatedMessage) {</span>
-<span class="source-line-no">096</span><span id="line.96">            return com.commercetools.api.models.message.ParcelMeasurementsUpdatedMessage</span>
-<span class="source-line-no">097</span><span id="line.97">                    .deepCopy((com.commercetools.api.models.message.ParcelMeasurementsUpdatedMessage) template);</span>
+<span class="source-line-no">095</span><span id="line.95">        if (template instanceof com.commercetools.api.models.message.OrderCustomerEmailSetMessage) {</span>
+<span class="source-line-no">096</span><span id="line.96">            return com.commercetools.api.models.message.OrderCustomerEmailSetMessage</span>
+<span class="source-line-no">097</span><span id="line.97">                    .deepCopy((com.commercetools.api.models.message.OrderCustomerEmailSetMessage) template);</span>
 <span class="source-line-no">098</span><span id="line.98">        }</span>
-<span class="source-line-no">099</span><span id="line.99">        if (template instanceof com.commercetools.api.models.message.ParcelRemovedFromDeliveryMessage) {</span>
-<span class="source-line-no">100</span><span id="line.100">            return com.commercetools.api.models.message.ParcelRemovedFromDeliveryMessage</span>
-<span class="source-line-no">101</span><span id="line.101">                    .deepCopy((com.commercetools.api.models.message.ParcelRemovedFromDeliveryMessage) template);</span>
+<span class="source-line-no">099</span><span id="line.99">        if (template instanceof com.commercetools.api.models.message.OrderCustomerGroupSetMessage) {</span>
+<span class="source-line-no">100</span><span id="line.100">            return com.commercetools.api.models.message.OrderCustomerGroupSetMessage</span>
+<span class="source-line-no">101</span><span id="line.101">                    .deepCopy((com.commercetools.api.models.message.OrderCustomerGroupSetMessage) template);</span>
 <span class="source-line-no">102</span><span id="line.102">        }</span>
-<span class="source-line-no">103</span><span id="line.103">        if (template instanceof com.commercetools.api.models.message.ParcelTrackingDataUpdatedMessage) {</span>
-<span class="source-line-no">104</span><span id="line.104">            return com.commercetools.api.models.message.ParcelTrackingDataUpdatedMessage</span>
-<span class="source-line-no">105</span><span id="line.105">                    .deepCopy((com.commercetools.api.models.message.ParcelTrackingDataUpdatedMessage) template);</span>
+<span class="source-line-no">103</span><span id="line.103">        if (template instanceof com.commercetools.api.models.message.OrderCustomerSetMessage) {</span>
+<span class="source-line-no">104</span><span id="line.104">            return com.commercetools.api.models.message.OrderCustomerSetMessage</span>
+<span class="source-line-no">105</span><span id="line.105">                    .deepCopy((com.commercetools.api.models.message.OrderCustomerSetMessage) template);</span>
 <span class="source-line-no">106</span><span id="line.106">        }</span>
-<span class="source-line-no">107</span><span id="line.107">        if (template instanceof com.commercetools.api.models.message.ReturnInfoAddedMessage) {</span>
-<span class="source-line-no">108</span><span id="line.108">            return com.commercetools.api.models.message.ReturnInfoAddedMessage</span>
-<span class="source-line-no">109</span><span id="line.109">                    .deepCopy((com.commercetools.api.models.message.ReturnInfoAddedMessage) template);</span>
+<span class="source-line-no">107</span><span id="line.107">        if (template instanceof com.commercetools.api.models.message.OrderDeletedMessage) {</span>
+<span class="source-line-no">108</span><span id="line.108">            return com.commercetools.api.models.message.OrderDeletedMessage</span>
+<span class="source-line-no">109</span><span id="line.109">                    .deepCopy((com.commercetools.api.models.message.OrderDeletedMessage) template);</span>
 <span class="source-line-no">110</span><span id="line.110">        }</span>
-<span class="source-line-no">111</span><span id="line.111">        if (template instanceof com.commercetools.api.models.message.ReturnInfoSetMessage) {</span>
-<span class="source-line-no">112</span><span id="line.112">            return com.commercetools.api.models.message.ReturnInfoSetMessage</span>
-<span class="source-line-no">113</span><span id="line.113">                    .deepCopy((com.commercetools.api.models.message.ReturnInfoSetMessage) template);</span>
+<span class="source-line-no">111</span><span id="line.111">        if (template instanceof com.commercetools.api.models.message.OrderDiscountCodeAddedMessage) {</span>
+<span class="source-line-no">112</span><span id="line.112">            return com.commercetools.api.models.message.OrderDiscountCodeAddedMessage</span>
+<span class="source-line-no">113</span><span id="line.113">                    .deepCopy((com.commercetools.api.models.message.OrderDiscountCodeAddedMessage) template);</span>
 <span class="source-line-no">114</span><span id="line.114">        }</span>
-<span class="source-line-no">115</span><span id="line.115">        if (template instanceof com.commercetools.api.models.message.DeliveryRemovedMessage) {</span>
-<span class="source-line-no">116</span><span id="line.116">            return com.commercetools.api.models.message.DeliveryRemovedMessage</span>
-<span class="source-line-no">117</span><span id="line.117">                    .deepCopy((com.commercetools.api.models.message.DeliveryRemovedMessage) template);</span>
+<span class="source-line-no">115</span><span id="line.115">        if (template instanceof com.commercetools.api.models.message.OrderDiscountCodeRemovedMessage) {</span>
+<span class="source-line-no">116</span><span id="line.116">            return com.commercetools.api.models.message.OrderDiscountCodeRemovedMessage</span>
+<span class="source-line-no">117</span><span id="line.117">                    .deepCopy((com.commercetools.api.models.message.OrderDiscountCodeRemovedMessage) template);</span>
 <span class="source-line-no">118</span><span id="line.118">        }</span>
-<span class="source-line-no">119</span><span id="line.119">        if (template instanceof com.commercetools.api.models.message.OrderCustomLineItemQuantityChangedMessage) {</span>
-<span class="source-line-no">120</span><span id="line.120">            return com.commercetools.api.models.message.OrderCustomLineItemQuantityChangedMessage.deepCopy(</span>
-<span class="source-line-no">121</span><span id="line.121">                (com.commercetools.api.models.message.OrderCustomLineItemQuantityChangedMessage) template);</span>
+<span class="source-line-no">119</span><span id="line.119">        if (template instanceof com.commercetools.api.models.message.OrderDiscountCodeStateSetMessage) {</span>
+<span class="source-line-no">120</span><span id="line.120">            return com.commercetools.api.models.message.OrderDiscountCodeStateSetMessage</span>
+<span class="source-line-no">121</span><span id="line.121">                    .deepCopy((com.commercetools.api.models.message.OrderDiscountCodeStateSetMessage) template);</span>
 <span class="source-line-no">122</span><span id="line.122">        }</span>
-<span class="source-line-no">123</span><span id="line.123">        if (template instanceof com.commercetools.api.models.message.OrderCustomLineItemRemovedMessage) {</span>
-<span class="source-line-no">124</span><span id="line.124">            return com.commercetools.api.models.message.OrderCustomLineItemRemovedMessage</span>
-<span class="source-line-no">125</span><span id="line.125">                    .deepCopy((com.commercetools.api.models.message.OrderCustomLineItemRemovedMessage) template);</span>
+<span class="source-line-no">123</span><span id="line.123">        if (template instanceof com.commercetools.api.models.message.OrderEditAppliedMessage) {</span>
+<span class="source-line-no">124</span><span id="line.124">            return com.commercetools.api.models.message.OrderEditAppliedMessage</span>
+<span class="source-line-no">125</span><span id="line.125">                    .deepCopy((com.commercetools.api.models.message.OrderEditAppliedMessage) template);</span>
 <span class="source-line-no">126</span><span id="line.126">        }</span>
-<span class="source-line-no">127</span><span id="line.127">        if (template instanceof com.commercetools.api.models.message.OrderLineItemDiscountSetMessage) {</span>
-<span class="source-line-no">128</span><span id="line.128">            return com.commercetools.api.models.message.OrderLineItemDiscountSetMessage</span>
-<span class="source-line-no">129</span><span id="line.129">                    .deepCopy((com.commercetools.api.models.message.OrderLineItemDiscountSetMessage) template);</span>
+<span class="source-line-no">127</span><span id="line.127">        if (template instanceof com.commercetools.api.models.message.OrderImportedMessage) {</span>
+<span class="source-line-no">128</span><span id="line.128">            return com.commercetools.api.models.message.OrderImportedMessage</span>
+<span class="source-line-no">129</span><span id="line.129">                    .deepCopy((com.commercetools.api.models.message.OrderImportedMessage) template);</span>
 <span class="source-line-no">130</span><span id="line.130">        }</span>
-<span class="source-line-no">131</span><span id="line.131">        if (template instanceof com.commercetools.api.models.message.DeliveryAddressSetMessage) {</span>
-<span class="source-line-no">132</span><span id="line.132">            return com.commercetools.api.models.message.DeliveryAddressSetMessage</span>
-<span class="source-line-no">133</span><span id="line.133">                    .deepCopy((com.commercetools.api.models.message.DeliveryAddressSetMessage) template);</span>
+<span class="source-line-no">131</span><span id="line.131">        if (template instanceof com.commercetools.api.models.message.OrderLineItemAddedMessage) {</span>
+<span class="source-line-no">132</span><span id="line.132">            return com.commercetools.api.models.message.OrderLineItemAddedMessage</span>
+<span class="source-line-no">133</span><span id="line.133">                    .deepCopy((com.commercetools.api.models.message.OrderLineItemAddedMessage) template);</span>
 <span class="source-line-no">134</span><span id="line.134">        }</span>
-<span class="source-line-no">135</span><span id="line.135">        if (template instanceof com.commercetools.api.models.message.OrderCustomLineItemAddedMessage) {</span>
-<span class="source-line-no">136</span><span id="line.136">            return com.commercetools.api.models.message.OrderCustomLineItemAddedMessage</span>
-<span class="source-line-no">137</span><span id="line.137">                    .deepCopy((com.commercetools.api.models.message.OrderCustomLineItemAddedMessage) template);</span>
+<span class="source-line-no">135</span><span id="line.135">        if (template instanceof com.commercetools.api.models.message.OrderLineItemDiscountSetMessage) {</span>
+<span class="source-line-no">136</span><span id="line.136">            return com.commercetools.api.models.message.OrderLineItemDiscountSetMessage</span>
+<span class="source-line-no">137</span><span id="line.137">                    .deepCopy((com.commercetools.api.models.message.OrderLineItemDiscountSetMessage) template);</span>
 <span class="source-line-no">138</span><span id="line.138">        }</span>
-<span class="source-line-no">139</span><span id="line.139">        if (template instanceof com.commercetools.api.models.message.OrderCustomLineItemDiscountSetMessage) {</span>
-<span class="source-line-no">140</span><span id="line.140">            return com.commercetools.api.models.message.OrderCustomLineItemDiscountSetMessage</span>
-<span class="source-line-no">141</span><span id="line.141">                    .deepCopy((com.commercetools.api.models.message.OrderCustomLineItemDiscountSetMessage) template);</span>
+<span class="source-line-no">139</span><span id="line.139">        if (template instanceof com.commercetools.api.models.message.OrderLineItemDistributionChannelSetMessage) {</span>
+<span class="source-line-no">140</span><span id="line.140">            return com.commercetools.api.models.message.OrderLineItemDistributionChannelSetMessage.deepCopy(</span>
+<span class="source-line-no">141</span><span id="line.141">                (com.commercetools.api.models.message.OrderLineItemDistributionChannelSetMessage) template);</span>
 <span class="source-line-no">142</span><span id="line.142">        }</span>
-<span class="source-line-no">143</span><span id="line.143">        if (template instanceof com.commercetools.api.models.message.OrderCustomerEmailSetMessage) {</span>
-<span class="source-line-no">144</span><span id="line.144">            return com.commercetools.api.models.message.OrderCustomerEmailSetMessage</span>
-<span class="source-line-no">145</span><span id="line.145">                    .deepCopy((com.commercetools.api.models.message.OrderCustomerEmailSetMessage) template);</span>
+<span class="source-line-no">143</span><span id="line.143">        if (template instanceof com.commercetools.api.models.message.OrderLineItemRemovedMessage) {</span>
+<span class="source-line-no">144</span><span id="line.144">            return com.commercetools.api.models.message.OrderLineItemRemovedMessage</span>
+<span class="source-line-no">145</span><span id="line.145">                    .deepCopy((com.commercetools.api.models.message.OrderLineItemRemovedMessage) template);</span>
 <span class="source-line-no">146</span><span id="line.146">        }</span>
-<span class="source-line-no">147</span><span id="line.147">        if (template instanceof com.commercetools.api.models.message.OrderDeletedMessage) {</span>
-<span class="source-line-no">148</span><span id="line.148">            return com.commercetools.api.models.message.OrderDeletedMessage</span>
-<span class="source-line-no">149</span><span id="line.149">                    .deepCopy((com.commercetools.api.models.message.OrderDeletedMessage) template);</span>
+<span class="source-line-no">147</span><span id="line.147">        if (template instanceof com.commercetools.api.models.message.OrderPaymentStateChangedMessage) {</span>
+<span class="source-line-no">148</span><span id="line.148">            return com.commercetools.api.models.message.OrderPaymentStateChangedMessage</span>
+<span class="source-line-no">149</span><span id="line.149">                    .deepCopy((com.commercetools.api.models.message.OrderPaymentStateChangedMessage) template);</span>
 <span class="source-line-no">150</span><span id="line.150">        }</span>
-<span class="source-line-no">151</span><span id="line.151">        if (template instanceof com.commercetools.api.models.message.OrderCustomerGroupSetMessage) {</span>
-<span class="source-line-no">152</span><span id="line.152">            return com.commercetools.api.models.message.OrderCustomerGroupSetMessage</span>
-<span class="source-line-no">153</span><span id="line.153">                    .deepCopy((com.commercetools.api.models.message.OrderCustomerGroupSetMessage) template);</span>
+<span class="source-line-no">151</span><span id="line.151">        if (template instanceof com.commercetools.api.models.message.OrderPurchaseOrderNumberSetMessage) {</span>
+<span class="source-line-no">152</span><span id="line.152">            return com.commercetools.api.models.message.OrderPurchaseOrderNumberSetMessage</span>
+<span class="source-line-no">153</span><span id="line.153">                    .deepCopy((com.commercetools.api.models.message.OrderPurchaseOrderNumberSetMessage) template);</span>
 <span class="source-line-no">154</span><span id="line.154">        }</span>
-<span class="source-line-no">155</span><span id="line.155">        if (template instanceof com.commercetools.api.models.message.DeliveryAddedMessage) {</span>
-<span class="source-line-no">156</span><span id="line.156">            return com.commercetools.api.models.message.DeliveryAddedMessage</span>
-<span class="source-line-no">157</span><span id="line.157">                    .deepCopy((com.commercetools.api.models.message.DeliveryAddedMessage) template);</span>
+<span class="source-line-no">155</span><span id="line.155">        if (template instanceof com.commercetools.api.models.message.OrderReturnShipmentStateChangedMessage) {</span>
+<span class="source-line-no">156</span><span id="line.156">            return com.commercetools.api.models.message.OrderReturnShipmentStateChangedMessage</span>
+<span class="source-line-no">157</span><span id="line.157">                    .deepCopy((com.commercetools.api.models.message.OrderReturnShipmentStateChangedMessage) template);</span>
 <span class="source-line-no">158</span><span id="line.158">        }</span>
-<span class="source-line-no">159</span><span id="line.159">        if (template instanceof com.commercetools.api.models.message.LineItemStateTransitionMessage) {</span>
-<span class="source-line-no">160</span><span id="line.160">            return com.commercetools.api.models.message.LineItemStateTransitionMessage</span>
-<span class="source-line-no">161</span><span id="line.161">                    .deepCopy((com.commercetools.api.models.message.LineItemStateTransitionMessage) template);</span>
+<span class="source-line-no">159</span><span id="line.159">        if (template instanceof com.commercetools.api.models.message.OrderShipmentStateChangedMessage) {</span>
+<span class="source-line-no">160</span><span id="line.160">            return com.commercetools.api.models.message.OrderShipmentStateChangedMessage</span>
+<span class="source-line-no">161</span><span id="line.161">                    .deepCopy((com.commercetools.api.models.message.OrderShipmentStateChangedMessage) template);</span>
 <span class="source-line-no">162</span><span id="line.162">        }</span>
-<span class="source-line-no">163</span><span id="line.163">        if (template instanceof com.commercetools.api.models.message.OrderCustomerSetMessage) {</span>
-<span class="source-line-no">164</span><span id="line.164">            return com.commercetools.api.models.message.OrderCustomerSetMessage</span>
-<span class="source-line-no">165</span><span id="line.165">                    .deepCopy((com.commercetools.api.models.message.OrderCustomerSetMessage) template);</span>
+<span class="source-line-no">163</span><span id="line.163">        if (template instanceof com.commercetools.api.models.message.OrderShippingAddressSetMessage) {</span>
+<span class="source-line-no">164</span><span id="line.164">            return com.commercetools.api.models.message.OrderShippingAddressSetMessage</span>
+<span class="source-line-no">165</span><span id="line.165">                    .deepCopy((com.commercetools.api.models.message.OrderShippingAddressSetMessage) template);</span>
 <span class="source-line-no">166</span><span id="line.166">        }</span>
-<span class="source-line-no">167</span><span id="line.167">        if (template instanceof com.commercetools.api.models.message.OrderLineItemDistributionChannelSetMessage) {</span>
-<span class="source-line-no">168</span><span id="line.168">            return com.commercetools.api.models.message.OrderLineItemDistributionChannelSetMessage.deepCopy(</span>
-<span class="source-line-no">169</span><span id="line.169">                (com.commercetools.api.models.message.OrderLineItemDistributionChannelSetMessage) template);</span>
+<span class="source-line-no">167</span><span id="line.167">        if (template instanceof com.commercetools.api.models.message.OrderShippingInfoSetMessage) {</span>
+<span class="source-line-no">168</span><span id="line.168">            return com.commercetools.api.models.message.OrderShippingInfoSetMessage</span>
+<span class="source-line-no">169</span><span id="line.169">                    .deepCopy((com.commercetools.api.models.message.OrderShippingInfoSetMessage) template);</span>
 <span class="source-line-no">170</span><span id="line.170">        }</span>
-<span class="source-line-no">171</span><span id="line.171">        if (template instanceof com.commercetools.api.models.message.DeliveryItemsUpdatedMessage) {</span>
-<span class="source-line-no">172</span><span id="line.172">            return com.commercetools.api.models.message.DeliveryItemsUpdatedMessage</span>
-<span class="source-line-no">173</span><span id="line.173">                    .deepCopy((com.commercetools.api.models.message.DeliveryItemsUpdatedMessage) template);</span>
+<span class="source-line-no">171</span><span id="line.171">        if (template instanceof com.commercetools.api.models.message.OrderShippingRateInputSetMessage) {</span>
+<span class="source-line-no">172</span><span id="line.172">            return com.commercetools.api.models.message.OrderShippingRateInputSetMessage</span>
+<span class="source-line-no">173</span><span id="line.173">                    .deepCopy((com.commercetools.api.models.message.OrderShippingRateInputSetMessage) template);</span>
 <span class="source-line-no">174</span><span id="line.174">        }</span>
-<span class="source-line-no">175</span><span id="line.175">        if (template instanceof com.commercetools.api.models.message.OrderLineItemRemovedMessage) {</span>
-<span class="source-line-no">176</span><span id="line.176">            return com.commercetools.api.models.message.OrderLineItemRemovedMessage</span>
-<span class="source-line-no">177</span><span id="line.177">                    .deepCopy((com.commercetools.api.models.message.OrderLineItemRemovedMessage) template);</span>
+<span class="source-line-no">175</span><span id="line.175">        if (template instanceof com.commercetools.api.models.message.OrderStateChangedMessage) {</span>
+<span class="source-line-no">176</span><span id="line.176">            return com.commercetools.api.models.message.OrderStateChangedMessage</span>
+<span class="source-line-no">177</span><span id="line.177">                    .deepCopy((com.commercetools.api.models.message.OrderStateChangedMessage) template);</span>
 <span class="source-line-no">178</span><span id="line.178">        }</span>
-<span class="source-line-no">179</span><span id="line.179">        if (template instanceof com.commercetools.api.models.message.OrderEditAppliedMessage) {</span>
-<span class="source-line-no">180</span><span id="line.180">            return com.commercetools.api.models.message.OrderEditAppliedMessage</span>
-<span class="source-line-no">181</span><span id="line.181">                    .deepCopy((com.commercetools.api.models.message.OrderEditAppliedMessage) template);</span>
+<span class="source-line-no">179</span><span id="line.179">        if (template instanceof com.commercetools.api.models.message.OrderStateTransitionMessage) {</span>
+<span class="source-line-no">180</span><span id="line.180">            return com.commercetools.api.models.message.OrderStateTransitionMessage</span>
+<span class="source-line-no">181</span><span id="line.181">                    .deepCopy((com.commercetools.api.models.message.OrderStateTransitionMessage) template);</span>
 <span class="source-line-no">182</span><span id="line.182">        }</span>
-<span class="source-line-no">183</span><span id="line.183">        if (template instanceof com.commercetools.api.models.message.OrderDiscountCodeStateSetMessage) {</span>
-<span class="source-line-no">184</span><span id="line.184">            return com.commercetools.api.models.message.OrderDiscountCodeStateSetMessage</span>
-<span class="source-line-no">185</span><span id="line.185">                    .deepCopy((com.commercetools.api.models.message.OrderDiscountCodeStateSetMessage) template);</span>
+<span class="source-line-no">183</span><span id="line.183">        if (template instanceof com.commercetools.api.models.message.OrderStoreSetMessage) {</span>
+<span class="source-line-no">184</span><span id="line.184">            return com.commercetools.api.models.message.OrderStoreSetMessage</span>
+<span class="source-line-no">185</span><span id="line.185">                    .deepCopy((com.commercetools.api.models.message.OrderStoreSetMessage) template);</span>
 <span class="source-line-no">186</span><span id="line.186">        }</span>
-<span class="source-line-no">187</span><span id="line.187">        if (template instanceof com.commercetools.api.models.message.OrderDiscountCodeAddedMessage) {</span>
-<span class="source-line-no">188</span><span id="line.188">            return com.commercetools.api.models.message.OrderDiscountCodeAddedMessage</span>
-<span class="source-line-no">189</span><span id="line.189">                    .deepCopy((com.commercetools.api.models.message.OrderDiscountCodeAddedMessage) template);</span>
+<span class="source-line-no">187</span><span id="line.187">        if (template instanceof com.commercetools.api.models.message.ParcelAddedToDeliveryMessage) {</span>
+<span class="source-line-no">188</span><span id="line.188">            return com.commercetools.api.models.message.ParcelAddedToDeliveryMessage</span>
+<span class="source-line-no">189</span><span id="line.189">                    .deepCopy((com.commercetools.api.models.message.ParcelAddedToDeliveryMessage) template);</span>
 <span class="source-line-no">190</span><span id="line.190">        }</span>
-<span class="source-line-no">191</span><span id="line.191">        if (template instanceof com.commercetools.api.models.message.OrderBillingAddressSetMessage) {</span>
-<span class="source-line-no">192</span><span id="line.192">            return com.commercetools.api.models.message.OrderBillingAddressSetMessage</span>
-<span class="source-line-no">193</span><span id="line.193">                    .deepCopy((com.commercetools.api.models.message.OrderBillingAddressSetMessage) template);</span>
+<span class="source-line-no">191</span><span id="line.191">        if (template instanceof com.commercetools.api.models.message.ParcelItemsUpdatedMessage) {</span>
+<span class="source-line-no">192</span><span id="line.192">            return com.commercetools.api.models.message.ParcelItemsUpdatedMessage</span>
+<span class="source-line-no">193</span><span id="line.193">                    .deepCopy((com.commercetools.api.models.message.ParcelItemsUpdatedMessage) template);</span>
 <span class="source-line-no">194</span><span id="line.194">        }</span>
-<span class="source-line-no">195</span><span id="line.195">        if (template instanceof com.commercetools.api.models.message.OrderImportedMessage) {</span>
-<span class="source-line-no">196</span><span id="line.196">            return com.commercetools.api.models.message.OrderImportedMessage</span>
-<span class="source-line-no">197</span><span id="line.197">                    .deepCopy((com.commercetools.api.models.message.OrderImportedMessage) template);</span>
+<span class="source-line-no">195</span><span id="line.195">        if (template instanceof com.commercetools.api.models.message.ParcelMeasurementsUpdatedMessage) {</span>
+<span class="source-line-no">196</span><span id="line.196">            return com.commercetools.api.models.message.ParcelMeasurementsUpdatedMessage</span>
+<span class="source-line-no">197</span><span id="line.197">                    .deepCopy((com.commercetools.api.models.message.ParcelMeasurementsUpdatedMessage) template);</span>
 <span class="source-line-no">198</span><span id="line.198">        }</span>
-<span class="source-line-no">199</span><span id="line.199">        if (template instanceof com.commercetools.api.models.message.OrderCreatedMessage) {</span>
-<span class="source-line-no">200</span><span id="line.200">            return com.commercetools.api.models.message.OrderCreatedMessage</span>
-<span class="source-line-no">201</span><span id="line.201">                    .deepCopy((com.commercetools.api.models.message.OrderCreatedMessage) template);</span>
+<span class="source-line-no">199</span><span id="line.199">        if (template instanceof com.commercetools.api.models.message.ParcelRemovedFromDeliveryMessage) {</span>
+<span class="source-line-no">200</span><span id="line.200">            return com.commercetools.api.models.message.ParcelRemovedFromDeliveryMessage</span>
+<span class="source-line-no">201</span><span id="line.201">                    .deepCopy((com.commercetools.api.models.message.ParcelRemovedFromDeliveryMessage) template);</span>
 <span class="source-line-no">202</span><span id="line.202">        }</span>
-<span class="source-line-no">203</span><span id="line.203">        if (template instanceof com.commercetools.api.models.message.OrderDiscountCodeRemovedMessage) {</span>
-<span class="source-line-no">204</span><span id="line.204">            return com.commercetools.api.models.message.OrderDiscountCodeRemovedMessage</span>
-<span class="source-line-no">205</span><span id="line.205">                    .deepCopy((com.commercetools.api.models.message.OrderDiscountCodeRemovedMessage) template);</span>
+<span class="source-line-no">203</span><span id="line.203">        if (template instanceof com.commercetools.api.models.message.ParcelTrackingDataUpdatedMessage) {</span>
+<span class="source-line-no">204</span><span id="line.204">            return com.commercetools.api.models.message.ParcelTrackingDataUpdatedMessage</span>
+<span class="source-line-no">205</span><span id="line.205">                    .deepCopy((com.commercetools.api.models.message.ParcelTrackingDataUpdatedMessage) template);</span>
 <span class="source-line-no">206</span><span id="line.206">        }</span>
-<span class="source-line-no">207</span><span id="line.207">        if (template instanceof com.commercetools.api.models.message.OrderLineItemAddedMessage) {</span>
-<span class="source-line-no">208</span><span id="line.208">            return com.commercetools.api.models.message.OrderLineItemAddedMessage</span>
-<span class="source-line-no">209</span><span id="line.209">                    .deepCopy((com.commercetools.api.models.message.OrderLineItemAddedMessage) template);</span>
+<span class="source-line-no">207</span><span id="line.207">        if (template instanceof com.commercetools.api.models.message.ReturnInfoAddedMessage) {</span>
+<span class="source-line-no">208</span><span id="line.208">            return com.commercetools.api.models.message.ReturnInfoAddedMessage</span>
+<span class="source-line-no">209</span><span id="line.209">                    .deepCopy((com.commercetools.api.models.message.ReturnInfoAddedMessage) template);</span>
 <span class="source-line-no">210</span><span id="line.210">        }</span>
-<span class="source-line-no">211</span><span id="line.211">        if (template instanceof com.commercetools.api.models.message.CustomLineItemStateTransitionMessage) {</span>
-<span class="source-line-no">212</span><span id="line.212">            return com.commercetools.api.models.message.CustomLineItemStateTransitionMessage</span>
-<span class="source-line-no">213</span><span id="line.213">                    .deepCopy((com.commercetools.api.models.message.CustomLineItemStateTransitionMessage) template);</span>
+<span class="source-line-no">211</span><span id="line.211">        if (template instanceof com.commercetools.api.models.message.ReturnInfoSetMessage) {</span>
+<span class="source-line-no">212</span><span id="line.212">            return com.commercetools.api.models.message.ReturnInfoSetMessage</span>
+<span class="source-line-no">213</span><span id="line.213">                    .deepCopy((com.commercetools.api.models.message.ReturnInfoSetMessage) template);</span>
 <span class="source-line-no">214</span><span id="line.214">        }</span>
 <span class="source-line-no">215</span><span id="line.215">        OrderMessageImpl instance = new OrderMessageImpl();</span>
 <span class="source-line-no">216</span><span id="line.216">        instance.setId(template.getId());</span>

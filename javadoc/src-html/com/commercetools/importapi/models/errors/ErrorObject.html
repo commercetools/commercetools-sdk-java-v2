@@ -104,13 +104,13 @@
 <span class="source-line-no">091</span><span id="line.91">            return com.commercetools.importapi.models.errors.AccessDeniedError</span>
 <span class="source-line-no">092</span><span id="line.92">                    .deepCopy((com.commercetools.importapi.models.errors.AccessDeniedError) template);</span>
 <span class="source-line-no">093</span><span id="line.93">        }</span>
-<span class="source-line-no">094</span><span id="line.94">        if (template instanceof com.commercetools.importapi.models.errors.InvalidScopeError) {</span>
-<span class="source-line-no">095</span><span id="line.95">            return com.commercetools.importapi.models.errors.InvalidScopeError</span>
-<span class="source-line-no">096</span><span id="line.96">                    .deepCopy((com.commercetools.importapi.models.errors.InvalidScopeError) template);</span>
+<span class="source-line-no">094</span><span id="line.94">        if (template instanceof com.commercetools.importapi.models.errors.ConcurrentModificationError) {</span>
+<span class="source-line-no">095</span><span id="line.95">            return com.commercetools.importapi.models.errors.ConcurrentModificationError</span>
+<span class="source-line-no">096</span><span id="line.96">                    .deepCopy((com.commercetools.importapi.models.errors.ConcurrentModificationError) template);</span>
 <span class="source-line-no">097</span><span id="line.97">        }</span>
-<span class="source-line-no">098</span><span id="line.98">        if (template instanceof com.commercetools.importapi.models.errors.InvalidOperation) {</span>
-<span class="source-line-no">099</span><span id="line.99">            return com.commercetools.importapi.models.errors.InvalidOperation</span>
-<span class="source-line-no">100</span><span id="line.100">                    .deepCopy((com.commercetools.importapi.models.errors.InvalidOperation) template);</span>
+<span class="source-line-no">098</span><span id="line.98">        if (template instanceof com.commercetools.importapi.models.errors.ContentionError) {</span>
+<span class="source-line-no">099</span><span id="line.99">            return com.commercetools.importapi.models.errors.ContentionError</span>
+<span class="source-line-no">100</span><span id="line.100">                    .deepCopy((com.commercetools.importapi.models.errors.ContentionError) template);</span>
 <span class="source-line-no">101</span><span id="line.101">        }</span>
 <span class="source-line-no">102</span><span id="line.102">        if (template instanceof com.commercetools.importapi.models.errors.DuplicateAttributeValueError) {</span>
 <span class="source-line-no">103</span><span id="line.103">            return com.commercetools.importapi.models.errors.DuplicateAttributeValueError</span>
@@ -128,65 +128,65 @@
 <span class="source-line-no">115</span><span id="line.115">            return com.commercetools.importapi.models.errors.DuplicateVariantValuesError</span>
 <span class="source-line-no">116</span><span id="line.116">                    .deepCopy((com.commercetools.importapi.models.errors.DuplicateVariantValuesError) template);</span>
 <span class="source-line-no">117</span><span id="line.117">        }</span>
-<span class="source-line-no">118</span><span id="line.118">        if (template instanceof com.commercetools.importapi.models.errors.InsufficientScopeError) {</span>
-<span class="source-line-no">119</span><span id="line.119">            return com.commercetools.importapi.models.errors.InsufficientScopeError</span>
-<span class="source-line-no">120</span><span id="line.120">                    .deepCopy((com.commercetools.importapi.models.errors.InsufficientScopeError) template);</span>
+<span class="source-line-no">118</span><span id="line.118">        if (template instanceof com.commercetools.importapi.models.errors.GenericError) {</span>
+<span class="source-line-no">119</span><span id="line.119">            return com.commercetools.importapi.models.errors.GenericError</span>
+<span class="source-line-no">120</span><span id="line.120">                    .deepCopy((com.commercetools.importapi.models.errors.GenericError) template);</span>
 <span class="source-line-no">121</span><span id="line.121">        }</span>
-<span class="source-line-no">122</span><span id="line.122">        if (template instanceof com.commercetools.importapi.models.errors.InvalidCredentialsError) {</span>
-<span class="source-line-no">123</span><span id="line.123">            return com.commercetools.importapi.models.errors.InvalidCredentialsError</span>
-<span class="source-line-no">124</span><span id="line.124">                    .deepCopy((com.commercetools.importapi.models.errors.InvalidCredentialsError) template);</span>
+<span class="source-line-no">122</span><span id="line.122">        if (template instanceof com.commercetools.importapi.models.errors.InsufficientScopeError) {</span>
+<span class="source-line-no">123</span><span id="line.123">            return com.commercetools.importapi.models.errors.InsufficientScopeError</span>
+<span class="source-line-no">124</span><span id="line.124">                    .deepCopy((com.commercetools.importapi.models.errors.InsufficientScopeError) template);</span>
 <span class="source-line-no">125</span><span id="line.125">        }</span>
-<span class="source-line-no">126</span><span id="line.126">        if (template instanceof com.commercetools.importapi.models.errors.InvalidTokenError) {</span>
-<span class="source-line-no">127</span><span id="line.127">            return com.commercetools.importapi.models.errors.InvalidTokenError</span>
-<span class="source-line-no">128</span><span id="line.128">                    .deepCopy((com.commercetools.importapi.models.errors.InvalidTokenError) template);</span>
+<span class="source-line-no">126</span><span id="line.126">        if (template instanceof com.commercetools.importapi.models.errors.InvalidCredentialsError) {</span>
+<span class="source-line-no">127</span><span id="line.127">            return com.commercetools.importapi.models.errors.InvalidCredentialsError</span>
+<span class="source-line-no">128</span><span id="line.128">                    .deepCopy((com.commercetools.importapi.models.errors.InvalidCredentialsError) template);</span>
 <span class="source-line-no">129</span><span id="line.129">        }</span>
 <span class="source-line-no">130</span><span id="line.130">        if (template instanceof com.commercetools.importapi.models.errors.InvalidFieldError) {</span>
 <span class="source-line-no">131</span><span id="line.131">            return com.commercetools.importapi.models.errors.InvalidFieldError</span>
 <span class="source-line-no">132</span><span id="line.132">                    .deepCopy((com.commercetools.importapi.models.errors.InvalidFieldError) template);</span>
 <span class="source-line-no">133</span><span id="line.133">        }</span>
-<span class="source-line-no">134</span><span id="line.134">        if (template instanceof com.commercetools.importapi.models.errors.InvalidJsonInput) {</span>
-<span class="source-line-no">135</span><span id="line.135">            return com.commercetools.importapi.models.errors.InvalidJsonInput</span>
-<span class="source-line-no">136</span><span id="line.136">                    .deepCopy((com.commercetools.importapi.models.errors.InvalidJsonInput) template);</span>
+<span class="source-line-no">134</span><span id="line.134">        if (template instanceof com.commercetools.importapi.models.errors.InvalidInput) {</span>
+<span class="source-line-no">135</span><span id="line.135">            return com.commercetools.importapi.models.errors.InvalidInput</span>
+<span class="source-line-no">136</span><span id="line.136">                    .deepCopy((com.commercetools.importapi.models.errors.InvalidInput) template);</span>
 <span class="source-line-no">137</span><span id="line.137">        }</span>
-<span class="source-line-no">138</span><span id="line.138">        if (template instanceof com.commercetools.importapi.models.errors.InvalidInput) {</span>
-<span class="source-line-no">139</span><span id="line.139">            return com.commercetools.importapi.models.errors.InvalidInput</span>
-<span class="source-line-no">140</span><span id="line.140">                    .deepCopy((com.commercetools.importapi.models.errors.InvalidInput) template);</span>
+<span class="source-line-no">138</span><span id="line.138">        if (template instanceof com.commercetools.importapi.models.errors.InvalidJsonInput) {</span>
+<span class="source-line-no">139</span><span id="line.139">            return com.commercetools.importapi.models.errors.InvalidJsonInput</span>
+<span class="source-line-no">140</span><span id="line.140">                    .deepCopy((com.commercetools.importapi.models.errors.InvalidJsonInput) template);</span>
 <span class="source-line-no">141</span><span id="line.141">        }</span>
-<span class="source-line-no">142</span><span id="line.142">        if (template instanceof com.commercetools.importapi.models.errors.ResourceNotFoundError) {</span>
-<span class="source-line-no">143</span><span id="line.143">            return com.commercetools.importapi.models.errors.ResourceNotFoundError</span>
-<span class="source-line-no">144</span><span id="line.144">                    .deepCopy((com.commercetools.importapi.models.errors.ResourceNotFoundError) template);</span>
+<span class="source-line-no">142</span><span id="line.142">        if (template instanceof com.commercetools.importapi.models.errors.InvalidOperation) {</span>
+<span class="source-line-no">143</span><span id="line.143">            return com.commercetools.importapi.models.errors.InvalidOperation</span>
+<span class="source-line-no">144</span><span id="line.144">                    .deepCopy((com.commercetools.importapi.models.errors.InvalidOperation) template);</span>
 <span class="source-line-no">145</span><span id="line.145">        }</span>
-<span class="source-line-no">146</span><span id="line.146">        if (template instanceof com.commercetools.importapi.models.errors.ResourceCreationError) {</span>
-<span class="source-line-no">147</span><span id="line.147">            return com.commercetools.importapi.models.errors.ResourceCreationError</span>
-<span class="source-line-no">148</span><span id="line.148">                    .deepCopy((com.commercetools.importapi.models.errors.ResourceCreationError) template);</span>
+<span class="source-line-no">146</span><span id="line.146">        if (template instanceof com.commercetools.importapi.models.errors.InvalidScopeError) {</span>
+<span class="source-line-no">147</span><span id="line.147">            return com.commercetools.importapi.models.errors.InvalidScopeError</span>
+<span class="source-line-no">148</span><span id="line.148">                    .deepCopy((com.commercetools.importapi.models.errors.InvalidScopeError) template);</span>
 <span class="source-line-no">149</span><span id="line.149">        }</span>
-<span class="source-line-no">150</span><span id="line.150">        if (template instanceof com.commercetools.importapi.models.errors.ResourceUpdateError) {</span>
-<span class="source-line-no">151</span><span id="line.151">            return com.commercetools.importapi.models.errors.ResourceUpdateError</span>
-<span class="source-line-no">152</span><span id="line.152">                    .deepCopy((com.commercetools.importapi.models.errors.ResourceUpdateError) template);</span>
+<span class="source-line-no">150</span><span id="line.150">        if (template instanceof com.commercetools.importapi.models.errors.InvalidStateTransitionError) {</span>
+<span class="source-line-no">151</span><span id="line.151">            return com.commercetools.importapi.models.errors.InvalidStateTransitionError</span>
+<span class="source-line-no">152</span><span id="line.152">                    .deepCopy((com.commercetools.importapi.models.errors.InvalidStateTransitionError) template);</span>
 <span class="source-line-no">153</span><span id="line.153">        }</span>
-<span class="source-line-no">154</span><span id="line.154">        if (template instanceof com.commercetools.importapi.models.errors.ResourceDeletionError) {</span>
-<span class="source-line-no">155</span><span id="line.155">            return com.commercetools.importapi.models.errors.ResourceDeletionError</span>
-<span class="source-line-no">156</span><span id="line.156">                    .deepCopy((com.commercetools.importapi.models.errors.ResourceDeletionError) template);</span>
+<span class="source-line-no">154</span><span id="line.154">        if (template instanceof com.commercetools.importapi.models.errors.InvalidTokenError) {</span>
+<span class="source-line-no">155</span><span id="line.155">            return com.commercetools.importapi.models.errors.InvalidTokenError</span>
+<span class="source-line-no">156</span><span id="line.156">                    .deepCopy((com.commercetools.importapi.models.errors.InvalidTokenError) template);</span>
 <span class="source-line-no">157</span><span id="line.157">        }</span>
 <span class="source-line-no">158</span><span id="line.158">        if (template instanceof com.commercetools.importapi.models.errors.RequiredFieldError) {</span>
 <span class="source-line-no">159</span><span id="line.159">            return com.commercetools.importapi.models.errors.RequiredFieldError</span>
 <span class="source-line-no">160</span><span id="line.160">                    .deepCopy((com.commercetools.importapi.models.errors.RequiredFieldError) template);</span>
 <span class="source-line-no">161</span><span id="line.161">        }</span>
-<span class="source-line-no">162</span><span id="line.162">        if (template instanceof com.commercetools.importapi.models.errors.InvalidStateTransitionError) {</span>
-<span class="source-line-no">163</span><span id="line.163">            return com.commercetools.importapi.models.errors.InvalidStateTransitionError</span>
-<span class="source-line-no">164</span><span id="line.164">                    .deepCopy((com.commercetools.importapi.models.errors.InvalidStateTransitionError) template);</span>
+<span class="source-line-no">162</span><span id="line.162">        if (template instanceof com.commercetools.importapi.models.errors.ResourceCreationError) {</span>
+<span class="source-line-no">163</span><span id="line.163">            return com.commercetools.importapi.models.errors.ResourceCreationError</span>
+<span class="source-line-no">164</span><span id="line.164">                    .deepCopy((com.commercetools.importapi.models.errors.ResourceCreationError) template);</span>
 <span class="source-line-no">165</span><span id="line.165">        }</span>
-<span class="source-line-no">166</span><span id="line.166">        if (template instanceof com.commercetools.importapi.models.errors.ConcurrentModificationError) {</span>
-<span class="source-line-no">167</span><span id="line.167">            return com.commercetools.importapi.models.errors.ConcurrentModificationError</span>
-<span class="source-line-no">168</span><span id="line.168">                    .deepCopy((com.commercetools.importapi.models.errors.ConcurrentModificationError) template);</span>
+<span class="source-line-no">166</span><span id="line.166">        if (template instanceof com.commercetools.importapi.models.errors.ResourceDeletionError) {</span>
+<span class="source-line-no">167</span><span id="line.167">            return com.commercetools.importapi.models.errors.ResourceDeletionError</span>
+<span class="source-line-no">168</span><span id="line.168">                    .deepCopy((com.commercetools.importapi.models.errors.ResourceDeletionError) template);</span>
 <span class="source-line-no">169</span><span id="line.169">        }</span>
-<span class="source-line-no">170</span><span id="line.170">        if (template instanceof com.commercetools.importapi.models.errors.ContentionError) {</span>
-<span class="source-line-no">171</span><span id="line.171">            return com.commercetools.importapi.models.errors.ContentionError</span>
-<span class="source-line-no">172</span><span id="line.172">                    .deepCopy((com.commercetools.importapi.models.errors.ContentionError) template);</span>
+<span class="source-line-no">170</span><span id="line.170">        if (template instanceof com.commercetools.importapi.models.errors.ResourceNotFoundError) {</span>
+<span class="source-line-no">171</span><span id="line.171">            return com.commercetools.importapi.models.errors.ResourceNotFoundError</span>
+<span class="source-line-no">172</span><span id="line.172">                    .deepCopy((com.commercetools.importapi.models.errors.ResourceNotFoundError) template);</span>
 <span class="source-line-no">173</span><span id="line.173">        }</span>
-<span class="source-line-no">174</span><span id="line.174">        if (template instanceof com.commercetools.importapi.models.errors.GenericError) {</span>
-<span class="source-line-no">175</span><span id="line.175">            return com.commercetools.importapi.models.errors.GenericError</span>
-<span class="source-line-no">176</span><span id="line.176">                    .deepCopy((com.commercetools.importapi.models.errors.GenericError) template);</span>
+<span class="source-line-no">174</span><span id="line.174">        if (template instanceof com.commercetools.importapi.models.errors.ResourceUpdateError) {</span>
+<span class="source-line-no">175</span><span id="line.175">            return com.commercetools.importapi.models.errors.ResourceUpdateError</span>
+<span class="source-line-no">176</span><span id="line.176">                    .deepCopy((com.commercetools.importapi.models.errors.ResourceUpdateError) template);</span>
 <span class="source-line-no">177</span><span id="line.177">        }</span>
 <span class="source-line-no">178</span><span id="line.178">        ErrorObjectImpl instance = new ErrorObjectImpl();</span>
 <span class="source-line-no">179</span><span id="line.179">        instance.setMessage(template.getMessage());</span>

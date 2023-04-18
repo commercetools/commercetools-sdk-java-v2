@@ -70,29 +70,29 @@
 <span class="source-line-no">057</span><span id="line.57">        if (template == null) {</span>
 <span class="source-line-no">058</span><span id="line.58">            return null;</span>
 <span class="source-line-no">059</span><span id="line.59">        }</span>
-<span class="source-line-no">060</span><span id="line.60">        if (template instanceof com.commercetools.api.models.subscription.EventBridgeDestination) {</span>
-<span class="source-line-no">061</span><span id="line.61">            return com.commercetools.api.models.subscription.EventBridgeDestination</span>
-<span class="source-line-no">062</span><span id="line.62">                    .deepCopy((com.commercetools.api.models.subscription.EventBridgeDestination) template);</span>
+<span class="source-line-no">060</span><span id="line.60">        if (template instanceof com.commercetools.api.models.subscription.AzureEventGridDestination) {</span>
+<span class="source-line-no">061</span><span id="line.61">            return com.commercetools.api.models.subscription.AzureEventGridDestination</span>
+<span class="source-line-no">062</span><span id="line.62">                    .deepCopy((com.commercetools.api.models.subscription.AzureEventGridDestination) template);</span>
 <span class="source-line-no">063</span><span id="line.63">        }</span>
-<span class="source-line-no">064</span><span id="line.64">        if (template instanceof com.commercetools.api.models.subscription.GoogleCloudPubSubDestination) {</span>
-<span class="source-line-no">065</span><span id="line.65">            return com.commercetools.api.models.subscription.GoogleCloudPubSubDestination</span>
-<span class="source-line-no">066</span><span id="line.66">                    .deepCopy((com.commercetools.api.models.subscription.GoogleCloudPubSubDestination) template);</span>
+<span class="source-line-no">064</span><span id="line.64">        if (template instanceof com.commercetools.api.models.subscription.AzureServiceBusDestination) {</span>
+<span class="source-line-no">065</span><span id="line.65">            return com.commercetools.api.models.subscription.AzureServiceBusDestination</span>
+<span class="source-line-no">066</span><span id="line.66">                    .deepCopy((com.commercetools.api.models.subscription.AzureServiceBusDestination) template);</span>
 <span class="source-line-no">067</span><span id="line.67">        }</span>
-<span class="source-line-no">068</span><span id="line.68">        if (template instanceof com.commercetools.api.models.subscription.SnsDestination) {</span>
-<span class="source-line-no">069</span><span id="line.69">            return com.commercetools.api.models.subscription.SnsDestination</span>
-<span class="source-line-no">070</span><span id="line.70">                    .deepCopy((com.commercetools.api.models.subscription.SnsDestination) template);</span>
+<span class="source-line-no">068</span><span id="line.68">        if (template instanceof com.commercetools.api.models.subscription.EventBridgeDestination) {</span>
+<span class="source-line-no">069</span><span id="line.69">            return com.commercetools.api.models.subscription.EventBridgeDestination</span>
+<span class="source-line-no">070</span><span id="line.70">                    .deepCopy((com.commercetools.api.models.subscription.EventBridgeDestination) template);</span>
 <span class="source-line-no">071</span><span id="line.71">        }</span>
-<span class="source-line-no">072</span><span id="line.72">        if (template instanceof com.commercetools.api.models.subscription.SqsDestination) {</span>
-<span class="source-line-no">073</span><span id="line.73">            return com.commercetools.api.models.subscription.SqsDestination</span>
-<span class="source-line-no">074</span><span id="line.74">                    .deepCopy((com.commercetools.api.models.subscription.SqsDestination) template);</span>
+<span class="source-line-no">072</span><span id="line.72">        if (template instanceof com.commercetools.api.models.subscription.GoogleCloudPubSubDestination) {</span>
+<span class="source-line-no">073</span><span id="line.73">            return com.commercetools.api.models.subscription.GoogleCloudPubSubDestination</span>
+<span class="source-line-no">074</span><span id="line.74">                    .deepCopy((com.commercetools.api.models.subscription.GoogleCloudPubSubDestination) template);</span>
 <span class="source-line-no">075</span><span id="line.75">        }</span>
-<span class="source-line-no">076</span><span id="line.76">        if (template instanceof com.commercetools.api.models.subscription.AzureEventGridDestination) {</span>
-<span class="source-line-no">077</span><span id="line.77">            return com.commercetools.api.models.subscription.AzureEventGridDestination</span>
-<span class="source-line-no">078</span><span id="line.78">                    .deepCopy((com.commercetools.api.models.subscription.AzureEventGridDestination) template);</span>
+<span class="source-line-no">076</span><span id="line.76">        if (template instanceof com.commercetools.api.models.subscription.SnsDestination) {</span>
+<span class="source-line-no">077</span><span id="line.77">            return com.commercetools.api.models.subscription.SnsDestination</span>
+<span class="source-line-no">078</span><span id="line.78">                    .deepCopy((com.commercetools.api.models.subscription.SnsDestination) template);</span>
 <span class="source-line-no">079</span><span id="line.79">        }</span>
-<span class="source-line-no">080</span><span id="line.80">        if (template instanceof com.commercetools.api.models.subscription.AzureServiceBusDestination) {</span>
-<span class="source-line-no">081</span><span id="line.81">            return com.commercetools.api.models.subscription.AzureServiceBusDestination</span>
-<span class="source-line-no">082</span><span id="line.82">                    .deepCopy((com.commercetools.api.models.subscription.AzureServiceBusDestination) template);</span>
+<span class="source-line-no">080</span><span id="line.80">        if (template instanceof com.commercetools.api.models.subscription.SqsDestination) {</span>
+<span class="source-line-no">081</span><span id="line.81">            return com.commercetools.api.models.subscription.SqsDestination</span>
+<span class="source-line-no">082</span><span id="line.82">                    .deepCopy((com.commercetools.api.models.subscription.SqsDestination) template);</span>
 <span class="source-line-no">083</span><span id="line.83">        }</span>
 <span class="source-line-no">084</span><span id="line.84">        DestinationImpl instance = new DestinationImpl();</span>
 <span class="source-line-no">085</span><span id="line.85">        return instance;</span>

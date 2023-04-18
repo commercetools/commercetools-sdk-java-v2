@@ -68,17 +68,17 @@
 <span class="source-line-no">055</span><span id="line.55">        if (template == null) {</span>
 <span class="source-line-no">056</span><span id="line.56">            return null;</span>
 <span class="source-line-no">057</span><span id="line.57">        }</span>
-<span class="source-line-no">058</span><span id="line.58">        if (template instanceof com.commercetools.api.models.extension.GoogleCloudFunctionDestination) {</span>
-<span class="source-line-no">059</span><span id="line.59">            return com.commercetools.api.models.extension.GoogleCloudFunctionDestination</span>
-<span class="source-line-no">060</span><span id="line.60">                    .deepCopy((com.commercetools.api.models.extension.GoogleCloudFunctionDestination) template);</span>
+<span class="source-line-no">058</span><span id="line.58">        if (template instanceof com.commercetools.api.models.extension.AWSLambdaDestination) {</span>
+<span class="source-line-no">059</span><span id="line.59">            return com.commercetools.api.models.extension.AWSLambdaDestination</span>
+<span class="source-line-no">060</span><span id="line.60">                    .deepCopy((com.commercetools.api.models.extension.AWSLambdaDestination) template);</span>
 <span class="source-line-no">061</span><span id="line.61">        }</span>
-<span class="source-line-no">062</span><span id="line.62">        if (template instanceof com.commercetools.api.models.extension.HttpDestination) {</span>
-<span class="source-line-no">063</span><span id="line.63">            return com.commercetools.api.models.extension.HttpDestination</span>
-<span class="source-line-no">064</span><span id="line.64">                    .deepCopy((com.commercetools.api.models.extension.HttpDestination) template);</span>
+<span class="source-line-no">062</span><span id="line.62">        if (template instanceof com.commercetools.api.models.extension.GoogleCloudFunctionDestination) {</span>
+<span class="source-line-no">063</span><span id="line.63">            return com.commercetools.api.models.extension.GoogleCloudFunctionDestination</span>
+<span class="source-line-no">064</span><span id="line.64">                    .deepCopy((com.commercetools.api.models.extension.GoogleCloudFunctionDestination) template);</span>
 <span class="source-line-no">065</span><span id="line.65">        }</span>
-<span class="source-line-no">066</span><span id="line.66">        if (template instanceof com.commercetools.api.models.extension.AWSLambdaDestination) {</span>
-<span class="source-line-no">067</span><span id="line.67">            return com.commercetools.api.models.extension.AWSLambdaDestination</span>
-<span class="source-line-no">068</span><span id="line.68">                    .deepCopy((com.commercetools.api.models.extension.AWSLambdaDestination) template);</span>
+<span class="source-line-no">066</span><span id="line.66">        if (template instanceof com.commercetools.api.models.extension.HttpDestination) {</span>
+<span class="source-line-no">067</span><span id="line.67">            return com.commercetools.api.models.extension.HttpDestination</span>
+<span class="source-line-no">068</span><span id="line.68">                    .deepCopy((com.commercetools.api.models.extension.HttpDestination) template);</span>
 <span class="source-line-no">069</span><span id="line.69">        }</span>
 <span class="source-line-no">070</span><span id="line.70">        ExtensionDestinationImpl instance = new ExtensionDestinationImpl();</span>
 <span class="source-line-no">071</span><span id="line.71">        return instance;</span>

@@ -32,6 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = ProductSelectionTypeImpl.class, visible = true)
 @JsonDeserialize(as = ProductSelectionTypeImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public interface ProductSelectionType {
 
     /**
@@ -39,6 +40,7 @@ public interface ProductSelectionType {
      * @return type
      */
     @NotNull
+    @Deprecated
     @JsonProperty("type")
     public ProductSelectionTypeEnum getType();
 

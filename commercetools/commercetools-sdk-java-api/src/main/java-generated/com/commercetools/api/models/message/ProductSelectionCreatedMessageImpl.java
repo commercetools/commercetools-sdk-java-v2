@@ -42,7 +42,7 @@ public class ProductSelectionCreatedMessageImpl implements ProductSelectionCreat
 
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
-    private com.commercetools.api.models.product_selection.ProductSelectionType productSelection;
+    private com.commercetools.api.models.product_selection.ProductSelection productSelection;
 
     /**
      * create instance with all properties
@@ -57,7 +57,7 @@ public class ProductSelectionCreatedMessageImpl implements ProductSelectionCreat
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
-            @JsonProperty("productSelection") final com.commercetools.api.models.product_selection.ProductSelectionType productSelection) {
+            @JsonProperty("productSelection") final com.commercetools.api.models.product_selection.ProductSelection productSelection) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -168,10 +168,10 @@ public class ProductSelectionCreatedMessageImpl implements ProductSelectionCreat
     }
 
     /**
-     *  <p>The <code>type</code> and <code>name</code> of the individual Product Selection.</p>
+     *  <p>Product Selection that was created.</p>
      */
 
-    public com.commercetools.api.models.product_selection.ProductSelectionType getProductSelection() {
+    public com.commercetools.api.models.product_selection.ProductSelection getProductSelection() {
         return this.productSelection;
     }
 
@@ -217,7 +217,7 @@ public class ProductSelectionCreatedMessageImpl implements ProductSelectionCreat
     }
 
     public void setProductSelection(
-            final com.commercetools.api.models.product_selection.ProductSelectionType productSelection) {
+            final com.commercetools.api.models.product_selection.ProductSelection productSelection) {
         this.productSelection = productSelection;
     }
 

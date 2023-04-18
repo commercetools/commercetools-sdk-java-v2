@@ -30,10 +30,7 @@ public class ProductAssignmentMissingErrorBuilder implements Builder<ProductAssi
     private com.commercetools.api.models.product.ProductReference product;
 
     /**
-     *  <p>For Product Selection of type Individual, the message is:</p>
-     *  <p><code>"A Product Variant Selection can only be set for a Product that has previously been added to the Product Selection."</code></p>
-     *  <p>For Product Selection of type Individual Exclusion, the message is:</p>
-     *  <p><code>"A Variant Exclusion can only be set for a Product that has previously been added to the Product Selection of type Individual Exclusion."</code></p>
+     *  <p>For Product Selection of mode Individual, the message is: <code>"A Product Variant Selection can only be set for a Product that has previously been added to the Product Selection."</code> For Product Selection of mode IndividualExclusion, the message is: <code>"A Variant Exclusion can only be set for a Product that has previously been added to the Product Selection of type Individual Exclusion."</code></p>
      * @param message value to be set
      * @return Builder
      */
@@ -94,10 +91,7 @@ public class ProductAssignmentMissingErrorBuilder implements Builder<ProductAssi
     }
 
     /**
-     *  <p>For Product Selection of type Individual, the message is:</p>
-     *  <p><code>"A Product Variant Selection can only be set for a Product that has previously been added to the Product Selection."</code></p>
-     *  <p>For Product Selection of type Individual Exclusion, the message is:</p>
-     *  <p><code>"A Variant Exclusion can only be set for a Product that has previously been added to the Product Selection of type Individual Exclusion."</code></p>
+     *  <p>For Product Selection of mode Individual, the message is: <code>"A Product Variant Selection can only be set for a Product that has previously been added to the Product Selection."</code> For Product Selection of mode IndividualExclusion, the message is: <code>"A Variant Exclusion can only be set for a Product that has previously been added to the Product Selection of type Individual Exclusion."</code></p>
      * @return message
      */
 

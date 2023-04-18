@@ -22,7 +22,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .name(nameBuilder -> nameBuilder)
  *             .productCount(0.3)
- *             .type(ProductSelectionTypeEnum.INDIVIDUAL)
+ *             .mode(ProductSelectionMode.INDIVIDUAL)
  *             .build()
  * </code></pre>
  * </div>
@@ -51,7 +51,11 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
 
     private Integer productCount;
 
+    @Deprecated
+    @Nullable
     private com.commercetools.api.models.product_selection.ProductSelectionTypeEnum type;
+
+    private com.commercetools.api.models.product_selection.ProductSelectionMode mode;
 
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
@@ -197,10 +201,22 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
      * @param type value to be set
      * @return Builder
      */
-
+    @Deprecated
     public ProductSelectionBuilder type(
-            final com.commercetools.api.models.product_selection.ProductSelectionTypeEnum type) {
+            @Nullable final com.commercetools.api.models.product_selection.ProductSelectionTypeEnum type) {
         this.type = type;
+        return this;
+    }
+
+    /**
+     *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually, either by including or excluding them explicitly.</p>
+     * @param mode value to be set
+     * @return Builder
+     */
+
+    public ProductSelectionBuilder mode(
+            final com.commercetools.api.models.product_selection.ProductSelectionMode mode) {
+        this.mode = mode;
         return this;
     }
 
@@ -315,9 +331,19 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
      *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually, either by including or excluding them explicitly.</p>
      * @return type
      */
-
+    @Deprecated
+    @Nullable
     public com.commercetools.api.models.product_selection.ProductSelectionTypeEnum getType() {
         return this.type;
+    }
+
+    /**
+     *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually, either by including or excluding them explicitly.</p>
+     * @return mode
+     */
+
+    public com.commercetools.api.models.product_selection.ProductSelectionMode getMode() {
+        return this.mode;
     }
 
     /**
@@ -341,9 +367,9 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
         Objects.requireNonNull(lastModifiedAt, ProductSelection.class + ": lastModifiedAt is missing");
         Objects.requireNonNull(name, ProductSelection.class + ": name is missing");
         Objects.requireNonNull(productCount, ProductSelection.class + ": productCount is missing");
-        Objects.requireNonNull(type, ProductSelection.class + ": type is missing");
+        Objects.requireNonNull(mode, ProductSelection.class + ": mode is missing");
         return new ProductSelectionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name,
-            productCount, type, custom);
+            productCount, type, mode, custom);
     }
 
     /**
@@ -352,7 +378,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
      */
     public ProductSelection buildUnchecked() {
         return new ProductSelectionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name,
-            productCount, type, custom);
+            productCount, type, mode, custom);
     }
 
     /**
@@ -380,6 +406,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
         builder.name = template.getName();
         builder.productCount = template.getProductCount();
         builder.type = template.getType();
+        builder.mode = template.getMode();
         builder.custom = template.getCustom();
         return builder;
     }

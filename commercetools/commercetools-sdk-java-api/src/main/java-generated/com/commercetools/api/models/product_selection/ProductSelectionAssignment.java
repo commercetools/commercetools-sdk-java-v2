@@ -16,10 +16,10 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Given the type of Product Selection this Assignment refers to, it may contain:</p>
+ *  <p>Given the mode of Product Selection, this assignment refers to, it may contain:</p>
  *  <ul>
- *   <li><code>variantSelection</code> field if the Product Selection is of type Individual.</li>
- *   <li><code>variantExclusion</code> field if the Product Selection is of type Individual Exclusion.</li>
+ *   <li><code>variantSelection</code> field for a Product Selection with <code>Individual</code> ProductSelectionMode.</li>
+ *   <li><code>variantExclusion</code> field for a Product Selection with <code>IndividualExclusion</code> ProductSelectionMode.</li>
  *  </ul>
  *
  * <hr>
@@ -56,8 +56,8 @@ public interface ProductSelectionAssignment {
     public ProductSelectionReference getProductSelection();
 
     /**
-     *  <p>Define which Variants of the added Product will be included from the Product Selection.</p>
-     *  <p>This field is only available for Assignments to a Product Selection of type Individual. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     *  <p>Define which Variants of the added Product will be included in the Product Selection.</p>
+     *  <p>This field is only available for assignments to a Product Selection with <code>Individual</code> ProductSelectionMode. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
      * @return variantSelection
      */
     @Valid
@@ -66,7 +66,7 @@ public interface ProductSelectionAssignment {
 
     /**
      *  <p>Defines which Variants of the Product will be excluded from the Product Selection.</p>
-     *  <p>This field is only available for Assignments to a Product Selection of type Individual Exclusion. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     *  <p>This field is only available for assignments to a Product Selection with <code>IndividualExclusion</code> ProductSelectionMode. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
      * @return variantExclusion
      */
     @Valid
@@ -88,8 +88,8 @@ public interface ProductSelectionAssignment {
     public void setProductSelection(final ProductSelectionReference productSelection);
 
     /**
-     *  <p>Define which Variants of the added Product will be included from the Product Selection.</p>
-     *  <p>This field is only available for Assignments to a Product Selection of type Individual. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     *  <p>Define which Variants of the added Product will be included in the Product Selection.</p>
+     *  <p>This field is only available for assignments to a Product Selection with <code>Individual</code> ProductSelectionMode. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
      * @param variantSelection value to be set
      */
 
@@ -97,7 +97,7 @@ public interface ProductSelectionAssignment {
 
     /**
      *  <p>Defines which Variants of the Product will be excluded from the Product Selection.</p>
-     *  <p>This field is only available for Assignments to a Product Selection of type Individual Exclusion. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     *  <p>This field is only available for assignments to a Product Selection with <code>IndividualExclusion</code> ProductSelectionMode. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
      * @param variantExclusion value to be set
      */
 

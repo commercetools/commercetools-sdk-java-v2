@@ -55,7 +55,7 @@ public class ProductSelectionAddProductActionBuilder implements Builder<ProductS
     }
 
     /**
-     *  <p>Defines which Variants of the Product will be included from the Product Selection. If not supplied all Variants are deemed to be included.</p>
+     *  <p>Defines which Variants of the Product will be included in the Product Selection. If not supplied all Variants are deemed to be included.</p>
      * @param variantSelection value to be set
      * @return Builder
      */
@@ -67,7 +67,7 @@ public class ProductSelectionAddProductActionBuilder implements Builder<ProductS
     }
 
     /**
-     *  <p>Defines which Variants of the Product will be included from the Product Selection. If not supplied all Variants are deemed to be included.</p>
+     *  <p>Defines which Variants of the Product will be included in the Product Selection. If not supplied all Variants are deemed to be included.</p>
      * @param builder function to build the variantSelection value
      * @return Builder
      */
@@ -90,7 +90,7 @@ public class ProductSelectionAddProductActionBuilder implements Builder<ProductS
     }
 
     /**
-     *  <p>Defines which Variants of the Product will be included from the Product Selection. If not supplied all Variants are deemed to be included.</p>
+     *  <p>Defines which Variants of the Product will be included in the Product Selection. If not supplied all Variants are deemed to be included.</p>
      * @return variantSelection
      */
 

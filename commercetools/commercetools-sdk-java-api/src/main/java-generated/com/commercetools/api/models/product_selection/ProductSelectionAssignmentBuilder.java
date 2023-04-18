@@ -86,8 +86,8 @@ public class ProductSelectionAssignmentBuilder implements Builder<ProductSelecti
     }
 
     /**
-     *  <p>Define which Variants of the added Product will be included from the Product Selection.</p>
-     *  <p>This field is only available for Assignments to a Product Selection of type Individual. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     *  <p>Define which Variants of the added Product will be included in the Product Selection.</p>
+     *  <p>This field is only available for assignments to a Product Selection with <code>Individual</code> ProductSelectionMode. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
      * @param variantSelection value to be set
      * @return Builder
      */
@@ -99,8 +99,8 @@ public class ProductSelectionAssignmentBuilder implements Builder<ProductSelecti
     }
 
     /**
-     *  <p>Define which Variants of the added Product will be included from the Product Selection.</p>
-     *  <p>This field is only available for Assignments to a Product Selection of type Individual. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     *  <p>Define which Variants of the added Product will be included in the Product Selection.</p>
+     *  <p>This field is only available for assignments to a Product Selection with <code>Individual</code> ProductSelectionMode. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
      * @param builder function to build the variantSelection value
      * @return Builder
      */
@@ -115,7 +115,7 @@ public class ProductSelectionAssignmentBuilder implements Builder<ProductSelecti
 
     /**
      *  <p>Defines which Variants of the Product will be excluded from the Product Selection.</p>
-     *  <p>This field is only available for Assignments to a Product Selection of type Individual Exclusion. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     *  <p>This field is only available for assignments to a Product Selection with <code>IndividualExclusion</code> ProductSelectionMode. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
      * @param builder function to build the variantExclusion value
      * @return Builder
      */
@@ -130,7 +130,7 @@ public class ProductSelectionAssignmentBuilder implements Builder<ProductSelecti
 
     /**
      *  <p>Defines which Variants of the Product will be excluded from the Product Selection.</p>
-     *  <p>This field is only available for Assignments to a Product Selection of type Individual Exclusion. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     *  <p>This field is only available for assignments to a Product Selection with <code>IndividualExclusion</code> ProductSelectionMode. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
      * @param variantExclusion value to be set
      * @return Builder
      */
@@ -160,8 +160,8 @@ public class ProductSelectionAssignmentBuilder implements Builder<ProductSelecti
     }
 
     /**
-     *  <p>Define which Variants of the added Product will be included from the Product Selection.</p>
-     *  <p>This field is only available for Assignments to a Product Selection of type Individual. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     *  <p>Define which Variants of the added Product will be included in the Product Selection.</p>
+     *  <p>This field is only available for assignments to a Product Selection with <code>Individual</code> ProductSelectionMode. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
      * @return variantSelection
      */
 
@@ -172,7 +172,7 @@ public class ProductSelectionAssignmentBuilder implements Builder<ProductSelecti
 
     /**
      *  <p>Defines which Variants of the Product will be excluded from the Product Selection.</p>
-     *  <p>This field is only available for Assignments to a Product Selection of type Individual Exclusion. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     *  <p>This field is only available for assignments to a Product Selection with <code>IndividualExclusion</code> ProductSelectionMode. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
      * @return variantExclusion
      */
 

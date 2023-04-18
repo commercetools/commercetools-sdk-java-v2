@@ -55,7 +55,7 @@ public class AssignedProductReferenceImpl implements AssignedProductReference, M
 
     /**
      *  <p>The Variants of the Product that are included from the Product Selection.</p>
-     *  <p>This field may exist only for the IndividualProductSelectionType. In absence of this field, all Variants are deemed to be included.</p>
+     *  <p>This field may exist only in Product Selections with <code>Individual</code> ProductSelectionMode. In absence of this field, all Variants are deemed to be included.</p>
      */
 
     public com.commercetools.api.models.product_selection.ProductVariantSelection getVariantSelection() {
@@ -64,7 +64,7 @@ public class AssignedProductReferenceImpl implements AssignedProductReference, M
 
     /**
      *  <p>The Variants of the Product that are excluded from the Product Selection.</p>
-     *  <p>This field may exist only for the IndividualExclusionProductSelectionType. In absence of this field, all Variants are deemed to be excluded.</p>
+     *  <p>This field may exist only in Product Selections with <code>IndividualExclusion</code> ProductSelectionMode. In absence of this field, all Variants are deemed to be excluded.</p>
      */
 
     public com.commercetools.api.models.product_selection.ProductVariantExclusion getVariantExclusion() {

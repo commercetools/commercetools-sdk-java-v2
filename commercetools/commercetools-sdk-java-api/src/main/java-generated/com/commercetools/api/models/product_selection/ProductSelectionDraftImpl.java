@@ -26,7 +26,10 @@ public class ProductSelectionDraftImpl implements ProductSelectionDraft, ModelBa
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    @Deprecated
     private com.commercetools.api.models.product_selection.ProductSelectionTypeEnum type;
+
+    private com.commercetools.api.models.product_selection.ProductSelectionMode mode;
 
     /**
      * create instance with all properties
@@ -35,11 +38,13 @@ public class ProductSelectionDraftImpl implements ProductSelectionDraft, ModelBa
     ProductSelectionDraftImpl(@JsonProperty("key") final String key,
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
-            @JsonProperty("type") final com.commercetools.api.models.product_selection.ProductSelectionTypeEnum type) {
+            @JsonProperty("type") final com.commercetools.api.models.product_selection.ProductSelectionTypeEnum type,
+            @JsonProperty("mode") final com.commercetools.api.models.product_selection.ProductSelectionMode mode) {
         this.key = key;
         this.name = name;
         this.custom = custom;
         this.type = type;
+        this.mode = mode;
     }
 
     /**
@@ -75,9 +80,17 @@ public class ProductSelectionDraftImpl implements ProductSelectionDraft, ModelBa
     /**
      *  <p>Type of the Product Selection.</p>
      */
-
+    @Deprecated
     public com.commercetools.api.models.product_selection.ProductSelectionTypeEnum getType() {
         return this.type;
+    }
+
+    /**
+     *  <p>Mode of the Product Selection.</p>
+     */
+
+    public com.commercetools.api.models.product_selection.ProductSelectionMode getMode() {
+        return this.mode;
     }
 
     public void setKey(final String key) {
@@ -92,8 +105,13 @@ public class ProductSelectionDraftImpl implements ProductSelectionDraft, ModelBa
         this.custom = custom;
     }
 
+    @Deprecated
     public void setType(final com.commercetools.api.models.product_selection.ProductSelectionTypeEnum type) {
         this.type = type;
+    }
+
+    public void setMode(final com.commercetools.api.models.product_selection.ProductSelectionMode mode) {
+        this.mode = mode;
     }
 
     @Override
@@ -110,12 +128,18 @@ public class ProductSelectionDraftImpl implements ProductSelectionDraft, ModelBa
                 .append(name, that.name)
                 .append(custom, that.custom)
                 .append(type, that.type)
+                .append(mode, that.mode)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(key).append(name).append(custom).append(type).toHashCode();
+        return new HashCodeBuilder(17, 37).append(key)
+                .append(name)
+                .append(custom)
+                .append(type)
+                .append(mode)
+                .toHashCode();
     }
 
 }

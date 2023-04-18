@@ -54,7 +54,7 @@ public class ProductSelectionCreatedMessageBuilder implements Builder<ProductSel
     @Nullable
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
-    private com.commercetools.api.models.product_selection.ProductSelectionType productSelection;
+    private com.commercetools.api.models.product_selection.ProductSelection productSelection;
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
@@ -221,28 +221,28 @@ public class ProductSelectionCreatedMessageBuilder implements Builder<ProductSel
     }
 
     /**
-     *  <p>The <code>type</code> and <code>name</code> of the individual Product Selection.</p>
-     * @param productSelection value to be set
-     * @return Builder
-     */
-
-    public ProductSelectionCreatedMessageBuilder productSelection(
-            final com.commercetools.api.models.product_selection.ProductSelectionType productSelection) {
-        this.productSelection = productSelection;
-        return this;
-    }
-
-    /**
-     *  <p>The <code>type</code> and <code>name</code> of the individual Product Selection.</p>
+     *  <p>Product Selection that was created.</p>
      * @param builder function to build the productSelection value
      * @return Builder
      */
 
     public ProductSelectionCreatedMessageBuilder productSelection(
-            Function<com.commercetools.api.models.product_selection.ProductSelectionTypeBuilder, Builder<? extends com.commercetools.api.models.product_selection.ProductSelectionType>> builder) {
+            Function<com.commercetools.api.models.product_selection.ProductSelectionBuilder, com.commercetools.api.models.product_selection.ProductSelectionBuilder> builder) {
         this.productSelection = builder
-                .apply(com.commercetools.api.models.product_selection.ProductSelectionTypeBuilder.of())
+                .apply(com.commercetools.api.models.product_selection.ProductSelectionBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Product Selection that was created.</p>
+     * @param productSelection value to be set
+     * @return Builder
+     */
+
+    public ProductSelectionCreatedMessageBuilder productSelection(
+            final com.commercetools.api.models.product_selection.ProductSelection productSelection) {
+        this.productSelection = productSelection;
         return this;
     }
 
@@ -340,11 +340,11 @@ public class ProductSelectionCreatedMessageBuilder implements Builder<ProductSel
     }
 
     /**
-     *  <p>The <code>type</code> and <code>name</code> of the individual Product Selection.</p>
+     *  <p>Product Selection that was created.</p>
      * @return productSelection
      */
 
-    public com.commercetools.api.models.product_selection.ProductSelectionType getProductSelection() {
+    public com.commercetools.api.models.product_selection.ProductSelection getProductSelection() {
         return this.productSelection;
     }
 

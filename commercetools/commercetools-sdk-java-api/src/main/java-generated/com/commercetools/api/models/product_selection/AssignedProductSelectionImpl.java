@@ -58,8 +58,8 @@ public class AssignedProductSelectionImpl implements AssignedProductSelection, M
     }
 
     /**
-     *  <p>Defines which Variants of the Product will be included from the Product Selection.</p>
-     *  <p>This field is only available for Assignments to a Product Selection of type Individual.</p>
+     *  <p>Defines which Variants of the Product will be included in the Product Selection.</p>
+     *  <p>This field is only available for assignments to a Product Selection with <code>Individual</code> ProductSelectionMode.</p>
      */
 
     public com.commercetools.api.models.product_selection.ProductVariantSelection getVariantSelection() {
@@ -68,7 +68,7 @@ public class AssignedProductSelectionImpl implements AssignedProductSelection, M
 
     /**
      *  <p>Defines which Variants of the Product will be excluded from the Product Selection.</p>
-     *  <p>This field is only available for Assignments to a Product Selection of type Individual Exclusion.</p>
+     *  <p>This field is only available for assignments to a Product Selection with <code>IndividualExclusion</code> ProductSelectionMode.</p>
      */
 
     public com.commercetools.api.models.product_selection.ProductVariantExclusion getVariantExclusion() {

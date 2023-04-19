@@ -78,6 +78,7 @@ public interface ShippingMode extends JsonEnum {
     /**
      * factory method for a enum value of ShippingMode
      * if no enum has been found an anonymous instance will be created
+     * @param value the enum value to be wrapped
      * @return enum instance
      */
     @JsonCreator
@@ -101,6 +102,7 @@ public interface ShippingMode extends JsonEnum {
 
     /**
      * method to find enum using the JSON value
+     * @param value the json value to be wrapped
      * @return optional of enum instance
      */
     public static Optional<ShippingMode> findEnumViaJsonName(String jsonName) {

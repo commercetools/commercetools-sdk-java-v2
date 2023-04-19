@@ -77,6 +77,7 @@ public interface SelectionMode extends JsonEnum {
     /**
      * factory method for a enum value of SelectionMode
      * if no enum has been found an anonymous instance will be created
+     * @param value the enum value to be wrapped
      * @return enum instance
      */
     @JsonCreator
@@ -100,6 +101,7 @@ public interface SelectionMode extends JsonEnum {
 
     /**
      * method to find enum using the JSON value
+     * @param value the json value to be wrapped
      * @return optional of enum instance
      */
     public static Optional<SelectionMode> findEnumViaJsonName(String jsonName) {

@@ -22,7 +22,7 @@ public interface ProductSelectionTypeEnum extends JsonEnum {
     */
     ProductSelectionTypeEnum INDIVIDUAL = ProductSelectionTypeEnumEnum.INDIVIDUAL;
     /**
-    	<p>Defines the Product Selection to contain Products that are excluded from the catalog.
+    	<p>Defines the Product Selection to contain Products that are excluded from the catalog (<a href="/../offering/api-contract#public-beta">BETA</a>).
     	For this type of Product Selection, the Products are to be excluded individually by using the <a href="/projects/product-selections#exclude-product">Exclude Product</a> update action.</p>
 
     */

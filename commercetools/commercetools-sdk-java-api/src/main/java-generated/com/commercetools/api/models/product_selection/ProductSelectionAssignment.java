@@ -19,7 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *  <p>Given the mode of Product Selection, this assignment refers to, it may contain:</p>
  *  <ul>
  *   <li><code>variantSelection</code> field for a Product Selection with <code>Individual</code> ProductSelectionMode.</li>
- *   <li><code>variantExclusion</code> field for a Product Selection with <code>IndividualExclusion</code> ProductSelectionMode.</li>
+ *   <li><code>variantExclusion</code> field for a Product Selection with <code>IndividualExclusion</code> ProductSelectionMode (BETA).</li>
  *  </ul>
  *
  * <hr>

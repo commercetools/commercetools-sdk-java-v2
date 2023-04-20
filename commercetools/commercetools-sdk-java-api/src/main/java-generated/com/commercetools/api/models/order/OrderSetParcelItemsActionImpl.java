@@ -24,8 +24,6 @@ public class OrderSetParcelItemsActionImpl implements OrderSetParcelItemsAction,
 
     private String parcelId;
 
-    private String parcelKey;
-
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
     /**
@@ -33,10 +31,8 @@ public class OrderSetParcelItemsActionImpl implements OrderSetParcelItemsAction,
      */
     @JsonCreator
     OrderSetParcelItemsActionImpl(@JsonProperty("parcelId") final String parcelId,
-            @JsonProperty("parcelKey") final String parcelKey,
             @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
         this.parcelId = parcelId;
-        this.parcelKey = parcelKey;
         this.items = items;
         this.action = SET_PARCEL_ITEMS;
     }
@@ -57,19 +53,11 @@ public class OrderSetParcelItemsActionImpl implements OrderSetParcelItemsAction,
     }
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     *
      */
 
     public String getParcelId() {
         return this.parcelId;
-    }
-
-    /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
-     */
-
-    public String getParcelKey() {
-        return this.parcelKey;
     }
 
     /**
@@ -82,10 +70,6 @@ public class OrderSetParcelItemsActionImpl implements OrderSetParcelItemsAction,
 
     public void setParcelId(final String parcelId) {
         this.parcelId = parcelId;
-    }
-
-    public void setParcelKey(final String parcelKey) {
-        this.parcelKey = parcelKey;
     }
 
     public void setItems(final com.commercetools.api.models.order.DeliveryItem... items) {
@@ -108,14 +92,13 @@ public class OrderSetParcelItemsActionImpl implements OrderSetParcelItemsAction,
 
         return new EqualsBuilder().append(action, that.action)
                 .append(parcelId, that.parcelId)
-                .append(parcelKey, that.parcelKey)
                 .append(items, that.items)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(parcelId).append(parcelKey).append(items).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action).append(parcelId).append(items).toHashCode();
     }
 
 }

@@ -24,8 +24,6 @@ public class StagedOrderSetParcelMeasurementsActionImpl implements StagedOrderSe
 
     private String parcelId;
 
-    private String parcelKey;
-
     private com.commercetools.api.models.order.ParcelMeasurements measurements;
 
     /**
@@ -33,10 +31,8 @@ public class StagedOrderSetParcelMeasurementsActionImpl implements StagedOrderSe
      */
     @JsonCreator
     StagedOrderSetParcelMeasurementsActionImpl(@JsonProperty("parcelId") final String parcelId,
-            @JsonProperty("parcelKey") final String parcelKey,
             @JsonProperty("measurements") final com.commercetools.api.models.order.ParcelMeasurements measurements) {
         this.parcelId = parcelId;
-        this.parcelKey = parcelKey;
         this.measurements = measurements;
         this.action = SET_PARCEL_MEASUREMENTS;
     }
@@ -57,19 +53,11 @@ public class StagedOrderSetParcelMeasurementsActionImpl implements StagedOrderSe
     }
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     *
      */
 
     public String getParcelId() {
         return this.parcelId;
-    }
-
-    /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
-     */
-
-    public String getParcelKey() {
-        return this.parcelKey;
     }
 
     /**
@@ -82,10 +70,6 @@ public class StagedOrderSetParcelMeasurementsActionImpl implements StagedOrderSe
 
     public void setParcelId(final String parcelId) {
         this.parcelId = parcelId;
-    }
-
-    public void setParcelKey(final String parcelKey) {
-        this.parcelKey = parcelKey;
     }
 
     public void setMeasurements(final com.commercetools.api.models.order.ParcelMeasurements measurements) {
@@ -104,18 +88,13 @@ public class StagedOrderSetParcelMeasurementsActionImpl implements StagedOrderSe
 
         return new EqualsBuilder().append(action, that.action)
                 .append(parcelId, that.parcelId)
-                .append(parcelKey, that.parcelKey)
                 .append(measurements, that.measurements)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action)
-                .append(parcelId)
-                .append(parcelKey)
-                .append(measurements)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37).append(action).append(parcelId).append(measurements).toHashCode();
     }
 
 }

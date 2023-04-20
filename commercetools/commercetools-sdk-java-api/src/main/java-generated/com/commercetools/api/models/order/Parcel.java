@@ -44,14 +44,6 @@ public interface Parcel extends ParcelMixin, com.commercetools.api.models.Custom
     public String getId();
 
     /**
-     *  <p>User-defined unique identifier of the Parcel.</p>
-     * @return key
-     */
-
-    @JsonProperty("key")
-    public String getKey();
-
-    /**
      *
      * @return createdAt
      */
@@ -97,13 +89,6 @@ public interface Parcel extends ParcelMixin, com.commercetools.api.models.Custom
      */
 
     public void setId(final String id);
-
-    /**
-     *  <p>User-defined unique identifier of the Parcel.</p>
-     * @param key value to be set
-     */
-
-    public void setKey(final String key);
 
     /**
      * set createdAt
@@ -164,7 +149,6 @@ public interface Parcel extends ParcelMixin, com.commercetools.api.models.Custom
     public static Parcel of(final Parcel template) {
         ParcelImpl instance = new ParcelImpl();
         instance.setId(template.getId());
-        instance.setKey(template.getKey());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setMeasurements(template.getMeasurements());
         instance.setTrackingData(template.getTrackingData());
@@ -185,7 +169,6 @@ public interface Parcel extends ParcelMixin, com.commercetools.api.models.Custom
         }
         ParcelImpl instance = new ParcelImpl();
         instance.setId(template.getId());
-        instance.setKey(template.getKey());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setMeasurements(
             com.commercetools.api.models.order.ParcelMeasurements.deepCopy(template.getMeasurements()));

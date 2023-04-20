@@ -28,8 +28,6 @@ public class ParcelDraftImpl implements ParcelDraft, ModelBase {
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
-    private String key;
-
     /**
      * create instance with all properties
      */
@@ -38,13 +36,11 @@ public class ParcelDraftImpl implements ParcelDraft, ModelBase {
             @JsonProperty("measurements") final com.commercetools.api.models.order.ParcelMeasurements measurements,
             @JsonProperty("trackingData") final com.commercetools.api.models.order.TrackingData trackingData,
             @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
-            @JsonProperty("key") final String key) {
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.measurements = measurements;
         this.trackingData = trackingData;
         this.items = items;
         this.custom = custom;
-        this.key = key;
     }
 
     /**
@@ -85,14 +81,6 @@ public class ParcelDraftImpl implements ParcelDraft, ModelBase {
         return this.custom;
     }
 
-    /**
-     *  <p>User-defined unique identifier of the Parcel.</p>
-     */
-
-    public String getKey() {
-        return this.key;
-    }
-
     public void setMeasurements(final com.commercetools.api.models.order.ParcelMeasurements measurements) {
         this.measurements = measurements;
     }
@@ -113,10 +101,6 @@ public class ParcelDraftImpl implements ParcelDraft, ModelBase {
         this.custom = custom;
     }
 
-    public void setKey(final String key) {
-        this.key = key;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -131,7 +115,6 @@ public class ParcelDraftImpl implements ParcelDraft, ModelBase {
                 .append(trackingData, that.trackingData)
                 .append(items, that.items)
                 .append(custom, that.custom)
-                .append(key, that.key)
                 .isEquals();
     }
 
@@ -141,7 +124,6 @@ public class ParcelDraftImpl implements ParcelDraft, ModelBase {
                 .append(trackingData)
                 .append(items)
                 .append(custom)
-                .append(key)
                 .toHashCode();
     }
 

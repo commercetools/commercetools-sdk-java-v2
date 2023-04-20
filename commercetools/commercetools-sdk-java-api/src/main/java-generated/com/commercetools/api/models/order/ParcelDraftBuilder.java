@@ -35,9 +35,6 @@ public class ParcelDraftBuilder implements Builder<ParcelDraft> {
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
-    @Nullable
-    private String key;
-
     /**
      * set the value to the measurements using the builder function
      * @param builder function to build the measurements value
@@ -175,17 +172,6 @@ public class ParcelDraftBuilder implements Builder<ParcelDraft> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Parcel.</p>
-     * @param key value to be set
-     * @return Builder
-     */
-
-    public ParcelDraftBuilder key(@Nullable final String key) {
-        this.key = key;
-        return this;
-    }
-
-    /**
      * value of measurements}
      * @return measurements
      */
@@ -226,21 +212,11 @@ public class ParcelDraftBuilder implements Builder<ParcelDraft> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Parcel.</p>
-     * @return key
-     */
-
-    @Nullable
-    public String getKey() {
-        return this.key;
-    }
-
-    /**
      * builds ParcelDraft with checking for non-null required values
      * @return ParcelDraft
      */
     public ParcelDraft build() {
-        return new ParcelDraftImpl(measurements, trackingData, items, custom, key);
+        return new ParcelDraftImpl(measurements, trackingData, items, custom);
     }
 
     /**
@@ -248,7 +224,7 @@ public class ParcelDraftBuilder implements Builder<ParcelDraft> {
      * @return ParcelDraft
      */
     public ParcelDraft buildUnchecked() {
-        return new ParcelDraftImpl(measurements, trackingData, items, custom, key);
+        return new ParcelDraftImpl(measurements, trackingData, items, custom);
     }
 
     /**
@@ -270,7 +246,6 @@ public class ParcelDraftBuilder implements Builder<ParcelDraft> {
         builder.trackingData = template.getTrackingData();
         builder.items = template.getItems();
         builder.custom = template.getCustom();
-        builder.key = template.getKey();
         return builder;
     }
 

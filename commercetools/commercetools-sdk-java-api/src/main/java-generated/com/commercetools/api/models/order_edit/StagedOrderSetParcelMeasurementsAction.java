@@ -7,6 +7,7 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order.ParcelMeasurements;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
@@ -23,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderSetParcelMeasurementsAction stagedOrderSetParcelMeasurementsAction = StagedOrderSetParcelMeasurementsAction.builder()
+ *             .parcelId("{parcelId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -37,20 +39,12 @@ public interface StagedOrderSetParcelMeasurementsAction extends StagedOrderUpdat
     String SET_PARCEL_MEASUREMENTS = "setParcelMeasurements";
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     *
      * @return parcelId
      */
-
+    @NotNull
     @JsonProperty("parcelId")
     public String getParcelId();
-
-    /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
-     * @return parcelKey
-     */
-
-    @JsonProperty("parcelKey")
-    public String getParcelKey();
 
     /**
      *
@@ -61,18 +55,11 @@ public interface StagedOrderSetParcelMeasurementsAction extends StagedOrderUpdat
     public ParcelMeasurements getMeasurements();
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     * set parcelId
      * @param parcelId value to be set
      */
 
     public void setParcelId(final String parcelId);
-
-    /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
-     * @param parcelKey value to be set
-     */
-
-    public void setParcelKey(final String parcelKey);
 
     /**
      * set measurements
@@ -97,7 +84,6 @@ public interface StagedOrderSetParcelMeasurementsAction extends StagedOrderUpdat
     public static StagedOrderSetParcelMeasurementsAction of(final StagedOrderSetParcelMeasurementsAction template) {
         StagedOrderSetParcelMeasurementsActionImpl instance = new StagedOrderSetParcelMeasurementsActionImpl();
         instance.setParcelId(template.getParcelId());
-        instance.setParcelKey(template.getParcelKey());
         instance.setMeasurements(template.getMeasurements());
         return instance;
     }
@@ -115,7 +101,6 @@ public interface StagedOrderSetParcelMeasurementsAction extends StagedOrderUpdat
         }
         StagedOrderSetParcelMeasurementsActionImpl instance = new StagedOrderSetParcelMeasurementsActionImpl();
         instance.setParcelId(template.getParcelId());
-        instance.setParcelKey(template.getParcelKey());
         instance.setMeasurements(
             com.commercetools.api.models.order.ParcelMeasurements.deepCopy(template.getMeasurements()));
         return instance;

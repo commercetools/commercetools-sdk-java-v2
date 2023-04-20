@@ -22,6 +22,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderSetParcelCustomFieldAction stagedOrderSetParcelCustomFieldAction = StagedOrderSetParcelCustomFieldAction.builder()
+ *             .parcelId("{parcelId}")
  *             .name("{name}")
  *             .build()
  * </code></pre>
@@ -37,20 +38,12 @@ public interface StagedOrderSetParcelCustomFieldAction extends StagedOrderUpdate
     String SET_PARCEL_CUSTOM_FIELD = "setParcelCustomField";
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     *
      * @return parcelId
      */
-
+    @NotNull
     @JsonProperty("parcelId")
     public String getParcelId();
-
-    /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
-     * @return parcelKey
-     */
-
-    @JsonProperty("parcelKey")
-    public String getParcelKey();
 
     /**
      *  <p>Name of the Custom Field.</p>
@@ -69,18 +62,11 @@ public interface StagedOrderSetParcelCustomFieldAction extends StagedOrderUpdate
     public Object getValue();
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     * set parcelId
      * @param parcelId value to be set
      */
 
     public void setParcelId(final String parcelId);
-
-    /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
-     * @param parcelKey value to be set
-     */
-
-    public void setParcelKey(final String parcelKey);
 
     /**
      *  <p>Name of the Custom Field.</p>
@@ -112,7 +98,6 @@ public interface StagedOrderSetParcelCustomFieldAction extends StagedOrderUpdate
     public static StagedOrderSetParcelCustomFieldAction of(final StagedOrderSetParcelCustomFieldAction template) {
         StagedOrderSetParcelCustomFieldActionImpl instance = new StagedOrderSetParcelCustomFieldActionImpl();
         instance.setParcelId(template.getParcelId());
-        instance.setParcelKey(template.getParcelKey());
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
@@ -131,7 +116,6 @@ public interface StagedOrderSetParcelCustomFieldAction extends StagedOrderUpdate
         }
         StagedOrderSetParcelCustomFieldActionImpl instance = new StagedOrderSetParcelCustomFieldActionImpl();
         instance.setParcelId(template.getParcelId());
-        instance.setParcelKey(template.getParcelKey());
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;

@@ -16,6 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderSetParcelCustomTypeAction stagedOrderSetParcelCustomTypeAction = StagedOrderSetParcelCustomTypeAction.builder()
+ *             .parcelId("{parcelId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -23,11 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetParcelCustomTypeActionBuilder implements Builder<StagedOrderSetParcelCustomTypeAction> {
 
-    @Nullable
     private String parcelId;
-
-    @Nullable
-    private String parcelKey;
 
     @Nullable
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
@@ -36,24 +33,13 @@ public class StagedOrderSetParcelCustomTypeActionBuilder implements Builder<Stag
     private com.commercetools.api.models.type.FieldContainer fields;
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     * set the value to the parcelId
      * @param parcelId value to be set
      * @return Builder
      */
 
-    public StagedOrderSetParcelCustomTypeActionBuilder parcelId(@Nullable final String parcelId) {
+    public StagedOrderSetParcelCustomTypeActionBuilder parcelId(final String parcelId) {
         this.parcelId = parcelId;
-        return this;
-    }
-
-    /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
-     * @param parcelKey value to be set
-     * @return Builder
-     */
-
-    public StagedOrderSetParcelCustomTypeActionBuilder parcelKey(@Nullable final String parcelKey) {
-        this.parcelKey = parcelKey;
         return this;
     }
 
@@ -106,23 +92,12 @@ public class StagedOrderSetParcelCustomTypeActionBuilder implements Builder<Stag
     }
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     * value of parcelId}
      * @return parcelId
      */
 
-    @Nullable
     public String getParcelId() {
         return this.parcelId;
-    }
-
-    /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
-     * @return parcelKey
-     */
-
-    @Nullable
-    public String getParcelKey() {
-        return this.parcelKey;
     }
 
     /**
@@ -150,7 +125,8 @@ public class StagedOrderSetParcelCustomTypeActionBuilder implements Builder<Stag
      * @return StagedOrderSetParcelCustomTypeAction
      */
     public StagedOrderSetParcelCustomTypeAction build() {
-        return new StagedOrderSetParcelCustomTypeActionImpl(parcelId, parcelKey, type, fields);
+        Objects.requireNonNull(parcelId, StagedOrderSetParcelCustomTypeAction.class + ": parcelId is missing");
+        return new StagedOrderSetParcelCustomTypeActionImpl(parcelId, type, fields);
     }
 
     /**
@@ -158,7 +134,7 @@ public class StagedOrderSetParcelCustomTypeActionBuilder implements Builder<Stag
      * @return StagedOrderSetParcelCustomTypeAction
      */
     public StagedOrderSetParcelCustomTypeAction buildUnchecked() {
-        return new StagedOrderSetParcelCustomTypeActionImpl(parcelId, parcelKey, type, fields);
+        return new StagedOrderSetParcelCustomTypeActionImpl(parcelId, type, fields);
     }
 
     /**
@@ -177,7 +153,6 @@ public class StagedOrderSetParcelCustomTypeActionBuilder implements Builder<Stag
     public static StagedOrderSetParcelCustomTypeActionBuilder of(final StagedOrderSetParcelCustomTypeAction template) {
         StagedOrderSetParcelCustomTypeActionBuilder builder = new StagedOrderSetParcelCustomTypeActionBuilder();
         builder.parcelId = template.getParcelId();
-        builder.parcelKey = template.getParcelKey();
         builder.type = template.getType();
         builder.fields = template.getFields();
         return builder;

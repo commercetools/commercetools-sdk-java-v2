@@ -16,6 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderSetParcelMeasurementsAction stagedOrderSetParcelMeasurementsAction = StagedOrderSetParcelMeasurementsAction.builder()
+ *             .parcelId("{parcelId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -23,34 +24,19 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetParcelMeasurementsActionBuilder implements Builder<StagedOrderSetParcelMeasurementsAction> {
 
-    @Nullable
     private String parcelId;
-
-    @Nullable
-    private String parcelKey;
 
     @Nullable
     private com.commercetools.api.models.order.ParcelMeasurements measurements;
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     * set the value to the parcelId
      * @param parcelId value to be set
      * @return Builder
      */
 
-    public StagedOrderSetParcelMeasurementsActionBuilder parcelId(@Nullable final String parcelId) {
+    public StagedOrderSetParcelMeasurementsActionBuilder parcelId(final String parcelId) {
         this.parcelId = parcelId;
-        return this;
-    }
-
-    /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
-     * @param parcelKey value to be set
-     * @return Builder
-     */
-
-    public StagedOrderSetParcelMeasurementsActionBuilder parcelKey(@Nullable final String parcelKey) {
-        this.parcelKey = parcelKey;
         return this;
     }
 
@@ -79,23 +65,12 @@ public class StagedOrderSetParcelMeasurementsActionBuilder implements Builder<St
     }
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     * value of parcelId}
      * @return parcelId
      */
 
-    @Nullable
     public String getParcelId() {
         return this.parcelId;
-    }
-
-    /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
-     * @return parcelKey
-     */
-
-    @Nullable
-    public String getParcelKey() {
-        return this.parcelKey;
     }
 
     /**
@@ -113,7 +88,8 @@ public class StagedOrderSetParcelMeasurementsActionBuilder implements Builder<St
      * @return StagedOrderSetParcelMeasurementsAction
      */
     public StagedOrderSetParcelMeasurementsAction build() {
-        return new StagedOrderSetParcelMeasurementsActionImpl(parcelId, parcelKey, measurements);
+        Objects.requireNonNull(parcelId, StagedOrderSetParcelMeasurementsAction.class + ": parcelId is missing");
+        return new StagedOrderSetParcelMeasurementsActionImpl(parcelId, measurements);
     }
 
     /**
@@ -121,7 +97,7 @@ public class StagedOrderSetParcelMeasurementsActionBuilder implements Builder<St
      * @return StagedOrderSetParcelMeasurementsAction
      */
     public StagedOrderSetParcelMeasurementsAction buildUnchecked() {
-        return new StagedOrderSetParcelMeasurementsActionImpl(parcelId, parcelKey, measurements);
+        return new StagedOrderSetParcelMeasurementsActionImpl(parcelId, measurements);
     }
 
     /**
@@ -141,7 +117,6 @@ public class StagedOrderSetParcelMeasurementsActionBuilder implements Builder<St
             final StagedOrderSetParcelMeasurementsAction template) {
         StagedOrderSetParcelMeasurementsActionBuilder builder = new StagedOrderSetParcelMeasurementsActionBuilder();
         builder.parcelId = template.getParcelId();
-        builder.parcelKey = template.getParcelKey();
         builder.measurements = template.getMeasurements();
         return builder;
     }

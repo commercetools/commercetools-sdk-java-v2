@@ -24,8 +24,6 @@ public class StagedOrderSetParcelCustomFieldActionImpl implements StagedOrderSet
 
     private String parcelId;
 
-    private String parcelKey;
-
     private String name;
 
     private java.lang.Object value;
@@ -35,10 +33,8 @@ public class StagedOrderSetParcelCustomFieldActionImpl implements StagedOrderSet
      */
     @JsonCreator
     StagedOrderSetParcelCustomFieldActionImpl(@JsonProperty("parcelId") final String parcelId,
-            @JsonProperty("parcelKey") final String parcelKey, @JsonProperty("name") final String name,
-            @JsonProperty("value") final java.lang.Object value) {
+            @JsonProperty("name") final String name, @JsonProperty("value") final java.lang.Object value) {
         this.parcelId = parcelId;
-        this.parcelKey = parcelKey;
         this.name = name;
         this.value = value;
         this.action = SET_PARCEL_CUSTOM_FIELD;
@@ -60,19 +56,11 @@ public class StagedOrderSetParcelCustomFieldActionImpl implements StagedOrderSet
     }
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     *
      */
 
     public String getParcelId() {
         return this.parcelId;
-    }
-
-    /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
-     */
-
-    public String getParcelKey() {
-        return this.parcelKey;
     }
 
     /**
@@ -95,10 +83,6 @@ public class StagedOrderSetParcelCustomFieldActionImpl implements StagedOrderSet
         this.parcelId = parcelId;
     }
 
-    public void setParcelKey(final String parcelKey) {
-        this.parcelKey = parcelKey;
-    }
-
     public void setName(final String name) {
         this.name = name;
     }
@@ -119,7 +103,6 @@ public class StagedOrderSetParcelCustomFieldActionImpl implements StagedOrderSet
 
         return new EqualsBuilder().append(action, that.action)
                 .append(parcelId, that.parcelId)
-                .append(parcelKey, that.parcelKey)
                 .append(name, that.name)
                 .append(value, that.value)
                 .isEquals();
@@ -127,12 +110,7 @@ public class StagedOrderSetParcelCustomFieldActionImpl implements StagedOrderSet
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action)
-                .append(parcelId)
-                .append(parcelKey)
-                .append(name)
-                .append(value)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37).append(action).append(parcelId).append(name).append(value).toHashCode();
     }
 
 }

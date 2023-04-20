@@ -4,8 +4,6 @@ package com.commercetools.api.models.order_edit;
 import java.util.*;
 import java.util.function.Function;
 
-import javax.annotation.Nullable;
-
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,6 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderSetParcelItemsAction stagedOrderSetParcelItemsAction = StagedOrderSetParcelItemsAction.builder()
+ *             .parcelId("{parcelId}")
  *             .plusItems(itemsBuilder -> itemsBuilder)
  *             .build()
  * </code></pre>
@@ -24,33 +23,18 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrderSetParcelItemsAction> {
 
-    @Nullable
     private String parcelId;
-
-    @Nullable
-    private String parcelKey;
 
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     * set the value to the parcelId
      * @param parcelId value to be set
      * @return Builder
      */
 
-    public StagedOrderSetParcelItemsActionBuilder parcelId(@Nullable final String parcelId) {
+    public StagedOrderSetParcelItemsActionBuilder parcelId(final String parcelId) {
         this.parcelId = parcelId;
-        return this;
-    }
-
-    /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
-     * @param parcelKey value to be set
-     * @return Builder
-     */
-
-    public StagedOrderSetParcelItemsActionBuilder parcelKey(@Nullable final String parcelKey) {
-        this.parcelKey = parcelKey;
         return this;
     }
 
@@ -122,23 +106,12 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
     }
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     * value of parcelId}
      * @return parcelId
      */
 
-    @Nullable
     public String getParcelId() {
         return this.parcelId;
-    }
-
-    /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
-     * @return parcelKey
-     */
-
-    @Nullable
-    public String getParcelKey() {
-        return this.parcelKey;
     }
 
     /**
@@ -155,8 +128,9 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
      * @return StagedOrderSetParcelItemsAction
      */
     public StagedOrderSetParcelItemsAction build() {
+        Objects.requireNonNull(parcelId, StagedOrderSetParcelItemsAction.class + ": parcelId is missing");
         Objects.requireNonNull(items, StagedOrderSetParcelItemsAction.class + ": items is missing");
-        return new StagedOrderSetParcelItemsActionImpl(parcelId, parcelKey, items);
+        return new StagedOrderSetParcelItemsActionImpl(parcelId, items);
     }
 
     /**
@@ -164,7 +138,7 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
      * @return StagedOrderSetParcelItemsAction
      */
     public StagedOrderSetParcelItemsAction buildUnchecked() {
-        return new StagedOrderSetParcelItemsActionImpl(parcelId, parcelKey, items);
+        return new StagedOrderSetParcelItemsActionImpl(parcelId, items);
     }
 
     /**
@@ -183,7 +157,6 @@ public class StagedOrderSetParcelItemsActionBuilder implements Builder<StagedOrd
     public static StagedOrderSetParcelItemsActionBuilder of(final StagedOrderSetParcelItemsAction template) {
         StagedOrderSetParcelItemsActionBuilder builder = new StagedOrderSetParcelItemsActionBuilder();
         builder.parcelId = template.getParcelId();
-        builder.parcelKey = template.getParcelKey();
         builder.items = template.getItems();
         return builder;
     }

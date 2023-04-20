@@ -3,8 +3,6 @@ package com.commercetools.api.models.order;
 
 import java.util.*;
 
-import javax.annotation.Nullable;
-
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -15,6 +13,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     OrderRemoveParcelFromDeliveryAction orderRemoveParcelFromDeliveryAction = OrderRemoveParcelFromDeliveryAction.builder()
+ *             .parcelId("{parcelId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -22,52 +21,26 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderRemoveParcelFromDeliveryActionBuilder implements Builder<OrderRemoveParcelFromDeliveryAction> {
 
-    @Nullable
     private String parcelId;
 
-    @Nullable
-    private String parcelKey;
-
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     * set the value to the parcelId
      * @param parcelId value to be set
      * @return Builder
      */
 
-    public OrderRemoveParcelFromDeliveryActionBuilder parcelId(@Nullable final String parcelId) {
+    public OrderRemoveParcelFromDeliveryActionBuilder parcelId(final String parcelId) {
         this.parcelId = parcelId;
         return this;
     }
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
-     * @param parcelKey value to be set
-     * @return Builder
-     */
-
-    public OrderRemoveParcelFromDeliveryActionBuilder parcelKey(@Nullable final String parcelKey) {
-        this.parcelKey = parcelKey;
-        return this;
-    }
-
-    /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     * value of parcelId}
      * @return parcelId
      */
 
-    @Nullable
     public String getParcelId() {
         return this.parcelId;
-    }
-
-    /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
-     * @return parcelKey
-     */
-
-    @Nullable
-    public String getParcelKey() {
-        return this.parcelKey;
     }
 
     /**
@@ -75,7 +48,8 @@ public class OrderRemoveParcelFromDeliveryActionBuilder implements Builder<Order
      * @return OrderRemoveParcelFromDeliveryAction
      */
     public OrderRemoveParcelFromDeliveryAction build() {
-        return new OrderRemoveParcelFromDeliveryActionImpl(parcelId, parcelKey);
+        Objects.requireNonNull(parcelId, OrderRemoveParcelFromDeliveryAction.class + ": parcelId is missing");
+        return new OrderRemoveParcelFromDeliveryActionImpl(parcelId);
     }
 
     /**
@@ -83,7 +57,7 @@ public class OrderRemoveParcelFromDeliveryActionBuilder implements Builder<Order
      * @return OrderRemoveParcelFromDeliveryAction
      */
     public OrderRemoveParcelFromDeliveryAction buildUnchecked() {
-        return new OrderRemoveParcelFromDeliveryActionImpl(parcelId, parcelKey);
+        return new OrderRemoveParcelFromDeliveryActionImpl(parcelId);
     }
 
     /**
@@ -102,7 +76,6 @@ public class OrderRemoveParcelFromDeliveryActionBuilder implements Builder<Order
     public static OrderRemoveParcelFromDeliveryActionBuilder of(final OrderRemoveParcelFromDeliveryAction template) {
         OrderRemoveParcelFromDeliveryActionBuilder builder = new OrderRemoveParcelFromDeliveryActionBuilder();
         builder.parcelId = template.getParcelId();
-        builder.parcelKey = template.getParcelKey();
         return builder;
     }
 

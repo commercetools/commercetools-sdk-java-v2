@@ -24,8 +24,6 @@ public class OrderAddParcelToDeliveryActionImpl implements OrderAddParcelToDeliv
 
     private String deliveryId;
 
-    private String parcelKey;
-
     private com.commercetools.api.models.order.ParcelMeasurements measurements;
 
     private com.commercetools.api.models.order.TrackingData trackingData;
@@ -37,12 +35,10 @@ public class OrderAddParcelToDeliveryActionImpl implements OrderAddParcelToDeliv
      */
     @JsonCreator
     OrderAddParcelToDeliveryActionImpl(@JsonProperty("deliveryId") final String deliveryId,
-            @JsonProperty("parcelKey") final String parcelKey,
             @JsonProperty("measurements") final com.commercetools.api.models.order.ParcelMeasurements measurements,
             @JsonProperty("trackingData") final com.commercetools.api.models.order.TrackingData trackingData,
             @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
         this.deliveryId = deliveryId;
-        this.parcelKey = parcelKey;
         this.measurements = measurements;
         this.trackingData = trackingData;
         this.items = items;
@@ -76,14 +72,6 @@ public class OrderAddParcelToDeliveryActionImpl implements OrderAddParcelToDeliv
      *
      */
 
-    public String getParcelKey() {
-        return this.parcelKey;
-    }
-
-    /**
-     *
-     */
-
     public com.commercetools.api.models.order.ParcelMeasurements getMeasurements() {
         return this.measurements;
     }
@@ -106,10 +94,6 @@ public class OrderAddParcelToDeliveryActionImpl implements OrderAddParcelToDeliv
 
     public void setDeliveryId(final String deliveryId) {
         this.deliveryId = deliveryId;
-    }
-
-    public void setParcelKey(final String parcelKey) {
-        this.parcelKey = parcelKey;
     }
 
     public void setMeasurements(final com.commercetools.api.models.order.ParcelMeasurements measurements) {
@@ -140,7 +124,6 @@ public class OrderAddParcelToDeliveryActionImpl implements OrderAddParcelToDeliv
 
         return new EqualsBuilder().append(action, that.action)
                 .append(deliveryId, that.deliveryId)
-                .append(parcelKey, that.parcelKey)
                 .append(measurements, that.measurements)
                 .append(trackingData, that.trackingData)
                 .append(items, that.items)
@@ -151,7 +134,6 @@ public class OrderAddParcelToDeliveryActionImpl implements OrderAddParcelToDeliv
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(action)
                 .append(deliveryId)
-                .append(parcelKey)
                 .append(measurements)
                 .append(trackingData)
                 .append(items)

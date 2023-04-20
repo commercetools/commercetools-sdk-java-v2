@@ -7,6 +7,7 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     StagedOrderSetParcelCustomTypeAction stagedOrderSetParcelCustomTypeAction = StagedOrderSetParcelCustomTypeAction.builder()
+ *             .parcelId("{parcelId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -38,20 +40,12 @@ public interface StagedOrderSetParcelCustomTypeAction extends StagedOrderUpdateA
     String SET_PARCEL_CUSTOM_TYPE = "setParcelCustomType";
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     *
      * @return parcelId
      */
-
+    @NotNull
     @JsonProperty("parcelId")
     public String getParcelId();
-
-    /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
-     * @return parcelKey
-     */
-
-    @JsonProperty("parcelKey")
-    public String getParcelKey();
 
     /**
      *  <p>Defines the Type that extends the Parcel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Parcel.</p>
@@ -70,18 +64,11 @@ public interface StagedOrderSetParcelCustomTypeAction extends StagedOrderUpdateA
     public FieldContainer getFields();
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     * set parcelId
      * @param parcelId value to be set
      */
 
     public void setParcelId(final String parcelId);
-
-    /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
-     * @param parcelKey value to be set
-     */
-
-    public void setParcelKey(final String parcelKey);
 
     /**
      *  <p>Defines the Type that extends the Parcel with Custom Fields. If absent, any existing Type and Custom Fields are removed from the Parcel.</p>
@@ -113,7 +100,6 @@ public interface StagedOrderSetParcelCustomTypeAction extends StagedOrderUpdateA
     public static StagedOrderSetParcelCustomTypeAction of(final StagedOrderSetParcelCustomTypeAction template) {
         StagedOrderSetParcelCustomTypeActionImpl instance = new StagedOrderSetParcelCustomTypeActionImpl();
         instance.setParcelId(template.getParcelId());
-        instance.setParcelKey(template.getParcelKey());
         instance.setType(template.getType());
         instance.setFields(template.getFields());
         return instance;
@@ -132,7 +118,6 @@ public interface StagedOrderSetParcelCustomTypeAction extends StagedOrderUpdateA
         }
         StagedOrderSetParcelCustomTypeActionImpl instance = new StagedOrderSetParcelCustomTypeActionImpl();
         instance.setParcelId(template.getParcelId());
-        instance.setParcelKey(template.getParcelKey());
         instance.setType(com.commercetools.api.models.type.TypeResourceIdentifier.deepCopy(template.getType()));
         instance.setFields(com.commercetools.api.models.type.FieldContainer.deepCopy(template.getFields()));
         return instance;

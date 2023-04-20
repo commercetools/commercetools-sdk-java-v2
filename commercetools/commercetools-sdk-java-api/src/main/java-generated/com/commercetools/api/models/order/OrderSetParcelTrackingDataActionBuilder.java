@@ -16,6 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     OrderSetParcelTrackingDataAction orderSetParcelTrackingDataAction = OrderSetParcelTrackingDataAction.builder()
+ *             .parcelId("{parcelId}")
  *             .build()
  * </code></pre>
  * </div>
@@ -23,34 +24,19 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSetParcelTrackingDataActionBuilder implements Builder<OrderSetParcelTrackingDataAction> {
 
-    @Nullable
     private String parcelId;
-
-    @Nullable
-    private String parcelKey;
 
     @Nullable
     private com.commercetools.api.models.order.TrackingData trackingData;
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     * set the value to the parcelId
      * @param parcelId value to be set
      * @return Builder
      */
 
-    public OrderSetParcelTrackingDataActionBuilder parcelId(@Nullable final String parcelId) {
+    public OrderSetParcelTrackingDataActionBuilder parcelId(final String parcelId) {
         this.parcelId = parcelId;
-        return this;
-    }
-
-    /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
-     * @param parcelKey value to be set
-     * @return Builder
-     */
-
-    public OrderSetParcelTrackingDataActionBuilder parcelKey(@Nullable final String parcelKey) {
-        this.parcelKey = parcelKey;
         return this;
     }
 
@@ -79,23 +65,12 @@ public class OrderSetParcelTrackingDataActionBuilder implements Builder<OrderSet
     }
 
     /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     * value of parcelId}
      * @return parcelId
      */
 
-    @Nullable
     public String getParcelId() {
         return this.parcelId;
-    }
-
-    /**
-     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
-     * @return parcelKey
-     */
-
-    @Nullable
-    public String getParcelKey() {
-        return this.parcelKey;
     }
 
     /**
@@ -113,7 +88,8 @@ public class OrderSetParcelTrackingDataActionBuilder implements Builder<OrderSet
      * @return OrderSetParcelTrackingDataAction
      */
     public OrderSetParcelTrackingDataAction build() {
-        return new OrderSetParcelTrackingDataActionImpl(parcelId, parcelKey, trackingData);
+        Objects.requireNonNull(parcelId, OrderSetParcelTrackingDataAction.class + ": parcelId is missing");
+        return new OrderSetParcelTrackingDataActionImpl(parcelId, trackingData);
     }
 
     /**
@@ -121,7 +97,7 @@ public class OrderSetParcelTrackingDataActionBuilder implements Builder<OrderSet
      * @return OrderSetParcelTrackingDataAction
      */
     public OrderSetParcelTrackingDataAction buildUnchecked() {
-        return new OrderSetParcelTrackingDataActionImpl(parcelId, parcelKey, trackingData);
+        return new OrderSetParcelTrackingDataActionImpl(parcelId, trackingData);
     }
 
     /**
@@ -140,7 +116,6 @@ public class OrderSetParcelTrackingDataActionBuilder implements Builder<OrderSet
     public static OrderSetParcelTrackingDataActionBuilder of(final OrderSetParcelTrackingDataAction template) {
         OrderSetParcelTrackingDataActionBuilder builder = new OrderSetParcelTrackingDataActionBuilder();
         builder.parcelId = template.getParcelId();
-        builder.parcelKey = template.getParcelKey();
         builder.trackingData = template.getTrackingData();
         return builder;
     }

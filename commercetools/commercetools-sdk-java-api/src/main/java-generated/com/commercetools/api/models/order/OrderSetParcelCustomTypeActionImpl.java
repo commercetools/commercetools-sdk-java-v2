@@ -24,6 +24,8 @@ public class OrderSetParcelCustomTypeActionImpl implements OrderSetParcelCustomT
 
     private String parcelId;
 
+    private String parcelKey;
+
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
 
     private com.commercetools.api.models.type.FieldContainer fields;
@@ -33,9 +35,11 @@ public class OrderSetParcelCustomTypeActionImpl implements OrderSetParcelCustomT
      */
     @JsonCreator
     OrderSetParcelCustomTypeActionImpl(@JsonProperty("parcelId") final String parcelId,
+            @JsonProperty("parcelKey") final String parcelKey,
             @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
             @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
         this.parcelId = parcelId;
+        this.parcelKey = parcelKey;
         this.type = type;
         this.fields = fields;
         this.action = SET_PARCEL_CUSTOM_TYPE;
@@ -57,11 +61,19 @@ public class OrderSetParcelCustomTypeActionImpl implements OrderSetParcelCustomT
     }
 
     /**
-     *
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
      */
 
     public String getParcelId() {
         return this.parcelId;
+    }
+
+    /**
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     */
+
+    public String getParcelKey() {
+        return this.parcelKey;
     }
 
     /**
@@ -84,6 +96,10 @@ public class OrderSetParcelCustomTypeActionImpl implements OrderSetParcelCustomT
         this.parcelId = parcelId;
     }
 
+    public void setParcelKey(final String parcelKey) {
+        this.parcelKey = parcelKey;
+    }
+
     public void setType(final com.commercetools.api.models.type.TypeResourceIdentifier type) {
         this.type = type;
     }
@@ -104,6 +120,7 @@ public class OrderSetParcelCustomTypeActionImpl implements OrderSetParcelCustomT
 
         return new EqualsBuilder().append(action, that.action)
                 .append(parcelId, that.parcelId)
+                .append(parcelKey, that.parcelKey)
                 .append(type, that.type)
                 .append(fields, that.fields)
                 .isEquals();
@@ -111,7 +128,12 @@ public class OrderSetParcelCustomTypeActionImpl implements OrderSetParcelCustomT
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(parcelId).append(type).append(fields).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(parcelId)
+                .append(parcelKey)
+                .append(type)
+                .append(fields)
+                .toHashCode();
     }
 
 }

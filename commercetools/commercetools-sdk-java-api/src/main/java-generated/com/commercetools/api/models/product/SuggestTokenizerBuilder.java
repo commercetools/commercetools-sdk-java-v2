@@ -26,4 +26,5 @@ public class SuggestTokenizerBuilder {
     public static SuggestTokenizerBuilder of() {
         return new SuggestTokenizerBuilder();
     }
+
 }

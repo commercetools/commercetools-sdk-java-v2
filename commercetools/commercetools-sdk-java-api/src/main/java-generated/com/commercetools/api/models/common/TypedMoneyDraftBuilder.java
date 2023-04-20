@@ -26,4 +26,5 @@ public class TypedMoneyDraftBuilder {
     public static TypedMoneyDraftBuilder of() {
         return new TypedMoneyDraftBuilder();
     }
+
 }

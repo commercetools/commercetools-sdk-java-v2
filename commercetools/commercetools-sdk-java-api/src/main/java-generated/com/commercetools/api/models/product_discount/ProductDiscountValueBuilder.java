@@ -30,4 +30,5 @@ public class ProductDiscountValueBuilder {
     public static ProductDiscountValueBuilder of() {
         return new ProductDiscountValueBuilder();
     }
+
 }

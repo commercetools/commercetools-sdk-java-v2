@@ -98,4 +98,5 @@ public class ProductTypeUpdateActionBuilder {
     public static ProductTypeUpdateActionBuilder of() {
         return new ProductTypeUpdateActionBuilder();
     }
+
 }

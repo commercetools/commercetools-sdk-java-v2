@@ -46,4 +46,5 @@ public class StandalonePriceUpdateActionBuilder {
     public static StandalonePriceUpdateActionBuilder of() {
         return new StandalonePriceUpdateActionBuilder();
     }
+
 }

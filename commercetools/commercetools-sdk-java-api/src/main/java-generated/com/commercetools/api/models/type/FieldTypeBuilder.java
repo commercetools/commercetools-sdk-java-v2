@@ -66,4 +66,5 @@ public class FieldTypeBuilder {
     public static FieldTypeBuilder of() {
         return new FieldTypeBuilder();
     }
+
 }

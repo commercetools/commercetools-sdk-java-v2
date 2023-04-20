@@ -70,4 +70,5 @@ public class DiscountCodeUpdateActionBuilder {
     public static DiscountCodeUpdateActionBuilder of() {
         return new DiscountCodeUpdateActionBuilder();
     }
+
 }

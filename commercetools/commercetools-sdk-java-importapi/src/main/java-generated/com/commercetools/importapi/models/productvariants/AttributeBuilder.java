@@ -106,4 +106,5 @@ public class AttributeBuilder {
     public static AttributeBuilder of() {
         return new AttributeBuilder();
     }
+
 }

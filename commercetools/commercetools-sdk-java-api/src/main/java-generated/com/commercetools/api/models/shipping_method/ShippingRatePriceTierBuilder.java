@@ -30,4 +30,5 @@ public class ShippingRatePriceTierBuilder {
     public static ShippingRatePriceTierBuilder of() {
         return new ShippingRatePriceTierBuilder();
     }
+
 }

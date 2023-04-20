@@ -51,6 +51,14 @@ public interface StagedOrderAddParcelToDeliveryAction extends StagedOrderUpdateA
 
     /**
      *
+     * @return parcelKey
+     */
+
+    @JsonProperty("parcelKey")
+    public String getParcelKey();
+
+    /**
+     *
      * @return measurements
      */
     @Valid
@@ -79,6 +87,13 @@ public interface StagedOrderAddParcelToDeliveryAction extends StagedOrderUpdateA
      */
 
     public void setDeliveryId(final String deliveryId);
+
+    /**
+     * set parcelKey
+     * @param parcelKey value to be set
+     */
+
+    public void setParcelKey(final String parcelKey);
 
     /**
      * set measurements
@@ -125,6 +140,7 @@ public interface StagedOrderAddParcelToDeliveryAction extends StagedOrderUpdateA
     public static StagedOrderAddParcelToDeliveryAction of(final StagedOrderAddParcelToDeliveryAction template) {
         StagedOrderAddParcelToDeliveryActionImpl instance = new StagedOrderAddParcelToDeliveryActionImpl();
         instance.setDeliveryId(template.getDeliveryId());
+        instance.setParcelKey(template.getParcelKey());
         instance.setMeasurements(template.getMeasurements());
         instance.setTrackingData(template.getTrackingData());
         instance.setItems(template.getItems());
@@ -144,6 +160,7 @@ public interface StagedOrderAddParcelToDeliveryAction extends StagedOrderUpdateA
         }
         StagedOrderAddParcelToDeliveryActionImpl instance = new StagedOrderAddParcelToDeliveryActionImpl();
         instance.setDeliveryId(template.getDeliveryId());
+        instance.setParcelKey(template.getParcelKey());
         instance.setMeasurements(
             com.commercetools.api.models.order.ParcelMeasurements.deepCopy(template.getMeasurements()));
         instance.setTrackingData(com.commercetools.api.models.order.TrackingData.deepCopy(template.getTrackingData()));

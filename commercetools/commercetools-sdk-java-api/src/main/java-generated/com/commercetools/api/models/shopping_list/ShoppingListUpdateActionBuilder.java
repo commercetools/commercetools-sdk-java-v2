@@ -115,4 +115,5 @@ public class ShoppingListUpdateActionBuilder {
     public static ShoppingListUpdateActionBuilder of() {
         return new ShoppingListUpdateActionBuilder();
     }
+
 }

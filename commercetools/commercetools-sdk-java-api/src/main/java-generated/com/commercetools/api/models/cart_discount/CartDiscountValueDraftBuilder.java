@@ -34,4 +34,5 @@ public class CartDiscountValueDraftBuilder {
     public static CartDiscountValueDraftBuilder of() {
         return new CartDiscountValueDraftBuilder();
     }
+
 }

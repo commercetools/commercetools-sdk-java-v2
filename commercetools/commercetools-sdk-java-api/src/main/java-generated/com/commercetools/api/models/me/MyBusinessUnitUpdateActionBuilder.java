@@ -90,4 +90,5 @@ public class MyBusinessUnitUpdateActionBuilder {
     public static MyBusinessUnitUpdateActionBuilder of() {
         return new MyBusinessUnitUpdateActionBuilder();
     }
+
 }

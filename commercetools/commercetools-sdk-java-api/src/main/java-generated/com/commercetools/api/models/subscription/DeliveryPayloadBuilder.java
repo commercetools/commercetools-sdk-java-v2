@@ -34,4 +34,5 @@ public class DeliveryPayloadBuilder {
     public static DeliveryPayloadBuilder of() {
         return new DeliveryPayloadBuilder();
     }
+
 }

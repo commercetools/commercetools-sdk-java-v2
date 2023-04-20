@@ -134,4 +134,5 @@ public class ResourceIdentifierBuilder {
     public static ResourceIdentifierBuilder of() {
         return new ResourceIdentifierBuilder();
     }
+
 }

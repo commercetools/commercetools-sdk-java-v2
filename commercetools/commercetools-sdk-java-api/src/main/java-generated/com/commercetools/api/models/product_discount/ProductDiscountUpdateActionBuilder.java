@@ -58,4 +58,5 @@ public class ProductDiscountUpdateActionBuilder {
     public static ProductDiscountUpdateActionBuilder of() {
         return new ProductDiscountUpdateActionBuilder();
     }
+
 }

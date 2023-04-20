@@ -38,4 +38,5 @@ public class CartDiscountTargetBuilder {
     public static CartDiscountTargetBuilder of() {
         return new CartDiscountTargetBuilder();
     }
+
 }

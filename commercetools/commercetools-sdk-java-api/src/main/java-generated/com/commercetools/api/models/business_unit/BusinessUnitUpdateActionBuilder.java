@@ -118,4 +118,5 @@ public class BusinessUnitUpdateActionBuilder {
     public static BusinessUnitUpdateActionBuilder of() {
         return new BusinessUnitUpdateActionBuilder();
     }
+
 }

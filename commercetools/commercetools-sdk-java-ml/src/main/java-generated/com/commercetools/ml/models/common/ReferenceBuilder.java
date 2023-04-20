@@ -30,4 +30,5 @@ public class ReferenceBuilder {
     public static ReferenceBuilder of() {
         return new ReferenceBuilder();
     }
+
 }

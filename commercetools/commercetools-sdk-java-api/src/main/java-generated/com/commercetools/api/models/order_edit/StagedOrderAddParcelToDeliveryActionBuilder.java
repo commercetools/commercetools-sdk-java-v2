@@ -27,6 +27,9 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     private String deliveryId;
 
     @Nullable
+    private String parcelKey;
+
+    @Nullable
     private com.commercetools.api.models.order.ParcelMeasurements measurements;
 
     @Nullable
@@ -43,6 +46,17 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
 
     public StagedOrderAddParcelToDeliveryActionBuilder deliveryId(final String deliveryId) {
         this.deliveryId = deliveryId;
+        return this;
+    }
+
+    /**
+     * set the value to the parcelKey
+     * @param parcelKey value to be set
+     * @return Builder
+     */
+
+    public StagedOrderAddParcelToDeliveryActionBuilder parcelKey(@Nullable final String parcelKey) {
+        this.parcelKey = parcelKey;
         return this;
     }
 
@@ -171,6 +185,16 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
+     * value of parcelKey}
+     * @return parcelKey
+     */
+
+    @Nullable
+    public String getParcelKey() {
+        return this.parcelKey;
+    }
+
+    /**
      * value of measurements}
      * @return measurements
      */
@@ -206,7 +230,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
      */
     public StagedOrderAddParcelToDeliveryAction build() {
         Objects.requireNonNull(deliveryId, StagedOrderAddParcelToDeliveryAction.class + ": deliveryId is missing");
-        return new StagedOrderAddParcelToDeliveryActionImpl(deliveryId, measurements, trackingData, items);
+        return new StagedOrderAddParcelToDeliveryActionImpl(deliveryId, parcelKey, measurements, trackingData, items);
     }
 
     /**
@@ -214,7 +238,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
      * @return StagedOrderAddParcelToDeliveryAction
      */
     public StagedOrderAddParcelToDeliveryAction buildUnchecked() {
-        return new StagedOrderAddParcelToDeliveryActionImpl(deliveryId, measurements, trackingData, items);
+        return new StagedOrderAddParcelToDeliveryActionImpl(deliveryId, parcelKey, measurements, trackingData, items);
     }
 
     /**
@@ -233,6 +257,7 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     public static StagedOrderAddParcelToDeliveryActionBuilder of(final StagedOrderAddParcelToDeliveryAction template) {
         StagedOrderAddParcelToDeliveryActionBuilder builder = new StagedOrderAddParcelToDeliveryActionBuilder();
         builder.deliveryId = template.getDeliveryId();
+        builder.parcelKey = template.getParcelKey();
         builder.measurements = template.getMeasurements();
         builder.trackingData = template.getTrackingData();
         builder.items = template.getItems();

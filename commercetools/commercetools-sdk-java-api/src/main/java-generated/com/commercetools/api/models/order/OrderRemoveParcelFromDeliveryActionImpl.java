@@ -24,12 +24,16 @@ public class OrderRemoveParcelFromDeliveryActionImpl implements OrderRemoveParce
 
     private String parcelId;
 
+    private String parcelKey;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
-    OrderRemoveParcelFromDeliveryActionImpl(@JsonProperty("parcelId") final String parcelId) {
+    OrderRemoveParcelFromDeliveryActionImpl(@JsonProperty("parcelId") final String parcelId,
+            @JsonProperty("parcelKey") final String parcelKey) {
         this.parcelId = parcelId;
+        this.parcelKey = parcelKey;
         this.action = REMOVE_PARCEL_FROM_DELIVERY;
     }
 
@@ -49,15 +53,27 @@ public class OrderRemoveParcelFromDeliveryActionImpl implements OrderRemoveParce
     }
 
     /**
-     *
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
      */
 
     public String getParcelId() {
         return this.parcelId;
     }
 
+    /**
+     *  <p>Either <code>parcelId</code> or <code>parcelKey</code> is required for this update action.</p>
+     */
+
+    public String getParcelKey() {
+        return this.parcelKey;
+    }
+
     public void setParcelId(final String parcelId) {
         this.parcelId = parcelId;
+    }
+
+    public void setParcelKey(final String parcelKey) {
+        this.parcelKey = parcelKey;
     }
 
     @Override
@@ -70,12 +86,15 @@ public class OrderRemoveParcelFromDeliveryActionImpl implements OrderRemoveParce
 
         OrderRemoveParcelFromDeliveryActionImpl that = (OrderRemoveParcelFromDeliveryActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(parcelId, that.parcelId).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(parcelId, that.parcelId)
+                .append(parcelKey, that.parcelKey)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(parcelId).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action).append(parcelId).append(parcelKey).toHashCode();
     }
 
 }

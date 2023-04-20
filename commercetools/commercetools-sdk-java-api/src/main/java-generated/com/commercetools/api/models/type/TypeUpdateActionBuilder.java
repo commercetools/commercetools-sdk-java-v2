@@ -74,4 +74,5 @@ public class TypeUpdateActionBuilder {
     public static TypeUpdateActionBuilder of() {
         return new TypeUpdateActionBuilder();
     }
+
 }

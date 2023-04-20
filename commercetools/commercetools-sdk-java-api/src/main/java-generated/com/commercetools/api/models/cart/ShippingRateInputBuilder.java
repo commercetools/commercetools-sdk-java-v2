@@ -26,4 +26,5 @@ public class ShippingRateInputBuilder {
     public static ShippingRateInputBuilder of() {
         return new ShippingRateInputBuilder();
     }
+
 }

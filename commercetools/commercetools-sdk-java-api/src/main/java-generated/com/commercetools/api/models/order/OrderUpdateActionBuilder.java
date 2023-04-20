@@ -246,4 +246,5 @@ public class OrderUpdateActionBuilder {
     public static OrderUpdateActionBuilder of() {
         return new OrderUpdateActionBuilder();
     }
+
 }

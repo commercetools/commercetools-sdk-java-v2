@@ -26,4 +26,5 @@ public class BusinessUnitDraftBuilder {
     public static BusinessUnitDraftBuilder of() {
         return new BusinessUnitDraftBuilder();
     }
+
 }

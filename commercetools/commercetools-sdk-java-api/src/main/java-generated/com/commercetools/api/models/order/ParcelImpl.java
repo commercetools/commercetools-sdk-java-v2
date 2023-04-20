@@ -22,6 +22,8 @@ public class ParcelImpl implements Parcel, ModelBase {
 
     private String id;
 
+    private String key;
+
     private java.time.ZonedDateTime createdAt;
 
     private com.commercetools.api.models.order.ParcelMeasurements measurements;
@@ -36,12 +38,14 @@ public class ParcelImpl implements Parcel, ModelBase {
      * create instance with all properties
      */
     @JsonCreator
-    ParcelImpl(@JsonProperty("id") final String id, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
+    ParcelImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key,
+            @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
             @JsonProperty("measurements") final com.commercetools.api.models.order.ParcelMeasurements measurements,
             @JsonProperty("trackingData") final com.commercetools.api.models.order.TrackingData trackingData,
             @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
         this.id = id;
+        this.key = key;
         this.createdAt = createdAt;
         this.measurements = measurements;
         this.trackingData = trackingData;
@@ -61,6 +65,14 @@ public class ParcelImpl implements Parcel, ModelBase {
 
     public String getId() {
         return this.id;
+    }
+
+    /**
+     *  <p>User-defined unique identifier of the Parcel.</p>
+     */
+
+    public String getKey() {
+        return this.key;
     }
 
     /**
@@ -107,6 +119,10 @@ public class ParcelImpl implements Parcel, ModelBase {
         this.id = id;
     }
 
+    public void setKey(final String key) {
+        this.key = key;
+    }
+
     public void setCreatedAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
     }
@@ -142,6 +158,7 @@ public class ParcelImpl implements Parcel, ModelBase {
         ParcelImpl that = (ParcelImpl) o;
 
         return new EqualsBuilder().append(id, that.id)
+                .append(key, that.key)
                 .append(createdAt, that.createdAt)
                 .append(measurements, that.measurements)
                 .append(trackingData, that.trackingData)
@@ -153,6 +170,7 @@ public class ParcelImpl implements Parcel, ModelBase {
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(id)
+                .append(key)
                 .append(createdAt)
                 .append(measurements)
                 .append(trackingData)

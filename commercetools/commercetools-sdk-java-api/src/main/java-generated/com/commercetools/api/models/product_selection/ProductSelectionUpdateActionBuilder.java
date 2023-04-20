@@ -54,4 +54,5 @@ public class ProductSelectionUpdateActionBuilder {
     public static ProductSelectionUpdateActionBuilder of() {
         return new ProductSelectionUpdateActionBuilder();
     }
+
 }

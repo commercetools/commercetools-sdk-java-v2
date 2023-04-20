@@ -30,4 +30,5 @@ public class ShippingRateInputTypeBuilder {
     public static ShippingRateInputTypeBuilder of() {
         return new ShippingRateInputTypeBuilder();
     }
+
 }

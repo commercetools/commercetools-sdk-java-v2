@@ -34,4 +34,5 @@ public class QuoteRequestUpdateActionBuilder {
     public static QuoteRequestUpdateActionBuilder of() {
         return new QuoteRequestUpdateActionBuilder();
     }
+
 }

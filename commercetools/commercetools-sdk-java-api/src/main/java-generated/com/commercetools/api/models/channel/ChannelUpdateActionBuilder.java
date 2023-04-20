@@ -66,4 +66,5 @@ public class ChannelUpdateActionBuilder {
     public static ChannelUpdateActionBuilder of() {
         return new ChannelUpdateActionBuilder();
     }
+
 }

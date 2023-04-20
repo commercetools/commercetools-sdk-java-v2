@@ -26,4 +26,5 @@ public class BusinessUnitBuilder {
     public static BusinessUnitBuilder of() {
         return new BusinessUnitBuilder();
     }
+
 }

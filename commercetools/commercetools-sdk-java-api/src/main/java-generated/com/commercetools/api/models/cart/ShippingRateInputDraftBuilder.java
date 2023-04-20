@@ -26,4 +26,5 @@ public class ShippingRateInputDraftBuilder {
     public static ShippingRateInputDraftBuilder of() {
         return new ShippingRateInputDraftBuilder();
     }
+
 }

@@ -30,4 +30,5 @@ public class ProductDiscountValueDraftBuilder {
     public static ProductDiscountValueDraftBuilder of() {
         return new ProductDiscountValueDraftBuilder();
     }
+
 }

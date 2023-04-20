@@ -65,6 +65,14 @@ public interface ParcelDraft extends com.commercetools.api.models.CustomizableDr
     public CustomFieldsDraft getCustom();
 
     /**
+     *  <p>User-defined unique identifier of the Parcel.</p>
+     * @return key
+     */
+
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
      * set measurements
      * @param measurements value to be set
      */
@@ -101,6 +109,13 @@ public interface ParcelDraft extends com.commercetools.api.models.CustomizableDr
     public void setCustom(final CustomFieldsDraft custom);
 
     /**
+     *  <p>User-defined unique identifier of the Parcel.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
+
+    /**
      * factory method
      * @return instance of ParcelDraft
      */
@@ -119,6 +134,7 @@ public interface ParcelDraft extends com.commercetools.api.models.CustomizableDr
         instance.setTrackingData(template.getTrackingData());
         instance.setItems(template.getItems());
         instance.setCustom(template.getCustom());
+        instance.setKey(template.getKey());
         return instance;
     }
 
@@ -142,6 +158,7 @@ public interface ParcelDraft extends com.commercetools.api.models.CustomizableDr
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setKey(template.getKey());
         return instance;
     }
 

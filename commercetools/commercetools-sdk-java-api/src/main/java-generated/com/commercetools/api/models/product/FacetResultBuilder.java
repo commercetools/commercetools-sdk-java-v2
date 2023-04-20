@@ -30,4 +30,5 @@ public class FacetResultBuilder {
     public static FacetResultBuilder of() {
         return new FacetResultBuilder();
     }
+
 }

@@ -38,4 +38,5 @@ public class QuoteUpdateActionBuilder {
     public static QuoteUpdateActionBuilder of() {
         return new QuoteUpdateActionBuilder();
     }
+
 }

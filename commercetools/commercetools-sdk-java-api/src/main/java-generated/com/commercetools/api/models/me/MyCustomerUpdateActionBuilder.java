@@ -102,4 +102,5 @@ public class MyCustomerUpdateActionBuilder {
     public static MyCustomerUpdateActionBuilder of() {
         return new MyCustomerUpdateActionBuilder();
     }
+
 }

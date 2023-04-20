@@ -106,4 +106,5 @@ public class ErrorObjectBuilder {
     public static ErrorObjectBuilder of() {
         return new ErrorObjectBuilder();
     }
+
 }

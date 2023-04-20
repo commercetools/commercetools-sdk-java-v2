@@ -94,4 +94,5 @@ public class MyShoppingListUpdateActionBuilder {
     public static MyShoppingListUpdateActionBuilder of() {
         return new MyShoppingListUpdateActionBuilder();
     }
+
 }

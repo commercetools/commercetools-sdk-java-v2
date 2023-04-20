@@ -130,4 +130,5 @@ public class MyCartUpdateActionBuilder {
     public static MyCartUpdateActionBuilder of() {
         return new MyCartUpdateActionBuilder();
     }
+
 }

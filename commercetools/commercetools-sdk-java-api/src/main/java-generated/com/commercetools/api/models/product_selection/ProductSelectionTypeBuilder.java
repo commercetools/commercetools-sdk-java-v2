@@ -27,4 +27,5 @@ public class ProductSelectionTypeBuilder {
     public static ProductSelectionTypeBuilder of() {
         return new ProductSelectionTypeBuilder();
     }
+
 }

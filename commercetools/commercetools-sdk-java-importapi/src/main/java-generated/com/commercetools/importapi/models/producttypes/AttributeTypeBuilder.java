@@ -70,4 +70,5 @@ public class AttributeTypeBuilder {
     public static AttributeTypeBuilder of() {
         return new AttributeTypeBuilder();
     }
+
 }

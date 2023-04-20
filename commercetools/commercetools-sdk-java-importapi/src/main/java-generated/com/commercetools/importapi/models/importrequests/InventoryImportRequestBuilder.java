@@ -95,6 +95,28 @@ public class InventoryImportRequestBuilder implements Builder<InventoryImportReq
 
     /**
      *  <p>The inventory import resources of this request.</p>
+     * @param builder function to build the resources value
+     * @return Builder
+     */
+
+    public InventoryImportRequestBuilder addResources(
+            Function<com.commercetools.importapi.models.inventories.InventoryImportBuilder, com.commercetools.importapi.models.inventories.InventoryImport> builder) {
+        return plusResources(builder.apply(com.commercetools.importapi.models.inventories.InventoryImportBuilder.of()));
+    }
+
+    /**
+     *  <p>The inventory import resources of this request.</p>
+     * @param builder function to build the resources value
+     * @return Builder
+     */
+
+    public InventoryImportRequestBuilder setResources(
+            Function<com.commercetools.importapi.models.inventories.InventoryImportBuilder, com.commercetools.importapi.models.inventories.InventoryImport> builder) {
+        return resources(builder.apply(com.commercetools.importapi.models.inventories.InventoryImportBuilder.of()));
+    }
+
+    /**
+     *  <p>The inventory import resources of this request.</p>
      * @return resources
      */
 

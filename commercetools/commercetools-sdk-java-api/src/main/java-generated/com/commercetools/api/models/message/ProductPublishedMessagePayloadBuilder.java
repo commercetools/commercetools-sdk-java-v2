@@ -81,6 +81,18 @@ public class ProductPublishedMessagePayloadBuilder implements Builder<ProductPub
 
     /**
      *  <p>Current Product Projection of the Product at the time of creation.</p>
+     * @param builder function to build the productProjection value
+     * @return Builder
+     */
+
+    public ProductPublishedMessagePayloadBuilder withProductProjection(
+            Function<com.commercetools.api.models.product.ProductProjectionBuilder, com.commercetools.api.models.product.ProductProjection> builder) {
+        this.productProjection = builder.apply(com.commercetools.api.models.product.ProductProjectionBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Current Product Projection of the Product at the time of creation.</p>
      * @param productProjection value to be set
      * @return Builder
      */

@@ -139,6 +139,28 @@ public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarPr
     }
 
     /**
+     * add the value to the results using the builder function
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public SimilarProductsPagedQueryResultBuilder addResults(
+            Function<com.commercetools.ml.models.similar_products.SimilarProductPairBuilder, com.commercetools.ml.models.similar_products.SimilarProductPair> builder) {
+        return plusResults(builder.apply(com.commercetools.ml.models.similar_products.SimilarProductPairBuilder.of()));
+    }
+
+    /**
+     * set the value to the results using the builder function
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public SimilarProductsPagedQueryResultBuilder setResults(
+            Function<com.commercetools.ml.models.similar_products.SimilarProductPairBuilder, com.commercetools.ml.models.similar_products.SimilarProductPair> builder) {
+        return results(builder.apply(com.commercetools.ml.models.similar_products.SimilarProductPairBuilder.of()));
+    }
+
+    /**
      * set the value to the meta using the builder function
      * @param builder function to build the meta value
      * @return Builder
@@ -149,6 +171,19 @@ public class SimilarProductsPagedQueryResultBuilder implements Builder<SimilarPr
         this.meta = builder
                 .apply(com.commercetools.ml.models.similar_products.SimilarProductSearchRequestMetaBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     * set the value to the meta using the builder function
+     * @param builder function to build the meta value
+     * @return Builder
+     */
+
+    public SimilarProductsPagedQueryResultBuilder withMeta(
+            Function<com.commercetools.ml.models.similar_products.SimilarProductSearchRequestMetaBuilder, com.commercetools.ml.models.similar_products.SimilarProductSearchRequestMeta> builder) {
+        this.meta = builder
+                .apply(com.commercetools.ml.models.similar_products.SimilarProductSearchRequestMetaBuilder.of());
         return this;
     }
 

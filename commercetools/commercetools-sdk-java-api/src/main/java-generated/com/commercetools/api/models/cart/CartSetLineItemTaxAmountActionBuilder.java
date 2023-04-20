@@ -58,6 +58,18 @@ public class CartSetLineItemTaxAmountActionBuilder implements Builder<CartSetLin
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @param builder function to build the externalTaxAmount value
+     * @return Builder
+     */
+
+    public CartSetLineItemTaxAmountActionBuilder withExternalTaxAmount(
+            Function<com.commercetools.api.models.cart.ExternalTaxAmountDraftBuilder, com.commercetools.api.models.cart.ExternalTaxAmountDraft> builder) {
+        this.externalTaxAmount = builder.apply(com.commercetools.api.models.cart.ExternalTaxAmountDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param externalTaxAmount value to be set
      * @return Builder
      */

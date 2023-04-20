@@ -128,6 +128,28 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
     }
 
     /**
+     *  <p>Delivery Items after the Set Parcel Items update action.</p>
+     * @param builder function to build the items value
+     * @return Builder
+     */
+
+    public ParcelItemsUpdatedMessagePayloadBuilder addItems(
+            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItem> builder) {
+        return plusItems(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()));
+    }
+
+    /**
+     *  <p>Delivery Items after the Set Parcel Items update action.</p>
+     * @param builder function to build the items value
+     * @return Builder
+     */
+
+    public ParcelItemsUpdatedMessagePayloadBuilder setItems(
+            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItem> builder) {
+        return items(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()));
+    }
+
+    /**
      *  <p>Delivery Items before the Set Parcel Items update action.</p>
      * @param oldItems value to be set
      * @return Builder
@@ -192,6 +214,28 @@ public class ParcelItemsUpdatedMessagePayloadBuilder implements Builder<ParcelIt
         this.oldItems = new ArrayList<>();
         this.oldItems.add(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Delivery Items before the Set Parcel Items update action.</p>
+     * @param builder function to build the oldItems value
+     * @return Builder
+     */
+
+    public ParcelItemsUpdatedMessagePayloadBuilder addOldItems(
+            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItem> builder) {
+        return plusOldItems(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()));
+    }
+
+    /**
+     *  <p>Delivery Items before the Set Parcel Items update action.</p>
+     * @param builder function to build the oldItems value
+     * @return Builder
+     */
+
+    public ParcelItemsUpdatedMessagePayloadBuilder setOldItems(
+            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItem> builder) {
+        return oldItems(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()));
     }
 
     /**

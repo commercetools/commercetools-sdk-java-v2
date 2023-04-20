@@ -79,6 +79,18 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
 
     /**
      *  <p>ResourceIdentifier of the Cart from which this order is created.</p>
+     * @param builder function to build the cart value
+     * @return Builder
+     */
+
+    public OrderFromCartDraftBuilder withCart(
+            Function<com.commercetools.api.models.cart.CartResourceIdentifierBuilder, com.commercetools.api.models.cart.CartResourceIdentifier> builder) {
+        this.cart = builder.apply(com.commercetools.api.models.cart.CartResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>ResourceIdentifier of the Cart from which this order is created.</p>
      * @param cart value to be set
      * @return Builder
      */
@@ -171,6 +183,18 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
     }
 
     /**
+     * set the value to the state using the builder function
+     * @param builder function to build the state value
+     * @return Builder
+     */
+
+    public OrderFromCartDraftBuilder withState(
+            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifier> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the state
      * @param state value to be set
      * @return Builder
@@ -191,6 +215,18 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
     public OrderFromCartDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the Order. The Custom Field type must match the type of the Custom Fields in the referenced Cart. If specified, the Custom Fields are merged with the Custom Fields on the referenced Cart and added to the Order. If empty, the Custom Fields on the referenced Cart are added to the Order automatically.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public OrderFromCartDraftBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
         return this;
     }
 

@@ -101,6 +101,18 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Information about the user or the API client who performed the change.</p>
+     * @param builder function to build the modifiedBy value
+     * @return Builder
+     */
+
+    public RecordBuilder withModifiedBy(
+            Function<com.commercetools.history.models.change_history.ModifiedByBuilder, com.commercetools.history.models.change_history.ModifiedBy> builder) {
+        this.modifiedBy = builder.apply(com.commercetools.history.models.change_history.ModifiedByBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Information about the user or the API client who performed the change.</p>
      * @param modifiedBy value to be set
      * @return Builder
      */
@@ -245,6 +257,18 @@ public class RecordBuilder implements Builder<Record> {
 
     /**
      *  <p>Reference to the changed resource.</p>
+     * @param builder function to build the resource value
+     * @return Builder
+     */
+
+    public RecordBuilder withResource(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
+        this.resource = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the changed resource.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -316,6 +340,28 @@ public class RecordBuilder implements Builder<Record> {
         this.stores = new ArrayList<>();
         this.stores.add(builder.apply(com.commercetools.history.models.common.KeyReferenceBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>References to the Stores attached to the Change.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public RecordBuilder addStores(
+            Function<com.commercetools.history.models.common.KeyReferenceBuilder, com.commercetools.history.models.common.KeyReference> builder) {
+        return plusStores(builder.apply(com.commercetools.history.models.common.KeyReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p>References to the Stores attached to the Change.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public RecordBuilder setStores(
+            Function<com.commercetools.history.models.common.KeyReferenceBuilder, com.commercetools.history.models.common.KeyReference> builder) {
+        return stores(builder.apply(com.commercetools.history.models.common.KeyReferenceBuilder.of()));
     }
 
     /**

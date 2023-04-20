@@ -58,6 +58,18 @@ public class ProductCatalogDataBuilder implements Builder<ProductCatalogData> {
 
     /**
      *  <p>Current (published) data of the Product.</p>
+     * @param builder function to build the current value
+     * @return Builder
+     */
+
+    public ProductCatalogDataBuilder withCurrent(
+            Function<com.commercetools.api.models.product.ProductDataBuilder, com.commercetools.api.models.product.ProductData> builder) {
+        this.current = builder.apply(com.commercetools.api.models.product.ProductDataBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Current (published) data of the Product.</p>
      * @param current value to be set
      * @return Builder
      */
@@ -76,6 +88,18 @@ public class ProductCatalogDataBuilder implements Builder<ProductCatalogData> {
     public ProductCatalogDataBuilder staged(
             Function<com.commercetools.api.models.product.ProductDataBuilder, com.commercetools.api.models.product.ProductDataBuilder> builder) {
         this.staged = builder.apply(com.commercetools.api.models.product.ProductDataBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Staged (unpublished) data of the Product.</p>
+     * @param builder function to build the staged value
+     * @return Builder
+     */
+
+    public ProductCatalogDataBuilder withStaged(
+            Function<com.commercetools.api.models.product.ProductDataBuilder, com.commercetools.api.models.product.ProductData> builder) {
+        this.staged = builder.apply(com.commercetools.api.models.product.ProductDataBuilder.of());
         return this;
     }
 

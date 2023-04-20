@@ -38,6 +38,18 @@ public class CustomerRemoveStoreActionBuilder implements Builder<CustomerRemoveS
 
     /**
      *  <p>ResourceIdentifier of the Store to remove.</p>
+     * @param builder function to build the store value
+     * @return Builder
+     */
+
+    public CustomerRemoveStoreActionBuilder withStore(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifier> builder) {
+        this.store = builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>ResourceIdentifier of the Store to remove.</p>
      * @param store value to be set
      * @return Builder
      */

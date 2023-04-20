@@ -68,6 +68,18 @@ public class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKeywords
     }
 
     /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public SetSearchKeywordsChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.SearchKeywordsBuilder, com.commercetools.history.models.common.SearchKeywords> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.SearchKeywordsBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
@@ -88,6 +100,18 @@ public class SetSearchKeywordsChangeBuilder implements Builder<SetSearchKeywords
     public SetSearchKeywordsChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.SearchKeywordsBuilder, com.commercetools.history.models.common.SearchKeywordsBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.SearchKeywordsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetSearchKeywordsChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.SearchKeywordsBuilder, com.commercetools.history.models.common.SearchKeywords> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.SearchKeywordsBuilder.of());
         return this;
     }
 

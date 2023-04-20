@@ -68,6 +68,18 @@ public class TaxPortionBuilder implements Builder<TaxPortion> {
 
     /**
      *  <p>Money value of the tax portion.</p>
+     * @param builder function to build the amount value
+     * @return Builder
+     */
+
+    public TaxPortionBuilder withAmount(
+            Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoney> builder) {
+        this.amount = builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Money value of the tax portion.</p>
      * @param amount value to be set
      * @return Builder
      */

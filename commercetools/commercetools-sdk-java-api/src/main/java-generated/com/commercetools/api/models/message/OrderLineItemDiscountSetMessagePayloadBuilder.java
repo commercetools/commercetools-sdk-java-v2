@@ -119,6 +119,30 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     }
 
     /**
+     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     * @param builder function to build the discountedPricePerQuantity value
+     * @return Builder
+     */
+
+    public OrderLineItemDiscountSetMessagePayloadBuilder addDiscountedPricePerQuantity(
+            Function<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder, com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> builder) {
+        return plusDiscountedPricePerQuantity(
+            builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder.of()));
+    }
+
+    /**
+     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     * @param builder function to build the discountedPricePerQuantity value
+     * @return Builder
+     */
+
+    public OrderLineItemDiscountSetMessagePayloadBuilder setDiscountedPricePerQuantity(
+            Function<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder, com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> builder) {
+        return discountedPricePerQuantity(
+            builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder.of()));
+    }
+
+    /**
      *  <p>Total Price of the Line Item after the Discount recalculation.</p>
      * @param builder function to build the totalPrice value
      * @return Builder
@@ -127,6 +151,18 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     public OrderLineItemDiscountSetMessagePayloadBuilder totalPrice(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.totalPrice = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Total Price of the Line Item after the Discount recalculation.</p>
+     * @param builder function to build the totalPrice value
+     * @return Builder
+     */
+
+    public OrderLineItemDiscountSetMessagePayloadBuilder withTotalPrice(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+        this.totalPrice = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
         return this;
     }
 
@@ -151,6 +187,18 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     public OrderLineItemDiscountSetMessagePayloadBuilder taxedPrice(
             Function<com.commercetools.api.models.cart.TaxedItemPriceBuilder, com.commercetools.api.models.cart.TaxedItemPriceBuilder> builder) {
         this.taxedPrice = builder.apply(com.commercetools.api.models.cart.TaxedItemPriceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>TaxedItemPrice of the Line Item after the Discount recalculation.</p>
+     * @param builder function to build the taxedPrice value
+     * @return Builder
+     */
+
+    public OrderLineItemDiscountSetMessagePayloadBuilder withTaxedPrice(
+            Function<com.commercetools.api.models.cart.TaxedItemPriceBuilder, com.commercetools.api.models.cart.TaxedItemPrice> builder) {
+        this.taxedPrice = builder.apply(com.commercetools.api.models.cart.TaxedItemPriceBuilder.of());
         return this;
     }
 
@@ -233,6 +281,28 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
         this.taxedPricePortions
                 .add(builder.apply(com.commercetools.api.models.cart.MethodTaxedPriceBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode.</p>
+     * @param builder function to build the taxedPricePortions value
+     * @return Builder
+     */
+
+    public OrderLineItemDiscountSetMessagePayloadBuilder addTaxedPricePortions(
+            Function<com.commercetools.api.models.cart.MethodTaxedPriceBuilder, com.commercetools.api.models.cart.MethodTaxedPrice> builder) {
+        return plusTaxedPricePortions(builder.apply(com.commercetools.api.models.cart.MethodTaxedPriceBuilder.of()));
+    }
+
+    /**
+     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode.</p>
+     * @param builder function to build the taxedPricePortions value
+     * @return Builder
+     */
+
+    public OrderLineItemDiscountSetMessagePayloadBuilder setTaxedPricePortions(
+            Function<com.commercetools.api.models.cart.MethodTaxedPriceBuilder, com.commercetools.api.models.cart.MethodTaxedPrice> builder) {
+        return taxedPricePortions(builder.apply(com.commercetools.api.models.cart.MethodTaxedPriceBuilder.of()));
     }
 
     /**

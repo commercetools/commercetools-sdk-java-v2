@@ -41,6 +41,19 @@ public class StandalonePriceStagedChangesAppliedMessagePayloadBuilder
 
     /**
      *  <p>Applied changes of the StandalonePrice after the Apply Staged Changes update action.</p>
+     * @param builder function to build the stagedChanges value
+     * @return Builder
+     */
+
+    public StandalonePriceStagedChangesAppliedMessagePayloadBuilder withStagedChanges(
+            Function<com.commercetools.api.models.standalone_price.StagedStandalonePriceBuilder, com.commercetools.api.models.standalone_price.StagedStandalonePrice> builder) {
+        this.stagedChanges = builder
+                .apply(com.commercetools.api.models.standalone_price.StagedStandalonePriceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Applied changes of the StandalonePrice after the Apply Staged Changes update action.</p>
      * @param stagedChanges value to be set
      * @return Builder
      */

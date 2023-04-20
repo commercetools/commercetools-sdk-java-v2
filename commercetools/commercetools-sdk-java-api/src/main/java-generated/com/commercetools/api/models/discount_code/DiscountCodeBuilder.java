@@ -141,6 +141,18 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
+     * @return Builder
+     */
+
+    public DiscountCodeBuilder withLastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -160,6 +172,18 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
     public DiscountCodeBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
+     * @return Builder
+     */
+
+    public DiscountCodeBuilder withCreatedBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
 
@@ -188,6 +212,18 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
 
     /**
      *  <p>Name of the DiscountCode.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public DiscountCodeBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Name of the DiscountCode.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -206,6 +242,18 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
     public DiscountCodeBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Description of the DiscountCode.</p>
+     * @param builder function to build the description value
+     * @return Builder
+     */
+
+    public DiscountCodeBuilder withDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -299,6 +347,30 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
         this.cartDiscounts.add(
             builder.apply(com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Reference to CartDiscounts that can be applied to the Cart once the DiscountCode is applied.</p>
+     * @param builder function to build the cartDiscounts value
+     * @return Builder
+     */
+
+    public DiscountCodeBuilder addCartDiscounts(
+            Function<com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder, com.commercetools.api.models.cart_discount.CartDiscountReference> builder) {
+        return plusCartDiscounts(
+            builder.apply(com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p>Reference to CartDiscounts that can be applied to the Cart once the DiscountCode is applied.</p>
+     * @param builder function to build the cartDiscounts value
+     * @return Builder
+     */
+
+    public DiscountCodeBuilder setCartDiscounts(
+            Function<com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder, com.commercetools.api.models.cart_discount.CartDiscountReference> builder) {
+        return cartDiscounts(
+            builder.apply(com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder.of()));
     }
 
     /**
@@ -419,6 +491,18 @@ public class DiscountCodeBuilder implements Builder<DiscountCode> {
     public DiscountCodeBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields of the DiscountCode.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public DiscountCodeBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of());
         return this;
     }
 

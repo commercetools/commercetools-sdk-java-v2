@@ -120,6 +120,30 @@ public class DiscountedLineItemPriceBuilder implements Builder<DiscountedLineIte
     }
 
     /**
+     *  <p>Discount applicable on the Line Item or Custom Line Item.</p>
+     * @param builder function to build the includedDiscounts value
+     * @return Builder
+     */
+
+    public DiscountedLineItemPriceBuilder addIncludedDiscounts(
+            Function<com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder, com.commercetools.api.models.cart.DiscountedLineItemPortion> builder) {
+        return plusIncludedDiscounts(
+            builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder.of()));
+    }
+
+    /**
+     *  <p>Discount applicable on the Line Item or Custom Line Item.</p>
+     * @param builder function to build the includedDiscounts value
+     * @return Builder
+     */
+
+    public DiscountedLineItemPriceBuilder setIncludedDiscounts(
+            Function<com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder, com.commercetools.api.models.cart.DiscountedLineItemPortion> builder) {
+        return includedDiscounts(
+            builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPortionBuilder.of()));
+    }
+
+    /**
      *  <p>Money value of the discounted Line Item or Custom Line Item.</p>
      * @return value
      */

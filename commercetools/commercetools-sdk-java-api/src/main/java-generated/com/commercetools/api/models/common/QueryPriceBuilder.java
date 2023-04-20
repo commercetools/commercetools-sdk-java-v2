@@ -78,6 +78,18 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
 
     /**
      *  <p>Money value of the given Price.</p>
+     * @param builder function to build the value value
+     * @return Builder
+     */
+
+    public QueryPriceBuilder withValue(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+        this.value = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Money value of the given Price.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -114,6 +126,19 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
 
     /**
      *  <p>CustomerGroup for which the given Price is valid.</p>
+     * @param builder function to build the customerGroup value
+     * @return Builder
+     */
+
+    public QueryPriceBuilder withCustomerGroup(
+            Function<com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReference> builder) {
+        this.customerGroup = builder
+                .apply(com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>CustomerGroup for which the given Price is valid.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -133,6 +158,18 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     public QueryPriceBuilder channel(
             Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
         this.channel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p><code>ProductDistribution</code> Channel for which the given Price is valid.</p>
+     * @param builder function to build the channel value
+     * @return Builder
+     */
+
+    public QueryPriceBuilder withChannel(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReference> builder) {
+        this.channel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of());
         return this;
     }
 
@@ -183,6 +220,18 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
 
     /**
      *  <p>DiscountedPrice you specify for the given Price.</p>
+     * @param builder function to build the discounted value
+     * @return Builder
+     */
+
+    public QueryPriceBuilder withDiscounted(
+            Function<com.commercetools.api.models.common.DiscountedPriceDraftBuilder, com.commercetools.api.models.common.DiscountedPriceDraft> builder) {
+        this.discounted = builder.apply(com.commercetools.api.models.common.DiscountedPriceDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>DiscountedPrice you specify for the given Price.</p>
      * @param discounted value to be set
      * @return Builder
      */
@@ -202,6 +251,18 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
     public QueryPriceBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the Price.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public QueryPriceBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of());
         return this;
     }
 
@@ -279,6 +340,28 @@ public class QueryPriceBuilder implements Builder<QueryPrice> {
         this.tiers = new ArrayList<>();
         this.tiers.add(builder.apply(com.commercetools.api.models.common.PriceTierDraftBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
+     * @param builder function to build the tiers value
+     * @return Builder
+     */
+
+    public QueryPriceBuilder addTiers(
+            Function<com.commercetools.api.models.common.PriceTierDraftBuilder, com.commercetools.api.models.common.PriceTierDraft> builder) {
+        return plusTiers(builder.apply(com.commercetools.api.models.common.PriceTierDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
+     * @param builder function to build the tiers value
+     * @return Builder
+     */
+
+    public QueryPriceBuilder setTiers(
+            Function<com.commercetools.api.models.common.PriceTierDraftBuilder, com.commercetools.api.models.common.PriceTierDraft> builder) {
+        return tiers(builder.apply(com.commercetools.api.models.common.PriceTierDraftBuilder.of()));
     }
 
     /**

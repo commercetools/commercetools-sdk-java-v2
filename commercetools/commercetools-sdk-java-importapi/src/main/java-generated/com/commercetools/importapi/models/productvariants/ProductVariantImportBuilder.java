@@ -217,6 +217,28 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
+     *  <p>Maps to <code>ProductVariant.images</code>.</p>
+     * @param builder function to build the images value
+     * @return Builder
+     */
+
+    public ProductVariantImportBuilder addImages(
+            Function<com.commercetools.importapi.models.common.ImageBuilder, com.commercetools.importapi.models.common.Image> builder) {
+        return plusImages(builder.apply(com.commercetools.importapi.models.common.ImageBuilder.of()));
+    }
+
+    /**
+     *  <p>Maps to <code>ProductVariant.images</code>.</p>
+     * @param builder function to build the images value
+     * @return Builder
+     */
+
+    public ProductVariantImportBuilder setImages(
+            Function<com.commercetools.importapi.models.common.ImageBuilder, com.commercetools.importapi.models.common.Image> builder) {
+        return images(builder.apply(com.commercetools.importapi.models.common.ImageBuilder.of()));
+    }
+
+    /**
      *  <p>Maps to <code>ProductVariant.assets</code>.</p>
      * @param assets value to be set
      * @return Builder
@@ -284,6 +306,28 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     }
 
     /**
+     *  <p>Maps to <code>ProductVariant.assets</code>.</p>
+     * @param builder function to build the assets value
+     * @return Builder
+     */
+
+    public ProductVariantImportBuilder addAssets(
+            Function<com.commercetools.importapi.models.common.AssetBuilder, com.commercetools.importapi.models.common.Asset> builder) {
+        return plusAssets(builder.apply(com.commercetools.importapi.models.common.AssetBuilder.of()));
+    }
+
+    /**
+     *  <p>Maps to <code>ProductVariant.assets</code>.</p>
+     * @param builder function to build the assets value
+     * @return Builder
+     */
+
+    public ProductVariantImportBuilder setAssets(
+            Function<com.commercetools.importapi.models.common.AssetBuilder, com.commercetools.importapi.models.common.Asset> builder) {
+        return assets(builder.apply(com.commercetools.importapi.models.common.AssetBuilder.of()));
+    }
+
+    /**
      *  <p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data. If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p>
      * @param publish value to be set
      * @return Builder
@@ -303,6 +347,18 @@ public class ProductVariantImportBuilder implements Builder<ProductVariantImport
     public ProductVariantImportBuilder product(
             Function<com.commercetools.importapi.models.common.ProductKeyReferenceBuilder, com.commercetools.importapi.models.common.ProductKeyReferenceBuilder> builder) {
         this.product = builder.apply(com.commercetools.importapi.models.common.ProductKeyReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>The Product to which this Product Variant belongs. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the ProductVariant is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
+     * @param builder function to build the product value
+     * @return Builder
+     */
+
+    public ProductVariantImportBuilder withProduct(
+            Function<com.commercetools.importapi.models.common.ProductKeyReferenceBuilder, com.commercetools.importapi.models.common.ProductKeyReference> builder) {
+        this.product = builder.apply(com.commercetools.importapi.models.common.ProductKeyReferenceBuilder.of());
         return this;
     }
 

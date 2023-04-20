@@ -39,6 +39,18 @@ public class OrderRemovePaymentActionBuilder implements Builder<OrderRemovePayme
 
     /**
      *  <p>ResourceIdentifier of a Payment.</p>
+     * @param builder function to build the payment value
+     * @return Builder
+     */
+
+    public OrderRemovePaymentActionBuilder withPayment(
+            Function<com.commercetools.api.models.payment.PaymentResourceIdentifierBuilder, com.commercetools.api.models.payment.PaymentResourceIdentifier> builder) {
+        this.payment = builder.apply(com.commercetools.api.models.payment.PaymentResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>ResourceIdentifier of a Payment.</p>
      * @param payment value to be set
      * @return Builder
      */

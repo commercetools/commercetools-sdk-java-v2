@@ -53,6 +53,18 @@ public class OrderCustomLineItemRemovedMessagePayloadBuilder
 
     /**
      *  <p>Custom Line Item that was removed from the Order.</p>
+     * @param builder function to build the customLineItem value
+     * @return Builder
+     */
+
+    public OrderCustomLineItemRemovedMessagePayloadBuilder withCustomLineItem(
+            Function<com.commercetools.api.models.cart.CustomLineItemBuilder, com.commercetools.api.models.cart.CustomLineItem> builder) {
+        this.customLineItem = builder.apply(com.commercetools.api.models.cart.CustomLineItemBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Custom Line Item that was removed from the Order.</p>
      * @param customLineItem value to be set
      * @return Builder
      */

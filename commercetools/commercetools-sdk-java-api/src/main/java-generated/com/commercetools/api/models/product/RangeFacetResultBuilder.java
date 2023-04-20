@@ -90,6 +90,28 @@ public class RangeFacetResultBuilder implements Builder<RangeFacetResult> {
     }
 
     /**
+     * add the value to the ranges using the builder function
+     * @param builder function to build the ranges value
+     * @return Builder
+     */
+
+    public RangeFacetResultBuilder addRanges(
+            Function<com.commercetools.api.models.product.FacetRangeBuilder, com.commercetools.api.models.product.FacetRange> builder) {
+        return plusRanges(builder.apply(com.commercetools.api.models.product.FacetRangeBuilder.of()));
+    }
+
+    /**
+     * set the value to the ranges using the builder function
+     * @param builder function to build the ranges value
+     * @return Builder
+     */
+
+    public RangeFacetResultBuilder setRanges(
+            Function<com.commercetools.api.models.product.FacetRangeBuilder, com.commercetools.api.models.product.FacetRange> builder) {
+        return ranges(builder.apply(com.commercetools.api.models.product.FacetRangeBuilder.of()));
+    }
+
+    /**
      * value of ranges}
      * @return ranges
      */

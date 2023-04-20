@@ -38,6 +38,18 @@ public class CategoryCreatedMessagePayloadBuilder implements Builder<CategoryCre
 
     /**
      *  <p>Category that was created.</p>
+     * @param builder function to build the category value
+     * @return Builder
+     */
+
+    public CategoryCreatedMessagePayloadBuilder withCategory(
+            Function<com.commercetools.api.models.category.CategoryBuilder, com.commercetools.api.models.category.Category> builder) {
+        this.category = builder.apply(com.commercetools.api.models.category.CategoryBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Category that was created.</p>
      * @param category value to be set
      * @return Builder
      */

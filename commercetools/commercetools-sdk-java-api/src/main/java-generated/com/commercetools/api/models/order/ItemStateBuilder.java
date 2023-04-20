@@ -51,6 +51,18 @@ public class ItemStateBuilder implements Builder<ItemState> {
     }
 
     /**
+     * set the value to the state using the builder function
+     * @param builder function to build the state value
+     * @return Builder
+     */
+
+    public ItemStateBuilder withState(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReference> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the state
      * @param state value to be set
      * @return Builder

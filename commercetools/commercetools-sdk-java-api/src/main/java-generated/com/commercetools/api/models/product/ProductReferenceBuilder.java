@@ -54,6 +54,18 @@ public class ProductReferenceBuilder implements Builder<ProductReference> {
 
     /**
      *  <p>Contains the representation of the expanded Product. Only present in responses to requests with Reference Expansion for Products.</p>
+     * @param builder function to build the obj value
+     * @return Builder
+     */
+
+    public ProductReferenceBuilder withObj(
+            Function<com.commercetools.api.models.product.ProductBuilder, com.commercetools.api.models.product.Product> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.product.ProductBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Contains the representation of the expanded Product. Only present in responses to requests with Reference Expansion for Products.</p>
      * @param obj value to be set
      * @return Builder
      */

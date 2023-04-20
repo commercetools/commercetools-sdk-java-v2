@@ -229,6 +229,18 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
+     * @return Builder
+     */
+
+    public StagedOrderBuilder withLastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -248,6 +260,18 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     public StagedOrderBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
+     * @return Builder
+     */
+
+    public StagedOrderBuilder withCreatedBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
 
@@ -333,6 +357,19 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>The Business Unit the Order belongs to.</p>
+     * @param builder function to build the businessUnit value
+     * @return Builder
+     */
+
+    public StagedOrderBuilder withBusinessUnit(
+            Function<com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder, com.commercetools.api.models.business_unit.BusinessUnitKeyReference> builder) {
+        this.businessUnit = builder
+                .apply(com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The Business Unit the Order belongs to.</p>
      * @param businessUnit value to be set
      * @return Builder
      */
@@ -352,6 +389,18 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     public StagedOrderBuilder store(
             Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
         this.store = builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the store using the builder function
+     * @param builder function to build the store value
+     * @return Builder
+     */
+
+    public StagedOrderBuilder withStore(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
+        this.store = builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of());
         return this;
     }
 
@@ -431,6 +480,28 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
+     * add the value to the lineItems using the builder function
+     * @param builder function to build the lineItems value
+     * @return Builder
+     */
+
+    public StagedOrderBuilder addLineItems(
+            Function<com.commercetools.api.models.cart.LineItemBuilder, com.commercetools.api.models.cart.LineItem> builder) {
+        return plusLineItems(builder.apply(com.commercetools.api.models.cart.LineItemBuilder.of()));
+    }
+
+    /**
+     * set the value to the lineItems using the builder function
+     * @param builder function to build the lineItems value
+     * @return Builder
+     */
+
+    public StagedOrderBuilder setLineItems(
+            Function<com.commercetools.api.models.cart.LineItemBuilder, com.commercetools.api.models.cart.LineItem> builder) {
+        return lineItems(builder.apply(com.commercetools.api.models.cart.LineItemBuilder.of()));
+    }
+
+    /**
      * set values to the customLineItems
      * @param customLineItems value to be set
      * @return Builder
@@ -498,6 +569,28 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
+     * add the value to the customLineItems using the builder function
+     * @param builder function to build the customLineItems value
+     * @return Builder
+     */
+
+    public StagedOrderBuilder addCustomLineItems(
+            Function<com.commercetools.api.models.cart.CustomLineItemBuilder, com.commercetools.api.models.cart.CustomLineItem> builder) {
+        return plusCustomLineItems(builder.apply(com.commercetools.api.models.cart.CustomLineItemBuilder.of()));
+    }
+
+    /**
+     * set the value to the customLineItems using the builder function
+     * @param builder function to build the customLineItems value
+     * @return Builder
+     */
+
+    public StagedOrderBuilder setCustomLineItems(
+            Function<com.commercetools.api.models.cart.CustomLineItemBuilder, com.commercetools.api.models.cart.CustomLineItem> builder) {
+        return customLineItems(builder.apply(com.commercetools.api.models.cart.CustomLineItemBuilder.of()));
+    }
+
+    /**
      * set the value to the totalPrice
      * @param totalPrice value to be set
      * @return Builder
@@ -534,6 +627,18 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>The taxes are calculated based on the shipping address.</p>
+     * @param builder function to build the taxedPrice value
+     * @return Builder
+     */
+
+    public StagedOrderBuilder withTaxedPrice(
+            Function<com.commercetools.api.models.cart.TaxedPriceBuilder, com.commercetools.api.models.cart.TaxedPrice> builder) {
+        this.taxedPrice = builder.apply(com.commercetools.api.models.cart.TaxedPriceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The taxes are calculated based on the shipping address.</p>
      * @param taxedPrice value to be set
      * @return Builder
      */
@@ -552,6 +657,18 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     public StagedOrderBuilder taxedShippingPrice(
             Function<com.commercetools.api.models.cart.TaxedPriceBuilder, com.commercetools.api.models.cart.TaxedPriceBuilder> builder) {
         this.taxedShippingPrice = builder.apply(com.commercetools.api.models.cart.TaxedPriceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Sum of <code>taxedPrice</code> of ShippingInfo across all Shipping Methods. For <code>Platform</code> TaxMode, it is set automatically only if shipping address is set or Shipping Method is added to the Cart.</p>
+     * @param builder function to build the taxedShippingPrice value
+     * @return Builder
+     */
+
+    public StagedOrderBuilder withTaxedShippingPrice(
+            Function<com.commercetools.api.models.cart.TaxedPriceBuilder, com.commercetools.api.models.cart.TaxedPrice> builder) {
+        this.taxedShippingPrice = builder.apply(com.commercetools.api.models.cart.TaxedPriceBuilder.of());
         return this;
     }
 
@@ -583,6 +700,19 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     /**
      *  <p>Holds all shipping-related information per Shipping Method.</p>
      *  <p>For <code>Multi</code> ShippingMode, it is updated automatically after the Shipping Methods are added.</p>
+     * @param builder function to build the shippingAddress value
+     * @return Builder
+     */
+
+    public StagedOrderBuilder withShippingAddress(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
+        this.shippingAddress = builder.apply(com.commercetools.api.models.common.AddressBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Holds all shipping-related information per Shipping Method.</p>
+     *  <p>For <code>Multi</code> ShippingMode, it is updated automatically after the Shipping Methods are added.</p>
      * @param shippingAddress value to be set
      * @return Builder
      */
@@ -602,6 +732,18 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     public StagedOrderBuilder billingAddress(
             Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
         this.billingAddress = builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the billingAddress using the builder function
+     * @param builder function to build the billingAddress value
+     * @return Builder
+     */
+
+    public StagedOrderBuilder withBillingAddress(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
+        this.billingAddress = builder.apply(com.commercetools.api.models.common.AddressBuilder.of());
         return this;
     }
 
@@ -648,6 +790,18 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     public StagedOrderBuilder shippingCustomFields(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.shippingCustomFields = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields of the Shipping Method for <code>Single</code> ShippingMode.</p>
+     * @param builder function to build the shippingCustomFields value
+     * @return Builder
+     */
+
+    public StagedOrderBuilder withShippingCustomFields(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
+        this.shippingCustomFields = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of());
         return this;
     }
 
@@ -733,6 +887,30 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
+     *  <p>Holds all shipping-related information per Shipping Method for <code>Multi</code> ShippingMode.</p>
+     *  <p>It is updated automatically after the Shipping Method is added.</p>
+     * @param builder function to build the shipping value
+     * @return Builder
+     */
+
+    public StagedOrderBuilder addShipping(
+            Function<com.commercetools.api.models.cart.ShippingBuilder, com.commercetools.api.models.cart.Shipping> builder) {
+        return plusShipping(builder.apply(com.commercetools.api.models.cart.ShippingBuilder.of()));
+    }
+
+    /**
+     *  <p>Holds all shipping-related information per Shipping Method for <code>Multi</code> ShippingMode.</p>
+     *  <p>It is updated automatically after the Shipping Method is added.</p>
+     * @param builder function to build the shipping value
+     * @return Builder
+     */
+
+    public StagedOrderBuilder setShipping(
+            Function<com.commercetools.api.models.cart.ShippingBuilder, com.commercetools.api.models.cart.Shipping> builder) {
+        return shipping(builder.apply(com.commercetools.api.models.cart.ShippingBuilder.of()));
+    }
+
+    /**
      * set the value to the taxMode
      * @param taxMode value to be set
      * @return Builder
@@ -766,6 +944,19 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
         this.customerGroup = builder
                 .apply(com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>
+     * @param builder function to build the customerGroup value
+     * @return Builder
+     */
+
+    public StagedOrderBuilder withCustomerGroup(
+            Function<com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReference> builder) {
+        this.customerGroup = builder
+                .apply(com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder.of());
         return this;
     }
 
@@ -817,6 +1008,18 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>This reference can point to a state in a custom workflow.</p>
+     * @param builder function to build the state value
+     * @return Builder
+     */
+
+    public StagedOrderBuilder withState(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReference> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>This reference can point to a state in a custom workflow.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -859,6 +1062,18 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     public StagedOrderBuilder shippingInfo(
             Function<com.commercetools.api.models.cart.ShippingInfoBuilder, com.commercetools.api.models.cart.ShippingInfoBuilder> builder) {
         this.shippingInfo = builder.apply(com.commercetools.api.models.cart.ShippingInfoBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Set if the ShippingMethod is set.</p>
+     * @param builder function to build the shippingInfo value
+     * @return Builder
+     */
+
+    public StagedOrderBuilder withShippingInfo(
+            Function<com.commercetools.api.models.cart.ShippingInfoBuilder, com.commercetools.api.models.cart.ShippingInfo> builder) {
+        this.shippingInfo = builder.apply(com.commercetools.api.models.cart.ShippingInfoBuilder.of());
         return this;
     }
 
@@ -939,6 +1154,28 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
+     * add the value to the syncInfo using the builder function
+     * @param builder function to build the syncInfo value
+     * @return Builder
+     */
+
+    public StagedOrderBuilder addSyncInfo(
+            Function<com.commercetools.api.models.order.SyncInfoBuilder, com.commercetools.api.models.order.SyncInfo> builder) {
+        return plusSyncInfo(builder.apply(com.commercetools.api.models.order.SyncInfoBuilder.of()));
+    }
+
+    /**
+     * set the value to the syncInfo using the builder function
+     * @param builder function to build the syncInfo value
+     * @return Builder
+     */
+
+    public StagedOrderBuilder setSyncInfo(
+            Function<com.commercetools.api.models.order.SyncInfoBuilder, com.commercetools.api.models.order.SyncInfo> builder) {
+        return syncInfo(builder.apply(com.commercetools.api.models.order.SyncInfoBuilder.of()));
+    }
+
+    /**
      * set values to the returnInfo
      * @param returnInfo value to be set
      * @return Builder
@@ -1002,6 +1239,28 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
         this.returnInfo = new ArrayList<>();
         this.returnInfo.add(builder.apply(com.commercetools.api.models.order.ReturnInfoBuilder.of()).build());
         return this;
+    }
+
+    /**
+     * add the value to the returnInfo using the builder function
+     * @param builder function to build the returnInfo value
+     * @return Builder
+     */
+
+    public StagedOrderBuilder addReturnInfo(
+            Function<com.commercetools.api.models.order.ReturnInfoBuilder, com.commercetools.api.models.order.ReturnInfo> builder) {
+        return plusReturnInfo(builder.apply(com.commercetools.api.models.order.ReturnInfoBuilder.of()));
+    }
+
+    /**
+     * set the value to the returnInfo using the builder function
+     * @param builder function to build the returnInfo value
+     * @return Builder
+     */
+
+    public StagedOrderBuilder setReturnInfo(
+            Function<com.commercetools.api.models.order.ReturnInfoBuilder, com.commercetools.api.models.order.ReturnInfo> builder) {
+        return returnInfo(builder.apply(com.commercetools.api.models.order.ReturnInfoBuilder.of()));
     }
 
     /**
@@ -1083,6 +1342,28 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
+     * add the value to the discountCodes using the builder function
+     * @param builder function to build the discountCodes value
+     * @return Builder
+     */
+
+    public StagedOrderBuilder addDiscountCodes(
+            Function<com.commercetools.api.models.cart.DiscountCodeInfoBuilder, com.commercetools.api.models.cart.DiscountCodeInfo> builder) {
+        return plusDiscountCodes(builder.apply(com.commercetools.api.models.cart.DiscountCodeInfoBuilder.of()));
+    }
+
+    /**
+     * set the value to the discountCodes using the builder function
+     * @param builder function to build the discountCodes value
+     * @return Builder
+     */
+
+    public StagedOrderBuilder setDiscountCodes(
+            Function<com.commercetools.api.models.cart.DiscountCodeInfoBuilder, com.commercetools.api.models.cart.DiscountCodeInfo> builder) {
+        return discountCodes(builder.apply(com.commercetools.api.models.cart.DiscountCodeInfoBuilder.of()));
+    }
+
+    /**
      *  <p>Internal-only field.</p>
      * @param lastMessageSequenceNumber value to be set
      * @return Builder
@@ -1102,6 +1383,18 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     public StagedOrderBuilder cart(
             Function<com.commercetools.api.models.cart.CartReferenceBuilder, com.commercetools.api.models.cart.CartReferenceBuilder> builder) {
         this.cart = builder.apply(com.commercetools.api.models.cart.CartReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Set when this order was created from a cart. The cart will have the state <code>Ordered</code>.</p>
+     * @param builder function to build the cart value
+     * @return Builder
+     */
+
+    public StagedOrderBuilder withCart(
+            Function<com.commercetools.api.models.cart.CartReferenceBuilder, com.commercetools.api.models.cart.CartReference> builder) {
+        this.cart = builder.apply(com.commercetools.api.models.cart.CartReferenceBuilder.of());
         return this;
     }
 
@@ -1130,6 +1423,18 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     /**
      *  <p>Set when this order was created from a quote.</p>
+     * @param builder function to build the quote value
+     * @return Builder
+     */
+
+    public StagedOrderBuilder withQuote(
+            Function<com.commercetools.api.models.quote.QuoteReferenceBuilder, com.commercetools.api.models.quote.QuoteReference> builder) {
+        this.quote = builder.apply(com.commercetools.api.models.quote.QuoteReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Set when this order was created from a quote.</p>
      * @param quote value to be set
      * @return Builder
      */
@@ -1148,6 +1453,18 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     public StagedOrderBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the custom using the builder function
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public StagedOrderBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of());
         return this;
     }
 
@@ -1171,6 +1488,18 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     public StagedOrderBuilder paymentInfo(
             Function<com.commercetools.api.models.order.PaymentInfoBuilder, com.commercetools.api.models.order.PaymentInfoBuilder> builder) {
         this.paymentInfo = builder.apply(com.commercetools.api.models.order.PaymentInfoBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the paymentInfo using the builder function
+     * @param builder function to build the paymentInfo value
+     * @return Builder
+     */
+
+    public StagedOrderBuilder withPaymentInfo(
+            Function<com.commercetools.api.models.order.PaymentInfoBuilder, com.commercetools.api.models.order.PaymentInfo> builder) {
+        this.paymentInfo = builder.apply(com.commercetools.api.models.order.PaymentInfoBuilder.of());
         return this;
     }
 
@@ -1333,6 +1662,28 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
+     *  <p>Contains addresses for orders with multiple shipping addresses.</p>
+     * @param builder function to build the itemShippingAddresses value
+     * @return Builder
+     */
+
+    public StagedOrderBuilder addItemShippingAddresses(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
+        return plusItemShippingAddresses(builder.apply(com.commercetools.api.models.common.AddressBuilder.of()));
+    }
+
+    /**
+     *  <p>Contains addresses for orders with multiple shipping addresses.</p>
+     * @param builder function to build the itemShippingAddresses value
+     * @return Builder
+     */
+
+    public StagedOrderBuilder setItemShippingAddresses(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
+        return itemShippingAddresses(builder.apply(com.commercetools.api.models.common.AddressBuilder.of()));
+    }
+
+    /**
      *  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>
      * @param refusedGifts value to be set
      * @return Builder
@@ -1399,6 +1750,30 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
         this.refusedGifts.add(
             builder.apply(com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>
+     * @param builder function to build the refusedGifts value
+     * @return Builder
+     */
+
+    public StagedOrderBuilder addRefusedGifts(
+            Function<com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder, com.commercetools.api.models.cart_discount.CartDiscountReference> builder) {
+        return plusRefusedGifts(
+            builder.apply(com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p>Automatically filled when a line item with LineItemMode <code>GiftLineItem</code> is removed from this order.</p>
+     * @param builder function to build the refusedGifts value
+     * @return Builder
+     */
+
+    public StagedOrderBuilder setRefusedGifts(
+            Function<com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder, com.commercetools.api.models.cart_discount.CartDiscountReference> builder) {
+        return refusedGifts(
+            builder.apply(com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder.of()));
     }
 
     /**

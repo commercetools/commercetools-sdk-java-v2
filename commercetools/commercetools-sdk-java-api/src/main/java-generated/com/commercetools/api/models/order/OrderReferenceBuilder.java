@@ -53,6 +53,18 @@ public class OrderReferenceBuilder implements Builder<OrderReference> {
     }
 
     /**
+     * set the value to the obj using the builder function
+     * @param builder function to build the obj value
+     * @return Builder
+     */
+
+    public OrderReferenceBuilder withObj(
+            Function<com.commercetools.api.models.order.OrderBuilder, com.commercetools.api.models.order.Order> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.order.OrderBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the obj
      * @param obj value to be set
      * @return Builder

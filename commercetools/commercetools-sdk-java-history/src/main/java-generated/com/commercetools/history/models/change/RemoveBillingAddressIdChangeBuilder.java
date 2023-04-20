@@ -129,6 +129,18 @@ public class RemoveBillingAddressIdChangeBuilder implements Builder<RemoveBillin
     }
 
     /**
+     * set the value to the address using the builder function
+     * @param builder function to build the address value
+     * @return Builder
+     */
+
+    public RemoveBillingAddressIdChangeBuilder withAddress(
+            Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.Address> builder) {
+        this.address = builder.apply(com.commercetools.history.models.common.AddressBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the address
      * @param address value to be set
      * @return Builder

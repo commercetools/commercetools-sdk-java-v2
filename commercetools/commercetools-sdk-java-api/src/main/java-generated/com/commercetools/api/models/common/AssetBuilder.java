@@ -120,6 +120,28 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
+     * add the value to the sources using the builder function
+     * @param builder function to build the sources value
+     * @return Builder
+     */
+
+    public AssetBuilder addSources(
+            Function<com.commercetools.api.models.common.AssetSourceBuilder, com.commercetools.api.models.common.AssetSource> builder) {
+        return plusSources(builder.apply(com.commercetools.api.models.common.AssetSourceBuilder.of()));
+    }
+
+    /**
+     * set the value to the sources using the builder function
+     * @param builder function to build the sources value
+     * @return Builder
+     */
+
+    public AssetBuilder setSources(
+            Function<com.commercetools.api.models.common.AssetSourceBuilder, com.commercetools.api.models.common.AssetSource> builder) {
+        return sources(builder.apply(com.commercetools.api.models.common.AssetSourceBuilder.of()));
+    }
+
+    /**
      *  <p>Name of the Asset.</p>
      * @param builder function to build the name value
      * @return Builder
@@ -128,6 +150,18 @@ public class AssetBuilder implements Builder<Asset> {
     public AssetBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Name of the Asset.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public AssetBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -151,6 +185,18 @@ public class AssetBuilder implements Builder<Asset> {
     public AssetBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Description of the Asset.</p>
+     * @param builder function to build the description value
+     * @return Builder
+     */
+
+    public AssetBuilder withDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -210,6 +256,18 @@ public class AssetBuilder implements Builder<Asset> {
     public AssetBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields defined for the Asset.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public AssetBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of());
         return this;
     }
 

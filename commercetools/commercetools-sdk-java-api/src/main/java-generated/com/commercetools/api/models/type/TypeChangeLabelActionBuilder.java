@@ -52,6 +52,18 @@ public class TypeChangeLabelActionBuilder implements Builder<TypeChangeLabelActi
 
     /**
      *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     * @param builder function to build the label value
+     * @return Builder
+     */
+
+    public TypeChangeLabelActionBuilder withLabel(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.label = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
      * @param label value to be set
      * @return Builder
      */

@@ -58,6 +58,18 @@ public class SetTextLineItemDescriptionChangeBuilder implements Builder<SetTextL
     }
 
     /**
+     * set the value to the textLineItem using the builder function
+     * @param builder function to build the textLineItem value
+     * @return Builder
+     */
+
+    public SetTextLineItemDescriptionChangeBuilder withTextLineItem(
+            Function<com.commercetools.history.models.change_value.TextLineItemValueBuilder, com.commercetools.history.models.change_value.TextLineItemValue> builder) {
+        this.textLineItem = builder.apply(com.commercetools.history.models.change_value.TextLineItemValueBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the textLineItem
      * @param textLineItem value to be set
      * @return Builder
@@ -82,6 +94,18 @@ public class SetTextLineItemDescriptionChangeBuilder implements Builder<SetTextL
     }
 
     /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public SetTextLineItemDescriptionChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
@@ -102,6 +126,18 @@ public class SetTextLineItemDescriptionChangeBuilder implements Builder<SetTextL
     public SetTextLineItemDescriptionChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetTextLineItemDescriptionChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
         return this;
     }
 

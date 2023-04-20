@@ -57,6 +57,18 @@ public class ImageBuilder implements Builder<Image> {
 
     /**
      *  <p>Dimensions of the original image.</p>
+     * @param builder function to build the dimensions value
+     * @return Builder
+     */
+
+    public ImageBuilder withDimensions(
+            Function<com.commercetools.api.models.common.ImageDimensionsBuilder, com.commercetools.api.models.common.ImageDimensions> builder) {
+        this.dimensions = builder.apply(com.commercetools.api.models.common.ImageDimensionsBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Dimensions of the original image.</p>
      * @param dimensions value to be set
      * @return Builder
      */

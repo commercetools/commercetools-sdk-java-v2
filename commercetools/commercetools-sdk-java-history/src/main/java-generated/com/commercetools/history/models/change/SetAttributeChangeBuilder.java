@@ -69,6 +69,18 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
     }
 
     /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public SetAttributeChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.change_value.AttributeValueBuilder, com.commercetools.history.models.change_value.AttributeValue> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.change_value.AttributeValueBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
@@ -90,6 +102,18 @@ public class SetAttributeChangeBuilder implements Builder<SetAttributeChange> {
             Function<com.commercetools.history.models.change_value.AttributeValueBuilder, com.commercetools.history.models.change_value.AttributeValueBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.change_value.AttributeValueBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetAttributeChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.change_value.AttributeValueBuilder, com.commercetools.history.models.change_value.AttributeValue> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.change_value.AttributeValueBuilder.of());
         return this;
     }
 

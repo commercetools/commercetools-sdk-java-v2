@@ -147,6 +147,28 @@ public class TypePagedQueryResponseBuilder implements Builder<TypePagedQueryResp
     }
 
     /**
+     *  <p>Types matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public TypePagedQueryResponseBuilder addResults(
+            Function<com.commercetools.api.models.type.TypeBuilder, com.commercetools.api.models.type.Type> builder) {
+        return plusResults(builder.apply(com.commercetools.api.models.type.TypeBuilder.of()));
+    }
+
+    /**
+     *  <p>Types matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public TypePagedQueryResponseBuilder setResults(
+            Function<com.commercetools.api.models.type.TypeBuilder, com.commercetools.api.models.type.Type> builder) {
+        return results(builder.apply(com.commercetools.api.models.type.TypeBuilder.of()));
+    }
+
+    /**
      *  <p>Number of results requested.</p>
      * @return limit
      */

@@ -51,6 +51,18 @@ public class TextLineItemValueBuilder implements Builder<TextLineItemValue> {
     }
 
     /**
+     * set the value to the name using the builder function
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public TextLineItemValueBuilder withName(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the name
      * @param name value to be set
      * @return Builder

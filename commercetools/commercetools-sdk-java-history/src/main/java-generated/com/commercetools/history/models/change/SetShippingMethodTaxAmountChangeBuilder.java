@@ -71,6 +71,19 @@ public class SetShippingMethodTaxAmountChangeBuilder implements Builder<SetShipp
     }
 
     /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetShippingMethodTaxAmountChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValueBuilder, com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValue> builder) {
+        this.nextValue = builder
+                .apply(com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValueBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
@@ -93,6 +106,19 @@ public class SetShippingMethodTaxAmountChangeBuilder implements Builder<SetShipp
         this.previousValue = builder
                 .apply(com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValueBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public SetShippingMethodTaxAmountChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValueBuilder, com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValue> builder) {
+        this.previousValue = builder
+                .apply(com.commercetools.history.models.change_value.ShippingMethodTaxAmountChangeValueBuilder.of());
         return this;
     }
 

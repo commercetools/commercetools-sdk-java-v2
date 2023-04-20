@@ -41,6 +41,18 @@ public class OrderLineItemAddedMessagePayloadBuilder implements Builder<OrderLin
 
     /**
      *  <p>Line Item that was added to the Order.</p>
+     * @param builder function to build the lineItem value
+     * @return Builder
+     */
+
+    public OrderLineItemAddedMessagePayloadBuilder withLineItem(
+            Function<com.commercetools.api.models.cart.LineItemBuilder, com.commercetools.api.models.cart.LineItem> builder) {
+        this.lineItem = builder.apply(com.commercetools.api.models.cart.LineItemBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Line Item that was added to the Order.</p>
      * @param lineItem value to be set
      * @return Builder
      */

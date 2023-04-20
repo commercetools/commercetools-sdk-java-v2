@@ -128,6 +128,28 @@ public class DeliveryBuilder implements Builder<Delivery> {
     }
 
     /**
+     *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
+     * @param builder function to build the items value
+     * @return Builder
+     */
+
+    public DeliveryBuilder addItems(
+            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItem> builder) {
+        return plusItems(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()));
+    }
+
+    /**
+     *  <p>Items which are shipped in this delivery regardless their distribution over several parcels. Can also be specified individually for each Parcel.</p>
+     * @param builder function to build the items value
+     * @return Builder
+     */
+
+    public DeliveryBuilder setItems(
+            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItem> builder) {
+        return items(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()));
+    }
+
+    /**
      * set values to the parcels
      * @param parcels value to be set
      * @return Builder
@@ -192,6 +214,28 @@ public class DeliveryBuilder implements Builder<Delivery> {
     }
 
     /**
+     * add the value to the parcels using the builder function
+     * @param builder function to build the parcels value
+     * @return Builder
+     */
+
+    public DeliveryBuilder addParcels(
+            Function<com.commercetools.api.models.order.ParcelBuilder, com.commercetools.api.models.order.Parcel> builder) {
+        return plusParcels(builder.apply(com.commercetools.api.models.order.ParcelBuilder.of()));
+    }
+
+    /**
+     * set the value to the parcels using the builder function
+     * @param builder function to build the parcels value
+     * @return Builder
+     */
+
+    public DeliveryBuilder setParcels(
+            Function<com.commercetools.api.models.order.ParcelBuilder, com.commercetools.api.models.order.Parcel> builder) {
+        return parcels(builder.apply(com.commercetools.api.models.order.ParcelBuilder.of()));
+    }
+
+    /**
      * set the value to the address using the builder function
      * @param builder function to build the address value
      * @return Builder
@@ -200,6 +244,18 @@ public class DeliveryBuilder implements Builder<Delivery> {
     public DeliveryBuilder address(
             Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
         this.address = builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the address using the builder function
+     * @param builder function to build the address value
+     * @return Builder
+     */
+
+    public DeliveryBuilder withAddress(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
+        this.address = builder.apply(com.commercetools.api.models.common.AddressBuilder.of());
         return this;
     }
 
@@ -223,6 +279,18 @@ public class DeliveryBuilder implements Builder<Delivery> {
     public DeliveryBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the Transaction.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public DeliveryBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of());
         return this;
     }
 

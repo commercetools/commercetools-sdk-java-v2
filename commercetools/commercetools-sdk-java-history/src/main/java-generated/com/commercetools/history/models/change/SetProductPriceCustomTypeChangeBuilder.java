@@ -68,6 +68,18 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
     }
 
     /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public SetProductPriceCustomTypeChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFields> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.CustomFieldsBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
@@ -88,6 +100,18 @@ public class SetProductPriceCustomTypeChangeBuilder implements Builder<SetProduc
     public SetProductPriceCustomTypeChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFieldsBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetProductPriceCustomTypeChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFields> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.CustomFieldsBuilder.of());
         return this;
     }
 

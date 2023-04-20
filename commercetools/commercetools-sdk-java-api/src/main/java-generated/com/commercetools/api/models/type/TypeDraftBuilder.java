@@ -63,6 +63,18 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
 
     /**
      *  <p>Name of the Type.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public TypeDraftBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Name of the Type.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -81,6 +93,18 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
     public TypeDraftBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Description of the Type.</p>
+     * @param builder function to build the description value
+     * @return Builder
+     */
+
+    public TypeDraftBuilder withDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -199,6 +223,28 @@ public class TypeDraftBuilder implements Builder<TypeDraft> {
         this.fieldDefinitions = new ArrayList<>();
         this.fieldDefinitions.add(builder.apply(com.commercetools.api.models.type.FieldDefinitionBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Defines Custom Fields.</p>
+     * @param builder function to build the fieldDefinitions value
+     * @return Builder
+     */
+
+    public TypeDraftBuilder addFieldDefinitions(
+            Function<com.commercetools.api.models.type.FieldDefinitionBuilder, com.commercetools.api.models.type.FieldDefinition> builder) {
+        return plusFieldDefinitions(builder.apply(com.commercetools.api.models.type.FieldDefinitionBuilder.of()));
+    }
+
+    /**
+     *  <p>Defines Custom Fields.</p>
+     * @param builder function to build the fieldDefinitions value
+     * @return Builder
+     */
+
+    public TypeDraftBuilder setFieldDefinitions(
+            Function<com.commercetools.api.models.type.FieldDefinitionBuilder, com.commercetools.api.models.type.FieldDefinition> builder) {
+        return fieldDefinitions(builder.apply(com.commercetools.api.models.type.FieldDefinitionBuilder.of()));
     }
 
     /**

@@ -78,6 +78,18 @@ public class AssociateBuilder implements Builder<Associate> {
 
     /**
      *  <p>The Customer that is part of the Business Unit.</p>
+     * @param builder function to build the customer value
+     * @return Builder
+     */
+
+    public AssociateBuilder withCustomer(
+            Function<com.commercetools.api.models.customer.CustomerReferenceBuilder, com.commercetools.api.models.customer.CustomerReference> builder) {
+        this.customer = builder.apply(com.commercetools.api.models.customer.CustomerReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The Customer that is part of the Business Unit.</p>
      * @param customer value to be set
      * @return Builder
      */

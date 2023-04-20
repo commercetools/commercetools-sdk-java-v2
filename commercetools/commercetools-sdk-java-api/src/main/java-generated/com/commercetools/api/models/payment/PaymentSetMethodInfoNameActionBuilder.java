@@ -40,6 +40,18 @@ public class PaymentSetMethodInfoNameActionBuilder implements Builder<PaymentSet
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public PaymentSetMethodInfoNameActionBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param name value to be set
      * @return Builder
      */

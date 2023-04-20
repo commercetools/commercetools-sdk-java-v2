@@ -52,6 +52,18 @@ public class CustomFieldLocalizedEnumValueBuilder implements Builder<CustomField
 
     /**
      *  <p>Descriptive localized label of the value.</p>
+     * @param builder function to build the label value
+     * @return Builder
+     */
+
+    public CustomFieldLocalizedEnumValueBuilder withLabel(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.label = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Descriptive localized label of the value.</p>
      * @param label value to be set
      * @return Builder
      */

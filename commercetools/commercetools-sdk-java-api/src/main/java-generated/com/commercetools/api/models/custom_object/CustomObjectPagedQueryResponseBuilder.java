@@ -150,6 +150,28 @@ public class CustomObjectPagedQueryResponseBuilder implements Builder<CustomObje
     }
 
     /**
+     *  <p>CustomObjects matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public CustomObjectPagedQueryResponseBuilder addResults(
+            Function<com.commercetools.api.models.custom_object.CustomObjectBuilder, com.commercetools.api.models.custom_object.CustomObject> builder) {
+        return plusResults(builder.apply(com.commercetools.api.models.custom_object.CustomObjectBuilder.of()));
+    }
+
+    /**
+     *  <p>CustomObjects matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public CustomObjectPagedQueryResponseBuilder setResults(
+            Function<com.commercetools.api.models.custom_object.CustomObjectBuilder, com.commercetools.api.models.custom_object.CustomObject> builder) {
+        return results(builder.apply(com.commercetools.api.models.custom_object.CustomObjectBuilder.of()));
+    }
+
+    /**
      *  <p>Number of results requested.</p>
      * @return limit
      */

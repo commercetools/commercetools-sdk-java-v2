@@ -43,6 +43,18 @@ public class CartSetCartTotalTaxActionBuilder implements Builder<CartSetCartTota
 
     /**
      *  <p>The Cart's total gross price becoming the <code>totalGross</code> field (<code>totalNet</code> + taxes) on the Cart's <code>taxedPrice</code>.</p>
+     * @param builder function to build the externalTotalGross value
+     * @return Builder
+     */
+
+    public CartSetCartTotalTaxActionBuilder withExternalTotalGross(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+        this.externalTotalGross = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The Cart's total gross price becoming the <code>totalGross</code> field (<code>totalNet</code> + taxes) on the Cart's <code>taxedPrice</code>.</p>
      * @param externalTotalGross value to be set
      * @return Builder
      */
@@ -120,6 +132,28 @@ public class CartSetCartTotalTaxActionBuilder implements Builder<CartSetCartTota
         this.externalTaxPortions
                 .add(builder.apply(com.commercetools.api.models.cart.TaxPortionDraftBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Set if the <code>externalTotalGross</code> price is a sum of portions with different tax rates.</p>
+     * @param builder function to build the externalTaxPortions value
+     * @return Builder
+     */
+
+    public CartSetCartTotalTaxActionBuilder addExternalTaxPortions(
+            Function<com.commercetools.api.models.cart.TaxPortionDraftBuilder, com.commercetools.api.models.cart.TaxPortionDraft> builder) {
+        return plusExternalTaxPortions(builder.apply(com.commercetools.api.models.cart.TaxPortionDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>Set if the <code>externalTotalGross</code> price is a sum of portions with different tax rates.</p>
+     * @param builder function to build the externalTaxPortions value
+     * @return Builder
+     */
+
+    public CartSetCartTotalTaxActionBuilder setExternalTaxPortions(
+            Function<com.commercetools.api.models.cart.TaxPortionDraftBuilder, com.commercetools.api.models.cart.TaxPortionDraft> builder) {
+        return externalTaxPortions(builder.apply(com.commercetools.api.models.cart.TaxPortionDraftBuilder.of()));
     }
 
     /**

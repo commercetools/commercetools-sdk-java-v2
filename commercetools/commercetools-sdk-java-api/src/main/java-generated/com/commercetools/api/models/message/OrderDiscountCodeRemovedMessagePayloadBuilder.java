@@ -39,6 +39,18 @@ public class OrderDiscountCodeRemovedMessagePayloadBuilder implements Builder<Or
 
     /**
      *  <p>DiscountCode that was removed.</p>
+     * @param builder function to build the discountCode value
+     * @return Builder
+     */
+
+    public OrderDiscountCodeRemovedMessagePayloadBuilder withDiscountCode(
+            Function<com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder, com.commercetools.api.models.discount_code.DiscountCodeReference> builder) {
+        this.discountCode = builder.apply(com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>DiscountCode that was removed.</p>
      * @param discountCode value to be set
      * @return Builder
      */

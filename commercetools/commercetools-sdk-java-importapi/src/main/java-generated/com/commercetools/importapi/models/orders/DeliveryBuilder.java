@@ -125,6 +125,28 @@ public class DeliveryBuilder implements Builder<Delivery> {
     }
 
     /**
+     * add the value to the items using the builder function
+     * @param builder function to build the items value
+     * @return Builder
+     */
+
+    public DeliveryBuilder addItems(
+            Function<com.commercetools.importapi.models.orders.DeliveryItemBuilder, com.commercetools.importapi.models.orders.DeliveryItem> builder) {
+        return plusItems(builder.apply(com.commercetools.importapi.models.orders.DeliveryItemBuilder.of()));
+    }
+
+    /**
+     * set the value to the items using the builder function
+     * @param builder function to build the items value
+     * @return Builder
+     */
+
+    public DeliveryBuilder setItems(
+            Function<com.commercetools.importapi.models.orders.DeliveryItemBuilder, com.commercetools.importapi.models.orders.DeliveryItem> builder) {
+        return items(builder.apply(com.commercetools.importapi.models.orders.DeliveryItemBuilder.of()));
+    }
+
+    /**
      * set values to the parcels
      * @param parcels value to be set
      * @return Builder
@@ -189,6 +211,28 @@ public class DeliveryBuilder implements Builder<Delivery> {
     }
 
     /**
+     * add the value to the parcels using the builder function
+     * @param builder function to build the parcels value
+     * @return Builder
+     */
+
+    public DeliveryBuilder addParcels(
+            Function<com.commercetools.importapi.models.orders.ParcelBuilder, com.commercetools.importapi.models.orders.Parcel> builder) {
+        return plusParcels(builder.apply(com.commercetools.importapi.models.orders.ParcelBuilder.of()));
+    }
+
+    /**
+     * set the value to the parcels using the builder function
+     * @param builder function to build the parcels value
+     * @return Builder
+     */
+
+    public DeliveryBuilder setParcels(
+            Function<com.commercetools.importapi.models.orders.ParcelBuilder, com.commercetools.importapi.models.orders.Parcel> builder) {
+        return parcels(builder.apply(com.commercetools.importapi.models.orders.ParcelBuilder.of()));
+    }
+
+    /**
      * set the value to the address using the builder function
      * @param builder function to build the address value
      * @return Builder
@@ -197,6 +241,18 @@ public class DeliveryBuilder implements Builder<Delivery> {
     public DeliveryBuilder address(
             Function<com.commercetools.importapi.models.common.AddressBuilder, com.commercetools.importapi.models.common.AddressBuilder> builder) {
         this.address = builder.apply(com.commercetools.importapi.models.common.AddressBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the address using the builder function
+     * @param builder function to build the address value
+     * @return Builder
+     */
+
+    public DeliveryBuilder withAddress(
+            Function<com.commercetools.importapi.models.common.AddressBuilder, com.commercetools.importapi.models.common.Address> builder) {
+        this.address = builder.apply(com.commercetools.importapi.models.common.AddressBuilder.of());
         return this;
     }
 

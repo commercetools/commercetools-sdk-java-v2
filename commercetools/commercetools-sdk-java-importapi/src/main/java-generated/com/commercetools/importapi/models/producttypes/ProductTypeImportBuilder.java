@@ -138,6 +138,30 @@ public class ProductTypeImportBuilder implements Builder<ProductTypeImport> {
     }
 
     /**
+     *  <p>The <code>attributes</code> of ProductType.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductTypeImportBuilder addAttributes(
+            Function<com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder, com.commercetools.importapi.models.producttypes.AttributeDefinition> builder) {
+        return plusAttributes(
+            builder.apply(com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder.of()));
+    }
+
+    /**
+     *  <p>The <code>attributes</code> of ProductType.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductTypeImportBuilder setAttributes(
+            Function<com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder, com.commercetools.importapi.models.producttypes.AttributeDefinition> builder) {
+        return attributes(
+            builder.apply(com.commercetools.importapi.models.producttypes.AttributeDefinitionBuilder.of()));
+    }
+
+    /**
      *  <p>User-defined unique identifier.</p>
      * @return key
      */

@@ -54,6 +54,18 @@ public class CartSetLineItemPriceActionBuilder implements Builder<CartSetLineIte
 
     /**
      *  <p>Value to set. If <code>externalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalPrice</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
+     * @param builder function to build the externalPrice value
+     * @return Builder
+     */
+
+    public CartSetLineItemPriceActionBuilder withExternalPrice(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+        this.externalPrice = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to set. If <code>externalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalPrice</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
      * @param externalPrice value to be set
      * @return Builder
      */

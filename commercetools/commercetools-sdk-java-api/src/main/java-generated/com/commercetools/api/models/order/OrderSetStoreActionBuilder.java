@@ -40,6 +40,18 @@ public class OrderSetStoreActionBuilder implements Builder<OrderSetStoreAction> 
 
     /**
      *  <p>ResourceIdentifier to a Store.</p>
+     * @param builder function to build the store value
+     * @return Builder
+     */
+
+    public OrderSetStoreActionBuilder withStore(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifier> builder) {
+        this.store = builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>ResourceIdentifier to a Store.</p>
      * @param store value to be set
      * @return Builder
      */

@@ -68,6 +68,18 @@ public class TaxPortionDraftBuilder implements Builder<TaxPortionDraft> {
 
     /**
      *  <p>Money value for the tax portion.</p>
+     * @param builder function to build the amount value
+     * @return Builder
+     */
+
+    public TaxPortionDraftBuilder withAmount(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+        this.amount = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Money value for the tax portion.</p>
      * @param amount value to be set
      * @return Builder
      */

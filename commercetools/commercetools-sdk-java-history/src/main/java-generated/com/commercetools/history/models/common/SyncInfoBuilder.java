@@ -43,6 +43,18 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
     }
 
     /**
+     * set the value to the channel using the builder function
+     * @param builder function to build the channel value
+     * @return Builder
+     */
+
+    public SyncInfoBuilder withChannel(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
+        this.channel = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the channel
      * @param channel value to be set
      * @return Builder

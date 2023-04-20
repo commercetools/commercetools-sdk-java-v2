@@ -44,6 +44,18 @@ public class ProductSelectionAddProductActionBuilder implements Builder<ProductS
 
     /**
      *  <p>ResourceIdentifier of the Product</p>
+     * @param builder function to build the product value
+     * @return Builder
+     */
+
+    public ProductSelectionAddProductActionBuilder withProduct(
+            Function<com.commercetools.api.models.product.ProductResourceIdentifierBuilder, com.commercetools.api.models.product.ProductResourceIdentifier> builder) {
+        this.product = builder.apply(com.commercetools.api.models.product.ProductResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>ResourceIdentifier of the Product</p>
      * @param product value to be set
      * @return Builder
      */

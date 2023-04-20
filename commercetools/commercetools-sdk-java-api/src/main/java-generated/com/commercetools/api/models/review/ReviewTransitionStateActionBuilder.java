@@ -43,6 +43,18 @@ public class ReviewTransitionStateActionBuilder implements Builder<ReviewTransit
 
     /**
      *  <p>Value to set. If there is no State yet, the new State must be an initial State. If the existing State has <code>transitions</code> set, there must be a direct transition to the new State. If <code>transitions</code> is not set, no validation is performed. If the new State does not have the role <code>ReviewIncludedInStatistics</code>, the Review is not taken into account in the ratings statistics of the target.</p>
+     * @param builder function to build the state value
+     * @return Builder
+     */
+
+    public ReviewTransitionStateActionBuilder withState(
+            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifier> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to set. If there is no State yet, the new State must be an initial State. If the existing State has <code>transitions</code> set, there must be a direct transition to the new State. If <code>transitions</code> is not set, no validation is performed. If the new State does not have the role <code>ReviewIncludedInStatistics</code>, the Review is not taken into account in the ratings statistics of the target.</p>
      * @param state value to be set
      * @return Builder
      */

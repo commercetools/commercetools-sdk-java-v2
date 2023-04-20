@@ -97,6 +97,30 @@ public class StandalonePriceImportRequestBuilder implements Builder<StandalonePr
 
     /**
      *  <p>The Standalone Price import resources of this request.</p>
+     * @param builder function to build the resources value
+     * @return Builder
+     */
+
+    public StandalonePriceImportRequestBuilder addResources(
+            Function<com.commercetools.importapi.models.standalone_prices.StandalonePriceImportBuilder, com.commercetools.importapi.models.standalone_prices.StandalonePriceImport> builder) {
+        return plusResources(
+            builder.apply(com.commercetools.importapi.models.standalone_prices.StandalonePriceImportBuilder.of()));
+    }
+
+    /**
+     *  <p>The Standalone Price import resources of this request.</p>
+     * @param builder function to build the resources value
+     * @return Builder
+     */
+
+    public StandalonePriceImportRequestBuilder setResources(
+            Function<com.commercetools.importapi.models.standalone_prices.StandalonePriceImportBuilder, com.commercetools.importapi.models.standalone_prices.StandalonePriceImport> builder) {
+        return resources(
+            builder.apply(com.commercetools.importapi.models.standalone_prices.StandalonePriceImportBuilder.of()));
+    }
+
+    /**
+     *  <p>The Standalone Price import resources of this request.</p>
      * @return resources
      */
 

@@ -95,6 +95,28 @@ public class CategoryImportRequestBuilder implements Builder<CategoryImportReque
 
     /**
      *  <p>The category import resources of this request.</p>
+     * @param builder function to build the resources value
+     * @return Builder
+     */
+
+    public CategoryImportRequestBuilder addResources(
+            Function<com.commercetools.importapi.models.categories.CategoryImportBuilder, com.commercetools.importapi.models.categories.CategoryImport> builder) {
+        return plusResources(builder.apply(com.commercetools.importapi.models.categories.CategoryImportBuilder.of()));
+    }
+
+    /**
+     *  <p>The category import resources of this request.</p>
+     * @param builder function to build the resources value
+     * @return Builder
+     */
+
+    public CategoryImportRequestBuilder setResources(
+            Function<com.commercetools.importapi.models.categories.CategoryImportBuilder, com.commercetools.importapi.models.categories.CategoryImport> builder) {
+        return resources(builder.apply(com.commercetools.importapi.models.categories.CategoryImportBuilder.of()));
+    }
+
+    /**
+     *  <p>The category import resources of this request.</p>
      * @return resources
      */
 

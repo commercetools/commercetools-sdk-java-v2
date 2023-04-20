@@ -50,6 +50,18 @@ public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDi
 
     /**
      *  <p>ResourceIdentifier of a Product.</p>
+     * @param builder function to build the product value
+     * @return Builder
+     */
+
+    public CartDiscountValueGiftLineItemDraftBuilder withProduct(
+            Function<com.commercetools.api.models.product.ProductResourceIdentifierBuilder, com.commercetools.api.models.product.ProductResourceIdentifier> builder) {
+        this.product = builder.apply(com.commercetools.api.models.product.ProductResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>ResourceIdentifier of a Product.</p>
      * @param product value to be set
      * @return Builder
      */
@@ -86,6 +98,18 @@ public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDi
 
     /**
      *  <p>Channel must have the role <code>InventorySupply</code>.</p>
+     * @param builder function to build the supplyChannel value
+     * @return Builder
+     */
+
+    public CartDiscountValueGiftLineItemDraftBuilder withSupplyChannel(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Channel must have the role <code>InventorySupply</code>.</p>
      * @param supplyChannel value to be set
      * @return Builder
      */
@@ -107,6 +131,19 @@ public class CartDiscountValueGiftLineItemDraftBuilder implements Builder<CartDi
         this.distributionChannel = builder
                 .apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Channel must have the role <code>ProductDistribution</code>.</p>
+     * @param builder function to build the distributionChannel value
+     * @return Builder
+     */
+
+    public CartDiscountValueGiftLineItemDraftBuilder withDistributionChannel(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+        this.distributionChannel = builder
+                .apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of());
         return this;
     }
 

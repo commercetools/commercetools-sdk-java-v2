@@ -40,6 +40,19 @@ public class ProductSelectionCreatedMessagePayloadBuilder implements Builder<Pro
 
     /**
      *  <p>Product Selection that was created.</p>
+     * @param builder function to build the productSelection value
+     * @return Builder
+     */
+
+    public ProductSelectionCreatedMessagePayloadBuilder withProductSelection(
+            Function<com.commercetools.api.models.product_selection.ProductSelectionBuilder, com.commercetools.api.models.product_selection.ProductSelection> builder) {
+        this.productSelection = builder
+                .apply(com.commercetools.api.models.product_selection.ProductSelectionBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Product Selection that was created.</p>
      * @param productSelection value to be set
      * @return Builder
      */

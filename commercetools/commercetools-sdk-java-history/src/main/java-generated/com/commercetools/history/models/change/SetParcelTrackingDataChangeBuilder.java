@@ -58,6 +58,18 @@ public class SetParcelTrackingDataChangeBuilder implements Builder<SetParcelTrac
     }
 
     /**
+     * set the value to the parcel using the builder function
+     * @param builder function to build the parcel value
+     * @return Builder
+     */
+
+    public SetParcelTrackingDataChangeBuilder withParcel(
+            Function<com.commercetools.history.models.change_value.ParcelChangeValueBuilder, com.commercetools.history.models.change_value.ParcelChangeValue> builder) {
+        this.parcel = builder.apply(com.commercetools.history.models.change_value.ParcelChangeValueBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the parcel
      * @param parcel value to be set
      * @return Builder
@@ -82,6 +94,18 @@ public class SetParcelTrackingDataChangeBuilder implements Builder<SetParcelTrac
     }
 
     /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetParcelTrackingDataChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.TrackingDataBuilder, com.commercetools.history.models.common.TrackingData> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.TrackingDataBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
@@ -102,6 +126,18 @@ public class SetParcelTrackingDataChangeBuilder implements Builder<SetParcelTrac
     public SetParcelTrackingDataChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.TrackingDataBuilder, com.commercetools.history.models.common.TrackingDataBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.TrackingDataBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public SetParcelTrackingDataChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.TrackingDataBuilder, com.commercetools.history.models.common.TrackingData> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.TrackingDataBuilder.of());
         return this;
     }
 

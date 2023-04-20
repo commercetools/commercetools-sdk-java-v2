@@ -137,6 +137,28 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
     }
 
     /**
+     * add the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public TransitionLineItemStateChangeBuilder addNextValue(
+            Function<com.commercetools.history.models.common.ItemStateBuilder, com.commercetools.history.models.common.ItemState> builder) {
+        return plusNextValue(builder.apply(com.commercetools.history.models.common.ItemStateBuilder.of()));
+    }
+
+    /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public TransitionLineItemStateChangeBuilder setNextValue(
+            Function<com.commercetools.history.models.common.ItemStateBuilder, com.commercetools.history.models.common.ItemState> builder) {
+        return nextValue(builder.apply(com.commercetools.history.models.common.ItemStateBuilder.of()));
+    }
+
+    /**
      * set values to the previousValue
      * @param previousValue value to be set
      * @return Builder
@@ -201,6 +223,28 @@ public class TransitionLineItemStateChangeBuilder implements Builder<TransitionL
         this.previousValue = new ArrayList<>();
         this.previousValue.add(builder.apply(com.commercetools.history.models.common.ItemStateBuilder.of()).build());
         return this;
+    }
+
+    /**
+     * add the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public TransitionLineItemStateChangeBuilder addPreviousValue(
+            Function<com.commercetools.history.models.common.ItemStateBuilder, com.commercetools.history.models.common.ItemState> builder) {
+        return plusPreviousValue(builder.apply(com.commercetools.history.models.common.ItemStateBuilder.of()));
+    }
+
+    /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public TransitionLineItemStateChangeBuilder setPreviousValue(
+            Function<com.commercetools.history.models.common.ItemStateBuilder, com.commercetools.history.models.common.ItemState> builder) {
+        return previousValue(builder.apply(com.commercetools.history.models.common.ItemStateBuilder.of()));
     }
 
     /**

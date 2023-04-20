@@ -93,6 +93,28 @@ public class ExtensionChangeTriggersActionBuilder implements Builder<ExtensionCh
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param builder function to build the triggers value
+     * @return Builder
+     */
+
+    public ExtensionChangeTriggersActionBuilder addTriggers(
+            Function<com.commercetools.api.models.extension.ExtensionTriggerBuilder, com.commercetools.api.models.extension.ExtensionTrigger> builder) {
+        return plusTriggers(builder.apply(com.commercetools.api.models.extension.ExtensionTriggerBuilder.of()));
+    }
+
+    /**
+     *  <p>New value to set. Must not be empty.</p>
+     * @param builder function to build the triggers value
+     * @return Builder
+     */
+
+    public ExtensionChangeTriggersActionBuilder setTriggers(
+            Function<com.commercetools.api.models.extension.ExtensionTriggerBuilder, com.commercetools.api.models.extension.ExtensionTrigger> builder) {
+        return triggers(builder.apply(com.commercetools.api.models.extension.ExtensionTriggerBuilder.of()));
+    }
+
+    /**
+     *  <p>New value to set. Must not be empty.</p>
      * @return triggers
      */
 

@@ -111,6 +111,34 @@ public class CartSetDirectDiscountsActionBuilder implements Builder<CartSetDirec
      *   <li>If set, all existing Direct Discounts are replaced. The discounts apply in the order they are added to the list.</li>
      *   <li>If empty, all existing Direct Discounts are removed and all affected prices on the Cart or Order are recalculated.</li>
      *  </ul>
+     * @param builder function to build the discounts value
+     * @return Builder
+     */
+
+    public CartSetDirectDiscountsActionBuilder addDiscounts(
+            Function<com.commercetools.api.models.cart.DirectDiscountDraftBuilder, com.commercetools.api.models.cart.DirectDiscountDraft> builder) {
+        return plusDiscounts(builder.apply(com.commercetools.api.models.cart.DirectDiscountDraftBuilder.of()));
+    }
+
+    /**
+     *  <ul>
+     *   <li>If set, all existing Direct Discounts are replaced. The discounts apply in the order they are added to the list.</li>
+     *   <li>If empty, all existing Direct Discounts are removed and all affected prices on the Cart or Order are recalculated.</li>
+     *  </ul>
+     * @param builder function to build the discounts value
+     * @return Builder
+     */
+
+    public CartSetDirectDiscountsActionBuilder setDiscounts(
+            Function<com.commercetools.api.models.cart.DirectDiscountDraftBuilder, com.commercetools.api.models.cart.DirectDiscountDraft> builder) {
+        return discounts(builder.apply(com.commercetools.api.models.cart.DirectDiscountDraftBuilder.of()));
+    }
+
+    /**
+     *  <ul>
+     *   <li>If set, all existing Direct Discounts are replaced. The discounts apply in the order they are added to the list.</li>
+     *   <li>If empty, all existing Direct Discounts are removed and all affected prices on the Cart or Order are recalculated.</li>
+     *  </ul>
      * @return discounts
      */
 

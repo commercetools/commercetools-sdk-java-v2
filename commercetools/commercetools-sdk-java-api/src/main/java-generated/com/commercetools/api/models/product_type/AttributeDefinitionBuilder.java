@@ -95,6 +95,18 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     /**
      *  <p>Human-readable label for the Attribute.</p>
+     * @param builder function to build the label value
+     * @return Builder
+     */
+
+    public AttributeDefinitionBuilder withLabel(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.label = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Human-readable label for the Attribute.</p>
      * @param label value to be set
      * @return Builder
      */
@@ -136,6 +148,18 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     public AttributeDefinitionBuilder inputTip(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.inputTip = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Provides additional Attribute information to aid content managers configure Product details.</p>
+     * @param builder function to build the inputTip value
+     * @return Builder
+     */
+
+    public AttributeDefinitionBuilder withInputTip(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.inputTip = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
 

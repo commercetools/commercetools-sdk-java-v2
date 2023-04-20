@@ -100,6 +100,30 @@ public class StoreDistributionChannelsChangedMessagePayloadBuilder
     }
 
     /**
+     *  <p>Product distribution Channels that have been added to the Store.</p>
+     * @param builder function to build the addedDistributionChannels value
+     * @return Builder
+     */
+
+    public StoreDistributionChannelsChangedMessagePayloadBuilder addAddedDistributionChannels(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReference> builder) {
+        return plusAddedDistributionChannels(
+            builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p>Product distribution Channels that have been added to the Store.</p>
+     * @param builder function to build the addedDistributionChannels value
+     * @return Builder
+     */
+
+    public StoreDistributionChannelsChangedMessagePayloadBuilder setAddedDistributionChannels(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReference> builder) {
+        return addedDistributionChannels(
+            builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()));
+    }
+
+    /**
      *  <p>Product distribution Channels that have been removed from the Store.</p>
      * @param removedDistributionChannels value to be set
      * @return Builder
@@ -166,6 +190,30 @@ public class StoreDistributionChannelsChangedMessagePayloadBuilder
         this.removedDistributionChannels
                 .add(builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Product distribution Channels that have been removed from the Store.</p>
+     * @param builder function to build the removedDistributionChannels value
+     * @return Builder
+     */
+
+    public StoreDistributionChannelsChangedMessagePayloadBuilder addRemovedDistributionChannels(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReference> builder) {
+        return plusRemovedDistributionChannels(
+            builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p>Product distribution Channels that have been removed from the Store.</p>
+     * @param builder function to build the removedDistributionChannels value
+     * @return Builder
+     */
+
+    public StoreDistributionChannelsChangedMessagePayloadBuilder setRemovedDistributionChannels(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReference> builder) {
+        return removedDistributionChannels(
+            builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()));
     }
 
     /**

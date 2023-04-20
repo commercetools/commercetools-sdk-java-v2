@@ -145,6 +145,28 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
     }
 
     /**
+     * add the value to the terms using the builder function
+     * @param builder function to build the terms value
+     * @return Builder
+     */
+
+    public TermFacetResultBuilder addTerms(
+            Function<com.commercetools.api.models.product.FacetTermBuilder, com.commercetools.api.models.product.FacetTerm> builder) {
+        return plusTerms(builder.apply(com.commercetools.api.models.product.FacetTermBuilder.of()));
+    }
+
+    /**
+     * set the value to the terms using the builder function
+     * @param builder function to build the terms value
+     * @return Builder
+     */
+
+    public TermFacetResultBuilder setTerms(
+            Function<com.commercetools.api.models.product.FacetTermBuilder, com.commercetools.api.models.product.FacetTerm> builder) {
+        return terms(builder.apply(com.commercetools.api.models.product.FacetTermBuilder.of()));
+    }
+
+    /**
      * value of dataType}
      * @return dataType
      */

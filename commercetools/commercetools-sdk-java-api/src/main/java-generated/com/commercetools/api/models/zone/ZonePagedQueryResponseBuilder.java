@@ -147,6 +147,28 @@ public class ZonePagedQueryResponseBuilder implements Builder<ZonePagedQueryResp
     }
 
     /**
+     *  <p>Zones matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public ZonePagedQueryResponseBuilder addResults(
+            Function<com.commercetools.api.models.zone.ZoneBuilder, com.commercetools.api.models.zone.Zone> builder) {
+        return plusResults(builder.apply(com.commercetools.api.models.zone.ZoneBuilder.of()));
+    }
+
+    /**
+     *  <p>Zones matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public ZonePagedQueryResponseBuilder setResults(
+            Function<com.commercetools.api.models.zone.ZoneBuilder, com.commercetools.api.models.zone.Zone> builder) {
+        return results(builder.apply(com.commercetools.api.models.zone.ZoneBuilder.of()));
+    }
+
+    /**
      *  <p>Number of results requested.</p>
      * @return limit
      */

@@ -54,6 +54,18 @@ public class SetSupplyChannelChangeBuilder implements Builder<SetSupplyChannelCh
     }
 
     /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public SetSupplyChannelChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
@@ -74,6 +86,18 @@ public class SetSupplyChannelChangeBuilder implements Builder<SetSupplyChannelCh
     public SetSupplyChannelChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetSupplyChannelChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
         return this;
     }
 

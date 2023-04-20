@@ -150,6 +150,28 @@ public class ShoppingListPagedQueryResponseBuilder implements Builder<ShoppingLi
     }
 
     /**
+     *  <p>ShoppingLists matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public ShoppingListPagedQueryResponseBuilder addResults(
+            Function<com.commercetools.api.models.shopping_list.ShoppingListBuilder, com.commercetools.api.models.shopping_list.ShoppingList> builder) {
+        return plusResults(builder.apply(com.commercetools.api.models.shopping_list.ShoppingListBuilder.of()));
+    }
+
+    /**
+     *  <p>ShoppingLists matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public ShoppingListPagedQueryResponseBuilder setResults(
+            Function<com.commercetools.api.models.shopping_list.ShoppingListBuilder, com.commercetools.api.models.shopping_list.ShoppingList> builder) {
+        return results(builder.apply(com.commercetools.api.models.shopping_list.ShoppingListBuilder.of()));
+    }
+
+    /**
      *  <p>Number of results requested.</p>
      * @return limit
      */

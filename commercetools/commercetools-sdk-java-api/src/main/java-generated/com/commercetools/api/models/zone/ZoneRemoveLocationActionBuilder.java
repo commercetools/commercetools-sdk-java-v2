@@ -38,6 +38,18 @@ public class ZoneRemoveLocationActionBuilder implements Builder<ZoneRemoveLocati
 
     /**
      *  <p>Location to be removed from the Zone.</p>
+     * @param builder function to build the location value
+     * @return Builder
+     */
+
+    public ZoneRemoveLocationActionBuilder withLocation(
+            Function<com.commercetools.api.models.zone.LocationBuilder, com.commercetools.api.models.zone.Location> builder) {
+        this.location = builder.apply(com.commercetools.api.models.zone.LocationBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Location to be removed from the Zone.</p>
      * @param location value to be set
      * @return Builder
      */

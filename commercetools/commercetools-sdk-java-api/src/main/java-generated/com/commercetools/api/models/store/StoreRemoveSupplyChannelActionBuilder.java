@@ -39,6 +39,18 @@ public class StoreRemoveSupplyChannelActionBuilder implements Builder<StoreRemov
 
     /**
      *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @param builder function to build the supplyChannel value
+     * @return Builder
+     */
+
+    public StoreRemoveSupplyChannelActionBuilder withSupplyChannel(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to remove. ResourceIdentifier of a Channel with the <code>InventorySupply</code> ChannelRoleEnum.</p>
      * @param supplyChannel value to be set
      * @return Builder
      */

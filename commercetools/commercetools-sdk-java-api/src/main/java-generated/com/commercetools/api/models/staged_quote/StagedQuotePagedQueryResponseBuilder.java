@@ -150,6 +150,28 @@ public class StagedQuotePagedQueryResponseBuilder implements Builder<StagedQuote
     }
 
     /**
+     *  <p>Staged Quotes matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public StagedQuotePagedQueryResponseBuilder addResults(
+            Function<com.commercetools.api.models.staged_quote.StagedQuoteBuilder, com.commercetools.api.models.staged_quote.StagedQuote> builder) {
+        return plusResults(builder.apply(com.commercetools.api.models.staged_quote.StagedQuoteBuilder.of()));
+    }
+
+    /**
+     *  <p>Staged Quotes matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public StagedQuotePagedQueryResponseBuilder setResults(
+            Function<com.commercetools.api.models.staged_quote.StagedQuoteBuilder, com.commercetools.api.models.staged_quote.StagedQuote> builder) {
+        return results(builder.apply(com.commercetools.api.models.staged_quote.StagedQuoteBuilder.of()));
+    }
+
+    /**
      *  <p>Number of results requested.</p>
      * @return limit
      */

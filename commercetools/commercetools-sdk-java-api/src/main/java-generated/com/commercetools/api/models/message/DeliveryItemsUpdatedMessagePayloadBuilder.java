@@ -114,6 +114,28 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
     }
 
     /**
+     *  <p>Delivery Items after the Set Delivery Items update action.</p>
+     * @param builder function to build the items value
+     * @return Builder
+     */
+
+    public DeliveryItemsUpdatedMessagePayloadBuilder addItems(
+            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItem> builder) {
+        return plusItems(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()));
+    }
+
+    /**
+     *  <p>Delivery Items after the Set Delivery Items update action.</p>
+     * @param builder function to build the items value
+     * @return Builder
+     */
+
+    public DeliveryItemsUpdatedMessagePayloadBuilder setItems(
+            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItem> builder) {
+        return items(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()));
+    }
+
+    /**
      *  <p>Delivery Items before the Set Delivery Items update action.</p>
      * @param oldItems value to be set
      * @return Builder
@@ -178,6 +200,28 @@ public class DeliveryItemsUpdatedMessagePayloadBuilder implements Builder<Delive
         this.oldItems = new ArrayList<>();
         this.oldItems.add(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Delivery Items before the Set Delivery Items update action.</p>
+     * @param builder function to build the oldItems value
+     * @return Builder
+     */
+
+    public DeliveryItemsUpdatedMessagePayloadBuilder addOldItems(
+            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItem> builder) {
+        return plusOldItems(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()));
+    }
+
+    /**
+     *  <p>Delivery Items before the Set Delivery Items update action.</p>
+     * @param builder function to build the oldItems value
+     * @return Builder
+     */
+
+    public DeliveryItemsUpdatedMessagePayloadBuilder setOldItems(
+            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItem> builder) {
+        return oldItems(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()));
     }
 
     /**

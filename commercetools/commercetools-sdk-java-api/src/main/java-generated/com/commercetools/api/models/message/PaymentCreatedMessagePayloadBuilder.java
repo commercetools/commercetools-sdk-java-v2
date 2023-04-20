@@ -38,6 +38,18 @@ public class PaymentCreatedMessagePayloadBuilder implements Builder<PaymentCreat
 
     /**
      *  <p>Payment that was created.</p>
+     * @param builder function to build the payment value
+     * @return Builder
+     */
+
+    public PaymentCreatedMessagePayloadBuilder withPayment(
+            Function<com.commercetools.api.models.payment.PaymentBuilder, com.commercetools.api.models.payment.Payment> builder) {
+        this.payment = builder.apply(com.commercetools.api.models.payment.PaymentBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Payment that was created.</p>
      * @param payment value to be set
      * @return Builder
      */

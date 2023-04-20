@@ -173,6 +173,28 @@ public class TaxRateBuilder implements Builder<TaxRate> {
     }
 
     /**
+     * add the value to the subRates using the builder function
+     * @param builder function to build the subRates value
+     * @return Builder
+     */
+
+    public TaxRateBuilder addSubRates(
+            Function<com.commercetools.history.models.common.SubRateBuilder, com.commercetools.history.models.common.SubRate> builder) {
+        return plusSubRates(builder.apply(com.commercetools.history.models.common.SubRateBuilder.of()));
+    }
+
+    /**
+     * set the value to the subRates using the builder function
+     * @param builder function to build the subRates value
+     * @return Builder
+     */
+
+    public TaxRateBuilder setSubRates(
+            Function<com.commercetools.history.models.common.SubRateBuilder, com.commercetools.history.models.common.SubRate> builder) {
+        return subRates(builder.apply(com.commercetools.history.models.common.SubRateBuilder.of()));
+    }
+
+    /**
      *  <p>The ID is always set if the tax rate is part of a TaxCategory. The external tax rates in a Cart do not contain an <code>id</code>.</p>
      * @return id
      */

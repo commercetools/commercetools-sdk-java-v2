@@ -134,6 +134,28 @@ public class DuplicateAttributeValuesErrorBuilder implements Builder<DuplicateAt
     }
 
     /**
+     *  <p>Conflicting Attributes.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public DuplicateAttributeValuesErrorBuilder addAttributes(
+            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.Attribute> builder) {
+        return plusAttributes(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()));
+    }
+
+    /**
+     *  <p>Conflicting Attributes.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public DuplicateAttributeValuesErrorBuilder setAttributes(
+            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.Attribute> builder) {
+        return attributes(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()));
+    }
+
+    /**
      *  <p><code>"The set of attributes must be unique across all variants."</code></p>
      * @return message
      */

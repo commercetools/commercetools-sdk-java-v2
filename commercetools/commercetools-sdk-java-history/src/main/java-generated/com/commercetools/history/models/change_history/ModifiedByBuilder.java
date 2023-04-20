@@ -77,6 +77,18 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
 
     /**
      *  <p>Reference to the Customer who made the change. Present only if the change was made using a token from the Password Flow.</p>
+     * @param builder function to build the customer value
+     * @return Builder
+     */
+
+    public ModifiedByBuilder withCustomer(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
+        this.customer = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the Customer who made the change. Present only if the change was made using a token from the Password Flow.</p>
      * @param customer value to be set
      * @return Builder
      */

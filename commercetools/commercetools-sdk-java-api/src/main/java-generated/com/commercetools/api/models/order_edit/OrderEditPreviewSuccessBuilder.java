@@ -40,6 +40,18 @@ public class OrderEditPreviewSuccessBuilder implements Builder<OrderEditPreviewS
     }
 
     /**
+     * set the value to the preview using the builder function
+     * @param builder function to build the preview value
+     * @return Builder
+     */
+
+    public OrderEditPreviewSuccessBuilder withPreview(
+            Function<com.commercetools.api.models.order_edit.StagedOrderBuilder, com.commercetools.api.models.order_edit.StagedOrder> builder) {
+        this.preview = builder.apply(com.commercetools.api.models.order_edit.StagedOrderBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the preview
      * @param preview value to be set
      * @return Builder

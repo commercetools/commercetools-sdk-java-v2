@@ -73,6 +73,18 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
 
     /**
      *  <p>Name of the DiscountCode.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public DiscountCodeDraftBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Name of the DiscountCode.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -91,6 +103,18 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
     public DiscountCodeDraftBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Description of the DiscountCode.</p>
+     * @param builder function to build the description value
+     * @return Builder
+     */
+
+    public DiscountCodeDraftBuilder withDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -189,6 +213,30 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
     }
 
     /**
+     *  <p>Specify what CartDiscounts the API applies when you add the DiscountCode to the Cart.</p>
+     * @param builder function to build the cartDiscounts value
+     * @return Builder
+     */
+
+    public DiscountCodeDraftBuilder addCartDiscounts(
+            Function<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder, com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> builder) {
+        return plusCartDiscounts(
+            builder.apply(com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder.of()));
+    }
+
+    /**
+     *  <p>Specify what CartDiscounts the API applies when you add the DiscountCode to the Cart.</p>
+     * @param builder function to build the cartDiscounts value
+     * @return Builder
+     */
+
+    public DiscountCodeDraftBuilder setCartDiscounts(
+            Function<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder, com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> builder) {
+        return cartDiscounts(
+            builder.apply(com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder.of()));
+    }
+
+    /**
      *  <p>DiscountCode can only be applied to Carts that match this predicate.</p>
      * @param cartPredicate value to be set
      * @return Builder
@@ -241,6 +289,18 @@ public class DiscountCodeDraftBuilder implements Builder<DiscountCodeDraft> {
     public DiscountCodeDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the DiscountCode.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public DiscountCodeDraftBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
         return this;
     }
 

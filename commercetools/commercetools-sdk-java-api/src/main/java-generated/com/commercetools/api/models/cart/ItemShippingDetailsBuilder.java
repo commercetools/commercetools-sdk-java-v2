@@ -94,6 +94,28 @@ public class ItemShippingDetailsBuilder implements Builder<ItemShippingDetails> 
     }
 
     /**
+     *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
+     * @param builder function to build the targets value
+     * @return Builder
+     */
+
+    public ItemShippingDetailsBuilder addTargets(
+            Function<com.commercetools.api.models.cart.ItemShippingTargetBuilder, com.commercetools.api.models.cart.ItemShippingTarget> builder) {
+        return plusTargets(builder.apply(com.commercetools.api.models.cart.ItemShippingTargetBuilder.of()));
+    }
+
+    /**
+     *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
+     * @param builder function to build the targets value
+     * @return Builder
+     */
+
+    public ItemShippingDetailsBuilder setTargets(
+            Function<com.commercetools.api.models.cart.ItemShippingTargetBuilder, com.commercetools.api.models.cart.ItemShippingTarget> builder) {
+        return targets(builder.apply(com.commercetools.api.models.cart.ItemShippingTargetBuilder.of()));
+    }
+
+    /**
      *  <ul>
      *   <li><code>true</code> if the quantity of Line Items or Custom Line Items is equal to the sum of sub-quantities defined in <code>targets</code>.</li>
      *   <li><code>false</code> if the quantity of Line Items or Custom Line Items is not equal to the sum of sub-quantities defined in <code>targets</code>. Ordering a Cart when the value is <code>false</code> returns an InvalidItemShippingDetails error.</li>

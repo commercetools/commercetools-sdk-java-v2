@@ -40,6 +40,18 @@ public class ChannelSetAddressActionBuilder implements Builder<ChannelSetAddress
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param builder function to build the address value
+     * @return Builder
+     */
+
+    public ChannelSetAddressActionBuilder withAddress(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddress> builder) {
+        this.address = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param address value to be set
      * @return Builder
      */

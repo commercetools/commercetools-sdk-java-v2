@@ -97,6 +97,18 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
 
     /**
      *  <p>Custom Fields for the Business Unit.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public MyCompanyDraftBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the Business Unit.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -171,6 +183,28 @@ public class MyCompanyDraftBuilder implements Builder<MyCompanyDraft> {
         this.addresses = new ArrayList<>();
         this.addresses.add(builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Addresses used by the Business Unit.</p>
+     * @param builder function to build the addresses value
+     * @return Builder
+     */
+
+    public MyCompanyDraftBuilder addAddresses(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddress> builder) {
+        return plusAddresses(builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()));
+    }
+
+    /**
+     *  <p>Addresses used by the Business Unit.</p>
+     * @param builder function to build the addresses value
+     * @return Builder
+     */
+
+    public MyCompanyDraftBuilder setAddresses(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddress> builder) {
+        return addresses(builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()));
     }
 
     /**

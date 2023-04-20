@@ -105,6 +105,23 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @param builder function to build the label value
+     * @return Builder
+     */
+
+    public AttributeDefinitionBuilder withLabel(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedString> builder) {
+        this.label = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
      * @param label value to be set
      * @return Builder
      */
@@ -151,6 +168,23 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     public AttributeDefinitionBuilder inputTip(
             Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
         this.inputTip = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     * @param builder function to build the inputTip value
+     * @return Builder
+     */
+
+    public AttributeDefinitionBuilder withInputTip(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedString> builder) {
+        this.inputTip = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of());
         return this;
     }
 

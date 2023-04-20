@@ -132,6 +132,18 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @param builder function to build the lastModifiedBy value
+     * @return Builder
+     */
+
+    public StoreCreatedMessageBuilder withLastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value of <code>createdBy</code>.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -151,6 +163,18 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     public StoreCreatedMessageBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
+     * @return Builder
+     */
+
+    public StoreCreatedMessageBuilder withCreatedBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
 
@@ -227,6 +251,19 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @param builder function to build the resourceUserProvidedIdentifiers value
+     * @return Builder
+     */
+
+    public StoreCreatedMessageBuilder withResourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiers> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      * @param resourceUserProvidedIdentifiers value to be set
      * @return Builder
      */
@@ -246,6 +283,18 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     public StoreCreatedMessageBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>The <code>name</code> of the Store that was created.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public StoreCreatedMessageBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -364,6 +413,28 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
+     *  <p>Countries of the Store that was created.</p>
+     * @param builder function to build the countries value
+     * @return Builder
+     */
+
+    public StoreCreatedMessageBuilder addCountries(
+            Function<com.commercetools.api.models.store_country.StoreCountryBuilder, com.commercetools.api.models.store_country.StoreCountry> builder) {
+        return plusCountries(builder.apply(com.commercetools.api.models.store_country.StoreCountryBuilder.of()));
+    }
+
+    /**
+     *  <p>Countries of the Store that was created.</p>
+     * @param builder function to build the countries value
+     * @return Builder
+     */
+
+    public StoreCreatedMessageBuilder setCountries(
+            Function<com.commercetools.api.models.store_country.StoreCountryBuilder, com.commercetools.api.models.store_country.StoreCountry> builder) {
+        return countries(builder.apply(com.commercetools.api.models.store_country.StoreCountryBuilder.of()));
+    }
+
+    /**
      *  <p>Distribution Channels of the Store that was created.</p>
      * @param distributionChannels value to be set
      * @return Builder
@@ -430,6 +501,29 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
         this.distributionChannels
                 .add(builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Distribution Channels of the Store that was created.</p>
+     * @param builder function to build the distributionChannels value
+     * @return Builder
+     */
+
+    public StoreCreatedMessageBuilder addDistributionChannels(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReference> builder) {
+        return plusDistributionChannels(
+            builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p>Distribution Channels of the Store that was created.</p>
+     * @param builder function to build the distributionChannels value
+     * @return Builder
+     */
+
+    public StoreCreatedMessageBuilder setDistributionChannels(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReference> builder) {
+        return distributionChannels(builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()));
     }
 
     /**
@@ -502,6 +596,28 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
+     *  <p>Supply Channels of the Store that was created.</p>
+     * @param builder function to build the supplyChannels value
+     * @return Builder
+     */
+
+    public StoreCreatedMessageBuilder addSupplyChannels(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReference> builder) {
+        return plusSupplyChannels(builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p>Supply Channels of the Store that was created.</p>
+     * @param builder function to build the supplyChannels value
+     * @return Builder
+     */
+
+    public StoreCreatedMessageBuilder setSupplyChannels(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReference> builder) {
+        return supplyChannels(builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()));
+    }
+
+    /**
      *  <p>ProductSelectionSettings of the Store that was created.</p>
      * @param productSelections value to be set
      * @return Builder
@@ -571,6 +687,29 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     }
 
     /**
+     *  <p>ProductSelectionSettings of the Store that was created.</p>
+     * @param builder function to build the productSelections value
+     * @return Builder
+     */
+
+    public StoreCreatedMessageBuilder addProductSelections(
+            Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSetting> builder) {
+        return plusProductSelections(
+            builder.apply(com.commercetools.api.models.store.ProductSelectionSettingBuilder.of()));
+    }
+
+    /**
+     *  <p>ProductSelectionSettings of the Store that was created.</p>
+     * @param builder function to build the productSelections value
+     * @return Builder
+     */
+
+    public StoreCreatedMessageBuilder setProductSelections(
+            Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSetting> builder) {
+        return productSelections(builder.apply(com.commercetools.api.models.store.ProductSelectionSettingBuilder.of()));
+    }
+
+    /**
      *  <p>Custom Fields on the Store that was created.</p>
      * @param builder function to build the custom value
      * @return Builder
@@ -579,6 +718,18 @@ public class StoreCreatedMessageBuilder implements Builder<StoreCreatedMessage> 
     public StoreCreatedMessageBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields on the Store that was created.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public StoreCreatedMessageBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of());
         return this;
     }
 

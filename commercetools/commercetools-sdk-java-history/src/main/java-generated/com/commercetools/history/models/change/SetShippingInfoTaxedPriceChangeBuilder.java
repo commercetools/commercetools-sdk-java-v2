@@ -54,6 +54,18 @@ public class SetShippingInfoTaxedPriceChangeBuilder implements Builder<SetShippi
     }
 
     /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetShippingInfoTaxedPriceChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.TaxedPriceBuilder, com.commercetools.history.models.common.TaxedPrice> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.TaxedPriceBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
@@ -74,6 +86,18 @@ public class SetShippingInfoTaxedPriceChangeBuilder implements Builder<SetShippi
     public SetShippingInfoTaxedPriceChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.TaxedPriceBuilder, com.commercetools.history.models.common.TaxedPriceBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.TaxedPriceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public SetShippingInfoTaxedPriceChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.TaxedPriceBuilder, com.commercetools.history.models.common.TaxedPrice> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.TaxedPriceBuilder.of());
         return this;
     }
 

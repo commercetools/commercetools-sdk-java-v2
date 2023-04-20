@@ -38,6 +38,18 @@ public class CustomerAddAddressActionBuilder implements Builder<CustomerAddAddre
 
     /**
      *  <p>Value to append to the <code>addresses</code> array.</p>
+     * @param builder function to build the address value
+     * @return Builder
+     */
+
+    public CustomerAddAddressActionBuilder withAddress(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddress> builder) {
+        this.address = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to append to the <code>addresses</code> array.</p>
      * @param address value to be set
      * @return Builder
      */

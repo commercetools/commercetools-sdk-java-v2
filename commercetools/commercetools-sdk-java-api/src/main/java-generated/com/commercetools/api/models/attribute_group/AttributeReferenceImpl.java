@@ -37,7 +37,7 @@ public class AttributeReferenceImpl implements AttributeReference, ModelBase {
     }
 
     /**
-     *  <p>Key of the attribute.</p>
+     *  <p>The Attribute's <code>name</code> as given in its AttributeDefinition.</p>
      */
 
     public String getKey() {

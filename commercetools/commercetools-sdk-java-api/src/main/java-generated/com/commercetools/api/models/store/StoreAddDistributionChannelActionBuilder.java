@@ -40,6 +40,19 @@ public class StoreAddDistributionChannelActionBuilder implements Builder<StoreAd
 
     /**
      *  <p>Value to append.</p>
+     * @param builder function to build the distributionChannel value
+     * @return Builder
+     */
+
+    public StoreAddDistributionChannelActionBuilder withDistributionChannel(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+        this.distributionChannel = builder
+                .apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to append.</p>
      * @param distributionChannel value to be set
      * @return Builder
      */

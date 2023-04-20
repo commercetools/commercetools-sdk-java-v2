@@ -44,6 +44,18 @@ public class ProjectCategoryRecommendationBuilder implements Builder<ProjectCate
 
     /**
      *  <p>A category that is recommended for a product.</p>
+     * @param builder function to build the category value
+     * @return Builder
+     */
+
+    public ProjectCategoryRecommendationBuilder withCategory(
+            Function<com.commercetools.ml.models.common.CategoryReferenceBuilder, com.commercetools.ml.models.common.CategoryReference> builder) {
+        this.category = builder.apply(com.commercetools.ml.models.common.CategoryReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>A category that is recommended for a product.</p>
      * @param category value to be set
      * @return Builder
      */

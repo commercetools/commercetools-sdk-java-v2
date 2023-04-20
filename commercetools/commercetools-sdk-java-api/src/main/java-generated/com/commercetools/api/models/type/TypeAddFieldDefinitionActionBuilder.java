@@ -38,6 +38,18 @@ public class TypeAddFieldDefinitionActionBuilder implements Builder<TypeAddField
 
     /**
      *  <p>Value to append to the array.</p>
+     * @param builder function to build the fieldDefinition value
+     * @return Builder
+     */
+
+    public TypeAddFieldDefinitionActionBuilder withFieldDefinition(
+            Function<com.commercetools.api.models.type.FieldDefinitionBuilder, com.commercetools.api.models.type.FieldDefinition> builder) {
+        this.fieldDefinition = builder.apply(com.commercetools.api.models.type.FieldDefinitionBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to append to the array.</p>
      * @param fieldDefinition value to be set
      * @return Builder
      */

@@ -110,6 +110,18 @@ public class ShoppingListAddLineItemActionBuilder implements Builder<ShoppingLis
 
     /**
      *  <p>Custom Fields defined for the ShoppingListLineItem.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public ShoppingListAddLineItemActionBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields defined for the ShoppingListLineItem.</p>
      * @param custom value to be set
      * @return Builder
      */

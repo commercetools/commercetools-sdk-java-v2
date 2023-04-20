@@ -136,6 +136,28 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
     }
 
     /**
+     * add the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public SetPricesChangeBuilder addPreviousValue(
+            Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.Price> builder) {
+        return plusPreviousValue(builder.apply(com.commercetools.history.models.common.PriceBuilder.of()));
+    }
+
+    /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public SetPricesChangeBuilder setPreviousValue(
+            Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.Price> builder) {
+        return previousValue(builder.apply(com.commercetools.history.models.common.PriceBuilder.of()));
+    }
+
+    /**
      * set values to the nextValue
      * @param nextValue value to be set
      * @return Builder
@@ -198,6 +220,28 @@ public class SetPricesChangeBuilder implements Builder<SetPricesChange> {
         this.nextValue = new ArrayList<>();
         this.nextValue.add(builder.apply(com.commercetools.history.models.common.PriceBuilder.of()).build());
         return this;
+    }
+
+    /**
+     * add the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetPricesChangeBuilder addNextValue(
+            Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.Price> builder) {
+        return plusNextValue(builder.apply(com.commercetools.history.models.common.PriceBuilder.of()));
+    }
+
+    /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetPricesChangeBuilder setNextValue(
+            Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.Price> builder) {
+        return nextValue(builder.apply(com.commercetools.history.models.common.PriceBuilder.of()));
     }
 
     /**

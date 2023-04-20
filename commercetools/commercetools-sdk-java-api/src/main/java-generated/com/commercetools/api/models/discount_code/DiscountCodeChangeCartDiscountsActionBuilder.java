@@ -97,6 +97,30 @@ public class DiscountCodeChangeCartDiscountsActionBuilder implements Builder<Dis
 
     /**
      *  <p>New value to set.</p>
+     * @param builder function to build the cartDiscounts value
+     * @return Builder
+     */
+
+    public DiscountCodeChangeCartDiscountsActionBuilder addCartDiscounts(
+            Function<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder, com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> builder) {
+        return plusCartDiscounts(
+            builder.apply(com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder.of()));
+    }
+
+    /**
+     *  <p>New value to set.</p>
+     * @param builder function to build the cartDiscounts value
+     * @return Builder
+     */
+
+    public DiscountCodeChangeCartDiscountsActionBuilder setCartDiscounts(
+            Function<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder, com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> builder) {
+        return cartDiscounts(
+            builder.apply(com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifierBuilder.of()));
+    }
+
+    /**
+     *  <p>New value to set.</p>
      * @return cartDiscounts
      */
 

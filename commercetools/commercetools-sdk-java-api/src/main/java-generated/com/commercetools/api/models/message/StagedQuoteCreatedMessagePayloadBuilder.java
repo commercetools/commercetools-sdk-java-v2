@@ -38,6 +38,18 @@ public class StagedQuoteCreatedMessagePayloadBuilder implements Builder<StagedQu
 
     /**
      *  <p>Staged Quote that was created.</p>
+     * @param builder function to build the stagedQuote value
+     * @return Builder
+     */
+
+    public StagedQuoteCreatedMessagePayloadBuilder withStagedQuote(
+            Function<com.commercetools.api.models.staged_quote.StagedQuoteBuilder, com.commercetools.api.models.staged_quote.StagedQuote> builder) {
+        this.stagedQuote = builder.apply(com.commercetools.api.models.staged_quote.StagedQuoteBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Staged Quote that was created.</p>
      * @param stagedQuote value to be set
      * @return Builder
      */

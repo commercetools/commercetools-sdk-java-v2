@@ -39,6 +39,18 @@ public class AttributeGroupRemoveAttributeActionBuilder implements Builder<Attri
 
     /**
      *  <p>Value to remove.</p>
+     * @param builder function to build the attribute value
+     * @return Builder
+     */
+
+    public AttributeGroupRemoveAttributeActionBuilder withAttribute(
+            Function<com.commercetools.api.models.attribute_group.AttributeReferenceBuilder, com.commercetools.api.models.attribute_group.AttributeReference> builder) {
+        this.attribute = builder.apply(com.commercetools.api.models.attribute_group.AttributeReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to remove.</p>
      * @param attribute value to be set
      * @return Builder
      */

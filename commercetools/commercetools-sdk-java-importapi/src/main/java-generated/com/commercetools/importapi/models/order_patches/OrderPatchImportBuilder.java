@@ -52,6 +52,18 @@ public class OrderPatchImportBuilder implements Builder<OrderPatchImport> {
 
     /**
      *  <p>Each field referenced must be defined in an already existing order in the project or the import operation state is set to <code>validationFailed</code>.</p>
+     * @param builder function to build the fields value
+     * @return Builder
+     */
+
+    public OrderPatchImportBuilder withFields(
+            Function<com.commercetools.importapi.models.order_patches.OrderFieldBuilder, com.commercetools.importapi.models.order_patches.OrderField> builder) {
+        this.fields = builder.apply(com.commercetools.importapi.models.order_patches.OrderFieldBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Each field referenced must be defined in an already existing order in the project or the import operation state is set to <code>validationFailed</code>.</p>
      * @param fields value to be set
      * @return Builder
      */

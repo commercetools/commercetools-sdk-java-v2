@@ -41,6 +41,18 @@ public class ShippingMethodRemoveShippingRateActionBuilder implements Builder<Sh
 
     /**
      *  <p>Zone from which the ShippingRate should be removed.</p>
+     * @param builder function to build the zone value
+     * @return Builder
+     */
+
+    public ShippingMethodRemoveShippingRateActionBuilder withZone(
+            Function<com.commercetools.api.models.zone.ZoneResourceIdentifierBuilder, com.commercetools.api.models.zone.ZoneResourceIdentifier> builder) {
+        this.zone = builder.apply(com.commercetools.api.models.zone.ZoneResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Zone from which the ShippingRate should be removed.</p>
      * @param zone value to be set
      * @return Builder
      */
@@ -61,6 +73,18 @@ public class ShippingMethodRemoveShippingRateActionBuilder implements Builder<Sh
             Function<com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder, com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder> builder) {
         this.shippingRate = builder.apply(com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Value to remove from <code>shippingRates</code>.</p>
+     * @param builder function to build the shippingRate value
+     * @return Builder
+     */
+
+    public ShippingMethodRemoveShippingRateActionBuilder withShippingRate(
+            Function<com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder, com.commercetools.api.models.shipping_method.ShippingRateDraft> builder) {
+        this.shippingRate = builder.apply(com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder.of());
         return this;
     }
 

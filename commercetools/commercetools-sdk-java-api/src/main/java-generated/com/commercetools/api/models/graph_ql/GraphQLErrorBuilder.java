@@ -116,6 +116,28 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
     }
 
     /**
+     * add the value to the locations using the builder function
+     * @param builder function to build the locations value
+     * @return Builder
+     */
+
+    public GraphQLErrorBuilder addLocations(
+            Function<com.commercetools.api.models.graph_ql.GraphQLErrorLocationBuilder, com.commercetools.api.models.graph_ql.GraphQLErrorLocation> builder) {
+        return plusLocations(builder.apply(com.commercetools.api.models.graph_ql.GraphQLErrorLocationBuilder.of()));
+    }
+
+    /**
+     * set the value to the locations using the builder function
+     * @param builder function to build the locations value
+     * @return Builder
+     */
+
+    public GraphQLErrorBuilder setLocations(
+            Function<com.commercetools.api.models.graph_ql.GraphQLErrorLocationBuilder, com.commercetools.api.models.graph_ql.GraphQLErrorLocation> builder) {
+        return locations(builder.apply(com.commercetools.api.models.graph_ql.GraphQLErrorLocationBuilder.of()));
+    }
+
+    /**
      * set values to the path
      * @param path value to be set
      * @return Builder

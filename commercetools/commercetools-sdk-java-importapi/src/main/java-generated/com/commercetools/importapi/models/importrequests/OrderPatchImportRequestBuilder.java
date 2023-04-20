@@ -95,6 +95,29 @@ public class OrderPatchImportRequestBuilder implements Builder<OrderPatchImportR
 
     /**
      *  <p>The order patches of this request</p>
+     * @param builder function to build the patches value
+     * @return Builder
+     */
+
+    public OrderPatchImportRequestBuilder addPatches(
+            Function<com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder, com.commercetools.importapi.models.order_patches.OrderPatchImport> builder) {
+        return plusPatches(
+            builder.apply(com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder.of()));
+    }
+
+    /**
+     *  <p>The order patches of this request</p>
+     * @param builder function to build the patches value
+     * @return Builder
+     */
+
+    public OrderPatchImportRequestBuilder setPatches(
+            Function<com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder, com.commercetools.importapi.models.order_patches.OrderPatchImport> builder) {
+        return patches(builder.apply(com.commercetools.importapi.models.order_patches.OrderPatchImportBuilder.of()));
+    }
+
+    /**
+     *  <p>The order patches of this request</p>
      * @return patches
      */
 

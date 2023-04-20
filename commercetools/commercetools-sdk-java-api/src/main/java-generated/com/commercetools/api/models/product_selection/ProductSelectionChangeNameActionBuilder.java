@@ -38,6 +38,18 @@ public class ProductSelectionChangeNameActionBuilder implements Builder<ProductS
 
     /**
      *  <p>The new name to be set for the ProductSelection.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public ProductSelectionChangeNameActionBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The new name to be set for the ProductSelection.</p>
      * @param name value to be set
      * @return Builder
      */

@@ -54,6 +54,18 @@ public class AddAssetChangeBuilder implements Builder<AddAssetChange> {
     }
 
     /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public AddAssetChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.AssetBuilder, com.commercetools.history.models.common.Asset> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.AssetBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
@@ -73,6 +85,18 @@ public class AddAssetChangeBuilder implements Builder<AddAssetChange> {
     public AddAssetChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.AssetBuilder, com.commercetools.history.models.common.AssetBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.AssetBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public AddAssetChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.AssetBuilder, com.commercetools.history.models.common.Asset> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.AssetBuilder.of());
         return this;
     }
 

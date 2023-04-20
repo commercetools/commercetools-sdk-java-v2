@@ -150,6 +150,28 @@ public class ExtensionPagedQueryResponseBuilder implements Builder<ExtensionPage
     }
 
     /**
+     *  <p>Extensions matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public ExtensionPagedQueryResponseBuilder addResults(
+            Function<com.commercetools.api.models.extension.ExtensionBuilder, com.commercetools.api.models.extension.Extension> builder) {
+        return plusResults(builder.apply(com.commercetools.api.models.extension.ExtensionBuilder.of()));
+    }
+
+    /**
+     *  <p>Extensions matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public ExtensionPagedQueryResponseBuilder setResults(
+            Function<com.commercetools.api.models.extension.ExtensionBuilder, com.commercetools.api.models.extension.Extension> builder) {
+        return results(builder.apply(com.commercetools.api.models.extension.ExtensionBuilder.of()));
+    }
+
+    /**
      *  <p>Number of results requested.</p>
      * @return limit
      */

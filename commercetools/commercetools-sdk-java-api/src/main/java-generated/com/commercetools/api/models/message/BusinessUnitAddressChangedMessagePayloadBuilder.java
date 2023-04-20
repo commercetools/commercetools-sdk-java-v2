@@ -39,6 +39,18 @@ public class BusinessUnitAddressChangedMessagePayloadBuilder
 
     /**
      *  <p>Updated address of the Business Unit.</p>
+     * @param builder function to build the address value
+     * @return Builder
+     */
+
+    public BusinessUnitAddressChangedMessagePayloadBuilder withAddress(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
+        this.address = builder.apply(com.commercetools.api.models.common.AddressBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Updated address of the Business Unit.</p>
      * @param address value to be set
      * @return Builder
      */

@@ -54,6 +54,18 @@ public class ParcelMeasurementDraftBuilder implements Builder<ParcelMeasurementD
     }
 
     /**
+     * set the value to the measurements using the builder function
+     * @param builder function to build the measurements value
+     * @return Builder
+     */
+
+    public ParcelMeasurementDraftBuilder withMeasurements(
+            Function<com.commercetools.importapi.models.orders.ParcelMeasurementsBuilder, com.commercetools.importapi.models.orders.ParcelMeasurements> builder) {
+        this.measurements = builder.apply(com.commercetools.importapi.models.orders.ParcelMeasurementsBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the measurements
      * @param measurements value to be set
      * @return Builder

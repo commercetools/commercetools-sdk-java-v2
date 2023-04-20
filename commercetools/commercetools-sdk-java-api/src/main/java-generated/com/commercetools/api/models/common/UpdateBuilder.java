@@ -103,6 +103,28 @@ public class UpdateBuilder implements Builder<Update> {
     }
 
     /**
+     * add the value to the actions using the builder function
+     * @param builder function to build the actions value
+     * @return Builder
+     */
+
+    public UpdateBuilder addActions(
+            Function<com.commercetools.api.models.common.UpdateActionBuilder, com.commercetools.api.models.common.UpdateAction> builder) {
+        return plusActions(builder.apply(com.commercetools.api.models.common.UpdateActionBuilder.of()));
+    }
+
+    /**
+     * set the value to the actions using the builder function
+     * @param builder function to build the actions value
+     * @return Builder
+     */
+
+    public UpdateBuilder setActions(
+            Function<com.commercetools.api.models.common.UpdateActionBuilder, com.commercetools.api.models.common.UpdateAction> builder) {
+        return actions(builder.apply(com.commercetools.api.models.common.UpdateActionBuilder.of()));
+    }
+
+    /**
      * value of version}
      * @return version
      */

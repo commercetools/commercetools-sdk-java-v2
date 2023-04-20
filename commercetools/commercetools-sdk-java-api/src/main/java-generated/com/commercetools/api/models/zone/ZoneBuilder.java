@@ -111,6 +111,18 @@ public class ZoneBuilder implements Builder<Zone> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
+     * @return Builder
+     */
+
+    public ZoneBuilder withLastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -130,6 +142,18 @@ public class ZoneBuilder implements Builder<Zone> {
     public ZoneBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
+     * @return Builder
+     */
+
+    public ZoneBuilder withCreatedBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
 
@@ -239,6 +263,28 @@ public class ZoneBuilder implements Builder<Zone> {
         this.locations = new ArrayList<>();
         this.locations.add(builder.apply(com.commercetools.api.models.zone.LocationBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>List of locations that belong to the Zone.</p>
+     * @param builder function to build the locations value
+     * @return Builder
+     */
+
+    public ZoneBuilder addLocations(
+            Function<com.commercetools.api.models.zone.LocationBuilder, com.commercetools.api.models.zone.Location> builder) {
+        return plusLocations(builder.apply(com.commercetools.api.models.zone.LocationBuilder.of()));
+    }
+
+    /**
+     *  <p>List of locations that belong to the Zone.</p>
+     * @param builder function to build the locations value
+     * @return Builder
+     */
+
+    public ZoneBuilder setLocations(
+            Function<com.commercetools.api.models.zone.LocationBuilder, com.commercetools.api.models.zone.Location> builder) {
+        return locations(builder.apply(com.commercetools.api.models.zone.LocationBuilder.of()));
     }
 
     /**

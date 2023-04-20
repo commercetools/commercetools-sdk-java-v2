@@ -92,6 +92,28 @@ public class CustomFieldEnumTypeBuilder implements Builder<CustomFieldEnumType> 
 
     /**
      *  <p>Allowed values.</p>
+     * @param builder function to build the values value
+     * @return Builder
+     */
+
+    public CustomFieldEnumTypeBuilder addValues(
+            Function<com.commercetools.api.models.type.CustomFieldEnumValueBuilder, com.commercetools.api.models.type.CustomFieldEnumValue> builder) {
+        return plusValues(builder.apply(com.commercetools.api.models.type.CustomFieldEnumValueBuilder.of()));
+    }
+
+    /**
+     *  <p>Allowed values.</p>
+     * @param builder function to build the values value
+     * @return Builder
+     */
+
+    public CustomFieldEnumTypeBuilder setValues(
+            Function<com.commercetools.api.models.type.CustomFieldEnumValueBuilder, com.commercetools.api.models.type.CustomFieldEnumValue> builder) {
+        return values(builder.apply(com.commercetools.api.models.type.CustomFieldEnumValueBuilder.of()));
+    }
+
+    /**
+     *  <p>Allowed values.</p>
      * @return values
      */
 

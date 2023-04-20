@@ -40,6 +40,18 @@ public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
     }
 
     /**
+     * set the value to the discountCode using the builder function
+     * @param builder function to build the discountCode value
+     * @return Builder
+     */
+
+    public DiscountCodeInfoBuilder withDiscountCode(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
+        this.discountCode = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the discountCode
      * @param discountCode value to be set
      * @return Builder

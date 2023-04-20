@@ -39,6 +39,18 @@ public class MyBusinessUnitRemoveAssociateActionBuilder implements Builder<MyBus
 
     /**
      *  <p>Associate to remove.</p>
+     * @param builder function to build the customer value
+     * @return Builder
+     */
+
+    public MyBusinessUnitRemoveAssociateActionBuilder withCustomer(
+            Function<com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder, com.commercetools.api.models.customer.CustomerResourceIdentifier> builder) {
+        this.customer = builder.apply(com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Associate to remove.</p>
      * @param customer value to be set
      * @return Builder
      */

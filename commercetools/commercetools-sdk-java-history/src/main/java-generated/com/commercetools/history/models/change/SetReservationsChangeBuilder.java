@@ -109,6 +109,28 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
     }
 
     /**
+     * add the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetReservationsChangeBuilder addNextValue(
+            Function<com.commercetools.history.models.common.ReservationBuilder, com.commercetools.history.models.common.Reservation> builder) {
+        return plusNextValue(builder.apply(com.commercetools.history.models.common.ReservationBuilder.of()));
+    }
+
+    /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetReservationsChangeBuilder setNextValue(
+            Function<com.commercetools.history.models.common.ReservationBuilder, com.commercetools.history.models.common.Reservation> builder) {
+        return nextValue(builder.apply(com.commercetools.history.models.common.ReservationBuilder.of()));
+    }
+
+    /**
      * set values to the previousValue
      * @param previousValue value to be set
      * @return Builder
@@ -173,6 +195,28 @@ public class SetReservationsChangeBuilder implements Builder<SetReservationsChan
         this.previousValue = new ArrayList<>();
         this.previousValue.add(builder.apply(com.commercetools.history.models.common.ReservationBuilder.of()).build());
         return this;
+    }
+
+    /**
+     * add the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public SetReservationsChangeBuilder addPreviousValue(
+            Function<com.commercetools.history.models.common.ReservationBuilder, com.commercetools.history.models.common.Reservation> builder) {
+        return plusPreviousValue(builder.apply(com.commercetools.history.models.common.ReservationBuilder.of()));
+    }
+
+    /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public SetReservationsChangeBuilder setPreviousValue(
+            Function<com.commercetools.history.models.common.ReservationBuilder, com.commercetools.history.models.common.Reservation> builder) {
+        return previousValue(builder.apply(com.commercetools.history.models.common.ReservationBuilder.of()));
     }
 
     /**

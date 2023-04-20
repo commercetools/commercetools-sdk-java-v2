@@ -38,6 +38,18 @@ public class BusinessUnitRemoveStoreActionBuilder implements Builder<BusinessUni
 
     /**
      *  <p>Store to remove.</p>
+     * @param builder function to build the store value
+     * @return Builder
+     */
+
+    public BusinessUnitRemoveStoreActionBuilder withStore(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifier> builder) {
+        this.store = builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Store to remove.</p>
      * @param store value to be set
      * @return Builder
      */

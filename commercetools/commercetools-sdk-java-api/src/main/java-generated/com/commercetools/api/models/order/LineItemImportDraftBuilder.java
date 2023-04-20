@@ -84,6 +84,18 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
 
     /**
      *  <p>The product name.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public LineItemImportDraftBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The product name.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -102,6 +114,18 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     public LineItemImportDraftBuilder variant(
             Function<com.commercetools.api.models.order.ProductVariantImportDraftBuilder, com.commercetools.api.models.order.ProductVariantImportDraftBuilder> builder) {
         this.variant = builder.apply(com.commercetools.api.models.order.ProductVariantImportDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the variant using the builder function
+     * @param builder function to build the variant value
+     * @return Builder
+     */
+
+    public LineItemImportDraftBuilder withVariant(
+            Function<com.commercetools.api.models.order.ProductVariantImportDraftBuilder, com.commercetools.api.models.order.ProductVariantImportDraft> builder) {
+        this.variant = builder.apply(com.commercetools.api.models.order.ProductVariantImportDraftBuilder.of());
         return this;
     }
 
@@ -126,6 +150,18 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     public LineItemImportDraftBuilder price(
             Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraftBuilder> builder) {
         this.price = builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the price using the builder function
+     * @param builder function to build the price value
+     * @return Builder
+     */
+
+    public LineItemImportDraftBuilder withPrice(
+            Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraft> builder) {
+        this.price = builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of());
         return this;
     }
 
@@ -217,6 +253,28 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
+     * add the value to the state using the builder function
+     * @param builder function to build the state value
+     * @return Builder
+     */
+
+    public LineItemImportDraftBuilder addState(
+            Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemState> builder) {
+        return plusState(builder.apply(com.commercetools.api.models.order.ItemStateBuilder.of()));
+    }
+
+    /**
+     * set the value to the state using the builder function
+     * @param builder function to build the state value
+     * @return Builder
+     */
+
+    public LineItemImportDraftBuilder setState(
+            Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemState> builder) {
+        return state(builder.apply(com.commercetools.api.models.order.ItemStateBuilder.of()));
+    }
+
+    /**
      *  <p>Connection to a particular supplier. By providing supply channel information, you can uniquely identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>
      * @param builder function to build the supplyChannel value
      * @return Builder
@@ -226,6 +284,18 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
             Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
         this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Connection to a particular supplier. By providing supply channel information, you can uniquely identify inventory entries that should be reserved. The provided channel should have the InventorySupply role.</p>
+     * @param builder function to build the supplyChannel value
+     * @return Builder
+     */
+
+    public LineItemImportDraftBuilder withSupplyChannel(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of());
         return this;
     }
 
@@ -257,6 +327,19 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
 
     /**
      *  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>
+     * @param builder function to build the distributionChannel value
+     * @return Builder
+     */
+
+    public LineItemImportDraftBuilder withDistributionChannel(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+        this.distributionChannel = builder
+                .apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The channel is used to select a ProductPrice. The provided channel should have the ProductDistribution role.</p>
      * @param distributionChannel value to be set
      * @return Builder
      */
@@ -276,6 +359,18 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     public LineItemImportDraftBuilder taxRate(
             Function<com.commercetools.api.models.tax_category.TaxRateBuilder, com.commercetools.api.models.tax_category.TaxRateBuilder> builder) {
         this.taxRate = builder.apply(com.commercetools.api.models.tax_category.TaxRateBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the taxRate using the builder function
+     * @param builder function to build the taxRate value
+     * @return Builder
+     */
+
+    public LineItemImportDraftBuilder withTaxRate(
+            Function<com.commercetools.api.models.tax_category.TaxRateBuilder, com.commercetools.api.models.tax_category.TaxRate> builder) {
+        this.taxRate = builder.apply(com.commercetools.api.models.tax_category.TaxRateBuilder.of());
         return this;
     }
 
@@ -300,6 +395,18 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     public LineItemImportDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>The custom fields.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public LineItemImportDraftBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
         return this;
     }
 
@@ -337,6 +444,18 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
             Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder> builder) {
         this.shippingDetails = builder.apply(com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     * set the value to the shippingDetails using the builder function
+     * @param builder function to build the shippingDetails value
+     * @return Builder
+     */
+
+    public LineItemImportDraftBuilder withShippingDetails(
+            Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraft> builder) {
+        this.shippingDetails = builder.apply(com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder.of());
         return this;
     }
 

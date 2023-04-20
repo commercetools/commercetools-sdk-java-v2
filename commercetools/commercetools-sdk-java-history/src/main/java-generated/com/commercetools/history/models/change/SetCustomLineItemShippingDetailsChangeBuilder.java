@@ -68,6 +68,18 @@ public class SetCustomLineItemShippingDetailsChangeBuilder implements Builder<Se
     }
 
     /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetCustomLineItemShippingDetailsChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.ItemShippingDetailsBuilder, com.commercetools.history.models.common.ItemShippingDetails> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.ItemShippingDetailsBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
@@ -89,6 +101,18 @@ public class SetCustomLineItemShippingDetailsChangeBuilder implements Builder<Se
             Function<com.commercetools.history.models.common.ItemShippingDetailsBuilder, com.commercetools.history.models.common.ItemShippingDetailsBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.ItemShippingDetailsBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public SetCustomLineItemShippingDetailsChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.ItemShippingDetailsBuilder, com.commercetools.history.models.common.ItemShippingDetails> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.ItemShippingDetailsBuilder.of());
         return this;
     }
 

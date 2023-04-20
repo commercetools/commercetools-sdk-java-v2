@@ -107,6 +107,19 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
 
     /**
      *  <p><code>similarityMeasures</code> defines the attributes taken into account to measure product similarity.</p>
+     * @param builder function to build the similarityMeasures value
+     * @return Builder
+     */
+
+    public SimilarProductSearchRequestBuilder withSimilarityMeasures(
+            Function<com.commercetools.ml.models.similar_products.SimilarityMeasuresBuilder, com.commercetools.ml.models.similar_products.SimilarityMeasures> builder) {
+        this.similarityMeasures = builder
+                .apply(com.commercetools.ml.models.similar_products.SimilarityMeasuresBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p><code>similarityMeasures</code> defines the attributes taken into account to measure product similarity.</p>
      * @param similarityMeasures value to be set
      * @return Builder
      */
@@ -184,6 +197,30 @@ public class SimilarProductSearchRequestBuilder implements Builder<SimilarProduc
         this.productSetSelectors.add(
             builder.apply(com.commercetools.ml.models.similar_products.ProductSetSelectorBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Array of length 2 of ProductSetSelector</p>
+     * @param builder function to build the productSetSelectors value
+     * @return Builder
+     */
+
+    public SimilarProductSearchRequestBuilder addProductSetSelectors(
+            Function<com.commercetools.ml.models.similar_products.ProductSetSelectorBuilder, com.commercetools.ml.models.similar_products.ProductSetSelector> builder) {
+        return plusProductSetSelectors(
+            builder.apply(com.commercetools.ml.models.similar_products.ProductSetSelectorBuilder.of()));
+    }
+
+    /**
+     *  <p>Array of length 2 of ProductSetSelector</p>
+     * @param builder function to build the productSetSelectors value
+     * @return Builder
+     */
+
+    public SimilarProductSearchRequestBuilder setProductSetSelectors(
+            Function<com.commercetools.ml.models.similar_products.ProductSetSelectorBuilder, com.commercetools.ml.models.similar_products.ProductSetSelector> builder) {
+        return productSetSelectors(
+            builder.apply(com.commercetools.ml.models.similar_products.ProductSetSelectorBuilder.of()));
     }
 
     /**

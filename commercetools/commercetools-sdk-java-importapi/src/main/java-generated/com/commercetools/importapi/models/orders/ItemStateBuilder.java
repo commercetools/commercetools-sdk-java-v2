@@ -52,6 +52,18 @@ public class ItemStateBuilder implements Builder<ItemState> {
 
     /**
      *  <p>Maps to <code>ItemState.state</code>.</p>
+     * @param builder function to build the state value
+     * @return Builder
+     */
+
+    public ItemStateBuilder withState(
+            Function<com.commercetools.importapi.models.common.StateKeyReferenceBuilder, com.commercetools.importapi.models.common.StateKeyReference> builder) {
+        this.state = builder.apply(com.commercetools.importapi.models.common.StateKeyReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Maps to <code>ItemState.state</code>.</p>
      * @param state value to be set
      * @return Builder
      */

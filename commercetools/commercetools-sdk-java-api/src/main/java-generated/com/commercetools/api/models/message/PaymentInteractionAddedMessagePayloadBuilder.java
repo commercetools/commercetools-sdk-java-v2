@@ -38,6 +38,18 @@ public class PaymentInteractionAddedMessagePayloadBuilder implements Builder<Pay
 
     /**
      *  <p>The interface interaction that was added to the Payment.</p>
+     * @param builder function to build the interaction value
+     * @return Builder
+     */
+
+    public PaymentInteractionAddedMessagePayloadBuilder withInteraction(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
+        this.interaction = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The interface interaction that was added to the Payment.</p>
      * @param interaction value to be set
      * @return Builder
      */

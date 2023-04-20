@@ -44,6 +44,18 @@ public class ProductRemoveFromCategoryActionBuilder implements Builder<ProductRe
 
     /**
      *  <p>The Category to remove.</p>
+     * @param builder function to build the category value
+     * @return Builder
+     */
+
+    public ProductRemoveFromCategoryActionBuilder withCategory(
+            Function<com.commercetools.api.models.category.CategoryResourceIdentifierBuilder, com.commercetools.api.models.category.CategoryResourceIdentifier> builder) {
+        this.category = builder.apply(com.commercetools.api.models.category.CategoryResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The Category to remove.</p>
      * @param category value to be set
      * @return Builder
      */

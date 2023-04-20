@@ -121,6 +121,38 @@ public class StoreSetProductSelectionsActionBuilder implements Builder<StoreSetP
      *   <li>If provided, Product Selections for which <code>active</code> is set to <code>true</code> are available in the Store.</li>
      *   <li>If not provided or provided as empty array, the action removes all Product Selections from this Store, meaning all Products in the Project are available in this Store.</li>
      *  </ul>
+     * @param builder function to build the productSelections value
+     * @return Builder
+     */
+
+    public StoreSetProductSelectionsActionBuilder addProductSelections(
+            Function<com.commercetools.api.models.store.ProductSelectionSettingDraftBuilder, com.commercetools.api.models.store.ProductSelectionSettingDraft> builder) {
+        return plusProductSelections(
+            builder.apply(com.commercetools.api.models.store.ProductSelectionSettingDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>Value to set.</p>
+     *  <ul>
+     *   <li>If provided, Product Selections for which <code>active</code> is set to <code>true</code> are available in the Store.</li>
+     *   <li>If not provided or provided as empty array, the action removes all Product Selections from this Store, meaning all Products in the Project are available in this Store.</li>
+     *  </ul>
+     * @param builder function to build the productSelections value
+     * @return Builder
+     */
+
+    public StoreSetProductSelectionsActionBuilder setProductSelections(
+            Function<com.commercetools.api.models.store.ProductSelectionSettingDraftBuilder, com.commercetools.api.models.store.ProductSelectionSettingDraft> builder) {
+        return productSelections(
+            builder.apply(com.commercetools.api.models.store.ProductSelectionSettingDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>Value to set.</p>
+     *  <ul>
+     *   <li>If provided, Product Selections for which <code>active</code> is set to <code>true</code> are available in the Store.</li>
+     *   <li>If not provided or provided as empty array, the action removes all Product Selections from this Store, meaning all Products in the Project are available in this Store.</li>
+     *  </ul>
      * @return productSelections
      */
 

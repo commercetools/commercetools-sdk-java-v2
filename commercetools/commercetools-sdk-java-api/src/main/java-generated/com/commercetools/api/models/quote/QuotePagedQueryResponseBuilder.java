@@ -148,6 +148,28 @@ public class QuotePagedQueryResponseBuilder implements Builder<QuotePagedQueryRe
     }
 
     /**
+     *  <p>Quotes matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public QuotePagedQueryResponseBuilder addResults(
+            Function<com.commercetools.api.models.quote.QuoteBuilder, com.commercetools.api.models.quote.Quote> builder) {
+        return plusResults(builder.apply(com.commercetools.api.models.quote.QuoteBuilder.of()));
+    }
+
+    /**
+     *  <p>Quotes matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public QuotePagedQueryResponseBuilder setResults(
+            Function<com.commercetools.api.models.quote.QuoteBuilder, com.commercetools.api.models.quote.Quote> builder) {
+        return results(builder.apply(com.commercetools.api.models.quote.QuoteBuilder.of()));
+    }
+
+    /**
      *  <p>Number of results requested.</p>
      * @return limit
      */

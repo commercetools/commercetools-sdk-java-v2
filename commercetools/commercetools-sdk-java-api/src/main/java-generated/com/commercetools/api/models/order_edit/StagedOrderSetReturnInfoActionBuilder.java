@@ -94,6 +94,28 @@ public class StagedOrderSetReturnInfoActionBuilder implements Builder<StagedOrde
     }
 
     /**
+     * add the value to the items using the builder function
+     * @param builder function to build the items value
+     * @return Builder
+     */
+
+    public StagedOrderSetReturnInfoActionBuilder addItems(
+            Function<com.commercetools.api.models.order.ReturnInfoDraftBuilder, com.commercetools.api.models.order.ReturnInfoDraft> builder) {
+        return plusItems(builder.apply(com.commercetools.api.models.order.ReturnInfoDraftBuilder.of()));
+    }
+
+    /**
+     * set the value to the items using the builder function
+     * @param builder function to build the items value
+     * @return Builder
+     */
+
+    public StagedOrderSetReturnInfoActionBuilder setItems(
+            Function<com.commercetools.api.models.order.ReturnInfoDraftBuilder, com.commercetools.api.models.order.ReturnInfoDraft> builder) {
+        return items(builder.apply(com.commercetools.api.models.order.ReturnInfoDraftBuilder.of()));
+    }
+
+    /**
      * value of items}
      * @return items
      */

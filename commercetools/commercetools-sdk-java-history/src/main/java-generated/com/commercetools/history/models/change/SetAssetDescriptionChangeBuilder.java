@@ -57,6 +57,18 @@ public class SetAssetDescriptionChangeBuilder implements Builder<SetAssetDescrip
     }
 
     /**
+     * set the value to the asset using the builder function
+     * @param builder function to build the asset value
+     * @return Builder
+     */
+
+    public SetAssetDescriptionChangeBuilder withAsset(
+            Function<com.commercetools.history.models.change_value.AssetChangeValueBuilder, com.commercetools.history.models.change_value.AssetChangeValue> builder) {
+        this.asset = builder.apply(com.commercetools.history.models.change_value.AssetChangeValueBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the asset
      * @param asset value to be set
      * @return Builder
@@ -81,6 +93,18 @@ public class SetAssetDescriptionChangeBuilder implements Builder<SetAssetDescrip
     }
 
     /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetAssetDescriptionChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
@@ -101,6 +125,18 @@ public class SetAssetDescriptionChangeBuilder implements Builder<SetAssetDescrip
     public SetAssetDescriptionChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public SetAssetDescriptionChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
         return this;
     }
 

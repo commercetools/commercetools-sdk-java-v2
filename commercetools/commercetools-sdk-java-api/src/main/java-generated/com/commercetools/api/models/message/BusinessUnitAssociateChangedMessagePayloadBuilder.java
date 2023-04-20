@@ -39,6 +39,18 @@ public class BusinessUnitAssociateChangedMessagePayloadBuilder
 
     /**
      *  <p>The Associate that was updated.</p>
+     * @param builder function to build the associate value
+     * @return Builder
+     */
+
+    public BusinessUnitAssociateChangedMessagePayloadBuilder withAssociate(
+            Function<com.commercetools.api.models.business_unit.AssociateBuilder, com.commercetools.api.models.business_unit.Associate> builder) {
+        this.associate = builder.apply(com.commercetools.api.models.business_unit.AssociateBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The Associate that was updated.</p>
      * @param associate value to be set
      * @return Builder
      */

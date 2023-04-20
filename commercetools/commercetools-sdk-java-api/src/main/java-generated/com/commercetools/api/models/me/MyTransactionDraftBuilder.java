@@ -74,6 +74,18 @@ public class MyTransactionDraftBuilder implements Builder<MyTransactionDraft> {
 
     /**
      *  <p>Money value for the Transaction.</p>
+     * @param builder function to build the amount value
+     * @return Builder
+     */
+
+    public MyTransactionDraftBuilder withAmount(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+        this.amount = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Money value for the Transaction.</p>
      * @param amount value to be set
      * @return Builder
      */
@@ -103,6 +115,18 @@ public class MyTransactionDraftBuilder implements Builder<MyTransactionDraft> {
     public MyTransactionDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields of the Transaction.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public MyTransactionDraftBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
         return this;
     }
 

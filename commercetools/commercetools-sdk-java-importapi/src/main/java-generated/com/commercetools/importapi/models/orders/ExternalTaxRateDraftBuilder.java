@@ -153,6 +153,28 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
+     * add the value to the subRates using the builder function
+     * @param builder function to build the subRates value
+     * @return Builder
+     */
+
+    public ExternalTaxRateDraftBuilder addSubRates(
+            Function<com.commercetools.importapi.models.prices.SubRateBuilder, com.commercetools.importapi.models.prices.SubRate> builder) {
+        return plusSubRates(builder.apply(com.commercetools.importapi.models.prices.SubRateBuilder.of()));
+    }
+
+    /**
+     * set the value to the subRates using the builder function
+     * @param builder function to build the subRates value
+     * @return Builder
+     */
+
+    public ExternalTaxRateDraftBuilder setSubRates(
+            Function<com.commercetools.importapi.models.prices.SubRateBuilder, com.commercetools.importapi.models.prices.SubRate> builder) {
+        return subRates(builder.apply(com.commercetools.importapi.models.prices.SubRateBuilder.of()));
+    }
+
+    /**
      * set the value to the includedInPrice
      * @param includedInPrice value to be set
      * @return Builder

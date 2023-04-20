@@ -41,6 +41,18 @@ public class BusinessUnitDefaultShippingAddressSetMessagePayloadBuilder
 
     /**
      *  <p>The address that was set as the default shipping address.</p>
+     * @param builder function to build the address value
+     * @return Builder
+     */
+
+    public BusinessUnitDefaultShippingAddressSetMessagePayloadBuilder withAddress(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
+        this.address = builder.apply(com.commercetools.api.models.common.AddressBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The address that was set as the default shipping address.</p>
      * @param address value to be set
      * @return Builder
      */

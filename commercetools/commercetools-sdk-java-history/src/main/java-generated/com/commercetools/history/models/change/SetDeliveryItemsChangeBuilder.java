@@ -123,6 +123,28 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
     }
 
     /**
+     * add the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetDeliveryItemsChangeBuilder addNextValue(
+            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItem> builder) {
+        return plusNextValue(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()));
+    }
+
+    /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetDeliveryItemsChangeBuilder setNextValue(
+            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItem> builder) {
+        return nextValue(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()));
+    }
+
+    /**
      * set values to the previousValue
      * @param previousValue value to be set
      * @return Builder
@@ -187,6 +209,28 @@ public class SetDeliveryItemsChangeBuilder implements Builder<SetDeliveryItemsCh
         this.previousValue = new ArrayList<>();
         this.previousValue.add(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()).build());
         return this;
+    }
+
+    /**
+     * add the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public SetDeliveryItemsChangeBuilder addPreviousValue(
+            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItem> builder) {
+        return plusPreviousValue(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()));
+    }
+
+    /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public SetDeliveryItemsChangeBuilder setPreviousValue(
+            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItem> builder) {
+        return previousValue(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()));
     }
 
     /**

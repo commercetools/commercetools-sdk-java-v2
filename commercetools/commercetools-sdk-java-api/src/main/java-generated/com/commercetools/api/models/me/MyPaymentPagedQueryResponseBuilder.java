@@ -148,6 +148,28 @@ public class MyPaymentPagedQueryResponseBuilder implements Builder<MyPaymentPage
     }
 
     /**
+     *  <p>MyPayments matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public MyPaymentPagedQueryResponseBuilder addResults(
+            Function<com.commercetools.api.models.me.MyPaymentBuilder, com.commercetools.api.models.me.MyPayment> builder) {
+        return plusResults(builder.apply(com.commercetools.api.models.me.MyPaymentBuilder.of()));
+    }
+
+    /**
+     *  <p>MyPayments matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public MyPaymentPagedQueryResponseBuilder setResults(
+            Function<com.commercetools.api.models.me.MyPaymentBuilder, com.commercetools.api.models.me.MyPayment> builder) {
+        return results(builder.apply(com.commercetools.api.models.me.MyPaymentBuilder.of()));
+    }
+
+    /**
      *  <p>Number of results requested.</p>
      * @return limit
      */

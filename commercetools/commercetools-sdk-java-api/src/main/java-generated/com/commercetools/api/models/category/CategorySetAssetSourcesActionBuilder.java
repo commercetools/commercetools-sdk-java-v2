@@ -122,6 +122,28 @@ public class CategorySetAssetSourcesActionBuilder implements Builder<CategorySet
     }
 
     /**
+     *  <p>Must not be empty. At least one entry is required.</p>
+     * @param builder function to build the sources value
+     * @return Builder
+     */
+
+    public CategorySetAssetSourcesActionBuilder addSources(
+            Function<com.commercetools.api.models.common.AssetSourceBuilder, com.commercetools.api.models.common.AssetSource> builder) {
+        return plusSources(builder.apply(com.commercetools.api.models.common.AssetSourceBuilder.of()));
+    }
+
+    /**
+     *  <p>Must not be empty. At least one entry is required.</p>
+     * @param builder function to build the sources value
+     * @return Builder
+     */
+
+    public CategorySetAssetSourcesActionBuilder setSources(
+            Function<com.commercetools.api.models.common.AssetSourceBuilder, com.commercetools.api.models.common.AssetSource> builder) {
+        return sources(builder.apply(com.commercetools.api.models.common.AssetSourceBuilder.of()));
+    }
+
+    /**
      *  <p>New value to set. Either <code>assetId</code> or <code>assetKey</code> is required.</p>
      * @return assetId
      */

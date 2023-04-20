@@ -54,6 +54,18 @@ public class CategoryReferenceBuilder implements Builder<CategoryReference> {
 
     /**
      *  <p>Contains the representation of the expanded Category. Only present in responses to requests with Reference Expansion for Categories.</p>
+     * @param builder function to build the obj value
+     * @return Builder
+     */
+
+    public CategoryReferenceBuilder withObj(
+            Function<com.commercetools.api.models.category.CategoryBuilder, com.commercetools.api.models.category.Category> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.category.CategoryBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Contains the representation of the expanded Category. Only present in responses to requests with Reference Expansion for Categories.</p>
      * @param obj value to be set
      * @return Builder
      */

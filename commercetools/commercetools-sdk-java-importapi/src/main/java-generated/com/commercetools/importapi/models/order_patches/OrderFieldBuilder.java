@@ -65,6 +65,18 @@ public class OrderFieldBuilder implements Builder<OrderField> {
 
     /**
      *  <p>Maps to <code>Order.returnInfo</code></p>
+     * @param builder function to build the addReturnInfo value
+     * @return Builder
+     */
+
+    public OrderFieldBuilder withAddReturnInfo(
+            Function<com.commercetools.importapi.models.order_patches.ReturnInfoBuilder, com.commercetools.importapi.models.order_patches.ReturnInfo> builder) {
+        this.addReturnInfo = builder.apply(com.commercetools.importapi.models.order_patches.ReturnInfoBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Maps to <code>Order.returnInfo</code></p>
      * @param addReturnInfo value to be set
      * @return Builder
      */
@@ -86,6 +98,19 @@ public class OrderFieldBuilder implements Builder<OrderField> {
         this.addParcelToDelivery = builder
                 .apply(com.commercetools.importapi.models.order_patches.DeliveryParcelBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Maps to <code>Order.delivery</code></p>
+     * @param builder function to build the addParcelToDelivery value
+     * @return Builder
+     */
+
+    public OrderFieldBuilder withAddParcelToDelivery(
+            Function<com.commercetools.importapi.models.order_patches.DeliveryParcelBuilder, com.commercetools.importapi.models.order_patches.DeliveryParcel> builder) {
+        this.addParcelToDelivery = builder
+                .apply(com.commercetools.importapi.models.order_patches.DeliveryParcelBuilder.of());
         return this;
     }
 
@@ -171,6 +196,29 @@ public class OrderFieldBuilder implements Builder<OrderField> {
     }
 
     /**
+     *  <p>Maps to <code>Order.delivery</code></p>
+     * @param builder function to build the addDeliveries value
+     * @return Builder
+     */
+
+    public OrderFieldBuilder addAddDeliveries(
+            Function<com.commercetools.importapi.models.order_patches.DeliveryDraftBuilder, com.commercetools.importapi.models.order_patches.DeliveryDraft> builder) {
+        return plusAddDeliveries(
+            builder.apply(com.commercetools.importapi.models.order_patches.DeliveryDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>Maps to <code>Order.delivery</code></p>
+     * @param builder function to build the addDeliveries value
+     * @return Builder
+     */
+
+    public OrderFieldBuilder setAddDeliveries(
+            Function<com.commercetools.importapi.models.order_patches.DeliveryDraftBuilder, com.commercetools.importapi.models.order_patches.DeliveryDraft> builder) {
+        return addDeliveries(builder.apply(com.commercetools.importapi.models.order_patches.DeliveryDraftBuilder.of()));
+    }
+
+    /**
      *  <p>Maps to <code>Order.removeDelivery</code></p>
      * @param builder function to build the removeDelivery value
      * @return Builder
@@ -181,6 +229,19 @@ public class OrderFieldBuilder implements Builder<OrderField> {
         this.removeDelivery = builder
                 .apply(com.commercetools.importapi.models.order_patches.RemoveDeliveryDraftBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Maps to <code>Order.removeDelivery</code></p>
+     * @param builder function to build the removeDelivery value
+     * @return Builder
+     */
+
+    public OrderFieldBuilder withRemoveDelivery(
+            Function<com.commercetools.importapi.models.order_patches.RemoveDeliveryDraftBuilder, com.commercetools.importapi.models.order_patches.RemoveDeliveryDraft> builder) {
+        this.removeDelivery = builder
+                .apply(com.commercetools.importapi.models.order_patches.RemoveDeliveryDraftBuilder.of());
         return this;
     }
 
@@ -212,6 +273,19 @@ public class OrderFieldBuilder implements Builder<OrderField> {
 
     /**
      *  <p>Maps to <code>Order.removeParcelFromDelivery</code></p>
+     * @param builder function to build the removeParcelFromDelivery value
+     * @return Builder
+     */
+
+    public OrderFieldBuilder withRemoveParcelFromDelivery(
+            Function<com.commercetools.importapi.models.order_patches.RemoveParcelFromDeliveryDraftBuilder, com.commercetools.importapi.models.order_patches.RemoveParcelFromDeliveryDraft> builder) {
+        this.removeParcelFromDelivery = builder
+                .apply(com.commercetools.importapi.models.order_patches.RemoveParcelFromDeliveryDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Maps to <code>Order.removeParcelFromDelivery</code></p>
      * @param removeParcelFromDelivery value to be set
      * @return Builder
      */
@@ -233,6 +307,19 @@ public class OrderFieldBuilder implements Builder<OrderField> {
         this.setDeliveryAddress = builder
                 .apply(com.commercetools.importapi.models.order_patches.DeliveryAddressDraftBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Maps to <code>Order.addressDraft</code></p>
+     * @param builder function to build the setDeliveryAddress value
+     * @return Builder
+     */
+
+    public OrderFieldBuilder withSetDeliveryAddress(
+            Function<com.commercetools.importapi.models.order_patches.DeliveryAddressDraftBuilder, com.commercetools.importapi.models.order_patches.DeliveryAddressDraft> builder) {
+        this.setDeliveryAddress = builder
+                .apply(com.commercetools.importapi.models.order_patches.DeliveryAddressDraftBuilder.of());
         return this;
     }
 
@@ -264,6 +351,19 @@ public class OrderFieldBuilder implements Builder<OrderField> {
 
     /**
      *  <p>Maps to <code>Order.parcelMeasurements</code></p>
+     * @param builder function to build the setParcelMeasurements value
+     * @return Builder
+     */
+
+    public OrderFieldBuilder withSetParcelMeasurements(
+            Function<com.commercetools.importapi.models.order_patches.ParcelMeasurementDraftBuilder, com.commercetools.importapi.models.order_patches.ParcelMeasurementDraft> builder) {
+        this.setParcelMeasurements = builder
+                .apply(com.commercetools.importapi.models.order_patches.ParcelMeasurementDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Maps to <code>Order.parcelMeasurements</code></p>
      * @param setParcelMeasurements value to be set
      * @return Builder
      */
@@ -285,6 +385,19 @@ public class OrderFieldBuilder implements Builder<OrderField> {
         this.setParcelTrackingData = builder
                 .apply(com.commercetools.importapi.models.order_patches.ParcelTrackingDataBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Maps to <code>Order.parcelTrackingData</code></p>
+     * @param builder function to build the setParcelTrackingData value
+     * @return Builder
+     */
+
+    public OrderFieldBuilder withSetParcelTrackingData(
+            Function<com.commercetools.importapi.models.order_patches.ParcelTrackingDataBuilder, com.commercetools.importapi.models.order_patches.ParcelTrackingData> builder) {
+        this.setParcelTrackingData = builder
+                .apply(com.commercetools.importapi.models.order_patches.ParcelTrackingDataBuilder.of());
         return this;
     }
 
@@ -367,6 +480,29 @@ public class OrderFieldBuilder implements Builder<OrderField> {
         this.setParcelItems
                 .add(builder.apply(com.commercetools.importapi.models.order_patches.ParcelItemsBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Maps to <code>Order.parcelItems</code></p>
+     * @param builder function to build the setParcelItems value
+     * @return Builder
+     */
+
+    public OrderFieldBuilder addSetParcelItems(
+            Function<com.commercetools.importapi.models.order_patches.ParcelItemsBuilder, com.commercetools.importapi.models.order_patches.ParcelItems> builder) {
+        return plusSetParcelItems(
+            builder.apply(com.commercetools.importapi.models.order_patches.ParcelItemsBuilder.of()));
+    }
+
+    /**
+     *  <p>Maps to <code>Order.parcelItems</code></p>
+     * @param builder function to build the setParcelItems value
+     * @return Builder
+     */
+
+    public OrderFieldBuilder setSetParcelItems(
+            Function<com.commercetools.importapi.models.order_patches.ParcelItemsBuilder, com.commercetools.importapi.models.order_patches.ParcelItems> builder) {
+        return setParcelItems(builder.apply(com.commercetools.importapi.models.order_patches.ParcelItemsBuilder.of()));
     }
 
     /**

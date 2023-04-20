@@ -45,6 +45,19 @@ public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
 
     /**
      *  <p>References a discount code by key.</p>
+     * @param builder function to build the discountCode value
+     * @return Builder
+     */
+
+    public DiscountCodeInfoBuilder withDiscountCode(
+            Function<com.commercetools.importapi.models.common.DiscountCodeKeyReferenceBuilder, com.commercetools.importapi.models.common.DiscountCodeKeyReference> builder) {
+        this.discountCode = builder
+                .apply(com.commercetools.importapi.models.common.DiscountCodeKeyReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>References a discount code by key.</p>
      * @param discountCode value to be set
      * @return Builder
      */

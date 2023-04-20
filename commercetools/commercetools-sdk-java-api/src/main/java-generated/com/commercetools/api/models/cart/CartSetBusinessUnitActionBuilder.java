@@ -40,6 +40,19 @@ public class CartSetBusinessUnitActionBuilder implements Builder<CartSetBusiness
 
     /**
      *  <p>New Business Unit to assign to the Cart, which must have access to the Store that is set on the Cart.</p>
+     * @param builder function to build the businessUnit value
+     * @return Builder
+     */
+
+    public CartSetBusinessUnitActionBuilder withBusinessUnit(
+            Function<com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder, com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier> builder) {
+        this.businessUnit = builder
+                .apply(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>New Business Unit to assign to the Cart, which must have access to the Store that is set on the Cart.</p>
      * @param businessUnit value to be set
      * @return Builder
      */

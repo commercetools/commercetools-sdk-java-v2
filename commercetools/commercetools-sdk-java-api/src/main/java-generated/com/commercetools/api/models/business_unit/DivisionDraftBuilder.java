@@ -166,6 +166,32 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
     }
 
     /**
+     *  <p>Sets the Stores the Business Unit is associated with. Can only be set when <code>storeMode</code> is <code>Explicit</code>. Defaults to empty for Companies and not set for Divisions.</p>
+     *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
+     *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public DivisionDraftBuilder addStores(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifier> builder) {
+        return plusStores(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()));
+    }
+
+    /**
+     *  <p>Sets the Stores the Business Unit is associated with. Can only be set when <code>storeMode</code> is <code>Explicit</code>. Defaults to empty for Companies and not set for Divisions.</p>
+     *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
+     *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public DivisionDraftBuilder setStores(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifier> builder) {
+        return stores(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()));
+    }
+
+    /**
      *  <p>If not set, the Division inherits the Stores from its <code>parentUnit</code>. Set this to <code>Explicit</code> if you want to set the Stores explicitly in the <code>stores</code> field instead.</p>
      * @param storeMode value to be set
      * @return Builder
@@ -269,6 +295,28 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
     }
 
     /**
+     *  <p>List of members that are part of the Business Unit in specific roles.</p>
+     * @param builder function to build the associates value
+     * @return Builder
+     */
+
+    public DivisionDraftBuilder addAssociates(
+            Function<com.commercetools.api.models.business_unit.AssociateDraftBuilder, com.commercetools.api.models.business_unit.AssociateDraft> builder) {
+        return plusAssociates(builder.apply(com.commercetools.api.models.business_unit.AssociateDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>List of members that are part of the Business Unit in specific roles.</p>
+     * @param builder function to build the associates value
+     * @return Builder
+     */
+
+    public DivisionDraftBuilder setAssociates(
+            Function<com.commercetools.api.models.business_unit.AssociateDraftBuilder, com.commercetools.api.models.business_unit.AssociateDraft> builder) {
+        return associates(builder.apply(com.commercetools.api.models.business_unit.AssociateDraftBuilder.of()));
+    }
+
+    /**
      *  <p>Addresses used by the Business Unit.</p>
      * @param addresses value to be set
      * @return Builder
@@ -333,6 +381,28 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
         this.addresses = new ArrayList<>();
         this.addresses.add(builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Addresses used by the Business Unit.</p>
+     * @param builder function to build the addresses value
+     * @return Builder
+     */
+
+    public DivisionDraftBuilder addAddresses(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddress> builder) {
+        return plusAddresses(builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()));
+    }
+
+    /**
+     *  <p>Addresses used by the Business Unit.</p>
+     * @param builder function to build the addresses value
+     * @return Builder
+     */
+
+    public DivisionDraftBuilder setAddresses(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddress> builder) {
+        return addresses(builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()));
     }
 
     /**
@@ -443,6 +513,18 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
 
     /**
      *  <p>Custom Fields for the Business Unit.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public DivisionDraftBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the Business Unit.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -463,6 +545,19 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
         this.parentUnit = builder
                 .apply(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>The parent unit of this Division. Can be a Company or a Division.</p>
+     * @param builder function to build the parentUnit value
+     * @return Builder
+     */
+
+    public DivisionDraftBuilder withParentUnit(
+            Function<com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder, com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier> builder) {
+        this.parentUnit = builder
+                .apply(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder.of());
         return this;
     }
 

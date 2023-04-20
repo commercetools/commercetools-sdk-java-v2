@@ -54,6 +54,18 @@ public class StateReferenceBuilder implements Builder<StateReference> {
 
     /**
      *  <p>Contains the representation of the expanded State. Only present in responses to requests with Reference Expansion for States.</p>
+     * @param builder function to build the obj value
+     * @return Builder
+     */
+
+    public StateReferenceBuilder withObj(
+            Function<com.commercetools.api.models.state.StateBuilder, com.commercetools.api.models.state.State> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.state.StateBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Contains the representation of the expanded State. Only present in responses to requests with Reference Expansion for States.</p>
      * @param obj value to be set
      * @return Builder
      */

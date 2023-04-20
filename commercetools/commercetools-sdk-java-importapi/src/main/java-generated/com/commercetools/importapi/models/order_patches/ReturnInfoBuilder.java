@@ -101,6 +101,28 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     }
 
     /**
+     * add the value to the items using the builder function
+     * @param builder function to build the items value
+     * @return Builder
+     */
+
+    public ReturnInfoBuilder addItems(
+            Function<com.commercetools.importapi.models.order_patches.ReturnItemDraftBuilder, com.commercetools.importapi.models.order_patches.ReturnItemDraft> builder) {
+        return plusItems(builder.apply(com.commercetools.importapi.models.order_patches.ReturnItemDraftBuilder.of()));
+    }
+
+    /**
+     * set the value to the items using the builder function
+     * @param builder function to build the items value
+     * @return Builder
+     */
+
+    public ReturnInfoBuilder setItems(
+            Function<com.commercetools.importapi.models.order_patches.ReturnItemDraftBuilder, com.commercetools.importapi.models.order_patches.ReturnItemDraft> builder) {
+        return items(builder.apply(com.commercetools.importapi.models.order_patches.ReturnItemDraftBuilder.of()));
+    }
+
+    /**
      *  <p>Maps to <code>ReturnInfo.returnTrackingId</code></p>
      * @param returnTrackingId value to be set
      * @return Builder

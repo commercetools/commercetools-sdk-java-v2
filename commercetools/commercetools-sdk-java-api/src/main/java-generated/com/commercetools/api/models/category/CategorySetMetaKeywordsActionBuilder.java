@@ -40,6 +40,18 @@ public class CategorySetMetaKeywordsActionBuilder implements Builder<CategorySet
 
     /**
      *  <p>Value to set.</p>
+     * @param builder function to build the metaKeywords value
+     * @return Builder
+     */
+
+    public CategorySetMetaKeywordsActionBuilder withMetaKeywords(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.metaKeywords = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to set.</p>
      * @param metaKeywords value to be set
      * @return Builder
      */

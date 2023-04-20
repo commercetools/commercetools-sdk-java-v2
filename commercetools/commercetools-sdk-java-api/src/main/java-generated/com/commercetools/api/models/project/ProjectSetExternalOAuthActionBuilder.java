@@ -40,6 +40,18 @@ public class ProjectSetExternalOAuthActionBuilder implements Builder<ProjectSetE
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param builder function to build the externalOAuth value
+     * @return Builder
+     */
+
+    public ProjectSetExternalOAuthActionBuilder withExternalOAuth(
+            Function<com.commercetools.api.models.project.ExternalOAuthBuilder, com.commercetools.api.models.project.ExternalOAuth> builder) {
+        this.externalOAuth = builder.apply(com.commercetools.api.models.project.ExternalOAuthBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param externalOAuth value to be set
      * @return Builder
      */

@@ -120,6 +120,18 @@ public class OrderStateTransitionMessageBuilder implements Builder<OrderStateTra
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @param builder function to build the lastModifiedBy value
+     * @return Builder
+     */
+
+    public OrderStateTransitionMessageBuilder withLastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value of <code>createdBy</code>.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -139,6 +151,18 @@ public class OrderStateTransitionMessageBuilder implements Builder<OrderStateTra
     public OrderStateTransitionMessageBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
+     * @return Builder
+     */
+
+    public OrderStateTransitionMessageBuilder withCreatedBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
 
@@ -215,6 +239,19 @@ public class OrderStateTransitionMessageBuilder implements Builder<OrderStateTra
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @param builder function to build the resourceUserProvidedIdentifiers value
+     * @return Builder
+     */
+
+    public OrderStateTransitionMessageBuilder withResourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiers> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      * @param resourceUserProvidedIdentifiers value to be set
      * @return Builder
      */
@@ -239,6 +276,18 @@ public class OrderStateTransitionMessageBuilder implements Builder<OrderStateTra
 
     /**
      *  <p>OrderState after the Transition State update action.</p>
+     * @param builder function to build the state value
+     * @return Builder
+     */
+
+    public OrderStateTransitionMessageBuilder withState(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReference> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>OrderState after the Transition State update action.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -257,6 +306,18 @@ public class OrderStateTransitionMessageBuilder implements Builder<OrderStateTra
     public OrderStateTransitionMessageBuilder oldState(
             Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
         this.oldState = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>OrderState before the Transition State update action.</p>
+     * @param builder function to build the oldState value
+     * @return Builder
+     */
+
+    public OrderStateTransitionMessageBuilder withOldState(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReference> builder) {
+        this.oldState = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of());
         return this;
     }
 

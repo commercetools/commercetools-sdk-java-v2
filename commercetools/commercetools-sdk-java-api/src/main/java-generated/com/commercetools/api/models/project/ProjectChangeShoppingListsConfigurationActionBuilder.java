@@ -41,6 +41,19 @@ public class ProjectChangeShoppingListsConfigurationActionBuilder
 
     /**
      *  <p>Configuration for the Shopping Lists feature.</p>
+     * @param builder function to build the shoppingListsConfiguration value
+     * @return Builder
+     */
+
+    public ProjectChangeShoppingListsConfigurationActionBuilder withShoppingListsConfiguration(
+            Function<com.commercetools.api.models.project.ShoppingListsConfigurationBuilder, com.commercetools.api.models.project.ShoppingListsConfiguration> builder) {
+        this.shoppingListsConfiguration = builder
+                .apply(com.commercetools.api.models.project.ShoppingListsConfigurationBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Configuration for the Shopping Lists feature.</p>
      * @param shoppingListsConfiguration value to be set
      * @return Builder
      */

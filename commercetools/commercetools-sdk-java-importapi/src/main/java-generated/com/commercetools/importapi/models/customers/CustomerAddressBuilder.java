@@ -376,6 +376,18 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
 
     /**
      *  <p>Custom Fields for the address.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public CustomerAddressBuilder withCustom(
+            Function<com.commercetools.importapi.models.customfields.CustomBuilder, com.commercetools.importapi.models.customfields.Custom> builder) {
+        this.custom = builder.apply(com.commercetools.importapi.models.customfields.CustomBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the address.</p>
      * @param custom value to be set
      * @return Builder
      */

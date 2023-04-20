@@ -58,6 +58,18 @@ public class ParcelRemovedFromDeliveryMessagePayloadBuilder
 
     /**
      *  <p>Parcel that was removed from the Delivery.</p>
+     * @param builder function to build the parcel value
+     * @return Builder
+     */
+
+    public ParcelRemovedFromDeliveryMessagePayloadBuilder withParcel(
+            Function<com.commercetools.api.models.order.ParcelBuilder, com.commercetools.api.models.order.Parcel> builder) {
+        this.parcel = builder.apply(com.commercetools.api.models.order.ParcelBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Parcel that was removed from the Delivery.</p>
      * @param parcel value to be set
      * @return Builder
      */

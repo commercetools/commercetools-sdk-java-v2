@@ -63,6 +63,18 @@ public class ShippingBuilder implements Builder<Shipping> {
 
     /**
      *  <p>Automatically set when the Shipping Method is added.</p>
+     * @param builder function to build the shippingInfo value
+     * @return Builder
+     */
+
+    public ShippingBuilder withShippingInfo(
+            Function<com.commercetools.api.models.cart.ShippingInfoBuilder, com.commercetools.api.models.cart.ShippingInfo> builder) {
+        this.shippingInfo = builder.apply(com.commercetools.api.models.cart.ShippingInfoBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Automatically set when the Shipping Method is added.</p>
      * @param shippingInfo value to be set
      * @return Builder
      */
@@ -81,6 +93,18 @@ public class ShippingBuilder implements Builder<Shipping> {
     public ShippingBuilder shippingAddress(
             Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
         this.shippingAddress = builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Determines the shipping rates and Tax Rates of associated Line Items.</p>
+     * @param builder function to build the shippingAddress value
+     * @return Builder
+     */
+
+    public ShippingBuilder withShippingAddress(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
+        this.shippingAddress = builder.apply(com.commercetools.api.models.common.AddressBuilder.of());
         return this;
     }
 
@@ -138,6 +162,18 @@ public class ShippingBuilder implements Builder<Shipping> {
     public ShippingBuilder shippingCustomFields(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.shippingCustomFields = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields of Shipping with <code>Multiple</code> ShippingMode.</p>
+     * @param builder function to build the shippingCustomFields value
+     * @return Builder
+     */
+
+    public ShippingBuilder withShippingCustomFields(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
+        this.shippingCustomFields = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of());
         return this;
     }
 

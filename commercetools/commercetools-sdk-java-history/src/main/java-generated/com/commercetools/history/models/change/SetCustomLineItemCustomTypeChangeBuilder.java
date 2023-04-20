@@ -61,6 +61,18 @@ public class SetCustomLineItemCustomTypeChangeBuilder implements Builder<SetCust
     }
 
     /**
+     * set the value to the customLineItem using the builder function
+     * @param builder function to build the customLineItem value
+     * @return Builder
+     */
+
+    public SetCustomLineItemCustomTypeChangeBuilder withCustomLineItem(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+        this.customLineItem = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the customLineItem
      * @param customLineItem value to be set
      * @return Builder
@@ -96,6 +108,18 @@ public class SetCustomLineItemCustomTypeChangeBuilder implements Builder<SetCust
     }
 
     /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetCustomLineItemCustomTypeChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFields> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.CustomFieldsBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
@@ -116,6 +140,18 @@ public class SetCustomLineItemCustomTypeChangeBuilder implements Builder<SetCust
     public SetCustomLineItemCustomTypeChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFieldsBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public SetCustomLineItemCustomTypeChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFields> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.CustomFieldsBuilder.of());
         return this;
     }
 

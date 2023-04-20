@@ -72,6 +72,18 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
 
     /**
      *  <p>Name of the Store.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public StoreDraftBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Name of the Store.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -185,6 +197,28 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
+     *  <p>Countries defined for the Store.</p>
+     * @param builder function to build the countries value
+     * @return Builder
+     */
+
+    public StoreDraftBuilder addCountries(
+            Function<com.commercetools.api.models.store_country.StoreCountryBuilder, com.commercetools.api.models.store_country.StoreCountry> builder) {
+        return plusCountries(builder.apply(com.commercetools.api.models.store_country.StoreCountryBuilder.of()));
+    }
+
+    /**
+     *  <p>Countries defined for the Store.</p>
+     * @param builder function to build the countries value
+     * @return Builder
+     */
+
+    public StoreDraftBuilder setCountries(
+            Function<com.commercetools.api.models.store_country.StoreCountryBuilder, com.commercetools.api.models.store_country.StoreCountry> builder) {
+        return countries(builder.apply(com.commercetools.api.models.store_country.StoreCountryBuilder.of()));
+    }
+
+    /**
      *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
      * @param distributionChannels value to be set
      * @return Builder
@@ -254,6 +288,30 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
+     *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     * @param builder function to build the distributionChannels value
+     * @return Builder
+     */
+
+    public StoreDraftBuilder addDistributionChannels(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+        return plusDistributionChannels(
+            builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()));
+    }
+
+    /**
+     *  <p>ResourceIdentifier of a Channel with <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     * @param builder function to build the distributionChannels value
+     * @return Builder
+     */
+
+    public StoreDraftBuilder setDistributionChannels(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+        return distributionChannels(
+            builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()));
+    }
+
+    /**
      *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
      * @param supplyChannels value to be set
      * @return Builder
@@ -320,6 +378,30 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
         this.supplyChannels
                 .add(builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @param builder function to build the supplyChannels value
+     * @return Builder
+     */
+
+    public StoreDraftBuilder addSupplyChannels(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+        return plusSupplyChannels(
+            builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()));
+    }
+
+    /**
+     *  <p>ResourceIdentifier of a Channel with <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @param builder function to build the supplyChannels value
+     * @return Builder
+     */
+
+    public StoreDraftBuilder setSupplyChannels(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+        return supplyChannels(
+            builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()));
     }
 
     /**
@@ -422,6 +504,42 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     }
 
     /**
+     *  <p>Controls availability of Products for this Store via active/inactive Product Selections:</p>
+     *  <ul>
+     *   <li>Leave empty if all Products in the Project should be available in this Store.</li>
+     *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> ProductSelectionMode are provided, all the Products are available in this Store.</li>
+     *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of mode <code>Individual</code>, no Product is available in this Store.</li>
+     *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availability in this Store.</li>
+     *  </ul>
+     * @param builder function to build the productSelections value
+     * @return Builder
+     */
+
+    public StoreDraftBuilder addProductSelections(
+            Function<com.commercetools.api.models.store.ProductSelectionSettingDraftBuilder, com.commercetools.api.models.store.ProductSelectionSettingDraft> builder) {
+        return plusProductSelections(
+            builder.apply(com.commercetools.api.models.store.ProductSelectionSettingDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>Controls availability of Products for this Store via active/inactive Product Selections:</p>
+     *  <ul>
+     *   <li>Leave empty if all Products in the Project should be available in this Store.</li>
+     *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> ProductSelectionMode are provided, all the Products are available in this Store.</li>
+     *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of mode <code>Individual</code>, no Product is available in this Store.</li>
+     *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availability in this Store.</li>
+     *  </ul>
+     * @param builder function to build the productSelections value
+     * @return Builder
+     */
+
+    public StoreDraftBuilder setProductSelections(
+            Function<com.commercetools.api.models.store.ProductSelectionSettingDraftBuilder, com.commercetools.api.models.store.ProductSelectionSettingDraft> builder) {
+        return productSelections(
+            builder.apply(com.commercetools.api.models.store.ProductSelectionSettingDraftBuilder.of()));
+    }
+
+    /**
      *  <p>Custom fields for the Store.</p>
      * @param builder function to build the custom value
      * @return Builder
@@ -430,6 +548,18 @@ public class StoreDraftBuilder implements Builder<StoreDraft> {
     public StoreDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom fields for the Store.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public StoreDraftBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
         return this;
     }
 

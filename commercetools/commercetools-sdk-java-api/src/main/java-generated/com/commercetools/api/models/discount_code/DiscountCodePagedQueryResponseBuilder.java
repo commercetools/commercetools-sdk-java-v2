@@ -150,6 +150,28 @@ public class DiscountCodePagedQueryResponseBuilder implements Builder<DiscountCo
     }
 
     /**
+     *  <p>DiscountCodes matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public DiscountCodePagedQueryResponseBuilder addResults(
+            Function<com.commercetools.api.models.discount_code.DiscountCodeBuilder, com.commercetools.api.models.discount_code.DiscountCode> builder) {
+        return plusResults(builder.apply(com.commercetools.api.models.discount_code.DiscountCodeBuilder.of()));
+    }
+
+    /**
+     *  <p>DiscountCodes matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public DiscountCodePagedQueryResponseBuilder setResults(
+            Function<com.commercetools.api.models.discount_code.DiscountCodeBuilder, com.commercetools.api.models.discount_code.DiscountCode> builder) {
+        return results(builder.apply(com.commercetools.api.models.discount_code.DiscountCodeBuilder.of()));
+    }
+
+    /**
      *  <p>Number of results requested.</p>
      * @return limit
      */

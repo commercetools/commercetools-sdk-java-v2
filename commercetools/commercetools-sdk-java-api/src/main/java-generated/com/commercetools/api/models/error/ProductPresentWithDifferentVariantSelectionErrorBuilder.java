@@ -85,6 +85,18 @@ public class ProductPresentWithDifferentVariantSelectionErrorBuilder
 
     /**
      *  <p>Reference to the Product for which the error was returned.</p>
+     * @param builder function to build the product value
+     * @return Builder
+     */
+
+    public ProductPresentWithDifferentVariantSelectionErrorBuilder withProduct(
+            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReference> builder) {
+        this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the Product for which the error was returned.</p>
      * @param product value to be set
      * @return Builder
      */

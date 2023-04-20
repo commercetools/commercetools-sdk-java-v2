@@ -150,6 +150,28 @@ public class ErrorResponseBuilder implements Builder<ErrorResponse> {
     }
 
     /**
+     * add the value to the errors using the builder function
+     * @param builder function to build the errors value
+     * @return Builder
+     */
+
+    public ErrorResponseBuilder addErrors(
+            Function<com.commercetools.history.models.change_history.ErrorObjectBuilder, com.commercetools.history.models.change_history.ErrorObject> builder) {
+        return plusErrors(builder.apply(com.commercetools.history.models.change_history.ErrorObjectBuilder.of()));
+    }
+
+    /**
+     * set the value to the errors using the builder function
+     * @param builder function to build the errors value
+     * @return Builder
+     */
+
+    public ErrorResponseBuilder setErrors(
+            Function<com.commercetools.history.models.change_history.ErrorObjectBuilder, com.commercetools.history.models.change_history.ErrorObject> builder) {
+        return errors(builder.apply(com.commercetools.history.models.change_history.ErrorObjectBuilder.of()));
+    }
+
+    /**
      * value of statusCode}
      * @return statusCode
      */

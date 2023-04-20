@@ -95,6 +95,30 @@ public class ProductDraftImportRequestBuilder implements Builder<ProductDraftImp
 
     /**
      *  <p>The product draft import resources of this request.</p>
+     * @param builder function to build the resources value
+     * @return Builder
+     */
+
+    public ProductDraftImportRequestBuilder addResources(
+            Function<com.commercetools.importapi.models.productdrafts.ProductDraftImportBuilder, com.commercetools.importapi.models.productdrafts.ProductDraftImport> builder) {
+        return plusResources(
+            builder.apply(com.commercetools.importapi.models.productdrafts.ProductDraftImportBuilder.of()));
+    }
+
+    /**
+     *  <p>The product draft import resources of this request.</p>
+     * @param builder function to build the resources value
+     * @return Builder
+     */
+
+    public ProductDraftImportRequestBuilder setResources(
+            Function<com.commercetools.importapi.models.productdrafts.ProductDraftImportBuilder, com.commercetools.importapi.models.productdrafts.ProductDraftImport> builder) {
+        return resources(
+            builder.apply(com.commercetools.importapi.models.productdrafts.ProductDraftImportBuilder.of()));
+    }
+
+    /**
+     *  <p>The product draft import resources of this request.</p>
      * @return resources
      */
 

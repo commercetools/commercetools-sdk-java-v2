@@ -59,6 +59,18 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     }
 
     /**
+     * set the value to the measurements using the builder function
+     * @param builder function to build the measurements value
+     * @return Builder
+     */
+
+    public StagedOrderAddParcelToDeliveryActionBuilder withMeasurements(
+            Function<com.commercetools.api.models.order.ParcelMeasurementsBuilder, com.commercetools.api.models.order.ParcelMeasurements> builder) {
+        this.measurements = builder.apply(com.commercetools.api.models.order.ParcelMeasurementsBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the measurements
      * @param measurements value to be set
      * @return Builder
@@ -79,6 +91,18 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
     public StagedOrderAddParcelToDeliveryActionBuilder trackingData(
             Function<com.commercetools.api.models.order.TrackingDataBuilder, com.commercetools.api.models.order.TrackingDataBuilder> builder) {
         this.trackingData = builder.apply(com.commercetools.api.models.order.TrackingDataBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the trackingData using the builder function
+     * @param builder function to build the trackingData value
+     * @return Builder
+     */
+
+    public StagedOrderAddParcelToDeliveryActionBuilder withTrackingData(
+            Function<com.commercetools.api.models.order.TrackingDataBuilder, com.commercetools.api.models.order.TrackingData> builder) {
+        this.trackingData = builder.apply(com.commercetools.api.models.order.TrackingDataBuilder.of());
         return this;
     }
 
@@ -159,6 +183,28 @@ public class StagedOrderAddParcelToDeliveryActionBuilder implements Builder<Stag
         this.items = new ArrayList<>();
         this.items.add(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()).build());
         return this;
+    }
+
+    /**
+     * add the value to the items using the builder function
+     * @param builder function to build the items value
+     * @return Builder
+     */
+
+    public StagedOrderAddParcelToDeliveryActionBuilder addItems(
+            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItem> builder) {
+        return plusItems(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()));
+    }
+
+    /**
+     * set the value to the items using the builder function
+     * @param builder function to build the items value
+     * @return Builder
+     */
+
+    public StagedOrderAddParcelToDeliveryActionBuilder setItems(
+            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItem> builder) {
+        return items(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()));
     }
 
     /**

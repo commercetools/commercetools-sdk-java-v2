@@ -45,6 +45,19 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
     /**
      *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
      *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @param builder function to build the externalTotalGross value
+     * @return Builder
+     */
+
+    public StagedOrderSetOrderTotalTaxActionBuilder withExternalTotalGross(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+        this.externalTotalGross = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      * @param externalTotalGross value to be set
      * @return Builder
      */
@@ -122,6 +135,28 @@ public class StagedOrderSetOrderTotalTaxActionBuilder implements Builder<StagedO
         this.externalTaxPortions
                 .add(builder.apply(com.commercetools.api.models.cart.TaxPortionDraftBuilder.of()).build());
         return this;
+    }
+
+    /**
+     * add the value to the externalTaxPortions using the builder function
+     * @param builder function to build the externalTaxPortions value
+     * @return Builder
+     */
+
+    public StagedOrderSetOrderTotalTaxActionBuilder addExternalTaxPortions(
+            Function<com.commercetools.api.models.cart.TaxPortionDraftBuilder, com.commercetools.api.models.cart.TaxPortionDraft> builder) {
+        return plusExternalTaxPortions(builder.apply(com.commercetools.api.models.cart.TaxPortionDraftBuilder.of()));
+    }
+
+    /**
+     * set the value to the externalTaxPortions using the builder function
+     * @param builder function to build the externalTaxPortions value
+     * @return Builder
+     */
+
+    public StagedOrderSetOrderTotalTaxActionBuilder setExternalTaxPortions(
+            Function<com.commercetools.api.models.cart.TaxPortionDraftBuilder, com.commercetools.api.models.cart.TaxPortionDraft> builder) {
+        return externalTaxPortions(builder.apply(com.commercetools.api.models.cart.TaxPortionDraftBuilder.of()));
     }
 
     /**

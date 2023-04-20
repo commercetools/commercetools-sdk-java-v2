@@ -63,6 +63,18 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
 
     /**
      *  <p>Custom Fields for the TextLineItem.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public TextLineItemDraftBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the TextLineItem.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -81,6 +93,18 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
     public TextLineItemDraftBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Description of the TextLineItem.</p>
+     * @param builder function to build the description value
+     * @return Builder
+     */
+
+    public TextLineItemDraftBuilder withDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -105,6 +129,18 @@ public class TextLineItemDraftBuilder implements Builder<TextLineItemDraft> {
     public TextLineItemDraftBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Name of the TextLineItem.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public TextLineItemDraftBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
 

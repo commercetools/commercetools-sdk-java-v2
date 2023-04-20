@@ -55,6 +55,18 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
 
     /**
      *  <p>State of the Review before the Transition State update action.</p>
+     * @param builder function to build the oldState value
+     * @return Builder
+     */
+
+    public ReviewStateTransitionMessagePayloadBuilder withOldState(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReference> builder) {
+        this.oldState = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>State of the Review before the Transition State update action.</p>
      * @param oldState value to be set
      * @return Builder
      */
@@ -74,6 +86,18 @@ public class ReviewStateTransitionMessagePayloadBuilder implements Builder<Revie
     public ReviewStateTransitionMessagePayloadBuilder newState(
             Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
         this.newState = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>State of the Review after the Transition State update action.</p>
+     * @param builder function to build the newState value
+     * @return Builder
+     */
+
+    public ReviewStateTransitionMessagePayloadBuilder withNewState(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReference> builder) {
+        this.newState = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of());
         return this;
     }
 

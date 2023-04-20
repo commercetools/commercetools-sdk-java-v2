@@ -114,6 +114,18 @@ public class OrderImportedMessageBuilder implements Builder<OrderImportedMessage
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @param builder function to build the lastModifiedBy value
+     * @return Builder
+     */
+
+    public OrderImportedMessageBuilder withLastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value of <code>createdBy</code>.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -133,6 +145,18 @@ public class OrderImportedMessageBuilder implements Builder<OrderImportedMessage
     public OrderImportedMessageBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
+     * @return Builder
+     */
+
+    public OrderImportedMessageBuilder withCreatedBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
 
@@ -209,6 +233,19 @@ public class OrderImportedMessageBuilder implements Builder<OrderImportedMessage
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @param builder function to build the resourceUserProvidedIdentifiers value
+     * @return Builder
+     */
+
+    public OrderImportedMessageBuilder withResourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiers> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      * @param resourceUserProvidedIdentifiers value to be set
      * @return Builder
      */
@@ -228,6 +265,18 @@ public class OrderImportedMessageBuilder implements Builder<OrderImportedMessage
     public OrderImportedMessageBuilder order(
             Function<com.commercetools.api.models.order.OrderBuilder, com.commercetools.api.models.order.OrderBuilder> builder) {
         this.order = builder.apply(com.commercetools.api.models.order.OrderBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Order that was imported.</p>
+     * @param builder function to build the order value
+     * @return Builder
+     */
+
+    public OrderImportedMessageBuilder withOrder(
+            Function<com.commercetools.api.models.order.OrderBuilder, com.commercetools.api.models.order.Order> builder) {
+        this.order = builder.apply(com.commercetools.api.models.order.OrderBuilder.of());
         return this;
     }
 

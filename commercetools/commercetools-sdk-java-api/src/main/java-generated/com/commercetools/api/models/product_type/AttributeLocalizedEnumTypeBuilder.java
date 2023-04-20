@@ -95,6 +95,29 @@ public class AttributeLocalizedEnumTypeBuilder implements Builder<AttributeLocal
 
     /**
      *  <p>Available values that can be assigned to Products.</p>
+     * @param builder function to build the values value
+     * @return Builder
+     */
+
+    public AttributeLocalizedEnumTypeBuilder addValues(
+            Function<com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder, com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> builder) {
+        return plusValues(
+            builder.apply(com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder.of()));
+    }
+
+    /**
+     *  <p>Available values that can be assigned to Products.</p>
+     * @param builder function to build the values value
+     * @return Builder
+     */
+
+    public AttributeLocalizedEnumTypeBuilder setValues(
+            Function<com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder, com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> builder) {
+        return values(builder.apply(com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder.of()));
+    }
+
+    /**
+     *  <p>Available values that can be assigned to Products.</p>
      * @return values
      */
 

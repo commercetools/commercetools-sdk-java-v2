@@ -95,6 +95,28 @@ public class CustomerImportRequestBuilder implements Builder<CustomerImportReque
 
     /**
      *  <p>The customer import resources of this request.</p>
+     * @param builder function to build the resources value
+     * @return Builder
+     */
+
+    public CustomerImportRequestBuilder addResources(
+            Function<com.commercetools.importapi.models.customers.CustomerImportBuilder, com.commercetools.importapi.models.customers.CustomerImport> builder) {
+        return plusResources(builder.apply(com.commercetools.importapi.models.customers.CustomerImportBuilder.of()));
+    }
+
+    /**
+     *  <p>The customer import resources of this request.</p>
+     * @param builder function to build the resources value
+     * @return Builder
+     */
+
+    public CustomerImportRequestBuilder setResources(
+            Function<com.commercetools.importapi.models.customers.CustomerImportBuilder, com.commercetools.importapi.models.customers.CustomerImport> builder) {
+        return resources(builder.apply(com.commercetools.importapi.models.customers.CustomerImportBuilder.of()));
+    }
+
+    /**
+     *  <p>The customer import resources of this request.</p>
      * @return resources
      */
 

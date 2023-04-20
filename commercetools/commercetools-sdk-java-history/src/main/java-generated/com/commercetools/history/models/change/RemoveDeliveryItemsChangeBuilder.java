@@ -51,6 +51,18 @@ public class RemoveDeliveryItemsChangeBuilder implements Builder<RemoveDeliveryI
     }
 
     /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public RemoveDeliveryItemsChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.DeliveryBuilder, com.commercetools.history.models.common.Delivery> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.DeliveryBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder

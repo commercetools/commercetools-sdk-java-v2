@@ -39,6 +39,18 @@ public class AttributeGroupAddAttributeActionBuilder implements Builder<Attribut
 
     /**
      *  <p>Value to add.</p>
+     * @param builder function to build the attribute value
+     * @return Builder
+     */
+
+    public AttributeGroupAddAttributeActionBuilder withAttribute(
+            Function<com.commercetools.api.models.attribute_group.AttributeReferenceBuilder, com.commercetools.api.models.attribute_group.AttributeReference> builder) {
+        this.attribute = builder.apply(com.commercetools.api.models.attribute_group.AttributeReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to add.</p>
      * @param attribute value to be set
      * @return Builder
      */

@@ -111,6 +111,30 @@ public class SetProductSelectionsChangeBuilder implements Builder<SetProductSele
     }
 
     /**
+     * add the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public SetProductSelectionsChangeBuilder addPreviousValue(
+            Function<com.commercetools.history.models.common.ProductSelectionSettingBuilder, com.commercetools.history.models.common.ProductSelectionSetting> builder) {
+        return plusPreviousValue(
+            builder.apply(com.commercetools.history.models.common.ProductSelectionSettingBuilder.of()));
+    }
+
+    /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public SetProductSelectionsChangeBuilder setPreviousValue(
+            Function<com.commercetools.history.models.common.ProductSelectionSettingBuilder, com.commercetools.history.models.common.ProductSelectionSetting> builder) {
+        return previousValue(
+            builder.apply(com.commercetools.history.models.common.ProductSelectionSettingBuilder.of()));
+    }
+
+    /**
      * set values to the nextValue
      * @param nextValue value to be set
      * @return Builder
@@ -177,6 +201,29 @@ public class SetProductSelectionsChangeBuilder implements Builder<SetProductSele
         this.nextValue.add(
             builder.apply(com.commercetools.history.models.common.ProductSelectionSettingBuilder.of()).build());
         return this;
+    }
+
+    /**
+     * add the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetProductSelectionsChangeBuilder addNextValue(
+            Function<com.commercetools.history.models.common.ProductSelectionSettingBuilder, com.commercetools.history.models.common.ProductSelectionSetting> builder) {
+        return plusNextValue(
+            builder.apply(com.commercetools.history.models.common.ProductSelectionSettingBuilder.of()));
+    }
+
+    /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetProductSelectionsChangeBuilder setNextValue(
+            Function<com.commercetools.history.models.common.ProductSelectionSettingBuilder, com.commercetools.history.models.common.ProductSelectionSetting> builder) {
+        return nextValue(builder.apply(com.commercetools.history.models.common.ProductSelectionSettingBuilder.of()));
     }
 
     /**

@@ -137,6 +137,19 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
 
     /**
      *  <p>Reference to a CustomerGroup.</p>
+     * @param builder function to build the customerGroup value
+     * @return Builder
+     */
+
+    public ScopedPriceBuilder withCustomerGroup(
+            Function<com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReference> builder) {
+        this.customerGroup = builder
+                .apply(com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Reference to a CustomerGroup.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -156,6 +169,18 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     public ScopedPriceBuilder channel(
             Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
         this.channel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Reference to a Channel.</p>
+     * @param builder function to build the channel value
+     * @return Builder
+     */
+
+    public ScopedPriceBuilder withChannel(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReference> builder) {
+        this.channel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of());
         return this;
     }
 
@@ -208,6 +233,19 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     /**
      *  <p>Is set when a matching ProductDiscount exists. If set, the Cart uses the discounted value for the Cart Price calculation.</p>
      *  <p>When a relative Product Discount is applied and the fractional part of the discounted Price is 0.5, the discounted Price is rounded half down in favor of the Customer.</p>
+     * @param builder function to build the discounted value
+     * @return Builder
+     */
+
+    public ScopedPriceBuilder withDiscounted(
+            Function<com.commercetools.api.models.common.DiscountedPriceBuilder, com.commercetools.api.models.common.DiscountedPrice> builder) {
+        this.discounted = builder.apply(com.commercetools.api.models.common.DiscountedPriceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Is set when a matching ProductDiscount exists. If set, the Cart uses the discounted value for the Cart Price calculation.</p>
+     *  <p>When a relative Product Discount is applied and the fractional part of the discounted Price is 0.5, the discounted Price is rounded half down in favor of the Customer.</p>
      * @param discounted value to be set
      * @return Builder
      */
@@ -227,6 +265,18 @@ public class ScopedPriceBuilder implements Builder<ScopedPrice> {
     public ScopedPriceBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the Price.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public ScopedPriceBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of());
         return this;
     }
 

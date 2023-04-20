@@ -148,6 +148,28 @@ public class ProductPagedQueryResponseBuilder implements Builder<ProductPagedQue
     }
 
     /**
+     *  <p>Products matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public ProductPagedQueryResponseBuilder addResults(
+            Function<com.commercetools.api.models.product.ProductBuilder, com.commercetools.api.models.product.Product> builder) {
+        return plusResults(builder.apply(com.commercetools.api.models.product.ProductBuilder.of()));
+    }
+
+    /**
+     *  <p>Products matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public ProductPagedQueryResponseBuilder setResults(
+            Function<com.commercetools.api.models.product.ProductBuilder, com.commercetools.api.models.product.Product> builder) {
+        return results(builder.apply(com.commercetools.api.models.product.ProductBuilder.of()));
+    }
+
+    /**
      *  <p>Number of results requested.</p>
      * @return limit
      */

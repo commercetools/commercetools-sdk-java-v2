@@ -41,6 +41,18 @@ public class StandalonePriceDiscountSetMessagePayloadBuilder
 
     /**
      *  <p>The new <code>discounted</code> value of the updated StandalonePrice.</p>
+     * @param builder function to build the discounted value
+     * @return Builder
+     */
+
+    public StandalonePriceDiscountSetMessagePayloadBuilder withDiscounted(
+            Function<com.commercetools.api.models.common.DiscountedPriceBuilder, com.commercetools.api.models.common.DiscountedPrice> builder) {
+        this.discounted = builder.apply(com.commercetools.api.models.common.DiscountedPriceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The new <code>discounted</code> value of the updated StandalonePrice.</p>
      * @param discounted value to be set
      * @return Builder
      */

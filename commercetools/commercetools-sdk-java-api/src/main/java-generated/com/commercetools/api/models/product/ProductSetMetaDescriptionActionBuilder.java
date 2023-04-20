@@ -43,6 +43,18 @@ public class ProductSetMetaDescriptionActionBuilder implements Builder<ProductSe
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param builder function to build the metaDescription value
+     * @return Builder
+     */
+
+    public ProductSetMetaDescriptionActionBuilder withMetaDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.metaDescription = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param metaDescription value to be set
      * @return Builder
      */

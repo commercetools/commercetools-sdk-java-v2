@@ -60,6 +60,18 @@ public class DeliveryAddressSetMessagePayloadBuilder implements Builder<Delivery
 
     /**
      *  <p>Address after the Set Delivery Address update action.</p>
+     * @param builder function to build the address value
+     * @return Builder
+     */
+
+    public DeliveryAddressSetMessagePayloadBuilder withAddress(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
+        this.address = builder.apply(com.commercetools.api.models.common.AddressBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Address after the Set Delivery Address update action.</p>
      * @param address value to be set
      * @return Builder
      */
@@ -79,6 +91,18 @@ public class DeliveryAddressSetMessagePayloadBuilder implements Builder<Delivery
     public DeliveryAddressSetMessagePayloadBuilder oldAddress(
             Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
         this.oldAddress = builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Address before the Set Delivery Address update action.</p>
+     * @param builder function to build the oldAddress value
+     * @return Builder
+     */
+
+    public DeliveryAddressSetMessagePayloadBuilder withOldAddress(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
+        this.oldAddress = builder.apply(com.commercetools.api.models.common.AddressBuilder.of());
         return this;
     }
 

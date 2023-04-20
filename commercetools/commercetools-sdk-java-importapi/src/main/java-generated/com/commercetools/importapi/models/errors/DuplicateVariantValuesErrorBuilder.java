@@ -52,6 +52,18 @@ public class DuplicateVariantValuesErrorBuilder implements Builder<DuplicateVari
 
     /**
      *  <p>The offending variant values.</p>
+     * @param builder function to build the variantValues value
+     * @return Builder
+     */
+
+    public DuplicateVariantValuesErrorBuilder withVariantValues(
+            Function<com.commercetools.importapi.models.errors.VariantValuesBuilder, com.commercetools.importapi.models.errors.VariantValues> builder) {
+        this.variantValues = builder.apply(com.commercetools.importapi.models.errors.VariantValuesBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The offending variant values.</p>
      * @param variantValues value to be set
      * @return Builder
      */

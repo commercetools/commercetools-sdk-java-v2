@@ -45,6 +45,19 @@ public class OrderCustomerGroupSetMessagePayloadBuilder implements Builder<Order
 
     /**
      *  <p>CustomerGroup on the Order after the Set Customer Group update action.</p>
+     * @param builder function to build the customerGroup value
+     * @return Builder
+     */
+
+    public OrderCustomerGroupSetMessagePayloadBuilder withCustomerGroup(
+            Function<com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReference> builder) {
+        this.customerGroup = builder
+                .apply(com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>CustomerGroup on the Order after the Set Customer Group update action.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -66,6 +79,19 @@ public class OrderCustomerGroupSetMessagePayloadBuilder implements Builder<Order
         this.oldCustomerGroup = builder
                 .apply(com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>CustomerGroup on the Order before the Set Customer Group update action.</p>
+     * @param builder function to build the oldCustomerGroup value
+     * @return Builder
+     */
+
+    public OrderCustomerGroupSetMessagePayloadBuilder withOldCustomerGroup(
+            Function<com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReference> builder) {
+        this.oldCustomerGroup = builder
+                .apply(com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder.of());
         return this;
     }
 

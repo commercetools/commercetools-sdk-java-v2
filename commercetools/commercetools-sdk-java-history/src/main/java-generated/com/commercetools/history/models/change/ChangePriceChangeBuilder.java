@@ -82,6 +82,18 @@ public class ChangePriceChangeBuilder implements Builder<ChangePriceChange> {
     }
 
     /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public ChangePriceChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.Price> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.PriceBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
@@ -101,6 +113,18 @@ public class ChangePriceChangeBuilder implements Builder<ChangePriceChange> {
     public ChangePriceChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.PriceBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.PriceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public ChangePriceChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.Price> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.PriceBuilder.of());
         return this;
     }
 

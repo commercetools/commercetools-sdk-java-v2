@@ -64,6 +64,18 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *  <p>Name of the Custom Line Item.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public CustomLineItemDraftBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Name of the Custom Line Item.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -93,6 +105,18 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     public CustomLineItemDraftBuilder money(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.money = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Money value of the Custom Line Item. The value can be negative.</p>
+     * @param builder function to build the money value
+     * @return Builder
+     */
+
+    public CustomLineItemDraftBuilder withMoney(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+        this.money = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
         return this;
     }
 
@@ -134,6 +158,19 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode. This field is required for <code>Platform</code> TaxMode.</p>
+     * @param builder function to build the taxCategory value
+     * @return Builder
+     */
+
+    public CustomLineItemDraftBuilder withTaxCategory(
+            Function<com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder, com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier> builder) {
+        this.taxCategory = builder
+                .apply(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode. This field is required for <code>Platform</code> TaxMode.</p>
      * @param taxCategory value to be set
      * @return Builder
      */
@@ -154,6 +191,18 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
             Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
         this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>External Tax Rate for the Custom Line Item if the Cart has the <code>External</code> TaxMode.</p>
+     * @param builder function to build the externalTaxRate value
+     * @return Builder
+     */
+
+    public CustomLineItemDraftBuilder withExternalTaxRate(
+            Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraft> builder) {
+        this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of());
         return this;
     }
 
@@ -183,6 +232,18 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
 
     /**
      *  <p>Custom Fields for the Custom Line Item.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public CustomLineItemDraftBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the Custom Line Item.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -203,6 +264,18 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
             Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder> builder) {
         this.shippingDetails = builder.apply(com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Container for Custom Line Item-specific addresses.</p>
+     * @param builder function to build the shippingDetails value
+     * @return Builder
+     */
+
+    public CustomLineItemDraftBuilder withShippingDetails(
+            Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraft> builder) {
+        this.shippingDetails = builder.apply(com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder.of());
         return this;
     }
 

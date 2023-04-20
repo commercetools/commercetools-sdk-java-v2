@@ -106,6 +106,28 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     }
 
     /**
+     * add the value to the items using the builder function
+     * @param builder function to build the items value
+     * @return Builder
+     */
+
+    public OrderAddDeliveryActionBuilder addItems(
+            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItem> builder) {
+        return plusItems(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()));
+    }
+
+    /**
+     * set the value to the items using the builder function
+     * @param builder function to build the items value
+     * @return Builder
+     */
+
+    public OrderAddDeliveryActionBuilder setItems(
+            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItem> builder) {
+        return items(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()));
+    }
+
+    /**
      *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multi</code> ShippingMode.</p>
      * @param shippingKey value to be set
      * @return Builder
@@ -125,6 +147,18 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     public OrderAddDeliveryActionBuilder address(
             Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
         this.address = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     * @param builder function to build the address value
+     * @return Builder
+     */
+
+    public OrderAddDeliveryActionBuilder withAddress(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddress> builder) {
+        this.address = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of());
         return this;
     }
 
@@ -208,6 +242,28 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     }
 
     /**
+     * add the value to the parcels using the builder function
+     * @param builder function to build the parcels value
+     * @return Builder
+     */
+
+    public OrderAddDeliveryActionBuilder addParcels(
+            Function<com.commercetools.api.models.order.ParcelDraftBuilder, com.commercetools.api.models.order.ParcelDraft> builder) {
+        return plusParcels(builder.apply(com.commercetools.api.models.order.ParcelDraftBuilder.of()));
+    }
+
+    /**
+     * set the value to the parcels using the builder function
+     * @param builder function to build the parcels value
+     * @return Builder
+     */
+
+    public OrderAddDeliveryActionBuilder setParcels(
+            Function<com.commercetools.api.models.order.ParcelDraftBuilder, com.commercetools.api.models.order.ParcelDraft> builder) {
+        return parcels(builder.apply(com.commercetools.api.models.order.ParcelDraftBuilder.of()));
+    }
+
+    /**
      *  <p>Custom Fields for the Transaction.</p>
      * @param builder function to build the custom value
      * @return Builder
@@ -216,6 +272,18 @@ public class OrderAddDeliveryActionBuilder implements Builder<OrderAddDeliveryAc
     public OrderAddDeliveryActionBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the Transaction.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public OrderAddDeliveryActionBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
         return this;
     }
 

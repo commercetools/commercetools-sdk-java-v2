@@ -43,6 +43,18 @@ public class StagedOrderTransitionStateActionBuilder implements Builder<StagedOr
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
+     * @param builder function to build the state value
+     * @return Builder
+     */
+
+    public StagedOrderTransitionStateActionBuilder withState(
+            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifier> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>ResourceIdentifier to a State.</p>
      * @param state value to be set
      * @return Builder
      */

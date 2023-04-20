@@ -108,6 +108,28 @@ public class LocalizableTextSetAttributeBuilder implements Builder<LocalizableTe
     }
 
     /**
+     * add the value to the value using the builder function
+     * @param builder function to build the value value
+     * @return Builder
+     */
+
+    public LocalizableTextSetAttributeBuilder addValue(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedString> builder) {
+        return plusValue(builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()));
+    }
+
+    /**
+     * set the value to the value using the builder function
+     * @param builder function to build the value value
+     * @return Builder
+     */
+
+    public LocalizableTextSetAttributeBuilder setValue(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedString> builder) {
+        return value(builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()));
+    }
+
+    /**
      *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
      * @return name
      */

@@ -53,6 +53,18 @@ public class DeliveryAddressDraftBuilder implements Builder<DeliveryAddressDraft
     }
 
     /**
+     * set the value to the address using the builder function
+     * @param builder function to build the address value
+     * @return Builder
+     */
+
+    public DeliveryAddressDraftBuilder withAddress(
+            Function<com.commercetools.importapi.models.common.AddressBuilder, com.commercetools.importapi.models.common.Address> builder) {
+        this.address = builder.apply(com.commercetools.importapi.models.common.AddressBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the address
      * @param address value to be set
      * @return Builder

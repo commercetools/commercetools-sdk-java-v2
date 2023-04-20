@@ -40,6 +40,18 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
     }
 
     /**
+     * set the value to the value using the builder function
+     * @param builder function to build the value value
+     * @return Builder
+     */
+
+    public DiscountedLineItemPriceDraftBuilder withValue(
+            Function<com.commercetools.importapi.models.common.MoneyBuilder, com.commercetools.importapi.models.common.Money> builder) {
+        this.value = builder.apply(com.commercetools.importapi.models.common.MoneyBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the value
      * @param value value to be set
      * @return Builder
@@ -117,6 +129,30 @@ public class DiscountedLineItemPriceDraftBuilder implements Builder<DiscountedLi
         this.includedDiscounts.add(
             builder.apply(com.commercetools.importapi.models.orders.DiscountedLineItemPortionBuilder.of()).build());
         return this;
+    }
+
+    /**
+     * add the value to the includedDiscounts using the builder function
+     * @param builder function to build the includedDiscounts value
+     * @return Builder
+     */
+
+    public DiscountedLineItemPriceDraftBuilder addIncludedDiscounts(
+            Function<com.commercetools.importapi.models.orders.DiscountedLineItemPortionBuilder, com.commercetools.importapi.models.orders.DiscountedLineItemPortion> builder) {
+        return plusIncludedDiscounts(
+            builder.apply(com.commercetools.importapi.models.orders.DiscountedLineItemPortionBuilder.of()));
+    }
+
+    /**
+     * set the value to the includedDiscounts using the builder function
+     * @param builder function to build the includedDiscounts value
+     * @return Builder
+     */
+
+    public DiscountedLineItemPriceDraftBuilder setIncludedDiscounts(
+            Function<com.commercetools.importapi.models.orders.DiscountedLineItemPortionBuilder, com.commercetools.importapi.models.orders.DiscountedLineItemPortion> builder) {
+        return includedDiscounts(
+            builder.apply(com.commercetools.importapi.models.orders.DiscountedLineItemPortionBuilder.of()));
     }
 
     /**

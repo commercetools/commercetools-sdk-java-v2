@@ -42,6 +42,18 @@ public class ProductSelectionProductExcludedMessagePayloadBuilder
 
     /**
      *  <p>Product that was excluded from the Product Selection.</p>
+     * @param builder function to build the product value
+     * @return Builder
+     */
+
+    public ProductSelectionProductExcludedMessagePayloadBuilder withProduct(
+            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReference> builder) {
+        this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Product that was excluded from the Product Selection.</p>
      * @param product value to be set
      * @return Builder
      */
@@ -63,6 +75,19 @@ public class ProductSelectionProductExcludedMessagePayloadBuilder
         this.variantExclusion = builder
                 .apply(com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Product Variant Exclusion after the Exclude Product update action.</p>
+     * @param builder function to build the variantExclusion value
+     * @return Builder
+     */
+
+    public ProductSelectionProductExcludedMessagePayloadBuilder withVariantExclusion(
+            Function<com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder, com.commercetools.api.models.product_selection.ProductVariantExclusion> builder) {
+        this.variantExclusion = builder
+                .apply(com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder.of());
         return this;
     }
 

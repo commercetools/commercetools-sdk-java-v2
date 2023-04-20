@@ -54,6 +54,18 @@ public class ZoneReferenceBuilder implements Builder<ZoneReference> {
 
     /**
      *  <p>Contains the representation of the expanded Zone. Only present in responses to requests with Reference Expansion for Zones.</p>
+     * @param builder function to build the obj value
+     * @return Builder
+     */
+
+    public ZoneReferenceBuilder withObj(
+            Function<com.commercetools.api.models.zone.ZoneBuilder, com.commercetools.api.models.zone.Zone> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.zone.ZoneBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Contains the representation of the expanded Zone. Only present in responses to requests with Reference Expansion for Zones.</p>
      * @param obj value to be set
      * @return Builder
      */

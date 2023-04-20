@@ -54,6 +54,18 @@ public class CustomerGroupReferenceBuilder implements Builder<CustomerGroupRefer
 
     /**
      *  <p>Contains the representation of the expanded CustomerGroup. Only present in responses to requests with Reference Expansion for CustomerGroups.</p>
+     * @param builder function to build the obj value
+     * @return Builder
+     */
+
+    public CustomerGroupReferenceBuilder withObj(
+            Function<com.commercetools.api.models.customer_group.CustomerGroupBuilder, com.commercetools.api.models.customer_group.CustomerGroup> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.customer_group.CustomerGroupBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Contains the representation of the expanded CustomerGroup. Only present in responses to requests with Reference Expansion for CustomerGroups.</p>
      * @param obj value to be set
      * @return Builder
      */

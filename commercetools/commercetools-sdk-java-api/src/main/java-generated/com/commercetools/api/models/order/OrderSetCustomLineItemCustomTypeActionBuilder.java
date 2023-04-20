@@ -57,6 +57,18 @@ public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<Or
 
     /**
      *  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>
+     * @param builder function to build the type value
+     * @return Builder
+     */
+
+    public OrderSetCustomLineItemCustomTypeActionBuilder withType(
+            Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifier> builder) {
+        this.type = builder.apply(com.commercetools.api.models.type.TypeResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Defines the Type that extends the CustomLineItem with Custom Fields. If absent, any existing Type and Custom Fields are removed from the CustomLineItem.</p>
      * @param type value to be set
      * @return Builder
      */
@@ -76,6 +88,18 @@ public class OrderSetCustomLineItemCustomTypeActionBuilder implements Builder<Or
     public OrderSetCustomLineItemCustomTypeActionBuilder fields(
             Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
         this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Sets the Custom Fields fields for the CustomLineItem.</p>
+     * @param builder function to build the fields value
+     * @return Builder
+     */
+
+    public OrderSetCustomLineItemCustomTypeActionBuilder withFields(
+            Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainer> builder) {
+        this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of());
         return this;
     }
 

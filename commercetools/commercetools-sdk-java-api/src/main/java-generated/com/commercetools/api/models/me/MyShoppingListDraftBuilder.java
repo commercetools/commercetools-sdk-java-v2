@@ -58,6 +58,18 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
 
     /**
      *  <p>Name of the ShoppingList.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public MyShoppingListDraftBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Name of the ShoppingList.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -76,6 +88,18 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     public MyShoppingListDraftBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Description of the ShoppingList.</p>
+     * @param builder function to build the description value
+     * @return Builder
+     */
+
+    public MyShoppingListDraftBuilder withDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -161,6 +185,30 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
+     *  <p>Line Items (containing Products) to add to the ShoppingList.</p>
+     * @param builder function to build the lineItems value
+     * @return Builder
+     */
+
+    public MyShoppingListDraftBuilder addLineItems(
+            Function<com.commercetools.api.models.shopping_list.ShoppingListLineItemDraftBuilder, com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft> builder) {
+        return plusLineItems(
+            builder.apply(com.commercetools.api.models.shopping_list.ShoppingListLineItemDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>Line Items (containing Products) to add to the ShoppingList.</p>
+     * @param builder function to build the lineItems value
+     * @return Builder
+     */
+
+    public MyShoppingListDraftBuilder setLineItems(
+            Function<com.commercetools.api.models.shopping_list.ShoppingListLineItemDraftBuilder, com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft> builder) {
+        return lineItems(
+            builder.apply(com.commercetools.api.models.shopping_list.ShoppingListLineItemDraftBuilder.of()));
+    }
+
+    /**
      *  <p>Line Items (containing text values) to add to the ShoppingList.</p>
      * @param textLineItems value to be set
      * @return Builder
@@ -230,6 +278,29 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     }
 
     /**
+     *  <p>Line Items (containing text values) to add to the ShoppingList.</p>
+     * @param builder function to build the textLineItems value
+     * @return Builder
+     */
+
+    public MyShoppingListDraftBuilder addTextLineItems(
+            Function<com.commercetools.api.models.shopping_list.TextLineItemDraftBuilder, com.commercetools.api.models.shopping_list.TextLineItemDraft> builder) {
+        return plusTextLineItems(
+            builder.apply(com.commercetools.api.models.shopping_list.TextLineItemDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>Line Items (containing text values) to add to the ShoppingList.</p>
+     * @param builder function to build the textLineItems value
+     * @return Builder
+     */
+
+    public MyShoppingListDraftBuilder setTextLineItems(
+            Function<com.commercetools.api.models.shopping_list.TextLineItemDraftBuilder, com.commercetools.api.models.shopping_list.TextLineItemDraft> builder) {
+        return textLineItems(builder.apply(com.commercetools.api.models.shopping_list.TextLineItemDraftBuilder.of()));
+    }
+
+    /**
      *  <p>Custom Fields defined for the ShoppingList.</p>
      * @param builder function to build the custom value
      * @return Builder
@@ -238,6 +309,18 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     public MyShoppingListDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields defined for the ShoppingList.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public MyShoppingListDraftBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
         return this;
     }
 
@@ -274,6 +357,18 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     public MyShoppingListDraftBuilder store(
             Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder> builder) {
         this.store = builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Assigns the new ShoppingList to the Store. The Store assignment can not be modified.</p>
+     * @param builder function to build the store value
+     * @return Builder
+     */
+
+    public MyShoppingListDraftBuilder withStore(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifier> builder) {
+        this.store = builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of());
         return this;
     }
 

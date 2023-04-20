@@ -93,6 +93,28 @@ public class OrderImportRequestBuilder implements Builder<OrderImportRequest> {
 
     /**
      *  <p>The order import resources of this request.</p>
+     * @param builder function to build the resources value
+     * @return Builder
+     */
+
+    public OrderImportRequestBuilder addResources(
+            Function<com.commercetools.importapi.models.orders.OrderImportBuilder, com.commercetools.importapi.models.orders.OrderImport> builder) {
+        return plusResources(builder.apply(com.commercetools.importapi.models.orders.OrderImportBuilder.of()));
+    }
+
+    /**
+     *  <p>The order import resources of this request.</p>
+     * @param builder function to build the resources value
+     * @return Builder
+     */
+
+    public OrderImportRequestBuilder setResources(
+            Function<com.commercetools.importapi.models.orders.OrderImportBuilder, com.commercetools.importapi.models.orders.OrderImport> builder) {
+        return resources(builder.apply(com.commercetools.importapi.models.orders.OrderImportBuilder.of()));
+    }
+
+    /**
+     *  <p>The order import resources of this request.</p>
      * @return resources
      */
 

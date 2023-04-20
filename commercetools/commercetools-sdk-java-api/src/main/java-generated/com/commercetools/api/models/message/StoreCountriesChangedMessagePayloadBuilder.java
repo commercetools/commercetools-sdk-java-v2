@@ -99,6 +99,28 @@ public class StoreCountriesChangedMessagePayloadBuilder implements Builder<Store
     }
 
     /**
+     *  <p>Countries added to the Store.</p>
+     * @param builder function to build the addedCountries value
+     * @return Builder
+     */
+
+    public StoreCountriesChangedMessagePayloadBuilder addAddedCountries(
+            Function<com.commercetools.api.models.store_country.StoreCountryBuilder, com.commercetools.api.models.store_country.StoreCountry> builder) {
+        return plusAddedCountries(builder.apply(com.commercetools.api.models.store_country.StoreCountryBuilder.of()));
+    }
+
+    /**
+     *  <p>Countries added to the Store.</p>
+     * @param builder function to build the addedCountries value
+     * @return Builder
+     */
+
+    public StoreCountriesChangedMessagePayloadBuilder setAddedCountries(
+            Function<com.commercetools.api.models.store_country.StoreCountryBuilder, com.commercetools.api.models.store_country.StoreCountry> builder) {
+        return addedCountries(builder.apply(com.commercetools.api.models.store_country.StoreCountryBuilder.of()));
+    }
+
+    /**
      *  <p>Countries removed from the Store.</p>
      * @param removedCountries value to be set
      * @return Builder
@@ -165,6 +187,28 @@ public class StoreCountriesChangedMessagePayloadBuilder implements Builder<Store
         this.removedCountries
                 .add(builder.apply(com.commercetools.api.models.store_country.StoreCountryBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Countries removed from the Store.</p>
+     * @param builder function to build the removedCountries value
+     * @return Builder
+     */
+
+    public StoreCountriesChangedMessagePayloadBuilder addRemovedCountries(
+            Function<com.commercetools.api.models.store_country.StoreCountryBuilder, com.commercetools.api.models.store_country.StoreCountry> builder) {
+        return plusRemovedCountries(builder.apply(com.commercetools.api.models.store_country.StoreCountryBuilder.of()));
+    }
+
+    /**
+     *  <p>Countries removed from the Store.</p>
+     * @param builder function to build the removedCountries value
+     * @return Builder
+     */
+
+    public StoreCountriesChangedMessagePayloadBuilder setRemovedCountries(
+            Function<com.commercetools.api.models.store_country.StoreCountryBuilder, com.commercetools.api.models.store_country.StoreCountry> builder) {
+        return removedCountries(builder.apply(com.commercetools.api.models.store_country.StoreCountryBuilder.of()));
     }
 
     /**

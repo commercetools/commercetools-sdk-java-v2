@@ -148,6 +148,28 @@ public class StorePagedQueryResponseBuilder implements Builder<StorePagedQueryRe
     }
 
     /**
+     *  <p>Stores matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public StorePagedQueryResponseBuilder addResults(
+            Function<com.commercetools.api.models.store.StoreBuilder, com.commercetools.api.models.store.Store> builder) {
+        return plusResults(builder.apply(com.commercetools.api.models.store.StoreBuilder.of()));
+    }
+
+    /**
+     *  <p>Stores matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public StorePagedQueryResponseBuilder setResults(
+            Function<com.commercetools.api.models.store.StoreBuilder, com.commercetools.api.models.store.Store> builder) {
+        return results(builder.apply(com.commercetools.api.models.store.StoreBuilder.of()));
+    }
+
+    /**
      *  <p>Number of results requested.</p>
      * @return limit
      */

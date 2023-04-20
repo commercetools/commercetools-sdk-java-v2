@@ -153,6 +153,28 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     }
 
     /**
+     * add the value to the results using the builder function
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public ProductProjectionPagedSearchResponseBuilder addResults(
+            Function<com.commercetools.api.models.product.ProductProjectionBuilder, com.commercetools.api.models.product.ProductProjection> builder) {
+        return plusResults(builder.apply(com.commercetools.api.models.product.ProductProjectionBuilder.of()));
+    }
+
+    /**
+     * set the value to the results using the builder function
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public ProductProjectionPagedSearchResponseBuilder setResults(
+            Function<com.commercetools.api.models.product.ProductProjectionBuilder, com.commercetools.api.models.product.ProductProjection> builder) {
+        return results(builder.apply(com.commercetools.api.models.product.ProductProjectionBuilder.of()));
+    }
+
+    /**
      * set the value to the facets using the builder function
      * @param builder function to build the facets value
      * @return Builder
@@ -161,6 +183,18 @@ public class ProductProjectionPagedSearchResponseBuilder implements Builder<Prod
     public ProductProjectionPagedSearchResponseBuilder facets(
             Function<com.commercetools.api.models.product.FacetResultsBuilder, com.commercetools.api.models.product.FacetResultsBuilder> builder) {
         this.facets = builder.apply(com.commercetools.api.models.product.FacetResultsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the facets using the builder function
+     * @param builder function to build the facets value
+     * @return Builder
+     */
+
+    public ProductProjectionPagedSearchResponseBuilder withFacets(
+            Function<com.commercetools.api.models.product.FacetResultsBuilder, com.commercetools.api.models.product.FacetResults> builder) {
+        this.facets = builder.apply(com.commercetools.api.models.product.FacetResultsBuilder.of());
         return this;
     }
 

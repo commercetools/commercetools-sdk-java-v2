@@ -117,6 +117,28 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
+     * add the value to the sources using the builder function
+     * @param builder function to build the sources value
+     * @return Builder
+     */
+
+    public AssetBuilder addSources(
+            Function<com.commercetools.importapi.models.common.AssetSourceBuilder, com.commercetools.importapi.models.common.AssetSource> builder) {
+        return plusSources(builder.apply(com.commercetools.importapi.models.common.AssetSourceBuilder.of()));
+    }
+
+    /**
+     * set the value to the sources using the builder function
+     * @param builder function to build the sources value
+     * @return Builder
+     */
+
+    public AssetBuilder setSources(
+            Function<com.commercetools.importapi.models.common.AssetSourceBuilder, com.commercetools.importapi.models.common.AssetSource> builder) {
+        return sources(builder.apply(com.commercetools.importapi.models.common.AssetSourceBuilder.of()));
+    }
+
+    /**
      *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
      *  <pre><code>{
      *    "de": "Hundefutter",
@@ -130,6 +152,23 @@ public class AssetBuilder implements Builder<Asset> {
     public AssetBuilder name(
             Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public AssetBuilder withName(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -163,6 +202,23 @@ public class AssetBuilder implements Builder<Asset> {
     public AssetBuilder description(
             Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
         this.description = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     * @param builder function to build the description value
+     * @return Builder
+     */
+
+    public AssetBuilder withDescription(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedString> builder) {
+        this.description = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -228,6 +284,18 @@ public class AssetBuilder implements Builder<Asset> {
     public AssetBuilder custom(
             Function<com.commercetools.importapi.models.customfields.CustomBuilder, com.commercetools.importapi.models.customfields.CustomBuilder> builder) {
         this.custom = builder.apply(com.commercetools.importapi.models.customfields.CustomBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public AssetBuilder withCustom(
+            Function<com.commercetools.importapi.models.customfields.CustomBuilder, com.commercetools.importapi.models.customfields.Custom> builder) {
+        this.custom = builder.apply(com.commercetools.importapi.models.customfields.CustomBuilder.of());
         return this;
     }
 

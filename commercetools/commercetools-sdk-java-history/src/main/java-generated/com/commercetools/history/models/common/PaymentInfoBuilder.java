@@ -90,6 +90,28 @@ public class PaymentInfoBuilder implements Builder<PaymentInfo> {
     }
 
     /**
+     * add the value to the payments using the builder function
+     * @param builder function to build the payments value
+     * @return Builder
+     */
+
+    public PaymentInfoBuilder addPayments(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
+        return plusPayments(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()));
+    }
+
+    /**
+     * set the value to the payments using the builder function
+     * @param builder function to build the payments value
+     * @return Builder
+     */
+
+    public PaymentInfoBuilder setPayments(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
+        return payments(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()));
+    }
+
+    /**
      * value of payments}
      * @return payments
      */

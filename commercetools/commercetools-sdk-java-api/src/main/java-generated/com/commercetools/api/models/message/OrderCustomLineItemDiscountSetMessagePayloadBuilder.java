@@ -114,6 +114,30 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
     }
 
     /**
+     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     * @param builder function to build the discountedPricePerQuantity value
+     * @return Builder
+     */
+
+    public OrderCustomLineItemDiscountSetMessagePayloadBuilder addDiscountedPricePerQuantity(
+            Function<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder, com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> builder) {
+        return plusDiscountedPricePerQuantity(
+            builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder.of()));
+    }
+
+    /**
+     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     * @param builder function to build the discountedPricePerQuantity value
+     * @return Builder
+     */
+
+    public OrderCustomLineItemDiscountSetMessagePayloadBuilder setDiscountedPricePerQuantity(
+            Function<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder, com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> builder) {
+        return discountedPricePerQuantity(
+            builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder.of()));
+    }
+
+    /**
      *  <p>TaxedItemPrice of the Custom Line Item after the Discount recalculation.</p>
      * @param builder function to build the taxedPrice value
      * @return Builder
@@ -122,6 +146,18 @@ public class OrderCustomLineItemDiscountSetMessagePayloadBuilder
     public OrderCustomLineItemDiscountSetMessagePayloadBuilder taxedPrice(
             Function<com.commercetools.api.models.cart.TaxedItemPriceBuilder, com.commercetools.api.models.cart.TaxedItemPriceBuilder> builder) {
         this.taxedPrice = builder.apply(com.commercetools.api.models.cart.TaxedItemPriceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>TaxedItemPrice of the Custom Line Item after the Discount recalculation.</p>
+     * @param builder function to build the taxedPrice value
+     * @return Builder
+     */
+
+    public OrderCustomLineItemDiscountSetMessagePayloadBuilder withTaxedPrice(
+            Function<com.commercetools.api.models.cart.TaxedItemPriceBuilder, com.commercetools.api.models.cart.TaxedItemPrice> builder) {
+        this.taxedPrice = builder.apply(com.commercetools.api.models.cart.TaxedItemPriceBuilder.of());
         return this;
     }
 

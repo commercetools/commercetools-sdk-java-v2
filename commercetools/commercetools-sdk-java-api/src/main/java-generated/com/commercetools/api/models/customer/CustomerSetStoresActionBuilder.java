@@ -95,6 +95,28 @@ public class CustomerSetStoresActionBuilder implements Builder<CustomerSetStores
 
     /**
      *  <p>ResourceIdentifier of the Stores to set.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public CustomerSetStoresActionBuilder addStores(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifier> builder) {
+        return plusStores(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()));
+    }
+
+    /**
+     *  <p>ResourceIdentifier of the Stores to set.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public CustomerSetStoresActionBuilder setStores(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifier> builder) {
+        return stores(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()));
+    }
+
+    /**
+     *  <p>ResourceIdentifier of the Stores to set.</p>
      * @return stores
      */
 

@@ -128,6 +128,28 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
+     *  <p>The Embedded Prices of the variant. The prices should not contain two prices for the same price scope (same currency, country, customer group, channel, valid from and valid until). If this property is defined, then it will override the <code>prices</code> property from the original product variant, otherwise <code>prices</code> property from the original product variant would be copied in the resulting order.</p>
+     * @param builder function to build the prices value
+     * @return Builder
+     */
+
+    public ProductVariantImportDraftBuilder addPrices(
+            Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraft> builder) {
+        return plusPrices(builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>The Embedded Prices of the variant. The prices should not contain two prices for the same price scope (same currency, country, customer group, channel, valid from and valid until). If this property is defined, then it will override the <code>prices</code> property from the original product variant, otherwise <code>prices</code> property from the original product variant would be copied in the resulting order.</p>
+     * @param builder function to build the prices value
+     * @return Builder
+     */
+
+    public ProductVariantImportDraftBuilder setPrices(
+            Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraft> builder) {
+        return prices(builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of()));
+    }
+
+    /**
      *  <p>If this property is defined, then it will override the <code>attributes</code> property from the original product variant, otherwise <code>attributes</code> property from the original product variant would be copied in the resulting order.</p>
      * @param attributes value to be set
      * @return Builder
@@ -195,6 +217,28 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
     }
 
     /**
+     *  <p>If this property is defined, then it will override the <code>attributes</code> property from the original product variant, otherwise <code>attributes</code> property from the original product variant would be copied in the resulting order.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductVariantImportDraftBuilder addAttributes(
+            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.Attribute> builder) {
+        return plusAttributes(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()));
+    }
+
+    /**
+     *  <p>If this property is defined, then it will override the <code>attributes</code> property from the original product variant, otherwise <code>attributes</code> property from the original product variant would be copied in the resulting order.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductVariantImportDraftBuilder setAttributes(
+            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.Attribute> builder) {
+        return attributes(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()));
+    }
+
+    /**
      *  <p>If this property is defined, then it will override the <code>images</code> property from the original product variant, otherwise <code>images</code> property from the original product variant would be copied in the resulting order.</p>
      * @param images value to be set
      * @return Builder
@@ -259,6 +303,28 @@ public class ProductVariantImportDraftBuilder implements Builder<ProductVariantI
         this.images = new ArrayList<>();
         this.images.add(builder.apply(com.commercetools.api.models.common.ImageBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>If this property is defined, then it will override the <code>images</code> property from the original product variant, otherwise <code>images</code> property from the original product variant would be copied in the resulting order.</p>
+     * @param builder function to build the images value
+     * @return Builder
+     */
+
+    public ProductVariantImportDraftBuilder addImages(
+            Function<com.commercetools.api.models.common.ImageBuilder, com.commercetools.api.models.common.Image> builder) {
+        return plusImages(builder.apply(com.commercetools.api.models.common.ImageBuilder.of()));
+    }
+
+    /**
+     *  <p>If this property is defined, then it will override the <code>images</code> property from the original product variant, otherwise <code>images</code> property from the original product variant would be copied in the resulting order.</p>
+     * @param builder function to build the images value
+     * @return Builder
+     */
+
+    public ProductVariantImportDraftBuilder setImages(
+            Function<com.commercetools.api.models.common.ImageBuilder, com.commercetools.api.models.common.Image> builder) {
+        return images(builder.apply(com.commercetools.api.models.common.ImageBuilder.of()));
     }
 
     /**

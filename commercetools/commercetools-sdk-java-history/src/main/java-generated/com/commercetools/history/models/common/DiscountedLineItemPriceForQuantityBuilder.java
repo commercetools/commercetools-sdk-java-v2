@@ -53,6 +53,19 @@ public class DiscountedLineItemPriceForQuantityBuilder implements Builder<Discou
     }
 
     /**
+     * set the value to the discountedPrice using the builder function
+     * @param builder function to build the discountedPrice value
+     * @return Builder
+     */
+
+    public DiscountedLineItemPriceForQuantityBuilder withDiscountedPrice(
+            Function<com.commercetools.history.models.common.DiscountedLineItemPriceBuilder, com.commercetools.history.models.common.DiscountedLineItemPrice> builder) {
+        this.discountedPrice = builder
+                .apply(com.commercetools.history.models.common.DiscountedLineItemPriceBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the discountedPrice
      * @param discountedPrice value to be set
      * @return Builder

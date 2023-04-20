@@ -171,6 +171,28 @@ public class ExternalTaxRateDraftBuilder implements Builder<ExternalTaxRateDraft
     }
 
     /**
+     *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes).</p>
+     * @param builder function to build the subRates value
+     * @return Builder
+     */
+
+    public ExternalTaxRateDraftBuilder addSubRates(
+            Function<com.commercetools.api.models.tax_category.SubRateBuilder, com.commercetools.api.models.tax_category.SubRate> builder) {
+        return plusSubRates(builder.apply(com.commercetools.api.models.tax_category.SubRateBuilder.of()));
+    }
+
+    /**
+     *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes).</p>
+     * @param builder function to build the subRates value
+     * @return Builder
+     */
+
+    public ExternalTaxRateDraftBuilder setSubRates(
+            Function<com.commercetools.api.models.tax_category.SubRateBuilder, com.commercetools.api.models.tax_category.SubRate> builder) {
+        return subRates(builder.apply(com.commercetools.api.models.tax_category.SubRateBuilder.of()));
+    }
+
+    /**
      *  <p>Name of the Tax Rate.</p>
      * @return name
      */

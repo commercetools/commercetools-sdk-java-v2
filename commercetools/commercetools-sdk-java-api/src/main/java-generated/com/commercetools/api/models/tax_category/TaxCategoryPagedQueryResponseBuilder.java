@@ -150,6 +150,28 @@ public class TaxCategoryPagedQueryResponseBuilder implements Builder<TaxCategory
     }
 
     /**
+     *  <p>TaxCategories matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public TaxCategoryPagedQueryResponseBuilder addResults(
+            Function<com.commercetools.api.models.tax_category.TaxCategoryBuilder, com.commercetools.api.models.tax_category.TaxCategory> builder) {
+        return plusResults(builder.apply(com.commercetools.api.models.tax_category.TaxCategoryBuilder.of()));
+    }
+
+    /**
+     *  <p>TaxCategories matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public TaxCategoryPagedQueryResponseBuilder setResults(
+            Function<com.commercetools.api.models.tax_category.TaxCategoryBuilder, com.commercetools.api.models.tax_category.TaxCategory> builder) {
+        return results(builder.apply(com.commercetools.api.models.tax_category.TaxCategoryBuilder.of()));
+    }
+
+    /**
      *  <p>Number of results requested.</p>
      * @return limit
      */

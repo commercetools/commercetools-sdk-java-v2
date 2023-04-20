@@ -39,6 +39,18 @@ public class AttributeNestedTypeBuilder implements Builder<AttributeNestedType> 
 
     /**
      *  <p>Attributes that can be stored as nested Attributes of the current Attribute.</p>
+     * @param builder function to build the typeReference value
+     * @return Builder
+     */
+
+    public AttributeNestedTypeBuilder withTypeReference(
+            Function<com.commercetools.api.models.product_type.ProductTypeReferenceBuilder, com.commercetools.api.models.product_type.ProductTypeReference> builder) {
+        this.typeReference = builder.apply(com.commercetools.api.models.product_type.ProductTypeReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Attributes that can be stored as nested Attributes of the current Attribute.</p>
      * @param typeReference value to be set
      * @return Builder
      */

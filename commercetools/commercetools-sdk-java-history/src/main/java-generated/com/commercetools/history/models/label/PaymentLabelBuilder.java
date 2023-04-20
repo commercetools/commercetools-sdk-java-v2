@@ -51,6 +51,18 @@ public class PaymentLabelBuilder implements Builder<PaymentLabel> {
     }
 
     /**
+     * set the value to the amountPlanned using the builder function
+     * @param builder function to build the amountPlanned value
+     * @return Builder
+     */
+
+    public PaymentLabelBuilder withAmountPlanned(
+            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.Money> builder) {
+        this.amountPlanned = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the amountPlanned
      * @param amountPlanned value to be set
      * @return Builder

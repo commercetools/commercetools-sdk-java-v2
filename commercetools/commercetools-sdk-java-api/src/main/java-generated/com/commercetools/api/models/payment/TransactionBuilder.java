@@ -91,6 +91,18 @@ public class TransactionBuilder implements Builder<Transaction> {
 
     /**
      *  <p>Money value of the Transaction.</p>
+     * @param builder function to build the amount value
+     * @return Builder
+     */
+
+    public TransactionBuilder withAmount(
+            Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoney> builder) {
+        this.amount = builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Money value of the Transaction.</p>
      * @param amount value to be set
      * @return Builder
      */
@@ -131,6 +143,18 @@ public class TransactionBuilder implements Builder<Transaction> {
     public TransactionBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields defined for the Transaction.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public TransactionBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of());
         return this;
     }
 

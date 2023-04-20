@@ -57,6 +57,18 @@ public class ImageBuilder implements Builder<Image> {
 
     /**
      *  <p>Dimensions of the original image. This can be used by your application, for example, to determine whether the image is large enough to display a zoom view.</p>
+     * @param builder function to build the dimensions value
+     * @return Builder
+     */
+
+    public ImageBuilder withDimensions(
+            Function<com.commercetools.importapi.models.common.AssetDimensionsBuilder, com.commercetools.importapi.models.common.AssetDimensions> builder) {
+        this.dimensions = builder.apply(com.commercetools.importapi.models.common.AssetDimensionsBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Dimensions of the original image. This can be used by your application, for example, to determine whether the image is large enough to display a zoom view.</p>
      * @param dimensions value to be set
      * @return Builder
      */

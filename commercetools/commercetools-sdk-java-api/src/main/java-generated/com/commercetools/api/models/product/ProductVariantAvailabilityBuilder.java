@@ -51,6 +51,19 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
 
     /**
      *  <p>For each InventoryEntry with a supply Channel, an entry is added to <code>channels</code>.</p>
+     * @param builder function to build the channels value
+     * @return Builder
+     */
+
+    public ProductVariantAvailabilityBuilder withChannels(
+            Function<com.commercetools.api.models.product.ProductVariantChannelAvailabilityMapBuilder, com.commercetools.api.models.product.ProductVariantChannelAvailabilityMap> builder) {
+        this.channels = builder
+                .apply(com.commercetools.api.models.product.ProductVariantChannelAvailabilityMapBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>For each InventoryEntry with a supply Channel, an entry is added to <code>channels</code>.</p>
      * @param channels value to be set
      * @return Builder
      */

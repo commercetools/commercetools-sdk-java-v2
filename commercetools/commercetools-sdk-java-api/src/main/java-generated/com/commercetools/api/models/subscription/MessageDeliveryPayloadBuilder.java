@@ -103,6 +103,19 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
 
     /**
      *  <p>User-defined unique identifiers of the resource.</p>
+     * @param builder function to build the resourceUserProvidedIdentifiers value
+     * @return Builder
+     */
+
+    public MessageDeliveryPayloadBuilder withResourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiers> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>User-defined unique identifiers of the resource.</p>
      * @param resourceUserProvidedIdentifiers value to be set
      * @return Builder
      */
@@ -190,6 +203,19 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
         this.payloadNotIncluded = builder
                 .apply(com.commercetools.api.models.subscription.PayloadNotIncludedBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>If the payload does not fit into the size limit or its format is not accepted by the messaging service, the <code>payloadNotIncluded</code> field is present.</p>
+     * @param builder function to build the payloadNotIncluded value
+     * @return Builder
+     */
+
+    public MessageDeliveryPayloadBuilder withPayloadNotIncluded(
+            Function<com.commercetools.api.models.subscription.PayloadNotIncludedBuilder, com.commercetools.api.models.subscription.PayloadNotIncluded> builder) {
+        this.payloadNotIncluded = builder
+                .apply(com.commercetools.api.models.subscription.PayloadNotIncludedBuilder.of());
         return this;
     }
 

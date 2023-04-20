@@ -40,6 +40,19 @@ public class StoreRemoveProductSelectionActionBuilder implements Builder<StoreRe
 
     /**
      *  <p>Value to remove. The removed Product Selection is made offline.</p>
+     * @param builder function to build the productSelection value
+     * @return Builder
+     */
+
+    public StoreRemoveProductSelectionActionBuilder withProductSelection(
+            Function<com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder, com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier> builder) {
+        this.productSelection = builder
+                .apply(com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to remove. The removed Product Selection is made offline.</p>
      * @param productSelection value to be set
      * @return Builder
      */

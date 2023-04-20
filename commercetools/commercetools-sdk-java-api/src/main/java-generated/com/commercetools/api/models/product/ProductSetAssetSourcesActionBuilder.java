@@ -164,6 +164,28 @@ public class ProductSetAssetSourcesActionBuilder implements Builder<ProductSetAs
     }
 
     /**
+     *  <p>Value to set.</p>
+     * @param builder function to build the sources value
+     * @return Builder
+     */
+
+    public ProductSetAssetSourcesActionBuilder addSources(
+            Function<com.commercetools.api.models.common.AssetSourceBuilder, com.commercetools.api.models.common.AssetSource> builder) {
+        return plusSources(builder.apply(com.commercetools.api.models.common.AssetSourceBuilder.of()));
+    }
+
+    /**
+     *  <p>Value to set.</p>
+     * @param builder function to build the sources value
+     * @return Builder
+     */
+
+    public ProductSetAssetSourcesActionBuilder setSources(
+            Function<com.commercetools.api.models.common.AssetSourceBuilder, com.commercetools.api.models.common.AssetSource> builder) {
+        return sources(builder.apply(com.commercetools.api.models.common.AssetSourceBuilder.of()));
+    }
+
+    /**
      *  <p>The <code>id</code> of the ProductVariant to update.</p>
      * @return variantId
      */

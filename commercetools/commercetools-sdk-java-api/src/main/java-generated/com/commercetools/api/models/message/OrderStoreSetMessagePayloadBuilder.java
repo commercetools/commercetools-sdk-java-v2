@@ -40,6 +40,18 @@ public class OrderStoreSetMessagePayloadBuilder implements Builder<OrderStoreSet
 
     /**
      *  <p>Store that was set.</p>
+     * @param builder function to build the store value
+     * @return Builder
+     */
+
+    public OrderStoreSetMessagePayloadBuilder withStore(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
+        this.store = builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Store that was set.</p>
      * @param store value to be set
      * @return Builder
      */

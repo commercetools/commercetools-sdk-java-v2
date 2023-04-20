@@ -80,6 +80,18 @@ public class StateDraftBuilder implements Builder<StateDraft> {
 
     /**
      *  <p>Name of the State.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public StateDraftBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Name of the State.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -98,6 +110,18 @@ public class StateDraftBuilder implements Builder<StateDraft> {
     public StateDraftBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Description of the State.</p>
+     * @param builder function to build the description value
+     * @return Builder
+     */
+
+    public StateDraftBuilder withDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -253,6 +277,38 @@ public class StateDraftBuilder implements Builder<StateDraft> {
         this.transitions
                 .add(builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Define the list of States of the same <code>type</code> to which the current State can be transitioned to.</p>
+     *  <ul>
+     *   <li>If, for example, the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the StateResourceIdentifier to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
+     *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
+     *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
+     *  </ul>
+     * @param builder function to build the transitions value
+     * @return Builder
+     */
+
+    public StateDraftBuilder addTransitions(
+            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifier> builder) {
+        return plusTransitions(builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()));
+    }
+
+    /**
+     *  <p>Define the list of States of the same <code>type</code> to which the current State can be transitioned to.</p>
+     *  <ul>
+     *   <li>If, for example, the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and you want to allow the transition <em>Initial</em> -&gt; <em>Shipped</em>, then add the StateResourceIdentifier to the <em>Shipped</em> <code>OrderState</code> to this list.</li>
+     *   <li>Set to empty list for not allowing any transition from the current State and defining it as final State for a workflow.</li>
+     *   <li>Do not set this field at all to turn off validation and allowing transitions to any other State of the same <code>type</code> as the current State.</li>
+     *  </ul>
+     * @param builder function to build the transitions value
+     * @return Builder
+     */
+
+    public StateDraftBuilder setTransitions(
+            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifier> builder) {
+        return transitions(builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()));
     }
 
     /**

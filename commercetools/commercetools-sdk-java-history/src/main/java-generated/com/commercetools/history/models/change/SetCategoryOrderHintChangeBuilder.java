@@ -83,6 +83,18 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
     }
 
     /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public SetCategoryOrderHintChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.CategoryOrderHintsBuilder, com.commercetools.history.models.common.CategoryOrderHints> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.CategoryOrderHintsBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
@@ -103,6 +115,18 @@ public class SetCategoryOrderHintChangeBuilder implements Builder<SetCategoryOrd
     public SetCategoryOrderHintChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.CategoryOrderHintsBuilder, com.commercetools.history.models.common.CategoryOrderHintsBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.CategoryOrderHintsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetCategoryOrderHintChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.CategoryOrderHintsBuilder, com.commercetools.history.models.common.CategoryOrderHints> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.CategoryOrderHintsBuilder.of());
         return this;
     }
 

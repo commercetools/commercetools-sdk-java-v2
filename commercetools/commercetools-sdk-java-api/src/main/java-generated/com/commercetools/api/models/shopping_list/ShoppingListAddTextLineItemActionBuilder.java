@@ -52,6 +52,18 @@ public class ShoppingListAddTextLineItemActionBuilder implements Builder<Shoppin
 
     /**
      *  <p>Name of the TextLineItem.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public ShoppingListAddTextLineItemActionBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Name of the TextLineItem.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -71,6 +83,18 @@ public class ShoppingListAddTextLineItemActionBuilder implements Builder<Shoppin
     public ShoppingListAddTextLineItemActionBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Description of the TextLineItem.</p>
+     * @param builder function to build the description value
+     * @return Builder
+     */
+
+    public ShoppingListAddTextLineItemActionBuilder withDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -117,6 +141,18 @@ public class ShoppingListAddTextLineItemActionBuilder implements Builder<Shoppin
     public ShoppingListAddTextLineItemActionBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields defined for the TextLineItem.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public ShoppingListAddTextLineItemActionBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
         return this;
     }
 

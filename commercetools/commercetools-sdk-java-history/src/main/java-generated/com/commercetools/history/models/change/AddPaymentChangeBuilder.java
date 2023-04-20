@@ -54,6 +54,18 @@ public class AddPaymentChangeBuilder implements Builder<AddPaymentChange> {
     }
 
     /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public AddPaymentChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.PaymentInfoBuilder, com.commercetools.history.models.common.PaymentInfo> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.PaymentInfoBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
@@ -73,6 +85,18 @@ public class AddPaymentChangeBuilder implements Builder<AddPaymentChange> {
     public AddPaymentChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.PaymentInfoBuilder, com.commercetools.history.models.common.PaymentInfoBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.PaymentInfoBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public AddPaymentChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.PaymentInfoBuilder, com.commercetools.history.models.common.PaymentInfo> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.PaymentInfoBuilder.of());
         return this;
     }
 

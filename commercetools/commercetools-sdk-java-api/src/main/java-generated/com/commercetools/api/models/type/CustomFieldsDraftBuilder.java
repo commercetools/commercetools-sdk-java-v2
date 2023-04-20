@@ -43,6 +43,18 @@ public class CustomFieldsDraftBuilder implements Builder<CustomFieldsDraft> {
 
     /**
      *  <p><code>id</code> or <code>key</code> of the Type.</p>
+     * @param builder function to build the type value
+     * @return Builder
+     */
+
+    public CustomFieldsDraftBuilder withType(
+            Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifier> builder) {
+        this.type = builder.apply(com.commercetools.api.models.type.TypeResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p><code>id</code> or <code>key</code> of the Type.</p>
      * @param type value to be set
      * @return Builder
      */
@@ -61,6 +73,18 @@ public class CustomFieldsDraftBuilder implements Builder<CustomFieldsDraft> {
     public CustomFieldsDraftBuilder fields(
             Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
         this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
+     * @param builder function to build the fields value
+     * @return Builder
+     */
+
+    public CustomFieldsDraftBuilder withFields(
+            Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainer> builder) {
+        this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of());
         return this;
     }
 

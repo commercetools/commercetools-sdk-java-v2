@@ -58,6 +58,18 @@ public class StagedOrderSetLineItemTaxRateActionBuilder implements Builder<Stage
 
     /**
      *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @param builder function to build the externalTaxRate value
+     * @return Builder
+     */
+
+    public StagedOrderSetLineItemTaxRateActionBuilder withExternalTaxRate(
+            Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraft> builder) {
+        this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
      * @param externalTaxRate value to be set
      * @return Builder
      */

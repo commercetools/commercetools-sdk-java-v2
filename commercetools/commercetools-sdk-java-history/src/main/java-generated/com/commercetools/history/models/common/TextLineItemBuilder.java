@@ -63,6 +63,18 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     }
 
     /**
+     * set the value to the custom using the builder function
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public TextLineItemBuilder withCustom(
+            Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFields> builder) {
+        this.custom = builder.apply(com.commercetools.history.models.common.CustomFieldsBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the custom
      * @param custom value to be set
      * @return Builder
@@ -82,6 +94,18 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     public TextLineItemBuilder description(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
         this.description = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the description using the builder function
+     * @param builder function to build the description value
+     * @return Builder
+     */
+
+    public TextLineItemBuilder withDescription(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+        this.description = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -116,6 +140,18 @@ public class TextLineItemBuilder implements Builder<TextLineItem> {
     public TextLineItemBuilder name(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the name using the builder function
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public TextLineItemBuilder withName(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
         return this;
     }
 

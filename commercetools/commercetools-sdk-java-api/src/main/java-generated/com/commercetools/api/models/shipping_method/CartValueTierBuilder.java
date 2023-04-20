@@ -57,6 +57,18 @@ public class CartValueTierBuilder implements Builder<CartValueTier> {
 
     /**
      *  <p>Fixed shipping rate Price for a CartValue.</p>
+     * @param builder function to build the price value
+     * @return Builder
+     */
+
+    public CartValueTierBuilder withPrice(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+        this.price = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Fixed shipping rate Price for a CartValue.</p>
      * @param price value to be set
      * @return Builder
      */

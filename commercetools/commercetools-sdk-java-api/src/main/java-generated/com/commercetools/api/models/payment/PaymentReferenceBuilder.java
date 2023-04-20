@@ -54,6 +54,18 @@ public class PaymentReferenceBuilder implements Builder<PaymentReference> {
 
     /**
      *  <p>Contains the representation of the expanded Payment. Only present in responses to requests with Reference Expansion for Payments.</p>
+     * @param builder function to build the obj value
+     * @return Builder
+     */
+
+    public PaymentReferenceBuilder withObj(
+            Function<com.commercetools.api.models.payment.PaymentBuilder, com.commercetools.api.models.payment.Payment> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.payment.PaymentBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Contains the representation of the expanded Payment. Only present in responses to requests with Reference Expansion for Payments.</p>
      * @param obj value to be set
      * @return Builder
      */

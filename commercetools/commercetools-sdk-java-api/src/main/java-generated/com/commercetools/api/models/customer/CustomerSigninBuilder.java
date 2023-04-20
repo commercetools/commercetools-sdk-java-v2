@@ -93,6 +93,18 @@ public class CustomerSigninBuilder implements Builder<CustomerSignin> {
 
     /**
      *  <p>Identifies a Cart that will be assigned to the Customer.</p>
+     * @param builder function to build the anonymousCart value
+     * @return Builder
+     */
+
+    public CustomerSigninBuilder withAnonymousCart(
+            Function<com.commercetools.api.models.cart.CartResourceIdentifierBuilder, com.commercetools.api.models.cart.CartResourceIdentifier> builder) {
+        this.anonymousCart = builder.apply(com.commercetools.api.models.cart.CartResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Identifies a Cart that will be assigned to the Customer.</p>
      * @param anonymousCart value to be set
      * @return Builder
      */

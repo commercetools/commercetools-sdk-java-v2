@@ -139,6 +139,29 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
     }
 
     /**
+     * add the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public ChangeLocalizedEnumValueOrderChangeBuilder addNextValue(
+            Function<com.commercetools.history.models.change_value.LocalizedEnumValueBuilder, com.commercetools.history.models.change_value.LocalizedEnumValue> builder) {
+        return plusNextValue(
+            builder.apply(com.commercetools.history.models.change_value.LocalizedEnumValueBuilder.of()));
+    }
+
+    /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public ChangeLocalizedEnumValueOrderChangeBuilder setNextValue(
+            Function<com.commercetools.history.models.change_value.LocalizedEnumValueBuilder, com.commercetools.history.models.change_value.LocalizedEnumValue> builder) {
+        return nextValue(builder.apply(com.commercetools.history.models.change_value.LocalizedEnumValueBuilder.of()));
+    }
+
+    /**
      * set values to the previousValue
      * @param previousValue value to be set
      * @return Builder
@@ -205,6 +228,30 @@ public class ChangeLocalizedEnumValueOrderChangeBuilder implements Builder<Chang
         this.previousValue.add(
             builder.apply(com.commercetools.history.models.change_value.LocalizedEnumValueBuilder.of()).build());
         return this;
+    }
+
+    /**
+     * add the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public ChangeLocalizedEnumValueOrderChangeBuilder addPreviousValue(
+            Function<com.commercetools.history.models.change_value.LocalizedEnumValueBuilder, com.commercetools.history.models.change_value.LocalizedEnumValue> builder) {
+        return plusPreviousValue(
+            builder.apply(com.commercetools.history.models.change_value.LocalizedEnumValueBuilder.of()));
+    }
+
+    /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public ChangeLocalizedEnumValueOrderChangeBuilder setPreviousValue(
+            Function<com.commercetools.history.models.change_value.LocalizedEnumValueBuilder, com.commercetools.history.models.change_value.LocalizedEnumValue> builder) {
+        return previousValue(
+            builder.apply(com.commercetools.history.models.change_value.LocalizedEnumValueBuilder.of()));
     }
 
     /**

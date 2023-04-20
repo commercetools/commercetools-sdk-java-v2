@@ -43,6 +43,18 @@ public class DeliveryRemovedMessagePayloadBuilder implements Builder<DeliveryRem
 
     /**
      *  <p>The Delivery that was removed from the Order.</p>
+     * @param builder function to build the delivery value
+     * @return Builder
+     */
+
+    public DeliveryRemovedMessagePayloadBuilder withDelivery(
+            Function<com.commercetools.api.models.order.DeliveryBuilder, com.commercetools.api.models.order.Delivery> builder) {
+        this.delivery = builder.apply(com.commercetools.api.models.order.DeliveryBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The Delivery that was removed from the Order.</p>
      * @param delivery value to be set
      * @return Builder
      */

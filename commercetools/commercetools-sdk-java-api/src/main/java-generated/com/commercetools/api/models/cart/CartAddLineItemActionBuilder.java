@@ -137,6 +137,19 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
 
     /**
      *  <p>Used to select a Product Price. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum. If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
+     * @param builder function to build the distributionChannel value
+     * @return Builder
+     */
+
+    public CartAddLineItemActionBuilder withDistributionChannel(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+        this.distributionChannel = builder
+                .apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Used to select a Product Price. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum. If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
      * @param distributionChannel value to be set
      * @return Builder
      */
@@ -162,6 +175,18 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
 
     /**
      *  <p>Used to identify Inventory entries that must be reserved. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @param builder function to build the supplyChannel value
+     * @return Builder
+     */
+
+    public CartAddLineItemActionBuilder withSupplyChannel(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Used to identify Inventory entries that must be reserved. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
      * @param supplyChannel value to be set
      * @return Builder
      */
@@ -181,6 +206,18 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     public CartAddLineItemActionBuilder externalPrice(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.externalPrice = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Sets the LineItem <code>price</code> value, and the <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
+     * @param builder function to build the externalPrice value
+     * @return Builder
+     */
+
+    public CartAddLineItemActionBuilder withExternalPrice(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+        this.externalPrice = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
         return this;
     }
 
@@ -212,6 +249,19 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
 
     /**
      *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> values, and the <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
+     * @param builder function to build the externalTotalPrice value
+     * @return Builder
+     */
+
+    public CartAddLineItemActionBuilder withExternalTotalPrice(
+            Function<com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder, com.commercetools.api.models.cart.ExternalLineItemTotalPrice> builder) {
+        this.externalTotalPrice = builder
+                .apply(com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> values, and the <code>priceMode</code> to <code>ExternalTotal</code> LineItemPriceMode.</p>
      * @param externalTotalPrice value to be set
      * @return Builder
      */
@@ -232,6 +282,18 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
             Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
         this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>External Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode.</p>
+     * @param builder function to build the externalTaxRate value
+     * @return Builder
+     */
+
+    public CartAddLineItemActionBuilder withExternalTaxRate(
+            Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraft> builder) {
+        this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of());
         return this;
     }
 
@@ -274,6 +336,18 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
 
     /**
      *  <p>Container for Line Item-specific addresses.</p>
+     * @param builder function to build the shippingDetails value
+     * @return Builder
+     */
+
+    public CartAddLineItemActionBuilder withShippingDetails(
+            Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraft> builder) {
+        this.shippingDetails = builder.apply(com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Container for Line Item-specific addresses.</p>
      * @param shippingDetails value to be set
      * @return Builder
      */
@@ -293,6 +367,18 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     public CartAddLineItemActionBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the Line Item.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public CartAddLineItemActionBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
         return this;
     }
 

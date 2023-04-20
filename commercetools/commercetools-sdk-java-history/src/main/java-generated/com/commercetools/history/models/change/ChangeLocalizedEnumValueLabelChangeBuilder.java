@@ -96,6 +96,18 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
     }
 
     /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public ChangeLocalizedEnumValueLabelChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
@@ -116,6 +128,18 @@ public class ChangeLocalizedEnumValueLabelChangeBuilder implements Builder<Chang
     public ChangeLocalizedEnumValueLabelChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public ChangeLocalizedEnumValueLabelChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
         return this;
     }
 

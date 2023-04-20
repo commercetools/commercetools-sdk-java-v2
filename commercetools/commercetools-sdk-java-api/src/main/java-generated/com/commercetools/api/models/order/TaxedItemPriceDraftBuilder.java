@@ -43,6 +43,19 @@ public class TaxedItemPriceDraftBuilder implements Builder<TaxedItemPriceDraft> 
     /**
      *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
      *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @param builder function to build the totalNet value
+     * @return Builder
+     */
+
+    public TaxedItemPriceDraftBuilder withTotalNet(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+        this.totalNet = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      * @param totalNet value to be set
      * @return Builder
      */
@@ -62,6 +75,19 @@ public class TaxedItemPriceDraftBuilder implements Builder<TaxedItemPriceDraft> 
     public TaxedItemPriceDraftBuilder totalGross(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.totalGross = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @param builder function to build the totalGross value
+     * @return Builder
+     */
+
+    public TaxedItemPriceDraftBuilder withTotalGross(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+        this.totalGross = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
         return this;
     }
 

@@ -172,6 +172,20 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     /**
      *  <p>ResourceIdentifier to the Customer Group of the Customer that the Cart belongs to. Used for LineItem Price selection.</p>
      *  <p>It is automatically set if the Customer referenced in <code>customerId</code> belongs to a Customer Group. It can also be set explicitly when no <code>customerId</code> is present.</p>
+     * @param builder function to build the customerGroup value
+     * @return Builder
+     */
+
+    public CartDraftBuilder withCustomerGroup(
+            Function<com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder, com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier> builder) {
+        this.customerGroup = builder
+                .apply(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>ResourceIdentifier to the Customer Group of the Customer that the Cart belongs to. Used for LineItem Price selection.</p>
+     *  <p>It is automatically set if the Customer referenced in <code>customerId</code> belongs to a Customer Group. It can also be set explicitly when no <code>customerId</code> is present.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -209,6 +223,19 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>ResourceIdentifier to the Business Unit the Cart should belong to.</p>
+     * @param builder function to build the businessUnit value
+     * @return Builder
+     */
+
+    public CartDraftBuilder withBusinessUnit(
+            Function<com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder, com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier> builder) {
+        this.businessUnit = builder
+                .apply(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>ResourceIdentifier to the Business Unit the Cart should belong to.</p>
      * @param businessUnit value to be set
      * @return Builder
      */
@@ -228,6 +255,18 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     public CartDraftBuilder store(
             Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder> builder) {
         this.store = builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>ResourceIdentifier to the Store the Cart should belong to. Once set, it cannot be updated.</p>
+     * @param builder function to build the store value
+     * @return Builder
+     */
+
+    public CartDraftBuilder withStore(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifier> builder) {
+        this.store = builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of());
         return this;
     }
 
@@ -309,6 +348,28 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
+     *  <p>Line Items to add to the Cart.</p>
+     * @param builder function to build the lineItems value
+     * @return Builder
+     */
+
+    public CartDraftBuilder addLineItems(
+            Function<com.commercetools.api.models.cart.LineItemDraftBuilder, com.commercetools.api.models.cart.LineItemDraft> builder) {
+        return plusLineItems(builder.apply(com.commercetools.api.models.cart.LineItemDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>Line Items to add to the Cart.</p>
+     * @param builder function to build the lineItems value
+     * @return Builder
+     */
+
+    public CartDraftBuilder setLineItems(
+            Function<com.commercetools.api.models.cart.LineItemDraftBuilder, com.commercetools.api.models.cart.LineItemDraft> builder) {
+        return lineItems(builder.apply(com.commercetools.api.models.cart.LineItemDraftBuilder.of()));
+    }
+
+    /**
      *  <p>Custom Line Items to add to the Cart.</p>
      * @param customLineItems value to be set
      * @return Builder
@@ -378,6 +439,28 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
+     *  <p>Custom Line Items to add to the Cart.</p>
+     * @param builder function to build the customLineItems value
+     * @return Builder
+     */
+
+    public CartDraftBuilder addCustomLineItems(
+            Function<com.commercetools.api.models.cart.CustomLineItemDraftBuilder, com.commercetools.api.models.cart.CustomLineItemDraft> builder) {
+        return plusCustomLineItems(builder.apply(com.commercetools.api.models.cart.CustomLineItemDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>Custom Line Items to add to the Cart.</p>
+     * @param builder function to build the customLineItems value
+     * @return Builder
+     */
+
+    public CartDraftBuilder setCustomLineItems(
+            Function<com.commercetools.api.models.cart.CustomLineItemDraftBuilder, com.commercetools.api.models.cart.CustomLineItemDraft> builder) {
+        return customLineItems(builder.apply(com.commercetools.api.models.cart.CustomLineItemDraftBuilder.of()));
+    }
+
+    /**
      *  <p>Determines how Tax Rates are set.</p>
      * @param taxMode value to be set
      * @return Builder
@@ -399,6 +482,19 @@ public class CartDraftBuilder implements Builder<CartDraft> {
         this.externalTaxRateForShippingMethod = builder
                 .apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>External Tax Rate for the <code>shippingMethod</code> if the Cart has <code>External</code> TaxMode.</p>
+     * @param builder function to build the externalTaxRateForShippingMethod value
+     * @return Builder
+     */
+
+    public CartDraftBuilder withExternalTaxRateForShippingMethod(
+            Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraft> builder) {
+        this.externalTaxRateForShippingMethod = builder
+                .apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of());
         return this;
     }
 
@@ -464,6 +560,18 @@ public class CartDraftBuilder implements Builder<CartDraft> {
 
     /**
      *  <p>Billing address associated with the Cart.</p>
+     * @param builder function to build the billingAddress value
+     * @return Builder
+     */
+
+    public CartDraftBuilder withBillingAddress(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddress> builder) {
+        this.billingAddress = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Billing address associated with the Cart.</p>
      * @param billingAddress value to be set
      * @return Builder
      */
@@ -483,6 +591,18 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     public CartDraftBuilder shippingAddress(
             Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
         this.shippingAddress = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Shipping address associated with the Cart. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     * @param builder function to build the shippingAddress value
+     * @return Builder
+     */
+
+    public CartDraftBuilder withShippingAddress(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddress> builder) {
+        this.shippingAddress = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of());
         return this;
     }
 
@@ -509,6 +629,19 @@ public class CartDraftBuilder implements Builder<CartDraft> {
         this.shippingMethod = builder
                 .apply(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Shipping Method for a Cart with <code>Single</code> ShippingMode. If the referenced ShippingMethod has a <code>predicate</code> that does not match the Cart, an InvalidOperation error is returned when creating a Cart.</p>
+     * @param builder function to build the shippingMethod value
+     * @return Builder
+     */
+
+    public CartDraftBuilder withShippingMethod(
+            Function<com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder, com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier> builder) {
+        this.shippingMethod = builder
+                .apply(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder.of());
         return this;
     }
 
@@ -643,6 +776,28 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
+     *  <p>Custom Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
+     * @param builder function to build the customShipping value
+     * @return Builder
+     */
+
+    public CartDraftBuilder addCustomShipping(
+            Function<com.commercetools.api.models.cart.CustomShippingDraftBuilder, com.commercetools.api.models.cart.CustomShippingDraft> builder) {
+        return plusCustomShipping(builder.apply(com.commercetools.api.models.cart.CustomShippingDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>Custom Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
+     * @param builder function to build the customShipping value
+     * @return Builder
+     */
+
+    public CartDraftBuilder setCustomShipping(
+            Function<com.commercetools.api.models.cart.CustomShippingDraftBuilder, com.commercetools.api.models.cart.CustomShippingDraft> builder) {
+        return customShipping(builder.apply(com.commercetools.api.models.cart.CustomShippingDraftBuilder.of()));
+    }
+
+    /**
      *  <p>Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
      * @param shipping value to be set
      * @return Builder
@@ -705,6 +860,28 @@ public class CartDraftBuilder implements Builder<CartDraft> {
         this.shipping = new ArrayList<>();
         this.shipping.add(builder.apply(com.commercetools.api.models.cart.ShippingDraftBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
+     * @param builder function to build the shipping value
+     * @return Builder
+     */
+
+    public CartDraftBuilder addShipping(
+            Function<com.commercetools.api.models.cart.ShippingDraftBuilder, com.commercetools.api.models.cart.ShippingDraft> builder) {
+        return plusShipping(builder.apply(com.commercetools.api.models.cart.ShippingDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>Shipping Methods for a Cart with <code>Multiple</code> ShippingMode.</p>
+     * @param builder function to build the shipping value
+     * @return Builder
+     */
+
+    public CartDraftBuilder setShipping(
+            Function<com.commercetools.api.models.cart.ShippingDraftBuilder, com.commercetools.api.models.cart.ShippingDraft> builder) {
+        return shipping(builder.apply(com.commercetools.api.models.cart.ShippingDraftBuilder.of()));
     }
 
     /**
@@ -779,6 +956,30 @@ public class CartDraftBuilder implements Builder<CartDraft> {
         this.itemShippingAddresses
                 .add(builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Multiple shipping addresses of the Cart. Each address must contain a <code>key</code> that is unique in this Cart. The keys are used by LineItems to reference these addresses under their <code>shippingDetails</code>.</p>
+     *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     * @param builder function to build the itemShippingAddresses value
+     * @return Builder
+     */
+
+    public CartDraftBuilder addItemShippingAddresses(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddress> builder) {
+        return plusItemShippingAddresses(builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()));
+    }
+
+    /**
+     *  <p>Multiple shipping addresses of the Cart. Each address must contain a <code>key</code> that is unique in this Cart. The keys are used by LineItems to reference these addresses under their <code>shippingDetails</code>.</p>
+     *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     * @param builder function to build the itemShippingAddresses value
+     * @return Builder
+     */
+
+    public CartDraftBuilder setItemShippingAddresses(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddress> builder) {
+        return itemShippingAddresses(builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()));
     }
 
     /**
@@ -871,6 +1072,18 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     public CartDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the Cart.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public CartDraftBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
         return this;
     }
 

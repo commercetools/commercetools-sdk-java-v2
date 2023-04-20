@@ -115,6 +115,34 @@ public class StateSetTransitionsActionBuilder implements Builder<StateSetTransit
      *  <p>Possible transformations of the current State to other States of the same <code>type</code> (for example, <em>Initial</em> -&gt; <em>Shipped</em>). When performing a <code>transitionState</code> update action and <code>transitions</code> is set, the currently referenced State must have a transition to the new State.</p>
      *  <p>If <code>transitions</code> is an empty list, it means the current State is a final State and no further transitions are allowed. If <code>transitions</code> is not set, the validation is turned off.</p>
      *  <p>When performing a <code>transitionState</code> update action, any other State of the same <code>type</code> can be transitioned to.</p>
+     * @param builder function to build the transitions value
+     * @return Builder
+     */
+
+    public StateSetTransitionsActionBuilder addTransitions(
+            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifier> builder) {
+        return plusTransitions(builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()));
+    }
+
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Possible transformations of the current State to other States of the same <code>type</code> (for example, <em>Initial</em> -&gt; <em>Shipped</em>). When performing a <code>transitionState</code> update action and <code>transitions</code> is set, the currently referenced State must have a transition to the new State.</p>
+     *  <p>If <code>transitions</code> is an empty list, it means the current State is a final State and no further transitions are allowed. If <code>transitions</code> is not set, the validation is turned off.</p>
+     *  <p>When performing a <code>transitionState</code> update action, any other State of the same <code>type</code> can be transitioned to.</p>
+     * @param builder function to build the transitions value
+     * @return Builder
+     */
+
+    public StateSetTransitionsActionBuilder setTransitions(
+            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifier> builder) {
+        return transitions(builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()));
+    }
+
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Possible transformations of the current State to other States of the same <code>type</code> (for example, <em>Initial</em> -&gt; <em>Shipped</em>). When performing a <code>transitionState</code> update action and <code>transitions</code> is set, the currently referenced State must have a transition to the new State.</p>
+     *  <p>If <code>transitions</code> is an empty list, it means the current State is a final State and no further transitions are allowed. If <code>transitions</code> is not set, the validation is turned off.</p>
+     *  <p>When performing a <code>transitionState</code> update action, any other State of the same <code>type</code> can be transitioned to.</p>
      * @return transitions
      */
 

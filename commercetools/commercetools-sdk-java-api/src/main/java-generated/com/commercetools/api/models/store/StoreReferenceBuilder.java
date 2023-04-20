@@ -54,6 +54,18 @@ public class StoreReferenceBuilder implements Builder<StoreReference> {
 
     /**
      *  <p>Contains the representation of the expanded Store. Only present in responses to requests with Reference Expansion for Stores.</p>
+     * @param builder function to build the obj value
+     * @return Builder
+     */
+
+    public StoreReferenceBuilder withObj(
+            Function<com.commercetools.api.models.store.StoreBuilder, com.commercetools.api.models.store.Store> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.store.StoreBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Contains the representation of the expanded Store. Only present in responses to requests with Reference Expansion for Stores.</p>
      * @param obj value to be set
      * @return Builder
      */

@@ -152,6 +152,28 @@ public class ShippingMethodPagedQueryResponseBuilder implements Builder<Shipping
     }
 
     /**
+     *  <p>Shipping Methods matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public ShippingMethodPagedQueryResponseBuilder addResults(
+            Function<com.commercetools.api.models.shipping_method.ShippingMethodBuilder, com.commercetools.api.models.shipping_method.ShippingMethod> builder) {
+        return plusResults(builder.apply(com.commercetools.api.models.shipping_method.ShippingMethodBuilder.of()));
+    }
+
+    /**
+     *  <p>Shipping Methods matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public ShippingMethodPagedQueryResponseBuilder setResults(
+            Function<com.commercetools.api.models.shipping_method.ShippingMethodBuilder, com.commercetools.api.models.shipping_method.ShippingMethod> builder) {
+        return results(builder.apply(com.commercetools.api.models.shipping_method.ShippingMethodBuilder.of()));
+    }
+
+    /**
      *  <p>Number of results requested.</p>
      * @return limit
      */

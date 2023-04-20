@@ -67,6 +67,18 @@ public class GraphQLEditPreviewFailedErrorBuilder implements Builder<GraphQLEdit
 
     /**
      *  <p>State of the OrderEdit where the <code>stagedActions</code> cannot be applied to the Order.</p>
+     * @param builder function to build the result value
+     * @return Builder
+     */
+
+    public GraphQLEditPreviewFailedErrorBuilder withResult(
+            Function<com.commercetools.api.models.order_edit.OrderEditPreviewFailureBuilder, com.commercetools.api.models.order_edit.OrderEditPreviewFailure> builder) {
+        this.result = builder.apply(com.commercetools.api.models.order_edit.OrderEditPreviewFailureBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>State of the OrderEdit where the <code>stagedActions</code> cannot be applied to the Order.</p>
      * @param result value to be set
      * @return Builder
      */

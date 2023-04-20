@@ -63,6 +63,19 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     /**
      *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
      *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @param builder function to build the money value
+     * @return Builder
+     */
+
+    public StagedOrderAddCustomLineItemActionBuilder withMoney(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+        this.money = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      * @param money value to be set
      * @return Builder
      */
@@ -81,6 +94,18 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     public StagedOrderAddCustomLineItemActionBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>JSON object where the keys are of type Locale, and the values are the strings used for the corresponding language.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public StagedOrderAddCustomLineItemActionBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -134,6 +159,19 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
 
     /**
      *  <p>ResourceIdentifier to a TaxCategory.</p>
+     * @param builder function to build the taxCategory value
+     * @return Builder
+     */
+
+    public StagedOrderAddCustomLineItemActionBuilder withTaxCategory(
+            Function<com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder, com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier> builder) {
+        this.taxCategory = builder
+                .apply(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>ResourceIdentifier to a TaxCategory.</p>
      * @param taxCategory value to be set
      * @return Builder
      */
@@ -153,6 +191,18 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
     public StagedOrderAddCustomLineItemActionBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public StagedOrderAddCustomLineItemActionBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
         return this;
     }
 
@@ -178,6 +228,18 @@ public class StagedOrderAddCustomLineItemActionBuilder implements Builder<Staged
             Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
         this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @param builder function to build the externalTaxRate value
+     * @return Builder
+     */
+
+    public StagedOrderAddCustomLineItemActionBuilder withExternalTaxRate(
+            Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraft> builder) {
+        this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of());
         return this;
     }
 

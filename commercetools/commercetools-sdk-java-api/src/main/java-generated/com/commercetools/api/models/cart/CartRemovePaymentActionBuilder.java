@@ -39,6 +39,18 @@ public class CartRemovePaymentActionBuilder implements Builder<CartRemovePayment
 
     /**
      *  <p>Payment to remove from the Cart.</p>
+     * @param builder function to build the payment value
+     * @return Builder
+     */
+
+    public CartRemovePaymentActionBuilder withPayment(
+            Function<com.commercetools.api.models.payment.PaymentResourceIdentifierBuilder, com.commercetools.api.models.payment.PaymentResourceIdentifier> builder) {
+        this.payment = builder.apply(com.commercetools.api.models.payment.PaymentResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Payment to remove from the Cart.</p>
      * @param payment value to be set
      * @return Builder
      */

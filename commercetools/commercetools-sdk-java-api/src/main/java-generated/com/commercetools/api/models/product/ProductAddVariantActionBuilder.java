@@ -134,6 +134,28 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
     }
 
     /**
+     *  <p>Embedded Prices for the Product Variant.</p>
+     * @param builder function to build the prices value
+     * @return Builder
+     */
+
+    public ProductAddVariantActionBuilder addPrices(
+            Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraft> builder) {
+        return plusPrices(builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>Embedded Prices for the Product Variant.</p>
+     * @param builder function to build the prices value
+     * @return Builder
+     */
+
+    public ProductAddVariantActionBuilder setPrices(
+            Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraft> builder) {
+        return prices(builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of()));
+    }
+
+    /**
      *  <p>Images for the Product Variant.</p>
      * @param images value to be set
      * @return Builder
@@ -197,6 +219,28 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
         this.images = new ArrayList<>();
         this.images.add(builder.apply(com.commercetools.api.models.common.ImageBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Images for the Product Variant.</p>
+     * @param builder function to build the images value
+     * @return Builder
+     */
+
+    public ProductAddVariantActionBuilder addImages(
+            Function<com.commercetools.api.models.common.ImageBuilder, com.commercetools.api.models.common.Image> builder) {
+        return plusImages(builder.apply(com.commercetools.api.models.common.ImageBuilder.of()));
+    }
+
+    /**
+     *  <p>Images for the Product Variant.</p>
+     * @param builder function to build the images value
+     * @return Builder
+     */
+
+    public ProductAddVariantActionBuilder setImages(
+            Function<com.commercetools.api.models.common.ImageBuilder, com.commercetools.api.models.common.Image> builder) {
+        return images(builder.apply(com.commercetools.api.models.common.ImageBuilder.of()));
     }
 
     /**
@@ -264,6 +308,28 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
         this.attributes = new ArrayList<>();
         this.attributes.add(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Attributes for the Product Variant.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductAddVariantActionBuilder addAttributes(
+            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.Attribute> builder) {
+        return plusAttributes(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()));
+    }
+
+    /**
+     *  <p>Attributes for the Product Variant.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductAddVariantActionBuilder setAttributes(
+            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.Attribute> builder) {
+        return attributes(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()));
     }
 
     /**
@@ -342,6 +408,28 @@ public class ProductAddVariantActionBuilder implements Builder<ProductAddVariant
         this.assets = new ArrayList<>();
         this.assets.add(builder.apply(com.commercetools.api.models.common.AssetDraftBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Media assets for the Product Variant.</p>
+     * @param builder function to build the assets value
+     * @return Builder
+     */
+
+    public ProductAddVariantActionBuilder addAssets(
+            Function<com.commercetools.api.models.common.AssetDraftBuilder, com.commercetools.api.models.common.AssetDraft> builder) {
+        return plusAssets(builder.apply(com.commercetools.api.models.common.AssetDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>Media assets for the Product Variant.</p>
+     * @param builder function to build the assets value
+     * @return Builder
+     */
+
+    public ProductAddVariantActionBuilder setAssets(
+            Function<com.commercetools.api.models.common.AssetDraftBuilder, com.commercetools.api.models.common.AssetDraft> builder) {
+        return assets(builder.apply(com.commercetools.api.models.common.AssetDraftBuilder.of()));
     }
 
     /**

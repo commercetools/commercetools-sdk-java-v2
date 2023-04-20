@@ -54,6 +54,18 @@ public class TaxCategoryReferenceBuilder implements Builder<TaxCategoryReference
 
     /**
      *  <p>Contains the representation of the expanded TaxCategory. Only present in responses to requests with Reference Expansion for TaxCategories.</p>
+     * @param builder function to build the obj value
+     * @return Builder
+     */
+
+    public TaxCategoryReferenceBuilder withObj(
+            Function<com.commercetools.api.models.tax_category.TaxCategoryBuilder, com.commercetools.api.models.tax_category.TaxCategory> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.tax_category.TaxCategoryBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Contains the representation of the expanded TaxCategory. Only present in responses to requests with Reference Expansion for TaxCategories.</p>
      * @param obj value to be set
      * @return Builder
      */

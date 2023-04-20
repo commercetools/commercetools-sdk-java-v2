@@ -38,6 +38,18 @@ public class PaymentChangeAmountPlannedActionBuilder implements Builder<PaymentC
 
     /**
      *  <p>New value to set.</p>
+     * @param builder function to build the amount value
+     * @return Builder
+     */
+
+    public PaymentChangeAmountPlannedActionBuilder withAmount(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+        this.amount = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>New value to set.</p>
      * @param amount value to be set
      * @return Builder
      */

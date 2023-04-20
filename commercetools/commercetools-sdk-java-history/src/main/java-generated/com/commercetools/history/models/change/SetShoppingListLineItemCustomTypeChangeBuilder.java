@@ -60,6 +60,19 @@ public class SetShoppingListLineItemCustomTypeChangeBuilder
     }
 
     /**
+     * set the value to the lineItem using the builder function
+     * @param builder function to build the lineItem value
+     * @return Builder
+     */
+
+    public SetShoppingListLineItemCustomTypeChangeBuilder withLineItem(
+            Function<com.commercetools.history.models.change_value.ShoppingListLineItemValueBuilder, com.commercetools.history.models.change_value.ShoppingListLineItemValue> builder) {
+        this.lineItem = builder
+                .apply(com.commercetools.history.models.change_value.ShoppingListLineItemValueBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the lineItem
      * @param lineItem value to be set
      * @return Builder
@@ -84,6 +97,18 @@ public class SetShoppingListLineItemCustomTypeChangeBuilder
     }
 
     /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetShoppingListLineItemCustomTypeChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFields> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.CustomFieldsBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
@@ -104,6 +129,18 @@ public class SetShoppingListLineItemCustomTypeChangeBuilder
     public SetShoppingListLineItemCustomTypeChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFieldsBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public SetShoppingListLineItemCustomTypeChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFields> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.CustomFieldsBuilder.of());
         return this;
     }
 

@@ -41,6 +41,18 @@ public class ExternalTaxAmountDraftBuilder implements Builder<ExternalTaxAmountD
 
     /**
      *  <p>Total gross amount (<code>totalNet</code> + <code>taxPortions</code>) of the Line Item or Custom Line Item.</p>
+     * @param builder function to build the totalGross value
+     * @return Builder
+     */
+
+    public ExternalTaxAmountDraftBuilder withTotalGross(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+        this.totalGross = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Total gross amount (<code>totalNet</code> + <code>taxPortions</code>) of the Line Item or Custom Line Item.</p>
      * @param totalGross value to be set
      * @return Builder
      */
@@ -59,6 +71,18 @@ public class ExternalTaxAmountDraftBuilder implements Builder<ExternalTaxAmountD
     public ExternalTaxAmountDraftBuilder taxRate(
             Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
         this.taxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Tax Rates and subrates of states and countries.</p>
+     * @param builder function to build the taxRate value
+     * @return Builder
+     */
+
+    public ExternalTaxAmountDraftBuilder withTaxRate(
+            Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraft> builder) {
+        this.taxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of());
         return this;
     }
 

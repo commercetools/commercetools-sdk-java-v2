@@ -38,6 +38,18 @@ public class CustomerAddressRemovedMessagePayloadBuilder implements Builder<Cust
 
     /**
      *  <p>Address that was removed during the Remove Address update action.</p>
+     * @param builder function to build the address value
+     * @return Builder
+     */
+
+    public CustomerAddressRemovedMessagePayloadBuilder withAddress(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
+        this.address = builder.apply(com.commercetools.api.models.common.AddressBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Address that was removed during the Remove Address update action.</p>
      * @param address value to be set
      * @return Builder
      */

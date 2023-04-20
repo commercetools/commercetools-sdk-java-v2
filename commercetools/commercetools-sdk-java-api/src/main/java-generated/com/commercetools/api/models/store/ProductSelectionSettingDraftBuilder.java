@@ -45,6 +45,19 @@ public class ProductSelectionSettingDraftBuilder implements Builder<ProductSelec
 
     /**
      *  <p>Resource Identifier of a ProductSelection.</p>
+     * @param builder function to build the productSelection value
+     * @return Builder
+     */
+
+    public ProductSelectionSettingDraftBuilder withProductSelection(
+            Function<com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder, com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier> builder) {
+        this.productSelection = builder
+                .apply(com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Resource Identifier of a ProductSelection.</p>
      * @param productSelection value to be set
      * @return Builder
      */

@@ -107,6 +107,28 @@ public class GraphQLResponseBuilder implements Builder<GraphQLResponse> {
     }
 
     /**
+     * add the value to the errors using the builder function
+     * @param builder function to build the errors value
+     * @return Builder
+     */
+
+    public GraphQLResponseBuilder addErrors(
+            Function<com.commercetools.api.models.graph_ql.GraphQLErrorBuilder, com.commercetools.api.models.graph_ql.GraphQLError> builder) {
+        return plusErrors(builder.apply(com.commercetools.api.models.graph_ql.GraphQLErrorBuilder.of()));
+    }
+
+    /**
+     * set the value to the errors using the builder function
+     * @param builder function to build the errors value
+     * @return Builder
+     */
+
+    public GraphQLResponseBuilder setErrors(
+            Function<com.commercetools.api.models.graph_ql.GraphQLErrorBuilder, com.commercetools.api.models.graph_ql.GraphQLError> builder) {
+        return errors(builder.apply(com.commercetools.api.models.graph_ql.GraphQLErrorBuilder.of()));
+    }
+
+    /**
      * value of data}
      * @return data
      */

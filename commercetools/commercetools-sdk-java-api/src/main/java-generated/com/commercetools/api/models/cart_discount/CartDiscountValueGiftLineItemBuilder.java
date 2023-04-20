@@ -49,6 +49,18 @@ public class CartDiscountValueGiftLineItemBuilder implements Builder<CartDiscoun
 
     /**
      *  <p>Reference to a Product.</p>
+     * @param builder function to build the product value
+     * @return Builder
+     */
+
+    public CartDiscountValueGiftLineItemBuilder withProduct(
+            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReference> builder) {
+        this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Reference to a Product.</p>
      * @param product value to be set
      * @return Builder
      */
@@ -84,6 +96,18 @@ public class CartDiscountValueGiftLineItemBuilder implements Builder<CartDiscoun
 
     /**
      *  <p>Channel must have the ChannelRoleEnum <code>InventorySupply</code>.</p>
+     * @param builder function to build the supplyChannel value
+     * @return Builder
+     */
+
+    public CartDiscountValueGiftLineItemBuilder withSupplyChannel(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReference> builder) {
+        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Channel must have the ChannelRoleEnum <code>InventorySupply</code>.</p>
      * @param supplyChannel value to be set
      * @return Builder
      */
@@ -104,6 +128,18 @@ public class CartDiscountValueGiftLineItemBuilder implements Builder<CartDiscoun
             Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
         this.distributionChannel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Channel must have the ChannelRoleEnum <code>ProductDistribution</code>.</p>
+     * @param builder function to build the distributionChannel value
+     * @return Builder
+     */
+
+    public CartDiscountValueGiftLineItemBuilder withDistributionChannel(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReference> builder) {
+        this.distributionChannel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of());
         return this;
     }
 

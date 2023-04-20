@@ -46,6 +46,19 @@ public class BusinessUnitParentUnitChangedMessagePayloadBuilder
 
     /**
      *  <p>Parent unit of the Business Unit before the Change Parent Unit update action.</p>
+     * @param builder function to build the oldParentUnit value
+     * @return Builder
+     */
+
+    public BusinessUnitParentUnitChangedMessagePayloadBuilder withOldParentUnit(
+            Function<com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder, com.commercetools.api.models.business_unit.BusinessUnitKeyReference> builder) {
+        this.oldParentUnit = builder
+                .apply(com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Parent unit of the Business Unit before the Change Parent Unit update action.</p>
      * @param oldParentUnit value to be set
      * @return Builder
      */
@@ -67,6 +80,19 @@ public class BusinessUnitParentUnitChangedMessagePayloadBuilder
         this.newParentUnit = builder
                 .apply(com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Parent unit of the Business Unit after the Change Parent Unit update action.</p>
+     * @param builder function to build the newParentUnit value
+     * @return Builder
+     */
+
+    public BusinessUnitParentUnitChangedMessagePayloadBuilder withNewParentUnit(
+            Function<com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder, com.commercetools.api.models.business_unit.BusinessUnitKeyReference> builder) {
+        this.newParentUnit = builder
+                .apply(com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder.of());
         return this;
     }
 

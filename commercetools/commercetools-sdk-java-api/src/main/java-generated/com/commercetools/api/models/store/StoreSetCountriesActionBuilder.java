@@ -95,6 +95,28 @@ public class StoreSetCountriesActionBuilder implements Builder<StoreSetCountries
 
     /**
      *  <p>New value to set.</p>
+     * @param builder function to build the countries value
+     * @return Builder
+     */
+
+    public StoreSetCountriesActionBuilder addCountries(
+            Function<com.commercetools.api.models.store_country.StoreCountryBuilder, com.commercetools.api.models.store_country.StoreCountry> builder) {
+        return plusCountries(builder.apply(com.commercetools.api.models.store_country.StoreCountryBuilder.of()));
+    }
+
+    /**
+     *  <p>New value to set.</p>
+     * @param builder function to build the countries value
+     * @return Builder
+     */
+
+    public StoreSetCountriesActionBuilder setCountries(
+            Function<com.commercetools.api.models.store_country.StoreCountryBuilder, com.commercetools.api.models.store_country.StoreCountry> builder) {
+        return countries(builder.apply(com.commercetools.api.models.store_country.StoreCountryBuilder.of()));
+    }
+
+    /**
+     *  <p>New value to set.</p>
      * @return countries
      */
 

@@ -96,6 +96,30 @@ public class ImportResponseBuilder implements Builder<ImportResponse> {
     }
 
     /**
+     * add the value to the operationStatus using the builder function
+     * @param builder function to build the operationStatus value
+     * @return Builder
+     */
+
+    public ImportResponseBuilder addOperationStatus(
+            Function<com.commercetools.importapi.models.importoperations.ImportOperationStatusBuilder, com.commercetools.importapi.models.importoperations.ImportOperationStatus> builder) {
+        return plusOperationStatus(
+            builder.apply(com.commercetools.importapi.models.importoperations.ImportOperationStatusBuilder.of()));
+    }
+
+    /**
+     * set the value to the operationStatus using the builder function
+     * @param builder function to build the operationStatus value
+     * @return Builder
+     */
+
+    public ImportResponseBuilder setOperationStatus(
+            Function<com.commercetools.importapi.models.importoperations.ImportOperationStatusBuilder, com.commercetools.importapi.models.importoperations.ImportOperationStatus> builder) {
+        return operationStatus(
+            builder.apply(com.commercetools.importapi.models.importoperations.ImportOperationStatusBuilder.of()));
+    }
+
+    /**
      * value of operationStatus}
      * @return operationStatus
      */

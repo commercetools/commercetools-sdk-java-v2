@@ -51,6 +51,18 @@ public class AddTextLineItemChangeBuilder implements Builder<AddTextLineItemChan
     }
 
     /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public AddTextLineItemChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.TextLineItemBuilder, com.commercetools.history.models.common.TextLineItem> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.TextLineItemBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder

@@ -126,6 +126,19 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
 
     /**
      *  <p>Used to select a Product Price. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum. If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
+     * @param builder function to build the distributionChannel value
+     * @return Builder
+     */
+
+    public MyCartAddLineItemActionBuilder withDistributionChannel(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+        this.distributionChannel = builder
+                .apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Used to select a Product Price. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum. If the Cart is bound to a Store with <code>distributionChannels</code> set, the Channel must match one of the Store's distribution channels.</p>
      * @param distributionChannel value to be set
      * @return Builder
      */
@@ -146,6 +159,18 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
             Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
         this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Used to identify Inventory entries that must be reserved. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @param builder function to build the supplyChannel value
+     * @return Builder
+     */
+
+    public MyCartAddLineItemActionBuilder withSupplyChannel(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of());
         return this;
     }
 
@@ -176,6 +201,18 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
 
     /**
      *  <p>Container for Line Item-specific addresses.</p>
+     * @param builder function to build the shippingDetails value
+     * @return Builder
+     */
+
+    public MyCartAddLineItemActionBuilder withShippingDetails(
+            Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraft> builder) {
+        this.shippingDetails = builder.apply(com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Container for Line Item-specific addresses.</p>
      * @param shippingDetails value to be set
      * @return Builder
      */
@@ -195,6 +232,18 @@ public class MyCartAddLineItemActionBuilder implements Builder<MyCartAddLineItem
     public MyCartAddLineItemActionBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the Line Item.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public MyCartAddLineItemActionBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
         return this;
     }
 

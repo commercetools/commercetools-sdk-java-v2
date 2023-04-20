@@ -54,6 +54,19 @@ public class ProductTypeChangeLocalizedEnumValueLabelActionBuilder
 
     /**
      *  <p>New value to set. Must be different from the existing value.</p>
+     * @param builder function to build the newValue value
+     * @return Builder
+     */
+
+    public ProductTypeChangeLocalizedEnumValueLabelActionBuilder withNewValue(
+            Function<com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder, com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> builder) {
+        this.newValue = builder
+                .apply(com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>New value to set. Must be different from the existing value.</p>
      * @param newValue value to be set
      * @return Builder
      */

@@ -68,6 +68,18 @@ public class SetImageLabelChangeBuilder implements Builder<SetImageLabelChange> 
     }
 
     /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public SetImageLabelChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.ImageBuilder, com.commercetools.history.models.common.Image> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.ImageBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
@@ -87,6 +99,18 @@ public class SetImageLabelChangeBuilder implements Builder<SetImageLabelChange> 
     public SetImageLabelChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.ImageBuilder, com.commercetools.history.models.common.ImageBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.ImageBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetImageLabelChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.ImageBuilder, com.commercetools.history.models.common.Image> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.ImageBuilder.of());
         return this;
     }
 

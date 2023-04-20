@@ -83,6 +83,18 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Reference to a Customer associated with the Payment.</p>
+     * @param builder function to build the customer value
+     * @return Builder
+     */
+
+    public PaymentDraftBuilder withCustomer(
+            Function<com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder, com.commercetools.api.models.customer.CustomerResourceIdentifier> builder) {
+        this.customer = builder.apply(com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Reference to a Customer associated with the Payment.</p>
      * @param customer value to be set
      * @return Builder
      */
@@ -140,6 +152,18 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Money value the Payment intends to receive from the customer. The value typically matches the Cart or Order gross total.</p>
+     * @param builder function to build the amountPlanned value
+     * @return Builder
+     */
+
+    public PaymentDraftBuilder withAmountPlanned(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+        this.amountPlanned = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Money value the Payment intends to receive from the customer. The value typically matches the Cart or Order gross total.</p>
      * @param amountPlanned value to be set
      * @return Builder
      */
@@ -158,6 +182,18 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
     public PaymentDraftBuilder amountAuthorized(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.amountAuthorized = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Deprecated because the value can be calculated from the total amounts saved in the Transactions.</p>
+     * @param builder function to build the amountAuthorized value
+     * @return Builder
+     */
+
+    public PaymentDraftBuilder withAmountAuthorized(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+        this.amountAuthorized = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
         return this;
     }
 
@@ -198,6 +234,18 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Deprecated because the value can be calculated from the total amounts saved in the Transactions.</p>
+     * @param builder function to build the amountPaid value
+     * @return Builder
+     */
+
+    public PaymentDraftBuilder withAmountPaid(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+        this.amountPaid = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Deprecated because the value can be calculated from the total amounts saved in the Transactions.</p>
      * @param amountPaid value to be set
      * @return Builder
      */
@@ -216,6 +264,18 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
     public PaymentDraftBuilder amountRefunded(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.amountRefunded = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Deprecated because the value can be calculated from the total amounts saved in the Transactions.</p>
+     * @param builder function to build the amountRefunded value
+     * @return Builder
+     */
+
+    public PaymentDraftBuilder withAmountRefunded(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+        this.amountRefunded = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
         return this;
     }
 
@@ -246,6 +306,18 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
 
     /**
      *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
+     * @param builder function to build the paymentMethodInfo value
+     * @return Builder
+     */
+
+    public PaymentDraftBuilder withPaymentMethodInfo(
+            Function<com.commercetools.api.models.payment.PaymentMethodInfoBuilder, com.commercetools.api.models.payment.PaymentMethodInfo> builder) {
+        this.paymentMethodInfo = builder.apply(com.commercetools.api.models.payment.PaymentMethodInfoBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
      * @param paymentMethodInfo value to be set
      * @return Builder
      */
@@ -265,6 +337,18 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
     public PaymentDraftBuilder paymentStatus(
             Function<com.commercetools.api.models.payment.PaymentStatusDraftBuilder, com.commercetools.api.models.payment.PaymentStatusDraftBuilder> builder) {
         this.paymentStatus = builder.apply(com.commercetools.api.models.payment.PaymentStatusDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Current status of the Payment.</p>
+     * @param builder function to build the paymentStatus value
+     * @return Builder
+     */
+
+    public PaymentDraftBuilder withPaymentStatus(
+            Function<com.commercetools.api.models.payment.PaymentStatusDraftBuilder, com.commercetools.api.models.payment.PaymentStatusDraft> builder) {
+        this.paymentStatus = builder.apply(com.commercetools.api.models.payment.PaymentStatusDraftBuilder.of());
         return this;
     }
 
@@ -348,6 +432,28 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
     }
 
     /**
+     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     * @param builder function to build the transactions value
+     * @return Builder
+     */
+
+    public PaymentDraftBuilder addTransactions(
+            Function<com.commercetools.api.models.payment.TransactionDraftBuilder, com.commercetools.api.models.payment.TransactionDraft> builder) {
+        return plusTransactions(builder.apply(com.commercetools.api.models.payment.TransactionDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     * @param builder function to build the transactions value
+     * @return Builder
+     */
+
+    public PaymentDraftBuilder setTransactions(
+            Function<com.commercetools.api.models.payment.TransactionDraftBuilder, com.commercetools.api.models.payment.TransactionDraft> builder) {
+        return transactions(builder.apply(com.commercetools.api.models.payment.TransactionDraftBuilder.of()));
+    }
+
+    /**
      *  <p>Represents information exchange with the payment service, for example, a PSP. An interaction may be a request sent, or a response or notification received from the payment service.</p>
      * @param interfaceInteractions value to be set
      * @return Builder
@@ -417,6 +523,29 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
     }
 
     /**
+     *  <p>Represents information exchange with the payment service, for example, a PSP. An interaction may be a request sent, or a response or notification received from the payment service.</p>
+     * @param builder function to build the interfaceInteractions value
+     * @return Builder
+     */
+
+    public PaymentDraftBuilder addInterfaceInteractions(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        return plusInterfaceInteractions(
+            builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>Represents information exchange with the payment service, for example, a PSP. An interaction may be a request sent, or a response or notification received from the payment service.</p>
+     * @param builder function to build the interfaceInteractions value
+     * @return Builder
+     */
+
+    public PaymentDraftBuilder setInterfaceInteractions(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        return interfaceInteractions(builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()));
+    }
+
+    /**
      *  <p>Custom Fields for the Payment.</p>
      * @param builder function to build the custom value
      * @return Builder
@@ -425,6 +554,18 @@ public class PaymentDraftBuilder implements Builder<PaymentDraft> {
     public PaymentDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the Payment.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public PaymentDraftBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
         return this;
     }
 

@@ -54,6 +54,18 @@ public class ChannelReferenceBuilder implements Builder<ChannelReference> {
 
     /**
      *  <p>Contains the representation of the expanded Channel. Only present in responses to requests with Reference Expansion for Channels.</p>
+     * @param builder function to build the obj value
+     * @return Builder
+     */
+
+    public ChannelReferenceBuilder withObj(
+            Function<com.commercetools.api.models.channel.ChannelBuilder, com.commercetools.api.models.channel.Channel> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.channel.ChannelBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Contains the representation of the expanded Channel. Only present in responses to requests with Reference Expansion for Channels.</p>
      * @param obj value to be set
      * @return Builder
      */

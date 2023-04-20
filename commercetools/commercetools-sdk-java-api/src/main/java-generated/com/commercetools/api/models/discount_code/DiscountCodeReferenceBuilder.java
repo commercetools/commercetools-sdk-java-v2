@@ -54,6 +54,18 @@ public class DiscountCodeReferenceBuilder implements Builder<DiscountCodeReferen
 
     /**
      *  <p>Contains the representation of the expanded DiscountCode. Only present in responses to requests with Reference Expansion for DiscountCodes.</p>
+     * @param builder function to build the obj value
+     * @return Builder
+     */
+
+    public DiscountCodeReferenceBuilder withObj(
+            Function<com.commercetools.api.models.discount_code.DiscountCodeBuilder, com.commercetools.api.models.discount_code.DiscountCode> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.discount_code.DiscountCodeBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Contains the representation of the expanded DiscountCode. Only present in responses to requests with Reference Expansion for DiscountCodes.</p>
      * @param obj value to be set
      * @return Builder
      */

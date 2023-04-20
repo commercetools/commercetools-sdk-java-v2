@@ -93,6 +93,28 @@ public class PriceImportRequestBuilder implements Builder<PriceImportRequest> {
 
     /**
      *  <p>The price import resources of this request.</p>
+     * @param builder function to build the resources value
+     * @return Builder
+     */
+
+    public PriceImportRequestBuilder addResources(
+            Function<com.commercetools.importapi.models.prices.PriceImportBuilder, com.commercetools.importapi.models.prices.PriceImport> builder) {
+        return plusResources(builder.apply(com.commercetools.importapi.models.prices.PriceImportBuilder.of()));
+    }
+
+    /**
+     *  <p>The price import resources of this request.</p>
+     * @param builder function to build the resources value
+     * @return Builder
+     */
+
+    public PriceImportRequestBuilder setResources(
+            Function<com.commercetools.importapi.models.prices.PriceImportBuilder, com.commercetools.importapi.models.prices.PriceImport> builder) {
+        return resources(builder.apply(com.commercetools.importapi.models.prices.PriceImportBuilder.of()));
+    }
+
+    /**
+     *  <p>The price import resources of this request.</p>
      * @return resources
      */
 

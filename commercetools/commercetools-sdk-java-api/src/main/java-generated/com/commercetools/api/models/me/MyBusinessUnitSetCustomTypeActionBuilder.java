@@ -43,6 +43,18 @@ public class MyBusinessUnitSetCustomTypeActionBuilder implements Builder<MyBusin
 
     /**
      *  <p>Defines the Type that extends the BusinessUnit with Custom Fields. If absent, any existing Type and Custom Fields are removed from the BusinessUnit.</p>
+     * @param builder function to build the type value
+     * @return Builder
+     */
+
+    public MyBusinessUnitSetCustomTypeActionBuilder withType(
+            Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifier> builder) {
+        this.type = builder.apply(com.commercetools.api.models.type.TypeResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Defines the Type that extends the BusinessUnit with Custom Fields. If absent, any existing Type and Custom Fields are removed from the BusinessUnit.</p>
      * @param type value to be set
      * @return Builder
      */
@@ -62,6 +74,18 @@ public class MyBusinessUnitSetCustomTypeActionBuilder implements Builder<MyBusin
     public MyBusinessUnitSetCustomTypeActionBuilder fields(
             Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
         this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Sets the Custom Fields for the BusinessUnit.</p>
+     * @param builder function to build the fields value
+     * @return Builder
+     */
+
+    public MyBusinessUnitSetCustomTypeActionBuilder withFields(
+            Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainer> builder) {
+        this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of());
         return this;
     }
 

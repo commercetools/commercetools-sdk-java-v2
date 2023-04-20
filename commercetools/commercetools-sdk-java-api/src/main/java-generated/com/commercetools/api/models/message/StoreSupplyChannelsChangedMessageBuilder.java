@@ -117,6 +117,18 @@ public class StoreSupplyChannelsChangedMessageBuilder implements Builder<StoreSu
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @param builder function to build the lastModifiedBy value
+     * @return Builder
+     */
+
+    public StoreSupplyChannelsChangedMessageBuilder withLastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value of <code>createdBy</code>.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -136,6 +148,18 @@ public class StoreSupplyChannelsChangedMessageBuilder implements Builder<StoreSu
     public StoreSupplyChannelsChangedMessageBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
+     * @return Builder
+     */
+
+    public StoreSupplyChannelsChangedMessageBuilder withCreatedBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
 
@@ -208,6 +232,19 @@ public class StoreSupplyChannelsChangedMessageBuilder implements Builder<StoreSu
         this.resourceUserProvidedIdentifiers = builder
                 .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @param builder function to build the resourceUserProvidedIdentifiers value
+     * @return Builder
+     */
+
+    public StoreSupplyChannelsChangedMessageBuilder withResourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiers> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of());
         return this;
     }
 
@@ -293,6 +330,29 @@ public class StoreSupplyChannelsChangedMessageBuilder implements Builder<StoreSu
     }
 
     /**
+     *  <p>Inventory supply Channels that have been added to the Store.</p>
+     * @param builder function to build the addedSupplyChannels value
+     * @return Builder
+     */
+
+    public StoreSupplyChannelsChangedMessageBuilder addAddedSupplyChannels(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReference> builder) {
+        return plusAddedSupplyChannels(
+            builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p>Inventory supply Channels that have been added to the Store.</p>
+     * @param builder function to build the addedSupplyChannels value
+     * @return Builder
+     */
+
+    public StoreSupplyChannelsChangedMessageBuilder setAddedSupplyChannels(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReference> builder) {
+        return addedSupplyChannels(builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()));
+    }
+
+    /**
      *  <p>Inventory supply Channels that have been removed from the Store.</p>
      * @param removedSupplyChannels value to be set
      * @return Builder
@@ -359,6 +419,29 @@ public class StoreSupplyChannelsChangedMessageBuilder implements Builder<StoreSu
         this.removedSupplyChannels
                 .add(builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Inventory supply Channels that have been removed from the Store.</p>
+     * @param builder function to build the removedSupplyChannels value
+     * @return Builder
+     */
+
+    public StoreSupplyChannelsChangedMessageBuilder addRemovedSupplyChannels(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReference> builder) {
+        return plusRemovedSupplyChannels(
+            builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p>Inventory supply Channels that have been removed from the Store.</p>
+     * @param builder function to build the removedSupplyChannels value
+     * @return Builder
+     */
+
+    public StoreSupplyChannelsChangedMessageBuilder setRemovedSupplyChannels(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReference> builder) {
+        return removedSupplyChannels(builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()));
     }
 
     /**

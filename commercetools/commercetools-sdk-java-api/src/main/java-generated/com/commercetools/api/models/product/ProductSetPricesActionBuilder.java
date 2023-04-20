@@ -123,6 +123,28 @@ public class ProductSetPricesActionBuilder implements Builder<ProductSetPricesAc
     }
 
     /**
+     *  <p>The Embedded Prices to set. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     * @param builder function to build the prices value
+     * @return Builder
+     */
+
+    public ProductSetPricesActionBuilder addPrices(
+            Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraft> builder) {
+        return plusPrices(builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>The Embedded Prices to set. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     * @param builder function to build the prices value
+     * @return Builder
+     */
+
+    public ProductSetPricesActionBuilder setPrices(
+            Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraft> builder) {
+        return prices(builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of()));
+    }
+
+    /**
      *  <p>If <code>true</code>, only the staged ProductVariant is updated. If <code>false</code>, both the current and staged ProductVariant are updated.</p>
      * @param staged value to be set
      * @return Builder

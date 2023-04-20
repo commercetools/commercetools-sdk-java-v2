@@ -207,6 +207,28 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
     }
 
     /**
+     *  <p>The References to the Stores with which the Customer is associated. If referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Stores are created.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public CustomerImportBuilder addStores(
+            Function<com.commercetools.importapi.models.common.StoreKeyReferenceBuilder, com.commercetools.importapi.models.common.StoreKeyReference> builder) {
+        return plusStores(builder.apply(com.commercetools.importapi.models.common.StoreKeyReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p>The References to the Stores with which the Customer is associated. If referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Stores are created.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public CustomerImportBuilder setStores(
+            Function<com.commercetools.importapi.models.common.StoreKeyReferenceBuilder, com.commercetools.importapi.models.common.StoreKeyReference> builder) {
+        return stores(builder.apply(com.commercetools.importapi.models.common.StoreKeyReferenceBuilder.of()));
+    }
+
+    /**
      *  <p>Maps to <code>Customer.firstName</code>.</p>
      * @param firstName value to be set
      * @return Builder
@@ -332,6 +354,19 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
 
     /**
      *  <p>The Reference to the CustomerGroup with which the Customer is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>
+     * @param builder function to build the customerGroup value
+     * @return Builder
+     */
+
+    public CustomerImportBuilder withCustomerGroup(
+            Function<com.commercetools.importapi.models.common.CustomerGroupKeyReferenceBuilder, com.commercetools.importapi.models.common.CustomerGroupKeyReference> builder) {
+        this.customerGroup = builder
+                .apply(com.commercetools.importapi.models.common.CustomerGroupKeyReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The Reference to the CustomerGroup with which the Customer is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -409,6 +444,28 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
         this.addresses
                 .add(builder.apply(com.commercetools.importapi.models.customers.CustomerAddressBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Maps to <code>Customer.addresses</code>.</p>
+     * @param builder function to build the addresses value
+     * @return Builder
+     */
+
+    public CustomerImportBuilder addAddresses(
+            Function<com.commercetools.importapi.models.customers.CustomerAddressBuilder, com.commercetools.importapi.models.customers.CustomerAddress> builder) {
+        return plusAddresses(builder.apply(com.commercetools.importapi.models.customers.CustomerAddressBuilder.of()));
+    }
+
+    /**
+     *  <p>Maps to <code>Customer.addresses</code>.</p>
+     * @param builder function to build the addresses value
+     * @return Builder
+     */
+
+    public CustomerImportBuilder setAddresses(
+            Function<com.commercetools.importapi.models.customers.CustomerAddressBuilder, com.commercetools.importapi.models.customers.CustomerAddress> builder) {
+        return addresses(builder.apply(com.commercetools.importapi.models.customers.CustomerAddressBuilder.of()));
     }
 
     /**
@@ -525,6 +582,18 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
     public CustomerImportBuilder custom(
             Function<com.commercetools.importapi.models.customfields.CustomBuilder, com.commercetools.importapi.models.customfields.CustomBuilder> builder) {
         this.custom = builder.apply(com.commercetools.importapi.models.customfields.CustomBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>The Custom Fields for this Customer.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public CustomerImportBuilder withCustom(
+            Function<com.commercetools.importapi.models.customfields.CustomBuilder, com.commercetools.importapi.models.customfields.Custom> builder) {
+        this.custom = builder.apply(com.commercetools.importapi.models.customfields.CustomBuilder.of());
         return this;
     }
 

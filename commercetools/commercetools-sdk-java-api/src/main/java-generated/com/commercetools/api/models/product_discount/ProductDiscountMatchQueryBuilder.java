@@ -80,6 +80,18 @@ public class ProductDiscountMatchQueryBuilder implements Builder<ProductDiscount
 
     /**
      *  <p>Specified Price of the specified Product Variant.</p>
+     * @param builder function to build the price value
+     * @return Builder
+     */
+
+    public ProductDiscountMatchQueryBuilder withPrice(
+            Function<com.commercetools.api.models.common.QueryPriceBuilder, com.commercetools.api.models.common.QueryPrice> builder) {
+        this.price = builder.apply(com.commercetools.api.models.common.QueryPriceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Specified Price of the specified Product Variant.</p>
      * @param price value to be set
      * @return Builder
      */

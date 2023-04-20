@@ -40,6 +40,18 @@ public class ProductLabelBuilder implements Builder<ProductLabel> {
     }
 
     /**
+     * set the value to the slug using the builder function
+     * @param builder function to build the slug value
+     * @return Builder
+     */
+
+    public ProductLabelBuilder withSlug(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+        this.slug = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the slug
      * @param slug value to be set
      * @return Builder
@@ -59,6 +71,18 @@ public class ProductLabelBuilder implements Builder<ProductLabel> {
     public ProductLabelBuilder name(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the name using the builder function
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public ProductLabelBuilder withName(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
         return this;
     }
 

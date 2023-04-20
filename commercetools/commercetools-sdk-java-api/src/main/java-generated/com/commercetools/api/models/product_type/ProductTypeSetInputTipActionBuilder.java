@@ -54,6 +54,18 @@ public class ProductTypeSetInputTipActionBuilder implements Builder<ProductTypeS
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param builder function to build the inputTip value
+     * @return Builder
+     */
+
+    public ProductTypeSetInputTipActionBuilder withInputTip(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.inputTip = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param inputTip value to be set
      * @return Builder
      */

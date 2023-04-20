@@ -120,6 +120,18 @@ public class ProductBuilder implements Builder<Product> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
+     * @return Builder
+     */
+
+    public ProductBuilder withLastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -139,6 +151,18 @@ public class ProductBuilder implements Builder<Product> {
     public ProductBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
+     * @return Builder
+     */
+
+    public ProductBuilder withCreatedBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
 
@@ -180,6 +204,18 @@ public class ProductBuilder implements Builder<Product> {
 
     /**
      *  <p>The Product Type defining the Attributes of the Product. Cannot be changed.</p>
+     * @param builder function to build the productType value
+     * @return Builder
+     */
+
+    public ProductBuilder withProductType(
+            Function<com.commercetools.api.models.product_type.ProductTypeReferenceBuilder, com.commercetools.api.models.product_type.ProductTypeReference> builder) {
+        this.productType = builder.apply(com.commercetools.api.models.product_type.ProductTypeReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The Product Type defining the Attributes of the Product. Cannot be changed.</p>
      * @param productType value to be set
      * @return Builder
      */
@@ -199,6 +235,18 @@ public class ProductBuilder implements Builder<Product> {
     public ProductBuilder masterData(
             Function<com.commercetools.api.models.product.ProductCatalogDataBuilder, com.commercetools.api.models.product.ProductCatalogDataBuilder> builder) {
         this.masterData = builder.apply(com.commercetools.api.models.product.ProductCatalogDataBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Contains the current and the staged representation of the product information.</p>
+     * @param builder function to build the masterData value
+     * @return Builder
+     */
+
+    public ProductBuilder withMasterData(
+            Function<com.commercetools.api.models.product.ProductCatalogDataBuilder, com.commercetools.api.models.product.ProductCatalogData> builder) {
+        this.masterData = builder.apply(com.commercetools.api.models.product.ProductCatalogDataBuilder.of());
         return this;
     }
 
@@ -228,6 +276,18 @@ public class ProductBuilder implements Builder<Product> {
 
     /**
      *  <p>The TaxCategory of the Product.</p>
+     * @param builder function to build the taxCategory value
+     * @return Builder
+     */
+
+    public ProductBuilder withTaxCategory(
+            Function<com.commercetools.api.models.tax_category.TaxCategoryReferenceBuilder, com.commercetools.api.models.tax_category.TaxCategoryReference> builder) {
+        this.taxCategory = builder.apply(com.commercetools.api.models.tax_category.TaxCategoryReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The TaxCategory of the Product.</p>
      * @param taxCategory value to be set
      * @return Builder
      */
@@ -247,6 +307,18 @@ public class ProductBuilder implements Builder<Product> {
     public ProductBuilder state(
             Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
         this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>State of the Product.</p>
+     * @param builder function to build the state value
+     * @return Builder
+     */
+
+    public ProductBuilder withState(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReference> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of());
         return this;
     }
 
@@ -272,6 +344,19 @@ public class ProductBuilder implements Builder<Product> {
         this.reviewRatingStatistics = builder
                 .apply(com.commercetools.api.models.review.ReviewRatingStatisticsBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Review statistics of the Product.</p>
+     * @param builder function to build the reviewRatingStatistics value
+     * @return Builder
+     */
+
+    public ProductBuilder withReviewRatingStatistics(
+            Function<com.commercetools.api.models.review.ReviewRatingStatisticsBuilder, com.commercetools.api.models.review.ReviewRatingStatistics> builder) {
+        this.reviewRatingStatistics = builder
+                .apply(com.commercetools.api.models.review.ReviewRatingStatisticsBuilder.of());
         return this;
     }
 

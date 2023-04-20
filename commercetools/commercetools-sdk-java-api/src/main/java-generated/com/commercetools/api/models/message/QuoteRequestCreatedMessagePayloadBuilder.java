@@ -38,6 +38,18 @@ public class QuoteRequestCreatedMessagePayloadBuilder implements Builder<QuoteRe
 
     /**
      *  <p>Quote Request that was created.</p>
+     * @param builder function to build the quoteRequest value
+     * @return Builder
+     */
+
+    public QuoteRequestCreatedMessagePayloadBuilder withQuoteRequest(
+            Function<com.commercetools.api.models.quote_request.QuoteRequestBuilder, com.commercetools.api.models.quote_request.QuoteRequest> builder) {
+        this.quoteRequest = builder.apply(com.commercetools.api.models.quote_request.QuoteRequestBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Quote Request that was created.</p>
      * @param quoteRequest value to be set
      * @return Builder
      */

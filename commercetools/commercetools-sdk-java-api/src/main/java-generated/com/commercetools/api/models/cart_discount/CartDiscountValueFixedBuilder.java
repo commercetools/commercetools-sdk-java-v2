@@ -92,6 +92,28 @@ public class CartDiscountValueFixedBuilder implements Builder<CartDiscountValueF
 
     /**
      *  <p>Cent precision money values in different currencies.</p>
+     * @param builder function to build the money value
+     * @return Builder
+     */
+
+    public CartDiscountValueFixedBuilder addMoney(
+            Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoney> builder) {
+        return plusMoney(builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of()));
+    }
+
+    /**
+     *  <p>Cent precision money values in different currencies.</p>
+     * @param builder function to build the money value
+     * @return Builder
+     */
+
+    public CartDiscountValueFixedBuilder setMoney(
+            Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoney> builder) {
+        return money(builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of()));
+    }
+
+    /**
+     *  <p>Cent precision money values in different currencies.</p>
      * @return money
      */
 

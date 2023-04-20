@@ -43,6 +43,18 @@ public class ProductVariantDeletedMessagePayloadBuilder implements Builder<Produ
 
     /**
      *  <p>Unique identifier of the Product Variant that was added.</p>
+     * @param builder function to build the variant value
+     * @return Builder
+     */
+
+    public ProductVariantDeletedMessagePayloadBuilder withVariant(
+            Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariant> builder) {
+        this.variant = builder.apply(com.commercetools.api.models.product.ProductVariantBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Unique identifier of the Product Variant that was added.</p>
      * @param variant value to be set
      * @return Builder
      */

@@ -51,6 +51,18 @@ public class FieldDefinitionOrderValueBuilder implements Builder<FieldDefinition
     }
 
     /**
+     * set the value to the label using the builder function
+     * @param builder function to build the label value
+     * @return Builder
+     */
+
+    public FieldDefinitionOrderValueBuilder withLabel(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+        this.label = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the label
      * @param label value to be set
      * @return Builder

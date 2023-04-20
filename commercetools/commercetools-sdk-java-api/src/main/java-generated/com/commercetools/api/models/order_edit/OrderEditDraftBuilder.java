@@ -66,6 +66,18 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
 
     /**
      *  <p>The order to be updated with this edit.</p>
+     * @param builder function to build the resource value
+     * @return Builder
+     */
+
+    public OrderEditDraftBuilder withResource(
+            Function<com.commercetools.api.models.order.OrderReferenceBuilder, com.commercetools.api.models.order.OrderReference> builder) {
+        this.resource = builder.apply(com.commercetools.api.models.order.OrderReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The order to be updated with this edit.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -153,6 +165,18 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     public OrderEditDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>The custom fields.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public OrderEditDraftBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
         return this;
     }
 

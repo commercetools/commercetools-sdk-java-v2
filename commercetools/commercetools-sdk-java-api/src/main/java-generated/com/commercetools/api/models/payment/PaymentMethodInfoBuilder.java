@@ -68,6 +68,18 @@ public class PaymentMethodInfoBuilder implements Builder<PaymentMethodInfo> {
 
     /**
      *  <p>Localizable name of the payment method.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public PaymentMethodInfoBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Localizable name of the payment method.</p>
      * @param name value to be set
      * @return Builder
      */

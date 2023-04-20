@@ -54,6 +54,18 @@ public class MethodTaxRateBuilder implements Builder<MethodTaxRate> {
 
     /**
      *  <p>Tax Rate for the Shipping Method.</p>
+     * @param builder function to build the taxRate value
+     * @return Builder
+     */
+
+    public MethodTaxRateBuilder withTaxRate(
+            Function<com.commercetools.api.models.tax_category.TaxRateBuilder, com.commercetools.api.models.tax_category.TaxRate> builder) {
+        this.taxRate = builder.apply(com.commercetools.api.models.tax_category.TaxRateBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Tax Rate for the Shipping Method.</p>
      * @param taxRate value to be set
      * @return Builder
      */

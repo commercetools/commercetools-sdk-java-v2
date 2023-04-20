@@ -54,6 +54,18 @@ public class CartDiscountReferenceBuilder implements Builder<CartDiscountReferen
 
     /**
      *  <p>Contains the representation of the expanded CartDiscount. Only present in responses to requests with Reference Expansion for CartDiscounts.</p>
+     * @param builder function to build the obj value
+     * @return Builder
+     */
+
+    public CartDiscountReferenceBuilder withObj(
+            Function<com.commercetools.api.models.cart_discount.CartDiscountBuilder, com.commercetools.api.models.cart_discount.CartDiscount> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.cart_discount.CartDiscountBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Contains the representation of the expanded CartDiscount. Only present in responses to requests with Reference Expansion for CartDiscounts.</p>
      * @param obj value to be set
      * @return Builder
      */

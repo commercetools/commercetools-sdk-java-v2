@@ -106,6 +106,28 @@ public class ResultItemBuilder implements Builder<ResultItem> {
     }
 
     /**
+     *  <p>An array of product variants containing the image URL.</p>
+     * @param builder function to build the productVariants value
+     * @return Builder
+     */
+
+    public ResultItemBuilder addProductVariants(
+            Function<com.commercetools.ml.models.common.ProductVariantBuilder, com.commercetools.ml.models.common.ProductVariant> builder) {
+        return plusProductVariants(builder.apply(com.commercetools.ml.models.common.ProductVariantBuilder.of()));
+    }
+
+    /**
+     *  <p>An array of product variants containing the image URL.</p>
+     * @param builder function to build the productVariants value
+     * @return Builder
+     */
+
+    public ResultItemBuilder setProductVariants(
+            Function<com.commercetools.ml.models.common.ProductVariantBuilder, com.commercetools.ml.models.common.ProductVariant> builder) {
+        return productVariants(builder.apply(com.commercetools.ml.models.common.ProductVariantBuilder.of()));
+    }
+
+    /**
      *  <p>The URL of the image.</p>
      * @return imageUrl
      */

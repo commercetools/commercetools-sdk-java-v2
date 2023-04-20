@@ -52,6 +52,18 @@ public class RemoveAttributeDefinitionChangeBuilder implements Builder<RemoveAtt
     }
 
     /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public RemoveAttributeDefinitionChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.AttributeDefinitionBuilder, com.commercetools.history.models.common.AttributeDefinition> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.AttributeDefinitionBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder

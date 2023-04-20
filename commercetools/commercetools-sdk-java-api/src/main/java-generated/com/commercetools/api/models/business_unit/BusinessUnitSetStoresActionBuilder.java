@@ -95,6 +95,28 @@ public class BusinessUnitSetStoresActionBuilder implements Builder<BusinessUnitS
 
     /**
      *  <p>Stores to set. Overrides the current list of Stores.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public BusinessUnitSetStoresActionBuilder addStores(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifier> builder) {
+        return plusStores(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()));
+    }
+
+    /**
+     *  <p>Stores to set. Overrides the current list of Stores.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public BusinessUnitSetStoresActionBuilder setStores(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifier> builder) {
+        return stores(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()));
+    }
+
+    /**
+     *  <p>Stores to set. Overrides the current list of Stores.</p>
      * @return stores
      */
 

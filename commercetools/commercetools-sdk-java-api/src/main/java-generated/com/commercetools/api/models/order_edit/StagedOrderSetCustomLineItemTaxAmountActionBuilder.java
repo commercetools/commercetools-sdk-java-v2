@@ -66,6 +66,23 @@ public class StagedOrderSetCustomLineItemTaxAmountActionBuilder
      *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Carts</li>
      *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Order Edits</li>
      *  </ul>
+     * @param builder function to build the externalTaxAmount value
+     * @return Builder
+     */
+
+    public StagedOrderSetCustomLineItemTaxAmountActionBuilder withExternalTaxAmount(
+            Function<com.commercetools.api.models.cart.ExternalTaxAmountDraftBuilder, com.commercetools.api.models.cart.ExternalTaxAmountDraft> builder) {
+        this.externalTaxAmount = builder.apply(com.commercetools.api.models.cart.ExternalTaxAmountDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Cannot be used in LineItemDraft or CustomLineItemDraft.</p>
+     *  <p>Can only be set by these update actions:</p>
+     *  <ul>
+     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Carts</li>
+     *   <li>Set LineItem TaxAmount, Set CustomLineItem TaxAmount, or Set ShippingMethod TaxAmount on Order Edits</li>
+     *  </ul>
      * @param externalTaxAmount value to be set
      * @return Builder
      */

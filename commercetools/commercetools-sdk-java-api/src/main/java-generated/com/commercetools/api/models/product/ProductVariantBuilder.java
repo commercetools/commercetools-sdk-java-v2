@@ -159,6 +159,28 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
+     *  <p>The Embedded Prices of the Product Variant. Cannot contain two Prices of the same Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     * @param builder function to build the prices value
+     * @return Builder
+     */
+
+    public ProductVariantBuilder addPrices(
+            Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.Price> builder) {
+        return plusPrices(builder.apply(com.commercetools.api.models.common.PriceBuilder.of()));
+    }
+
+    /**
+     *  <p>The Embedded Prices of the Product Variant. Cannot contain two Prices of the same Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
+     * @param builder function to build the prices value
+     * @return Builder
+     */
+
+    public ProductVariantBuilder setPrices(
+            Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.Price> builder) {
+        return prices(builder.apply(com.commercetools.api.models.common.PriceBuilder.of()));
+    }
+
+    /**
      *  <p>Attributes of the Product Variant.</p>
      * @param attributes value to be set
      * @return Builder
@@ -226,6 +248,28 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
+     *  <p>Attributes of the Product Variant.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductVariantBuilder addAttributes(
+            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.Attribute> builder) {
+        return plusAttributes(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()));
+    }
+
+    /**
+     *  <p>Attributes of the Product Variant.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductVariantBuilder setAttributes(
+            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.Attribute> builder) {
+        return attributes(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()));
+    }
+
+    /**
      *  <p>Only available when Price selection is used. Cannot be used in a Query Predicate.</p>
      * @param builder function to build the price value
      * @return Builder
@@ -234,6 +278,18 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     public ProductVariantBuilder price(
             Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.PriceBuilder> builder) {
         this.price = builder.apply(com.commercetools.api.models.common.PriceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Only available when Price selection is used. Cannot be used in a Query Predicate.</p>
+     * @param builder function to build the price value
+     * @return Builder
+     */
+
+    public ProductVariantBuilder withPrice(
+            Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.Price> builder) {
+        this.price = builder.apply(com.commercetools.api.models.common.PriceBuilder.of());
         return this;
     }
 
@@ -314,6 +370,28 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
+     *  <p>Images of the Product Variant.</p>
+     * @param builder function to build the images value
+     * @return Builder
+     */
+
+    public ProductVariantBuilder addImages(
+            Function<com.commercetools.api.models.common.ImageBuilder, com.commercetools.api.models.common.Image> builder) {
+        return plusImages(builder.apply(com.commercetools.api.models.common.ImageBuilder.of()));
+    }
+
+    /**
+     *  <p>Images of the Product Variant.</p>
+     * @param builder function to build the images value
+     * @return Builder
+     */
+
+    public ProductVariantBuilder setImages(
+            Function<com.commercetools.api.models.common.ImageBuilder, com.commercetools.api.models.common.Image> builder) {
+        return images(builder.apply(com.commercetools.api.models.common.ImageBuilder.of()));
+    }
+
+    /**
      *  <p>Media assets of the Product Variant.</p>
      * @param assets value to be set
      * @return Builder
@@ -379,6 +457,28 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
+     *  <p>Media assets of the Product Variant.</p>
+     * @param builder function to build the assets value
+     * @return Builder
+     */
+
+    public ProductVariantBuilder addAssets(
+            Function<com.commercetools.api.models.common.AssetBuilder, com.commercetools.api.models.common.Asset> builder) {
+        return plusAssets(builder.apply(com.commercetools.api.models.common.AssetBuilder.of()));
+    }
+
+    /**
+     *  <p>Media assets of the Product Variant.</p>
+     * @param builder function to build the assets value
+     * @return Builder
+     */
+
+    public ProductVariantBuilder setAssets(
+            Function<com.commercetools.api.models.common.AssetBuilder, com.commercetools.api.models.common.Asset> builder) {
+        return assets(builder.apply(com.commercetools.api.models.common.AssetBuilder.of()));
+    }
+
+    /**
      *  <p>Set if the Product Variant is tracked by Inventory. Can be used as an optimization to reduce calls to the Inventory service. May not contain the latest Inventory State (it is eventually consistent).</p>
      * @param builder function to build the availability value
      * @return Builder
@@ -388,6 +488,18 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
             Function<com.commercetools.api.models.product.ProductVariantAvailabilityBuilder, com.commercetools.api.models.product.ProductVariantAvailabilityBuilder> builder) {
         this.availability = builder.apply(com.commercetools.api.models.product.ProductVariantAvailabilityBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Set if the Product Variant is tracked by Inventory. Can be used as an optimization to reduce calls to the Inventory service. May not contain the latest Inventory State (it is eventually consistent).</p>
+     * @param builder function to build the availability value
+     * @return Builder
+     */
+
+    public ProductVariantBuilder withAvailability(
+            Function<com.commercetools.api.models.product.ProductVariantAvailabilityBuilder, com.commercetools.api.models.product.ProductVariantAvailability> builder) {
+        this.availability = builder.apply(com.commercetools.api.models.product.ProductVariantAvailabilityBuilder.of());
         return this;
     }
 
@@ -423,6 +535,18 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     public ProductVariantBuilder scopedPrice(
             Function<com.commercetools.api.models.common.ScopedPriceBuilder, com.commercetools.api.models.common.ScopedPriceBuilder> builder) {
         this.scopedPrice = builder.apply(com.commercetools.api.models.common.ScopedPriceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Only available in response to a Product Projection Search request with price selection. Can be used to sort, filter, and facet.</p>
+     * @param builder function to build the scopedPrice value
+     * @return Builder
+     */
+
+    public ProductVariantBuilder withScopedPrice(
+            Function<com.commercetools.api.models.common.ScopedPriceBuilder, com.commercetools.api.models.common.ScopedPrice> builder) {
+        this.scopedPrice = builder.apply(com.commercetools.api.models.common.ScopedPriceBuilder.of());
         return this;
     }
 

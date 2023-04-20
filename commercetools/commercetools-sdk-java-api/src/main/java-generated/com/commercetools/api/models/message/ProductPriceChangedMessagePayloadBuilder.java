@@ -63,6 +63,18 @@ public class ProductPriceChangedMessagePayloadBuilder implements Builder<Product
 
     /**
      *  <p>The current Embedded Price before the Change Embedded Price update action.</p>
+     * @param builder function to build the oldPrice value
+     * @return Builder
+     */
+
+    public ProductPriceChangedMessagePayloadBuilder withOldPrice(
+            Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.Price> builder) {
+        this.oldPrice = builder.apply(com.commercetools.api.models.common.PriceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The current Embedded Price before the Change Embedded Price update action.</p>
      * @param oldPrice value to be set
      * @return Builder
      */
@@ -81,6 +93,18 @@ public class ProductPriceChangedMessagePayloadBuilder implements Builder<Product
     public ProductPriceChangedMessagePayloadBuilder newPrice(
             Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.PriceBuilder> builder) {
         this.newPrice = builder.apply(com.commercetools.api.models.common.PriceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>The Embedded Price after the Change Embedded Price update action.</p>
+     * @param builder function to build the newPrice value
+     * @return Builder
+     */
+
+    public ProductPriceChangedMessagePayloadBuilder withNewPrice(
+            Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.Price> builder) {
+        this.newPrice = builder.apply(com.commercetools.api.models.common.PriceBuilder.of());
         return this;
     }
 
@@ -115,6 +139,18 @@ public class ProductPriceChangedMessagePayloadBuilder implements Builder<Product
     public ProductPriceChangedMessagePayloadBuilder oldStagedPrice(
             Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.PriceBuilder> builder) {
         this.oldStagedPrice = builder.apply(com.commercetools.api.models.common.PriceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>The staged Embedded Price before the Change Embedded Price update action.</p>
+     * @param builder function to build the oldStagedPrice value
+     * @return Builder
+     */
+
+    public ProductPriceChangedMessagePayloadBuilder withOldStagedPrice(
+            Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.Price> builder) {
+        this.oldStagedPrice = builder.apply(com.commercetools.api.models.common.PriceBuilder.of());
         return this;
     }
 

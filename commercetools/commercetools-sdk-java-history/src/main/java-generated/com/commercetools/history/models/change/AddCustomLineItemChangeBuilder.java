@@ -54,6 +54,18 @@ public class AddCustomLineItemChangeBuilder implements Builder<AddCustomLineItem
     }
 
     /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public AddCustomLineItemChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.CustomLineItemBuilder, com.commercetools.history.models.common.CustomLineItem> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.CustomLineItemBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
@@ -74,6 +86,18 @@ public class AddCustomLineItemChangeBuilder implements Builder<AddCustomLineItem
     public AddCustomLineItemChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.CustomLineItemBuilder, com.commercetools.history.models.common.CustomLineItemBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.CustomLineItemBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public AddCustomLineItemChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.CustomLineItemBuilder, com.commercetools.history.models.common.CustomLineItem> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.CustomLineItemBuilder.of());
         return this;
     }
 

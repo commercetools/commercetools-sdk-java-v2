@@ -76,6 +76,18 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
 
     /**
      *  <p>Name of the CartDiscount.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public CartDiscountDraftBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Name of the CartDiscount.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -105,6 +117,18 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     public CartDiscountDraftBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Description of the CartDiscount.</p>
+     * @param builder function to build the description value
+     * @return Builder
+     */
+
+    public CartDiscountDraftBuilder withDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -256,6 +280,18 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     public CartDiscountDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields of the CartDiscount.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public CartDiscountDraftBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
         return this;
     }
 

@@ -61,6 +61,18 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
 
     /**
      *  <p>ResourceIdentifier of the Quote from which this Order is created. If the Quote has <code>QuoteState</code> in <code>Accepted</code>, <code>Declined</code> or <code>Withdrawn</code> then the order creation will fail. The creation will also fail if the <code>Quote</code> has expired (<code>validTo</code> check).</p>
+     * @param builder function to build the quote value
+     * @return Builder
+     */
+
+    public OrderFromQuoteDraftBuilder withQuote(
+            Function<com.commercetools.api.models.quote.QuoteResourceIdentifierBuilder, com.commercetools.api.models.quote.QuoteResourceIdentifier> builder) {
+        this.quote = builder.apply(com.commercetools.api.models.quote.QuoteResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>ResourceIdentifier of the Quote from which this Order is created. If the Quote has <code>QuoteState</code> in <code>Accepted</code>, <code>Declined</code> or <code>Withdrawn</code> then the order creation will fail. The creation will also fail if the <code>Quote</code> has expired (<code>validTo</code> check).</p>
      * @param quote value to be set
      * @return Builder
      */
@@ -148,6 +160,18 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
     public OrderFromQuoteDraftBuilder state(
             Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
         this.state = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the state using the builder function
+     * @param builder function to build the state value
+     * @return Builder
+     */
+
+    public OrderFromQuoteDraftBuilder withState(
+            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifier> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of());
         return this;
     }
 

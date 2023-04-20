@@ -58,6 +58,18 @@ public class SetParcelMeasurementsChangeBuilder implements Builder<SetParcelMeas
     }
 
     /**
+     * set the value to the parcel using the builder function
+     * @param builder function to build the parcel value
+     * @return Builder
+     */
+
+    public SetParcelMeasurementsChangeBuilder withParcel(
+            Function<com.commercetools.history.models.change_value.ParcelChangeValueBuilder, com.commercetools.history.models.change_value.ParcelChangeValue> builder) {
+        this.parcel = builder.apply(com.commercetools.history.models.change_value.ParcelChangeValueBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the parcel
      * @param parcel value to be set
      * @return Builder
@@ -78,6 +90,18 @@ public class SetParcelMeasurementsChangeBuilder implements Builder<SetParcelMeas
     public SetParcelMeasurementsChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.ParcelMeasurementsBuilder, com.commercetools.history.models.common.ParcelMeasurementsBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.ParcelMeasurementsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetParcelMeasurementsChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.ParcelMeasurementsBuilder, com.commercetools.history.models.common.ParcelMeasurements> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.ParcelMeasurementsBuilder.of());
         return this;
     }
 
@@ -103,6 +127,18 @@ public class SetParcelMeasurementsChangeBuilder implements Builder<SetParcelMeas
             Function<com.commercetools.history.models.common.ParcelMeasurementsBuilder, com.commercetools.history.models.common.ParcelMeasurementsBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.ParcelMeasurementsBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public SetParcelMeasurementsChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.ParcelMeasurementsBuilder, com.commercetools.history.models.common.ParcelMeasurements> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.ParcelMeasurementsBuilder.of());
         return this;
     }
 

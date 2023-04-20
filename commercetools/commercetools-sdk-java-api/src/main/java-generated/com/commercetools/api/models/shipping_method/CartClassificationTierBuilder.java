@@ -57,6 +57,18 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
 
     /**
      *  <p>Fixed shipping rate for the selected classification.</p>
+     * @param builder function to build the price value
+     * @return Builder
+     */
+
+    public CartClassificationTierBuilder withPrice(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+        this.price = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Fixed shipping rate for the selected classification.</p>
      * @param price value to be set
      * @return Builder
      */

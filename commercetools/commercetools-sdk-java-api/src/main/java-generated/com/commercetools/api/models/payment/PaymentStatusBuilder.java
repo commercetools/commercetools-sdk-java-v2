@@ -68,6 +68,18 @@ public class PaymentStatusBuilder implements Builder<PaymentStatus> {
 
     /**
      *  <p>Reference to a State.</p>
+     * @param builder function to build the state value
+     * @return Builder
+     */
+
+    public PaymentStatusBuilder withState(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReference> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Reference to a State.</p>
      * @param state value to be set
      * @return Builder
      */

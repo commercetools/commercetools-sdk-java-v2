@@ -43,6 +43,18 @@ public class DeliveryAddedMessagePayloadBuilder implements Builder<DeliveryAdded
 
     /**
      *  <p>Delivery that was added to the Order. The Delivery in the Message body does not contain Parcels if those were part of the initial Add Delivery update action. In that case, the update action produces an additional ParcelAddedToDelivery Message containing information about the Parcels.</p>
+     * @param builder function to build the delivery value
+     * @return Builder
+     */
+
+    public DeliveryAddedMessagePayloadBuilder withDelivery(
+            Function<com.commercetools.api.models.order.DeliveryBuilder, com.commercetools.api.models.order.Delivery> builder) {
+        this.delivery = builder.apply(com.commercetools.api.models.order.DeliveryBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Delivery that was added to the Order. The Delivery in the Message body does not contain Parcels if those were part of the initial Add Delivery update action. In that case, the update action produces an additional ParcelAddedToDelivery Message containing information about the Parcels.</p>
      * @param delivery value to be set
      * @return Builder
      */

@@ -95,6 +95,28 @@ public class AttributeEnumTypeBuilder implements Builder<AttributeEnumType> {
 
     /**
      *  <p>Available values that can be assigned to Products.</p>
+     * @param builder function to build the values value
+     * @return Builder
+     */
+
+    public AttributeEnumTypeBuilder addValues(
+            Function<com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder, com.commercetools.api.models.product_type.AttributePlainEnumValue> builder) {
+        return plusValues(builder.apply(com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder.of()));
+    }
+
+    /**
+     *  <p>Available values that can be assigned to Products.</p>
+     * @param builder function to build the values value
+     * @return Builder
+     */
+
+    public AttributeEnumTypeBuilder setValues(
+            Function<com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder, com.commercetools.api.models.product_type.AttributePlainEnumValue> builder) {
+        return values(builder.apply(com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder.of()));
+    }
+
+    /**
+     *  <p>Available values that can be assigned to Products.</p>
      * @return values
      */
 

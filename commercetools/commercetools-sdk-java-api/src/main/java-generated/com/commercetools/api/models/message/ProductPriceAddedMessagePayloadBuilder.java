@@ -55,6 +55,18 @@ public class ProductPriceAddedMessagePayloadBuilder implements Builder<ProductPr
 
     /**
      *  <p>The Embedded Price that was added to the ProductVariant.</p>
+     * @param builder function to build the price value
+     * @return Builder
+     */
+
+    public ProductPriceAddedMessagePayloadBuilder withPrice(
+            Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.Price> builder) {
+        this.price = builder.apply(com.commercetools.api.models.common.PriceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The Embedded Price that was added to the ProductVariant.</p>
      * @param price value to be set
      * @return Builder
      */

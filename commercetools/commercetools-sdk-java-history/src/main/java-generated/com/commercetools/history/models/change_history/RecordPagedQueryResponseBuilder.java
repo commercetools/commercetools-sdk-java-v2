@@ -148,6 +148,28 @@ public class RecordPagedQueryResponseBuilder implements Builder<RecordPagedQuery
     }
 
     /**
+     * add the value to the results using the builder function
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public RecordPagedQueryResponseBuilder addResults(
+            Function<com.commercetools.history.models.change_history.RecordBuilder, com.commercetools.history.models.change_history.Record> builder) {
+        return plusResults(builder.apply(com.commercetools.history.models.change_history.RecordBuilder.of()));
+    }
+
+    /**
+     * set the value to the results using the builder function
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public RecordPagedQueryResponseBuilder setResults(
+            Function<com.commercetools.history.models.change_history.RecordBuilder, com.commercetools.history.models.change_history.Record> builder) {
+        return results(builder.apply(com.commercetools.history.models.change_history.RecordBuilder.of()));
+    }
+
+    /**
      *  <p>Number of results requested.</p>
      * @return limit
      */

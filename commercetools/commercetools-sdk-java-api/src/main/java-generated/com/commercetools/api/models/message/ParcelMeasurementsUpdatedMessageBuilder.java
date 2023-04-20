@@ -123,6 +123,18 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @param builder function to build the lastModifiedBy value
+     * @return Builder
+     */
+
+    public ParcelMeasurementsUpdatedMessageBuilder withLastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value of <code>createdBy</code>.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -142,6 +154,18 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
     public ParcelMeasurementsUpdatedMessageBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
+     * @return Builder
+     */
+
+    public ParcelMeasurementsUpdatedMessageBuilder withCreatedBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
 
@@ -219,6 +243,19 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @param builder function to build the resourceUserProvidedIdentifiers value
+     * @return Builder
+     */
+
+    public ParcelMeasurementsUpdatedMessageBuilder withResourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiers> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      * @param resourceUserProvidedIdentifiers value to be set
      * @return Builder
      */
@@ -260,6 +297,18 @@ public class ParcelMeasurementsUpdatedMessageBuilder implements Builder<ParcelMe
     public ParcelMeasurementsUpdatedMessageBuilder measurements(
             Function<com.commercetools.api.models.order.ParcelMeasurementsBuilder, com.commercetools.api.models.order.ParcelMeasurementsBuilder> builder) {
         this.measurements = builder.apply(com.commercetools.api.models.order.ParcelMeasurementsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>The Parcel Measurements that were set on the Parcel.</p>
+     * @param builder function to build the measurements value
+     * @return Builder
+     */
+
+    public ParcelMeasurementsUpdatedMessageBuilder withMeasurements(
+            Function<com.commercetools.api.models.order.ParcelMeasurementsBuilder, com.commercetools.api.models.order.ParcelMeasurements> builder) {
+        this.measurements = builder.apply(com.commercetools.api.models.order.ParcelMeasurementsBuilder.of());
         return this;
     }
 

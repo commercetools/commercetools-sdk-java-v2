@@ -38,6 +38,18 @@ public class MyPaymentAddTransactionActionBuilder implements Builder<MyPaymentAd
 
     /**
      *  <p>Transaction to add to the Payment.</p>
+     * @param builder function to build the transaction value
+     * @return Builder
+     */
+
+    public MyPaymentAddTransactionActionBuilder withTransaction(
+            Function<com.commercetools.api.models.payment.TransactionDraftBuilder, com.commercetools.api.models.payment.TransactionDraft> builder) {
+        this.transaction = builder.apply(com.commercetools.api.models.payment.TransactionDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Transaction to add to the Payment.</p>
      * @param transaction value to be set
      * @return Builder
      */

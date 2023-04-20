@@ -52,6 +52,18 @@ public class CartChangeCustomLineItemMoneyActionBuilder implements Builder<CartC
 
     /**
      *  <p>Value to set. Must not be empty. Can be a negative amount.</p>
+     * @param builder function to build the money value
+     * @return Builder
+     */
+
+    public CartChangeCustomLineItemMoneyActionBuilder withMoney(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+        this.money = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to set. Must not be empty. Can be a negative amount.</p>
      * @param money value to be set
      * @return Builder
      */

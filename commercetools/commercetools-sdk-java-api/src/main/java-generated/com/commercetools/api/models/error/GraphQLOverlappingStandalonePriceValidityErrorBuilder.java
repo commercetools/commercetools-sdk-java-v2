@@ -99,6 +99,19 @@ public class GraphQLOverlappingStandalonePriceValidityErrorBuilder
 
     /**
      *  <p>Reference to the conflicting Standalone Price.</p>
+     * @param builder function to build the conflictingStandalonePrice value
+     * @return Builder
+     */
+
+    public GraphQLOverlappingStandalonePriceValidityErrorBuilder withConflictingStandalonePrice(
+            Function<com.commercetools.api.models.standalone_price.StandalonePriceReferenceBuilder, com.commercetools.api.models.standalone_price.StandalonePriceReference> builder) {
+        this.conflictingStandalonePrice = builder
+                .apply(com.commercetools.api.models.standalone_price.StandalonePriceReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the conflicting Standalone Price.</p>
      * @param conflictingStandalonePrice value to be set
      * @return Builder
      */
@@ -158,6 +171,19 @@ public class GraphQLOverlappingStandalonePriceValidityErrorBuilder
 
     /**
      *  <p>CustomerGroup for which the Standalone Price is valid.</p>
+     * @param builder function to build the customerGroup value
+     * @return Builder
+     */
+
+    public GraphQLOverlappingStandalonePriceValidityErrorBuilder withCustomerGroup(
+            Function<com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder, com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier> builder) {
+        this.customerGroup = builder
+                .apply(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>CustomerGroup for which the Standalone Price is valid.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -178,6 +204,18 @@ public class GraphQLOverlappingStandalonePriceValidityErrorBuilder
             Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
         this.channel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Channel for which the Standalone Price is valid.</p>
+     * @param builder function to build the channel value
+     * @return Builder
+     */
+
+    public GraphQLOverlappingStandalonePriceValidityErrorBuilder withChannel(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+        this.channel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of());
         return this;
     }
 

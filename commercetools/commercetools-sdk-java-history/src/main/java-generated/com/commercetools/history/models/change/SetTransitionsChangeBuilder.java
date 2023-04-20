@@ -109,6 +109,28 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
     }
 
     /**
+     * add the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public SetTransitionsChangeBuilder addPreviousValue(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
+        return plusPreviousValue(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()));
+    }
+
+    /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public SetTransitionsChangeBuilder setPreviousValue(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
+        return previousValue(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()));
+    }
+
+    /**
      * set values to the nextValue
      * @param nextValue value to be set
      * @return Builder
@@ -172,6 +194,28 @@ public class SetTransitionsChangeBuilder implements Builder<SetTransitionsChange
         this.nextValue = new ArrayList<>();
         this.nextValue.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
         return this;
+    }
+
+    /**
+     * add the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetTransitionsChangeBuilder addNextValue(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
+        return plusNextValue(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()));
+    }
+
+    /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetTransitionsChangeBuilder setNextValue(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
+        return nextValue(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()));
     }
 
     /**

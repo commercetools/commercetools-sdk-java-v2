@@ -83,6 +83,23 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public CustomLineItemDraftBuilder withName(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
      * @param name value to be set
      * @return Builder
      */
@@ -125,6 +142,18 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
             Function<com.commercetools.importapi.models.orders.CustomLineItemTaxedPriceBuilder, com.commercetools.importapi.models.orders.CustomLineItemTaxedPriceBuilder> builder) {
         this.taxedPrice = builder.apply(com.commercetools.importapi.models.orders.CustomLineItemTaxedPriceBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     * set the value to the taxedPrice using the builder function
+     * @param builder function to build the taxedPrice value
+     * @return Builder
+     */
+
+    public CustomLineItemDraftBuilder withTaxedPrice(
+            Function<com.commercetools.importapi.models.orders.CustomLineItemTaxedPriceBuilder, com.commercetools.importapi.models.orders.CustomLineItemTaxedPrice> builder) {
+        this.taxedPrice = builder.apply(com.commercetools.importapi.models.orders.CustomLineItemTaxedPriceBuilder.of());
         return this;
     }
 
@@ -254,6 +283,28 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
+     * add the value to the state using the builder function
+     * @param builder function to build the state value
+     * @return Builder
+     */
+
+    public CustomLineItemDraftBuilder addState(
+            Function<com.commercetools.importapi.models.orders.ItemStateBuilder, com.commercetools.importapi.models.orders.ItemState> builder) {
+        return plusState(builder.apply(com.commercetools.importapi.models.orders.ItemStateBuilder.of()));
+    }
+
+    /**
+     * set the value to the state using the builder function
+     * @param builder function to build the state value
+     * @return Builder
+     */
+
+    public CustomLineItemDraftBuilder setState(
+            Function<com.commercetools.importapi.models.orders.ItemStateBuilder, com.commercetools.importapi.models.orders.ItemState> builder) {
+        return state(builder.apply(com.commercetools.importapi.models.orders.ItemStateBuilder.of()));
+    }
+
+    /**
      *  <p>References a tax category by key.</p>
      * @param builder function to build the taxCategory value
      * @return Builder
@@ -263,6 +314,18 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
             Function<com.commercetools.importapi.models.common.TaxCategoryKeyReferenceBuilder, com.commercetools.importapi.models.common.TaxCategoryKeyReferenceBuilder> builder) {
         this.taxCategory = builder.apply(com.commercetools.importapi.models.common.TaxCategoryKeyReferenceBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>References a tax category by key.</p>
+     * @param builder function to build the taxCategory value
+     * @return Builder
+     */
+
+    public CustomLineItemDraftBuilder withTaxCategory(
+            Function<com.commercetools.importapi.models.common.TaxCategoryKeyReferenceBuilder, com.commercetools.importapi.models.common.TaxCategoryKeyReference> builder) {
+        this.taxCategory = builder.apply(com.commercetools.importapi.models.common.TaxCategoryKeyReferenceBuilder.of());
         return this;
     }
 
@@ -291,6 +354,18 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
+     * set the value to the taxRate using the builder function
+     * @param builder function to build the taxRate value
+     * @return Builder
+     */
+
+    public CustomLineItemDraftBuilder withTaxRate(
+            Function<com.commercetools.importapi.models.prices.TaxRateBuilder, com.commercetools.importapi.models.prices.TaxRate> builder) {
+        this.taxRate = builder.apply(com.commercetools.importapi.models.prices.TaxRateBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the taxRate
      * @param taxRate value to be set
      * @return Builder
@@ -312,6 +387,19 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
             Function<com.commercetools.importapi.models.orders.ExternalTaxRateDraftBuilder, com.commercetools.importapi.models.orders.ExternalTaxRateDraftBuilder> builder) {
         this.externalTaxRate = builder.apply(com.commercetools.importapi.models.orders.ExternalTaxRateDraftBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     * set the value to the externalTaxRate using the builder function
+     * @param builder function to build the externalTaxRate value
+     * @return Builder
+     */
+
+    public CustomLineItemDraftBuilder withExternalTaxRate(
+            Function<com.commercetools.importapi.models.orders.ExternalTaxRateDraftBuilder, com.commercetools.importapi.models.orders.ExternalTaxRateDraft> builder) {
+        this.externalTaxRate = builder
+                .apply(com.commercetools.importapi.models.orders.ExternalTaxRateDraftBuilder.of());
         return this;
     }
 
@@ -397,6 +485,30 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
+     * add the value to the discountedPricePerQuantity using the builder function
+     * @param builder function to build the discountedPricePerQuantity value
+     * @return Builder
+     */
+
+    public CustomLineItemDraftBuilder addDiscountedPricePerQuantity(
+            Function<com.commercetools.importapi.models.orders.DiscountedLineItemPriceDraftBuilder, com.commercetools.importapi.models.orders.DiscountedLineItemPriceDraft> builder) {
+        return plusDiscountedPricePerQuantity(
+            builder.apply(com.commercetools.importapi.models.orders.DiscountedLineItemPriceDraftBuilder.of()));
+    }
+
+    /**
+     * set the value to the discountedPricePerQuantity using the builder function
+     * @param builder function to build the discountedPricePerQuantity value
+     * @return Builder
+     */
+
+    public CustomLineItemDraftBuilder setDiscountedPricePerQuantity(
+            Function<com.commercetools.importapi.models.orders.DiscountedLineItemPriceDraftBuilder, com.commercetools.importapi.models.orders.DiscountedLineItemPriceDraft> builder) {
+        return discountedPricePerQuantity(
+            builder.apply(com.commercetools.importapi.models.orders.DiscountedLineItemPriceDraftBuilder.of()));
+    }
+
+    /**
      * set the value to the shippingDetails using the builder function
      * @param builder function to build the shippingDetails value
      * @return Builder
@@ -407,6 +519,19 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
         this.shippingDetails = builder
                 .apply(com.commercetools.importapi.models.orders.ItemShippingDetailsDraftBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     * set the value to the shippingDetails using the builder function
+     * @param builder function to build the shippingDetails value
+     * @return Builder
+     */
+
+    public CustomLineItemDraftBuilder withShippingDetails(
+            Function<com.commercetools.importapi.models.orders.ItemShippingDetailsDraftBuilder, com.commercetools.importapi.models.orders.ItemShippingDetailsDraft> builder) {
+        this.shippingDetails = builder
+                .apply(com.commercetools.importapi.models.orders.ItemShippingDetailsDraftBuilder.of());
         return this;
     }
 

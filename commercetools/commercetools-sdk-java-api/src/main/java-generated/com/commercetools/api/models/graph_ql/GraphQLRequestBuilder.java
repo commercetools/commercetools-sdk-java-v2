@@ -67,6 +67,18 @@ public class GraphQLRequestBuilder implements Builder<GraphQLRequest> {
     }
 
     /**
+     * set the value to the variables using the builder function
+     * @param builder function to build the variables value
+     * @return Builder
+     */
+
+    public GraphQLRequestBuilder withVariables(
+            Function<com.commercetools.api.models.graph_ql.GraphQLVariablesMapBuilder, com.commercetools.api.models.graph_ql.GraphQLVariablesMap> builder) {
+        this.variables = builder.apply(com.commercetools.api.models.graph_ql.GraphQLVariablesMapBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the variables
      * @param variables value to be set
      * @return Builder

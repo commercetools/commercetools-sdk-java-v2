@@ -55,6 +55,18 @@ public class RemoveTaxRateChangeBuilder implements Builder<RemoveTaxRateChange> 
 
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public RemoveTaxRateChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.TaxRateBuilder, com.commercetools.history.models.common.TaxRate> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.TaxRateBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -74,6 +86,18 @@ public class RemoveTaxRateChangeBuilder implements Builder<RemoveTaxRateChange> 
     public RemoveTaxRateChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.TaxRateBuilder, com.commercetools.history.models.common.TaxRateBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.TaxRateBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public RemoveTaxRateChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.TaxRateBuilder, com.commercetools.history.models.common.TaxRate> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.TaxRateBuilder.of());
         return this;
     }
 

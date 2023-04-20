@@ -48,6 +48,19 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
 
     /**
      *  <p>The ProductVariant to which this patch is applied. The Reference to the ProductVariant with which the ProductVariantPatch is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
+     * @param builder function to build the productVariant value
+     * @return Builder
+     */
+
+    public ProductVariantPatchBuilder withProductVariant(
+            Function<com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder, com.commercetools.importapi.models.common.ProductVariantKeyReference> builder) {
+        this.productVariant = builder
+                .apply(com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The ProductVariant to which this patch is applied. The Reference to the ProductVariant with which the ProductVariantPatch is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
      * @param productVariant value to be set
      * @return Builder
      */
@@ -74,6 +87,24 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
             Function<com.commercetools.importapi.models.productvariants.AttributesBuilder, com.commercetools.importapi.models.productvariants.AttributesBuilder> builder) {
         this.attributes = builder.apply(com.commercetools.importapi.models.productvariants.AttributesBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Maps to <code>ProductVariant.attributes</code>.</p>
+     *  <ul>
+     *   <li>The referenced Attribute must be defined in an existing ProductType, or the <code>state</code> of the ImportOperation will be <code>validationFailed</code>.</li>
+     *   <li>Setting the value of a non-required Attribute to <code>null</code> will remove the Attribute.</li>
+     *   <li>Attempting to set a <code>null</code> value to a required Attribute will make the import operation fail with an InvalidOperation error.</li>
+     *   <li>Importing LocalizableTextAttributes or LocalizableTextSetAttributes follows an override pattern, meaning that omitted localized fields will be deleted, new fields will be created, and existing fields will be updated. You can also delete localized fields by setting their value to <code>null</code>.</li>
+     *  </ul>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductVariantPatchBuilder withAttributes(
+            Function<com.commercetools.importapi.models.productvariants.AttributesBuilder, com.commercetools.importapi.models.productvariants.Attributes> builder) {
+        this.attributes = builder.apply(com.commercetools.importapi.models.productvariants.AttributesBuilder.of());
         return this;
     }
 

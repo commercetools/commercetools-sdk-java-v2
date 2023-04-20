@@ -152,6 +152,28 @@ public class ProductSelectionPagedQueryResponseBuilder implements Builder<Produc
     }
 
     /**
+     *  <p>ProductSelections matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public ProductSelectionPagedQueryResponseBuilder addResults(
+            Function<com.commercetools.api.models.product_selection.ProductSelectionBuilder, com.commercetools.api.models.product_selection.ProductSelection> builder) {
+        return plusResults(builder.apply(com.commercetools.api.models.product_selection.ProductSelectionBuilder.of()));
+    }
+
+    /**
+     *  <p>ProductSelections matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public ProductSelectionPagedQueryResponseBuilder setResults(
+            Function<com.commercetools.api.models.product_selection.ProductSelectionBuilder, com.commercetools.api.models.product_selection.ProductSelection> builder) {
+        return results(builder.apply(com.commercetools.api.models.product_selection.ProductSelectionBuilder.of()));
+    }
+
+    /**
      *  <p>Number of results requested.</p>
      * @return limit
      */

@@ -95,6 +95,28 @@ public class ReturnInfoSetMessagePayloadBuilder implements Builder<ReturnInfoSet
 
     /**
      *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
+     * @param builder function to build the returnInfo value
+     * @return Builder
+     */
+
+    public ReturnInfoSetMessagePayloadBuilder addReturnInfo(
+            Function<com.commercetools.api.models.order.ReturnInfoBuilder, com.commercetools.api.models.order.ReturnInfo> builder) {
+        return plusReturnInfo(builder.apply(com.commercetools.api.models.order.ReturnInfoBuilder.of()));
+    }
+
+    /**
+     *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
+     * @param builder function to build the returnInfo value
+     * @return Builder
+     */
+
+    public ReturnInfoSetMessagePayloadBuilder setReturnInfo(
+            Function<com.commercetools.api.models.order.ReturnInfoBuilder, com.commercetools.api.models.order.ReturnInfo> builder) {
+        return returnInfo(builder.apply(com.commercetools.api.models.order.ReturnInfoBuilder.of()));
+    }
+
+    /**
+     *  <p>The ReturnInfo that was set on the Order or Order Edit.</p>
      * @return returnInfo
      */
 

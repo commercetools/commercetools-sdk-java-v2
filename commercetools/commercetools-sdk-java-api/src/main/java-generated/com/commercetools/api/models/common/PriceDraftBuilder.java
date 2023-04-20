@@ -78,6 +78,18 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
 
     /**
      *  <p>Money value of this Price.</p>
+     * @param builder function to build the value value
+     * @return Builder
+     */
+
+    public PriceDraftBuilder withValue(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+        this.value = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Money value of this Price.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -114,6 +126,19 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
 
     /**
      *  <p>Set this field if this Price is only valid for the referenced CustomerGroup.</p>
+     * @param builder function to build the customerGroup value
+     * @return Builder
+     */
+
+    public PriceDraftBuilder withCustomerGroup(
+            Function<com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder, com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier> builder) {
+        this.customerGroup = builder
+                .apply(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Set this field if this Price is only valid for the referenced CustomerGroup.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -134,6 +159,18 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
             Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
         this.channel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> Channel.</p>
+     * @param builder function to build the channel value
+     * @return Builder
+     */
+
+    public PriceDraftBuilder withChannel(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+        this.channel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of());
         return this;
     }
 
@@ -186,6 +223,24 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     public PriceDraftBuilder discounted(
             Function<com.commercetools.api.models.common.DiscountedPriceDraftBuilder, com.commercetools.api.models.common.DiscountedPriceDraftBuilder> builder) {
         this.discounted = builder.apply(com.commercetools.api.models.common.DiscountedPriceDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Set this field to add a DiscountedPrice from an <strong>external service</strong>.</p>
+     *  <p>Otherwise, Composable Commerce sets this field automatically if at least one ProductDiscount applies. The DiscountedPrice must reference a ProductDiscount with:</p>
+     *  <ul>
+     *   <li>The <code>isActive</code> flag set to <code>true</code>.</li>
+     *   <li>A ProductDiscountValue of type <code>external</code>.</li>
+     *   <li>A <code>predicate</code> that matches the ProductVariant the Price is referenced from.</li>
+     *  </ul>
+     * @param builder function to build the discounted value
+     * @return Builder
+     */
+
+    public PriceDraftBuilder withDiscounted(
+            Function<com.commercetools.api.models.common.DiscountedPriceDraftBuilder, com.commercetools.api.models.common.DiscountedPriceDraft> builder) {
+        this.discounted = builder.apply(com.commercetools.api.models.common.DiscountedPriceDraftBuilder.of());
         return this;
     }
 
@@ -273,6 +328,28 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
+     *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
+     * @param builder function to build the tiers value
+     * @return Builder
+     */
+
+    public PriceDraftBuilder addTiers(
+            Function<com.commercetools.api.models.common.PriceTierDraftBuilder, com.commercetools.api.models.common.PriceTierDraft> builder) {
+        return plusTiers(builder.apply(com.commercetools.api.models.common.PriceTierDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>Set this field to specify different Prices for certain LineItem quantities.</p>
+     * @param builder function to build the tiers value
+     * @return Builder
+     */
+
+    public PriceDraftBuilder setTiers(
+            Function<com.commercetools.api.models.common.PriceTierDraftBuilder, com.commercetools.api.models.common.PriceTierDraft> builder) {
+        return tiers(builder.apply(com.commercetools.api.models.common.PriceTierDraftBuilder.of()));
+    }
+
+    /**
      *  <p>Custom Fields for the Price.</p>
      * @param builder function to build the custom value
      * @return Builder
@@ -281,6 +358,18 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     public PriceDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the Price.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public PriceDraftBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
         return this;
     }
 

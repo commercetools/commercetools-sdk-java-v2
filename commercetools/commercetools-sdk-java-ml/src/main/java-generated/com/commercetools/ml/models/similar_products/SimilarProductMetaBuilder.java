@@ -49,6 +49,18 @@ public class SimilarProductMetaBuilder implements Builder<SimilarProductMeta> {
 
     /**
      *  <p>Localized product name used for similarity estimation.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public SimilarProductMetaBuilder withName(
+            Function<com.commercetools.ml.models.common.LocalizedStringBuilder, com.commercetools.ml.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.ml.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Localized product name used for similarity estimation.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -67,6 +79,18 @@ public class SimilarProductMetaBuilder implements Builder<SimilarProductMeta> {
     public SimilarProductMetaBuilder description(
             Function<com.commercetools.ml.models.common.LocalizedStringBuilder, com.commercetools.ml.models.common.LocalizedStringBuilder> builder) {
         this.description = builder.apply(com.commercetools.ml.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Localized product description used for similarity estimation.</p>
+     * @param builder function to build the description value
+     * @return Builder
+     */
+
+    public SimilarProductMetaBuilder withDescription(
+            Function<com.commercetools.ml.models.common.LocalizedStringBuilder, com.commercetools.ml.models.common.LocalizedString> builder) {
+        this.description = builder.apply(com.commercetools.ml.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -91,6 +115,18 @@ public class SimilarProductMetaBuilder implements Builder<SimilarProductMeta> {
     public SimilarProductMetaBuilder price(
             Function<com.commercetools.ml.models.common.MoneyBuilder, com.commercetools.ml.models.common.MoneyBuilder> builder) {
         this.price = builder.apply(com.commercetools.ml.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>The product price in cents using the currency defined in SimilarProductSearchRequest If multiple prices exist, the median value is taken as a representative amount.</p>
+     * @param builder function to build the price value
+     * @return Builder
+     */
+
+    public SimilarProductMetaBuilder withPrice(
+            Function<com.commercetools.ml.models.common.MoneyBuilder, com.commercetools.ml.models.common.Money> builder) {
+        this.price = builder.apply(com.commercetools.ml.models.common.MoneyBuilder.of());
         return this;
     }
 

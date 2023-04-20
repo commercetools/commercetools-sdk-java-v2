@@ -40,6 +40,19 @@ public class SimilarProductSearchRequestMetaBuilder implements Builder<SimilarPr
 
     /**
      *  <p>The SimilarityMeasures used in this search.</p>
+     * @param builder function to build the similarityMeasures value
+     * @return Builder
+     */
+
+    public SimilarProductSearchRequestMetaBuilder withSimilarityMeasures(
+            Function<com.commercetools.ml.models.similar_products.SimilarityMeasuresBuilder, com.commercetools.ml.models.similar_products.SimilarityMeasures> builder) {
+        this.similarityMeasures = builder
+                .apply(com.commercetools.ml.models.similar_products.SimilarityMeasuresBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The SimilarityMeasures used in this search.</p>
      * @param similarityMeasures value to be set
      * @return Builder
      */

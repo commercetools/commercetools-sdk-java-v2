@@ -111,6 +111,18 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
+     * @return Builder
+     */
+
+    public AttributeGroupBuilder withLastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -130,6 +142,18 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
     public AttributeGroupBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
+     * @return Builder
+     */
+
+    public AttributeGroupBuilder withCreatedBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
 
@@ -158,6 +182,18 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
 
     /**
      *  <p>Name of the AttributeGroup.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public AttributeGroupBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Name of the AttributeGroup.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -176,6 +212,18 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
     public AttributeGroupBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Description of the AttributeGroup.</p>
+     * @param builder function to build the description value
+     * @return Builder
+     */
+
+    public AttributeGroupBuilder withDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -258,6 +306,29 @@ public class AttributeGroupBuilder implements Builder<AttributeGroup> {
         this.attributes.add(
             builder.apply(com.commercetools.api.models.attribute_group.AttributeReferenceBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Attributes with unique values.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public AttributeGroupBuilder addAttributes(
+            Function<com.commercetools.api.models.attribute_group.AttributeReferenceBuilder, com.commercetools.api.models.attribute_group.AttributeReference> builder) {
+        return plusAttributes(
+            builder.apply(com.commercetools.api.models.attribute_group.AttributeReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p>Attributes with unique values.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public AttributeGroupBuilder setAttributes(
+            Function<com.commercetools.api.models.attribute_group.AttributeReferenceBuilder, com.commercetools.api.models.attribute_group.AttributeReference> builder) {
+        return attributes(builder.apply(com.commercetools.api.models.attribute_group.AttributeReferenceBuilder.of()));
     }
 
     /**

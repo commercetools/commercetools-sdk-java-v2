@@ -40,6 +40,18 @@ public class StoreSetNameActionBuilder implements Builder<StoreSetNameAction> {
 
     /**
      *  <p>Value to set.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public StoreSetNameActionBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to set.</p>
      * @param name value to be set
      * @return Builder
      */

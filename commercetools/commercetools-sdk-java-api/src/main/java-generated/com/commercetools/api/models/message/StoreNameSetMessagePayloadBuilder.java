@@ -43,6 +43,18 @@ public class StoreNameSetMessagePayloadBuilder implements Builder<StoreNameSetMe
 
     /**
      *  <p>Name of the Store set during the Set Name update action.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public StoreNameSetMessagePayloadBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Name of the Store set during the Set Name update action.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -118,6 +130,28 @@ public class StoreNameSetMessagePayloadBuilder implements Builder<StoreNameSetMe
         this.nameAllLocales = new ArrayList<>();
         this.nameAllLocales.add(builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Names set for the Store in different locales.</p>
+     * @param builder function to build the nameAllLocales value
+     * @return Builder
+     */
+
+    public StoreNameSetMessagePayloadBuilder addNameAllLocales(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        return plusNameAllLocales(builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()));
+    }
+
+    /**
+     *  <p>Names set for the Store in different locales.</p>
+     * @param builder function to build the nameAllLocales value
+     * @return Builder
+     */
+
+    public StoreNameSetMessagePayloadBuilder setNameAllLocales(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        return nameAllLocales(builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()));
     }
 
     /**

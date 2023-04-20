@@ -40,6 +40,18 @@ public class MyCartSetShippingAddressActionBuilder implements Builder<MyCartSetS
 
     /**
      *  <p>Value to set. If not set, the shipping address is unset, and the <code>taxedPrice</code> and <code>taxRate</code> are unset in all Line Items.</p>
+     * @param builder function to build the address value
+     * @return Builder
+     */
+
+    public MyCartSetShippingAddressActionBuilder withAddress(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddress> builder) {
+        this.address = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to set. If not set, the shipping address is unset, and the <code>taxedPrice</code> and <code>taxRate</code> are unset in all Line Items.</p>
      * @param address value to be set
      * @return Builder
      */

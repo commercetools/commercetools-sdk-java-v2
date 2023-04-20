@@ -97,6 +97,30 @@ public class StoreSetDistributionChannelsActionBuilder implements Builder<StoreS
 
     /**
      *  <p>Value to set. If not defined, the Store's <code>distributionChannels</code> are unset.</p>
+     * @param builder function to build the distributionChannels value
+     * @return Builder
+     */
+
+    public StoreSetDistributionChannelsActionBuilder addDistributionChannels(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+        return plusDistributionChannels(
+            builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()));
+    }
+
+    /**
+     *  <p>Value to set. If not defined, the Store's <code>distributionChannels</code> are unset.</p>
+     * @param builder function to build the distributionChannels value
+     * @return Builder
+     */
+
+    public StoreSetDistributionChannelsActionBuilder setDistributionChannels(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+        return distributionChannels(
+            builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()));
+    }
+
+    /**
+     *  <p>Value to set. If not defined, the Store's <code>distributionChannels</code> are unset.</p>
      * @return distributionChannels
      */
 

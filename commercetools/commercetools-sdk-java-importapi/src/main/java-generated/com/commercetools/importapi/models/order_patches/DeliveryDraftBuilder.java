@@ -98,6 +98,28 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
+     * add the value to the items using the builder function
+     * @param builder function to build the items value
+     * @return Builder
+     */
+
+    public DeliveryDraftBuilder addItems(
+            Function<com.commercetools.importapi.models.orders.DeliveryItemBuilder, com.commercetools.importapi.models.orders.DeliveryItem> builder) {
+        return plusItems(builder.apply(com.commercetools.importapi.models.orders.DeliveryItemBuilder.of()));
+    }
+
+    /**
+     * set the value to the items using the builder function
+     * @param builder function to build the items value
+     * @return Builder
+     */
+
+    public DeliveryDraftBuilder setItems(
+            Function<com.commercetools.importapi.models.orders.DeliveryItemBuilder, com.commercetools.importapi.models.orders.DeliveryItem> builder) {
+        return items(builder.apply(com.commercetools.importapi.models.orders.DeliveryItemBuilder.of()));
+    }
+
+    /**
      * set the value to the address using the builder function
      * @param builder function to build the address value
      * @return Builder
@@ -106,6 +128,18 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     public DeliveryDraftBuilder address(
             Function<com.commercetools.importapi.models.common.AddressBuilder, com.commercetools.importapi.models.common.AddressBuilder> builder) {
         this.address = builder.apply(com.commercetools.importapi.models.common.AddressBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the address using the builder function
+     * @param builder function to build the address value
+     * @return Builder
+     */
+
+    public DeliveryDraftBuilder withAddress(
+            Function<com.commercetools.importapi.models.common.AddressBuilder, com.commercetools.importapi.models.common.Address> builder) {
+        this.address = builder.apply(com.commercetools.importapi.models.common.AddressBuilder.of());
         return this;
     }
 
@@ -187,6 +221,29 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
         this.parcels.add(
             builder.apply(com.commercetools.importapi.models.order_patches.DeliveryParcelDraftBuilder.of()).build());
         return this;
+    }
+
+    /**
+     * add the value to the parcels using the builder function
+     * @param builder function to build the parcels value
+     * @return Builder
+     */
+
+    public DeliveryDraftBuilder addParcels(
+            Function<com.commercetools.importapi.models.order_patches.DeliveryParcelDraftBuilder, com.commercetools.importapi.models.order_patches.DeliveryParcelDraft> builder) {
+        return plusParcels(
+            builder.apply(com.commercetools.importapi.models.order_patches.DeliveryParcelDraftBuilder.of()));
+    }
+
+    /**
+     * set the value to the parcels using the builder function
+     * @param builder function to build the parcels value
+     * @return Builder
+     */
+
+    public DeliveryDraftBuilder setParcels(
+            Function<com.commercetools.importapi.models.order_patches.DeliveryParcelDraftBuilder, com.commercetools.importapi.models.order_patches.DeliveryParcelDraft> builder) {
+        return parcels(builder.apply(com.commercetools.importapi.models.order_patches.DeliveryParcelDraftBuilder.of()));
     }
 
     /**

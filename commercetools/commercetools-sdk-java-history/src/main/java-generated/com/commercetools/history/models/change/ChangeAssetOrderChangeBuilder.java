@@ -111,6 +111,28 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
     }
 
     /**
+     * add the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public ChangeAssetOrderChangeBuilder addPreviousValue(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+        return plusPreviousValue(builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()));
+    }
+
+    /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public ChangeAssetOrderChangeBuilder setPreviousValue(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+        return previousValue(builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()));
+    }
+
+    /**
      * set values to the nextValue
      * @param nextValue value to be set
      * @return Builder
@@ -175,6 +197,28 @@ public class ChangeAssetOrderChangeBuilder implements Builder<ChangeAssetOrderCh
         this.nextValue = new ArrayList<>();
         this.nextValue.add(builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build());
         return this;
+    }
+
+    /**
+     * add the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public ChangeAssetOrderChangeBuilder addNextValue(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+        return plusNextValue(builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()));
+    }
+
+    /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public ChangeAssetOrderChangeBuilder setNextValue(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+        return nextValue(builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()));
     }
 
     /**

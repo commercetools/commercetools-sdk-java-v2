@@ -52,6 +52,18 @@ public class RemoveDiscountCodeChangeBuilder implements Builder<RemoveDiscountCo
     }
 
     /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public RemoveDiscountCodeChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.DiscountCodeInfoBuilder, com.commercetools.history.models.common.DiscountCodeInfo> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.DiscountCodeInfoBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder

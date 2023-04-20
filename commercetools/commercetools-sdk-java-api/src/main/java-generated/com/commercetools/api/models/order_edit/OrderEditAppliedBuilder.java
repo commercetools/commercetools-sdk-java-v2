@@ -55,6 +55,18 @@ public class OrderEditAppliedBuilder implements Builder<OrderEditApplied> {
     }
 
     /**
+     * set the value to the excerptBeforeEdit using the builder function
+     * @param builder function to build the excerptBeforeEdit value
+     * @return Builder
+     */
+
+    public OrderEditAppliedBuilder withExcerptBeforeEdit(
+            Function<com.commercetools.api.models.order_edit.OrderExcerptBuilder, com.commercetools.api.models.order_edit.OrderExcerpt> builder) {
+        this.excerptBeforeEdit = builder.apply(com.commercetools.api.models.order_edit.OrderExcerptBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the excerptBeforeEdit
      * @param excerptBeforeEdit value to be set
      * @return Builder
@@ -75,6 +87,18 @@ public class OrderEditAppliedBuilder implements Builder<OrderEditApplied> {
     public OrderEditAppliedBuilder excerptAfterEdit(
             Function<com.commercetools.api.models.order_edit.OrderExcerptBuilder, com.commercetools.api.models.order_edit.OrderExcerptBuilder> builder) {
         this.excerptAfterEdit = builder.apply(com.commercetools.api.models.order_edit.OrderExcerptBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the excerptAfterEdit using the builder function
+     * @param builder function to build the excerptAfterEdit value
+     * @return Builder
+     */
+
+    public OrderEditAppliedBuilder withExcerptAfterEdit(
+            Function<com.commercetools.api.models.order_edit.OrderExcerptBuilder, com.commercetools.api.models.order_edit.OrderExcerpt> builder) {
+        this.excerptAfterEdit = builder.apply(com.commercetools.api.models.order_edit.OrderExcerptBuilder.of());
         return this;
     }
 

@@ -38,6 +38,18 @@ public class BusinessUnitAddAssociateActionBuilder implements Builder<BusinessUn
 
     /**
      *  <p>The Associate to add.</p>
+     * @param builder function to build the associate value
+     * @return Builder
+     */
+
+    public BusinessUnitAddAssociateActionBuilder withAssociate(
+            Function<com.commercetools.api.models.business_unit.AssociateDraftBuilder, com.commercetools.api.models.business_unit.AssociateDraft> builder) {
+        this.associate = builder.apply(com.commercetools.api.models.business_unit.AssociateDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The Associate to add.</p>
      * @param associate value to be set
      * @return Builder
      */

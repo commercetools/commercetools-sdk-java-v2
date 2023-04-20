@@ -98,6 +98,18 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
+     * set the value to the shippingRate using the builder function
+     * @param builder function to build the shippingRate value
+     * @return Builder
+     */
+
+    public ShippingInfoImportDraftBuilder withShippingRate(
+            Function<com.commercetools.importapi.models.orders.ShippingRateDraftBuilder, com.commercetools.importapi.models.orders.ShippingRateDraft> builder) {
+        this.shippingRate = builder.apply(com.commercetools.importapi.models.orders.ShippingRateDraftBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the shippingRate
      * @param shippingRate value to be set
      * @return Builder
@@ -118,6 +130,18 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     public ShippingInfoImportDraftBuilder taxRate(
             Function<com.commercetools.importapi.models.prices.TaxRateBuilder, com.commercetools.importapi.models.prices.TaxRateBuilder> builder) {
         this.taxRate = builder.apply(com.commercetools.importapi.models.prices.TaxRateBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the taxRate using the builder function
+     * @param builder function to build the taxRate value
+     * @return Builder
+     */
+
+    public ShippingInfoImportDraftBuilder withTaxRate(
+            Function<com.commercetools.importapi.models.prices.TaxRateBuilder, com.commercetools.importapi.models.prices.TaxRate> builder) {
+        this.taxRate = builder.apply(com.commercetools.importapi.models.prices.TaxRateBuilder.of());
         return this;
     }
 
@@ -148,6 +172,18 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
 
     /**
      *  <p>References a tax category by key.</p>
+     * @param builder function to build the taxCategory value
+     * @return Builder
+     */
+
+    public ShippingInfoImportDraftBuilder withTaxCategory(
+            Function<com.commercetools.importapi.models.common.TaxCategoryKeyReferenceBuilder, com.commercetools.importapi.models.common.TaxCategoryKeyReference> builder) {
+        this.taxCategory = builder.apply(com.commercetools.importapi.models.common.TaxCategoryKeyReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>References a tax category by key.</p>
      * @param taxCategory value to be set
      * @return Builder
      */
@@ -169,6 +205,19 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
         this.shippingMethod = builder
                 .apply(com.commercetools.importapi.models.common.ShippingMethodKeyReferenceBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>References a shipping method by key.</p>
+     * @param builder function to build the shippingMethod value
+     * @return Builder
+     */
+
+    public ShippingInfoImportDraftBuilder withShippingMethod(
+            Function<com.commercetools.importapi.models.common.ShippingMethodKeyReferenceBuilder, com.commercetools.importapi.models.common.ShippingMethodKeyReference> builder) {
+        this.shippingMethod = builder
+                .apply(com.commercetools.importapi.models.common.ShippingMethodKeyReferenceBuilder.of());
         return this;
     }
 
@@ -252,6 +301,28 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
+     *  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>
+     * @param builder function to build the deliveries value
+     * @return Builder
+     */
+
+    public ShippingInfoImportDraftBuilder addDeliveries(
+            Function<com.commercetools.importapi.models.orders.DeliveryBuilder, com.commercetools.importapi.models.orders.Delivery> builder) {
+        return plusDeliveries(builder.apply(com.commercetools.importapi.models.orders.DeliveryBuilder.of()));
+    }
+
+    /**
+     *  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>
+     * @param builder function to build the deliveries value
+     * @return Builder
+     */
+
+    public ShippingInfoImportDraftBuilder setDeliveries(
+            Function<com.commercetools.importapi.models.orders.DeliveryBuilder, com.commercetools.importapi.models.orders.Delivery> builder) {
+        return deliveries(builder.apply(com.commercetools.importapi.models.orders.DeliveryBuilder.of()));
+    }
+
+    /**
      * set the value to the discountedPrice using the builder function
      * @param builder function to build the discountedPrice value
      * @return Builder
@@ -262,6 +333,19 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
         this.discountedPrice = builder
                 .apply(com.commercetools.importapi.models.orders.DiscountedLineItemPriceDraftBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     * set the value to the discountedPrice using the builder function
+     * @param builder function to build the discountedPrice value
+     * @return Builder
+     */
+
+    public ShippingInfoImportDraftBuilder withDiscountedPrice(
+            Function<com.commercetools.importapi.models.orders.DiscountedLineItemPriceDraftBuilder, com.commercetools.importapi.models.orders.DiscountedLineItemPriceDraft> builder) {
+        this.discountedPrice = builder
+                .apply(com.commercetools.importapi.models.orders.DiscountedLineItemPriceDraftBuilder.of());
         return this;
     }
 

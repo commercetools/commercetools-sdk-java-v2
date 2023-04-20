@@ -66,6 +66,18 @@ public class GraphQLDuplicateVariantValuesErrorBuilder implements Builder<GraphQ
 
     /**
      *  <p>Every Product Variant must have a distinct combination of SKU, prices, and custom Attribute values.</p>
+     * @param builder function to build the variantValues value
+     * @return Builder
+     */
+
+    public GraphQLDuplicateVariantValuesErrorBuilder withVariantValues(
+            Function<com.commercetools.api.models.error.VariantValuesBuilder, com.commercetools.api.models.error.VariantValues> builder) {
+        this.variantValues = builder.apply(com.commercetools.api.models.error.VariantValuesBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Every Product Variant must have a distinct combination of SKU, prices, and custom Attribute values.</p>
      * @param variantValues value to be set
      * @return Builder
      */

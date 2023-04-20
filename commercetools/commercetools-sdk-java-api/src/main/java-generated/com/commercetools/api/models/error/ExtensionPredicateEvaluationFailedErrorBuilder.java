@@ -81,6 +81,18 @@ public class ExtensionPredicateEvaluationFailedErrorBuilder
 
     /**
      *  <p>Details about the API Extension that was involved in the error.</p>
+     * @param builder function to build the errorByExtension value
+     * @return Builder
+     */
+
+    public ExtensionPredicateEvaluationFailedErrorBuilder withErrorByExtension(
+            Function<com.commercetools.api.models.error.ErrorByExtensionBuilder, com.commercetools.api.models.error.ErrorByExtension> builder) {
+        this.errorByExtension = builder.apply(com.commercetools.api.models.error.ErrorByExtensionBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Details about the API Extension that was involved in the error.</p>
      * @param errorByExtension value to be set
      * @return Builder
      */

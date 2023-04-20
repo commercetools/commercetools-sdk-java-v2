@@ -54,6 +54,18 @@ public class StandalonePriceReferenceBuilder implements Builder<StandalonePriceR
 
     /**
      *  <p>Contains the representation of the expanded StandalonePrice. Only present in responses to requests with Reference Expansion for StandalonePrice.</p>
+     * @param builder function to build the obj value
+     * @return Builder
+     */
+
+    public StandalonePriceReferenceBuilder withObj(
+            Function<com.commercetools.api.models.standalone_price.StandalonePriceBuilder, com.commercetools.api.models.standalone_price.StandalonePrice> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.standalone_price.StandalonePriceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Contains the representation of the expanded StandalonePrice. Only present in responses to requests with Reference Expansion for StandalonePrice.</p>
      * @param obj value to be set
      * @return Builder
      */

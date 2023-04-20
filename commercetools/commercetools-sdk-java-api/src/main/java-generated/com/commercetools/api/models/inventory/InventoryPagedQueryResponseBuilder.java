@@ -150,6 +150,28 @@ public class InventoryPagedQueryResponseBuilder implements Builder<InventoryPage
     }
 
     /**
+     *  <p>Inventory entries matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public InventoryPagedQueryResponseBuilder addResults(
+            Function<com.commercetools.api.models.inventory.InventoryEntryBuilder, com.commercetools.api.models.inventory.InventoryEntry> builder) {
+        return plusResults(builder.apply(com.commercetools.api.models.inventory.InventoryEntryBuilder.of()));
+    }
+
+    /**
+     *  <p>Inventory entries matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public InventoryPagedQueryResponseBuilder setResults(
+            Function<com.commercetools.api.models.inventory.InventoryEntryBuilder, com.commercetools.api.models.inventory.InventoryEntry> builder) {
+        return results(builder.apply(com.commercetools.api.models.inventory.InventoryEntryBuilder.of()));
+    }
+
+    /**
      *  <p>Number of results requested.</p>
      * @return limit
      */

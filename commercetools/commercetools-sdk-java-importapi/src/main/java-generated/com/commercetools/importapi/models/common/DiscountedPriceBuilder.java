@@ -65,6 +65,19 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
 
     /**
      *  <p>Reference to a ProductDiscount.</p>
+     * @param builder function to build the discount value
+     * @return Builder
+     */
+
+    public DiscountedPriceBuilder withDiscount(
+            Function<com.commercetools.importapi.models.common.ProductDiscountKeyReferenceBuilder, com.commercetools.importapi.models.common.ProductDiscountKeyReference> builder) {
+        this.discount = builder
+                .apply(com.commercetools.importapi.models.common.ProductDiscountKeyReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Reference to a ProductDiscount.</p>
      * @param discount value to be set
      * @return Builder
      */

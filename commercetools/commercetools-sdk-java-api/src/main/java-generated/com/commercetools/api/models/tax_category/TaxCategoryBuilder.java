@@ -111,6 +111,18 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
+     * @return Builder
+     */
+
+    public TaxCategoryBuilder withLastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -130,6 +142,18 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
     public TaxCategoryBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
+     * @return Builder
+     */
+
+    public TaxCategoryBuilder withCreatedBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
 
@@ -228,6 +252,28 @@ public class TaxCategoryBuilder implements Builder<TaxCategory> {
         this.rates = new ArrayList<>();
         this.rates.add(builder.apply(com.commercetools.api.models.tax_category.TaxRateBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID.</p>
+     * @param builder function to build the rates value
+     * @return Builder
+     */
+
+    public TaxCategoryBuilder addRates(
+            Function<com.commercetools.api.models.tax_category.TaxRateBuilder, com.commercetools.api.models.tax_category.TaxRate> builder) {
+        return plusRates(builder.apply(com.commercetools.api.models.tax_category.TaxRateBuilder.of()));
+    }
+
+    /**
+     *  <p>Tax rates and subrates of states and countries. Each TaxRate in the array has a unique ID.</p>
+     * @param builder function to build the rates value
+     * @return Builder
+     */
+
+    public TaxCategoryBuilder setRates(
+            Function<com.commercetools.api.models.tax_category.TaxRateBuilder, com.commercetools.api.models.tax_category.TaxRate> builder) {
+        return rates(builder.apply(com.commercetools.api.models.tax_category.TaxRateBuilder.of()));
     }
 
     /**

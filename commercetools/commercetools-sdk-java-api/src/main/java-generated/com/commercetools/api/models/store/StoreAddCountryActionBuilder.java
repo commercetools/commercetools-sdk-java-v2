@@ -38,6 +38,18 @@ public class StoreAddCountryActionBuilder implements Builder<StoreAddCountryActi
 
     /**
      *  <p>Value to append to <code>countries</code>.</p>
+     * @param builder function to build the country value
+     * @return Builder
+     */
+
+    public StoreAddCountryActionBuilder withCountry(
+            Function<com.commercetools.api.models.store_country.StoreCountryBuilder, com.commercetools.api.models.store_country.StoreCountry> builder) {
+        this.country = builder.apply(com.commercetools.api.models.store_country.StoreCountryBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to append to <code>countries</code>.</p>
      * @param country value to be set
      * @return Builder
      */

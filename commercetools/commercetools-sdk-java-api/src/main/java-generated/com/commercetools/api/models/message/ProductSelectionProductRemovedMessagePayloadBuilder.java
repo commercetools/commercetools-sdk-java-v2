@@ -39,6 +39,18 @@ public class ProductSelectionProductRemovedMessagePayloadBuilder
 
     /**
      *  <p>Product that was removed from the Product Selection.</p>
+     * @param builder function to build the product value
+     * @return Builder
+     */
+
+    public ProductSelectionProductRemovedMessagePayloadBuilder withProduct(
+            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReference> builder) {
+        this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Product that was removed from the Product Selection.</p>
      * @param product value to be set
      * @return Builder
      */

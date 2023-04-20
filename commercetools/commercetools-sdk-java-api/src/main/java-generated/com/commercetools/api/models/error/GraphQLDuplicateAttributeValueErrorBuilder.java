@@ -66,6 +66,18 @@ public class GraphQLDuplicateAttributeValueErrorBuilder implements Builder<Graph
 
     /**
      *  <p>Conflicting Attributes.</p>
+     * @param builder function to build the attribute value
+     * @return Builder
+     */
+
+    public GraphQLDuplicateAttributeValueErrorBuilder withAttribute(
+            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.Attribute> builder) {
+        this.attribute = builder.apply(com.commercetools.api.models.product.AttributeBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Conflicting Attributes.</p>
      * @param attribute value to be set
      * @return Builder
      */

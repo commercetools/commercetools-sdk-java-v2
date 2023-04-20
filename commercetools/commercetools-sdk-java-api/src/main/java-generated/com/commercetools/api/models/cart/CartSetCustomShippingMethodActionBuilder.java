@@ -61,6 +61,18 @@ public class CartSetCustomShippingMethodActionBuilder implements Builder<CartSet
 
     /**
      *  <p>Determines the shipping price.</p>
+     * @param builder function to build the shippingRate value
+     * @return Builder
+     */
+
+    public CartSetCustomShippingMethodActionBuilder withShippingRate(
+            Function<com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder, com.commercetools.api.models.shipping_method.ShippingRateDraft> builder) {
+        this.shippingRate = builder.apply(com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Determines the shipping price.</p>
      * @param shippingRate value to be set
      * @return Builder
      */
@@ -87,6 +99,19 @@ public class CartSetCustomShippingMethodActionBuilder implements Builder<CartSet
 
     /**
      *  <p>Tax Category used to determine the Tax Rate when the Cart has the <code>Platform</code> TaxMode.</p>
+     * @param builder function to build the taxCategory value
+     * @return Builder
+     */
+
+    public CartSetCustomShippingMethodActionBuilder withTaxCategory(
+            Function<com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder, com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier> builder) {
+        this.taxCategory = builder
+                .apply(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Tax Category used to determine the Tax Rate when the Cart has the <code>Platform</code> TaxMode.</p>
      * @param taxCategory value to be set
      * @return Builder
      */
@@ -107,6 +132,18 @@ public class CartSetCustomShippingMethodActionBuilder implements Builder<CartSet
             Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
         this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>External Tax Rate for the <code>shippingRate</code> to be set if the Cart has the <code>External</code> TaxMode.</p>
+     * @param builder function to build the externalTaxRate value
+     * @return Builder
+     */
+
+    public CartSetCustomShippingMethodActionBuilder withExternalTaxRate(
+            Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraft> builder) {
+        this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of());
         return this;
     }
 

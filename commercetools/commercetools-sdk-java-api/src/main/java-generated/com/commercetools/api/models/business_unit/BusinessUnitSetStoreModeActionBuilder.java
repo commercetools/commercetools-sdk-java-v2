@@ -109,6 +109,28 @@ public class BusinessUnitSetStoreModeActionBuilder implements Builder<BusinessUn
     }
 
     /**
+     *  <p>Set the Stores the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public BusinessUnitSetStoreModeActionBuilder addStores(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifier> builder) {
+        return plusStores(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()));
+    }
+
+    /**
+     *  <p>Set the Stores the Business Unit is associated with. Can only be set if <code>storeMode</code> is <code>Explicit</code>.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public BusinessUnitSetStoreModeActionBuilder setStores(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifier> builder) {
+        return stores(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()));
+    }
+
+    /**
      *  <p>Set to <code>Explicit</code> to specify Stores for the Business Unit. Set to <code>FromParent</code> to inherit Stores from a parent.</p>
      * @return storeMode
      */

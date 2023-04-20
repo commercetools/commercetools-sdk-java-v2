@@ -166,6 +166,28 @@ public class TaxRateDraftBuilder implements Builder<TaxRateDraft> {
     }
 
     /**
+     *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
+     * @param builder function to build the subRates value
+     * @return Builder
+     */
+
+    public TaxRateDraftBuilder addSubRates(
+            Function<com.commercetools.api.models.tax_category.SubRateBuilder, com.commercetools.api.models.tax_category.SubRate> builder) {
+        return plusSubRates(builder.apply(com.commercetools.api.models.tax_category.SubRateBuilder.of()));
+    }
+
+    /**
+     *  <p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes).</p>
+     * @param builder function to build the subRates value
+     * @return Builder
+     */
+
+    public TaxRateDraftBuilder setSubRates(
+            Function<com.commercetools.api.models.tax_category.SubRateBuilder, com.commercetools.api.models.tax_category.SubRate> builder) {
+        return subRates(builder.apply(com.commercetools.api.models.tax_category.SubRateBuilder.of()));
+    }
+
+    /**
      *  <p>User-defined unique identifier of the TaxRate.</p>
      * @param key value to be set
      * @return Builder

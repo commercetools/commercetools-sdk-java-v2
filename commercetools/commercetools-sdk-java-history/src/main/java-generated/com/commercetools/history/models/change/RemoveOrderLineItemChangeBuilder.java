@@ -54,6 +54,18 @@ public class RemoveOrderLineItemChangeBuilder implements Builder<RemoveOrderLine
     }
 
     /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public RemoveOrderLineItemChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.LineItemBuilder, com.commercetools.history.models.common.LineItem> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.LineItemBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
@@ -74,6 +86,18 @@ public class RemoveOrderLineItemChangeBuilder implements Builder<RemoveOrderLine
     public RemoveOrderLineItemChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.LineItemBuilder, com.commercetools.history.models.common.LineItemBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.LineItemBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public RemoveOrderLineItemChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.LineItemBuilder, com.commercetools.history.models.common.LineItem> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.LineItemBuilder.of());
         return this;
     }
 

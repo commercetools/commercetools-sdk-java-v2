@@ -108,6 +108,28 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
+     *  <p>Embedded Prices of the ProductVariant.</p>
+     * @param builder function to build the prices value
+     * @return Builder
+     */
+
+    public VariantValuesBuilder addPrices(
+            Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraft> builder) {
+        return plusPrices(builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>Embedded Prices of the ProductVariant.</p>
+     * @param builder function to build the prices value
+     * @return Builder
+     */
+
+    public VariantValuesBuilder setPrices(
+            Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraft> builder) {
+        return prices(builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of()));
+    }
+
+    /**
      *  <p>Attributes of the ProductVariant.</p>
      * @param attributes value to be set
      * @return Builder
@@ -170,6 +192,28 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
         this.attributes = new ArrayList<>();
         this.attributes.add(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Attributes of the ProductVariant.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public VariantValuesBuilder addAttributes(
+            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.Attribute> builder) {
+        return plusAttributes(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()));
+    }
+
+    /**
+     *  <p>Attributes of the ProductVariant.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public VariantValuesBuilder setAttributes(
+            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.Attribute> builder) {
+        return attributes(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()));
     }
 
     /**

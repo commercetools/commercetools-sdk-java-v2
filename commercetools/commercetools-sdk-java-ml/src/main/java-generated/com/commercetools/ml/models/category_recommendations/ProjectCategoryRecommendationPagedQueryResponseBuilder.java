@@ -142,6 +142,30 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
     }
 
     /**
+     * add the value to the results using the builder function
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public ProjectCategoryRecommendationPagedQueryResponseBuilder addResults(
+            Function<com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationBuilder, com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendation> builder) {
+        return plusResults(builder
+                .apply(com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationBuilder.of()));
+    }
+
+    /**
+     * set the value to the results using the builder function
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public ProjectCategoryRecommendationPagedQueryResponseBuilder setResults(
+            Function<com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationBuilder, com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendation> builder) {
+        return results(builder
+                .apply(com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationBuilder.of()));
+    }
+
+    /**
      * set the value to the meta using the builder function
      * @param builder function to build the meta value
      * @return Builder
@@ -153,6 +177,19 @@ public class ProjectCategoryRecommendationPagedQueryResponseBuilder
                 .apply(
                     com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMetaBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     * set the value to the meta using the builder function
+     * @param builder function to build the meta value
+     * @return Builder
+     */
+
+    public ProjectCategoryRecommendationPagedQueryResponseBuilder withMeta(
+            Function<com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMetaBuilder, com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMeta> builder) {
+        this.meta = builder.apply(
+            com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMetaBuilder.of());
         return this;
     }
 

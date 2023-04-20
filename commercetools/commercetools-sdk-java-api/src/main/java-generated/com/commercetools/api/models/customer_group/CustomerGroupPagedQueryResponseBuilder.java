@@ -150,6 +150,28 @@ public class CustomerGroupPagedQueryResponseBuilder implements Builder<CustomerG
     }
 
     /**
+     *  <p>CustomerGroups matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public CustomerGroupPagedQueryResponseBuilder addResults(
+            Function<com.commercetools.api.models.customer_group.CustomerGroupBuilder, com.commercetools.api.models.customer_group.CustomerGroup> builder) {
+        return plusResults(builder.apply(com.commercetools.api.models.customer_group.CustomerGroupBuilder.of()));
+    }
+
+    /**
+     *  <p>CustomerGroups matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public CustomerGroupPagedQueryResponseBuilder setResults(
+            Function<com.commercetools.api.models.customer_group.CustomerGroupBuilder, com.commercetools.api.models.customer_group.CustomerGroup> builder) {
+        return results(builder.apply(com.commercetools.api.models.customer_group.CustomerGroupBuilder.of()));
+    }
+
+    /**
      *  <p>Number of results requested.</p>
      * @return limit
      */

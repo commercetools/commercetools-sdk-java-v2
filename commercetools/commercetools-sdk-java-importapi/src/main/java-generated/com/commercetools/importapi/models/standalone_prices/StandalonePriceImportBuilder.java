@@ -128,6 +128,19 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Sets the CustomerGroup for which this Price is valid.</p>
+     * @param builder function to build the customerGroup value
+     * @return Builder
+     */
+
+    public StandalonePriceImportBuilder withCustomerGroup(
+            Function<com.commercetools.importapi.models.common.CustomerGroupKeyReferenceBuilder, com.commercetools.importapi.models.common.CustomerGroupKeyReference> builder) {
+        this.customerGroup = builder
+                .apply(com.commercetools.importapi.models.common.CustomerGroupKeyReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Sets the CustomerGroup for which this Price is valid.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -147,6 +160,18 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     public StandalonePriceImportBuilder channel(
             Function<com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder, com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder> builder) {
         this.channel = builder.apply(com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Sets the product distribution Channel for which this Price is valid</p>
+     * @param builder function to build the channel value
+     * @return Builder
+     */
+
+    public StandalonePriceImportBuilder withChannel(
+            Function<com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder, com.commercetools.importapi.models.common.ChannelKeyReference> builder) {
+        this.channel = builder.apply(com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder.of());
         return this;
     }
 
@@ -252,6 +277,28 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
+     *  <p>Sets price tiers.</p>
+     * @param builder function to build the tiers value
+     * @return Builder
+     */
+
+    public StandalonePriceImportBuilder addTiers(
+            Function<com.commercetools.importapi.models.common.PriceTierBuilder, com.commercetools.importapi.models.common.PriceTier> builder) {
+        return plusTiers(builder.apply(com.commercetools.importapi.models.common.PriceTierBuilder.of()));
+    }
+
+    /**
+     *  <p>Sets price tiers.</p>
+     * @param builder function to build the tiers value
+     * @return Builder
+     */
+
+    public StandalonePriceImportBuilder setTiers(
+            Function<com.commercetools.importapi.models.common.PriceTierBuilder, com.commercetools.importapi.models.common.PriceTier> builder) {
+        return tiers(builder.apply(com.commercetools.importapi.models.common.PriceTierBuilder.of()));
+    }
+
+    /**
      *  <p>Sets a discounted price for this Price that is different from the base price with value.</p>
      * @param builder function to build the discounted value
      * @return Builder
@@ -260,6 +307,18 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     public StandalonePriceImportBuilder discounted(
             Function<com.commercetools.importapi.models.common.DiscountedPriceBuilder, com.commercetools.importapi.models.common.DiscountedPriceBuilder> builder) {
         this.discounted = builder.apply(com.commercetools.importapi.models.common.DiscountedPriceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Sets a discounted price for this Price that is different from the base price with value.</p>
+     * @param builder function to build the discounted value
+     * @return Builder
+     */
+
+    public StandalonePriceImportBuilder withDiscounted(
+            Function<com.commercetools.importapi.models.common.DiscountedPriceBuilder, com.commercetools.importapi.models.common.DiscountedPrice> builder) {
+        this.discounted = builder.apply(com.commercetools.importapi.models.common.DiscountedPriceBuilder.of());
         return this;
     }
 
@@ -284,6 +343,18 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     public StandalonePriceImportBuilder custom(
             Function<com.commercetools.importapi.models.customfields.CustomBuilder, com.commercetools.importapi.models.customfields.CustomBuilder> builder) {
         this.custom = builder.apply(com.commercetools.importapi.models.customfields.CustomBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the StandalonePrice.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public StandalonePriceImportBuilder withCustom(
+            Function<com.commercetools.importapi.models.customfields.CustomBuilder, com.commercetools.importapi.models.customfields.Custom> builder) {
+        this.custom = builder.apply(com.commercetools.importapi.models.customfields.CustomBuilder.of());
         return this;
     }
 

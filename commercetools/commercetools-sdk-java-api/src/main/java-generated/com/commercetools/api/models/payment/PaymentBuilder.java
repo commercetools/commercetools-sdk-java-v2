@@ -144,6 +144,18 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
+     * @return Builder
+     */
+
+    public PaymentBuilder withLastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -168,6 +180,18 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
+     * @return Builder
+     */
+
+    public PaymentBuilder withCreatedBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param createdBy value to be set
      * @return Builder
      */
@@ -186,6 +210,18 @@ public class PaymentBuilder implements Builder<Payment> {
     public PaymentBuilder customer(
             Function<com.commercetools.api.models.customer.CustomerReferenceBuilder, com.commercetools.api.models.customer.CustomerReferenceBuilder> builder) {
         this.customer = builder.apply(com.commercetools.api.models.customer.CustomerReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Reference to a Customer associated with the Payment.</p>
+     * @param builder function to build the customer value
+     * @return Builder
+     */
+
+    public PaymentBuilder withCustomer(
+            Function<com.commercetools.api.models.customer.CustomerReferenceBuilder, com.commercetools.api.models.customer.CustomerReference> builder) {
+        this.customer = builder.apply(com.commercetools.api.models.customer.CustomerReferenceBuilder.of());
         return this;
     }
 
@@ -242,6 +278,18 @@ public class PaymentBuilder implements Builder<Payment> {
     public PaymentBuilder amountPlanned(
             Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoneyBuilder> builder) {
         this.amountPlanned = builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Money value the Payment intends to receive from the customer. The value typically matches the Cart or Order gross total.</p>
+     * @param builder function to build the amountPlanned value
+     * @return Builder
+     */
+
+    public PaymentBuilder withAmountPlanned(
+            Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoney> builder) {
+        this.amountPlanned = builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of());
         return this;
     }
 
@@ -353,6 +401,18 @@ public class PaymentBuilder implements Builder<Payment> {
 
     /**
      *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
+     * @param builder function to build the paymentMethodInfo value
+     * @return Builder
+     */
+
+    public PaymentBuilder withPaymentMethodInfo(
+            Function<com.commercetools.api.models.payment.PaymentMethodInfoBuilder, com.commercetools.api.models.payment.PaymentMethodInfo> builder) {
+        this.paymentMethodInfo = builder.apply(com.commercetools.api.models.payment.PaymentMethodInfoBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
      * @param paymentMethodInfo value to be set
      * @return Builder
      */
@@ -372,6 +432,18 @@ public class PaymentBuilder implements Builder<Payment> {
     public PaymentBuilder paymentStatus(
             Function<com.commercetools.api.models.payment.PaymentStatusBuilder, com.commercetools.api.models.payment.PaymentStatusBuilder> builder) {
         this.paymentStatus = builder.apply(com.commercetools.api.models.payment.PaymentStatusBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Current status of the Payment.</p>
+     * @param builder function to build the paymentStatus value
+     * @return Builder
+     */
+
+    public PaymentBuilder withPaymentStatus(
+            Function<com.commercetools.api.models.payment.PaymentStatusBuilder, com.commercetools.api.models.payment.PaymentStatus> builder) {
+        this.paymentStatus = builder.apply(com.commercetools.api.models.payment.PaymentStatusBuilder.of());
         return this;
     }
 
@@ -452,6 +524,28 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
+     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     * @param builder function to build the transactions value
+     * @return Builder
+     */
+
+    public PaymentBuilder addTransactions(
+            Function<com.commercetools.api.models.payment.TransactionBuilder, com.commercetools.api.models.payment.Transaction> builder) {
+        return plusTransactions(builder.apply(com.commercetools.api.models.payment.TransactionBuilder.of()));
+    }
+
+    /**
+     *  <p>Financial transactions of the Payment. Each Transaction has a TransactionType and a TransactionState.</p>
+     * @param builder function to build the transactions value
+     * @return Builder
+     */
+
+    public PaymentBuilder setTransactions(
+            Function<com.commercetools.api.models.payment.TransactionBuilder, com.commercetools.api.models.payment.Transaction> builder) {
+        return transactions(builder.apply(com.commercetools.api.models.payment.TransactionBuilder.of()));
+    }
+
+    /**
      *  <p>Represents information exchange with the payment service, for example, a PSP. An interaction may be a request sent, or a response or notification received from the payment service.</p>
      * @param interfaceInteractions value to be set
      * @return Builder
@@ -521,6 +615,28 @@ public class PaymentBuilder implements Builder<Payment> {
     }
 
     /**
+     *  <p>Represents information exchange with the payment service, for example, a PSP. An interaction may be a request sent, or a response or notification received from the payment service.</p>
+     * @param builder function to build the interfaceInteractions value
+     * @return Builder
+     */
+
+    public PaymentBuilder addInterfaceInteractions(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
+        return plusInterfaceInteractions(builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()));
+    }
+
+    /**
+     *  <p>Represents information exchange with the payment service, for example, a PSP. An interaction may be a request sent, or a response or notification received from the payment service.</p>
+     * @param builder function to build the interfaceInteractions value
+     * @return Builder
+     */
+
+    public PaymentBuilder setInterfaceInteractions(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
+        return interfaceInteractions(builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()));
+    }
+
+    /**
      *  <p>Custom Fields for the Payment.</p>
      * @param builder function to build the custom value
      * @return Builder
@@ -529,6 +645,18 @@ public class PaymentBuilder implements Builder<Payment> {
     public PaymentBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the Payment.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public PaymentBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of());
         return this;
     }
 

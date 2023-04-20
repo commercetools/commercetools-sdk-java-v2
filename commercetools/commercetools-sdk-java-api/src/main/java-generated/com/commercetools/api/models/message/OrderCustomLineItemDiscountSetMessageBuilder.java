@@ -120,6 +120,18 @@ public class OrderCustomLineItemDiscountSetMessageBuilder implements Builder<Ord
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @param builder function to build the lastModifiedBy value
+     * @return Builder
+     */
+
+    public OrderCustomLineItemDiscountSetMessageBuilder withLastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value of <code>createdBy</code>.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -139,6 +151,18 @@ public class OrderCustomLineItemDiscountSetMessageBuilder implements Builder<Ord
     public OrderCustomLineItemDiscountSetMessageBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
+     * @return Builder
+     */
+
+    public OrderCustomLineItemDiscountSetMessageBuilder withCreatedBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
 
@@ -211,6 +235,19 @@ public class OrderCustomLineItemDiscountSetMessageBuilder implements Builder<Ord
         this.resourceUserProvidedIdentifiers = builder
                 .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @param builder function to build the resourceUserProvidedIdentifiers value
+     * @return Builder
+     */
+
+    public OrderCustomLineItemDiscountSetMessageBuilder withResourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiers> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of());
         return this;
     }
 
@@ -307,6 +344,30 @@ public class OrderCustomLineItemDiscountSetMessageBuilder implements Builder<Ord
     }
 
     /**
+     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     * @param builder function to build the discountedPricePerQuantity value
+     * @return Builder
+     */
+
+    public OrderCustomLineItemDiscountSetMessageBuilder addDiscountedPricePerQuantity(
+            Function<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder, com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> builder) {
+        return plusDiscountedPricePerQuantity(
+            builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder.of()));
+    }
+
+    /**
+     *  <p>Array of DiscountedLineItemPriceForQuantity after the Discount recalculation.</p>
+     * @param builder function to build the discountedPricePerQuantity value
+     * @return Builder
+     */
+
+    public OrderCustomLineItemDiscountSetMessageBuilder setDiscountedPricePerQuantity(
+            Function<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder, com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> builder) {
+        return discountedPricePerQuantity(
+            builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder.of()));
+    }
+
+    /**
      *  <p>TaxedItemPrice of the Custom Line Item after the Discount recalculation.</p>
      * @param builder function to build the taxedPrice value
      * @return Builder
@@ -315,6 +376,18 @@ public class OrderCustomLineItemDiscountSetMessageBuilder implements Builder<Ord
     public OrderCustomLineItemDiscountSetMessageBuilder taxedPrice(
             Function<com.commercetools.api.models.cart.TaxedItemPriceBuilder, com.commercetools.api.models.cart.TaxedItemPriceBuilder> builder) {
         this.taxedPrice = builder.apply(com.commercetools.api.models.cart.TaxedItemPriceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>TaxedItemPrice of the Custom Line Item after the Discount recalculation.</p>
+     * @param builder function to build the taxedPrice value
+     * @return Builder
+     */
+
+    public OrderCustomLineItemDiscountSetMessageBuilder withTaxedPrice(
+            Function<com.commercetools.api.models.cart.TaxedItemPriceBuilder, com.commercetools.api.models.cart.TaxedItemPrice> builder) {
+        this.taxedPrice = builder.apply(com.commercetools.api.models.cart.TaxedItemPriceBuilder.of());
         return this;
     }
 

@@ -51,6 +51,18 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
+     * set the value to the value using the builder function
+     * @param builder function to build the value value
+     * @return Builder
+     */
+
+    public PriceBuilder withValue(
+            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.Money> builder) {
+        this.value = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the value
      * @param value value to be set
      * @return Builder

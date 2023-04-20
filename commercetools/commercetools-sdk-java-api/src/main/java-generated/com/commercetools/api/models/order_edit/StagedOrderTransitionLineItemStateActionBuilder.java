@@ -75,6 +75,18 @@ public class StagedOrderTransitionLineItemStateActionBuilder
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
+     * @param builder function to build the fromState value
+     * @return Builder
+     */
+
+    public StagedOrderTransitionLineItemStateActionBuilder withFromState(
+            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifier> builder) {
+        this.fromState = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>ResourceIdentifier to a State.</p>
      * @param fromState value to be set
      * @return Builder
      */
@@ -94,6 +106,18 @@ public class StagedOrderTransitionLineItemStateActionBuilder
     public StagedOrderTransitionLineItemStateActionBuilder toState(
             Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
         this.toState = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>ResourceIdentifier to a State.</p>
+     * @param builder function to build the toState value
+     * @return Builder
+     */
+
+    public StagedOrderTransitionLineItemStateActionBuilder withToState(
+            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifier> builder) {
+        this.toState = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of());
         return this;
     }
 

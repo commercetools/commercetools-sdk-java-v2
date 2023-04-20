@@ -40,6 +40,18 @@ public class CategorySetMetaDescriptionActionBuilder implements Builder<Category
 
     /**
      *  <p>Value to set.</p>
+     * @param builder function to build the metaDescription value
+     * @return Builder
+     */
+
+    public CategorySetMetaDescriptionActionBuilder withMetaDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.metaDescription = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to set.</p>
      * @param metaDescription value to be set
      * @return Builder
      */

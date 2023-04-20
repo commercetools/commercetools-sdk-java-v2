@@ -150,6 +150,28 @@ public class CartDiscountPagedQueryResponseBuilder implements Builder<CartDiscou
     }
 
     /**
+     *  <p>CartDiscounts matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public CartDiscountPagedQueryResponseBuilder addResults(
+            Function<com.commercetools.api.models.cart_discount.CartDiscountBuilder, com.commercetools.api.models.cart_discount.CartDiscount> builder) {
+        return plusResults(builder.apply(com.commercetools.api.models.cart_discount.CartDiscountBuilder.of()));
+    }
+
+    /**
+     *  <p>CartDiscounts matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public CartDiscountPagedQueryResponseBuilder setResults(
+            Function<com.commercetools.api.models.cart_discount.CartDiscountBuilder, com.commercetools.api.models.cart_discount.CartDiscount> builder) {
+        return results(builder.apply(com.commercetools.api.models.cart_discount.CartDiscountBuilder.of()));
+    }
+
+    /**
      *  <p>Number of results requested.</p>
      * @return limit
      */

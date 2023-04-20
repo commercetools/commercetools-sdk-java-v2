@@ -148,6 +148,28 @@ public class ChannelPagedQueryResponseBuilder implements Builder<ChannelPagedQue
     }
 
     /**
+     *  <p>Channels matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public ChannelPagedQueryResponseBuilder addResults(
+            Function<com.commercetools.api.models.channel.ChannelBuilder, com.commercetools.api.models.channel.Channel> builder) {
+        return plusResults(builder.apply(com.commercetools.api.models.channel.ChannelBuilder.of()));
+    }
+
+    /**
+     *  <p>Channels matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public ChannelPagedQueryResponseBuilder setResults(
+            Function<com.commercetools.api.models.channel.ChannelBuilder, com.commercetools.api.models.channel.Channel> builder) {
+        return results(builder.apply(com.commercetools.api.models.channel.ChannelBuilder.of()));
+    }
+
+    /**
      *  <p>Number of results requested.</p>
      * @return limit
      */

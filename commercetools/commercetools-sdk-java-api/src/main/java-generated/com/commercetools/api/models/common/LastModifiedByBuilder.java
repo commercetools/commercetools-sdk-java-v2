@@ -71,6 +71,18 @@ public class LastModifiedByBuilder implements Builder<LastModifiedBy> {
 
     /**
      *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
+     * @param builder function to build the customer value
+     * @return Builder
+     */
+
+    public LastModifiedByBuilder withCustomer(
+            Function<com.commercetools.api.models.customer.CustomerReferenceBuilder, com.commercetools.api.models.customer.CustomerReference> builder) {
+        this.customer = builder.apply(com.commercetools.api.models.customer.CustomerReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Indicates the Customer who modified the resource using a token from the password flow.</p>
      * @param customer value to be set
      * @return Builder
      */

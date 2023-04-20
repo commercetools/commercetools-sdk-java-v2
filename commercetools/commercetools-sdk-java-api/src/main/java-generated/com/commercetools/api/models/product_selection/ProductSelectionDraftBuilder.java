@@ -64,6 +64,18 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
 
     /**
      *  <p>Name of the ProductSelection. Not checked for uniqueness, but distinct names are recommended.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public ProductSelectionDraftBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Name of the ProductSelection. Not checked for uniqueness, but distinct names are recommended.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -82,6 +94,18 @@ public class ProductSelectionDraftBuilder implements Builder<ProductSelectionDra
     public ProductSelectionDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields of this ProductSelection.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public ProductSelectionDraftBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
         return this;
     }
 

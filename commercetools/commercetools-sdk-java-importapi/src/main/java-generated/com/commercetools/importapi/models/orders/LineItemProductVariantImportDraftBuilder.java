@@ -54,6 +54,19 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
 
     /**
      *  <p>Maps to <code>ProductVariant.product</code>.</p>
+     * @param builder function to build the productVariant value
+     * @return Builder
+     */
+
+    public LineItemProductVariantImportDraftBuilder withProductVariant(
+            Function<com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder, com.commercetools.importapi.models.common.ProductVariantKeyReference> builder) {
+        this.productVariant = builder
+                .apply(com.commercetools.importapi.models.common.ProductVariantKeyReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Maps to <code>ProductVariant.product</code>.</p>
      * @param productVariant value to be set
      * @return Builder
      */
@@ -140,6 +153,28 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
         this.prices = new ArrayList<>();
         this.prices.add(builder.apply(com.commercetools.importapi.models.orders.LineItemPriceBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>
+     * @param builder function to build the prices value
+     * @return Builder
+     */
+
+    public LineItemProductVariantImportDraftBuilder addPrices(
+            Function<com.commercetools.importapi.models.orders.LineItemPriceBuilder, com.commercetools.importapi.models.orders.LineItemPrice> builder) {
+        return plusPrices(builder.apply(com.commercetools.importapi.models.orders.LineItemPriceBuilder.of()));
+    }
+
+    /**
+     *  <p>Maps to <code>ProductVariantImportDraft.prices</code></p>
+     * @param builder function to build the prices value
+     * @return Builder
+     */
+
+    public LineItemProductVariantImportDraftBuilder setPrices(
+            Function<com.commercetools.importapi.models.orders.LineItemPriceBuilder, com.commercetools.importapi.models.orders.LineItemPrice> builder) {
+        return prices(builder.apply(com.commercetools.importapi.models.orders.LineItemPriceBuilder.of()));
     }
 
     /**
@@ -276,6 +311,28 @@ public class LineItemProductVariantImportDraftBuilder implements Builder<LineIte
         this.images = new ArrayList<>();
         this.images.add(builder.apply(com.commercetools.importapi.models.common.ImageBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>
+     * @param builder function to build the images value
+     * @return Builder
+     */
+
+    public LineItemProductVariantImportDraftBuilder addImages(
+            Function<com.commercetools.importapi.models.common.ImageBuilder, com.commercetools.importapi.models.common.Image> builder) {
+        return plusImages(builder.apply(com.commercetools.importapi.models.common.ImageBuilder.of()));
+    }
+
+    /**
+     *  <p>Maps to <code>ProductVariantImportDraft.images</code>.</p>
+     * @param builder function to build the images value
+     * @return Builder
+     */
+
+    public LineItemProductVariantImportDraftBuilder setImages(
+            Function<com.commercetools.importapi.models.common.ImageBuilder, com.commercetools.importapi.models.common.Image> builder) {
+        return images(builder.apply(com.commercetools.importapi.models.common.ImageBuilder.of()));
     }
 
     /**

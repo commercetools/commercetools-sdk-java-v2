@@ -54,6 +54,18 @@ public class OrderEditReferenceBuilder implements Builder<OrderEditReference> {
 
     /**
      *  <p>Contains the representation of the expanded OrderEdit. Only present in responses to requests with Reference Expansion for OrderEdits.</p>
+     * @param builder function to build the obj value
+     * @return Builder
+     */
+
+    public OrderEditReferenceBuilder withObj(
+            Function<com.commercetools.api.models.order_edit.OrderEditBuilder, com.commercetools.api.models.order_edit.OrderEdit> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.order_edit.OrderEditBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Contains the representation of the expanded OrderEdit. Only present in responses to requests with Reference Expansion for OrderEdits.</p>
      * @param obj value to be set
      * @return Builder
      */

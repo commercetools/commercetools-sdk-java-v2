@@ -96,6 +96,28 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     }
 
     /**
+     * add the value to the items using the builder function
+     * @param builder function to build the items value
+     * @return Builder
+     */
+
+    public DeliveryChangeValueBuilder addItems(
+            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItem> builder) {
+        return plusItems(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()));
+    }
+
+    /**
+     * set the value to the items using the builder function
+     * @param builder function to build the items value
+     * @return Builder
+     */
+
+    public DeliveryChangeValueBuilder setItems(
+            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItem> builder) {
+        return items(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()));
+    }
+
+    /**
      * set the value to the address using the builder function
      * @param builder function to build the address value
      * @return Builder
@@ -104,6 +126,18 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
     public DeliveryChangeValueBuilder address(
             Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.AddressBuilder> builder) {
         this.address = builder.apply(com.commercetools.history.models.common.AddressBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the address using the builder function
+     * @param builder function to build the address value
+     * @return Builder
+     */
+
+    public DeliveryChangeValueBuilder withAddress(
+            Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.Address> builder) {
+        this.address = builder.apply(com.commercetools.history.models.common.AddressBuilder.of());
         return this;
     }
 
@@ -181,6 +215,28 @@ public class DeliveryChangeValueBuilder implements Builder<DeliveryChangeValue> 
         this.parcels = new ArrayList<>();
         this.parcels.add(builder.apply(com.commercetools.history.models.common.ParcelBuilder.of()).build());
         return this;
+    }
+
+    /**
+     * add the value to the parcels using the builder function
+     * @param builder function to build the parcels value
+     * @return Builder
+     */
+
+    public DeliveryChangeValueBuilder addParcels(
+            Function<com.commercetools.history.models.common.ParcelBuilder, com.commercetools.history.models.common.Parcel> builder) {
+        return plusParcels(builder.apply(com.commercetools.history.models.common.ParcelBuilder.of()));
+    }
+
+    /**
+     * set the value to the parcels using the builder function
+     * @param builder function to build the parcels value
+     * @return Builder
+     */
+
+    public DeliveryChangeValueBuilder setParcels(
+            Function<com.commercetools.history.models.common.ParcelBuilder, com.commercetools.history.models.common.Parcel> builder) {
+        return parcels(builder.apply(com.commercetools.history.models.common.ParcelBuilder.of()));
     }
 
     /**

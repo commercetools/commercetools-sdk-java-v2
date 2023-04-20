@@ -40,6 +40,19 @@ public class BusinessUnitChangeParentUnitActionBuilder implements Builder<Busine
 
     /**
      *  <p>New parent unit of the Business Unit.</p>
+     * @param builder function to build the parentUnit value
+     * @return Builder
+     */
+
+    public BusinessUnitChangeParentUnitActionBuilder withParentUnit(
+            Function<com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder, com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier> builder) {
+        this.parentUnit = builder
+                .apply(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>New parent unit of the Business Unit.</p>
      * @param parentUnit value to be set
      * @return Builder
      */

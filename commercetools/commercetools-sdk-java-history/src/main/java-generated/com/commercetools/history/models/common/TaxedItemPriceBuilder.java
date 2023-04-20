@@ -40,6 +40,18 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
     }
 
     /**
+     * set the value to the totalNet using the builder function
+     * @param builder function to build the totalNet value
+     * @return Builder
+     */
+
+    public TaxedItemPriceBuilder withTotalNet(
+            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.Money> builder) {
+        this.totalNet = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the totalNet
      * @param totalNet value to be set
      * @return Builder
@@ -59,6 +71,18 @@ public class TaxedItemPriceBuilder implements Builder<TaxedItemPrice> {
     public TaxedItemPriceBuilder totalGross(
             Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
         this.totalGross = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the totalGross using the builder function
+     * @param builder function to build the totalGross value
+     * @return Builder
+     */
+
+    public TaxedItemPriceBuilder withTotalGross(
+            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.Money> builder) {
+        this.totalGross = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of());
         return this;
     }
 

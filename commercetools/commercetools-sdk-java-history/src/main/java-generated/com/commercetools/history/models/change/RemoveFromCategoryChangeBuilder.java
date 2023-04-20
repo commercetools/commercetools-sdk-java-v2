@@ -57,6 +57,18 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
     }
 
     /**
+     * set the value to the category using the builder function
+     * @param builder function to build the category value
+     * @return Builder
+     */
+
+    public RemoveFromCategoryChangeBuilder withCategory(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
+        this.category = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the category
      * @param category value to be set
      * @return Builder
@@ -135,6 +147,28 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
     }
 
     /**
+     * add the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public RemoveFromCategoryChangeBuilder addPreviousValue(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
+        return plusPreviousValue(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()));
+    }
+
+    /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public RemoveFromCategoryChangeBuilder setPreviousValue(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
+        return previousValue(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()));
+    }
+
+    /**
      * set values to the nextValue
      * @param nextValue value to be set
      * @return Builder
@@ -199,6 +233,28 @@ public class RemoveFromCategoryChangeBuilder implements Builder<RemoveFromCatego
         this.nextValue = new ArrayList<>();
         this.nextValue.add(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build());
         return this;
+    }
+
+    /**
+     * add the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public RemoveFromCategoryChangeBuilder addNextValue(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
+        return plusNextValue(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()));
+    }
+
+    /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public RemoveFromCategoryChangeBuilder setNextValue(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
+        return nextValue(builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()));
     }
 
     /**

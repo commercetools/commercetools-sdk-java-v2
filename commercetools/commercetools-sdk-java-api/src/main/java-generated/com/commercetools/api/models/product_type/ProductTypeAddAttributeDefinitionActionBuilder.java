@@ -40,6 +40,18 @@ public class ProductTypeAddAttributeDefinitionActionBuilder
 
     /**
      *  <p>Value to append to <code>attributes</code>.</p>
+     * @param builder function to build the attribute value
+     * @return Builder
+     */
+
+    public ProductTypeAddAttributeDefinitionActionBuilder withAttribute(
+            Function<com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder, com.commercetools.api.models.product_type.AttributeDefinitionDraft> builder) {
+        this.attribute = builder.apply(com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to append to <code>attributes</code>.</p>
      * @param attribute value to be set
      * @return Builder
      */

@@ -95,6 +95,28 @@ public class CustomFieldLocalizedEnumTypeBuilder implements Builder<CustomFieldL
 
     /**
      *  <p>Allowed values.</p>
+     * @param builder function to build the values value
+     * @return Builder
+     */
+
+    public CustomFieldLocalizedEnumTypeBuilder addValues(
+            Function<com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder, com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> builder) {
+        return plusValues(builder.apply(com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder.of()));
+    }
+
+    /**
+     *  <p>Allowed values.</p>
+     * @param builder function to build the values value
+     * @return Builder
+     */
+
+    public CustomFieldLocalizedEnumTypeBuilder setValues(
+            Function<com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder, com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> builder) {
+        return values(builder.apply(com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder.of()));
+    }
+
+    /**
+     *  <p>Allowed values.</p>
      * @return values
      */
 

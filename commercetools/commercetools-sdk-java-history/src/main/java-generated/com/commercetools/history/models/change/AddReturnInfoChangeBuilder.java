@@ -51,6 +51,18 @@ public class AddReturnInfoChangeBuilder implements Builder<AddReturnInfoChange> 
     }
 
     /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public AddReturnInfoChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.ReturnInfoBuilder, com.commercetools.history.models.common.ReturnInfo> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.ReturnInfoBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder

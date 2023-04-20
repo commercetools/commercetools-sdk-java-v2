@@ -52,6 +52,18 @@ public class TypeChangeEnumValueLabelActionBuilder implements Builder<TypeChange
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param builder function to build the value value
+     * @return Builder
+     */
+
+    public TypeChangeEnumValueLabelActionBuilder withValue(
+            Function<com.commercetools.api.models.type.CustomFieldEnumValueBuilder, com.commercetools.api.models.type.CustomFieldEnumValue> builder) {
+        this.value = builder.apply(com.commercetools.api.models.type.CustomFieldEnumValueBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>New value to set. Must not be empty.</p>
      * @param value value to be set
      * @return Builder
      */

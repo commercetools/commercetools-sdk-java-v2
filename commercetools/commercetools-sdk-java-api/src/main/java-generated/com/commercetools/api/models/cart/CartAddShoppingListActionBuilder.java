@@ -48,6 +48,19 @@ public class CartAddShoppingListActionBuilder implements Builder<CartAddShopping
 
     /**
      *  <p>Shopping List that contains the Line Items to be added.</p>
+     * @param builder function to build the shoppingList value
+     * @return Builder
+     */
+
+    public CartAddShoppingListActionBuilder withShoppingList(
+            Function<com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifierBuilder, com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier> builder) {
+        this.shoppingList = builder
+                .apply(com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Shopping List that contains the Line Items to be added.</p>
      * @param shoppingList value to be set
      * @return Builder
      */
@@ -74,6 +87,19 @@ public class CartAddShoppingListActionBuilder implements Builder<CartAddShopping
 
     /**
      *  <p><code>distributionChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     * @param builder function to build the distributionChannel value
+     * @return Builder
+     */
+
+    public CartAddShoppingListActionBuilder withDistributionChannel(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+        this.distributionChannel = builder
+                .apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p><code>distributionChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>ProductDistribution</code> ChannelRoleEnum.</p>
      * @param distributionChannel value to be set
      * @return Builder
      */
@@ -94,6 +120,18 @@ public class CartAddShoppingListActionBuilder implements Builder<CartAddShopping
             Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
         this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p><code>supplyChannel</code> to set for all LineItems that are added to the Cart. The Channel must have the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @param builder function to build the supplyChannel value
+     * @return Builder
+     */
+
+    public CartAddShoppingListActionBuilder withSupplyChannel(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of());
         return this;
     }
 

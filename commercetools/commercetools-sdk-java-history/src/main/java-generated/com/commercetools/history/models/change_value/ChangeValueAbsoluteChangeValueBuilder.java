@@ -91,6 +91,28 @@ public class ChangeValueAbsoluteChangeValueBuilder implements Builder<ChangeValu
     }
 
     /**
+     * add the value to the money using the builder function
+     * @param builder function to build the money value
+     * @return Builder
+     */
+
+    public ChangeValueAbsoluteChangeValueBuilder addMoney(
+            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.Money> builder) {
+        return plusMoney(builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()));
+    }
+
+    /**
+     * set the value to the money using the builder function
+     * @param builder function to build the money value
+     * @return Builder
+     */
+
+    public ChangeValueAbsoluteChangeValueBuilder setMoney(
+            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.Money> builder) {
+        return money(builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()));
+    }
+
+    /**
      * value of money}
      * @return money
      */

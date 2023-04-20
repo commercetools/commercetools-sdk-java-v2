@@ -92,6 +92,28 @@ public class LocalizedStringSetFieldBuilder implements Builder<LocalizedStringSe
     }
 
     /**
+     * add the value to the value using the builder function
+     * @param builder function to build the value value
+     * @return Builder
+     */
+
+    public LocalizedStringSetFieldBuilder addValue(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedString> builder) {
+        return plusValue(builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()));
+    }
+
+    /**
+     * set the value to the value using the builder function
+     * @param builder function to build the value value
+     * @return Builder
+     */
+
+    public LocalizedStringSetFieldBuilder setValue(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedString> builder) {
+        return value(builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()));
+    }
+
+    /**
      * value of value}
      * @return value
      */

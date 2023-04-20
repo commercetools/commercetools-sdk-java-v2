@@ -111,6 +111,30 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
     }
 
     /**
+     * add the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public ChangeFieldDefinitionOrderChangeBuilder addPreviousValue(
+            Function<com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder, com.commercetools.history.models.change_value.FieldDefinitionOrderValue> builder) {
+        return plusPreviousValue(
+            builder.apply(com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder.of()));
+    }
+
+    /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public ChangeFieldDefinitionOrderChangeBuilder setPreviousValue(
+            Function<com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder, com.commercetools.history.models.change_value.FieldDefinitionOrderValue> builder) {
+        return previousValue(
+            builder.apply(com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder.of()));
+    }
+
+    /**
      * set values to the nextValue
      * @param nextValue value to be set
      * @return Builder
@@ -177,6 +201,30 @@ public class ChangeFieldDefinitionOrderChangeBuilder implements Builder<ChangeFi
         this.nextValue.add(
             builder.apply(com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder.of()).build());
         return this;
+    }
+
+    /**
+     * add the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public ChangeFieldDefinitionOrderChangeBuilder addNextValue(
+            Function<com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder, com.commercetools.history.models.change_value.FieldDefinitionOrderValue> builder) {
+        return plusNextValue(
+            builder.apply(com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder.of()));
+    }
+
+    /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public ChangeFieldDefinitionOrderChangeBuilder setNextValue(
+            Function<com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder, com.commercetools.history.models.change_value.FieldDefinitionOrderValue> builder) {
+        return nextValue(
+            builder.apply(com.commercetools.history.models.change_value.FieldDefinitionOrderValueBuilder.of()));
     }
 
     /**

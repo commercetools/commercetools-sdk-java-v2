@@ -38,6 +38,18 @@ public class BusinessUnitStoreRemovedMessagePayloadBuilder implements Builder<Bu
 
     /**
      *  <p>The Store that was removed from the Business Unit.</p>
+     * @param builder function to build the store value
+     * @return Builder
+     */
+
+    public BusinessUnitStoreRemovedMessagePayloadBuilder withStore(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
+        this.store = builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The Store that was removed from the Business Unit.</p>
      * @param store value to be set
      * @return Builder
      */

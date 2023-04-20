@@ -147,6 +147,28 @@ public class CartPagedQueryResponseBuilder implements Builder<CartPagedQueryResp
     }
 
     /**
+     *  <p>Carts matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public CartPagedQueryResponseBuilder addResults(
+            Function<com.commercetools.api.models.cart.CartBuilder, com.commercetools.api.models.cart.Cart> builder) {
+        return plusResults(builder.apply(com.commercetools.api.models.cart.CartBuilder.of()));
+    }
+
+    /**
+     *  <p>Carts matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public CartPagedQueryResponseBuilder setResults(
+            Function<com.commercetools.api.models.cart.CartBuilder, com.commercetools.api.models.cart.Cart> builder) {
+        return results(builder.apply(com.commercetools.api.models.cart.CartBuilder.of()));
+    }
+
+    /**
      *  <p>Number of results requested.</p>
      * @return limit
      */

@@ -38,6 +38,18 @@ public class BusinessUnitStoreAddedMessagePayloadBuilder implements Builder<Busi
 
     /**
      *  <p>The Store that was added to the Business Unit.</p>
+     * @param builder function to build the store value
+     * @return Builder
+     */
+
+    public BusinessUnitStoreAddedMessagePayloadBuilder withStore(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
+        this.store = builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The Store that was added to the Business Unit.</p>
      * @param store value to be set
      * @return Builder
      */

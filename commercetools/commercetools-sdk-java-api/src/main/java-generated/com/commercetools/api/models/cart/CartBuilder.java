@@ -242,6 +242,19 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for LineItem Price selection.</p>
+     * @param builder function to build the customerGroup value
+     * @return Builder
+     */
+
+    public CartBuilder withCustomerGroup(
+            Function<com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReference> builder) {
+        this.customerGroup = builder
+                .apply(com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for LineItem Price selection.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -279,6 +292,19 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Reference to a Business Unit the Cart belongs to.</p>
+     * @param builder function to build the businessUnit value
+     * @return Builder
+     */
+
+    public CartBuilder withBusinessUnit(
+            Function<com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder, com.commercetools.api.models.business_unit.BusinessUnitKeyReference> builder) {
+        this.businessUnit = builder
+                .apply(com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Reference to a Business Unit the Cart belongs to.</p>
      * @param businessUnit value to be set
      * @return Builder
      */
@@ -298,6 +324,18 @@ public class CartBuilder implements Builder<Cart> {
     public CartBuilder store(
             Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
         this.store = builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Reference to a Store the Cart belongs to.</p>
+     * @param builder function to build the store value
+     * @return Builder
+     */
+
+    public CartBuilder withStore(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
+        this.store = builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of());
         return this;
     }
 
@@ -377,6 +415,28 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
+     *  <p>Line Items added to the Cart.</p>
+     * @param builder function to build the lineItems value
+     * @return Builder
+     */
+
+    public CartBuilder addLineItems(
+            Function<com.commercetools.api.models.cart.LineItemBuilder, com.commercetools.api.models.cart.LineItem> builder) {
+        return plusLineItems(builder.apply(com.commercetools.api.models.cart.LineItemBuilder.of()));
+    }
+
+    /**
+     *  <p>Line Items added to the Cart.</p>
+     * @param builder function to build the lineItems value
+     * @return Builder
+     */
+
+    public CartBuilder setLineItems(
+            Function<com.commercetools.api.models.cart.LineItemBuilder, com.commercetools.api.models.cart.LineItem> builder) {
+        return lineItems(builder.apply(com.commercetools.api.models.cart.LineItemBuilder.of()));
+    }
+
+    /**
      *  <p>Custom Line Items added to the Cart.</p>
      * @param customLineItems value to be set
      * @return Builder
@@ -442,6 +502,28 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
+     *  <p>Custom Line Items added to the Cart.</p>
+     * @param builder function to build the customLineItems value
+     * @return Builder
+     */
+
+    public CartBuilder addCustomLineItems(
+            Function<com.commercetools.api.models.cart.CustomLineItemBuilder, com.commercetools.api.models.cart.CustomLineItem> builder) {
+        return plusCustomLineItems(builder.apply(com.commercetools.api.models.cart.CustomLineItemBuilder.of()));
+    }
+
+    /**
+     *  <p>Custom Line Items added to the Cart.</p>
+     * @param builder function to build the customLineItems value
+     * @return Builder
+     */
+
+    public CartBuilder setCustomLineItems(
+            Function<com.commercetools.api.models.cart.CustomLineItemBuilder, com.commercetools.api.models.cart.CustomLineItem> builder) {
+        return customLineItems(builder.apply(com.commercetools.api.models.cart.CustomLineItemBuilder.of()));
+    }
+
+    /**
      *  <p>Sum of all LineItem quantities, excluding CustomLineItems. Only present when the Cart has at least one LineItem.</p>
      * @param totalLineItemQuantity value to be set
      * @return Builder
@@ -462,6 +544,19 @@ public class CartBuilder implements Builder<Cart> {
     public CartBuilder totalPrice(
             Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoneyBuilder> builder) {
         this.totalPrice = builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo.</p>
+     *  <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
+     * @param builder function to build the totalPrice value
+     * @return Builder
+     */
+
+    public CartBuilder withTotalPrice(
+            Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoney> builder) {
+        this.totalPrice = builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of());
         return this;
     }
 
@@ -497,6 +592,21 @@ public class CartBuilder implements Builder<Cart> {
      *   <li>For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
      *   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when the external Tax Rate for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
      *  </ul>
+     * @param builder function to build the taxedPrice value
+     * @return Builder
+     */
+
+    public CartBuilder withTaxedPrice(
+            Function<com.commercetools.api.models.cart.TaxedPriceBuilder, com.commercetools.api.models.cart.TaxedPrice> builder) {
+        this.taxedPrice = builder.apply(com.commercetools.api.models.cart.TaxedPriceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <ul>
+     *   <li>For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
+     *   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when the external Tax Rate for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
+     *  </ul>
      * @param taxedPrice value to be set
      * @return Builder
      */
@@ -515,6 +625,18 @@ public class CartBuilder implements Builder<Cart> {
     public CartBuilder taxedShippingPrice(
             Function<com.commercetools.api.models.cart.TaxedPriceBuilder, com.commercetools.api.models.cart.TaxedPriceBuilder> builder) {
         this.taxedShippingPrice = builder.apply(com.commercetools.api.models.cart.TaxedPriceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Sum of the <code>taxedPrice</code> field of ShippingInfo across all Shipping Methods.</p>
+     * @param builder function to build the taxedShippingPrice value
+     * @return Builder
+     */
+
+    public CartBuilder withTaxedShippingPrice(
+            Function<com.commercetools.api.models.cart.TaxedPriceBuilder, com.commercetools.api.models.cart.TaxedPrice> builder) {
+        this.taxedShippingPrice = builder.apply(com.commercetools.api.models.cart.TaxedPriceBuilder.of());
         return this;
     }
 
@@ -600,6 +722,18 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Billing address associated with the Cart.</p>
+     * @param builder function to build the billingAddress value
+     * @return Builder
+     */
+
+    public CartBuilder withBillingAddress(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
+        this.billingAddress = builder.apply(com.commercetools.api.models.common.AddressBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Billing address associated with the Cart.</p>
      * @param billingAddress value to be set
      * @return Builder
      */
@@ -618,6 +752,18 @@ public class CartBuilder implements Builder<Cart> {
     public CartBuilder shippingAddress(
             Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
         this.shippingAddress = builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Shipping address associated with the Cart. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     * @param builder function to build the shippingAddress value
+     * @return Builder
+     */
+
+    public CartBuilder withShippingAddress(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
+        this.shippingAddress = builder.apply(com.commercetools.api.models.common.AddressBuilder.of());
         return this;
     }
 
@@ -663,6 +809,18 @@ public class CartBuilder implements Builder<Cart> {
     public CartBuilder shippingInfo(
             Function<com.commercetools.api.models.cart.ShippingInfoBuilder, com.commercetools.api.models.cart.ShippingInfoBuilder> builder) {
         this.shippingInfo = builder.apply(com.commercetools.api.models.cart.ShippingInfoBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Shipping-related information of a Cart with <code>Single</code> ShippingMode. Automatically set when a Shipping Method is set.</p>
+     * @param builder function to build the shippingInfo value
+     * @return Builder
+     */
+
+    public CartBuilder withShippingInfo(
+            Function<com.commercetools.api.models.cart.ShippingInfoBuilder, com.commercetools.api.models.cart.ShippingInfo> builder) {
+        this.shippingInfo = builder.apply(com.commercetools.api.models.cart.ShippingInfoBuilder.of());
         return this;
     }
 
@@ -720,6 +878,18 @@ public class CartBuilder implements Builder<Cart> {
     public CartBuilder shippingCustomFields(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.shippingCustomFields = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields of the Shipping Method in a Cart with <code>Single</code> ShippingMode.</p>
+     * @param builder function to build the shippingCustomFields value
+     * @return Builder
+     */
+
+    public CartBuilder withShippingCustomFields(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
+        this.shippingCustomFields = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of());
         return this;
     }
 
@@ -800,6 +970,28 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
+     *  <p>Shipping-related information of a Cart with <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     * @param builder function to build the shipping value
+     * @return Builder
+     */
+
+    public CartBuilder addShipping(
+            Function<com.commercetools.api.models.cart.ShippingBuilder, com.commercetools.api.models.cart.Shipping> builder) {
+        return plusShipping(builder.apply(com.commercetools.api.models.cart.ShippingBuilder.of()));
+    }
+
+    /**
+     *  <p>Shipping-related information of a Cart with <code>Multiple</code> ShippingMode. Updated automatically each time a new Shipping Method is added.</p>
+     * @param builder function to build the shipping value
+     * @return Builder
+     */
+
+    public CartBuilder setShipping(
+            Function<com.commercetools.api.models.cart.ShippingBuilder, com.commercetools.api.models.cart.Shipping> builder) {
+        return shipping(builder.apply(com.commercetools.api.models.cart.ShippingBuilder.of()));
+    }
+
+    /**
      *  <p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
      *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
      * @param itemShippingAddresses value to be set
@@ -872,6 +1064,30 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
+     *  <p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
+     *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     * @param builder function to build the itemShippingAddresses value
+     * @return Builder
+     */
+
+    public CartBuilder addItemShippingAddresses(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
+        return plusItemShippingAddresses(builder.apply(com.commercetools.api.models.common.AddressBuilder.of()));
+    }
+
+    /**
+     *  <p>Additional shipping addresses of the Cart as specified by LineItems using the <code>shippingDetails</code> field.</p>
+     *  <p>Eligible Shipping Methods or applicable Tax Rates are determined by the address in <code>shippingAddress</code>, and not <code>itemShippingAddresses</code>.</p>
+     * @param builder function to build the itemShippingAddresses value
+     * @return Builder
+     */
+
+    public CartBuilder setItemShippingAddresses(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
+        return itemShippingAddresses(builder.apply(com.commercetools.api.models.common.AddressBuilder.of()));
+    }
+
+    /**
      *  <p>Discount Codes applied to the Cart. A Cart that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
      * @param discountCodes value to be set
      * @return Builder
@@ -937,6 +1153,28 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
+     *  <p>Discount Codes applied to the Cart. A Cart that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     * @param builder function to build the discountCodes value
+     * @return Builder
+     */
+
+    public CartBuilder addDiscountCodes(
+            Function<com.commercetools.api.models.cart.DiscountCodeInfoBuilder, com.commercetools.api.models.cart.DiscountCodeInfo> builder) {
+        return plusDiscountCodes(builder.apply(com.commercetools.api.models.cart.DiscountCodeInfoBuilder.of()));
+    }
+
+    /**
+     *  <p>Discount Codes applied to the Cart. A Cart that has <code>directDiscounts</code> cannot have <code>discountCodes</code>.</p>
+     * @param builder function to build the discountCodes value
+     * @return Builder
+     */
+
+    public CartBuilder setDiscountCodes(
+            Function<com.commercetools.api.models.cart.DiscountCodeInfoBuilder, com.commercetools.api.models.cart.DiscountCodeInfo> builder) {
+        return discountCodes(builder.apply(com.commercetools.api.models.cart.DiscountCodeInfoBuilder.of()));
+    }
+
+    /**
      *  <p>Direct Discounts added to the Cart. A Cart that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
      * @param directDiscounts value to be set
      * @return Builder
@@ -999,6 +1237,28 @@ public class CartBuilder implements Builder<Cart> {
         this.directDiscounts = new ArrayList<>();
         this.directDiscounts.add(builder.apply(com.commercetools.api.models.cart.DirectDiscountBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Direct Discounts added to the Cart. A Cart that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     * @param builder function to build the directDiscounts value
+     * @return Builder
+     */
+
+    public CartBuilder addDirectDiscounts(
+            Function<com.commercetools.api.models.cart.DirectDiscountBuilder, com.commercetools.api.models.cart.DirectDiscount> builder) {
+        return plusDirectDiscounts(builder.apply(com.commercetools.api.models.cart.DirectDiscountBuilder.of()));
+    }
+
+    /**
+     *  <p>Direct Discounts added to the Cart. A Cart that has <code>discountCodes</code> cannot have <code>directDiscounts</code>.</p>
+     * @param builder function to build the directDiscounts value
+     * @return Builder
+     */
+
+    public CartBuilder setDirectDiscounts(
+            Function<com.commercetools.api.models.cart.DirectDiscountBuilder, com.commercetools.api.models.cart.DirectDiscount> builder) {
+        return directDiscounts(builder.apply(com.commercetools.api.models.cart.DirectDiscountBuilder.of()));
     }
 
     /**
@@ -1071,6 +1331,30 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
+     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Cart.</p>
+     * @param builder function to build the refusedGifts value
+     * @return Builder
+     */
+
+    public CartBuilder addRefusedGifts(
+            Function<com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder, com.commercetools.api.models.cart_discount.CartDiscountReference> builder) {
+        return plusRefusedGifts(
+            builder.apply(com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p>Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Cart.</p>
+     * @param builder function to build the refusedGifts value
+     * @return Builder
+     */
+
+    public CartBuilder setRefusedGifts(
+            Function<com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder, com.commercetools.api.models.cart_discount.CartDiscountReference> builder) {
+        return refusedGifts(
+            builder.apply(com.commercetools.api.models.cart_discount.CartDiscountReferenceBuilder.of()));
+    }
+
+    /**
      *  <p>Payment information related to the Cart.</p>
      * @param builder function to build the paymentInfo value
      * @return Builder
@@ -1079,6 +1363,18 @@ public class CartBuilder implements Builder<Cart> {
     public CartBuilder paymentInfo(
             Function<com.commercetools.api.models.order.PaymentInfoBuilder, com.commercetools.api.models.order.PaymentInfoBuilder> builder) {
         this.paymentInfo = builder.apply(com.commercetools.api.models.order.PaymentInfoBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Payment information related to the Cart.</p>
+     * @param builder function to build the paymentInfo value
+     * @return Builder
+     */
+
+    public CartBuilder withPaymentInfo(
+            Function<com.commercetools.api.models.order.PaymentInfoBuilder, com.commercetools.api.models.order.PaymentInfo> builder) {
+        this.paymentInfo = builder.apply(com.commercetools.api.models.order.PaymentInfoBuilder.of());
         return this;
     }
 
@@ -1140,6 +1436,18 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Custom Fields of the Cart.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public CartBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields of the Cart.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -1174,6 +1482,18 @@ public class CartBuilder implements Builder<Cart> {
 
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
+     * @return Builder
+     */
+
+    public CartBuilder withLastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -1193,6 +1513,18 @@ public class CartBuilder implements Builder<Cart> {
     public CartBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
+     * @return Builder
+     */
+
+    public CartBuilder withCreatedBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
 

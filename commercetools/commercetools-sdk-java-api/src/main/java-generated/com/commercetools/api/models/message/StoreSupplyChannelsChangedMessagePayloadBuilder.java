@@ -100,6 +100,29 @@ public class StoreSupplyChannelsChangedMessagePayloadBuilder
     }
 
     /**
+     *  <p>Inventory supply Channels that have been added to the Store.</p>
+     * @param builder function to build the addedSupplyChannels value
+     * @return Builder
+     */
+
+    public StoreSupplyChannelsChangedMessagePayloadBuilder addAddedSupplyChannels(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReference> builder) {
+        return plusAddedSupplyChannels(
+            builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p>Inventory supply Channels that have been added to the Store.</p>
+     * @param builder function to build the addedSupplyChannels value
+     * @return Builder
+     */
+
+    public StoreSupplyChannelsChangedMessagePayloadBuilder setAddedSupplyChannels(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReference> builder) {
+        return addedSupplyChannels(builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()));
+    }
+
+    /**
      *  <p>Inventory supply Channels that have been removed from the Store.</p>
      * @param removedSupplyChannels value to be set
      * @return Builder
@@ -166,6 +189,29 @@ public class StoreSupplyChannelsChangedMessagePayloadBuilder
         this.removedSupplyChannels
                 .add(builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Inventory supply Channels that have been removed from the Store.</p>
+     * @param builder function to build the removedSupplyChannels value
+     * @return Builder
+     */
+
+    public StoreSupplyChannelsChangedMessagePayloadBuilder addRemovedSupplyChannels(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReference> builder) {
+        return plusRemovedSupplyChannels(
+            builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p>Inventory supply Channels that have been removed from the Store.</p>
+     * @param builder function to build the removedSupplyChannels value
+     * @return Builder
+     */
+
+    public StoreSupplyChannelsChangedMessagePayloadBuilder setRemovedSupplyChannels(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReference> builder) {
+        return removedSupplyChannels(builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()));
     }
 
     /**

@@ -66,6 +66,18 @@ public class GraphQLDuplicatePriceKeyErrorBuilder implements Builder<GraphQLDupl
 
     /**
      *  <p>Conflicting Embedded Price.</p>
+     * @param builder function to build the conflictingPrice value
+     * @return Builder
+     */
+
+    public GraphQLDuplicatePriceKeyErrorBuilder withConflictingPrice(
+            Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.Price> builder) {
+        this.conflictingPrice = builder.apply(com.commercetools.api.models.common.PriceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Conflicting Embedded Price.</p>
      * @param conflictingPrice value to be set
      * @return Builder
      */

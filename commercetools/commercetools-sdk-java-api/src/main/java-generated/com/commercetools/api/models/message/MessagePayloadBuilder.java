@@ -626,4 +626,5 @@ public class MessagePayloadBuilder {
     public static MessagePayloadBuilder of() {
         return new MessagePayloadBuilder();
     }
+
 }

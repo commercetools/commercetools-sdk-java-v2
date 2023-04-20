@@ -97,6 +97,30 @@ public class StoreSetSupplyChannelsActionBuilder implements Builder<StoreSetSupp
 
     /**
      *  <p>Value to set. If not defined, the Store's <code>supplyChannels</code> are unset.</p>
+     * @param builder function to build the supplyChannels value
+     * @return Builder
+     */
+
+    public StoreSetSupplyChannelsActionBuilder addSupplyChannels(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+        return plusSupplyChannels(
+            builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()));
+    }
+
+    /**
+     *  <p>Value to set. If not defined, the Store's <code>supplyChannels</code> are unset.</p>
+     * @param builder function to build the supplyChannels value
+     * @return Builder
+     */
+
+    public StoreSetSupplyChannelsActionBuilder setSupplyChannels(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+        return supplyChannels(
+            builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of()));
+    }
+
+    /**
+     *  <p>Value to set. If not defined, the Store's <code>supplyChannels</code> are unset.</p>
      * @return supplyChannels
      */
 

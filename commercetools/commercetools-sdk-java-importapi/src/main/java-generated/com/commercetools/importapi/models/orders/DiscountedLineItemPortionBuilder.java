@@ -42,6 +42,18 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
 
     /**
      *  <p>References a cart discount by key.</p>
+     * @param builder function to build the discount value
+     * @return Builder
+     */
+
+    public DiscountedLineItemPortionBuilder withDiscount(
+            Function<com.commercetools.importapi.models.common.CartDiscountKeyReferenceBuilder, com.commercetools.importapi.models.common.CartDiscountKeyReference> builder) {
+        this.discount = builder.apply(com.commercetools.importapi.models.common.CartDiscountKeyReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>References a cart discount by key.</p>
      * @param discount value to be set
      * @return Builder
      */
@@ -61,6 +73,18 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
     public DiscountedLineItemPortionBuilder discountedAmount(
             Function<com.commercetools.importapi.models.common.MoneyBuilder, com.commercetools.importapi.models.common.MoneyBuilder> builder) {
         this.discountedAmount = builder.apply(com.commercetools.importapi.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the discountedAmount using the builder function
+     * @param builder function to build the discountedAmount value
+     * @return Builder
+     */
+
+    public DiscountedLineItemPortionBuilder withDiscountedAmount(
+            Function<com.commercetools.importapi.models.common.MoneyBuilder, com.commercetools.importapi.models.common.Money> builder) {
+        this.discountedAmount = builder.apply(com.commercetools.importapi.models.common.MoneyBuilder.of());
         return this;
     }
 

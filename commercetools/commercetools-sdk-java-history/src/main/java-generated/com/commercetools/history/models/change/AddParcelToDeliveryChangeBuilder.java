@@ -65,6 +65,18 @@ public class AddParcelToDeliveryChangeBuilder implements Builder<AddParcelToDeli
     }
 
     /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public AddParcelToDeliveryChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.ParcelBuilder, com.commercetools.history.models.common.Parcel> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.ParcelBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder

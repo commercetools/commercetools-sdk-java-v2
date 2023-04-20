@@ -68,6 +68,18 @@ public class MyCustomerChangeAddressActionBuilder implements Builder<MyCustomerC
 
     /**
      *  <p>Value to set.</p>
+     * @param builder function to build the address value
+     * @return Builder
+     */
+
+    public MyCustomerChangeAddressActionBuilder withAddress(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddress> builder) {
+        this.address = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to set.</p>
      * @param address value to be set
      * @return Builder
      */

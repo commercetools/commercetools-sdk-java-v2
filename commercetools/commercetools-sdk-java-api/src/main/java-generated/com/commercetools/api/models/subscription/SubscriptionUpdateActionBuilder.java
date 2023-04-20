@@ -34,4 +34,5 @@ public class SubscriptionUpdateActionBuilder {
     public static SubscriptionUpdateActionBuilder of() {
         return new SubscriptionUpdateActionBuilder();
     }
+
 }

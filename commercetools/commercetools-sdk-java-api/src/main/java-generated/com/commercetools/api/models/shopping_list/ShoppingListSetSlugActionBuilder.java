@@ -40,6 +40,18 @@ public class ShoppingListSetSlugActionBuilder implements Builder<ShoppingListSet
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code></p>
+     * @param builder function to build the slug value
+     * @return Builder
+     */
+
+    public ShoppingListSetSlugActionBuilder withSlug(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code></p>
      * @param slug value to be set
      * @return Builder
      */

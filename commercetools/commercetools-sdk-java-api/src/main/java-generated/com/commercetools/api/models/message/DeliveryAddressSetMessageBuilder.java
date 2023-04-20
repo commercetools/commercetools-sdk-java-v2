@@ -123,6 +123,18 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @param builder function to build the lastModifiedBy value
+     * @return Builder
+     */
+
+    public DeliveryAddressSetMessageBuilder withLastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value of <code>createdBy</code>.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -142,6 +154,18 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
     public DeliveryAddressSetMessageBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
+     * @return Builder
+     */
+
+    public DeliveryAddressSetMessageBuilder withCreatedBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
 
@@ -218,6 +242,19 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @param builder function to build the resourceUserProvidedIdentifiers value
+     * @return Builder
+     */
+
+    public DeliveryAddressSetMessageBuilder withResourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiers> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      * @param resourceUserProvidedIdentifiers value to be set
      * @return Builder
      */
@@ -253,6 +290,18 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
 
     /**
      *  <p>Address after the Set Delivery Address update action.</p>
+     * @param builder function to build the address value
+     * @return Builder
+     */
+
+    public DeliveryAddressSetMessageBuilder withAddress(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
+        this.address = builder.apply(com.commercetools.api.models.common.AddressBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Address after the Set Delivery Address update action.</p>
      * @param address value to be set
      * @return Builder
      */
@@ -272,6 +321,18 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
     public DeliveryAddressSetMessageBuilder oldAddress(
             Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
         this.oldAddress = builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Address before the Set Delivery Address update action.</p>
+     * @param builder function to build the oldAddress value
+     * @return Builder
+     */
+
+    public DeliveryAddressSetMessageBuilder withOldAddress(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
+        this.oldAddress = builder.apply(com.commercetools.api.models.common.AddressBuilder.of());
         return this;
     }
 

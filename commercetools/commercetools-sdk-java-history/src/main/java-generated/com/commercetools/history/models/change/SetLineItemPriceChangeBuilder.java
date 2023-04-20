@@ -57,6 +57,18 @@ public class SetLineItemPriceChangeBuilder implements Builder<SetLineItemPriceCh
     }
 
     /**
+     * set the value to the lineItem using the builder function
+     * @param builder function to build the lineItem value
+     * @return Builder
+     */
+
+    public SetLineItemPriceChangeBuilder withLineItem(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+        this.lineItem = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the lineItem
      * @param lineItem value to be set
      * @return Builder
@@ -81,6 +93,18 @@ public class SetLineItemPriceChangeBuilder implements Builder<SetLineItemPriceCh
     }
 
     /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetLineItemPriceChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.Price> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.PriceBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
@@ -100,6 +124,18 @@ public class SetLineItemPriceChangeBuilder implements Builder<SetLineItemPriceCh
     public SetLineItemPriceChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.PriceBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.PriceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public SetLineItemPriceChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.Price> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.PriceBuilder.of());
         return this;
     }
 

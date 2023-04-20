@@ -86,6 +86,19 @@ public class SetShoppingListLineItemCustomFieldChangeBuilder
     }
 
     /**
+     * set the value to the lineItem using the builder function
+     * @param builder function to build the lineItem value
+     * @return Builder
+     */
+
+    public SetShoppingListLineItemCustomFieldChangeBuilder withLineItem(
+            Function<com.commercetools.history.models.change_value.ShoppingListLineItemValueBuilder, com.commercetools.history.models.change_value.ShoppingListLineItemValue> builder) {
+        this.lineItem = builder
+                .apply(com.commercetools.history.models.change_value.ShoppingListLineItemValueBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the lineItem
      * @param lineItem value to be set
      * @return Builder

@@ -57,6 +57,19 @@ public class SetValidFromAndUntilChangeBuilder implements Builder<SetValidFromAn
 
     /**
      *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public SetValidFromAndUntilChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.change_value.ValidFromAndUntilValueBuilder, com.commercetools.history.models.change_value.ValidFromAndUntilValue> builder) {
+        this.previousValue = builder
+                .apply(com.commercetools.history.models.change_value.ValidFromAndUntilValueBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -77,6 +90,19 @@ public class SetValidFromAndUntilChangeBuilder implements Builder<SetValidFromAn
             Function<com.commercetools.history.models.change_value.ValidFromAndUntilValueBuilder, com.commercetools.history.models.change_value.ValidFromAndUntilValueBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.change_value.ValidFromAndUntilValueBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Shape of the value for <code>setValidFromAndUntil</code> action</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetValidFromAndUntilChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.change_value.ValidFromAndUntilValueBuilder, com.commercetools.history.models.change_value.ValidFromAndUntilValue> builder) {
+        this.nextValue = builder
+                .apply(com.commercetools.history.models.change_value.ValidFromAndUntilValueBuilder.of());
         return this;
     }
 

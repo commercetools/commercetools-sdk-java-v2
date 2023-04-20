@@ -44,6 +44,18 @@ public class ProductSelectionAddProductActionBuilder implements Builder<ProductS
 
     /**
      *  <p>ResourceIdentifier of the Product</p>
+     * @param builder function to build the product value
+     * @return Builder
+     */
+
+    public ProductSelectionAddProductActionBuilder withProduct(
+            Function<com.commercetools.api.models.product.ProductResourceIdentifierBuilder, com.commercetools.api.models.product.ProductResourceIdentifier> builder) {
+        this.product = builder.apply(com.commercetools.api.models.product.ProductResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>ResourceIdentifier of the Product</p>
      * @param product value to be set
      * @return Builder
      */
@@ -55,7 +67,7 @@ public class ProductSelectionAddProductActionBuilder implements Builder<ProductS
     }
 
     /**
-     *  <p>Defines which Variants of the Product will be included from the Product Selection. If not supplied all Variants are deemed to be included.</p>
+     *  <p>Defines which Variants of the Product will be included in the Product Selection. If not supplied all Variants are deemed to be included.</p>
      * @param variantSelection value to be set
      * @return Builder
      */
@@ -67,7 +79,7 @@ public class ProductSelectionAddProductActionBuilder implements Builder<ProductS
     }
 
     /**
-     *  <p>Defines which Variants of the Product will be included from the Product Selection. If not supplied all Variants are deemed to be included.</p>
+     *  <p>Defines which Variants of the Product will be included in the Product Selection. If not supplied all Variants are deemed to be included.</p>
      * @param builder function to build the variantSelection value
      * @return Builder
      */
@@ -90,7 +102,7 @@ public class ProductSelectionAddProductActionBuilder implements Builder<ProductS
     }
 
     /**
-     *  <p>Defines which Variants of the Product will be included from the Product Selection. If not supplied all Variants are deemed to be included.</p>
+     *  <p>Defines which Variants of the Product will be included in the Product Selection. If not supplied all Variants are deemed to be included.</p>
      * @return variantSelection
      */
 

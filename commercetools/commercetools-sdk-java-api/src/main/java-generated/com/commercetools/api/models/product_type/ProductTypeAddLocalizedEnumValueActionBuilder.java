@@ -53,6 +53,18 @@ public class ProductTypeAddLocalizedEnumValueActionBuilder implements Builder<Pr
 
     /**
      *  <p>Value to append to the array.</p>
+     * @param builder function to build the value value
+     * @return Builder
+     */
+
+    public ProductTypeAddLocalizedEnumValueActionBuilder withValue(
+            Function<com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder, com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> builder) {
+        this.value = builder.apply(com.commercetools.api.models.product_type.AttributeLocalizedEnumValueBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to append to the array.</p>
      * @param value value to be set
      * @return Builder
      */

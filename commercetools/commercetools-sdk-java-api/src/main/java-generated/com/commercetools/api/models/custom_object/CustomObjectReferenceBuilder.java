@@ -54,6 +54,18 @@ public class CustomObjectReferenceBuilder implements Builder<CustomObjectReferen
 
     /**
      *  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with Reference Expansion for CustomObjects.</p>
+     * @param builder function to build the obj value
+     * @return Builder
+     */
+
+    public CustomObjectReferenceBuilder withObj(
+            Function<com.commercetools.api.models.custom_object.CustomObjectBuilder, com.commercetools.api.models.custom_object.CustomObject> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.custom_object.CustomObjectBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Contains the representation of the expanded CustomObject. Only present in responses to requests with Reference Expansion for CustomObjects.</p>
      * @param obj value to be set
      * @return Builder
      */

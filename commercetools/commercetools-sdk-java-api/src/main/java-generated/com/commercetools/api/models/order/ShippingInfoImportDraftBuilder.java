@@ -74,6 +74,18 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
+     * set the value to the price using the builder function
+     * @param builder function to build the price value
+     * @return Builder
+     */
+
+    public ShippingInfoImportDraftBuilder withPrice(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+        this.price = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the price
      * @param price value to be set
      * @return Builder
@@ -99,6 +111,18 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
 
     /**
      *  <p>The shipping rate used to determine the price.</p>
+     * @param builder function to build the shippingRate value
+     * @return Builder
+     */
+
+    public ShippingInfoImportDraftBuilder withShippingRate(
+            Function<com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder, com.commercetools.api.models.shipping_method.ShippingRateDraft> builder) {
+        this.shippingRate = builder.apply(com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The shipping rate used to determine the price.</p>
      * @param shippingRate value to be set
      * @return Builder
      */
@@ -118,6 +142,18 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     public ShippingInfoImportDraftBuilder taxRate(
             Function<com.commercetools.api.models.tax_category.TaxRateBuilder, com.commercetools.api.models.tax_category.TaxRateBuilder> builder) {
         this.taxRate = builder.apply(com.commercetools.api.models.tax_category.TaxRateBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the taxRate using the builder function
+     * @param builder function to build the taxRate value
+     * @return Builder
+     */
+
+    public ShippingInfoImportDraftBuilder withTaxRate(
+            Function<com.commercetools.api.models.tax_category.TaxRateBuilder, com.commercetools.api.models.tax_category.TaxRate> builder) {
+        this.taxRate = builder.apply(com.commercetools.api.models.tax_category.TaxRateBuilder.of());
         return this;
     }
 
@@ -148,6 +184,19 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
+     * set the value to the taxCategory using the builder function
+     * @param builder function to build the taxCategory value
+     * @return Builder
+     */
+
+    public ShippingInfoImportDraftBuilder withTaxCategory(
+            Function<com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder, com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier> builder) {
+        this.taxCategory = builder
+                .apply(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the taxCategory
      * @param taxCategory value to be set
      * @return Builder
@@ -170,6 +219,19 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
         this.shippingMethod = builder
                 .apply(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Not set if custom shipping method is used.</p>
+     * @param builder function to build the shippingMethod value
+     * @return Builder
+     */
+
+    public ShippingInfoImportDraftBuilder withShippingMethod(
+            Function<com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder, com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier> builder) {
+        this.shippingMethod = builder
+                .apply(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder.of());
         return this;
     }
 
@@ -253,6 +315,28 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
     }
 
     /**
+     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+     * @param builder function to build the deliveries value
+     * @return Builder
+     */
+
+    public ShippingInfoImportDraftBuilder addDeliveries(
+            Function<com.commercetools.api.models.order.DeliveryDraftBuilder, com.commercetools.api.models.order.DeliveryDraft> builder) {
+        return plusDeliveries(builder.apply(com.commercetools.api.models.order.DeliveryDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
+     * @param builder function to build the deliveries value
+     * @return Builder
+     */
+
+    public ShippingInfoImportDraftBuilder setDeliveries(
+            Function<com.commercetools.api.models.order.DeliveryDraftBuilder, com.commercetools.api.models.order.DeliveryDraft> builder) {
+        return deliveries(builder.apply(com.commercetools.api.models.order.DeliveryDraftBuilder.of()));
+    }
+
+    /**
      * set the value to the discountedPrice using the builder function
      * @param builder function to build the discountedPrice value
      * @return Builder
@@ -263,6 +347,19 @@ public class ShippingInfoImportDraftBuilder implements Builder<ShippingInfoImpor
         this.discountedPrice = builder
                 .apply(com.commercetools.api.models.order.DiscountedLineItemPriceDraftBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     * set the value to the discountedPrice using the builder function
+     * @param builder function to build the discountedPrice value
+     * @return Builder
+     */
+
+    public ShippingInfoImportDraftBuilder withDiscountedPrice(
+            Function<com.commercetools.api.models.order.DiscountedLineItemPriceDraftBuilder, com.commercetools.api.models.order.DiscountedLineItemPriceDraft> builder) {
+        this.discountedPrice = builder
+                .apply(com.commercetools.api.models.order.DiscountedLineItemPriceDraftBuilder.of());
         return this;
     }
 

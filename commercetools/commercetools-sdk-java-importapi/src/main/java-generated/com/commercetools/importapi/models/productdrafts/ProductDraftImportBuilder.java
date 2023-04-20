@@ -97,6 +97,18 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
 
     /**
      *  <p>The <code>productType</code> of a Product. Maps to <code>Product.productType</code>. The Reference to the ProductType with which the ProductDraft is associated. If referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductType is created.</p>
+     * @param builder function to build the productType value
+     * @return Builder
+     */
+
+    public ProductDraftImportBuilder withProductType(
+            Function<com.commercetools.importapi.models.common.ProductTypeKeyReferenceBuilder, com.commercetools.importapi.models.common.ProductTypeKeyReference> builder) {
+        this.productType = builder.apply(com.commercetools.importapi.models.common.ProductTypeKeyReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The <code>productType</code> of a Product. Maps to <code>Product.productType</code>. The Reference to the ProductType with which the ProductDraft is associated. If referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductType is created.</p>
      * @param productType value to be set
      * @return Builder
      */
@@ -116,6 +128,18 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     public ProductDraftImportBuilder name(
             Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the name using the builder function
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public ProductDraftImportBuilder withName(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -144,6 +168,18 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
 
     /**
      *  <p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p>
+     * @param builder function to build the slug value
+     * @return Builder
+     */
+
+    public ProductDraftImportBuilder withSlug(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedString> builder) {
+        this.slug = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p>
      * @param slug value to be set
      * @return Builder
      */
@@ -162,6 +198,18 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     public ProductDraftImportBuilder description(
             Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
         this.description = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Maps to <code>Product.description</code>.</p>
+     * @param builder function to build the description value
+     * @return Builder
+     */
+
+    public ProductDraftImportBuilder withDescription(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedString> builder) {
+        this.description = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -247,6 +295,29 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     }
 
     /**
+     *  <p>The Reference to the Categories with which the ProductDraft is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
+     * @param builder function to build the categories value
+     * @return Builder
+     */
+
+    public ProductDraftImportBuilder addCategories(
+            Function<com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder, com.commercetools.importapi.models.common.CategoryKeyReference> builder) {
+        return plusCategories(
+            builder.apply(com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p>The Reference to the Categories with which the ProductDraft is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
+     * @param builder function to build the categories value
+     * @return Builder
+     */
+
+    public ProductDraftImportBuilder setCategories(
+            Function<com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder, com.commercetools.importapi.models.common.CategoryKeyReference> builder) {
+        return categories(builder.apply(com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder.of()));
+    }
+
+    /**
      *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
      *  <pre><code>{
      *    "de": "Hundefutter",
@@ -260,6 +331,23 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     public ProductDraftImportBuilder metaTitle(
             Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
         this.metaTitle = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
+     * @param builder function to build the metaTitle value
+     * @return Builder
+     */
+
+    public ProductDraftImportBuilder withMetaTitle(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedString> builder) {
+        this.metaTitle = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -305,6 +393,23 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @param builder function to build the metaDescription value
+     * @return Builder
+     */
+
+    public ProductDraftImportBuilder withMetaDescription(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedString> builder) {
+        this.metaDescription = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
      * @param metaDescription value to be set
      * @return Builder
      */
@@ -340,6 +445,23 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @param builder function to build the metaKeywords value
+     * @return Builder
+     */
+
+    public ProductDraftImportBuilder withMetaKeywords(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedString> builder) {
+        this.metaKeywords = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
      * @param metaKeywords value to be set
      * @return Builder
      */
@@ -361,6 +483,19 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
         this.masterVariant = builder
                 .apply(com.commercetools.importapi.models.productdrafts.ProductVariantDraftImportBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>The master Product variant. Required if the <code>variants</code> array contains a Product Variant.</p>
+     * @param builder function to build the masterVariant value
+     * @return Builder
+     */
+
+    public ProductDraftImportBuilder withMasterVariant(
+            Function<com.commercetools.importapi.models.productdrafts.ProductVariantDraftImportBuilder, com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport> builder) {
+        this.masterVariant = builder
+                .apply(com.commercetools.importapi.models.productdrafts.ProductVariantDraftImportBuilder.of());
         return this;
     }
 
@@ -448,6 +583,30 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     }
 
     /**
+     *  <p>An array of related Product Variants.</p>
+     * @param builder function to build the variants value
+     * @return Builder
+     */
+
+    public ProductDraftImportBuilder addVariants(
+            Function<com.commercetools.importapi.models.productdrafts.ProductVariantDraftImportBuilder, com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport> builder) {
+        return plusVariants(
+            builder.apply(com.commercetools.importapi.models.productdrafts.ProductVariantDraftImportBuilder.of()));
+    }
+
+    /**
+     *  <p>An array of related Product Variants.</p>
+     * @param builder function to build the variants value
+     * @return Builder
+     */
+
+    public ProductDraftImportBuilder setVariants(
+            Function<com.commercetools.importapi.models.productdrafts.ProductVariantDraftImportBuilder, com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport> builder) {
+        return variants(
+            builder.apply(com.commercetools.importapi.models.productdrafts.ProductVariantDraftImportBuilder.of()));
+    }
+
+    /**
      *  <p>The Reference to the TaxCategory with which the ProductDraft is associated. If referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary TaxCategory is created.</p>
      * @param builder function to build the taxCategory value
      * @return Builder
@@ -457,6 +616,18 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
             Function<com.commercetools.importapi.models.common.TaxCategoryKeyReferenceBuilder, com.commercetools.importapi.models.common.TaxCategoryKeyReferenceBuilder> builder) {
         this.taxCategory = builder.apply(com.commercetools.importapi.models.common.TaxCategoryKeyReferenceBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>The Reference to the TaxCategory with which the ProductDraft is associated. If referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary TaxCategory is created.</p>
+     * @param builder function to build the taxCategory value
+     * @return Builder
+     */
+
+    public ProductDraftImportBuilder withTaxCategory(
+            Function<com.commercetools.importapi.models.common.TaxCategoryKeyReferenceBuilder, com.commercetools.importapi.models.common.TaxCategoryKeyReference> builder) {
+        this.taxCategory = builder.apply(com.commercetools.importapi.models.common.TaxCategoryKeyReferenceBuilder.of());
         return this;
     }
 
@@ -519,6 +690,34 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
      *    ]
      *  }
      *  </code></pre>
+     * @param builder function to build the searchKeywords value
+     * @return Builder
+     */
+
+    public ProductDraftImportBuilder withSearchKeywords(
+            Function<com.commercetools.importapi.models.products.SearchKeywordsBuilder, com.commercetools.importapi.models.products.SearchKeywords> builder) {
+        this.searchKeywords = builder.apply(com.commercetools.importapi.models.products.SearchKeywordsBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of IETF language tag. The value to a language tag key is an array of SearchKeyword for the specific language.</p>
+     *  <pre><code>{
+     *    "en": [
+     *      { "text": "Multi tool" },
+     *      { "text": "Swiss Army Knife", "suggestTokenizer": { "type": "whitespace" } }
+     *    ],
+     *    "de": [
+     *      {
+     *        "text": "Schweizer Messer",
+     *        "suggestTokenizer": {
+     *          "type": "custom",
+     *          "inputs": ["schweizer messer", "offiziersmesser", "sackmesser"]
+     *        }
+     *      }
+     *    ]
+     *  }
+     *  </code></pre>
      * @param searchKeywords value to be set
      * @return Builder
      */
@@ -538,6 +737,18 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     public ProductDraftImportBuilder state(
             Function<com.commercetools.importapi.models.common.StateKeyReferenceBuilder, com.commercetools.importapi.models.common.StateKeyReferenceBuilder> builder) {
         this.state = builder.apply(com.commercetools.importapi.models.common.StateKeyReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>The Reference to the State with which the ProductDraft is associated. If referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary State is created.</p>
+     * @param builder function to build the state value
+     * @return Builder
+     */
+
+    public ProductDraftImportBuilder withState(
+            Function<com.commercetools.importapi.models.common.StateKeyReferenceBuilder, com.commercetools.importapi.models.common.StateKeyReference> builder) {
+        this.state = builder.apply(com.commercetools.importapi.models.common.StateKeyReferenceBuilder.of());
         return this;
     }
 

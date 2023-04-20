@@ -26,4 +26,5 @@ public class TypedMoneyBuilder {
     public static TypedMoneyBuilder of() {
         return new TypedMoneyBuilder();
     }
+
 }

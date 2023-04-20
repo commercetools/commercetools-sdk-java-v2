@@ -120,6 +120,18 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
+     * set the value to the customer using the builder function
+     * @param builder function to build the customer value
+     * @return Builder
+     */
+
+    public OrderImportBuilder withCustomer(
+            Function<com.commercetools.importapi.models.common.CustomerKeyReferenceBuilder, com.commercetools.importapi.models.common.CustomerKeyReference> builder) {
+        this.customer = builder.apply(com.commercetools.importapi.models.common.CustomerKeyReferenceBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the customer
      * @param customer value to be set
      * @return Builder
@@ -212,6 +224,28 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
+     *  <p>Maps to <code>Order.lineItems</code>.</p>
+     * @param builder function to build the lineItems value
+     * @return Builder
+     */
+
+    public OrderImportBuilder addLineItems(
+            Function<com.commercetools.importapi.models.orders.LineItemImportDraftBuilder, com.commercetools.importapi.models.orders.LineItemImportDraft> builder) {
+        return plusLineItems(builder.apply(com.commercetools.importapi.models.orders.LineItemImportDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>Maps to <code>Order.lineItems</code>.</p>
+     * @param builder function to build the lineItems value
+     * @return Builder
+     */
+
+    public OrderImportBuilder setLineItems(
+            Function<com.commercetools.importapi.models.orders.LineItemImportDraftBuilder, com.commercetools.importapi.models.orders.LineItemImportDraft> builder) {
+        return lineItems(builder.apply(com.commercetools.importapi.models.orders.LineItemImportDraftBuilder.of()));
+    }
+
+    /**
      *  <p>Maps to <code>Order.customLineItems</code></p>
      * @param customLineItems value to be set
      * @return Builder
@@ -281,6 +315,30 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
+     *  <p>Maps to <code>Order.customLineItems</code></p>
+     * @param builder function to build the customLineItems value
+     * @return Builder
+     */
+
+    public OrderImportBuilder addCustomLineItems(
+            Function<com.commercetools.importapi.models.orders.CustomLineItemDraftBuilder, com.commercetools.importapi.models.orders.CustomLineItemDraft> builder) {
+        return plusCustomLineItems(
+            builder.apply(com.commercetools.importapi.models.orders.CustomLineItemDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>Maps to <code>Order.customLineItems</code></p>
+     * @param builder function to build the customLineItems value
+     * @return Builder
+     */
+
+    public OrderImportBuilder setCustomLineItems(
+            Function<com.commercetools.importapi.models.orders.CustomLineItemDraftBuilder, com.commercetools.importapi.models.orders.CustomLineItemDraft> builder) {
+        return customLineItems(
+            builder.apply(com.commercetools.importapi.models.orders.CustomLineItemDraftBuilder.of()));
+    }
+
+    /**
      *  <p>Maps to <code>Order.totalPrice</code>.</p>
      * @param totalPrice value to be set
      * @return Builder
@@ -317,6 +375,18 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.taxedPrice</code>.</p>
+     * @param builder function to build the taxedPrice value
+     * @return Builder
+     */
+
+    public OrderImportBuilder withTaxedPrice(
+            Function<com.commercetools.importapi.models.orders.TaxedPriceBuilder, com.commercetools.importapi.models.orders.TaxedPrice> builder) {
+        this.taxedPrice = builder.apply(com.commercetools.importapi.models.orders.TaxedPriceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Maps to <code>Order.taxedPrice</code>.</p>
      * @param taxedPrice value to be set
      * @return Builder
      */
@@ -336,6 +406,18 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     public OrderImportBuilder shippingAddress(
             Function<com.commercetools.importapi.models.common.AddressBuilder, com.commercetools.importapi.models.common.AddressBuilder> builder) {
         this.shippingAddress = builder.apply(com.commercetools.importapi.models.common.AddressBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Maps to <code>Order.shippingAddress</code>.</p>
+     * @param builder function to build the shippingAddress value
+     * @return Builder
+     */
+
+    public OrderImportBuilder withShippingAddress(
+            Function<com.commercetools.importapi.models.common.AddressBuilder, com.commercetools.importapi.models.common.Address> builder) {
+        this.shippingAddress = builder.apply(com.commercetools.importapi.models.common.AddressBuilder.of());
         return this;
     }
 
@@ -365,6 +447,18 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.billingAddress</code>.</p>
+     * @param builder function to build the billingAddress value
+     * @return Builder
+     */
+
+    public OrderImportBuilder withBillingAddress(
+            Function<com.commercetools.importapi.models.common.AddressBuilder, com.commercetools.importapi.models.common.Address> builder) {
+        this.billingAddress = builder.apply(com.commercetools.importapi.models.common.AddressBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Maps to <code>Order.billingAddress</code>.</p>
      * @param billingAddress value to be set
      * @return Builder
      */
@@ -386,6 +480,19 @@ public class OrderImportBuilder implements Builder<OrderImport> {
         this.customerGroup = builder
                 .apply(com.commercetools.importapi.models.common.CustomerGroupKeyReferenceBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Maps to <code>Order.customerGroup</code>.</p>
+     * @param builder function to build the customerGroup value
+     * @return Builder
+     */
+
+    public OrderImportBuilder withCustomerGroup(
+            Function<com.commercetools.importapi.models.common.CustomerGroupKeyReferenceBuilder, com.commercetools.importapi.models.common.CustomerGroupKeyReference> builder) {
+        this.customerGroup = builder
+                .apply(com.commercetools.importapi.models.common.CustomerGroupKeyReferenceBuilder.of());
         return this;
     }
 
@@ -463,6 +570,19 @@ public class OrderImportBuilder implements Builder<OrderImport> {
 
     /**
      *  <p>Maps to <code>Order.shippingInfo</code>.</p>
+     * @param builder function to build the shippingInfo value
+     * @return Builder
+     */
+
+    public OrderImportBuilder withShippingInfo(
+            Function<com.commercetools.importapi.models.orders.ShippingInfoImportDraftBuilder, com.commercetools.importapi.models.orders.ShippingInfoImportDraft> builder) {
+        this.shippingInfo = builder
+                .apply(com.commercetools.importapi.models.orders.ShippingInfoImportDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Maps to <code>Order.shippingInfo</code>.</p>
      * @param shippingInfo value to be set
      * @return Builder
      */
@@ -493,6 +613,18 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     public OrderImportBuilder custom(
             Function<com.commercetools.importapi.models.customfields.CustomBuilder, com.commercetools.importapi.models.customfields.CustomBuilder> builder) {
         this.custom = builder.apply(com.commercetools.importapi.models.customfields.CustomBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Maps to <code>Order.custom</code>.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public OrderImportBuilder withCustom(
+            Function<com.commercetools.importapi.models.customfields.CustomBuilder, com.commercetools.importapi.models.customfields.Custom> builder) {
+        this.custom = builder.apply(com.commercetools.importapi.models.customfields.CustomBuilder.of());
         return this;
     }
 
@@ -624,6 +756,28 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
+     *  <p>Maps to <code>Order.itemShippingAddresses</code>.</p>
+     * @param builder function to build the itemShippingAddresses value
+     * @return Builder
+     */
+
+    public OrderImportBuilder addItemShippingAddresses(
+            Function<com.commercetools.importapi.models.common.AddressBuilder, com.commercetools.importapi.models.common.Address> builder) {
+        return plusItemShippingAddresses(builder.apply(com.commercetools.importapi.models.common.AddressBuilder.of()));
+    }
+
+    /**
+     *  <p>Maps to <code>Order.itemShippingAddresses</code>.</p>
+     * @param builder function to build the itemShippingAddresses value
+     * @return Builder
+     */
+
+    public OrderImportBuilder setItemShippingAddresses(
+            Function<com.commercetools.importapi.models.common.AddressBuilder, com.commercetools.importapi.models.common.Address> builder) {
+        return itemShippingAddresses(builder.apply(com.commercetools.importapi.models.common.AddressBuilder.of()));
+    }
+
+    /**
      *  <p>Reference to the Store in which the Order is associated. If referenced Store does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Store exists.</p>
      * @param builder function to build the store value
      * @return Builder
@@ -632,6 +786,18 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     public OrderImportBuilder store(
             Function<com.commercetools.importapi.models.common.StoreKeyReferenceBuilder, com.commercetools.importapi.models.common.StoreKeyReferenceBuilder> builder) {
         this.store = builder.apply(com.commercetools.importapi.models.common.StoreKeyReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the Store in which the Order is associated. If referenced Store does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Store exists.</p>
+     * @param builder function to build the store value
+     * @return Builder
+     */
+
+    public OrderImportBuilder withStore(
+            Function<com.commercetools.importapi.models.common.StoreKeyReferenceBuilder, com.commercetools.importapi.models.common.StoreKeyReference> builder) {
+        this.store = builder.apply(com.commercetools.importapi.models.common.StoreKeyReferenceBuilder.of());
         return this;
     }
 
@@ -655,6 +821,18 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     public OrderImportBuilder state(
             Function<com.commercetools.importapi.models.common.StateKeyReferenceBuilder, com.commercetools.importapi.models.common.StateKeyReferenceBuilder> builder) {
         this.state = builder.apply(com.commercetools.importapi.models.common.StateKeyReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Reference to a State in a custom workflow.</p>
+     * @param builder function to build the state value
+     * @return Builder
+     */
+
+    public OrderImportBuilder withState(
+            Function<com.commercetools.importapi.models.common.StateKeyReferenceBuilder, com.commercetools.importapi.models.common.StateKeyReference> builder) {
+        this.state = builder.apply(com.commercetools.importapi.models.common.StateKeyReferenceBuilder.of());
         return this;
     }
 

@@ -34,4 +34,5 @@ public class OrderEditResultBuilder {
     public static OrderEditResultBuilder of() {
         return new OrderEditResultBuilder();
     }
+
 }

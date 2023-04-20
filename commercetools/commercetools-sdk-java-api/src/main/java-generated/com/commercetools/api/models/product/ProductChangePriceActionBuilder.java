@@ -57,6 +57,18 @@ public class ProductChangePriceActionBuilder implements Builder<ProductChangePri
 
     /**
      *  <p>Value to set.</p>
+     * @param builder function to build the price value
+     * @return Builder
+     */
+
+    public ProductChangePriceActionBuilder withPrice(
+            Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraft> builder) {
+        this.price = builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to set.</p>
      * @param price value to be set
      * @return Builder
      */

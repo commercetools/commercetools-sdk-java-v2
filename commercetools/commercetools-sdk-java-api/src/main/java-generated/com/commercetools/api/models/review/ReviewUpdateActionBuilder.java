@@ -62,4 +62,5 @@ public class ReviewUpdateActionBuilder {
     public static ReviewUpdateActionBuilder of() {
         return new ReviewUpdateActionBuilder();
     }
+
 }

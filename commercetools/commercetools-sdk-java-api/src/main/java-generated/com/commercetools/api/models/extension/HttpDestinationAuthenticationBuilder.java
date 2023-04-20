@@ -26,4 +26,5 @@ public class HttpDestinationAuthenticationBuilder {
     public static HttpDestinationAuthenticationBuilder of() {
         return new HttpDestinationAuthenticationBuilder();
     }
+
 }

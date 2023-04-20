@@ -60,6 +60,18 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
+     * set the value to the name using the builder function
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public AssetBuilder withName(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the name
      * @param name value to be set
      * @return Builder
@@ -83,6 +95,18 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
+     * set the value to the description using the builder function
+     * @param builder function to build the description value
+     * @return Builder
+     */
+
+    public AssetBuilder withDescription(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+        this.description = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the description
      * @param description value to be set
      * @return Builder
@@ -102,6 +126,18 @@ public class AssetBuilder implements Builder<Asset> {
     public AssetBuilder custom(
             Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.history.models.common.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the custom using the builder function
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public AssetBuilder withCustom(
+            Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFields> builder) {
+        this.custom = builder.apply(com.commercetools.history.models.common.CustomFieldsBuilder.of());
         return this;
     }
 

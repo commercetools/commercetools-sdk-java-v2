@@ -43,6 +43,18 @@ public class PaymentAddInterfaceInteractionActionBuilder implements Builder<Paym
 
     /**
      *  <p>ResourceIdentifier of a Type.</p>
+     * @param builder function to build the type value
+     * @return Builder
+     */
+
+    public PaymentAddInterfaceInteractionActionBuilder withType(
+            Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifier> builder) {
+        this.type = builder.apply(com.commercetools.api.models.type.TypeResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>ResourceIdentifier of a Type.</p>
      * @param type value to be set
      * @return Builder
      */
@@ -62,6 +74,18 @@ public class PaymentAddInterfaceInteractionActionBuilder implements Builder<Paym
     public PaymentAddInterfaceInteractionActionBuilder fields(
             Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
         this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields as per FieldDefinitions of the Type.</p>
+     * @param builder function to build the fields value
+     * @return Builder
+     */
+
+    public PaymentAddInterfaceInteractionActionBuilder withFields(
+            Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainer> builder) {
+        this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of());
         return this;
     }
 

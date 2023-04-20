@@ -117,6 +117,18 @@ public class SubscriptionBuilder implements Builder<Subscription> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
+     * @return Builder
+     */
+
+    public SubscriptionBuilder withLastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -136,6 +148,18 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     public SubscriptionBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
+     * @return Builder
+     */
+
+    public SubscriptionBuilder withCreatedBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
 
@@ -216,6 +240,28 @@ public class SubscriptionBuilder implements Builder<Subscription> {
         this.changes
                 .add(builder.apply(com.commercetools.api.models.subscription.ChangeSubscriptionBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Change notifications subscribed to.</p>
+     * @param builder function to build the changes value
+     * @return Builder
+     */
+
+    public SubscriptionBuilder addChanges(
+            Function<com.commercetools.api.models.subscription.ChangeSubscriptionBuilder, com.commercetools.api.models.subscription.ChangeSubscription> builder) {
+        return plusChanges(builder.apply(com.commercetools.api.models.subscription.ChangeSubscriptionBuilder.of()));
+    }
+
+    /**
+     *  <p>Change notifications subscribed to.</p>
+     * @param builder function to build the changes value
+     * @return Builder
+     */
+
+    public SubscriptionBuilder setChanges(
+            Function<com.commercetools.api.models.subscription.ChangeSubscriptionBuilder, com.commercetools.api.models.subscription.ChangeSubscription> builder) {
+        return changes(builder.apply(com.commercetools.api.models.subscription.ChangeSubscriptionBuilder.of()));
     }
 
     /**
@@ -319,6 +365,28 @@ public class SubscriptionBuilder implements Builder<Subscription> {
         this.messages
                 .add(builder.apply(com.commercetools.api.models.subscription.MessageSubscriptionBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Messages subscribed to.</p>
+     * @param builder function to build the messages value
+     * @return Builder
+     */
+
+    public SubscriptionBuilder addMessages(
+            Function<com.commercetools.api.models.subscription.MessageSubscriptionBuilder, com.commercetools.api.models.subscription.MessageSubscription> builder) {
+        return plusMessages(builder.apply(com.commercetools.api.models.subscription.MessageSubscriptionBuilder.of()));
+    }
+
+    /**
+     *  <p>Messages subscribed to.</p>
+     * @param builder function to build the messages value
+     * @return Builder
+     */
+
+    public SubscriptionBuilder setMessages(
+            Function<com.commercetools.api.models.subscription.MessageSubscriptionBuilder, com.commercetools.api.models.subscription.MessageSubscription> builder) {
+        return messages(builder.apply(com.commercetools.api.models.subscription.MessageSubscriptionBuilder.of()));
     }
 
     /**

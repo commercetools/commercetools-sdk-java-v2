@@ -54,4 +54,5 @@ public class StateUpdateActionBuilder {
     public static StateUpdateActionBuilder of() {
         return new StateUpdateActionBuilder();
     }
+
 }

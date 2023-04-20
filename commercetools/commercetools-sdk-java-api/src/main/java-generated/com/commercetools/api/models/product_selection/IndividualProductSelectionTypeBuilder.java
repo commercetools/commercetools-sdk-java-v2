@@ -20,6 +20,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class IndividualProductSelectionTypeBuilder implements Builder<IndividualProductSelectionType> {
 
     private com.commercetools.api.models.common.LocalizedString name;
@@ -33,6 +34,18 @@ public class IndividualProductSelectionTypeBuilder implements Builder<Individual
     public IndividualProductSelectionTypeBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>The name of the ProductSelection which is recommended to be unique.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public IndividualProductSelectionTypeBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
 

@@ -81,6 +81,19 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
     }
 
     /**
+     * set the value to the channels using the builder function
+     * @param builder function to build the channels value
+     * @return Builder
+     */
+
+    public ProductVariantAvailabilityBuilder withChannels(
+            Function<com.commercetools.history.models.common.ProductVariantChannelAvailabilityMapBuilder, com.commercetools.history.models.common.ProductVariantChannelAvailabilityMap> builder) {
+        this.channels = builder
+                .apply(com.commercetools.history.models.common.ProductVariantChannelAvailabilityMapBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the channels
      * @param channels value to be set
      * @return Builder

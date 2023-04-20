@@ -99,6 +99,30 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
     /**
      *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
      *  <p>If multiple shipping addresses are present for a Line Item or Custom Line Item, sub-quantities must be specified.</p>
+     * @param builder function to build the targets value
+     * @return Builder
+     */
+
+    public ItemShippingDetailsDraftBuilder addTargets(
+            Function<com.commercetools.api.models.cart.ItemShippingTargetBuilder, com.commercetools.api.models.cart.ItemShippingTarget> builder) {
+        return plusTargets(builder.apply(com.commercetools.api.models.cart.ItemShippingTargetBuilder.of()));
+    }
+
+    /**
+     *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
+     *  <p>If multiple shipping addresses are present for a Line Item or Custom Line Item, sub-quantities must be specified.</p>
+     * @param builder function to build the targets value
+     * @return Builder
+     */
+
+    public ItemShippingDetailsDraftBuilder setTargets(
+            Function<com.commercetools.api.models.cart.ItemShippingTargetBuilder, com.commercetools.api.models.cart.ItemShippingTarget> builder) {
+        return targets(builder.apply(com.commercetools.api.models.cart.ItemShippingTargetBuilder.of()));
+    }
+
+    /**
+     *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
+     *  <p>If multiple shipping addresses are present for a Line Item or Custom Line Item, sub-quantities must be specified.</p>
      * @return targets
      */
 

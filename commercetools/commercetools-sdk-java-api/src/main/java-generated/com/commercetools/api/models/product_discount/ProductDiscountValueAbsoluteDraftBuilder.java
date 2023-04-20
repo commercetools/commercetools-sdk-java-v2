@@ -92,6 +92,28 @@ public class ProductDiscountValueAbsoluteDraftBuilder implements Builder<Product
 
     /**
      *  <p>Money values in different currencies. An absolute ProductDiscount will only match a price if this array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
+     * @param builder function to build the money value
+     * @return Builder
+     */
+
+    public ProductDiscountValueAbsoluteDraftBuilder addMoney(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+        return plusMoney(builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()));
+    }
+
+    /**
+     *  <p>Money values in different currencies. An absolute ProductDiscount will only match a price if this array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
+     * @param builder function to build the money value
+     * @return Builder
+     */
+
+    public ProductDiscountValueAbsoluteDraftBuilder setMoney(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+        return money(builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()));
+    }
+
+    /**
+     *  <p>Money values in different currencies. An absolute ProductDiscount will only match a price if this array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
      * @return money
      */
 

@@ -34,4 +34,5 @@ public class CustomerGroupUpdateActionBuilder {
     public static CustomerGroupUpdateActionBuilder of() {
         return new CustomerGroupUpdateActionBuilder();
     }
+
 }

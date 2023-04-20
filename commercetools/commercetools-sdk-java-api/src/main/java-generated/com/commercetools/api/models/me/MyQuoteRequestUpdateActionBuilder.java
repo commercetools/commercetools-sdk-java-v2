@@ -22,4 +22,5 @@ public class MyQuoteRequestUpdateActionBuilder {
     public static MyQuoteRequestUpdateActionBuilder of() {
         return new MyQuoteRequestUpdateActionBuilder();
     }
+
 }

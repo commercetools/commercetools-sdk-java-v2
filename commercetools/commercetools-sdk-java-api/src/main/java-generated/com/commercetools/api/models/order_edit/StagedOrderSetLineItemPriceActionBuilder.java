@@ -56,6 +56,19 @@ public class StagedOrderSetLineItemPriceActionBuilder implements Builder<StagedO
     /**
      *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
      *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @param builder function to build the externalPrice value
+     * @return Builder
+     */
+
+    public StagedOrderSetLineItemPriceActionBuilder withExternalPrice(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+        this.externalPrice = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      * @param externalPrice value to be set
      * @return Builder
      */

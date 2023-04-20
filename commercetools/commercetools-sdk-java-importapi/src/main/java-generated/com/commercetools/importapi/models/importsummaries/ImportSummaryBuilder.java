@@ -42,6 +42,18 @@ public class ImportSummaryBuilder implements Builder<ImportSummary> {
 
     /**
      *  <p>The import status of an ImportContainer given by the number of resources in each Processing State.</p>
+     * @param builder function to build the states value
+     * @return Builder
+     */
+
+    public ImportSummaryBuilder withStates(
+            Function<com.commercetools.importapi.models.importsummaries.OperationStatesBuilder, com.commercetools.importapi.models.importsummaries.OperationStates> builder) {
+        this.states = builder.apply(com.commercetools.importapi.models.importsummaries.OperationStatesBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The import status of an ImportContainer given by the number of resources in each Processing State.</p>
      * @param states value to be set
      * @return Builder
      */

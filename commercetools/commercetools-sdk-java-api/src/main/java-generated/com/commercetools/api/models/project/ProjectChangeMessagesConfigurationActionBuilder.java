@@ -41,6 +41,19 @@ public class ProjectChangeMessagesConfigurationActionBuilder
 
     /**
      *  <p>Configuration for the Messages Query feature.</p>
+     * @param builder function to build the messagesConfiguration value
+     * @return Builder
+     */
+
+    public ProjectChangeMessagesConfigurationActionBuilder withMessagesConfiguration(
+            Function<com.commercetools.api.models.message.MessagesConfigurationDraftBuilder, com.commercetools.api.models.message.MessagesConfigurationDraft> builder) {
+        this.messagesConfiguration = builder
+                .apply(com.commercetools.api.models.message.MessagesConfigurationDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Configuration for the Messages Query feature.</p>
      * @param messagesConfiguration value to be set
      * @return Builder
      */

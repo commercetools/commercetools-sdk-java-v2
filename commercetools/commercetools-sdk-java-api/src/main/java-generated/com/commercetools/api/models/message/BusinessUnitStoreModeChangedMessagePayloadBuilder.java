@@ -102,6 +102,28 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
     }
 
     /**
+     *  <p>Stores of the Business Unit after the Set Store Mode update action.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public BusinessUnitStoreModeChangedMessagePayloadBuilder addStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
+        return plusStores(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p>Stores of the Business Unit after the Set Store Mode update action.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public BusinessUnitStoreModeChangedMessagePayloadBuilder setStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
+        return stores(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()));
+    }
+
+    /**
      *  <p>BusinessUnitStoreMode of the Business Unit after the Set Store Mode update action.</p>
      * @param storeMode value to be set
      * @return Builder
@@ -178,6 +200,28 @@ public class BusinessUnitStoreModeChangedMessagePayloadBuilder
         this.oldStores = new ArrayList<>();
         this.oldStores.add(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Stores of the Business Unit before the Set Store Mode update action.</p>
+     * @param builder function to build the oldStores value
+     * @return Builder
+     */
+
+    public BusinessUnitStoreModeChangedMessagePayloadBuilder addOldStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
+        return plusOldStores(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p>Stores of the Business Unit before the Set Store Mode update action.</p>
+     * @param builder function to build the oldStores value
+     * @return Builder
+     */
+
+    public BusinessUnitStoreModeChangedMessagePayloadBuilder setOldStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
+        return oldStores(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()));
     }
 
     /**

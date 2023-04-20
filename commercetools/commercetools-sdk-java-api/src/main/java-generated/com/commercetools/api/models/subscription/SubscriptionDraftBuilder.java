@@ -108,6 +108,28 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
+     *  <p>Change notifications to be subscribed to.</p>
+     * @param builder function to build the changes value
+     * @return Builder
+     */
+
+    public SubscriptionDraftBuilder addChanges(
+            Function<com.commercetools.api.models.subscription.ChangeSubscriptionBuilder, com.commercetools.api.models.subscription.ChangeSubscription> builder) {
+        return plusChanges(builder.apply(com.commercetools.api.models.subscription.ChangeSubscriptionBuilder.of()));
+    }
+
+    /**
+     *  <p>Change notifications to be subscribed to.</p>
+     * @param builder function to build the changes value
+     * @return Builder
+     */
+
+    public SubscriptionDraftBuilder setChanges(
+            Function<com.commercetools.api.models.subscription.ChangeSubscriptionBuilder, com.commercetools.api.models.subscription.ChangeSubscription> builder) {
+        return changes(builder.apply(com.commercetools.api.models.subscription.ChangeSubscriptionBuilder.of()));
+    }
+
+    /**
      *  <p>Messaging service to which the messages are sent.</p>
      * @param destination value to be set
      * @return Builder
@@ -209,6 +231,28 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
         this.messages
                 .add(builder.apply(com.commercetools.api.models.subscription.MessageSubscriptionBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Messages to be subscribed to.</p>
+     * @param builder function to build the messages value
+     * @return Builder
+     */
+
+    public SubscriptionDraftBuilder addMessages(
+            Function<com.commercetools.api.models.subscription.MessageSubscriptionBuilder, com.commercetools.api.models.subscription.MessageSubscription> builder) {
+        return plusMessages(builder.apply(com.commercetools.api.models.subscription.MessageSubscriptionBuilder.of()));
+    }
+
+    /**
+     *  <p>Messages to be subscribed to.</p>
+     * @param builder function to build the messages value
+     * @return Builder
+     */
+
+    public SubscriptionDraftBuilder setMessages(
+            Function<com.commercetools.api.models.subscription.MessageSubscriptionBuilder, com.commercetools.api.models.subscription.MessageSubscription> builder) {
+        return messages(builder.apply(com.commercetools.api.models.subscription.MessageSubscriptionBuilder.of()));
     }
 
     /**

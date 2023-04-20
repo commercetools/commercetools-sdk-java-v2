@@ -38,6 +38,18 @@ public class TypeChangeNameActionBuilder implements Builder<TypeChangeNameAction
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public TypeChangeNameActionBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>New value to set. Must not be empty.</p>
      * @param name value to be set
      * @return Builder
      */

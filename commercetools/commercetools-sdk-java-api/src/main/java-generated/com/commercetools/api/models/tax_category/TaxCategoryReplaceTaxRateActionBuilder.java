@@ -68,6 +68,18 @@ public class TaxCategoryReplaceTaxRateActionBuilder implements Builder<TaxCatego
 
     /**
      *  <p>New TaxRate to replace with.</p>
+     * @param builder function to build the taxRate value
+     * @return Builder
+     */
+
+    public TaxCategoryReplaceTaxRateActionBuilder withTaxRate(
+            Function<com.commercetools.api.models.tax_category.TaxRateDraftBuilder, com.commercetools.api.models.tax_category.TaxRateDraft> builder) {
+        this.taxRate = builder.apply(com.commercetools.api.models.tax_category.TaxRateDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>New TaxRate to replace with.</p>
      * @param taxRate value to be set
      * @return Builder
      */

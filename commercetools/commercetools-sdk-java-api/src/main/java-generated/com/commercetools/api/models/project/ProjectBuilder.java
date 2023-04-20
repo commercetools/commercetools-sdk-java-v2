@@ -245,6 +245,18 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Holds the configuration for the Messages Query feature.</p>
+     * @param builder function to build the messages value
+     * @return Builder
+     */
+
+    public ProjectBuilder withMessages(
+            Function<com.commercetools.api.models.message.MessagesConfigurationBuilder, com.commercetools.api.models.message.MessagesConfiguration> builder) {
+        this.messages = builder.apply(com.commercetools.api.models.message.MessagesConfigurationBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Holds the configuration for the Messages Query feature.</p>
      * @param messages value to be set
      * @return Builder
      */
@@ -263,6 +275,18 @@ public class ProjectBuilder implements Builder<Project> {
     public ProjectBuilder carts(
             Function<com.commercetools.api.models.project.CartsConfigurationBuilder, com.commercetools.api.models.project.CartsConfigurationBuilder> builder) {
         this.carts = builder.apply(com.commercetools.api.models.project.CartsConfigurationBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Holds the configuration for the Carts feature.</p>
+     * @param builder function to build the carts value
+     * @return Builder
+     */
+
+    public ProjectBuilder withCarts(
+            Function<com.commercetools.api.models.project.CartsConfigurationBuilder, com.commercetools.api.models.project.CartsConfiguration> builder) {
+        this.carts = builder.apply(com.commercetools.api.models.project.CartsConfigurationBuilder.of());
         return this;
     }
 
@@ -287,6 +311,18 @@ public class ProjectBuilder implements Builder<Project> {
             Function<com.commercetools.api.models.project.ShoppingListsConfigurationBuilder, com.commercetools.api.models.project.ShoppingListsConfigurationBuilder> builder) {
         this.shoppingLists = builder.apply(com.commercetools.api.models.project.ShoppingListsConfigurationBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Holds the configuration for the Shopping Lists feature. This field may not be present on Projects created before January 2020.</p>
+     * @param builder function to build the shoppingLists value
+     * @return Builder
+     */
+
+    public ProjectBuilder withShoppingLists(
+            Function<com.commercetools.api.models.project.ShoppingListsConfigurationBuilder, com.commercetools.api.models.project.ShoppingListsConfiguration> builder) {
+        this.shoppingLists = builder.apply(com.commercetools.api.models.project.ShoppingListsConfigurationBuilder.of());
         return this;
     }
 
@@ -342,6 +378,18 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.</p>
+     * @param builder function to build the externalOAuth value
+     * @return Builder
+     */
+
+    public ProjectBuilder withExternalOAuth(
+            Function<com.commercetools.api.models.project.ExternalOAuthBuilder, com.commercetools.api.models.project.ExternalOAuth> builder) {
+        this.externalOAuth = builder.apply(com.commercetools.api.models.project.ExternalOAuthBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Represents a RFC 7662 compliant OAuth 2.0 Token Introspection endpoint.</p>
      * @param externalOAuth value to be set
      * @return Builder
      */
@@ -368,6 +416,19 @@ public class ProjectBuilder implements Builder<Project> {
 
     /**
      *  <p>Controls indexing of resources to be provided on high performance read-only search endpoints.</p>
+     * @param builder function to build the searchIndexing value
+     * @return Builder
+     */
+
+    public ProjectBuilder withSearchIndexing(
+            Function<com.commercetools.api.models.project.SearchIndexingConfigurationBuilder, com.commercetools.api.models.project.SearchIndexingConfiguration> builder) {
+        this.searchIndexing = builder
+                .apply(com.commercetools.api.models.project.SearchIndexingConfigurationBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Controls indexing of resources to be provided on high performance read-only search endpoints.</p>
      * @param searchIndexing value to be set
      * @return Builder
      */
@@ -388,6 +449,18 @@ public class ProjectBuilder implements Builder<Project> {
             Function<com.commercetools.api.models.project.BusinessUnitConfigurationBuilder, com.commercetools.api.models.project.BusinessUnitConfigurationBuilder> builder) {
         this.businessUnits = builder.apply(com.commercetools.api.models.project.BusinessUnitConfigurationBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Holds configuration specific to Business Units.</p>
+     * @param builder function to build the businessUnits value
+     * @return Builder
+     */
+
+    public ProjectBuilder withBusinessUnits(
+            Function<com.commercetools.api.models.project.BusinessUnitConfigurationBuilder, com.commercetools.api.models.project.BusinessUnitConfiguration> builder) {
+        this.businessUnits = builder.apply(com.commercetools.api.models.project.BusinessUnitConfigurationBuilder.of());
         return this;
     }
 

@@ -74,6 +74,18 @@ public class CartRemoveLineItemActionBuilder implements Builder<CartRemoveLineIt
 
     /**
      *  <p>Sets the LineItem <code>price</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
+     * @param builder function to build the externalPrice value
+     * @return Builder
+     */
+
+    public CartRemoveLineItemActionBuilder withExternalPrice(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+        this.externalPrice = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Sets the LineItem <code>price</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
      * @param externalPrice value to be set
      * @return Builder
      */
@@ -100,6 +112,19 @@ public class CartRemoveLineItemActionBuilder implements Builder<CartRemoveLineIt
 
     /**
      *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
+     * @param builder function to build the externalTotalPrice value
+     * @return Builder
+     */
+
+    public CartRemoveLineItemActionBuilder withExternalTotalPrice(
+            Function<com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder, com.commercetools.api.models.cart.ExternalLineItemTotalPrice> builder) {
+        this.externalTotalPrice = builder
+                .apply(com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Sets the LineItem <code>price</code> and <code>totalPrice</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalTotal</code> LineItemPriceMode.</p>
      * @param externalTotalPrice value to be set
      * @return Builder
      */
@@ -121,6 +146,19 @@ public class CartRemoveLineItemActionBuilder implements Builder<CartRemoveLineIt
         this.shippingDetailsToRemove = builder
                 .apply(com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Container for Line Item-specific addresses to remove.</p>
+     * @param builder function to build the shippingDetailsToRemove value
+     * @return Builder
+     */
+
+    public CartRemoveLineItemActionBuilder withShippingDetailsToRemove(
+            Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraft> builder) {
+        this.shippingDetailsToRemove = builder
+                .apply(com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder.of());
         return this;
     }
 

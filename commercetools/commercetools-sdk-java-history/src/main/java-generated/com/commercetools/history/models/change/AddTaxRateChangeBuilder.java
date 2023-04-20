@@ -52,6 +52,18 @@ public class AddTaxRateChangeBuilder implements Builder<AddTaxRateChange> {
 
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public AddTaxRateChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.TaxRateBuilder, com.commercetools.history.models.common.TaxRate> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.TaxRateBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      * @param nextValue value to be set
      * @return Builder
      */

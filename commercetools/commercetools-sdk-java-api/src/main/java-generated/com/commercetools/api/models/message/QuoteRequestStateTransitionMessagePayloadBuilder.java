@@ -47,6 +47,18 @@ public class QuoteRequestStateTransitionMessagePayloadBuilder
 
     /**
      *  <p>State of the Quote after the Transition State update action.</p>
+     * @param builder function to build the state value
+     * @return Builder
+     */
+
+    public QuoteRequestStateTransitionMessagePayloadBuilder withState(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReference> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>State of the Quote after the Transition State update action.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -66,6 +78,18 @@ public class QuoteRequestStateTransitionMessagePayloadBuilder
     public QuoteRequestStateTransitionMessagePayloadBuilder oldState(
             Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
         this.oldState = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>State of the Quote before the Transition State update action.</p>
+     * @param builder function to build the oldState value
+     * @return Builder
+     */
+
+    public QuoteRequestStateTransitionMessagePayloadBuilder withOldState(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReference> builder) {
+        this.oldState = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of());
         return this;
     }
 

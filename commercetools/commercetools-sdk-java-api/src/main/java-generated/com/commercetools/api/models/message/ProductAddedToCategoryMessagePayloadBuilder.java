@@ -41,6 +41,18 @@ public class ProductAddedToCategoryMessagePayloadBuilder implements Builder<Prod
 
     /**
      *  <p>Category the Product was added to.</p>
+     * @param builder function to build the category value
+     * @return Builder
+     */
+
+    public ProductAddedToCategoryMessagePayloadBuilder withCategory(
+            Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReference> builder) {
+        this.category = builder.apply(com.commercetools.api.models.category.CategoryReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Category the Product was added to.</p>
      * @param category value to be set
      * @return Builder
      */

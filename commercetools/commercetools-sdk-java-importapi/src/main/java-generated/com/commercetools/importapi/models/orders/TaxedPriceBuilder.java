@@ -44,6 +44,18 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
 
     /**
      *  <p>Maps to <code>TaxedPrice.totalNet</code>.</p>
+     * @param builder function to build the totalNet value
+     * @return Builder
+     */
+
+    public TaxedPriceBuilder withTotalNet(
+            Function<com.commercetools.importapi.models.common.MoneyBuilder, com.commercetools.importapi.models.common.Money> builder) {
+        this.totalNet = builder.apply(com.commercetools.importapi.models.common.MoneyBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Maps to <code>TaxedPrice.totalNet</code>.</p>
      * @param totalNet value to be set
      * @return Builder
      */
@@ -62,6 +74,18 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
     public TaxedPriceBuilder totalGross(
             Function<com.commercetools.importapi.models.common.MoneyBuilder, com.commercetools.importapi.models.common.MoneyBuilder> builder) {
         this.totalGross = builder.apply(com.commercetools.importapi.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Maps to <code>TaxedPrice.totalGross</code>.</p>
+     * @param builder function to build the totalGross value
+     * @return Builder
+     */
+
+    public TaxedPriceBuilder withTotalGross(
+            Function<com.commercetools.importapi.models.common.MoneyBuilder, com.commercetools.importapi.models.common.Money> builder) {
+        this.totalGross = builder.apply(com.commercetools.importapi.models.common.MoneyBuilder.of());
         return this;
     }
 
@@ -140,6 +164,28 @@ public class TaxedPriceBuilder implements Builder<TaxedPrice> {
         this.taxPortions = new ArrayList<>();
         this.taxPortions.add(builder.apply(com.commercetools.importapi.models.orders.TaxPortionBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>
+     * @param builder function to build the taxPortions value
+     * @return Builder
+     */
+
+    public TaxedPriceBuilder addTaxPortions(
+            Function<com.commercetools.importapi.models.orders.TaxPortionBuilder, com.commercetools.importapi.models.orders.TaxPortion> builder) {
+        return plusTaxPortions(builder.apply(com.commercetools.importapi.models.orders.TaxPortionBuilder.of()));
+    }
+
+    /**
+     *  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>
+     * @param builder function to build the taxPortions value
+     * @return Builder
+     */
+
+    public TaxedPriceBuilder setTaxPortions(
+            Function<com.commercetools.importapi.models.orders.TaxPortionBuilder, com.commercetools.importapi.models.orders.TaxPortion> builder) {
+        return taxPortions(builder.apply(com.commercetools.importapi.models.orders.TaxPortionBuilder.of()));
     }
 
     /**

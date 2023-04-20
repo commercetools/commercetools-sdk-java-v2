@@ -150,6 +150,28 @@ public class OrderEditPagedQueryResponseBuilder implements Builder<OrderEditPage
     }
 
     /**
+     * add the value to the results using the builder function
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public OrderEditPagedQueryResponseBuilder addResults(
+            Function<com.commercetools.api.models.order_edit.OrderEditBuilder, com.commercetools.api.models.order_edit.OrderEdit> builder) {
+        return plusResults(builder.apply(com.commercetools.api.models.order_edit.OrderEditBuilder.of()));
+    }
+
+    /**
+     * set the value to the results using the builder function
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public OrderEditPagedQueryResponseBuilder setResults(
+            Function<com.commercetools.api.models.order_edit.OrderEditBuilder, com.commercetools.api.models.order_edit.OrderEdit> builder) {
+        return results(builder.apply(com.commercetools.api.models.order_edit.OrderEditBuilder.of()));
+    }
+
+    /**
      *  <p>Number of results requested.</p>
      * @return limit
      */

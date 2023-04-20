@@ -188,6 +188,18 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
+     * @return Builder
+     */
+
+    public QuoteRequestBuilder withLastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -207,6 +219,18 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     public QuoteRequestBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
+     * @return Builder
+     */
+
+    public QuoteRequestBuilder withCreatedBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
 
@@ -258,6 +282,18 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>The Buyer who raised the request.</p>
+     * @param builder function to build the customer value
+     * @return Builder
+     */
+
+    public QuoteRequestBuilder withCustomer(
+            Function<com.commercetools.api.models.customer.CustomerReferenceBuilder, com.commercetools.api.models.customer.CustomerReference> builder) {
+        this.customer = builder.apply(com.commercetools.api.models.customer.CustomerReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The Buyer who raised the request.</p>
      * @param customer value to be set
      * @return Builder
      */
@@ -283,6 +319,19 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Set automatically when <code>customer</code> is set and the Customer is a member of a Customer Group. Used for Product Variant price selection.</p>
+     * @param builder function to build the customerGroup value
+     * @return Builder
+     */
+
+    public QuoteRequestBuilder withCustomerGroup(
+            Function<com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReference> builder) {
+        this.customerGroup = builder
+                .apply(com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Set automatically when <code>customer</code> is set and the Customer is a member of a Customer Group. Used for Product Variant price selection.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -302,6 +351,18 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     public QuoteRequestBuilder store(
             Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
         this.store = builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>The Store to which the Buyer belongs.</p>
+     * @param builder function to build the store value
+     * @return Builder
+     */
+
+    public QuoteRequestBuilder withStore(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
+        this.store = builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of());
         return this;
     }
 
@@ -381,6 +442,28 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
+     *  <p>The Line Items for which a Quote is requested.</p>
+     * @param builder function to build the lineItems value
+     * @return Builder
+     */
+
+    public QuoteRequestBuilder addLineItems(
+            Function<com.commercetools.api.models.cart.LineItemBuilder, com.commercetools.api.models.cart.LineItem> builder) {
+        return plusLineItems(builder.apply(com.commercetools.api.models.cart.LineItemBuilder.of()));
+    }
+
+    /**
+     *  <p>The Line Items for which a Quote is requested.</p>
+     * @param builder function to build the lineItems value
+     * @return Builder
+     */
+
+    public QuoteRequestBuilder setLineItems(
+            Function<com.commercetools.api.models.cart.LineItemBuilder, com.commercetools.api.models.cart.LineItem> builder) {
+        return lineItems(builder.apply(com.commercetools.api.models.cart.LineItemBuilder.of()));
+    }
+
+    /**
      *  <p>The Custom Line Items for which a Quote is requested.</p>
      * @param customLineItems value to be set
      * @return Builder
@@ -448,6 +531,28 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
+     *  <p>The Custom Line Items for which a Quote is requested.</p>
+     * @param builder function to build the customLineItems value
+     * @return Builder
+     */
+
+    public QuoteRequestBuilder addCustomLineItems(
+            Function<com.commercetools.api.models.cart.CustomLineItemBuilder, com.commercetools.api.models.cart.CustomLineItem> builder) {
+        return plusCustomLineItems(builder.apply(com.commercetools.api.models.cart.CustomLineItemBuilder.of()));
+    }
+
+    /**
+     *  <p>The Custom Line Items for which a Quote is requested.</p>
+     * @param builder function to build the customLineItems value
+     * @return Builder
+     */
+
+    public QuoteRequestBuilder setCustomLineItems(
+            Function<com.commercetools.api.models.cart.CustomLineItemBuilder, com.commercetools.api.models.cart.CustomLineItem> builder) {
+        return customLineItems(builder.apply(com.commercetools.api.models.cart.CustomLineItemBuilder.of()));
+    }
+
+    /**
      *  <p>Sum of all <code>totalPrice</code> fields of the <code>lineItems</code> and <code>customLineItems</code>, as well as the <code>price</code> field of <code>shippingInfo</code> (if it exists). <code>totalPrice</code> may or may not include the taxes: it depends on the taxRate.includedInPrice property of each price.</p>
      * @param totalPrice value to be set
      * @return Builder
@@ -484,6 +589,18 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Not set until the shipping address is set. Will be set automatically in the <code>Platform</code> TaxMode. For the <code>External</code> tax mode it will be set as soon as the external tax rates for all line items, custom line items, and shipping in the cart are set.</p>
+     * @param builder function to build the taxedPrice value
+     * @return Builder
+     */
+
+    public QuoteRequestBuilder withTaxedPrice(
+            Function<com.commercetools.api.models.cart.TaxedPriceBuilder, com.commercetools.api.models.cart.TaxedPrice> builder) {
+        this.taxedPrice = builder.apply(com.commercetools.api.models.cart.TaxedPriceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Not set until the shipping address is set. Will be set automatically in the <code>Platform</code> TaxMode. For the <code>External</code> tax mode it will be set as soon as the external tax rates for all line items, custom line items, and shipping in the cart are set.</p>
      * @param taxedPrice value to be set
      * @return Builder
      */
@@ -502,6 +619,18 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     public QuoteRequestBuilder shippingAddress(
             Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
         this.shippingAddress = builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Used to determine the eligible ShippingMethods and rates as well as the tax rate of the Line Items.</p>
+     * @param builder function to build the shippingAddress value
+     * @return Builder
+     */
+
+    public QuoteRequestBuilder withShippingAddress(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
+        this.shippingAddress = builder.apply(com.commercetools.api.models.common.AddressBuilder.of());
         return this;
     }
 
@@ -526,6 +655,18 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     public QuoteRequestBuilder billingAddress(
             Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
         this.billingAddress = builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Address used for invoicing.</p>
+     * @param builder function to build the billingAddress value
+     * @return Builder
+     */
+
+    public QuoteRequestBuilder withBillingAddress(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
+        this.billingAddress = builder.apply(com.commercetools.api.models.common.AddressBuilder.of());
         return this;
     }
 
@@ -612,6 +753,18 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     /**
      *  <p>Set automatically once the ShippingMethod is set.</p>
+     * @param builder function to build the shippingInfo value
+     * @return Builder
+     */
+
+    public QuoteRequestBuilder withShippingInfo(
+            Function<com.commercetools.api.models.cart.ShippingInfoBuilder, com.commercetools.api.models.cart.ShippingInfo> builder) {
+        this.shippingInfo = builder.apply(com.commercetools.api.models.cart.ShippingInfoBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Set automatically once the ShippingMethod is set.</p>
      * @param shippingInfo value to be set
      * @return Builder
      */
@@ -631,6 +784,18 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     public QuoteRequestBuilder paymentInfo(
             Function<com.commercetools.api.models.order.PaymentInfoBuilder, com.commercetools.api.models.order.PaymentInfoBuilder> builder) {
         this.paymentInfo = builder.apply(com.commercetools.api.models.order.PaymentInfoBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Log of payment transactions related to the Quote.</p>
+     * @param builder function to build the paymentInfo value
+     * @return Builder
+     */
+
+    public QuoteRequestBuilder withPaymentInfo(
+            Function<com.commercetools.api.models.order.PaymentInfoBuilder, com.commercetools.api.models.order.PaymentInfo> builder) {
+        this.paymentInfo = builder.apply(com.commercetools.api.models.order.PaymentInfoBuilder.of());
         return this;
     }
 
@@ -737,6 +902,28 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
+     *  <p>Contains addresses for carts with multiple shipping addresses. Line items reference these addresses under their <code>shippingDetails</code>. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's <code>shippingAddress</code> is used for this.</p>
+     * @param builder function to build the itemShippingAddresses value
+     * @return Builder
+     */
+
+    public QuoteRequestBuilder addItemShippingAddresses(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
+        return plusItemShippingAddresses(builder.apply(com.commercetools.api.models.common.AddressBuilder.of()));
+    }
+
+    /**
+     *  <p>Contains addresses for carts with multiple shipping addresses. Line items reference these addresses under their <code>shippingDetails</code>. The addresses captured here are not used to determine eligible shipping methods or the applicable tax rate. Only the cart's <code>shippingAddress</code> is used for this.</p>
+     * @param builder function to build the itemShippingAddresses value
+     * @return Builder
+     */
+
+    public QuoteRequestBuilder setItemShippingAddresses(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
+        return itemShippingAddresses(builder.apply(com.commercetools.api.models.common.AddressBuilder.of()));
+    }
+
+    /**
      *  <p>Discounts that are only valid for the Quote and cannot be associated to any other Cart or Order.</p>
      * @param directDiscounts value to be set
      * @return Builder
@@ -804,6 +991,28 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
+     *  <p>Discounts that are only valid for the Quote and cannot be associated to any other Cart or Order.</p>
+     * @param builder function to build the directDiscounts value
+     * @return Builder
+     */
+
+    public QuoteRequestBuilder addDirectDiscounts(
+            Function<com.commercetools.api.models.cart.DirectDiscountBuilder, com.commercetools.api.models.cart.DirectDiscount> builder) {
+        return plusDirectDiscounts(builder.apply(com.commercetools.api.models.cart.DirectDiscountBuilder.of()));
+    }
+
+    /**
+     *  <p>Discounts that are only valid for the Quote and cannot be associated to any other Cart or Order.</p>
+     * @param builder function to build the directDiscounts value
+     * @return Builder
+     */
+
+    public QuoteRequestBuilder setDirectDiscounts(
+            Function<com.commercetools.api.models.cart.DirectDiscountBuilder, com.commercetools.api.models.cart.DirectDiscount> builder) {
+        return directDiscounts(builder.apply(com.commercetools.api.models.cart.DirectDiscountBuilder.of()));
+    }
+
+    /**
      *  <p>Custom Fields of the Quote Request.</p>
      * @param builder function to build the custom value
      * @return Builder
@@ -812,6 +1021,18 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     public QuoteRequestBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields of the Quote Request.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public QuoteRequestBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of());
         return this;
     }
 
@@ -835,6 +1056,18 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     public QuoteRequestBuilder state(
             Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
         this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>State of the Quote Request. This reference can point to a State in a custom workflow.</p>
+     * @param builder function to build the state value
+     * @return Builder
+     */
+
+    public QuoteRequestBuilder withState(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReference> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of());
         return this;
     }
 
@@ -871,6 +1104,19 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
         this.businessUnit = builder
                 .apply(com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>The BusinessUnit for the Quote Request.</p>
+     * @param builder function to build the businessUnit value
+     * @return Builder
+     */
+
+    public QuoteRequestBuilder withBusinessUnit(
+            Function<com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder, com.commercetools.api.models.business_unit.BusinessUnitKeyReference> builder) {
+        this.businessUnit = builder
+                .apply(com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder.of());
         return this;
     }
 

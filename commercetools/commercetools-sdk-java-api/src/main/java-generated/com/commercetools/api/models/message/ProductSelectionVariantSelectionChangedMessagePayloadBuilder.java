@@ -45,6 +45,18 @@ public class ProductSelectionVariantSelectionChangedMessagePayloadBuilder
 
     /**
      *  <p>Product for which the Product Variant Selection changed.</p>
+     * @param builder function to build the product value
+     * @return Builder
+     */
+
+    public ProductSelectionVariantSelectionChangedMessagePayloadBuilder withProduct(
+            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReference> builder) {
+        this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Product for which the Product Variant Selection changed.</p>
      * @param product value to be set
      * @return Builder
      */

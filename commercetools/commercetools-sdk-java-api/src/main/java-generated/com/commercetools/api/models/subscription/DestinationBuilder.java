@@ -42,4 +42,5 @@ public class DestinationBuilder {
     public static DestinationBuilder of() {
         return new DestinationBuilder();
     }
+
 }

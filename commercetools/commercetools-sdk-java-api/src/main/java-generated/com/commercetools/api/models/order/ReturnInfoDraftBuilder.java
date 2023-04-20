@@ -98,6 +98,28 @@ public class ReturnInfoDraftBuilder implements Builder<ReturnInfoDraft> {
     }
 
     /**
+     * add the value to the items using the builder function
+     * @param builder function to build the items value
+     * @return Builder
+     */
+
+    public ReturnInfoDraftBuilder addItems(
+            Function<com.commercetools.api.models.order.ReturnItemDraftBuilder, com.commercetools.api.models.order.ReturnItemDraft> builder) {
+        return plusItems(builder.apply(com.commercetools.api.models.order.ReturnItemDraftBuilder.of()));
+    }
+
+    /**
+     * set the value to the items using the builder function
+     * @param builder function to build the items value
+     * @return Builder
+     */
+
+    public ReturnInfoDraftBuilder setItems(
+            Function<com.commercetools.api.models.order.ReturnItemDraftBuilder, com.commercetools.api.models.order.ReturnItemDraft> builder) {
+        return items(builder.apply(com.commercetools.api.models.order.ReturnItemDraftBuilder.of()));
+    }
+
+    /**
      *  <p>Identifies, which return tracking ID is connected to this particular return.</p>
      * @param returnTrackingId value to be set
      * @return Builder

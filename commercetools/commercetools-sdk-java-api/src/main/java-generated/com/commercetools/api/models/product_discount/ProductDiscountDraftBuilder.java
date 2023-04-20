@@ -64,6 +64,18 @@ public class ProductDiscountDraftBuilder implements Builder<ProductDiscountDraft
 
     /**
      *  <p>Name of the ProductDiscount.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public ProductDiscountDraftBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Name of the ProductDiscount.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -93,6 +105,18 @@ public class ProductDiscountDraftBuilder implements Builder<ProductDiscountDraft
     public ProductDiscountDraftBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Description of the ProductDiscount.</p>
+     * @param builder function to build the description value
+     * @return Builder
+     */
+
+    public ProductDiscountDraftBuilder withDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
 

@@ -68,6 +68,18 @@ public class OrderExcerptBuilder implements Builder<OrderExcerpt> {
     }
 
     /**
+     * set the value to the taxedPrice using the builder function
+     * @param builder function to build the taxedPrice value
+     * @return Builder
+     */
+
+    public OrderExcerptBuilder withTaxedPrice(
+            Function<com.commercetools.api.models.cart.TaxedPriceBuilder, com.commercetools.api.models.cart.TaxedPrice> builder) {
+        this.taxedPrice = builder.apply(com.commercetools.api.models.cart.TaxedPriceBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the taxedPrice
      * @param taxedPrice value to be set
      * @return Builder

@@ -83,6 +83,18 @@ public class SetAssetCustomFieldChangeBuilder implements Builder<SetAssetCustomF
     }
 
     /**
+     * set the value to the asset using the builder function
+     * @param builder function to build the asset value
+     * @return Builder
+     */
+
+    public SetAssetCustomFieldChangeBuilder withAsset(
+            Function<com.commercetools.history.models.change_value.AssetChangeValueBuilder, com.commercetools.history.models.change_value.AssetChangeValue> builder) {
+        this.asset = builder.apply(com.commercetools.history.models.change_value.AssetChangeValueBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the asset
      * @param asset value to be set
      * @return Builder

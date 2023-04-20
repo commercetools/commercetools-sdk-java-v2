@@ -43,6 +43,18 @@ public class StagedQuoteTransitionStateActionBuilder implements Builder<StagedQu
 
     /**
      *  <p>Value to set. If there is no State yet, the new State must be an initial State.</p>
+     * @param builder function to build the state value
+     * @return Builder
+     */
+
+    public StagedQuoteTransitionStateActionBuilder withState(
+            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifier> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to set. If there is no State yet, the new State must be an initial State.</p>
      * @param state value to be set
      * @return Builder
      */

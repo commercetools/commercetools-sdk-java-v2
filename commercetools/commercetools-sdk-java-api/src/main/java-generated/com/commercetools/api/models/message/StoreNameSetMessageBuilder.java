@@ -117,6 +117,18 @@ public class StoreNameSetMessageBuilder implements Builder<StoreNameSetMessage> 
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @param builder function to build the lastModifiedBy value
+     * @return Builder
+     */
+
+    public StoreNameSetMessageBuilder withLastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value of <code>createdBy</code>.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -136,6 +148,18 @@ public class StoreNameSetMessageBuilder implements Builder<StoreNameSetMessage> 
     public StoreNameSetMessageBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
+     * @return Builder
+     */
+
+    public StoreNameSetMessageBuilder withCreatedBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
 
@@ -212,6 +236,19 @@ public class StoreNameSetMessageBuilder implements Builder<StoreNameSetMessage> 
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @param builder function to build the resourceUserProvidedIdentifiers value
+     * @return Builder
+     */
+
+    public StoreNameSetMessageBuilder withResourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiers> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      * @param resourceUserProvidedIdentifiers value to be set
      * @return Builder
      */
@@ -231,6 +268,18 @@ public class StoreNameSetMessageBuilder implements Builder<StoreNameSetMessage> 
     public StoreNameSetMessageBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Name of the Store set during the Set Name update action.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public StoreNameSetMessageBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -310,6 +359,28 @@ public class StoreNameSetMessageBuilder implements Builder<StoreNameSetMessage> 
         this.nameAllLocales = new ArrayList<>();
         this.nameAllLocales.add(builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Names set for the Store in different locales.</p>
+     * @param builder function to build the nameAllLocales value
+     * @return Builder
+     */
+
+    public StoreNameSetMessageBuilder addNameAllLocales(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        return plusNameAllLocales(builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()));
+    }
+
+    /**
+     *  <p>Names set for the Store in different locales.</p>
+     * @param builder function to build the nameAllLocales value
+     * @return Builder
+     */
+
+    public StoreNameSetMessageBuilder setNameAllLocales(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        return nameAllLocales(builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()));
     }
 
     /**

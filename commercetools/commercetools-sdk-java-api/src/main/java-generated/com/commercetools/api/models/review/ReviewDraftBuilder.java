@@ -161,6 +161,18 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
 
     /**
      *  <p>State of the Review. Used for approval processes, see Review approval process for details.</p>
+     * @param builder function to build the state value
+     * @return Builder
+     */
+
+    public ReviewDraftBuilder withState(
+            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifier> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>State of the Review. Used for approval processes, see Review approval process for details.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -196,6 +208,18 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
 
     /**
      *  <p>Customer who created the Review.</p>
+     * @param builder function to build the customer value
+     * @return Builder
+     */
+
+    public ReviewDraftBuilder withCustomer(
+            Function<com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder, com.commercetools.api.models.customer.CustomerResourceIdentifier> builder) {
+        this.customer = builder.apply(com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Customer who created the Review.</p>
      * @param customer value to be set
      * @return Builder
      */
@@ -215,6 +239,18 @@ public class ReviewDraftBuilder implements Builder<ReviewDraft> {
     public ReviewDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the Review.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public ReviewDraftBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
         return this;
     }
 

@@ -152,6 +152,28 @@ public class ProductDiscountPagedQueryResponseBuilder implements Builder<Product
     }
 
     /**
+     *  <p>ProductDiscounts matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public ProductDiscountPagedQueryResponseBuilder addResults(
+            Function<com.commercetools.api.models.product_discount.ProductDiscountBuilder, com.commercetools.api.models.product_discount.ProductDiscount> builder) {
+        return plusResults(builder.apply(com.commercetools.api.models.product_discount.ProductDiscountBuilder.of()));
+    }
+
+    /**
+     *  <p>ProductDiscounts matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public ProductDiscountPagedQueryResponseBuilder setResults(
+            Function<com.commercetools.api.models.product_discount.ProductDiscountBuilder, com.commercetools.api.models.product_discount.ProductDiscount> builder) {
+        return results(builder.apply(com.commercetools.api.models.product_discount.ProductDiscountBuilder.of()));
+    }
+
+    /**
      *  <p>Number of results requested.</p>
      * @return limit
      */

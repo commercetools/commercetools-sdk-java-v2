@@ -31,7 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface AttributeReference extends com.commercetools.api.models.WithKey {
 
     /**
-     *  <p>Key of the attribute.</p>
+     *  <p>The Attribute's <code>name</code> as given in its AttributeDefinition.</p>
      * @return key
      */
     @NotNull
@@ -39,7 +39,7 @@ public interface AttributeReference extends com.commercetools.api.models.WithKey
     public String getKey();
 
     /**
-     *  <p>Key of the attribute.</p>
+     *  <p>The Attribute's <code>name</code> as given in its AttributeDefinition.</p>
      * @param key value to be set
      */
 

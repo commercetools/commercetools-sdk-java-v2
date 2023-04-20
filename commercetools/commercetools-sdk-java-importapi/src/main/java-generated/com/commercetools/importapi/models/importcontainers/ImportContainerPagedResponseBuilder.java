@@ -150,6 +150,29 @@ public class ImportContainerPagedResponseBuilder implements Builder<ImportContai
     }
 
     /**
+     *  <p>The array of Import Containers matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public ImportContainerPagedResponseBuilder addResults(
+            Function<com.commercetools.importapi.models.importcontainers.ImportContainerBuilder, com.commercetools.importapi.models.importcontainers.ImportContainer> builder) {
+        return plusResults(
+            builder.apply(com.commercetools.importapi.models.importcontainers.ImportContainerBuilder.of()));
+    }
+
+    /**
+     *  <p>The array of Import Containers matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public ImportContainerPagedResponseBuilder setResults(
+            Function<com.commercetools.importapi.models.importcontainers.ImportContainerBuilder, com.commercetools.importapi.models.importcontainers.ImportContainer> builder) {
+        return results(builder.apply(com.commercetools.importapi.models.importcontainers.ImportContainerBuilder.of()));
+    }
+
+    /**
      *  <p>Number of results requested.</p>
      * @return limit
      */

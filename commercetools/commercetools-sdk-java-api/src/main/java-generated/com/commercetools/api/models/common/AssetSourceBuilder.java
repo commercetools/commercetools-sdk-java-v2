@@ -71,6 +71,18 @@ public class AssetSourceBuilder implements Builder<AssetSource> {
 
     /**
      *  <p>Width and height of the AssetSource.</p>
+     * @param builder function to build the dimensions value
+     * @return Builder
+     */
+
+    public AssetSourceBuilder withDimensions(
+            Function<com.commercetools.api.models.common.AssetDimensionsBuilder, com.commercetools.api.models.common.AssetDimensions> builder) {
+        this.dimensions = builder.apply(com.commercetools.api.models.common.AssetDimensionsBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Width and height of the AssetSource.</p>
      * @param dimensions value to be set
      * @return Builder
      */

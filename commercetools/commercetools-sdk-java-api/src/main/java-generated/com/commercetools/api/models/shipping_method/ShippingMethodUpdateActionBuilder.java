@@ -74,4 +74,5 @@ public class ShippingMethodUpdateActionBuilder {
     public static ShippingMethodUpdateActionBuilder of() {
         return new ShippingMethodUpdateActionBuilder();
     }
+
 }

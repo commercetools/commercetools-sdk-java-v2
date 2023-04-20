@@ -22,4 +22,5 @@ public class GeoJsonBuilder {
     public static GeoJsonBuilder of() {
         return new GeoJsonBuilder();
     }
+
 }

@@ -42,4 +42,5 @@ public class StagedQuoteUpdateActionBuilder {
     public static StagedQuoteUpdateActionBuilder of() {
         return new StagedQuoteUpdateActionBuilder();
     }
+
 }

@@ -38,6 +38,18 @@ public class OrderPaymentAddedMessagePayloadBuilder implements Builder<OrderPaym
 
     /**
      *  <p>Payment that was added to the Order.</p>
+     * @param builder function to build the payment value
+     * @return Builder
+     */
+
+    public OrderPaymentAddedMessagePayloadBuilder withPayment(
+            Function<com.commercetools.api.models.payment.PaymentReferenceBuilder, com.commercetools.api.models.payment.PaymentReference> builder) {
+        this.payment = builder.apply(com.commercetools.api.models.payment.PaymentReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Payment that was added to the Order.</p>
      * @param payment value to be set
      * @return Builder
      */

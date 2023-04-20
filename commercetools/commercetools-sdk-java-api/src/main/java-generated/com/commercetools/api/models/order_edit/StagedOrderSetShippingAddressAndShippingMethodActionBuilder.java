@@ -47,6 +47,18 @@ public class StagedOrderSetShippingAddressAndShippingMethodActionBuilder
 
     /**
      *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
+     * @param builder function to build the address value
+     * @return Builder
+     */
+
+    public StagedOrderSetShippingAddressAndShippingMethodActionBuilder withAddress(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddress> builder) {
+        this.address = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Polymorphic base type that represents a postal address and contact details. Depending on the read or write action, it can be either Address or AddressDraft that only differ in the data type for the optional <code>custom</code> field.</p>
      * @param address value to be set
      * @return Builder
      */
@@ -73,6 +85,19 @@ public class StagedOrderSetShippingAddressAndShippingMethodActionBuilder
 
     /**
      *  <p>ResourceIdentifier to a ShippingMethod.</p>
+     * @param builder function to build the shippingMethod value
+     * @return Builder
+     */
+
+    public StagedOrderSetShippingAddressAndShippingMethodActionBuilder withShippingMethod(
+            Function<com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder, com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier> builder) {
+        this.shippingMethod = builder
+                .apply(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>ResourceIdentifier to a ShippingMethod.</p>
      * @param shippingMethod value to be set
      * @return Builder
      */
@@ -93,6 +118,18 @@ public class StagedOrderSetShippingAddressAndShippingMethodActionBuilder
             Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
         this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @param builder function to build the externalTaxRate value
+     * @return Builder
+     */
+
+    public StagedOrderSetShippingAddressAndShippingMethodActionBuilder withExternalTaxRate(
+            Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraft> builder) {
+        this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of());
         return this;
     }
 

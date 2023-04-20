@@ -70,6 +70,18 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
 
     /**
      *  <p>Maps to <code>LineItem.productId</code>.</p>
+     * @param builder function to build the product value
+     * @return Builder
+     */
+
+    public LineItemImportDraftBuilder withProduct(
+            Function<com.commercetools.importapi.models.common.ProductKeyReferenceBuilder, com.commercetools.importapi.models.common.ProductKeyReference> builder) {
+        this.product = builder.apply(com.commercetools.importapi.models.common.ProductKeyReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Maps to <code>LineItem.productId</code>.</p>
      * @param product value to be set
      * @return Builder
      */
@@ -89,6 +101,18 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     public LineItemImportDraftBuilder name(
             Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Maps to <code>LineItem.name</code>.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public LineItemImportDraftBuilder withName(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -119,6 +143,19 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
 
     /**
      *  <p>Maps to <code>ProductVariantImportDraft</code>.</p>
+     * @param builder function to build the variant value
+     * @return Builder
+     */
+
+    public LineItemImportDraftBuilder withVariant(
+            Function<com.commercetools.importapi.models.orders.LineItemProductVariantImportDraftBuilder, com.commercetools.importapi.models.orders.LineItemProductVariantImportDraft> builder) {
+        this.variant = builder
+                .apply(com.commercetools.importapi.models.orders.LineItemProductVariantImportDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Maps to <code>ProductVariantImportDraft</code>.</p>
      * @param variant value to be set
      * @return Builder
      */
@@ -138,6 +175,18 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     public LineItemImportDraftBuilder price(
             Function<com.commercetools.importapi.models.orders.LineItemPriceBuilder, com.commercetools.importapi.models.orders.LineItemPriceBuilder> builder) {
         this.price = builder.apply(com.commercetools.importapi.models.orders.LineItemPriceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Maps to <code>LineItem.price</code>.</p>
+     * @param builder function to build the price value
+     * @return Builder
+     */
+
+    public LineItemImportDraftBuilder withPrice(
+            Function<com.commercetools.importapi.models.orders.LineItemPriceBuilder, com.commercetools.importapi.models.orders.LineItemPrice> builder) {
+        this.price = builder.apply(com.commercetools.importapi.models.orders.LineItemPriceBuilder.of());
         return this;
     }
 
@@ -231,6 +280,28 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     }
 
     /**
+     * add the value to the state using the builder function
+     * @param builder function to build the state value
+     * @return Builder
+     */
+
+    public LineItemImportDraftBuilder addState(
+            Function<com.commercetools.importapi.models.orders.ItemStateBuilder, com.commercetools.importapi.models.orders.ItemState> builder) {
+        return plusState(builder.apply(com.commercetools.importapi.models.orders.ItemStateBuilder.of()));
+    }
+
+    /**
+     * set the value to the state using the builder function
+     * @param builder function to build the state value
+     * @return Builder
+     */
+
+    public LineItemImportDraftBuilder setState(
+            Function<com.commercetools.importapi.models.orders.ItemStateBuilder, com.commercetools.importapi.models.orders.ItemState> builder) {
+        return state(builder.apply(com.commercetools.importapi.models.orders.ItemStateBuilder.of()));
+    }
+
+    /**
      *  <p>Maps to <code>LineItem.supplyChannel</code>. The Reference to the Supply Channel with which the LineItem is associated. If referenced Supply Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Supply Channel is created.</p>
      * @param builder function to build the supplyChannel value
      * @return Builder
@@ -240,6 +311,18 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
             Function<com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder, com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder> builder) {
         this.supplyChannel = builder.apply(com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Maps to <code>LineItem.supplyChannel</code>. The Reference to the Supply Channel with which the LineItem is associated. If referenced Supply Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Supply Channel is created.</p>
+     * @param builder function to build the supplyChannel value
+     * @return Builder
+     */
+
+    public LineItemImportDraftBuilder withSupplyChannel(
+            Function<com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder, com.commercetools.importapi.models.common.ChannelKeyReference> builder) {
+        this.supplyChannel = builder.apply(com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder.of());
         return this;
     }
 
@@ -271,6 +354,19 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
 
     /**
      *  <p>Maps to <code>LineItem.distributionChannel</code>. The Reference to the Distribution Channel with which the LineItem is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Distribution Channel is created.</p>
+     * @param builder function to build the distributionChannel value
+     * @return Builder
+     */
+
+    public LineItemImportDraftBuilder withDistributionChannel(
+            Function<com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder, com.commercetools.importapi.models.common.ChannelKeyReference> builder) {
+        this.distributionChannel = builder
+                .apply(com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Maps to <code>LineItem.distributionChannel</code>. The Reference to the Distribution Channel with which the LineItem is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Distribution Channel is created.</p>
      * @param distributionChannel value to be set
      * @return Builder
      */
@@ -290,6 +386,18 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     public LineItemImportDraftBuilder taxRate(
             Function<com.commercetools.importapi.models.prices.TaxRateBuilder, com.commercetools.importapi.models.prices.TaxRateBuilder> builder) {
         this.taxRate = builder.apply(com.commercetools.importapi.models.prices.TaxRateBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Maps to <code>LineItem.taxRate</code>.</p>
+     * @param builder function to build the taxRate value
+     * @return Builder
+     */
+
+    public LineItemImportDraftBuilder withTaxRate(
+            Function<com.commercetools.importapi.models.prices.TaxRateBuilder, com.commercetools.importapi.models.prices.TaxRate> builder) {
+        this.taxRate = builder.apply(com.commercetools.importapi.models.prices.TaxRateBuilder.of());
         return this;
     }
 
@@ -321,6 +429,19 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
 
     /**
      *  <p>Maps to LineItem.shippingDetails.</p>
+     * @param builder function to build the shippingDetails value
+     * @return Builder
+     */
+
+    public LineItemImportDraftBuilder withShippingDetails(
+            Function<com.commercetools.importapi.models.orders.ItemShippingDetailsDraftBuilder, com.commercetools.importapi.models.orders.ItemShippingDetailsDraft> builder) {
+        this.shippingDetails = builder
+                .apply(com.commercetools.importapi.models.orders.ItemShippingDetailsDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Maps to LineItem.shippingDetails.</p>
      * @param shippingDetails value to be set
      * @return Builder
      */
@@ -340,6 +461,18 @@ public class LineItemImportDraftBuilder implements Builder<LineItemImportDraft> 
     public LineItemImportDraftBuilder custom(
             Function<com.commercetools.importapi.models.customfields.CustomBuilder, com.commercetools.importapi.models.customfields.CustomBuilder> builder) {
         this.custom = builder.apply(com.commercetools.importapi.models.customfields.CustomBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for this Line Item.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public LineItemImportDraftBuilder withCustom(
+            Function<com.commercetools.importapi.models.customfields.CustomBuilder, com.commercetools.importapi.models.customfields.Custom> builder) {
+        this.custom = builder.apply(com.commercetools.importapi.models.customfields.CustomBuilder.of());
         return this;
     }
 

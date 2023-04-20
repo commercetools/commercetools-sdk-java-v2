@@ -46,6 +46,18 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
     }
 
     /**
+     * set the value to the type using the builder function
+     * @param builder function to build the type value
+     * @return Builder
+     */
+
+    public FieldDefinitionBuilder withType(
+            Function<com.commercetools.history.models.common.FieldTypeBuilder, com.commercetools.history.models.common.FieldType> builder) {
+        this.type = builder.apply(com.commercetools.history.models.common.FieldTypeBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the type
      * @param type value to be set
      * @return Builder
@@ -76,6 +88,18 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
     public FieldDefinitionBuilder label(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
         this.label = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the label using the builder function
+     * @param builder function to build the label value
+     * @return Builder
+     */
+
+    public FieldDefinitionBuilder withLabel(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+        this.label = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
         return this;
     }
 

@@ -109,6 +109,28 @@ public class ProductTypeChangePlainEnumValueOrderActionBuilder
     }
 
     /**
+     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error is returned.</p>
+     * @param builder function to build the values value
+     * @return Builder
+     */
+
+    public ProductTypeChangePlainEnumValueOrderActionBuilder addValues(
+            Function<com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder, com.commercetools.api.models.product_type.AttributePlainEnumValue> builder) {
+        return plusValues(builder.apply(com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder.of()));
+    }
+
+    /**
+     *  <p>Values must be equal to the values of the Attribute enum values (except for the order). If not, an EnumValuesMustMatch error is returned.</p>
+     * @param builder function to build the values value
+     * @return Builder
+     */
+
+    public ProductTypeChangePlainEnumValueOrderActionBuilder setValues(
+            Function<com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder, com.commercetools.api.models.product_type.AttributePlainEnumValue> builder) {
+        return values(builder.apply(com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder.of()));
+    }
+
+    /**
      *  <p>Name of the AttributeDefinition to update.</p>
      * @return attributeName
      */

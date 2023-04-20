@@ -89,6 +89,28 @@ public class MoneySetFieldBuilder implements Builder<MoneySetField> {
     }
 
     /**
+     * add the value to the value using the builder function
+     * @param builder function to build the value value
+     * @return Builder
+     */
+
+    public MoneySetFieldBuilder addValue(
+            Function<com.commercetools.importapi.models.common.MoneyBuilder, com.commercetools.importapi.models.common.Money> builder) {
+        return plusValue(builder.apply(com.commercetools.importapi.models.common.MoneyBuilder.of()));
+    }
+
+    /**
+     * set the value to the value using the builder function
+     * @param builder function to build the value value
+     * @return Builder
+     */
+
+    public MoneySetFieldBuilder setValue(
+            Function<com.commercetools.importapi.models.common.MoneyBuilder, com.commercetools.importapi.models.common.Money> builder) {
+        return value(builder.apply(com.commercetools.importapi.models.common.MoneyBuilder.of()));
+    }
+
+    /**
      * value of value}
      * @return value
      */

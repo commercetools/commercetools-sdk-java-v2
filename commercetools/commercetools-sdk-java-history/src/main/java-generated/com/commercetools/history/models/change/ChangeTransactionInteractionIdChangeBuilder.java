@@ -59,6 +59,19 @@ public class ChangeTransactionInteractionIdChangeBuilder implements Builder<Chan
     }
 
     /**
+     * set the value to the transaction using the builder function
+     * @param builder function to build the transaction value
+     * @return Builder
+     */
+
+    public ChangeTransactionInteractionIdChangeBuilder withTransaction(
+            Function<com.commercetools.history.models.change_value.TransactionChangeValueBuilder, com.commercetools.history.models.change_value.TransactionChangeValue> builder) {
+        this.transaction = builder
+                .apply(com.commercetools.history.models.change_value.TransactionChangeValueBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the transaction
      * @param transaction value to be set
      * @return Builder

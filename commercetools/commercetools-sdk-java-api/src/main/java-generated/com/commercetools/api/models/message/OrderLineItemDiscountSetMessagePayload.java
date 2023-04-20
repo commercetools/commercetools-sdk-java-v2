@@ -79,7 +79,7 @@ public interface OrderLineItemDiscountSetMessagePayload extends OrderMessagePayl
     public TaxedItemPrice getTaxedPrice();
 
     /**
-     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode..</p>
+     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode.</p>
      * @return taxedPricePortions
      */
     @NotNull
@@ -125,7 +125,7 @@ public interface OrderLineItemDiscountSetMessagePayload extends OrderMessagePayl
     public void setTaxedPrice(final TaxedItemPrice taxedPrice);
 
     /**
-     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode..</p>
+     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode.</p>
      * @param taxedPricePortions values to be set
      */
 
@@ -133,7 +133,7 @@ public interface OrderLineItemDiscountSetMessagePayload extends OrderMessagePayl
     public void setTaxedPricePortions(final MethodTaxedPrice... taxedPricePortions);
 
     /**
-     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode..</p>
+     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multi</code> ShippingMode.</p>
      * @param taxedPricePortions values to be set
      */
 

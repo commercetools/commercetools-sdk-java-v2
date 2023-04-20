@@ -94,6 +94,28 @@ public class BusinessUnitAssociatesSetMessagePayloadBuilder
 
     /**
      *  <p>The list of Associates that was updated on the Business Unit.</p>
+     * @param builder function to build the associates value
+     * @return Builder
+     */
+
+    public BusinessUnitAssociatesSetMessagePayloadBuilder addAssociates(
+            Function<com.commercetools.api.models.business_unit.AssociateBuilder, com.commercetools.api.models.business_unit.Associate> builder) {
+        return plusAssociates(builder.apply(com.commercetools.api.models.business_unit.AssociateBuilder.of()));
+    }
+
+    /**
+     *  <p>The list of Associates that was updated on the Business Unit.</p>
+     * @param builder function to build the associates value
+     * @return Builder
+     */
+
+    public BusinessUnitAssociatesSetMessagePayloadBuilder setAssociates(
+            Function<com.commercetools.api.models.business_unit.AssociateBuilder, com.commercetools.api.models.business_unit.Associate> builder) {
+        return associates(builder.apply(com.commercetools.api.models.business_unit.AssociateBuilder.of()));
+    }
+
+    /**
+     *  <p>The list of Associates that was updated on the Business Unit.</p>
      * @return associates
      */
 

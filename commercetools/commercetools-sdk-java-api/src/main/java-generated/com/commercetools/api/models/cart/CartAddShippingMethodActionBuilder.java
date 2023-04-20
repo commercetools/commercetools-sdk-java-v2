@@ -71,6 +71,19 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
 
     /**
      *  <p>RecourceIdentifier to a ShippingMethod to add to the Cart with <code>Multiple</code> ShippingMode. If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
+     * @param builder function to build the shippingMethod value
+     * @return Builder
+     */
+
+    public CartAddShippingMethodActionBuilder withShippingMethod(
+            Function<com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder, com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier> builder) {
+        this.shippingMethod = builder
+                .apply(com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>RecourceIdentifier to a ShippingMethod to add to the Cart with <code>Multiple</code> ShippingMode. If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
      * @param shippingMethod value to be set
      * @return Builder
      */
@@ -90,6 +103,18 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
     public CartAddShippingMethodActionBuilder shippingAddress(
             Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
         this.shippingAddress = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Determines the shipping rate and Tax Rate of the Line Items.</p>
+     * @param builder function to build the shippingAddress value
+     * @return Builder
+     */
+
+    public CartAddShippingMethodActionBuilder withShippingAddress(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddress> builder) {
+        this.shippingAddress = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of());
         return this;
     }
 
@@ -150,6 +175,18 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
             Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
         this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Tax Rate used to tax a shipping expense if the Cart has the <code>External</code> TaxMode.</p>
+     * @param builder function to build the externalTaxRate value
+     * @return Builder
+     */
+
+    public CartAddShippingMethodActionBuilder withExternalTaxRate(
+            Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraft> builder) {
+        this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of());
         return this;
     }
 
@@ -233,6 +270,28 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
     }
 
     /**
+     *  <p>Deliveries to be shipped with the referenced Shipping Method.</p>
+     * @param builder function to build the deliveries value
+     * @return Builder
+     */
+
+    public CartAddShippingMethodActionBuilder addDeliveries(
+            Function<com.commercetools.api.models.order.DeliveryDraftBuilder, com.commercetools.api.models.order.DeliveryDraft> builder) {
+        return plusDeliveries(builder.apply(com.commercetools.api.models.order.DeliveryDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>Deliveries to be shipped with the referenced Shipping Method.</p>
+     * @param builder function to build the deliveries value
+     * @return Builder
+     */
+
+    public CartAddShippingMethodActionBuilder setDeliveries(
+            Function<com.commercetools.api.models.order.DeliveryDraftBuilder, com.commercetools.api.models.order.DeliveryDraft> builder) {
+        return deliveries(builder.apply(com.commercetools.api.models.order.DeliveryDraftBuilder.of()));
+    }
+
+    /**
      *  <p>Custom Fields for the Shipping Method.</p>
      * @param builder function to build the custom value
      * @return Builder
@@ -241,6 +300,18 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
     public CartAddShippingMethodActionBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the Shipping Method.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public CartAddShippingMethodActionBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
         return this;
     }
 

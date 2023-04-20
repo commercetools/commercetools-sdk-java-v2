@@ -42,6 +42,18 @@ public class ProductSelectionProductAddedMessagePayloadBuilder
 
     /**
      *  <p>Product that was added to the Product Selection.</p>
+     * @param builder function to build the product value
+     * @return Builder
+     */
+
+    public ProductSelectionProductAddedMessagePayloadBuilder withProduct(
+            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReference> builder) {
+        this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Product that was added to the Product Selection.</p>
      * @param product value to be set
      * @return Builder
      */

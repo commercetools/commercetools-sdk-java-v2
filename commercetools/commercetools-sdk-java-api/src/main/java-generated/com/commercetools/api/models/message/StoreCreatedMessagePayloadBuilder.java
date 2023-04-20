@@ -58,6 +58,18 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
 
     /**
      *  <p>The <code>name</code> of the Store that was created.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public StoreCreatedMessagePayloadBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The <code>name</code> of the Store that was created.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -172,6 +184,28 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
+     *  <p>Countries of the Store that was created.</p>
+     * @param builder function to build the countries value
+     * @return Builder
+     */
+
+    public StoreCreatedMessagePayloadBuilder addCountries(
+            Function<com.commercetools.api.models.store_country.StoreCountryBuilder, com.commercetools.api.models.store_country.StoreCountry> builder) {
+        return plusCountries(builder.apply(com.commercetools.api.models.store_country.StoreCountryBuilder.of()));
+    }
+
+    /**
+     *  <p>Countries of the Store that was created.</p>
+     * @param builder function to build the countries value
+     * @return Builder
+     */
+
+    public StoreCreatedMessagePayloadBuilder setCountries(
+            Function<com.commercetools.api.models.store_country.StoreCountryBuilder, com.commercetools.api.models.store_country.StoreCountry> builder) {
+        return countries(builder.apply(com.commercetools.api.models.store_country.StoreCountryBuilder.of()));
+    }
+
+    /**
      *  <p>Distribution Channels of the Store that was created.</p>
      * @param distributionChannels value to be set
      * @return Builder
@@ -238,6 +272,29 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
         this.distributionChannels
                 .add(builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Distribution Channels of the Store that was created.</p>
+     * @param builder function to build the distributionChannels value
+     * @return Builder
+     */
+
+    public StoreCreatedMessagePayloadBuilder addDistributionChannels(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReference> builder) {
+        return plusDistributionChannels(
+            builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p>Distribution Channels of the Store that was created.</p>
+     * @param builder function to build the distributionChannels value
+     * @return Builder
+     */
+
+    public StoreCreatedMessagePayloadBuilder setDistributionChannels(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReference> builder) {
+        return distributionChannels(builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()));
     }
 
     /**
@@ -310,6 +367,28 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
+     *  <p>Supply Channels of the Store that was created.</p>
+     * @param builder function to build the supplyChannels value
+     * @return Builder
+     */
+
+    public StoreCreatedMessagePayloadBuilder addSupplyChannels(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReference> builder) {
+        return plusSupplyChannels(builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p>Supply Channels of the Store that was created.</p>
+     * @param builder function to build the supplyChannels value
+     * @return Builder
+     */
+
+    public StoreCreatedMessagePayloadBuilder setSupplyChannels(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReference> builder) {
+        return supplyChannels(builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()));
+    }
+
+    /**
      *  <p>ProductSelectionSettings of the Store that was created.</p>
      * @param productSelections value to be set
      * @return Builder
@@ -379,6 +458,29 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     }
 
     /**
+     *  <p>ProductSelectionSettings of the Store that was created.</p>
+     * @param builder function to build the productSelections value
+     * @return Builder
+     */
+
+    public StoreCreatedMessagePayloadBuilder addProductSelections(
+            Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSetting> builder) {
+        return plusProductSelections(
+            builder.apply(com.commercetools.api.models.store.ProductSelectionSettingBuilder.of()));
+    }
+
+    /**
+     *  <p>ProductSelectionSettings of the Store that was created.</p>
+     * @param builder function to build the productSelections value
+     * @return Builder
+     */
+
+    public StoreCreatedMessagePayloadBuilder setProductSelections(
+            Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSetting> builder) {
+        return productSelections(builder.apply(com.commercetools.api.models.store.ProductSelectionSettingBuilder.of()));
+    }
+
+    /**
      *  <p>Custom Fields on the Store that was created.</p>
      * @param builder function to build the custom value
      * @return Builder
@@ -387,6 +489,18 @@ public class StoreCreatedMessagePayloadBuilder implements Builder<StoreCreatedMe
     public StoreCreatedMessagePayloadBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields on the Store that was created.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public StoreCreatedMessagePayloadBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of());
         return this;
     }
 

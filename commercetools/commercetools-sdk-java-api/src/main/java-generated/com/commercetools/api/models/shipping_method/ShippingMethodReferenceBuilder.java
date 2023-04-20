@@ -54,6 +54,18 @@ public class ShippingMethodReferenceBuilder implements Builder<ShippingMethodRef
 
     /**
      *  <p>Contains the representation of the expanded ShippingMethod. Only present in responses to requests with Reference Expansion for ShippingMethods.</p>
+     * @param builder function to build the obj value
+     * @return Builder
+     */
+
+    public ShippingMethodReferenceBuilder withObj(
+            Function<com.commercetools.api.models.shipping_method.ShippingMethodBuilder, com.commercetools.api.models.shipping_method.ShippingMethod> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.shipping_method.ShippingMethodBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Contains the representation of the expanded ShippingMethod. Only present in responses to requests with Reference Expansion for ShippingMethods.</p>
      * @param obj value to be set
      * @return Builder
      */

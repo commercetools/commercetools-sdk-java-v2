@@ -18,8 +18,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * ProductSelectionType
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class ProductSelectionTypeImpl implements ProductSelectionType, ModelBase {
 
+    @Deprecated
     private com.commercetools.api.models.product_selection.ProductSelectionTypeEnum type;
 
     /**
@@ -40,7 +42,7 @@ public class ProductSelectionTypeImpl implements ProductSelectionType, ModelBase
     /**
      *  <p>The following types of Product Selections are supported:</p>
      */
-
+    @Deprecated
     public com.commercetools.api.models.product_selection.ProductSelectionTypeEnum getType() {
         return this.type;
     }

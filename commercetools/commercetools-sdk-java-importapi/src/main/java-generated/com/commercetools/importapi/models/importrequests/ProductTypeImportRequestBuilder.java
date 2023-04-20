@@ -95,6 +95,29 @@ public class ProductTypeImportRequestBuilder implements Builder<ProductTypeImpor
 
     /**
      *  <p>The product type import resources of this request.</p>
+     * @param builder function to build the resources value
+     * @return Builder
+     */
+
+    public ProductTypeImportRequestBuilder addResources(
+            Function<com.commercetools.importapi.models.producttypes.ProductTypeImportBuilder, com.commercetools.importapi.models.producttypes.ProductTypeImport> builder) {
+        return plusResources(
+            builder.apply(com.commercetools.importapi.models.producttypes.ProductTypeImportBuilder.of()));
+    }
+
+    /**
+     *  <p>The product type import resources of this request.</p>
+     * @param builder function to build the resources value
+     * @return Builder
+     */
+
+    public ProductTypeImportRequestBuilder setResources(
+            Function<com.commercetools.importapi.models.producttypes.ProductTypeImportBuilder, com.commercetools.importapi.models.producttypes.ProductTypeImport> builder) {
+        return resources(builder.apply(com.commercetools.importapi.models.producttypes.ProductTypeImportBuilder.of()));
+    }
+
+    /**
+     *  <p>The product type import resources of this request.</p>
      * @return resources
      */
 

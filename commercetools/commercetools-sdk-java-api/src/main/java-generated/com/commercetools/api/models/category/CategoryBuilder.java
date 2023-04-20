@@ -138,6 +138,18 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
+     * @return Builder
+     */
+
+    public CategoryBuilder withLastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -157,6 +169,18 @@ public class CategoryBuilder implements Builder<Category> {
     public CategoryBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
+     * @return Builder
+     */
+
+    public CategoryBuilder withCreatedBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
 
@@ -185,6 +209,18 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Name of the Category.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public CategoryBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Name of the Category.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -208,6 +244,18 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>User-defined identifier used as a deep-link URL to the related Category per Locale. A Category can have the same slug for different Locales, but they are unique across the Project. Valid slugs match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set in a Project.</p>
+     * @param builder function to build the slug value
+     * @return Builder
+     */
+
+    public CategoryBuilder withSlug(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>User-defined identifier used as a deep-link URL to the related Category per Locale. A Category can have the same slug for different Locales, but they are unique across the Project. Valid slugs match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set in a Project.</p>
      * @param slug value to be set
      * @return Builder
      */
@@ -226,6 +274,18 @@ public class CategoryBuilder implements Builder<Category> {
     public CategoryBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Description of the Category.</p>
+     * @param builder function to build the description value
+     * @return Builder
+     */
+
+    public CategoryBuilder withDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -307,6 +367,28 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
+     *  <p>Contains the parent path towards the root Category.</p>
+     * @param builder function to build the ancestors value
+     * @return Builder
+     */
+
+    public CategoryBuilder addAncestors(
+            Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReference> builder) {
+        return plusAncestors(builder.apply(com.commercetools.api.models.category.CategoryReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p>Contains the parent path towards the root Category.</p>
+     * @param builder function to build the ancestors value
+     * @return Builder
+     */
+
+    public CategoryBuilder setAncestors(
+            Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReference> builder) {
+        return ancestors(builder.apply(com.commercetools.api.models.category.CategoryReferenceBuilder.of()));
+    }
+
+    /**
      *  <p>Parent Category of this Category.</p>
      * @param builder function to build the parent value
      * @return Builder
@@ -315,6 +397,18 @@ public class CategoryBuilder implements Builder<Category> {
     public CategoryBuilder parent(
             Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReferenceBuilder> builder) {
         this.parent = builder.apply(com.commercetools.api.models.category.CategoryReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Parent Category of this Category.</p>
+     * @param builder function to build the parent value
+     * @return Builder
+     */
+
+    public CategoryBuilder withParent(
+            Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReference> builder) {
+        this.parent = builder.apply(com.commercetools.api.models.category.CategoryReferenceBuilder.of());
         return this;
     }
 
@@ -365,6 +459,18 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Name of the Category used by external search engines for improved search engine performance.</p>
+     * @param builder function to build the metaTitle value
+     * @return Builder
+     */
+
+    public CategoryBuilder withMetaTitle(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.metaTitle = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Name of the Category used by external search engines for improved search engine performance.</p>
      * @param metaTitle value to be set
      * @return Builder
      */
@@ -383,6 +489,18 @@ public class CategoryBuilder implements Builder<Category> {
     public CategoryBuilder metaDescription(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.metaDescription = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Description of the Category used by external search engines for improved search engine performance.</p>
+     * @param builder function to build the metaDescription value
+     * @return Builder
+     */
+
+    public CategoryBuilder withMetaDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.metaDescription = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -412,6 +530,18 @@ public class CategoryBuilder implements Builder<Category> {
 
     /**
      *  <p>Keywords related to the Category for improved search engine performance.</p>
+     * @param builder function to build the metaKeywords value
+     * @return Builder
+     */
+
+    public CategoryBuilder withMetaKeywords(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.metaKeywords = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Keywords related to the Category for improved search engine performance.</p>
      * @param metaKeywords value to be set
      * @return Builder
      */
@@ -431,6 +561,18 @@ public class CategoryBuilder implements Builder<Category> {
     public CategoryBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the Category.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public CategoryBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of());
         return this;
     }
 
@@ -507,6 +649,28 @@ public class CategoryBuilder implements Builder<Category> {
         this.assets = new ArrayList<>();
         this.assets.add(builder.apply(com.commercetools.api.models.common.AssetBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Media related to the Category.</p>
+     * @param builder function to build the assets value
+     * @return Builder
+     */
+
+    public CategoryBuilder addAssets(
+            Function<com.commercetools.api.models.common.AssetBuilder, com.commercetools.api.models.common.Asset> builder) {
+        return plusAssets(builder.apply(com.commercetools.api.models.common.AssetBuilder.of()));
+    }
+
+    /**
+     *  <p>Media related to the Category.</p>
+     * @param builder function to build the assets value
+     * @return Builder
+     */
+
+    public CategoryBuilder setAssets(
+            Function<com.commercetools.api.models.common.AssetBuilder, com.commercetools.api.models.common.Asset> builder) {
+        return assets(builder.apply(com.commercetools.api.models.common.AssetBuilder.of()));
     }
 
     /**

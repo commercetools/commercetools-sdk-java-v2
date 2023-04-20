@@ -152,6 +152,28 @@ public class StandalonePricePagedQueryResponseBuilder implements Builder<Standal
     }
 
     /**
+     *  <p>StandalonePrices matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public StandalonePricePagedQueryResponseBuilder addResults(
+            Function<com.commercetools.api.models.standalone_price.StandalonePriceBuilder, com.commercetools.api.models.standalone_price.StandalonePrice> builder) {
+        return plusResults(builder.apply(com.commercetools.api.models.standalone_price.StandalonePriceBuilder.of()));
+    }
+
+    /**
+     *  <p>StandalonePrices matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public StandalonePricePagedQueryResponseBuilder setResults(
+            Function<com.commercetools.api.models.standalone_price.StandalonePriceBuilder, com.commercetools.api.models.standalone_price.StandalonePrice> builder) {
+        return results(builder.apply(com.commercetools.api.models.standalone_price.StandalonePriceBuilder.of()));
+    }
+
+    /**
      *  <p>Number of requested results.</p>
      * @return limit
      */

@@ -63,6 +63,18 @@ public class SetLineItemTaxRateChangeBuilder implements Builder<SetLineItemTaxRa
     }
 
     /**
+     * set the value to the lineItem using the builder function
+     * @param builder function to build the lineItem value
+     * @return Builder
+     */
+
+    public SetLineItemTaxRateChangeBuilder withLineItem(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+        this.lineItem = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the lineItem
      * @param lineItem value to be set
      * @return Builder
@@ -110,6 +122,18 @@ public class SetLineItemTaxRateChangeBuilder implements Builder<SetLineItemTaxRa
 
     /**
      *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetLineItemTaxRateChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.TaxRateBuilder, com.commercetools.history.models.common.TaxRate> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.TaxRateBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
      * @param nextValue value to be set
      * @return Builder
      */
@@ -128,6 +152,18 @@ public class SetLineItemTaxRateChangeBuilder implements Builder<SetLineItemTaxRa
     public SetLineItemTaxRateChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.TaxRateBuilder, com.commercetools.history.models.common.TaxRateBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.TaxRateBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public SetLineItemTaxRateChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.TaxRateBuilder, com.commercetools.history.models.common.TaxRate> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.TaxRateBuilder.of());
         return this;
     }
 

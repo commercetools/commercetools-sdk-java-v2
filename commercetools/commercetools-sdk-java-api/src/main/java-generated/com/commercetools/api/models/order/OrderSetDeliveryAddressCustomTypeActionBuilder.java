@@ -58,6 +58,18 @@ public class OrderSetDeliveryAddressCustomTypeActionBuilder
 
     /**
      *  <p>Defines the Type that extends the <code>address</code> in a Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code> in a Delivery.</p>
+     * @param builder function to build the type value
+     * @return Builder
+     */
+
+    public OrderSetDeliveryAddressCustomTypeActionBuilder withType(
+            Function<com.commercetools.api.models.type.TypeResourceIdentifierBuilder, com.commercetools.api.models.type.TypeResourceIdentifier> builder) {
+        this.type = builder.apply(com.commercetools.api.models.type.TypeResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Defines the Type that extends the <code>address</code> in a Delivery with Custom Fields. If absent, any existing Type and Custom Fields are removed from the <code>address</code> in a Delivery.</p>
      * @param type value to be set
      * @return Builder
      */
@@ -77,6 +89,18 @@ public class OrderSetDeliveryAddressCustomTypeActionBuilder
     public OrderSetDeliveryAddressCustomTypeActionBuilder fields(
             Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
         this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Sets the Custom Fields fields for the <code>address</code> in a Delivery.</p>
+     * @param builder function to build the fields value
+     * @return Builder
+     */
+
+    public OrderSetDeliveryAddressCustomTypeActionBuilder withFields(
+            Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainer> builder) {
+        this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of());
         return this;
     }
 

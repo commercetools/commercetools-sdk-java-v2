@@ -128,6 +128,19 @@ public class PriceBuilder implements Builder<Price> {
 
     /**
      *  <p>CustomerGroup for which this Price is valid.</p>
+     * @param builder function to build the customerGroup value
+     * @return Builder
+     */
+
+    public PriceBuilder withCustomerGroup(
+            Function<com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReference> builder) {
+        this.customerGroup = builder
+                .apply(com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>CustomerGroup for which this Price is valid.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -147,6 +160,18 @@ public class PriceBuilder implements Builder<Price> {
     public PriceBuilder channel(
             Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
         this.channel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p><code>ProductDistribution</code> Channel for which this Price is valid.</p>
+     * @param builder function to build the channel value
+     * @return Builder
+     */
+
+    public PriceBuilder withChannel(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReference> builder) {
+        this.channel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of());
         return this;
     }
 
@@ -192,6 +217,18 @@ public class PriceBuilder implements Builder<Price> {
     public PriceBuilder discounted(
             Function<com.commercetools.api.models.common.DiscountedPriceBuilder, com.commercetools.api.models.common.DiscountedPriceBuilder> builder) {
         this.discounted = builder.apply(com.commercetools.api.models.common.DiscountedPriceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Is set if a ProductDiscount has been applied. If set, the API uses the DiscountedPrice value for the Line Item Price selection. When a relative discount has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with half-down rounding.</p>
+     * @param builder function to build the discounted value
+     * @return Builder
+     */
+
+    public PriceBuilder withDiscounted(
+            Function<com.commercetools.api.models.common.DiscountedPriceBuilder, com.commercetools.api.models.common.DiscountedPrice> builder) {
+        this.discounted = builder.apply(com.commercetools.api.models.common.DiscountedPriceBuilder.of());
         return this;
     }
 
@@ -271,6 +308,28 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
+     *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     * @param builder function to build the tiers value
+     * @return Builder
+     */
+
+    public PriceBuilder addTiers(
+            Function<com.commercetools.api.models.common.PriceTierBuilder, com.commercetools.api.models.common.PriceTier> builder) {
+        return plusTiers(builder.apply(com.commercetools.api.models.common.PriceTierBuilder.of()));
+    }
+
+    /**
+     *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     * @param builder function to build the tiers value
+     * @return Builder
+     */
+
+    public PriceBuilder setTiers(
+            Function<com.commercetools.api.models.common.PriceTierBuilder, com.commercetools.api.models.common.PriceTier> builder) {
+        return tiers(builder.apply(com.commercetools.api.models.common.PriceTierBuilder.of()));
+    }
+
+    /**
      *  <p>Custom Fields defined for the Price.</p>
      * @param builder function to build the custom value
      * @return Builder
@@ -279,6 +338,18 @@ public class PriceBuilder implements Builder<Price> {
     public PriceBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields defined for the Price.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public PriceBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of());
         return this;
     }
 

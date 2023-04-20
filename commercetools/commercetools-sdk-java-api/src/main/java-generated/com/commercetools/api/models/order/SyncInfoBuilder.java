@@ -46,6 +46,18 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
 
     /**
      *  <p>Connection to a particular synchronization destination.</p>
+     * @param builder function to build the channel value
+     * @return Builder
+     */
+
+    public SyncInfoBuilder withChannel(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReference> builder) {
+        this.channel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Connection to a particular synchronization destination.</p>
      * @param channel value to be set
      * @return Builder
      */

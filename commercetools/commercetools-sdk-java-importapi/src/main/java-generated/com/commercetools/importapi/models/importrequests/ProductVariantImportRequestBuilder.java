@@ -95,6 +95,30 @@ public class ProductVariantImportRequestBuilder implements Builder<ProductVarian
 
     /**
      *  <p>The product variant import resources of this request.</p>
+     * @param builder function to build the resources value
+     * @return Builder
+     */
+
+    public ProductVariantImportRequestBuilder addResources(
+            Function<com.commercetools.importapi.models.productvariants.ProductVariantImportBuilder, com.commercetools.importapi.models.productvariants.ProductVariantImport> builder) {
+        return plusResources(
+            builder.apply(com.commercetools.importapi.models.productvariants.ProductVariantImportBuilder.of()));
+    }
+
+    /**
+     *  <p>The product variant import resources of this request.</p>
+     * @param builder function to build the resources value
+     * @return Builder
+     */
+
+    public ProductVariantImportRequestBuilder setResources(
+            Function<com.commercetools.importapi.models.productvariants.ProductVariantImportBuilder, com.commercetools.importapi.models.productvariants.ProductVariantImport> builder) {
+        return resources(
+            builder.apply(com.commercetools.importapi.models.productvariants.ProductVariantImportBuilder.of()));
+    }
+
+    /**
+     *  <p>The product variant import resources of this request.</p>
      * @return resources
      */
 

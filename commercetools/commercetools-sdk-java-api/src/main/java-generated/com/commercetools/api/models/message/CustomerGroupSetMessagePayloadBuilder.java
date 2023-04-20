@@ -42,6 +42,19 @@ public class CustomerGroupSetMessagePayloadBuilder implements Builder<CustomerGr
 
     /**
      *  <p>Customer Group that was set during the Set Customer Group update action.</p>
+     * @param builder function to build the customerGroup value
+     * @return Builder
+     */
+
+    public CustomerGroupSetMessagePayloadBuilder withCustomerGroup(
+            Function<com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReference> builder) {
+        this.customerGroup = builder
+                .apply(com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Customer Group that was set during the Set Customer Group update action.</p>
      * @param customerGroup value to be set
      * @return Builder
      */

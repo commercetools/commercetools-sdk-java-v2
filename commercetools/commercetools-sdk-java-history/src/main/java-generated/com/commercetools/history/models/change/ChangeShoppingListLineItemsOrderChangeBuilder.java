@@ -111,6 +111,30 @@ public class ChangeShoppingListLineItemsOrderChangeBuilder implements Builder<Ch
     }
 
     /**
+     * add the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public ChangeShoppingListLineItemsOrderChangeBuilder addPreviousValue(
+            Function<com.commercetools.history.models.change_value.ShoppingListLineItemValueBuilder, com.commercetools.history.models.change_value.ShoppingListLineItemValue> builder) {
+        return plusPreviousValue(
+            builder.apply(com.commercetools.history.models.change_value.ShoppingListLineItemValueBuilder.of()));
+    }
+
+    /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public ChangeShoppingListLineItemsOrderChangeBuilder setPreviousValue(
+            Function<com.commercetools.history.models.change_value.ShoppingListLineItemValueBuilder, com.commercetools.history.models.change_value.ShoppingListLineItemValue> builder) {
+        return previousValue(
+            builder.apply(com.commercetools.history.models.change_value.ShoppingListLineItemValueBuilder.of()));
+    }
+
+    /**
      * set values to the nextValue
      * @param nextValue value to be set
      * @return Builder
@@ -177,6 +201,30 @@ public class ChangeShoppingListLineItemsOrderChangeBuilder implements Builder<Ch
         this.nextValue.add(
             builder.apply(com.commercetools.history.models.change_value.ShoppingListLineItemValueBuilder.of()).build());
         return this;
+    }
+
+    /**
+     * add the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public ChangeShoppingListLineItemsOrderChangeBuilder addNextValue(
+            Function<com.commercetools.history.models.change_value.ShoppingListLineItemValueBuilder, com.commercetools.history.models.change_value.ShoppingListLineItemValue> builder) {
+        return plusNextValue(
+            builder.apply(com.commercetools.history.models.change_value.ShoppingListLineItemValueBuilder.of()));
+    }
+
+    /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public ChangeShoppingListLineItemsOrderChangeBuilder setNextValue(
+            Function<com.commercetools.history.models.change_value.ShoppingListLineItemValueBuilder, com.commercetools.history.models.change_value.ShoppingListLineItemValue> builder) {
+        return nextValue(
+            builder.apply(com.commercetools.history.models.change_value.ShoppingListLineItemValueBuilder.of()));
     }
 
     /**

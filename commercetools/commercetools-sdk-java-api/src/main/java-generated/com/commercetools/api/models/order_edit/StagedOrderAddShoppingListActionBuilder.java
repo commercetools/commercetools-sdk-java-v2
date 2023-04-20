@@ -48,6 +48,19 @@ public class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOr
 
     /**
      *  <p>ResourceIdentifier to a ShoppingList.</p>
+     * @param builder function to build the shoppingList value
+     * @return Builder
+     */
+
+    public StagedOrderAddShoppingListActionBuilder withShoppingList(
+            Function<com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifierBuilder, com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier> builder) {
+        this.shoppingList = builder
+                .apply(com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>ResourceIdentifier to a ShoppingList.</p>
      * @param shoppingList value to be set
      * @return Builder
      */
@@ -68,6 +81,18 @@ public class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOr
             Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder> builder) {
         this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>ResourceIdentifier to a Channel.</p>
+     * @param builder function to build the supplyChannel value
+     * @return Builder
+     */
+
+    public StagedOrderAddShoppingListActionBuilder withSupplyChannel(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of());
         return this;
     }
 
@@ -94,6 +119,19 @@ public class StagedOrderAddShoppingListActionBuilder implements Builder<StagedOr
         this.distributionChannel = builder
                 .apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>ResourceIdentifier to a Channel.</p>
+     * @param builder function to build the distributionChannel value
+     * @return Builder
+     */
+
+    public StagedOrderAddShoppingListActionBuilder withDistributionChannel(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+        this.distributionChannel = builder
+                .apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of());
         return this;
     }
 

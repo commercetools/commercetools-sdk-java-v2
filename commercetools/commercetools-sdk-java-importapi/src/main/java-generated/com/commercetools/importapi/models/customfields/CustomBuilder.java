@@ -43,6 +43,18 @@ public class CustomBuilder implements Builder<Custom> {
 
     /**
      *  <p>The type that provides the field definitions for this object.</p>
+     * @param builder function to build the type value
+     * @return Builder
+     */
+
+    public CustomBuilder withType(
+            Function<com.commercetools.importapi.models.common.TypeKeyReferenceBuilder, com.commercetools.importapi.models.common.TypeKeyReference> builder) {
+        this.type = builder.apply(com.commercetools.importapi.models.common.TypeKeyReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The type that provides the field definitions for this object.</p>
      * @param type value to be set
      * @return Builder
      */
@@ -61,6 +73,18 @@ public class CustomBuilder implements Builder<Custom> {
     public CustomBuilder fields(
             Function<com.commercetools.importapi.models.customfields.FieldContainerBuilder, com.commercetools.importapi.models.customfields.FieldContainerBuilder> builder) {
         this.fields = builder.apply(com.commercetools.importapi.models.customfields.FieldContainerBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>The custom fields of this object.</p>
+     * @param builder function to build the fields value
+     * @return Builder
+     */
+
+    public CustomBuilder withFields(
+            Function<com.commercetools.importapi.models.customfields.FieldContainerBuilder, com.commercetools.importapi.models.customfields.FieldContainer> builder) {
+        this.fields = builder.apply(com.commercetools.importapi.models.customfields.FieldContainerBuilder.of());
         return this;
     }
 

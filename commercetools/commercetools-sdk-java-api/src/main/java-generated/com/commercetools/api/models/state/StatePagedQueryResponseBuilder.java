@@ -148,6 +148,28 @@ public class StatePagedQueryResponseBuilder implements Builder<StatePagedQueryRe
     }
 
     /**
+     *  <p>States matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public StatePagedQueryResponseBuilder addResults(
+            Function<com.commercetools.api.models.state.StateBuilder, com.commercetools.api.models.state.State> builder) {
+        return plusResults(builder.apply(com.commercetools.api.models.state.StateBuilder.of()));
+    }
+
+    /**
+     *  <p>States matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public StatePagedQueryResponseBuilder setResults(
+            Function<com.commercetools.api.models.state.StateBuilder, com.commercetools.api.models.state.State> builder) {
+        return results(builder.apply(com.commercetools.api.models.state.StateBuilder.of()));
+    }
+
+    /**
      *  <p>Number of results requested.</p>
      * @return limit
      */

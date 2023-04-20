@@ -163,6 +163,32 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
     }
 
     /**
+     *  <p>Sets the Stores the Business Unit is associated with. Can only be set when <code>storeMode</code> is <code>Explicit</code>. Defaults to empty for Companies and not set for Divisions.</p>
+     *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
+     *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public CompanyDraftBuilder addStores(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifier> builder) {
+        return plusStores(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()));
+    }
+
+    /**
+     *  <p>Sets the Stores the Business Unit is associated with. Can only be set when <code>storeMode</code> is <code>Explicit</code>. Defaults to empty for Companies and not set for Divisions.</p>
+     *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
+     *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public CompanyDraftBuilder setStores(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifier> builder) {
+        return stores(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()));
+    }
+
+    /**
      *  <p>Defines whether the Stores of the Business Unit are set directly on the Business Unit or are inherited from a parent. <code>storeMode</code> is always <code>Explicit</code> for Companies and defaults to <code>FromParent</code> for Divisions.</p>
      * @param storeMode value to be set
      * @return Builder
@@ -266,6 +292,28 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
     }
 
     /**
+     *  <p>List of members that are part of the Business Unit in specific roles.</p>
+     * @param builder function to build the associates value
+     * @return Builder
+     */
+
+    public CompanyDraftBuilder addAssociates(
+            Function<com.commercetools.api.models.business_unit.AssociateDraftBuilder, com.commercetools.api.models.business_unit.AssociateDraft> builder) {
+        return plusAssociates(builder.apply(com.commercetools.api.models.business_unit.AssociateDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>List of members that are part of the Business Unit in specific roles.</p>
+     * @param builder function to build the associates value
+     * @return Builder
+     */
+
+    public CompanyDraftBuilder setAssociates(
+            Function<com.commercetools.api.models.business_unit.AssociateDraftBuilder, com.commercetools.api.models.business_unit.AssociateDraft> builder) {
+        return associates(builder.apply(com.commercetools.api.models.business_unit.AssociateDraftBuilder.of()));
+    }
+
+    /**
      *  <p>Addresses used by the Business Unit.</p>
      * @param addresses value to be set
      * @return Builder
@@ -329,6 +377,28 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
         this.addresses = new ArrayList<>();
         this.addresses.add(builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Addresses used by the Business Unit.</p>
+     * @param builder function to build the addresses value
+     * @return Builder
+     */
+
+    public CompanyDraftBuilder addAddresses(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddress> builder) {
+        return plusAddresses(builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()));
+    }
+
+    /**
+     *  <p>Addresses used by the Business Unit.</p>
+     * @param builder function to build the addresses value
+     * @return Builder
+     */
+
+    public CompanyDraftBuilder setAddresses(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddress> builder) {
+        return addresses(builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()));
     }
 
     /**
@@ -434,6 +504,18 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
     public CompanyDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the Business Unit.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public CompanyDraftBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
         return this;
     }
 

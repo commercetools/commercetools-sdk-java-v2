@@ -71,6 +71,18 @@ public class ProductAddPriceActionBuilder implements Builder<ProductAddPriceActi
 
     /**
      *  <p>Embedded Price to add to the Product Variant.</p>
+     * @param builder function to build the price value
+     * @return Builder
+     */
+
+    public ProductAddPriceActionBuilder withPrice(
+            Function<com.commercetools.api.models.common.PriceDraftBuilder, com.commercetools.api.models.common.PriceDraft> builder) {
+        this.price = builder.apply(com.commercetools.api.models.common.PriceDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Embedded Price to add to the Product Variant.</p>
      * @param price value to be set
      * @return Builder
      */

@@ -68,6 +68,18 @@ public class PaymentStatusDraftBuilder implements Builder<PaymentStatusDraft> {
 
     /**
      *  <p>ResourceIdentifier to a State.</p>
+     * @param builder function to build the state value
+     * @return Builder
+     */
+
+    public PaymentStatusDraftBuilder withState(
+            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifier> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>ResourceIdentifier to a State.</p>
      * @param state value to be set
      * @return Builder
      */

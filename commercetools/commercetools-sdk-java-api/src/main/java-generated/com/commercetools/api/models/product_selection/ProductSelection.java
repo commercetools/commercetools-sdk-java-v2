@@ -34,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .name(nameBuilder -> nameBuilder)
  *             .productCount(0.3)
- *             .type(ProductSelectionTypeEnum.INDIVIDUAL)
+ *             .mode(ProductSelectionMode.INDIVIDUAL)
  *             .build()
  * </code></pre>
  * </div>
@@ -124,9 +124,17 @@ public interface ProductSelection
      *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually, either by including or excluding them explicitly.</p>
      * @return type
      */
-    @NotNull
+    @Deprecated
     @JsonProperty("type")
     public ProductSelectionTypeEnum getType();
+
+    /**
+     *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually, either by including or excluding them explicitly.</p>
+     * @return mode
+     */
+    @NotNull
+    @JsonProperty("mode")
+    public ProductSelectionMode getMode();
 
     /**
      *  <p>Custom Fields of the ProductSelection.</p>
@@ -203,8 +211,15 @@ public interface ProductSelection
      *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually, either by including or excluding them explicitly.</p>
      * @param type value to be set
      */
-
+    @Deprecated
     public void setType(final ProductSelectionTypeEnum type);
+
+    /**
+     *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually, either by including or excluding them explicitly.</p>
+     * @param mode value to be set
+     */
+
+    public void setMode(final ProductSelectionMode mode);
 
     /**
      *  <p>Custom Fields of the ProductSelection.</p>
@@ -238,6 +253,7 @@ public interface ProductSelection
         instance.setName(template.getName());
         instance.setProductCount(template.getProductCount());
         instance.setType(template.getType());
+        instance.setMode(template.getMode());
         instance.setCustom(template.getCustom());
         return instance;
     }
@@ -264,6 +280,7 @@ public interface ProductSelection
         instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
         instance.setProductCount(template.getProductCount());
         instance.setType(template.getType());
+        instance.setMode(template.getMode());
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         return instance;
     }

@@ -154,6 +154,30 @@ public class ProductsInStorePagedQueryResponseBuilder implements Builder<Product
     }
 
     /**
+     *  <p>ProductSelectionAssignments matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public ProductsInStorePagedQueryResponseBuilder addResults(
+            Function<com.commercetools.api.models.product_selection.ProductSelectionAssignmentBuilder, com.commercetools.api.models.product_selection.ProductSelectionAssignment> builder) {
+        return plusResults(
+            builder.apply(com.commercetools.api.models.product_selection.ProductSelectionAssignmentBuilder.of()));
+    }
+
+    /**
+     *  <p>ProductSelectionAssignments matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public ProductsInStorePagedQueryResponseBuilder setResults(
+            Function<com.commercetools.api.models.product_selection.ProductSelectionAssignmentBuilder, com.commercetools.api.models.product_selection.ProductSelectionAssignment> builder) {
+        return results(
+            builder.apply(com.commercetools.api.models.product_selection.ProductSelectionAssignmentBuilder.of()));
+    }
+
+    /**
      *  <p>Number of results requested.</p>
      * @return limit
      */

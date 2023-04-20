@@ -153,6 +153,30 @@ public class AssignedProductSelectionPagedQueryResponseBuilder
     }
 
     /**
+     *  <p>References to ProductSelection that are assigned to the Product.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public AssignedProductSelectionPagedQueryResponseBuilder addResults(
+            Function<com.commercetools.api.models.product_selection.AssignedProductSelectionBuilder, com.commercetools.api.models.product_selection.AssignedProductSelection> builder) {
+        return plusResults(
+            builder.apply(com.commercetools.api.models.product_selection.AssignedProductSelectionBuilder.of()));
+    }
+
+    /**
+     *  <p>References to ProductSelection that are assigned to the Product.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public AssignedProductSelectionPagedQueryResponseBuilder setResults(
+            Function<com.commercetools.api.models.product_selection.AssignedProductSelectionBuilder, com.commercetools.api.models.product_selection.AssignedProductSelection> builder) {
+        return results(
+            builder.apply(com.commercetools.api.models.product_selection.AssignedProductSelectionBuilder.of()));
+    }
+
+    /**
      *  <p>Number of results requested.</p>
      * @return limit
      */

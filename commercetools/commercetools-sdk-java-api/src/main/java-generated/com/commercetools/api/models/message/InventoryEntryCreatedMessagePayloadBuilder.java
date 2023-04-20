@@ -38,6 +38,18 @@ public class InventoryEntryCreatedMessagePayloadBuilder implements Builder<Inven
 
     /**
      *  <p>InventoryEntry that was created.</p>
+     * @param builder function to build the inventoryEntry value
+     * @return Builder
+     */
+
+    public InventoryEntryCreatedMessagePayloadBuilder withInventoryEntry(
+            Function<com.commercetools.api.models.inventory.InventoryEntryBuilder, com.commercetools.api.models.inventory.InventoryEntry> builder) {
+        this.inventoryEntry = builder.apply(com.commercetools.api.models.inventory.InventoryEntryBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>InventoryEntry that was created.</p>
      * @param inventoryEntry value to be set
      * @return Builder
      */

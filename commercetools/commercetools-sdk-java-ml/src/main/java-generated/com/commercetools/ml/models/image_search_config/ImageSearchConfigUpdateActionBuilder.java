@@ -22,4 +22,5 @@ public class ImageSearchConfigUpdateActionBuilder {
     public static ImageSearchConfigUpdateActionBuilder of() {
         return new ImageSearchConfigUpdateActionBuilder();
     }
+
 }

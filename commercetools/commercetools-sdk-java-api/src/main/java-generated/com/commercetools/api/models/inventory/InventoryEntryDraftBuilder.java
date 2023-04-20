@@ -81,6 +81,18 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
 
     /**
      *  <p>Channel that supplies this InventoryEntry.</p>
+     * @param builder function to build the supplyChannel value
+     * @return Builder
+     */
+
+    public InventoryEntryDraftBuilder withSupplyChannel(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Channel that supplies this InventoryEntry.</p>
      * @param supplyChannel value to be set
      * @return Builder
      */
@@ -133,6 +145,18 @@ public class InventoryEntryDraftBuilder implements Builder<InventoryEntryDraft> 
     public InventoryEntryDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields of the InventoryEntry.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public InventoryEntryDraftBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
         return this;
     }
 

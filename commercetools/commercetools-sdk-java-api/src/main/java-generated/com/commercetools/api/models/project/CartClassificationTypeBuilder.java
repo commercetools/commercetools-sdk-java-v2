@@ -95,6 +95,28 @@ public class CartClassificationTypeBuilder implements Builder<CartClassification
 
     /**
      *  <p>The classification items that can be used for specifying any ShippingRatePriceTier.</p>
+     * @param builder function to build the values value
+     * @return Builder
+     */
+
+    public CartClassificationTypeBuilder addValues(
+            Function<com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder, com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> builder) {
+        return plusValues(builder.apply(com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder.of()));
+    }
+
+    /**
+     *  <p>The classification items that can be used for specifying any ShippingRatePriceTier.</p>
+     * @param builder function to build the values value
+     * @return Builder
+     */
+
+    public CartClassificationTypeBuilder setValues(
+            Function<com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder, com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> builder) {
+        return values(builder.apply(com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder.of()));
+    }
+
+    /**
+     *  <p>The classification items that can be used for specifying any ShippingRatePriceTier.</p>
      * @return values
      */
 

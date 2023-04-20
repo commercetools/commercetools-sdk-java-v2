@@ -114,6 +114,18 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
+     * @return Builder
+     */
+
+    public TypeBuilder withLastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -133,6 +145,18 @@ public class TypeBuilder implements Builder<Type> {
     public TypeBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
+     * @return Builder
+     */
+
+    public TypeBuilder withCreatedBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
 
@@ -172,6 +196,18 @@ public class TypeBuilder implements Builder<Type> {
 
     /**
      *  <p>Name of the Type.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public TypeBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Name of the Type.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -190,6 +226,18 @@ public class TypeBuilder implements Builder<Type> {
     public TypeBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Description of the Type.</p>
+     * @param builder function to build the description value
+     * @return Builder
+     */
+
+    public TypeBuilder withDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -305,6 +353,28 @@ public class TypeBuilder implements Builder<Type> {
         this.fieldDefinitions = new ArrayList<>();
         this.fieldDefinitions.add(builder.apply(com.commercetools.api.models.type.FieldDefinitionBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Defines Custom Fields.</p>
+     * @param builder function to build the fieldDefinitions value
+     * @return Builder
+     */
+
+    public TypeBuilder addFieldDefinitions(
+            Function<com.commercetools.api.models.type.FieldDefinitionBuilder, com.commercetools.api.models.type.FieldDefinition> builder) {
+        return plusFieldDefinitions(builder.apply(com.commercetools.api.models.type.FieldDefinitionBuilder.of()));
+    }
+
+    /**
+     *  <p>Defines Custom Fields.</p>
+     * @param builder function to build the fieldDefinitions value
+     * @return Builder
+     */
+
+    public TypeBuilder setFieldDefinitions(
+            Function<com.commercetools.api.models.type.FieldDefinitionBuilder, com.commercetools.api.models.type.FieldDefinition> builder) {
+        return fieldDefinitions(builder.apply(com.commercetools.api.models.type.FieldDefinitionBuilder.of()));
     }
 
     /**

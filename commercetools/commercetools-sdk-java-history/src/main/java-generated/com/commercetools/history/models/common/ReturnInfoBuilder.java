@@ -95,6 +95,28 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     }
 
     /**
+     * add the value to the items using the builder function
+     * @param builder function to build the items value
+     * @return Builder
+     */
+
+    public ReturnInfoBuilder addItems(
+            Function<com.commercetools.history.models.common.ReturnItemBuilder, com.commercetools.history.models.common.ReturnItem> builder) {
+        return plusItems(builder.apply(com.commercetools.history.models.common.ReturnItemBuilder.of()));
+    }
+
+    /**
+     * set the value to the items using the builder function
+     * @param builder function to build the items value
+     * @return Builder
+     */
+
+    public ReturnInfoBuilder setItems(
+            Function<com.commercetools.history.models.common.ReturnItemBuilder, com.commercetools.history.models.common.ReturnItem> builder) {
+        return items(builder.apply(com.commercetools.history.models.common.ReturnItemBuilder.of()));
+    }
+
+    /**
      *  <p>Identifies, which return tracking ID is connected to this particular return.</p>
      * @param returnTrackingId value to be set
      * @return Builder

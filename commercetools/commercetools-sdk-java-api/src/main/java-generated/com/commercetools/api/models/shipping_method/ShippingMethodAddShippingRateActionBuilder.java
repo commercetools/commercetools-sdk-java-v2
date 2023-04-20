@@ -41,6 +41,18 @@ public class ShippingMethodAddShippingRateActionBuilder implements Builder<Shipp
 
     /**
      *  <p>Zone to which the ShippingRate should be added.</p>
+     * @param builder function to build the zone value
+     * @return Builder
+     */
+
+    public ShippingMethodAddShippingRateActionBuilder withZone(
+            Function<com.commercetools.api.models.zone.ZoneResourceIdentifierBuilder, com.commercetools.api.models.zone.ZoneResourceIdentifier> builder) {
+        this.zone = builder.apply(com.commercetools.api.models.zone.ZoneResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Zone to which the ShippingRate should be added.</p>
      * @param zone value to be set
      * @return Builder
      */
@@ -61,6 +73,18 @@ public class ShippingMethodAddShippingRateActionBuilder implements Builder<Shipp
             Function<com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder, com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder> builder) {
         this.shippingRate = builder.apply(com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Value to add to <code>shippingRates</code>.</p>
+     * @param builder function to build the shippingRate value
+     * @return Builder
+     */
+
+    public ShippingMethodAddShippingRateActionBuilder withShippingRate(
+            Function<com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder, com.commercetools.api.models.shipping_method.ShippingRateDraft> builder) {
+        this.shippingRate = builder.apply(com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder.of());
         return this;
     }
 

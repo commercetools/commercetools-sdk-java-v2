@@ -103,6 +103,30 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
     }
 
     /**
+     *  <p>ProductSelectionSettings that were added to the Store.</p>
+     * @param builder function to build the addedProductSelections value
+     * @return Builder
+     */
+
+    public StoreProductSelectionsChangedMessagePayloadBuilder addAddedProductSelections(
+            Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSetting> builder) {
+        return plusAddedProductSelections(
+            builder.apply(com.commercetools.api.models.store.ProductSelectionSettingBuilder.of()));
+    }
+
+    /**
+     *  <p>ProductSelectionSettings that were added to the Store.</p>
+     * @param builder function to build the addedProductSelections value
+     * @return Builder
+     */
+
+    public StoreProductSelectionsChangedMessagePayloadBuilder setAddedProductSelections(
+            Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSetting> builder) {
+        return addedProductSelections(
+            builder.apply(com.commercetools.api.models.store.ProductSelectionSettingBuilder.of()));
+    }
+
+    /**
      *  <p>ProductSelectionSettings that were removed from the Store.</p>
      * @param removedProductSelections value to be set
      * @return Builder
@@ -172,6 +196,30 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
     }
 
     /**
+     *  <p>ProductSelectionSettings that were removed from the Store.</p>
+     * @param builder function to build the removedProductSelections value
+     * @return Builder
+     */
+
+    public StoreProductSelectionsChangedMessagePayloadBuilder addRemovedProductSelections(
+            Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSetting> builder) {
+        return plusRemovedProductSelections(
+            builder.apply(com.commercetools.api.models.store.ProductSelectionSettingBuilder.of()));
+    }
+
+    /**
+     *  <p>ProductSelectionSettings that were removed from the Store.</p>
+     * @param builder function to build the removedProductSelections value
+     * @return Builder
+     */
+
+    public StoreProductSelectionsChangedMessagePayloadBuilder setRemovedProductSelections(
+            Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSetting> builder) {
+        return removedProductSelections(
+            builder.apply(com.commercetools.api.models.store.ProductSelectionSettingBuilder.of()));
+    }
+
+    /**
      *  <p>ProductSelectionSettings that were updated in the Store.</p>
      * @param updatedProductSelections value to be set
      * @return Builder
@@ -238,6 +286,30 @@ public class StoreProductSelectionsChangedMessagePayloadBuilder
         this.updatedProductSelections
                 .add(builder.apply(com.commercetools.api.models.store.ProductSelectionSettingBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>ProductSelectionSettings that were updated in the Store.</p>
+     * @param builder function to build the updatedProductSelections value
+     * @return Builder
+     */
+
+    public StoreProductSelectionsChangedMessagePayloadBuilder addUpdatedProductSelections(
+            Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSetting> builder) {
+        return plusUpdatedProductSelections(
+            builder.apply(com.commercetools.api.models.store.ProductSelectionSettingBuilder.of()));
+    }
+
+    /**
+     *  <p>ProductSelectionSettings that were updated in the Store.</p>
+     * @param builder function to build the updatedProductSelections value
+     * @return Builder
+     */
+
+    public StoreProductSelectionsChangedMessagePayloadBuilder setUpdatedProductSelections(
+            Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSetting> builder) {
+        return updatedProductSelections(
+            builder.apply(com.commercetools.api.models.store.ProductSelectionSettingBuilder.of()));
     }
 
     /**

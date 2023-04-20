@@ -68,6 +68,18 @@ public class SetDeliveryAddressChangeBuilder implements Builder<SetDeliveryAddre
     }
 
     /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetDeliveryAddressChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.Address> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.AddressBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
@@ -87,6 +99,18 @@ public class SetDeliveryAddressChangeBuilder implements Builder<SetDeliveryAddre
     public SetDeliveryAddressChangeBuilder previousValue(
             Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.AddressBuilder> builder) {
         this.previousValue = builder.apply(com.commercetools.history.models.common.AddressBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public SetDeliveryAddressChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.Address> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.AddressBuilder.of());
         return this;
     }
 

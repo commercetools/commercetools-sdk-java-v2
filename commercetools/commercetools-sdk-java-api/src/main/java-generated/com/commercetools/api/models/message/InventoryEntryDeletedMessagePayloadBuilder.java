@@ -54,6 +54,18 @@ public class InventoryEntryDeletedMessagePayloadBuilder implements Builder<Inven
 
     /**
      *  <p>Reference to the Channel where the InventoryEntry was deleted.</p>
+     * @param builder function to build the supplyChannel value
+     * @return Builder
+     */
+
+    public InventoryEntryDeletedMessagePayloadBuilder withSupplyChannel(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReference> builder) {
+        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the Channel where the InventoryEntry was deleted.</p>
      * @param supplyChannel value to be set
      * @return Builder
      */

@@ -9,7 +9,7 @@ import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.product_selection.ProductSelectionType;
+import com.commercetools.api.models.product_selection.ProductSelection;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -38,20 +38,20 @@ public interface ProductSelectionCreatedMessagePayload extends MessagePayload {
     String PRODUCT_SELECTION_CREATED = "ProductSelectionCreated";
 
     /**
-     *  <p>The <code>type</code> and <code>name</code> of the individual Product Selection.</p>
+     *  <p>Product Selection that was created.</p>
      * @return productSelection
      */
     @NotNull
     @Valid
     @JsonProperty("productSelection")
-    public ProductSelectionType getProductSelection();
+    public ProductSelection getProductSelection();
 
     /**
-     *  <p>The <code>type</code> and <code>name</code> of the individual Product Selection.</p>
+     *  <p>Product Selection that was created.</p>
      * @param productSelection value to be set
      */
 
-    public void setProductSelection(final ProductSelectionType productSelection);
+    public void setProductSelection(final ProductSelection productSelection);
 
     /**
      * factory method
@@ -84,8 +84,8 @@ public interface ProductSelectionCreatedMessagePayload extends MessagePayload {
             return null;
         }
         ProductSelectionCreatedMessagePayloadImpl instance = new ProductSelectionCreatedMessagePayloadImpl();
-        instance.setProductSelection(com.commercetools.api.models.product_selection.ProductSelectionType
-                .deepCopy(template.getProductSelection()));
+        instance.setProductSelection(
+            com.commercetools.api.models.product_selection.ProductSelection.deepCopy(template.getProductSelection()));
         return instance;
     }
 

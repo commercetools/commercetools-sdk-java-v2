@@ -134,6 +134,28 @@ public class ZoneDraftBuilder implements Builder<ZoneDraft> {
     }
 
     /**
+     *  <p>List of locations that belong to the Zone.</p>
+     * @param builder function to build the locations value
+     * @return Builder
+     */
+
+    public ZoneDraftBuilder addLocations(
+            Function<com.commercetools.api.models.zone.LocationBuilder, com.commercetools.api.models.zone.Location> builder) {
+        return plusLocations(builder.apply(com.commercetools.api.models.zone.LocationBuilder.of()));
+    }
+
+    /**
+     *  <p>List of locations that belong to the Zone.</p>
+     * @param builder function to build the locations value
+     * @return Builder
+     */
+
+    public ZoneDraftBuilder setLocations(
+            Function<com.commercetools.api.models.zone.LocationBuilder, com.commercetools.api.models.zone.Location> builder) {
+        return locations(builder.apply(com.commercetools.api.models.zone.LocationBuilder.of()));
+    }
+
+    /**
      *  <p>User-defined unique identifier for the Zone.</p>
      * @return key
      */

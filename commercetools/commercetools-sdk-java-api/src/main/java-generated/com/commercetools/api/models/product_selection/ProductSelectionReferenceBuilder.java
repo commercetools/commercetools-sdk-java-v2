@@ -54,6 +54,18 @@ public class ProductSelectionReferenceBuilder implements Builder<ProductSelectio
 
     /**
      *  <p>Contains the representation of the expanded ProductSelection. Only present in responses to requests with Reference Expansion for ProductSelections.</p>
+     * @param builder function to build the obj value
+     * @return Builder
+     */
+
+    public ProductSelectionReferenceBuilder withObj(
+            Function<com.commercetools.api.models.product_selection.ProductSelectionBuilder, com.commercetools.api.models.product_selection.ProductSelection> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.product_selection.ProductSelectionBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Contains the representation of the expanded ProductSelection. Only present in responses to requests with Reference Expansion for ProductSelections.</p>
      * @param obj value to be set
      * @return Builder
      */

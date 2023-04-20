@@ -24,7 +24,7 @@ public class AttributeReferenceBuilder implements Builder<AttributeReference> {
     private String key;
 
     /**
-     *  <p>Key of the attribute.</p>
+     *  <p>The Attribute's <code>name</code> as given in its AttributeDefinition.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class AttributeReferenceBuilder implements Builder<AttributeReference> {
     }
 
     /**
-     *  <p>Key of the attribute.</p>
+     *  <p>The Attribute's <code>name</code> as given in its AttributeDefinition.</p>
      * @return key
      */
 

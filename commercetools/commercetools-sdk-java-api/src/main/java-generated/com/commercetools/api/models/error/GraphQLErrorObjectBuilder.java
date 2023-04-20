@@ -298,4 +298,5 @@ public class GraphQLErrorObjectBuilder {
     public static GraphQLErrorObjectBuilder of() {
         return new GraphQLErrorObjectBuilder();
     }
+
 }

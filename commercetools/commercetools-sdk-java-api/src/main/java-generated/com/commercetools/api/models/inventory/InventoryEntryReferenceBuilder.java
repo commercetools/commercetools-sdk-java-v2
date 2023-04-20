@@ -54,6 +54,18 @@ public class InventoryEntryReferenceBuilder implements Builder<InventoryEntryRef
 
     /**
      *  <p>Contains the representation of the expanded InventoryEntry. Only present in responses to requests with Reference Expansion for InventoryEntries.</p>
+     * @param builder function to build the obj value
+     * @return Builder
+     */
+
+    public InventoryEntryReferenceBuilder withObj(
+            Function<com.commercetools.api.models.inventory.InventoryEntryBuilder, com.commercetools.api.models.inventory.InventoryEntry> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.inventory.InventoryEntryBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Contains the representation of the expanded InventoryEntry. Only present in responses to requests with Reference Expansion for InventoryEntries.</p>
      * @param obj value to be set
      * @return Builder
      */

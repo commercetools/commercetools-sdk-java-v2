@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Only Product Variants with the explicitly listed SKUs are part of the Product Selection of type Individual Exclusion.</p>
+ *  <p>Only Product Variants with the explicitly listed SKUs are part of a Product Selection with <code>IndividualExclusion</code> ProductSelectionMode.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantExclusionImpl implements ProductVariantExclusion, ModelBase {
@@ -37,7 +37,7 @@ public class ProductVariantExclusionImpl implements ProductVariantExclusion, Mod
     }
 
     /**
-     *  <p>Non-empty array of SKUs representing Product Variants to be included in the Product Selection of type Individual Exclusion.</p>
+     *  <p>Non-empty array of SKUs representing Product Variants to be included in the Product Selection with <code>IndividualExclusion</code> ProductSelectionMode.</p>
      */
 
     public java.util.List<String> getSkus() {

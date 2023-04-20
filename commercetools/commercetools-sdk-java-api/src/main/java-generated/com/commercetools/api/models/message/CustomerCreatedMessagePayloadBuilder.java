@@ -38,6 +38,18 @@ public class CustomerCreatedMessagePayloadBuilder implements Builder<CustomerCre
 
     /**
      *  <p>Customer that was created.</p>
+     * @param builder function to build the customer value
+     * @return Builder
+     */
+
+    public CustomerCreatedMessagePayloadBuilder withCustomer(
+            Function<com.commercetools.api.models.customer.CustomerBuilder, com.commercetools.api.models.customer.Customer> builder) {
+        this.customer = builder.apply(com.commercetools.api.models.customer.CustomerBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Customer that was created.</p>
      * @param customer value to be set
      * @return Builder
      */

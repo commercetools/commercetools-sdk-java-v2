@@ -133,6 +133,28 @@ public class ImageSearchResponseBuilder implements Builder<ImageSearchResponse> 
     }
 
     /**
+     *  <p>An array of image URLs of images that are similar to the query image. If no matching images are found, results is empty.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public ImageSearchResponseBuilder addResults(
+            Function<com.commercetools.ml.models.image_search.ResultItemBuilder, com.commercetools.ml.models.image_search.ResultItem> builder) {
+        return plusResults(builder.apply(com.commercetools.ml.models.image_search.ResultItemBuilder.of()));
+    }
+
+    /**
+     *  <p>An array of image URLs of images that are similar to the query image. If no matching images are found, results is empty.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public ImageSearchResponseBuilder setResults(
+            Function<com.commercetools.ml.models.image_search.ResultItemBuilder, com.commercetools.ml.models.image_search.ResultItem> builder) {
+        return results(builder.apply(com.commercetools.ml.models.image_search.ResultItemBuilder.of()));
+    }
+
+    /**
      *  <p>The maximum number of results to return from a query.</p>
      * @return count
      */

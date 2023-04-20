@@ -62,4 +62,5 @@ public class LabelBuilder {
     public static LabelBuilder of() {
         return new LabelBuilder();
     }
+
 }

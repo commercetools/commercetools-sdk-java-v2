@@ -54,6 +54,18 @@ public class AttributeGroupReferenceBuilder implements Builder<AttributeGroupRef
 
     /**
      *  <p>Contains the representation of the expanded AttributeGroup. Only present in responses to requests with Reference Expansion for AttributeGroup.</p>
+     * @param builder function to build the obj value
+     * @return Builder
+     */
+
+    public AttributeGroupReferenceBuilder withObj(
+            Function<com.commercetools.api.models.attribute_group.AttributeGroupBuilder, com.commercetools.api.models.attribute_group.AttributeGroup> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.attribute_group.AttributeGroupBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Contains the representation of the expanded AttributeGroup. Only present in responses to requests with Reference Expansion for AttributeGroup.</p>
      * @param obj value to be set
      * @return Builder
      */

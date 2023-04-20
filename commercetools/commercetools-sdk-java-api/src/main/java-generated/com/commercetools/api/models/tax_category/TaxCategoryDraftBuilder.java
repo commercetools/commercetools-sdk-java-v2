@@ -125,6 +125,28 @@ public class TaxCategoryDraftBuilder implements Builder<TaxCategoryDraft> {
     }
 
     /**
+     *  <p>Tax rates and subrates of states and countries.</p>
+     * @param builder function to build the rates value
+     * @return Builder
+     */
+
+    public TaxCategoryDraftBuilder addRates(
+            Function<com.commercetools.api.models.tax_category.TaxRateDraftBuilder, com.commercetools.api.models.tax_category.TaxRateDraft> builder) {
+        return plusRates(builder.apply(com.commercetools.api.models.tax_category.TaxRateDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>Tax rates and subrates of states and countries.</p>
+     * @param builder function to build the rates value
+     * @return Builder
+     */
+
+    public TaxCategoryDraftBuilder setRates(
+            Function<com.commercetools.api.models.tax_category.TaxRateDraftBuilder, com.commercetools.api.models.tax_category.TaxRateDraft> builder) {
+        return rates(builder.apply(com.commercetools.api.models.tax_category.TaxRateDraftBuilder.of()));
+    }
+
+    /**
      *  <p>User-defined unique identifier for the TaxCategory.</p>
      * @param key value to be set
      * @return Builder

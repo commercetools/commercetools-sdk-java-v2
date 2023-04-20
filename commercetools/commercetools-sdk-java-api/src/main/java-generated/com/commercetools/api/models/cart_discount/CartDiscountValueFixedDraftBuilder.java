@@ -91,6 +91,28 @@ public class CartDiscountValueFixedDraftBuilder implements Builder<CartDiscountV
 
     /**
      *  <p>Money values in different currencies. A fixed Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
+     * @param builder function to build the money value
+     * @return Builder
+     */
+
+    public CartDiscountValueFixedDraftBuilder addMoney(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+        return plusMoney(builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()));
+    }
+
+    /**
+     *  <p>Money values in different currencies. A fixed Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
+     * @param builder function to build the money value
+     * @return Builder
+     */
+
+    public CartDiscountValueFixedDraftBuilder setMoney(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+        return money(builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()));
+    }
+
+    /**
+     *  <p>Money values in different currencies. A fixed Cart Discount will only match a price if this array contains a value with the same currency. If it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
      * @return money
      */
 

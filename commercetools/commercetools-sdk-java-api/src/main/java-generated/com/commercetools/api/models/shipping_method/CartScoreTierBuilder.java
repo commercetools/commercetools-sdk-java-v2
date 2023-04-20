@@ -60,6 +60,18 @@ public class CartScoreTierBuilder implements Builder<CartScoreTier> {
 
     /**
      *  <p>Defines a fixed price for the <code>score</code>.</p>
+     * @param builder function to build the price value
+     * @return Builder
+     */
+
+    public CartScoreTierBuilder withPrice(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+        this.price = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Defines a fixed price for the <code>score</code>.</p>
      * @param price value to be set
      * @return Builder
      */
@@ -79,6 +91,18 @@ public class CartScoreTierBuilder implements Builder<CartScoreTier> {
             Function<com.commercetools.api.models.shipping_method.PriceFunctionBuilder, com.commercetools.api.models.shipping_method.PriceFunctionBuilder> builder) {
         this.priceFunction = builder.apply(com.commercetools.api.models.shipping_method.PriceFunctionBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Dynamically calculates a Price for a range of scores.</p>
+     * @param builder function to build the priceFunction value
+     * @return Builder
+     */
+
+    public CartScoreTierBuilder withPriceFunction(
+            Function<com.commercetools.api.models.shipping_method.PriceFunctionBuilder, com.commercetools.api.models.shipping_method.PriceFunction> builder) {
+        this.priceFunction = builder.apply(com.commercetools.api.models.shipping_method.PriceFunctionBuilder.of());
         return this;
     }
 

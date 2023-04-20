@@ -162,6 +162,18 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>The ProductType defining the Attributes of the Product.</p>
+     * @param builder function to build the productType value
+     * @return Builder
+     */
+
+    public ProductProjectionBuilder withProductType(
+            Function<com.commercetools.api.models.product_type.ProductTypeReferenceBuilder, com.commercetools.api.models.product_type.ProductTypeReference> builder) {
+        this.productType = builder.apply(com.commercetools.api.models.product_type.ProductTypeReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The ProductType defining the Attributes of the Product.</p>
      * @param productType value to be set
      * @return Builder
      */
@@ -181,6 +193,18 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     public ProductProjectionBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Name of the Product.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public ProductProjectionBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -209,6 +233,18 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Description of the Product.</p>
+     * @param builder function to build the description value
+     * @return Builder
+     */
+
+    public ProductProjectionBuilder withDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Description of the Product.</p>
      * @param description value to be set
      * @return Builder
      */
@@ -228,6 +264,18 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     public ProductProjectionBuilder slug(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different locales. Matches the pattern <code>[a-zA-Z0-9_\-]{2,256}</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set in the Project.</p>
+     * @param builder function to build the slug value
+     * @return Builder
+     */
+
+    public ProductProjectionBuilder withSlug(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -310,6 +358,28 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
+     *  <p>Categories assigned to the Product.</p>
+     * @param builder function to build the categories value
+     * @return Builder
+     */
+
+    public ProductProjectionBuilder addCategories(
+            Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReference> builder) {
+        return plusCategories(builder.apply(com.commercetools.api.models.category.CategoryReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p>Categories assigned to the Product.</p>
+     * @param builder function to build the categories value
+     * @return Builder
+     */
+
+    public ProductProjectionBuilder setCategories(
+            Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReference> builder) {
+        return categories(builder.apply(com.commercetools.api.models.category.CategoryReferenceBuilder.of()));
+    }
+
+    /**
      *  <p>Order of Product in Categories.</p>
      * @param builder function to build the categoryOrderHints value
      * @return Builder
@@ -319,6 +389,18 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
             Function<com.commercetools.api.models.product.CategoryOrderHintsBuilder, com.commercetools.api.models.product.CategoryOrderHintsBuilder> builder) {
         this.categoryOrderHints = builder.apply(com.commercetools.api.models.product.CategoryOrderHintsBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Order of Product in Categories.</p>
+     * @param builder function to build the categoryOrderHints value
+     * @return Builder
+     */
+
+    public ProductProjectionBuilder withCategoryOrderHints(
+            Function<com.commercetools.api.models.product.CategoryOrderHintsBuilder, com.commercetools.api.models.product.CategoryOrderHints> builder) {
+        this.categoryOrderHints = builder.apply(com.commercetools.api.models.product.CategoryOrderHintsBuilder.of());
         return this;
     }
 
@@ -348,6 +430,18 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Title of the Product displayed in search results.</p>
+     * @param builder function to build the metaTitle value
+     * @return Builder
+     */
+
+    public ProductProjectionBuilder withMetaTitle(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.metaTitle = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Title of the Product displayed in search results.</p>
      * @param metaTitle value to be set
      * @return Builder
      */
@@ -367,6 +461,18 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     public ProductProjectionBuilder metaDescription(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.metaDescription = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Description of the Product displayed in search results below the meta title.</p>
+     * @param builder function to build the metaDescription value
+     * @return Builder
+     */
+
+    public ProductProjectionBuilder withMetaDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.metaDescription = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -396,6 +502,18 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>Keywords that give additional information about the Product to search engines.</p>
+     * @param builder function to build the metaKeywords value
+     * @return Builder
+     */
+
+    public ProductProjectionBuilder withMetaKeywords(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.metaKeywords = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Keywords that give additional information about the Product to search engines.</p>
      * @param metaKeywords value to be set
      * @return Builder
      */
@@ -415,6 +533,18 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     public ProductProjectionBuilder searchKeywords(
             Function<com.commercetools.api.models.product.SearchKeywordsBuilder, com.commercetools.api.models.product.SearchKeywordsBuilder> builder) {
         this.searchKeywords = builder.apply(com.commercetools.api.models.product.SearchKeywordsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     * @param builder function to build the searchKeywords value
+     * @return Builder
+     */
+
+    public ProductProjectionBuilder withSearchKeywords(
+            Function<com.commercetools.api.models.product.SearchKeywordsBuilder, com.commercetools.api.models.product.SearchKeywords> builder) {
+        this.searchKeywords = builder.apply(com.commercetools.api.models.product.SearchKeywordsBuilder.of());
         return this;
     }
 
@@ -461,6 +591,18 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     public ProductProjectionBuilder masterVariant(
             Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariantBuilder> builder) {
         this.masterVariant = builder.apply(com.commercetools.api.models.product.ProductVariantBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>The Master Variant of the Product.</p>
+     * @param builder function to build the masterVariant value
+     * @return Builder
+     */
+
+    public ProductProjectionBuilder withMasterVariant(
+            Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariant> builder) {
+        this.masterVariant = builder.apply(com.commercetools.api.models.product.ProductVariantBuilder.of());
         return this;
     }
 
@@ -543,6 +685,28 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
+     *  <p>Additional Product Variants.</p>
+     * @param builder function to build the variants value
+     * @return Builder
+     */
+
+    public ProductProjectionBuilder addVariants(
+            Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariant> builder) {
+        return plusVariants(builder.apply(com.commercetools.api.models.product.ProductVariantBuilder.of()));
+    }
+
+    /**
+     *  <p>Additional Product Variants.</p>
+     * @param builder function to build the variants value
+     * @return Builder
+     */
+
+    public ProductProjectionBuilder setVariants(
+            Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariant> builder) {
+        return variants(builder.apply(com.commercetools.api.models.product.ProductVariantBuilder.of()));
+    }
+
+    /**
      *  <p>The TaxCategory of the Product.</p>
      * @param builder function to build the taxCategory value
      * @return Builder
@@ -552,6 +716,18 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
             Function<com.commercetools.api.models.tax_category.TaxCategoryReferenceBuilder, com.commercetools.api.models.tax_category.TaxCategoryReferenceBuilder> builder) {
         this.taxCategory = builder.apply(com.commercetools.api.models.tax_category.TaxCategoryReferenceBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>The TaxCategory of the Product.</p>
+     * @param builder function to build the taxCategory value
+     * @return Builder
+     */
+
+    public ProductProjectionBuilder withTaxCategory(
+            Function<com.commercetools.api.models.tax_category.TaxCategoryReferenceBuilder, com.commercetools.api.models.tax_category.TaxCategoryReference> builder) {
+        this.taxCategory = builder.apply(com.commercetools.api.models.tax_category.TaxCategoryReferenceBuilder.of());
         return this;
     }
 
@@ -581,6 +757,18 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     /**
      *  <p>State of the Product.</p>
+     * @param builder function to build the state value
+     * @return Builder
+     */
+
+    public ProductProjectionBuilder withState(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReference> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>State of the Product.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -601,6 +789,19 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
         this.reviewRatingStatistics = builder
                 .apply(com.commercetools.api.models.review.ReviewRatingStatisticsBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Review statistics of the Product.</p>
+     * @param builder function to build the reviewRatingStatistics value
+     * @return Builder
+     */
+
+    public ProductProjectionBuilder withReviewRatingStatistics(
+            Function<com.commercetools.api.models.review.ReviewRatingStatisticsBuilder, com.commercetools.api.models.review.ReviewRatingStatistics> builder) {
+        this.reviewRatingStatistics = builder
+                .apply(com.commercetools.api.models.review.ReviewRatingStatisticsBuilder.of());
         return this;
     }
 

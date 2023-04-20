@@ -46,4 +46,5 @@ public class MyPaymentUpdateActionBuilder {
     public static MyPaymentUpdateActionBuilder of() {
         return new MyPaymentUpdateActionBuilder();
     }
+
 }

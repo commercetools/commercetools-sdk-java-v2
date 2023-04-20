@@ -51,6 +51,18 @@ public class AddTransactionChangeBuilder implements Builder<AddTransactionChange
     }
 
     /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public AddTransactionChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.TransactionBuilder, com.commercetools.history.models.common.Transaction> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.TransactionBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder

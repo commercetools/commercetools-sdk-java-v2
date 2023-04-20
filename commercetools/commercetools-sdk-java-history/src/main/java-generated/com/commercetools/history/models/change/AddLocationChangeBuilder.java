@@ -55,6 +55,18 @@ public class AddLocationChangeBuilder implements Builder<AddLocationChange> {
 
     /**
      *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public AddLocationChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.LocationBuilder, com.commercetools.history.models.common.Location> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.LocationBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
      * @param previousValue value to be set
      * @return Builder
      */
@@ -74,6 +86,18 @@ public class AddLocationChangeBuilder implements Builder<AddLocationChange> {
     public AddLocationChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.LocationBuilder, com.commercetools.history.models.common.LocationBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.LocationBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Shape of the value for <code>addLocation</code> and <code>removeLocation</code> actions</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public AddLocationChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.LocationBuilder, com.commercetools.history.models.common.Location> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.LocationBuilder.of());
         return this;
     }
 

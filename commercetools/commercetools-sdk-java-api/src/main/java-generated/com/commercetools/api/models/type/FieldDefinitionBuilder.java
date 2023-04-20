@@ -86,6 +86,18 @@ public class FieldDefinitionBuilder implements Builder<FieldDefinition> {
 
     /**
      *  <p>A human-readable label for the field.</p>
+     * @param builder function to build the label value
+     * @return Builder
+     */
+
+    public FieldDefinitionBuilder withLabel(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.label = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>A human-readable label for the field.</p>
      * @param label value to be set
      * @return Builder
      */

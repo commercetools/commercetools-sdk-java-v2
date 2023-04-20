@@ -56,6 +56,18 @@ public class StagedOrderSetCustomLineItemShippingDetailsActionBuilder
 
     /**
      *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     * @param builder function to build the shippingDetails value
+     * @return Builder
+     */
+
+    public StagedOrderSetCustomLineItemShippingDetailsActionBuilder withShippingDetails(
+            Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraft> builder) {
+        this.shippingDetails = builder.apply(com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
      * @param shippingDetails value to be set
      * @return Builder
      */

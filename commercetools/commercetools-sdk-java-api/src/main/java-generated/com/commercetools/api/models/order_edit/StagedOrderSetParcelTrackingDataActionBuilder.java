@@ -53,6 +53,18 @@ public class StagedOrderSetParcelTrackingDataActionBuilder implements Builder<St
     }
 
     /**
+     * set the value to the trackingData using the builder function
+     * @param builder function to build the trackingData value
+     * @return Builder
+     */
+
+    public StagedOrderSetParcelTrackingDataActionBuilder withTrackingData(
+            Function<com.commercetools.api.models.order.TrackingDataBuilder, com.commercetools.api.models.order.TrackingData> builder) {
+        this.trackingData = builder.apply(com.commercetools.api.models.order.TrackingDataBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the trackingData
      * @param trackingData value to be set
      * @return Builder

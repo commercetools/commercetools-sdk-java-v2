@@ -54,6 +54,18 @@ public class CartReferenceBuilder implements Builder<CartReference> {
 
     /**
      *  <p>Contains the representation of the expanded Cart. Only present in responses to requests with Reference Expansion for Carts.</p>
+     * @param builder function to build the obj value
+     * @return Builder
+     */
+
+    public CartReferenceBuilder withObj(
+            Function<com.commercetools.api.models.cart.CartBuilder, com.commercetools.api.models.cart.Cart> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.cart.CartBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Contains the representation of the expanded Cart. Only present in responses to requests with Reference Expansion for Carts.</p>
      * @param obj value to be set
      * @return Builder
      */

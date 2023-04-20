@@ -148,6 +148,28 @@ public class ReviewPagedQueryResponseBuilder implements Builder<ReviewPagedQuery
     }
 
     /**
+     *  <p>Reviews matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public ReviewPagedQueryResponseBuilder addResults(
+            Function<com.commercetools.api.models.review.ReviewBuilder, com.commercetools.api.models.review.Review> builder) {
+        return plusResults(builder.apply(com.commercetools.api.models.review.ReviewBuilder.of()));
+    }
+
+    /**
+     *  <p>Reviews matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public ReviewPagedQueryResponseBuilder setResults(
+            Function<com.commercetools.api.models.review.ReviewBuilder, com.commercetools.api.models.review.Review> builder) {
+        return results(builder.apply(com.commercetools.api.models.review.ReviewBuilder.of()));
+    }
+
+    /**
      *  <p>Number of results requested.</p>
      * @return limit
      */

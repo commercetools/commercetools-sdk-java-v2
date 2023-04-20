@@ -123,6 +123,18 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
+     * @return Builder
+     */
+
+    public ChannelBuilder withLastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -142,6 +154,18 @@ public class ChannelBuilder implements Builder<Channel> {
     public ChannelBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
+     * @return Builder
+     */
+
+    public ChannelBuilder withCreatedBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
 
@@ -217,6 +241,18 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Name of the Channel.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public ChannelBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Name of the Channel.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -240,6 +276,18 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Description of the Channel.</p>
+     * @param builder function to build the description value
+     * @return Builder
+     */
+
+    public ChannelBuilder withDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Description of the Channel.</p>
      * @param description value to be set
      * @return Builder
      */
@@ -258,6 +306,18 @@ public class ChannelBuilder implements Builder<Channel> {
     public ChannelBuilder address(
             Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
         this.address = builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Address where the Channel is located (for example, if the Channel is a physical store).</p>
+     * @param builder function to build the address value
+     * @return Builder
+     */
+
+    public ChannelBuilder withAddress(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
+        this.address = builder.apply(com.commercetools.api.models.common.AddressBuilder.of());
         return this;
     }
 
@@ -288,6 +348,19 @@ public class ChannelBuilder implements Builder<Channel> {
 
     /**
      *  <p>Statistics about the review ratings taken into account for the Channel.</p>
+     * @param builder function to build the reviewRatingStatistics value
+     * @return Builder
+     */
+
+    public ChannelBuilder withReviewRatingStatistics(
+            Function<com.commercetools.api.models.review.ReviewRatingStatisticsBuilder, com.commercetools.api.models.review.ReviewRatingStatistics> builder) {
+        this.reviewRatingStatistics = builder
+                .apply(com.commercetools.api.models.review.ReviewRatingStatisticsBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Statistics about the review ratings taken into account for the Channel.</p>
      * @param reviewRatingStatistics value to be set
      * @return Builder
      */
@@ -307,6 +380,18 @@ public class ChannelBuilder implements Builder<Channel> {
     public ChannelBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields defined for the Channel.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public ChannelBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of());
         return this;
     }
 

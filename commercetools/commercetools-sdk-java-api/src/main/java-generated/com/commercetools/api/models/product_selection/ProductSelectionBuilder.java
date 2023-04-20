@@ -22,7 +22,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .name(nameBuilder -> nameBuilder)
  *             .productCount(0.3)
- *             .type(ProductSelectionTypeEnum.INDIVIDUAL)
+ *             .mode(ProductSelectionMode.INDIVIDUAL)
  *             .build()
  * </code></pre>
  * </div>
@@ -51,7 +51,11 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
 
     private Integer productCount;
 
+    @Deprecated
+    @Nullable
     private com.commercetools.api.models.product_selection.ProductSelectionTypeEnum type;
+
+    private com.commercetools.api.models.product_selection.ProductSelectionMode mode;
 
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
@@ -114,6 +118,18 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
 
     /**
      *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
+     * @return Builder
+     */
+
+    public ProductSelectionBuilder withLastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -133,6 +149,18 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
     public ProductSelectionBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
+     * @return Builder
+     */
+
+    public ProductSelectionBuilder withCreatedBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
 
@@ -172,6 +200,18 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
 
     /**
      *  <p>Name of the ProductSelection.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public ProductSelectionBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Name of the ProductSelection.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -197,10 +237,22 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
      * @param type value to be set
      * @return Builder
      */
-
+    @Deprecated
     public ProductSelectionBuilder type(
-            final com.commercetools.api.models.product_selection.ProductSelectionTypeEnum type) {
+            @Nullable final com.commercetools.api.models.product_selection.ProductSelectionTypeEnum type) {
         this.type = type;
+        return this;
+    }
+
+    /**
+     *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually, either by including or excluding them explicitly.</p>
+     * @param mode value to be set
+     * @return Builder
+     */
+
+    public ProductSelectionBuilder mode(
+            final com.commercetools.api.models.product_selection.ProductSelectionMode mode) {
+        this.mode = mode;
         return this;
     }
 
@@ -213,6 +265,18 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
     public ProductSelectionBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields of the ProductSelection.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public ProductSelectionBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of());
         return this;
     }
 
@@ -315,9 +379,19 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
      *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually, either by including or excluding them explicitly.</p>
      * @return type
      */
-
+    @Deprecated
+    @Nullable
     public com.commercetools.api.models.product_selection.ProductSelectionTypeEnum getType() {
         return this.type;
+    }
+
+    /**
+     *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually, either by including or excluding them explicitly.</p>
+     * @return mode
+     */
+
+    public com.commercetools.api.models.product_selection.ProductSelectionMode getMode() {
+        return this.mode;
     }
 
     /**
@@ -341,9 +415,9 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
         Objects.requireNonNull(lastModifiedAt, ProductSelection.class + ": lastModifiedAt is missing");
         Objects.requireNonNull(name, ProductSelection.class + ": name is missing");
         Objects.requireNonNull(productCount, ProductSelection.class + ": productCount is missing");
-        Objects.requireNonNull(type, ProductSelection.class + ": type is missing");
+        Objects.requireNonNull(mode, ProductSelection.class + ": mode is missing");
         return new ProductSelectionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name,
-            productCount, type, custom);
+            productCount, type, mode, custom);
     }
 
     /**
@@ -352,7 +426,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
      */
     public ProductSelection buildUnchecked() {
         return new ProductSelectionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name,
-            productCount, type, custom);
+            productCount, type, mode, custom);
     }
 
     /**
@@ -380,6 +454,7 @@ public class ProductSelectionBuilder implements Builder<ProductSelection> {
         builder.name = template.getName();
         builder.productCount = template.getProductCount();
         builder.type = template.getType();
+        builder.mode = template.getMode();
         builder.custom = template.getCustom();
         return builder;
     }

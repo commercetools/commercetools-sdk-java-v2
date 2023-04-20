@@ -65,6 +65,18 @@ public class AddEnumValueChangeBuilder implements Builder<AddEnumValueChange> {
     }
 
     /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public AddEnumValueChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.change_value.EnumValueBuilder, com.commercetools.history.models.change_value.EnumValue> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.change_value.EnumValueBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder

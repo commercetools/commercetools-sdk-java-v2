@@ -46,6 +46,18 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
 
     /**
      *  <p>Money value of the ShippingRate.</p>
+     * @param builder function to build the price value
+     * @return Builder
+     */
+
+    public ShippingRateDraftBuilder withPrice(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+        this.price = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Money value of the ShippingRate.</p>
      * @param price value to be set
      * @return Builder
      */
@@ -64,6 +76,18 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
     public ShippingRateDraftBuilder freeAbove(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.freeAbove = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Shipping is free if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
+     * @param builder function to build the freeAbove value
+     * @return Builder
+     */
+
+    public ShippingRateDraftBuilder withFreeAbove(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+        this.freeAbove = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
         return this;
     }
 

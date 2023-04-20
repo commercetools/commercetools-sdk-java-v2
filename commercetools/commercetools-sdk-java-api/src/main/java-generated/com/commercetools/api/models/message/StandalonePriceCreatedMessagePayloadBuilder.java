@@ -39,6 +39,18 @@ public class StandalonePriceCreatedMessagePayloadBuilder implements Builder<Stan
 
     /**
      *  <p>Standalone Price that was created.</p>
+     * @param builder function to build the standalonePrice value
+     * @return Builder
+     */
+
+    public StandalonePriceCreatedMessagePayloadBuilder withStandalonePrice(
+            Function<com.commercetools.api.models.standalone_price.StandalonePriceBuilder, com.commercetools.api.models.standalone_price.StandalonePrice> builder) {
+        this.standalonePrice = builder.apply(com.commercetools.api.models.standalone_price.StandalonePriceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Standalone Price that was created.</p>
      * @param standalonePrice value to be set
      * @return Builder
      */

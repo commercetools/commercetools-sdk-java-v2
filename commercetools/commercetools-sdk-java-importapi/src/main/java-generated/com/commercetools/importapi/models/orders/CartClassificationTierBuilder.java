@@ -59,6 +59,18 @@ public class CartClassificationTierBuilder implements Builder<CartClassification
     }
 
     /**
+     * set the value to the price using the builder function
+     * @param builder function to build the price value
+     * @return Builder
+     */
+
+    public CartClassificationTierBuilder withPrice(
+            Function<com.commercetools.importapi.models.common.MoneyBuilder, com.commercetools.importapi.models.common.Money> builder) {
+        this.price = builder.apply(com.commercetools.importapi.models.common.MoneyBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the price
      * @param price value to be set
      * @return Builder

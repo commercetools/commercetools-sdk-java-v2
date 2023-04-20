@@ -64,6 +64,18 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
 
     /**
      *  <p>Money value of the Custom Line Item. The value can be negative.</p>
+     * @param builder function to build the money value
+     * @return Builder
+     */
+
+    public CartAddCustomLineItemActionBuilder withMoney(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+        this.money = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Money value of the Custom Line Item. The value can be negative.</p>
      * @param money value to be set
      * @return Builder
      */
@@ -82,6 +94,18 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     public CartAddCustomLineItemActionBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Name of the Custom Line Item.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public CartAddCustomLineItemActionBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -136,6 +160,20 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     /**
      *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode.</p>
      *  <p>If TaxMode is <code>Platform</code>, this field must not be empty.</p>
+     * @param builder function to build the taxCategory value
+     * @return Builder
+     */
+
+    public CartAddCustomLineItemActionBuilder withTaxCategory(
+            Function<com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder, com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier> builder) {
+        this.taxCategory = builder
+                .apply(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode.</p>
+     *  <p>If TaxMode is <code>Platform</code>, this field must not be empty.</p>
      * @param taxCategory value to be set
      * @return Builder
      */
@@ -156,6 +194,18 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
             Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
         this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>An external Tax Rate can be set if the Cart has <code>External</code> TaxMode.</p>
+     * @param builder function to build the externalTaxRate value
+     * @return Builder
+     */
+
+    public CartAddCustomLineItemActionBuilder withExternalTaxRate(
+            Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraft> builder) {
+        this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of());
         return this;
     }
 
@@ -186,6 +236,18 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
 
     /**
      *  <p>Container for Custom Line Item-specific addresses.</p>
+     * @param builder function to build the shippingDetails value
+     * @return Builder
+     */
+
+    public CartAddCustomLineItemActionBuilder withShippingDetails(
+            Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraft> builder) {
+        this.shippingDetails = builder.apply(com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Container for Custom Line Item-specific addresses.</p>
      * @param shippingDetails value to be set
      * @return Builder
      */
@@ -205,6 +267,18 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     public CartAddCustomLineItemActionBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the Custom Line Item.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public CartAddCustomLineItemActionBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
         return this;
     }
 

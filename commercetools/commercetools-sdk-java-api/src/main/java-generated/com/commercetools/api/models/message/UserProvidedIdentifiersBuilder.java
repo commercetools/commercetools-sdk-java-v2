@@ -113,6 +113,18 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
 
     /**
      *  <p>Unique identifier usually used in deep-link URLs for a Product. The value corresponds to the slug in the <code>current</code> Product Projection.</p>
+     * @param builder function to build the slug value
+     * @return Builder
+     */
+
+    public UserProvidedIdentifiersBuilder withSlug(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Unique identifier usually used in deep-link URLs for a Product. The value corresponds to the slug in the <code>current</code> Product Projection.</p>
      * @param slug value to be set
      * @return Builder
      */
@@ -132,6 +144,18 @@ public class UserProvidedIdentifiersBuilder implements Builder<UserProvidedIdent
     public UserProvidedIdentifiersBuilder containerAndKey(
             Function<com.commercetools.api.models.message.ContainerAndKeyBuilder, com.commercetools.api.models.message.ContainerAndKeyBuilder> builder) {
         this.containerAndKey = builder.apply(com.commercetools.api.models.message.ContainerAndKeyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Unique identifier of a Custom Object.</p>
+     * @param builder function to build the containerAndKey value
+     * @return Builder
+     */
+
+    public UserProvidedIdentifiersBuilder withContainerAndKey(
+            Function<com.commercetools.api.models.message.ContainerAndKeyBuilder, com.commercetools.api.models.message.ContainerAndKey> builder) {
+        this.containerAndKey = builder.apply(com.commercetools.api.models.message.ContainerAndKeyBuilder.of());
         return this;
     }
 

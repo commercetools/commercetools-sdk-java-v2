@@ -47,6 +47,18 @@ public class StandalonePriceValueChangedMessagePayloadBuilder
 
     /**
      *  <p>The new value of the updated StandalonePrice.</p>
+     * @param builder function to build the value value
+     * @return Builder
+     */
+
+    public StandalonePriceValueChangedMessagePayloadBuilder withValue(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+        this.value = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The new value of the updated StandalonePrice.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -77,6 +89,18 @@ public class StandalonePriceValueChangedMessagePayloadBuilder
     public StandalonePriceValueChangedMessagePayloadBuilder oldValue(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.oldValue = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>The old value of the updated StandalonePrice. Present on Messages created after 3 February 2023. Optional for backwards compatibility.</p>
+     * @param builder function to build the oldValue value
+     * @return Builder
+     */
+
+    public StandalonePriceValueChangedMessagePayloadBuilder withOldValue(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+        this.oldValue = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
         return this;
     }
 

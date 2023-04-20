@@ -107,6 +107,28 @@ public class ProductPricesSetMessagePayloadBuilder implements Builder<ProductPri
     }
 
     /**
+     *  <p>The Embedded Prices that were set on the ProductVariant.</p>
+     * @param builder function to build the prices value
+     * @return Builder
+     */
+
+    public ProductPricesSetMessagePayloadBuilder addPrices(
+            Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.Price> builder) {
+        return plusPrices(builder.apply(com.commercetools.api.models.common.PriceBuilder.of()));
+    }
+
+    /**
+     *  <p>The Embedded Prices that were set on the ProductVariant.</p>
+     * @param builder function to build the prices value
+     * @return Builder
+     */
+
+    public ProductPricesSetMessagePayloadBuilder setPrices(
+            Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.Price> builder) {
+        return prices(builder.apply(com.commercetools.api.models.common.PriceBuilder.of()));
+    }
+
+    /**
      *  <p>Whether the update was only applied to the staged Product Projection.</p>
      * @param staged value to be set
      * @return Builder

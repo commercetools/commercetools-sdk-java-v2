@@ -100,6 +100,18 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
 
     /**
      *  <p>Custom Fields for the Business Unit.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public MyDivisionDraftBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the Business Unit.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -174,6 +186,28 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
         this.addresses = new ArrayList<>();
         this.addresses.add(builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Addresses used by the Business Unit.</p>
+     * @param builder function to build the addresses value
+     * @return Builder
+     */
+
+    public MyDivisionDraftBuilder addAddresses(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddress> builder) {
+        return plusAddresses(builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()));
+    }
+
+    /**
+     *  <p>Addresses used by the Business Unit.</p>
+     * @param builder function to build the addresses value
+     * @return Builder
+     */
+
+    public MyDivisionDraftBuilder setAddresses(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddress> builder) {
+        return addresses(builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()));
     }
 
     /**
@@ -281,6 +315,19 @@ public class MyDivisionDraftBuilder implements Builder<MyDivisionDraft> {
         this.parentUnit = builder
                 .apply(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>The parent unit of this Division. Can be a Company or a Division.</p>
+     * @param builder function to build the parentUnit value
+     * @return Builder
+     */
+
+    public MyDivisionDraftBuilder withParentUnit(
+            Function<com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder, com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier> builder) {
+        this.parentUnit = builder
+                .apply(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder.of());
         return this;
     }
 

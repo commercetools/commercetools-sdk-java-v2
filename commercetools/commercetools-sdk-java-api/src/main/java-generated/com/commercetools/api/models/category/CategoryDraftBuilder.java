@@ -73,6 +73,18 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Name of the Category.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public CategoryDraftBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Name of the Category.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -91,6 +103,18 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     public CategoryDraftBuilder slug(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>User-defined identifier used as a deep-link URL to the related Category. A Category can have the same slug for different Locales, but it must be unique across the Project. Valid slugs must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
+     * @param builder function to build the slug value
+     * @return Builder
+     */
+
+    public CategoryDraftBuilder withSlug(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -119,6 +143,18 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Description of the Category.</p>
+     * @param builder function to build the description value
+     * @return Builder
+     */
+
+    public CategoryDraftBuilder withDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Description of the Category.</p>
      * @param description value to be set
      * @return Builder
      */
@@ -139,6 +175,18 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
             Function<com.commercetools.api.models.category.CategoryResourceIdentifierBuilder, com.commercetools.api.models.category.CategoryResourceIdentifierBuilder> builder) {
         this.parent = builder.apply(com.commercetools.api.models.category.CategoryResourceIdentifierBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Parent Category of the Category. The parent can be set by its <code>id</code> or <code>key</code>.</p>
+     * @param builder function to build the parent value
+     * @return Builder
+     */
+
+    public CategoryDraftBuilder withParent(
+            Function<com.commercetools.api.models.category.CategoryResourceIdentifierBuilder, com.commercetools.api.models.category.CategoryResourceIdentifier> builder) {
+        this.parent = builder.apply(com.commercetools.api.models.category.CategoryResourceIdentifierBuilder.of());
         return this;
     }
 
@@ -190,6 +238,18 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Name of the Category used by external search engines for improved search engine performance.</p>
+     * @param builder function to build the metaTitle value
+     * @return Builder
+     */
+
+    public CategoryDraftBuilder withMetaTitle(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.metaTitle = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Name of the Category used by external search engines for improved search engine performance.</p>
      * @param metaTitle value to be set
      * @return Builder
      */
@@ -209,6 +269,18 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     public CategoryDraftBuilder metaDescription(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.metaDescription = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Description of the Category used by external search engines for improved search engine performance.</p>
+     * @param builder function to build the metaDescription value
+     * @return Builder
+     */
+
+    public CategoryDraftBuilder withMetaDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.metaDescription = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -238,6 +310,18 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>Keywords related to the Category for improved search engine performance.</p>
+     * @param builder function to build the metaKeywords value
+     * @return Builder
+     */
+
+    public CategoryDraftBuilder withMetaKeywords(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.metaKeywords = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Keywords related to the Category for improved search engine performance.</p>
      * @param metaKeywords value to be set
      * @return Builder
      */
@@ -257,6 +341,18 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
     public CategoryDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the Category.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public CategoryDraftBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
         return this;
     }
 
@@ -334,6 +430,28 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
         this.assets = new ArrayList<>();
         this.assets.add(builder.apply(com.commercetools.api.models.common.AssetDraftBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Media related to the Category.</p>
+     * @param builder function to build the assets value
+     * @return Builder
+     */
+
+    public CategoryDraftBuilder addAssets(
+            Function<com.commercetools.api.models.common.AssetDraftBuilder, com.commercetools.api.models.common.AssetDraft> builder) {
+        return plusAssets(builder.apply(com.commercetools.api.models.common.AssetDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>Media related to the Category.</p>
+     * @param builder function to build the assets value
+     * @return Builder
+     */
+
+    public CategoryDraftBuilder setAssets(
+            Function<com.commercetools.api.models.common.AssetDraftBuilder, com.commercetools.api.models.common.AssetDraft> builder) {
+        return assets(builder.apply(com.commercetools.api.models.common.AssetDraftBuilder.of()));
     }
 
     /**

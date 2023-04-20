@@ -41,6 +41,18 @@ public class InventoryEntrySetSupplyChannelActionBuilder implements Builder<Inve
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param builder function to build the supplyChannel value
+     * @return Builder
+     */
+
+    public InventoryEntrySetSupplyChannelActionBuilder withSupplyChannel(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param supplyChannel value to be set
      * @return Builder
      */

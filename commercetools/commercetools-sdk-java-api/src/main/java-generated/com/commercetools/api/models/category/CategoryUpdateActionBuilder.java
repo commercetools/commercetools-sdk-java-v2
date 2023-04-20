@@ -106,4 +106,5 @@ public class CategoryUpdateActionBuilder {
     public static CategoryUpdateActionBuilder of() {
         return new CategoryUpdateActionBuilder();
     }
+
 }

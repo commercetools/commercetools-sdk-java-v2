@@ -108,6 +108,28 @@ public class SimilarProductPairBuilder implements Builder<SimilarProductPair> {
     }
 
     /**
+     * add the value to the products using the builder function
+     * @param builder function to build the products value
+     * @return Builder
+     */
+
+    public SimilarProductPairBuilder addProducts(
+            Function<com.commercetools.ml.models.similar_products.SimilarProductBuilder, com.commercetools.ml.models.similar_products.SimilarProduct> builder) {
+        return plusProducts(builder.apply(com.commercetools.ml.models.similar_products.SimilarProductBuilder.of()));
+    }
+
+    /**
+     * set the value to the products using the builder function
+     * @param builder function to build the products value
+     * @return Builder
+     */
+
+    public SimilarProductPairBuilder setProducts(
+            Function<com.commercetools.ml.models.similar_products.SimilarProductBuilder, com.commercetools.ml.models.similar_products.SimilarProduct> builder) {
+        return products(builder.apply(com.commercetools.ml.models.similar_products.SimilarProductBuilder.of()));
+    }
+
+    /**
      *  <p>The probability of product similarity.</p>
      * @return confidence
      */

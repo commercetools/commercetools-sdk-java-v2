@@ -84,6 +84,18 @@ public class SetTextLineItemCustomFieldChangeBuilder implements Builder<SetTextL
     }
 
     /**
+     * set the value to the textLineItem using the builder function
+     * @param builder function to build the textLineItem value
+     * @return Builder
+     */
+
+    public SetTextLineItemCustomFieldChangeBuilder withTextLineItem(
+            Function<com.commercetools.history.models.change_value.TextLineItemValueBuilder, com.commercetools.history.models.change_value.TextLineItemValue> builder) {
+        this.textLineItem = builder.apply(com.commercetools.history.models.change_value.TextLineItemValueBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the textLineItem
      * @param textLineItem value to be set
      * @return Builder

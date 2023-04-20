@@ -68,6 +68,18 @@ public class ProductSetDiscountedPriceActionBuilder implements Builder<ProductSe
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed. The referenced ProductDiscount must have the Type <code>external</code>, be active, and its predicate must match the referenced Price.</p>
+     * @param builder function to build the discounted value
+     * @return Builder
+     */
+
+    public ProductSetDiscountedPriceActionBuilder withDiscounted(
+            Function<com.commercetools.api.models.common.DiscountedPriceDraftBuilder, com.commercetools.api.models.common.DiscountedPriceDraft> builder) {
+        this.discounted = builder.apply(com.commercetools.api.models.common.DiscountedPriceDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed. The referenced ProductDiscount must have the Type <code>external</code>, be active, and its predicate must match the referenced Price.</p>
      * @param discounted value to be set
      * @return Builder
      */

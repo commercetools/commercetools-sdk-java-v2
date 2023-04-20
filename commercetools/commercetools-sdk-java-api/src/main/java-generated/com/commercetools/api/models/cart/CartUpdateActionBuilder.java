@@ -302,4 +302,5 @@ public class CartUpdateActionBuilder {
     public static CartUpdateActionBuilder of() {
         return new CartUpdateActionBuilder();
     }
+
 }

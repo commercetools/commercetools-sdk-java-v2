@@ -34,4 +34,5 @@ public class ProductVariantSelectionBuilder {
     public static ProductVariantSelectionBuilder of() {
         return new ProductVariantSelectionBuilder();
     }
+
 }

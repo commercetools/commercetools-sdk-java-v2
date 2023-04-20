@@ -58,6 +58,18 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
 
     /**
      *  <p>Cart for which a Quote is requested. Anonymous Carts, Carts with Discount Codes, or Carts with a <code>Multiple</code> ShippingMode are not supported.</p>
+     * @param builder function to build the cart value
+     * @return Builder
+     */
+
+    public QuoteRequestDraftBuilder withCart(
+            Function<com.commercetools.api.models.cart.CartResourceIdentifierBuilder, com.commercetools.api.models.cart.CartResourceIdentifier> builder) {
+        this.cart = builder.apply(com.commercetools.api.models.cart.CartResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Cart for which a Quote is requested. Anonymous Carts, Carts with Discount Codes, or Carts with a <code>Multiple</code> ShippingMode are not supported.</p>
      * @param cart value to be set
      * @return Builder
      */
@@ -114,6 +126,18 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
 
     /**
      *  <p>Custom Fields to be added to the Quote Request.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public QuoteRequestDraftBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields to be added to the Quote Request.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -132,6 +156,18 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
     public QuoteRequestDraftBuilder state(
             Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
         this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>State of this Quote Request. This reference can point to a State in a custom workflow.</p>
+     * @param builder function to build the state value
+     * @return Builder
+     */
+
+    public QuoteRequestDraftBuilder withState(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReference> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of());
         return this;
     }
 

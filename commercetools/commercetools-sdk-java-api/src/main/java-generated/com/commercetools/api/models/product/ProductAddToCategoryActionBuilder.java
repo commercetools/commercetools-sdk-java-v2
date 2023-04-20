@@ -47,6 +47,18 @@ public class ProductAddToCategoryActionBuilder implements Builder<ProductAddToCa
 
     /**
      *  <p>The Category to add.</p>
+     * @param builder function to build the category value
+     * @return Builder
+     */
+
+    public ProductAddToCategoryActionBuilder withCategory(
+            Function<com.commercetools.api.models.category.CategoryResourceIdentifierBuilder, com.commercetools.api.models.category.CategoryResourceIdentifier> builder) {
+        this.category = builder.apply(com.commercetools.api.models.category.CategoryResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The Category to add.</p>
      * @param category value to be set
      * @return Builder
      */

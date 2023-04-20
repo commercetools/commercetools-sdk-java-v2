@@ -38,7 +38,10 @@ public class ProductSelectionImpl implements ProductSelection, ModelBase {
 
     private Integer productCount;
 
+    @Deprecated
     private com.commercetools.api.models.product_selection.ProductSelectionTypeEnum type;
+
+    private com.commercetools.api.models.product_selection.ProductSelectionMode mode;
 
     private com.commercetools.api.models.type.CustomFields custom;
 
@@ -55,6 +58,7 @@ public class ProductSelectionImpl implements ProductSelection, ModelBase {
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("productCount") final Integer productCount,
             @JsonProperty("type") final com.commercetools.api.models.product_selection.ProductSelectionTypeEnum type,
+            @JsonProperty("mode") final com.commercetools.api.models.product_selection.ProductSelectionMode mode,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
         this.id = id;
         this.version = version;
@@ -66,6 +70,7 @@ public class ProductSelectionImpl implements ProductSelection, ModelBase {
         this.name = name;
         this.productCount = productCount;
         this.type = type;
+        this.mode = mode;
         this.custom = custom;
     }
 
@@ -150,9 +155,17 @@ public class ProductSelectionImpl implements ProductSelection, ModelBase {
     /**
      *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually, either by including or excluding them explicitly.</p>
      */
-
+    @Deprecated
     public com.commercetools.api.models.product_selection.ProductSelectionTypeEnum getType() {
         return this.type;
+    }
+
+    /**
+     *  <p>Specifies in which way the Products are assigned to the ProductSelection. Currently, the only way of doing this is to specify each Product individually, either by including or excluding them explicitly.</p>
+     */
+
+    public com.commercetools.api.models.product_selection.ProductSelectionMode getMode() {
+        return this.mode;
     }
 
     /**
@@ -199,8 +212,13 @@ public class ProductSelectionImpl implements ProductSelection, ModelBase {
         this.productCount = productCount;
     }
 
+    @Deprecated
     public void setType(final com.commercetools.api.models.product_selection.ProductSelectionTypeEnum type) {
         this.type = type;
+    }
+
+    public void setMode(final com.commercetools.api.models.product_selection.ProductSelectionMode mode) {
+        this.mode = mode;
     }
 
     public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
@@ -227,6 +245,7 @@ public class ProductSelectionImpl implements ProductSelection, ModelBase {
                 .append(name, that.name)
                 .append(productCount, that.productCount)
                 .append(type, that.type)
+                .append(mode, that.mode)
                 .append(custom, that.custom)
                 .isEquals();
     }
@@ -243,6 +262,7 @@ public class ProductSelectionImpl implements ProductSelection, ModelBase {
                 .append(name)
                 .append(productCount)
                 .append(type)
+                .append(mode)
                 .append(custom)
                 .toHashCode();
     }

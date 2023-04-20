@@ -141,6 +141,30 @@ public class GeneralCategoryRecommendationPagedQueryResponseBuilder
     }
 
     /**
+     * add the value to the results using the builder function
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public GeneralCategoryRecommendationPagedQueryResponseBuilder addResults(
+            Function<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder, com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendation> builder) {
+        return plusResults(builder.apply(
+            com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder.of()));
+    }
+
+    /**
+     * set the value to the results using the builder function
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public GeneralCategoryRecommendationPagedQueryResponseBuilder setResults(
+            Function<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder, com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendation> builder) {
+        return results(builder.apply(
+            com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationBuilder.of()));
+    }
+
+    /**
      * value of count}
      * @return count
      */

@@ -61,6 +61,18 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
     }
 
     /**
+     * set the value to the shippingRate using the builder function
+     * @param builder function to build the shippingRate value
+     * @return Builder
+     */
+
+    public StagedOrderSetCustomShippingMethodActionBuilder withShippingRate(
+            Function<com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder, com.commercetools.api.models.shipping_method.ShippingRateDraft> builder) {
+        this.shippingRate = builder.apply(com.commercetools.api.models.shipping_method.ShippingRateDraftBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the shippingRate
      * @param shippingRate value to be set
      * @return Builder
@@ -88,6 +100,19 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
 
     /**
      *  <p>ResourceIdentifier to a TaxCategory.</p>
+     * @param builder function to build the taxCategory value
+     * @return Builder
+     */
+
+    public StagedOrderSetCustomShippingMethodActionBuilder withTaxCategory(
+            Function<com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder, com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier> builder) {
+        this.taxCategory = builder
+                .apply(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>ResourceIdentifier to a TaxCategory.</p>
      * @param taxCategory value to be set
      * @return Builder
      */
@@ -108,6 +133,18 @@ public class StagedOrderSetCustomShippingMethodActionBuilder
             Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
         this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @param builder function to build the externalTaxRate value
+     * @return Builder
+     */
+
+    public StagedOrderSetCustomShippingMethodActionBuilder withExternalTaxRate(
+            Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraft> builder) {
+        this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of());
         return this;
     }
 

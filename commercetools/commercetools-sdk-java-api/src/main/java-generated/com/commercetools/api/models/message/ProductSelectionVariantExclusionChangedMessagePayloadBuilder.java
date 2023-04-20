@@ -45,6 +45,18 @@ public class ProductSelectionVariantExclusionChangedMessagePayloadBuilder
 
     /**
      *  <p>Product for which the Product Variant Exclusion changed.</p>
+     * @param builder function to build the product value
+     * @return Builder
+     */
+
+    public ProductSelectionVariantExclusionChangedMessagePayloadBuilder withProduct(
+            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReference> builder) {
+        this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Product for which the Product Variant Exclusion changed.</p>
      * @param product value to be set
      * @return Builder
      */
@@ -71,6 +83,19 @@ public class ProductSelectionVariantExclusionChangedMessagePayloadBuilder
 
     /**
      *  <p>Product Variant Exclusion before the Set Variant Exclusion update action.</p>
+     * @param builder function to build the oldVariantExclusion value
+     * @return Builder
+     */
+
+    public ProductSelectionVariantExclusionChangedMessagePayloadBuilder withOldVariantExclusion(
+            Function<com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder, com.commercetools.api.models.product_selection.ProductVariantExclusion> builder) {
+        this.oldVariantExclusion = builder
+                .apply(com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Product Variant Exclusion before the Set Variant Exclusion update action.</p>
      * @param oldVariantExclusion value to be set
      * @return Builder
      */
@@ -92,6 +117,19 @@ public class ProductSelectionVariantExclusionChangedMessagePayloadBuilder
         this.newVariantExclusion = builder
                 .apply(com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Product Variant Exclusion after the Set Variant Exclusion update action.</p>
+     * @param builder function to build the newVariantExclusion value
+     * @return Builder
+     */
+
+    public ProductSelectionVariantExclusionChangedMessagePayloadBuilder withNewVariantExclusion(
+            Function<com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder, com.commercetools.api.models.product_selection.ProductVariantExclusion> builder) {
+        this.newVariantExclusion = builder
+                .apply(com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder.of());
         return this;
     }
 

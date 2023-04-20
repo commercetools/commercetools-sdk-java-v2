@@ -15,8 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Returned when a Product is not assigned to the Product Selection.</p>
- *  <p>The error is returned as a failed response either to the Set Variant Selection or to the Set Variant Exclusion update action.</p>
+ *  <p>Returned when a Product is not assigned to the Product Selection. The error is returned as a failed response either to the Set Variant Selection or to the Set Variant Exclusion update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GraphQLProductAssignmentMissingErrorImpl implements GraphQLProductAssignmentMissingError, ModelBase {

@@ -120,6 +120,18 @@ public class StoreProductSelectionsChangedMessageBuilder implements Builder<Stor
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @param builder function to build the lastModifiedBy value
+     * @return Builder
+     */
+
+    public StoreProductSelectionsChangedMessageBuilder withLastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value of <code>createdBy</code>.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -139,6 +151,18 @@ public class StoreProductSelectionsChangedMessageBuilder implements Builder<Stor
     public StoreProductSelectionsChangedMessageBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
+     * @return Builder
+     */
+
+    public StoreProductSelectionsChangedMessageBuilder withCreatedBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
 
@@ -211,6 +235,19 @@ public class StoreProductSelectionsChangedMessageBuilder implements Builder<Stor
         this.resourceUserProvidedIdentifiers = builder
                 .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @param builder function to build the resourceUserProvidedIdentifiers value
+     * @return Builder
+     */
+
+    public StoreProductSelectionsChangedMessageBuilder withResourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiers> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of());
         return this;
     }
 
@@ -296,6 +333,30 @@ public class StoreProductSelectionsChangedMessageBuilder implements Builder<Stor
     }
 
     /**
+     *  <p>ProductSelectionSettings that were added to the Store.</p>
+     * @param builder function to build the addedProductSelections value
+     * @return Builder
+     */
+
+    public StoreProductSelectionsChangedMessageBuilder addAddedProductSelections(
+            Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSetting> builder) {
+        return plusAddedProductSelections(
+            builder.apply(com.commercetools.api.models.store.ProductSelectionSettingBuilder.of()));
+    }
+
+    /**
+     *  <p>ProductSelectionSettings that were added to the Store.</p>
+     * @param builder function to build the addedProductSelections value
+     * @return Builder
+     */
+
+    public StoreProductSelectionsChangedMessageBuilder setAddedProductSelections(
+            Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSetting> builder) {
+        return addedProductSelections(
+            builder.apply(com.commercetools.api.models.store.ProductSelectionSettingBuilder.of()));
+    }
+
+    /**
      *  <p>ProductSelectionSettings that were removed from the Store.</p>
      * @param removedProductSelections value to be set
      * @return Builder
@@ -365,6 +426,30 @@ public class StoreProductSelectionsChangedMessageBuilder implements Builder<Stor
     }
 
     /**
+     *  <p>ProductSelectionSettings that were removed from the Store.</p>
+     * @param builder function to build the removedProductSelections value
+     * @return Builder
+     */
+
+    public StoreProductSelectionsChangedMessageBuilder addRemovedProductSelections(
+            Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSetting> builder) {
+        return plusRemovedProductSelections(
+            builder.apply(com.commercetools.api.models.store.ProductSelectionSettingBuilder.of()));
+    }
+
+    /**
+     *  <p>ProductSelectionSettings that were removed from the Store.</p>
+     * @param builder function to build the removedProductSelections value
+     * @return Builder
+     */
+
+    public StoreProductSelectionsChangedMessageBuilder setRemovedProductSelections(
+            Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSetting> builder) {
+        return removedProductSelections(
+            builder.apply(com.commercetools.api.models.store.ProductSelectionSettingBuilder.of()));
+    }
+
+    /**
      *  <p>ProductSelectionSettings that were updated in the Store.</p>
      * @param updatedProductSelections value to be set
      * @return Builder
@@ -431,6 +516,30 @@ public class StoreProductSelectionsChangedMessageBuilder implements Builder<Stor
         this.updatedProductSelections
                 .add(builder.apply(com.commercetools.api.models.store.ProductSelectionSettingBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>ProductSelectionSettings that were updated in the Store.</p>
+     * @param builder function to build the updatedProductSelections value
+     * @return Builder
+     */
+
+    public StoreProductSelectionsChangedMessageBuilder addUpdatedProductSelections(
+            Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSetting> builder) {
+        return plusUpdatedProductSelections(
+            builder.apply(com.commercetools.api.models.store.ProductSelectionSettingBuilder.of()));
+    }
+
+    /**
+     *  <p>ProductSelectionSettings that were updated in the Store.</p>
+     * @param builder function to build the updatedProductSelections value
+     * @return Builder
+     */
+
+    public StoreProductSelectionsChangedMessageBuilder setUpdatedProductSelections(
+            Function<com.commercetools.api.models.store.ProductSelectionSettingBuilder, com.commercetools.api.models.store.ProductSelectionSetting> builder) {
+        return updatedProductSelections(
+            builder.apply(com.commercetools.api.models.store.ProductSelectionSettingBuilder.of()));
     }
 
     /**

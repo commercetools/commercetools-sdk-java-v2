@@ -95,6 +95,28 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
 
     /**
      *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
+     * @param builder function to build the targets value
+     * @return Builder
+     */
+
+    public ItemShippingDetailsDraftBuilder addTargets(
+            Function<com.commercetools.importapi.models.orders.ItemShippingTargetBuilder, com.commercetools.importapi.models.orders.ItemShippingTarget> builder) {
+        return plusTargets(builder.apply(com.commercetools.importapi.models.orders.ItemShippingTargetBuilder.of()));
+    }
+
+    /**
+     *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
+     * @param builder function to build the targets value
+     * @return Builder
+     */
+
+    public ItemShippingDetailsDraftBuilder setTargets(
+            Function<com.commercetools.importapi.models.orders.ItemShippingTargetBuilder, com.commercetools.importapi.models.orders.ItemShippingTarget> builder) {
+        return targets(builder.apply(com.commercetools.importapi.models.orders.ItemShippingTargetBuilder.of()));
+    }
+
+    /**
+     *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
      * @return targets
      */
 

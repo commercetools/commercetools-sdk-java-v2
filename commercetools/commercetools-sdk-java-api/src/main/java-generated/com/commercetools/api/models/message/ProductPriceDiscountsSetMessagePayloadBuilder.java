@@ -97,6 +97,30 @@ public class ProductPriceDiscountsSetMessagePayloadBuilder implements Builder<Pr
 
     /**
      *  <p>Array containing details about the Embedded Prices that were updated.</p>
+     * @param builder function to build the updatedPrices value
+     * @return Builder
+     */
+
+    public ProductPriceDiscountsSetMessagePayloadBuilder addUpdatedPrices(
+            Function<com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPriceBuilder, com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice> builder) {
+        return plusUpdatedPrices(
+            builder.apply(com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPriceBuilder.of()));
+    }
+
+    /**
+     *  <p>Array containing details about the Embedded Prices that were updated.</p>
+     * @param builder function to build the updatedPrices value
+     * @return Builder
+     */
+
+    public ProductPriceDiscountsSetMessagePayloadBuilder setUpdatedPrices(
+            Function<com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPriceBuilder, com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice> builder) {
+        return updatedPrices(
+            builder.apply(com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPriceBuilder.of()));
+    }
+
+    /**
+     *  <p>Array containing details about the Embedded Prices that were updated.</p>
      * @return updatedPrices
      */
 

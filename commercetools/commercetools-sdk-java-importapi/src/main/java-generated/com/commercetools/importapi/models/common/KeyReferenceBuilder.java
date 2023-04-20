@@ -98,4 +98,5 @@ public class KeyReferenceBuilder {
     public static KeyReferenceBuilder of() {
         return new KeyReferenceBuilder();
     }
+
 }

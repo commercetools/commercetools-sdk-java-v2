@@ -54,6 +54,19 @@ public class AddInterfaceInteractionChangeBuilder implements Builder<AddInterfac
 
     /**
      *  <p>Only available if <code>expand</code> is set to true</p>
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public AddInterfaceInteractionChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.change_value.CustomFieldExpandedValueBuilder, com.commercetools.history.models.change_value.CustomFieldExpandedValue> builder) {
+        this.nextValue = builder
+                .apply(com.commercetools.history.models.change_value.CustomFieldExpandedValueBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Only available if <code>expand</code> is set to true</p>
      * @param nextValue value to be set
      * @return Builder
      */

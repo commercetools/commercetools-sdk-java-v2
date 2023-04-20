@@ -98,4 +98,5 @@ public class PaymentUpdateActionBuilder {
     public static PaymentUpdateActionBuilder of() {
         return new PaymentUpdateActionBuilder();
     }
+
 }

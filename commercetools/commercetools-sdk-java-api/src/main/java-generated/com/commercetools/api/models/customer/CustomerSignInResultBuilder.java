@@ -43,6 +43,18 @@ public class CustomerSignInResultBuilder implements Builder<CustomerSignInResult
 
     /**
      *  <p>Customer signed up or signed in after authentication.</p>
+     * @param builder function to build the customer value
+     * @return Builder
+     */
+
+    public CustomerSignInResultBuilder withCustomer(
+            Function<com.commercetools.api.models.customer.CustomerBuilder, com.commercetools.api.models.customer.Customer> builder) {
+        this.customer = builder.apply(com.commercetools.api.models.customer.CustomerBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Customer signed up or signed in after authentication.</p>
      * @param customer value to be set
      * @return Builder
      */
@@ -61,6 +73,18 @@ public class CustomerSignInResultBuilder implements Builder<CustomerSignInResult
     public CustomerSignInResultBuilder cart(
             Function<com.commercetools.api.models.cart.CartBuilder, com.commercetools.api.models.cart.CartBuilder> builder) {
         this.cart = builder.apply(com.commercetools.api.models.cart.CartBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Cart associated with the Customer. If empty, the Customer does not have a Cart assigned.</p>
+     * @param builder function to build the cart value
+     * @return Builder
+     */
+
+    public CustomerSignInResultBuilder withCart(
+            Function<com.commercetools.api.models.cart.CartBuilder, com.commercetools.api.models.cart.Cart> builder) {
+        this.cart = builder.apply(com.commercetools.api.models.cart.CartBuilder.of());
         return this;
     }
 

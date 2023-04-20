@@ -109,6 +109,28 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
+     * add the value to the prices using the builder function
+     * @param builder function to build the prices value
+     * @return Builder
+     */
+
+    public VariantValuesBuilder addPrices(
+            Function<com.commercetools.importapi.models.prices.PriceImportBuilder, com.commercetools.importapi.models.prices.PriceImport> builder) {
+        return plusPrices(builder.apply(com.commercetools.importapi.models.prices.PriceImportBuilder.of()));
+    }
+
+    /**
+     * set the value to the prices using the builder function
+     * @param builder function to build the prices value
+     * @return Builder
+     */
+
+    public VariantValuesBuilder setPrices(
+            Function<com.commercetools.importapi.models.prices.PriceImportBuilder, com.commercetools.importapi.models.prices.PriceImport> builder) {
+        return prices(builder.apply(com.commercetools.importapi.models.prices.PriceImportBuilder.of()));
+    }
+
+    /**
      * set values to the attributes
      * @param attributes value to be set
      * @return Builder

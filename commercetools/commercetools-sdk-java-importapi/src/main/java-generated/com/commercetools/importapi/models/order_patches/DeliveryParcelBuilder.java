@@ -60,6 +60,18 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
     }
 
     /**
+     * set the value to the measurements using the builder function
+     * @param builder function to build the measurements value
+     * @return Builder
+     */
+
+    public DeliveryParcelBuilder withMeasurements(
+            Function<com.commercetools.importapi.models.orders.ParcelMeasurementsBuilder, com.commercetools.importapi.models.orders.ParcelMeasurements> builder) {
+        this.measurements = builder.apply(com.commercetools.importapi.models.orders.ParcelMeasurementsBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the measurements
      * @param measurements value to be set
      * @return Builder
@@ -80,6 +92,18 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
     public DeliveryParcelBuilder trackingData(
             Function<com.commercetools.importapi.models.orders.TrackingDataBuilder, com.commercetools.importapi.models.orders.TrackingDataBuilder> builder) {
         this.trackingData = builder.apply(com.commercetools.importapi.models.orders.TrackingDataBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the trackingData using the builder function
+     * @param builder function to build the trackingData value
+     * @return Builder
+     */
+
+    public DeliveryParcelBuilder withTrackingData(
+            Function<com.commercetools.importapi.models.orders.TrackingDataBuilder, com.commercetools.importapi.models.orders.TrackingData> builder) {
+        this.trackingData = builder.apply(com.commercetools.importapi.models.orders.TrackingDataBuilder.of());
         return this;
     }
 
@@ -160,6 +184,28 @@ public class DeliveryParcelBuilder implements Builder<DeliveryParcel> {
         this.items = new ArrayList<>();
         this.items.add(builder.apply(com.commercetools.importapi.models.orders.DeliveryItemBuilder.of()).build());
         return this;
+    }
+
+    /**
+     * add the value to the items using the builder function
+     * @param builder function to build the items value
+     * @return Builder
+     */
+
+    public DeliveryParcelBuilder addItems(
+            Function<com.commercetools.importapi.models.orders.DeliveryItemBuilder, com.commercetools.importapi.models.orders.DeliveryItem> builder) {
+        return plusItems(builder.apply(com.commercetools.importapi.models.orders.DeliveryItemBuilder.of()));
+    }
+
+    /**
+     * set the value to the items using the builder function
+     * @param builder function to build the items value
+     * @return Builder
+     */
+
+    public DeliveryParcelBuilder setItems(
+            Function<com.commercetools.importapi.models.orders.DeliveryItemBuilder, com.commercetools.importapi.models.orders.DeliveryItem> builder) {
+        return items(builder.apply(com.commercetools.importapi.models.orders.DeliveryItemBuilder.of()));
     }
 
     /**

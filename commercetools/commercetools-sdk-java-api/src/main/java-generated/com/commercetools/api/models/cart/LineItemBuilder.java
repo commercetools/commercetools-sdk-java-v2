@@ -151,6 +151,18 @@ public class LineItemBuilder implements Builder<LineItem> {
 
     /**
      *  <p>Name of the Product.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public LineItemBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Name of the Product.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -169,6 +181,18 @@ public class LineItemBuilder implements Builder<LineItem> {
     public LineItemBuilder productSlug(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.productSlug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p><code>slug</code> of the current version of the Product. Updated automatically if the <code>slug</code> changes. Empty if the Product has been deleted. The <code>productSlug</code> field of LineItem is not expanded when using Reference Expansion.</p>
+     * @param builder function to build the productSlug value
+     * @return Builder
+     */
+
+    public LineItemBuilder withProductSlug(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.productSlug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -194,6 +218,18 @@ public class LineItemBuilder implements Builder<LineItem> {
             Function<com.commercetools.api.models.product_type.ProductTypeReferenceBuilder, com.commercetools.api.models.product_type.ProductTypeReferenceBuilder> builder) {
         this.productType = builder.apply(com.commercetools.api.models.product_type.ProductTypeReferenceBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Product Type of the Product.</p>
+     * @param builder function to build the productType value
+     * @return Builder
+     */
+
+    public LineItemBuilder withProductType(
+            Function<com.commercetools.api.models.product_type.ProductTypeReferenceBuilder, com.commercetools.api.models.product_type.ProductTypeReference> builder) {
+        this.productType = builder.apply(com.commercetools.api.models.product_type.ProductTypeReferenceBuilder.of());
         return this;
     }
 
@@ -225,6 +261,19 @@ public class LineItemBuilder implements Builder<LineItem> {
     /**
      *  <p>Holds the data of the Product Variant added to the Cart.</p>
      *  <p>The data is saved at the time the Product Variant is added to the Cart and is not updated automatically when Product Variant data changes. Must be updated using the Recalculate update action.</p>
+     * @param builder function to build the variant value
+     * @return Builder
+     */
+
+    public LineItemBuilder withVariant(
+            Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariant> builder) {
+        this.variant = builder.apply(com.commercetools.api.models.product.ProductVariantBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Holds the data of the Product Variant added to the Cart.</p>
+     *  <p>The data is saved at the time the Product Variant is added to the Cart and is not updated automatically when Product Variant data changes. Must be updated using the Recalculate update action.</p>
      * @param variant value to be set
      * @return Builder
      */
@@ -243,6 +292,18 @@ public class LineItemBuilder implements Builder<LineItem> {
     public LineItemBuilder price(
             Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.PriceBuilder> builder) {
         this.price = builder.apply(com.commercetools.api.models.common.PriceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Price of a Line Item selected from the Product Variant according to the Product <code>priceMode</code>. If the <code>priceMode</code> is <code>Embedded</code> ProductPriceMode and the <code>variant</code> field hasn't been updated, the price may not correspond to a price in <code>variant.prices</code>.</p>
+     * @param builder function to build the price value
+     * @return Builder
+     */
+
+    public LineItemBuilder withPrice(
+            Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.Price> builder) {
+        this.price = builder.apply(com.commercetools.api.models.common.PriceBuilder.of());
         return this;
     }
 
@@ -277,6 +338,18 @@ public class LineItemBuilder implements Builder<LineItem> {
     public LineItemBuilder totalPrice(
             Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoneyBuilder> builder) {
         this.totalPrice = builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Total price of this Line Item equalling <code>price</code> multiplied by <code>quantity</code>. If the Line Item is discounted, the total price is the <code>discountedPricePerQuantity</code> multiplied by <code>quantity</code>. Includes taxes if the TaxRate <code>includedInPrice</code> is <code>true</code>.</p>
+     * @param builder function to build the totalPrice value
+     * @return Builder
+     */
+
+    public LineItemBuilder withTotalPrice(
+            Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoney> builder) {
+        this.totalPrice = builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of());
         return this;
     }
 
@@ -361,6 +434,30 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
+     *  <p>Discounted price of a single quantity of the Line Item.</p>
+     * @param builder function to build the discountedPricePerQuantity value
+     * @return Builder
+     */
+
+    public LineItemBuilder addDiscountedPricePerQuantity(
+            Function<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder, com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> builder) {
+        return plusDiscountedPricePerQuantity(
+            builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder.of()));
+    }
+
+    /**
+     *  <p>Discounted price of a single quantity of the Line Item.</p>
+     * @param builder function to build the discountedPricePerQuantity value
+     * @return Builder
+     */
+
+    public LineItemBuilder setDiscountedPricePerQuantity(
+            Function<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder, com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> builder) {
+        return discountedPricePerQuantity(
+            builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityBuilder.of()));
+    }
+
+    /**
      *  <p>Automatically set after <code>taxRate</code> is set.</p>
      * @param builder function to build the taxedPrice value
      * @return Builder
@@ -369,6 +466,18 @@ public class LineItemBuilder implements Builder<LineItem> {
     public LineItemBuilder taxedPrice(
             Function<com.commercetools.api.models.cart.TaxedItemPriceBuilder, com.commercetools.api.models.cart.TaxedItemPriceBuilder> builder) {
         this.taxedPrice = builder.apply(com.commercetools.api.models.cart.TaxedItemPriceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Automatically set after <code>taxRate</code> is set.</p>
+     * @param builder function to build the taxedPrice value
+     * @return Builder
+     */
+
+    public LineItemBuilder withTaxedPrice(
+            Function<com.commercetools.api.models.cart.TaxedItemPriceBuilder, com.commercetools.api.models.cart.TaxedItemPrice> builder) {
+        this.taxedPrice = builder.apply(com.commercetools.api.models.cart.TaxedItemPriceBuilder.of());
         return this;
     }
 
@@ -453,6 +562,28 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
+     *  <p>Taxed price of the Shipping Method that is automatically set after <code>perMethodTaxRate</code> is set.</p>
+     * @param builder function to build the taxedPricePortions value
+     * @return Builder
+     */
+
+    public LineItemBuilder addTaxedPricePortions(
+            Function<com.commercetools.api.models.cart.MethodTaxedPriceBuilder, com.commercetools.api.models.cart.MethodTaxedPrice> builder) {
+        return plusTaxedPricePortions(builder.apply(com.commercetools.api.models.cart.MethodTaxedPriceBuilder.of()));
+    }
+
+    /**
+     *  <p>Taxed price of the Shipping Method that is automatically set after <code>perMethodTaxRate</code> is set.</p>
+     * @param builder function to build the taxedPricePortions value
+     * @return Builder
+     */
+
+    public LineItemBuilder setTaxedPricePortions(
+            Function<com.commercetools.api.models.cart.MethodTaxedPriceBuilder, com.commercetools.api.models.cart.MethodTaxedPrice> builder) {
+        return taxedPricePortions(builder.apply(com.commercetools.api.models.cart.MethodTaxedPriceBuilder.of()));
+    }
+
+    /**
      *  <p>State of the Line Item in the Cart.</p>
      * @param state value to be set
      * @return Builder
@@ -517,6 +648,28 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
+     *  <p>State of the Line Item in the Cart.</p>
+     * @param builder function to build the state value
+     * @return Builder
+     */
+
+    public LineItemBuilder addState(
+            Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemState> builder) {
+        return plusState(builder.apply(com.commercetools.api.models.order.ItemStateBuilder.of()));
+    }
+
+    /**
+     *  <p>State of the Line Item in the Cart.</p>
+     * @param builder function to build the state value
+     * @return Builder
+     */
+
+    public LineItemBuilder setState(
+            Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemState> builder) {
+        return state(builder.apply(com.commercetools.api.models.order.ItemStateBuilder.of()));
+    }
+
+    /**
      *  <ul>
      *   <li>For a Cart with <code>Platform</code> TaxMode, the <code>taxRate</code> of Line Items is set automatically once a shipping address is set. The rate is based on the TaxCategory that applies for the shipping address.</li>
      *   <li>For a Cart with <code>External</code> TaxMode, the <code>taxRate</code> of Line Items can be set using ExternalTaxRateDraft.</li>
@@ -528,6 +681,21 @@ public class LineItemBuilder implements Builder<LineItem> {
     public LineItemBuilder taxRate(
             Function<com.commercetools.api.models.tax_category.TaxRateBuilder, com.commercetools.api.models.tax_category.TaxRateBuilder> builder) {
         this.taxRate = builder.apply(com.commercetools.api.models.tax_category.TaxRateBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <ul>
+     *   <li>For a Cart with <code>Platform</code> TaxMode, the <code>taxRate</code> of Line Items is set automatically once a shipping address is set. The rate is based on the TaxCategory that applies for the shipping address.</li>
+     *   <li>For a Cart with <code>External</code> TaxMode, the <code>taxRate</code> of Line Items can be set using ExternalTaxRateDraft.</li>
+     *  </ul>
+     * @param builder function to build the taxRate value
+     * @return Builder
+     */
+
+    public LineItemBuilder withTaxRate(
+            Function<com.commercetools.api.models.tax_category.TaxRateBuilder, com.commercetools.api.models.tax_category.TaxRate> builder) {
+        this.taxRate = builder.apply(com.commercetools.api.models.tax_category.TaxRateBuilder.of());
         return this;
     }
 
@@ -612,6 +780,28 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
+     *  <p>Tax Rate per Shipping Method for a Cart with <code>Multiple</code> ShippingMode. For a Cart with <code>Platform</code> TaxMode it is automatically set after the Shipping Method is added. For a Cart with <code>External</code> TaxMode, the Tax Rate must be set with ExternalTaxRateDraft.</p>
+     * @param builder function to build the perMethodTaxRate value
+     * @return Builder
+     */
+
+    public LineItemBuilder addPerMethodTaxRate(
+            Function<com.commercetools.api.models.cart.MethodTaxRateBuilder, com.commercetools.api.models.cart.MethodTaxRate> builder) {
+        return plusPerMethodTaxRate(builder.apply(com.commercetools.api.models.cart.MethodTaxRateBuilder.of()));
+    }
+
+    /**
+     *  <p>Tax Rate per Shipping Method for a Cart with <code>Multiple</code> ShippingMode. For a Cart with <code>Platform</code> TaxMode it is automatically set after the Shipping Method is added. For a Cart with <code>External</code> TaxMode, the Tax Rate must be set with ExternalTaxRateDraft.</p>
+     * @param builder function to build the perMethodTaxRate value
+     * @return Builder
+     */
+
+    public LineItemBuilder setPerMethodTaxRate(
+            Function<com.commercetools.api.models.cart.MethodTaxRateBuilder, com.commercetools.api.models.cart.MethodTaxRate> builder) {
+        return perMethodTaxRate(builder.apply(com.commercetools.api.models.cart.MethodTaxRateBuilder.of()));
+    }
+
+    /**
      *  <p>Identifies Inventory entries that are reserved. The referenced Channel has the <code>InventorySupply</code> ChannelRoleEnum.</p>
      * @param builder function to build the supplyChannel value
      * @return Builder
@@ -620,6 +810,18 @@ public class LineItemBuilder implements Builder<LineItem> {
     public LineItemBuilder supplyChannel(
             Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
         this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Identifies Inventory entries that are reserved. The referenced Channel has the <code>InventorySupply</code> ChannelRoleEnum.</p>
+     * @param builder function to build the supplyChannel value
+     * @return Builder
+     */
+
+    public LineItemBuilder withSupplyChannel(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReference> builder) {
+        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of());
         return this;
     }
 
@@ -645,6 +847,18 @@ public class LineItemBuilder implements Builder<LineItem> {
             Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
         this.distributionChannel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Used to select a Product Price. The referenced Channel has the <code>ProductDistribution</code> ChannelRoleEnum.</p>
+     * @param builder function to build the distributionChannel value
+     * @return Builder
+     */
+
+    public LineItemBuilder withDistributionChannel(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReference> builder) {
+        this.distributionChannel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of());
         return this;
     }
 
@@ -708,6 +922,18 @@ public class LineItemBuilder implements Builder<LineItem> {
 
     /**
      *  <p>Container for Line Item-specific addresses.</p>
+     * @param builder function to build the shippingDetails value
+     * @return Builder
+     */
+
+    public LineItemBuilder withShippingDetails(
+            Function<com.commercetools.api.models.cart.ItemShippingDetailsBuilder, com.commercetools.api.models.cart.ItemShippingDetails> builder) {
+        this.shippingDetails = builder.apply(com.commercetools.api.models.cart.ItemShippingDetailsBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Container for Line Item-specific addresses.</p>
      * @param shippingDetails value to be set
      * @return Builder
      */
@@ -727,6 +953,18 @@ public class LineItemBuilder implements Builder<LineItem> {
     public LineItemBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields of the Line Item.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public LineItemBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of());
         return this;
     }
 

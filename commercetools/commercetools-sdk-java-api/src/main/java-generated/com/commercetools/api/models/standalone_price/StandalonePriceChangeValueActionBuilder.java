@@ -43,6 +43,18 @@ public class StandalonePriceChangeValueActionBuilder implements Builder<Standalo
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param builder function to build the value value
+     * @return Builder
+     */
+
+    public StandalonePriceChangeValueActionBuilder withValue(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+        this.value = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>New value to set. Must not be empty.</p>
      * @param value value to be set
      * @return Builder
      */

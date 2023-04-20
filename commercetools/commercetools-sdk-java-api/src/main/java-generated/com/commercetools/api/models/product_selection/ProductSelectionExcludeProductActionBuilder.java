@@ -44,6 +44,18 @@ public class ProductSelectionExcludeProductActionBuilder implements Builder<Prod
 
     /**
      *  <p>ResourceIdentifier of the Product</p>
+     * @param builder function to build the product value
+     * @return Builder
+     */
+
+    public ProductSelectionExcludeProductActionBuilder withProduct(
+            Function<com.commercetools.api.models.product.ProductResourceIdentifierBuilder, com.commercetools.api.models.product.ProductResourceIdentifier> builder) {
+        this.product = builder.apply(com.commercetools.api.models.product.ProductResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>ResourceIdentifier of the Product</p>
      * @param product value to be set
      * @return Builder
      */
@@ -65,6 +77,19 @@ public class ProductSelectionExcludeProductActionBuilder implements Builder<Prod
         this.variantExclusion = builder
                 .apply(com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Defines which Variants of the Product will be excluded from the Product Selection. If not supplied all Variants are deemed to be excluded.</p>
+     * @param builder function to build the variantExclusion value
+     * @return Builder
+     */
+
+    public ProductSelectionExcludeProductActionBuilder withVariantExclusion(
+            Function<com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder, com.commercetools.api.models.product_selection.ProductVariantExclusion> builder) {
+        this.variantExclusion = builder
+                .apply(com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder.of());
         return this;
     }
 

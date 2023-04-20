@@ -130,6 +130,18 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
+     * @return Builder
+     */
+
+    public ShippingMethodBuilder withLastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -149,6 +161,18 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     public ShippingMethodBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
+     * @return Builder
+     */
+
+    public ShippingMethodBuilder withCreatedBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
 
@@ -199,6 +223,18 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Localized name of the ShippingMethod.</p>
+     * @param builder function to build the localizedName value
+     * @return Builder
+     */
+
+    public ShippingMethodBuilder withLocalizedName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.localizedName = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Localized name of the ShippingMethod.</p>
      * @param localizedName value to be set
      * @return Builder
      */
@@ -235,6 +271,18 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
 
     /**
      *  <p>Localized description of the ShippingMethod.</p>
+     * @param builder function to build the localizedDescription value
+     * @return Builder
+     */
+
+    public ShippingMethodBuilder withLocalizedDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.localizedDescription = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Localized description of the ShippingMethod.</p>
      * @param localizedDescription value to be set
      * @return Builder
      */
@@ -255,6 +303,18 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
             Function<com.commercetools.api.models.tax_category.TaxCategoryReferenceBuilder, com.commercetools.api.models.tax_category.TaxCategoryReferenceBuilder> builder) {
         this.taxCategory = builder.apply(com.commercetools.api.models.tax_category.TaxCategoryReferenceBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>TaxCategory of all ZoneRates of the ShippingMethod.</p>
+     * @param builder function to build the taxCategory value
+     * @return Builder
+     */
+
+    public ShippingMethodBuilder withTaxCategory(
+            Function<com.commercetools.api.models.tax_category.TaxCategoryReferenceBuilder, com.commercetools.api.models.tax_category.TaxCategoryReference> builder) {
+        this.taxCategory = builder.apply(com.commercetools.api.models.tax_category.TaxCategoryReferenceBuilder.of());
         return this;
     }
 
@@ -337,6 +397,28 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     /**
+     *  <p>Defines ShippingRates (prices) for specific Zones.</p>
+     * @param builder function to build the zoneRates value
+     * @return Builder
+     */
+
+    public ShippingMethodBuilder addZoneRates(
+            Function<com.commercetools.api.models.shipping_method.ZoneRateBuilder, com.commercetools.api.models.shipping_method.ZoneRate> builder) {
+        return plusZoneRates(builder.apply(com.commercetools.api.models.shipping_method.ZoneRateBuilder.of()));
+    }
+
+    /**
+     *  <p>Defines ShippingRates (prices) for specific Zones.</p>
+     * @param builder function to build the zoneRates value
+     * @return Builder
+     */
+
+    public ShippingMethodBuilder setZoneRates(
+            Function<com.commercetools.api.models.shipping_method.ZoneRateBuilder, com.commercetools.api.models.shipping_method.ZoneRate> builder) {
+        return zoneRates(builder.apply(com.commercetools.api.models.shipping_method.ZoneRateBuilder.of()));
+    }
+
+    /**
      *  <p>If <code>true</code> this ShippingMethod is the Project's default ShippingMethod.</p>
      * @param isDefault value to be set
      * @return Builder
@@ -367,6 +449,18 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     public ShippingMethodBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields of the ShippingMethod.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public ShippingMethodBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of());
         return this;
     }
 

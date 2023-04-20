@@ -55,6 +55,19 @@ public class StagedOrderSetLineItemTotalPriceActionBuilder implements Builder<St
     }
 
     /**
+     * set the value to the externalTotalPrice using the builder function
+     * @param builder function to build the externalTotalPrice value
+     * @return Builder
+     */
+
+    public StagedOrderSetLineItemTotalPriceActionBuilder withExternalTotalPrice(
+            Function<com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder, com.commercetools.api.models.cart.ExternalLineItemTotalPrice> builder) {
+        this.externalTotalPrice = builder
+                .apply(com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the externalTotalPrice
      * @param externalTotalPrice value to be set
      * @return Builder

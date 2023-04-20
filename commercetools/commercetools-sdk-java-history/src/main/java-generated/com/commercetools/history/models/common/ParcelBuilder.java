@@ -72,6 +72,18 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
+     * set the value to the measurements using the builder function
+     * @param builder function to build the measurements value
+     * @return Builder
+     */
+
+    public ParcelBuilder withMeasurements(
+            Function<com.commercetools.history.models.common.ParcelMeasurementsBuilder, com.commercetools.history.models.common.ParcelMeasurements> builder) {
+        this.measurements = builder.apply(com.commercetools.history.models.common.ParcelMeasurementsBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the measurements
      * @param measurements value to be set
      * @return Builder
@@ -91,6 +103,18 @@ public class ParcelBuilder implements Builder<Parcel> {
     public ParcelBuilder trackingData(
             Function<com.commercetools.history.models.common.TrackingDataBuilder, com.commercetools.history.models.common.TrackingDataBuilder> builder) {
         this.trackingData = builder.apply(com.commercetools.history.models.common.TrackingDataBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the trackingData using the builder function
+     * @param builder function to build the trackingData value
+     * @return Builder
+     */
+
+    public ParcelBuilder withTrackingData(
+            Function<com.commercetools.history.models.common.TrackingDataBuilder, com.commercetools.history.models.common.TrackingData> builder) {
+        this.trackingData = builder.apply(com.commercetools.history.models.common.TrackingDataBuilder.of());
         return this;
     }
 
@@ -167,6 +191,28 @@ public class ParcelBuilder implements Builder<Parcel> {
         this.items = new ArrayList<>();
         this.items.add(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()).build());
         return this;
+    }
+
+    /**
+     * add the value to the items using the builder function
+     * @param builder function to build the items value
+     * @return Builder
+     */
+
+    public ParcelBuilder addItems(
+            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItem> builder) {
+        return plusItems(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()));
+    }
+
+    /**
+     * set the value to the items using the builder function
+     * @param builder function to build the items value
+     * @return Builder
+     */
+
+    public ParcelBuilder setItems(
+            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItem> builder) {
+        return items(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()));
     }
 
     /**

@@ -46,6 +46,18 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     }
 
     /**
+     * set the value to the price using the builder function
+     * @param builder function to build the price value
+     * @return Builder
+     */
+
+    public ShippingRateBuilder withPrice(
+            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.Money> builder) {
+        this.price = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the price
      * @param price value to be set
      * @return Builder
@@ -65,6 +77,18 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
     public ShippingRateBuilder freeAbove(
             Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
         this.freeAbove = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the freeAbove using the builder function
+     * @param builder function to build the freeAbove value
+     * @return Builder
+     */
+
+    public ShippingRateBuilder withFreeAbove(
+            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.Money> builder) {
+        this.freeAbove = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of());
         return this;
     }
 
@@ -155,6 +179,28 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
         this.tiers
                 .add(builder.apply(com.commercetools.history.models.common.ShippingRatePriceTierBuilder.of()).build());
         return this;
+    }
+
+    /**
+     * add the value to the tiers using the builder function
+     * @param builder function to build the tiers value
+     * @return Builder
+     */
+
+    public ShippingRateBuilder addTiers(
+            Function<com.commercetools.history.models.common.ShippingRatePriceTierBuilder, com.commercetools.history.models.common.ShippingRatePriceTier> builder) {
+        return plusTiers(builder.apply(com.commercetools.history.models.common.ShippingRatePriceTierBuilder.of()));
+    }
+
+    /**
+     * set the value to the tiers using the builder function
+     * @param builder function to build the tiers value
+     * @return Builder
+     */
+
+    public ShippingRateBuilder setTiers(
+            Function<com.commercetools.history.models.common.ShippingRatePriceTierBuilder, com.commercetools.history.models.common.ShippingRatePriceTier> builder) {
+        return tiers(builder.apply(com.commercetools.history.models.common.ShippingRatePriceTierBuilder.of()));
     }
 
     /**

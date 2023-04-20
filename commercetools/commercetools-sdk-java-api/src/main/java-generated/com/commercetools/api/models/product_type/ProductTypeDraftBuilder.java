@@ -138,6 +138,30 @@ public class ProductTypeDraftBuilder implements Builder<ProductTypeDraft> {
     }
 
     /**
+     *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their ProductVariants.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductTypeDraftBuilder addAttributes(
+            Function<com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder, com.commercetools.api.models.product_type.AttributeDefinitionDraft> builder) {
+        return plusAttributes(
+            builder.apply(com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>Attributes to specify for the ProductType. Products of this ProductType have these Attributes available on their ProductVariants.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductTypeDraftBuilder setAttributes(
+            Function<com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder, com.commercetools.api.models.product_type.AttributeDefinitionDraft> builder) {
+        return attributes(
+            builder.apply(com.commercetools.api.models.product_type.AttributeDefinitionDraftBuilder.of()));
+    }
+
+    /**
      *  <p>User-defined unique identifier for the ProductType.</p>
      * @return key
      */

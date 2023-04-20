@@ -15,10 +15,10 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Given the type of Product Selection this Assignment refers to, it may contain:</p>
+ *  <p>Given the mode of Product Selection, this assignment refers to, it may contain:</p>
  *  <ul>
- *   <li><code>variantSelection</code> field if the Product Selection is of type Individual.</li>
- *   <li><code>variantExclusion</code> field if the Product Selection is of type Individual Exclusion.</li>
+ *   <li><code>variantSelection</code> field for a Product Selection with <code>Individual</code> ProductSelectionMode.</li>
+ *   <li><code>variantExclusion</code> field for a Product Selection with <code>IndividualExclusion</code> ProductSelectionMode (BETA).</li>
  *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -70,8 +70,8 @@ public class ProductSelectionAssignmentImpl implements ProductSelectionAssignmen
     }
 
     /**
-     *  <p>Define which Variants of the added Product will be included from the Product Selection.</p>
-     *  <p>This field is only available for Assignments to a Product Selection of type Individual. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     *  <p>Define which Variants of the added Product will be included in the Product Selection.</p>
+     *  <p>This field is only available for assignments to a Product Selection with <code>Individual</code> ProductSelectionMode. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
      */
 
     public com.commercetools.api.models.product_selection.ProductVariantSelection getVariantSelection() {
@@ -80,7 +80,7 @@ public class ProductSelectionAssignmentImpl implements ProductSelectionAssignmen
 
     /**
      *  <p>Defines which Variants of the Product will be excluded from the Product Selection.</p>
-     *  <p>This field is only available for Assignments to a Product Selection of type Individual Exclusion. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
+     *  <p>This field is only available for assignments to a Product Selection with <code>IndividualExclusion</code> ProductSelectionMode. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p>
      */
 
     public com.commercetools.api.models.product_selection.ProductVariantExclusion getVariantExclusion() {

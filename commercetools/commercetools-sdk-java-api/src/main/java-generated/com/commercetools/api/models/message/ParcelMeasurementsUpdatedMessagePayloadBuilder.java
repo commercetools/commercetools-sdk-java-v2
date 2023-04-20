@@ -72,6 +72,18 @@ public class ParcelMeasurementsUpdatedMessagePayloadBuilder
 
     /**
      *  <p>The Parcel Measurements that were set on the Parcel.</p>
+     * @param builder function to build the measurements value
+     * @return Builder
+     */
+
+    public ParcelMeasurementsUpdatedMessagePayloadBuilder withMeasurements(
+            Function<com.commercetools.api.models.order.ParcelMeasurementsBuilder, com.commercetools.api.models.order.ParcelMeasurements> builder) {
+        this.measurements = builder.apply(com.commercetools.api.models.order.ParcelMeasurementsBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The Parcel Measurements that were set on the Parcel.</p>
      * @param measurements value to be set
      * @return Builder
      */

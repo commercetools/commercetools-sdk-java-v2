@@ -149,6 +149,28 @@ public class CategoryPagedQueryResponseBuilder implements Builder<CategoryPagedQ
     }
 
     /**
+     *  <p>Category matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public CategoryPagedQueryResponseBuilder addResults(
+            Function<com.commercetools.api.models.category.CategoryBuilder, com.commercetools.api.models.category.Category> builder) {
+        return plusResults(builder.apply(com.commercetools.api.models.category.CategoryBuilder.of()));
+    }
+
+    /**
+     *  <p>Category matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public CategoryPagedQueryResponseBuilder setResults(
+            Function<com.commercetools.api.models.category.CategoryBuilder, com.commercetools.api.models.category.Category> builder) {
+        return results(builder.apply(com.commercetools.api.models.category.CategoryBuilder.of()));
+    }
+
+    /**
      *  <p>Number of results requested.</p>
      * @return limit
      */

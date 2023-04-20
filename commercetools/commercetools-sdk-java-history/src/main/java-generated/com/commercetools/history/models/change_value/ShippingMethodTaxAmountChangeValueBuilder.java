@@ -40,6 +40,18 @@ public class ShippingMethodTaxAmountChangeValueBuilder implements Builder<Shippi
     }
 
     /**
+     * set the value to the taxedPrice using the builder function
+     * @param builder function to build the taxedPrice value
+     * @return Builder
+     */
+
+    public ShippingMethodTaxAmountChangeValueBuilder withTaxedPrice(
+            Function<com.commercetools.history.models.common.TaxedPriceBuilder, com.commercetools.history.models.common.TaxedPrice> builder) {
+        this.taxedPrice = builder.apply(com.commercetools.history.models.common.TaxedPriceBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the taxedPrice
      * @param taxedPrice value to be set
      * @return Builder
@@ -60,6 +72,18 @@ public class ShippingMethodTaxAmountChangeValueBuilder implements Builder<Shippi
     public ShippingMethodTaxAmountChangeValueBuilder taxRate(
             Function<com.commercetools.history.models.common.TaxRateBuilder, com.commercetools.history.models.common.TaxRateBuilder> builder) {
         this.taxRate = builder.apply(com.commercetools.history.models.common.TaxRateBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Shape of the value for <code>addTaxRate</code> and <code>removeTaxRate</code> actions</p>
+     * @param builder function to build the taxRate value
+     * @return Builder
+     */
+
+    public ShippingMethodTaxAmountChangeValueBuilder withTaxRate(
+            Function<com.commercetools.history.models.common.TaxRateBuilder, com.commercetools.history.models.common.TaxRate> builder) {
+        this.taxRate = builder.apply(com.commercetools.history.models.common.TaxRateBuilder.of());
         return this;
     }
 

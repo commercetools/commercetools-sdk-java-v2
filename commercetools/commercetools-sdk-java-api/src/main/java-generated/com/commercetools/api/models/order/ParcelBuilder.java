@@ -76,6 +76,18 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
+     * set the value to the measurements using the builder function
+     * @param builder function to build the measurements value
+     * @return Builder
+     */
+
+    public ParcelBuilder withMeasurements(
+            Function<com.commercetools.api.models.order.ParcelMeasurementsBuilder, com.commercetools.api.models.order.ParcelMeasurements> builder) {
+        this.measurements = builder.apply(com.commercetools.api.models.order.ParcelMeasurementsBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the measurements
      * @param measurements value to be set
      * @return Builder
@@ -96,6 +108,18 @@ public class ParcelBuilder implements Builder<Parcel> {
     public ParcelBuilder trackingData(
             Function<com.commercetools.api.models.order.TrackingDataBuilder, com.commercetools.api.models.order.TrackingDataBuilder> builder) {
         this.trackingData = builder.apply(com.commercetools.api.models.order.TrackingDataBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the trackingData using the builder function
+     * @param builder function to build the trackingData value
+     * @return Builder
+     */
+
+    public ParcelBuilder withTrackingData(
+            Function<com.commercetools.api.models.order.TrackingDataBuilder, com.commercetools.api.models.order.TrackingData> builder) {
+        this.trackingData = builder.apply(com.commercetools.api.models.order.TrackingDataBuilder.of());
         return this;
     }
 
@@ -175,6 +199,28 @@ public class ParcelBuilder implements Builder<Parcel> {
     }
 
     /**
+     *  <p>The delivery items contained in this parcel.</p>
+     * @param builder function to build the items value
+     * @return Builder
+     */
+
+    public ParcelBuilder addItems(
+            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItem> builder) {
+        return plusItems(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()));
+    }
+
+    /**
+     *  <p>The delivery items contained in this parcel.</p>
+     * @param builder function to build the items value
+     * @return Builder
+     */
+
+    public ParcelBuilder setItems(
+            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItem> builder) {
+        return items(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()));
+    }
+
+    /**
      *  <p>Custom Fields of this parcel.</p>
      * @param builder function to build the custom value
      * @return Builder
@@ -183,6 +229,18 @@ public class ParcelBuilder implements Builder<Parcel> {
     public ParcelBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields of this parcel.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public ParcelBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of());
         return this;
     }
 

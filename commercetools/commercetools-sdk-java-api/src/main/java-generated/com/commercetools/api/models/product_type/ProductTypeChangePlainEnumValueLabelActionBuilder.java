@@ -54,6 +54,18 @@ public class ProductTypeChangePlainEnumValueLabelActionBuilder
 
     /**
      *  <p>New value to set. Must be different from the existing value.</p>
+     * @param builder function to build the newValue value
+     * @return Builder
+     */
+
+    public ProductTypeChangePlainEnumValueLabelActionBuilder withNewValue(
+            Function<com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder, com.commercetools.api.models.product_type.AttributePlainEnumValue> builder) {
+        this.newValue = builder.apply(com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>New value to set. Must be different from the existing value.</p>
      * @param newValue value to be set
      * @return Builder
      */

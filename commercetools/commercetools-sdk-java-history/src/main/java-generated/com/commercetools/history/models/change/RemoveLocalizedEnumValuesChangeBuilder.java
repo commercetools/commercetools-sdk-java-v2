@@ -66,6 +66,19 @@ public class RemoveLocalizedEnumValuesChangeBuilder implements Builder<RemoveLoc
     }
 
     /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public RemoveLocalizedEnumValuesChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.change_value.LocalizedEnumValueBuilder, com.commercetools.history.models.change_value.LocalizedEnumValue> builder) {
+        this.previousValue = builder
+                .apply(com.commercetools.history.models.change_value.LocalizedEnumValueBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder

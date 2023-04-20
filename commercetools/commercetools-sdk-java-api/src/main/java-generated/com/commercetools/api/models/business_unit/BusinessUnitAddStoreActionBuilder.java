@@ -38,6 +38,18 @@ public class BusinessUnitAddStoreActionBuilder implements Builder<BusinessUnitAd
 
     /**
      *  <p>Store to add.</p>
+     * @param builder function to build the store value
+     * @return Builder
+     */
+
+    public BusinessUnitAddStoreActionBuilder withStore(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifier> builder) {
+        this.store = builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Store to add.</p>
      * @param store value to be set
      * @return Builder
      */

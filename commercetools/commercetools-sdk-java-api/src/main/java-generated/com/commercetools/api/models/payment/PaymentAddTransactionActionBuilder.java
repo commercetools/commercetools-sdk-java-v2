@@ -38,6 +38,18 @@ public class PaymentAddTransactionActionBuilder implements Builder<PaymentAddTra
 
     /**
      *  <p>Value to append to the <code>transactions</code> array.</p>
+     * @param builder function to build the transaction value
+     * @return Builder
+     */
+
+    public PaymentAddTransactionActionBuilder withTransaction(
+            Function<com.commercetools.api.models.payment.TransactionDraftBuilder, com.commercetools.api.models.payment.TransactionDraft> builder) {
+        this.transaction = builder.apply(com.commercetools.api.models.payment.TransactionDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to append to the <code>transactions</code> array.</p>
      * @param transaction value to be set
      * @return Builder
      */

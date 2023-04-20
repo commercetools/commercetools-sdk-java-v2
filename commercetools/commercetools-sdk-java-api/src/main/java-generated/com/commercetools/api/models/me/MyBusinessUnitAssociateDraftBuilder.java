@@ -52,6 +52,18 @@ public class MyBusinessUnitAssociateDraftBuilder implements Builder<MyBusinessUn
 
     /**
      *  <p>Customer to create and assign to the Business Unit.</p>
+     * @param builder function to build the customer value
+     * @return Builder
+     */
+
+    public MyBusinessUnitAssociateDraftBuilder withCustomer(
+            Function<com.commercetools.api.models.me.MyCustomerDraftBuilder, com.commercetools.api.models.me.MyCustomerDraft> builder) {
+        this.customer = builder.apply(com.commercetools.api.models.me.MyCustomerDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Customer to create and assign to the Business Unit.</p>
      * @param customer value to be set
      * @return Builder
      */

@@ -93,6 +93,28 @@ public class BusinessUnitStoresSetMessagePayloadBuilder implements Builder<Busin
 
     /**
      *  <p>Stores of the Business Unit after the Set Stores update action.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public BusinessUnitStoresSetMessagePayloadBuilder addStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
+        return plusStores(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p>Stores of the Business Unit after the Set Stores update action.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public BusinessUnitStoresSetMessagePayloadBuilder setStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
+        return stores(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p>Stores of the Business Unit after the Set Stores update action.</p>
      * @return stores
      */
 

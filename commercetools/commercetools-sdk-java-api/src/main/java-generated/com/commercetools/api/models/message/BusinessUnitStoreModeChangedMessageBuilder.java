@@ -123,6 +123,18 @@ public class BusinessUnitStoreModeChangedMessageBuilder implements Builder<Busin
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @param builder function to build the lastModifiedBy value
+     * @return Builder
+     */
+
+    public BusinessUnitStoreModeChangedMessageBuilder withLastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value of <code>createdBy</code>.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -142,6 +154,18 @@ public class BusinessUnitStoreModeChangedMessageBuilder implements Builder<Busin
     public BusinessUnitStoreModeChangedMessageBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
+     * @return Builder
+     */
+
+    public BusinessUnitStoreModeChangedMessageBuilder withCreatedBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
 
@@ -214,6 +238,19 @@ public class BusinessUnitStoreModeChangedMessageBuilder implements Builder<Busin
         this.resourceUserProvidedIdentifiers = builder
                 .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @param builder function to build the resourceUserProvidedIdentifiers value
+     * @return Builder
+     */
+
+    public BusinessUnitStoreModeChangedMessageBuilder withResourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiers> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of());
         return this;
     }
 
@@ -297,6 +334,28 @@ public class BusinessUnitStoreModeChangedMessageBuilder implements Builder<Busin
     }
 
     /**
+     *  <p>Stores of the Business Unit after the Set Store Mode update action.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public BusinessUnitStoreModeChangedMessageBuilder addStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
+        return plusStores(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p>Stores of the Business Unit after the Set Store Mode update action.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public BusinessUnitStoreModeChangedMessageBuilder setStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
+        return stores(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()));
+    }
+
+    /**
      *  <p>BusinessUnitStoreMode of the Business Unit after the Set Store Mode update action.</p>
      * @param storeMode value to be set
      * @return Builder
@@ -373,6 +432,28 @@ public class BusinessUnitStoreModeChangedMessageBuilder implements Builder<Busin
         this.oldStores = new ArrayList<>();
         this.oldStores.add(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Stores of the Business Unit before the Set Store Mode update action.</p>
+     * @param builder function to build the oldStores value
+     * @return Builder
+     */
+
+    public BusinessUnitStoreModeChangedMessageBuilder addOldStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
+        return plusOldStores(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p>Stores of the Business Unit before the Set Store Mode update action.</p>
+     * @param builder function to build the oldStores value
+     * @return Builder
+     */
+
+    public BusinessUnitStoreModeChangedMessageBuilder setOldStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
+        return oldStores(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()));
     }
 
     /**

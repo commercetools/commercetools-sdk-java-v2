@@ -38,4 +38,5 @@ public class ChangeTargetChangeValueBuilder {
     public static ChangeTargetChangeValueBuilder of() {
         return new ChangeTargetChangeValueBuilder();
     }
+
 }

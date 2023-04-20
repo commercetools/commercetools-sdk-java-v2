@@ -75,6 +75,18 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
+     * set the value to the custom using the builder function
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public LineItemBuilder withCustom(
+            Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFields> builder) {
+        this.custom = builder.apply(com.commercetools.history.models.common.CustomFieldsBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the custom
      * @param custom value to be set
      * @return Builder
@@ -105,6 +117,18 @@ public class LineItemBuilder implements Builder<LineItem> {
     public LineItemBuilder name(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the name using the builder function
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public LineItemBuilder withName(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -143,6 +167,18 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
+     * set the value to the productSlug using the builder function
+     * @param builder function to build the productSlug value
+     * @return Builder
+     */
+
+    public LineItemBuilder withProductSlug(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+        this.productSlug = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the productSlug
      * @param productSlug value to be set
      * @return Builder
@@ -162,6 +198,18 @@ public class LineItemBuilder implements Builder<LineItem> {
     public LineItemBuilder productType(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         this.productType = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the productType using the builder function
+     * @param builder function to build the productType value
+     * @return Builder
+     */
+
+    public LineItemBuilder withProductType(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
+        this.productType = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
         return this;
     }
 
@@ -196,6 +244,18 @@ public class LineItemBuilder implements Builder<LineItem> {
     public LineItemBuilder variant(
             Function<com.commercetools.history.models.common.VariantBuilder, com.commercetools.history.models.common.VariantBuilder> builder) {
         this.variant = builder.apply(com.commercetools.history.models.common.VariantBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the variant using the builder function
+     * @param builder function to build the variant value
+     * @return Builder
+     */
+
+    public LineItemBuilder withVariant(
+            Function<com.commercetools.history.models.common.VariantBuilder, com.commercetools.history.models.common.Variant> builder) {
+        this.variant = builder.apply(com.commercetools.history.models.common.VariantBuilder.of());
         return this;
     }
 

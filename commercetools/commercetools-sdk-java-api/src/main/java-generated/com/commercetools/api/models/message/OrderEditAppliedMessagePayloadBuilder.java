@@ -41,6 +41,18 @@ public class OrderEditAppliedMessagePayloadBuilder implements Builder<OrderEditA
 
     /**
      *  <p>OrderEdit that was applied.</p>
+     * @param builder function to build the edit value
+     * @return Builder
+     */
+
+    public OrderEditAppliedMessagePayloadBuilder withEdit(
+            Function<com.commercetools.api.models.order_edit.OrderEditBuilder, com.commercetools.api.models.order_edit.OrderEdit> builder) {
+        this.edit = builder.apply(com.commercetools.api.models.order_edit.OrderEditBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>OrderEdit that was applied.</p>
      * @param edit value to be set
      * @return Builder
      */
@@ -59,6 +71,18 @@ public class OrderEditAppliedMessagePayloadBuilder implements Builder<OrderEditA
     public OrderEditAppliedMessagePayloadBuilder result(
             Function<com.commercetools.api.models.order_edit.OrderEditAppliedBuilder, com.commercetools.api.models.order_edit.OrderEditAppliedBuilder> builder) {
         this.result = builder.apply(com.commercetools.api.models.order_edit.OrderEditAppliedBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Information about a successfully applied OrderEdit.</p>
+     * @param builder function to build the result value
+     * @return Builder
+     */
+
+    public OrderEditAppliedMessagePayloadBuilder withResult(
+            Function<com.commercetools.api.models.order_edit.OrderEditAppliedBuilder, com.commercetools.api.models.order_edit.OrderEditApplied> builder) {
+        this.result = builder.apply(com.commercetools.api.models.order_edit.OrderEditAppliedBuilder.of());
         return this;
     }
 

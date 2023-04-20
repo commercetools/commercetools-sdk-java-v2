@@ -150,6 +150,28 @@ public class ProductProjectionPagedQueryResponseBuilder implements Builder<Produ
     }
 
     /**
+     *  <p>ProductProjections matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public ProductProjectionPagedQueryResponseBuilder addResults(
+            Function<com.commercetools.api.models.product.ProductProjectionBuilder, com.commercetools.api.models.product.ProductProjection> builder) {
+        return plusResults(builder.apply(com.commercetools.api.models.product.ProductProjectionBuilder.of()));
+    }
+
+    /**
+     *  <p>ProductProjections matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public ProductProjectionPagedQueryResponseBuilder setResults(
+            Function<com.commercetools.api.models.product.ProductProjectionBuilder, com.commercetools.api.models.product.ProductProjection> builder) {
+        return results(builder.apply(com.commercetools.api.models.product.ProductProjectionBuilder.of()));
+    }
+
+    /**
      *  <p>Number of results requested.</p>
      * @return limit
      */

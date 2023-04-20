@@ -117,6 +117,18 @@ public class StoreCountriesChangedMessageBuilder implements Builder<StoreCountri
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @param builder function to build the lastModifiedBy value
+     * @return Builder
+     */
+
+    public StoreCountriesChangedMessageBuilder withLastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value of <code>createdBy</code>.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -136,6 +148,18 @@ public class StoreCountriesChangedMessageBuilder implements Builder<StoreCountri
     public StoreCountriesChangedMessageBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
+     * @return Builder
+     */
+
+    public StoreCountriesChangedMessageBuilder withCreatedBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
 
@@ -207,6 +231,19 @@ public class StoreCountriesChangedMessageBuilder implements Builder<StoreCountri
         this.resourceUserProvidedIdentifiers = builder
                 .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @param builder function to build the resourceUserProvidedIdentifiers value
+     * @return Builder
+     */
+
+    public StoreCountriesChangedMessageBuilder withResourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiers> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of());
         return this;
     }
 
@@ -292,6 +329,28 @@ public class StoreCountriesChangedMessageBuilder implements Builder<StoreCountri
     }
 
     /**
+     *  <p>Countries added to the Store.</p>
+     * @param builder function to build the addedCountries value
+     * @return Builder
+     */
+
+    public StoreCountriesChangedMessageBuilder addAddedCountries(
+            Function<com.commercetools.api.models.store_country.StoreCountryBuilder, com.commercetools.api.models.store_country.StoreCountry> builder) {
+        return plusAddedCountries(builder.apply(com.commercetools.api.models.store_country.StoreCountryBuilder.of()));
+    }
+
+    /**
+     *  <p>Countries added to the Store.</p>
+     * @param builder function to build the addedCountries value
+     * @return Builder
+     */
+
+    public StoreCountriesChangedMessageBuilder setAddedCountries(
+            Function<com.commercetools.api.models.store_country.StoreCountryBuilder, com.commercetools.api.models.store_country.StoreCountry> builder) {
+        return addedCountries(builder.apply(com.commercetools.api.models.store_country.StoreCountryBuilder.of()));
+    }
+
+    /**
      *  <p>Countries removed from the Store.</p>
      * @param removedCountries value to be set
      * @return Builder
@@ -358,6 +417,28 @@ public class StoreCountriesChangedMessageBuilder implements Builder<StoreCountri
         this.removedCountries
                 .add(builder.apply(com.commercetools.api.models.store_country.StoreCountryBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Countries removed from the Store.</p>
+     * @param builder function to build the removedCountries value
+     * @return Builder
+     */
+
+    public StoreCountriesChangedMessageBuilder addRemovedCountries(
+            Function<com.commercetools.api.models.store_country.StoreCountryBuilder, com.commercetools.api.models.store_country.StoreCountry> builder) {
+        return plusRemovedCountries(builder.apply(com.commercetools.api.models.store_country.StoreCountryBuilder.of()));
+    }
+
+    /**
+     *  <p>Countries removed from the Store.</p>
+     * @param builder function to build the removedCountries value
+     * @return Builder
+     */
+
+    public StoreCountriesChangedMessageBuilder setRemovedCountries(
+            Function<com.commercetools.api.models.store_country.StoreCountryBuilder, com.commercetools.api.models.store_country.StoreCountry> builder) {
+        return removedCountries(builder.apply(com.commercetools.api.models.store_country.StoreCountryBuilder.of()));
     }
 
     /**

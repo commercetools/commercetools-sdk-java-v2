@@ -249,6 +249,28 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
     }
 
     /**
+     *  <p>Addresses of the Customer.</p>
+     * @param builder function to build the addresses value
+     * @return Builder
+     */
+
+    public MyCustomerDraftBuilder addAddresses(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddress> builder) {
+        return plusAddresses(builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()));
+    }
+
+    /**
+     *  <p>Addresses of the Customer.</p>
+     * @param builder function to build the addresses value
+     * @return Builder
+     */
+
+    public MyCustomerDraftBuilder setAddresses(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddress> builder) {
+        return addresses(builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()));
+    }
+
+    /**
      *  <p>Index of the address in the <code>addresses</code> array to use as the default shipping address. The <code>defaultShippingAddressId</code> of the Customer will be set to the <code>id</code> of that address.</p>
      * @param defaultShippingAddress value to be set
      * @return Builder
@@ -279,6 +301,18 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
     public MyCustomerDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the Customer.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public MyCustomerDraftBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
         return this;
     }
 
@@ -369,6 +403,28 @@ public class MyCustomerDraftBuilder implements Builder<MyCustomerDraft> {
         this.stores = new ArrayList<>();
         this.stores.add(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Sets the Stores for the Customer.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public MyCustomerDraftBuilder addStores(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifier> builder) {
+        return plusStores(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()));
+    }
+
+    /**
+     *  <p>Sets the Stores for the Customer.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public MyCustomerDraftBuilder setStores(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifier> builder) {
+        return stores(builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()));
     }
 
     /**

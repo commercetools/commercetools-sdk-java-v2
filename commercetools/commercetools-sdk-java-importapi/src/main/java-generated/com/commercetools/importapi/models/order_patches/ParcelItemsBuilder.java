@@ -107,6 +107,28 @@ public class ParcelItemsBuilder implements Builder<ParcelItems> {
     }
 
     /**
+     * add the value to the items using the builder function
+     * @param builder function to build the items value
+     * @return Builder
+     */
+
+    public ParcelItemsBuilder addItems(
+            Function<com.commercetools.importapi.models.orders.DeliveryItemBuilder, com.commercetools.importapi.models.orders.DeliveryItem> builder) {
+        return plusItems(builder.apply(com.commercetools.importapi.models.orders.DeliveryItemBuilder.of()));
+    }
+
+    /**
+     * set the value to the items using the builder function
+     * @param builder function to build the items value
+     * @return Builder
+     */
+
+    public ParcelItemsBuilder setItems(
+            Function<com.commercetools.importapi.models.orders.DeliveryItemBuilder, com.commercetools.importapi.models.orders.DeliveryItem> builder) {
+        return items(builder.apply(com.commercetools.importapi.models.orders.DeliveryItemBuilder.of()));
+    }
+
+    /**
      * value of parcelId}
      * @return parcelId
      */

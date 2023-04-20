@@ -122,6 +122,19 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
 
     /**
      *  <p>References a customer group by key.</p>
+     * @param builder function to build the customerGroup value
+     * @return Builder
+     */
+
+    public LineItemPriceBuilder withCustomerGroup(
+            Function<com.commercetools.importapi.models.common.CustomerGroupKeyReferenceBuilder, com.commercetools.importapi.models.common.CustomerGroupKeyReference> builder) {
+        this.customerGroup = builder
+                .apply(com.commercetools.importapi.models.common.CustomerGroupKeyReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>References a customer group by key.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -146,6 +159,18 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
 
     /**
      *  <p>References a channel by key.</p>
+     * @param builder function to build the channel value
+     * @return Builder
+     */
+
+    public LineItemPriceBuilder withChannel(
+            Function<com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder, com.commercetools.importapi.models.common.ChannelKeyReference> builder) {
+        this.channel = builder.apply(com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>References a channel by key.</p>
      * @param channel value to be set
      * @return Builder
      */
@@ -165,6 +190,18 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
     public LineItemPriceBuilder discounted(
             Function<com.commercetools.importapi.models.common.DiscountedPriceBuilder, com.commercetools.importapi.models.common.DiscountedPriceBuilder> builder) {
         this.discounted = builder.apply(com.commercetools.importapi.models.common.DiscountedPriceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Sets a discounted price from an external service.</p>
+     * @param builder function to build the discounted value
+     * @return Builder
+     */
+
+    public LineItemPriceBuilder withDiscounted(
+            Function<com.commercetools.importapi.models.common.DiscountedPriceBuilder, com.commercetools.importapi.models.common.DiscountedPrice> builder) {
+        this.discounted = builder.apply(com.commercetools.importapi.models.common.DiscountedPriceBuilder.of());
         return this;
     }
 
@@ -247,6 +284,28 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
     }
 
     /**
+     *  <p>The tiered prices for this price.</p>
+     * @param builder function to build the tiers value
+     * @return Builder
+     */
+
+    public LineItemPriceBuilder addTiers(
+            Function<com.commercetools.importapi.models.common.PriceTierBuilder, com.commercetools.importapi.models.common.PriceTier> builder) {
+        return plusTiers(builder.apply(com.commercetools.importapi.models.common.PriceTierBuilder.of()));
+    }
+
+    /**
+     *  <p>The tiered prices for this price.</p>
+     * @param builder function to build the tiers value
+     * @return Builder
+     */
+
+    public LineItemPriceBuilder setTiers(
+            Function<com.commercetools.importapi.models.common.PriceTierBuilder, com.commercetools.importapi.models.common.PriceTier> builder) {
+        return tiers(builder.apply(com.commercetools.importapi.models.common.PriceTierBuilder.of()));
+    }
+
+    /**
      *  <p>Maps to <code>Price.custom</code>.</p>
      * @param builder function to build the custom value
      * @return Builder
@@ -255,6 +314,18 @@ public class LineItemPriceBuilder implements Builder<LineItemPrice> {
     public LineItemPriceBuilder custom(
             Function<com.commercetools.importapi.models.customfields.CustomBuilder, com.commercetools.importapi.models.customfields.CustomBuilder> builder) {
         this.custom = builder.apply(com.commercetools.importapi.models.customfields.CustomBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Maps to <code>Price.custom</code>.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public LineItemPriceBuilder withCustom(
+            Function<com.commercetools.importapi.models.customfields.CustomBuilder, com.commercetools.importapi.models.customfields.Custom> builder) {
+        this.custom = builder.apply(com.commercetools.importapi.models.customfields.CustomBuilder.of());
         return this;
     }
 

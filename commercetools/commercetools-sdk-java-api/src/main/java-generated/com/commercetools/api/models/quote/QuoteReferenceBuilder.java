@@ -54,6 +54,18 @@ public class QuoteReferenceBuilder implements Builder<QuoteReference> {
 
     /**
      *  <p>Contains the representation of the expanded Quote. Only present in responses to requests with Reference Expansion for Quote.</p>
+     * @param builder function to build the obj value
+     * @return Builder
+     */
+
+    public QuoteReferenceBuilder withObj(
+            Function<com.commercetools.api.models.quote.QuoteBuilder, com.commercetools.api.models.quote.Quote> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.quote.QuoteBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Contains the representation of the expanded Quote. Only present in responses to requests with Reference Expansion for Quote.</p>
      * @param obj value to be set
      * @return Builder
      */

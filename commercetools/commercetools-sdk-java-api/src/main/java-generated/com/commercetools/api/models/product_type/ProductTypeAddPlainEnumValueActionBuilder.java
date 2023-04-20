@@ -53,6 +53,18 @@ public class ProductTypeAddPlainEnumValueActionBuilder implements Builder<Produc
 
     /**
      *  <p>Value to append to the array.</p>
+     * @param builder function to build the value value
+     * @return Builder
+     */
+
+    public ProductTypeAddPlainEnumValueActionBuilder withValue(
+            Function<com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder, com.commercetools.api.models.product_type.AttributePlainEnumValue> builder) {
+        this.value = builder.apply(com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to append to the array.</p>
      * @param value value to be set
      * @return Builder
      */

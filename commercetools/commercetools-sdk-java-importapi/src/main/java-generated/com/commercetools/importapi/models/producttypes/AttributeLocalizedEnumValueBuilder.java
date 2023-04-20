@@ -62,6 +62,23 @@ public class AttributeLocalizedEnumValueBuilder implements Builder<AttributeLoca
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @param builder function to build the label value
+     * @return Builder
+     */
+
+    public AttributeLocalizedEnumValueBuilder withLabel(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedString> builder) {
+        this.label = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
      * @param label value to be set
      * @return Builder
      */

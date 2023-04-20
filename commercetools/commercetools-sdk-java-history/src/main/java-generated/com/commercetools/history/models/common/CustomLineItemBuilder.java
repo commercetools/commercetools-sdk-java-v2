@@ -66,6 +66,18 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
+     * set the value to the name using the builder function
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public CustomLineItemBuilder withName(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the name
      * @param name value to be set
      * @return Builder
@@ -85,6 +97,18 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     public CustomLineItemBuilder money(
             Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
         this.money = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the money using the builder function
+     * @param builder function to build the money value
+     * @return Builder
+     */
+
+    public CustomLineItemBuilder withMoney(
+            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.Money> builder) {
+        this.money = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of());
         return this;
     }
 
@@ -112,6 +136,18 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
+     * set the value to the taxedPrice using the builder function
+     * @param builder function to build the taxedPrice value
+     * @return Builder
+     */
+
+    public CustomLineItemBuilder withTaxedPrice(
+            Function<com.commercetools.history.models.common.TaxedItemPriceBuilder, com.commercetools.history.models.common.TaxedItemPrice> builder) {
+        this.taxedPrice = builder.apply(com.commercetools.history.models.common.TaxedItemPriceBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the taxedPrice
      * @param taxedPrice value to be set
      * @return Builder
@@ -131,6 +167,18 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     public CustomLineItemBuilder totalPrice(
             Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
         this.totalPrice = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the totalPrice using the builder function
+     * @param builder function to build the totalPrice value
+     * @return Builder
+     */
+
+    public CustomLineItemBuilder withTotalPrice(
+            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.Money> builder) {
+        this.totalPrice = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of());
         return this;
     }
 

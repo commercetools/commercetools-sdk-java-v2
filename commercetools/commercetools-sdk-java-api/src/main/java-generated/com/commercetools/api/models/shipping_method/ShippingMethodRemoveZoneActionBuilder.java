@@ -38,6 +38,18 @@ public class ShippingMethodRemoveZoneActionBuilder implements Builder<ShippingMe
 
     /**
      *  <p>Value to remove from <code>zoneRates</code>.</p>
+     * @param builder function to build the zone value
+     * @return Builder
+     */
+
+    public ShippingMethodRemoveZoneActionBuilder withZone(
+            Function<com.commercetools.api.models.zone.ZoneResourceIdentifierBuilder, com.commercetools.api.models.zone.ZoneResourceIdentifier> builder) {
+        this.zone = builder.apply(com.commercetools.api.models.zone.ZoneResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to remove from <code>zoneRates</code>.</p>
      * @param zone value to be set
      * @return Builder
      */

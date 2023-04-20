@@ -210,4 +210,5 @@ public class ProductUpdateActionBuilder {
     public static ProductUpdateActionBuilder of() {
         return new ProductUpdateActionBuilder();
     }
+
 }

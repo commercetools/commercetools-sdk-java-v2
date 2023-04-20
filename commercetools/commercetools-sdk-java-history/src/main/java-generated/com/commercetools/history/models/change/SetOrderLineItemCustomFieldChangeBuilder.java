@@ -97,6 +97,18 @@ public class SetOrderLineItemCustomFieldChangeBuilder implements Builder<SetOrde
     }
 
     /**
+     * set the value to the lineItem using the builder function
+     * @param builder function to build the lineItem value
+     * @return Builder
+     */
+
+    public SetOrderLineItemCustomFieldChangeBuilder withLineItem(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+        this.lineItem = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the lineItem
      * @param lineItem value to be set
      * @return Builder

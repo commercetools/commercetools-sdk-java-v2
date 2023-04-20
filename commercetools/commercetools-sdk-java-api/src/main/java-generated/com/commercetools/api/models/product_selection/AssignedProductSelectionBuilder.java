@@ -51,6 +51,19 @@ public class AssignedProductSelectionBuilder implements Builder<AssignedProductS
 
     /**
      *  <p>Reference to the Product Selection that this assignment is part of.</p>
+     * @param builder function to build the productSelection value
+     * @return Builder
+     */
+
+    public AssignedProductSelectionBuilder withProductSelection(
+            Function<com.commercetools.api.models.product_selection.ProductSelectionReferenceBuilder, com.commercetools.api.models.product_selection.ProductSelectionReference> builder) {
+        this.productSelection = builder
+                .apply(com.commercetools.api.models.product_selection.ProductSelectionReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the Product Selection that this assignment is part of.</p>
      * @param productSelection value to be set
      * @return Builder
      */
@@ -62,8 +75,8 @@ public class AssignedProductSelectionBuilder implements Builder<AssignedProductS
     }
 
     /**
-     *  <p>Defines which Variants of the Product will be included from the Product Selection.</p>
-     *  <p>This field is only available for Assignments to a Product Selection of type Individual.</p>
+     *  <p>Defines which Variants of the Product will be included in the Product Selection.</p>
+     *  <p>This field is only available for assignments to a Product Selection with <code>Individual</code> ProductSelectionMode.</p>
      * @param variantSelection value to be set
      * @return Builder
      */
@@ -75,8 +88,8 @@ public class AssignedProductSelectionBuilder implements Builder<AssignedProductS
     }
 
     /**
-     *  <p>Defines which Variants of the Product will be included from the Product Selection.</p>
-     *  <p>This field is only available for Assignments to a Product Selection of type Individual.</p>
+     *  <p>Defines which Variants of the Product will be included in the Product Selection.</p>
+     *  <p>This field is only available for assignments to a Product Selection with <code>Individual</code> ProductSelectionMode.</p>
      * @param builder function to build the variantSelection value
      * @return Builder
      */
@@ -91,7 +104,7 @@ public class AssignedProductSelectionBuilder implements Builder<AssignedProductS
 
     /**
      *  <p>Defines which Variants of the Product will be excluded from the Product Selection.</p>
-     *  <p>This field is only available for Assignments to a Product Selection of type Individual Exclusion.</p>
+     *  <p>This field is only available for assignments to a Product Selection with <code>IndividualExclusion</code> ProductSelectionMode.</p>
      * @param builder function to build the variantExclusion value
      * @return Builder
      */
@@ -106,7 +119,21 @@ public class AssignedProductSelectionBuilder implements Builder<AssignedProductS
 
     /**
      *  <p>Defines which Variants of the Product will be excluded from the Product Selection.</p>
-     *  <p>This field is only available for Assignments to a Product Selection of type Individual Exclusion.</p>
+     *  <p>This field is only available for assignments to a Product Selection with <code>IndividualExclusion</code> ProductSelectionMode.</p>
+     * @param builder function to build the variantExclusion value
+     * @return Builder
+     */
+
+    public AssignedProductSelectionBuilder withVariantExclusion(
+            Function<com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder, com.commercetools.api.models.product_selection.ProductVariantExclusion> builder) {
+        this.variantExclusion = builder
+                .apply(com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Defines which Variants of the Product will be excluded from the Product Selection.</p>
+     *  <p>This field is only available for assignments to a Product Selection with <code>IndividualExclusion</code> ProductSelectionMode.</p>
      * @param variantExclusion value to be set
      * @return Builder
      */
@@ -138,8 +165,8 @@ public class AssignedProductSelectionBuilder implements Builder<AssignedProductS
     }
 
     /**
-     *  <p>Defines which Variants of the Product will be included from the Product Selection.</p>
-     *  <p>This field is only available for Assignments to a Product Selection of type Individual.</p>
+     *  <p>Defines which Variants of the Product will be included in the Product Selection.</p>
+     *  <p>This field is only available for assignments to a Product Selection with <code>Individual</code> ProductSelectionMode.</p>
      * @return variantSelection
      */
 
@@ -150,7 +177,7 @@ public class AssignedProductSelectionBuilder implements Builder<AssignedProductS
 
     /**
      *  <p>Defines which Variants of the Product will be excluded from the Product Selection.</p>
-     *  <p>This field is only available for Assignments to a Product Selection of type Individual Exclusion.</p>
+     *  <p>This field is only available for assignments to a Product Selection with <code>IndividualExclusion</code> ProductSelectionMode.</p>
      * @return variantExclusion
      */
 

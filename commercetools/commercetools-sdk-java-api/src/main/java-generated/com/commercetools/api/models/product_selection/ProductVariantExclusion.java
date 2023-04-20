@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Only Product Variants with the explicitly listed SKUs are part of the Product Selection of type Individual Exclusion.</p>
+ *  <p>Only Product Variants with the explicitly listed SKUs are part of a Product Selection with <code>IndividualExclusion</code> ProductSelectionMode.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -31,7 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ProductVariantExclusion {
 
     /**
-     *  <p>Non-empty array of SKUs representing Product Variants to be included in the Product Selection of type Individual Exclusion.</p>
+     *  <p>Non-empty array of SKUs representing Product Variants to be included in the Product Selection with <code>IndividualExclusion</code> ProductSelectionMode.</p>
      * @return skus
      */
     @NotNull
@@ -39,7 +39,7 @@ public interface ProductVariantExclusion {
     public List<String> getSkus();
 
     /**
-     *  <p>Non-empty array of SKUs representing Product Variants to be included in the Product Selection of type Individual Exclusion.</p>
+     *  <p>Non-empty array of SKUs representing Product Variants to be included in the Product Selection with <code>IndividualExclusion</code> ProductSelectionMode.</p>
      * @param skus values to be set
      */
 
@@ -47,7 +47,7 @@ public interface ProductVariantExclusion {
     public void setSkus(final String... skus);
 
     /**
-     *  <p>Non-empty array of SKUs representing Product Variants to be included in the Product Selection of type Individual Exclusion.</p>
+     *  <p>Non-empty array of SKUs representing Product Variants to be included in the Product Selection with <code>IndividualExclusion</code> ProductSelectionMode.</p>
      * @param skus values to be set
      */
 

@@ -54,4 +54,5 @@ public class InventoryEntryUpdateActionBuilder {
     public static InventoryEntryUpdateActionBuilder of() {
         return new InventoryEntryUpdateActionBuilder();
     }
+
 }

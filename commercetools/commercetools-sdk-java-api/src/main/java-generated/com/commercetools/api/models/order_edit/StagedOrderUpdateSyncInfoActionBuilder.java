@@ -47,6 +47,18 @@ public class StagedOrderUpdateSyncInfoActionBuilder implements Builder<StagedOrd
 
     /**
      *  <p>ResourceIdentifier to a Channel.</p>
+     * @param builder function to build the channel value
+     * @return Builder
+     */
+
+    public StagedOrderUpdateSyncInfoActionBuilder withChannel(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+        this.channel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>ResourceIdentifier to a Channel.</p>
      * @param channel value to be set
      * @return Builder
      */

@@ -76,6 +76,19 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
     /**
      *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
      *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @param builder function to build the externalPrice value
+     * @return Builder
+     */
+
+    public StagedOrderRemoveLineItemActionBuilder withExternalPrice(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+        this.externalPrice = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
      * @param externalPrice value to be set
      * @return Builder
      */
@@ -97,6 +110,19 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
         this.externalTotalPrice = builder
                 .apply(com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     * set the value to the externalTotalPrice using the builder function
+     * @param builder function to build the externalTotalPrice value
+     * @return Builder
+     */
+
+    public StagedOrderRemoveLineItemActionBuilder withExternalTotalPrice(
+            Function<com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder, com.commercetools.api.models.cart.ExternalLineItemTotalPrice> builder) {
+        this.externalTotalPrice = builder
+                .apply(com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder.of());
         return this;
     }
 
@@ -123,6 +149,19 @@ public class StagedOrderRemoveLineItemActionBuilder implements Builder<StagedOrd
         this.shippingDetailsToRemove = builder
                 .apply(com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     * @param builder function to build the shippingDetailsToRemove value
+     * @return Builder
+     */
+
+    public StagedOrderRemoveLineItemActionBuilder withShippingDetailsToRemove(
+            Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraft> builder) {
+        this.shippingDetailsToRemove = builder
+                .apply(com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder.of());
         return this;
     }
 

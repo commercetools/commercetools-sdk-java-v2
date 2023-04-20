@@ -22,7 +22,7 @@ public interface ProductSelectionTypeEnum extends JsonEnum {
     */
     ProductSelectionTypeEnum INDIVIDUAL = ProductSelectionTypeEnumEnum.INDIVIDUAL;
     /**
-    	<p>Defines the Product Selection to contain Products that are excluded from the catalog.
+    	<p>Defines the Product Selection to contain Products that are excluded from the catalog (<a href="/../offering/api-contract#public-beta">BETA</a>).
     	For this type of Product Selection, the Products are to be excluded individually by using the <a href="/projects/product-selections#exclude-product">Exclude Product</a> update action.</p>
 
     */
@@ -78,6 +78,7 @@ public interface ProductSelectionTypeEnum extends JsonEnum {
     /**
      * factory method for a enum value of ProductSelectionTypeEnum
      * if no enum has been found an anonymous instance will be created
+     * @param value the enum value to be wrapped
      * @return enum instance
      */
     @JsonCreator
@@ -101,6 +102,7 @@ public interface ProductSelectionTypeEnum extends JsonEnum {
 
     /**
      * method to find enum using the JSON value
+     * @param value the json value to be wrapped
      * @return optional of enum instance
      */
     public static Optional<ProductSelectionTypeEnum> findEnumViaJsonName(String jsonName) {

@@ -53,6 +53,18 @@ public class ParcelTrackingDataBuilder implements Builder<ParcelTrackingData> {
     }
 
     /**
+     * set the value to the trackingData using the builder function
+     * @param builder function to build the trackingData value
+     * @return Builder
+     */
+
+    public ParcelTrackingDataBuilder withTrackingData(
+            Function<com.commercetools.importapi.models.orders.TrackingDataBuilder, com.commercetools.importapi.models.orders.TrackingData> builder) {
+        this.trackingData = builder.apply(com.commercetools.importapi.models.orders.TrackingDataBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the trackingData
      * @param trackingData value to be set
      * @return Builder

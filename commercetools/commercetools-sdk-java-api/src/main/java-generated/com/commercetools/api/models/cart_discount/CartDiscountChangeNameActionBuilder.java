@@ -38,6 +38,18 @@ public class CartDiscountChangeNameActionBuilder implements Builder<CartDiscount
 
     /**
      *  <p>New value to set.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public CartDiscountChangeNameActionBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>New value to set.</p>
      * @param name value to be set
      * @return Builder
      */

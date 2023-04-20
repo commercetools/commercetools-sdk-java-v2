@@ -117,6 +117,18 @@ public class OrderCustomerGroupSetMessageBuilder implements Builder<OrderCustome
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @param builder function to build the lastModifiedBy value
+     * @return Builder
+     */
+
+    public OrderCustomerGroupSetMessageBuilder withLastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value of <code>createdBy</code>.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -136,6 +148,18 @@ public class OrderCustomerGroupSetMessageBuilder implements Builder<OrderCustome
     public OrderCustomerGroupSetMessageBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
+     * @return Builder
+     */
+
+    public OrderCustomerGroupSetMessageBuilder withCreatedBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
 
@@ -212,6 +236,19 @@ public class OrderCustomerGroupSetMessageBuilder implements Builder<OrderCustome
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @param builder function to build the resourceUserProvidedIdentifiers value
+     * @return Builder
+     */
+
+    public OrderCustomerGroupSetMessageBuilder withResourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiers> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      * @param resourceUserProvidedIdentifiers value to be set
      * @return Builder
      */
@@ -238,6 +275,19 @@ public class OrderCustomerGroupSetMessageBuilder implements Builder<OrderCustome
 
     /**
      *  <p>CustomerGroup on the Order after the Set Customer Group update action.</p>
+     * @param builder function to build the customerGroup value
+     * @return Builder
+     */
+
+    public OrderCustomerGroupSetMessageBuilder withCustomerGroup(
+            Function<com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReference> builder) {
+        this.customerGroup = builder
+                .apply(com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>CustomerGroup on the Order after the Set Customer Group update action.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -259,6 +309,19 @@ public class OrderCustomerGroupSetMessageBuilder implements Builder<OrderCustome
         this.oldCustomerGroup = builder
                 .apply(com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>CustomerGroup on the Order before the Set Customer Group update action.</p>
+     * @param builder function to build the oldCustomerGroup value
+     * @return Builder
+     */
+
+    public OrderCustomerGroupSetMessageBuilder withOldCustomerGroup(
+            Function<com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReference> builder) {
+        this.oldCustomerGroup = builder
+                .apply(com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder.of());
         return this;
     }
 

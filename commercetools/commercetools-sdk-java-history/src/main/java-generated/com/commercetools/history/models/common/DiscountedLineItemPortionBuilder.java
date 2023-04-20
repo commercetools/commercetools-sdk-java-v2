@@ -40,6 +40,18 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
     }
 
     /**
+     * set the value to the discount using the builder function
+     * @param builder function to build the discount value
+     * @return Builder
+     */
+
+    public DiscountedLineItemPortionBuilder withDiscount(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
+        this.discount = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the discount
      * @param discount value to be set
      * @return Builder
@@ -59,6 +71,18 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
     public DiscountedLineItemPortionBuilder discountedAmount(
             Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
         this.discountedAmount = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the discountedAmount using the builder function
+     * @param builder function to build the discountedAmount value
+     * @return Builder
+     */
+
+    public DiscountedLineItemPortionBuilder withDiscountedAmount(
+            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.Money> builder) {
+        this.discountedAmount = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of());
         return this;
     }
 

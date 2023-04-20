@@ -55,6 +55,18 @@ public class ProductImageAddedMessagePayloadBuilder implements Builder<ProductIm
 
     /**
      *  <p>Image that was added.</p>
+     * @param builder function to build the image value
+     * @return Builder
+     */
+
+    public ProductImageAddedMessagePayloadBuilder withImage(
+            Function<com.commercetools.api.models.common.ImageBuilder, com.commercetools.api.models.common.Image> builder) {
+        this.image = builder.apply(com.commercetools.api.models.common.ImageBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Image that was added.</p>
      * @param image value to be set
      * @return Builder
      */

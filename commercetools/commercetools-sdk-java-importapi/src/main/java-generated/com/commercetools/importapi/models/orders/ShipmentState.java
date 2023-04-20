@@ -98,6 +98,7 @@ public interface ShipmentState extends JsonEnum {
     /**
      * factory method for a enum value of ShipmentState
      * if no enum has been found an anonymous instance will be created
+     * @param value the enum value to be wrapped
      * @return enum instance
      */
     @JsonCreator
@@ -121,6 +122,7 @@ public interface ShipmentState extends JsonEnum {
 
     /**
      * method to find enum using the JSON value
+     * @param value the json value to be wrapped
      * @return optional of enum instance
      */
     public static Optional<ShipmentState> findEnumViaJsonName(String jsonName) {

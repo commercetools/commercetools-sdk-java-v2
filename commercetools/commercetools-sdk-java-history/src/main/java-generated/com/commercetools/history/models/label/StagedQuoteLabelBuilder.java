@@ -54,6 +54,18 @@ public class StagedQuoteLabelBuilder implements Builder<StagedQuoteLabel> {
     }
 
     /**
+     * set the value to the customer using the builder function
+     * @param builder function to build the customer value
+     * @return Builder
+     */
+
+    public StagedQuoteLabelBuilder withCustomer(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
+        this.customer = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the customer
      * @param customer value to be set
      * @return Builder
@@ -73,6 +85,18 @@ public class StagedQuoteLabelBuilder implements Builder<StagedQuoteLabel> {
     public StagedQuoteLabelBuilder quoteRequest(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         this.quoteRequest = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the quoteRequest using the builder function
+     * @param builder function to build the quoteRequest value
+     * @return Builder
+     */
+
+    public StagedQuoteLabelBuilder withQuoteRequest(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
+        this.quoteRequest = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
         return this;
     }
 

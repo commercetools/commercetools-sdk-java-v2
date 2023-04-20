@@ -51,6 +51,18 @@ public class RemoveFieldDefinitionChangeBuilder implements Builder<RemoveFieldDe
     }
 
     /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public RemoveFieldDefinitionChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.FieldDefinitionBuilder, com.commercetools.history.models.common.FieldDefinition> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.FieldDefinitionBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder

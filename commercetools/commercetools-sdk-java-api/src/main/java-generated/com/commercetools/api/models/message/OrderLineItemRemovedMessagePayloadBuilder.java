@@ -148,6 +148,28 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
     }
 
     /**
+     *  <p>ItemStates after the Remove Line Item update action.</p>
+     * @param builder function to build the newState value
+     * @return Builder
+     */
+
+    public OrderLineItemRemovedMessagePayloadBuilder addNewState(
+            Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemState> builder) {
+        return plusNewState(builder.apply(com.commercetools.api.models.order.ItemStateBuilder.of()));
+    }
+
+    /**
+     *  <p>ItemStates after the Remove Line Item update action.</p>
+     * @param builder function to build the newState value
+     * @return Builder
+     */
+
+    public OrderLineItemRemovedMessagePayloadBuilder setNewState(
+            Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemState> builder) {
+        return newState(builder.apply(com.commercetools.api.models.order.ItemStateBuilder.of()));
+    }
+
+    /**
      *  <p><code>totalPrice</code> of the Order after the Remove Line Item update action.</p>
      * @param builder function to build the newTotalPrice value
      * @return Builder
@@ -156,6 +178,18 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
     public OrderLineItemRemovedMessagePayloadBuilder newTotalPrice(
             Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoneyBuilder> builder) {
         this.newTotalPrice = builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p><code>totalPrice</code> of the Order after the Remove Line Item update action.</p>
+     * @param builder function to build the newTotalPrice value
+     * @return Builder
+     */
+
+    public OrderLineItemRemovedMessagePayloadBuilder withNewTotalPrice(
+            Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoney> builder) {
+        this.newTotalPrice = builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of());
         return this;
     }
 
@@ -185,6 +219,18 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
 
     /**
      *  <p>TaxedItemPrice of the Order after the Remove Line Item update action.</p>
+     * @param builder function to build the newTaxedPrice value
+     * @return Builder
+     */
+
+    public OrderLineItemRemovedMessagePayloadBuilder withNewTaxedPrice(
+            Function<com.commercetools.api.models.cart.TaxedItemPriceBuilder, com.commercetools.api.models.cart.TaxedItemPrice> builder) {
+        this.newTaxedPrice = builder.apply(com.commercetools.api.models.cart.TaxedItemPriceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>TaxedItemPrice of the Order after the Remove Line Item update action.</p>
      * @param newTaxedPrice value to be set
      * @return Builder
      */
@@ -204,6 +250,18 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
     public OrderLineItemRemovedMessagePayloadBuilder newPrice(
             Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.PriceBuilder> builder) {
         this.newPrice = builder.apply(com.commercetools.api.models.common.PriceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Price of the Order after the Remove Line Item update action.</p>
+     * @param builder function to build the newPrice value
+     * @return Builder
+     */
+
+    public OrderLineItemRemovedMessagePayloadBuilder withNewPrice(
+            Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.Price> builder) {
+        this.newPrice = builder.apply(com.commercetools.api.models.common.PriceBuilder.of());
         return this;
     }
 
@@ -229,6 +287,18 @@ public class OrderLineItemRemovedMessagePayloadBuilder implements Builder<OrderL
             Function<com.commercetools.api.models.cart.ItemShippingDetailsBuilder, com.commercetools.api.models.cart.ItemShippingDetailsBuilder> builder) {
         this.newShippingDetail = builder.apply(com.commercetools.api.models.cart.ItemShippingDetailsBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Shipping Details of the Order after the Remove Line Item update action.</p>
+     * @param builder function to build the newShippingDetail value
+     * @return Builder
+     */
+
+    public OrderLineItemRemovedMessagePayloadBuilder withNewShippingDetail(
+            Function<com.commercetools.api.models.cart.ItemShippingDetailsBuilder, com.commercetools.api.models.cart.ItemShippingDetails> builder) {
+        this.newShippingDetail = builder.apply(com.commercetools.api.models.cart.ItemShippingDetailsBuilder.of());
         return this;
     }
 

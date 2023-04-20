@@ -65,6 +65,18 @@ public class RemoveEnumValuesChangeBuilder implements Builder<RemoveEnumValuesCh
     }
 
     /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public RemoveEnumValuesChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.change_value.EnumValueBuilder, com.commercetools.history.models.change_value.EnumValue> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.change_value.EnumValueBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder

@@ -84,6 +84,19 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
     }
 
     /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public SetVariantAvailabilityChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.ProductVariantAvailabilityBuilder, com.commercetools.history.models.common.ProductVariantAvailability> builder) {
+        this.previousValue = builder
+                .apply(com.commercetools.history.models.common.ProductVariantAvailabilityBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
@@ -105,6 +118,18 @@ public class SetVariantAvailabilityChangeBuilder implements Builder<SetVariantAv
             Function<com.commercetools.history.models.common.ProductVariantAvailabilityBuilder, com.commercetools.history.models.common.ProductVariantAvailabilityBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.ProductVariantAvailabilityBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public SetVariantAvailabilityChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.ProductVariantAvailabilityBuilder, com.commercetools.history.models.common.ProductVariantAvailability> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.ProductVariantAvailabilityBuilder.of());
         return this;
     }
 

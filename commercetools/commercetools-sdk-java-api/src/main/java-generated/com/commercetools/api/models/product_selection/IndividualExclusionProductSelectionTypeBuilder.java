@@ -20,6 +20,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class IndividualExclusionProductSelectionTypeBuilder
         implements Builder<IndividualExclusionProductSelectionType> {
 
@@ -34,6 +35,18 @@ public class IndividualExclusionProductSelectionTypeBuilder
     public IndividualExclusionProductSelectionTypeBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>The name of the ProductSelection which is recommended to be unique.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public IndividualExclusionProductSelectionTypeBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
 

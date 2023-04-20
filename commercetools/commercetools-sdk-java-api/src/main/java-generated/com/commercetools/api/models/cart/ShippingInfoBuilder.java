@@ -78,6 +78,18 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
 
     /**
      *  <p>Determined based on the ShippingRate and its tiered prices, and either the sum of LineItem prices or the <code>shippingRateInput</code> field.</p>
+     * @param builder function to build the price value
+     * @return Builder
+     */
+
+    public ShippingInfoBuilder withPrice(
+            Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoney> builder) {
+        this.price = builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Determined based on the ShippingRate and its tiered prices, and either the sum of LineItem prices or the <code>shippingRateInput</code> field.</p>
      * @param price value to be set
      * @return Builder
      */
@@ -102,6 +114,18 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
 
     /**
      *  <p>Used to determine the price.</p>
+     * @param builder function to build the shippingRate value
+     * @return Builder
+     */
+
+    public ShippingInfoBuilder withShippingRate(
+            Function<com.commercetools.api.models.shipping_method.ShippingRateBuilder, com.commercetools.api.models.shipping_method.ShippingRate> builder) {
+        this.shippingRate = builder.apply(com.commercetools.api.models.shipping_method.ShippingRateBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Used to determine the price.</p>
      * @param shippingRate value to be set
      * @return Builder
      */
@@ -121,6 +145,18 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     public ShippingInfoBuilder taxedPrice(
             Function<com.commercetools.api.models.cart.TaxedItemPriceBuilder, com.commercetools.api.models.cart.TaxedItemPriceBuilder> builder) {
         this.taxedPrice = builder.apply(com.commercetools.api.models.cart.TaxedItemPriceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Automatically set after the <code>taxRate</code> is set.</p>
+     * @param builder function to build the taxedPrice value
+     * @return Builder
+     */
+
+    public ShippingInfoBuilder withTaxedPrice(
+            Function<com.commercetools.api.models.cart.TaxedItemPriceBuilder, com.commercetools.api.models.cart.TaxedItemPrice> builder) {
+        this.taxedPrice = builder.apply(com.commercetools.api.models.cart.TaxedItemPriceBuilder.of());
         return this;
     }
 
@@ -151,6 +187,19 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     /**
      *  <p>Automatically set in the <code>Platform</code> TaxMode after the shipping address is set.</p>
      *  <p>For the <code>External</code> TaxMode the Tax Rate must be set explicitly with the ExternalTaxRateDraft.</p>
+     * @param builder function to build the taxRate value
+     * @return Builder
+     */
+
+    public ShippingInfoBuilder withTaxRate(
+            Function<com.commercetools.api.models.tax_category.TaxRateBuilder, com.commercetools.api.models.tax_category.TaxRate> builder) {
+        this.taxRate = builder.apply(com.commercetools.api.models.tax_category.TaxRateBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Automatically set in the <code>Platform</code> TaxMode after the shipping address is set.</p>
+     *  <p>For the <code>External</code> TaxMode the Tax Rate must be set explicitly with the ExternalTaxRateDraft.</p>
      * @param taxRate value to be set
      * @return Builder
      */
@@ -170,6 +219,18 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
             Function<com.commercetools.api.models.tax_category.TaxCategoryReferenceBuilder, com.commercetools.api.models.tax_category.TaxCategoryReferenceBuilder> builder) {
         this.taxCategory = builder.apply(com.commercetools.api.models.tax_category.TaxCategoryReferenceBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Used to select a Tax Rate when a Cart has the <code>Platform</code> TaxMode.</p>
+     * @param builder function to build the taxCategory value
+     * @return Builder
+     */
+
+    public ShippingInfoBuilder withTaxCategory(
+            Function<com.commercetools.api.models.tax_category.TaxCategoryReferenceBuilder, com.commercetools.api.models.tax_category.TaxCategoryReference> builder) {
+        this.taxCategory = builder.apply(com.commercetools.api.models.tax_category.TaxCategoryReferenceBuilder.of());
         return this;
     }
 
@@ -196,6 +257,19 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
         this.shippingMethod = builder
                 .apply(com.commercetools.api.models.shipping_method.ShippingMethodReferenceBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Not set if a custom Shipping Method is used.</p>
+     * @param builder function to build the shippingMethod value
+     * @return Builder
+     */
+
+    public ShippingInfoBuilder withShippingMethod(
+            Function<com.commercetools.api.models.shipping_method.ShippingMethodReferenceBuilder, com.commercetools.api.models.shipping_method.ShippingMethodReference> builder) {
+        this.shippingMethod = builder
+                .apply(com.commercetools.api.models.shipping_method.ShippingMethodReferenceBuilder.of());
         return this;
     }
 
@@ -278,6 +352,28 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
     }
 
     /**
+     *  <p>Information on how items are delivered to customers.</p>
+     * @param builder function to build the deliveries value
+     * @return Builder
+     */
+
+    public ShippingInfoBuilder addDeliveries(
+            Function<com.commercetools.api.models.order.DeliveryBuilder, com.commercetools.api.models.order.Delivery> builder) {
+        return plusDeliveries(builder.apply(com.commercetools.api.models.order.DeliveryBuilder.of()));
+    }
+
+    /**
+     *  <p>Information on how items are delivered to customers.</p>
+     * @param builder function to build the deliveries value
+     * @return Builder
+     */
+
+    public ShippingInfoBuilder setDeliveries(
+            Function<com.commercetools.api.models.order.DeliveryBuilder, com.commercetools.api.models.order.Delivery> builder) {
+        return deliveries(builder.apply(com.commercetools.api.models.order.DeliveryBuilder.of()));
+    }
+
+    /**
      *  <p>Discounted price of the Shipping Method.</p>
      * @param builder function to build the discountedPrice value
      * @return Builder
@@ -287,6 +383,18 @@ public class ShippingInfoBuilder implements Builder<ShippingInfo> {
             Function<com.commercetools.api.models.cart.DiscountedLineItemPriceBuilder, com.commercetools.api.models.cart.DiscountedLineItemPriceBuilder> builder) {
         this.discountedPrice = builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPriceBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Discounted price of the Shipping Method.</p>
+     * @param builder function to build the discountedPrice value
+     * @return Builder
+     */
+
+    public ShippingInfoBuilder withDiscountedPrice(
+            Function<com.commercetools.api.models.cart.DiscountedLineItemPriceBuilder, com.commercetools.api.models.cart.DiscountedLineItemPrice> builder) {
+        this.discountedPrice = builder.apply(com.commercetools.api.models.cart.DiscountedLineItemPriceBuilder.of());
         return this;
     }
 

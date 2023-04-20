@@ -26,4 +26,5 @@ public class DeliveryFormatBuilder {
     public static DeliveryFormatBuilder of() {
         return new DeliveryFormatBuilder();
     }
+
 }

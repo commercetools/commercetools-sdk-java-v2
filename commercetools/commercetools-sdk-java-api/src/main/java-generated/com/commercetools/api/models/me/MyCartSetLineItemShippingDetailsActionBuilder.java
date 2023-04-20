@@ -55,6 +55,18 @@ public class MyCartSetLineItemShippingDetailsActionBuilder implements Builder<My
 
     /**
      *  <p>Value to set. If empty, the existing value is removed.</p>
+     * @param builder function to build the shippingDetails value
+     * @return Builder
+     */
+
+    public MyCartSetLineItemShippingDetailsActionBuilder withShippingDetails(
+            Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraft> builder) {
+        this.shippingDetails = builder.apply(com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to set. If empty, the existing value is removed.</p>
      * @param shippingDetails value to be set
      * @return Builder
      */

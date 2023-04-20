@@ -54,6 +54,18 @@ public class ReviewReferenceBuilder implements Builder<ReviewReference> {
 
     /**
      *  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for Reviews.</p>
+     * @param builder function to build the obj value
+     * @return Builder
+     */
+
+    public ReviewReferenceBuilder withObj(
+            Function<com.commercetools.api.models.review.ReviewBuilder, com.commercetools.api.models.review.Review> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.review.ReviewBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Contains the representation of the expanded Review. Only present in responses to requests with Reference Expansion for Reviews.</p>
      * @param obj value to be set
      * @return Builder
      */

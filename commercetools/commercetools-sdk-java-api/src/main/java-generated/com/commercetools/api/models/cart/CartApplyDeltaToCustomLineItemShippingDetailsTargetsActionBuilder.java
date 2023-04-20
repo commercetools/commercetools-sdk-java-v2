@@ -108,6 +108,28 @@ public class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder
     }
 
     /**
+     *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
+     * @param builder function to build the targetsDelta value
+     * @return Builder
+     */
+
+    public CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder addTargetsDelta(
+            Function<com.commercetools.api.models.cart.ItemShippingTargetBuilder, com.commercetools.api.models.cart.ItemShippingTarget> builder) {
+        return plusTargetsDelta(builder.apply(com.commercetools.api.models.cart.ItemShippingTargetBuilder.of()));
+    }
+
+    /**
+     *  <p>Using positive or negative quantities increases or decreases the number of items shipped to an address.</p>
+     * @param builder function to build the targetsDelta value
+     * @return Builder
+     */
+
+    public CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder setTargetsDelta(
+            Function<com.commercetools.api.models.cart.ItemShippingTargetBuilder, com.commercetools.api.models.cart.ItemShippingTarget> builder) {
+        return targetsDelta(builder.apply(com.commercetools.api.models.cart.ItemShippingTargetBuilder.of()));
+    }
+
+    /**
      *  <p><code>id</code> of the CustomLineItem to update.</p>
      * @return customLineItemId
      */

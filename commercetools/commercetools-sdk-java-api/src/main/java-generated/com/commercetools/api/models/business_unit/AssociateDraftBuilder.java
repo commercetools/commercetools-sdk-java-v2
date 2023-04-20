@@ -83,6 +83,18 @@ public class AssociateDraftBuilder implements Builder<AssociateDraft> {
 
     /**
      *  <p>The Customer to be part of the Business Unit.</p>
+     * @param builder function to build the customer value
+     * @return Builder
+     */
+
+    public AssociateDraftBuilder withCustomer(
+            Function<com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder, com.commercetools.api.models.customer.CustomerResourceIdentifier> builder) {
+        this.customer = builder.apply(com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The Customer to be part of the Business Unit.</p>
      * @param customer value to be set
      * @return Builder
      */

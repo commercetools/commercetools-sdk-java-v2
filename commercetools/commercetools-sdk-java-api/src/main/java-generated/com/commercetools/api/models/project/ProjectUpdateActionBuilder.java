@@ -70,4 +70,5 @@ public class ProjectUpdateActionBuilder {
     public static ProjectUpdateActionBuilder of() {
         return new ProjectUpdateActionBuilder();
     }
+
 }

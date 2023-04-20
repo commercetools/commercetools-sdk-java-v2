@@ -90,6 +90,18 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
 
     /**
      *  <p>Localized name of the ShippingMethod.</p>
+     * @param builder function to build the localizedName value
+     * @return Builder
+     */
+
+    public ShippingMethodDraftBuilder withLocalizedName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.localizedName = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Localized name of the ShippingMethod.</p>
      * @param localizedName value to be set
      * @return Builder
      */
@@ -126,6 +138,18 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
 
     /**
      *  <p>Localized description of the ShippingMethod.</p>
+     * @param builder function to build the localizedDescription value
+     * @return Builder
+     */
+
+    public ShippingMethodDraftBuilder withLocalizedDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.localizedDescription = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Localized description of the ShippingMethod.</p>
      * @param localizedDescription value to be set
      * @return Builder
      */
@@ -147,6 +171,19 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
         this.taxCategory = builder
                 .apply(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>TaxCategory for all ZoneRates of the ShippingMethod.</p>
+     * @param builder function to build the taxCategory value
+     * @return Builder
+     */
+
+    public ShippingMethodDraftBuilder withTaxCategory(
+            Function<com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder, com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier> builder) {
+        this.taxCategory = builder
+                .apply(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder.of());
         return this;
     }
 
@@ -232,6 +269,28 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
     }
 
     /**
+     *  <p>Defines ShippingRates (prices) for specific zones.</p>
+     * @param builder function to build the zoneRates value
+     * @return Builder
+     */
+
+    public ShippingMethodDraftBuilder addZoneRates(
+            Function<com.commercetools.api.models.shipping_method.ZoneRateDraftBuilder, com.commercetools.api.models.shipping_method.ZoneRateDraft> builder) {
+        return plusZoneRates(builder.apply(com.commercetools.api.models.shipping_method.ZoneRateDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>Defines ShippingRates (prices) for specific zones.</p>
+     * @param builder function to build the zoneRates value
+     * @return Builder
+     */
+
+    public ShippingMethodDraftBuilder setZoneRates(
+            Function<com.commercetools.api.models.shipping_method.ZoneRateDraftBuilder, com.commercetools.api.models.shipping_method.ZoneRateDraft> builder) {
+        return zoneRates(builder.apply(com.commercetools.api.models.shipping_method.ZoneRateDraftBuilder.of()));
+    }
+
+    /**
      *  <p>If <code>true</code> the ShippingMethod will be the Project's default ShippingMethod.</p>
      * @param isDefault value to be set
      * @return Builder
@@ -262,6 +321,18 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
     public ShippingMethodDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the ShippingMethod.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public ShippingMethodDraftBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
         return this;
     }
 

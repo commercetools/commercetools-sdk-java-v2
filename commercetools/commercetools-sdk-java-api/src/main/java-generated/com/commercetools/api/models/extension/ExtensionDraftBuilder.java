@@ -138,6 +138,28 @@ public class ExtensionDraftBuilder implements Builder<ExtensionDraft> {
     }
 
     /**
+     *  <p>Describes what triggers the Extension.</p>
+     * @param builder function to build the triggers value
+     * @return Builder
+     */
+
+    public ExtensionDraftBuilder addTriggers(
+            Function<com.commercetools.api.models.extension.ExtensionTriggerBuilder, com.commercetools.api.models.extension.ExtensionTrigger> builder) {
+        return plusTriggers(builder.apply(com.commercetools.api.models.extension.ExtensionTriggerBuilder.of()));
+    }
+
+    /**
+     *  <p>Describes what triggers the Extension.</p>
+     * @param builder function to build the triggers value
+     * @return Builder
+     */
+
+    public ExtensionDraftBuilder setTriggers(
+            Function<com.commercetools.api.models.extension.ExtensionTriggerBuilder, com.commercetools.api.models.extension.ExtensionTrigger> builder) {
+        return triggers(builder.apply(com.commercetools.api.models.extension.ExtensionTriggerBuilder.of()));
+    }
+
+    /**
      *  <p>Maximum time (in milliseconds) the Extension can respond within. If no timeout is provided, the default value is used for all types of Extensions. The maximum value is 10000 ms (10 seconds) for <code>payment</code> Extensions and 2000 ms (2 seconds) for all other Extensions.</p>
      *  <p>This limit can be increased per Project after we review the performance impact. Please contact our support via the Support Portal and provide the Region, Project key, and use case.</p>
      * @param timeoutInMs value to be set

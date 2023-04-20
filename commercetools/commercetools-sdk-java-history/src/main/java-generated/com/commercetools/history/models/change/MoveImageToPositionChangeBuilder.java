@@ -123,6 +123,28 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
     }
 
     /**
+     * add the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public MoveImageToPositionChangeBuilder addPreviousValue(
+            Function<com.commercetools.history.models.common.ImageBuilder, com.commercetools.history.models.common.Image> builder) {
+        return plusPreviousValue(builder.apply(com.commercetools.history.models.common.ImageBuilder.of()));
+    }
+
+    /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public MoveImageToPositionChangeBuilder setPreviousValue(
+            Function<com.commercetools.history.models.common.ImageBuilder, com.commercetools.history.models.common.Image> builder) {
+        return previousValue(builder.apply(com.commercetools.history.models.common.ImageBuilder.of()));
+    }
+
+    /**
      * set values to the nextValue
      * @param nextValue value to be set
      * @return Builder
@@ -187,6 +209,28 @@ public class MoveImageToPositionChangeBuilder implements Builder<MoveImageToPosi
         this.nextValue = new ArrayList<>();
         this.nextValue.add(builder.apply(com.commercetools.history.models.common.ImageBuilder.of()).build());
         return this;
+    }
+
+    /**
+     * add the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public MoveImageToPositionChangeBuilder addNextValue(
+            Function<com.commercetools.history.models.common.ImageBuilder, com.commercetools.history.models.common.Image> builder) {
+        return plusNextValue(builder.apply(com.commercetools.history.models.common.ImageBuilder.of()));
+    }
+
+    /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public MoveImageToPositionChangeBuilder setNextValue(
+            Function<com.commercetools.history.models.common.ImageBuilder, com.commercetools.history.models.common.Image> builder) {
+        return nextValue(builder.apply(com.commercetools.history.models.common.ImageBuilder.of()));
     }
 
     /**

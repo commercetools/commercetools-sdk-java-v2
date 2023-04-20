@@ -46,6 +46,18 @@ public class SimilarProductBuilder implements Builder<SimilarProduct> {
 
     /**
      *  <p>Reference to Product</p>
+     * @param builder function to build the product value
+     * @return Builder
+     */
+
+    public SimilarProductBuilder withProduct(
+            Function<com.commercetools.ml.models.common.ProductReferenceBuilder, com.commercetools.ml.models.common.ProductReference> builder) {
+        this.product = builder.apply(com.commercetools.ml.models.common.ProductReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Reference to Product</p>
      * @param product value to be set
      * @return Builder
      */
@@ -75,6 +87,18 @@ public class SimilarProductBuilder implements Builder<SimilarProduct> {
     public SimilarProductBuilder meta(
             Function<com.commercetools.ml.models.similar_products.SimilarProductMetaBuilder, com.commercetools.ml.models.similar_products.SimilarProductMetaBuilder> builder) {
         this.meta = builder.apply(com.commercetools.ml.models.similar_products.SimilarProductMetaBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Supplementary information about the data used for similarity estimation. This information helps you understand the estimated confidence score, but it should not be used to identify a product.</p>
+     * @param builder function to build the meta value
+     * @return Builder
+     */
+
+    public SimilarProductBuilder withMeta(
+            Function<com.commercetools.ml.models.similar_products.SimilarProductMetaBuilder, com.commercetools.ml.models.similar_products.SimilarProductMeta> builder) {
+        this.meta = builder.apply(com.commercetools.ml.models.similar_products.SimilarProductMetaBuilder.of());
         return this;
     }
 

@@ -132,6 +132,18 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
 
     /**
      *  <p>Name of the ShoppingList.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public ShoppingListBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Name of the ShoppingList.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -166,6 +178,18 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
 
     /**
      *  <p>Reference to a Customer associated with the ShoppingList.</p>
+     * @param builder function to build the customer value
+     * @return Builder
+     */
+
+    public ShoppingListBuilder withCustomer(
+            Function<com.commercetools.api.models.customer.CustomerReferenceBuilder, com.commercetools.api.models.customer.CustomerReference> builder) {
+        this.customer = builder.apply(com.commercetools.api.models.customer.CustomerReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Reference to a Customer associated with the ShoppingList.</p>
      * @param customer value to be set
      * @return Builder
      */
@@ -190,6 +214,18 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
 
     /**
      *  <p>Human-readable identifiers usually used as deep-link URL to the related ShoppingList. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. The slug must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set on the Project.</p>
+     * @param builder function to build the slug value
+     * @return Builder
+     */
+
+    public ShoppingListBuilder withSlug(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Human-readable identifiers usually used as deep-link URL to the related ShoppingList. Each slug is unique across a Project, but a ShoppingList can have the same slug for different languages. The slug must match the pattern <code>[a-zA-Z0-9_-]{2,256}</code>. For good performance, indexes are provided for the first 15 <code>languages</code> set on the Project.</p>
      * @param slug value to be set
      * @return Builder
      */
@@ -208,6 +244,18 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     public ShoppingListBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Description of the ShoppingList.</p>
+     * @param builder function to build the description value
+     * @return Builder
+     */
+
+    public ShoppingListBuilder withDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -293,6 +341,29 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
+     *  <p>Line Items (containing Products) of the ShoppingList.</p>
+     * @param builder function to build the lineItems value
+     * @return Builder
+     */
+
+    public ShoppingListBuilder addLineItems(
+            Function<com.commercetools.api.models.shopping_list.ShoppingListLineItemBuilder, com.commercetools.api.models.shopping_list.ShoppingListLineItem> builder) {
+        return plusLineItems(
+            builder.apply(com.commercetools.api.models.shopping_list.ShoppingListLineItemBuilder.of()));
+    }
+
+    /**
+     *  <p>Line Items (containing Products) of the ShoppingList.</p>
+     * @param builder function to build the lineItems value
+     * @return Builder
+     */
+
+    public ShoppingListBuilder setLineItems(
+            Function<com.commercetools.api.models.shopping_list.ShoppingListLineItemBuilder, com.commercetools.api.models.shopping_list.ShoppingListLineItem> builder) {
+        return lineItems(builder.apply(com.commercetools.api.models.shopping_list.ShoppingListLineItemBuilder.of()));
+    }
+
+    /**
      *  <p>Line Items (containing text values) of the ShoppingList.</p>
      * @param textLineItems value to be set
      * @return Builder
@@ -362,6 +433,28 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
+     *  <p>Line Items (containing text values) of the ShoppingList.</p>
+     * @param builder function to build the textLineItems value
+     * @return Builder
+     */
+
+    public ShoppingListBuilder addTextLineItems(
+            Function<com.commercetools.api.models.shopping_list.TextLineItemBuilder, com.commercetools.api.models.shopping_list.TextLineItem> builder) {
+        return plusTextLineItems(builder.apply(com.commercetools.api.models.shopping_list.TextLineItemBuilder.of()));
+    }
+
+    /**
+     *  <p>Line Items (containing text values) of the ShoppingList.</p>
+     * @param builder function to build the textLineItems value
+     * @return Builder
+     */
+
+    public ShoppingListBuilder setTextLineItems(
+            Function<com.commercetools.api.models.shopping_list.TextLineItemBuilder, com.commercetools.api.models.shopping_list.TextLineItem> builder) {
+        return textLineItems(builder.apply(com.commercetools.api.models.shopping_list.TextLineItemBuilder.of()));
+    }
+
+    /**
      *  <p>Number of days after which the ShoppingList will be automatically deleted if it has not been modified.</p>
      * @param deleteDaysAfterLastModification value to be set
      * @return Builder
@@ -397,6 +490,18 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
 
     /**
      *  <p>Store to which the ShoppingList is assigned.</p>
+     * @param builder function to build the store value
+     * @return Builder
+     */
+
+    public ShoppingListBuilder withStore(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
+        this.store = builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Store to which the ShoppingList is assigned.</p>
      * @param store value to be set
      * @return Builder
      */
@@ -415,6 +520,18 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     public ShoppingListBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields defined for the ShoppingList.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public ShoppingListBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of());
         return this;
     }
 
@@ -443,6 +560,18 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
+     * @return Builder
+     */
+
+    public ShoppingListBuilder withLastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -462,6 +591,18 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     public ShoppingListBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
+     * @return Builder
+     */
+
+    public ShoppingListBuilder withCreatedBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
 

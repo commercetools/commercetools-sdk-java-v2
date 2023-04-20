@@ -111,6 +111,18 @@ public class ProductTypeBuilder implements Builder<ProductType> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
+     * @return Builder
+     */
+
+    public ProductTypeBuilder withLastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -130,6 +142,18 @@ public class ProductTypeBuilder implements Builder<ProductType> {
     public ProductTypeBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
+     * @return Builder
+     */
+
+    public ProductTypeBuilder withCreatedBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
 
@@ -244,6 +268,28 @@ public class ProductTypeBuilder implements Builder<ProductType> {
         this.attributes
                 .add(builder.apply(com.commercetools.api.models.product_type.AttributeDefinitionBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Attributes specified for the ProductType.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductTypeBuilder addAttributes(
+            Function<com.commercetools.api.models.product_type.AttributeDefinitionBuilder, com.commercetools.api.models.product_type.AttributeDefinition> builder) {
+        return plusAttributes(builder.apply(com.commercetools.api.models.product_type.AttributeDefinitionBuilder.of()));
+    }
+
+    /**
+     *  <p>Attributes specified for the ProductType.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductTypeBuilder setAttributes(
+            Function<com.commercetools.api.models.product_type.AttributeDefinitionBuilder, com.commercetools.api.models.product_type.AttributeDefinition> builder) {
+        return attributes(builder.apply(com.commercetools.api.models.product_type.AttributeDefinitionBuilder.of()));
     }
 
     /**

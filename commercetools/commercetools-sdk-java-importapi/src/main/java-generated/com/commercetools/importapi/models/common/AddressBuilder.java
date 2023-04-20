@@ -390,6 +390,18 @@ public class AddressBuilder implements Builder<Address> {
 
     /**
      *  <p>Custom Fields defined for the Address. Custom Fields can only be applied to <code>shippingAddress</code>.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public AddressBuilder withCustom(
+            Function<com.commercetools.importapi.models.customfields.CustomBuilder, com.commercetools.importapi.models.customfields.Custom> builder) {
+        this.custom = builder.apply(com.commercetools.importapi.models.customfields.CustomBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields defined for the Address. Custom Fields can only be applied to <code>shippingAddress</code>.</p>
      * @param custom value to be set
      * @return Builder
      */

@@ -52,6 +52,18 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
     }
 
     /**
+     * set the value to the suggestTokenizer using the builder function
+     * @param builder function to build the suggestTokenizer value
+     * @return Builder
+     */
+
+    public SearchKeywordBuilder withSuggestTokenizer(
+            Function<com.commercetools.history.models.common.SuggestTokenizerBuilder, com.commercetools.history.models.common.SuggestTokenizer> builder) {
+        this.suggestTokenizer = builder.apply(com.commercetools.history.models.common.SuggestTokenizerBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the suggestTokenizer
      * @param suggestTokenizer value to be set
      * @return Builder

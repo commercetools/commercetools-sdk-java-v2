@@ -90,6 +90,19 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>The Product Type defining the Attributes for the Product. Cannot be changed later.</p>
+     * @param builder function to build the productType value
+     * @return Builder
+     */
+
+    public ProductDraftBuilder withProductType(
+            Function<com.commercetools.api.models.product_type.ProductTypeResourceIdentifierBuilder, com.commercetools.api.models.product_type.ProductTypeResourceIdentifier> builder) {
+        this.productType = builder
+                .apply(com.commercetools.api.models.product_type.ProductTypeResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The Product Type defining the Attributes for the Product. Cannot be changed later.</p>
      * @param productType value to be set
      * @return Builder
      */
@@ -114,6 +127,18 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>Name of the Product.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public ProductDraftBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Name of the Product.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -132,6 +157,18 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     public ProductDraftBuilder slug(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>User-defined identifier used in a deep-link URL for the Product. It must be unique across a Project, but a Product can have the same slug in different Locales. It must match the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
+     * @param builder function to build the slug value
+     * @return Builder
+     */
+
+    public ProductDraftBuilder withSlug(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -166,6 +203,18 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     public ProductDraftBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Description of the Product.</p>
+     * @param builder function to build the description value
+     * @return Builder
+     */
+
+    public ProductDraftBuilder withDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -251,6 +300,29 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
+     *  <p>Categories assigned to the Product.</p>
+     * @param builder function to build the categories value
+     * @return Builder
+     */
+
+    public ProductDraftBuilder addCategories(
+            Function<com.commercetools.api.models.category.CategoryResourceIdentifierBuilder, com.commercetools.api.models.category.CategoryResourceIdentifier> builder) {
+        return plusCategories(
+            builder.apply(com.commercetools.api.models.category.CategoryResourceIdentifierBuilder.of()));
+    }
+
+    /**
+     *  <p>Categories assigned to the Product.</p>
+     * @param builder function to build the categories value
+     * @return Builder
+     */
+
+    public ProductDraftBuilder setCategories(
+            Function<com.commercetools.api.models.category.CategoryResourceIdentifierBuilder, com.commercetools.api.models.category.CategoryResourceIdentifier> builder) {
+        return categories(builder.apply(com.commercetools.api.models.category.CategoryResourceIdentifierBuilder.of()));
+    }
+
+    /**
      *  <p>Numerical values to allow ordering of Products within a specified Category.</p>
      * @param builder function to build the categoryOrderHints value
      * @return Builder
@@ -260,6 +332,18 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
             Function<com.commercetools.api.models.product.CategoryOrderHintsBuilder, com.commercetools.api.models.product.CategoryOrderHintsBuilder> builder) {
         this.categoryOrderHints = builder.apply(com.commercetools.api.models.product.CategoryOrderHintsBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Numerical values to allow ordering of Products within a specified Category.</p>
+     * @param builder function to build the categoryOrderHints value
+     * @return Builder
+     */
+
+    public ProductDraftBuilder withCategoryOrderHints(
+            Function<com.commercetools.api.models.product.CategoryOrderHintsBuilder, com.commercetools.api.models.product.CategoryOrderHints> builder) {
+        this.categoryOrderHints = builder.apply(com.commercetools.api.models.product.CategoryOrderHintsBuilder.of());
         return this;
     }
 
@@ -289,6 +373,18 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>Title of the Product displayed in search results.</p>
+     * @param builder function to build the metaTitle value
+     * @return Builder
+     */
+
+    public ProductDraftBuilder withMetaTitle(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.metaTitle = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Title of the Product displayed in search results.</p>
      * @param metaTitle value to be set
      * @return Builder
      */
@@ -308,6 +404,18 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     public ProductDraftBuilder metaDescription(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.metaDescription = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Description of the Product displayed in search results.</p>
+     * @param builder function to build the metaDescription value
+     * @return Builder
+     */
+
+    public ProductDraftBuilder withMetaDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.metaDescription = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -337,6 +445,18 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>Keywords that give additional information about the Product to search engines.</p>
+     * @param builder function to build the metaKeywords value
+     * @return Builder
+     */
+
+    public ProductDraftBuilder withMetaKeywords(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.metaKeywords = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Keywords that give additional information about the Product to search engines.</p>
      * @param metaKeywords value to be set
      * @return Builder
      */
@@ -357,6 +477,18 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
             Function<com.commercetools.api.models.product.ProductVariantDraftBuilder, com.commercetools.api.models.product.ProductVariantDraftBuilder> builder) {
         this.masterVariant = builder.apply(com.commercetools.api.models.product.ProductVariantDraftBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>The Product Variant to be the Master Variant for the Product. Required if <code>variants</code> are provided also.</p>
+     * @param builder function to build the masterVariant value
+     * @return Builder
+     */
+
+    public ProductDraftBuilder withMasterVariant(
+            Function<com.commercetools.api.models.product.ProductVariantDraftBuilder, com.commercetools.api.models.product.ProductVariantDraft> builder) {
+        this.masterVariant = builder.apply(com.commercetools.api.models.product.ProductVariantDraftBuilder.of());
         return this;
     }
 
@@ -440,6 +572,28 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
+     *  <p>The additional Product Variants for the Product.</p>
+     * @param builder function to build the variants value
+     * @return Builder
+     */
+
+    public ProductDraftBuilder addVariants(
+            Function<com.commercetools.api.models.product.ProductVariantDraftBuilder, com.commercetools.api.models.product.ProductVariantDraft> builder) {
+        return plusVariants(builder.apply(com.commercetools.api.models.product.ProductVariantDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>The additional Product Variants for the Product.</p>
+     * @param builder function to build the variants value
+     * @return Builder
+     */
+
+    public ProductDraftBuilder setVariants(
+            Function<com.commercetools.api.models.product.ProductVariantDraftBuilder, com.commercetools.api.models.product.ProductVariantDraft> builder) {
+        return variants(builder.apply(com.commercetools.api.models.product.ProductVariantDraftBuilder.of()));
+    }
+
+    /**
      *  <p>The Tax Category to be assigned to the Product.</p>
      * @param builder function to build the taxCategory value
      * @return Builder
@@ -450,6 +604,19 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
         this.taxCategory = builder
                 .apply(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>The Tax Category to be assigned to the Product.</p>
+     * @param builder function to build the taxCategory value
+     * @return Builder
+     */
+
+    public ProductDraftBuilder withTaxCategory(
+            Function<com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder, com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier> builder) {
+        this.taxCategory = builder
+                .apply(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder.of());
         return this;
     }
 
@@ -479,6 +646,18 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
 
     /**
      *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     * @param builder function to build the searchKeywords value
+     * @return Builder
+     */
+
+    public ProductDraftBuilder withSearchKeywords(
+            Function<com.commercetools.api.models.product.SearchKeywordsBuilder, com.commercetools.api.models.product.SearchKeywords> builder) {
+        this.searchKeywords = builder.apply(com.commercetools.api.models.product.SearchKeywordsBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
      * @param searchKeywords value to be set
      * @return Builder
      */
@@ -498,6 +677,18 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     public ProductDraftBuilder state(
             Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifierBuilder> builder) {
         this.state = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>State to be assigned to the Product.</p>
+     * @param builder function to build the state value
+     * @return Builder
+     */
+
+    public ProductDraftBuilder withState(
+            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifier> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of());
         return this;
     }
 

@@ -38,6 +38,18 @@ public class PaymentTransactionAddedMessagePayloadBuilder implements Builder<Pay
 
     /**
      *  <p>Transaction that was added to the Payment.</p>
+     * @param builder function to build the transaction value
+     * @return Builder
+     */
+
+    public PaymentTransactionAddedMessagePayloadBuilder withTransaction(
+            Function<com.commercetools.api.models.payment.TransactionBuilder, com.commercetools.api.models.payment.Transaction> builder) {
+        this.transaction = builder.apply(com.commercetools.api.models.payment.TransactionBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Transaction that was added to the Payment.</p>
      * @param transaction value to be set
      * @return Builder
      */

@@ -81,6 +81,18 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
 
     /**
      *  <p>Custom Fields of the ShoppingListLineItem.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public ShoppingListLineItemBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields of the ShoppingListLineItem.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -129,6 +141,19 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     /**
      *  <p>Name of the Product.</p>
      *  <p>This data is updated in an eventual consistent manner when the Product's name changes.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public ShoppingListLineItemBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Name of the Product.</p>
+     *  <p>This data is updated in an eventual consistent manner when the Product's name changes.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -159,6 +184,18 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
             Function<com.commercetools.api.models.product_type.ProductTypeReferenceBuilder, com.commercetools.api.models.product_type.ProductTypeReferenceBuilder> builder) {
         this.productType = builder.apply(com.commercetools.api.models.product_type.ProductTypeReferenceBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>The Product Type defining the Attributes of the Product.</p>
+     * @param builder function to build the productType value
+     * @return Builder
+     */
+
+    public ShoppingListLineItemBuilder withProductType(
+            Function<com.commercetools.api.models.product_type.ProductTypeReferenceBuilder, com.commercetools.api.models.product_type.ProductTypeReference> builder) {
+        this.productType = builder.apply(com.commercetools.api.models.product_type.ProductTypeReferenceBuilder.of());
         return this;
     }
 
@@ -212,6 +249,19 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     /**
      *  <p>Data of the ProductVariant.</p>
      *  <p>Returned when expanded using <code>expand=lineItems[*].variant</code>. You cannot expand only a single element of the array.</p>
+     * @param builder function to build the variant value
+     * @return Builder
+     */
+
+    public ShoppingListLineItemBuilder withVariant(
+            Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariant> builder) {
+        this.variant = builder.apply(com.commercetools.api.models.product.ProductVariantBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Data of the ProductVariant.</p>
+     *  <p>Returned when expanded using <code>expand=lineItems[*].variant</code>. You cannot expand only a single element of the array.</p>
      * @param variant value to be set
      * @return Builder
      */
@@ -232,6 +282,19 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     public ShoppingListLineItemBuilder productSlug(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.productSlug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Slug of the current ProductData.</p>
+     *  <p>Returned when expanded using <code>expand=lineItems[*].productSlug</code>. You cannot expand only a single element of the array.</p>
+     * @param builder function to build the productSlug value
+     * @return Builder
+     */
+
+    public ShoppingListLineItemBuilder withProductSlug(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.productSlug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
 

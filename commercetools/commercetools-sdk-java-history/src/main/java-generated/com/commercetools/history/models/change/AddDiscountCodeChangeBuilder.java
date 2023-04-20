@@ -51,6 +51,18 @@ public class AddDiscountCodeChangeBuilder implements Builder<AddDiscountCodeChan
     }
 
     /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public AddDiscountCodeChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.DiscountCodeInfoBuilder, com.commercetools.history.models.common.DiscountCodeInfo> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.DiscountCodeInfoBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder

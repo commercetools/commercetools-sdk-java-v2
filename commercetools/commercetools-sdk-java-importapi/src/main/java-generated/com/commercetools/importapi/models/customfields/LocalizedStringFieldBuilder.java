@@ -48,6 +48,23 @@ public class LocalizedStringFieldBuilder implements Builder<LocalizedStringField
      *    "en": "dog food"
      *  }
      *  </code></pre>
+     * @param builder function to build the value value
+     * @return Builder
+     */
+
+    public LocalizedStringFieldBuilder withValue(
+            Function<com.commercetools.importapi.models.common.LocalizedStringBuilder, com.commercetools.importapi.models.common.LocalizedString> builder) {
+        this.value = builder.apply(com.commercetools.importapi.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
+     *  <pre><code>{
+     *    "de": "Hundefutter",
+     *    "en": "dog food"
+     *  }
+     *  </code></pre>
      * @param value value to be set
      * @return Builder
      */

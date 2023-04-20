@@ -126,6 +126,18 @@ public class ProductPriceChangedMessageBuilder implements Builder<ProductPriceCh
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @param builder function to build the lastModifiedBy value
+     * @return Builder
+     */
+
+    public ProductPriceChangedMessageBuilder withLastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value of <code>createdBy</code>.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -145,6 +157,18 @@ public class ProductPriceChangedMessageBuilder implements Builder<ProductPriceCh
     public ProductPriceChangedMessageBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
+     * @return Builder
+     */
+
+    public ProductPriceChangedMessageBuilder withCreatedBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
 
@@ -221,6 +245,19 @@ public class ProductPriceChangedMessageBuilder implements Builder<ProductPriceCh
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @param builder function to build the resourceUserProvidedIdentifiers value
+     * @return Builder
+     */
+
+    public ProductPriceChangedMessageBuilder withResourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiers> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      * @param resourceUserProvidedIdentifiers value to be set
      * @return Builder
      */
@@ -256,6 +293,18 @@ public class ProductPriceChangedMessageBuilder implements Builder<ProductPriceCh
 
     /**
      *  <p>The current Embedded Price before the Change Embedded Price update action.</p>
+     * @param builder function to build the oldPrice value
+     * @return Builder
+     */
+
+    public ProductPriceChangedMessageBuilder withOldPrice(
+            Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.Price> builder) {
+        this.oldPrice = builder.apply(com.commercetools.api.models.common.PriceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The current Embedded Price before the Change Embedded Price update action.</p>
      * @param oldPrice value to be set
      * @return Builder
      */
@@ -274,6 +323,18 @@ public class ProductPriceChangedMessageBuilder implements Builder<ProductPriceCh
     public ProductPriceChangedMessageBuilder newPrice(
             Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.PriceBuilder> builder) {
         this.newPrice = builder.apply(com.commercetools.api.models.common.PriceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>The Embedded Price after the Change Embedded Price update action.</p>
+     * @param builder function to build the newPrice value
+     * @return Builder
+     */
+
+    public ProductPriceChangedMessageBuilder withNewPrice(
+            Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.Price> builder) {
+        this.newPrice = builder.apply(com.commercetools.api.models.common.PriceBuilder.of());
         return this;
     }
 
@@ -308,6 +369,18 @@ public class ProductPriceChangedMessageBuilder implements Builder<ProductPriceCh
     public ProductPriceChangedMessageBuilder oldStagedPrice(
             Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.PriceBuilder> builder) {
         this.oldStagedPrice = builder.apply(com.commercetools.api.models.common.PriceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>The staged Embedded Price before the Change Embedded Price update action.</p>
+     * @param builder function to build the oldStagedPrice value
+     * @return Builder
+     */
+
+    public ProductPriceChangedMessageBuilder withOldStagedPrice(
+            Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.Price> builder) {
+        this.oldStagedPrice = builder.apply(com.commercetools.api.models.common.PriceBuilder.of());
         return this;
     }
 

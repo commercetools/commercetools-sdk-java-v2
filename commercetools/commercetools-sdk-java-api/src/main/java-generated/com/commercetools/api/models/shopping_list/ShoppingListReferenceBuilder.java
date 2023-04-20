@@ -54,6 +54,18 @@ public class ShoppingListReferenceBuilder implements Builder<ShoppingListReferen
 
     /**
      *  <p>Contains the representation of the expanded ShoppingList. Only present in responses to requests with Reference Expansion for ShoppingLists.</p>
+     * @param builder function to build the obj value
+     * @return Builder
+     */
+
+    public ShoppingListReferenceBuilder withObj(
+            Function<com.commercetools.api.models.shopping_list.ShoppingListBuilder, com.commercetools.api.models.shopping_list.ShoppingList> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.shopping_list.ShoppingListBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Contains the representation of the expanded ShoppingList. Only present in responses to requests with Reference Expansion for ShoppingLists.</p>
      * @param obj value to be set
      * @return Builder
      */

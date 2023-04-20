@@ -98,6 +98,18 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
 
     /**
      *  <p>Human-readable label for the Attribute.</p>
+     * @param builder function to build the label value
+     * @return Builder
+     */
+
+    public AttributeDefinitionDraftBuilder withLabel(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.label = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Human-readable label for the Attribute.</p>
      * @param label value to be set
      * @return Builder
      */
@@ -139,6 +151,18 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
     public AttributeDefinitionDraftBuilder inputTip(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.inputTip = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Provides additional information about the Attribute that aids content managers when setting Product details.</p>
+     * @param builder function to build the inputTip value
+     * @return Builder
+     */
+
+    public AttributeDefinitionDraftBuilder withInputTip(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.inputTip = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
 

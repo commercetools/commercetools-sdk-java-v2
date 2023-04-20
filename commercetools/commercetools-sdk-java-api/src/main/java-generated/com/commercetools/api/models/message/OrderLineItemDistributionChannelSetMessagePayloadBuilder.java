@@ -56,6 +56,18 @@ public class OrderLineItemDistributionChannelSetMessagePayloadBuilder
 
     /**
      *  <p>Distribution Channel that was set.</p>
+     * @param builder function to build the distributionChannel value
+     * @return Builder
+     */
+
+    public OrderLineItemDistributionChannelSetMessagePayloadBuilder withDistributionChannel(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReference> builder) {
+        this.distributionChannel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Distribution Channel that was set.</p>
      * @param distributionChannel value to be set
      * @return Builder
      */

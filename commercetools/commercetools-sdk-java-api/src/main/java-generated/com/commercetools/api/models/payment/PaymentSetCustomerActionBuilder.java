@@ -41,6 +41,18 @@ public class PaymentSetCustomerActionBuilder implements Builder<PaymentSetCustom
 
     /**
      *  <p>Value to set. If empty, any existing reference is removed.</p>
+     * @param builder function to build the customer value
+     * @return Builder
+     */
+
+    public PaymentSetCustomerActionBuilder withCustomer(
+            Function<com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder, com.commercetools.api.models.customer.CustomerResourceIdentifier> builder) {
+        this.customer = builder.apply(com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to set. If empty, any existing reference is removed.</p>
      * @param customer value to be set
      * @return Builder
      */

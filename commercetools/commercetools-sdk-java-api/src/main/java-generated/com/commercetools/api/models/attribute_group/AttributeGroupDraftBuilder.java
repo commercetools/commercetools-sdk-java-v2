@@ -49,6 +49,18 @@ public class AttributeGroupDraftBuilder implements Builder<AttributeGroupDraft> 
 
     /**
      *  <p>Name of the AttributeGroup.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public AttributeGroupDraftBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Name of the AttributeGroup.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -67,6 +79,18 @@ public class AttributeGroupDraftBuilder implements Builder<AttributeGroupDraft> 
     public AttributeGroupDraftBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Description of the AttributeGroup.</p>
+     * @param builder function to build the description value
+     * @return Builder
+     */
+
+    public AttributeGroupDraftBuilder withDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -149,6 +173,29 @@ public class AttributeGroupDraftBuilder implements Builder<AttributeGroupDraft> 
         this.attributes.add(
             builder.apply(com.commercetools.api.models.attribute_group.AttributeReferenceBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Attributes with unique values.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public AttributeGroupDraftBuilder addAttributes(
+            Function<com.commercetools.api.models.attribute_group.AttributeReferenceBuilder, com.commercetools.api.models.attribute_group.AttributeReference> builder) {
+        return plusAttributes(
+            builder.apply(com.commercetools.api.models.attribute_group.AttributeReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p>Attributes with unique values.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public AttributeGroupDraftBuilder setAttributes(
+            Function<com.commercetools.api.models.attribute_group.AttributeReferenceBuilder, com.commercetools.api.models.attribute_group.AttributeReference> builder) {
+        return attributes(builder.apply(com.commercetools.api.models.attribute_group.AttributeReferenceBuilder.of()));
     }
 
     /**

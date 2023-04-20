@@ -111,6 +111,30 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
     }
 
     /**
+     * add the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public ChangeTextLineItemsOrderChangeBuilder addPreviousValue(
+            Function<com.commercetools.history.models.change_value.TextLineItemValueBuilder, com.commercetools.history.models.change_value.TextLineItemValue> builder) {
+        return plusPreviousValue(
+            builder.apply(com.commercetools.history.models.change_value.TextLineItemValueBuilder.of()));
+    }
+
+    /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public ChangeTextLineItemsOrderChangeBuilder setPreviousValue(
+            Function<com.commercetools.history.models.change_value.TextLineItemValueBuilder, com.commercetools.history.models.change_value.TextLineItemValue> builder) {
+        return previousValue(
+            builder.apply(com.commercetools.history.models.change_value.TextLineItemValueBuilder.of()));
+    }
+
+    /**
      * set values to the nextValue
      * @param nextValue value to be set
      * @return Builder
@@ -177,6 +201,29 @@ public class ChangeTextLineItemsOrderChangeBuilder implements Builder<ChangeText
         this.nextValue.add(
             builder.apply(com.commercetools.history.models.change_value.TextLineItemValueBuilder.of()).build());
         return this;
+    }
+
+    /**
+     * add the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public ChangeTextLineItemsOrderChangeBuilder addNextValue(
+            Function<com.commercetools.history.models.change_value.TextLineItemValueBuilder, com.commercetools.history.models.change_value.TextLineItemValue> builder) {
+        return plusNextValue(
+            builder.apply(com.commercetools.history.models.change_value.TextLineItemValueBuilder.of()));
+    }
+
+    /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public ChangeTextLineItemsOrderChangeBuilder setNextValue(
+            Function<com.commercetools.history.models.change_value.TextLineItemValueBuilder, com.commercetools.history.models.change_value.TextLineItemValue> builder) {
+        return nextValue(builder.apply(com.commercetools.history.models.change_value.TextLineItemValueBuilder.of()));
     }
 
     /**

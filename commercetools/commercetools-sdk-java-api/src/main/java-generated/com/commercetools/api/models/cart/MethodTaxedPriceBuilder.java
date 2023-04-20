@@ -54,6 +54,18 @@ public class MethodTaxedPriceBuilder implements Builder<MethodTaxedPrice> {
 
     /**
      *  <p>Taxed price for the Shipping Method.</p>
+     * @param builder function to build the taxedPrice value
+     * @return Builder
+     */
+
+    public MethodTaxedPriceBuilder withTaxedPrice(
+            Function<com.commercetools.api.models.cart.TaxedItemPriceBuilder, com.commercetools.api.models.cart.TaxedItemPrice> builder) {
+        this.taxedPrice = builder.apply(com.commercetools.api.models.cart.TaxedItemPriceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Taxed price for the Shipping Method.</p>
      * @param taxedPrice value to be set
      * @return Builder
      */

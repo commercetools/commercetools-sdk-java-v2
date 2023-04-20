@@ -70,6 +70,19 @@ public class SimilarProductsTaskStatusBuilder implements Builder<SimilarProducts
 
     /**
      *  <p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p>
+     * @param builder function to build the result value
+     * @return Builder
+     */
+
+    public SimilarProductsTaskStatusBuilder withResult(
+            Function<com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResultBuilder, com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResult> builder) {
+        this.result = builder
+                .apply(com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResultBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The response to an asynchronous request. The type depends on the request initiated. Only populated when the status is <code>SUCCESS</code>.</p>
      * @param result value to be set
      * @return Builder
      */

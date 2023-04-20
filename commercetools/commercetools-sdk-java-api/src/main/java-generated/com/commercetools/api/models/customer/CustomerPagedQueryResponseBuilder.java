@@ -149,6 +149,28 @@ public class CustomerPagedQueryResponseBuilder implements Builder<CustomerPagedQ
     }
 
     /**
+     *  <p>Customers matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public CustomerPagedQueryResponseBuilder addResults(
+            Function<com.commercetools.api.models.customer.CustomerBuilder, com.commercetools.api.models.customer.Customer> builder) {
+        return plusResults(builder.apply(com.commercetools.api.models.customer.CustomerBuilder.of()));
+    }
+
+    /**
+     *  <p>Customers matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public CustomerPagedQueryResponseBuilder setResults(
+            Function<com.commercetools.api.models.customer.CustomerBuilder, com.commercetools.api.models.customer.Customer> builder) {
+        return results(builder.apply(com.commercetools.api.models.customer.CustomerBuilder.of()));
+    }
+
+    /**
      *  <p>Number of results requested.</p>
      * @return limit
      */

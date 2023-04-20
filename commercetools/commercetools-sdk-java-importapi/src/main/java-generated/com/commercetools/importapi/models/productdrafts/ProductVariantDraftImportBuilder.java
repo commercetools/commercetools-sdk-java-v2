@@ -133,6 +133,28 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
+     * add the value to the prices using the builder function
+     * @param builder function to build the prices value
+     * @return Builder
+     */
+
+    public ProductVariantDraftImportBuilder addPrices(
+            Function<com.commercetools.importapi.models.productdrafts.PriceDraftImportBuilder, com.commercetools.importapi.models.productdrafts.PriceDraftImport> builder) {
+        return plusPrices(builder.apply(com.commercetools.importapi.models.productdrafts.PriceDraftImportBuilder.of()));
+    }
+
+    /**
+     * set the value to the prices using the builder function
+     * @param builder function to build the prices value
+     * @return Builder
+     */
+
+    public ProductVariantDraftImportBuilder setPrices(
+            Function<com.commercetools.importapi.models.productdrafts.PriceDraftImportBuilder, com.commercetools.importapi.models.productdrafts.PriceDraftImport> builder) {
+        return prices(builder.apply(com.commercetools.importapi.models.productdrafts.PriceDraftImportBuilder.of()));
+    }
+
+    /**
      * set values to the attributes
      * @param attributes value to be set
      * @return Builder
@@ -269,6 +291,28 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
     }
 
     /**
+     * add the value to the images using the builder function
+     * @param builder function to build the images value
+     * @return Builder
+     */
+
+    public ProductVariantDraftImportBuilder addImages(
+            Function<com.commercetools.importapi.models.common.ImageBuilder, com.commercetools.importapi.models.common.Image> builder) {
+        return plusImages(builder.apply(com.commercetools.importapi.models.common.ImageBuilder.of()));
+    }
+
+    /**
+     * set the value to the images using the builder function
+     * @param builder function to build the images value
+     * @return Builder
+     */
+
+    public ProductVariantDraftImportBuilder setImages(
+            Function<com.commercetools.importapi.models.common.ImageBuilder, com.commercetools.importapi.models.common.Image> builder) {
+        return images(builder.apply(com.commercetools.importapi.models.common.ImageBuilder.of()));
+    }
+
+    /**
      * set values to the assets
      * @param assets value to be set
      * @return Builder
@@ -333,6 +377,28 @@ public class ProductVariantDraftImportBuilder implements Builder<ProductVariantD
         this.assets = new ArrayList<>();
         this.assets.add(builder.apply(com.commercetools.importapi.models.common.AssetBuilder.of()).build());
         return this;
+    }
+
+    /**
+     * add the value to the assets using the builder function
+     * @param builder function to build the assets value
+     * @return Builder
+     */
+
+    public ProductVariantDraftImportBuilder addAssets(
+            Function<com.commercetools.importapi.models.common.AssetBuilder, com.commercetools.importapi.models.common.Asset> builder) {
+        return plusAssets(builder.apply(com.commercetools.importapi.models.common.AssetBuilder.of()));
+    }
+
+    /**
+     * set the value to the assets using the builder function
+     * @param builder function to build the assets value
+     * @return Builder
+     */
+
+    public ProductVariantDraftImportBuilder setAssets(
+            Function<com.commercetools.importapi.models.common.AssetBuilder, com.commercetools.importapi.models.common.Asset> builder) {
+        return assets(builder.apply(com.commercetools.importapi.models.common.AssetBuilder.of()));
     }
 
     /**

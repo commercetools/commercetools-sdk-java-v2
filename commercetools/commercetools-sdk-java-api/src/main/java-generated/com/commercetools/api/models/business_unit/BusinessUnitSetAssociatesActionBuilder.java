@@ -95,6 +95,28 @@ public class BusinessUnitSetAssociatesActionBuilder implements Builder<BusinessU
 
     /**
      *  <p>The new list of Associates. If not provided, any existing list is removed.</p>
+     * @param builder function to build the associates value
+     * @return Builder
+     */
+
+    public BusinessUnitSetAssociatesActionBuilder addAssociates(
+            Function<com.commercetools.api.models.business_unit.AssociateDraftBuilder, com.commercetools.api.models.business_unit.AssociateDraft> builder) {
+        return plusAssociates(builder.apply(com.commercetools.api.models.business_unit.AssociateDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>The new list of Associates. If not provided, any existing list is removed.</p>
+     * @param builder function to build the associates value
+     * @return Builder
+     */
+
+    public BusinessUnitSetAssociatesActionBuilder setAssociates(
+            Function<com.commercetools.api.models.business_unit.AssociateDraftBuilder, com.commercetools.api.models.business_unit.AssociateDraft> builder) {
+        return associates(builder.apply(com.commercetools.api.models.business_unit.AssociateDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>The new list of Associates. If not provided, any existing list is removed.</p>
      * @return associates
      */
 

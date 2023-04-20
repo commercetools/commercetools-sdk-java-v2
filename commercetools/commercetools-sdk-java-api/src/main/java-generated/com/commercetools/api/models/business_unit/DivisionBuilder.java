@@ -144,6 +144,18 @@ public class DivisionBuilder implements Builder<Division> {
 
     /**
      *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
+     * @return Builder
+     */
+
+    public DivisionBuilder withLastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -163,6 +175,18 @@ public class DivisionBuilder implements Builder<Division> {
     public DivisionBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
+     * @return Builder
+     */
+
+    public DivisionBuilder withCreatedBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
 
@@ -275,6 +299,32 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
+     *  <p>References to Stores the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
+     *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
+     *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public DivisionBuilder addStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
+        return plusStores(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p>References to Stores the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
+     *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
+     *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public DivisionBuilder setStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
+        return stores(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()));
+    }
+
+    /**
      *  <p>Defines whether the Stores of the Division are set explicitly or inherited from a parent Business Unit.</p>
      * @param storeMode value to be set
      * @return Builder
@@ -316,6 +366,18 @@ public class DivisionBuilder implements Builder<Division> {
     public DivisionBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the Business Unit.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public DivisionBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of());
         return this;
     }
 
@@ -392,6 +454,28 @@ public class DivisionBuilder implements Builder<Division> {
         this.addresses = new ArrayList<>();
         this.addresses.add(builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Addresses used by the Business Unit.</p>
+     * @param builder function to build the addresses value
+     * @return Builder
+     */
+
+    public DivisionBuilder addAddresses(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
+        return plusAddresses(builder.apply(com.commercetools.api.models.common.AddressBuilder.of()));
+    }
+
+    /**
+     *  <p>Addresses used by the Business Unit.</p>
+     * @param builder function to build the addresses value
+     * @return Builder
+     */
+
+    public DivisionBuilder setAddresses(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
+        return addresses(builder.apply(com.commercetools.api.models.common.AddressBuilder.of()));
     }
 
     /**
@@ -554,6 +638,28 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
+     *  <p>Members that are part of the Business Unit in specific roles.</p>
+     * @param builder function to build the associates value
+     * @return Builder
+     */
+
+    public DivisionBuilder addAssociates(
+            Function<com.commercetools.api.models.business_unit.AssociateBuilder, com.commercetools.api.models.business_unit.Associate> builder) {
+        return plusAssociates(builder.apply(com.commercetools.api.models.business_unit.AssociateBuilder.of()));
+    }
+
+    /**
+     *  <p>Members that are part of the Business Unit in specific roles.</p>
+     * @param builder function to build the associates value
+     * @return Builder
+     */
+
+    public DivisionBuilder setAssociates(
+            Function<com.commercetools.api.models.business_unit.AssociateBuilder, com.commercetools.api.models.business_unit.Associate> builder) {
+        return associates(builder.apply(com.commercetools.api.models.business_unit.AssociateBuilder.of()));
+    }
+
+    /**
      *  <p>Parent unit of the Division.</p>
      * @param builder function to build the parentUnit value
      * @return Builder
@@ -563,6 +669,19 @@ public class DivisionBuilder implements Builder<Division> {
             Function<com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder, com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder> builder) {
         this.parentUnit = builder.apply(com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Parent unit of the Division.</p>
+     * @param builder function to build the parentUnit value
+     * @return Builder
+     */
+
+    public DivisionBuilder withParentUnit(
+            Function<com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder, com.commercetools.api.models.business_unit.BusinessUnitKeyReference> builder) {
+        this.parentUnit = builder
+                .apply(com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder.of());
         return this;
     }
 
@@ -589,6 +708,19 @@ public class DivisionBuilder implements Builder<Division> {
         this.topLevelUnit = builder
                 .apply(com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Top-level unit of the Business Unit. The top-level unit is of <code>unitType</code> <code>Company</code>.</p>
+     * @param builder function to build the topLevelUnit value
+     * @return Builder
+     */
+
+    public DivisionBuilder withTopLevelUnit(
+            Function<com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder, com.commercetools.api.models.business_unit.BusinessUnitKeyReference> builder) {
+        this.topLevelUnit = builder
+                .apply(com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder.of());
         return this;
     }
 

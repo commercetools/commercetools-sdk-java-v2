@@ -38,6 +38,18 @@ public class TaxCategoryAddTaxRateActionBuilder implements Builder<TaxCategoryAd
 
     /**
      *  <p>Value to append to the <code>rates</code> array.</p>
+     * @param builder function to build the taxRate value
+     * @return Builder
+     */
+
+    public TaxCategoryAddTaxRateActionBuilder withTaxRate(
+            Function<com.commercetools.api.models.tax_category.TaxRateDraftBuilder, com.commercetools.api.models.tax_category.TaxRateDraft> builder) {
+        this.taxRate = builder.apply(com.commercetools.api.models.tax_category.TaxRateDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to append to the <code>rates</code> array.</p>
      * @param taxRate value to be set
      * @return Builder
      */

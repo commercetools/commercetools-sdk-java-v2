@@ -38,6 +38,18 @@ public class OrderCreatedMessagePayloadBuilder implements Builder<OrderCreatedMe
 
     /**
      *  <p>Order that was created.</p>
+     * @param builder function to build the order value
+     * @return Builder
+     */
+
+    public OrderCreatedMessagePayloadBuilder withOrder(
+            Function<com.commercetools.api.models.order.OrderBuilder, com.commercetools.api.models.order.Order> builder) {
+        this.order = builder.apply(com.commercetools.api.models.order.OrderBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Order that was created.</p>
      * @param order value to be set
      * @return Builder
      */

@@ -37,6 +37,18 @@ public class LocalizedLabelBuilder implements Builder<LocalizedLabel> {
     }
 
     /**
+     * set the value to the value using the builder function
+     * @param builder function to build the value value
+     * @return Builder
+     */
+
+    public LocalizedLabelBuilder withValue(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+        this.value = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the value
      * @param value value to be set
      * @return Builder

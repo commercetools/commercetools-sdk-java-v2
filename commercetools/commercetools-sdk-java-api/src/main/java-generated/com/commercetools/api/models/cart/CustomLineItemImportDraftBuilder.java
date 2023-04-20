@@ -66,6 +66,18 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
+     * set the value to the name using the builder function
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public CustomLineItemImportDraftBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the name
      * @param name value to be set
      * @return Builder
@@ -96,6 +108,18 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     public CustomLineItemImportDraftBuilder money(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.money = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>The cost to add to the cart. The amount can be negative.</p>
+     * @param builder function to build the money value
+     * @return Builder
+     */
+
+    public CustomLineItemImportDraftBuilder withMoney(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+        this.money = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
         return this;
     }
 
@@ -189,6 +213,28 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
+     * add the value to the state using the builder function
+     * @param builder function to build the state value
+     * @return Builder
+     */
+
+    public CustomLineItemImportDraftBuilder addState(
+            Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemState> builder) {
+        return plusState(builder.apply(com.commercetools.api.models.order.ItemStateBuilder.of()));
+    }
+
+    /**
+     * set the value to the state using the builder function
+     * @param builder function to build the state value
+     * @return Builder
+     */
+
+    public CustomLineItemImportDraftBuilder setState(
+            Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemState> builder) {
+        return state(builder.apply(com.commercetools.api.models.order.ItemStateBuilder.of()));
+    }
+
+    /**
      * set the value to the taxRate using the builder function
      * @param builder function to build the taxRate value
      * @return Builder
@@ -197,6 +243,18 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     public CustomLineItemImportDraftBuilder taxRate(
             Function<com.commercetools.api.models.tax_category.TaxRateBuilder, com.commercetools.api.models.tax_category.TaxRateBuilder> builder) {
         this.taxRate = builder.apply(com.commercetools.api.models.tax_category.TaxRateBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the taxRate using the builder function
+     * @param builder function to build the taxRate value
+     * @return Builder
+     */
+
+    public CustomLineItemImportDraftBuilder withTaxRate(
+            Function<com.commercetools.api.models.tax_category.TaxRateBuilder, com.commercetools.api.models.tax_category.TaxRate> builder) {
+        this.taxRate = builder.apply(com.commercetools.api.models.tax_category.TaxRateBuilder.of());
         return this;
     }
 
@@ -227,6 +285,19 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
     }
 
     /**
+     * set the value to the taxCategory using the builder function
+     * @param builder function to build the taxCategory value
+     * @return Builder
+     */
+
+    public CustomLineItemImportDraftBuilder withTaxCategory(
+            Function<com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder, com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier> builder) {
+        this.taxCategory = builder
+                .apply(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the taxCategory
      * @param taxCategory value to be set
      * @return Builder
@@ -252,6 +323,18 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
 
     /**
      *  <p>The custom fields.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public CustomLineItemImportDraftBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The custom fields.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -272,6 +355,18 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
             Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder> builder) {
         this.shippingDetails = builder.apply(com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     * set the value to the shippingDetails using the builder function
+     * @param builder function to build the shippingDetails value
+     * @return Builder
+     */
+
+    public CustomLineItemImportDraftBuilder withShippingDetails(
+            Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraft> builder) {
+        this.shippingDetails = builder.apply(com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder.of());
         return this;
     }
 

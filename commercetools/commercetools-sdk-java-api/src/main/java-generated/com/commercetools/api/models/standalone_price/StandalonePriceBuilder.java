@@ -138,6 +138,18 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
+     * @return Builder
+     */
+
+    public StandalonePriceBuilder withLastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -157,6 +169,18 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     public StandalonePriceBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
+     * @return Builder
+     */
+
+    public StandalonePriceBuilder withCreatedBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
 
@@ -243,6 +267,19 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>CustomerGroup for which this Price is valid.</p>
+     * @param builder function to build the customerGroup value
+     * @return Builder
+     */
+
+    public StandalonePriceBuilder withCustomerGroup(
+            Function<com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReference> builder) {
+        this.customerGroup = builder
+                .apply(com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>CustomerGroup for which this Price is valid.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -262,6 +299,18 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     public StandalonePriceBuilder channel(
             Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
         this.channel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Product distribution Channel for which this Price is valid.</p>
+     * @param builder function to build the channel value
+     * @return Builder
+     */
+
+    public StandalonePriceBuilder withChannel(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReference> builder) {
+        this.channel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of());
         return this;
     }
 
@@ -365,6 +414,28 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
+     *  <p>Price tiers if any are defined.</p>
+     * @param builder function to build the tiers value
+     * @return Builder
+     */
+
+    public StandalonePriceBuilder addTiers(
+            Function<com.commercetools.api.models.common.PriceTierBuilder, com.commercetools.api.models.common.PriceTier> builder) {
+        return plusTiers(builder.apply(com.commercetools.api.models.common.PriceTierBuilder.of()));
+    }
+
+    /**
+     *  <p>Price tiers if any are defined.</p>
+     * @param builder function to build the tiers value
+     * @return Builder
+     */
+
+    public StandalonePriceBuilder setTiers(
+            Function<com.commercetools.api.models.common.PriceTierBuilder, com.commercetools.api.models.common.PriceTier> builder) {
+        return tiers(builder.apply(com.commercetools.api.models.common.PriceTierBuilder.of()));
+    }
+
+    /**
      *  <p>Set if a matching ProductDiscount exists. If set, the API uses the <code>discounted</code> value for the LineItem Price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>
      * @param builder function to build the discounted value
      * @return Builder
@@ -373,6 +444,18 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     public StandalonePriceBuilder discounted(
             Function<com.commercetools.api.models.common.DiscountedPriceBuilder, com.commercetools.api.models.common.DiscountedPriceBuilder> builder) {
         this.discounted = builder.apply(com.commercetools.api.models.common.DiscountedPriceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Set if a matching ProductDiscount exists. If set, the API uses the <code>discounted</code> value for the LineItem Price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>
+     * @param builder function to build the discounted value
+     * @return Builder
+     */
+
+    public StandalonePriceBuilder withDiscounted(
+            Function<com.commercetools.api.models.common.DiscountedPriceBuilder, com.commercetools.api.models.common.DiscountedPrice> builder) {
+        this.discounted = builder.apply(com.commercetools.api.models.common.DiscountedPriceBuilder.of());
         return this;
     }
 
@@ -402,6 +485,18 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Custom Fields for the StandalonePrice.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public StandalonePriceBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the StandalonePrice.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -421,6 +516,18 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
             Function<com.commercetools.api.models.standalone_price.StagedStandalonePriceBuilder, com.commercetools.api.models.standalone_price.StagedStandalonePriceBuilder> builder) {
         this.staged = builder.apply(com.commercetools.api.models.standalone_price.StagedStandalonePriceBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Staged changes of the StandalonePrice. Only present if the StandalonePrice has staged changes.</p>
+     * @param builder function to build the staged value
+     * @return Builder
+     */
+
+    public StandalonePriceBuilder withStaged(
+            Function<com.commercetools.api.models.standalone_price.StagedStandalonePriceBuilder, com.commercetools.api.models.standalone_price.StagedStandalonePrice> builder) {
+        this.staged = builder.apply(com.commercetools.api.models.standalone_price.StagedStandalonePriceBuilder.of());
         return this;
     }
 

@@ -123,6 +123,18 @@ public class StateBuilder implements Builder<State> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
+     * @return Builder
+     */
+
+    public StateBuilder withLastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -142,6 +154,18 @@ public class StateBuilder implements Builder<State> {
     public StateBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
+     * @return Builder
+     */
+
+    public StateBuilder withCreatedBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
 
@@ -192,6 +216,18 @@ public class StateBuilder implements Builder<State> {
 
     /**
      *  <p>Name of the State.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public StateBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Name of the State.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -210,6 +246,18 @@ public class StateBuilder implements Builder<State> {
     public StateBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Description of the State.</p>
+     * @param builder function to build the description value
+     * @return Builder
+     */
+
+    public StateBuilder withDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -366,6 +414,36 @@ public class StateBuilder implements Builder<State> {
         this.transitions = new ArrayList<>();
         this.transitions.add(builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <ul>
+     *   <li>list of States of the same <code>type</code> that the current State can be transitioned to. For example, when the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and this list contains the reference to the <em>Shipped</em> <code>OrderState</code>, the transition <em>Initial</em> -&gt; <em>Shipped</em> is allowed.</li>
+     *   <li>if empty, no transitions are allowed from the current State, defining the current State as final for this workflow.</li>
+     *   <li>if not set, the validation is turned off and the current State can be transitioned to any other State of the same <code>type</code> as the current State.</li>
+     *  </ul>
+     * @param builder function to build the transitions value
+     * @return Builder
+     */
+
+    public StateBuilder addTransitions(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReference> builder) {
+        return plusTransitions(builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()));
+    }
+
+    /**
+     *  <ul>
+     *   <li>list of States of the same <code>type</code> that the current State can be transitioned to. For example, when the current State is the <em>Initial</em> State of StateType <code>OrderState</code> and this list contains the reference to the <em>Shipped</em> <code>OrderState</code>, the transition <em>Initial</em> -&gt; <em>Shipped</em> is allowed.</li>
+     *   <li>if empty, no transitions are allowed from the current State, defining the current State as final for this workflow.</li>
+     *   <li>if not set, the validation is turned off and the current State can be transitioned to any other State of the same <code>type</code> as the current State.</li>
+     *  </ul>
+     * @param builder function to build the transitions value
+     * @return Builder
+     */
+
+    public StateBuilder setTransitions(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReference> builder) {
+        return transitions(builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()));
     }
 
     /**

@@ -205,6 +205,18 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the lastModifiedBy value
+     * @return Builder
+     */
+
+    public CustomerBuilder withLastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -224,6 +236,18 @@ public class CustomerBuilder implements Builder<Customer> {
     public CustomerBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
+     * @return Builder
+     */
+
+    public CustomerBuilder withCreatedBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
 
@@ -402,6 +426,28 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
+     *  <p>Addresses used by the Customer.</p>
+     * @param builder function to build the addresses value
+     * @return Builder
+     */
+
+    public CustomerBuilder addAddresses(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
+        return plusAddresses(builder.apply(com.commercetools.api.models.common.AddressBuilder.of()));
+    }
+
+    /**
+     *  <p>Addresses used by the Customer.</p>
+     * @param builder function to build the addresses value
+     * @return Builder
+     */
+
+    public CustomerBuilder setAddresses(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
+        return addresses(builder.apply(com.commercetools.api.models.common.AddressBuilder.of()));
+    }
+
+    /**
      *  <p>ID of the address in <code>addresses</code> used as the default shipping address.</p>
      * @param defaultShippingAddressId value to be set
      * @return Builder
@@ -522,6 +568,19 @@ public class CustomerBuilder implements Builder<Customer> {
 
     /**
      *  <p>CustomerGroup to which the Customer belongs.</p>
+     * @param builder function to build the customerGroup value
+     * @return Builder
+     */
+
+    public CustomerBuilder withCustomerGroup(
+            Function<com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReference> builder) {
+        this.customerGroup = builder
+                .apply(com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>CustomerGroup to which the Customer belongs.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -541,6 +600,18 @@ public class CustomerBuilder implements Builder<Customer> {
     public CustomerBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the Customer.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public CustomerBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of());
         return this;
     }
 
@@ -660,6 +731,36 @@ public class CustomerBuilder implements Builder<Customer> {
         this.stores = new ArrayList<>();
         this.stores.add(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Stores to which the Customer is assigned to.</p>
+     *  <ul>
+     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *  </ul>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public CustomerBuilder addStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
+        return plusStores(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p>Stores to which the Customer is assigned to.</p>
+     *  <ul>
+     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
+     *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
+     *  </ul>
+     * @param builder function to build the stores value
+     * @return Builder
+     */
+
+    public CustomerBuilder setStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
+        return stores(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()));
     }
 
     /**

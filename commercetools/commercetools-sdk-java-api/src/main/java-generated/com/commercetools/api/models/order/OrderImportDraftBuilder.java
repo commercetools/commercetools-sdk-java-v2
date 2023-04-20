@@ -199,6 +199,28 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
+     *  <p>If not given <code>customLineItems</code> must not be empty.</p>
+     * @param builder function to build the lineItems value
+     * @return Builder
+     */
+
+    public OrderImportDraftBuilder addLineItems(
+            Function<com.commercetools.api.models.order.LineItemImportDraftBuilder, com.commercetools.api.models.order.LineItemImportDraft> builder) {
+        return plusLineItems(builder.apply(com.commercetools.api.models.order.LineItemImportDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>If not given <code>customLineItems</code> must not be empty.</p>
+     * @param builder function to build the lineItems value
+     * @return Builder
+     */
+
+    public OrderImportDraftBuilder setLineItems(
+            Function<com.commercetools.api.models.order.LineItemImportDraftBuilder, com.commercetools.api.models.order.LineItemImportDraft> builder) {
+        return lineItems(builder.apply(com.commercetools.api.models.order.LineItemImportDraftBuilder.of()));
+    }
+
+    /**
      *  <p>If not given <code>lineItems</code> must not be empty.</p>
      * @param customLineItems value to be set
      * @return Builder
@@ -268,6 +290,29 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
+     *  <p>If not given <code>lineItems</code> must not be empty.</p>
+     * @param builder function to build the customLineItems value
+     * @return Builder
+     */
+
+    public OrderImportDraftBuilder addCustomLineItems(
+            Function<com.commercetools.api.models.cart.CustomLineItemImportDraftBuilder, com.commercetools.api.models.cart.CustomLineItemImportDraft> builder) {
+        return plusCustomLineItems(
+            builder.apply(com.commercetools.api.models.cart.CustomLineItemImportDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>If not given <code>lineItems</code> must not be empty.</p>
+     * @param builder function to build the customLineItems value
+     * @return Builder
+     */
+
+    public OrderImportDraftBuilder setCustomLineItems(
+            Function<com.commercetools.api.models.cart.CustomLineItemImportDraftBuilder, com.commercetools.api.models.cart.CustomLineItemImportDraft> builder) {
+        return customLineItems(builder.apply(com.commercetools.api.models.cart.CustomLineItemImportDraftBuilder.of()));
+    }
+
+    /**
      * set the value to the totalPrice using the builder function
      * @param builder function to build the totalPrice value
      * @return Builder
@@ -276,6 +321,18 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     public OrderImportDraftBuilder totalPrice(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.totalPrice = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the totalPrice using the builder function
+     * @param builder function to build the totalPrice value
+     * @return Builder
+     */
+
+    public OrderImportDraftBuilder withTotalPrice(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+        this.totalPrice = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
         return this;
     }
 
@@ -304,6 +361,18 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>Order Import does not support calculation of taxes. When setting the draft the taxedPrice is to be provided.</p>
+     * @param builder function to build the taxedPrice value
+     * @return Builder
+     */
+
+    public OrderImportDraftBuilder withTaxedPrice(
+            Function<com.commercetools.api.models.cart.TaxedPriceDraftBuilder, com.commercetools.api.models.cart.TaxedPriceDraft> builder) {
+        this.taxedPrice = builder.apply(com.commercetools.api.models.cart.TaxedPriceDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Order Import does not support calculation of taxes. When setting the draft the taxedPrice is to be provided.</p>
      * @param taxedPrice value to be set
      * @return Builder
      */
@@ -323,6 +392,18 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     public OrderImportDraftBuilder shippingAddress(
             Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddressBuilder> builder) {
         this.shippingAddress = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the shippingAddress using the builder function
+     * @param builder function to build the shippingAddress value
+     * @return Builder
+     */
+
+    public OrderImportDraftBuilder withShippingAddress(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddress> builder) {
+        this.shippingAddress = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of());
         return this;
     }
 
@@ -351,6 +432,18 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
+     * set the value to the billingAddress using the builder function
+     * @param builder function to build the billingAddress value
+     * @return Builder
+     */
+
+    public OrderImportDraftBuilder withBillingAddress(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddress> builder) {
+        this.billingAddress = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the billingAddress
      * @param billingAddress value to be set
      * @return Builder
@@ -373,6 +466,19 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
         this.customerGroup = builder
                 .apply(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Set when the customer is set and the customer is a member of a customer group. Used for product variant price selection.</p>
+     * @param builder function to build the customerGroup value
+     * @return Builder
+     */
+
+    public OrderImportDraftBuilder withCustomerGroup(
+            Function<com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder, com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier> builder) {
+        this.customerGroup = builder
+                .apply(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder.of());
         return this;
     }
 
@@ -420,6 +526,18 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     public OrderImportDraftBuilder state(
             Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
         this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>This reference can point to a state in a custom workflow.</p>
+     * @param builder function to build the state value
+     * @return Builder
+     */
+
+    public OrderImportDraftBuilder withState(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReference> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of());
         return this;
     }
 
@@ -473,6 +591,18 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
 
     /**
      *  <p>Set if the ShippingMethod is set.</p>
+     * @param builder function to build the shippingInfo value
+     * @return Builder
+     */
+
+    public OrderImportDraftBuilder withShippingInfo(
+            Function<com.commercetools.api.models.order.ShippingInfoImportDraftBuilder, com.commercetools.api.models.order.ShippingInfoImportDraft> builder) {
+        this.shippingInfo = builder.apply(com.commercetools.api.models.order.ShippingInfoImportDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Set if the ShippingMethod is set.</p>
      * @param shippingInfo value to be set
      * @return Builder
      */
@@ -492,6 +622,18 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     public OrderImportDraftBuilder paymentInfo(
             Function<com.commercetools.api.models.order.PaymentInfoBuilder, com.commercetools.api.models.order.PaymentInfoBuilder> builder) {
         this.paymentInfo = builder.apply(com.commercetools.api.models.order.PaymentInfoBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the paymentInfo using the builder function
+     * @param builder function to build the paymentInfo value
+     * @return Builder
+     */
+
+    public OrderImportDraftBuilder withPaymentInfo(
+            Function<com.commercetools.api.models.order.PaymentInfoBuilder, com.commercetools.api.models.order.PaymentInfo> builder) {
+        this.paymentInfo = builder.apply(com.commercetools.api.models.order.PaymentInfoBuilder.of());
         return this;
     }
 
@@ -527,6 +669,18 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     public OrderImportDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>The custom fields.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public OrderImportDraftBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
         return this;
     }
 
@@ -635,6 +789,28 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
+     *  <p>Contains addresses for orders with multiple shipping addresses.</p>
+     * @param builder function to build the itemShippingAddresses value
+     * @return Builder
+     */
+
+    public OrderImportDraftBuilder addItemShippingAddresses(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddress> builder) {
+        return plusItemShippingAddresses(builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()));
+    }
+
+    /**
+     *  <p>Contains addresses for orders with multiple shipping addresses.</p>
+     * @param builder function to build the itemShippingAddresses value
+     * @return Builder
+     */
+
+    public OrderImportDraftBuilder setItemShippingAddresses(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddress> builder) {
+        return itemShippingAddresses(builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of()));
+    }
+
+    /**
      *  <p>The Business Unit the Cart belongs to.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
@@ -645,6 +821,19 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
         this.businessUnit = builder
                 .apply(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>The Business Unit the Cart belongs to.</p>
+     * @param builder function to build the businessUnit value
+     * @return Builder
+     */
+
+    public OrderImportDraftBuilder withBusinessUnit(
+            Function<com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder, com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier> builder) {
+        this.businessUnit = builder
+                .apply(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder.of());
         return this;
     }
 
@@ -669,6 +858,18 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     public OrderImportDraftBuilder store(
             Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifierBuilder> builder) {
         this.store = builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the store using the builder function
+     * @param builder function to build the store value
+     * @return Builder
+     */
+
+    public OrderImportDraftBuilder withStore(
+            Function<com.commercetools.api.models.store.StoreResourceIdentifierBuilder, com.commercetools.api.models.store.StoreResourceIdentifier> builder) {
+        this.store = builder.apply(com.commercetools.api.models.store.StoreResourceIdentifierBuilder.of());
         return this;
     }
 

@@ -123,6 +123,28 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
     }
 
     /**
+     * add the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public ChangeEnumValueOrderChangeBuilder addNextValue(
+            Function<com.commercetools.history.models.change_value.EnumValueBuilder, com.commercetools.history.models.change_value.EnumValue> builder) {
+        return plusNextValue(builder.apply(com.commercetools.history.models.change_value.EnumValueBuilder.of()));
+    }
+
+    /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public ChangeEnumValueOrderChangeBuilder setNextValue(
+            Function<com.commercetools.history.models.change_value.EnumValueBuilder, com.commercetools.history.models.change_value.EnumValue> builder) {
+        return nextValue(builder.apply(com.commercetools.history.models.change_value.EnumValueBuilder.of()));
+    }
+
+    /**
      * set values to the previousValue
      * @param previousValue value to be set
      * @return Builder
@@ -189,6 +211,28 @@ public class ChangeEnumValueOrderChangeBuilder implements Builder<ChangeEnumValu
         this.previousValue
                 .add(builder.apply(com.commercetools.history.models.change_value.EnumValueBuilder.of()).build());
         return this;
+    }
+
+    /**
+     * add the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public ChangeEnumValueOrderChangeBuilder addPreviousValue(
+            Function<com.commercetools.history.models.change_value.EnumValueBuilder, com.commercetools.history.models.change_value.EnumValue> builder) {
+        return plusPreviousValue(builder.apply(com.commercetools.history.models.change_value.EnumValueBuilder.of()));
+    }
+
+    /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public ChangeEnumValueOrderChangeBuilder setPreviousValue(
+            Function<com.commercetools.history.models.change_value.EnumValueBuilder, com.commercetools.history.models.change_value.EnumValue> builder) {
+        return previousValue(builder.apply(com.commercetools.history.models.change_value.EnumValueBuilder.of()));
     }
 
     /**

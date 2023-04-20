@@ -85,6 +85,18 @@ public class TransactionBuilder implements Builder<Transaction> {
     }
 
     /**
+     * set the value to the amount using the builder function
+     * @param builder function to build the amount value
+     * @return Builder
+     */
+
+    public TransactionBuilder withAmount(
+            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.Money> builder) {
+        this.amount = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the amount
      * @param amount value to be set
      * @return Builder

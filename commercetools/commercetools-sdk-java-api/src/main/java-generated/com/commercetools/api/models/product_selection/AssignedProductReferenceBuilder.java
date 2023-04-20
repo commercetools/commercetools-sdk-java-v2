@@ -46,6 +46,18 @@ public class AssignedProductReferenceBuilder implements Builder<AssignedProductR
 
     /**
      *  <p>Reference to a Product that is assigned to the Product Selection.</p>
+     * @param builder function to build the product value
+     * @return Builder
+     */
+
+    public AssignedProductReferenceBuilder withProduct(
+            Function<com.commercetools.api.models.product.ProductReferenceBuilder, com.commercetools.api.models.product.ProductReference> builder) {
+        this.product = builder.apply(com.commercetools.api.models.product.ProductReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Reference to a Product that is assigned to the Product Selection.</p>
      * @param product value to be set
      * @return Builder
      */
@@ -58,7 +70,7 @@ public class AssignedProductReferenceBuilder implements Builder<AssignedProductR
 
     /**
      *  <p>The Variants of the Product that are included from the Product Selection.</p>
-     *  <p>This field may exist only for the IndividualProductSelectionType. In absence of this field, all Variants are deemed to be included.</p>
+     *  <p>This field may exist only in Product Selections with <code>Individual</code> ProductSelectionMode. In absence of this field, all Variants are deemed to be included.</p>
      * @param variantSelection value to be set
      * @return Builder
      */
@@ -71,7 +83,7 @@ public class AssignedProductReferenceBuilder implements Builder<AssignedProductR
 
     /**
      *  <p>The Variants of the Product that are included from the Product Selection.</p>
-     *  <p>This field may exist only for the IndividualProductSelectionType. In absence of this field, all Variants are deemed to be included.</p>
+     *  <p>This field may exist only in Product Selections with <code>Individual</code> ProductSelectionMode. In absence of this field, all Variants are deemed to be included.</p>
      * @param builder function to build the variantSelection value
      * @return Builder
      */
@@ -86,7 +98,7 @@ public class AssignedProductReferenceBuilder implements Builder<AssignedProductR
 
     /**
      *  <p>The Variants of the Product that are excluded from the Product Selection.</p>
-     *  <p>This field may exist only for the IndividualExclusionProductSelectionType. In absence of this field, all Variants are deemed to be excluded.</p>
+     *  <p>This field may exist only in Product Selections with <code>IndividualExclusion</code> ProductSelectionMode. In absence of this field, all Variants are deemed to be excluded.</p>
      * @param builder function to build the variantExclusion value
      * @return Builder
      */
@@ -101,7 +113,21 @@ public class AssignedProductReferenceBuilder implements Builder<AssignedProductR
 
     /**
      *  <p>The Variants of the Product that are excluded from the Product Selection.</p>
-     *  <p>This field may exist only for the IndividualExclusionProductSelectionType. In absence of this field, all Variants are deemed to be excluded.</p>
+     *  <p>This field may exist only in Product Selections with <code>IndividualExclusion</code> ProductSelectionMode. In absence of this field, all Variants are deemed to be excluded.</p>
+     * @param builder function to build the variantExclusion value
+     * @return Builder
+     */
+
+    public AssignedProductReferenceBuilder withVariantExclusion(
+            Function<com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder, com.commercetools.api.models.product_selection.ProductVariantExclusion> builder) {
+        this.variantExclusion = builder
+                .apply(com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The Variants of the Product that are excluded from the Product Selection.</p>
+     *  <p>This field may exist only in Product Selections with <code>IndividualExclusion</code> ProductSelectionMode. In absence of this field, all Variants are deemed to be excluded.</p>
      * @param variantExclusion value to be set
      * @return Builder
      */
@@ -123,7 +149,7 @@ public class AssignedProductReferenceBuilder implements Builder<AssignedProductR
 
     /**
      *  <p>The Variants of the Product that are included from the Product Selection.</p>
-     *  <p>This field may exist only for the IndividualProductSelectionType. In absence of this field, all Variants are deemed to be included.</p>
+     *  <p>This field may exist only in Product Selections with <code>Individual</code> ProductSelectionMode. In absence of this field, all Variants are deemed to be included.</p>
      * @return variantSelection
      */
 
@@ -134,7 +160,7 @@ public class AssignedProductReferenceBuilder implements Builder<AssignedProductR
 
     /**
      *  <p>The Variants of the Product that are excluded from the Product Selection.</p>
-     *  <p>This field may exist only for the IndividualExclusionProductSelectionType. In absence of this field, all Variants are deemed to be excluded.</p>
+     *  <p>This field may exist only in Product Selections with <code>IndividualExclusion</code> ProductSelectionMode. In absence of this field, all Variants are deemed to be excluded.</p>
      * @return variantExclusion
      */
 

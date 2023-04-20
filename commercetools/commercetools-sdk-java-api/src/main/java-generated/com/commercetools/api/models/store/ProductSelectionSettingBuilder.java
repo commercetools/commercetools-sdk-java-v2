@@ -43,6 +43,19 @@ public class ProductSelectionSettingBuilder implements Builder<ProductSelectionS
 
     /**
      *  <p>Reference to a ProductSelection.</p>
+     * @param builder function to build the productSelection value
+     * @return Builder
+     */
+
+    public ProductSelectionSettingBuilder withProductSelection(
+            Function<com.commercetools.api.models.product_selection.ProductSelectionReferenceBuilder, com.commercetools.api.models.product_selection.ProductSelectionReference> builder) {
+        this.productSelection = builder
+                .apply(com.commercetools.api.models.product_selection.ProductSelectionReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Reference to a ProductSelection.</p>
      * @param productSelection value to be set
      * @return Builder
      */

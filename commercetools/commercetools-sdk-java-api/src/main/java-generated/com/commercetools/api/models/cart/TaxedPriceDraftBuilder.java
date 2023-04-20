@@ -44,6 +44,18 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
 
     /**
      *  <p>Total net price of the Line Item or Custom Line Item.</p>
+     * @param builder function to build the totalNet value
+     * @return Builder
+     */
+
+    public TaxedPriceDraftBuilder withTotalNet(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+        this.totalNet = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Total net price of the Line Item or Custom Line Item.</p>
      * @param totalNet value to be set
      * @return Builder
      */
@@ -62,6 +74,18 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
     public TaxedPriceDraftBuilder totalGross(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.totalGross = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Total gross price of the Line Item or Custom Line Item.</p>
+     * @param builder function to build the totalGross value
+     * @return Builder
+     */
+
+    public TaxedPriceDraftBuilder withTotalGross(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+        this.totalGross = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
         return this;
     }
 
@@ -145,6 +169,30 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
         this.taxPortions = new ArrayList<>();
         this.taxPortions.add(builder.apply(com.commercetools.api.models.cart.TaxPortionDraftBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Taxable portions added to the <code>totalGross</code>.</p>
+     *  <p>Calculated from the TaxRates.</p>
+     * @param builder function to build the taxPortions value
+     * @return Builder
+     */
+
+    public TaxedPriceDraftBuilder addTaxPortions(
+            Function<com.commercetools.api.models.cart.TaxPortionDraftBuilder, com.commercetools.api.models.cart.TaxPortionDraft> builder) {
+        return plusTaxPortions(builder.apply(com.commercetools.api.models.cart.TaxPortionDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>Taxable portions added to the <code>totalGross</code>.</p>
+     *  <p>Calculated from the TaxRates.</p>
+     * @param builder function to build the taxPortions value
+     * @return Builder
+     */
+
+    public TaxedPriceDraftBuilder setTaxPortions(
+            Function<com.commercetools.api.models.cart.TaxPortionDraftBuilder, com.commercetools.api.models.cart.TaxPortionDraft> builder) {
+        return taxPortions(builder.apply(com.commercetools.api.models.cart.TaxPortionDraftBuilder.of()));
     }
 
     /**

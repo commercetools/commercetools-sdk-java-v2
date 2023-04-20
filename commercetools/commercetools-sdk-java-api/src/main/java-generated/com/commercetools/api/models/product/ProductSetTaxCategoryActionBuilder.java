@@ -42,6 +42,19 @@ public class ProductSetTaxCategoryActionBuilder implements Builder<ProductSetTax
 
     /**
      *  <p>The Tax Category to set. If empty, any existing value will be removed.</p>
+     * @param builder function to build the taxCategory value
+     * @return Builder
+     */
+
+    public ProductSetTaxCategoryActionBuilder withTaxCategory(
+            Function<com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder, com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier> builder) {
+        this.taxCategory = builder
+                .apply(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The Tax Category to set. If empty, any existing value will be removed.</p>
      * @param taxCategory value to be set
      * @return Builder
      */

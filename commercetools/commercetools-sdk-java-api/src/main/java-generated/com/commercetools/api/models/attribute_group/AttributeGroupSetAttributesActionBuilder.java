@@ -95,6 +95,29 @@ public class AttributeGroupSetAttributesActionBuilder implements Builder<Attribu
 
     /**
      *  <p>New unique values to set.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public AttributeGroupSetAttributesActionBuilder addAttributes(
+            Function<com.commercetools.api.models.attribute_group.AttributeReferenceBuilder, com.commercetools.api.models.attribute_group.AttributeReference> builder) {
+        return plusAttributes(
+            builder.apply(com.commercetools.api.models.attribute_group.AttributeReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p>New unique values to set.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public AttributeGroupSetAttributesActionBuilder setAttributes(
+            Function<com.commercetools.api.models.attribute_group.AttributeReferenceBuilder, com.commercetools.api.models.attribute_group.AttributeReference> builder) {
+        return attributes(builder.apply(com.commercetools.api.models.attribute_group.AttributeReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p>New unique values to set.</p>
      * @return attributes
      */
 

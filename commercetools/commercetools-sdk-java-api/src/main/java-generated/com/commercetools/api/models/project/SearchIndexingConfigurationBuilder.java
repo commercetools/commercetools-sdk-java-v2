@@ -45,6 +45,19 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
 
     /**
      *  <p>Configuration for the Product Projection Search and Product Suggestions endpoints.</p>
+     * @param builder function to build the products value
+     * @return Builder
+     */
+
+    public SearchIndexingConfigurationBuilder withProducts(
+            Function<com.commercetools.api.models.project.SearchIndexingConfigurationValuesBuilder, com.commercetools.api.models.project.SearchIndexingConfigurationValues> builder) {
+        this.products = builder
+                .apply(com.commercetools.api.models.project.SearchIndexingConfigurationValuesBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Configuration for the Product Projection Search and Product Suggestions endpoints.</p>
      * @param products value to be set
      * @return Builder
      */
@@ -65,6 +78,18 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
             Function<com.commercetools.api.models.project.SearchIndexingConfigurationValuesBuilder, com.commercetools.api.models.project.SearchIndexingConfigurationValuesBuilder> builder) {
         this.orders = builder.apply(com.commercetools.api.models.project.SearchIndexingConfigurationValuesBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Configuration for the Order Search feature.</p>
+     * @param builder function to build the orders value
+     * @return Builder
+     */
+
+    public SearchIndexingConfigurationBuilder withOrders(
+            Function<com.commercetools.api.models.project.SearchIndexingConfigurationValuesBuilder, com.commercetools.api.models.project.SearchIndexingConfigurationValues> builder) {
+        this.orders = builder.apply(com.commercetools.api.models.project.SearchIndexingConfigurationValuesBuilder.of());
         return this;
     }
 

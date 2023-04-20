@@ -61,6 +61,18 @@ public class ChangeCustomLineItemQuantityChangeBuilder implements Builder<Change
     }
 
     /**
+     * set the value to the customLineItem using the builder function
+     * @param builder function to build the customLineItem value
+     * @return Builder
+     */
+
+    public ChangeCustomLineItemQuantityChangeBuilder withCustomLineItem(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+        this.customLineItem = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the customLineItem
      * @param customLineItem value to be set
      * @return Builder

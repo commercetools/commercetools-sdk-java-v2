@@ -126,6 +126,18 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @param builder function to build the lastModifiedBy value
+     * @return Builder
+     */
+
+    public ParcelItemsUpdatedMessageBuilder withLastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value of <code>createdBy</code>.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -145,6 +157,18 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     public ParcelItemsUpdatedMessageBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
+     * @return Builder
+     */
+
+    public ParcelItemsUpdatedMessageBuilder withCreatedBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
 
@@ -216,6 +240,19 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
         this.resourceUserProvidedIdentifiers = builder
                 .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @param builder function to build the resourceUserProvidedIdentifiers value
+     * @return Builder
+     */
+
+    public ParcelItemsUpdatedMessageBuilder withResourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiers> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of());
         return this;
     }
 
@@ -319,6 +356,28 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
     }
 
     /**
+     *  <p>Delivery Items after the Set Parcel Items update action.</p>
+     * @param builder function to build the items value
+     * @return Builder
+     */
+
+    public ParcelItemsUpdatedMessageBuilder addItems(
+            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItem> builder) {
+        return plusItems(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()));
+    }
+
+    /**
+     *  <p>Delivery Items after the Set Parcel Items update action.</p>
+     * @param builder function to build the items value
+     * @return Builder
+     */
+
+    public ParcelItemsUpdatedMessageBuilder setItems(
+            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItem> builder) {
+        return items(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()));
+    }
+
+    /**
      *  <p>Delivery Items before the Set Parcel Items update action.</p>
      * @param oldItems value to be set
      * @return Builder
@@ -383,6 +442,28 @@ public class ParcelItemsUpdatedMessageBuilder implements Builder<ParcelItemsUpda
         this.oldItems = new ArrayList<>();
         this.oldItems.add(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Delivery Items before the Set Parcel Items update action.</p>
+     * @param builder function to build the oldItems value
+     * @return Builder
+     */
+
+    public ParcelItemsUpdatedMessageBuilder addOldItems(
+            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItem> builder) {
+        return plusOldItems(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()));
+    }
+
+    /**
+     *  <p>Delivery Items before the Set Parcel Items update action.</p>
+     * @param builder function to build the oldItems value
+     * @return Builder
+     */
+
+    public ParcelItemsUpdatedMessageBuilder setOldItems(
+            Function<com.commercetools.api.models.order.DeliveryItemBuilder, com.commercetools.api.models.order.DeliveryItem> builder) {
+        return oldItems(builder.apply(com.commercetools.api.models.order.DeliveryItemBuilder.of()));
     }
 
     /**

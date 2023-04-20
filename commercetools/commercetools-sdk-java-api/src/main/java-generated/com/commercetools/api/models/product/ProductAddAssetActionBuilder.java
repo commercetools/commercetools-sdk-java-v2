@@ -85,6 +85,18 @@ public class ProductAddAssetActionBuilder implements Builder<ProductAddAssetActi
 
     /**
      *  <p>Value to append.</p>
+     * @param builder function to build the asset value
+     * @return Builder
+     */
+
+    public ProductAddAssetActionBuilder withAsset(
+            Function<com.commercetools.api.models.common.AssetDraftBuilder, com.commercetools.api.models.common.AssetDraft> builder) {
+        this.asset = builder.apply(com.commercetools.api.models.common.AssetDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to append.</p>
      * @param asset value to be set
      * @return Builder
      */

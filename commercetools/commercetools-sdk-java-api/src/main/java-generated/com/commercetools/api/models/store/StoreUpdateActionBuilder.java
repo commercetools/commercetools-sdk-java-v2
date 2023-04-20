@@ -86,4 +86,5 @@ public class StoreUpdateActionBuilder {
     public static StoreUpdateActionBuilder of() {
         return new StoreUpdateActionBuilder();
     }
+
 }

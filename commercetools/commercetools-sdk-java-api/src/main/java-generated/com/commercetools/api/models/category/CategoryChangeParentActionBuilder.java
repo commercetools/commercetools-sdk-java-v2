@@ -39,6 +39,18 @@ public class CategoryChangeParentActionBuilder implements Builder<CategoryChange
 
     /**
      *  <p>New value to set as parent.</p>
+     * @param builder function to build the parent value
+     * @return Builder
+     */
+
+    public CategoryChangeParentActionBuilder withParent(
+            Function<com.commercetools.api.models.category.CategoryResourceIdentifierBuilder, com.commercetools.api.models.category.CategoryResourceIdentifier> builder) {
+        this.parent = builder.apply(com.commercetools.api.models.category.CategoryResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>New value to set as parent.</p>
      * @param parent value to be set
      * @return Builder
      */

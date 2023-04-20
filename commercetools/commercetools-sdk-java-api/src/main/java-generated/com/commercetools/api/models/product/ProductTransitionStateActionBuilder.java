@@ -43,6 +43,18 @@ public class ProductTransitionStateActionBuilder implements Builder<ProductTrans
 
     /**
      *  <p>The State to transition to. If there is no existing State, this must be an initial State.</p>
+     * @param builder function to build the state value
+     * @return Builder
+     */
+
+    public ProductTransitionStateActionBuilder withState(
+            Function<com.commercetools.api.models.state.StateResourceIdentifierBuilder, com.commercetools.api.models.state.StateResourceIdentifier> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The State to transition to. If there is no existing State, this must be an initial State.</p>
      * @param state value to be set
      * @return Builder
      */

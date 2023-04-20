@@ -30,4 +30,5 @@ public class ExtensionDestinationBuilder {
     public static ExtensionDestinationBuilder of() {
         return new ExtensionDestinationBuilder();
     }
+
 }

@@ -43,6 +43,18 @@ public class ProductSetSearchKeywordsActionBuilder implements Builder<ProductSet
 
     /**
      *  <p>Value to set.</p>
+     * @param builder function to build the searchKeywords value
+     * @return Builder
+     */
+
+    public ProductSetSearchKeywordsActionBuilder withSearchKeywords(
+            Function<com.commercetools.api.models.product.SearchKeywordsBuilder, com.commercetools.api.models.product.SearchKeywords> builder) {
+        this.searchKeywords = builder.apply(com.commercetools.api.models.product.SearchKeywordsBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to set.</p>
      * @param searchKeywords value to be set
      * @return Builder
      */

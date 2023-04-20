@@ -106,6 +106,28 @@ public class StagedOrderImportLineItemStateActionBuilder implements Builder<Stag
     }
 
     /**
+     * add the value to the state using the builder function
+     * @param builder function to build the state value
+     * @return Builder
+     */
+
+    public StagedOrderImportLineItemStateActionBuilder addState(
+            Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemState> builder) {
+        return plusState(builder.apply(com.commercetools.api.models.order.ItemStateBuilder.of()));
+    }
+
+    /**
+     * set the value to the state using the builder function
+     * @param builder function to build the state value
+     * @return Builder
+     */
+
+    public StagedOrderImportLineItemStateActionBuilder setState(
+            Function<com.commercetools.api.models.order.ItemStateBuilder, com.commercetools.api.models.order.ItemState> builder) {
+        return state(builder.apply(com.commercetools.api.models.order.ItemStateBuilder.of()));
+    }
+
+    /**
      * value of lineItemId}
      * @return lineItemId
      */

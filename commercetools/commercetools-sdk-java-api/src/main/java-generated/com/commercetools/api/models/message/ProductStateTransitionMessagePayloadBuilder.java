@@ -41,6 +41,18 @@ public class ProductStateTransitionMessagePayloadBuilder implements Builder<Prod
 
     /**
      *  <p>Product State after the Transition State update action.</p>
+     * @param builder function to build the state value
+     * @return Builder
+     */
+
+    public ProductStateTransitionMessagePayloadBuilder withState(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReference> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Product State after the Transition State update action.</p>
      * @param state value to be set
      * @return Builder
      */

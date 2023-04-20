@@ -259,6 +259,30 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
+     *  <p>In case of unresolved status this array will show the unresolved references</p>
+     * @param builder function to build the unresolvedReferences value
+     * @return Builder
+     */
+
+    public ImportOperationBuilder addUnresolvedReferences(
+            Function<com.commercetools.importapi.models.common.UnresolvedReferencesBuilder, com.commercetools.importapi.models.common.UnresolvedReferences> builder) {
+        return plusUnresolvedReferences(
+            builder.apply(com.commercetools.importapi.models.common.UnresolvedReferencesBuilder.of()));
+    }
+
+    /**
+     *  <p>In case of unresolved status this array will show the unresolved references</p>
+     * @param builder function to build the unresolvedReferences value
+     * @return Builder
+     */
+
+    public ImportOperationBuilder setUnresolvedReferences(
+            Function<com.commercetools.importapi.models.common.UnresolvedReferencesBuilder, com.commercetools.importapi.models.common.UnresolvedReferences> builder) {
+        return unresolvedReferences(
+            builder.apply(com.commercetools.importapi.models.common.UnresolvedReferencesBuilder.of()));
+    }
+
+    /**
      *  <p>The time when the ImportOperation was created.</p>
      * @param createdAt value to be set
      * @return Builder

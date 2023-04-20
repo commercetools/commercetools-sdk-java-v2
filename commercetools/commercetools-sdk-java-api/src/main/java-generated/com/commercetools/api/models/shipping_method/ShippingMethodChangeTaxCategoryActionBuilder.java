@@ -40,6 +40,19 @@ public class ShippingMethodChangeTaxCategoryActionBuilder implements Builder<Shi
 
     /**
      *  <p>Value to set.</p>
+     * @param builder function to build the taxCategory value
+     * @return Builder
+     */
+
+    public ShippingMethodChangeTaxCategoryActionBuilder withTaxCategory(
+            Function<com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder, com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier> builder) {
+        this.taxCategory = builder
+                .apply(com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to set.</p>
      * @param taxCategory value to be set
      * @return Builder
      */

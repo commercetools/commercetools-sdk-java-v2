@@ -38,6 +38,18 @@ public class ReviewCreatedMessagePayloadBuilder implements Builder<ReviewCreated
 
     /**
      *  <p>Review that was created.</p>
+     * @param builder function to build the review value
+     * @return Builder
+     */
+
+    public ReviewCreatedMessagePayloadBuilder withReview(
+            Function<com.commercetools.api.models.review.ReviewBuilder, com.commercetools.api.models.review.Review> builder) {
+        this.review = builder.apply(com.commercetools.api.models.review.ReviewBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Review that was created.</p>
      * @param review value to be set
      * @return Builder
      */

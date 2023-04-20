@@ -40,6 +40,18 @@ public class ProductDiscountSetDescriptionActionBuilder implements Builder<Produ
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param builder function to build the description value
+     * @return Builder
+     */
+
+    public ProductDiscountSetDescriptionActionBuilder withDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param description value to be set
      * @return Builder
      */

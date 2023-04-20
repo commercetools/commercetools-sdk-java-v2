@@ -42,6 +42,19 @@ public class CartSetCustomerGroupActionBuilder implements Builder<CartSetCustome
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
+     * @param builder function to build the customerGroup value
+     * @return Builder
+     */
+
+    public CartSetCustomerGroupActionBuilder withCustomerGroup(
+            Function<com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder, com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier> builder) {
+        this.customerGroup = builder
+                .apply(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to set. If empty, any existing value is removed.</p>
      * @param customerGroup value to be set
      * @return Builder
      */

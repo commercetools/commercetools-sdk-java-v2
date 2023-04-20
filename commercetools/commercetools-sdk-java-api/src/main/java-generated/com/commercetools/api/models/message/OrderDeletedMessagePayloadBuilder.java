@@ -38,6 +38,18 @@ public class OrderDeletedMessagePayloadBuilder implements Builder<OrderDeletedMe
 
     /**
      *  <p>Order that has been deleted.</p>
+     * @param builder function to build the order value
+     * @return Builder
+     */
+
+    public OrderDeletedMessagePayloadBuilder withOrder(
+            Function<com.commercetools.api.models.order.OrderBuilder, com.commercetools.api.models.order.Order> builder) {
+        this.order = builder.apply(com.commercetools.api.models.order.OrderBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Order that has been deleted.</p>
      * @param order value to be set
      * @return Builder
      */

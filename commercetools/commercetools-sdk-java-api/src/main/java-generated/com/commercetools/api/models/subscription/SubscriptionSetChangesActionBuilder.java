@@ -97,6 +97,28 @@ public class SubscriptionSetChangesActionBuilder implements Builder<Subscription
 
     /**
      *  <p>Value to set. Can only be unset if <code>messages</code> is set.</p>
+     * @param builder function to build the changes value
+     * @return Builder
+     */
+
+    public SubscriptionSetChangesActionBuilder addChanges(
+            Function<com.commercetools.api.models.subscription.ChangeSubscriptionBuilder, com.commercetools.api.models.subscription.ChangeSubscription> builder) {
+        return plusChanges(builder.apply(com.commercetools.api.models.subscription.ChangeSubscriptionBuilder.of()));
+    }
+
+    /**
+     *  <p>Value to set. Can only be unset if <code>messages</code> is set.</p>
+     * @param builder function to build the changes value
+     * @return Builder
+     */
+
+    public SubscriptionSetChangesActionBuilder setChanges(
+            Function<com.commercetools.api.models.subscription.ChangeSubscriptionBuilder, com.commercetools.api.models.subscription.ChangeSubscription> builder) {
+        return changes(builder.apply(com.commercetools.api.models.subscription.ChangeSubscriptionBuilder.of()));
+    }
+
+    /**
+     *  <p>Value to set. Can only be unset if <code>messages</code> is set.</p>
      * @return changes
      */
 

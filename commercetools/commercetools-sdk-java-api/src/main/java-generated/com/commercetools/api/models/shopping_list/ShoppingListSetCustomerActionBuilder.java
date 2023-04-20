@@ -41,6 +41,18 @@ public class ShoppingListSetCustomerActionBuilder implements Builder<ShoppingLis
 
     /**
      *  <p>The Customer the ShoppingList should be associated to. If empty, any existing value will be removed.</p>
+     * @param builder function to build the customer value
+     * @return Builder
+     */
+
+    public ShoppingListSetCustomerActionBuilder withCustomer(
+            Function<com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder, com.commercetools.api.models.customer.CustomerResourceIdentifier> builder) {
+        this.customer = builder.apply(com.commercetools.api.models.customer.CustomerResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The Customer the ShoppingList should be associated to. If empty, any existing value will be removed.</p>
      * @param customer value to be set
      * @return Builder
      */

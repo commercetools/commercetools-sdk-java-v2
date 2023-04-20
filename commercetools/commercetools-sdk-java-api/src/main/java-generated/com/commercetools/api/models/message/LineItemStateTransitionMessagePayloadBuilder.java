@@ -83,6 +83,18 @@ public class LineItemStateTransitionMessagePayloadBuilder implements Builder<Lin
 
     /**
      *  <p>State the Line Item was transitioned from.</p>
+     * @param builder function to build the fromState value
+     * @return Builder
+     */
+
+    public LineItemStateTransitionMessagePayloadBuilder withFromState(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReference> builder) {
+        this.fromState = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>State the Line Item was transitioned from.</p>
      * @param fromState value to be set
      * @return Builder
      */
@@ -102,6 +114,18 @@ public class LineItemStateTransitionMessagePayloadBuilder implements Builder<Lin
     public LineItemStateTransitionMessagePayloadBuilder toState(
             Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
         this.toState = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>State the Line Item was transitioned to.</p>
+     * @param builder function to build the toState value
+     * @return Builder
+     */
+
+    public LineItemStateTransitionMessagePayloadBuilder withToState(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReference> builder) {
+        this.toState = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of());
         return this;
     }
 

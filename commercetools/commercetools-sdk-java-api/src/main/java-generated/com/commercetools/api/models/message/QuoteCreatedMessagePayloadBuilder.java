@@ -38,6 +38,18 @@ public class QuoteCreatedMessagePayloadBuilder implements Builder<QuoteCreatedMe
 
     /**
      *  <p>Quote that was created.</p>
+     * @param builder function to build the quote value
+     * @return Builder
+     */
+
+    public QuoteCreatedMessagePayloadBuilder withQuote(
+            Function<com.commercetools.api.models.quote.QuoteBuilder, com.commercetools.api.models.quote.Quote> builder) {
+        this.quote = builder.apply(com.commercetools.api.models.quote.QuoteBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Quote that was created.</p>
      * @param quote value to be set
      * @return Builder
      */

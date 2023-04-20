@@ -46,6 +46,18 @@ public class ParcelAddedToDeliveryMessagePayloadBuilder implements Builder<Parce
 
     /**
      *  <p>Unique identifier of the Delivery.</p>
+     * @param builder function to build the delivery value
+     * @return Builder
+     */
+
+    public ParcelAddedToDeliveryMessagePayloadBuilder withDelivery(
+            Function<com.commercetools.api.models.order.DeliveryBuilder, com.commercetools.api.models.order.Delivery> builder) {
+        this.delivery = builder.apply(com.commercetools.api.models.order.DeliveryBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Unique identifier of the Delivery.</p>
      * @param delivery value to be set
      * @return Builder
      */
@@ -65,6 +77,18 @@ public class ParcelAddedToDeliveryMessagePayloadBuilder implements Builder<Parce
     public ParcelAddedToDeliveryMessagePayloadBuilder parcel(
             Function<com.commercetools.api.models.order.ParcelBuilder, com.commercetools.api.models.order.ParcelBuilder> builder) {
         this.parcel = builder.apply(com.commercetools.api.models.order.ParcelBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Parcel that was added to the Delivery.</p>
+     * @param builder function to build the parcel value
+     * @return Builder
+     */
+
+    public ParcelAddedToDeliveryMessagePayloadBuilder withParcel(
+            Function<com.commercetools.api.models.order.ParcelBuilder, com.commercetools.api.models.order.Parcel> builder) {
+        this.parcel = builder.apply(com.commercetools.api.models.order.ParcelBuilder.of());
         return this;
     }
 

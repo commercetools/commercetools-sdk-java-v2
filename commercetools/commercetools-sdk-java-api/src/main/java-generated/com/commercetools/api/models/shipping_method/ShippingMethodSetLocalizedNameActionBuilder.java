@@ -40,6 +40,18 @@ public class ShippingMethodSetLocalizedNameActionBuilder implements Builder<Ship
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param builder function to build the localizedName value
+     * @return Builder
+     */
+
+    public ShippingMethodSetLocalizedNameActionBuilder withLocalizedName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.localizedName = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param localizedName value to be set
      * @return Builder
      */

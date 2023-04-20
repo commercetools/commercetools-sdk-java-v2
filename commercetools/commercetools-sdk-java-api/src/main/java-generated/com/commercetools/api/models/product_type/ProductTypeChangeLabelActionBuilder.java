@@ -52,6 +52,18 @@ public class ProductTypeChangeLabelActionBuilder implements Builder<ProductTypeC
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     * @param builder function to build the label value
+     * @return Builder
+     */
+
+    public ProductTypeChangeLabelActionBuilder withLabel(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.label = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>New value to set. Must not be empty.</p>
      * @param label value to be set
      * @return Builder
      */

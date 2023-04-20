@@ -117,6 +117,18 @@ public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedM
 
     /**
      *  <p>Value of <code>createdBy</code>.</p>
+     * @param builder function to build the lastModifiedBy value
+     * @return Builder
+     */
+
+    public OrderEditAppliedMessageBuilder withLastModifiedBy(
+            Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
+        this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value of <code>createdBy</code>.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -136,6 +148,18 @@ public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedM
     public OrderEditAppliedMessageBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     * @param builder function to build the createdBy value
+     * @return Builder
+     */
+
+    public OrderEditAppliedMessageBuilder withCreatedBy(
+            Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
+        this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
     }
 
@@ -212,6 +236,19 @@ public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedM
 
     /**
      *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
+     * @param builder function to build the resourceUserProvidedIdentifiers value
+     * @return Builder
+     */
+
+    public OrderEditAppliedMessageBuilder withResourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiers> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>. Only present if the resource has such identifiers.</p>
      * @param resourceUserProvidedIdentifiers value to be set
      * @return Builder
      */
@@ -236,6 +273,18 @@ public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedM
 
     /**
      *  <p>OrderEdit that was applied.</p>
+     * @param builder function to build the edit value
+     * @return Builder
+     */
+
+    public OrderEditAppliedMessageBuilder withEdit(
+            Function<com.commercetools.api.models.order_edit.OrderEditBuilder, com.commercetools.api.models.order_edit.OrderEdit> builder) {
+        this.edit = builder.apply(com.commercetools.api.models.order_edit.OrderEditBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>OrderEdit that was applied.</p>
      * @param edit value to be set
      * @return Builder
      */
@@ -254,6 +303,18 @@ public class OrderEditAppliedMessageBuilder implements Builder<OrderEditAppliedM
     public OrderEditAppliedMessageBuilder result(
             Function<com.commercetools.api.models.order_edit.OrderEditAppliedBuilder, com.commercetools.api.models.order_edit.OrderEditAppliedBuilder> builder) {
         this.result = builder.apply(com.commercetools.api.models.order_edit.OrderEditAppliedBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Information about a successfully applied OrderEdit.</p>
+     * @param builder function to build the result value
+     * @return Builder
+     */
+
+    public OrderEditAppliedMessageBuilder withResult(
+            Function<com.commercetools.api.models.order_edit.OrderEditAppliedBuilder, com.commercetools.api.models.order_edit.OrderEditApplied> builder) {
+        this.result = builder.apply(com.commercetools.api.models.order_edit.OrderEditAppliedBuilder.of());
         return this;
     }
 

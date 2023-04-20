@@ -42,6 +42,18 @@ public class ShippingMethodSetLocalizedDescriptionActionBuilder
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     * @param builder function to build the localizedDescription value
+     * @return Builder
+     */
+
+    public ShippingMethodSetLocalizedDescriptionActionBuilder withLocalizedDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.localizedDescription = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to set. If empty, any existing value will be removed.</p>
      * @param localizedDescription value to be set
      * @return Builder
      */

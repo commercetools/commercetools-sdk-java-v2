@@ -45,6 +45,18 @@ public class ProductSelectionSetVariantExclusionActionBuilder
 
     /**
      *  <p>ResourceIdentifier of the Product</p>
+     * @param builder function to build the product value
+     * @return Builder
+     */
+
+    public ProductSelectionSetVariantExclusionActionBuilder withProduct(
+            Function<com.commercetools.api.models.product.ProductResourceIdentifierBuilder, com.commercetools.api.models.product.ProductResourceIdentifier> builder) {
+        this.product = builder.apply(com.commercetools.api.models.product.ProductResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>ResourceIdentifier of the Product</p>
      * @param product value to be set
      * @return Builder
      */
@@ -56,7 +68,7 @@ public class ProductSelectionSetVariantExclusionActionBuilder
     }
 
     /**
-     *  <p>Determines which Variants of the previously excluded Product are to be included in the Product Selection of type Individual Exclusion. Leave it empty to unset an existing Variant Exclusion.</p>
+     *  <p>Determines which Variants of the previously excluded Product are to be included in the Product Selection with <code>IndividualExclusion</code> ProductSelectionMode. Leave it empty to unset an existing Variant Exclusion.</p>
      * @param builder function to build the variantExclusion value
      * @return Builder
      */
@@ -70,7 +82,20 @@ public class ProductSelectionSetVariantExclusionActionBuilder
     }
 
     /**
-     *  <p>Determines which Variants of the previously excluded Product are to be included in the Product Selection of type Individual Exclusion. Leave it empty to unset an existing Variant Exclusion.</p>
+     *  <p>Determines which Variants of the previously excluded Product are to be included in the Product Selection with <code>IndividualExclusion</code> ProductSelectionMode. Leave it empty to unset an existing Variant Exclusion.</p>
+     * @param builder function to build the variantExclusion value
+     * @return Builder
+     */
+
+    public ProductSelectionSetVariantExclusionActionBuilder withVariantExclusion(
+            Function<com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder, com.commercetools.api.models.product_selection.ProductVariantExclusion> builder) {
+        this.variantExclusion = builder
+                .apply(com.commercetools.api.models.product_selection.ProductVariantExclusionBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Determines which Variants of the previously excluded Product are to be included in the Product Selection with <code>IndividualExclusion</code> ProductSelectionMode. Leave it empty to unset an existing Variant Exclusion.</p>
      * @param variantExclusion value to be set
      * @return Builder
      */
@@ -91,7 +116,7 @@ public class ProductSelectionSetVariantExclusionActionBuilder
     }
 
     /**
-     *  <p>Determines which Variants of the previously excluded Product are to be included in the Product Selection of type Individual Exclusion. Leave it empty to unset an existing Variant Exclusion.</p>
+     *  <p>Determines which Variants of the previously excluded Product are to be included in the Product Selection with <code>IndividualExclusion</code> ProductSelectionMode. Leave it empty to unset an existing Variant Exclusion.</p>
      * @return variantExclusion
      */
 

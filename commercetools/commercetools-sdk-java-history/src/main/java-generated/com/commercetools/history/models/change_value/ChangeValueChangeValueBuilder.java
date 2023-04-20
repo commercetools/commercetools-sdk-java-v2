@@ -34,4 +34,5 @@ public class ChangeValueChangeValueBuilder {
     public static ChangeValueChangeValueBuilder of() {
         return new ChangeValueChangeValueBuilder();
     }
+
 }

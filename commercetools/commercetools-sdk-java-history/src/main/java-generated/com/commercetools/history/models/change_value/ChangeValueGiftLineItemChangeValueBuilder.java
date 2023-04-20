@@ -48,6 +48,18 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
     }
 
     /**
+     * set the value to the product using the builder function
+     * @param builder function to build the product value
+     * @return Builder
+     */
+
+    public ChangeValueGiftLineItemChangeValueBuilder withProduct(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
+        this.product = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the product
      * @param product value to be set
      * @return Builder
@@ -83,6 +95,18 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
     }
 
     /**
+     * set the value to the supplyChannel using the builder function
+     * @param builder function to build the supplyChannel value
+     * @return Builder
+     */
+
+    public ChangeValueGiftLineItemChangeValueBuilder withSupplyChannel(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
+        this.supplyChannel = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the supplyChannel
      * @param supplyChannel value to be set
      * @return Builder
@@ -103,6 +127,18 @@ public class ChangeValueGiftLineItemChangeValueBuilder implements Builder<Change
     public ChangeValueGiftLineItemChangeValueBuilder distributionChannel(
             Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.ReferenceBuilder> builder) {
         this.distributionChannel = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the distributionChannel using the builder function
+     * @param builder function to build the distributionChannel value
+     * @return Builder
+     */
+
+    public ChangeValueGiftLineItemChangeValueBuilder withDistributionChannel(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
+        this.distributionChannel = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
         return this;
     }
 

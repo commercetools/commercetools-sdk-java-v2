@@ -143,6 +143,19 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
 
     /**
      *  <p>Customer Group associated with the Price.</p>
+     * @param builder function to build the customerGroup value
+     * @return Builder
+     */
+
+    public MatchingPriceNotFoundErrorBuilder withCustomerGroup(
+            Function<com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder, com.commercetools.api.models.customer_group.CustomerGroupReference> builder) {
+        this.customerGroup = builder
+                .apply(com.commercetools.api.models.customer_group.CustomerGroupReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Customer Group associated with the Price.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -162,6 +175,18 @@ public class MatchingPriceNotFoundErrorBuilder implements Builder<MatchingPriceN
     public MatchingPriceNotFoundErrorBuilder channel(
             Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReferenceBuilder> builder) {
         this.channel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Channel associated with the Price.</p>
+     * @param builder function to build the channel value
+     * @return Builder
+     */
+
+    public MatchingPriceNotFoundErrorBuilder withChannel(
+            Function<com.commercetools.api.models.channel.ChannelReferenceBuilder, com.commercetools.api.models.channel.ChannelReference> builder) {
+        this.channel = builder.apply(com.commercetools.api.models.channel.ChannelReferenceBuilder.of());
         return this;
     }
 

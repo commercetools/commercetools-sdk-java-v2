@@ -133,6 +133,28 @@ public class OrderPagedSearchResponseBuilder implements Builder<OrderPagedSearch
     }
 
     /**
+     *  <p>Actual results.</p>
+     * @param builder function to build the hits value
+     * @return Builder
+     */
+
+    public OrderPagedSearchResponseBuilder addHits(
+            Function<com.commercetools.api.models.order.HitBuilder, com.commercetools.api.models.order.Hit> builder) {
+        return plusHits(builder.apply(com.commercetools.api.models.order.HitBuilder.of()));
+    }
+
+    /**
+     *  <p>Actual results.</p>
+     * @param builder function to build the hits value
+     * @return Builder
+     */
+
+    public OrderPagedSearchResponseBuilder setHits(
+            Function<com.commercetools.api.models.order.HitBuilder, com.commercetools.api.models.order.Hit> builder) {
+        return hits(builder.apply(com.commercetools.api.models.order.HitBuilder.of()));
+    }
+
+    /**
      *  <p>Total number of results matching the query.</p>
      * @return total
      */

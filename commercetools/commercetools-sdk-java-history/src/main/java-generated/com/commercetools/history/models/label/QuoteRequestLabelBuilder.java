@@ -51,6 +51,18 @@ public class QuoteRequestLabelBuilder implements Builder<QuoteRequestLabel> {
     }
 
     /**
+     * set the value to the customer using the builder function
+     * @param builder function to build the customer value
+     * @return Builder
+     */
+
+    public QuoteRequestLabelBuilder withCustomer(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
+        this.customer = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the customer
      * @param customer value to be set
      * @return Builder

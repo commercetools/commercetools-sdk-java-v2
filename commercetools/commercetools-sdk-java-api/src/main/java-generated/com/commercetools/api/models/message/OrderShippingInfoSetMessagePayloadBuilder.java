@@ -43,6 +43,18 @@ public class OrderShippingInfoSetMessagePayloadBuilder implements Builder<OrderS
 
     /**
      *  <p>ShippingInfo after the Set Shipping Method or Set Custom Shipping Method update action.</p>
+     * @param builder function to build the shippingInfo value
+     * @return Builder
+     */
+
+    public OrderShippingInfoSetMessagePayloadBuilder withShippingInfo(
+            Function<com.commercetools.api.models.cart.ShippingInfoBuilder, com.commercetools.api.models.cart.ShippingInfo> builder) {
+        this.shippingInfo = builder.apply(com.commercetools.api.models.cart.ShippingInfoBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>ShippingInfo after the Set Shipping Method or Set Custom Shipping Method update action.</p>
      * @param shippingInfo value to be set
      * @return Builder
      */
@@ -62,6 +74,18 @@ public class OrderShippingInfoSetMessagePayloadBuilder implements Builder<OrderS
     public OrderShippingInfoSetMessagePayloadBuilder oldShippingInfo(
             Function<com.commercetools.api.models.cart.ShippingInfoBuilder, com.commercetools.api.models.cart.ShippingInfoBuilder> builder) {
         this.oldShippingInfo = builder.apply(com.commercetools.api.models.cart.ShippingInfoBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>ShippingInfo before the Set Shipping Method or Set Custom Shipping Method update action.</p>
+     * @param builder function to build the oldShippingInfo value
+     * @return Builder
+     */
+
+    public OrderShippingInfoSetMessagePayloadBuilder withOldShippingInfo(
+            Function<com.commercetools.api.models.cart.ShippingInfoBuilder, com.commercetools.api.models.cart.ShippingInfo> builder) {
+        this.oldShippingInfo = builder.apply(com.commercetools.api.models.cart.ShippingInfoBuilder.of());
         return this;
     }
 

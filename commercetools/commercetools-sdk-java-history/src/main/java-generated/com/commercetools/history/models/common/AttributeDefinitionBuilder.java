@@ -58,6 +58,18 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
+     * set the value to the type using the builder function
+     * @param builder function to build the type value
+     * @return Builder
+     */
+
+    public AttributeDefinitionBuilder withType(
+            Function<com.commercetools.history.models.common.AttributeTypeBuilder, com.commercetools.history.models.common.AttributeType> builder) {
+        this.type = builder.apply(com.commercetools.history.models.common.AttributeTypeBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the type
      * @param type value to be set
      * @return Builder
@@ -88,6 +100,18 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     public AttributeDefinitionBuilder label(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
         this.label = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the label using the builder function
+     * @param builder function to build the label value
+     * @return Builder
+     */
+
+    public AttributeDefinitionBuilder withLabel(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+        this.label = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -134,6 +158,18 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     public AttributeDefinitionBuilder inputTip(
             Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedStringBuilder> builder) {
         this.inputTip = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the inputTip using the builder function
+     * @param builder function to build the inputTip value
+     * @return Builder
+     */
+
+    public AttributeDefinitionBuilder withInputTip(
+            Function<com.commercetools.history.models.common.LocalizedStringBuilder, com.commercetools.history.models.common.LocalizedString> builder) {
+        this.inputTip = builder.apply(com.commercetools.history.models.common.LocalizedStringBuilder.of());
         return this;
     }
 

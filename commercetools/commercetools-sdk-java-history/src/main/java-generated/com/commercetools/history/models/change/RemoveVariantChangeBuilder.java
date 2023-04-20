@@ -68,6 +68,18 @@ public class RemoveVariantChangeBuilder implements Builder<RemoveVariantChange> 
     }
 
     /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public RemoveVariantChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.VariantBuilder, com.commercetools.history.models.common.Variant> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.VariantBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
@@ -88,6 +100,18 @@ public class RemoveVariantChangeBuilder implements Builder<RemoveVariantChange> 
     public RemoveVariantChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.VariantBuilder, com.commercetools.history.models.common.VariantBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.VariantBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public RemoveVariantChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.VariantBuilder, com.commercetools.history.models.common.Variant> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.VariantBuilder.of());
         return this;
     }
 

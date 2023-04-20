@@ -41,6 +41,18 @@ public class ZoneRateBuilder implements Builder<ZoneRate> {
 
     /**
      *  <p>Zone for which the shipping rates are valid.</p>
+     * @param builder function to build the zone value
+     * @return Builder
+     */
+
+    public ZoneRateBuilder withZone(
+            Function<com.commercetools.api.models.zone.ZoneReferenceBuilder, com.commercetools.api.models.zone.ZoneReference> builder) {
+        this.zone = builder.apply(com.commercetools.api.models.zone.ZoneReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Zone for which the shipping rates are valid.</p>
      * @param zone value to be set
      * @return Builder
      */
@@ -117,6 +129,28 @@ public class ZoneRateBuilder implements Builder<ZoneRate> {
         this.shippingRates
                 .add(builder.apply(com.commercetools.api.models.shipping_method.ShippingRateBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Shipping rates defined per currency.</p>
+     * @param builder function to build the shippingRates value
+     * @return Builder
+     */
+
+    public ZoneRateBuilder addShippingRates(
+            Function<com.commercetools.api.models.shipping_method.ShippingRateBuilder, com.commercetools.api.models.shipping_method.ShippingRate> builder) {
+        return plusShippingRates(builder.apply(com.commercetools.api.models.shipping_method.ShippingRateBuilder.of()));
+    }
+
+    /**
+     *  <p>Shipping rates defined per currency.</p>
+     * @param builder function to build the shippingRates value
+     * @return Builder
+     */
+
+    public ZoneRateBuilder setShippingRates(
+            Function<com.commercetools.api.models.shipping_method.ShippingRateBuilder, com.commercetools.api.models.shipping_method.ShippingRate> builder) {
+        return shippingRates(builder.apply(com.commercetools.api.models.shipping_method.ShippingRateBuilder.of()));
     }
 
     /**

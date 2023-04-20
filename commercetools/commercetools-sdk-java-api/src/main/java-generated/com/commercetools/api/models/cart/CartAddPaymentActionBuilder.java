@@ -39,6 +39,18 @@ public class CartAddPaymentActionBuilder implements Builder<CartAddPaymentAction
 
     /**
      *  <p>Payment to add to the Cart. Must not be assigned to another Order or active Cart already.</p>
+     * @param builder function to build the payment value
+     * @return Builder
+     */
+
+    public CartAddPaymentActionBuilder withPayment(
+            Function<com.commercetools.api.models.payment.PaymentResourceIdentifierBuilder, com.commercetools.api.models.payment.PaymentResourceIdentifier> builder) {
+        this.payment = builder.apply(com.commercetools.api.models.payment.PaymentResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Payment to add to the Cart. Must not be assigned to another Order or active Cart already.</p>
      * @param payment value to be set
      * @return Builder
      */

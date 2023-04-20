@@ -45,6 +45,19 @@ public class StoreChangeProductSelectionActionBuilder implements Builder<StoreCh
 
     /**
      *  <p>Current Product Selection of the Store to be activated or deactivated.</p>
+     * @param builder function to build the productSelection value
+     * @return Builder
+     */
+
+    public StoreChangeProductSelectionActionBuilder withProductSelection(
+            Function<com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder, com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier> builder) {
+        this.productSelection = builder
+                .apply(com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Current Product Selection of the Store to be activated or deactivated.</p>
      * @param productSelection value to be set
      * @return Builder
      */

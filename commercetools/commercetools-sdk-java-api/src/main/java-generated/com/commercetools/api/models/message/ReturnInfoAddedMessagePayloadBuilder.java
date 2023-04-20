@@ -38,6 +38,18 @@ public class ReturnInfoAddedMessagePayloadBuilder implements Builder<ReturnInfoA
 
     /**
      *  <p>The ReturnInfo that was added to the Order.</p>
+     * @param builder function to build the returnInfo value
+     * @return Builder
+     */
+
+    public ReturnInfoAddedMessagePayloadBuilder withReturnInfo(
+            Function<com.commercetools.api.models.order.ReturnInfoBuilder, com.commercetools.api.models.order.ReturnInfo> builder) {
+        this.returnInfo = builder.apply(com.commercetools.api.models.order.ReturnInfoBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The ReturnInfo that was added to the Order.</p>
      * @param returnInfo value to be set
      * @return Builder
      */

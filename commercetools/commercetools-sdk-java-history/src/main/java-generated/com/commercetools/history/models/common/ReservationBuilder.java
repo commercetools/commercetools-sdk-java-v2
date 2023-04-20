@@ -57,6 +57,18 @@ public class ReservationBuilder implements Builder<Reservation> {
     }
 
     /**
+     * set the value to the owner using the builder function
+     * @param builder function to build the owner value
+     * @return Builder
+     */
+
+    public ReservationBuilder withOwner(
+            Function<com.commercetools.history.models.common.ReferenceBuilder, com.commercetools.history.models.common.Reference> builder) {
+        this.owner = builder.apply(com.commercetools.history.models.common.ReferenceBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the owner
      * @param owner value to be set
      * @return Builder

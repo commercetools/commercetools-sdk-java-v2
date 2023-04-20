@@ -150,6 +150,28 @@ public class SubscriptionPagedQueryResponseBuilder implements Builder<Subscripti
     }
 
     /**
+     *  <p>Subscriptions matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public SubscriptionPagedQueryResponseBuilder addResults(
+            Function<com.commercetools.api.models.subscription.SubscriptionBuilder, com.commercetools.api.models.subscription.Subscription> builder) {
+        return plusResults(builder.apply(com.commercetools.api.models.subscription.SubscriptionBuilder.of()));
+    }
+
+    /**
+     *  <p>Subscriptions matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public SubscriptionPagedQueryResponseBuilder setResults(
+            Function<com.commercetools.api.models.subscription.SubscriptionBuilder, com.commercetools.api.models.subscription.Subscription> builder) {
+        return results(builder.apply(com.commercetools.api.models.subscription.SubscriptionBuilder.of()));
+    }
+
+    /**
      *  <p>Number of results requested.</p>
      * @return limit
      */

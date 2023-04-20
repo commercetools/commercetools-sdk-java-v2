@@ -38,6 +38,18 @@ public class MyBusinessUnitAddAddressActionBuilder implements Builder<MyBusiness
 
     /**
      *  <p>The address to add to <code>addresses</code>.</p>
+     * @param builder function to build the address value
+     * @return Builder
+     */
+
+    public MyBusinessUnitAddAddressActionBuilder withAddress(
+            Function<com.commercetools.api.models.common.BaseAddressBuilder, com.commercetools.api.models.common.BaseAddress> builder) {
+        this.address = builder.apply(com.commercetools.api.models.common.BaseAddressBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The address to add to <code>addresses</code>.</p>
      * @param address value to be set
      * @return Builder
      */

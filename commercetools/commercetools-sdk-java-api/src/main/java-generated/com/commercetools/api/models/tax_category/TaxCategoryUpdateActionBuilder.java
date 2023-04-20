@@ -42,4 +42,5 @@ public class TaxCategoryUpdateActionBuilder {
     public static TaxCategoryUpdateActionBuilder of() {
         return new TaxCategoryUpdateActionBuilder();
     }
+
 }

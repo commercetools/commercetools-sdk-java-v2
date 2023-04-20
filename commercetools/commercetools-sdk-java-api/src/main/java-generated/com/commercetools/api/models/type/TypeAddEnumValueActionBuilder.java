@@ -52,6 +52,18 @@ public class TypeAddEnumValueActionBuilder implements Builder<TypeAddEnumValueAc
 
     /**
      *  <p>Value to append to the array.</p>
+     * @param builder function to build the value value
+     * @return Builder
+     */
+
+    public TypeAddEnumValueActionBuilder withValue(
+            Function<com.commercetools.api.models.type.CustomFieldEnumValueBuilder, com.commercetools.api.models.type.CustomFieldEnumValue> builder) {
+        this.value = builder.apply(com.commercetools.api.models.type.CustomFieldEnumValueBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to append to the array.</p>
      * @param value value to be set
      * @return Builder
      */

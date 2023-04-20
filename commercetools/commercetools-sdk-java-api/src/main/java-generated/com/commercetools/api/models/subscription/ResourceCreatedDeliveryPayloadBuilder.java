@@ -89,6 +89,19 @@ public class ResourceCreatedDeliveryPayloadBuilder implements Builder<ResourceCr
 
     /**
      *  <p>User-defined unique identifiers of the resource.</p>
+     * @param builder function to build the resourceUserProvidedIdentifiers value
+     * @return Builder
+     */
+
+    public ResourceCreatedDeliveryPayloadBuilder withResourceUserProvidedIdentifiers(
+            Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiers> builder) {
+        this.resourceUserProvidedIdentifiers = builder
+                .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>User-defined unique identifiers of the resource.</p>
      * @param resourceUserProvidedIdentifiers value to be set
      * @return Builder
      */

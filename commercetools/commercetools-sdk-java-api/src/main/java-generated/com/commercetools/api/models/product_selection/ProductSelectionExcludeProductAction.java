@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Excludes a Product from the Product Selection of type Individual Exclusion.</p>
+ *  <p>Excludes a Product from a Product Selection with <code>IndividualExclusion</code> ProductSelectionMode.</p>
  *  <p>If the specified Product is already assigned to the Product Selection, but the existing Product Selection has a different Product Variant Exclusion, a ProductPresentWithDifferentVariantSelection error is returned.</p>
  *
  * <hr>

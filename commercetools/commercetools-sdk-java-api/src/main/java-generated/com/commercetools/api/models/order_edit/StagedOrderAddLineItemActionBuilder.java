@@ -73,6 +73,18 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
 
     /**
      *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public StagedOrderAddLineItemActionBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The representation used when creating or updating a customizable data type with Custom Fields.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -99,6 +111,19 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
 
     /**
      *  <p>ResourceIdentifier to a Channel.</p>
+     * @param builder function to build the distributionChannel value
+     * @return Builder
+     */
+
+    public StagedOrderAddLineItemActionBuilder withDistributionChannel(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+        this.distributionChannel = builder
+                .apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>ResourceIdentifier to a Channel.</p>
      * @param distributionChannel value to be set
      * @return Builder
      */
@@ -119,6 +144,18 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
             Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder> builder) {
         this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Controls calculation of taxed prices for Line Items, Custom Line Items, and Shipping Methods as explained in Cart tax calculation.</p>
+     * @param builder function to build the externalTaxRate value
+     * @return Builder
+     */
+
+    public StagedOrderAddLineItemActionBuilder withExternalTaxRate(
+            Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraft> builder) {
+        this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of());
         return this;
     }
 
@@ -204,6 +241,18 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
 
     /**
      *  <p>ResourceIdentifier to a Channel.</p>
+     * @param builder function to build the supplyChannel value
+     * @return Builder
+     */
+
+    public StagedOrderAddLineItemActionBuilder withSupplyChannel(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+        this.supplyChannel = builder.apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>ResourceIdentifier to a Channel.</p>
      * @param supplyChannel value to be set
      * @return Builder
      */
@@ -224,6 +273,19 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     public StagedOrderAddLineItemActionBuilder externalPrice(
             Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
         this.externalPrice = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Draft type that stores amounts in cent precision for the specified currency.</p>
+     *  <p>For storing money values in fractions of the minor unit in a currency, use HighPrecisionMoneyDraft instead.</p>
+     * @param builder function to build the externalPrice value
+     * @return Builder
+     */
+
+    public StagedOrderAddLineItemActionBuilder withExternalPrice(
+            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
+        this.externalPrice = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
         return this;
     }
 
@@ -255,6 +317,19 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
+     * set the value to the externalTotalPrice using the builder function
+     * @param builder function to build the externalTotalPrice value
+     * @return Builder
+     */
+
+    public StagedOrderAddLineItemActionBuilder withExternalTotalPrice(
+            Function<com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder, com.commercetools.api.models.cart.ExternalLineItemTotalPrice> builder) {
+        this.externalTotalPrice = builder
+                .apply(com.commercetools.api.models.cart.ExternalLineItemTotalPriceBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the externalTotalPrice
      * @param externalTotalPrice value to be set
      * @return Builder
@@ -276,6 +351,18 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
             Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder> builder) {
         this.shippingDetails = builder.apply(com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>For order creation and updates, the sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items.</p>
+     * @param builder function to build the shippingDetails value
+     * @return Builder
+     */
+
+    public StagedOrderAddLineItemActionBuilder withShippingDetails(
+            Function<com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder, com.commercetools.api.models.cart.ItemShippingDetailsDraft> builder) {
+        this.shippingDetails = builder.apply(com.commercetools.api.models.cart.ItemShippingDetailsDraftBuilder.of());
         return this;
     }
 

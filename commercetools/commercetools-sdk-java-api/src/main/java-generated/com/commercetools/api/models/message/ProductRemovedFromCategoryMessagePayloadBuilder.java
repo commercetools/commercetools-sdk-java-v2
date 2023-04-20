@@ -42,6 +42,18 @@ public class ProductRemovedFromCategoryMessagePayloadBuilder
 
     /**
      *  <p>Category the Product was removed from.</p>
+     * @param builder function to build the category value
+     * @return Builder
+     */
+
+    public ProductRemovedFromCategoryMessagePayloadBuilder withCategory(
+            Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReference> builder) {
+        this.category = builder.apply(com.commercetools.api.models.category.CategoryReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Category the Product was removed from.</p>
      * @param category value to be set
      * @return Builder
      */

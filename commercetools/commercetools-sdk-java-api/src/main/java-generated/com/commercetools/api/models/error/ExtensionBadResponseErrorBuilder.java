@@ -100,6 +100,18 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
 
     /**
      *  <p>User-defined localized description of the error.</p>
+     * @param builder function to build the localizedMessage value
+     * @return Builder
+     */
+
+    public ExtensionBadResponseErrorBuilder withLocalizedMessage(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.localizedMessage = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>User-defined localized description of the error.</p>
      * @param localizedMessage value to be set
      * @return Builder
      */
@@ -186,6 +198,28 @@ public class ExtensionBadResponseErrorBuilder implements Builder<ExtensionBadRes
         this.extensionErrors = new ArrayList<>();
         this.extensionErrors.add(builder.apply(com.commercetools.api.models.error.ExtensionErrorBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Additional errors related to the API Extension.</p>
+     * @param builder function to build the extensionErrors value
+     * @return Builder
+     */
+
+    public ExtensionBadResponseErrorBuilder addExtensionErrors(
+            Function<com.commercetools.api.models.error.ExtensionErrorBuilder, com.commercetools.api.models.error.ExtensionError> builder) {
+        return plusExtensionErrors(builder.apply(com.commercetools.api.models.error.ExtensionErrorBuilder.of()));
+    }
+
+    /**
+     *  <p>Additional errors related to the API Extension.</p>
+     * @param builder function to build the extensionErrors value
+     * @return Builder
+     */
+
+    public ExtensionBadResponseErrorBuilder setExtensionErrors(
+            Function<com.commercetools.api.models.error.ExtensionErrorBuilder, com.commercetools.api.models.error.ExtensionError> builder) {
+        return extensionErrors(builder.apply(com.commercetools.api.models.error.ExtensionErrorBuilder.of()));
     }
 
     /**

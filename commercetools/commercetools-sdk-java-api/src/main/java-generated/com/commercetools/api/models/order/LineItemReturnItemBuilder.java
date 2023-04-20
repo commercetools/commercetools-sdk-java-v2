@@ -121,6 +121,18 @@ public class LineItemReturnItemBuilder implements Builder<LineItemReturnItem> {
 
     /**
      *  <p>Custom Fields of this return item.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public LineItemReturnItemBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields of this return item.</p>
      * @param custom value to be set
      * @return Builder
      */

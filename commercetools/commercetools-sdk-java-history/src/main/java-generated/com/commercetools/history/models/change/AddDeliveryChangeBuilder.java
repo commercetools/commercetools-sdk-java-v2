@@ -55,6 +55,18 @@ public class AddDeliveryChangeBuilder implements Builder<AddDeliveryChange> {
     }
 
     /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public AddDeliveryChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.change_value.DeliveryChangeValueBuilder, com.commercetools.history.models.change_value.DeliveryChangeValue> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.change_value.DeliveryChangeValueBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder
@@ -77,6 +89,19 @@ public class AddDeliveryChangeBuilder implements Builder<AddDeliveryChange> {
         this.previousValue = builder
                 .apply(com.commercetools.history.models.change_value.DeliveryChangeValueBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public AddDeliveryChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.change_value.DeliveryChangeValueBuilder, com.commercetools.history.models.change_value.DeliveryChangeValue> builder) {
+        this.previousValue = builder
+                .apply(com.commercetools.history.models.change_value.DeliveryChangeValueBuilder.of());
         return this;
     }
 

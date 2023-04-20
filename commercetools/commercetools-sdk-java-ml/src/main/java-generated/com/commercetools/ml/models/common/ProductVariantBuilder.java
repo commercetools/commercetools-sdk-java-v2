@@ -44,6 +44,18 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
 
     /**
      *  <p>The product that contains this variant.</p>
+     * @param builder function to build the product value
+     * @return Builder
+     */
+
+    public ProductVariantBuilder withProduct(
+            Function<com.commercetools.ml.models.common.ProductReferenceBuilder, com.commercetools.ml.models.common.ProductReference> builder) {
+        this.product = builder.apply(com.commercetools.ml.models.common.ProductReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The product that contains this variant.</p>
      * @param product value to be set
      * @return Builder
      */

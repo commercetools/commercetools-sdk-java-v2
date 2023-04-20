@@ -152,6 +152,28 @@ public class AttributeGroupPagedQueryResponseBuilder implements Builder<Attribut
     }
 
     /**
+     *  <p>AttributeGroups matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public AttributeGroupPagedQueryResponseBuilder addResults(
+            Function<com.commercetools.api.models.attribute_group.AttributeGroupBuilder, com.commercetools.api.models.attribute_group.AttributeGroup> builder) {
+        return plusResults(builder.apply(com.commercetools.api.models.attribute_group.AttributeGroupBuilder.of()));
+    }
+
+    /**
+     *  <p>AttributeGroups matching the query.</p>
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public AttributeGroupPagedQueryResponseBuilder setResults(
+            Function<com.commercetools.api.models.attribute_group.AttributeGroupBuilder, com.commercetools.api.models.attribute_group.AttributeGroup> builder) {
+        return results(builder.apply(com.commercetools.api.models.attribute_group.AttributeGroupBuilder.of()));
+    }
+
+    /**
      *  <p>Number of results requested in the query request.</p>
      * @return limit
      */

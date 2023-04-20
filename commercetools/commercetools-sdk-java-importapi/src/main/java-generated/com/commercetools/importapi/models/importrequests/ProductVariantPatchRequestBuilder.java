@@ -95,6 +95,30 @@ public class ProductVariantPatchRequestBuilder implements Builder<ProductVariant
 
     /**
      *  <p>The product variant patches of this request.</p>
+     * @param builder function to build the patches value
+     * @return Builder
+     */
+
+    public ProductVariantPatchRequestBuilder addPatches(
+            Function<com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder, com.commercetools.importapi.models.productvariants.ProductVariantPatch> builder) {
+        return plusPatches(
+            builder.apply(com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder.of()));
+    }
+
+    /**
+     *  <p>The product variant patches of this request.</p>
+     * @param builder function to build the patches value
+     * @return Builder
+     */
+
+    public ProductVariantPatchRequestBuilder setPatches(
+            Function<com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder, com.commercetools.importapi.models.productvariants.ProductVariantPatch> builder) {
+        return patches(
+            builder.apply(com.commercetools.importapi.models.productvariants.ProductVariantPatchBuilder.of()));
+    }
+
+    /**
+     *  <p>The product variant patches of this request.</p>
      * @return patches
      */
 

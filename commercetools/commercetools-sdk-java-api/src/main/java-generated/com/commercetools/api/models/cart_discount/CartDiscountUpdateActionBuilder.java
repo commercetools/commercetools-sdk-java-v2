@@ -78,4 +78,5 @@ public class CartDiscountUpdateActionBuilder {
     public static CartDiscountUpdateActionBuilder of() {
         return new CartDiscountUpdateActionBuilder();
     }
+
 }

@@ -70,6 +70,18 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Name of the Product.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public ProductDataBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Name of the Product.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -146,6 +158,28 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
+     *  <p>Categories assigned to the Product.</p>
+     * @param builder function to build the categories value
+     * @return Builder
+     */
+
+    public ProductDataBuilder addCategories(
+            Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReference> builder) {
+        return plusCategories(builder.apply(com.commercetools.api.models.category.CategoryReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p>Categories assigned to the Product.</p>
+     * @param builder function to build the categories value
+     * @return Builder
+     */
+
+    public ProductDataBuilder setCategories(
+            Function<com.commercetools.api.models.category.CategoryReferenceBuilder, com.commercetools.api.models.category.CategoryReference> builder) {
+        return categories(builder.apply(com.commercetools.api.models.category.CategoryReferenceBuilder.of()));
+    }
+
+    /**
      *  <p>Numerical values to allow ordering of Products within a specified Category.</p>
      * @param builder function to build the categoryOrderHints value
      * @return Builder
@@ -155,6 +189,18 @@ public class ProductDataBuilder implements Builder<ProductData> {
             Function<com.commercetools.api.models.product.CategoryOrderHintsBuilder, com.commercetools.api.models.product.CategoryOrderHintsBuilder> builder) {
         this.categoryOrderHints = builder.apply(com.commercetools.api.models.product.CategoryOrderHintsBuilder.of())
                 .build();
+        return this;
+    }
+
+    /**
+     *  <p>Numerical values to allow ordering of Products within a specified Category.</p>
+     * @param builder function to build the categoryOrderHints value
+     * @return Builder
+     */
+
+    public ProductDataBuilder withCategoryOrderHints(
+            Function<com.commercetools.api.models.product.CategoryOrderHintsBuilder, com.commercetools.api.models.product.CategoryOrderHints> builder) {
+        this.categoryOrderHints = builder.apply(com.commercetools.api.models.product.CategoryOrderHintsBuilder.of());
         return this;
     }
 
@@ -184,6 +230,18 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Description of the Product.</p>
+     * @param builder function to build the description value
+     * @return Builder
+     */
+
+    public ProductDataBuilder withDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Description of the Product.</p>
      * @param description value to be set
      * @return Builder
      */
@@ -203,6 +261,18 @@ public class ProductDataBuilder implements Builder<ProductData> {
     public ProductDataBuilder slug(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>User-defined identifier used in a deep-link URL for the Product. Must be unique across a Project, but can be the same for Products in different Locales. Matches the pattern <code>[a-zA-Z0-9_\\-]{2,256}</code>.</p>
+     * @param builder function to build the slug value
+     * @return Builder
+     */
+
+    public ProductDataBuilder withSlug(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.slug = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -231,6 +301,18 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Title of the Product displayed in search results.</p>
+     * @param builder function to build the metaTitle value
+     * @return Builder
+     */
+
+    public ProductDataBuilder withMetaTitle(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.metaTitle = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Title of the Product displayed in search results.</p>
      * @param metaTitle value to be set
      * @return Builder
      */
@@ -249,6 +331,18 @@ public class ProductDataBuilder implements Builder<ProductData> {
     public ProductDataBuilder metaDescription(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.metaDescription = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Description of the Product displayed in search results below the meta title.</p>
+     * @param builder function to build the metaDescription value
+     * @return Builder
+     */
+
+    public ProductDataBuilder withMetaDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.metaDescription = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -278,6 +372,18 @@ public class ProductDataBuilder implements Builder<ProductData> {
 
     /**
      *  <p>Keywords that give additional information about the Product to search engines.</p>
+     * @param builder function to build the metaKeywords value
+     * @return Builder
+     */
+
+    public ProductDataBuilder withMetaKeywords(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.metaKeywords = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Keywords that give additional information about the Product to search engines.</p>
      * @param metaKeywords value to be set
      * @return Builder
      */
@@ -297,6 +403,18 @@ public class ProductDataBuilder implements Builder<ProductData> {
     public ProductDataBuilder masterVariant(
             Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariantBuilder> builder) {
         this.masterVariant = builder.apply(com.commercetools.api.models.product.ProductVariantBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>The Master Variant of the Product.</p>
+     * @param builder function to build the masterVariant value
+     * @return Builder
+     */
+
+    public ProductDataBuilder withMasterVariant(
+            Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariant> builder) {
+        this.masterVariant = builder.apply(com.commercetools.api.models.product.ProductVariantBuilder.of());
         return this;
     }
 
@@ -377,6 +495,28 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
+     *  <p>Additional Product Variants.</p>
+     * @param builder function to build the variants value
+     * @return Builder
+     */
+
+    public ProductDataBuilder addVariants(
+            Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariant> builder) {
+        return plusVariants(builder.apply(com.commercetools.api.models.product.ProductVariantBuilder.of()));
+    }
+
+    /**
+     *  <p>Additional Product Variants.</p>
+     * @param builder function to build the variants value
+     * @return Builder
+     */
+
+    public ProductDataBuilder setVariants(
+            Function<com.commercetools.api.models.product.ProductVariantBuilder, com.commercetools.api.models.product.ProductVariant> builder) {
+        return variants(builder.apply(com.commercetools.api.models.product.ProductVariantBuilder.of()));
+    }
+
+    /**
      *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
      * @param builder function to build the searchKeywords value
      * @return Builder
@@ -385,6 +525,18 @@ public class ProductDataBuilder implements Builder<ProductData> {
     public ProductDataBuilder searchKeywords(
             Function<com.commercetools.api.models.product.SearchKeywordsBuilder, com.commercetools.api.models.product.SearchKeywordsBuilder> builder) {
         this.searchKeywords = builder.apply(com.commercetools.api.models.product.SearchKeywordsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     * @param builder function to build the searchKeywords value
+     * @return Builder
+     */
+
+    public ProductDataBuilder withSearchKeywords(
+            Function<com.commercetools.api.models.product.SearchKeywordsBuilder, com.commercetools.api.models.product.SearchKeywords> builder) {
+        this.searchKeywords = builder.apply(com.commercetools.api.models.product.SearchKeywordsBuilder.of());
         return this;
     }
 

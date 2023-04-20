@@ -114,6 +114,18 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
 
     /**
      *  <p>Maps to <code>Inventory.supplyChannel</code></p>
+     * @param builder function to build the supplyChannel value
+     * @return Builder
+     */
+
+    public InventoryImportBuilder withSupplyChannel(
+            Function<com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder, com.commercetools.importapi.models.common.ChannelKeyReference> builder) {
+        this.supplyChannel = builder.apply(com.commercetools.importapi.models.common.ChannelKeyReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Maps to <code>Inventory.supplyChannel</code></p>
      * @param supplyChannel value to be set
      * @return Builder
      */
@@ -133,6 +145,18 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
     public InventoryImportBuilder custom(
             Function<com.commercetools.importapi.models.customfields.CustomBuilder, com.commercetools.importapi.models.customfields.CustomBuilder> builder) {
         this.custom = builder.apply(com.commercetools.importapi.models.customfields.CustomBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Maps to <code>Inventory.custom</code>.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public InventoryImportBuilder withCustom(
+            Function<com.commercetools.importapi.models.customfields.CustomBuilder, com.commercetools.importapi.models.customfields.Custom> builder) {
+        this.custom = builder.apply(com.commercetools.importapi.models.customfields.CustomBuilder.of());
         return this;
     }
 

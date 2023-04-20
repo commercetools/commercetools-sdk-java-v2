@@ -54,6 +54,18 @@ public class ChangeAmountPlannedChangeBuilder implements Builder<ChangeAmountPla
     }
 
     /**
+     * set the value to the previousValue using the builder function
+     * @param builder function to build the previousValue value
+     * @return Builder
+     */
+
+    public ChangeAmountPlannedChangeBuilder withPreviousValue(
+            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.Money> builder) {
+        this.previousValue = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the previousValue
      * @param previousValue value to be set
      * @return Builder
@@ -74,6 +86,18 @@ public class ChangeAmountPlannedChangeBuilder implements Builder<ChangeAmountPla
     public ChangeAmountPlannedChangeBuilder nextValue(
             Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.MoneyBuilder> builder) {
         this.nextValue = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public ChangeAmountPlannedChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.MoneyBuilder, com.commercetools.history.models.common.Money> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.MoneyBuilder.of());
         return this;
     }
 

@@ -93,6 +93,28 @@ public class ProductDiscountValueAbsoluteBuilder implements Builder<ProductDisco
 
     /**
      *  <p>Money values in different currencies. An absolute ProductDiscount will only match a price if this array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
+     * @param builder function to build the money value
+     * @return Builder
+     */
+
+    public ProductDiscountValueAbsoluteBuilder addMoney(
+            Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoney> builder) {
+        return plusMoney(builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of()));
+    }
+
+    /**
+     *  <p>Money values in different currencies. An absolute ProductDiscount will only match a price if this array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
+     * @param builder function to build the money value
+     * @return Builder
+     */
+
+    public ProductDiscountValueAbsoluteBuilder setMoney(
+            Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoney> builder) {
+        return money(builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of()));
+    }
+
+    /**
+     *  <p>Money values in different currencies. An absolute ProductDiscount will only match a price if this array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
      * @return money
      */
 

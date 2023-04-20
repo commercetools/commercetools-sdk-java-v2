@@ -106,6 +106,28 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
     }
 
     /**
+     * add the value to the sources using the builder function
+     * @param builder function to build the sources value
+     * @return Builder
+     */
+
+    public AssetDraftBuilder addSources(
+            Function<com.commercetools.api.models.common.AssetSourceBuilder, com.commercetools.api.models.common.AssetSource> builder) {
+        return plusSources(builder.apply(com.commercetools.api.models.common.AssetSourceBuilder.of()));
+    }
+
+    /**
+     * set the value to the sources using the builder function
+     * @param builder function to build the sources value
+     * @return Builder
+     */
+
+    public AssetDraftBuilder setSources(
+            Function<com.commercetools.api.models.common.AssetSourceBuilder, com.commercetools.api.models.common.AssetSource> builder) {
+        return sources(builder.apply(com.commercetools.api.models.common.AssetSourceBuilder.of()));
+    }
+
+    /**
      *  <p>Name of the Asset.</p>
      * @param builder function to build the name value
      * @return Builder
@@ -114,6 +136,18 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
     public AssetDraftBuilder name(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Name of the Asset.</p>
+     * @param builder function to build the name value
+     * @return Builder
+     */
+
+    public AssetDraftBuilder withName(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.name = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -137,6 +171,18 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
     public AssetDraftBuilder description(
             Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
         this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Description of the Asset.</p>
+     * @param builder function to build the description value
+     * @return Builder
+     */
+
+    public AssetDraftBuilder withDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.description = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
         return this;
     }
 
@@ -197,6 +243,18 @@ public class AssetDraftBuilder implements Builder<AssetDraft> {
     public AssetDraftBuilder custom(
             Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
         this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields defined for the Asset.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public AssetDraftBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
         return this;
     }
 

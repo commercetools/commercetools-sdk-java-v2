@@ -42,6 +42,19 @@ public class StagedOrderSetCustomerGroupActionBuilder implements Builder<StagedO
 
     /**
      *  <p>ResourceIdentifier to a CustomerGroup.</p>
+     * @param builder function to build the customerGroup value
+     * @return Builder
+     */
+
+    public StagedOrderSetCustomerGroupActionBuilder withCustomerGroup(
+            Function<com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder, com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier> builder) {
+        this.customerGroup = builder
+                .apply(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>ResourceIdentifier to a CustomerGroup.</p>
      * @param customerGroup value to be set
      * @return Builder
      */

@@ -148,6 +148,28 @@ public class OrderPagedQueryResponseBuilder implements Builder<OrderPagedQueryRe
     }
 
     /**
+     * add the value to the results using the builder function
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public OrderPagedQueryResponseBuilder addResults(
+            Function<com.commercetools.api.models.order.OrderBuilder, com.commercetools.api.models.order.Order> builder) {
+        return plusResults(builder.apply(com.commercetools.api.models.order.OrderBuilder.of()));
+    }
+
+    /**
+     * set the value to the results using the builder function
+     * @param builder function to build the results value
+     * @return Builder
+     */
+
+    public OrderPagedQueryResponseBuilder setResults(
+            Function<com.commercetools.api.models.order.OrderBuilder, com.commercetools.api.models.order.Order> builder) {
+        return results(builder.apply(com.commercetools.api.models.order.OrderBuilder.of()));
+    }
+
+    /**
      *  <p>Number of results requested.</p>
      * @return limit
      */

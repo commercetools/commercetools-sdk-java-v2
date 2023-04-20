@@ -55,6 +55,18 @@ public class CartSetCustomLineItemTaxRateActionBuilder implements Builder<CartSe
 
     /**
      *  <p>Value to set. If empty, an existing value is removed.</p>
+     * @param builder function to build the externalTaxRate value
+     * @return Builder
+     */
+
+    public CartSetCustomLineItemTaxRateActionBuilder withExternalTaxRate(
+            Function<com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.ExternalTaxRateDraft> builder) {
+        this.externalTaxRate = builder.apply(com.commercetools.api.models.cart.ExternalTaxRateDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to set. If empty, an existing value is removed.</p>
      * @param externalTaxRate value to be set
      * @return Builder
      */

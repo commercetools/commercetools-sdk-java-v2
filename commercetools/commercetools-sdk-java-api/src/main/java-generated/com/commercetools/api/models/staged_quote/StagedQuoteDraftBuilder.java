@@ -57,6 +57,19 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
 
     /**
      *  <p>QuoteRequest from which the StagedQuote is created.</p>
+     * @param builder function to build the quoteRequest value
+     * @return Builder
+     */
+
+    public StagedQuoteDraftBuilder withQuoteRequest(
+            Function<com.commercetools.api.models.quote_request.QuoteRequestResourceIdentifierBuilder, com.commercetools.api.models.quote_request.QuoteRequestResourceIdentifier> builder) {
+        this.quoteRequest = builder
+                .apply(com.commercetools.api.models.quote_request.QuoteRequestResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>QuoteRequest from which the StagedQuote is created.</p>
      * @param quoteRequest value to be set
      * @return Builder
      */
@@ -122,6 +135,22 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
      *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced QuoteRequest and added to the StagedQuote.</li>
      *   <li>If empty, the Custom Fields on the referenced QuoteRequest are added to the StagedQuote automatically.</li>
      *  </ul>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public StagedQuoteDraftBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields to be added to the StagedQuote.</p>
+     *  <ul>
+     *   <li>If specified, the Custom Fields are merged with the Custom Fields on the referenced QuoteRequest and added to the StagedQuote.</li>
+     *   <li>If empty, the Custom Fields on the referenced QuoteRequest are added to the StagedQuote automatically.</li>
+     *  </ul>
      * @param custom value to be set
      * @return Builder
      */
@@ -140,6 +169,18 @@ public class StagedQuoteDraftBuilder implements Builder<StagedQuoteDraft> {
     public StagedQuoteDraftBuilder state(
             Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReferenceBuilder> builder) {
         this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>State of the Staged Quote. This reference can point to a State in a custom workflow.</p>
+     * @param builder function to build the state value
+     * @return Builder
+     */
+
+    public StagedQuoteDraftBuilder withState(
+            Function<com.commercetools.api.models.state.StateReferenceBuilder, com.commercetools.api.models.state.StateReference> builder) {
+        this.state = builder.apply(com.commercetools.api.models.state.StateReferenceBuilder.of());
         return this;
     }
 

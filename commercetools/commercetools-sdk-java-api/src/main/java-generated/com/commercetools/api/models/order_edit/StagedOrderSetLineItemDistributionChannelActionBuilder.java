@@ -57,6 +57,19 @@ public class StagedOrderSetLineItemDistributionChannelActionBuilder
 
     /**
      *  <p>ResourceIdentifier to a Channel.</p>
+     * @param builder function to build the distributionChannel value
+     * @return Builder
+     */
+
+    public StagedOrderSetLineItemDistributionChannelActionBuilder withDistributionChannel(
+            Function<com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder, com.commercetools.api.models.channel.ChannelResourceIdentifier> builder) {
+        this.distributionChannel = builder
+                .apply(com.commercetools.api.models.channel.ChannelResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>ResourceIdentifier to a Channel.</p>
      * @param distributionChannel value to be set
      * @return Builder
      */

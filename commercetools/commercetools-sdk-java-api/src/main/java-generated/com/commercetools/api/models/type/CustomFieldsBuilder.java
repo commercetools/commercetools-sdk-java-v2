@@ -41,6 +41,18 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
 
     /**
      *  <p>Reference to the Type that holds the FieldDefinitions for the Custom Fields.</p>
+     * @param builder function to build the type value
+     * @return Builder
+     */
+
+    public CustomFieldsBuilder withType(
+            Function<com.commercetools.api.models.type.TypeReferenceBuilder, com.commercetools.api.models.type.TypeReference> builder) {
+        this.type = builder.apply(com.commercetools.api.models.type.TypeReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the Type that holds the FieldDefinitions for the Custom Fields.</p>
      * @param type value to be set
      * @return Builder
      */
@@ -59,6 +71,18 @@ public class CustomFieldsBuilder implements Builder<CustomFields> {
     public CustomFieldsBuilder fields(
             Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainerBuilder> builder) {
         this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Object containing the Custom Fields for the customized resource or data type.</p>
+     * @param builder function to build the fields value
+     * @return Builder
+     */
+
+    public CustomFieldsBuilder withFields(
+            Function<com.commercetools.api.models.type.FieldContainerBuilder, com.commercetools.api.models.type.FieldContainer> builder) {
+        this.fields = builder.apply(com.commercetools.api.models.type.FieldContainerBuilder.of());
         return this;
     }
 

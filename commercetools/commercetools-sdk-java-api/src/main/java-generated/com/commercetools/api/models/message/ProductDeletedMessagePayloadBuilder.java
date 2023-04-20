@@ -80,6 +80,18 @@ public class ProductDeletedMessagePayloadBuilder implements Builder<ProductDelet
 
     /**
      *  <p>Current Product Projection of the deleted Product.</p>
+     * @param builder function to build the currentProjection value
+     * @return Builder
+     */
+
+    public ProductDeletedMessagePayloadBuilder withCurrentProjection(
+            Function<com.commercetools.api.models.product.ProductProjectionBuilder, com.commercetools.api.models.product.ProductProjection> builder) {
+        this.currentProjection = builder.apply(com.commercetools.api.models.product.ProductProjectionBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Current Product Projection of the deleted Product.</p>
      * @param currentProjection value to be set
      * @return Builder
      */

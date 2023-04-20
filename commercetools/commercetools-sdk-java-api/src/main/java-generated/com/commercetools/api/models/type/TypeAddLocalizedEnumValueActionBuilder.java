@@ -52,6 +52,18 @@ public class TypeAddLocalizedEnumValueActionBuilder implements Builder<TypeAddLo
 
     /**
      *  <p>Value to append to the array.</p>
+     * @param builder function to build the value value
+     * @return Builder
+     */
+
+    public TypeAddLocalizedEnumValueActionBuilder withValue(
+            Function<com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder, com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> builder) {
+        this.value = builder.apply(com.commercetools.api.models.type.CustomFieldLocalizedEnumValueBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Value to append to the array.</p>
      * @param value value to be set
      * @return Builder
      */

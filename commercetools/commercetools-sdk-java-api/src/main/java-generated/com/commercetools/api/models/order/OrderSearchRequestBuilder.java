@@ -49,6 +49,18 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
 
     /**
      *  <p>The Order search query.</p>
+     * @param builder function to build the query value
+     * @return Builder
+     */
+
+    public OrderSearchRequestBuilder withQuery(
+            Function<com.commercetools.api.models.order.OrderSearchQueryBuilder, com.commercetools.api.models.order.OrderSearchQuery> builder) {
+        this.query = builder.apply(com.commercetools.api.models.order.OrderSearchQueryBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The Order search query.</p>
      * @param query value to be set
      * @return Builder
      */
@@ -123,6 +135,28 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
         this.sort = new ArrayList<>();
         this.sort.add(builder.apply(com.commercetools.api.models.order.OrderSearchSortingBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>
+     * @param builder function to build the sort value
+     * @return Builder
+     */
+
+    public OrderSearchRequestBuilder addSort(
+            Function<com.commercetools.api.models.order.OrderSearchSortingBuilder, com.commercetools.api.models.order.OrderSearchSorting> builder) {
+        return plusSort(builder.apply(com.commercetools.api.models.order.OrderSearchSortingBuilder.of()));
+    }
+
+    /**
+     *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>
+     * @param builder function to build the sort value
+     * @return Builder
+     */
+
+    public OrderSearchRequestBuilder setSort(
+            Function<com.commercetools.api.models.order.OrderSearchSortingBuilder, com.commercetools.api.models.order.OrderSearchSorting> builder) {
+        return sort(builder.apply(com.commercetools.api.models.order.OrderSearchSortingBuilder.of()));
     }
 
     /**

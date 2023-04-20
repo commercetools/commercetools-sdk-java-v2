@@ -9,6 +9,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * ProductSelectionTypeBuilder
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class ProductSelectionTypeBuilder {
 
     public com.commercetools.api.models.product_selection.IndividualExclusionProductSelectionTypeBuilder individualExclusionBuilder() {
@@ -26,4 +27,5 @@ public class ProductSelectionTypeBuilder {
     public static ProductSelectionTypeBuilder of() {
         return new ProductSelectionTypeBuilder();
     }
+
 }

@@ -54,6 +54,18 @@ public class CustomerReferenceBuilder implements Builder<CustomerReference> {
 
     /**
      *  <p>Contains the representation of the expanded Customer. Only present in responses to requests with Reference Expansion for Customers.</p>
+     * @param builder function to build the obj value
+     * @return Builder
+     */
+
+    public CustomerReferenceBuilder withObj(
+            Function<com.commercetools.api.models.customer.CustomerBuilder, com.commercetools.api.models.customer.Customer> builder) {
+        this.obj = builder.apply(com.commercetools.api.models.customer.CustomerBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Contains the representation of the expanded Customer. Only present in responses to requests with Reference Expansion for Customers.</p>
      * @param obj value to be set
      * @return Builder
      */

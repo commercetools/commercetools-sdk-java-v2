@@ -72,6 +72,18 @@ public class ParcelTrackingDataUpdatedMessagePayloadBuilder
 
     /**
      *  <p>The Tracking Data that was added to the Parcel.</p>
+     * @param builder function to build the trackingData value
+     * @return Builder
+     */
+
+    public ParcelTrackingDataUpdatedMessagePayloadBuilder withTrackingData(
+            Function<com.commercetools.api.models.order.TrackingDataBuilder, com.commercetools.api.models.order.TrackingData> builder) {
+        this.trackingData = builder.apply(com.commercetools.api.models.order.TrackingDataBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The Tracking Data that was added to the Parcel.</p>
      * @param trackingData value to be set
      * @return Builder
      */

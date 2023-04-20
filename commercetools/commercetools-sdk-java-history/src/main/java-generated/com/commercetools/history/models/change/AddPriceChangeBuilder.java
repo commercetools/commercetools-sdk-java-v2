@@ -79,6 +79,18 @@ public class AddPriceChangeBuilder implements Builder<AddPriceChange> {
     }
 
     /**
+     * set the value to the nextValue using the builder function
+     * @param builder function to build the nextValue value
+     * @return Builder
+     */
+
+    public AddPriceChangeBuilder withNextValue(
+            Function<com.commercetools.history.models.common.PriceBuilder, com.commercetools.history.models.common.Price> builder) {
+        this.nextValue = builder.apply(com.commercetools.history.models.common.PriceBuilder.of());
+        return this;
+    }
+
+    /**
      * set the value to the nextValue
      * @param nextValue value to be set
      * @return Builder

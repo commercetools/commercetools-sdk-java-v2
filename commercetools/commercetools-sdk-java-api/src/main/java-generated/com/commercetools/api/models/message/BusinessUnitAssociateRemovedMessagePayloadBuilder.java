@@ -39,6 +39,18 @@ public class BusinessUnitAssociateRemovedMessagePayloadBuilder
 
     /**
      *  <p>The Associate that was removed from the Business Unit.</p>
+     * @param builder function to build the associate value
+     * @return Builder
+     */
+
+    public BusinessUnitAssociateRemovedMessagePayloadBuilder withAssociate(
+            Function<com.commercetools.api.models.business_unit.AssociateBuilder, com.commercetools.api.models.business_unit.Associate> builder) {
+        this.associate = builder.apply(com.commercetools.api.models.business_unit.AssociateBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The Associate that was removed from the Business Unit.</p>
      * @param associate value to be set
      * @return Builder
      */

@@ -18,8 +18,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * IndividualExclusionProductSelectionType
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@Deprecated
 public class IndividualExclusionProductSelectionTypeImpl implements IndividualExclusionProductSelectionType, ModelBase {
 
+    @Deprecated
     private com.commercetools.api.models.product_selection.ProductSelectionTypeEnum type;
 
     private com.commercetools.api.models.common.LocalizedString name;
@@ -44,7 +46,7 @@ public class IndividualExclusionProductSelectionTypeImpl implements IndividualEx
     /**
      *  <p>The following types of Product Selections are supported:</p>
      */
-
+    @Deprecated
     public com.commercetools.api.models.product_selection.ProductSelectionTypeEnum getType() {
         return this.type;
     }

@@ -42,4 +42,5 @@ public class AttributeGroupUpdateActionBuilder {
     public static AttributeGroupUpdateActionBuilder of() {
         return new AttributeGroupUpdateActionBuilder();
     }
+
 }

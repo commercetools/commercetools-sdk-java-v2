@@ -128,6 +128,28 @@ public class DeliveryBuilder implements Builder<Delivery> {
     }
 
     /**
+     * add the value to the items using the builder function
+     * @param builder function to build the items value
+     * @return Builder
+     */
+
+    public DeliveryBuilder addItems(
+            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItem> builder) {
+        return plusItems(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()));
+    }
+
+    /**
+     * set the value to the items using the builder function
+     * @param builder function to build the items value
+     * @return Builder
+     */
+
+    public DeliveryBuilder setItems(
+            Function<com.commercetools.history.models.common.DeliveryItemBuilder, com.commercetools.history.models.common.DeliveryItem> builder) {
+        return items(builder.apply(com.commercetools.history.models.common.DeliveryItemBuilder.of()));
+    }
+
+    /**
      * set values to the parcels
      * @param parcels value to be set
      * @return Builder
@@ -192,6 +214,28 @@ public class DeliveryBuilder implements Builder<Delivery> {
     }
 
     /**
+     * add the value to the parcels using the builder function
+     * @param builder function to build the parcels value
+     * @return Builder
+     */
+
+    public DeliveryBuilder addParcels(
+            Function<com.commercetools.history.models.common.ParcelBuilder, com.commercetools.history.models.common.Parcel> builder) {
+        return plusParcels(builder.apply(com.commercetools.history.models.common.ParcelBuilder.of()));
+    }
+
+    /**
+     * set the value to the parcels using the builder function
+     * @param builder function to build the parcels value
+     * @return Builder
+     */
+
+    public DeliveryBuilder setParcels(
+            Function<com.commercetools.history.models.common.ParcelBuilder, com.commercetools.history.models.common.Parcel> builder) {
+        return parcels(builder.apply(com.commercetools.history.models.common.ParcelBuilder.of()));
+    }
+
+    /**
      * set the value to the address using the builder function
      * @param builder function to build the address value
      * @return Builder
@@ -200,6 +244,18 @@ public class DeliveryBuilder implements Builder<Delivery> {
     public DeliveryBuilder address(
             Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.AddressBuilder> builder) {
         this.address = builder.apply(com.commercetools.history.models.common.AddressBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     * set the value to the address using the builder function
+     * @param builder function to build the address value
+     * @return Builder
+     */
+
+    public DeliveryBuilder withAddress(
+            Function<com.commercetools.history.models.common.AddressBuilder, com.commercetools.history.models.common.Address> builder) {
+        this.address = builder.apply(com.commercetools.history.models.common.AddressBuilder.of());
         return this;
     }
 
@@ -223,6 +279,18 @@ public class DeliveryBuilder implements Builder<Delivery> {
     public DeliveryBuilder custom(
             Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFieldsBuilder> builder) {
         this.custom = builder.apply(com.commercetools.history.models.common.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the Transaction.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public DeliveryBuilder withCustom(
+            Function<com.commercetools.history.models.common.CustomFieldsBuilder, com.commercetools.history.models.common.CustomFields> builder) {
+        this.custom = builder.apply(com.commercetools.history.models.common.CustomFieldsBuilder.of());
         return this;
     }
 

@@ -201,7 +201,7 @@ public interface CustomFieldReferenceValue extends JsonEnum {
 
     /**
      * method to find enum using the JSON value
-     * @param value the json value to be wrapped
+     * @param jsonName the json value to be wrapped
      * @return optional of enum instance
      */
     public static Optional<CustomFieldReferenceValue> findEnumViaJsonName(String jsonName) {

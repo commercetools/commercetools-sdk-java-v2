@@ -4,10 +4,7 @@ package commercetools.order;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.commercetools.api.models.order.Order;
-import com.commercetools.api.models.order.OrderPagedSearchResponse;
-import com.commercetools.api.models.order.OrderSearchQuery;
-import com.commercetools.api.models.order.OrderSearchSorting;
+import com.commercetools.api.models.order.*;
 import com.commercetools.api.models.project.OrderSearchStatus;
 import com.commercetools.api.models.project.Project;
 import com.commercetools.api.models.project.ProjectUpdateActionBuilder;
@@ -74,15 +71,7 @@ public class OrderQueryTests {
                             mapper.put("exists", exists);
                             return mapper;
                         }
-                    }).sort(new OrderSearchSorting() {
-                        @JsonAnyGetter
-                        public Map<String, Object> getValue() {
-                            final Map<String, Object> mapper = new HashMap<>();
-                            mapper.put("field", "createdAt");
-                            mapper.put("order", "desc");
-                            return mapper;
-                        }
-                    }).limit(20))
+                    }).withSort(b -> b.field("createdAt").order(OrderSearchSortOrder.DESC)).limit(20))
                     .executeBlocking()
                     .getBody();
             Assertions.assertThat(response).isNotNull();
@@ -99,6 +88,23 @@ public class OrderQueryTests {
                     .post("{" + "\"query\": {" + "\"exists\": {" + "\"field\": \"custom.deliveryDate\","
                             + "\"customType\": \"StringType\"" + "}" + "}," + "\"sort\": [{"
                             + "\"field\": \"createdAt\"," + "\"order\": \"desc\"" + "}]," + "\"limit\": 20" + "}")
+                    .executeBlocking()
+                    .getBody();
+            Assertions.assertThat(response).isNotNull();
+        });
+    }
+
+    @Test
+    public void searchQueryBuilder() {
+        ensureOrderSearchIndexing();
+        OrdersFixtures.withOrder(order -> {
+            OrderPagedSearchResponse response = CommercetoolsTestUtils.getProjectApiRoot()
+                    .orders()
+                    .search()
+                    //                    .post("")
+                    .post(r -> r.withQuery(q -> q.exists(e -> e.field("custom.deliveryDate").customType("StringType")))
+                            .withSort(b -> b.field("createdAt").order(OrderSearchSortOrder.DESC))
+                            .limit(20))
                     .executeBlocking()
                     .getBody();
             Assertions.assertThat(response).isNotNull();

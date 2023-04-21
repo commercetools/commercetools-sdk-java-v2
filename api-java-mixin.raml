@@ -5,6 +5,12 @@ annotationTypes:
   java-mixin:
     type: string
     allowedTargets: TypeDeclaration
+  java-builder-implements:
+    type: string
+    allowedTargets: TypeDeclaration
+  java-builder-mixin:
+    type: string
+    allowedTargets: TypeDeclaration
 
 types:
   BaseAddress:
@@ -313,6 +319,8 @@ types:
       public static OrderEditSetCustomFieldAction ofUnset(final String name) {
           return OrderEditSetCustomFieldActionBuilder.of().name(name).build();
       }
+  OrderSearchQuery:
+    (java-builder-implements): 'OrderSearchQueryBuilderMixin'
   StagedOrderUpdateAction:
     (java-extends): 'com.commercetools.api.models.ResourceUpdateAction<StagedOrderUpdateAction>'
   StagedOrderAddCustomLineItemAction:

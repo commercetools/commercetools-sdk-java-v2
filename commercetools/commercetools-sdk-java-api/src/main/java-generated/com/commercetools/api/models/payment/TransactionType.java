@@ -131,7 +131,7 @@ public interface TransactionType extends JsonEnum {
 
     /**
      * method to find enum using the JSON value
-     * @param value the json value to be wrapped
+     * @param jsonName the json value to be wrapped
      * @return optional of enum instance
      */
     public static Optional<TransactionType> findEnumViaJsonName(String jsonName) {

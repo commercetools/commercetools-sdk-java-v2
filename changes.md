@@ -3,6 +3,11 @@
 <details>
 <summary>Added Property(s)</summary>
 
+- added property `field` to type `OrderSearchSorting`
+- added property `language` to type `OrderSearchSorting`
+- added property `order` to type `OrderSearchSorting`
+- added property `mode` to type `OrderSearchSorting`
+- added property `filter` to type `OrderSearchSorting`
 - added property `mode` to type `ProductSelection`
 - added property `mode` to type `ProductSelectionDraft`
 </details>
@@ -47,6 +52,30 @@
 <details>
 <summary>Added Type(s)</summary>
 
+- added type `OrderSearchAndExpression`
+- added type `OrderSearchAnyValue`
+- added type `OrderSearchCompoundExpression`
+- added type `OrderSearchDateRangeExpression`
+- added type `OrderSearchDateRangeValue`
+- added type `OrderSearchExactExpression`
+- added type `OrderSearchExistsExpression`
+- added type `OrderSearchFilterExpression`
+- added type `OrderSearchFullTextExpression`
+- added type `OrderSearchFullTextValue`
+- added type `OrderSearchLongRangeExpression`
+- added type `OrderSearchLongRangeValue`
+- added type `OrderSearchMatchType`
+- added type `OrderSearchNotExpression`
+- added type `OrderSearchNumberRangeExpression`
+- added type `OrderSearchNumberRangeValue`
+- added type `OrderSearchOrExpression`
+- added type `OrderSearchPrefixExpression`
+- added type `OrderSearchQueryExpression`
+- added type `OrderSearchQueryExpressionValue`
+- added type `OrderSearchSortMode`
+- added type `OrderSearchSortOrder`
+- added type `OrderSearchStringValue`
+- added type `OrderSearchWildCardExpression`
 - added type `ProductSelectionMode`
 </details>
 

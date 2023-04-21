@@ -6,6 +6,8 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -20,6 +22,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     OrderSearchSorting orderSearchSorting = OrderSearchSorting.builder()
+ *             .field("{field}")
  *             .build()
  * </code></pre>
  * </div>
@@ -27,6 +30,81 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderSearchSortingImpl.class)
 public interface OrderSearchSorting {
+
+    /**
+     *
+     * @return field
+     */
+    @NotNull
+    @JsonProperty("field")
+    public String getField();
+
+    /**
+     *
+     * @return language
+     */
+
+    @JsonProperty("language")
+    public String getLanguage();
+
+    /**
+     *
+     * @return order
+     */
+
+    @JsonProperty("order")
+    public OrderSearchSortOrder getOrder();
+
+    /**
+     *
+     * @return mode
+     */
+
+    @JsonProperty("mode")
+    public OrderSearchSortMode getMode();
+
+    /**
+     *
+     * @return filter
+     */
+    @Valid
+    @JsonProperty("filter")
+    public OrderSearchQueryExpression getFilter();
+
+    /**
+     * set field
+     * @param field value to be set
+     */
+
+    public void setField(final String field);
+
+    /**
+     * set language
+     * @param language value to be set
+     */
+
+    public void setLanguage(final String language);
+
+    /**
+     * set order
+     * @param order value to be set
+     */
+
+    public void setOrder(final OrderSearchSortOrder order);
+
+    /**
+     * set mode
+     * @param mode value to be set
+     */
+
+    public void setMode(final OrderSearchSortMode mode);
+
+    /**
+     * set filter
+     * @param filter value to be set
+     */
+
+    public void setFilter(final OrderSearchQueryExpression filter);
 
     /**
      * factory method
@@ -43,6 +121,11 @@ public interface OrderSearchSorting {
      */
     public static OrderSearchSorting of(final OrderSearchSorting template) {
         OrderSearchSortingImpl instance = new OrderSearchSortingImpl();
+        instance.setField(template.getField());
+        instance.setLanguage(template.getLanguage());
+        instance.setOrder(template.getOrder());
+        instance.setMode(template.getMode());
+        instance.setFilter(template.getFilter());
         return instance;
     }
 
@@ -57,6 +140,12 @@ public interface OrderSearchSorting {
             return null;
         }
         OrderSearchSortingImpl instance = new OrderSearchSortingImpl();
+        instance.setField(template.getField());
+        instance.setLanguage(template.getLanguage());
+        instance.setOrder(template.getOrder());
+        instance.setMode(template.getMode());
+        instance.setFilter(
+            com.commercetools.api.models.order.OrderSearchQueryExpression.deepCopy(template.getFilter()));
         return instance;
     }
 

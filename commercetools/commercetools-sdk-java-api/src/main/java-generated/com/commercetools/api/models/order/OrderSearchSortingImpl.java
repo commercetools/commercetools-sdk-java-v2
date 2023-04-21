@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
@@ -19,11 +20,95 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderSearchSortingImpl implements OrderSearchSorting, ModelBase {
 
+    private String field;
+
+    private String language;
+
+    private com.commercetools.api.models.order.OrderSearchSortOrder order;
+
+    private com.commercetools.api.models.order.OrderSearchSortMode mode;
+
+    private com.commercetools.api.models.order.OrderSearchQueryExpression filter;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
-    OrderSearchSortingImpl() {
+    OrderSearchSortingImpl(@JsonProperty("field") final String field, @JsonProperty("language") final String language,
+            @JsonProperty("order") final com.commercetools.api.models.order.OrderSearchSortOrder order,
+            @JsonProperty("mode") final com.commercetools.api.models.order.OrderSearchSortMode mode,
+            @JsonProperty("filter") final com.commercetools.api.models.order.OrderSearchQueryExpression filter) {
+        this.field = field;
+        this.language = language;
+        this.order = order;
+        this.mode = mode;
+        this.filter = filter;
+    }
+
+    /**
+     * create empty instance
+     */
+    public OrderSearchSortingImpl() {
+    }
+
+    /**
+     *
+     */
+
+    public String getField() {
+        return this.field;
+    }
+
+    /**
+     *
+     */
+
+    public String getLanguage() {
+        return this.language;
+    }
+
+    /**
+     *
+     */
+
+    public com.commercetools.api.models.order.OrderSearchSortOrder getOrder() {
+        return this.order;
+    }
+
+    /**
+     *
+     */
+
+    public com.commercetools.api.models.order.OrderSearchSortMode getMode() {
+        return this.mode;
+    }
+
+    /**
+     *
+     */
+
+    public com.commercetools.api.models.order.OrderSearchQueryExpression getFilter() {
+        return this.filter;
+    }
+
+    public void setField(final String field) {
+        this.field = field;
+    }
+
+    public void setLanguage(final String language) {
+        this.language = language;
+    }
+
+    public void setOrder(final com.commercetools.api.models.order.OrderSearchSortOrder order) {
+        this.order = order;
+    }
+
+    public void setMode(final com.commercetools.api.models.order.OrderSearchSortMode mode) {
+        this.mode = mode;
+    }
+
+    public void setFilter(final com.commercetools.api.models.order.OrderSearchQueryExpression filter) {
+        this.filter = filter;
     }
 
     @Override
@@ -36,12 +121,22 @@ public class OrderSearchSortingImpl implements OrderSearchSorting, ModelBase {
 
         OrderSearchSortingImpl that = (OrderSearchSortingImpl) o;
 
-        return new EqualsBuilder().isEquals();
+        return new EqualsBuilder().append(field, that.field)
+                .append(language, that.language)
+                .append(order, that.order)
+                .append(mode, that.mode)
+                .append(filter, that.filter)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).toHashCode();
+        return new HashCodeBuilder(17, 37).append(field)
+                .append(language)
+                .append(order)
+                .append(mode)
+                .append(filter)
+                .toHashCode();
     }
 
 }

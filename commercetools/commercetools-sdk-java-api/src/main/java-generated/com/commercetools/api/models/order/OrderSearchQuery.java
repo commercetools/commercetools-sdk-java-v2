@@ -56,6 +56,14 @@ public interface OrderSearchQuery {
         if (template == null) {
             return null;
         }
+        if (template instanceof com.commercetools.api.models.order.OrderSearchCompoundExpression) {
+            return com.commercetools.api.models.order.OrderSearchCompoundExpression
+                    .deepCopy((com.commercetools.api.models.order.OrderSearchCompoundExpression) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderSearchQueryExpression) {
+            return com.commercetools.api.models.order.OrderSearchQueryExpression
+                    .deepCopy((com.commercetools.api.models.order.OrderSearchQueryExpression) template);
+        }
         OrderSearchQueryImpl instance = new OrderSearchQueryImpl();
         return instance;
     }

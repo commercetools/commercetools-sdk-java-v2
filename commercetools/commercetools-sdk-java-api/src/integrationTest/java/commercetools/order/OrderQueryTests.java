@@ -102,9 +102,7 @@ public class OrderQueryTests {
                     .orders()
                     .search()
                     //                    .post("")
-                    .post(r -> r
-                            .withQuery(q -> q.and(
-                                t -> t.setAnd(a -> a.exists(e -> e.field(""))).addAnd(a -> a.exists(e -> e.field("")))))
+                    .post(r -> r.withQuery(q -> q.exists(e -> e.field("custom.deliveryDate").customType("StringType")))
                             .withSort(b -> b.field("createdAt").order(OrderSearchSortOrder.DESC))
                             .limit(20))
                     .executeBlocking()

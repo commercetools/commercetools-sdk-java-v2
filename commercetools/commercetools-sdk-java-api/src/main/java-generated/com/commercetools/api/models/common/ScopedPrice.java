@@ -19,7 +19,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Scoped Price is contained in a ProductVariant which is returned in response to a Search Product Projection request when Price Selection is used.</p>
+ *  <p>Scoped Price is contained in a ProductVariant which is returned in response to a Product Projection Search request when Scoped Price Search is used.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

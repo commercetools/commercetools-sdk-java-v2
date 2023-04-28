@@ -56,7 +56,7 @@ public interface CustomerImport extends ImportResource {
     public String getEmail();
 
     /**
-     *  <p>Maps to <code>Customer.password</code>.</p>
+     *  <p>Required when <code>authenticationMode</code> is set to <code>Password</code>. Maps to <code>Customer.password</code>.</p>
      * @return password
      */
 
@@ -242,7 +242,7 @@ public interface CustomerImport extends ImportResource {
     public void setEmail(final String email);
 
     /**
-     *  <p>Maps to <code>Customer.password</code>.</p>
+     *  <p>Required when <code>authenticationMode</code> is set to <code>Password</code>. Maps to <code>Customer.password</code>.</p>
      * @param password value to be set
      */
 

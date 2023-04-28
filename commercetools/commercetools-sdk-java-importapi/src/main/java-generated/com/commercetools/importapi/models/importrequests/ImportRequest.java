@@ -46,7 +46,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ImportRequest {
 
     /**
-     *  <p>The type of the import resource.</p>
+     *  <p>The resource types that can be imported.</p>
      * @return type
      */
     @NotNull

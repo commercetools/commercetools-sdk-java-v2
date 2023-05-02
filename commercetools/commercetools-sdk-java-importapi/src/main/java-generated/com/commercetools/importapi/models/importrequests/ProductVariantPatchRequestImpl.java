@@ -43,7 +43,7 @@ public class ProductVariantPatchRequestImpl implements ProductVariantPatchReques
     }
 
     /**
-     *  <p>The type of the import resource.</p>
+     *  <p>The resource types that can be imported.</p>
      */
 
     public com.commercetools.importapi.models.common.ImportResourceType getType() {

@@ -129,7 +129,7 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
     }
 
     /**
-     *  <p>Maps to <code>Customer.password</code>.</p>
+     *  <p>Required when <code>authenticationMode</code> is set to <code>Password</code>. Maps to <code>Customer.password</code>.</p>
      * @param password value to be set
      * @return Builder
      */
@@ -652,7 +652,7 @@ public class CustomerImportBuilder implements Builder<CustomerImport> {
     }
 
     /**
-     *  <p>Maps to <code>Customer.password</code>.</p>
+     *  <p>Required when <code>authenticationMode</code> is set to <code>Password</code>. Maps to <code>Customer.password</code>.</p>
      * @return password
      */
 

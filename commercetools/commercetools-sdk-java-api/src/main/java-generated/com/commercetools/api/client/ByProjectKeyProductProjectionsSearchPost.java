@@ -19,7 +19,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Search Product Projection</p>
+ *  <p>Product Projection Search</p>
  *
  * <hr>
  * <div class=code-example>

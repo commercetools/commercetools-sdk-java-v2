@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Draft type to model divisions that are part of a Company or a higher order Division. Contains the fields and values of the generic BusinessUnitDraft that are used specifically for creating a Division.</p>
+ *  <p>Draft type to model divisions that are part of a Company or a higher-order Division. Contains the fields and values of the generic BusinessUnitDraft that are used specifically for creating a Division.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DivisionDraftImpl implements DivisionDraft, ModelBase {
@@ -33,6 +33,8 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
     private String name;
 
     private String contactEmail;
+
+    private com.commercetools.api.models.business_unit.BusinessUnitAssociateMode associateMode;
 
     private java.util.List<com.commercetools.api.models.business_unit.AssociateDraft> associates;
 
@@ -59,6 +61,7 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
             @JsonProperty("stores") final java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores,
             @JsonProperty("storeMode") final com.commercetools.api.models.business_unit.BusinessUnitStoreMode storeMode,
             @JsonProperty("name") final String name, @JsonProperty("contactEmail") final String contactEmail,
+            @JsonProperty("associateMode") final com.commercetools.api.models.business_unit.BusinessUnitAssociateMode associateMode,
             @JsonProperty("associates") final java.util.List<com.commercetools.api.models.business_unit.AssociateDraft> associates,
             @JsonProperty("addresses") final java.util.List<com.commercetools.api.models.common.BaseAddress> addresses,
             @JsonProperty("shippingAddresses") final java.util.List<Integer> shippingAddresses,
@@ -73,6 +76,7 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
         this.storeMode = storeMode;
         this.name = name;
         this.contactEmail = contactEmail;
+        this.associateMode = associateMode;
         this.associates = associates;
         this.addresses = addresses;
         this.shippingAddresses = shippingAddresses;
@@ -118,7 +122,7 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
     }
 
     /**
-     *  <p>If not set, the Division inherits the Stores from its <code>parentUnit</code>. Set this to <code>Explicit</code> if you want to set the Stores explicitly in the <code>stores</code> field instead.</p>
+     *  <p>If not set, the Division inherits the Stores from a parent unit. Set this to <code>Explicit</code> if you want to set the Stores explicitly in the <code>stores</code> field instead.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitStoreMode getStoreMode() {
@@ -147,6 +151,14 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
 
     public String getContactEmail() {
         return this.contactEmail;
+    }
+
+    /**
+     *  <p>Determines whether the Division can inherit Associates from a parent.</p>
+     */
+
+    public com.commercetools.api.models.business_unit.BusinessUnitAssociateMode getAssociateMode() {
+        return this.associateMode;
     }
 
     /**
@@ -241,6 +253,11 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
         this.contactEmail = contactEmail;
     }
 
+    public void setAssociateMode(
+            final com.commercetools.api.models.business_unit.BusinessUnitAssociateMode associateMode) {
+        this.associateMode = associateMode;
+    }
+
     public void setAssociates(final com.commercetools.api.models.business_unit.AssociateDraft... associates) {
         this.associates = new ArrayList<>(Arrays.asList(associates));
     }
@@ -308,6 +325,7 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
                 .append(unitType, that.unitType)
                 .append(name, that.name)
                 .append(contactEmail, that.contactEmail)
+                .append(associateMode, that.associateMode)
                 .append(associates, that.associates)
                 .append(addresses, that.addresses)
                 .append(shippingAddresses, that.shippingAddresses)
@@ -328,6 +346,7 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
                 .append(unitType)
                 .append(name)
                 .append(contactEmail)
+                .append(associateMode)
                 .append(associates)
                 .append(addresses)
                 .append(shippingAddresses)

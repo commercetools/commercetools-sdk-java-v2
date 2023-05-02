@@ -22,13 +22,17 @@ public class BusinessUnitConfigurationImpl implements BusinessUnitConfiguration,
 
     private com.commercetools.api.models.project.BusinessUnitConfigurationStatus myBusinessUnitStatusOnCreation;
 
+    private com.commercetools.api.models.associate_role.AssociateRoleKeyReference myBusinessUnitAssociateRoleOnCreation;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     BusinessUnitConfigurationImpl(
-            @JsonProperty("myBusinessUnitStatusOnCreation") final com.commercetools.api.models.project.BusinessUnitConfigurationStatus myBusinessUnitStatusOnCreation) {
+            @JsonProperty("myBusinessUnitStatusOnCreation") final com.commercetools.api.models.project.BusinessUnitConfigurationStatus myBusinessUnitStatusOnCreation,
+            @JsonProperty("myBusinessUnitAssociateRoleOnCreation") final com.commercetools.api.models.associate_role.AssociateRoleKeyReference myBusinessUnitAssociateRoleOnCreation) {
         this.myBusinessUnitStatusOnCreation = myBusinessUnitStatusOnCreation;
+        this.myBusinessUnitAssociateRoleOnCreation = myBusinessUnitAssociateRoleOnCreation;
     }
 
     /**
@@ -45,9 +49,22 @@ public class BusinessUnitConfigurationImpl implements BusinessUnitConfiguration,
         return this.myBusinessUnitStatusOnCreation;
     }
 
+    /**
+     *  <p>Default Associate Role assigned to the Associate creating a Business Unit using the My Business Unit endpoint.</p>
+     */
+
+    public com.commercetools.api.models.associate_role.AssociateRoleKeyReference getMyBusinessUnitAssociateRoleOnCreation() {
+        return this.myBusinessUnitAssociateRoleOnCreation;
+    }
+
     public void setMyBusinessUnitStatusOnCreation(
             final com.commercetools.api.models.project.BusinessUnitConfigurationStatus myBusinessUnitStatusOnCreation) {
         this.myBusinessUnitStatusOnCreation = myBusinessUnitStatusOnCreation;
+    }
+
+    public void setMyBusinessUnitAssociateRoleOnCreation(
+            final com.commercetools.api.models.associate_role.AssociateRoleKeyReference myBusinessUnitAssociateRoleOnCreation) {
+        this.myBusinessUnitAssociateRoleOnCreation = myBusinessUnitAssociateRoleOnCreation;
     }
 
     @Override
@@ -61,12 +78,15 @@ public class BusinessUnitConfigurationImpl implements BusinessUnitConfiguration,
         BusinessUnitConfigurationImpl that = (BusinessUnitConfigurationImpl) o;
 
         return new EqualsBuilder().append(myBusinessUnitStatusOnCreation, that.myBusinessUnitStatusOnCreation)
+                .append(myBusinessUnitAssociateRoleOnCreation, that.myBusinessUnitAssociateRoleOnCreation)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(myBusinessUnitStatusOnCreation).toHashCode();
+        return new HashCodeBuilder(17, 37).append(myBusinessUnitStatusOnCreation)
+                .append(myBusinessUnitAssociateRoleOnCreation)
+                .toHashCode();
     }
 
 }

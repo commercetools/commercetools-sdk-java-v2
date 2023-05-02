@@ -98,7 +98,7 @@ public class OrderFromQuoteDraftImpl implements OrderFromQuoteDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Payment state of the Order.</p>
      */
 
     public com.commercetools.api.models.order.PaymentState getPaymentState() {
@@ -106,7 +106,7 @@ public class OrderFromQuoteDraftImpl implements OrderFromQuoteDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Shipment state of the Order.</p>
      */
 
     public com.commercetools.api.models.order.ShipmentState getShipmentState() {
@@ -122,7 +122,7 @@ public class OrderFromQuoteDraftImpl implements OrderFromQuoteDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Reference to a State indicating the Order's state.</p>
      */
 
     public com.commercetools.api.models.state.StateResourceIdentifier getState() {

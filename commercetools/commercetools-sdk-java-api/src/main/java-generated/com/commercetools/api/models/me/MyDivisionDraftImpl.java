@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Draft type to model divisions that are part of the Company or a higher order Division. Contains the fields and values of the generic MyBusinessUnitDraft that are used specifically for creating a Division.</p>
+ *  <p>Draft type to model divisions that are part of the Company or a higher-order Division. Contains the fields and values of the generic MyBusinessUnitDraft that are used specifically for creating a Division.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyDivisionDraftImpl implements MyDivisionDraft, ModelBase {

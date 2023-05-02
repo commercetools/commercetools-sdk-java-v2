@@ -11,38 +11,38 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Roles defining how an Associate can interact with a Business Unit.</p>
+ *  <p>Determines whether an AssociateRoleAssignment can be inherited by child Business Units.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface AssociateRole extends JsonEnum {
+public interface AssociateRoleInheritanceMode extends JsonEnum {
 
     /**
-    	<p>The Associate can update the Business Unit, create child Business Units and add or remove other Associates.</p>
+    	<p>The assignment can be inherited by child Business Units.</p>
 
     */
-    AssociateRole ADMIN = AssociateRoleEnum.ADMIN;
+    AssociateRoleInheritanceMode ENABLED = AssociateRoleInheritanceModeEnum.ENABLED;
     /**
-    	<p>The Associate can make purchases on behalf of the Business Unit.</p>
+    	<p>The assignment cannot be inherited by child Business Units.</p>
 
     */
-    AssociateRole BUYER = AssociateRoleEnum.BUYER;
+    AssociateRoleInheritanceMode DISABLED = AssociateRoleInheritanceModeEnum.DISABLED;
 
     /**
-     * possible values of AssociateRole
+     * possible values of AssociateRoleInheritanceMode
      */
-    enum AssociateRoleEnum implements AssociateRole {
+    enum AssociateRoleInheritanceModeEnum implements AssociateRoleInheritanceMode {
         /**
-         * Admin
+         * Enabled
          */
-        ADMIN("Admin"),
+        ENABLED("Enabled"),
 
         /**
-         * Buyer
+         * Disabled
          */
-        BUYER("Buyer");
+        DISABLED("Disabled");
         private final String jsonName;
 
-        private AssociateRoleEnum(final String jsonName) {
+        private AssociateRoleInheritanceModeEnum(final String jsonName) {
             this.jsonName = jsonName;
         }
 
@@ -75,14 +75,14 @@ public interface AssociateRole extends JsonEnum {
     String toString();
 
     /**
-     * factory method for a enum value of AssociateRole
+     * factory method for a enum value of AssociateRoleInheritanceMode
      * if no enum has been found an anonymous instance will be created
      * @param value the enum value to be wrapped
      * @return enum instance
      */
     @JsonCreator
-    public static AssociateRole findEnum(String value) {
-        return findEnumViaJsonName(value).orElse(new AssociateRole() {
+    public static AssociateRoleInheritanceMode findEnum(String value) {
+        return findEnumViaJsonName(value).orElse(new AssociateRoleInheritanceMode() {
             @Override
             public String getJsonName() {
                 return value;
@@ -104,7 +104,7 @@ public interface AssociateRole extends JsonEnum {
      * @param jsonName the json value to be wrapped
      * @return optional of enum instance
      */
-    public static Optional<AssociateRole> findEnumViaJsonName(String jsonName) {
+    public static Optional<AssociateRoleInheritanceMode> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
 
@@ -112,8 +112,8 @@ public interface AssociateRole extends JsonEnum {
      * possible enum values
      * @return array of possible enum values
      */
-    public static AssociateRole[] values() {
-        return AssociateRoleEnum.values();
+    public static AssociateRoleInheritanceMode[] values() {
+        return AssociateRoleInheritanceModeEnum.values();
     }
 
 }

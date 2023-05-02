@@ -57,7 +57,7 @@ public interface MyCartDraft extends com.commercetools.api.models.CustomizableDr
     public String getCustomerEmail();
 
     /**
-     *  <p>ResourceIdentifier to the Business Unit the Cart should belong to.</p>
+     *  <p>ResourceIdentifier to the Business Unit the Cart should belong to. The Customer must be an Associate of the Business Unit.</p>
      * @return businessUnit
      */
     @Valid
@@ -185,7 +185,7 @@ public interface MyCartDraft extends com.commercetools.api.models.CustomizableDr
     public void setCustomerEmail(final String customerEmail);
 
     /**
-     *  <p>ResourceIdentifier to the Business Unit the Cart should belong to.</p>
+     *  <p>ResourceIdentifier to the Business Unit the Cart should belong to. The Customer must be an Associate of the Business Unit.</p>
      * @param businessUnit value to be set
      */
 

@@ -22,7 +22,7 @@ public interface BusinessUnitStoreMode extends JsonEnum {
     */
     BusinessUnitStoreMode EXPLICIT = BusinessUnitStoreModeEnum.EXPLICIT;
     /**
-    	<p>Stores are inherited from the first parent in the hierarchy that has Stores defined. Up to four Business Units can be set as children-of-children within a hierarchy.</p>
+    	<p>Stores are inherited from the closest parent in the hierarchy that has Stores defined.</p>
 
     */
     BusinessUnitStoreMode FROM_PARENT = BusinessUnitStoreModeEnum.FROM_PARENT;

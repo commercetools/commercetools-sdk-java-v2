@@ -11,6 +11,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class KeyReferenceBuilder {
 
+    public com.commercetools.api.models.associate_role.AssociateRoleKeyReferenceBuilder associateRoleBuilder() {
+        return com.commercetools.api.models.associate_role.AssociateRoleKeyReferenceBuilder.of();
+    }
+
     public com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder businessUnitBuilder() {
         return com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder.of();
     }

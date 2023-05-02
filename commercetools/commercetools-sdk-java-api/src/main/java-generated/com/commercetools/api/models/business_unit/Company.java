@@ -31,6 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .storeMode(BusinessUnitStoreMode.EXPLICIT)
  *             .name("{name}")
  *             .plusAddresses(addressesBuilder -> addressesBuilder)
+ *             .associateMode(BusinessUnitAssociateMode.EXPLICIT)
  *             .plusAssociates(associatesBuilder -> associatesBuilder)
  *             .topLevelUnit(topLevelUnitBuilder -> topLevelUnitBuilder)
  *             .build()
@@ -47,7 +48,7 @@ public interface Company extends BusinessUnit {
     String COMPANY = "Company";
 
     /**
-     *  <p>Is always <code>Explicit</code> since a Company does not have a parent Business Unit the Stores can be inherited from.</p>
+     *  <p>Is always <code>Explicit</code> since a Company cannot have a parent Business Unit that Stores can be inherited from.</p>
      * @return storeMode
      */
     @NotNull
@@ -55,11 +56,26 @@ public interface Company extends BusinessUnit {
     public BusinessUnitStoreMode getStoreMode();
 
     /**
-     *  <p>Is always <code>Explicit</code> since a Company does not have a parent Business Unit the Stores can be inherited from.</p>
+     *  <p>Is always <code>Explicit</code> since a Company cannot have a parent Business Unit that Associates can be inherited from.</p>
+     * @return associateMode
+     */
+    @NotNull
+    @JsonProperty("associateMode")
+    public BusinessUnitAssociateMode getAssociateMode();
+
+    /**
+     *  <p>Is always <code>Explicit</code> since a Company cannot have a parent Business Unit that Stores can be inherited from.</p>
      * @param storeMode value to be set
      */
 
     public void setStoreMode(final BusinessUnitStoreMode storeMode);
+
+    /**
+     *  <p>Is always <code>Explicit</code> since a Company cannot have a parent Business Unit that Associates can be inherited from.</p>
+     * @param associateMode value to be set
+     */
+
+    public void setAssociateMode(final BusinessUnitAssociateMode associateMode);
 
     /**
      * factory method
@@ -94,7 +110,9 @@ public interface Company extends BusinessUnit {
         instance.setDefaultShippingAddressId(template.getDefaultShippingAddressId());
         instance.setBillingAddressIds(template.getBillingAddressIds());
         instance.setDefaultBillingAddressId(template.getDefaultBillingAddressId());
+        instance.setAssociateMode(template.getAssociateMode());
         instance.setAssociates(template.getAssociates());
+        instance.setInheritedAssociates(template.getInheritedAssociates());
         instance.setParentUnit(template.getParentUnit());
         instance.setTopLevelUnit(template.getTopLevelUnit());
         return instance;
@@ -140,9 +158,15 @@ public interface Company extends BusinessUnit {
         instance.setBillingAddressIds(
             Optional.ofNullable(template.getBillingAddressIds()).map(ArrayList::new).orElse(null));
         instance.setDefaultBillingAddressId(template.getDefaultBillingAddressId());
+        instance.setAssociateMode(template.getAssociateMode());
         instance.setAssociates(Optional.ofNullable(template.getAssociates())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.business_unit.Associate::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setInheritedAssociates(Optional.ofNullable(template.getInheritedAssociates())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.business_unit.InheritedAssociate::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setParentUnit(

@@ -68,7 +68,7 @@ public interface OrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<Order
     public String getOrderNumber();
 
     /**
-     *
+     *  <p>Payment state of the Order.</p>
      * @return paymentState
      */
 
@@ -76,7 +76,7 @@ public interface OrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<Order
     public PaymentState getPaymentState();
 
     /**
-     *
+     *  <p>Shipment state of the Order.</p>
      * @return shipmentState
      */
 
@@ -92,7 +92,7 @@ public interface OrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<Order
     public OrderState getOrderState();
 
     /**
-     *
+     *  <p>Reference to a State indicating the Order's state.</p>
      * @return state
      */
     @Valid
@@ -128,14 +128,14 @@ public interface OrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<Order
     public void setOrderNumber(final String orderNumber);
 
     /**
-     * set paymentState
+     *  <p>Payment state of the Order.</p>
      * @param paymentState value to be set
      */
 
     public void setPaymentState(final PaymentState paymentState);
 
     /**
-     * set shipmentState
+     *  <p>Shipment state of the Order.</p>
      * @param shipmentState value to be set
      */
 
@@ -149,7 +149,7 @@ public interface OrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<Order
     public void setOrderState(final OrderState orderState);
 
     /**
-     * set state
+     *  <p>Reference to a State indicating the Order's state.</p>
      * @param state value to be set
      */
 

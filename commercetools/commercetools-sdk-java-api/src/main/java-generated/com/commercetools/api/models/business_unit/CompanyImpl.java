@@ -58,7 +58,11 @@ public class CompanyImpl implements Company, ModelBase {
 
     private String defaultBillingAddressId;
 
+    private com.commercetools.api.models.business_unit.BusinessUnitAssociateMode associateMode;
+
     private java.util.List<com.commercetools.api.models.business_unit.Associate> associates;
+
+    private java.util.List<com.commercetools.api.models.business_unit.InheritedAssociate> inheritedAssociates;
 
     private com.commercetools.api.models.business_unit.BusinessUnitKeyReference parentUnit;
 
@@ -84,7 +88,9 @@ public class CompanyImpl implements Company, ModelBase {
             @JsonProperty("defaultShippingAddressId") final String defaultShippingAddressId,
             @JsonProperty("billingAddressIds") final java.util.List<String> billingAddressIds,
             @JsonProperty("defaultBillingAddressId") final String defaultBillingAddressId,
+            @JsonProperty("associateMode") final com.commercetools.api.models.business_unit.BusinessUnitAssociateMode associateMode,
             @JsonProperty("associates") final java.util.List<com.commercetools.api.models.business_unit.Associate> associates,
+            @JsonProperty("inheritedAssociates") final java.util.List<com.commercetools.api.models.business_unit.InheritedAssociate> inheritedAssociates,
             @JsonProperty("parentUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference parentUnit,
             @JsonProperty("topLevelUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference topLevelUnit) {
         this.id = id;
@@ -105,7 +111,9 @@ public class CompanyImpl implements Company, ModelBase {
         this.defaultShippingAddressId = defaultShippingAddressId;
         this.billingAddressIds = billingAddressIds;
         this.defaultBillingAddressId = defaultBillingAddressId;
+        this.associateMode = associateMode;
         this.associates = associates;
+        this.inheritedAssociates = inheritedAssociates;
         this.parentUnit = parentUnit;
         this.topLevelUnit = topLevelUnit;
         this.unitType = BusinessUnitType.findEnum("Company");
@@ -193,7 +201,7 @@ public class CompanyImpl implements Company, ModelBase {
     }
 
     /**
-     *  <p>Is always <code>Explicit</code> since a Company does not have a parent Business Unit the Stores can be inherited from.</p>
+     *  <p>Is always <code>Explicit</code> since a Company cannot have a parent Business Unit that Stores can be inherited from.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitStoreMode getStoreMode() {
@@ -273,11 +281,27 @@ public class CompanyImpl implements Company, ModelBase {
     }
 
     /**
-     *  <p>Members that are part of the Business Unit in specific roles.</p>
+     *  <p>Is always <code>Explicit</code> since a Company cannot have a parent Business Unit that Associates can be inherited from.</p>
+     */
+
+    public com.commercetools.api.models.business_unit.BusinessUnitAssociateMode getAssociateMode() {
+        return this.associateMode;
+    }
+
+    /**
+     *  <p>Associates that are part of the Business Unit in specific roles.</p>
      */
 
     public java.util.List<com.commercetools.api.models.business_unit.Associate> getAssociates() {
         return this.associates;
+    }
+
+    /**
+     *  <p>Associates that are inherited from a parent Business Unit. This value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.business_unit.InheritedAssociate> getInheritedAssociates() {
+        return this.inheritedAssociates;
     }
 
     /**
@@ -384,12 +408,27 @@ public class CompanyImpl implements Company, ModelBase {
         this.defaultBillingAddressId = defaultBillingAddressId;
     }
 
+    public void setAssociateMode(
+            final com.commercetools.api.models.business_unit.BusinessUnitAssociateMode associateMode) {
+        this.associateMode = associateMode;
+    }
+
     public void setAssociates(final com.commercetools.api.models.business_unit.Associate... associates) {
         this.associates = new ArrayList<>(Arrays.asList(associates));
     }
 
     public void setAssociates(final java.util.List<com.commercetools.api.models.business_unit.Associate> associates) {
         this.associates = associates;
+    }
+
+    public void setInheritedAssociates(
+            final com.commercetools.api.models.business_unit.InheritedAssociate... inheritedAssociates) {
+        this.inheritedAssociates = new ArrayList<>(Arrays.asList(inheritedAssociates));
+    }
+
+    public void setInheritedAssociates(
+            final java.util.List<com.commercetools.api.models.business_unit.InheritedAssociate> inheritedAssociates) {
+        this.inheritedAssociates = inheritedAssociates;
     }
 
     public void setParentUnit(final com.commercetools.api.models.business_unit.BusinessUnitKeyReference parentUnit) {
@@ -430,7 +469,9 @@ public class CompanyImpl implements Company, ModelBase {
                 .append(defaultShippingAddressId, that.defaultShippingAddressId)
                 .append(billingAddressIds, that.billingAddressIds)
                 .append(defaultBillingAddressId, that.defaultBillingAddressId)
+                .append(associateMode, that.associateMode)
                 .append(associates, that.associates)
+                .append(inheritedAssociates, that.inheritedAssociates)
                 .append(parentUnit, that.parentUnit)
                 .append(topLevelUnit, that.topLevelUnit)
                 .isEquals();
@@ -457,7 +498,9 @@ public class CompanyImpl implements Company, ModelBase {
                 .append(defaultShippingAddressId)
                 .append(billingAddressIds)
                 .append(defaultBillingAddressId)
+                .append(associateMode)
                 .append(associates)
+                .append(inheritedAssociates)
                 .append(parentUnit)
                 .append(topLevelUnit)
                 .toHashCode();

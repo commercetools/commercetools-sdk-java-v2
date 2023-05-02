@@ -196,7 +196,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     *  <p>ResourceIdentifier to the Business Unit the Cart should belong to.</p>
+     *  <p>ResourceIdentifier to the Business Unit the Cart should belong to. When the <code>customerId</code> of the Cart is also set, the Customer must be an Associate of the Business Unit.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier getBusinessUnit() {

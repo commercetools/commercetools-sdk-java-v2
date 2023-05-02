@@ -94,7 +94,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier to the Business Unit the Cart should belong to.</p>
+     *  <p>ResourceIdentifier to the Business Unit the Cart should belong to. The Customer must be an Associate of the Business Unit.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -108,7 +108,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier to the Business Unit the Cart should belong to.</p>
+     *  <p>ResourceIdentifier to the Business Unit the Cart should belong to. The Customer must be an Associate of the Business Unit.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -121,7 +121,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier to the Business Unit the Cart should belong to.</p>
+     *  <p>ResourceIdentifier to the Business Unit the Cart should belong to. The Customer must be an Associate of the Business Unit.</p>
      * @param businessUnit value to be set
      * @return Builder
      */
@@ -612,7 +612,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier to the Business Unit the Cart should belong to.</p>
+     *  <p>ResourceIdentifier to the Business Unit the Cart should belong to. The Customer must be an Associate of the Business Unit.</p>
      * @return businessUnit
      */
 

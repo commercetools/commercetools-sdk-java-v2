@@ -23,7 +23,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generic type to model those fields all Business Units have in common.</p>
+ *  <p>Generic type to model the fields that all types of Business Units have in common.</p>
  *
  * <hr>
  * Example to create a subtype instance using the builder pattern
@@ -39,6 +39,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             storeMode(BusinessUnitStoreMode.EXPLICIT)
  *             name("{name}")
  *             plusAddresses(addressesBuilder -> addressesBuilder)
+ *             associateMode(BusinessUnitAssociateMode.EXPLICIT)
  *             plusAssociates(associatesBuilder -> associatesBuilder)
  *             topLevelUnit(topLevelUnitBuilder -> topLevelUnitBuilder)
  *             .build()
@@ -209,13 +210,29 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
     public String getDefaultBillingAddressId();
 
     /**
-     *  <p>Members that are part of the Business Unit in specific roles.</p>
+     *  <p>Set to <code>Explicit</code> to prevent the Business Unit inheriting Associates from a parent, set to <code>ExplicitAndFromParent</code> to enable inheritance.</p>
+     * @return associateMode
+     */
+    @NotNull
+    @JsonProperty("associateMode")
+    public BusinessUnitAssociateMode getAssociateMode();
+
+    /**
+     *  <p>Associates that are part of the Business Unit in specific roles.</p>
      * @return associates
      */
     @NotNull
     @Valid
     @JsonProperty("associates")
     public List<Associate> getAssociates();
+
+    /**
+     *  <p>Associates that are inherited from a parent Business Unit. This value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
+     * @return inheritedAssociates
+     */
+    @Valid
+    @JsonProperty("inheritedAssociates")
+    public List<InheritedAssociate> getInheritedAssociates();
 
     /**
      *  <p>Parent unit of the Business Unit. Only present when the <code>unitType</code> is <code>Division</code>.</p>
@@ -397,7 +414,14 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
     public void setDefaultBillingAddressId(final String defaultBillingAddressId);
 
     /**
-     *  <p>Members that are part of the Business Unit in specific roles.</p>
+     *  <p>Set to <code>Explicit</code> to prevent the Business Unit inheriting Associates from a parent, set to <code>ExplicitAndFromParent</code> to enable inheritance.</p>
+     * @param associateMode value to be set
+     */
+
+    public void setAssociateMode(final BusinessUnitAssociateMode associateMode);
+
+    /**
+     *  <p>Associates that are part of the Business Unit in specific roles.</p>
      * @param associates values to be set
      */
 
@@ -405,11 +429,26 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
     public void setAssociates(final Associate... associates);
 
     /**
-     *  <p>Members that are part of the Business Unit in specific roles.</p>
+     *  <p>Associates that are part of the Business Unit in specific roles.</p>
      * @param associates values to be set
      */
 
     public void setAssociates(final List<Associate> associates);
+
+    /**
+     *  <p>Associates that are inherited from a parent Business Unit. This value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
+     * @param inheritedAssociates values to be set
+     */
+
+    @JsonIgnore
+    public void setInheritedAssociates(final InheritedAssociate... inheritedAssociates);
+
+    /**
+     *  <p>Associates that are inherited from a parent Business Unit. This value of this field is eventually consistent and is only present when the <code>associateMode</code> is set to <code>ExplicitAndFromParent</code>.</p>
+     * @param inheritedAssociates values to be set
+     */
+
+    public void setInheritedAssociates(final List<InheritedAssociate> inheritedAssociates);
 
     /**
      *  <p>Parent unit of the Business Unit. Only present when the <code>unitType</code> is <code>Division</code>.</p>
@@ -473,9 +512,15 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
         instance.setBillingAddressIds(
             Optional.ofNullable(template.getBillingAddressIds()).map(ArrayList::new).orElse(null));
         instance.setDefaultBillingAddressId(template.getDefaultBillingAddressId());
+        instance.setAssociateMode(template.getAssociateMode());
         instance.setAssociates(Optional.ofNullable(template.getAssociates())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.business_unit.Associate::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setInheritedAssociates(Optional.ofNullable(template.getInheritedAssociates())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.business_unit.InheritedAssociate::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setParentUnit(

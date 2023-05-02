@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Draft type to model divisions that are part of the Company or a higher order Division. Contains the fields and values of the generic MyBusinessUnitDraft that are used specifically for creating a Division.</p>
+ *  <p>Draft type to model divisions that are part of the Company or a higher-order Division. Contains the fields and values of the generic MyBusinessUnitDraft that are used specifically for creating a Division.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

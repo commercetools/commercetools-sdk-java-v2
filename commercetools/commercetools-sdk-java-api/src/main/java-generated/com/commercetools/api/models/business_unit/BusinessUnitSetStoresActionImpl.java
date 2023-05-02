@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Sets the Stores of the Business Unit. Can only be set if the Business Unit <code>storeMode</code> is <code>Explicit</code>. Carts and Orders created after the Set Stores update must use the new Stores of the Business Unit and, if set, their Product Selections, and Channels. Orders created prior to the Set Stores update action are unchanged. Setting the Stores on a Business Unit generates a BusinessUnitStoresSet Message.</p>
+ *  <p>Sets the Stores of the Business Unit. Can only be set if the Business Unit <code>storeMode</code> is <code>Explicit</code>. Carts and Orders created after the Set Stores update must use the new Stores of the Business Unit and, if set, their Product Selections, and Channels. Orders created before the Set Stores update action remain unchanged. Setting the Stores on a Business Unit generates a BusinessUnitStoresSet Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class BusinessUnitSetStoresActionImpl implements BusinessUnitSetStoresAction, ModelBase {

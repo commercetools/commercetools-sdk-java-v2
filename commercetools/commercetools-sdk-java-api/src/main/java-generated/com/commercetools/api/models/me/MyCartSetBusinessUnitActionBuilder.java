@@ -25,7 +25,7 @@ public class MyCartSetBusinessUnitActionBuilder implements Builder<MyCartSetBusi
     private com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier businessUnit;
 
     /**
-     *  <p>New Business Unit to assign to the Cart, which must have access to the Store that is set on the Cart. Additionally, the authenticated user must have Buyer access to the Business Unit.</p>
+     *  <p>New Business Unit to assign to the Cart, which must have access to the Store that is set on the Cart. Additionally, the authenticated user must be an Associate in the Business Unit.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class MyCartSetBusinessUnitActionBuilder implements Builder<MyCartSetBusi
     }
 
     /**
-     *  <p>New Business Unit to assign to the Cart, which must have access to the Store that is set on the Cart. Additionally, the authenticated user must have Buyer access to the Business Unit.</p>
+     *  <p>New Business Unit to assign to the Cart, which must have access to the Store that is set on the Cart. Additionally, the authenticated user must be an Associate in the Business Unit.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class MyCartSetBusinessUnitActionBuilder implements Builder<MyCartSetBusi
     }
 
     /**
-     *  <p>New Business Unit to assign to the Cart, which must have access to the Store that is set on the Cart. Additionally, the authenticated user must have Buyer access to the Business Unit.</p>
+     *  <p>New Business Unit to assign to the Cart, which must have access to the Store that is set on the Cart. Additionally, the authenticated user must be an Associate in the Business Unit.</p>
      * @param businessUnit value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class MyCartSetBusinessUnitActionBuilder implements Builder<MyCartSetBusi
     }
 
     /**
-     *  <p>New Business Unit to assign to the Cart, which must have access to the Store that is set on the Cart. Additionally, the authenticated user must have Buyer access to the Business Unit.</p>
+     *  <p>New Business Unit to assign to the Cart, which must have access to the Store that is set on the Cart. Additionally, the authenticated user must be an Associate in the Business Unit.</p>
      * @return businessUnit
      */
 

@@ -17,6 +17,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MessageSubscriptionResourceTypeId extends JsonEnum {
 
     /**
+    	<p>Messages related to <a href="ctp:api:type:AssociateRole">Associate Roles</a>.</p>
+
+    */
+    MessageSubscriptionResourceTypeId ASSOCIATE_ROLE = MessageSubscriptionResourceTypeIdEnum.ASSOCIATE_ROLE;
+    /**
     	<p>Messages related to <a href="ctp:api:type:BusinessUnit">Business Units</a>.</p>
 
     */
@@ -91,6 +96,11 @@ public interface MessageSubscriptionResourceTypeId extends JsonEnum {
      * possible values of MessageSubscriptionResourceTypeId
      */
     enum MessageSubscriptionResourceTypeIdEnum implements MessageSubscriptionResourceTypeId {
+        /**
+         * associate-role
+         */
+        ASSOCIATE_ROLE("associate-role"),
+
         /**
          * business-unit
          */

@@ -34,6 +34,8 @@ public class BusinessUnitDraftImpl implements BusinessUnitDraft, ModelBase {
 
     private String contactEmail;
 
+    private com.commercetools.api.models.business_unit.BusinessUnitAssociateMode associateMode;
+
     private java.util.List<com.commercetools.api.models.business_unit.AssociateDraft> associates;
 
     private java.util.List<com.commercetools.api.models.common.BaseAddress> addresses;
@@ -58,6 +60,7 @@ public class BusinessUnitDraftImpl implements BusinessUnitDraft, ModelBase {
             @JsonProperty("storeMode") final com.commercetools.api.models.business_unit.BusinessUnitStoreMode storeMode,
             @JsonProperty("unitType") final com.commercetools.api.models.business_unit.BusinessUnitType unitType,
             @JsonProperty("name") final String name, @JsonProperty("contactEmail") final String contactEmail,
+            @JsonProperty("associateMode") final com.commercetools.api.models.business_unit.BusinessUnitAssociateMode associateMode,
             @JsonProperty("associates") final java.util.List<com.commercetools.api.models.business_unit.AssociateDraft> associates,
             @JsonProperty("addresses") final java.util.List<com.commercetools.api.models.common.BaseAddress> addresses,
             @JsonProperty("shippingAddresses") final java.util.List<Integer> shippingAddresses,
@@ -72,6 +75,7 @@ public class BusinessUnitDraftImpl implements BusinessUnitDraft, ModelBase {
         this.unitType = unitType;
         this.name = name;
         this.contactEmail = contactEmail;
+        this.associateMode = associateMode;
         this.associates = associates;
         this.addresses = addresses;
         this.shippingAddresses = shippingAddresses;
@@ -143,6 +147,14 @@ public class BusinessUnitDraftImpl implements BusinessUnitDraft, ModelBase {
 
     public String getContactEmail() {
         return this.contactEmail;
+    }
+
+    /**
+     *  <p>Determines whether the Business Unit can inherit Associates from a parent. Always <code>Explicit</code> for Companies and defaults to <code>ExplicitAndFromParent</code> for Divisions.</p>
+     */
+
+    public com.commercetools.api.models.business_unit.BusinessUnitAssociateMode getAssociateMode() {
+        return this.associateMode;
     }
 
     /**
@@ -229,6 +241,11 @@ public class BusinessUnitDraftImpl implements BusinessUnitDraft, ModelBase {
         this.contactEmail = contactEmail;
     }
 
+    public void setAssociateMode(
+            final com.commercetools.api.models.business_unit.BusinessUnitAssociateMode associateMode) {
+        this.associateMode = associateMode;
+    }
+
     public void setAssociates(final com.commercetools.api.models.business_unit.AssociateDraft... associates) {
         this.associates = new ArrayList<>(Arrays.asList(associates));
     }
@@ -291,6 +308,7 @@ public class BusinessUnitDraftImpl implements BusinessUnitDraft, ModelBase {
                 .append(unitType, that.unitType)
                 .append(name, that.name)
                 .append(contactEmail, that.contactEmail)
+                .append(associateMode, that.associateMode)
                 .append(associates, that.associates)
                 .append(addresses, that.addresses)
                 .append(shippingAddresses, that.shippingAddresses)
@@ -310,6 +328,7 @@ public class BusinessUnitDraftImpl implements BusinessUnitDraft, ModelBase {
                 .append(unitType)
                 .append(name)
                 .append(contactEmail)
+                .append(associateMode)
                 .append(associates)
                 .append(addresses)
                 .append(shippingAddresses)

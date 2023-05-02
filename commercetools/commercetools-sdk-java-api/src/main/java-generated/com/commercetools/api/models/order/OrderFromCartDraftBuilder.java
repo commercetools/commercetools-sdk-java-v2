@@ -66,7 +66,7 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier of the Cart from which this order is created.</p>
+     *  <p>ResourceIdentifier of the Cart from which the Order is created.</p>
      * @param builder function to build the cart value
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier of the Cart from which this order is created.</p>
+     *  <p>ResourceIdentifier of the Cart from which the Order is created.</p>
      * @param builder function to build the cart value
      * @return Builder
      */
@@ -90,7 +90,7 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier of the Cart from which this order is created.</p>
+     *  <p>ResourceIdentifier of the Cart from which the Order is created.</p>
      * @param cart value to be set
      * @return Builder
      */
@@ -102,7 +102,7 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
     }
 
     /**
-     * set the value to the version
+     *  <p>Expected version of the Cart from which the Order is created. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
      * @param version value to be set
      * @return Builder
      */
@@ -135,7 +135,7 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
     }
 
     /**
-     * set the value to the paymentState
+     *  <p>Payment state for the Order.</p>
      * @param paymentState value to be set
      * @return Builder
      */
@@ -147,7 +147,7 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
     }
 
     /**
-     * set the value to the shipmentState
+     *  <p>Shipment state for the Order.</p>
      * @param shipmentState value to be set
      * @return Builder
      */
@@ -171,7 +171,7 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
     }
 
     /**
-     * set the value to the state using the builder function
+     *  <p>Reference to a State indicating the Order's state.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -183,7 +183,7 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
     }
 
     /**
-     * set the value to the state using the builder function
+     *  <p>Reference to a State indicating the Order's state.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -195,7 +195,7 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
     }
 
     /**
-     * set the value to the state
+     *  <p>Reference to a State indicating the Order's state.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -253,7 +253,7 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier of the Cart from which this order is created.</p>
+     *  <p>ResourceIdentifier of the Cart from which the Order is created.</p>
      * @return cart
      */
 
@@ -263,7 +263,7 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
     }
 
     /**
-     * value of version}
+     *  <p>Expected version of the Cart from which the Order is created. If the expected version does not match the actual version, a 409 Conflict error will be returned.</p>
      * @return version
      */
 
@@ -292,7 +292,7 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
     }
 
     /**
-     * value of paymentState}
+     *  <p>Payment state for the Order.</p>
      * @return paymentState
      */
 
@@ -302,7 +302,7 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
     }
 
     /**
-     * value of shipmentState}
+     *  <p>Shipment state for the Order.</p>
      * @return shipmentState
      */
 
@@ -322,7 +322,7 @@ public class OrderFromCartDraftBuilder implements Builder<OrderFromCartDraft> {
     }
 
     /**
-     * value of state}
+     *  <p>Reference to a State indicating the Order's state.</p>
      * @return state
      */
 

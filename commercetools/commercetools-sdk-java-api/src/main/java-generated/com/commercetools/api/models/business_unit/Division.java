@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Business Unit type to model divisions that are part of the Company or a higher order Division. Contains specific fields and values that differentiate a Division from the generic BusinessUnit.</p>
+ *  <p>Business Unit type to model divisions that are part of the Company or a higher-order Division. Contains specific fields and values that differentiate a Division from the generic BusinessUnit.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,6 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .storeMode(BusinessUnitStoreMode.EXPLICIT)
  *             .name("{name}")
  *             .plusAddresses(addressesBuilder -> addressesBuilder)
+ *             .associateMode(BusinessUnitAssociateMode.EXPLICIT)
  *             .plusAssociates(associatesBuilder -> associatesBuilder)
  *             .parentUnit(parentUnitBuilder -> parentUnitBuilder)
  *             .topLevelUnit(topLevelUnitBuilder -> topLevelUnitBuilder)
@@ -66,6 +67,14 @@ public interface Division extends BusinessUnit {
     public BusinessUnitStoreMode getStoreMode();
 
     /**
+     *  <p>Determines whether the Division can inherit Associates from a parent.</p>
+     * @return associateMode
+     */
+    @NotNull
+    @JsonProperty("associateMode")
+    public BusinessUnitAssociateMode getAssociateMode();
+
+    /**
      *  <p>Parent unit of the Division.</p>
      * @param parentUnit value to be set
      */
@@ -78,6 +87,13 @@ public interface Division extends BusinessUnit {
      */
 
     public void setStoreMode(final BusinessUnitStoreMode storeMode);
+
+    /**
+     *  <p>Determines whether the Division can inherit Associates from a parent.</p>
+     * @param associateMode value to be set
+     */
+
+    public void setAssociateMode(final BusinessUnitAssociateMode associateMode);
 
     /**
      * factory method
@@ -112,7 +128,9 @@ public interface Division extends BusinessUnit {
         instance.setDefaultShippingAddressId(template.getDefaultShippingAddressId());
         instance.setBillingAddressIds(template.getBillingAddressIds());
         instance.setDefaultBillingAddressId(template.getDefaultBillingAddressId());
+        instance.setAssociateMode(template.getAssociateMode());
         instance.setAssociates(template.getAssociates());
+        instance.setInheritedAssociates(template.getInheritedAssociates());
         instance.setParentUnit(template.getParentUnit());
         instance.setTopLevelUnit(template.getTopLevelUnit());
         return instance;
@@ -158,9 +176,15 @@ public interface Division extends BusinessUnit {
         instance.setBillingAddressIds(
             Optional.ofNullable(template.getBillingAddressIds()).map(ArrayList::new).orElse(null));
         instance.setDefaultBillingAddressId(template.getDefaultBillingAddressId());
+        instance.setAssociateMode(template.getAssociateMode());
         instance.setAssociates(Optional.ofNullable(template.getAssociates())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.business_unit.Associate::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setInheritedAssociates(Optional.ofNullable(template.getInheritedAssociates())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.business_unit.InheritedAssociate::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setParentUnit(

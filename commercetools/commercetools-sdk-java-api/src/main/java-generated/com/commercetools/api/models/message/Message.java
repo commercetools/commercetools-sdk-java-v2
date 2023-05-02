@@ -26,7 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * Example to create a subtype instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     Message message = Message.businessUnitAddressAddedBuilder()
+ *     Message message = Message.associateRoleBuyerAssignableChangedBuilder()
  *             id("{id}")
  *             version(0.3)
  *             createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
@@ -34,17 +34,25 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             sequenceNumber(0.3)
  *             resource(resourceBuilder -> resourceBuilder)
  *             resourceVersion(0.3)
- *             address(addressBuilder -> addressBuilder)
+ *             buyerAssignable(true)
  *             .build()
  * </code></pre>
  * </div>
  */
 @JsonSubTypes({
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.AssociateRoleBuyerAssignableChangedMessageImpl.class, name = AssociateRoleBuyerAssignableChangedMessage.ASSOCIATE_ROLE_BUYER_ASSIGNABLE_CHANGED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.AssociateRoleCreatedMessageImpl.class, name = AssociateRoleCreatedMessage.ASSOCIATE_ROLE_CREATED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.AssociateRoleDeletedMessageImpl.class, name = AssociateRoleDeletedMessage.ASSOCIATE_ROLE_DELETED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.AssociateRoleNameChangedMessageImpl.class, name = AssociateRoleNameChangedMessage.ASSOCIATE_ROLE_NAME_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.AssociateRolePermissionAddedMessageImpl.class, name = AssociateRolePermissionAddedMessage.ASSOCIATE_ROLE_PERMISSION_ADDED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.AssociateRolePermissionRemovedMessageImpl.class, name = AssociateRolePermissionRemovedMessage.ASSOCIATE_ROLE_PERMISSION_REMOVED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.AssociateRolePermissionsSetMessageImpl.class, name = AssociateRolePermissionsSetMessage.ASSOCIATE_ROLE_PERMISSIONS_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitAddressAddedMessageImpl.class, name = BusinessUnitAddressAddedMessage.BUSINESS_UNIT_ADDRESS_ADDED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitAddressChangedMessageImpl.class, name = BusinessUnitAddressChangedMessage.BUSINESS_UNIT_ADDRESS_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitAddressRemovedMessageImpl.class, name = BusinessUnitAddressRemovedMessage.BUSINESS_UNIT_ADDRESS_REMOVED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitAssociateAddedMessageImpl.class, name = BusinessUnitAssociateAddedMessage.BUSINESS_UNIT_ASSOCIATE_ADDED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitAssociateChangedMessageImpl.class, name = BusinessUnitAssociateChangedMessage.BUSINESS_UNIT_ASSOCIATE_CHANGED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitAssociateModeChangedMessageImpl.class, name = BusinessUnitAssociateModeChangedMessage.BUSINESS_UNIT_ASSOCIATE_MODE_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitAssociateRemovedMessageImpl.class, name = BusinessUnitAssociateRemovedMessage.BUSINESS_UNIT_ASSOCIATE_REMOVED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitAssociatesSetMessageImpl.class, name = BusinessUnitAssociatesSetMessage.BUSINESS_UNIT_ASSOCIATES_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitBillingAddressAddedMessageImpl.class, name = BusinessUnitBillingAddressAddedMessage.BUSINESS_UNIT_BILLING_ADDRESS_ADDED),
@@ -365,6 +373,34 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
         if (template == null) {
             return null;
         }
+        if (template instanceof com.commercetools.api.models.message.AssociateRoleBuyerAssignableChangedMessage) {
+            return com.commercetools.api.models.message.AssociateRoleBuyerAssignableChangedMessage.deepCopy(
+                (com.commercetools.api.models.message.AssociateRoleBuyerAssignableChangedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.AssociateRoleCreatedMessage) {
+            return com.commercetools.api.models.message.AssociateRoleCreatedMessage
+                    .deepCopy((com.commercetools.api.models.message.AssociateRoleCreatedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.AssociateRoleDeletedMessage) {
+            return com.commercetools.api.models.message.AssociateRoleDeletedMessage
+                    .deepCopy((com.commercetools.api.models.message.AssociateRoleDeletedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.AssociateRoleNameChangedMessage) {
+            return com.commercetools.api.models.message.AssociateRoleNameChangedMessage
+                    .deepCopy((com.commercetools.api.models.message.AssociateRoleNameChangedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.AssociateRolePermissionAddedMessage) {
+            return com.commercetools.api.models.message.AssociateRolePermissionAddedMessage
+                    .deepCopy((com.commercetools.api.models.message.AssociateRolePermissionAddedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.AssociateRolePermissionRemovedMessage) {
+            return com.commercetools.api.models.message.AssociateRolePermissionRemovedMessage
+                    .deepCopy((com.commercetools.api.models.message.AssociateRolePermissionRemovedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.AssociateRolePermissionsSetMessage) {
+            return com.commercetools.api.models.message.AssociateRolePermissionsSetMessage
+                    .deepCopy((com.commercetools.api.models.message.AssociateRolePermissionsSetMessage) template);
+        }
         if (template instanceof com.commercetools.api.models.message.BusinessUnitAddressAddedMessage) {
             return com.commercetools.api.models.message.BusinessUnitAddressAddedMessage
                     .deepCopy((com.commercetools.api.models.message.BusinessUnitAddressAddedMessage) template);
@@ -384,6 +420,10 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
         if (template instanceof com.commercetools.api.models.message.BusinessUnitAssociateChangedMessage) {
             return com.commercetools.api.models.message.BusinessUnitAssociateChangedMessage
                     .deepCopy((com.commercetools.api.models.message.BusinessUnitAssociateChangedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.BusinessUnitAssociateModeChangedMessage) {
+            return com.commercetools.api.models.message.BusinessUnitAssociateModeChangedMessage
+                    .deepCopy((com.commercetools.api.models.message.BusinessUnitAssociateModeChangedMessage) template);
         }
         if (template instanceof com.commercetools.api.models.message.BusinessUnitAssociateRemovedMessage) {
             return com.commercetools.api.models.message.BusinessUnitAssociateRemovedMessage
@@ -822,6 +862,62 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for associateRoleBuyerAssignableChanged subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.AssociateRoleBuyerAssignableChangedMessageBuilder associateRoleBuyerAssignableChangedBuilder() {
+        return com.commercetools.api.models.message.AssociateRoleBuyerAssignableChangedMessageBuilder.of();
+    }
+
+    /**
+     * builder for associateRoleCreated subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.AssociateRoleCreatedMessageBuilder associateRoleCreatedBuilder() {
+        return com.commercetools.api.models.message.AssociateRoleCreatedMessageBuilder.of();
+    }
+
+    /**
+     * builder for associateRoleDeleted subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.AssociateRoleDeletedMessageBuilder associateRoleDeletedBuilder() {
+        return com.commercetools.api.models.message.AssociateRoleDeletedMessageBuilder.of();
+    }
+
+    /**
+     * builder for associateRoleNameSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.AssociateRoleNameChangedMessageBuilder associateRoleNameSetBuilder() {
+        return com.commercetools.api.models.message.AssociateRoleNameChangedMessageBuilder.of();
+    }
+
+    /**
+     * builder for associateRolePermissionAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.AssociateRolePermissionAddedMessageBuilder associateRolePermissionAddedBuilder() {
+        return com.commercetools.api.models.message.AssociateRolePermissionAddedMessageBuilder.of();
+    }
+
+    /**
+     * builder for associateRolePermissionRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.AssociateRolePermissionRemovedMessageBuilder associateRolePermissionRemovedBuilder() {
+        return com.commercetools.api.models.message.AssociateRolePermissionRemovedMessageBuilder.of();
+    }
+
+    /**
+     * builder for associateRolePermissionsSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.AssociateRolePermissionsSetMessageBuilder associateRolePermissionsSetBuilder() {
+        return com.commercetools.api.models.message.AssociateRolePermissionsSetMessageBuilder.of();
+    }
+
+    /**
      * builder for businessUnitAddressAdded subtype
      * @return builder
      */
@@ -859,6 +955,14 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
      */
     public static com.commercetools.api.models.message.BusinessUnitAssociateChangedMessageBuilder businessUnitAssociateChangedBuilder() {
         return com.commercetools.api.models.message.BusinessUnitAssociateChangedMessageBuilder.of();
+    }
+
+    /**
+     * builder for businessUnitAssociateModeChanged subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.BusinessUnitAssociateModeChangedMessageBuilder businessUnitAssociateModeChangedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitAssociateModeChangedMessageBuilder.of();
     }
 
     /**

@@ -42,6 +42,9 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
     private String contactEmail;
 
     @Nullable
+    private com.commercetools.api.models.business_unit.BusinessUnitAssociateMode associateMode;
+
+    @Nullable
     private java.util.List<com.commercetools.api.models.business_unit.AssociateDraft> associates;
 
     @Nullable
@@ -219,6 +222,18 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
 
     public CompanyDraftBuilder contactEmail(@Nullable final String contactEmail) {
         this.contactEmail = contactEmail;
+        return this;
+    }
+
+    /**
+     *  <p>Determines whether the Business Unit can inherit Associates from a parent. Always <code>Explicit</code> for Companies and defaults to <code>ExplicitAndFromParent</code> for Divisions.</p>
+     * @param associateMode value to be set
+     * @return Builder
+     */
+
+    public CompanyDraftBuilder associateMode(
+            @Nullable final com.commercetools.api.models.business_unit.BusinessUnitAssociateMode associateMode) {
+        this.associateMode = associateMode;
         return this;
     }
 
@@ -591,6 +606,16 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
     }
 
     /**
+     *  <p>Determines whether the Business Unit can inherit Associates from a parent. Always <code>Explicit</code> for Companies and defaults to <code>ExplicitAndFromParent</code> for Divisions.</p>
+     * @return associateMode
+     */
+
+    @Nullable
+    public com.commercetools.api.models.business_unit.BusinessUnitAssociateMode getAssociateMode() {
+        return this.associateMode;
+    }
+
+    /**
      *  <p>List of members that are part of the Business Unit in specific roles.</p>
      * @return associates
      */
@@ -667,8 +692,8 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
     public CompanyDraft build() {
         Objects.requireNonNull(key, CompanyDraft.class + ": key is missing");
         Objects.requireNonNull(name, CompanyDraft.class + ": name is missing");
-        return new CompanyDraftImpl(key, status, stores, storeMode, name, contactEmail, associates, addresses,
-            shippingAddresses, defaultShippingAddress, billingAddresses, defaultBillingAddress, custom);
+        return new CompanyDraftImpl(key, status, stores, storeMode, name, contactEmail, associateMode, associates,
+            addresses, shippingAddresses, defaultShippingAddress, billingAddresses, defaultBillingAddress, custom);
     }
 
     /**
@@ -676,8 +701,8 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
      * @return CompanyDraft
      */
     public CompanyDraft buildUnchecked() {
-        return new CompanyDraftImpl(key, status, stores, storeMode, name, contactEmail, associates, addresses,
-            shippingAddresses, defaultShippingAddress, billingAddresses, defaultBillingAddress, custom);
+        return new CompanyDraftImpl(key, status, stores, storeMode, name, contactEmail, associateMode, associates,
+            addresses, shippingAddresses, defaultShippingAddress, billingAddresses, defaultBillingAddress, custom);
     }
 
     /**
@@ -701,6 +726,7 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
         builder.storeMode = template.getStoreMode();
         builder.name = template.getName();
         builder.contactEmail = template.getContactEmail();
+        builder.associateMode = template.getAssociateMode();
         builder.associates = template.getAssociates();
         builder.addresses = template.getAddresses();
         builder.shippingAddresses = template.getShippingAddresses();

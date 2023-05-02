@@ -103,6 +103,10 @@ public interface BaseResource {
         if (template == null) {
             return null;
         }
+        if (template instanceof com.commercetools.api.models.associate_role.AssociateRole) {
+            return com.commercetools.api.models.associate_role.AssociateRole
+                    .deepCopy((com.commercetools.api.models.associate_role.AssociateRole) template);
+        }
         if (template instanceof com.commercetools.api.models.attribute_group.AttributeGroup) {
             return com.commercetools.api.models.attribute_group.AttributeGroup
                     .deepCopy((com.commercetools.api.models.attribute_group.AttributeGroup) template);

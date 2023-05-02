@@ -55,6 +55,10 @@ public class ProjectUpdateActionBuilder {
         return com.commercetools.api.models.project.ProjectChangeShoppingListsConfigurationActionBuilder.of();
     }
 
+    public com.commercetools.api.models.project.ProjectSetBusinessUnitAssociateRoleOnCreationActionBuilder setMyBusinessUnitAssociateRoleOnCreationBuilder() {
+        return com.commercetools.api.models.project.ProjectSetBusinessUnitAssociateRoleOnCreationActionBuilder.of();
+    }
+
     public com.commercetools.api.models.project.ProjectSetExternalOAuthActionBuilder setExternalOAuthBuilder() {
         return com.commercetools.api.models.project.ProjectSetExternalOAuthActionBuilder.of();
     }

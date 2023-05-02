@@ -6,8 +6,10 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
+import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.api.models.associate_role.AssociateRoleKeyReference;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -39,11 +41,27 @@ public interface BusinessUnitConfiguration {
     public BusinessUnitConfigurationStatus getMyBusinessUnitStatusOnCreation();
 
     /**
+     *  <p>Default Associate Role assigned to the Associate creating a Business Unit using the My Business Unit endpoint.</p>
+     * @return myBusinessUnitAssociateRoleOnCreation
+     */
+    @Valid
+    @JsonProperty("myBusinessUnitAssociateRoleOnCreation")
+    public AssociateRoleKeyReference getMyBusinessUnitAssociateRoleOnCreation();
+
+    /**
      *  <p>Status of Business Units created using the My Business Unit endpoint.</p>
      * @param myBusinessUnitStatusOnCreation value to be set
      */
 
     public void setMyBusinessUnitStatusOnCreation(final BusinessUnitConfigurationStatus myBusinessUnitStatusOnCreation);
+
+    /**
+     *  <p>Default Associate Role assigned to the Associate creating a Business Unit using the My Business Unit endpoint.</p>
+     * @param myBusinessUnitAssociateRoleOnCreation value to be set
+     */
+
+    public void setMyBusinessUnitAssociateRoleOnCreation(
+            final AssociateRoleKeyReference myBusinessUnitAssociateRoleOnCreation);
 
     /**
      * factory method
@@ -61,6 +79,7 @@ public interface BusinessUnitConfiguration {
     public static BusinessUnitConfiguration of(final BusinessUnitConfiguration template) {
         BusinessUnitConfigurationImpl instance = new BusinessUnitConfigurationImpl();
         instance.setMyBusinessUnitStatusOnCreation(template.getMyBusinessUnitStatusOnCreation());
+        instance.setMyBusinessUnitAssociateRoleOnCreation(template.getMyBusinessUnitAssociateRoleOnCreation());
         return instance;
     }
 
@@ -76,6 +95,9 @@ public interface BusinessUnitConfiguration {
         }
         BusinessUnitConfigurationImpl instance = new BusinessUnitConfigurationImpl();
         instance.setMyBusinessUnitStatusOnCreation(template.getMyBusinessUnitStatusOnCreation());
+        instance.setMyBusinessUnitAssociateRoleOnCreation(
+            com.commercetools.api.models.associate_role.AssociateRoleKeyReference
+                    .deepCopy(template.getMyBusinessUnitAssociateRoleOnCreation()));
         return instance;
     }
 

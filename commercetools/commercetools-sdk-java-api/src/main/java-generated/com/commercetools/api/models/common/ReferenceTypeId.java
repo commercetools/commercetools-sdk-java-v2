@@ -17,6 +17,11 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ReferenceTypeId extends JsonEnum {
 
     /**
+    	<p>References an <a href="ctp:api:type:AssociateRole">AssociateRole</a>.</p>
+
+    */
+    ReferenceTypeId ASSOCIATE_ROLE = ReferenceTypeIdEnum.ASSOCIATE_ROLE;
+    /**
     	<p>References an <a href="ctp:api:type:AttributeGroup">AttributeGroup</a>.</p>
 
     */
@@ -191,6 +196,11 @@ public interface ReferenceTypeId extends JsonEnum {
      * possible values of ReferenceTypeId
      */
     enum ReferenceTypeIdEnum implements ReferenceTypeId {
+        /**
+         * associate-role
+         */
+        ASSOCIATE_ROLE("associate-role"),
+
         /**
          * attribute-group
          */

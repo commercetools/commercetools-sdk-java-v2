@@ -11,18 +11,18 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Indicates whether the Business Unit can be edited and used in Orders, Carts, or Quotes.</p>
+ *  <p>Indicates whether the Business Unit can be edited and used in Carts, Orders, Quote Requests, or Quotes.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface BusinessUnitStatus extends JsonEnum {
 
     /**
-    	<p>The Business Unit can be used in Orders, Carts, and Quotes and can be edited.</p>
+    	<p>The Business Unit can be used in Carts, Orders, Quote Requests, and Quotes and can be edited.</p>
 
     */
     BusinessUnitStatus ACTIVE = BusinessUnitStatusEnum.ACTIVE;
     /**
-    	<p>The Business Unit can be edited by an Admin, but not by a Buyer. The Business Unit cannot be used in Orders, Carts, and Quotes.</p>
+    	<p>The Business Unit cannot be used in Carts, Orders, Quote Requests, and Quotes and can only be edited using the <a href="ctp:api:endpoint:/{projectKey}/me/business-units:POST">general endpoint</a>.</p>
 
     */
     BusinessUnitStatus INACTIVE = BusinessUnitStatusEnum.INACTIVE;

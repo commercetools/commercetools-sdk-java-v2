@@ -17,12 +17,12 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface BusinessUnitConfigurationStatus extends JsonEnum {
 
     /**
-    	<p>The <a href="ctp:api:type:BusinessUnit">Business Unit</a> can be used in <a href="ctp:api:type:Order">Orders</a>, <a href="ctp:api:type:Cart">Carts</a>, and <a href="/../api/quotes-overview">Quotes</a> and can be updated using the <a href="/../api/projects/me-business-units#update-businessunit">My Business Unit endpoint</a>.</p>
+    	<p>The <a href="ctp:api:type:BusinessUnit">Business Unit</a> can be used in <a href="ctp:api:type:Order">Orders</a>, <a href="ctp:api:type:Cart">Carts</a>, and <a href="/../api/quotes-overview">Quotes</a> and can be updated using the <a href="ctp:api:endpoint:/{projectKey}/me/business-units:POST">My Business Unit endpoint</a>.</p>
 
     */
     BusinessUnitConfigurationStatus ACTIVE = BusinessUnitConfigurationStatusEnum.ACTIVE;
     /**
-    	<p>The <a href="ctp:api:type:BusinessUnit">Business Unit</a> cannot be used in <a href="ctp:api:type:Order">Orders</a>, <a href="ctp:api:type:Cart">Carts</a>, and <a href="/../api/quotes-overview">Quotes</a> and cannot be updated using the <a href="/../api/projects/me-business-units#update-businessunit">My Business Unit endpoint</a>.</p>
+    	<p>The <a href="ctp:api:type:BusinessUnit">Business Unit</a> cannot be used in <a href="ctp:api:type:Order">Orders</a>, <a href="ctp:api:type:Cart">Carts</a>, and <a href="/../api/quotes-overview">Quotes</a> and cannot be updated using the <a href="ctp:api:endpoint:/{projectKey}/me/business-units:POST">My Business Unit endpoint</a>.</p>
 
     */
     BusinessUnitConfigurationStatus INACTIVE = BusinessUnitConfigurationStatusEnum.INACTIVE;

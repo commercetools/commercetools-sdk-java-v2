@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * MyOrderFromQuoteDraft
+ *  <p>When creating B2B Orders, the Customer must have the <code>MyOrderFromQuoteDraft</code> Permission.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
